@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" team sites
 description: Apply a custom theme to a "modern" team site in SharePoint Online. 
-ms.date: 02/21/2021
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -52,7 +52,7 @@ In numerous areas on the "modern" team sites, the typical customizations are not
 - Changing "modern" site to use "classic" seattle.master or oslo.master.
 - Custom page layouts; we are looking to have support for multiple canvases in the future.
 - Enabling site or site collection scoped publishing features; technically, features can be currently activated, but this is not a supported configuration.
-- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions).
+- User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](/sharepoint/dev/spfx/extensions/overview-extensions).
 - "Modern" subsites; subsites created on "modern" team sites use the "classic" experience, but you can change the user experience to be similar to "modern" sites.
 - Ability to control available subsite template options.
 - Activation of community feature or creation of community subsites under "modern" team site.
@@ -96,7 +96,7 @@ The following elements are ignored when a remote template is applied to a "moder
 ## Apply a custom theme to a "modern" team site
 
 > [!NOTE]
-> The following method was written before **Tenant Themes** came out, to read about the new way of theming "modern" read [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+> The following method was written before **Tenant Themes** came out, to read about the new way of theming "modern" read [SharePoint site theming](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 "Modern" team sites support custom themes even though you cannot upload a new gallery entry for end users. This can be achieved by uploading the needed assets to the site and then executing the **ApplyTheme** method. The following PowerShell script shows how to perform this for a "modern" team site.
 

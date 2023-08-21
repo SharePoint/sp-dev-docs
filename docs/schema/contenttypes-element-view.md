@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Used to conditionally add markup language or script to a page, base
 # ContentTypes element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used to conditionally add markup language or script to a page, based on evaluation of a content type ID.
-  
+
 ```XML
 <ContentTypes>
 </ContentTypes>
@@ -32,20 +31,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

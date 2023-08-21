@@ -1,8 +1,7 @@
 ---
 title: Host extension from Microsoft 365 CDN (Hello World part 4)
 description: Deploy your SharePoint Framework Application Customizer to be hosted from a Microsoft 365 CDN and deploy that to SharePoint for end users.
-ms.date: 06/29/2020
-ms.prod: sharepoint
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -17,7 +16,7 @@ Be sure you've completed the procedures in the following articles before you beg
 - [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 - [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
 
-You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
 
@@ -66,7 +65,7 @@ Follow the steps outlined in the following document to ensure the Microsoft 365 
     gulp package-solution --ship
     ```
 
-1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted select the **Deploy** button to trust the solution. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
+1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted, select the **Only enable this app** radio button and then select the **Enable app** button. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
 
     ![App catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
 

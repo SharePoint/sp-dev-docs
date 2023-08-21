@@ -1,10 +1,10 @@
 ---
 title: Elements (Web Template)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements(Web Template) and includes information about elements and attributes, remarks, and an example.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Web Template schema
@@ -84,34 +84,34 @@ The following is an example of an **Elements** element.
 
 ```XML
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <WebTemplate 
-        AdjustHijriDays="0" 
-        AlternateCssUrl="" 
-        AlternateHeader="" 
-        BaseTemplateID="9" 
-        BaseTemplateName="BLOG" 
-        BaseConfigurationID="0" 
-        CalendarType="1" 
-        Collation="25" 
-        ContainsDefaultLists="TRUE" 
-        CustomizedCssFiles="" 
-        CustomJSUrl="" 
-        Description="A 4th Generation Blog Site." 
-        ExcludeFromOfflineClient="FALSE" 
-        Locale="1033" 
-        Name="BlogIV" 
-        ParserEnabled="TRUE" 
-        PortalName="" 
-        PortalUrl="" 
-        PresenceEnabled="TRUE" 
-        ProductVersion="4" 
-        QuickLaunchEnabled="TRUE" 
-        Subweb="TRUE" 
-        SyndicationEnabled="TRUE" 
-        Time24="FALSE" 
-        TimeZone="13" 
-        Title="BlogIV" 
-        TreeViewEnabled="FALSE" 
+      <WebTemplate
+        AdjustHijriDays="0"
+        AlternateCssUrl=""
+        AlternateHeader=""
+        BaseTemplateID="9"
+        BaseTemplateName="BLOG"
+        BaseConfigurationID="0"
+        CalendarType="1"
+        Collation="25"
+        ContainsDefaultLists="TRUE"
+        CustomizedCssFiles=""
+        CustomJSUrl=""
+        Description="A 4th Generation Blog Site."
+        ExcludeFromOfflineClient="FALSE"
+        Locale="1033"
+        Name="BlogIV"
+        ParserEnabled="TRUE"
+        PortalName=""
+        PortalUrl=""
+        PresenceEnabled="TRUE"
+        ProductVersion="4"
+        QuickLaunchEnabled="TRUE"
+        Subweb="TRUE"
+        SyndicationEnabled="TRUE"
+        Time24="FALSE"
+        TimeZone="13"
+        Title="BlogIV"
+        TreeViewEnabled="FALSE"
         UIVersionConfigurationEnabled="FALSE" />
     </Elements>
 ```
@@ -119,11 +119,3 @@ The following is an example of an **Elements** element.
 ## See also
 
 - [Working with Site Templates and Definitions](https://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
-
-
-
-
-
-
-
-

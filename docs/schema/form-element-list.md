@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Describes the forms in a base list type.
 # Form element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Describes the forms in a base list type.
-  
+
 ```XML
 <Form  Default = "TRUE" | "FALSE"  MobileUrl = "Text"
   Path = "Text"
@@ -50,7 +49,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**UseDefaultListFormWebPart** <br/> |Optional **Text**. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a **ListFormWebPart** object is created unless this attribute is set to **FALSE**. If this attribute equals **FALSE**, use the [WebParts](webparts-element-list.md) child element to define your customized list form web part.  <br/> |
 |**UseLegacyForm** <br/> |Optional **Boolean**. Used during upgrade to specify that Microsoft SharePoint Foundation use Collaborative Application Markup Language (CAML), as in previous versions of the technology, instead of Web controls, to define the view of an item within a form.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
-   
+
 ### Child elements
 
 - [ListFormBody](listformbody-element-list.md)
@@ -58,20 +57,20 @@ The following sections describe attributes, child elements, and parent elements.
 - [ListFormClosing](listformclosing-element-list.md)
 - [ListFormOpening](listformopening-element-list.md)
 - [WebParts](webparts-element-list.md)
-   
+
 ### Parent elements
 
 - [Forms](forms-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following example shows the form definitions that are specified in the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for Announcements lists. 
-  
+The following example shows the form definitions that are specified in the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for Announcements lists.
+
 ```XML
 <Forms>
       <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />

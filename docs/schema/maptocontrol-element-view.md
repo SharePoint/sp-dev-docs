@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the name of the application in which a document can be edit
 # MapToControl element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the name of the application in which a document can be edited based on the file name extension and **ProgID**.
-  
+
 ```XML
 <MapToControl>
       ProgID|File_Extension
@@ -33,32 +32,32 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-The **MapToControl** element uses the following syntax, separating the **ProgID** from the file name extension with a pipe symbol ("|"): 
-  
+The **MapToControl** element uses the following syntax, separating the **ProgID** from the file name extension with a pipe symbol ("|"):
+
 ```XML
 <MapToControl>ProgID|File_Extension </MapToControl>
 ```
 
 ## Example
 
-The following example uses the **MapToControl** element to assign the name of the application to an Editor variable. 
-  
+The following example uses the **MapToControl** element to assign the name of the application to an Editor variable.
+
 ```XML
 <SetVar Name="Editor" Scope="Request">
    <MapToControl>

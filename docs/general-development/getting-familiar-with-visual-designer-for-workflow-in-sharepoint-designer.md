@@ -1,7 +1,7 @@
 ---
 title: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes the basic features of the Visual Designer in SharePoint Designer 2013 and provides guidance for using the Visual Designer in SharePoint.
+ms.date: 06/09/2022
 ms.assetid: ff9b0314-eea1-47e4-87c7-53ed4de98c30
 ms.localizationpriority: medium
 ---

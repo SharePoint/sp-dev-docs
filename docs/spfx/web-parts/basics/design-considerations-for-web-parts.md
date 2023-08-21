@@ -2,14 +2,13 @@
 title: Design considerations for SharePoint client-side web parts
 description: Use Office UI Fabric React components to build and style your web parts.
 ms.date: 01/24/2018
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
 
 # Design considerations for SharePoint client-side web parts
 
-To get started designing web parts, you need to be familiar with [Office UI Fabric](https://developer.microsoft.com/fabric). All of the styles from [Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core), including icons, typography, color usage, animation, and the responsive grid, are loaded by default and available to your web part. 
+To get started designing web parts, you need to be familiar with [Office UI Fabric](https://developer.microsoft.com/fabric). All of the styles from [Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core), including icons, typography, color usage, animation, and the responsive grid, are loaded by default and available to your web part.
 
 Do not import a copy of Fabric for your web part because this may conflict with the global copy. These classes provide a foundation to your web part's styling, which you can always depart from if you require different visuals to match your company's brand.
 
@@ -26,7 +25,7 @@ You can find a complete list of the Office UI Fabric styles, typography, color, 
 
 ## Responsive behavior
 
-Pages in the new SharePoint authoring experience use the Office UI Fabric responsive grid to help ensure that each page looks great. 
+Pages in the new SharePoint authoring experience use the Office UI Fabric responsive grid to help ensure that each page looks great.
 
 ### Maximum width
 

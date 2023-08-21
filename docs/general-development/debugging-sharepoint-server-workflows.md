@@ -1,8 +1,7 @@
 ---
 title: Debugging SharePoint workflows
 description: Demonstrates how SharePoint now relies on Workflow Manager 1.0 for all workflow processing and management, and demonstrates debugging options.
-ms.date: 12/14/2020
-ms.prod: sharepoint
+ms.date: 10/15/2022
 ms.assetid: a5adf39b-8640-4871-be60-b786dcf9fafc
 ms.localizationpriority: high
 ---
@@ -126,7 +125,7 @@ The first step is to first define the default proxy configuration for .NET Frame
 - `%systemdrive%\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config`
 - `%systemdrive%\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\Config\\machine.config`
 
-Next, add the following markup to the bottom of each file, just before the closing **<configuration>** element:
+Next, add the following markup to the bottom of each file, just before the closing **\<configuration\>** element:
 
 ```xml
 <system.net>

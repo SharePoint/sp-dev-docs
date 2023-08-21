@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a push button control.
 # Button element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a push button control.
-  
+
 ```XML
 <Button
      Alt="Text"
@@ -87,26 +86,26 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-group.md) (Group)  
-- [Controls](controls-element-menusection.md) (MenuSection)  
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-group.md) (Group)
+- [Controls](controls-element-menusection.md) (MenuSection)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
-The following example shows how to add a button control to the server ribbon. The example adds a **Help** button to the ribbon in the same group as the built-in **New Document**, **New Folder**, and **Upload Document** controls: 
-  
+The following example shows how to add a button control to the server ribbon. The example adds a **Help** button to the ribbon in the same group as the built-in **New Document**, **New Folder**, and **Upload Document** controls:
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
@@ -142,4 +141,3 @@ The following example shows how to add a button control to the server ribbon. Th
 ## See also
 
 - [Walkthrough: Adding a Button to the Server Ribbon](https://msdn.microsoft.com/library/82d7078a-696d-4c93-99bf-d40cfb4db305%28Office.15%29.aspx)
-

@@ -1,10 +1,10 @@
 ---
 title: RemoveFieldRef element (ContentType)
+description: Describes the RemoveFieldRef element (ContentType), which specifies a column reference that is included in the parent content type but is to be removed from this content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5f06a5ba-0b74-497d-a88c-9a104225c0a5
 ---
@@ -48,7 +48,7 @@ You need only specify the ID attribute of the **RemoveFieldRef** element. ShareP
   ShowInFileDlg="TRUE" | "FALSE"
   ShowInListSettings="TRUE" | "FALSE"
   ShowInNewForm="TRUE" | "FALSE"
-  Sortable="TRUE" | "FALSE" 
+  Sortable="TRUE" | "FALSE"
   PrimaryPITarget="Text"
 />
 ```
@@ -145,11 +145,3 @@ The following example shows **RemoveFieldRef** elements specifying several colum
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 - [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 - [FieldRef element (ContentType)](fieldref-element-contenttype.md)
-
-
-
-
-
-
-
-

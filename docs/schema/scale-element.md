@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines how a group of controls on a tab are sized.
 # Scale element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines how a group of controls on a tab are sized.
-  
+
 ```XML
 <Scale
   GroupId="Text"
@@ -43,21 +42,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Size** <br/> |Required. A string that corresponds to the value of the **Title** attribute of a [Layout](layout-element.md) element that defines the size.  <br/> |
 |**PopupSize** <br/> |Optional. A string that corresponds to the value of the **Title** attribute of a [Layout](layout-element.md) element that defines the size.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Scaling](scaling-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded 
-   
+- Maximum: unbounded
+
 ## See also
 
 - [Server Ribbon XML](https://msdn.microsoft.com/library/5eeb45be-4af7-4a38-8ba0-3aafc62aed4b%28Office.15%29.aspx)
-

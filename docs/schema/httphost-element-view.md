@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Renders the URL to the Web application containing the current Share
 # HttpHost element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Renders the URL to the Web application containing the current SharePoint website, such as  `http://server`.
-  
+
 ```XML
 <HttpHost
   HTMLEncode = "TRUE | "FALSE"
@@ -37,26 +36,26 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 Numerous
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
 As an example, `My server is <HttpHost/>` returns the following: `My server is http://someservername.com`.
-  
-The following example constructs an opening `<A>` tag, using the **HttpHost** element to return the server path. 
-  
+
+The following example constructs an opening `<A>` tag, using the **HttpHost** element to return the server path.
+
 ```XML
 <HTML>
   <![CDATA[ <a href="  ]]>
@@ -72,4 +71,3 @@ The following example constructs an opening `<A>` tag, using the **HttpHost** el
 
 - [HTMLBase element](htmlbase-element.md)
 - [HttpVDir element (View)](httpvdir-element-view.md)
-

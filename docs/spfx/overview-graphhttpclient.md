@@ -2,7 +2,6 @@
 title: Overview of the GraphHttpClient class (preview)
 description: Use Microsoft Graph to build powerful solutions that access data from Office 365 and other Microsoft services.
 ms.date: 02/02/2018
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +14,7 @@ You can use Microsoft Graph to build powerful solutions that access data from Of
 
 ## What is the GraphHttpClient class?
 
-The **GraphHttpClient** class is included as part of the SharePoint Framework. It works in a similar way to the HttpClient that you can use to communicate with third-party APIs. The **GraphHttpClient** class automatically ensures that your request to Microsoft Graph has a valid bearer access token and the required headers. 
+The **GraphHttpClient** class is included as part of the SharePoint Framework. It works in a similar way to the HttpClient that you can use to communicate with third-party APIs. The **GraphHttpClient** class automatically ensures that your request to Microsoft Graph has a valid bearer access token and the required headers.
 
 When you issue a GET or a POST request, **GraphHttpClient** verifies that it has a valid access token, and if it doesn't, it automatically retrieves one from an internal API and stores it for subsequent requests.
 
@@ -46,12 +45,9 @@ export default class MyApplicationCustomizer
 To make a request to Microsoft Graph:
 
 1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **\@microsoft/sp-http** package.
-
-2. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
-
-3. As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration.
-
-4. Optionally, you can specify additional request headers that will be merged with the default headers set by **GraphHttpClient** (`'Accept': 'application/json'`, `'Authorization': 'Bearer [token]'` and `'Content-Type': 'application/json; charset=utf-8'`).
+1. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
+1. As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration.
+1. Optionally, you can specify additional request headers that will be merged with the default headers set by **GraphHttpClient** (`'Accept': 'application/json'`, `'Authorization': 'Bearer [token]'` and `'Content-Type': 'application/json; charset=utf-8'`).
 
 ## Considerations for using the **GraphHttpClient** class
 

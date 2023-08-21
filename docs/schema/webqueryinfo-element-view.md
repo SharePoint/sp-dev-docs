@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Used inside a TABLE tag surrounding a view to add attributes that a
 # WebQueryInfo element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used inside a **\<TABLE\>** tag surrounding a view to add attributes that assist the agents that are processing Web queries in extracting data from views. 
-  
+
+Used inside a **\<TABLE\>** tag surrounding a view to add attributes that assist the agents that are processing Web queries in extracting data from views.
+
 ```XML
 <WebQueryInfo>
 </WebQueryInfo>
@@ -32,28 +31,28 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: 1
-   
+
 ### Remarks
 
-The **WebQueryInfo** element renders an ID on the **\<TABLE\>** tag, a **Summary** attribute set to the name of the list, and a **WebQuerySourceHref** attribute in the **o:** namespace that links to the XMLDATA representation of the view. Consequently, agents that understand these attributes can import a structured data view of lists rather than being required to perform a "screenscrape" for the data. 
-  
+The **WebQueryInfo** element renders an ID on the **\<TABLE\>** tag, a **Summary** attribute set to the name of the list, and a **WebQuerySourceHref** attribute in the **o:** namespace that links to the XMLDATA representation of the view. Consequently, agents that understand these attributes can import a structured data view of lists rather than being required to perform a "screenscrape" for the data.
+
 ## Example
 
-In the following example, the **WebQueryInfo** element is used in a [ViewHeader](viewheader-element-list.md) element to provide an ID for a table that contains a view. 
-  
+In the following example, the **WebQueryInfo** element is used in a [ViewHeader](viewheader-element-list.md) element to provide an ID for a table that contains a view.
+
 ```XML
 <ViewHeader>
   <HTML>
@@ -68,7 +67,7 @@ In the following example, the **WebQueryInfo** element is used in a [ViewHeader]
     <HTML>
       <![CDATA[ <TH class="ms-vh">  ]]>
     </HTML>
-    <Field /> 
+    <Field />
     <HTML>
       <![CDATA[ </TH>  ]]>
     </HTML>

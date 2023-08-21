@@ -1,7 +1,7 @@
 ---
 title: Unsupported Features in Excel Services REST API
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes the unsupported features in the first version of the Excel Services REST API as it applies to SharePoint and SharePoint 2016 on-premises.
+ms.date: 06/14/2022
 ms.assetid: 4139901f-255b-4556-b8c8-3d986a07c587
 ms.localizationpriority: medium
 ---

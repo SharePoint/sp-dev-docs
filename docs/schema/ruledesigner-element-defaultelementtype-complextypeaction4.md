@@ -1,15 +1,15 @@
 ---
 title: RuleDesigner element (defaultElementType complexType)
+description: RuleDesigner element (defaultElementType complexType) contains information that allows the rendering of a declarative sentence in the visual workflow editor.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4321a0d0-b3b9-af35-62f5-abaef02504dd
 ---
 
-# RuleDesigner element (defaultElementType complexType) 
+# RuleDesigner element (defaultElementType complexType)
 
 (Action4)
 
@@ -55,7 +55,7 @@ Contains information that allows the rendering of a declarative sentence in the 
 ```XML
     <xs:element name="RuleDesigner"
      type="ruleDesignerType">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -140,11 +140,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -1,15 +1,15 @@
 ---
 title: ActionBody element
+description: Discusses the definition, elements and attributes for ActionBody element which specifies the body of a custom action.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9996ac3-be53-440c-8810-55b91031869b
 ---
 
-# ActionBody element 
+# ActionBody element
 
 (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -31,12 +31,11 @@ Specifies the body of a custom action.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -45,10 +44,10 @@ Specifies the body of a custom action.
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="ActionBody" >
-                </xs:element>  
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -86,11 +85,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

@@ -1,10 +1,10 @@
 ---
 title: Types (SharePoint Add-in Manifest)
+description: This article lists the types in the (SharePoint Add-in Manifest) XML schema.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f747c9b3-7443-4fee-4546-41b5c7cc3751
 ---
@@ -15,7 +15,7 @@ ms.assetid: f747c9b3-7443-4fee-4546-41b5c7cc3751
 
 This topic lists the types in the **SharePoint Add-in Manifest** XML schema.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 - [AppDefinition complexType](appdefinition-complextype-sharepoint-add-in-manifest.md)
@@ -79,11 +79,3 @@ This topic lists the types in the **SharePoint Add-in Manifest** XML schema.
 - [WebTemplateDefinition complexType](webtemplatedefinition-complextype-sharepoint-add-in-manifest.md)
 
 - [WebTemplateIdDefinition simpleType](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md)
-
-
-
-
-
-
-
-

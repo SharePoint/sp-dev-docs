@@ -1,7 +1,7 @@
 ---
 title: SharePoint workflow fundamentals
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Provides an overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.
+ms.date: 06/13/2022
 ms.assetid: 1e622296-f78b-4e3a-a1e7-8effa24111a8
 ms.localizationpriority: high
 ---
@@ -11,6 +11,7 @@ ms.localizationpriority: high
 Provides a high-level overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.
 
 > [!NOTE]
+> SharePoint 2013 workflow has been deprecated since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://support.microsoft.com/office/4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 ## Overview of workflows in SharePoint

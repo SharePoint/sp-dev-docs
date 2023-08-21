@@ -1,15 +1,15 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 02/10/2022
+ms.date: 09/08/2022
 ms.localizationpriority: high
 ---
 
 # Use column formatting to customize SharePoint
 
-You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed. 
+You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed.
 
-For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this: 
+For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this:
 
 ![SharePoint list with four unformatted columns](../images/sp-columnformatting-none.png)
 
@@ -22,9 +22,9 @@ A list with the appearance of the **Effort**, **Assigned To**, and **Status** fi
 
 ## How is column formatting different than the Field Customizer?
 
-Both column formatting and [SharePoint Framework Field Customizer](../spfx/extensions/get-started/building-simple-field-customizer.md) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed. 
+Both column formatting and [SharePoint Framework Field Customizer](../spfx/extensions/get-started/building-simple-field-customizer.md) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed.
 
-Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
+Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes.
 
 The following table compares column formatting and the Field Customizer.
 
@@ -51,7 +51,7 @@ To preview the formatting, select **Preview**. To commit your changes, select **
 The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
 > [!NOTE]
-> All examples in this document refer to the JSON schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
+> All examples in this document refer to the JSON schema used in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update. To format columns in SharePoint 2019 or SharePoint Server Subscription Edition before the Version 22H2 feature update, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
 
 
 ## Display field values (basic)
@@ -193,7 +193,7 @@ This example colors the current field red when the value inside an item's DueDat
 
 ### Formatting items based on arbitrary dates (advanced)
 
-To compare the value of a date/time field against a date that's not `@now`, follow the pattern in the following example. The following example colors the current field red if the due date was <= tomorrow. This is accomplished using date math. You can add milliseconds to any date and the result will be a new date. For example, to add a day to a date, you'd add (24\*60\*60\*1000 = 86,400,000). 
+To compare the value of a date/time field against a date that's not `@now`, follow the pattern in the following example. The following example colors the current field red if the due date was <= tomorrow. This is accomplished using date math. You can add milliseconds to any date and the result will be a new date. For example, to add a day to a date, you'd add (24\*60\*60\*1000 = 86,400,000).
 
 This example demonstrates an alternate syntax to express a conditional expression, using the ternary (`?`) operator inside an abstract syntax tree.
 
@@ -324,7 +324,7 @@ The following image shows action buttons added to a field.
 You can use column formatting to render quick action links next to fields. The following example, intended for a person field, renders two elements inside the parent `<div />` element:
 
 - A `<span />` element that contains the person’s display name.
-- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fluent UI](https://developer.microsoft.com/fluentui) classes to make it look like a clickable email icon. 
+- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fluent UI](https://developer.microsoft.com/fluentui) classes to make it look like a clickable email icon.
 
 ```JSON
 {
@@ -505,7 +505,8 @@ This example uses the `length` operator to detect the number of members of the f
     "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "a",
     "style": {
-        "display": "=if(length(@currentField) > 0, 'flex', 'none')"
+        "display": "=if(length(@currentField) > 0, 'flex', 'none')",
+        "text-decoration": "none"
     },
     "attributes": {
         "href": {
@@ -706,6 +707,7 @@ The following column types support column formatting:
 * Average Rating
 * Likes
 * Approval Status
+* Attachments
 
 The following are currently **not** supported:
 
@@ -736,11 +738,11 @@ You can use the following predefined classes for several common scenarios.
 > [!NOTE]
 > The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
 
-In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Fluent UI can be used. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/colors/products). 
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Fluent UI can be used. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/colors/products).
 
 ### Predefined icons
 
-You can use predefined icons from Fluent UI. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/icons). 
+You can use predefined icons from Fluent UI. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/icons).
 
 ## Creating custom JSON
 
@@ -750,7 +752,7 @@ Creating custom column formatting JSON from scratch is simple if user understand
 > At any point, select **Ctrl**+**Space** for property/value suggestions.
 
 > [!TIP]
-> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
 
 > [!TIP]
 > SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.

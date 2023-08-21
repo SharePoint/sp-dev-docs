@@ -1,16 +1,15 @@
 ---
 title: Introducing the PnP provisioning engine
-description: This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
-ms.date: 03/03/2021
+description: This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library.
+ms.date: 07/15/2022
 ms.localizationpriority: high
 ---
 
 # Introducing the PnP provisioning engine
 
-This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
+This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library.
 
 [!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
-<a name="thegoal"> </a>
 
 ## The goal
 
@@ -24,13 +23,11 @@ However, what if you would like to provision other artifacts like Microsoft Team
 
 ## Two types of Templates
 
-There are basically two types of templates that the engine understands: **Site Templates** (also called Provisioning Templates) and the extended version: **Tenant Templates**. 
+There are basically two types of templates that the engine understands: **Site Templates** (also called Provisioning Templates) and the extended version: **Tenant Templates**.
 
-When the engine was introduced the only template type available was the Site Template. After a few years we introduced the Tenant Template which distinguishes itself from its ability to provision artifacts beyond the scope of SharePoint sites. A tenant template for instance allows you to provision a Microsoft Teams team, Azure AD users, Site Designs and Site Scripts, tenant scoped themes, etc. Unlike Site Templates, you can create a so-called 'Sequence' in a tenant template and create site collections. 
+When the engine was introduced the only template type available was the Site Template. After a few years we introduced the Tenant Template which distinguishes itself from its ability to provision artifacts beyond the scope of SharePoint sites. A tenant template for instance allows you to provision a Microsoft Teams team, Azure AD users, Site Designs and Site Scripts, tenant scoped themes, etc. Unlike Site Templates, you can create a so-called 'Sequence' in a tenant template and create site collections.
 
 To keep it short: a tenant template is a site template which can contain artifacts to provision to tenant level.
-
-<a name="creatingtemplate"> </a>
 
 ## Create a site template
 
@@ -44,18 +41,18 @@ Besides the custom homepage you created a few events in the out of the box Event
 
 ![Custom events in the events list](./media/Introducing-the-PnP-Provisioning-Engine/Figure-2-SiteTemplate02.png)
 
-To export that site as a provisioning template, you can either use PowerShell or CSOM code, with some extension methods, which are provided by the OfficeDev PnP Core Library. 
+To export that site as a provisioning template, you can either use PowerShell or CSOM code, with some extension methods, which are provided by the OfficeDev PnP Core Library.
 
 ### Using PowerShell cmdlets
 
-> [!NOTE] 
+> [!NOTE]
 > This article focuses on using PnP PowerShell to work with the Provisioning Engine. If you prefer using C#, please refer to [PnP Provisioning Engine and the Core Library](./pnp-provisioning-engine-and-the-core-library.md).
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets), and install the SharePoint PnP PowerShell module. 
+To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets), and install the SharePoint PnP PowerShell module.
 
-After you have connected your PowerShell environment to SharePoint Online by using the **Connect-PnPOnline** cmdlet, you can use the following PowerShell cmdlet: 
+After you have connected your PowerShell environment to SharePoint Online by using the **Connect-PnPOnline** cmdlet, you can use the following PowerShell cmdlet:
 
 ```powershell
 Get-PnPSiteTemplate -Out "PnP-Provisioning-File.xml"
@@ -65,10 +62,10 @@ The `–Out` argument instructs the cmdlet about where to save the provisioning 
 
 The result of extracting and saving the template is, depending of the extension you used in the cmdlet (we support .xml and [.pnp](the-pnp-office-open-xml-file-format.md) currently), a file. If you selected to save the template as an XML file it will look like something you see below (notice, the template is not complete and is just an example of the XML structure):
 
-> [!NOTE] 
+> [!NOTE]
 > There are many configuration options to set to extract a template. For an explanation of this refer to [Configuring the PnP Provisioning Engine](./configuring-the-pnp-provisioning-engine.md).
 
-```xml    
+```xml
    <?xml version="1.0"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2019/09/ProvisioningSchema">
   <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.14.1910.1, Culture=neutral, PublicKeyToken=null" />
@@ -129,7 +126,7 @@ The result of extracting and saving the template is, depending of the extension 
                 </pnp:CanvasControl>
                 <pnp:CanvasControl WebPartType="Button" JsonControlData="{&quot;id&quot;: &quot;0f087d7f-520e-42b7-89c0-496aaf979d58&quot;, &quot;instanceId&quot;: &quot;deb39e2b-11a0-4141-8ac1-1078fe7cc392&quot;, &quot;title&quot;: &quot;..." ControlId="0f087d7f-520e-42b7-89c0-496aaf979d58" Order="3" Column="1" />
                 <pnp:CanvasControl WebPartType="Image" JsonControlData="{&quot;id&quot;: &quot;d1d91016-032f-456d-98a4-721247c305e8&quot;, &quot;instanceId&quot;: &quot;e0b59b5b-8a5a-406e-9deb-6e6f9de4bd3b&quot;, &quot;title&quot;: &quot;Image&quot;, ..." ControlId="d1d91016-032f-456d-98a4-721247c305e8" Order="1" Column="2" />
-               </pnp:Controls>            
+               </pnp:Controls>
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
@@ -139,27 +136,22 @@ The result of extracting and saving the template is, depending of the extension 
     </pnp:ProvisioningTemplate>
   </pnp:Templates>
 </pnp:Provisioning>
-```    
+```
 As you can see, the XML elements are fairly self-explanatory. The XML schema used in the example references the 201909 version of the PnP provisioning schema, which has been defined together with the SharePoint PnP Community, and which can be found on GitHub at [PnP-Provisioning-Schema](https://github.com/SharePoint/Pnp-Provisioning-Schema/). Within the same repository you can also find a markdown (MD) auto-generated document which describes the main elements, types, and attributes available to manually define an XML provisioning template.
 
 It is up to you to define the **ProvisioningTemplate** manually, using a model site, or by composing an XML document that validates against the PnP provisioning XSD schema, or by simply writing .NET code and constructing the hierarchy of objects. You can even do a mix of these approaches: you can design the provisioning template by using a model site, save it as an XML file, and do some in-memory customizations, while handling the **ProvisioningTemplate** instance in your code.
 
-<a name="applyingtemplate"> </a>
-
 ## Apply a provisioning template
 
-Now that you have seen what a provisioning template is you are ready to apply it to a target site. 
+Now that you have seen what a provisioning template is you are ready to apply it to a target site.
 
 Let's say that you have created another new Communication site collection in SharePoint Online as shown in the following figure.
- 
-![The SharePoint Online page for creating a new site collection](./media/Introducing-the-PnP-Provisioning-Engine/Figure-6-Target-Site-Creation.png)
 
-<br/>
+![The SharePoint Online page for creating a new site collection](./media/Introducing-the-PnP-Provisioning-Engine/Figure-6-Target-Site-Creation.png)
 
 By default, the site will look like the following figure, which is the default layout of a Communication site.
 
 ![The home page of a fresh new target](./media/Introducing-the-PnP-Provisioning-Engine/Figure-7-Target-Site-Created.png)
-
 
 You can now apply a custom site template by using a PnP PowerShell cmdlet
 
@@ -170,7 +162,7 @@ Invoke-PnPSiteTemplate -Path "PnP-Provisioning-File.xml"
 
 The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the ```Connect-PnPOnline``` cmdlet).
 
-> [!NOTE] 
+> [!NOTE]
 > The rule of thumb is that when you apply a site template the site you target needs to be created and working. If you want to create the site on the fly through a template you will have to create a tenant template. See below for more information about tenant templates.
 
 ## Apply a tenant template
@@ -196,7 +188,7 @@ A sequence is a configuration of one or more site collections to be created. Che
 ```
 As you can see, the sequence is defined at the same level as the ```<pnp:Templates />``` element. A sequence can contain one or more sites and can also define subsites. For each site you can refer to one or more templates to apply after the site has been created. You refer to a template by its ID and the templates are located in this example in the same XML file.
 
-To apply a tenant template to a tenant you enter: 
+To apply a tenant template to a tenant you enter:
 
 ```powershell
 Connect-PnPOnline https://yourtenant.sharepoint.com
@@ -205,24 +197,20 @@ Invoke-PnPTenantTemplate -Path "yourtenanttemplate.xml"
 
 For more information about tenant templates, refer to [PnP Provisioning Tenant Templates](pnp-provisioning-tenant-templates.md)
 
-<a name="advancedtopics"> </a>
-
 ## Advanced topics
 
 This is just an introductory article; it is important to understand that when using the PnP provisioning engine, you can also provision taxonomies, and use variables and tokens that can be replaced at runtime, based on what you are provisioning (such as list IDs, parameters, or term IDs). You can invoke the provisioning engine from timer job services, provider-hosted add-ins, external sites, and more. Lastly, you can use the PnP provisioning engine to move artifacts from test/staging environments to production environments.
 
 Make sure to check out the other [articles](pnp-remote-provisioning.md) for more advanced topics.
 
-<a name="wrapup"> </a>
-
 ## Requirements and wrap-up
 
-To play with the PnP provisioning engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, because the engine leverages some [capabilities](https://blogs.msdn.com/b/vesku/archive/2015/04/10/new-sharepoint-csom-version-released-for-office-365.aspx) of the client-side object model which are not available in previous versions of the product. If you target SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
+To play with the PnP provisioning engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, because the engine leverages some [capabilities](https://devblogs.microsoft.com/microsoft365dev/new-sharepoint-csom-version-released-for-office-365-january-2018/) of the client-side object model which are not available in previous versions of the product. If you target SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
 
 Play with the PnP provisioning engine, give us feedback, and enjoy the future of the SharePoint Add-in model and remote provisioning!
 
 ## See also
 
 - [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP/)
-- [SharePoint Developer Group at Microsoft Tech Community](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) 
+- [SharePoint Developer Group at Microsoft Tech Community](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev)
 - [PnP remote provisioning](pnp-remote-provisioning.md)

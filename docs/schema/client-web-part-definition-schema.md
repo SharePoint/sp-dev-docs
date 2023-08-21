@@ -1,10 +1,10 @@
 ---
 title: Client Web Part Definition schema
+description: Describes the Client web part, which is the backing structure of app parts. App parts are defined in XML documents and deployed as part of a Feature.
 manager: soliver
-ms.date: 12/7/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8924f546-44db-4308-90f9-8b5d9b2ffa4f
 ---
@@ -17,7 +17,7 @@ The Client web part is the backing structure of app parts. App parts are defined
 
 ## XML schema definition
 
-An XML document that defines Client web parts must validate with the schema defined in the file wss.xsd. This file is located on the following path: 
+An XML document that defines Client web parts must validate with the schema defined in the file wss.xsd. This file is located on the following path:
 
 `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`
 
@@ -31,12 +31,12 @@ An XML document that defines Client web parts must validate with the schema defi
 
 The [ClientWebPart](customactiongroup-element-custom-action.md) element contains the core definition for a Client web part. A Client web part is a UI extensibility mechanism that lets apps show information in the host web. You can render the HTML contents of a page in an **IFrame** embedded in a SharePoint page.
 
-You define the page to be rendered inside the **IFrame** using the Src attribute of the **Content** element. The target page must be allowed to be displayed in a frame, otherwise the SharePoint page displays the following error: **This content cannot be displayed in a frame**. 
+You define the page to be rendered inside the **IFrame** using the Src attribute of the **Content** element. The target page must be allowed to be displayed in a frame, otherwise the SharePoint page displays the following error: **This content cannot be displayed in a frame**.
 
 Some pages contain an **X-FRAME-OPTIONS** http header as a mechanism to prevent
 [ClickJacking](https://blogs.msdn.microsoft.com/ieinternals/2010/03/30/combating-clickjacking-with-x-frame-options/) attacks. You must carefully evaluate if the page supports a scenario that could be targeted by a ClickJacking attack, such as a bank transaction page or a purchase page in an online store. After assessing the risk of allowing your target page to be framed by external pages, you can remove the **X-FRAME-OPTIONS** http header to display your page in a Client web part.
 
-By default, SharePoint pages include an **X-FRAME-OPTIONS** http header. If you are using a SharePoint page as the target for your Client web part, you can remove the **X-FRAME-OPTIONS** header by adding the AllowFraming web part. 
+By default, SharePoint pages include an **X-FRAME-OPTIONS** http header. If you are using a SharePoint page as the target for your Client web part, you can remove the **X-FRAME-OPTIONS** header by adding the AllowFraming web part.
 
 The following code snippet shows you how to add an AllowFraming web part to your SharePoint page:
 
@@ -73,10 +73,10 @@ The following example shows an XML file that declares a Client web part. For an 
             Title="Basic app part"
             Name="Basic app part"
             Description="This is a basic app part with custom properties." >
-            
-            <!--  The properties are passed through the query string 
+
+            <!--  The properties are passed through the query string
                     using the following notation: _propertyName_
-                    in the Src property of the Content element  
+                    in the Src property of the Content element
               -->
             <Content
                 Src="~remoteAppUrl/AppPartContent.aspx?strProp=_strProp_&amp;intProp=_intProp_&amp;boolProp=_boolProp_&amp;enumProp=_enumProp_&amp;editmode=_editMode_"
@@ -128,12 +128,3 @@ The following example shows an XML file that declares a Client web part. For an 
 
 - [CustomAction](https://msdn.microsoft.com/library/office/ms458635.aspx)
 - [UX design for SharePoint Add-ins](../sp-add-ins/ux-design-for-sharepoint-add-ins.md)
-
-
-
-
-
-
-
-
-

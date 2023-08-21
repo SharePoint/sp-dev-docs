@@ -1,15 +1,15 @@
 ---
 title: AppPrincipalDefinition complexType
+description: Discusses the definition, elements and attributes for AppPrincipalDefinition complexType which applies to SharePoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 321966b6-067a-5827-5398-a872e9004bb5
 ---
 
-# AppPrincipalDefinition complexType 
+# AppPrincipalDefinition complexType
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 321966b6-067a-5827-5398-a872e9004bb5
 
 The add-in principal definition.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |
@@ -39,7 +39,7 @@ The add-in principal definition.
           use="required"
           />
         </xs:element>
-        
+
         <xs:element name="Internal" >
           <xs:attribute name="AllowedRemoteHostUrl"
           type="ManifestUri"
@@ -50,9 +50,9 @@ The add-in principal definition.
           use="optional"
           />
         </xs:element>
-        
+
         <xs:element name="AutoDeployedWebApplication" >
-    
+
       <xs:complexType>
         <xs:sequence>
           <xs:element name="DebugInfo"  type="AutoDeployedWebApplicationDebugInfoDefinition"
@@ -61,7 +61,7 @@ The add-in principal definition.
           </xs:element>
         </xs:sequence>
       </xs:complexType>
-          
+
         </xs:element>
       </xs:choice>
     </xs:complexType>
@@ -105,15 +105,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+
 
 ### Attributes
 
 None.
-
-
-
-
-
-
-

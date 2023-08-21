@@ -1,12 +1,12 @@
 ---
 title: Modifications Element (WorkflowInfo)
+description: Describes the Modifications element (WorkflowInfo) and provides a definition and the elements and attributes in SharePoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 18c6b7d8-f447-4d12-90dd-772929114dc6
 ---
@@ -71,10 +71,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-

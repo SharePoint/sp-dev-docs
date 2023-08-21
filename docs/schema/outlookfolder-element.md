@@ -1,10 +1,10 @@
 ---
 title: OutlookFolder Element
+description: OutlookFolder Element describes the Microsoft Outlook 2010 folder that contains the external data.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c4b78ba3-f271-4d7a-9e7a-ed3ec809ae65
 ---
@@ -21,7 +21,7 @@ Describes the Microsoft Outlook 2010 folder that contains the external data.
 
 ```XML
 <OutlookFolder FolderDisplayName = "String" NativeType = "NativeFolderType"
- SubscriptionName = "String" FolderName = "String" FolderGroup = "String" CanCreate = 
+ SubscriptionName = "String" FolderName = "String" FolderGroup = "String" CanCreate =
 "Boolean" CanUpdate = "Boolean" CanDelete = "Boolean" Name = "String"
  Description  = "String"> </OutlookFolder>
 ```
@@ -170,11 +170,3 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 05/07/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -126,7 +126,7 @@ The following formula checks if an email of person column `[$Owner]` is equal to
 
 ##### Boolean (Yes/No) column
 
-The following formula checks if the Yes/No column `[$Promoted]` is equal to a Yes. To do so, it checks for the value _true_ which maps to _Yes_ for users. 
+The following formula checks if the Yes/No column `[$Promoted]` is equal to a Yes. To do so, it checks for the value _true_ which maps to _Yes_ for users.
 
 ```
 =if([$Promoted] == true, 'true', 'false')

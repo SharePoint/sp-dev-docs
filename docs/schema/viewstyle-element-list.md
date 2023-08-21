@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Contains the definition of a view style for a list.
 # ViewStyle element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the definition of a view style for a list.
-  
+
 ```XML
 <ViewStyle
   BaseType = "Integer" | "Text"
@@ -45,7 +44,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ID** <br/> |Required **Counter**. Specifies the ID that uniquely identifies the view style.  <br/> |
 |**Preview** <br/> |Optional **Text**. Specifies the site-relative path to a preview image for the view style. For example,  `_layouts/images/prvpicl.gif`.  <br/> |
 |**Type** <br/> |Optional **Integer**. Specifies the list definition type.  <br/> |
-   
+
 ### Child elements
 
 - [GroupByFooter](groupbyfooter-element-list.md)
@@ -60,21 +59,21 @@ The following sections describe attributes, child elements, and parent elements.
 - [ViewFields](viewfields-element-list.md)
 - [ViewFooter](viewfooter-element-list.md)
 - [ViewHeader](viewheader-element-list.md)
-   
+
 ### Parent elements
 
 - [View element (List)](view-element-list.md)
 - [ViewStyles](viewstyles-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 (Unbounded within [ViewStyles](viewstyles-element.md))  
-   
+- Maximum: 1 (Unbounded within [ViewStyles](viewstyles-element.md))
+
 ## Example
 
 The following example outlines the sections contained within the Boxed view style of a ViewStyles.xml file.
-  
+
 ```XML
 <ViewStyle ID="13" DisplayName="Boxed" BaseType="0">
    <ViewFields />
@@ -113,4 +112,3 @@ The following example outlines the sections contained within the Boxed view styl
 ## See also
 
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

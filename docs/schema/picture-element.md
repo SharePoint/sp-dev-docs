@@ -1,10 +1,10 @@
 ---
 title: Picture Element
+description: Describes the Picture element and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3ca1d9db-6066-46e4-921a-94f0756a6fc8
 ---
@@ -88,11 +88,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

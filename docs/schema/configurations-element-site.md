@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - site definition configurations [sharepoint 2010]
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -19,9 +18,9 @@ description: Contains the configurations of lists and modules that make up a sit
 # Configurations element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the configurations of lists and modules that make up a site definition.
-  
+
 ```XML
 <Configurations>
   <Configuration>
@@ -37,28 +36,28 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Configuration](configuration-element-site.md)
-   
+
 ### Parent elements
 
 - [Project](project-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ### Remarks
 
-The **Configurations** element is used within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to specify configurations of site types that belong to a particular site definition. See the [Configuration](configuration-element-site.md) element for more information. 
-  
+The **Configurations** element is used within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to specify configurations of site types that belong to a particular site definition. See the [Configuration](configuration-element-site.md) element for more information.
+
 ## Example
 
-The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) specifies the lists and modules used in the **STS** site definition. 
-  
+The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) specifies the lists and modules used in the **STS** site definition.
+
 ```XML
 <Configurations>
   <Configuration ID="-1" Name="NewWeb" />
@@ -154,4 +153,3 @@ The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d665
 ```
 
 <br/>
-

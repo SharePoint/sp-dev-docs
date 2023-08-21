@@ -1,29 +1,28 @@
 ---
 title: "User Element (DeploymentUserGroupMap)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes User Element (DeploymentUserGroupMap) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16571086-f2bc-49f5-8dd8-d2ce064de700
-description: "Last modified: March 09, 2015"
 ---
 
 # User Element (DeploymentUserGroupMap)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Represents an instance of a deployment user (**DeploymentUser**) object included in the user group map (UserGroup.xml) file for export to the content migration package.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element 
-    name="User" 
-    type="DeploymentUser" 
-    minOccurs="0" maxOccurs="unbounded" 
+<xs:element
+    name="User"
+    type="DeploymentUser"
+    minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <Users>
@@ -44,7 +43,7 @@ USAGE
 ## Type
 
 **DeploymentUser**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -61,16 +60,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**IsSiteAdmin** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user is a Microsoft SharePoint Foundation site administrator; **true** if the user is a site administrator.  <br/> |
 |**SystemId** <br/> |xs:string  <br/> |Optional. Represents the value of the Active Directory SID, which is converted to a base64 data type by using the [ToBase64String](https://msdn.microsoft.com/library/system.convert.tobase64string(v=vs.110).aspx) method. Note that functionality provided by the **SPExport** type does not validate the data that is passed through the **SystemId** attribute.  <br/> |
 |**IsDeleted** <br/> |xs:boolean  <br/> |Optional. Specifies whether the user has been deleted; **true** if the user has been deleted.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [Users Element (DeploymentUserGroupMap)](users-element-deploymentusergroupmap.md)
-   
+
 ## See also
 
 - [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
-

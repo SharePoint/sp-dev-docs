@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.4 release notes
 description: Release notes for the SharePoint Framework v1.4 release
 ms.date: 09/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.4 release notes
@@ -13,18 +12,19 @@ ms.localizationpriority: high
 
 ## Upgrading projects from v1.3 to v1.4
 
-1. In the project's **package.json** file, identify all SPFx v1.3 packages. For each SPFx package:
-    1. Uninstall the existing v1.3 package:
+In the project's **package.json** file, identify all SPFx v1.3 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.3
-        ```
+1. Uninstall the existing v1.3 package:
 
-    1. Install the refreshed v1.4 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.3
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.4.0 --save --save-exact
-        ```
+1. Install the refreshed v1.4 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.4.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
@@ -63,7 +63,7 @@ ms.localizationpriority: high
 - Add `preloadListItemProperties` to the `preloadOptions` section of the client-side application manifest
 - Add a "tags" property to the web part manifest
 - Introduce the ability to specify a relative path to an icon in a web part or extension manifest
-- Enable the `preloadComponents` field to be used with other client-side component manifest types 
+- Enable the `preloadComponents` field to be used with other client-side component manifest types
 
 ### @microsoft/sp-webpart-base
 

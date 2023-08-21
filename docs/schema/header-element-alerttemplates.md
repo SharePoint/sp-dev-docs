@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies header information for the alert message.
 # Header element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies header information for the alert message.
-  
+
 ```XML
 <Header>
 </Header>
@@ -32,14 +31,12 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [Digest](digest-element-alerttemplates.md) 
-- [Immediate](immediate-element-alerttemplates.md) 
-   
-
+- [Digest](digest-element-alerttemplates.md)
+- [Immediate](immediate-element-alerttemplates.md)

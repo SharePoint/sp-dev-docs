@@ -1,10 +1,10 @@
 ---
 title: WorkflowInfo element (Action4)
+description: Describes the WorkflowInfo element (Action4) and provides the element's definition, usage, element information, and attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 76f59dcd-23bc-2ecf-5165-3bf662f3fc5b
 ---
@@ -67,18 +67,18 @@ The root element of the Actions schema. This element must be included in any .AC
                <xs:complexType>
                <xs:sequence>
          <xs:element name="RuleDesigner" type="ruleDesignerType">
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="ItemKeyType" type="s:string" />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Condition" minOccurs="0" maxOccurs="unbounded">
                <xs:complexType>
                <xs:all>
          <xs:element name="RuleDesigner" type="ruleDesignerType" minOccurs="1"     maxOccurs="1">
-      </xs:element>  
+      </xs:element>
          <xs:element name="Parameters" type="parametersType" minOccurs="1"     maxOccurs="1">
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Type" type="s:string" />
          <xs:attribute name="Name" type="s:string" use="required" />
@@ -90,7 +90,7 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="ClassName" type="s:string" />
          <xs:attribute name="ShapeImageUrl" type="s:string" />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="And"   type="s:string"     />
          <xs:attribute name="Or"   type="s:string"     />
@@ -98,21 +98,21 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="Else"   type="s:string"     />
          <xs:attribute name="Not"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Actions"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="Default"      type="defaultElementType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="Action"      minOccurs="0"     maxOccurs="unbounded"    >
                <xs:complexType>
                <xs:all>
          <xs:element name="Parameters"      type="parametersType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="DataSources"      type="dataSourcesType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="Modifications"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
@@ -120,34 +120,34 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="TypeId"   type="s:string"      use="required"     />
          <xs:attribute name="NameFormat"   type="s:string"      use="required"     />
          <xs:attribute name="FormURN"   type="s:string"      use="required"     />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionVariables"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionVariables"     >
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionBody"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionBody"     >
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionConditions"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionConditions"     >
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="ClassName"   type="s:string"      use="required"     />
@@ -165,12 +165,12 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="SandboxedFunction"   type="s:boolean"     />
          <xs:attribute name="ShapeImageUrl"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Sequential"   type="s:string"     />
          <xs:attribute name="Parallel"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="CompositeSteps"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -178,7 +178,7 @@ The root element of the Actions schema. This element must be included in any .AC
                <xs:complexType>
                <xs:sequence>
          <xs:element name="DataSources"      type="dataSourcesType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="ClassName"   type="s:string"      use="required"     />
@@ -187,10 +187,10 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="Order"   type="s:nonNegativeInteger"     />
          <xs:attribute name="Description"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="VariableTypes"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -201,20 +201,20 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="Default"   type="s:boolean"     />
          <xs:attribute name="ItemIdType"   type="s:boolean"     />
          <xs:attribute name="Hidden"   type="s:boolean"     />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="AssemblyRedirects"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence minOccurs="0" maxOccurs="unbounded">
          <xs:element name="AssemblyRedirect"     >
          <xs:attribute name="From"   type="s:string"      use="required"     />
          <xs:attribute name="To"   type="s:string"      use="required"     />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Coercions"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence minOccurs="0" maxOccurs="unbounded">
@@ -224,7 +224,7 @@ The root element of the Actions schema. This element must be included in any .AC
                <xs:complexType>
                <xs:all>
          <xs:element name="Parameters"      type="coercionParametersType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="Assembly"   type="s:string"     />
@@ -239,10 +239,10 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="Id"   type="s:string"      use="required"     />
          <xs:attribute name="SourceProperty"   type="s:string"      use="required"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Events"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
@@ -252,10 +252,10 @@ The root element of the Actions schema. This element must be included in any .AC
          <xs:attribute name="EventGroup"   type="s:string"      use="required"     />
          <xs:attribute name="Category"   type="s:string"      use="required"     />
          <xs:attribute name="RankDefault"   type="s:string"      use="required"     />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Flows"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
@@ -263,31 +263,31 @@ The root element of the Actions schema. This element must be included in any .AC
                <xs:complexType>
                <xs:sequence>
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="Parameters"      type="parametersType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="Category"   type="s:string"      use="required"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Blocks"      minOccurs="0"     maxOccurs="1"    >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="Block"      type="propertiesType" minOccurs="0"     maxOccurs="unbounded"    >
 
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Language"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -391,11 +391,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

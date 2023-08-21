@@ -2,12 +2,11 @@
 title: LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)
 description: Details on the LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystemInstance
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a0c37891-ef4f-58af-445c-5ff4d5ad6cef
 ---
@@ -68,54 +67,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of this external system instance.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of this external system instance.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of this external system instance. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of this external system instance. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md">LobSystemInstances Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A list of external system instances.</p></td>
-</tr>
-</tbody>
-</table>
 
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md) | A list of external system instances. |

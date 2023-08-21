@@ -1,24 +1,24 @@
 ---
 title: UpgradeActionsDefinition complexType
+description: Describes the definition, type, element, and attribute information for UpgradeActionsDefinition complexType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4910c72d-f35e-bed2-c1c3-f1067abd6493
 ---
 
-# UpgradeActionsDefinition complexType 
+# UpgradeActionsDefinition complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
@@ -27,16 +27,16 @@ ms.assetid: 4910c72d-f35e-bed2-c1c3-f1067abd6493
 ## Definition
 
 ```XML
-    <xs:complexType name="UpgradeActionsDefinition">              
+    <xs:complexType name="UpgradeActionsDefinition">
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="VersionRange"  type="VersionRangeDefinition"
          minOccurs="0"
          maxOccurs="unbounded"
         >
         </xs:element>
-        
+
         <xs: name="" >
-        </xs:>        
+        </xs:>
       </xs:choice>
         <xs:attribute name="ReceiverAssembly"
          type="AssemblyStrongName"
@@ -47,7 +47,7 @@ ms.assetid: 4910c72d-f35e-bed2-c1c3-f1067abd6493
          use="optional"
         />
     </xs:complexType>
-```          
+```
 
 ## Elements and attributes
 
@@ -119,10 +119,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 <br/>
-
-
-
-
-
-
-

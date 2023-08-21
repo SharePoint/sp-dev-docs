@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a combo box control.
 # ComboBox element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a combo box control.
-  
+
 ```XML
 <ComboBox
   AllowFreeForm="TRUE | FALSE"
@@ -91,19 +90,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
 |**Width** <br/> |Optional. The width in pixels of the text box that is part of this combo box.  <br/> |
-   
+
 ### Child elements
 
 - [Menu](menu-element.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-group.md) (Group) 
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-group.md) (Group)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
-
+- Maximum: unbounded

@@ -1,7 +1,7 @@
 ---
 title: Office Web Widgets - Experimental overview
 description: Experimental widgets that you can use in Office Add-ins, SharePoint Add-ins, and websites.
-ms.date: 12/20/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -33,7 +33,7 @@ Widgets must:
  
 You can use the widgets by installing the **Office Web Widgets - Experimental** NuGet package from Visual Studio. For more information, see [NuGet Package Manager UI](/nuget/tools/package-manager-ui). You can also browse the [NuGet gallery page](https://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
  
-Your feedback and comments helped us decide which widgets to provide. As you can see in the previous figure, the (1) People Picker and (2) Desktop List View widgets are ready for you to try. Please keep the feedback coming at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/)
+Your feedback and comments helped us decide which widgets to provide. As you can see in the previous figure, the (1) People Picker and (2) Desktop List View widgets are ready for you to try. Please keep the feedback coming at the [Office Developer Platform UserVoice site](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform).
  
 You can also see the widgets in action in the [Office Web Widgets - Experimental Demo](https://code.msdn.microsoft.com/office/SharePoint-2013-Office-Web-6d44aa9e) code sample.
  
@@ -108,7 +108,7 @@ The widget requires the SharePoint website style sheet. You can reference the Sh
  
 To see the List View widget in action, see the [Use the Desktop List View experimental widget in an add-in](https://code.msdn.microsoft.com/office/sharepoint-2013-use-the-c3edb076) code sample. Also see [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md).
 
-Widgets can help to speed up the development process and reduce the cost and time-to-market of your add-ins. Office Web Widgets - Experimental provide widgets that you can use in your non-production add-ins. Your feedback and comments are welcome at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/).
+Widgets can help to speed up the development process and reduce the cost and time-to-market of your add-ins. Office Web Widgets - Experimental provide widgets that you can use in your non-production add-ins. Your feedback and comments are welcome at the [Office Developer Platform UserVoice site](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform).
 
 ## See also
 

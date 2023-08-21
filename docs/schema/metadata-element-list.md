@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Used in list definitions (Schema.xml file) to separate list metadat
 # MetaData element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used in list definitions ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data. 
-  
+
+Used in list definitions ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data.
+
 ```XML
 <MetaData>
 </MetaData>
@@ -32,7 +31,7 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [ContentTypes](contenttypes-element-list.md)
@@ -44,20 +43,20 @@ None
 - [Toolbar](toolbar-element-list.md)
 - [Validation](validation-element-list.md)
 - [Views](views-element-list.md)
-   
+
 ### Parent elements
 
 - [List](list-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
-The following sample illustrates the skeletal structure of a list with **MetaData** and [Data](data-element-site.md) elements. 
-  
+The following sample illustrates the skeletal structure of a list with **MetaData** and [Data](data-element-site.md) elements.
+
 ```XML
 <List Name="Announcements" Title="My Announcements">
   <MetaData>
@@ -83,4 +82,3 @@ The following sample illustrates the skeletal structure of a list with **MetaDat
 ## See also
 
 - [Data](data-element-site.md)
-

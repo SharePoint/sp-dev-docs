@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies assembly information for an alert notification handler.
 # NotificationHandlerAssembly element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies assembly information for an alert notification handler.
-  
+
 ```XML
 <NotificationHandlerAssembly>
 </NotificationHandlerAssembly>
@@ -32,15 +31,15 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Properties](properties-element-alerttemplates.md)
-   
+
 ## Example
 
 ```XML
@@ -57,4 +56,3 @@ None
 ## See also
 
 - [UpdateHandlerAssembly element (AlertTemplates)](updatehandlerassembly-element-alerttemplates.md)
-

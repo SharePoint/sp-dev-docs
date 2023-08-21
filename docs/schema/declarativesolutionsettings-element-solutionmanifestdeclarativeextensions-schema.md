@@ -1,15 +1,15 @@
 ---
 title: DeclarativeSolutionSettings Element
+description: The SolutionSettings element is used to define the settings for the declarative solution, such as the ID, display name, description, and so on.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 55db90e4-b32d-1e97-5909-7afa7152276f
 ---
 
-# DeclarativeSolutionSettings Element 
+# DeclarativeSolutionSettings Element
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -17,7 +17,7 @@ ms.assetid: 55db90e4-b32d-1e97-5909-7afa7152276f
 
 The **SolutionSettings** element is used to define the settings for the declarative solution, such as the ID, display name, description, and so on.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -88,11 +88,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

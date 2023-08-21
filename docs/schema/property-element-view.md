@@ -1,32 +1,31 @@
 ---
 title: "Property element (View)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: c01137cb-20ca-4574-b843-31d046388897
-description: Returns the property from the context of the current ForEach loop. When a view or field is selected, the Property element can be used to retrieve a specific attribute value from it. 
+description: Returns the property from the context of the current ForEach loop. When a view or field is selected, the Property element can be used to retrieve a specific attribute value from it.
 ---
 
 # Property element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns the property from the context of the current [ForEach](foreach-element-view.md) loop. When a view or field is selected, the **Property** element can be used to retrieve a specific attribute value from it. 
-  
+
+Returns the property from the context of the current [ForEach](foreach-element-view.md) loop. When a view or field is selected, the **Property** element can be used to retrieve a specific attribute value from it.
+
 ```XML
 <Property
   AutoHyperLink = "TRUE" | "FALSE"
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
   Default = "Text"
-..ExpandXML = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
   Name = "Text"
   OuterLookupField = "TRUE" | "FALSE"
@@ -43,44 +42,44 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
+|Attribute|Description|
 |:-----|:-----|
-|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`).  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.  <br/> |
-|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).  <br/> |
-|**Default** <br/> |Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (`""`).  <br/> |
-|**ExpandXML** <br/> |Optional **Boolean**. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.  <br/> |
-|**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
-|**Name** <br/> |Optional **Text**. Specifies the name of the property.  <br/> |
-|**OuterLookupField** <br/> |Optional **Text**. Used in field definitions  <br/> |
-|**Select** <br/> |Required **Text**. Specifies the name of the property to select.  <br/> |
-|**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
-|**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+|**AutoHyperLink**  |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`).   |
+|**AutoHyperLinkNoEncoding**  |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.   |
+|**AutoNewLine**  |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).   |
+|**Default**  |Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (`""`).   |
+|**ExpandXML**  |Optional **Boolean**. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.   |
+|**HTMLEncode**  |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.   |
+|**Name**  |Optional **Text**. Specifies the name of the property.   |
+|**OuterLookupField**  |Optional **Text**. Used in field definitions   |
+|**Select**  |Required **Text**. Specifies the name of the property to select.   |
+|**StripWS**  |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.   |
+|**URLEncode**  |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).   |
+|**URLEncodeAsURL**  |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.   |
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-The line `<Property Select="."/>` returns the body of the element in the schema that is being enumerated. For example, within a **ForEach** statement such as `<ForEach Select="CHOICES/CHOICE">` specifying  `<Property Select="."/>` would return the text of one of the conditionals. 
-  
-If a property cannot be found, a subelement of the current element in the schema enumeration is evaluated whose name is equal to the text specified by **Select**. For example, if a **Field** element has no property called **Default**, `<Property Select="Default"/>` will also search for a subelement called **Default** and render its body text if found. 
-  
+The line `<Property Select="."/>` returns the body of the element in the schema that is being enumerated. For example, within a **ForEach** statement such as `<ForEach Select="CHOICES/CHOICE">` specifying  `<Property Select="."/>` would return the text of one of the conditionals.
+
+If a property cannot be found, a subelement of the current element in the schema enumeration is evaluated whose name is equal to the text specified by **Select**. For example, if a **Field** element has no property called **Default**, `<Property Select="Default"/>` will also search for a subelement called **Default** and render its body text if found.
+
 ## Example
 
-The following line of code returns the **Name** property from the current field or view. 
-  
+The following line of code returns the **Name** property from the current field or view.
+
 ```XML
 <Property Select="Name"/>
 ```
@@ -89,4 +88,3 @@ The following line of code returns the **Name** property from the current field 
 
 - [ListProperty element (View)](listproperty-element-view.md)
 - [ProjectProperty element (View)](projectproperty-element-view.md)
-

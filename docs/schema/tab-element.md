@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Represents a tab control.
 # Tab element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Represents a tab control.
-  
+
 ```XML
 <Tab
   Command="Text"
@@ -45,23 +44,22 @@ The following sections describe attributes, child elements, and parent elements.
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.CustomTabExample".  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among other tab controls.  <br/> |
 |**Title** <br/> |Optional. The title to display on the tab.  <br/> |
-   
+
 ### Child elements
 
-- [Scaling](scaling-element.md) 
-- [Groups](groups-element.md) 
-   
+- [Scaling](scaling-element.md)
+- [Groups](groups-element.md)
+
 ### Parent elements
 
-- [ContextualGroup](contextualgroup-element.md) 
-- [Tabs](tabs-element.md) 
-   
+- [ContextualGroup](contextualgroup-element.md)
+- [Tabs](tabs-element.md)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## See also
 
 - [Walkthrough: Adding a Tab to the Server Ribbon](https://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
-

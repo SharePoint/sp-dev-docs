@@ -2,7 +2,6 @@
 title: Workflow initiation and configuration properties
 description: See an overview of the initiation and association properties that SharePoint sets on workflows.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 7386bbf9-3ed6-4732-bcdb-b27baed7397e
 ms.localizationpriority: medium
 ---

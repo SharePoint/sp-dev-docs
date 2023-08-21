@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies row footer information for the alert message.
 # RowFooter element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies row footer information for the alert message.
-  
+
 ```XML
 <RowFooter>
 </RowFooter>
@@ -32,13 +31,11 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Digest](digest-element-alerttemplates.md)
-   
-

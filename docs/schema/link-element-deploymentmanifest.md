@@ -1,28 +1,27 @@
 ---
 title: "Link Element (DeploymentManifest)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the Link element (DeploymentManifest) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ae7f8996-6eea-4d95-9388-e599aa92d5c1
-description: "Last modified: March 09, 2015"
 ---
 
 # Link Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint Foundation link ([SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a SharePoint Foundation link ([SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)) object.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="Link" 
-        type="SPLink" 
-        minOccurs="0" maxOccurs="unbounded" 
+<xs:element name="Link"
+        type="SPLink"
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <Links>
@@ -46,7 +45,7 @@ USAGE
 ## Type
 
 [Microsoft.SharePoint.SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -66,17 +65,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ServerRel** <br/> |xs:boolean  <br/> |Optional. Specifies whether the link is a server-relative URL; **true** if the link is server-relative, otherwise **false**.  <br/> |
 |**Level** <br/> |xs:unsignedByte  <br/> |Optional.  <br/> |
 |**Search** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [Links Element (DeploymentManifest - SPFile)](links-element-deploymentmanifestspfile.md)
-   
+
 ## See also
 
 - [SPLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLink.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

@@ -1,10 +1,10 @@
 ---
 title: AppPartConfig element (AppPartConfigDefinition)
+description: Outlines information, a definition, and elements and attributes for the AppPartConfig element in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 95395db7-c2c2-a74a-3e56-7555adc768b7
 ---
@@ -15,16 +15,15 @@ ms.assetid: 95395db7-c2c2-a74a-3e56-7555adc768b7
 
 The top level node of an app part configuration file.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
+**Element type**: AppPartConfigDefinition
 
-|   |   |
-|---|---|
-| **Element type**  | AppPartConfigDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |
-| **Schema file**  | apppartconfig.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration`
+
+**Schema file**: apppartconfig.xsd
 
 ## Definition
 
@@ -71,10 +70,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: Design SharePoint Add-ins
 description: An overview of the design and architecture options available in SharePoint Add-ins, and how to make the right decisions to ease your add-in's development.
-ms.date: 09/24/2018
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -59,7 +59,7 @@ Have a solid design for your add-in? Get ready to build your add-in and publish 
 <a name="SP15Design_AddRes"> </a>
 
 -  [SharePoint Add-ins sample pack](https://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
--  [Reimagine SharePoint development](https://msdn.microsoft.com/office/apps/dn133840)
+-  [Reimagine SharePoint development](https://www.microsoft.com/download/details.aspx?id=39047)
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 -  [Blog for add-ins](https://developer.microsoft.com/office/blogs/technology/add-ins/)

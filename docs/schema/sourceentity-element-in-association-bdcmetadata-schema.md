@@ -1,17 +1,17 @@
 ---
 title: SourceEntity Element in Association
+description: SourceEntity Element in Association specifies a source external content type of an Association.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.SourceEntity
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 19fb5f38-4e85-7fb0-2562-281b9a9ffbef
 ---
 
-# SourceEntity Element in Association 
+# SourceEntity Element in Association
 
 (BDCMetadata Schema)
 
@@ -66,29 +66,6 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **Association** that contains this element.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) | The **Association** that contains this element. |

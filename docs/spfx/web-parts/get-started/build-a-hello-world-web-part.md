@@ -1,8 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 02/10/2022
-ms.prod: sharepoint
+ms.date: 02/20/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -19,9 +18,9 @@ Client-side web parts support:
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/_O2Re5uRLoo]
+> [!Video https://www.youtube.com/embed/6WTtjXP5yW4]
 
 ## Create a new web part project
 
@@ -43,6 +42,18 @@ At this point, Yeoman creates the project scaffolding (folders & files) and inst
 
 When the project scaffolding and dependency install process are complete, Yeoman will display a message similar to the following indicating it was successful:
 
+```console
+_=+#####!
+###########|       .-----------------------------------.
+###/    (##|(@)    |          Congratulations!         |
+###  ######|   \   |   Solution webpart-1 is created.  |
+###/   /###|   (@) |  Run gulp serve to play with it!  |
+#######  ##|   /   '-----------------------------------'
+###     /##|(@)
+###########|
+**=+####!
+```
+
 > [!IMPORTANT]
 > NPM may display warnings and error messages during the installation of dependencies while it runs the `npm install` command. You can safely ignore these log warnings & error messages.
 >
@@ -55,7 +66,6 @@ For information about troubleshooting any errors, see [Known issues](../../known
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP).

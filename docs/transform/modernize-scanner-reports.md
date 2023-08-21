@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports
 description: Explains the output created by the modernization scanner
-ms.date: 02/04/2021
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -9,6 +9,9 @@ ms.localizationpriority: high
 # SharePoint Modernization scanner reports
 
 The output of a SharePoint Modernization Scanner run is a series of reports (CSV files and Excel dashboards). Using these outputs you can better understand what classic usage there is in your tenant, assess whether it's still relevant for you and get informed on potential remediation's needed before you can modernize. You would typically use the Microsoft Excel based dashboards to inspect the data and build up an understanding of the scan results. If you later on want to modernize sites, lists, etc you can use the CSV files as input for (PowerShell based) automation.
+
+> [!Note]
+> Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
 
 ## Overview of the scanner output
 
@@ -31,7 +34,7 @@ After the run you'll find a new sub folder (e.g. 636530041937506713) which conta
 
 Report | Include in following modes | Content
 ---------|----------|----------
-**Microsoft 365 group Connection Readiness.xlsx** | All modes | The report that summarizes the data you need to know to help with assessing the readiness for "Microsoft 365 group connection" also called "Groupify". Checkout [Analyze and use the scanner data](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-scanner) to learn more on how to use the scanner results.
+**Microsoft 365 group Connection Readiness.xlsx** | All modes | The report that summarizes the data you need to know to help with assessing the readiness for "Microsoft 365 group connection" also called "Groupify". Checkout [Analyze and use the scanner data](/sharepoint/dev/transform/modernize-connect-to-office365-group-scanner) to learn more on how to use the scanner results.
 **office 365 List Readiness.xlsx** | Full, ListOnly | An Excel report using PowerQuery and PowerPivot to make it easier for to analyze the lists that will not render in modern.
 **Office 365 Page Transformation Readiness.xlsx** | Full, PageOnly| The report that summarizes the data you need to know to help with assessing the readiness for "Page Transformation" (so transforming from classic pages into modern pages)
 **Office 365 Publishing Portal Transformation Readiness.xlsx** | Full, PublishingOnly, PublishingWithPagesOnly | The report that summarizes the data you need to understand for transforming your classic publishing portals into modern publishing portals

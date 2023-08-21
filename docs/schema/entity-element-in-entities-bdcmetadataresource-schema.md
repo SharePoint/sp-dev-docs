@@ -2,10 +2,9 @@
 title: Entity Element in Entities (BDCMetadataResource Schema)
 description: Details on the Entity Element in Entities (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b791a3ca-84aa-d4a6-ef8d-43fd40c588fd
 ---
@@ -34,39 +33,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadataresource-schema.md">Methods Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadataresource-schema.md">Actions Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md) |
+| [Identifiers Element in Entity (BDCMetadataResource Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md) |
+| [Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md) |
+| [AssociationGroups Element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md) |
+| [Actions Element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
@@ -81,15 +56,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadataresource-schema.md">Entities Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="entities-element-in-lobsystem-bdcmetadataresource-schema.md">Entities Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

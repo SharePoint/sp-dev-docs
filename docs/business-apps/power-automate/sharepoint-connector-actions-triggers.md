@@ -1,8 +1,9 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 06/10/2021
-search.app: 
+ms.date: 06/22/2023
+ms.service: power-automate
+search.app:
   - Flow
 search.appverid: met150
 ---
@@ -25,7 +26,7 @@ Triggers the flow when you create an item, and each time you modify it in a Shar
 
 ### When an item or a file is modified
 
-Triggers the flow when you modify an item or a file in a SharePoint list or a document library. 
+Triggers the flow when you modify an item or a file in a SharePoint list or a document library.
 
 For more info about how to use this trigger, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
@@ -40,30 +41,36 @@ Allows users of lists to trigger a flow after selecting an item in a list.
 > [!NOTE]
 > Only flows within the default environment can be executed manually from a SharePoint list.
 
-### When a file is classified by a content understanding model 
-Triggers the flow when a SharePoint Syntex content understanding model classifies a file, shown in the classification date property of the file.
+### When a file is classified by a content understanding model
+Triggers the flow when a Microsoft Syntex content understanding model classifies a file, shown in the classification date property of the file.
 
-For more info about when SharePoint Syntex and how it classifies files see: [Introduction to Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding)
+For more info about when Microsoft Syntex and how it classifies files see: [Introduction to Microsoft Microsoft Syntex](/microsoft-365/contentunderstanding)
 
 ### When a file is created (properties only)
 
-Triggers the flow when you create a file in a document library, and returns only the custom file properties associated with that file.
+Triggers the flow when you create a file in a document library and returns only the custom file properties associated with that file.
 
-### When a file is created in a folder
+### When a file is created in a folder [deprecated]
+
+> [!NOTE]
+> This trigger is deprecated and may not work as expected.
 
 Triggers the flow when you create a file in a SharePoint folder. This trigger does not run if you add or update a file in a subfolder inside the folder this trigger is operating on. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
 
 ### When a file is created or modified (properties only)
 
-Triggers the flow when you create a file, and each time you modify the file properties in a library. Returns only the custom file properties associated with that file.
+Triggers the flow when you create a file, and each time you modify the file properties in a library. Specify a value in the "Folder" property to target a specific folder; otherwise the trigger applies to the entire library. Returns only the custom file properties associated with that file.
 
-### When a file is created or modified in a folder (properties only)
+### When a file is created or modified in a folder [deprecated]
 
-Triggers the flow when you create a file, and each time you modify the file properties in the selected SharePoint folder. The trigger does not activate if you add or update a file in a subfolder. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
+> [!NOTE]
+> This trigger is deprecated and may not work as expected.
+
+Triggers when a file is created, and also each time it is modified in a SharePoint folder. The trigger does not fire if a file is added/updated in a subfolder. If it is required to trigger on subfolders, multiple triggers should be created.
 
 ### When a file is deleted
 
-Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is epxected to run, using a site collection user account.
+Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection user account.
 
 ### For a selected file
 
@@ -92,7 +99,7 @@ Cancels hub join request. If applicable, specify the same Approval Correlation I
 
 ### Check in file
 
-Checks in a checked out file in a document library, which makes the version of the document available to others.
+Checks in a checked-out file in a document library, which makes the version of the document available to others.
 
 ### Check out file
 
@@ -102,7 +109,10 @@ Checks out a file in a document library to prevent others from editing the docum
 
 Copies a file. Works similarly to the **Copy to** command in SharePoint libraries. After copying, returns info about the new file.
 
-### Copy file (deprecated)
+### Copy file [deprecated]
+
+> [!NOTE]
+> This action is deprecated and may not work as expected.
 
 Copies a file to a SharePoint site.
 
@@ -162,14 +172,14 @@ Returns the list of attachments for the specified list item. To get to the conte
 
 Gets all the columns or file properties changed since and until a specified time interval. To get all the columns changed when an item or a file is modified:
 - Use the _when an item or file is modified_ trigger, and,
-- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the _when an item or file is modified_ trigger to infer what columnns changed since last time flow checked for item or file updates.
+- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the _when an item or file is modified_ trigger to infer what columns changed since the last time flow checked for item or file updates.
 
 For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
 > [!NOTE]
-> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change. 
-> - Only column changes are suported for lists and libraries.
-> - File content changes are not supported. 
+> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change.
+> - Only column changes are supported for lists and libraries.
+> - File content changes are not supported.
 > - Attachment changes are not supported.
 > - _Trigger Window Start Token_ & _Trigger Window End Token_ are only available when you use _when an item or file is modified_ trigger.
 
@@ -227,7 +237,7 @@ Grants access to an item or a folder in SharePoint to specific people.
 
 ### Join hub site
 
-Joins the requested site to the hub site. An Approval Token is required to complete the join successfully, if that hub requires approval. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
+Joins the requested site to the hub site. An Approval Token is required to complete the join successfully if that hub requires approval. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
 
 ### List folder
 
@@ -247,7 +257,7 @@ Moves a folder. Works similarly to the **Move to** command in SharePoint librari
 
 ### Resolve person
 
-Returns a single matching user value so it can be assigned to a column of type person. If there are no matches, or multiple matches, this action errors out.
+Returns a single matching user value so it can be assigned to a column of type person. If there are no matches or multiple matches, this action errors out.
 
 ### Send an HTTP request to SharePoint
 
@@ -298,7 +308,7 @@ The following tables list all of the actions and triggers that are supported for
 | When a file is deleted | No | No | Yes<sup>2</sup> |
 | Resolve Person | No | No | Yes |
 | Set content approval status | No | No | Yes |
- 
+
 > [!NOTE]
 > 1. Does not support “Limit Columns by View”.
 > 1. While this trigger is supported for SharePoint 2019, flows created using this trigger may encounter the following issues:
@@ -317,7 +327,7 @@ The following tables list all of the actions and triggers that are supported for
 | Get file content | Yes | Yes | Yes |
 | Create file | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
 | Update file | Yes | Yes | Yes |
-| Copy file (deprecated)<sup>2</sup>| Yes | Yes | Yes |
+| Copy file [deprecated]<sup>2</sup>| Yes | Yes | Yes |
 | List folder | Yes | Yes | Yes |
 | Extract folder | Yes | Yes | Yes |
 | Get attachments | Yes | Yes | Yes |
@@ -332,18 +342,19 @@ The following tables list all of the actions and triggers that are supported for
 
 > [!NOTE]
 > 1. Does not support creating a large file by uploading it as a set of chunks.
-> 1. This action includes "(deprecated)" in its display name. The "Copy file" action is different from this action.
+> 1. This action includes "[deprecated]" in its display name. The "Copy file" action is different from this action.
 > 1. This action only supports OData parameters, which excludes parameters such as "Limit Entries to Folder", "Include Nested Items", and "Limit Columns by View".
 > 1. Does not support “Limit Columns by View”.
 
-### Deprecated triggers
+### Deprecated triggers and actions
 
 These triggers are deprecated and are no longer actively maintained. While they are still present in the Microsoft SharePoint Connector, we recommend not utilizing deprecated triggers or actions in any new applications or solutions.
 
-| Trigger    | Supported Version    | Suggested Alternative    |
-| :-- | :-- | :-- |
-| When a file is created in a folder | SharePoint 2019 | When a file is created (properties only)  |
-| When a file is created or modified in a folder | SharePoint 2019 | When a file is created or modified (properties only)  |
+| Name    | Type    | Supported Version    | Suggested Alternative    |
+| :-- | :-- | :-- | :-- |
+| When a file is created in a folder [deprecated] | Trigger |SharePoint 2019 | When a file is created (properties only)  |
+| When a file is created or modified in a folder [deprecated] | Trigger | SharePoint 2019 | When a file is created or modified (properties only)  |
+| Copy file [deprecated] | Action | SharePoint 2019 | Copy file  |
 
 ## Known limitations
 
@@ -357,9 +368,9 @@ When you build a Power Automate flow to be triggered for an item, or for creatin
 
 ### Move files and flow runs
 
-When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated in the library where it was moved.
+When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated with the library where it was moved.
 
-### Syncing files to your OneDrive for business and SharePoint document libraries
+### Syncing files to your OneDrive for Business and SharePoint document libraries
 
 When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file syncs in that library or in your OneDrive for business.
 

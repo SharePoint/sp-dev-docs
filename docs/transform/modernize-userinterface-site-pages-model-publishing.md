@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 02/11/2021
+ms.date: 02/09/2023
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -326,7 +326,7 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ### I want to keep the source page creation information
 
-When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPClientSidePage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
+When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPPage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
 
 > [!Note]
 > When you, as part of page transformation, promote the page as news or publish the page the Editor field will be set to the account running page transformation
@@ -396,7 +396,7 @@ See [Page Transformation Functions and Selectors](modernize-userinterface-site-p
 
 When you transform you classic publishing page to a modern page you sometimes want to add an **additional** modern web part on the created page, without that there's a classic version of that web part on the classic publishing page. This can be done by adjusting your webpartmapping.xml and page layout mapping files as shown below.
 
-First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
+First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
 
 ```XML
 <WebParts>

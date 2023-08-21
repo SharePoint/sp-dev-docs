@@ -1,20 +1,19 @@
 ---
 title: "ListItem Element (DeploymentManifest - SPGenericObject)"
+description: Outlines the ListItem element (DeploymentManifest - SPGenericObject), which represents an instance of a Sharepoint list item object.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79ab2638-2487-4b1d-99d5-cbc151d35785
-description: "Last modified: March 09, 2015"
 ---
 
 # ListItem Element (DeploymentManifest - SPGenericObject)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)) object.
 
 ## Definition
 
@@ -60,7 +59,7 @@ USAGE
 ## Type
 
 [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -91,21 +90,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was last modified.  <br/> |
 |**UserLoginName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Version** <br/> |xs:string  <br/> |Optional. Represents the version of the list item.  <br/> |
-   
+
 ### Child elements
 
 - [Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
-- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) 
-- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) 
-- [Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) 
-- [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md) 
-   
+- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md)
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+- [Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md)
+- [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)
+
 ### Parent elements
 
 - [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

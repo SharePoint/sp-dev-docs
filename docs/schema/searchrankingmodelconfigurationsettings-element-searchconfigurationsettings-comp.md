@@ -1,27 +1,26 @@
 ---
 title: "SearchRankingModelConfigurationSettings element (SearchConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a638a73f-5d50-67cb-47f7-292697538b3a
-description: "Last modified: March 09, 2015"
+description: Learn about SearchRankingModelConfigurationSettings element (SearchConfigurationSettings complexType) (SPS15XSDSearchSet3).
 ---
 
 # SearchRankingModelConfigurationSettings element (SearchConfigurationSettings complexType) (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:SearchRankingModelConfigurationSettings  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
-   
+|**Element type** |tns:SearchRankingModelConfigurationSettings  |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd  |
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

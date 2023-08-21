@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a check box control.
 # CheckBox element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a check box control.
-  
+
 ```XML
 <CheckBox
      Alt="Text"
@@ -65,27 +64,27 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-group.md) (Group) 
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-group.md) (Group)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded 
-   
+- Maximum: unbounded
+
 ## Example
 
-The following example is an XML fragment that defines a group of controls that includes a **CheckBox** element. 
-  
+The following example is an XML fragment that defines a group of controls that includes a **CheckBox** element.
+
 ```XML
-<Group 
+<Group
   Id="Ribbon.Image.Image.Size"
   Sequence="50"
   Command="ImageSizeGroup"
@@ -102,7 +101,7 @@ The following example is an XML fragment that defines a group of controls that i
       ForId="Ribbon.Image.Image.Size.HorizontalSize"
       Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-80" Image16by16Left="-16"
       TemplateAlias="o1"
-      Sequence="10" 
+      Sequence="10"
     />
     <Spinner
        Id="Ribbon.Image.Image.Size.HorizontalSize"
@@ -118,7 +117,7 @@ The following example is an XML fragment that defines a group of controls that i
        ToolTipTitle="$Resources:core,LabelHorizSize;"
        ToolTipDescription="$Resources:core,cui_stt_ButSizeMenuHorizontalSizeTooltip;"
        TemplateAlias="o2"
-      Sequence="20" 
+      Sequence="20"
     >
       <Unit
           Name="pixel"
@@ -143,10 +142,10 @@ The following example is an XML fragment that defines a group of controls that i
       Id="Ribbon.Image.Image.Size.VertSizeLabel"
       LabelText="$Resources:core,LabelVertSize;"
       Command="ImageVerticalLabel"
-      ForId="Ribbon.Image.Image.Size.VerticalSize" 
+      ForId="Ribbon.Image.Image.Size.VerticalSize"
       Image16by16="/_layouts/$Resources:core,Language;/images/formatmap16x16.png" Image16by16Top="-208" Image16by16Left="-224"
       TemplateAlias="o1"
-      Sequence="30" 
+      Sequence="30"
     />
     <Spinner
       Id="Ribbon.Image.Image.Size.VerticalSize"
@@ -162,7 +161,7 @@ The following example is an XML fragment that defines a group of controls that i
       ToolTipTitle="$Resources:core,LabelVertSize;"
       ToolTipDescription="$Resources:core,cui_stt_ButSizeMenuVerticalSizeTooltip;"
       TemplateAlias="o2"
-      Sequence="40" 
+      Sequence="40"
     >
       <Unit
           Name="pixel"
@@ -190,10 +189,8 @@ The following example is an XML fragment that defines a group of controls that i
       LabelText="$Resources:core,LabelLockAspect;"
       Alt="$Resources:core,ButLockAspectAlt;"
       TemplateAlias="o2"
-      Sequence="50" 
+      Sequence="50"
     />
   </Controls>
 </Group>
 ```
-
-

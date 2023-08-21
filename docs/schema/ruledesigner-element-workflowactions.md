@@ -1,12 +1,12 @@
 ---
 title: RuleDesigner Element (WorkflowActions)
+description: RuleDesigner Element (WorkflowActions) contains information that is needed to render a workflow sentence in a declarative, code-free workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c22128ef-caba-4735-8655-f278430785e8
 ---
@@ -83,9 +83,3 @@ The following sections describe attributes, child elements, and parent elements.
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

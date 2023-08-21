@@ -1,10 +1,10 @@
 ---
 title: ElementManifests Element (Feature)
+description: Describes the ElementManifests element (Feature) and provides a definition, the elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d8d4db7e-2bc2-40c6-958b-d5683bdee87a
 ---
@@ -73,11 +73,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
-
-
-
-
-
-
-
-

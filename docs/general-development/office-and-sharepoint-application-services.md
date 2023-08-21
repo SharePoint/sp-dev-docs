@@ -2,7 +2,6 @@
 title: Office 2013 and SharePoint application services
 description: Learn about Access Services, Excel Services, Machine Translation Service, PerformancePoint Services, PowerPoint Automation Services, Visio Services, and Word Automation Services.
 ms.date: 12/14/2020
-ms.prod: sharepoint
 ms.assetid: f962922c-2967-492f-9a89-5ad10a1a6dd3
 ms.localizationpriority: medium
 ---

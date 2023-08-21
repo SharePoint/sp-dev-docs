@@ -1,10 +1,10 @@
 ---
 title: DocumentConverter Element (Document Converter)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Specifies the definition of a document converter and includes a description of attributes, child elements, and parent elements.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bfe1e739-6936-41dc-849a-ac4a7b9e664d
 ---
@@ -98,16 +98,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[Elements Element (Document Converter)](elements-element-document-converter.md)|
 
 ## Example
 
@@ -131,11 +124,3 @@ The following example is the document converter definition file for a custom doc
 ## See also
 
 - [Working with Features](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
-
-
-
-
-
-
-
-

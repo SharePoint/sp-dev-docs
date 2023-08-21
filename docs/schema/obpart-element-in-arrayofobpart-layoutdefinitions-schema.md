@@ -1,15 +1,15 @@
 ---
 title: OBPart element in ArrayOfOBPart
+description: Describes the definition, element, and attribute information for the OBPart element in ArrayOfOBPart, which specifies an External Data Part.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f50e24c6-674b-241f-5af6-1b6205be93be
 ---
 
-# OBPart element in ArrayOfOBPart 
+# OBPart element in ArrayOfOBPart
 
 (LayoutDefinitions Schema)
 
@@ -148,58 +148,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The list of the custom properties of the Container or Office External Part.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="titlebar-element-in-obpart-layoutdefinitions-schema.md">TitleBar element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The UI and behavior of the title bar of the Office External Part.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The actions that are exposed by this Office External Part.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|-------|-----------|
+|[CustomProperties element in UIElement (LayoutDefinitions Schema)](customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of the custom properties of the Container or Office External Part.|
+|[TitleBar element in OBPart (LayoutDefinitions Schema)](titlebar-element-in-obpart-layoutdefinitions-schema.md)|The UI and behavior of the title bar of the Office External Part.|
+|[ActionNames element in OBPart (LayoutDefinitions Schema)](actionnames-element-in-obpart-layoutdefinitions-schema.md)|The actions that are exposed by this Office External Part.|
+
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children element in Container (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|Description|
+|-------|-----------|
+|[Children element in Container (LayoutDefinitions Schema)](children-element-in-container-layoutdefinitions-schema.md)||

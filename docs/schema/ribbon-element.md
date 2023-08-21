@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Contains elements that define the server ribbon user interface.
 # Ribbon element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains elements that define the server ribbon user interface.
-  
+
 ```XML
 <Ribbon
   Id="Text"
@@ -121,22 +120,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**ATContextualTabText** <br/> |Optional. Hidden text to convey contextual tab information to screen readers, such as " {0} group. Tab {1} of {2}."  <br/> |
 |**ATTabPositionText** <br/> |Optional. Hidden text to convey tab information to screen readers, such as "Tab {0} of {1}."  <br/> |
 |**NavigationHelpText** <br/> |Optional. The text of a message that describes how to navigate the ribbon using the keyboard, which is displayed as hidden text for a screen reader.  <br/> |
-   
+
 ### Child elements
 
-- [Tabs](tabs-element.md) 
+- [Tabs](tabs-element.md)
 - [ContextualTabs](contextualtabs-element.md)
-   
+
 ### Parent elements
 
 - [CommandUI](commandui-element.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: 1  
-   
+- Minimum: 0
+- Maximum: 1
+
 ## See also
 
 - [Customizing the Server Ribbon](https://msdn.microsoft.com/library/dedfad80-0f32-44cd-9080-1507be3288e7%28Office.15%29.aspx)
-

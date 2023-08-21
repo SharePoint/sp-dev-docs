@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business customization in the SharePoint Add-in model
 description: In an SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
-ms.date: 12/29/2020
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 # OneDrive for Business customization in the SharePoint Add-in model
@@ -40,7 +40,7 @@ Let’s start with defining what is the challenge and what are we trying to solv
 
 ![Challenge with applying OneDrive for Business site customizations](media/Recipes/OD4BCustomization/OD4B-topolgy.png)
 
-Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on [feature stapling in farm level](http://cks.codeplex.com/releases/view/2824). This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
+Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on feature stapling in farm level. This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
 
 In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with app model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism.
 

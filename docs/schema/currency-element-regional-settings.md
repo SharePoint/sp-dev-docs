@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Regional Settings schema
@@ -17,9 +16,9 @@ description: Used in RGNLSTNG.XML to specify the currency format used for a loca
 # Currency element (Regional Settings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to specify the currency format used for a locale.
-  
+
 ```XML
 <Currency
   ID = "Integer">
@@ -35,24 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ID** <br/> |Required **Integer**. Specifies the locale ID.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Currencies](currencies-element-regional-settings.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
 The following table lists the locale identifiers (LCID) and currency formats, or names, for regions represented in Microsoft SharePoint Foundation.
-  
+
 |**ID**|**Name**|
 |:-----|:-----|
 |5121  <br/> |125 .ج.د (Algeria)  <br/> |
@@ -121,5 +120,3 @@ The following table lists the locale identifiers (LCID) and currency formats, or
 |8202  <br/> |Bs 125 (Venezuela)  <br/> |
 |1066  <br/> |125 ₫ (Vietnam)  <br/> |
 |9217  <br/> |125 .ي.ر (Yemen)  <br/> |
-   
-

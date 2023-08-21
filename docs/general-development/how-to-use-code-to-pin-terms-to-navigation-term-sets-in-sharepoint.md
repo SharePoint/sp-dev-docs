@@ -2,7 +2,6 @@
 title: Use code to pin terms to navigation term sets in SharePoint
 description: Learn how to use code to pin terms to navigation term sets.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 4a2811dc-25fd-4eb2-b0ab-1edded64c556
 ms.localizationpriority: medium
 ---

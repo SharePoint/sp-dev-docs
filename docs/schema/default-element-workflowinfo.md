@@ -1,12 +1,12 @@
 ---
 title: Default element (WorkflowInfo)
+description: The Default element is a container for other elements and has no definable attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 24ffa55e-9c63-4e52-ba2d-3382155a16ca
 ---
@@ -17,7 +17,7 @@ ms.assetid: 24ffa55e-9c63-4e52-ba2d-3382155a16ca
 
 The **Default** element is a container for other elements and has no definable attributes.
 
-> [!NOTE] 
+> [!NOTE]
 > The **Default** element is only read from the default WSS.ACTIONS file and cannot be overridden with a custom .ACTIONS file.
 
 ## Definition
@@ -94,14 +94,14 @@ The following XML demonstrates how to construct a **Default** element to make it
 ```XML
     <WorkflowInfo Language="en-us">
        <Conditions And="and" Or="or" Not="not" When="If" Else="ElseIf">
-          <Condition 
-                  AppliesTo="list" 
+          <Condition
+                  AppliesTo="list"
                   Assembly="MyWorkflowProject.Workflow1
                             PublicKeyToken=71e9bce111e9429c,
                             Version=1.0.0.0,
-                            Culture=neutral" 
+                            Culture=neutral"
                   ClassName="MyWorkflowProject.Workflow1.MyClass"
-                  FunctionName="IsOrderComplete" 
+                  FunctionName="IsOrderComplete"
                   Name="Check if item in %1 is a complete order"
                   Type="Custom"
                   UsesCurrentItem="True">
@@ -122,11 +122,3 @@ The following XML demonstrates how to construct a **Default** element to make it
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@
 title: Using Office UI Fabric Core and Fabric React in SharePoint Framework
 description: Information about the Fabric Core and Fabric React packages, and challenges with using CSS.
 ms.date: 02/09/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -323,7 +322,7 @@ return `<i class="${getIconClassName('Mail')}" />`;
 Solutions build with *React* option or by using *React* in general.
 
 1. Add `office-ui-fabric-react` package to your `package.json`, if not already added.
-2. Make code changes similar to below code, to get the required icon into your code:
+1. Make code changes similar to below code, to get the required icon into your code:
 
 ```typescript
 import { Icon } from 'office-ui-fabric-react/lib/Icon';

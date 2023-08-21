@@ -1,7 +1,7 @@
 ---
 title: Develop the site design in SharePoint
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes how to develop the site design in SharePoint using the Design Manager feature and provides links to other resources.
+ms.date: 06/09/2022
 ms.assetid: 4c061484-2ba5-45ea-9860-aec9d7c8f80e
 ms.localizationpriority: high
 ---

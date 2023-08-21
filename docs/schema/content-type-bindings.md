@@ -1,10 +1,10 @@
 ---
 title: Content Type Bindings
+description: Provides a definition and schema example for the ContentTypeBinding element in Sharepoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5ea25a00-6a99-4073-976e-336706fb7bc9
 ---
@@ -30,7 +30,7 @@ The following example specifies a content type to bind to the specified list typ
 ```XML 
     <elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <ContentTypeBinding
-        ContentTypeId="0x010100C5A8DB52D9D0A14D9B2FDCC96666E9F2" 
+        ContentTypeId="0x010100C5A8DB52D9D0A14D9B2FDCC96666E9F2"
         ListUrl="_catalogs/masterpage"
       />
     </elements>
@@ -41,13 +41,3 @@ The following example specifies a content type to bind to the specified list typ
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-
-
- 
-
-
-
-
-
-
-

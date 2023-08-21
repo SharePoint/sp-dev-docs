@@ -1,7 +1,7 @@
 ---
 title: Modernize classic publishing portals
 description: Modernize your classic publishing portals
-ms.date: 10/10/2019
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
-A classic publishing portal uses publishing functionalities like page layouts, custom branding, page approvals, audience targeting and many more. For most classic publishing portal functionalities there's a modern equivalent enabling you to build a similar modern publishing portal. This modern publishing portal will then take advantage of all the modern capabilities like beautiful pages that work on any device, flexible page approval using Microsoft Flow etc as described in the [Guide to the Modern experience in SharePoint](https://docs.microsoft.com/sharepoint/guide-to-sharepoint-modern-experience). Ensuring the portal you design is healthy and does achieve the performance you desire is important, a recommended read is the [Creating and launching a healthy SharePoint portal](https://docs.microsoft.com/sharepoint/portal-health) documentation.
+A classic publishing portal uses publishing functionalities like page layouts, custom branding, page approvals, audience targeting and many more. For most classic publishing portal functionalities there's a modern equivalent enabling you to build a similar modern publishing portal. This modern publishing portal will then take advantage of all the modern capabilities like beautiful pages that work on any device, flexible page approval using Microsoft Flow etc as described in the [Guide to the Modern experience in SharePoint](/sharepoint/guide-to-sharepoint-modern-experience). Ensuring the portal you design is healthy and does achieve the performance you desire is important, a recommended read is the [Creating and launching a healthy SharePoint portal](/sharepoint/portal-health) documentation.
 
 ## Modernization approach
 
@@ -33,7 +33,7 @@ Classic portals typically are using deeply nested site structures as shown below
 
 In modern intranets we recommend using individual communication sites instead of sub sites (you potentially can consolidate/deprecate certain of the sub sites) and then where need create a flexible hub-spoke model by designating some site collections to be a hub and joining other site collections to that hub. Note that in these individual site collections you can still create content types (based on the modern site page) for you page meta data (e.g. using site designs one can get these content types applied to each site joining the hub). Next to content types you can also have modern page templates as a lightweight alternative for the classic page layouts.
 
-![Modern Information architecture](media/modernize/modern&#32;information&#32;architecture.png)
+![Diagram of modern information architecture, showing the relationship between the Intranet, Finance, and I T.](media/modernize/modern&#32;information&#32;architecture.png)
 
 As preparation for designing your new information architecture it's useful to understand which publishing features are used and for that you can use the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). Using this scanner you can scan your complete tenant or a subset of site collections for their readiness in three categories: "Microsoft 365 group connection", "Page transformation" and "Publishing Portal Modernization". You can have the scanner collect all three categories but you can also scope the scan to only get the "Publishing Portal Modernization" information by using the `-m PublishingOnly` option. The result of the scan will be an Excel based dashboard which will allow you to analyze the publishing feature usage of all your portals.
 
@@ -41,5 +41,5 @@ As preparation for designing your new information architecture it's useful to un
 
 ## See also
 
-- [Guide to the Modern experience in SharePoint](https://docs.microsoft.com/sharepoint/guide-to-sharepoint-modern-experience)
+- [Guide to the Modern experience in SharePoint](/sharepoint/guide-to-sharepoint-modern-experience)
 - [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner)

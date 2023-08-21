@@ -2,12 +2,11 @@
 title: ActionParameters element in Action (BDCMetadata Schema)
 description: Details on the ActionParameters element in Action (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 07/01/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ActionParameters
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 ---
@@ -36,50 +35,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **ActionParameter**.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [ActionParameter element in ActionParameters (BDCMetadata Schema)](actionparameter-element-in-actionparameters-bdcmetadata-schema.md) | An **ActionParameter**. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action element in Actions (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **Action** that these **ActionParameters** belong to.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Action element in Actions (BDCMetadata Schema)](action-element-in-actions-bdcmetadata-schema.md) | The **Action** that these **ActionParameters** belong to. |

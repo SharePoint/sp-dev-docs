@@ -1,7 +1,7 @@
 ---
 title: What's new in SharePoint eDiscovery and compliance
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Learn what's new in SharePoint for eDiscovery and compliance features. Use these features to manage and recover evidence in civil litigations.
+ms.date: 06/07/2022
 ms.assetid: 39a1cc3f-c78d-478f-8c15-928b96386a52
 ms.localizationpriority: medium
 ---

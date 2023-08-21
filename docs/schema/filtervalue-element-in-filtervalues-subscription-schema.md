@@ -1,15 +1,15 @@
 ---
 title: FilterValue Element in FilterValues
+description: Describes the FilterValue Element in FilterValues, which specifies a filter value for a query or association. The element can contain a mix of character data and child elements.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6b5cd80c-fd89-8ea1-3657-d711dc513976
 ---
 
-# FilterValue Element in FilterValues 
+# FilterValue Element in FilterValues
 
 (Subscription Schema)
 
@@ -31,38 +31,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**FilterDescriptorName**</p></td>
-<td align="left"><p>Required.</p>
-<p>The name of the filter descriptor in the model.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required.</p>
-<p>The data type of the filter value.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**FilterIndex**</p></td>
-<td align="left"><p>Required.</p>
-<p>Must always be set to zero.</p>
-<p>Attribute type: **Integer**</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Description |
+|-----------|-------------|
+| **FilterDescriptorName** | Required.</br></br>The name of the filter descriptor in the model.</br></br>Attribute type: **String** |
+| **Type** | Required.</br></br>The data type of the filter value.</br></br>Attribute type: **String** |
+| **FilterIndex** | Required.</br></br>Must always be set to zero.</br></br>Attribute type: **Integer** |
 
 ### Child elements
 
@@ -70,33 +43,7 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [FilterValues Element in Query (Subscription Schema)](filtervalues-element-in-query-subscription-schema.md) | The **FilterValues** element that contains this filter value. |
+| [FilterValues Element in Association (Subscription Schema)](filtervalues-element-in-association-subscription-schema.md) | The **FilterValues** element that contains this filter value. |

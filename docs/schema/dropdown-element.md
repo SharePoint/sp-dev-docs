@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a control that enables a user to select from a drop-down li
 # DropDown element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a control that enables a user to select from a drop-down list.
-  
+
 ```XML
 <DropDown
   AltArrow="Text"
@@ -85,19 +84,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that displays for the selected item.  <br/> |
 |**Width** <br/> |Optional. The width in pixels of the list that is part of this drop-down list.  <br/> |
-   
+
 ### Child elements
 
 - [Menu](menu-element.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-group.md) (Group)  
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-group.md) (Group)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
-
+- Maximum: unbounded

@@ -2,7 +2,6 @@
 title: Crawl binary large objects (BLOBs) in SharePoint
 description: Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint crawler to crawl binary large object (BLOB) data stored in a SQL Server database.
 ms.date: 12/22/2020
-ms.prod: sharepoint
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
 ms.localizationpriority: medium
 ---

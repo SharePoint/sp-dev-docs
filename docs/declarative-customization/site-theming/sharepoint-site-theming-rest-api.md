@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - REST API
 description: Use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site themes.
-ms.date: 10/29/2019
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ The SharePoint Online (and SharePoint 2016 and later on-premises) REST service s
 
 Before you get started, make sure that you're familiar with the following:
 
-- [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) 
+- [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
 ## REST commands for site themes
@@ -119,7 +119,7 @@ function RestRequest(url,params) {
   req.send(params ? JSON.stringify(params) : void 0);
 }
 
- 
+
 RestRequest("/_api/thememanager/DeleteTenantTheme", { name:"Sounders Rave Green" });
 ```
 
@@ -147,7 +147,7 @@ function RestRequest(url,params) {
   req.setRequestHeader("ODATA-VERSION","4.0");
   req.send(params ? JSON.stringify(params) : void 0);
 }
- 
+
 RestRequest("/_api/thememanager/GetTenantThemingOptions");
 ```
 

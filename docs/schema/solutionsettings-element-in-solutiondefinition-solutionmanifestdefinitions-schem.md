@@ -1,15 +1,15 @@
 ---
 title: SolutionSettings Element in SolutionDefinition
+description: SolutionSettings Element in SolutionDefinition defines the settings for this Microsoft Business Connectivity Services (BCS) solution.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d8930948-e804-18ee-7c4b-b0bd39ccf62a
 ---
 
-# SolutionSettings Element in SolutionDefinition 
+# SolutionSettings Element in SolutionDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -90,33 +90,6 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="solutiondefinition-element-solutionmanifestdefinitions-schema.md">SolutionDefinition Element (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The solution definition these settings belong to.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-<br/>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [SolutionDefinition Element (SolutionManifestDefinitions Schema)](solutiondefinition-element-solutionmanifestdefinitions-schema.md) | The solution definition these settings belong to. |

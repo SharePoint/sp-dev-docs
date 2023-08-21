@@ -1,16 +1,15 @@
 ---
 title: Create folder classification request
+description: Use REST API to create a request to classify an entire folder using a trained document understanding model.
+ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
 ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
-ms.prod: microsoft-365-enterprise
-search.appverid: 
 ms.collection: m365initiative-syntex
 ms.localizationpriority: high
-description: Use REST API to create a request to classify an entire folder using a trained document understanding model.
 ---
 
 # Create folder classification request
@@ -78,7 +77,7 @@ None
     "TargetSiteId": "f686e63b-aba7-48e5-97c7-68c4c1df292f",
     "TargetWebId": "66d6b64d-6f88-4dd9-b3db-47e6f00c53e8",
     "TargetUniqueId": "e6cff8b7-c90c-4564-b5b8-033449090932",
-    "IsFolder": true 
+    "IsFolder": true
 }
 ```
 

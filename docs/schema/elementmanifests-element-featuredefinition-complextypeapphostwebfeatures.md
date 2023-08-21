@@ -1,24 +1,24 @@
 ---
 title: ElementManifests element (FeatureDefinition complexType)
+description: Describes the ElementManifests element (FeatureDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5f720156-326c-d29e-a8f6-5ba12842ce0e
 ---
 
-# ElementManifests element (FeatureDefinition complexType) 
+# ElementManifests element (FeatureDefinition complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ElementManifestReferences |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -30,10 +30,10 @@ ms.assetid: 5f720156-326c-d29e-a8f6-5ba12842ce0e
     <xs:element name="ElementManifests" type="ElementManifestReferences" minOccurs="0" maxOccurs="1"></xs:element>
 ```
 
-## Elements and attributes 
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
- 
+
 
 ### Parent elements
 
@@ -59,7 +59,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
@@ -90,17 +90,10 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Attributes
 
 None.
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

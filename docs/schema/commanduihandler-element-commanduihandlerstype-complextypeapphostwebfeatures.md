@@ -1,24 +1,24 @@
 ---
 title: CommandUIHandler element (CommandUIHandlersType complexType)
+description: Describes the CommandUIHandler element (CommandUIHandlersType complexType), including element information, attributes, and parent and child elements.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9937ad2-1d4a-832f-b821-5fd756743383
 ---
 
-# CommandUIHandler element (CommandUIHandlersType complexType) 
+# CommandUIHandler element (CommandUIHandlersType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  | CommandUIHandlerType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -110,12 +110,5 @@ None.
 </tr>
 </tbody>
 </table>
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

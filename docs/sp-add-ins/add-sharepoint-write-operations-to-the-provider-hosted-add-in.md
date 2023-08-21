@@ -16,7 +16,7 @@ In this article, we get back to coding by adding some functions that write data 
 
 ## Change a column value on a SharePoint list item
 
-Our add-in has a custom ribbon button that adds an employee from the Hong Kong store's **Local Employees** list to the corporate database. But the user has to remember to manually change the value of the **Added to Corporate DB** field to **Yes**. Let's add code to do that automatically.
+Our add-in has a custom ribbon button that adds an employee from the Hong Kong SAR store's **Local Employees** list to the corporate database. But the user has to remember to manually change the value of the **Added to Corporate DB** field to **Yes**. Let's add code to do that automatically.
 
 > [!NOTE]
 > The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles:
@@ -84,7 +84,7 @@ Because the add-in is now writing to the list as well as reading it, we need to 
 
 The next improvement to the Chain Store add-in is to create new items in a list, instead of merely changing a field in an existing item. Specifically, when a new order is placed at the corporate level, an item is automatically created in a SharePoint list that alerts local employees to expect a shipment. The list is called **Expected Shipments** and you create it with the following steps. In a later article in this series, you'll learn how to programmatically add a custom list to a host website, but for now you'll add this one manually.
 
-1. From the home page of the Fabrikam Hong Kong Store, go to **Site Contents** > **Add an add-in** > **Custom List**.
+1. From the home page of the Fabrikam Hong Kong SAR Store, go to **Site Contents** > **Add an add-in** > **Custom List**.
 1. In the **Adding Custom List** dialog, specify **Expected Shipments** as the name, and then select **Create**.
 1. On the **Site Contents** page, open the **Expected Shipments** list.
 1. On the **List** tab on the ribbon, select **List Settings**.
@@ -111,7 +111,7 @@ The next improvement to the Chain Store add-in is to create new items in a list,
 
 ## Insert an item into a SharePoint list
 
-Now you add a function to the add-in that creates an item in the **Expected Shipments** list whenever an order for the Hong Kong store is placed at the corporate level.
+Now you add a function to the add-in that creates an item in the **Expected Shipments** list whenever an order for the Hong Kong SAR store is placed at the corporate level.
 
 1. In **Solution Explorer**, open the OrderForm.aspx.cs file.
 1. Add a **using** statement for **Microsoft.SharePoint.Client** to the top of the file.
@@ -197,7 +197,7 @@ Recall that when an add-in requests Read or Write permission with the scope of L
 1. When the add-in's start page opens, select the **Order Form** link at the bottom of the page.
 1. Enter some values in the form, and then select **Place Order**.
 1. Use the browser's back button to go back to the start page, and then select **Back to Site** on the chrome control at the top.
-1. From the home page of the Hong Kong store, go to **Site Contents** and open the **Expected Shipments** list. There is now an item on the list corresponding to the order. The following screenshot is an example.
+1. From the home page of the Hong Kong SAR store, go to **Site Contents** and open the **Expected Shipments** list. There is now an item on the list corresponding to the order. The following screenshot is an example.
   
    *Figure 2. Expected Shipments list with a single item*
 

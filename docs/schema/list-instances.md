@@ -1,10 +1,10 @@
 ---
 title: List Instances
+description: Outlines the ListInstance element, which specifies default data with which to provision the given list type.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f0cb0e1e-0871-4193-b0e9-519e34d7e839
 ---
@@ -15,10 +15,10 @@ ms.assetid: f0cb0e1e-0871-4193-b0e9-519e34d7e839
 
 The [ListInstance](listinstance-element-list-instance.md) element specifies default data with which to provision the given list type. This element maps to the **List** element previously located within the [Configuration](configuration-element-site.md) element in [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx).
 
-> [!WARNING] 
+> [!WARNING]
 > When a list instance is provisioned in a Feature, the **Title** attribute must be specified and unique.
 
-<br/> 
+<br/>
 
 - [Elements](elements-element-list-instance.md)
 
@@ -39,8 +39,8 @@ The following example shows the contents of an XML file in which the [ListInstan
 ```XML
     <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-       <ListInstance 
-          Id="WssAdminTasks" Title="Administrator Tasks" 
+       <ListInstance
+          Id="WssAdminTasks" Title="Administrator Tasks"
           Description="Create an Administrator Tasks list to track a group of admin work items."
           TemplateType="1200" Url="Lists/AdminTasks">
           <Data>
@@ -62,11 +62,3 @@ The following example shows the contents of an XML file in which the [ListInstan
 ## See also
 
 - [List Instance](https://msdn.microsoft.com/library/office/ms469947.aspx)
-
-
-
-
-
-
-
-

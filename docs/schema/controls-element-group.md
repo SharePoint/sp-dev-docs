@@ -1,25 +1,24 @@
 ---
 title: "Controls element (Group) (Server Ribbon)"
+description: Outlines the Controls element in Sharepoint, including attributes, child elements, parent elements, and occurrences.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
 api_type:
 - schema
 ms.assetid: d3635d99-fb58-4327-864f-6e59b222833d
-description: Contains elements that define controls.
 ---
 
 # Controls element (Group) (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains elements that define controls.
-  
+
 ```XML
 <Controls
      Id="Text"
@@ -51,29 +50,27 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, then the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
-- [Button](button-element.md) 
-- [CheckBox](checkbox-element.md) 
-- [ComboBox](combobox-element.md) 
-- [DropDown](dropdown-element.md) 
-- [FlyoutAnchor](flyoutanchor-element.md) 
-- [GalleryButton](gallerybutton-element-group.md) 
-- [Label](label-element.md) 
-- [MRUSplitButton](mrusplitbutton-element.md) 
-- [Spinner](spinner-element.md) 
-- [SplitButton](splitbutton-element.md) 
-- [TextBox](textbox-element.md) 
-- [ToggleButton](togglebutton-element.md) 
-   
+- [Button](button-element.md)
+- [CheckBox](checkbox-element.md)
+- [ComboBox](combobox-element.md)
+- [DropDown](dropdown-element.md)
+- [FlyoutAnchor](flyoutanchor-element.md)
+- [GalleryButton](gallerybutton-element-group.md)
+- [Label](label-element.md)
+- [MRUSplitButton](mrusplitbutton-element.md)
+- [Spinner](spinner-element.md)
+- [SplitButton](splitbutton-element.md)
+- [TextBox](textbox-element.md)
+- [ToggleButton](togglebutton-element.md)
+
 ### Parent elements
 
 - [Group](group-element-ribbon.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: 1 
-   
-
+- Maximum: 1

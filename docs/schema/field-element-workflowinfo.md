@@ -1,12 +1,12 @@
 ---
 title: Field element (WorkflowInfo)
+description: Describes the definition, element, and attribute information for the Field element (WorkflowInfo), which specifies a field for displaying data from the parent data source.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: da7e8638-6760-4ec7-81c8-a9374d71ca2c
 ---
@@ -86,9 +86,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

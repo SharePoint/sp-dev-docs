@@ -1,16 +1,16 @@
 ---
 title: SPO provided Migration Azure container and queue
+description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. We now provide a default container that can be used for using the migration API."
+ms.date: 07/08/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
-ms.date: 04/23/2020
-description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. We now provide a default container that can be used for using the migration API."
+ms.subservice: migration-tool
 ms.localizationpriority: medium
 ---
-
 # SPO provided Migration Azure container and queue
 
-Microsoft’s Migration API requires the use of an Azure container for temporary storage. To simplify the process, you are now provided with a default container while using the migration API. If you choose, you can still provide your own Azure container.
+Microsoft’s Migration API requires the use of an Azure container for temporary storage. To simplify the process, you are now provided with a default container while using the migration API. To use the provided container you will need to [decorate your traffic correctly](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic) to avoid throttling. If you choose, you can still provide your own Azure container.
 
 ## Encryption is required
 
@@ -18,13 +18,13 @@ For the Migration API to accept a Migration Job coming from a SPO provided Azure
 
 ##  Advantages
 
-|Advantage|Description|
-|:-----|:-----|
-|Cost of Azure container goes to SPO|Since we are providing the containers, those containers are now part of the basic SharePoint online Offering. Every tenant who signs up for SharePoint Online will get this for free).|
-|Containers and queues are unique per request and not reused|Once a container is given to a customer this container will not be reused or shared.|
-|Containers and queue are automatically deleted|As per the standard SharePoint Online Compliance, we will destroy the container within 30 to 90 days automatically.|
-|Containers and queues are in the customer’s datacenter location|We make sure to provision containers that are in the same physical location than their SharePoint online tenant.| 
-|They are obtainable programmatically|There is no need to interact with Azure unless the user chooses.
+|                            Advantage                            |                                                                                      Description                                                                                       |
+| :-------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cost of Azure container goes to SPO                             | Since we are providing the containers, those containers are now part of the basic SharePoint online Offering. Every tenant who signs up for SharePoint Online will get this for free). |
+| Containers and queues are unique per request and not reused     | Once a container is given to a customer this container will not be reused or shared.                                                                                                   |
+| Containers and queue are automatically deleted                  | As per the standard SharePoint Online Compliance, we will destroy the container within 30 to 90 days automatically.                                                                    |
+| Containers and queues are in the customer’s datacenter location | We make sure to provision containers that are in the same physical location than their SharePoint online tenant.                                                                       |
+| They are obtainable programmatically                            | There is no need to interact with Azure unless the user chooses.                                                                                                                       |
 
 ## How to use it
 
@@ -34,16 +34,16 @@ For the Migration API to accept a Migration Job coming from a SPO provided Azure
 public SPProvisionedMigrationContainersInfo ProvisionMigrationContainers()
 ```
 
-The call will return an object that contains two strings containing two SAS tokens for accessing the two required containers and a byte array for the AES256CBC encryption. 
+The call will return an object that contains two strings containing two SAS tokens for accessing the two required containers and a byte array for the AES256CBC encryption.
 
 This key will need to be used when encrypting the data. We forget the key once we give it out, therefore you must keep it to pass it again for the Submit Migration Job call.
 
 ```csharp
-Uri DataContainerUri 
+Uri DataContainerUri
 
 Uri MetadataContainer Uri
 
-byte[] EncryptionKey 
+byte[] EncryptionKey
 ```
 
 ### Getting Queue
@@ -66,10 +66,9 @@ Once those calls have been made, the rest of the flow remains the same for using
 
 ### Required endpoints for goverment cloud
 
-If your tenant is hosted in a government cloud (GCC), you must have the proper endpoints set when calling the API. 
-*Example:*    usgovcloudapi.net 
+If your tenant is hosted in a government cloud (GCC), you must have the proper endpoints set when calling the API. For example: `usgovcloudapi.net`.
 
-|**Required Endpoint**|**Why**|
-|:-----|:-----|
-|https://<span>*.blob.core.usgovcloudapi.</span>net|Migration API Azure Government requirement|
-|https://<span>*.queue.core.usgovcloudapi.</span>net|Migration API Azure Government requirement|   
+|          **Required Endpoint**           |                  **Why**                   |
+| :--------------------------------------- | :----------------------------------------- |
+| `https://*.blob.core.usgovcloudapi.net`  | Migration API Azure Government requirement |
+| `https://*.queue.core.usgovcloudapi.net` | Migration API Azure Government requirement |

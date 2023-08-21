@@ -1,15 +1,15 @@
 ---
 title: Evaluation element
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Evaluation element and includes information on usage, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bb9c7b97-de46-0720-e635-9b7606d2b4ff
 ---
 
-# Evaluation element 
+# Evaluation element
 
 (dataSourceType complexType) (Action4)
 
@@ -56,15 +56,15 @@ Specifies whether values are retrieved from the data source fields of the parent
                <xs:complexType>
                <xs:choice>
          <xs:element name="ActivitySource">
-      </xs:element>  
+      </xs:element>
          <xs:element name="HashtableSource">
 
 
          <xs:attribute name="HashtableFrom" type="s:string" />
-      </xs:element>  
+      </xs:element>
            </xs:choice>
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -127,11 +127,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

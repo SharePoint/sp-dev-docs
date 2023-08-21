@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a section of a menu.
 # MenuSection element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a section of a menu.
-  
+
 ```XML
 <MenuSection
   Id="Text"
@@ -45,22 +44,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**MaxHeight** <br/> |Optional. Specifies the maximum height of the section in pixels.  <br/> |
 |**DisplayMode** <br/> | Optional. An enumeration value that determines how controls in this section of the menu are rendered.  <br/> **Menu**. Renders as a text-only menu item.  <br/> **Menu16**. Renders as a menu item with a 16-by-16-pixel icon.  <br/> **Menu32**. Renders as a menu item with a 32-by-32-pixel icon.  <br/> |
-   
+
 ### Child elements
 
-- [Controls](controls-element-menusection.md) 
-- [Gallery](gallery-element.md) 
-   
+- [Controls](controls-element-menusection.md)
+- [Gallery](gallery-element.md)
+
 > [!NOTE]
-> A **MenuSection** element must contain either a **Controls** element or a **Gallery** element. 
-  
+> A **MenuSection** element must contain either a **Controls** element or a **Gallery** element.
+
 ### Parent elements
 
 - [Menu](menu-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: unbounded 
-   
-
+- Maximum: unbounded

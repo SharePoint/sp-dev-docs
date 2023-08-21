@@ -2,7 +2,6 @@
 title: Deploy a custom theme in SharePoint
 description: Learn how to deploy a custom theme to a SharePoint site by using the user interface or by implementing a feature receiver.
 ms.date: 01/05/2021
-ms.prod: sharepoint
 ms.assetid: f703df24-8e56-4e6a-bc37-95acbb3c83e8
 ms.localizationpriority: high
 ---

@@ -1,7 +1,7 @@
 ---
 title: Building well performing classic publishing portals for SharePoint Online
 description: Guidelines for developing well-performing SharePoint Online portals. 
-ms.date: 4/30/2018
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,7 @@ SharePoint on-premises has been, and is, a popular platform for building enterpr
 
 > [!NOTE]
 > - Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
-> - Ensuring the portal you design is healthy and does achieve the performance you desire is important, another recommended read is the [Creating and launching a healthy SharePoint portal](https://docs.microsoft.com/sharepoint/portal-health) documentation which covers both classic and modern portals.
+> - Ensuring the portal you design is healthy and does achieve the performance you desire is important, another recommended read is the [Creating and launching a healthy SharePoint portal](/sharepoint/portal-health) documentation which covers both classic and modern portals.
 
 ## Why we created these guidelines
 
@@ -59,5 +59,5 @@ The following table contains an overview of the individual articles that are par
 
 ## See also
 
-- [Creating and launching a healthy SharePoint portal](https://docs.microsoft.com/sharepoint/portal-health)
+- [Creating and launching a healthy SharePoint portal](/sharepoint/portal-health)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

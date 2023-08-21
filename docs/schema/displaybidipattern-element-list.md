@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Specifies the display pattern to use for a column that supports bid
 # DisplayBidiPattern element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the display pattern to use for a column that supports bidirectional reading order.
-  
+
 ```XML
 <DisplayBidiPattern>
 </DisplayBidiPattern>
@@ -32,37 +31,37 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: 1 
-   
+- Minimum: 0
+- Maximum: 1
+
 ### Remarks
 
-The **DisplayBidiPattern** element applies to sites whose locale identifier supports bidirectional reading order, including Arabic, Farsi, Hebrew, and Urdu languages. 
-  
+The **DisplayBidiPattern** element applies to sites whose locale identifier supports bidirectional reading order, including Arabic, Farsi, Hebrew, and Urdu languages.
+
 ## Example
 
-The following example defines a display pattern for a **Title** column whose reading order is bidirectional. 
-  
+The following example defines a display pattern for a **Title** column whose reading order is bidirectional.
+
 ```XML
 <DisplayBidiPattern>
    <HTML><![CDATA[<p dir=]]></HTML>
    <Property Select="Direction"/>
    <HTML><![CDATA[><a onfocus="OnLink(this)" href="]]></HTML>
    <URL/>
-   <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;" 
+   <HTML><![CDATA[" ONCLICK="GoToLink(this);return false;"
       target="_self">]]></HTML>
-   <Column HTMLEncode='TRUE' Name='Title' 
+   <Column HTMLEncode='TRUE' Name='Title'
       Default='(no title)'></Column>
    <HTML><![CDATA[</a>]]></HTML>
    <IfNew>
@@ -75,5 +74,5 @@ The following example defines a display pattern for a **Title** column whose rea
    <HTML><![CDATA[</p>]]></HTML>
 </DisplayBidiPattern>
 ```
-   
-<br/> 
+
+<br/>

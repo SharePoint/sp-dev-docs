@@ -1,12 +1,12 @@
 ---
 title: Association element (WorkflowConfig)
+description:  Association element (WorkflowConfig) contains the information necessary for a declarative rules-based, code-free workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7f3e7e9f-256f-4570-ba3f-745bbdfbc5b8
 ---
@@ -94,16 +94,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig element</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[WorkflowConfig element](workflowconfig-element.md)|
 
 ### Remarks
 
@@ -142,10 +135,3 @@ The following example shows an Association element for a workflow configuration.
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-
-
-

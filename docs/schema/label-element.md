@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a label control.
 # Label element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a label control.
-  
+
 ```XML
 <Label
   ForId="Text"
@@ -55,25 +54,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**TemplateAlias** <br/> |Optional. A string that matches the value of the **TemplateAlias** attribute for a [ControlRef](controlref-element.md) element, an [OverflowArea](overflowarea-element.md) element, or an [OverflowSection](overflowsection-element.md) element in a [GroupTemplate](grouptemplate-element.md) element. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.  <br/> |
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |
 |**Command** <br/> |Optional. The name of the command to execute when the label receives focus.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-group.md) 
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-group.md)
 
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
-The following example is an XML fragment that shows a **Controls** element that contains two text box controls and two labels for them. 
-  
+The following example is an XML fragment that shows a **Controls** element that contains two text box controls and two labels for them.
+
 ```XML
 <Controls Id="Ribbon.Link.Link.Properties.Controls">
   <Label
@@ -113,5 +112,3 @@ The following example is an XML fragment that shows a **Controls** element that 
     TemplateAlias="o2"/>
 </Controls>
 ```
-
-

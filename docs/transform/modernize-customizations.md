@@ -1,7 +1,7 @@
 ---
 title: Modernize customizations
 description: Overview of the customizations that are not compatible with the modern user interface in SharePoint, and guidelines on how to remediate them.
-ms.date: 12/13/2018
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -118,9 +118,9 @@ In the introduction, we mentioned the common pattern of adding a site banner by 
 
 To learn more about SharePoint Framework Application Customizer extensions, see:
 
-- [Build your first SharePoint Framework Extension](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
-- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
-- [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
+- [Build your first SharePoint Framework Extension](/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
+- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
+- [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 
 ### Custom menu items in the site actions menu
 

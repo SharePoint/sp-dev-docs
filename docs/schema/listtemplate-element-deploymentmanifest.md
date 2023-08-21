@@ -1,20 +1,19 @@
 ---
 title: "ListTemplate element (DeploymentManifest)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the ListTemplate element (DeploymentManifest) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 40b7918d-5678-4be8-bb97-6ac22bd0265f
-description: "Last modified: March 09, 2015"
 ---
 
 # ListTemplate element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a list definition or instance of a list template ([SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)) object on a SharePoint list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents a list definition or instance of a list template ([SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)) object on a SharePoint list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object.
 
 ## Definition
 
@@ -43,7 +42,7 @@ USAGE
 ## Type
 
 [SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -63,18 +62,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**SchemaXml** <br/> |xs:string  <br/> |Optional. Represents the schema that describes the list definition.  <br/> |
 |**Type** <br/> |xs:string  <br/> |Optional. Specifies the list definition type as a [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx) value.  <br/> |
 |**Unique** <br/> |xs:boolean  <br/> |Optional. Specifies whether only one instance of the list type can be created by using the template, and that the template cannot be used to create a list by using the object model or user interface.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPListTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplate.aspx)
 - [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

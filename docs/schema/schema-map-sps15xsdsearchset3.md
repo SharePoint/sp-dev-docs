@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0b1ecfc3-a648-be87-6198-148a3946ebdd
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Portability.
@@ -15,7 +14,7 @@ description: Shows the schema definition for schema_Microsoft.Office.Server.Sear
 **Applies to:** SharePoint Server 2013
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Portability**.
-  
+
 ```XML
 <xs:schema ser="http://schemas.microsoft.com/2003/10/Serialization/" tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:complexType name="SearchConfigurationSettings">
@@ -67,5 +66,3 @@ This topic shows the schema definition for **schema_Microsoft.Office.Server.Sear
 </xs:schema>
 
 ```
-
-

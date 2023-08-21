@@ -1,10 +1,10 @@
 ---
 title: Schema map (AppPartConfigDefinition)
+description: This topic shows the schema definition for AppPartConfigDefinition.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: aea65d49-3b3f-2bf4-50e2-5967ffd753d2
 ---
@@ -15,7 +15,7 @@ ms.assetid: aea65d49-3b3f-2bf4-50e2-5967ffd753d2
 
 This topic shows the schema definition for **AppPartConfigDefinition**.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ```XML 
@@ -96,10 +96,3 @@ This topic shows the schema definition for **AppPartConfigDefinition**.
 
     </xs:schema>
 ```
-
-
-
-
-
-
-

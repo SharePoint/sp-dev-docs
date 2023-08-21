@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, used within a query to return items that are empty (Null).
 # IsNull element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used within a query to return items that are empty (**Null**).
-  
+
 ```XML
 <IsNull>
   <FieldRef Name = "Field_Name"/>
@@ -35,28 +34,28 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
 - [XML](xml-element.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
 The following query returns cases where the field base type is 1, the ID column equals the Project column, and the Template column is empty. Results are returned in ascending order by Title and then by ID.
-  
+
 ```XML
 <Query>
   <Where>
@@ -89,4 +88,3 @@ The following query returns cases where the field base type is 1, the ID column 
 
 - [IsNotNull element (Query)](isnotnull-element-query.md)
 - [Where element (Query)](where-element-query.md)
-

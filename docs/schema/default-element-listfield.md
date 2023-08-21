@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Sets the default value for a field.
 # Default element (List - Field)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Sets the default value for a field.
-    
+
 ```XML
 <Default>
 </Default>
@@ -32,27 +31,27 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
-The following example provides descriptive text and sets the default value of the **FavoriteColor** field to black. 
-  
+The following example provides descriptive text and sets the default value of the **FavoriteColor** field to black.
+
 ```XML
 <Field Type="Text" Name="FavoriteColor">
-  <Description>Enter your favorite color here. If you don't have a 
+  <Description>Enter your favorite color here. If you don't have a
     favorite color, enter "Black".
   </Description>
   <Default>Black</Default>
@@ -60,4 +59,3 @@ The following example provides descriptive text and sets the default value of th
 ```
 
 <br/>
-

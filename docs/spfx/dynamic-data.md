@@ -2,7 +2,6 @@
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
 ms.date: 07/31/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -21,7 +20,7 @@ Dynamic data in the SharePoint Framework is based on the source-notification mod
 
 Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified its data has changed. The consumer component then requests the data from the source component.
 
-Every dynamic data source implements the `IDynamicDataCallables` interface. 
+Every dynamic data source implements the `IDynamicDataCallables` interface.
 
 The following code demonstrates a web part that displays a list of upcoming events. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
@@ -77,10 +76,10 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
       case 'event':
         return this._selectedEvent;
       case 'location':
-        return this._selectedEvent 
-            ? { 
-                city: this._selectedEvent.city, 
-                address: this._selectedEvent.address 
+        return this._selectedEvent
+            ? {
+                city: this._selectedEvent.city,
+                address: this._selectedEvent.address
               }
             : undefined;
     }

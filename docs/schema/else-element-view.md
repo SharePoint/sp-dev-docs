@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: The instructions within this element are executed if the expression
 # Else element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 The instructions within this element are executed if the expressions contained in the [IfEqual](ifequal-element-view.md) element are not **TRUE**.
-  
+
 ```XML
 <Else>
 </Else>
@@ -32,26 +31,26 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [IfEqual](ifequal-element-view.md)
 - [IfHasRights](ifhasrights-element-view.md)
 - [IfSubString](ifsubstring-element-view.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: 1  
-   
+- Minimum: 0
+- Maximum: 1
+
 ## Example
 
 The following example evaluates two expressions, and if they are equal, it conveys a holiday greeting, but if not, it conveys a different message.
-  
+
 ```XML
 <IfEqual>
   <Expr1><Today/></Expr1>
@@ -63,8 +62,7 @@ The following example evaluates two expressions, and if they are equal, it conve
 
 ## See also
 
-- [Expr element (View)](expr-element-view.md)  
-- [Expr1 element (View)](expr1-element-view.md)  
+- [Expr element (View)](expr-element-view.md)
+- [Expr1 element (View)](expr1-element-view.md)
 - [Expr2 element (View)](expr2-element-view.md)
 - [Then element (View)](then-element-view.md)
-

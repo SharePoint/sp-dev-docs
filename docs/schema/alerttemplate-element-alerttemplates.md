@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Defines an alert message template.
 # AlertTemplate element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines an alert message template.
-  
+
 ```XML
 <AlertTemplate
   Type="List" | "Item" | "Custom"
@@ -49,16 +48,14 @@ The following sections describe attributes, child elements, and parent elements.
 |**Type**  <br/> |Specifies the item type that is associated with the alert template; either **List**, **Item**, or **Custom**.  <br/> |
 |**Default**  <br/> |Specifies whether the template is the default alert template.  <br/> |
 |**Name**  <br/> |Specifies the template name.  <br/> |
-   
+
 ### Child elements
 
 - [EventTypes](eventtypes-element-alerttemplates.md)
 - [Format](format-element-alerttemplates.md)
 - [Properties](properties-element-alerttemplates.md)
 - [Filters](filters-element-alerttemplates.md)
-   
+
 ### Parent elements
 
 - [AlertTemplates](alerttemplates-element-alerttemplates.md)
-   
-

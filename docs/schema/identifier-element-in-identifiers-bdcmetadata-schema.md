@@ -2,12 +2,11 @@
 title: Identifier Element in Identifiers (BDCMetadata Schema)
 description: Details on the Identifier Element in Identifiers (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Identifier
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c4abf09b-10b6-0007-9214-35d5fe675be7
 ---
@@ -22,7 +21,7 @@ Specifies an identifier of an external content type.
 
 **Schema**: BDCMetadata
 
-> [!NOTE] 
+> [!NOTE]
 > The Business Data Connectivity (BDC) service enables the mapping of identifiers to fields with nullable data types. However, for primary identifiers, BDC causes an error when the value of these identifiers are **null**.
 
 ```XML
@@ -161,54 +160,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names of the identifier.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the identifier.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of the identifier. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the identifier. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadata-schema.md">Identifiers Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A list of identifiers of an external content type.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Identifiers Element in Entity (BDCMetadata Schema)](identifiers-element-in-entity-bdcmetadata-schema.md) | A list of identifiers of an external content type. |

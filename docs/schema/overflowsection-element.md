@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a section that can be created dynamically with a variable n
 # OverflowSection element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a section that can be created dynamically with a variable number of controls.
-  
+
 ```XML
 <OverflowSection
   DisplayMode="Small | Medium | Large | Menu | Menu16 | Menu32"
@@ -43,18 +42,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**DividerBefore** <br/> |Optional. **TRUE** to render a divider at the start of the section.  <br/> |
 |**TemplateAlias** <br/> |Optional. A string that a control can reference in its own **TemplateAlias** attribute. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.  <br/> |
 |**Type** <br/> | Optional. An enumeration value that specifies the type of section.  <br/> **OneRow**. The section renders with one row of controls.  <br/> **TwoRow**. The section renders with two rows of controls.  <br/> **ThreeRow**. The section renders with three rows of controls.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Layout](layout-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
-
+- Maximum: unbounded

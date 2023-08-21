@@ -1,12 +1,12 @@
 ---
 title: MetaData Element (Workflow)
+description: The MetaData Element (Workflow) contains any additional, custom metadata elements that are valid XML for the workflow.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, metadata element (workflow)
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c454e18c-ea94-4dd1-8081-a25a8acbacef
 ---
@@ -89,7 +89,7 @@ Following is an example of a **Metadata** element containing information on how 
           <StatusColumnValue>Canceled</StatusColumnValue>
           <StatusColumnValue>Approved</StatusColumnValue>
           <StatusColumnValue>Rejected</StatusColumnValue>
-        </ExtendedStatusColumnValues>  
+        </ExtendedStatusColumnValues>
       </MetaData>
 ```
 
@@ -98,13 +98,3 @@ Following is an example of a **Metadata** element containing information on how 
 - [Workflow Definitions](workflow-definitions.md)
 - [Workflows in Windows SharePoint Services](https://msdn.microsoft.com/library/be0888d4-20b2-4d39-bf28-2d8a71829d8e(Office.15).aspx)
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
-
-
-
-
-
-
-
-
-
-

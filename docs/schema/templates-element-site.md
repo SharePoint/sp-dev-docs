@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:
 - schema
 ms.assetid: 208c0e62-e9e2-49ec-ad7b-f7aa1770a604
-description: Top-level element in a WebTemp*.xml file that specifies the collection of site definitions available for instantiating sites within the deployment. 
+description: Top-level element in a WebTemp*.xml file that specifies the collection of site definitions available for instantiating sites within the deployment.
 ---
 
 # Templates element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Top-level element in a [WebTemp\*.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment. 
-  
+
+Top-level element in a [WebTemp\*.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment.
+
 ```XML
 <Templates>
     <Template
@@ -39,24 +38,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Template](template-element-site.md)
-   
+
 ### Parent elements
 
-None 
-   
+None
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1   
-   
+- Maximum: 1
+
 ## Example
 
-The following example shows the templates defined in the default [WebTemp.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file installed in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033 folder of SharePoint Foundation. 
-  
+The following example shows the templates defined in the default [WebTemp.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file installed in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033 folder of SharePoint Foundation.
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <!-- _lcid="1033" _version="14.0.4762" _dal="1" -->
@@ -94,5 +93,3 @@ The following example shows the templates defined in the default [WebTemp.xml](h
  </Template>
 </Templates>
 ```
-
-

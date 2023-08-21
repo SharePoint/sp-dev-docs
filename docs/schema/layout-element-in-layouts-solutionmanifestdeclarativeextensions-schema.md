@@ -1,15 +1,15 @@
 ---
 title: Layout Element in Layouts
+description: Describes the Layout element in Layouts and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 ---
 
-# Layout Element in Layouts 
+# Layout Element in Layouts
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -17,7 +17,7 @@ ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 
 The **Layout** element is used to specify the location of the layout file that contains layout information for the external data part.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -73,53 +73,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx">Properties</a></p></td>
-<td align="left"><p>Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Description |
+| --- | --- |
+| [Properties](https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx) | Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **Layouts** element that contains this layout.</p></td>
-</tr>
-</tbody>
-</table>
 
+| Element | Description |
+| --- | --- |
+| [Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Layouts** element that contains this layout. |
 
-<br/>
+</br>
 
-<br/>
-
-
-
-
-
-
+</br>

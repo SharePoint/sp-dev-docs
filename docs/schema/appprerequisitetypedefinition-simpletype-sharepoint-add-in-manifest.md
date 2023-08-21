@@ -1,15 +1,15 @@
 ---
 title: AppPrerequisiteTypeDefinition simpleType
+description: Outlines information, a definition, and enumeration values for the AppPrerequisiteTypeDefinition simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 432f44e8-1b98-d4e2-76d1-4ddbff34606d
 ---
 
-# AppPrerequisiteTypeDefinition simpleType 
+# AppPrerequisiteTypeDefinition simpleType
 
 (SharePoint Add-in Manifest)
 
@@ -17,16 +17,15 @@ ms.assetid: 432f44e8-1b98-d4e2-76d1-4ddbff34606d
 
 The type of a prerequisite for a SharePoint Add-in.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
+**Base type**: xs:string
 
-|   |   |
-|---|---|
-| **Base type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
+
+**Schema file**: appmanifest.xsd
 
 ## Definition
 
@@ -72,10 +71,3 @@ The type of a prerequisite for a SharePoint Add-in.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

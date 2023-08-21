@@ -1,20 +1,19 @@
 ---
 title: "View Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes View Element (DeploymentManifest) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c7ab084e-e946-45a0-9dc8-ac68eba4e557
-description: "Last modified: March 09, 2015"
 ---
 
 # View Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 view ([SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)) object.
 
 ## Definition
 
@@ -73,8 +72,8 @@ USAGE
 
 ## Type
 
-[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) object 
-  
+[SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) object
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -100,7 +99,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Type** <br/> |xs:string  <br/> |Optional. Represetns the type of the view.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. Represents the site-relative URL of the page that contains the view.  <br/> |
 |**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Identifier of the web part zone in which the view is sited.  <br/> |
-   
+
 ### Child elements
 
 - [Script Element (DeploymentManifest - SPView)](script-element-deploymentmanifestspview.md)
@@ -125,13 +124,12 @@ The following sections describe attributes, child elements, and parent elements.
 - [GroupByHeader (DeploymentManifest - SPView)](groupbyheader-deploymentmanifestspview.md)
 - [CalendarViewStyles Element (DeploymentManifest - SPView)](calendarviewstyles-element-deploymentmanifestspview.md)
 - [ListFormBody Element (DeploymentManifest - SPView)](listformbody-element-deploymentmanifestspview.md)
-   
+
 ### Parent elements
 
 - [Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

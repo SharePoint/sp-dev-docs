@@ -2,7 +2,6 @@
 title: Create a mashup that uses an embedded workbook and Bing Maps
 description: This article walks you through a powerful Web-based mashup that combines an embedded Excel workbook and Bing Maps.
 ms.date: 12/22/2020
-ms.prod: sharepoint
 ms.assetid: 3cfeb8d7-84b8-4673-bc92-b176cba4ac3e
 ms.localizationpriority: medium
 ---

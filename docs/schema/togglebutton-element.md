@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a button that is used to switch states.
 # ToggleButton element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a button that is used to switch states.
-  
+
 ```XML
 <ToggleButton
   Alt="Text"
@@ -87,19 +86,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that displays in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip displays the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
+- [CommandUIDefinition](commanduidefinition-element.md)
 - [Controls](controls-element-group.md) (Group)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
-
+- Maximum: unbounded

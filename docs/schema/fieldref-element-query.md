@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, represents a reference to a field within a query.
 # FieldRef element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Represents a reference to a field within a query.
-  
+
 ```XML
 <FieldRef
   Alias = "Text"
@@ -61,11 +60,11 @@ The following sections describe attributes, child elements, and parent elements.
 |**ShowField** <br/> |Optional **Text**. The **ShowField** attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.  <br/> The following data types are allowed as targets of a **ShowField** attribute: **Text**, **Choice**, and **Counter**.  <br/> |
 |**TextOnly** <br/> |Optional **Boolean**. Specifies that the field contains only text values.  <br/> |
 |**Type** <br/> | Optional **Text**. Specifies the function that is applied to a totals column or a calculated column. Possible values include the following:<br/><br/> **AVG** Average value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **COUNT** Number of items. Applies to all field types that allow aggregation.  <br/> **MAX** Maximum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **MIN** Minimum value. Applies to **DateTime** **Number**, **Integer**, and **Currency** field types.  <br/> **SUM** Sum of values. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **STDEV** Standard deviation. Applies to **Number**, **Integer**, and **Currency** field types.  <br/> **VAR** Variance. Applies to **Number**, **Integer**, and **Currency** field types.  <br/><br/>The values for the **Type** attribute are not case-sensitive.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [BeginsWith](beginswith-element-query.md)
@@ -85,16 +84,16 @@ None
 - [Neq](neq-element-query.md)
 - [NotIncludes](notincludes-element-query.md)
 - [OrderBy](orderby-element-query.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
+- Minimum: 0
 - Maximum: 1 (unbounded within [OrderBy](orderby-element-query.md))
-   
+
 ## Examples
 
-The following example queries for cases where the Expires field is either **null** or contains a value greater than or equal to the current date. 
-  
+The following example queries for cases where the Expires field is either **null** or contains a value greater than or equal to the current date.
+
 ```XML
 <Query>
    <Where>
@@ -118,8 +117,8 @@ The following example queries for cases where the Expires field is either **null
 
 <br/>
 
-This example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for contacts lists fields to display in the toolbar. 
-  
+This example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for contacts lists fields to display in the toolbar.
+
 ```XML
 <ViewFields>
    <FieldRef Name="LinkTitleNoMenu"></FieldRef>
@@ -131,4 +130,3 @@ This example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-8
 
 
 <br/>
-

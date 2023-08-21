@@ -1,21 +1,20 @@
 ---
 title: GetByUniqueId
+description: Use REST API to get or update information about a Microsoft Syntex document understanding model.
+ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
 ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
-ms.prod: microsoft-365-enterprise
-search.appverid: 
 ms.collection: m365initiative-syntex
 ms.localizationpriority: high
-description: Use REST API to get or update information about a SharePoint Syntex document understanding model.
 ---
 
 # GetByUniqueId
 
-Gets or updates information about a SharePoint Syntex document understanding model (see [example](rest-getbyuniqueid-method.md#examples)).
+Gets or updates information about a Microsoft Syntex document understanding model (see [example](rest-getbyuniqueid-method.md#examples)).
 
 ## HTTP request
 
@@ -23,7 +22,7 @@ Gets or updates information about a SharePoint Syntex document understanding mod
 GET /_api/machinelearning/models/getbyuniqueid('{modelUniqueId}') HTTP/1.1
 ```
 
-This same method can be used for deleting a model, too. 
+This same method can be used for deleting a model, too.
 
 ```HTTP
 DELETE /_api/machinelearning/models/getbyuniqueid('{modelUniqueId}') HTTP/1.1

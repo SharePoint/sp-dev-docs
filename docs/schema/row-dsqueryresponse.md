@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
   - dsQueryResponse XML

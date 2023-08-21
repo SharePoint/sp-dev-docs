@@ -1,12 +1,12 @@
 ---
 title: HashtableSource Element (WorkflowInfo)
+description: HashtableSource Element (WorkflowInfo) specifies that the evaluation value is retrieved from a hash table.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0c03a225-83ab-4aa4-9065-6e06906de618
 ---
@@ -76,11 +76,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

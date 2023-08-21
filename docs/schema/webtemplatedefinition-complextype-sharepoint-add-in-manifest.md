@@ -1,15 +1,15 @@
 ---
 title: WebTemplateDefinition complexType
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/15/2022
+description: Describes WebTemplateDefinition complexType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9a87218f-b491-e4b6-e0f4-a2219f48fcd1
 ---
 
-# WebTemplateDefinition complexType 
+# WebTemplateDefinition complexType
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 9a87218f-b491-e4b6-e0f4-a2219f48fcd1
 
 Identifies the site type to use for the add-in web.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |
@@ -34,7 +34,7 @@ Identifies the site type to use for the add-in web.
       <xs:complexType name="WebTemplateDefinition">
          <xs:attribute name="Id"  type="WebTemplateIdDefinition"  use="required"  />
          <xs:attribute name="FeatureId"  type="GUID"  use="optional"  />
-      </xs:complexType>       
+      </xs:complexType>
 ```
 
 ## Elements and attributes
@@ -49,47 +49,7 @@ None.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="25%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>FeatureId (obsolete)</p></td>
-<td align="left"><p><a href="guid-simpletype-sharepoint-add-in-manifest.md">GUID</a></p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>This attribute is obsolete. Do not use.</p></td>
-<td align="left"><p>Values of the GUID type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Id</p></td>
-<td align="left"><p><a href="webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md">WebTemplateIdDefinition</a></p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>The ID of the WebTemplate that should be used when creating the add-in web.</p></td>
-<td align="left"><p>This type is a string of the form `{hyphenated_GUID}#web_template_name`<br/><br/>The hyphenated_GUID is the GUID of the add-in web Feature that contains the <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></span> that defines the site type of the add-in web.<br/><br/>The web_template_name is the value of the **Name** attribute of that <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a>.<br/><br/>Note that the braces "{}" and the "#" are mandatory.<br/><br/>The following is an example:<br/>
-`<WebTemplate Id="{81dd4ae5-873b-4759-9838-4ad9c3dd2952}#MyNewSiteType" />`</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Attribute | Type | Required | Description | Possible values |
+| --- | --- | --- | --- | --- |
+| FeatureId (obsolete) | [GUID](guid-simpletype-sharepoint-add-in-manifest.md) | optional | This attribute is obsolete. Do not use. | Values of the GUID type. |
+| Id  | [WebTemplateIdDefinition](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md) | required | The ID of the WebTemplate that should be used when creating the add-in web. | This type is a string of the form `{hyphenated_GUID}#web_template_name`  </br></br>The hyphenated_GUID is the GUID of the add-in web Feature that contains the [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) that defines the site type of the add-in web.</br></br>The web_template_name is the value of the **Name** attribute of that [WebTemplate Element (Web Template)](webtemplate-element-web-template.md).</br></br>Note that the braces "{}" and the "#" are mandatory.</br></br>The following is an example:</br>`<WebTemplate Id="{81dd4ae5-873b-4759-9838-4ad9c3dd2952}#MyNewSiteType" />` |

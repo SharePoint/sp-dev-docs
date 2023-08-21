@@ -1,12 +1,12 @@
 ---
 title: XmlDocuments Element (ContentType)
+description: Describes the XmlDocuments element (ContentType) and provides the element's definition, child elements, parent elements, remarks, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, xmldocuments element (contenttype)
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 90198d80-5f53-4f05-967e-40bb367b48ac
 ---
@@ -121,11 +121,3 @@ For more information on the actual information contained in the **XmlDocument** 
 
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-
-
-
-
-
-
-

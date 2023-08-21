@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, arithmetic operator that means "not equal to" and is used 
 # Neq element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Arithmetic operator that means "not equal to" and is used in queries.
-  
+
 ```XML
 <Neq>
   <FieldRef Name = "Field_Name"/>
@@ -35,29 +34,29 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
 - [XML](xml-element.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
 
-   
+
 ## Example
 
-The following example queries the Status field for cases where the value does not equal Completed or is **null**, returning the results according to a descending sort on the Modified field. The **Where** element contains an **Or** element to group the filters. 
-  
+The following example queries the Status field for cases where the value does not equal Completed or is **null**, returning the results according to a descending sort on the Modified field. The **Where** element contains an **Or** element to group the filters.
+
 ```XML
 <Query>
   <OrderBy>
@@ -79,8 +78,7 @@ The following example queries the Status field for cases where the value does no
 
 ## See also
 
-- [Eq element (Query)](eq-element-query.md)  
-- [Geq element (Query)](geq-element-query.md)  
-- [Gt element (Query)](gt-element-query.md)  
+- [Eq element (Query)](eq-element-query.md)
+- [Geq element (Query)](geq-element-query.md)
+- [Gt element (Query)](gt-element-query.md)
 - [Lt element (Query)](lt-element-query.md)
-

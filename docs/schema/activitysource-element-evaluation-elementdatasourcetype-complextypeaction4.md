@@ -1,15 +1,15 @@
 ---
 title: ActivitySource element (Evaluation element)
+description: Discusses the definition, elements and attributes for ActivitySource element (Evaluation element).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1cea3d40-3662-8b7d-f450-637a28927fe0
 ---
 
-# ActivitySource element (Evaluation element) 
+# ActivitySource element (Evaluation element)
 
 (dataSourceType complexType) (Action4)
 
@@ -27,7 +27,7 @@ Specifies that the evaluation value is retrieved from the fields of the parent d
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -37,7 +37,7 @@ Specifies that the evaluation value is retrieved from the fields of the parent d
 
 ```XML
     <xs:element name="ActivitySource">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -75,11 +75,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

@@ -1,28 +1,27 @@
 ---
 title: "ContentType Element (DeploymentManifest)"
+description: Provides a definition, elements and attributes for the ContentType element DeploymentManifest in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fd752d9d-2a30-4f6a-a0af-f1982fa2ee07
-description: "Last modified: March 09, 2015"
 ---
 
 # ContentType Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an object that specifies the content type for a Windows SharePoint Services 3.0 object.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element 
-        name="ContentType" 
-        type="SPContentType" 
+<xs:element
+        name="ContentType"
+        type="SPContentType"
 />
 USAGE
 <SPObject>
@@ -44,7 +43,7 @@ USAGE
 ## Type
 
 [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -62,18 +61,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**Group** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**PushDownChanges** <br/> |xs:boolean  <br/> |Optional.  <br/> |
 |**RequireClinetRenderingOnNew** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 - [ContentTypes Element (DeploymentManifest)](contenttypes-element-deploymentmanifest.md)
-

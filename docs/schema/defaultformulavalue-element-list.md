@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Contains the default value for a field that has a formula.
 # DefaultFormulaValue element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains the default value for a field that has a formula. 
-  
+
+Contains the default value for a field that has a formula.
+
 ```XML
 <DefaultFormulaValue>
 </DefaultFormulaValue>
@@ -32,18 +31,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: 1
-   
-<br/> 
+
+<br/>

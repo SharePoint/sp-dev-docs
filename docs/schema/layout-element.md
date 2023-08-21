@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines the layout of controls in a template.
 # Layout element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the layout of controls in a template.
-  
+
 ```XML
 <Layout
   Title="Text"
@@ -37,25 +36,25 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Title** <br/> |Required. A string that identifies the element within its parent [GroupTemplate](grouptemplate-element.md) element. The element's ID in the Document Object Model (DOM) is formed on the pattern "ParentId-Title".  <br/> |
 |**LayoutTitle** <br/> |Optional. An alternative identifier for the element. Use this attribute to provide a title when the value of the **Title** attribute is "Popup".  <br/> |
-   
+
 ### Child elements
 
-- [Section](section-element.md) 
-- [OverflowSection](overflowsection-element.md) 
-   
+- [Section](section-element.md)
+- [OverflowSection](overflowsection-element.md)
+
 ### Parent elements
 
 - [GroupTemplate](grouptemplate-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
-The following example is an XML fragment that defines a group template that has several **Layout** elements. 
-  
+The following example is an XML fragment that defines a group template that has several **Layout** elements.
+
 ```XML
 <GroupTemplate Id="Ribbon.Templates.FontGroup">
   <Layout Title="Large">
@@ -115,5 +114,3 @@ The following example is an XML fragment that defines a group template that has 
   <Layout Title="Popup" LayoutTitle="Large" />
 </GroupTemplate>
 ```
-
-

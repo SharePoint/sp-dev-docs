@@ -1,7 +1,7 @@
 ---
 title: Understanding Coordination actions in SharePoint Designer 2013
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes the two Coordination Actions in SharePoint Designer 2013 and provides details on how to use them.
+ms.date: 06/14/2022
 ms.assetid: 33fbcf91-0a5d-47ab-85a9-9d2d556a204d
 ms.localizationpriority: medium
 ---

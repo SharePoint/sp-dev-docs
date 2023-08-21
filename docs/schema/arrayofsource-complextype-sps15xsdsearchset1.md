@@ -1,27 +1,26 @@
 ---
 title: "ArrayOfSource complexType (SPS15XSDSearchSet1)"
+description: Discusses the definition, elements and attributes for ArrayOfSource complexType (SPS15XSDSearchSet1).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4bdb8121-495b-b729-2de5-e1d157e83169
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfSource complexType (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
 |**Extension base** <br/> |None  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -35,16 +34,14 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |[Source](source-element-arrayofsource-complextypesps15xsdsearchset1.md) <br/> |tns:Source  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Mobile Document Viewer XML
@@ -15,9 +14,9 @@ description: Specifies how a request for a document for a specific type is redir
 # MobileDocViewer element (Mobile Document Viewer)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies how a request for a document for a specific type is redirected to a page that hosts a viewer that can open documents of that type.
-  
+
 ```XML
   <MobileDocViewer ... > </MobileDocViewer>
 ```
@@ -35,23 +34,23 @@ The following sections describe attributes, child elements, and parent elements.
 |**FeatureId** <br/> |Optional. The GUID of the Feature, if any, that was used to deploy the viewer page.  <br/> |
 |**QueryId** <br/> |The query ID key; for example, "doc".  <br/> |
 |**AppendSourceUrl** <br/> |**True** if a source query ID should be appended to the URL of page that hosts the viewer; otherwise, **false**. The source query value is the path to the folder that holds the document. In the special case where `"?mobile=1"` is part of the original URL, the source query value is the same as the source query value of the original URL.  <br/> |
-   
+
 ### Child elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[BrowserCondition](browsercondition-mobile-document-viewer.md) <br/> |Optional. Identifies a browser capability that means the browser can use an alternative viewer for the specified type of file.  <br/> |
-   
+
 ### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[MobileDocViewers](mobiledocviewers-mobile-document-viewer.md) <br/> |Specifies the document viewing page for one or more types of documents.  <br/> |
-   
+
 ## Example
 
 The following example shows this element in use.
-  
+
 ```XML
 <MobileDocViewers>
   <MobileDocViewer Name="docx" FilePath="/_layouts/mobile/mWord.aspx" FeatureId="8DFAF93D-E23C-4471-9347-07368668DDAF" QueryId="doc" AppendSourceUrl="true" >
@@ -66,4 +65,3 @@ The following example shows this element in use.
 ## See also
 
 - [Developing Mobile Document Viewers](https://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
-

@@ -1,7 +1,7 @@
 ---
 title: Use composed looks to brand SharePoint sites
 description: Apply composed looks, including colors, fonts, and a background image, to your SharePoint and SharePoint Online sites by using the SharePoint theming engine.
-ms.date: 4/25/2018
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -68,7 +68,7 @@ You can edit the .spcolor file in Notepad. You cannot edit it in PowerPoint.
 
 ### Color palette tool
 
-You can use the [color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) to visualize theme colors and how they work together on the page. Use it to identify color information that you can use in the color slots of the .spcolor file, and apply colors to a SharePoint site without changing any CSS as part of the process.
+You can use the [color palette tool](https://techcommunity.microsoft.com/t5/sharepoint/download-sharepoint-color-palette-tool/m-p/63394) to visualize theme colors and how they work together on the page. Use it to identify color information that you can use in the color slots of the .spcolor file, and apply colors to a SharePoint site without changing any CSS as part of the process.
 
 The tool displays the colors in hexadecimal format so that you can easily copy and paste the color value into the appropriate element in your .spcolor file. You can also use the color palette tool to fit a background image into a mockup and toggle between the seattle.master and oslo.master master pages. 
 

@@ -1,16 +1,12 @@
 ---
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 02/18/2022
-ms.prod: sharepoint
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Advanced Card View Functionality
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
-
-> [!IMPORTANT]
-> This feature is still preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
 
 In this tutorial, you'll implement advanced card view functionality. You'll build off the the previous tutorial and create a card view that's powered by data in a SharePoint list.
 
@@ -237,7 +233,7 @@ Now you can test the ACE. Build and launch the ACE in the hosted workbench:
 gulp serve
 ```
 
-Once the local webserver has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 > [!NOTE]
 > Remove any old instance of the ACE from your workbench. ACE instances from [the previous tutorial](build-first-sharepoint-adaptive-card-extension.md) will show an error message since the ACE properties have been updated.
@@ -418,7 +414,7 @@ Select the **Next** button until you get to the last item in the list. The card 
 Starting in SPFx v1.14, ACEs have a client-side caching layer that can be configured to store:
 
 1. The latest rendered card.
-2. The state of the ACE.
+1. The state of the ACE.
 
 ### Rendering from cached Card view
 
@@ -435,7 +431,7 @@ The settings for this cache can be configured by overriding the following method
     };
   }
   ```
-  
+
 ### Rehydrating from cached ACE state
 
 The subset of the ACE state that is cached can be configured by overriding the following method:
@@ -443,7 +439,7 @@ The subset of the ACE state that is cached can be configured by overriding the f
   ```typescript
   protected getCachedState(state: TState): Partial<TState>;
   ```
- 
+
 The object returned by this method will be serialized and cached. By default, no state is cached. In the next call to `onInit`, the deserialized value will be passed to onInit as part of the `ICachedLoadParameters`
 
   ```typescript
@@ -462,3 +458,7 @@ After this lab you should be familiar with:
 - Conditionally rendering Card view elements
 - Advanced Card view manipulation
 - Caching Card view and ACE state
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

@@ -2,7 +2,6 @@
 title: SharePoint solution packaging
 description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
 ms.date: 10/26/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging

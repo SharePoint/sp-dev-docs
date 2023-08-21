@@ -1,15 +1,15 @@
 ---
 title: Hub site REST API
 description: Overview of hub site REST API for creating hub sites and associating existing sites with hub sites.
-ms.date: 4/20/2018
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
 # Hub site REST API
 
-You can use the SharePoint REST interface to register sites as hub sites, associate existing sites with hub sites, and obtain or update information about hub sites. 
+You can use the SharePoint REST interface to register sites as hub sites, associate existing sites with hub sites, and obtain or update information about hub sites.
 
-The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. 
+The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option.
 
 For details and links to code samples, see [Make batch requests with the REST APIs](../../sp-add-ins/make-batch-requests-with-the-rest-apis.md).
 
@@ -17,7 +17,7 @@ For details and links to code samples, see [Make batch requests with the REST AP
 
 Before you get started, make sure that you're familiar with the following:
 
-- [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) 
+- [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
 ## REST commands
@@ -50,4 +50,3 @@ To remove, or disassociate a site from a hub site, call [JoinHubSite](REST-joinh
 ## See also
 
 - [SharePoint hub sites overview](hub-site-overview.md)
-

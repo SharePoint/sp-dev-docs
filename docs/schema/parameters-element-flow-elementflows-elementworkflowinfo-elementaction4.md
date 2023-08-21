@@ -1,15 +1,15 @@
 ---
 title: Parameters element (Flow element)
+description: Describes the Parameters element (Flow element) and provides the usage, the element information, a definition, and the elements and attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 426b5695-1857-b535-6355-09701ef153bd
 ---
 
-# Parameters element (Flow element) 
+# Parameters element (Flow element)
 
 (Flows element) (WorkflowInfo element) (Action4)
 
@@ -57,7 +57,7 @@ Container for **Parameter** elements that includes descriptions of the parameter
 
 ```XML
     <xs:element name="Parameters" type="parametersType" minOccurs="1"     maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -115,11 +115,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

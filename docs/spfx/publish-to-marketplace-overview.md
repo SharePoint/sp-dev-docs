@@ -2,7 +2,6 @@
 title: Publish SharePoint Framework applications to the marketplace
 description: Considerations for publishing SharePoint Framework applications to the marketplace
 ms.date: 01/13/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

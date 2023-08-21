@@ -1,7 +1,7 @@
 ---
 title: Complete basic operations using SharePoint client library code
 description: Write code to perform basic operations with the SharePoint .NET Framework client object model (CSOM).
-ms.date: 9/1/2021
+ms.date: 6/16/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -97,7 +97,7 @@ context.ExecuteQuery();
 // try to print out other properties, the code will throw
 // an exception because other properties aren't available.
 label1.Text = web.Title;
-label1.Text = web. Description;
+label1.Text = web.Description;
 ```
 
 > [!NOTE]

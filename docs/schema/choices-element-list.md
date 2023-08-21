@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Used to define several choices within a field for a drop-down list.
 # CHOICES element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used to define several choices within a field for a drop-down list.
-  
+
 ```XML
 <CHOICES>
   <CHOICE
@@ -39,30 +38,30 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [CHOICE](choice-element-list.md)
-   
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: 1 
-   
+- Minimum: 0
+- Maximum: 1
+
 ### Remarks
 
-Within a **CHOICES** element, each **CHOICE** element contains a value that appears in the list. 
-  
-Remember that CAML is case-sensitive; the **CHOICE** and **CHOICES** elements are in all capital letters. 
-  
+Within a **CHOICES** element, each **CHOICE** element contains a value that appears in the list.
+
+Remember that CAML is case-sensitive; the **CHOICE** and **CHOICES** elements are in all capital letters.
+
 ## Example
 
-This example defines a **Choice** field with three choices. 
-  
+This example defines a **Choice** field with three choices.
+
 ```XML
 <CHOICES>
   <CHOICE>Not Started</CHOICE>
@@ -72,4 +71,3 @@ This example defines a **Choice** field with three choices.
 ```
 
 <br/>
-

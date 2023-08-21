@@ -1,28 +1,27 @@
 ---
 title: "Personalization Element (DeploymentManifest)"
+description: Describes the Personalization element (DeploymentManifest) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dc42dabd-68d3-4bba-bbe6-3e5571620ead
-description: "Last modified: March 09, 2015"
 ---
 
 # Personalization Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents personalization data pertaining to an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents personalization data pertaining to an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="Personalization" 
-        type="SPPersonalization" 
-        minOccurs="1" maxOccurs="unbounded" 
+<xs:element name="Personalization"
+        type="SPPersonalization"
+        minOccurs="1" maxOccurs="unbounded"
 />
 USAGE
 <Personalizations>
@@ -41,7 +40,7 @@ USAGE
 ## Type
 
 **SPPersonalization**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -57,17 +56,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**IsIncluded** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**FrameState** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**UserProperties** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

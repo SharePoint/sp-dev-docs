@@ -2,7 +2,6 @@
 title: Use cascading dropdowns in web part properties
 description: Create cascading dropdown controls in the SharePoint client-side web part property pane without developing a custom property pane control.
 ms.date: 02/11/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Use cascading dropdowns in web part properties

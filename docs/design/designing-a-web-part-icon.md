@@ -1,7 +1,7 @@
 ---
 title:  Designing a web part icon
 description: Learn how to design a web part icon that will look great in SharePoint.
-ms.date: 08/24/2018
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -13,13 +13,13 @@ Web part icons are designed to be simple, representative, and symbolic. Every ic
 
 ## Grid keyline shapes
 
-Web part icons are displayed at 32x32 px but are designed at twice the size, or 64x64 px. Create icons at 100% to ensure that pixels are accurate. 
+Web part icons are displayed at 32x32 px but are designed at twice the size, or 64x64 px. Create icons at 100% to ensure that pixels are accurate.
 
 ![Web part icon grid](../images/02_Icons_sizes.png)
 
 ## Layout
 
-Design icons within the 64x64 px container area. This ensures that the icon renders correctly. 
+Design icons within the 64x64 px container area. This ensures that the icon renders correctly.
 
 ![Grid example for web part icons at 64px](../images/03_Icons_Layout.png)
 
@@ -32,7 +32,7 @@ Not all icons or logos are designed in a perfect square. Use this guide of basic
 
 ## Pixel clarity
 
-Try to avoid any icon distortion by snapping your edges to the X and Y coordinates. Use whole numbers when possible. 
+Try to avoid any icon distortion by snapping your edges to the X and Y coordinates. Use whole numbers when possible.
 
 ![Example of an icon that is not aligned to the pixel and one that is](../images/05_Icons_pixel_clarity.png)
 
@@ -49,4 +49,3 @@ Web part icons can contain one color or be full color. Most icons work best when
 Export icons as SVGs at 64x64 px with transparent backgrounds.
 
 You can find the icon grid in the [SharePoint Design toolkit](https://developer.microsoft.com/fabric#/resources).
-

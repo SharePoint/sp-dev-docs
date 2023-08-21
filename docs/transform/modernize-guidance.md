@@ -1,7 +1,7 @@
 ---
 title: SharePoint modernization guidance
 description: Modernization offerings that IT Teams can use with their customers
-ms.date: 01/27/2021
+ms.date: 04/25/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -29,7 +29,7 @@ Check the [Strategy page](modernize-guidance-strategy.md) to learn more.
 
 ## Step 3: Execution
 
-Next is using the scan results from step 1 to build your modernization plan: you'll learn how to use the scan output to identify the sites to modernize and how to structure them in waves. Next you'll review and tailor the modernization scrips, prepare and validate the input for these scripts and finally run the modernization scripts.
+Next is using the scan results from step 1 to build your modernization plan: you'll learn how to use the scan output to identify the sites to modernize and how to structure them in waves. Next you'll review and tailor the modernization scripts, prepare and validate the input for these scripts and finally run the modernization scripts.
 
 Check the [Execution page](modernize-guidance-execution.md) to learn more.
 

@@ -1,28 +1,27 @@
 ---
 title: "FieldRef Element (DeploymentManifest - SPFieldLinkCollection)"
+description: Describes the definition, type, element, and attribute information for the FieldRef Element (DeploymentManifest - SPFieldLinkCollection).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6cc11fe1-c73a-4878-8d4a-b307af972dd6
-description: "Last modified: March 09, 2015"
 ---
 
 # FieldRef Element (DeploymentManifest - SPFieldLinkCollection)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents field data to display in a view.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="FieldRef" 
-        type="SPFieldLink" 
-        minOccurs="0" maxOccurs="unbounded" 
+<xs:element name="FieldRef"
+        type="SPFieldLink"
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <ViewFields>
@@ -50,7 +49,7 @@ USAGE
 ## Type
 
 [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -74,17 +73,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ShowInEditForm** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**DisplayName** <br/> |xs:string  <br/> |Optional. Name shown in the user interface for the field referenced.  <br/> |
 |**Node** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [ViewFields Element (DeploymentManifest - SPView)](viewfields-element-deploymentmanifestspview.md)
-   
+
 ## See also
 
 - [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

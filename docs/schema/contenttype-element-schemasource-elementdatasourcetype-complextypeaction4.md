@@ -1,15 +1,15 @@
 ---
 title: ContentType element
+description: Outlines information, a definition, elements and attributes for the ContentType element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4d654ee7-03e8-b72c-e3e8-da12f980cf76
 ---
 
-# ContentType element 
+# ContentType element
 
 (SchemaSource element) (dataSourceType complexType) (Action4)
 
@@ -27,18 +27,18 @@ Specifies a content type from which to retrieve fields.
 
 ## Element information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Element type**  |  |
-| **Namespace**     |  |
-| **Schema file**   | Actions4.xsd |
+| Element type |  |
+| Namespace    |  |
+| Schema file   | Actions4.xsd |
 
 ## Definition
 
 ```XML
     <xs:element name="ContentType" minOccurs="0" maxOccurs="1" >
          <xs:attribute name="IDFrom" type="s:string" />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -102,11 +102,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

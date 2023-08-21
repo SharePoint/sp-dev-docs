@@ -1,8 +1,7 @@
 ---
 title: Use theme colors in your SharePoint Framework customizations
 description: Use theme colors so that your customizations look like a part of the site by referring to the theme colors of the context site in your SharePoint Framework solution.
-ms.date: 02/26/2021
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 # Use theme colors in your SharePoint Framework customizations
@@ -143,7 +142,7 @@ Occurrence of theme tokens within SharePoint UI may differ depending upon select
 
 ### Customizing theme colors
 
-In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
+In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
 
 ## See also
 

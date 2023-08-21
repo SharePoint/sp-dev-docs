@@ -1,7 +1,8 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
 description: This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
-ms.date: 07/20/2021
+ms.date: 05/12/2023
+ms.service: power-automate
 search.app:
   - Flow
 search.appverid: met150
@@ -23,7 +24,7 @@ This article specifically provides guidance about how to plan for transitioning 
 
 Classic workflows in SharePoint constitutes two workflow systems namely
 
-- SharePoint 2010 workflow
+- SharePoint 2010 workflow ([deprecated in November 2020](https://support.microsoft.com/en-us/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f))
 - SharePoint 2013 workflow
 
 While both workflow systems allow users to build and publish workflows in SharePoint, see the following key differences:
@@ -32,6 +33,12 @@ While both workflow systems allow users to build and publish workflows in ShareP
 - SharePoint 2013 workflows, released along with SharePoint Server 2013, are hosted in SharePoint, and executed in Workflow Manager, that runs independently.
 
 Users primarily use SharePoint Designer to author and publish workflows in SharePoint, while professional developers, looking to extend and build workflows, use Visual Studio to build and publish workflows in SharePoint.
+
+> [!Important]
+> After August 1, 2020, new Microsoft 365 customers can use SharePoint 2013 workflows or Power Automate. However, SharePoint 2013 workflows will follow a similar retirement path in the future, so it's highly recommended to use Power Automate or other supported solutions. If you want to learn more about the SharePoint 2013 workflow usage inside your tenant you can use the [Workflow 2013 Assessment tool](https://aka.ms/microsoft365assessmenttool). This tool will assess your tenant on SharePoint 2013 workflow usage and generates a Power BI report with the findings.
+
+>[!Note]
+>The SharePoint Migration Tool (SPMT) lets you migrate SharePoint Server 2010 out-of-the-box workflows and SharePoint Designer 2010 & 2013 workflows to Power Automate. [Learn more about migrating your SharePoint Server and SharePoint Designer workflows with SPMT.](/sharepointmigration/spmt-workflow-overview)
 
 ## Modern workflows with Power Automate flows
 
@@ -54,13 +61,13 @@ To learn more about building workflows using Power Automate in SharePoint, start
 
 Many people feel there are significant gaps between SharePoint Designer (classic) workflows and Power Automate flows, but the list is not long. Of course, there are some workarounds you should consider in your planning as you move from classic workflows to Power Automate flows.
 
-- **30 day run limit for flows** – SharePoint Designer workflows can run endlessly, but flows have a 30 day lifespan. Getting beyond this limitation means your flow will need to call itself in a re-entrant way to restart the clock ticking.
-- **HTTP Connector** – If you make calls to SharePoint's REST API, then you can use  the ['Send HTTP Request to SharePoint'](../guidance/working-with-send-sp-http-request.md) action available in the SharePoint connector. Flow also has a generic HTTP connector (as an action), but it is a Premium connector. If you use HTTP calls extensively, you may want to create a “service account” user with a Power Automate license and run these flows with that user account. This also will make it easier to manage the set of flows you consider "enterprise" flows.
-- **Reusable Flows** – Using some modular thinking, you can create a master flow which a flow per list or library can call to do the heavy lifting. (In some ways this is even preferable, as you can edit a flow which is used in many locations centrally.) Alternatively, you can use flow actions to discover all of the lists or libraries which match some criteria and run the flow on them all on a timer rather than based on events.
-- **Workflow history storage** – Flows maintain a history in the context of the flow itself in the Power Automate dashboard. If you need tracking in your sites, you can have the flow log information in a list you create.
-- **Impersonation** - In SharePoint 2010 workflows, you can add an impersonation step to act as a different user. This capability is not readily available in flows.
+- **30 day run limit for flows** – SharePoint Designer workflows can run endlessly, but flows have a 30 day lifespan. Getting beyond this limitation means your flow will need to call itself in a re-entrant way to restart the clock ticking. Depending on the solution you choose to accomplish this, this may require a Premium Power Automate license.
+- **HTTP Connector** – If you make calls to SharePoint's REST API, then you can use the ['Send HTTP Request to SharePoint'](../guidance/working-with-send-sp-http-request.md) action available in the SharePoint connector. Flow also has a generic HTTP connector (as an action), but it is a Premium connector. If you use HTTP calls extensively, you may want to create a “service account” user with a Power Automate license and run these flows with that user account. This also will make it easier to manage the set of flows you consider "enterprise" flows. 
+- **Reusable Flows** – Using some modular thinking, you can create a master flow which a flow per list or library can call to do the heavy lifting. In some ways this is even preferable, as you can edit a flow which is used in many locations centrally. This will however require a Premium Power Automate license. Alternatively, you can use flow actions to discover all of the lists or libraries which match some criteria and run the flow on them all on a timer rather than based on events.
+- **Workflow history storage** – Flows maintain an extensively detailed history in the context of the flow itself in the Power Automate dashboard for the runs that have occured in the last 28 days. If you need tracking in your sites, or keep historical logging longer than 28 days, you can have the flow log information in a list you create. 
+- **Impersonation** - In SharePoint 2010 workflows, you can add an impersonation step to act as a different user. You could achieve similar functionality by using different user accounts with different (elevated) priviledges for certain actions. Alternatively you can consider using an Azure Active Directory Application registration, assigning it permissions and using that to directly call into the APIs. The latter will require a Premium Power Automate license and requires more manual effort to make the calls.
 
-While these pain points do exist, you can see there are workarounds for each of them.
+While these pain points do exist, you can see there are workarounds for each of them. Do beware that some of these workarounds will require a Power Automate Premium license. Read more about the [license implications](/power-platform/admin/power-automate-licensing/faqs#i-have-multiple-flows-running-under-a-shared-service-account-what-licenses-do-i-need) of doing so and [who will require to have a Premium license](/power-platform/admin/power-automate-licensing/faqs#who-needs-to-purchase-a-premium-license).
 
 ## Modern approvals with Power Automate flows
 
@@ -83,7 +90,7 @@ See the following tables that compare the workflow terminologies, triggers, and 
 While the following lists show some of the most common workflow capabilities, Power Automate offers many more features, and is actively updated with new features. We highly recommend visiting the following Power Automate websites for guided learning:
 
 - [Microsoft SharePoint Connector in Power Automate](../sharepoint-connector-actions-triggers.md)
-- [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
+- [Learn Power Automate](/training/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
 - [Power Automate Documentation](/power-automate)
 
 ### Workflow concepts

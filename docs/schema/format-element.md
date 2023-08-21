@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 55dae1d8-d415-445c-8c6c-5d9a1b140b64
 description: Contains definitions of column and row formatting that are used in a Datasheet view.
@@ -13,9 +12,9 @@ description: Contains definitions of column and row formatting that are used in 
 # Format element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains definitions of column and row formatting that are used in a Datasheet view.
-  
+
 ```XML
 <Format
   Name = "Text">
@@ -36,24 +35,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Required **Text**. Contains the name of the field to which the format applies.  <br/> |
-   
+
 ### Child elements
 
 - [FormatDef](formatdef-element.md)
-   
+
 ### Parent elements
 
 - [Formats](formats-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following example shows the definitions of column and row formatting used in a Datasheet view.
-  
+
 ```XML
 <Formats>
    <FormatDef Type="RowHeight" Value="67" />
@@ -66,5 +65,3 @@ The following example shows the definitions of column and row formatting used in
    </Format>
 </Formats>
 ```
-
-

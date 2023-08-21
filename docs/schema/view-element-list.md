@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,12 +16,12 @@ description: In a list definition (Schema.xml), defines a view for a list in a w
 # View element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 In a list definition ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), defines a view for a list in a website based on Microsoft SharePoint Foundation, where each list can contain a number of views.
-  
+
 > [!NOTE]
-> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
-  
+> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx).
+
 ```XML
 <View
   AggregateView = "TRUE" | "FALSE"
@@ -114,7 +113,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Url** <br/> |Optional **Text**. Specifies the URL for the view.  <br/> |
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
-   
+
 ### Child elements
 
 - [Aggregations](aggregations-element-list.md)
@@ -139,37 +138,37 @@ The following sections describe attributes, child elements, and parent elements.
 - [ViewHeader](viewheader-element-list.md)
 - [ViewStyle](viewstyle-element-list.md)
 - [XslLink](xsllink-element-list.md)
-   
+
 ### Parent elements
 
 - [Views](views-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
 The principal view type for list and document summary information is the HTML view. An HTML view is generally a columnar view that displays information from one or more lists. The data to be displayed is described by the fields that are shown in the view. For information about how views work in Microsoft SharePoint Foundation 2010, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx).
-  
+
 The primary attributes that define an HTML view are as follows:
-  
+
 - Its name.
 - The data source specification (usually a single list or document library).
 - The filter to be applied to the data source.
 - The collection of fields to be displayed.
 - The sort order of the items to be displayed. A special case of sort order is grouping.
 - An HTML template for rendering the view.
-    
-The **View** element is central to page rendering and generates a SQL query for the fields, sorts, and filters that are applied in a particular view. The **View** element iterates through the data set returned by the query and executes the [ViewBody](viewbody-element-list.md) element for each row that is returned. Within the **ViewBody** element, a [Fields](fields-element-view.md) element enumeration can be used to handle each field, or each field can be referred to individually by name within a [Field](field-element-list.md) element. 
-  
+
+The **View** element is central to page rendering and generates a SQL query for the fields, sorts, and filters that are applied in a particular view. The **View** element iterates through the data set returned by the query and executes the [ViewBody](viewbody-element-list.md) element for each row that is returned. Within the **ViewBody** element, a [Fields](fields-element-view.md) element enumeration can be used to handle each field, or each field can be referred to individually by name within a [Field](field-element-list.md) element.
+
 Each view has an internal name that is typically represented by a GUID. The view can be rendered on a page by using the \<View/\> tag.
-  
+
 ## Examples
 
 The following example illustrates the use of a fields enumeration within a view body, laying out a basic table for displaying a list in the browser.
-  
+
 ```XML
 <View Name="MyCustomView">
     <ViewHeader>
@@ -195,12 +194,12 @@ The following example illustrates the use of a fields enumeration within a view 
     </ViewFooter>
 ```
 
-Notice that in the previous section the fields enumeration is used within a [ViewHeader](viewheader-element-list.md) section to create column headers for the view. 
+Notice that in the previous section the fields enumeration is used within a [ViewHeader](viewheader-element-list.md) section to create column headers for the view.
 
-<br/> 
+<br/>
 
-In the following section of the example a [ViewFields](viewfields-element-list.md) section is included within the **View** element in order to specify which fields will be enumerated in the view. 
-  
+In the following section of the example a [ViewFields](viewfields-element-list.md) section is included within the **View** element in order to specify which fields will be enumerated in the view.
+
 ```XML
     <ViewFields>
       <FieldRef Name="Created_x0020_By"/>
@@ -209,12 +208,12 @@ In the following section of the example a [ViewFields](viewfields-element-list.m
 ```
 
 > [!NOTE]
-> If the view has a [Joins](joins-element-view.md) element, fields from the joined lists can be included in [ViewFields](viewfields-element-list.md), provided that they are also itemized in a [ProjectedFields](projectedfields-element-view.md) element. 
+> If the view has a [Joins](joins-element-view.md) element, fields from the joined lists can be included in [ViewFields](viewfields-element-list.md), provided that they are also itemized in a [ProjectedFields](projectedfields-element-view.md) element.
 
 <br/>
 
-In the last section of the example the [Query](query-element-list.md) element is used to specify a result set that meets certain criteria, as in the following example, which returns a list of all the documents in a library that are written by Mary or John. 
-  
+In the last section of the example the [Query](query-element-list.md) element is used to specify a result set that meets certain criteria, as in the following example, which returns a list of all the documents in a library that are written by Mary or John.
+
 ```XML
     <Query>
       <Where>
@@ -242,8 +241,8 @@ In the last section of the example the [Query](query-element-list.md) element is
 
 <br/>
 
-The next view example displays a sequence of paragraphs. The **Query** element specifies not only a sort order (in order of modification date), but also a filter (only show items whose **Expires** property is greater than or equal to today's date). 
-  
+The next view example displays a sequence of paragraphs. The **Query** element specifies not only a sort order (in order of modification date), but also a filter (only show items whose **Expires** property is greater than or equal to today's date).
+
 ```XML
 <View Type="HTML" Name="Summary">
   <ViewBody ExpandXML="TRUE">
@@ -277,4 +276,3 @@ The next view example displays a sequence of paragraphs. The **Query** element s
 ## See also
 
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

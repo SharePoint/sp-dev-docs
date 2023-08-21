@@ -195,6 +195,8 @@
         href: spfx/web-parts/basics/determine-web-part-width.md
       - name: Support section backgrounds
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md
+      - name: Web part top actions
+        href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
         href: spfx/web-parts/isolated-web-parts.md
       - name: Single Part App Pages
@@ -239,6 +241,8 @@
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
+    - name: Form customizer
+      href: spfx/extensions/get-started/building-form-customizer.md
     - name: Concepts & scenarios
       items:
       - name: Tenant wide deployment
@@ -319,6 +323,8 @@
       href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD
       href: spfx/use-aadhttpclient.md
+    - name: Working with the AADTokenProvider
+      href: spfx/use-aadtokenprovider.md
     - name: Connect to anonymous APIs
       href: spfx/connect-to-anonymous-apis.md
     - name: Subscribe to list notifications
@@ -342,7 +348,7 @@
     - name: Deploy web parts to Azure CDN
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/deployment-spfx-teams-solutions
+      href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
     - name: Custom build tasks
       href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
     - name: Extend Webpack
@@ -426,6 +432,8 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
+    - name: Configure SASS processing during builds
+      href: spfx/toolchain/configure-sass.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
@@ -444,25 +452,45 @@
       href: spfx/supported-extensibility-platforms-overview.md
     - name: SharePoint Online
       href: spfx/spfx-sharepoint-online.md
+    - name: Microsoft Teams
+      href: /sharepoint/dev/spfx/build-for-teams-overview
+    - name: Extend Outlook and Office
+      href: /sharepoint/dev/spfx/office/overview
+    - name: Microsoft Viva Connections
+      href: /sharepoint/dev/spfx/viva/overview-viva-connections
     - name: SharePoint 2019 & SE support
-      href: spfx/sharepoint-2019-support.md
+      href: spfx/sharepoint-2019-and-subscription-edition-support.md
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
-    - name: Microsoft Teams
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview
-    - name: Microsoft Viva Connections
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/viva/overview-viva-connections
   - name: Release notes & roadmap
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.15 - March 8, 2022
-      href: spfx/release-1.15.md      
-    - name: SPFx v1.14 - February 17, 2022
+    - name: SPFx v1.18 - August 15, 2023
+      href: spfx/release-1.18.md
+    - name: SPFx v1.17.4 - June 21, 2023
+      href: spfx/release-1.17.4.md
+    - name: SPFx v1.17.3 - May 31, 2023
+      href: spfx/release-1.17.3.md
+    - name: SPFx v1.17.2 - May 9, 2023
+      href: spfx/release-1.17.2.md
+    - name: SPFx v1.17.1 - April 12, 2023
+      href: spfx/release-1.17.1.md
+    - name: SPFx v1.17 - April 4, 2023
+      href: spfx/release-1.17.md
+    - name: SPFx v1.16.1 - November 30, 2022
+      href: spfx/release-1.16.1.md
+    - name: SPFx v1.16.0 - November 15, 2022
+      href: spfx/release-1.16.md
+    - name: SPFx v1.15.2 - August 2, 2022
+      href: spfx/release-1.15.2.md
+    - name: SPFx v1.15.0 - June 21, 2022
+      href: spfx/release-1.15.md
+    - name: SPFx v1.14.0 - February 17, 2022
       href: spfx/release-1.14.md
     - name: SPFx v1.13.1 - November 23, 2021
       href: spfx/release-1.13.1.md
-    - name: SPFx v1.13 - October 21, 2021
+    - name: SPFx v1.13.0 - October 21, 2021
       href: spfx/release-1.13.md
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
@@ -498,6 +526,8 @@
       href: spfx/release-1.1.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
+  - name: Extend SharePoint with SPFx - Learning Path
+    href: /training/paths/m365-sharepoint-associate
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -512,6 +542,8 @@
     href: spfx/build-for-teams-considerations.md
   - name: Deployment SPFx solutions to Microsoft Teams
     href: spfx/deployment-spfx-teams-solutions.md
+  - name: Teams apps for SharePoint, Teams, Outlook, and Office
+    href: spfx/office/overview.md
   - name: Tutorials
     items:
     - name: Build Microsoft Teams channel/group tabs with SPFx
@@ -522,6 +554,12 @@
   items:
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
+  - name: Location capabilities in Adaptive Card Extension
+    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+  - name: Media upload in Adaptive Card Extension
+    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
+  - name: Focus feature in Adaptive Card Extension
+    href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -542,8 +580,28 @@
       href: spfx/viva/get-started/advanced-quick-view-functionality.md
     - name: Adaptive Card Extensions and Teams Apps
       href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
+    - name: Create an Adaptive Card Extension with geolocation action
+      href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
+    - name: Geolocation capabilities with the property pane of an ACE
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md
+    - name: Create an Adpative Card Extension with the select media action
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
+    - name: Media Upload capability via property pane of an ACE
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
+    - name: Create a People Search Adaptive Card Extension
+      href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
+    - name: Using focus feature in an ACE
+      href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
+    - name: Making Quick View compatible with dark mode
+      href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
+    - name: Migrate existing ACEs to SharePoint Framework v1.18
+      href: spfx/viva/get-started/migrate-to-spfx-1-18.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
+  - name: Extend Viva Connections Learning Path
+    href: /training/paths/m365-extend-viva-connections
+  - name: Create ACE's for Viva Connections Learning Module
+    href: /training/modules/sharepoint-spfx-adaptive-card-extension-card-types
 - name: Business Apps & Process Automation
   items:
   - name: Overview
@@ -1625,6 +1683,8 @@
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
+    - name: Modernize SharePoint 2013 workflow
+      href: transform/modernize-workflows.md
     - name: Connect to a Microsoft 365 group
       items:
       - name: Overview
@@ -1809,8 +1869,6 @@
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Avoid getting throttled or blocked in SharePoint Online
       href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
-    - name: Handle SharePoint Online throttling
-      href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
     - name: Set up app-only access to SharePoint
       href: solution-guidance/security-apponly.md
       items:
@@ -2039,10 +2097,16 @@
     href: apis/sharepoint-rest-graph.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
+  - name: CSOM methods for applying retention labels
+    href: apis/csom-methods-for-applying-retention-labels.md
+  - name: SharePoint Add-in Management APIs
+    href: apis/addin-management-apis.md
   - name: Microsoft 365 Copy and Move API
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
+    - name: What's new in the Migration API
+      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
     - name: Migration permission guidance
@@ -2051,6 +2115,8 @@
       href: apis/onenote-migration-service.md
     - name: Sensitivity Labels and the SharePoint Migration API
       href: apis/sp-migration-api-and-sensitivity-labels.md
+    - name: How to export video transcripts using the SharePoint Migration API
+      href: apis/migration-api-video-transcripts.md
     - name: Migration API
       items:
       - name: Import Migration API
@@ -2068,7 +2134,7 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
-  - name: SharePoint Syntex REST API
+  - name: Microsoft Syntex REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md
@@ -2091,9 +2157,9 @@
       - name: Create folder classification request
         href: apis/syntex/rest-createfolderclassificationrequest.md
   - name: PnP Sites Core API reference
-    href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
+    href: /dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
-    href: https://docs.microsoft.com/dotnet/api/?term=microsoft.sharepoint
+    href: /dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
@@ -5277,4 +5343,4 @@
 - name: Tutorials
   href: training/training.md
 - name: SharePoint Framework API reference
-  href: https://docs.microsoft.com/javascript/api/overview/sharepoint
+  href: /javascript/api/overview/sharepoint

@@ -2,7 +2,6 @@
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
 ms.date: 10/21/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -15,9 +14,9 @@ If you already have a Microsoft 365 tenant, see the section [Create app catalog 
 
 If you don't have one, you can get a Microsoft 365 developer subscription when you join the [Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription.
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/yc1IYgYp7qQ]
+> [!Video https://www.youtube.com/embed/ijaJgc3J-iE]
 
 ## Create app catalog site
 
@@ -41,17 +40,8 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 
 1. In the left sidebar, select **More features**
 1. Locate the section **Apps** and select **Open**.
-1. On the **Apps** page, select **App Catalog**.
-1. Select **OK** to create a new app catalog site.
-1. On the next page, enter the following details:
 
-    - **Title**: Enter **app catalog**.
-    - **Web Site Address _suffix_**: Enter your preferred suffix for the app catalog; for example: **apps**.
-    - **Administrator**: Enter your username, and then select the **resolve** button to resolve the username.
-
-1. Select **OK** to create the app catalog site.
-
-SharePoint creates the app catalog site, and you can see its progress in the SharePoint admin center.
+This is start the automatic creation of the SharePoint app catalog to the tenant if it does not exist. If the app catalog already exists, you will be redirect to it. SharePoint app catalog is used to manage and deploy SharePoint Framework solutions.
 
 ## Create a new site collection
 
@@ -73,8 +63,8 @@ You also need a site collection and a site for your testing. You can create a ne
 
 1. In the left sidebar, select **Sites > Active sites**.
 1. Select **Create** from the toolbar at the top of the page.
-1. On the **Create a site** page, select **Team site**.
-1. In the panel that appears, enter required details to create the site (*name, owner, and language*):
+1. On the **Create a site** panel, select **Team site**.
+1. In the new view that appears, enter required details to create the site (*Site name, Group owner, and language*):
 1. Select **Next** to create the site collection.
 
 After SharePoint creates the site, you can browse to your site collection by selecting **Finish** & entering the URL of the new site.

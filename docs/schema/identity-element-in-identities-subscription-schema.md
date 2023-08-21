@@ -1,15 +1,15 @@
 ---
 title: Identity element in Identities
+description: Identity element in Identities specifies an explicit identity contained by this cache subscription.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: de3b9e21-c45c-b6fc-8c5d-e5e3cf55bd1e
 ---
 
-# Identity element in Identities 
+# Identity element in Identities
 
 (Subscription Schema)
 
@@ -39,29 +39,6 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
-<td align="left"><p>An **Identities** element that lists the serialized values of identities.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Identities Element in Subscription (Subscription Schema)](identities-element-in-subscription-subscription-schema.md) | An **Identities** element that lists the serialized values of identities. |

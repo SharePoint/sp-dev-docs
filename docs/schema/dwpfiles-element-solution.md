@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,13 +16,13 @@ description: Specifies the web part files (.dwp or .webpart) to include in the s
 # DwpFiles element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the web part files (.dwp or .webpart) to include in the solution.
-  
+
 ```XML
 <DwpFiles>
   <DwpFile
-    FileName = "Text" 
+    FileName = "Text"
     Location = "Text">
   </DwpFile>
   ...
@@ -37,13 +36,11 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [DwpFile](dwpfile-element-solution.md)
-   
+
 ### Parent elements
 
 - [Solution](solution-element-solution.md)
-   
-

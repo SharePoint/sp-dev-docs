@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Contains ribbon templates.
 # Templates element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains ribbon templates.
-  
+
 ```XML
 <Templates />
 ```
@@ -35,14 +34,12 @@ None
 ### Child elements
 
 - [RibbonTemplates](ribbontemplates.md)
-   
+
 ### Parent elements
 
 - [CommandUI](commandui-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
-
+- Maximum: 1

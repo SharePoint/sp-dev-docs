@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 06/05/2020
+ms.date: 02/16/2023
 ms.localizationpriority: high
 ---
 
@@ -32,6 +32,7 @@ The following predefined themes are available by default:
 * __Purple__
 * __Green__
 * __Gray__
+* __Periwinkle__
 * __Dark Yellow__ (inverted theme)
 * __Dark Blue__ (inverted theme)
 
@@ -46,7 +47,7 @@ In addition to the default themes, you can select from supplementary themes. The
 
 <!-- Verify that it's okay to use the concept of "modern" themes/pages here? -->
 
-To select from the available themes for a SharePoint site, choose the __gear icon (⚙️)__ in the top right corner of the screen, and then select __Change the look__. You'll be presented with a list of themes to choose from, which might include default themes and/or custom themes depending on how your site has been configured.
+To select from the available themes for a SharePoint site, choose the __gear icon (⚙️)__ in the top right corner of the screen, select __Change the look__, then select __theme__. You'll be presented with a list of themes to choose from, which might include default themes and/or custom themes depending on how your site has been configured.
 
 The following image shows how the default themes are presented in the theme picker dialog box.
 
@@ -54,11 +55,11 @@ The following image shows how the default themes are presented in the theme pick
 
 When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like.
 
-After you've found a theme that you want to use, choose **Apply** to save your selection, or choose **Cancel** to revert to your current theme.
+After you've found a theme that you want to use, choose **Save** to save your selection, or choose **Cancel** to revert to your current theme.
 
 ## Work with classic themes
 
-You can still use the classic themes by choosing the link to **Classic change the look options** under the modern themes listed under **Change the look**. Because the modern SharePoint UI differs from the classic UI, however, some limitations apply when you use classic themes with modern pages.
+You can still use the classic themes by choosing the link to **Classic change the look options** at the bottom of the **Change the look** panel. Because the modern SharePoint UI differs from the classic UI, however, some limitations apply when you use classic themes with modern pages.
 
 When you select a classic theme, a modern theme is generated from the settings in the classic theme, including the **isInverted** flag, the background image, and the color settings for **ContentAccent1**, **PageBackground**, and **BackgroundOverlay**. If **isInverted** is set to **True**, neutral colors such as **NeutralDark** and **NeutralLight** will be reversed.
 
@@ -71,29 +72,30 @@ The modern site theming experience has been rolled out to classic site templates
 To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP PowerShell enable feature command:
 
 1. Verify that you meet the following minimum requirements:
+
     * You are at least a site collection owner on the site where you want to disable modern site themes
     * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
 
-2. Download the latest PnP PowerShell from https://github.com/SharePoint/PnP-PowerShell/releases.
+1. Download the latest [PnP PowerShell](https://github.com/pnp/powershell).
 
     [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
-3. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
-
-4. Enter your credentials when prompted.
-
-5. To opt out of the site, you need to enable a feature:
+1. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
+1. Enter your credentials when prompted.
+1. To opt out of the site, you need to enable a feature:
 
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet)
     * Enter `Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
 
-6. Verify that the following is returned:
+1. Verify that the following is returned:
 
-    `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
+    ```powershell
+    ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b
+    ```
 
-For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/powershell-scripting).
+For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/overview).
 
 ## See also
 

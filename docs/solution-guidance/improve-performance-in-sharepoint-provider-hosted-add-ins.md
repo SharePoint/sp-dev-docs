@@ -2,7 +2,7 @@
 title: Improve performance in SharePoint provider-hosted add-ins
 description: Improve the performance of your SharePoint provider-hosted add-in by limiting remote calls.
 
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 # Improve performance in SharePoint provider-hosted add-ins
@@ -124,6 +124,6 @@ Before looking for the information stored in the local storage key, the code use
 
 ## See also
   
-- [Branding.UIElementPersonalization](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.UIElementPersonalization) 
-- [Performance.Caching](https://github.com/SharePoint/PnP/tree/dev/Samples/Performance.Caching)
+- [Branding.UIElementPersonalization](https://github.com/pnp/PnP/tree/master/Samples/Branding.UIElementPersonalization) 
+- [Performance.Caching](https://github.com/pnp/PnP/tree/master/Samples/Performance.Caching)
 - [UX components in SharePoint and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

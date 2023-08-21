@@ -1,11 +1,11 @@
 ---
 title: Alternative model for web app policies in SharePoint Online
 description: Web app policies are a concept that allows SharePoint administrators to either grant or deny permissions to users and groups for all sites under a web application. These permission grants and denies take preference over the permissions set at the sites in the web application and therefore are a mechanism typically used in multiple scenarios.
-ms.date: 12/14/2020
+ms.date: 8/10/2023
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: sharepoint
+ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ Web app policies are a concept that allows SharePoint administrators to either g
 - Grant support team read-only access to all sites so the support engineer can walk through the site with the end user
 - Deny users (e.g. after leaving the company) access to all content
 
-Web application policies do not exist anymore in SharePoint Online and there’s no identical alternative implementation possible, however by using the existing SharePoint security model you can achieve similar results. In this article and video you’ll learn more about this.
+Web application policies do not exist anymore in SharePoint Online and there’s no identical alternative implementation possible, however by using the existing SharePoint security model you can achieve similar results. In this article and video, you’ll learn more about this.
 
 > [!Video https://www.youtube.com/embed/zcmngkgQdTU]
 
@@ -28,11 +28,11 @@ Web application policies do not exist anymore in SharePoint Online and there’s
 Before starting to implement permissions grants it’s important to understand why a grant was needed. Questions to ask yourselves are:
 
 - Is granting access to **all** data in your SharePoint Online tenant necessary? Push back and verify that the access to **all** data is an absolute must to support a business scenario
-- Is the “one” using the granted permission an application or a user? If it’s an application then it might be possible to work with an app principal having SharePoint Online tenant wide permissions, especially if this is an inhouse developed application
+- Is the “one” using the granted permission an application or a user? If it’s an application then it might be possible to work with an app principal having SharePoint Online tenant-wide permissions, especially if this is an in-house developed application
 
-Below flowchart is capturing these questions:
+The below flowchart is capturing these questions:
 
-![Flowchart showing logic to determine app only policy or not](media/webapppolicies/flowchart1.png)
+![Flowchart showing logic to determine app-only policy or not](media/webapppolicies/flowchart1.png)
 
 > [!IMPORTANT]
 > Only in the case the granted access will be consumed by a user or an application that is not compatible with app principals should you grant access via users or groups. If possible, prefer app principals above users and groups because:
@@ -75,7 +75,7 @@ You can achieve the same result by either granting the permissions to a user or 
 
 | Category     | Group                                                                                                                                              | User                                                                                                     |
 | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
-| Clarity      | A group can contain on or more accounts, typically not visible to the other site collection administrators                                         | User account is always visible, there’s no doubt about it                                                |
+| Clarity      | A group can contain one or more accounts, typically not visible to the other site collection administrators                                         | User account is always visible, there’s no doubt about it                                                |
 | Maintenance  | You can easily grant access by adding new members to the group                                                                                     | New members must be added to all sites                                                                   |
 | Tamper proof | A group can shield the actual accounts having access (e.g. legal account) and other admins are less likely to remove the permissions for the group | There’s full transparency, other admins might be more likely to remove the “weird” users from their site |
 
@@ -84,23 +84,23 @@ You can achieve the same result by either granting the permissions to a user or 
 
 #### What about modern team sites (a.k.a. group sites)?
 
-Modern team sites are SharePoint team sites which are connected to a Microsoft 365 group. This Microsoft 365 group acts as a central model for granting access to all the services on top of that group (e.g. SharePoint Site, Exchange mailbox, Planner, …). For these sites, you do have 2 options for granting access:
+Modern team sites are SharePoint team sites that are connected to a Microsoft 365 group. This Microsoft 365 group acts as a central model for granting access to all the services on top of that group (e.g. SharePoint Site, Exchange mailbox, Planner, …). For these sites, you do have 2 options for granting access:
 
 - Add user accounts (no groups) to either the members or owners of the Microsoft 365 group connected to the modern team site. The advantage of this approach is that the granted permission applies to all services that use this group, but when evaluating web app policies this typically is not relevant
 - Treat the modern team site like a “normal” site and grant permission like described in earlier chapters
 
 > [!IMPORTANT]
-> We recommend granting permissions at SharePoint level, so treat the modern team sites like regular classic SharePoint team sites. This approach aligns with what the web application policies were providing.
+> We recommend granting permissions at the SharePoint level, so treat the modern team sites like regular classic SharePoint team sites. This approach aligns with what the web application policies were providing.
 
 #### Granting permissions using PnP PowerShell
 
-Below scripts show an easy way to grant access via using PnP PowerShell and they can be a good starting basis for your implementation. Below scripts do not take in account the following:
+The below scripts show an easy way to grant access via using PnP PowerShell and they can be a good starting basis for your implementation. The below scripts do not take in account the following:
 
 - Get-PnPTenantSite is currently not enumerating modern team sites
 - Get-PnPTenantSite is not Multi-Geo aware
 - Performance is not optimal since the scripts are sequentially running, there’s no parallel execution
 
-Since users continuously create new site collections it’s important to run these scripts on regular basis, ideally as a scheduled task.
+Since users continuously create new site collections it’s important to run these scripts on a regular basis, ideally as a scheduled task.
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
@@ -113,7 +113,7 @@ To give users full control to specific (or all) SharePoint sites, you can use Sh
 It is recommended that access be added on an as-needed basis, and then removed. For example, the script below assigns a list of administrators to all site collections in a tenant. The example uses the [SharePoint Patterns and Practices (PnP) of PowerShell commands](https://aka.ms/sppnp-powershell) to make two users admins of all site collections in the tenant.
 
 ```PowerShell
-# comma separated list of users and groups to be added
+# comma-separated list of users and groups to be added
 $adminAccounts = "admin1@contoso.onmicrosoft.com","admin21@contoso.onmicrosoft.com"
 
 # Specify the tenant here

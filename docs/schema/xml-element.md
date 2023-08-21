@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: Serves as an outer wrapper to denote an XML data island. This eleme
 # XML element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Serves as an outer wrapper to denote an XML data island. This element does not render anything by itself.
-  
+
 ```XML
 <XML>
 </XML>
@@ -32,11 +31,11 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [BeginsWith](beginswith-element-query.md)
@@ -54,10 +53,10 @@ None
 - [Neq](neq-element-query.md)
 - [NotIncludes](notincludes-element-query.md)
 - [Value](value-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 <br/>

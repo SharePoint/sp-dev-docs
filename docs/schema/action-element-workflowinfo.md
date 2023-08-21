@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cd9ce74a-ac5a-4ebc-8e4c-3b16bcad828e
 ---
@@ -164,9 +163,9 @@ The following code example demonstrates how to construct an **Action** element s
       <Actions Sequential="then" Parallel="and">
         <Action Name="Update my custom SharePoint list"
                 ClassName="CustomActivities.OrderListFunctions"
-                Assembly="CustomActivities,      
-                          PublicKeyToken=b03f5f7f11d50a3a, 
-                          Version=1.0.0.0, 
+                Assembly="CustomActivities,
+                          PublicKeyToken=b03f5f7f11d50a3a,
+                          Version=1.0.0.0,
                           Culture=neutral"
                 Category="My Custom Actions"
                 CreatesTask="true"
@@ -199,11 +198,3 @@ The following code example demonstrates how to construct an **Action** element s
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

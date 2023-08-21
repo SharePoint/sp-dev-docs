@@ -1,13 +1,13 @@
 ---
 title:  Layout patterns
 description: Find common SharePoint web part layout types and responsive patterns.
-ms.date: 08/24/2018
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
 # SharePoint web part layouts
 
-SharePoint uses a number of different layout types for web parts. The most common are grid, list, filmstrip, carousel, and compact. Each one of these five layouts serves a different purpose, depending on the layout, breakpoints, and content density of a page. 
+SharePoint uses a number of different layout types for web parts. The most common are grid, list, filmstrip, carousel, and compact. Each one of these five layouts serves a different purpose, depending on the layout, breakpoints, and content density of a page.
 
 When selecting a layout that works best for your web part, consider the type of content you are displaying. Is it highly visual or rich in text and data? Determine how much space is needed on the page for enough content to be displayed. Consider shortening long descriptions to optimize for displaying more items to the user. Remember that you can use the [property pane](reactive-and-nonreactive-web-parts.md) to let authors have control over how much content is displayed.
 

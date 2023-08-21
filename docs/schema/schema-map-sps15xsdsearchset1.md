@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 59b3b404-6c3f-a87c-8b07-9660ec4967f5
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Administration.Query.
@@ -48,5 +47,3 @@ This topic shows the schema definition for **schema_Microsoft.Office.Server.Sear
 </xs:schema>
 
 ```
-
-

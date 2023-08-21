@@ -1,14 +1,14 @@
 ---
 title:  SharePoint Developer Community (SharePoint PnP) resources
 description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
-ms.date: 02/14/2020
-ms.prod: sharepoint
+ms.date: 06/09/2022
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# SharePoint Developer Community (SharePoint PnP) resources
+# Microsoft 365 Platform Community (PnP) resources around SharePoint Framework
 
-The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
+The Microsoft 365 Platform Community (also known as M365 PnP community) is an open-source initiative coordinated by Microsoft 365 engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
 
 ## Blog posts, videos, and social media
 
@@ -17,7 +17,7 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 - [Microsoft 365 Dev Twitter](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
 - [Microsoft 365 PnP Twitter](https://twitter.com/m365pnp) - Community account for Microsoft 365 and SharePoint topics
 - [Microsoft 365 Dev Facebook](https://www.facebook.com/Microsoft365Developer) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
-- [Microsoft 365 PnP Facebook](https://www.facebook.com/OfficeDevPnP/) - Community account for SharePoint and Office 365 developer topics
+- [Microsoft 365 PnP Facebook](https://www.facebook.com/Microsoft365/community) - Community account for SharePoint and Office 365 developer topics
 
 ## GitHub
 

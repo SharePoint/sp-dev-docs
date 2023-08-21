@@ -1,7 +1,7 @@
 ---
 title: Customize default site templates in SharePoint
 description: Customize the default site templates for the SharePoint Team site or Communication site template.
-ms.date: 09/28/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,7 @@ SharePoint offers several [site templates that are already available](https://su
 
 ## Apply a site script to a default site template
 
-To customize a default site template, apply a new template script using PowerShell **Add-SPOSiteDesign** cmdlet or the **CreateSiteDesign** REST API. Specify the **IsDefault** switch to apply the site template as the default template. 
+To customize a default site template, apply a new template script using PowerShell **Add-SPOSiteDesign** cmdlet or the **CreateSiteDesign** REST API. Specify the **IsDefault** switch to apply the site template as the default template.
 
 | Parameter            | Value                | Site template type          |
 | :------------------- | :------------------- |:----------------|

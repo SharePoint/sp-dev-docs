@@ -2,7 +2,6 @@
 title: SharePoint Framework solutions governance considerations
 description: To get the most benefit from SharePoint Framework solutions, your organization should have an actionable governance plan covering the most important project management considerations.
 ms.date: 07/01/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # SharePoint Framework solutions governance considerations
@@ -24,7 +23,7 @@ The most important thing that organizations should know before deploying SharePo
 
 ### Is the code-hosting location supported by the organization?
 
-SharePoint Framework doesn't impose any restrictions where the solution's code is deployed. As a result, developers and vendors can deploy the code to a range of locations within or outside the organization's IT department. Different organizations may have different server requirements ranging from access policies to SLAs. 
+SharePoint Framework doesn't impose any restrictions where the solution's code is deployed. As a result, developers and vendors can deploy the code to a range of locations within or outside the organization's IT department. Different organizations may have different server requirements ranging from access policies to SLAs.
 
 Before deploying a SharePoint Framework solution package, organizations should ensure that the server used to host the code is a known server approved to be used by the organization.
 

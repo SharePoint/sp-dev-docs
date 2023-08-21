@@ -1,10 +1,10 @@
 ---
 title: Get started with workflows in SharePoint
-ms.date: 09/25/2017
+description: Describes how to get started with workflows in SharePoint and provides steps for creating a workflow using Visual Studio.
+ms.date: 06/09/2022
 keywords: vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
 f1_keywords:
 - vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
-ms.prod: sharepoint
 ms.assetid: a2643cd7-474d-4e4c-85bb-00f0b6685a1d
 ms.localizationpriority: high
 ---
@@ -16,6 +16,7 @@ Learn about the newly engineered Workflow Manager Client 1.0, which provides the
 > For instructions on setting up and configuring SharePoint and Microsoft Azure, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
   
 > [!NOTE]
+> SharePoint 2013 workflow has been deprecated since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://support.microsoft.com/office/4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
     
 

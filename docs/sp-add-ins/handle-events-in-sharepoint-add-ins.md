@@ -1,7 +1,7 @@
 ---
 title: Handle events in SharePoint Add-ins
 description: Handle list events, list item events, and add-in events in provider-hosted SharePoint add-ins.
-ms.date: 12/22/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -241,7 +241,7 @@ For a sample of an add-in event handler that does not use the handler delegation
 
 ## Remote event receivers in add-ins that support multiple security zones
 
-Some restrictions on how you design an add-in support multiple security zones and have a remote event receiver. For more information, see Knowledge Base article kb3135876 [You can't add a provider-hosted add-in to a SharePoint 2013 site in non-default zones](https://support.microsoft.com/help/3135876/you-can-t-add-a-provider-hosted-add-in-to-a-sharepoint-2013-site-in-no).
+Some restrictions on how you design an add-in support multiple security zones and have a remote event receiver.
  
 <a name="RERFAQ"> </a>
 

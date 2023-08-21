@@ -1,19 +1,16 @@
 ---
 title: SharePoint list webhooks
 description: List webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library.
-ms.date: 02/08/2018
-ms.prod: sharepoint
+ms.date: 09/23/2022
 ms.localizationpriority: high
 ---
-
-
 # SharePoint list webhooks
 
 The SharePoint list webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service.
 
 ## Tasks
 
-| Task                                                | HTTP method                                            |     
+| Task                                                | HTTP method                                            |
 |-----------------------------------------------------|--------------------------------------------------------|
 | [Create a new subscription](./create-subscription.md) | `POST    /_api/web/lists('list-guid')/subscriptions` |
 | [Get subscriptions](./get-subscription.md)          | `GET     /_api/web/lists('list-guid')/subscriptions`   |

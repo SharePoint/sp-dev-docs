@@ -1,12 +1,12 @@
 ---
 title: WorkflowActions Element (WorkflowActions)
+description: Describes the WorkflowActions element (WorkflowActions) and provides the element's definition, child elements, and additional references.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7994002d-4fc6-413d-8aaa-d744eed5202e
 ---
@@ -57,8 +57,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-

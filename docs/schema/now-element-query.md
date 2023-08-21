@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, returns the current date and time.
 # Now element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the current date and time.
-  
+
 ```XML
 <Now>
 </Now>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
 The following example queries for cases where a recurring event overlaps with the current date and time.
-  
+
 ```XML
 <Query>
    <Where>
@@ -68,6 +67,5 @@ The following example queries for cases where a recurring event overlaps with th
 ## See also
 
 - [TodayISO element](todayiso-element.md)
-- [Month element (Regional Settings)](month-element-regional-settings.md) 
+- [Month element (Regional Settings)](month-element-regional-settings.md)
 - [Today element (Query)](today-element-query.md)
-

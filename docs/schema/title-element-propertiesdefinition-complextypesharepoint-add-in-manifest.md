@@ -1,15 +1,15 @@
 ---
 title: Title element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes Title element (PropertiesDefinition complexType) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c4ca4165-ed3a-7ded-d8e3-0a841955d109
 ---
 
-# Title element (PropertiesDefinition complexType) 
+# Title element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: c4ca4165-ed3a-7ded-d8e3-0a841955d109
 
 The friendly title of the SharePoint Add-in. The value cannot exceed 256 characters.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | TitleDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -32,7 +32,7 @@ The friendly title of the SharePoint Add-in. The value cannot exceed 256 charact
 
 ```XML 
     <xs:element name="Title"  type="TitleDefinition"  minOccurs="1"  maxOccurs="1">
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -77,8 +77,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-

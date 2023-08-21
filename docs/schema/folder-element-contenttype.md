@@ -1,12 +1,12 @@
 ---
 title: Folder Element (ContentType)
+description: Folder Element (ContentType) specifies the relative folder path for the content type's resource folder.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, folder element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 381be88e-111d-4e23-b851-0d38c38cc415
 ---
@@ -101,11 +101,3 @@ The resource folder is the storage location for any file, such as a document tem
 - [ResourceFolder](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spcontenttype.resourcefolder.aspx)
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-
-
-
-
-
-
-

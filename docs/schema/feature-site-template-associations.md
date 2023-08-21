@@ -1,15 +1,15 @@
 ---
 title: Feature/Site Template Associations
+description: Provides an example of Feature/Site Template Associations in Sharepoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ed2a52f8-358f-47f5-afcb-5819b288e913
 ---
 
-# Feature/Site Template Associations 
+# Feature/Site Template Associations
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -27,21 +27,15 @@ The following example associates one Feature with two different site definition 
 
 ```XML 
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PROFILES#0" /> 
-      <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="CMSPUBLISHING#0" /> 
+      <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PROFILES#0" />
+      <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="CMSPUBLISHING#0" />
       <FeatureSiteTemplateAssociation Id="541F5F57-C847-4e16-B59A-B31E90E6F9EA" TemplateName="SRCHCENTERLITE#1">
-        <Property Key="IncludeInGlobalNavigation" Value="false" /> 
-        <Property Key="IncludeInCurrentNavigation" Value="false" /> 
-        <Property Key="InheritCurrentNavigation" Value="true" /> 
-        <Property Key="IncludePages" Value="false" /> 
+        <Property Key="IncludeInGlobalNavigation" Value="false" />
+        <Property Key="IncludeInCurrentNavigation" Value="false" />
+        <Property Key="InheritCurrentNavigation" Value="true" />
+        <Property Key="IncludePages" Value="false" />
       </FeatureSiteTemplateAssociation>
     </Elements>
 ```
 
 <br/>
-
-
-
-
-
-

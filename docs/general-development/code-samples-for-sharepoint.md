@@ -2,7 +2,6 @@
 title: Code samples for SharePoint
 description: Find and download code samples for SharePoint, including samples that demonstrate SharePoint Framework, SharePoint Add-ins, user experience design, metadata management, workflows, mobile application development, REST, and other areas of SharePoint development.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
 ms.localizationpriority: high
 ---

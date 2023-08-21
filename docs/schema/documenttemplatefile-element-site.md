@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:
 - schema
 ms.assetid: c1d81e2f-80b0-4e84-ad0f-48e350708313
-description: Contains a reference to a file that is used within a document template. 
+description: Contains a reference to a file that is used within a document template.
 ---
 
 # DocumentTemplateFile element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains a reference to a file that is used within a document template. 
-  
+
+Contains a reference to a file that is used within a document template.
+
 ```XML
 <DocumentTemplateFile
   Default = "TRUE" | "FALSE"
@@ -39,22 +38,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Default** <br/> |Optional **Boolean**. **TRUE** to specify that the template file is the default file.  <br/> |
 |**Name** <br/> |Required **Text**. The full path to the template file.  <br/> |
 |**TargetName** <br/> |Required **Text**. The full path to the target  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [DocumentTemplateFiles](documenttemplatefiles-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-For an example that shows how to use the **DocumentTemplateFile** element, see [DocumentTemplates](documenttemplates-element-site.md). 
-  
-
+For an example that shows how to use the **DocumentTemplateFile** element, see [DocumentTemplates](documenttemplates-element-site.md).

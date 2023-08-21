@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Escapes contained HTML tags so that the Collaborative Application M
 # HTML element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Escapes contained HTML tags so that the Collaborative Application Markup Language (CAML) parser does not parse the tags.
-  
+
 ```XML
 <HTML>
 </HTML>
@@ -34,24 +33,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ID** <br/> |Optional **Text**. Provides an identifier for the contents of the **HTML** element.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following line illustrates how to escape HTML tags by using this element and a CDATA section.
-  
+
 ```XML
 <HTML><![CDATA[...HTML tags...]]></HTML>
 ```
@@ -59,4 +58,3 @@ The following line illustrates how to escape HTML tags by using this element and
 ## See also
 
 - [XML element](xml-element.md)
-

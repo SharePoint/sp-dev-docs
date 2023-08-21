@@ -1,7 +1,7 @@
 ---
 title: Navigation solutions for SharePoint Online portals
 description: Explains the pros and cons of using an out-of-the-box navigation solution versus a custom navigation solution.
-ms.date: 4/30/2018
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 
@@ -175,7 +175,7 @@ For browser client environments:
 - Target SharePoint APIs via the SharePoint REST APIs (use JSOM only if necessary).
 	- Use the cross-domain library if you target a different site collection.
 - Target your custom Web APIs via REST.
-	- Use Azure AD Authentication Library for JavaScript (ADAL.js) and Implicit OAuth flow.
+	- Use Microsoft Authentication Library for JavaScript and Implicit OAuth flow.
 - Target third-party APIs via REST (or SOAP if necessary).
 
 <a name="bk_clientSideDal"> </a> 
@@ -189,7 +189,7 @@ For more information about the Client-Side Data Access Layer, see [Performance g
 ## See also
 
 - [Navigation options for SharePoint Online](https://support.office.com/article/Navigation-options-for-SharePoint-Online-adb92b80-b342-4ecb-99a1-da2a2b4782eb?ui=en-US&rs=en-US&ad=US)
-- [Overview of managed navigation in SharePoint Server](https://docs.microsoft.com/SharePoint/administration/overview-of-managed-navigation)
+- [Overview of managed navigation in SharePoint Server](/SharePoint/administration/overview-of-managed-navigation)
 - [PnP O365 Starter Intranet - Navigation implementation](http://thecollaborationcorner.com/2016/08/31/part-4-the-navigation-implementation/#.WNoU5oVOKiM)
 - [ASP.NET Web API 2](https://msdn.microsoft.com/library/dn448365(v=vs.118))
 - [Azure AD Authentication Library for JavaScript (GitHub)](https://github.com/AzureAD/azure-activedirectory-library-for-js)

@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the Microsoft 365 group connect scanner mode
 description: Explains the Microsoft 365 group connect output created by the modernization scanner
-ms.date: 02/14/2020
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -132,4 +132,4 @@ Load the ModernizationUserCustomActionScanResults.csv into Microsoft Excel and u
 
 Filter | Takeaway
 ---------|----------
-**No filter** | Will give you one row per found incompatible user custom action. You need to assess how important these user custom actions are: if they are business critical it's better to either build an alternative [SharePoint Framework extension](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions) or move the site back to "classic"
+**No filter** | Will give you one row per found incompatible user custom action. You need to assess how important these user custom actions are: if they are business critical it's better to either build an alternative [SharePoint Framework extension](/sharepoint/dev/spfx/extensions/overview-extensions) or move the site back to "classic"

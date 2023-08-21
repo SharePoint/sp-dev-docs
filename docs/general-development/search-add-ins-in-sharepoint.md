@@ -2,7 +2,6 @@
 title: Search add-ins in SharePoint
 description: Learn about search SharePoint Add-ins and how you can create your own search add-ins. The add-ins you create can be added to the SharePoint add-ins catalog so that they can be used in both on-premises deployment and Office 365. Search add-ins only work with data that is stored in the search index and not with the original source documents.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 21682e45-dd78-4f3c-8f1e-cdd48de3bde2
 ms.localizationpriority: medium
 ---

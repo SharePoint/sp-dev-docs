@@ -2,12 +2,11 @@
 title: LobSystems Element in Model (BDCMetadata Schema)
 description: Details on the LobSystems Element in Model (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystems
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 ---
@@ -36,50 +35,14 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A LobSystem element that specifies a external system.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Description |
+| --- | --- |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](lobsystem-element-in-lobsystems-bdcmetadata-schema.md) | A LobSystem element that specifies a external system. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.md">Model Element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An application definition (BDC model).</p></td>
-</tr>
-</tbody>
-</table>
 
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Model Element (BDCMetadata Schema)](model-element-bdcmetadata-schema.md) | An application definition (BDC model). |

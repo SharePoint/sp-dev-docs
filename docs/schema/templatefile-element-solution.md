@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies a template file to include in the solution.
 # TemplateFile element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a template file to include in the solution.
-  
+
 ```XML
 <TemplateFile
   Location="Text">
@@ -35,17 +34,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location**  <br/> |Required **Text**. Specifies a relative location within the solution that contains the template file.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [TemplateFiles](templatefiles-element-solution.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

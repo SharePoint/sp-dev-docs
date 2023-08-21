@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Defines default data to include in the specified column of a list, 
 # Field element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines default data to include in the specified column of a list, or contains a reference to a field used in the definition of a base Microsoft SharePoint Foundation field type in [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx).
-  
+
 ```XML
 <Field
     Name = "Text">
@@ -35,20 +34,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name** <br/> |Optional **Text**. The internal name of a field, which is unique with respect to the set of fields in a list. The name is auto-generated based on the user-defined name for a field.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Row](row-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

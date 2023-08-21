@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.9.1 release notes
 description: Release notes for the SharePoint Framework v1.9.1 release
 ms.date: 09/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.9.1 release notes
@@ -15,18 +14,19 @@ This is a minor release that includes **Library component moving to general avai
 
 ## Upgrading projects from v1.8.2 to v1.9.1
 
-1. In the project's **package.json** file, identify all SPFx v1.8.2 packages. For each SPFx package:
-    1. Uninstall the existing v1.8.2 package:
+In the project's **package.json** file, identify all SPFx v1.8.2 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.8.2
-        ```
+1. Uninstall the existing v1.8.2 package:
 
-    1. Install the refreshed v1.9.1 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.8.2
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.9.1.0 --save --save-exact
-        ```
+1. Install the refreshed v1.9.1 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.9.1.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

@@ -1,8 +1,7 @@
 ---
 title: SharePoint Framework enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 07/01/2020
-ms.prod: sharepoint
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -66,7 +65,7 @@ Provider-hosted add-ins are add-ins that are executed remotely from SharePoint (
 
 The primary advantage of add-ins is isolation: because the actual code isn't executed in the SharePoint site browser, cross-site scripting protections prevent the add-in from getting the same access as the user has. Add-ins are limited to the permissions that the add-in was granted at install time. This makes add-ins a safer option for scenarios where an admin acquires an add-in from a third party, and it also allows Microsoft to have a Store from where you can download add-ins.
 
-The SharePoint Framework works side by side with both SharePoint-hosted and provider-hosted add-ins, but can also be used as an alternative in scenarios where only client-side scripting is required. For example, add-ins can add app parts to the site where they are hosted. These app parts are similar to web parts, but instead of running in the context of the page, they run in their own domain (App Web or provider-hosted web) within an Iframe on the page. This prevents the add-in from gaining the user context from the rest of the page.
+The SharePoint Framework works side by side with both SharePoint-hosted and provider-hosted add-ins, but can also be used as an alternative in scenarios where only client-side scripting is required. For example, add-ins can add app parts to the site where they are hosted. These app parts are similar to web parts, but instead of running in the context of the page, they run in their own domain (App Web or provider-hosted web) within an `<iframe>` on the page. This prevents the add-in from gaining the user context from the rest of the page.
 
 The SharePoint Framework doesn't run in an Iframe. Thanks to this, it can more seamlessly run in the context of the page with the full power of the user viewing the part. This is the key to enabling it to run with rich functionality, but at the same time this means that it doesn't have the same level of security controls as add-ins. SharePoint Framework solutions are due to this also being referred to as *full trust client-side solutions*. Iframes suffer from the problem that they aren't responsive, which results in the rendered webpage not being as fluent on a mobile phone or alternate screen size.
 
@@ -147,7 +146,7 @@ A recommendation is for IT administrators to keep track of what CDNs are used an
 
 ### Microsoft 365 Public CDN
 
-The [Microsoft 365 Public CDN](https://developer.microsoft.com/blogs/general-availability-of-office-365-cdn) is a new capability in Microsoft 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Microsoft 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end users' browsers requesting them.
+The [Microsoft 365 Public CDN](/microsoft-365/enterprise/content-delivery-networks) is a new capability in Microsoft 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Microsoft 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end users' browsers requesting them.
 
 Administrators can enable the Microsoft 365 Public CDN capability on one or more document libraries, which will serve as the origin for the static assets. Administration of the libraries and the CDN is done by using the SharePoint Online PowerShell cmdlets. The assets in the document library will be replicated to the Microsoft 365 CDN and be accessible through the Microsoft 365 Public CDN URLs generated and associated with the document library. Any updates to the assets will be reflected on the CDN end-points within 15 minutes. Any assets within the document libraries will be available for anonymous users, through the CDN end point.
 

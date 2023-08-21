@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies a site definition manifest to include in the solution.
 # SiteDefinitionManifest element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a site definition manifest to include in the solution.
-  
+
 ```XML
 <SiteDefinitionManifest
   Location="Text">
@@ -37,17 +36,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location**  <br/> |Required **Text**. The relative path of the root folder for a site definition.  <br/> |
-   
+
 ### Child elements
 
 - [WebTempFile](webtempfile-element-solution.md)
-   
+
 ### Parent elements
 
 - [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

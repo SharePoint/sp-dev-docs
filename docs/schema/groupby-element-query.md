@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, contains a Group By section for grouping the data returned
 # GroupBy element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains a Group By section for grouping the data returned through a query in a list view.
-  
+
 ```XML
 <GroupBy
   Collapse = "TRUE" | "FALSE">
@@ -36,20 +35,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |Collapse  <br/> |Optional **Boolean**. **TRUE** for the Group By section in the list view to be collapsed by default.  <br/> |
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
-   
+
 ### Parent elements
 
 - [Expr1](expr1-element-view.md)
 - [Expr2](expr2-element-view.md)
 - [Query](query-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
-
+- Maximum: 1

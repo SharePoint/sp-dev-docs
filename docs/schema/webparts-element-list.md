@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,14 +16,14 @@ description: Contains a collection of web parts in a form for a list definition 
 # WebParts element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains a collection of web parts in a form for a list definition or a list template.
-  
+
 ```XML
 <WebParts>
     <AllUsersWebPart
-        WebPartOrder = Integer    
-        WebPartZoneID = "Text">      <![CDATA[...]]>  
+        WebPartOrder = Integer
+        WebPartZoneID = "Text">      <![CDATA[...]]>
     </AllUsersWebPart>
 </WebParts>
 ```
@@ -36,22 +35,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [AllUsersWebPart](alluserswebpart-element-list.md)
-   
+
 ### Parent elements
 
 - [Form](form-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ### Remarks
 
 For an example of how to use this element, see [Creating Custom Form Templates](https://msdn.microsoft.com/library/b77ec86e-9568-4325-b949-13ee2fdcaabf%28Office.15%29.aspx).
-  
-

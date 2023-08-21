@@ -1,8 +1,7 @@
 ---
 title: Shorter share link format in OneDrive and SharePoint
-description: Links to shared files and folders in OneDrive and SharePoint are now shorter and have a new format. 
-ms.date: 4/19/2018
-ms.prod: sharepoint
+description: Links to shared files and folders in OneDrive and SharePoint are now shorter and have a new format.
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -19,7 +18,7 @@ Links to shared files and folders in OneDrive and SharePoint are now shorter and
 > [!NOTE]
 > Links that were shared before this change was introduced are not affected by the change and will continue to work.
 
-The new link format might affect applications or services that inspect or take dependencies on OneDrive or SharePoint URL structures, especially if those applications or services parse the site URL or specific strings. The new short links are compatible with all APIs that work with `guestaccess.aspx` links. 
+The new link format might affect applications or services that inspect or take dependencies on OneDrive or SharePoint URL structures, especially if those applications or services parse the site URL or specific strings. The new short links are compatible with all APIs that work with `guestaccess.aspx` links.
 
 The following are some scenarios that are affected by this change:
 
@@ -29,11 +28,11 @@ The following are some scenarios that are affected by this change:
 
 - Applications that parse a URL input by an end user to determine whether it is an anonymous or an internal-only sharing link.
 
-Apps that use Microsoft Graph to interact with SharePoint links will continue to work. For more information, see [Accessing shared DriveItems](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/shares_get).
+Apps that use Microsoft Graph to interact with SharePoint links will continue to work. For more information, see [Accessing shared DriveItems](/onedrive/developer/rest-api/api/shares_get).
 
 ## SharePoint REST API
 
-The SharePoint REST API does not have a supported way to interact with user input links. We recommend that you migrate to the Microsoft Graph shares API if possible. 
+The SharePoint REST API does not have a supported way to interact with user input links. We recommend that you migrate to the Microsoft Graph shares API if possible.
 
 If you’re unable to migrate to Microsoft Graph, you can use the following workaround. Note that this workaround is not supported.
 
@@ -57,19 +56,17 @@ This is the new API request:
 
 To determine the specific type of link, inspect the `IsSharingLink` and `IsAnonymous` fields in the response for the GetSharingLinkData API (replace **GetFileByUrl** with **GetSharingLinkData** in the examples). Use this method instead of parsing URLs for tokens such as `guestaccess.aspx`.
 
-## SharePoint CSOM 
+## SharePoint CSOM
 
 CSOM does not have a supported way to interact with user input links. Some applications open a **ClientContext** and query the file metadata by successively truncating path segments from the SharePoint link until the **ClientContext** constructor succeeds. This approach no longer works with the new URL format.
 
 To work around this:
-1.	Open a **ClientContext** on the root site (scheme://hostname). 
+1.	Open a **ClientContext** on the root site (scheme://hostname).
 
-2.	Call `Web.WebUrlFromPageUrlDirect()` to get the web URL of the link. 
+2.	Call `Web.WebUrlFromPageUrlDirect()` to get the web URL of the link.
 
-3.	Open a new **ClientContext** using this web URL to make additional requests. 
+3.	Open a new **ClientContext** using this web URL to make additional requests.
 
 
 > [!NOTE]
 > This approach is not supported.
-
-

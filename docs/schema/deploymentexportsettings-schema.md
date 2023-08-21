@@ -1,10 +1,10 @@
 ---
 title: DeploymentExportSettings schema
+description: The DeploymentExportSettings schema provides validation for the ExportSettings.xml file.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f5deff87-c593-41b9-840e-43da5649a7dc
 ---
@@ -25,32 +25,11 @@ The following table lists elements in the DeploymentExportSettings.xsd schema fi
 
 <br/>
 
-<table>
-<colgroup>
-<col width="40%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="exportsettings-element-deploymentexportsettings.md">ExportSettings element (DeploymentExportSettings)</a></p></td>
-<td align="left"><p>Root element, which provides an XML wrapper for the deployment export settings container object and a means for specifying security, versioning, and how to export.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="deploymentobject-element-deploymentexportsettings.md">DeploymentObject element (DeploymentExportSettings)</a></p></td>
-<td align="left"><p>Represents instances of deployment objects (<span sdata="cer" target="T:Microsoft.SharePoint.Deployment.SPExportObject"><span class="nolink">SPExportObject</span></span>) marked for export to the content migration package.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects element (DeploymentExportSettings)</a></p></td>
-<td align="left"><p>Represents a collection of deployment export object instances for inclusion in the content migration package.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [ExportSettings element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md) | Root element, which provides an XML wrapper for the deployment export settings container object and a means for specifying security, versioning, and how to export. |
+| [DeploymentObject element (DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md) | Represents instances of deployment objects (SPExportObject) marked for export to the content migration package. |
+| [ExportObjects element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md) | Represents a collection of deployment export object instances for inclusion in the content migration package. |
 
 <br/>
 
@@ -94,11 +73,3 @@ The following table lists simple types that are defined in the schema but are no
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

@@ -1,28 +1,27 @@
 ---
 title: "ListItem Element (DeploymentManifest - SPListItemVersionCollection)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the ListItem element (DeploymentManifest - SPListItemVersionCollection).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b47189ad-7165-40df-8b8b-cee73bd6841d
-description: "Last modified: March 09, 2015"
 ---
 
 # ListItem Element (DeploymentManifest - SPListItemVersionCollection)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a SharePoint list item ([SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)) object.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="ListItem" 
-        type="SPListItem" 
-        minOccurs="1" maxOccurs="unbounded" 
+<xs:element name="ListItem"
+        type="SPListItem"
+        minOccurs="1" maxOccurs="unbounded"
 />
 USAGE
 <Versions>
@@ -62,7 +61,7 @@ USAGE
 ## Type
 
 [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -93,23 +92,23 @@ The following sections describe attributes, child elements, and parent elements.
 |**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Time and date that the file was last modified.  <br/> |
 |**UserLoginName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Version** <br/> |xs:string  <br/> |Optional. Represents the version of the list item.  <br/> |
-   
+
 ### Child elements
 
-- [Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md) 
-- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md) 
-- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) 
-- [Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md) 
+- [Attachments Element (DeploymentManifest)](attachments-element-deploymentmanifest.md)
+- [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md)
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+- [Links Element (DeploymentManifest - SPListItem)](links-element-deploymentmanifestsplistitem.md)
 - [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)
-   
+
 ### Parent elements
 
 - [Versions Element (DeploymentManifest - SPListItem)](versions-element-deploymentmanifestsplistitem.md)
-   
+
 ### Remarks
 
 This element has a recursive structure, as shown in the following code example.
-  
+
 ```XML
 <SPObject>
     <ListItem>
@@ -126,4 +125,3 @@ This element has a recursive structure, as shown in the following code example.
 
 - [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

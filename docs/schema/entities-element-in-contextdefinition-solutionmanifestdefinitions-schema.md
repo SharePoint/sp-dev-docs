@@ -1,15 +1,15 @@
 ---
 title: Entities Element in ContextDefinition
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Entities Element in ContextDefinition and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 27aa622c-d0f3-2124-57f0-a515545dfed6
 ---
 
-# Entities Element in ContextDefinition 
+# Entities Element in ContextDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -35,24 +35,9 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.md">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity Element in Entities (SolutionManifestDefinitions Schema)](entity-element-in-entities-solutionmanifestdefinitions-schema.md) | The external content type. |
 
 ### Parent elements
 
@@ -69,7 +54,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The context definition which is associated with this external content type.</p></td>
 </tr>
 </tbody>
@@ -78,11 +63,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

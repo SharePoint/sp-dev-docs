@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Serves as the top-level element in an Onet.xml file that contains a
 # Project element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Serves as the top-level element in an [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new website. 
-  
+
+Serves as the top-level element in an [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new website.
+
 ```XML
 <Project
   AlternateCSS = "Text"
@@ -52,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**SiteLogoDescription** <br/> |Optional **Text**. Provides a description of the site logo.  <br/> |
 |**Title** <br/> |Required **Text**. Specifies a default name for websites that are created from the site definition.  <br/> |
 |**UIVersion** <br/> |Optional **Integer**. Specifies the version of the SharePoint Foundation UI that is being used by the sites based on the site definition.  <br/> |
-   
+
 ### Child elements
 
 - [BaseTypes](basetypes-element-site.md)
@@ -63,22 +62,20 @@ The following sections describe attributes, child elements, and parent elements.
 - [Modules](modules-element-site.md)
 - [NavBars](navbars-element-site.md)
 - [ServerEmailFooter](serveremailfooter-element-site.md)|
-   
+
 ### Parent elements
 
 None
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following example shows the opening line of the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the standard SharePoint Foundation site definition (**STS**).
-  
+
 ```XML
 <Project Title="$Resources:onet_TeamWebSite;" Revision="2" ListDir="$Resources:core,lists_Folder;" xmlns:ows="Microsoft SharePoint">
 ```
-
-

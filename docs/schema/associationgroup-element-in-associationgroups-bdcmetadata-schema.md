@@ -2,12 +2,11 @@
 title: AssociationGroup element in AssociationGroups (BDCMetadata Schema)
 description: Details on the AssociationGroup element in AssociationGroups (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationGroup
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: db30622e-3c2b-2735-9360-a702196cbcff
 ---
@@ -70,58 +69,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of the **AssociationGroup**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the **AssociationGroup**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationreference-element-in-associationgroup-bdcmetadata-schema.md">AssociationReference element in AssociationGroup (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **AssociationReference** of an **AssociationGroup**.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the **AssociationGroup**|
+| [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **AssociationGroup**. |
+| [AssociationReference element in AssociationGroup (BDCMetadata Schema)](associationreference-element-in-associationgroup-bdcmetadata-schema.md) | An **AssociationReference** of an **AssociationGroup**. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **AssociationGroups** element that contains this **AssociationGroup**.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [AssociationGroups element in Entity (BDCMetadata Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md) | The **AssociationGroups** element that contains this **AssociationGroup**. |

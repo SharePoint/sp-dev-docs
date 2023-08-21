@@ -1,9 +1,9 @@
 ---
 title: "List schema"
-ms.date: 12/05/2020
+description: Outlines the list schema of Collaborative Application Markup Language (CAML), which is used to define the metadata for creating lists.
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema

@@ -1,10 +1,10 @@
 ---
 title: SolutionManifestDefinitions schema
+description: This section contains documentation for the Solution Manifest Definition schema (SolutionManifestDefinitions.xsd).
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f7fb29db-d6e2-8ec8-243f-93ff39a2d506
 ---
@@ -56,11 +56,3 @@ This section contains documentation for the **Solution Manifest Definition schem
 - [Views element](views-element.md)
 
 - [FolderViewDefinition element](folderviewdefinition-element.md)
-
-
-
-
-
-
-
-

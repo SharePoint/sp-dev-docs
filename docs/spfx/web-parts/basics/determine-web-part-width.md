@@ -2,7 +2,6 @@
 title: Determine the rendered web part width
 description: Learn how to determine the rendered width of a web part and handle when the web part is resized.
 ms.date: 03/30/2021
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # Determine the rendered web part size

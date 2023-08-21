@@ -1,18 +1,18 @@
 ---
 title: Migrating OneNote folders
-ms.date: 12/05/2020
+description: "Migrating OneNote folders using the SPO OneNote converting service"
+ms.date: 06/28/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 audience: Dev
 ms.topic: article
-ms.service: sharepoint-online
+ms.subservice: migration-tool
 ms.localizationpriority: high
 ms.collection:
 - SPMigration
 - M365-collaboration
 search.appverid: MET150
-description: "Migrating OneNote folders using the SPO OneNote converting service"
 ---
 # Migrating OneNote folders
 

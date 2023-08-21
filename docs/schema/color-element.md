@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a color.
 # Color element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a color.
-  
+
 ```XML
 <Color
      Sequence="Integer"
@@ -43,24 +42,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Style** <br/> |Optional. The name of a CSS selector to apply to the table cell that represents the color.  <br/> |
 |**Color** <br/> |Optional. A color string to be passed with the command event when the color is selected.  <br/> |
 |**DisplayColor** <br/> |Optional. A hexadecimal color code to use for the background color of the table cell, such as `#FF0000` (red).  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Colors](colors-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
-The following example defines a section of a menu that includes a color picker control with several **Color** elements. 
-  
+The following example defines a section of a menu that includes a color picker control with several **Color** elements.
+
 ```XML
 <MenuSection
     Id="fontColor"
@@ -85,5 +84,3 @@ The following example defines a section of a menu that includes a color picker c
     </Controls>
 </MenuSection>
 ```
-
-

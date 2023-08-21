@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Specifies options for a drop-down list.
 # SelectionOptions element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies options for a drop-down list.
-  
+
 ```XML
 <SelectionOptions
   BlankPattern = "Text"
@@ -39,30 +38,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**BlankPattern** <br/> |Required **Text**. The **BlankPattern** attribute is used to generate a localized text pattern for displaying text values for lookup fields that are blank (empty string). In the United States, this is localized as `(Item ^1)`. `^1` is replaced with the item ID of the item being referenced.  <br/> |
 |**Len** <br/> |Required **Integer**. The **Len** attribute causes the members of the drop-down list to be truncated to the specified number of Unicode characters if they exceed the value of  _Len_. This prevents the drop-down menu from being excessively wide.  <br/> |
 |**MoreText** <br/> |Required **Text**. The **MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, `...`).  <br/> |
-   
+
 ### Child elements
 
-None 
-   
+None
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ### Remarks
 
-Conditional rendering is based on the display mode. New items use the default value of the field, while items in Edit mode use the current value of the field to set the value of the HTML **Selected** attribute, with **Selected=True** added for the default or current value of the item. 
-  
+Conditional rendering is based on the display mode. New items use the default value of the field, while items in Edit mode use the current value of the field to set the value of the HTML **Selected** attribute, with **Selected=True** added for the default or current value of the item.
+
 For **Lookup** field types, this element produces the sequence `<OPTION VALUE="ID">` _Title_ `</OPTION>`.
-  
+
 ## Example
 
-The following example constructs a drop-down list box and uses the **SelectOptions** element to delineate the options. 
-  
+The following example constructs a drop-down list box and uses the **SelectOptions** element to delineate the options.
+
 ```XML
 <HTML><![CDATA[ <SELECT TITLE=" ]]></HTML>
 <Property Select="DisplayName" />
@@ -86,4 +85,3 @@ The following example constructs a drop-down list box and uses the **SelectOptio
 ```
 
 <br/>
-

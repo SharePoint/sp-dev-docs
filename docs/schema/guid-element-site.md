@@ -1,17 +1,16 @@
 ---
 title: "GUID element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:
 - schema
 ms.assetid: d00f61bb-1547-425f-9764-cae4f05947e9
-description: "Last modified: March 09, 2015"
+description: Learn more about GUID element (Site).
 ---
 
 # GUID element (Site)
@@ -34,18 +33,16 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Id** <br/> |Optional **Text**.  <br/> |
 |**ListUrl** <br/> |Optional **Text**.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [GUIDMap](guidmap-element-site.md)
-   
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded 
-   
-
+- Minimum: 0
+- Maximum: Unbounded

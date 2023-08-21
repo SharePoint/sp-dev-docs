@@ -2,7 +2,6 @@
 title: Use web parts with the full-width column
 description: Build web parts that can be used in the full-width column
 ms.date: 06/16/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

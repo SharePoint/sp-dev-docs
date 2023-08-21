@@ -1,10 +1,10 @@
 ---
-title: FeatureSiteTemplateAssociation Element (FeatureSiteTemplateAssociation)
+title: FeatureSiteTemplateAssociation Element
+description: Describes the FeatureSiteTemplateAssociation element and provides the definition, elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ef7dc9b4-3009-40d8-b15b-24cd60d99d7c
 ---
@@ -18,11 +18,11 @@ Associates the specified Features with the specified [site definition configurat
 ## Definition
 
 ```XML
-<FeatureSiteTemplateAssociation 
-    Id = "Text" 
-    TemplateName = "Text"> 
-    <Property 
-      Key= "Text" 
+<FeatureSiteTemplateAssociation
+    Id = "Text"
+    TemplateName = "Text">
+    <Property
+      Key= "Text"
       Value = "Text">
     </Property>
 </FeatureSiteTemplateAssociation>
@@ -101,11 +101,3 @@ The following sections describe attributes, child elements, and parent elements.
 ## Example
 
 For an example of how this element is used, see [Feature/Site Template Associations](feature-site-template-associations.md).
-
-
-
-
-
-
-
-

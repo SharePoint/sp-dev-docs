@@ -1,8 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 10/25/2021
-ms.prod: sharepoint
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension
@@ -67,7 +66,7 @@ The inner development loop with ACEs is similar to SPFx Web Parts. We can serve 
 gulp serve
 ```
 
-Once local webserver is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the **Web Part Toolbox** and select your ACE:
 
@@ -401,7 +400,7 @@ Test your changes by refreshing the hosted workbench in the browser. It should p
 :::image type="content" source="../../../images/viva-extensibility/lab1-new-ql.png" alt-text="Updated ACE Quick View":::
 
 > [!TIP]
-> Learn more about Adaptive Cards at https://adaptivecards.io. This site also includes an Adaptive Cards Designer that lets you preview the rendering and structure of adaptive cards as you create them.
+> Learn more about Adaptive Cards at [adaptivecards.io](https://adaptivecards.io). This site also includes an Adaptive Cards Designer that lets you preview the rendering and structure of adaptive cards as you create them.
 
 At this point, you've modified your ACE to include two new buttons in the Quick View card. The next step is to implement what happens when these buttons are selected. This is done using *action handlers*.
 
@@ -533,3 +532,7 @@ After this tutorial you should be familiar with:
 - Defer loading the Property Pane
 - How to use `state`
 - Difference between `properties` and `state`
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

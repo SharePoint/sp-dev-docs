@@ -2,7 +2,6 @@
 title: Supported extensibility platforms - overview
 description: Learn what platforms support customizations and rely on the SharePoint Framework for their extensibility opportunities available to developers.
 ms.date: 11/16/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -25,7 +24,7 @@ Learn more about using SPFx on SharePoint Online: [SPFx support for SharePoint O
 
 SharePoint Server 2019 includes support for the SPFx up to version v1.4.1.
 
-Learn more about using SPFx on SharePoint Server 2019: [SPFx support for SharePoint Server 2019](sharepoint-2019-support.md).
+Learn more about using SPFx on SharePoint Server 2019 and Subscription Edition: [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).
 
 ## SharePoint Server 2016
 

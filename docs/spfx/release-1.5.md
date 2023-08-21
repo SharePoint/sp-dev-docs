@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.5 release notes
 description: Release notes for the SharePoint Framework v1.5 release
 ms.date: 02/10/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.5 release notes
@@ -16,6 +15,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
 ## Upgrading projects from v1.4.1 to v1.5
 
 1. In the project's **package.json** file, identify all SPFx v1.4.1 packages. For each SPFx package:
+
     1. Uninstall the existing v1.4.1 package:
 
         ```console

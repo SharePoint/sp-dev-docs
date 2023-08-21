@@ -1,10 +1,10 @@
 ---
 title: dataSourcesType complexType (Action4)
+description: Learn more about dataSourcesType complexType (Action4).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 37824f01-75e0-6235-cdcd-8e10db69ab21
 ---
@@ -46,7 +46,7 @@ Base type definition for **DataSources** elements; applies to
     <xs:complexType name="dataSourcesType">
         <xs:sequence>
             <xs:element name="DataSource" type="dataSourceType" minOccurs="0"     maxOccurs="unbounded">
-            </xs:element>  
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 ```
@@ -82,11 +82,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

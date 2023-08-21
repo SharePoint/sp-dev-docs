@@ -1,20 +1,19 @@
 ---
 title: "Versions Element (DeploymentManifest - SPListItem)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Versions Element (DeploymentManifest - SPListItem) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fb081445-e5f9-4f0b-b087-acea040309e1
-description: "Last modified: March 09, 2015"
 ---
 
 # Versions Element (DeploymentManifest - SPListItem)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a collection of list item version collection objects ([SPFileVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFileVersionCollection.aspx)) specifying the versions of the list item. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents a collection of list item version collection objects ([SPFileVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFileVersionCollection.aspx)) specifying the versions of the list item.
 
 ## Definition
 
@@ -36,7 +35,7 @@ USAGE
 ## Type
 
 **SPListItemVersionCollection**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -44,17 +43,16 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 [ListItem Element (DeploymentManifest - SPListItemVersionCollection)](listitem-element-deploymentmanifestsplistitemversioncollection.md)
-   
+
 ### Parent elements
 
 [ListItem Element (DeploymentManifest - SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)
-   
+
 ## See also
 
 - [SPListItemVersionCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItemVersionCollection.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

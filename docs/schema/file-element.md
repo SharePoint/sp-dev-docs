@@ -3,7 +3,6 @@ title: "File element"
 ms.date: 12/05/2020
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema

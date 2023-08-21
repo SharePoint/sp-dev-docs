@@ -1,20 +1,19 @@
 ---
 title: "File Element (DeploymentManifest - SPGenericObject)"
+description: Describes the definition, type, element, and attribute information for the File Element (DeploymentManifest - SPGenericObject).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 122cf3f0-fe96-453c-9708-10dda669d745
-description: "Last modified: March 09, 2015"
 ---
 
 # File Element (DeploymentManifest - SPGenericObject)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 file ([SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)) object.
 
 ## Definition
 
@@ -58,7 +57,7 @@ USAGE
 ## Type
 
 [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -87,7 +86,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**SetupPath** <br/> |xs:string  <br/> |Path to the front-end file location in cases where the **IsGhosted** attribute is **true**.  <br/> Optional on export; required by import if **IsGhosted** attribute is **true**.  <br/> |
 |**SetupPathUser** <br/> |xs:string  <br/> |Optional. Person who initially created the list in the document library.  <br/> |
 |**SetupPathVersion** <br/> |xs:byte  <br/> |Optional. Specifies the Windows Microsoft SharePoint Foundation Services version. The value **2** specifies Windows SharePoint Services 2.0; the value **3** specifies Windows SharePoint Services 3.0.  <br/> |
-   
+
 ### Child elements
 
 - [EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md)
@@ -95,14 +94,13 @@ The following sections describe attributes, child elements, and parent elements.
 - [Personalizations Element (DeploymentManifest)](personalizations-element-deploymentmanifest.md)
 - [Properties Element (DeploymentManifest - SPFile)](properties-element-deploymentmanifestspfile.md)
 - [Versions Element (DeploymentManifest - SPFile)](versions-element-deploymentmanifestspfile.md)
-- [WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md) 
-   
+- [WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md)
+
 ### Parent elements
 
 - [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

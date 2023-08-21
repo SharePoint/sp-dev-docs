@@ -1,12 +1,12 @@
 ---
 title: VariableTypes Element (WorkflowInfo)
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes VariableTypes Element (WorkflowInfo) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 13908389-6fd7-4799-a199-4e86c0f96181
 ---
@@ -67,11 +67,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

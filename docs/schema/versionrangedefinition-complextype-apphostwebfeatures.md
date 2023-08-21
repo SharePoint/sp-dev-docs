@@ -1,24 +1,24 @@
 ---
 title: VersionRangeDefinition complexType
+description: Describes the VersionRangeDefinition complexType type information, definition, elements, and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 07/15/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e2e2ff43-f3a6-1060-d8b2-bae4ea9b2a41
 ---
 
-# VersionRangeDefinition complexType 
+# VersionRangeDefinition complexType
 
 (AppHostWebFeatures)<
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+|   | Value |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
@@ -31,7 +31,7 @@ ms.assetid: e2e2ff43-f3a6-1060-d8b2-bae4ea9b2a41
       <xs:sequence minOccurs="0" maxOccurs="unbounded">
         <xs: name="" >
         </xs:>
-        
+
       </xs:sequence>
         <xs:attribute name="BeginVersion"
          type="FeatureVersion"
@@ -42,7 +42,7 @@ ms.assetid: e2e2ff43-f3a6-1060-d8b2-bae4ea9b2a41
          use="optional"
         />
     </xs:complexType>
-```          
+```
 
 ## Elements and attributes
 
@@ -92,10 +92,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

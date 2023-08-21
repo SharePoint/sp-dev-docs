@@ -1,29 +1,28 @@
 ---
 title: ComboBox element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for ComboBox element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a9c03296-9144-b65f-c271-97ca3875f657
 ---
 
-# ComboBox element (CommandUIDefinitionType complexType) 
+# ComboBox element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ComboBoxType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-
+| Information | Location |
+|-------------|----------|
+| **Element Type** | ComboBoxType |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 
@@ -71,11 +70,5 @@ None.
 
 None.
 
-<br/> 
-<br/> 
-
-
-
-
-
-
+<br/>
+<br/>

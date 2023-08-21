@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, statuscolumnvalue element (workflow)
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d5335216-5214-4b3d-b515-5381543969aa
 ---
@@ -66,7 +65,7 @@ The following example specifies three custom workflow status column values: **Ca
         <StatusColumnValue>Canceled</StatusColumnValue>
         <StatusColumnValue>Approved</StatusColumnValue>
         <StatusColumnValue>Rejected</StatusColumnValue>
-      </ExtendedStatusColumnValues>  
+      </ExtendedStatusColumnValues>
     </MetaData>
 ```
 
@@ -75,13 +74,3 @@ The following example specifies three custom workflow status column values: **Ca
 - [Workflow Definitions](workflow-definitions.md)
 - [Workflows in Windows SharePoint Services](https://msdn.microsoft.com/library/be0888d4-20b2-4d39-bf28-2d8a71829d8e(Office.15).aspx)
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
-
-
-
-
-
-
-
-
-
-

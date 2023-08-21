@@ -1,10 +1,10 @@
 ---
 title: Types (AppHostWebFeatures)
+description: This article lists the types in the (AppHostWebFeatures) XML schema.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 471b53e5-90ca-2ca4-d89a-9d814b2c5dae
 ---
@@ -13,7 +13,7 @@ ms.assetid: 471b53e5-90ca-2ca4-d89a-9d814b2c5dae
 
 This topic lists the types in the **AppHostWebFeatures** XML schema.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 - [ClientWebPartDefinition complexType](clientwebpartdefinition-complextype-apphostwebfeatures.md)
@@ -93,11 +93,3 @@ This topic lists the types in the **AppHostWebFeatures** XML schema.
 - [VersionRangeDefinition complexType](versionrangedefinition-complextype-apphostwebfeatures.md)
 
 - [WebPartPersonalizationScope simpleType](webpartpersonalizationscope-simpletype-apphostwebfeatures.md)
-
-
-
-
-
-
-
-

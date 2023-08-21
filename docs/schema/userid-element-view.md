@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Contains the unique ID number of the currently authenticated user o
 # UserID element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the unique ID number of the currently authenticated user of a site, as defined in the UserInfo table of the content database.
-  
+
 ```XML
 <UserID
   AllowAnonymous = "TRUE | FALSE">
@@ -35,22 +34,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**AllowAnonymous** <br/> |Optional **Boolean**. **TRUE** to allow anonymous requests without displaying a dialog box to ask for the user's password.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 Numerous
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-The **UserID** element can be used to compare the value of a field to the current user ID. If the request is anonymous, this element, by default, causes the server to force authentication, which means it must display a dialog box in the browser that asks for a password, or else it must initiate Windows NT challenge/response (NTLM). If a user has accounts on multiple subsites or Web applications, the user ID may be different in each case. 
-  
-
+The **UserID** element can be used to compare the value of a field to the current user ID. If the request is anonymous, this element, by default, causes the server to force authentication, which means it must display a dialog box in the browser that asks for a password, or else it must initiate Windows NT challenge/response (NTLM). If a user has accounts on multiple subsites or Web applications, the user ID may be different in each case.

@@ -1,29 +1,29 @@
 ---
 title: PropertyBagParentTypeDefinition simpleType
+description: Describes the PropertyBagParentTypeDefinition simpleType and provides the type information, a definition, and the enumeration values.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 71bc7f6c-12dd-ba2e-40ba-de4be9f9c39d
 ---
 
-# PropertyBagParentTypeDefinition simpleType 
+# PropertyBagParentTypeDefinition simpleType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Base Type** | xs:string |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| *Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 
@@ -74,10 +74,3 @@ ms.assetid: 71bc7f6c-12dd-ba2e-40ba-de4be9f9c39d
 <br/>
 
 <br/>
-
-
-
-
-
-
-

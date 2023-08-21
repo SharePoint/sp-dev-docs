@@ -1,19 +1,18 @@
 ---
 title: "SPObjectType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPObjectType Simple Type (DeploymentManifest) and provides values for all top-level serialized SharePoint object types.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 68fee905-0ee5-41c6-ad8a-f7193baf5dbb
-description: "Last modified: March 09, 2015"
 ---
 
 # SPObjectType Simple Type (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013  
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Provides values for all top-level serialized SharePoint object types.
 
 ## Definition
@@ -74,8 +73,7 @@ Provides values for all top-level serialized SharePoint object types.
 |**DeploymentRoleAssignmentX** <br/> |Specifies that a SharePoint object is of type **DeploymentRoleAssignmentX**.  <br/> |
 |**DeploymentFieldTemplate** <br/> |Specifies that a SharePoint object is of type **DeploymentFieldTemplate**.  <br/> |
 |**SPFeature** <br/> |Specifies that a SharePoint object is of type **SPFeature**.  <br/> |
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

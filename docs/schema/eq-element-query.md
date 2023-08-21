@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
 api_type:
 - schema
 ms.assetid: f464f504-2b8e-48e1-bd40-5b5a60c56082
-description: In CAML, arithmetic operator that means "equal to" and is used within a query. 
+description: In CAML, arithmetic operator that means "equal to" and is used within a query.
 ---
 
 # Eq element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Arithmetic operator that means "equal to" and is used within a query. 
-  
+
+Arithmetic operator that means "equal to" and is used within a query.
+
 ```XML
 <Eq>
 </Eq>
@@ -32,13 +31,13 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
 - [XML](xml-element.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
@@ -46,16 +45,16 @@ None
 - [Expr2](expr2-element-view.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ## Example
 
 If the Status column equals Completed or is empty, the query in the following example returns rows from the Modified column in descending order.
-  
+
 ```XML
 <Query>
   <OrderBy>
@@ -77,8 +76,7 @@ If the Status column equals Completed or is empty, the query in the following ex
 
 ## See also
 
-- [Geq element (Query)](geq-element-query.md)  
-- [Gt element (Query)](gt-element-query.md)  
-- [Lt element (Query)](lt-element-query.md) 
+- [Geq element (Query)](geq-element-query.md)
+- [Gt element (Query)](gt-element-query.md)
+- [Lt element (Query)](lt-element-query.md)
 - [Neq element (Query)](neq-element-query.md)
-

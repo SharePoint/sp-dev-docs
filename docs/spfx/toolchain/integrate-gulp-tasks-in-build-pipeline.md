@@ -1,8 +1,7 @@
 ---
 title: Integrate gulp tasks in SharePoint Framework toolchain
 description: Integrate your custom gulp tasks in the build pipeline.
-ms.date: 10/26/2018
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 # Integrate gulp tasks in SharePoint Framework toolchain
@@ -46,7 +45,7 @@ Open the **gulpfile.js** in your code editor. The default code initializes the S
 
 ### Add your custom task
 
-To add your custom gulp task, add a new subtask to the SharePoint Framework build pipeline by using the [`build.subTask`](https://github.com/Microsoft/web-build-tools/blob/master/core-build/gulp-core-build/README.md#defining-a-custom-task) function:
+To add your custom gulp task, add a new subtask to the SharePoint Framework build pipeline by using the `build.subTask` function:
 
 ```javascript
 let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {

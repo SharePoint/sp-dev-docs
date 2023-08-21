@@ -1,10 +1,10 @@
 ---
 title: Field Definitions
+description: Provides the XML schema definition and an example for Field Definitions in SharePoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 07eb0303-7a99-4cd1-a55a-13b16397cd96
 ---
@@ -15,7 +15,7 @@ ms.assetid: 07eb0303-7a99-4cd1-a55a-13b16397cd96
 
 Each element manifest file that defines site columns must adhere to the Field Definition Schema.
 
-A *site column* is a reusable column definition, or template, that you can assign to multiple lists across multiple SharePoint sites. Site columns decrease rework and help you ensure consistency of metadata across sites and lists. 
+A *site column* is a reusable column definition, or template, that you can assign to multiple lists across multiple SharePoint sites. Site columns decrease rework and help you ensure consistency of metadata across sites and lists.
 
 For example, suppose you define a site column named **Customer**. Users can add that column to their lists, and reference it in their content types. This ensures that the column has the same attributes—at least to start with—wherever it appears. Much like site content types, you define a site column at the site level, independent of any actual list or content type.
 
@@ -82,11 +82,3 @@ The following example shows an element manifest for a Feature that creates four 
 ## See also
 
 - [How to: Add a Column to a Site](https://msdn.microsoft.com/library/aa543203(v=office.14).aspx)
-
-
-
-
-
-
-
-

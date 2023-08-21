@@ -1,12 +1,12 @@
 ---
 title: Parameter Element (WorkflowConfig)
+description: Describes the Parameter element (WorkflowConfig) and provides a definition, the elements and attributes, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3d043e89-5b01-41bb-a5ca-541041466d5a
 ---
@@ -20,9 +20,9 @@ Represents a single parameter for the workflow initiation form.
 ## Definition
 
 ```XML
-<Parameter 
-  Name="Text" 
-  Type="Text" 
+<Parameter
+  Name="Text"
+  Type="Text"
 />
 ```
 
@@ -71,16 +71,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[Parameters Element (WorkflowConfig)](parameters-element-workflowconfig.md)|
 
 ### Remarks
 
@@ -101,13 +94,13 @@ The element also contains a Fields element, which in turn contains a Field eleme
 This example has been edited for clarity.
 
 ```XML
-    <Initiation 
+    <Initiation
         URL="Workflows/Notify Me/Notify Me.aspx">
       <Fields>
-        <Field 
-          Name="Reason_for_Review" 
+        <Field
+          Name="Reason_for_Review"
           …
-          DisplayName="Reason for Review" 
+          DisplayName="Reason for Review"
           …
         >
           <Default>Standard review of new documents</Default>
@@ -125,9 +118,3 @@ This example has been edited for clarity.
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-
-

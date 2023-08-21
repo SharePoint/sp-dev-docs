@@ -1,28 +1,28 @@
 ---
 title: Property element (PropertyBagDefinition complexType)
+description: Describes the Property element (PropertyBagDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b820d65f-12d5-8521-09c6-3db3902ca4a1
 ---
 
-# Property element (PropertyBagDefinition complexType) 
+# Property element (PropertyBagDefinition complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
-| **Element type**  | PropertyValueAttributeDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Element type** | PropertyValueAttributeDefinition |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 
@@ -30,7 +30,7 @@ ms.assetid: b820d65f-12d5-8521-09c6-3db3902ca4a1
     <xs:element name="Property" type="PropertyValueAttributeDefinition" minOccurs="0" maxOccurs="unbounded"></xs:element>
 ```
 
-## Elements and attributes 
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
@@ -39,13 +39,13 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
@@ -91,14 +91,6 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

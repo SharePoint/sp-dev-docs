@@ -1,7 +1,7 @@
 ---
 title: SharePoint modernization guidance - Execution step
 description: Modernization offerings that IT Teams and partners can use with their customers - Execution step
-ms.date: 12/06/2019
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -120,7 +120,7 @@ Before running the Modernization it’s important to validate the input (alias m
 - Microsoft 365 group naming policy: [Microsoft 365 groups naming policy](/office365/admin/create-groups/groups-naming-policy)
 - Who can create Groups: [Manage who can create Microsoft 365 Groups](/office365/admin/create-groups/manage-creation-of-groups)
 - Group classifications: [Manage Microsoft 365 Groups with PowerShell](/office365/enterprise/powershell/manage-office-365-groups-with-powershell)
-- Tenant themes: [Add-PnPTenantTheme](/powershell/module/sharepoint-pnp/add-pnptenanttheme)
+- Tenant themes: [Add-PnPTenantTheme](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantTheme.html)
 
 ## Modernize a wave of site collections
 

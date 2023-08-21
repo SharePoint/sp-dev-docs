@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a unit for use within the spinner control.
 # Unit element (Spinner) (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a unit for use within the spinner control.
-  
+
 ```XML
 <Unit
   Name="Text"
@@ -43,24 +42,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**MaximumValue** <br/> |Optional. The maximum acceptable value.  <br/> |
 |**DecimalDigits** <br/> |Optional. The number of decimal digits to display.  <br/> |
 |**Interval** <br/> |Optional. The amount by which the value should be incremented or decremented.  <br/> |
-   
+
 ### Child elements
 
 - [UnitAbbreviation](unitabbreviation-element.md)
-   
+
 ### Parent elements
 
 - [Spinner](spinner-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: unbounded 
-   
+- Maximum: unbounded
+
 ## Example
 
 The following XML example defines a spinner control that contains several units.
-  
+
 ```XML
 <Spinner
    Id="Ribbon.Table.Layout.Properties.TableWidth"
@@ -117,5 +116,3 @@ The following XML example defines a spinner control that contains several units.
   </Unit>
 </Spinner>
 ```
-
-

@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Document Icons schema
 api_type:
 - schema
 ms.assetid: 238311d9-6dc4-4864-a3a9-120475f3de20
-description: Used in the DocIcon.xml file to map particular document types to their respective icons. 
+description: Used in the DocIcon.xml file to map particular document types to their respective icons.
 ---
 
 # Mapping element (Document Icons)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used in the [DocIcon.xml](https://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons. 
-  
+
+Used in the [DocIcon.xml](https://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to map particular document types to their respective icons.
+
 ```XML
 <Mapping
   Key = "Text"
@@ -40,31 +39,31 @@ The following sections describe attributes, child elements, and parent elements.
 |**Value** <br/> |Required **Text**. Specifies the image file name and extension. The file must exist in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\IMAGES folder.  <br/> |
 |**EditText** <br/> |Optional **Text**. Specifies text that displays in drop-down menus as the editing item ("Edit in  _Application Name_") for a file that has been uploaded to a list.  <br/> |
 |**OpenControl** <br/> |Optional **Text**. Specifies the name of the ActiveX control used to open the type of document.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [ByExtension](byextension-element-document-icons.md)
 - [ByProgID](byprogid-element-document-icons.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: Unbounded  
-   
+- Minimum: 0
+- Maximum: Unbounded
+
 ## Example
 
-The following example maps **ProgIDs** and file name extensions as follows: 
-  
-- For different values of the **ProgID** `<META>` tag, it maps **ProgIDs** to the icons representing the applications. For example, "Excel.Sheet" maps to ichtmxls.gif. 
-    
-- It maps file name extensions to appropriate icons. For example, "docx" maps to icdocx.png. 
-    
+The following example maps **ProgIDs** and file name extensions as follows:
+
+- For different values of the **ProgID** `<META>` tag, it maps **ProgIDs** to the icons representing the applications. For example, "Excel.Sheet" maps to ichtmxls.gif.
+
+- It maps file name extensions to appropriate icons. For example, "docx" maps to icdocx.png.
+
 - If neither of the above causes a match, it provides a default value, icgen.gif, for the mapping.
-    
+
 ```XML
 <DocIcons>
   <ByProgID>
@@ -83,5 +82,3 @@ The following example maps **ProgIDs** and file name extensions as follows:
   </Default>
 </DocIcons>
 ```
-
-

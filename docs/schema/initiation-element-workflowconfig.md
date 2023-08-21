@@ -1,12 +1,12 @@
 ---
 title: Initiation Element (WorkflowConfig)
+description: Initiation Element (WorkflowConfig) contains workflow initiation information, such as the workflow initiation form and the data fields on the initiation form.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5aab14eb-fa08-4917-b0d3-5f25626f5509
 ---
@@ -52,30 +52,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[Parameters Element (WorkflowConfig)](parameters-element-workflowconfig.md)|
+|[Fields Element (WorkflowConfig)](fields-element-workflowconfig.md)|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[WorkflowConfig Element](workflowconfig-element.md)|
 
 ### Remarks
 
@@ -96,13 +82,13 @@ The element also contains a **Fields** element, which in turn contains a **Field
 This example has been edited for clarity.
 
 ```XML
-    <Initiation 
+    <Initiation
         URL="Workflows/Notify Me/Notify Me.aspx">
       <Fields>
-        <Field 
-          Name="Reason_for_Review" 
+        <Field
+          Name="Reason_for_Review"
           …
-          DisplayName="Reason_for_Review" 
+          DisplayName="Reason_for_Review"
           …
         >
           <Default>Standard review of new documents</Default>
@@ -119,12 +105,3 @@ This example has been edited for clarity.
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-
-
-
-
-

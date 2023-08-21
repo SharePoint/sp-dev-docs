@@ -1,27 +1,25 @@
 ---
 title: "ManagedPropertyInfo element (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the ManagedPropertyInfo element (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e95dc863-3e98-6952-6480-b6d924e56bc7
-description: "Last modified: March 09, 2015"
 ---
 
 # ManagedPropertyInfo element (SPS15XSDSearchSet2)
 
- 
-  
-## Element information
 
-|||
+
+## Element information
+|Name|Value|
 |:-----|:-----|
-|**Element type** <br/> |tns:ManagedPropertyInfo  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+|**Element type** |tns:ManagedPropertyInfo  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+
 ## Definition
 
 ```XML
@@ -31,18 +29,16 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

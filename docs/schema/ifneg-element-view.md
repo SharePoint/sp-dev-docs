@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,13 +16,13 @@ description: Contains two Collaborative Application Markup Language (CAML) expre
 # IfNeg element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains two Collaborative Application Markup Language (CAML) expressions and allows for conditional rendering based on whether the first expression contains a negative value. The first expression is rendered if it contains a negative value, but if not, the second expression is rendered.
-  
+
 ```XML
 <IfNeg>
    <Expr1></Expr1>
-   <Expr2></Expr2>   
+   <Expr2></Expr2>
 </IfNeg>
 ```
 
@@ -34,21 +33,19 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Expr1](expr1-element-view.md)
 - [Expr2](expr2-element-view.md)
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded  
+- Minimum: 0
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

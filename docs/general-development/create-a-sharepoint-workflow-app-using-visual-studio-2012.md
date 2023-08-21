@@ -2,7 +2,6 @@
 title: Create a SharePoint workflow app using Visual Studio 2012
 description: Walk through the process of creating a workflow SharePoint Add-in using Microsoft Visual Studio 2012.
 ms.date: 12/22/2020
-ms.prod: sharepoint
 ms.assetid: 7923d60d-84b9-44d6-8185-e5236efaf502
 ms.localizationpriority: high
 ---

@@ -1,18 +1,16 @@
 ---
 title: Batch apply model
+description: Use REST API to apply a document understanding model to one or more libraries.
+ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
 ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
-ms.prod: microsoft-365-enterprise
-search.appverid: 
 ms.collection: m365initiative-syntex
 ms.localizationpriority: high
-description: Use REST API to apply a document understanding model to one or more libraries.
 ---
-
 # Batch Apply model
 
 Applies (or syncs) a trained document understanding model to one or more libraries (see [example](rest-applymodel-method.md#examples)).
@@ -72,7 +70,7 @@ None
 |--------|-------|------------|
 |StatusCode|int|The HTTP status code.|
 |ErrorMessage|string|The error message which tells what's wrong when apply the model to the document library.|
-|Publication|MachineLearningPublicationEntityData|It specifies the model info and the target document library.| 
+|Publication|MachineLearningPublicationEntityData|It specifies the model info and the target document library.|
 
 ### MachineLearningPublicationEntityData
 

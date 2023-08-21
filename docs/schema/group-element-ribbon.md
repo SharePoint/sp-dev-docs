@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a group of controls.
 # Group element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a group of controls.
-  
+
 ```XML
 <Group
   Command="Text"
@@ -53,25 +52,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Template** <br/> |Optional. A string that corresponds to the **Id** attribute of a [GroupTemplate](grouptemplate-element.md) element.  <br/> |
 |**Title** <br/> |Optional. The text that is displayed as the group's title on the ribbon and in the tooltip.  <br/> |
-   
+
 ### Child elements
 
 - [Controls](controls-element-group.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Groups](groups-element.md) 
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Groups](groups-element.md)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
 The following XML fragment defines a group that contains two buttons.
-  
+
 ```XML
 <Group
   Id="Ribbon.WikiPageTab.CustomGroup"
@@ -104,4 +103,3 @@ The following XML fragment defines a group that contains two buttons.
 ## See also
 
 - [Walkthrough: Adding a Group to the Server Ribbon](https://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
-

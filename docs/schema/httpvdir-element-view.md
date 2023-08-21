@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the root directory of the current subsite.
 # HttpVDir element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the root directory of the current subsite. For example, for `http://myserver/myweb/default.aspx`, the **HttpVDir** element would return  `http://myserver/myweb/`.
-  
+
 ```XML
 <HttpVDir
   CurrentWeb = "TRUE" | "FALSE"
@@ -39,28 +38,28 @@ The following sections describe attributes, child elements, and parent elements.
 |**CurrentWeb** <br/> |Optional **Boolean**.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following example defines the **More Items** link to display when the number of items in the list exceeds the limit set with the [RowLimit](rowlimit-element-list.md) element for number of items to display on a page. The example uses the **HttpVDir** element to construct the full path for an image file. 
-  
+The following example defines the **More Items** link to display when the number of items in the list exceeds the limit set with the [RowLimit](rowlimit-element-list.md) element for number of items to display on a page. The example uses the **HttpVDir** element to construct the full path for an image file.
+
 ```XML
 <RowLimitExceeded>
-   <HTML><![CDATA[ 
-      <TABLE class="ms-summarystandardbody" width="100%" border=0 
+   <HTML><![CDATA[
+      <TABLE class="ms-summarystandardbody" width="100%" border=0
             rules=rows>
          <TR><TD Class="ms-vb"><a href="]]></HTML>
    <ListProperty Select="DefaultViewUrl"/>
@@ -78,4 +77,3 @@ The following example defines the **More Items** link to display when the number
 
 - [HTMLBase element](htmlbase-element.md)
 - [HttpPath element (View)](httppath-element-view.md)
-

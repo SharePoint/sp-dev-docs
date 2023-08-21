@@ -2,10 +2,9 @@
 title: Association element in MethodInstances (BDCMetadataResource Schema)
 description: Details on the Association element in MethodInstances (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 23403618-d39a-783d-ff3c-12c439e5f4d3
 ---
@@ -48,51 +47,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances element in Method (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
-
+| Element |
+| --- |
+| [MethodInstances element in Method (BDCMetadataResource Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md) |

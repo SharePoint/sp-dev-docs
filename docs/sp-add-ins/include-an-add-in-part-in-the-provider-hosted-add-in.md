@@ -47,9 +47,9 @@ In this article, you add a special kind of web part called an add-in part to the
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 
-2. When the add-in's start page opens, the add-in has been deployed, and the **Place Order** add-in part is available for users to add to any web part area on any SharePoint page on the Hong Kong store's website. Follow these steps to add it to the home page:
+2. When the add-in's start page opens, the add-in has been deployed, and the **Place Order** add-in part is available for users to add to any web part area on any SharePoint page on the Hong Kong SAR store's website. Follow these steps to add it to the home page:
     
-   1. Select **Back to Site** on the chrome control at the top of the start page to open the home page of the Hong Kong store.
+   1. Select **Back to Site** on the chrome control at the top of the start page to open the home page of the Hong Kong SAR store.
    2. On the ribbon, open the **Page** tab and select **Edit**.
    3. After the page is in edit mode, open the **Insert** tab on the ribbon, and then select **Add-in Part** (the button may still be called **App Part**).
    4. On the web part insertion control that opens, select the **Place Order** add-in part. The control looks similar to the following.

@@ -1,12 +1,12 @@
 ---
 title: DataSources Element (WorkflowActions)
+description: DataSources Element (WorkflowActions) specifies the data sources for the action.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0e9831a1-2815-4a74-bcc4-9760aef7e3d2
 ---
@@ -65,9 +65,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

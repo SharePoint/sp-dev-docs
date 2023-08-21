@@ -1,7 +1,7 @@
 ---
 title: Make batch requests with the REST APIs
 description: Use the $batch query option with the REST/OData APIs.
-ms.date: 07/20/2021
+ms.date: 03/29/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,15 +12,16 @@ This article describes how you can batch queries and operations against the REST
 
 ## Executive summary of the $batch option
 
-SharePoint Online (and on-premises SharePoint 2016 and later) and the Office 365 APIs implement the OData  `$batch` query option, so you can rely on [the official documentation](http://www.odata.org/documentation/odata-version-3-0/batch-processing) for details about how to use it. (Another option is to see Andrew Connell's blog posts on the subject beginning at [Part 1 - SharePoint REST API Batching](http://www.andrewconnell.com/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests).)
+SharePoint Online (and on-premises SharePoint 2016 and later) and the Office 365 APIs implement the OData  `$batch` query option, so you can rely on [the official documentation](http://www.odata.org/documentation/odata-version-3-0/batch-processing) for details about how to use it. (Another option is to see Andrew Connell's blog posts on the subject beginning at [Part 1 - SharePoint REST API Batching](https://www.andrewconnell.com/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests).)
 
 The following is a reminder of the major points:
 
-- The request URL consists of the root service URL and the `$batch` option; for example, **https://fabrikam.sharepoint.com/_api/$batch** or **https://fabrikam.office365.com/api/v1.0/me/$batch**.
+- The request URL consists of the root service URL and the `$batch` option; for example, **`https://fabrikam.sharepoint.com/_api/$batch`** or **`https://fabrikam.office365.com/api/v1.0/me/$batch`**.
 - The HTTP request body is MIME type *multipart/mixed*.
 - The body of the request is divided into parts that are separated from each other by a boundary string that is specified in the header of the request.
 - Each part of the body has its own HTTP verb and REST URL, and its own internal body when applicable.
 - A part can be a read operation (or function invocation), or a ChangeSet of one or more write operations (or function invocations). A ChangeSet is itself a MIME type *multipart/mixed*  with subparts that contain insert, update, or delete operations.
+- The request URL and the URLs inside the body must target the same site. All URLs are case-sensitive.
 
 > [!IMPORTANT]
 > SharePoint and Office 365 APIs aren't transactional and don't support "all or nothing" functionality for ChangeSets that have more than one operation within them. If any of the child operations fails, the others still complete and aren't rolled back.

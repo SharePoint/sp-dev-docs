@@ -1,11 +1,10 @@
 ---
 title: Parameters Element in Method (BDCMetadataResource Schema)
-description: Details on the Parameters Element in Method (BDCMetadataResource Schema)
+description: Describes the Parameters element in Method (BDCMetadataResource Schema) and provides the elements and attributes.
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f7ce7810-f817-9560-6154-b4742a8cf162
 ---
@@ -34,44 +33,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadataresource-schema.md">Parameter Element in Parameters (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Parameter Element in Parameters (BDCMetadataResource Schema)](parameter-element-in-parameters-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element |
+| --- |
+| [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md) |

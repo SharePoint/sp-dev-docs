@@ -1,29 +1,28 @@
 ---
 title: CommandUIDefinitions element (CommandUIExtensionType complexType)
+description: Describes the definition, element, and attribute information for CommandUIDefinitions element (CommandUIExtensionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 802a1d04-ea23-582e-96cb-e6e067411d4e
 ---
 
-# CommandUIDefinitions element (CommandUIExtensionType complexType) 
+# CommandUIDefinitions element (CommandUIExtensionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | CommandUIDefinitionsType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-
+| Information | Location |
+|-------------|----------|
+| **Element Type** | CommandUIDefinitionType  |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 
@@ -91,12 +90,5 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

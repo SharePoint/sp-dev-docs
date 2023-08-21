@@ -2,7 +2,6 @@
 title: Exporting and importing search configuration settings in SharePoint
 description: Get code examples that show you how to export and import customized search configuration settings. These settings include all customized query rules, result sources, result types, ranking models, and site search settings.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: d00679a3-ffa2-4281-ad8b-70fc2c4a14e2
 ms.localizationpriority: medium
 ---

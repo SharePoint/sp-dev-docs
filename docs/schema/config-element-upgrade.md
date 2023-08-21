@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Upgrade schema
@@ -17,13 +16,13 @@ description: Specifies the top-level containing element for the upgrade definiti
 # Config element (Upgrade)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the top-level containing element for the upgrade definition.
-  
+
 ```XML
 <Config
   xmlns = "urn:Microsoft.SharePoint.Upgrade">
-  <WebTemplate 
+  <WebTemplate
     BeginFromSchemaVersion = "Integer"
     EndFromSchemaVersion = "Integer"
     FromProductVersion = "Integer"
@@ -45,22 +44,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**xmlns** <br/> |Specifies the Microsoft SharePoint Foundation 2010 Upgrade namespace:  `urn:Microsoft.SharePoint.Upgrade` <br/> |
-   
+
 ### Child elements
 
 - [WebTemplate](webtemplate-element-upgrade.md)
-   
+
 ### Parent elements
 
 None
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
 For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md).
-  
-

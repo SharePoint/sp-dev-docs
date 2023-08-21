@@ -1,10 +1,10 @@
 ---
 title: ApplyElementManifests element (Feature)
+description: Describes the ApplyElementManifests element (Feature) schema and provides the schema's definition, child elements, parent elements, and occurrences.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c087a0c3-1e27-4034-b4da-e025991454d6
 ---
@@ -74,11 +74,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

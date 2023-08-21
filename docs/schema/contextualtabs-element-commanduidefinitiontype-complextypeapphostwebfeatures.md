@@ -1,28 +1,28 @@
 ---
 title: ContextualTabs element (CommandUIDefinitionType complexType)
+description: Outlines information, a definition, and elements and attributes for the ContextualTabs element in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6c5814c2-aeb3-bbf1-8a6a-f7362a20e508
 ---
 
-# ContextualTabs element (CommandUIDefinitionType complexType) 
+# ContextualTabs element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
-
-|   |   |
+|Name   |Value   |
 |---|---|
 | **Element type**  | ContextualTabsType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
+
 
 ## Definition
 
@@ -71,11 +71,5 @@ None.
 
 None.
 
-<br/> 
-<br/> 
-
-
-
-
-
-
+<br/>
+<br/>

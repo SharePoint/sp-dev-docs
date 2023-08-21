@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/20/2019
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Field Types XML
@@ -15,9 +14,9 @@ description: Represents a characteristic of the field type.
 # Field element (Field Types)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Represents a characteristic of the field type.
-  
+
 ```xml
 <Field Name="Text"></Field>
 ```
@@ -43,7 +42,7 @@ None
 ### Remarks
 
 Field element children of **FieldType** elements are configured in _fldtypes\*.xml_ files in _%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML_.
-  
+
 Each **FieldType** element has several required and optional **Field** elements distinguished by their **Name** attribute. The following table describes these elements. In the object model, a field type is represented by the [SPFieldTypeDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldTypeDefinition.aspx) class. The latter class has a read-only property corresponding to all but two of the rows of the table (the exceptions are **InternalType** and **SQLType**). Except where noted otherwise, the property names match the value of the corresponding Name attribute.
 
 | Value of Field Element's `Name` Attribute | Description |
@@ -59,7 +58,7 @@ Each **FieldType** element has several required and optional **Field** elements 
 | **ShowOnDocumentLibraryAuthoringPages** | Optional **Boolean**. The default is **TRUE**. Represents whether this field type is displayed for inclusion in document libraries. If set to **TRUE**, SharePoint Foundation displays this field type on document library authoring pages so that users can include the field type in their document libraries.<br/><br/>In the SharePoint Foundation object model, **ShowOnDocumentLibraryAuthoringPages** is called [ShowOnDocumentLibraryCreate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnDocumentLibraryCreate.aspx).|
 | **ShowOnSurveyAuthoringPages** |Optional **Boolean**. The default is **TRUE**. Represents whether this field type is displayed for inclusion on surveys. If set to **TRUE**, SharePoint Foundation displays this field type on survey authoring pages so that users can include the field type in their surveys.<br/><br/>In the SharePoint Foundation object model, **ShowOnSurveyAuthoringPages** is called [ShowOnSurveyCreate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnSurveyCreate.aspx).|
 | **ShowOnColumnTemplateAuthoringPages** | Optional **Boolean**. The default is **TRUE**. Represents whether this field type should be displayed as a column template field type. If set to **TRUE**, SharePoint Foundation displays this field type on column template authoring pages so that users can select to create a column template of this field type.<br/><br/>In the SharePoint Foundation object model, **ShowOnColumnTemplateAuthoringPages** is called [ShowOnColumnTemplateCreate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnColumnTemplateCreate.aspx).|
-| **SQLType** | Optional **String**. Represents the SQL data type that is used to store the data in the content database. Do not use a `<Field Name="SQLType">` element in your custom field type definitions.  | 
+| **SQLType** | Optional **String**. Represents the SQL data type that is used to store the data in the content database. Do not use a `<Field Name="SQLType">` element in your custom field type definitions.  |
 | **Sortable** | Required **Boolean**. Represents whether a list with a column that is based on this field type can be sorted on the column that uses this type. If set to **TRUE**, the header of the column is a control that users can use to sort the list.|
 | **TypeDisplayName** | Required **String**. Represents the display name of the field type in the user interface (UI). In SharePoint Foundation, it appears in the **Type** column on the **Customize** [list] page (listedit.aspx). It is also used in place of **TypeShortDescription** if the latter is not present.<br/><br/>**TypeDisplayName** should be a localizable string.|
 | **TypeName** | Required **String**. Represents the name of the field type. This must be unique among all field type names on the SharePoint server farm.<br/><br/>**TypeName** should be a fixed, nonlocalizable string.|
@@ -69,10 +68,10 @@ Each **FieldType** element has several required and optional **Field** elements 
 ## Example
 
 The following example defines a custom field type.
-  
+
 > [!IMPORTANT]
-> The **RenderPattern** is obsolete. It is shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation. 
-  
+> The **RenderPattern** is obsolete. It is shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation.
+
 ```xml
 <FieldType>
   <Field Name="TypeName">SocialSecurityNumber</Field>
@@ -85,7 +84,7 @@ The following example defines a custom field type.
     Version=1.0.0.0,Culture=neutral,PublicKeyToken=90734cc53324b79c
   </Field>
   <RenderPattern Name="DisplayPattern">
-    <Column HTMLEncode="TRUE" /> 
+    <Column HTMLEncode="TRUE" />
     <Column HTMLEncode="TRUE" UseRelatedField="TRUE"/>
   </RenderPattern>
 </FieldType>
@@ -93,8 +92,8 @@ The following example defines a custom field type.
 
 ## See also
 
-- [Custom Field Types](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
-- [Custom Field Classes](https://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
-- [Custom Field Type Property Rendering](https://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
-- [Custom Field Type Definition](https://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  
+- [Custom Field Types](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)
+- [Custom Field Classes](https://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)
+- [Custom Field Type Property Rendering](https://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)
+- [Custom Field Type Definition](https://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)
 - [Walkthrough: Creating a Custom Field Type](https://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx)

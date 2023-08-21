@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - SPMetal Parameters XML
@@ -17,9 +16,9 @@ description: Specifies that SPMetal should generate code only for columns that a
 # ExcludeOtherColumns  element (SPMetal)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies that SPMetal should generate code only for columns that are explicitly represented by **Column** elements.
-  
+
 ```XML
 <ExcludeOtherColumns />
 ```
@@ -31,25 +30,25 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[ContentType](contenttype-spmetal.md) <br/> |Specifies that a content type should be included in code generation, and modifies which columns in the content type are included in code generation.  <br/> |
-   
+
 ### Remarks
 
 A **ContentType** element cannot have both an **ExcludeOtherColumns** element and an **IncludeHiddenColumns** element.
-  
+
 ## Example
 
 The following shows the **ExcludeOtherColumns** element in use. The presence of the element ensures that code generated for the **Contact** content type class has properties for only the three columns explicitly represented by **Column** elements.
-  
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Web AccessModifier="Internal" xmlns="http://schemas.microsoft.com/SharePoint/2009/spmetal">
@@ -71,4 +70,3 @@ The following shows the **ExcludeOtherColumns** element in use. The presence of 
 
 - [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
 - [Overriding SPMetal Defaults by Using a Parameters XML File](https://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
-

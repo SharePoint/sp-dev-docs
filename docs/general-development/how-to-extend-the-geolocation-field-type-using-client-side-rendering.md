@@ -2,7 +2,6 @@
 title: Extend the Geolocation field type by using client-side rendering
 description: Learn how to customize the SharePoint Geolocation field type programmatically using client-side rendering.
 ms.date: 01/05/2020
-ms.prod: sharepoint
 ms.assetid: 7360633a-a7cf-4194-8bbd-8dd7c323e80b
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,6 @@
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
 ms.date: 10/21/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -19,7 +18,7 @@ Before you start, complete the procedures in the following articles to ensure th
 > [!IMPORTANT]
 > This tutorials requires that you are using the SharePoint Framework v1.10 or higher as some capabilities and framework properties are not available in earlier versions.
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/JoTAC2i-XeU]
 

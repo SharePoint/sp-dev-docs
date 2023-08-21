@@ -2,7 +2,6 @@
 title: Reference third-party CSS styles in SharePoint Framework web parts
 description: Two approaches to including third-party CSS styles in web parts, and how each approach affects the resulting web part bundle.
 ms.date: 12/02/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

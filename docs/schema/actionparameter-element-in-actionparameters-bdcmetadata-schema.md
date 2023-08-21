@@ -2,12 +2,11 @@
 title: ActionParameter element in ActionParameters (BDCMetadata Schema)
 description: Details on the  ActionParameter element in ActionParameters (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ActionParameter
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 ---
@@ -24,14 +23,14 @@ Specifies the parameters of a URL-based action. Defines how to parameterize the 
 
 The URL attribute of a URL-based action can receive parameters by using the ActionParameter element.
 
-> [!IMPORTANT] 
-> **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**. 
-> 
+> [!IMPORTANT]
+> **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**.
+>
 > The **ActionParameter** represents an identifier value when the **IdOrdinal** property is present. The value of the property specifies the index of the identifier whose value this **ActionParameter** represents. If the **IdOrdinal** property is not specified, the **ActionParameter** represents a **TypeDescriptor**, and the **Name** attribute specifies which type descriptor is being represented. The **Name** attribute is specified as a **Dotted Path**.
 
 The **ActionParameter** element accepts the following property.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Properties are case-sensitive.
 
 ### Properties
@@ -123,56 +122,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names for the **ActionParameter**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the **ActionParameter**.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names for the **ActionParameter**. |
+| [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **ActionParameter**. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **ActionParameters** element that contains this **ActionParameter**.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The **ActionParameters** element that contains this **ActionParameter**. |

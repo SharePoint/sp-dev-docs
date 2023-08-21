@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Application Lifecycle Management
 description: Scenario guidance on application lifecycle management topics with SharePoint Framework and SharePoint add-ins.
-ms.date: 03/26/2018
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -18,9 +18,9 @@ _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 The SharePoint Add-In Model introduces new development techniques, mainly based on client-side code. Thus, the ALM of SharePoint Add-In solutions is slightly different from the previous Sandbox or Full Trust Code (FTC) solutions. Here follow articles and videos about how to manage ALM with the SharePoint Add-In model.
 
 ### Articles
-* [SharePoint Application Lifecycle Management](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)
-* [Application Lifecycle Management (ALM) APIs](https://docs.microsoft.com/sharepoint/dev/apis/alm-api-for-spfx-add-ins)
-* [Set up a general development environment for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)
+* [SharePoint Application Lifecycle Management](/sharepoint/dev/general-development/sharepoint-server-application-lifecycle-management)
+* [Application Lifecycle Management (ALM) APIs](/sharepoint/dev/apis/alm-api-for-spfx-add-ins)
+* [Set up a general development environment for SharePoint](/sharepoint/dev/general-development/set-up-a-general-development-environment-for-sharepoint)
 
 ### Solutions
 * [Tenant Information Portal](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/Tenant%20Information%20Portal)
@@ -35,12 +35,12 @@ _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016 (FP2)_
 The new development model of SharePoint Framework (SPFx) introduces new tools and techniques to develop SPFx solutions. Here follows a list of useful articles about ALM with SPFx.
 
 ### Articles
-* [Set up your Office 365 tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
-* [Set up your SharePoint Framework development environment](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
-* [SharePoint Framework (SPFx) enterprise guidance](https://docs.microsoft.com/sharepoint/dev/spfx/enterprise-guidance)
-* [Team-based development on the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/team-based-development-on-sharepoint-framework)
-* [SharePoint Framework solutions governance considerations](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/governance-considerations)
-* [Application Lifecycle Management (ALM) APIs](https://docs.microsoft.com/sharepoint/dev/apis/alm-api-for-spfx-add-ins)
+* [Set up your Office 365 tenant](/sharepoint/dev/spfx/set-up-your-developer-tenant)
+* [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment)
+* [SharePoint Framework (SPFx) enterprise guidance](/sharepoint/dev/spfx/enterprise-guidance)
+* [Team-based development on the SharePoint Framework](/sharepoint/dev/spfx/team-based-development-on-sharepoint-framework)
+* [SharePoint Framework solutions governance considerations](/sharepoint/dev/spfx/web-parts/guidance/governance-considerations)
+* [Application Lifecycle Management (ALM) APIs](/sharepoint/dev/apis/alm-api-for-spfx-add-ins)
 * [Working With: ALM API](https://github.com/SharePoint/PnP-JS-Core/wiki/Working-With:-ALM-API)
 
 ### Videos

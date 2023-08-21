@@ -1,10 +1,10 @@
 ---
 title: Event Registrations
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes Event Registrations and includes information on how to register event handlers at the site or site collection level that you will use to implement filtering to respond to events.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d4840ea9-0270-415d-9389-e566a7e2d018
 ---
@@ -48,10 +48,10 @@ To register an event handler for list events, create a folder in `\\Template\\Fe
 The Feature.xml file that registers an event handler might look like the following.
 
 ```XML 
-    <Feature 
-      Scope="Web" 
-      Title="Simple Updating Item Event Handler Registration" 
-      Id="A6B8687A-3200-4b01-AD76-09E8D163FB9A" 
+    <Feature
+      Scope="Web"
+      Title="Simple Updating Item Event Handler Registration"
+      Id="A6B8687A-3200-4b01-AD76-09E8D163FB9A"
       xmlns="http://schemas.microsoft.com/sharepoint/">
       <ElementManifests>
         <ElementManifest Location="elements.xml"/>
@@ -65,7 +65,7 @@ The elements manifest file registers the event handler assembly and associates i
 
 ```XML 
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <Receivers 
+      <Receivers
         ListTemplateId="104">
         <Receiver>
           <Name>SimpleUpdateEvent</Name>
@@ -126,12 +126,3 @@ The following example defines the content of an error message to display when us
 ## See also
 
 - [How to: Create an Event Handler Feature](https://msdn.microsoft.com/library/4f70b1ea-dafe-4068-a6b0-55402b7618dc(Office.15).aspx)
-
-
-
-
-
-
-
-
-

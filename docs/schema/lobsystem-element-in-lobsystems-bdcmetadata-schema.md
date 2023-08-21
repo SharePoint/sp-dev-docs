@@ -2,12 +2,11 @@
 title: LobSystem Element in LobSystems (BDCMetadata Schema)
 description: Details on the LobSystem Element in LobSystems (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystem
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d4e58d7d-a628-8093-97fe-7c3136e8f6f2
 ---
@@ -109,71 +108,18 @@ The following sections describe attributes, child elements, and parent elements.
 </table>
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of the **LobSystem**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies the properties of an **LobSystem**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies the access control list (ACL) of an **LobSystem**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="proxy-element-in-lobsystem-bdcmetadata-schema.md">Proxy Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies a user-provided proxy that is identical to the one that would be generated if this element was not present.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md">LobSystemInstances Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies the external system instances for this external system.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.md">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies the external content types in this external system.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the \*\*LobSystem\*\*. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | Specifies the properties of an \*\*LobSystem\*\*. |
+| [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | Specifies the access control list (ACL) of an \*\*LobSystem\*\*. |
+| [Proxy Element in LobSystem (BDCMetadata Schema)](proxy-element-in-lobsystem-bdcmetadata-schema.md) | Specifies a user-provided proxy that is identical to the one that would be generated if this element was not present. |
+| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md) | Specifies the external system instances for this external system. |
+| [Entities Element in LobSystem (BDCMetadata Schema)](entities-element-in-lobsystem-bdcmetadata-schema.md) | Specifies the external content types in this external system. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystems-element-in-model-bdcmetadata-schema.md">LobSystems Element in Model (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies a list of external systems in this model.</p></td>
-</tr>
-</tbody>
-</table>
 
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [LobSystems Element in Model (BDCMetadata Schema)](lobsystems-element-in-model-bdcmetadata-schema.md) | Specifies a list of external systems in this model. |

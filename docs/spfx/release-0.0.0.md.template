@@ -15,29 +15,30 @@ TODO:
 
 ## Upgrading projects from vTODO: {version-previous} to vTODO: {version-release}
 
-1. In the project's **package.json** file, identify all SPFx vTODO: {version-previous} packages. For each SPFx package:
-    1. Uninstall the existing vTODO: {version-previous} package:
+In the project's **package.json** file, identify all SPFx vTODO: {version-previous} packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@TODO: {version-previous}
-        ```
+1. Uninstall the existing vTODO: {version-previous} package:
 
-    1. Install the refreshed vTODO: {version-release} package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@TODO: {version-previous}
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@TODO: {version-release}.0 --save --save-exact
-        ```
+1. Install the refreshed vTODO: {version-release} package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@TODO: {version-release}.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 
-TODO: 
+TODO:
 
 ## Changes in this release
 
-TODO: 
+TODO:
 
 ## Deprecations and removed items in this release
 
-TODO: 
+TODO:

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Specifies a reference to a content type to associate with lists tha
 # ContentTypeRef element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a reference to a content type to associate with lists that are created through the list definition.
-  
+
 ```XML
 <ContentTypeRef
   ID = "Text">
@@ -35,24 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ID** <br/> |Required **Text**. Specifies the ID of the content type. For information about the format of content type IDs, see [Content Type IDs](https://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf%28Office.15%29.aspx).  <br/> |
-   
+
 ### Child elements
 
 - [Folder](folder-element-list.md)
-   
+
 ### Parent elements
 
 - [ContentTypes](contenttypes-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following example shows part of a definition for a list that uses three content types.
-  
+
 ```XML
 <ContentTypes>
   <ContentTypeRef ID="0x01010012841A8869DB425cB829C3875EC558CE01">

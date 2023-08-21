@@ -1,8 +1,7 @@
 ---
 title: SharePoint Framework v1.5.1 release notes
 description: Release notes for the SharePoint Framework v1.5.1 release
-ms.date: 09/08/2021
-ms.prod: sharepoint
+ms.date: 06/13/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.5.1 release notes
@@ -15,18 +14,19 @@ This is mainly a bug fix release to address few regressions, which were introduc
 
 ## Upgrading projects from v1.5 to v1.5.1
 
-1. In the project's **package.json** file, identify all SPFx v1.5 packages. For each SPFx package:
-    1. Uninstall the existing v1.5 package:
+In the project's **package.json** file, identify all SPFx v1.5 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.5
-        ```
+1. Uninstall the existing v1.5 package:
 
-    1. Install the refreshed v1.5.1 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.5
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.5.1.0 --save --save-exact
-        ```
+1. Install the refreshed v1.5.1 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.5.1 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

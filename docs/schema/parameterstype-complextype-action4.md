@@ -1,10 +1,10 @@
 ---
 title: parametersType complexType (Action4)
+description: Describes the parametersType complexType (Action4) and provides the type information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 35bb99bb-066d-0876-f257-4abeed4f4e04
 ---
@@ -54,7 +54,7 @@ Base type … xxxxxxxxxx.
                 <xs:attribute name="InitialValue" type="s:string" />
                 <xs:attribute name="InitialBinding" type="s:string" />
                 <xs:attribute name="EventCategory" type="s:string" />
-            </xs:element>  
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 ```
@@ -90,11 +90,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

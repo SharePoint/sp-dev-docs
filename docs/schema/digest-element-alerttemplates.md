@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies format information for alert messages in digest format.
 # Digest element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies format information for alert messages in digest format.
-  
+
 ```XML
 <Digest>
   <Subject>
@@ -50,21 +49,19 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 - [Footer](footer-element-alerttemplates.md)
 - [Header](header-element-alerttemplates.md)
 - [HeaderFields](headerfields-element-alerttemplates.md)
 - [HeaderFieldsFooter](headerfieldsfooter-element-alerttempaltes.md)
-- [HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.md) 
-- [RowFields](rowfields-element-alerttemplates.md) 
-- [RowFooter](rowfooter-element-alerttemplates.md) 
-- [RowHeader](rowheader-element-alerttemplates.md) 
-- [Subject](subject-element-alerttemplates.md) 
-   
+- [HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.md)
+- [RowFields](rowfields-element-alerttemplates.md)
+- [RowFooter](rowfooter-element-alerttemplates.md)
+- [RowHeader](rowheader-element-alerttemplates.md)
+- [Subject](subject-element-alerttemplates.md)
+
 ### Parent elements
 
 - [Format](format-element-alerttemplates.md)
-   
-

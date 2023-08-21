@@ -1,9 +1,8 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and deployed to SharePoint sites when the solution is installed on it.
-ms.date: 02/14/2022
+ms.date: 05/03/2023
 ms.localizationpriority: high
-ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
 
@@ -11,12 +10,15 @@ ms.custom: scenarios:getting-started
 
 SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it.
 
+> [!NOTE]
+> \*.sppkg packages that contain SharePoint assets cannot be tenant deployed from the tenant application catalog, and cannot be used in a site application catalog.
+
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom client-side web part:
 
 - [Build your first web part](build-a-hello-world-web-part.md)
 - [Connect your web part to SharePoint](connect-to-sharepoint.md)
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/09uoG6Voeew]
 
@@ -75,7 +77,7 @@ To provision SharePoint assets to sites with feature framework elements, we need
 - List instances
 - List instances with custom schema
 
-### Add an element.xml file for SharePoint definitions
+### Add an elements.xml file for SharePoint definitions
 
 In the following steps, we define the needed structure to be provisioned.
 
@@ -240,7 +242,7 @@ There are a few things to take note of from this XML:
 - Make sure you define a **unique GUID** for the `id` property in the `feature` property.
 - You can technically have multiple features in the package because the `features` property is an array. However, this isn't recommended.
 - **elements.xml** is referenced under `elementManifests` so that it's properly packaged for the feature definition as an element manifest file.
-- You can have multiple **element.xml** files in the definition, and they would be executed in the order they're mentioned in the JSON definition. Typically, you should avoid using multiple **element.xml** files because this adds unnecessary complexity. You can define all needed assets in a single **element.xml** file.
+- You can have multiple **elements.xml** files in the definition, and they would be executed in the order they're mentioned in the JSON definition. Typically, you should avoid using multiple **elements.xml** files because this adds unnecessary complexity. You can define all needed assets in a single **elements.xml** file.
 
 ## Deploy and test asset provisioning
 

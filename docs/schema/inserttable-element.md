@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a menu control for inserting a table that contains a variab
 # InsertTable element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a menu control for inserting a table that contains a variable number of cells.
-  
+
 ```XML
 <InsertTable
   Alt="Text"
@@ -51,19 +50,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**MenuSectionInitialTitle** <br/> |Optional. The title of the menu section before table cells are selected, such as "Insert Table".  <br/> |
 |**MenuSectionTitle** <br/> |Optional. The title of the menu section when table cells are selected. This could be a format string such as "Insert a {0} by {1} Table".  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-menusection.md) (MenuSection)  
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-menusection.md) (MenuSection)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
-
+- Maximum: 1

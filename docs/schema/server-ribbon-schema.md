@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,15 +16,15 @@ description: The Server Ribbon schema defines the structure of XML documents tha
 # Server Ribbon schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 The Server Ribbon schema defines the structure of XML documents that customize the server ribbon.
-  
+
 ## XML schema definition
 
-An XML document that customizes the server ribbon must validate with the schema that is defined in the cui.xsd file. This file is located in the following directory: %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML. 
-  
+An XML document that customizes the server ribbon must validate with the schema that is defined in the cui.xsd file. This file is located in the following directory: %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML.
+
 ## Elements
-  
+
 - [Button](button-element.md)
 - [CheckBox](checkbox-element.md)
 - [Color](color-element.md)
@@ -74,9 +73,8 @@ An XML document that customizes the server ribbon must validate with the schema 
 - [UnitAbbreviation](unitabbreviation-element.md)
 
 
-  
+
 ## See also
 
 - [CommandUIDefinition Element](commanduidefinition-element.md)
 - [Building Block: Server Ribbon](https://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8%28Office.15%29.aspx)
-

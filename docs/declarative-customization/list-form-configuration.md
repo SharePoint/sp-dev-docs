@@ -1,7 +1,7 @@
 ---
 title: Configure the list form
 description: Configure list form with a custom header, footer and body with one or more sections.
-ms.date: 04/23/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -23,8 +23,8 @@ To configure the form in a list or library:
 1. If you are in a document library:
 
    - Select a file.
-   - Select ... 
-   - Select More 
+   - Select ...
+   - Select More
    - Select Properties
 
 1. At the top of the form, expand **Edit Form** icon and then select **Configure layout**

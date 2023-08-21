@@ -1,15 +1,14 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 02/08/2022
-ms.prod: sharepoint
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
 
-This tutorial builds off the following tutorial: [Advanced Card View Functionality](advanced-quick-view-functionality.md).
+This tutorial builds off the following tutorial: [Advanced Card View Functionality](advanced-card-view-functionality.md).
 
-Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Functionality](advanced-quick-view-functionality.md). The HelloWorld ACE displays either the count of total steps or one individual step at a time. Using the Quick View, the ACE can show a list of all the steps. Additionally, the ACE can show more details about a particular step if it's selected.
+Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Functionality](advanced-card-view-functionality.md). The HelloWorld ACE displays either the count of total steps or one individual step at a time. Using the Quick View, the ACE can show a list of all the steps. Additionally, the ACE can show more details about a particular step if it's selected.
 
 ## Show all items in Quick View
 
@@ -89,7 +88,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
     }
     ```
 
-1. Finally locate the `fetchData()` method in the same class and modify the map function inside it, to: 
+1. Finally locate the `fetchData()` method in the same class and modify the map function inside it, to:
 
     ```typescript
     ...
@@ -105,7 +104,7 @@ Build and launch the ACE in the hosted workbench:
 gulp serve
 ```
 
-Once the local webserver has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the Toolbox and select your ACE. Select the Card to open the Quick View:
 
@@ -115,7 +114,6 @@ Since the `onAction()` handler has not been changed to handle the item click, se
 
 ## Create a new quick view
 
-1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Add the following JSON to the **DetailedQuickViewTemplate.json** file:
 
@@ -324,3 +322,7 @@ After this lab  you should be familiar with:
 - Handle actions from the Quick View
 - Use `onRenderTypeChanged()`
 - Advanced Quick View manipulation
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

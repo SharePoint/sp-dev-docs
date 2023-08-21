@@ -1,10 +1,10 @@
 ---
 title: LayoutDefinitions schema
+description: Provides links to the documentation for the Layouts schema (LayoutDefinitions.xsd) in SharePoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8e35d357-4b59-aea5-a06b-61ef6af6d4a1
 ---
@@ -30,11 +30,3 @@ This section contains the documentation for the **Layouts schema (LayoutDefiniti
 - [OBPart element in ArrayOfOBPart (LayoutDefinitions schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md)
 
 - [TitleBar element in OBPart (LayoutDefinitions schema)](titlebar-element-in-obpart-layoutdefinitions-schema.md)
-
-
-
-
-
-
-
-

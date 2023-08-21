@@ -1,28 +1,28 @@
 ---
 title: FeaturePropertyDefinitions complexType
+description: Outlines information, a definition, and elements and attributes for the FeaturePropertyDefinitions complexType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 89621dc1-7a85-8403-5ad1-01d62c4f9fdc
 ---
 
-# FeaturePropertyDefinitions complexType 
+# FeaturePropertyDefinitions complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-| **Extension base**  | None |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
+| **Extension base** | None |
 
 ## Definition
 
@@ -69,10 +69,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

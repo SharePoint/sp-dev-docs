@@ -1,15 +1,15 @@
 ---
 title: AppPrerequisite complexType
+description: Outlines information, a definition, and elements and attributes for the AppPrerequisite complexType in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 68a1f994-354b-3b93-b34a-cbc523474212
 ---
 
-# AppPrerequisite complexType 
+# AppPrerequisite complexType
 
 (SharePoint Add-in Manifest)
 
@@ -17,16 +17,15 @@ ms.assetid: 68a1f994-354b-3b93-b34a-cbc523474212
 
 Identifies a SharePoint Feature or capability that the add-in depends on, or an autohosted component that is included in the app. The SharePoint Add-ins installation infrastructure checks to see if the Feature or capability is present and activated. If it is not, installation of the app is blocked. If the element identifies an autohosted component, the infrastructure deploys the component.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
 
-|   |   |
-|---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
-| **Extension base**  | None |
+**Schema file**: appmanifest.xsd
+
+**Extension base**: None
 
 ## Definition
 
@@ -35,7 +34,7 @@ Identifies a SharePoint Feature or capability that the add-in depends on, or an 
       <xs:attribute name="Type" type="AppPrerequisiteTypeDefinition" use="required"  />
       <xs:attribute name="ID" type="xs:string" use="required" />
       <xs:attribute name="MinimumVersion" type="VersionDefinition" use="optional" />
-    </xs:complexType>       
+    </xs:complexType>
 ```
 
 ## Elements and attributes
@@ -187,11 +186,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

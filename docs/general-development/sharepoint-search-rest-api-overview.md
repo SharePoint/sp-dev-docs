@@ -1,8 +1,7 @@
 ---
 title: SharePoint Search REST API overview
 description: Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
-ms.date: 01/27/2021
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 # SharePoint Search REST API overview
@@ -14,7 +13,7 @@ When you query in the context of a SharePoint Online user, you get results from:
 - Content in SharePoint Online site collections
 - Content in Microsoft 365 groups
 - Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business)
-- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint)
+- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint)
 
 ## Content Delivery Network (CDN) Support
 
@@ -587,7 +586,7 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlighted
 
 A Boolean value that specifies whether to perform result type processing for the query.
 
-**true** to perform result type processing; otherwise, **false**. The default value is **false**.
+**false** to perform result type processing; otherwise, **true**. The default value is **true**.
 
 #### Sample GET request
 

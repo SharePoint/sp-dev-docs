@@ -2,7 +2,6 @@
 title: Why the SharePoint Framework?
 description: Learn why Microsoft introduced and now recommends the SharePoint Framework for customer SharePoint extensibility and customizations.
 ms.date: 09/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -38,3 +37,7 @@ Historically, developers created web parts as full trust C# assemblies that were
 However, current development models usually involve JavaScript running in a browser making REST API calls to the SharePoint and Microsoft 365 back-end workloads. C# assemblies don’t work in this world. Developers needed a new development model.
 
 The SharePoint Framework is the next evolution in SharePoint development.
+
+## See Also
+
+- [Why did Microsoft create the SharePoint Framework (SPFx)?](https://www.voitanos.io/blog/spfx-5w1h-why-did-microsoft-create-sharepoint-framework/)

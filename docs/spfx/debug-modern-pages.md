@@ -2,7 +2,6 @@
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
 ms.date: 02/10/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions on modern SharePoint pages

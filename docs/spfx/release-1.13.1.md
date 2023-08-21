@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.13.1 release notes
 description: Release notes for the SharePoint Framework v1.13.1 release
 ms.date: 11/24/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.13.1 release notes
@@ -15,18 +14,19 @@ This is a bug fix release to address few specific regressions, which were introd
 
 ## Upgrading projects from v1.13 to v1.13.1
 
-1. In the project's **package.json** file, identify all SPFx v1.13 packages. For each SPFx package:
-    1. Uninstall the existing v1.13 package:
+In the project's **package.json** file, identify all SPFx v1.13 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.13
-        ```
+1. Uninstall the existing v1.13 package:
 
-    1. Install the refreshed v1.13.1 {version-release} package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.13
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.13.1 --save --save-exact
-        ```
+1. Install the refreshed v1.13.1 {version-release} package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.13.1 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

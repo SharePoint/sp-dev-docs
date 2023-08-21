@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.FilterDescriptor
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ce0a852-38f9-75d2-8258-27c57418f53c
 ---
@@ -167,54 +166,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names of this filter descriptor.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of this filter descriptor.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of this filter descriptor. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of this filter descriptor. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filterdescriptors-element-in-method-bdcmetadata-schema.md">FilterDescriptors Element in Method (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A list of filter descriptors of a method.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [FilterDescriptors Element in Method (BDCMetadata Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md) | A list of filter descriptors of a method. |

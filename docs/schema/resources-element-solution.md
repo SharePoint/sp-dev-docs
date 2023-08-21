@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies the resources to be deployed to an existing Feature folde
 # Resources element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the resources to be deployed to an existing Feature folder.
-  
+
 ```XML
 <Resources
   <Resource
@@ -35,13 +34,11 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Resource](resource-element-solution.md)
-   
+
 ### Parent elements
 
 - [Solution](solution-element-solution.md)
-   
-

@@ -1,15 +1,15 @@
 ---
 title: AppPrerequisite element (AppPrerequisiteCollection complexType)
+description: Outlines information, a definition, and elements and attributes for the AppPrerequisite element in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 791be402-981f-519e-fcde-f24cc3cb4139
 ---
 
-# AppPrerequisite element (AppPrerequisiteCollection complexType) 
+# AppPrerequisite element (AppPrerequisiteCollection complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,7 +17,7 @@ ms.assetid: 791be402-981f-519e-fcde-f24cc3cb4139
 
 Identifies a SharePoint Feature or capability that the add-in depends on. The SharePoint Add-ins installation infrastructure checks to see if the Feature or capability is present and activated. If it is not, installation of the add-in is blocked.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ```XML 
@@ -25,17 +25,16 @@ Identifies a SharePoint Feature or capability that the add-in depends on. The Sh
 ```
 
 ## Element information
+**Element type**: AppPrerequisite
 
-|   |   |
-|---|---|
-| **Element type**  | AppPrerequisite |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
+
+**Schema file**: appmanifest.xsd
 
 ## Definition
 
 ```XML 
-    <xs:element name="AppPrerequisite" type="AppPrerequisite" maxOccurs="500"></xs:element>     
+    <xs:element name="AppPrerequisite" type="AppPrerequisite" maxOccurs="500"></xs:element>
 ```
 
 ## Elements and attributes
@@ -187,11 +186,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

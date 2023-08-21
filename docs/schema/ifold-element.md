@@ -4,18 +4,17 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ee9a319-4fed-405f-9607-ccc074a2dec7
-description: Returns TRUE if the item is considered old, meaning that the item was created before midnight two days before the current time. 
+description: Returns TRUE if the item is considered old, meaning that the item was created before midnight two days before the current time.
 ---
 
 # IfOld element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns **TRUE** if the item is considered old, meaning that the item was created before midnight two days before the current time. 
-  
+
+Returns **TRUE** if the item is considered old, meaning that the item was created before midnight two days before the current time.
+
 ```XML
 <IfOld>
 </IfOld>
@@ -28,20 +27,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

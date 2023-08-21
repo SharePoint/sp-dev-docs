@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
 ms.date: 12/28/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.12.1 release notes
@@ -15,18 +14,19 @@ This release introduces a new property & event in the Web Part API to detect the
 
 ## Upgrading projects from v1.11.0 to v1.12.1
 
-1. In the project's **package.json** file, identify all SPFx v1.11.0 packages. For each SPFx package:
-    1. Uninstall the existing v1.11.0 package:
+In the project's **package.json** file, identify all SPFx v1.11.0 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.11.0
-        ```
+1. Uninstall the existing v1.11.0 package:
 
-    1. Install the refreshed v1.12 {version-release} package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.11.0
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.12.1 --save --save-exact
-        ```
+1. Install the refreshed v1.12 {version-release} package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.12.1 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

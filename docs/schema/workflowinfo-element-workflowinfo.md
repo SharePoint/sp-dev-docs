@@ -1,12 +1,12 @@
 ---
 title: WorkflowInfo Element (WorkflowInfo)
+description: Describes the WorkflowInfo element (WorkflowInfo) and provides the element's definition, attributes, child elements, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e5cbdadc-53c2-4b48-9522-ba41c90bc4ba
 ---
@@ -85,9 +85,3 @@ The following XML demonstrates how to construct the **WorkflowInfo** element so 
 - [Actions Schema Reference](actions-schema-reference-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

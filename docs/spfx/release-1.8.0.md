@@ -1,8 +1,7 @@
 ---
 title: SharePoint Framework v1.8.0 release notes
 description: Release notes for the SharePoint Framework v1.8.0 release
-ms.date: 09/08/2021
-ms.prod: sharepoint
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.8.0 release notes
@@ -71,7 +70,7 @@ See more from:
 
 - [Building Microsoft Teams Tabs using SharePoint Framework](integrate-with-teams-introduction.md)
 - [Build Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
-- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](web-parts/guidance/creating-team-manifest-manually-for-webpart.md)
+- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](deployment-spfx-teams-solutions.md)
 
 ### App Pages (General Availability)
 
@@ -85,7 +84,7 @@ See more from:
 
 ### Domain isolated web parts (General Availability)
 
-SPFx components running inside the current page is simple and fast. However, there are scenarios where a stronger level of isolation is wanted. Domain isolated web parts run in an iframe with a separate domain, which can have different permissions from the host page. This allows, for example, a web part to access the current user’s email without giving all code running in the tenant the same level of access.
+SPFx components running inside the current page is simple and fast. However, there are scenarios where a stronger level of isolation is wanted. Domain isolated web parts run in an `<iframe>` with a separate domain, which can have different permissions from the host page. This allows, for example, a web part to access the current user’s email without giving all code running in the tenant the same level of access.
 
 The domain and its AAD app are created and managed for the tenant - the tenant admin will need to approve the permissions requested by the solution. For end users, the web part looks and behaves like any other web part. _At this time, domain isolated web parts only support Dynamic Data in the Page Context. Full part-to-part communication will come in a future update._
 
@@ -164,4 +163,4 @@ As mentioned in the TypeScript support section, some of the more recent builds o
 
 The updated provider hosted model for hosting Microsoft Teams solutions in SharePoint Online (using the Teams SDK) is still in preview.
 
-Dynamic data support for isolated domain parts is limited to the page context data source. Full support for dynamic data across the iFrame boundary will come in a future update.
+Dynamic data support for isolated domain parts is limited to the page context data source. Full support for dynamic data across the `<iframe>` boundary will come in a future update.

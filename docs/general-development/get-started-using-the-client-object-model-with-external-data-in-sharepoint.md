@@ -2,7 +2,6 @@
 title: Get started using the client object model with external data in SharePoint
 description: Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 8ed91929-fdb6-4fde-ba2a-7942870575f3
 ms.localizationpriority: medium
 ---

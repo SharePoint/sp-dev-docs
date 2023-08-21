@@ -2,7 +2,6 @@
 title: Extend the fixed-format export feature in Word Automation Services
 description: Extend Word Automation Services in Microsoft Office 2013 to replace the library used by the fixed-format export feature.
 ms.date: 12/14/2020
-ms.prod: sharepoint
 ms.assetid: d8375505-432e-438e-971b-221a1d9bb601
 ms.localizationpriority: medium
 ---

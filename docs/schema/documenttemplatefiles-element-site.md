@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Contains a collection of files that are part of a multifile documen
 # DocumentTemplateFiles element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains a collection of files that are part of a multifile document template.
-  
+
 ```XML
 <DocumentTemplateFiles>
 </DocumentTemplateFiles>
@@ -32,22 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [DocumentTemplateFile](documenttemplatefile-element-site.md)
-   
+
 ### Parent elements
 
 - [DocumentTemplate](documenttemplate-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ### Remarks
 
-For an example that shows how to use the **DocumentTemplateFiles** element, see [DocumentTemplates](documenttemplates-element-site.md). 
-  
-
+For an example that shows how to use the **DocumentTemplateFiles** element, see [DocumentTemplates](documenttemplates-element-site.md).

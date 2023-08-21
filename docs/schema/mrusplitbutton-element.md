@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a control that combines a button and a drop-down menu to di
 # MRUSplitButton element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a control that combines a button and a drop-down menu to display a list of the most-recently used items.
-  
+
 ```XML
 <MRUSplitButton
   Alt="Text"
@@ -85,19 +84,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipSelectedItemTitle** <br/> |Optional. The title of the tooltip that appears for the selected item.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
 - [Menu](menu-element.md)
-   
+
 ### Parent elements
 
 - [CommandUIDefinition](commanduidefinition-element.md)
-- [Controls](controls-element-group.md) 
-   
+- [Controls](controls-element-group.md)
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: unbounded  
-   
-
+- Minimum: 0
+- Maximum: unbounded

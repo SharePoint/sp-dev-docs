@@ -1,7 +1,7 @@
 ---
 title: Supported and Unsupported Features
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes the supported and unsupported features in Excel Services and describes the new Excel features that can be viewed.
+ms.date: 06/14/2022
 ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 ms.localizationpriority: high
 ---

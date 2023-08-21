@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a row in a section of a layout.
 # Row element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a row in a section of a layout.
-  
+
 ```XML
 <Row />
 ```
@@ -34,23 +33,23 @@ None
 
 ### Child elements
 
-- [ControlRef](controlref-element.md) 
-- [Strip](strip-element.md) 
-- [OverflowArea](overflowarea-element.md) 
-   
+- [ControlRef](controlref-element.md)
+- [Strip](strip-element.md)
+- [OverflowArea](overflowarea-element.md)
+
 ### Parent elements
 
 - [Section](section-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 3  
-   
+- Maximum: 3
+
 ## Example
 
 The following example is a fragment from the default server ribbon definition.
-  
+
 ```XML
 <GroupTemplate Id="Ribbon.Templates.ClipboardGroup">
   <Layout Title="Large">
@@ -78,5 +77,3 @@ The following example is a fragment from the default server ribbon definition.
   </Layout>
 </GroupTemplate>
 ```
-
-

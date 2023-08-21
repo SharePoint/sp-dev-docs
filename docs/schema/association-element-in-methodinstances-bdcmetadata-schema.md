@@ -2,12 +2,11 @@
 title: Association element in MethodInstances (BDCMetadata Schema)
 description: Details on the Association element in MethodInstances (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Association
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0
 ---
@@ -24,23 +23,23 @@ The Association element links related external content types within a system. Fo
 
 In the BDC Model, the Association logic (MethodInstance) can be on any external content type, either source or destination or an unrelated external content type, provided the destination external content type belongs to the LobSystem that contains the Association method instance.
 
-> [!WARNING] 
+> [!WARNING]
 > Note that when using SharePoint Designer 2010, you must create the Association operation on the destination external content type. This is a requirement of SharePoint Designer, and modeling it the other way (on the source or another external content type) will not work.
 
 BDC also supports multiple source external content type scenarios and one destination external content type scenario.
 
-An Association method instance contains slots for the identifier values of the SourceEntity instance, and a slot for the identifier values of the DestinationEntity instances. Therefore, you must tag enough input TypeDescriptor objects with identifiers corresponding to each identifier of each external content type that is a source in the Association in the Association method. 
+An Association method instance contains slots for the identifier values of the SourceEntity instance, and a slot for the identifier values of the DestinationEntity instances. Therefore, you must tag enough input TypeDescriptor objects with identifiers corresponding to each identifier of each external content type that is a source in the Association in the Association method.
 
 The IdentifierName attribute on an input TypeDescriptor object signals BDC to insert the identifier value of the EntityInstance of relevance before executing the method. For example, in an AssociationMethodInstance, the user has probably provided the identifier values for the source EntityInstance that he or she wants to retrieve. BDC will insert that value into this slot after fully instantiating this parameter by using all the default values.
 
 BDC also supports Foreign Key pseudo-associations. Foreign Key pseudo-associations are not first-class associations. Consider a Web method that returns Customer, and that one of the fields of a Customer is the Key to the Address of the Customer. Also consider another web method that returns Address given its key. A metadata modeller may use this method as a Customer-Address Association method (possibly along with a Specific Finder of Address). Foreign key pseudo associations see that the target of this method is an Address, fetch the key of Address from the Returned Customer, and then call this association Method to return the Address automatically.
 
-> [!WARNING] 
+> [!WARNING]
 > Note that although the BDC Model supports foreign key pseudo-associations, SharePoint Designer 2010 does not. Therefore, you cannot model foreign key pseudo-associations using SharePoint Designer.
 
 The Association element accepts the following property.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Properties are case-sensitive.
 
 ### Properties
@@ -199,68 +198,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The LocalizedDisplayNames element specifies a list of localized names for the Association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The Properties element specifies the properties of the Association.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The AccessControlList element specifies a set of access rights for the Association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="sourceentity-element-in-association-bdcmetadata-schema.md">SourceEntity element in Association (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The SourceEntity element specifies the source external content type in the association.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="destinationentity-element-in-association-bdcmetadata-schema.md">DestinationEntity element in Association (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The DestinationEntity element specifies the destination external content type in the Association.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|---|---|
+|[LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md)|The LocalizedDisplayNames element specifies a list of localized names for the Association|
+|[Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md)|The Properties element specifies the properties of the Association.|
+|[AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md)|The AccessControlList element specifies a set of access rights for the Association.|
+|[SourceEntity element in Association (BDCMetadata Schema)](sourceentity-element-in-association-bdcmetadata-schema.md)|The SourceEntity element specifies the source external content type in the association.|
+|[DestinationEntity element in Association (BDCMetadata Schema)](destinationentity-element-in-association-bdcmetadata-schema.md)|The DestinationEntity element specifies the destination external content type in the Association.|
 
-<br/>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances element in Method (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The MethodInstances element that contains the Association.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|Description|
+|---|---|
+|[MethodInstances element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md)|The MethodInstances element that contains the Association.|

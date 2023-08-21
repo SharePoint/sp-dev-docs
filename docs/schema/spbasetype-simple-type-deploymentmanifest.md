@@ -1,19 +1,18 @@
 ---
 title: "SPBaseType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPBaseType Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a8fbc636-ac36-4046-b3ab-d604d38ccaaf
-description: "Last modified: March 09, 2015"
 ---
 
 # SPBaseType Simple Type (DeploymentManifest)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the base type for a SharePoint list item.
 
 ## Definition
@@ -44,8 +43,7 @@ Specifies the base type for a SharePoint list item.
 |**DiscussionBoard** <br/> |Indicates the type is provided for backward compatibility with lists derived from the **DiscussionBoard** base type, but is no longer supported. The current version of SharePoint Foundation uses the **GenericList** base type to support a discussion board template.  <br/> |
 |**Survey** <br/> |Indicates the type is a survey list.  <br/> |
 |**Issue** <br/> |Indicates the type is an issue-tracking list.  <br/> |
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

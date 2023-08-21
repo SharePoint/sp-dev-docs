@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.6 release notes
 description: Release notes for the SharePoint Framework v1.6 release
 ms.date: 09/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.6 release notes
@@ -18,18 +17,19 @@ This release contains two main features:
 
 ## Upgrading projects from v1.5.1 to v1.6
 
-1. In the project's **package.json** file, identify all SPFx v1.5.1 packages. For each SPFx package:
-    1. Uninstall the existing v1.5.1 package:
+In the project's **package.json** file, identify all SPFx v1.5.1 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.5.1
-        ```
+1. Uninstall the existing v1.5.1 package:
 
-    1. Install the refreshed v1.6 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.5.1
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.6.0 --save --save-exact
-        ```
+1. Install the refreshed v1.6 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.6.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

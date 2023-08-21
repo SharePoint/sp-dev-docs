@@ -1,6 +1,7 @@
 ---
 title: Use asynchronous operations in SharePoint Add-ins
-ms.date: 11/03/2017
+description: Describes how to use asynchronous operations in SharePoint Add-ins as it applies to SharePoint 2013, SharePoint Add-ins, and SharePoint Online.
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Use asynchronous operations in SharePoint Add-ins
@@ -9,7 +10,7 @@ Implement asynchronous operations in SharePoint Add-ins by using Microsoft Azure
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
-The [Core.QueueWebJobUsage](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.QueueWebJobUsage) sample shows you how to create and run asynchronous operations by using provider-hosted add-ins and Azure WebJobs in Office 365.
+The [Core.QueueWebJobUsage](https://github.com/pnp/PnP/tree/master/Samples/Core.QueueWebJobUsage) sample shows you how to create and run asynchronous operations by using provider-hosted add-ins and Azure WebJobs in Office 365.
 
 Use this solution to:
 
@@ -46,7 +47,7 @@ To implement asynchronous operations in your provider-hosted add-in by using Azu
 
 ## Before you begin
 
-To get started, download the [Core.QueueWebJobUsage](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.QueueWebJobUsage) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub, and then create an Azure account, add details to that account, and verify that Azure WebJob is running.
+To get started, download the [Core.QueueWebJobUsage](https://github.com/pnp/PnP/tree/master/Samples/Core.QueueWebJobUsage) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub, and then create an Azure account, add details to that account, and verify that Azure WebJob is running.
 
 To create an Azure Storage account to access the Azure storage queue:
 
@@ -98,7 +99,7 @@ To verify that your Azure WebJob is running:
 
 Use the information in the following table to apply configuration settings to the Core.QueueWebJobUsage Visual Studio solution.
 
-|**File location**|**Key to update**|**Value information to update**|
+|File location|Key to update|Value information to update|
 |:-----|:-----|:-----|
 |Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure portal.|
 ||| Replace **[Your Account Key]** with the primary access key copied from the Azure portal.|
@@ -120,9 +121,9 @@ Use the information in the following table to apply configuration settings to th
 
 The following table describes all the Visual Studio projects in the Core.QueueWebJobUsage solution.
 
-|**Visual Studio project**|**Description**|
+|Visual Studio project|Description|
 |:-----|:-----|
-|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="https://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
+|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
 |Core.QueueWebJobUsage.Common|Contains the business objects and business logic code &mdash; such as the methods to add messages to the storage queue &mdash; for this solution. This project is included to share business objects and business logic between different projects. You may not need this in your implementation.|
 |Core.QueueWebJobUsage.Job|The Azure WebJob that runs when a new message is added to the Azure Storage queue. This project contains your custom business logic code. |
 |Core.QueueWebJobUsageWeb|The provider-hosted add-in that contains the UI for the Core.QueueWebJobUsage project. |
@@ -165,15 +166,15 @@ protected void btnAsync_Click(object sender, EventArgs e)
 
 In Core.QueueWebJobUsage.Common, in SiteManager.cs,  **AddAsyncOperationRequestToQueue** does the following:
 
-1. Creates a [CloudStorageAccount](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.cloudstorageaccount.aspx) object by using the **AccountName** and **AccountKey** configuration information in the Core.QueueWebJobUsageWeb\web.config file.
+1. Creates a [CloudStorageAccount](/dotnet/api/microsoft.azure.storage.cloudstorageaccount) object by using the **AccountName** and **AccountKey** configuration information in the Core.QueueWebJobUsageWeb\web.config file.
     
-2. Creates an Azure Storage queue client by using [CloudStorageAccount.CreateCloudQueueClient](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.cloudstorageaccount.createcloudqueueclient.aspx).
+2. Creates an Azure Storage queue client by using [CloudStorageAccount.CreateCloudQueueClient](/dotnet/api/microsoft.azure.storage.queue.queueaccountextensions.createcloudqueueclient).
     
-3. Uses [CloudQueueClient.GetQueueReference](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueueclient.getqueuereference.aspx) to get a reference to the Azure Storage queue with name equal to the value of the **SiteManager.StorageQueueName** constant.
+3. Uses [CloudQueueClient.GetQueueReference](/dotnet/api/microsoft.azure.storage.queue.cloudqueueclient.getqueuereference) to get a reference to the Azure Storage queue with name equal to the value of the **SiteManager.StorageQueueName** constant.
     
-4. Uses [CloudQueue.CreateIfNotExists](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueue.createifnotexists.aspx) to create the Azure Storage queue if it does not exist.
+4. Uses [CloudQueue.CreateIfNotExists](/dotnet/api/microsoft.azure.storage.queue.cloudqueue.createifnotexists) to create the Azure Storage queue if it does not exist.
     
-5. Uses [CloudQueue.AddMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueue.addmessage.aspx) to add a new message to the Azure Storage queue. The **modifyRequest** business object is serialized into a [CloudQueueMessage](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storage.queue.cloudqueuemessage.aspx) object, which is added to the Azure Storage queue.
+5. Uses [CloudQueue.AddMessage](/dotnet/api/microsoft.azure.storage.queue.cloudqueue.addmessage) to add a new message to the Azure Storage queue. The **modifyRequest** business object is serialized into a [CloudQueueMessage](/dotnet/api/microsoft.azure.storage.queue.cloudqueuemessage) object, which is added to the Azure Storage queue.
 
 ```csharp
 public void AddAsyncOperationRequestToQueue(SiteModifyRequest modifyRequest, 

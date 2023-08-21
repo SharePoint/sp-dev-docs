@@ -1,41 +1,40 @@
 ---
 title: AppPermissionRequestDefinition complexType
+description: Outlines information, a definition, and elements and attributes for the AppPermissionRequestDefinition complexType in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0ca537a2-d784-e761-eb27-13b8c373bdba
 ---
 
-# AppPermissionRequestDefinition complexType 
+# AppPermissionRequestDefinition complexType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
 
-|   |   |
-|---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
-| **Extension base**  | None |
+**Schema file**: appmanifest.xsd
+
+**Extension base**: None
 
 ## Definition
 
 ```XML
-    <xs:complexType name="AppPermissionRequestDefinition">       
+    <xs:complexType name="AppPermissionRequestDefinition">
       <xs:sequence>
         <xs:element name="Property"  type="AppPermissionPropertyDefinition"
          minOccurs="0"
          maxOccurs="1000"
         >
-        </xs:element> 
+        </xs:element>
       </xs:sequence>
         <xs:attribute name="Scope"
          type="xs:anyURI"
@@ -117,11 +116,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@
 title: Configure web part icon
 description: The available options for configuring the icon for your SharePoint client-side web parts.
 ms.date: 06/16/2018
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -188,7 +187,7 @@ Starting from SharePoint Framework v1.11 you can specify the preview image for y
 
 ### To set the single part app page preview image
 
-Specify the image's absolute URL in the `fullPageAppIconImageUrl` property in the web part manifest. 
+Specify the image's absolute URL in the `fullPageAppIconImageUrl` property in the web part manifest.
 
 ```json
 {

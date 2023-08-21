@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,7 +16,7 @@ description: Defines the footer, or suffix, for a view.
 # ViewFooter element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the footer, or suffix, for a view.
 
 ```XML
@@ -27,8 +26,8 @@ Defines the footer, or suffix, for a view.
 ```
 
 > [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -38,25 +37,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**ExpandXML** <br/> |Optional **Boolean**. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.  <br/> |
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [View](view-element-list.md)
 - [ViewStyle](viewstyle-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following example defines the view footer for a document library.
-  
+
 ```XML
 <ViewFooter>
   <HTML>
@@ -68,7 +67,7 @@ The following example defines the view footer for a document library.
   </HTML>
   <HttpVDir />
   <HTML>
-    <![CDATA[ /_layouts/images/blank.gif" width="1" 
+    <![CDATA[ /_layouts/images/blank.gif" width="1"
         height="5"></td></tr></table> ]]>
   </HTML>
 </ViewFooter>
@@ -76,8 +75,7 @@ The following example defines the view footer for a document library.
 
 ## See also
 
-- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
-- [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx) 
-- [ViewBody element (List)](viewbody-element-list.md) 
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [ViewBody element (List)](viewbody-element-list.md)
 - [ViewHeader element (List)](viewheader-element-list.md)
-

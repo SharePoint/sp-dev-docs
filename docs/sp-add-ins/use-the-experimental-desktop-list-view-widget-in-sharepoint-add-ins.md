@@ -1,7 +1,7 @@
 ---
 title: Use the experimental Desktop List View widget in SharePoint Add-ins
 description: Use the Desktop List View widget in your add-ins to display data in lists that are hosted on a SharePoint site.
-ms.date: 12/20/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -334,7 +334,7 @@ new Office.Controls.ListView(
 
 <br/>
 
-You can use the experimental Desktop List View widget to display data in SharePoint lists. The widget displays data in read-only mode. Please provide ideas and comments at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/).
+You can use the experimental Desktop List View widget to display data in SharePoint lists. The widget displays data in read-only mode. Please provide ideas and comments at the [Office Developer Platform UserVoice site](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform).
  
 
 ## See also
@@ -344,4 +344,3 @@ You can use the experimental Desktop List View widget to display data in SharePo
 -  [Office Web Widgets - Experimental overview](office-web-widgetsexperimental-overview.md)
 -  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
  
-

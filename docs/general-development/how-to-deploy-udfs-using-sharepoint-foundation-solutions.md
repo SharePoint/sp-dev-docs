@@ -5,7 +5,6 @@ ms.date: 01/05/2020
 keywords: how to,howdoi,howto,udf list,WSS Solutions
 f1_keywords:
 - how to,howdoi,howto,udf list,WSS Solutions
-ms.prod: sharepoint
 ms.assetid: 97751a6c-ef73-4d95-a3c4-98014d84ba48
 ms.localizationpriority: medium
 ---

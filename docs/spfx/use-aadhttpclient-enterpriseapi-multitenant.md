@@ -1,8 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 12/21/2020
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 
@@ -153,7 +152,7 @@ By default, when you secure an Azure Function using an Azure AD application, tha
 
 #### Change the application to be multi-tenant
 
-Go to the home page of the Azure portal and search for Azure Active Directory 
+Go to the home page of the Azure portal and search for Azure Active Directory
 
 ![Azure AD](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-aad.png)
 
@@ -161,7 +160,7 @@ On the left blade, select **App registrations** and select the app that was auto
 
 ![The 'App registrations' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-app-registrations.png)
 
-On the **Expose an API** update the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **https://yourtenant.onmicrosoft.com**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories. 
+On the **Expose an API** update the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **`https://yourtenant.onmicrosoft.com`**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories.
 
 ![App ID URI in the Azure portal](../images/use-aadhttpclient-enterpriseapi-appid-uri.png)
 
@@ -309,7 +308,7 @@ To the **solution** property, add a new section named `webApiPermissionRequests`
 }
 ```
 
-The value of the **resource** property refers to either the name or the ID of the Azure AD application used to secure the API. Using the name is more readable and easier to maintain over time. The value of the **scope** property specifies the permission scope that your solution needs to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you'll use.
+The value of the **resource** property refers only to the name of the Azure AD application used to secure the API. The value of the **scope** property specifies the permission scope that your solution needs to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you'll use.
 
 > [!NOTE]
 > If you want to connect to an enterprise API that has been created previously, contact your administrator to provide you with details for the Azure AD application used to secure it. You'll need information such as the application ID, permissions the application exposes and the audience it's configured to.

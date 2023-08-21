@@ -1,10 +1,10 @@
 ---
 title: Feature.xml Files
+description: Provides examples of Feature.xml files as it applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, and SharePoint Server 2013.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: caa75c38-9788-4727-a2a8-ab92df90a256
 ---
@@ -59,7 +59,7 @@ In a Feature.xml file, the [Feature](feature-element-feature.md) element defines
 
 - [MapFile element (Feature)](mapfile-element-feature.md)
 
-For information about where to create and how to implement Feature.xml files, see [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx). 
+For information about where to create and how to implement Feature.xml files, see [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx).
 
 For information about how to upgrade a Feature, see [Upgrading Features](https://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990(Office.15).aspx).
 
@@ -68,8 +68,8 @@ For information about how to upgrade a Feature, see [Upgrading Features](https:/
 The following example shows how to use a Feature.xml file to specify activation dependencies, special fields, and relative paths to element definition files.
 
 ```XML 
-    <Feature 
-      Id="11111111-1111-1111-1111-11111111111" 
+    <Feature
+      Id="11111111-1111-1111-1111-11111111111"
       Title="Location Services"
       Description="This Feature contains lists and parts that let you link location data to your customer lists."
       Scope="Web">
@@ -78,11 +78,11 @@ The following example shows how to use a Feature.xml file to specify activation 
           FeatureId="11111111-1111-1111-1111-111111111111" />
       </ActivationDependencies>
       <ElementManifests>
-        <ElementManifest 
+        <ElementManifest
           Location="Location\LocationPart.xml"/>
-        <ElementManifest 
+        <ElementManifest
           Location="CustomerLocation\CustomerLocationList.xml"/>
-        <ElementFile 
+        <ElementFile
           Location="test.aspx"/>
       </ElementManifests>
       <Properties>
@@ -101,7 +101,3 @@ The following example shows how to use a Feature.xml file to specify activation 
 ## See also
 
 - [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/office/ms460318.aspx)
-
-
-
-

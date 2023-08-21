@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PowerShell cmdlets
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 09/28/2020
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -14,8 +14,7 @@ Use PowerShell cmdlets to create, retrieve, update, and remove site designs and 
 To run the PowerShell cmdlets, you'll need to do the following:
 
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
-
-2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
+1. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
 
 To verify your setup, try using the [Get-SPOSiteScript](/powershell/module/sharepoint-online/Get-SPOSiteScript) cmdlet to read the current list of site scripts. If the cmdlet runs and returns with no errors, you're ready to proceed.
 

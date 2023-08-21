@@ -1,7 +1,7 @@
 ---
 title: Loop-Back SOAP Calls and Direct Linking
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Describes loop-back SOAP calls and directly linking to Microsoft.Office.Excel.Server.WebServices.dll for writing code within SharePoint Foundation.
+ms.date: 06/13/2022
 ms.assetid: bffc6565-636f-40d4-ba17-2511070ba5db
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design REST API
 description: Work with SharePoint site designs through the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations.
-ms.date: 08/05/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ The SharePoint Online (and SharePoint 2016 and later on-premises) REST service s
 
 Before you get started, make sure that you're familiar with the following:
 
-- [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) 
+- [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
 ## REST commands
@@ -81,7 +81,7 @@ Creates a new site script.
 The following example creates a new site script that applies a custom theme.
 
 ```javascript
-var site_script = 
+var site_script =
 {
   "$schema": "schema.json",
   "actions": [
@@ -178,11 +178,11 @@ Gets the site script syntax for a specific SharePoint site.
 Here is an example of retrieving a site script JSON object from the Contoso site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", { 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", {
    "webUrl":"https://contoso.sharepoint.com/",
-   "info":{ 
+   "info":{
       "IncludeBranding":true,
-      "IncludedLists":[ 
+      "IncludedLists":[
          "Lists/Contoso customer list"
       ],
       "IncludeRegionalSettings":true,
@@ -367,7 +367,7 @@ Updates a site script with new values. In the REST call, all parameters are opti
 Here's an example of updating an existing site script with a new JSON script and values.
 
 ```javascript
-var updated_site_script = 
+var updated_site_script =
 {
   "$schema": "schema.json",
   "actions": [
@@ -380,12 +380,12 @@ var updated_site_script =
   "version": 2
 };
 
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript",
 {updateInfo:{
   Id:"07702c07-0485-426f-b710-4704241caad9",
-  Title:"New Contoso theme", 
-  Description:"Updated Contoso site script", 
-  Version: 2, 
+  Title:"New Contoso theme",
+  Description:"Updated Contoso site script",
+  Version: 2,
   Content: JSON.stringify(updated_site_script)}});
 ```
 
@@ -419,7 +419,7 @@ Deletes a site script.
 Here's an example of deleting a site script.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript",
 {id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
@@ -579,7 +579,7 @@ Gets information about a specific site design.
 Here's an example of getting information about a specific site design by ID.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata",
 {id:"614f9b28-3e85-4ec9-a961-5971ea086cca"});
 ```
 
@@ -605,10 +605,10 @@ Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
 
 ## UpdateSiteDesign
 
-Updates a site design with new values. In the REST call, all parameters are optional except the site script Id. 
+Updates a site design with new values. In the REST call, all parameters are optional except the site script Id.
 
-> [!NOTE] 
-> If you had previously set the IsDefault parameter to **TRUE** and wish it to remain true, you must pass in this parameter again (otherwise it will be reset to **FALSE**). 
+> [!NOTE]
+> If you had previously set the IsDefault parameter to **TRUE** and wish it to remain true, you must pass in this parameter again (otherwise it will be reset to **FALSE**).
 
 ### Parameters
 
@@ -630,14 +630,14 @@ Here's an example that updates every value on an existing site design.
 ```javascript
 RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign",
  {updateInfo:{
-   Id:"614f9b28-3e85-4ec9-a961-5971ea086cca", 
-   Title:"Contoso customer site", 
-   Description:"Creates site with customer theme and list", 
-   SiteScriptIds:["6b2b79e4-5da3-4352-8565-42a896fabd57","2b997981-258b-4e1e-81ff-f6fbf7235a1f"], 
+   Id:"614f9b28-3e85-4ec9-a961-5971ea086cca",
+   Title:"Contoso customer site",
+   Description:"Creates site with customer theme and list",
+   SiteScriptIds:["6b2b79e4-5da3-4352-8565-42a896fabd57","2b997981-258b-4e1e-81ff-f6fbf7235a1f"],
    PreviewImageUrl:"https://contoso.sharepoint.com/SiteAssets/customer_site.png",
-   PreviewImageAltText:"Customer site with list and theme", 
-   WebTemplate:"68", 
-   Version: 7, 
+   PreviewImageAltText:"Customer site with list and theme",
+   WebTemplate:"68",
+   Version: 7,
    IsDefault: false}});
 ```
 
@@ -675,7 +675,7 @@ Deletes a site design.
 Here's an example of deleting a site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign",
 {id:"f9e76746-5076-4bd2-bad3-e611c488fa85"});
 ```
 
@@ -695,7 +695,7 @@ Gets a list of principals that have access to a site design.
 Here's an example of getting view rights for a specific site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights",
 {id:"dc076f7b-6c15-4d76-8f85-948a17f5dd18"});
 ```
 
@@ -767,7 +767,7 @@ Revokes access from a site design for one or more principals.
 Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso).
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights",
 {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa",
  principalNames:["PattiF@contoso.onmicrosoft.com"] });
 ```

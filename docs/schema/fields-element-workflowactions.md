@@ -1,12 +1,12 @@
 ---
 title: Fields element (WorkflowActions)
+description: Describes the definition, element, and attribute information for the Fields element (WorkflowActions), which specifies fields for displaying data from the parent data source.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c2b8d8df-8f4c-48c0-93ca-f0b21e0c6834
 ---
@@ -67,11 +67,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

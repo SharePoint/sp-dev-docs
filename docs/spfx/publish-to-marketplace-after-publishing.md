@@ -1,8 +1,7 @@
 ---
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
-ms.date: 07/16/2020
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -16,7 +15,7 @@ SharePoint Online allows you to create a tenant App Catalog where you centrally 
 
 Applications that you acquire from the Marketplace, you can install only in tenant App Catalogs. After installing the application, you can decide whether you want to deploy it globally and make it available to all sites in your tenant or if you want to deploy it only to specific sites.
 
-For more information about managing SharePoint Framework solution in the App Catalog visit: [https://docs.microsoft.com/sharepoint/use-app-catalog](https://docs.microsoft.com/sharepoint/use-app-catalog) and [https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog](https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog).
+For more information about managing SharePoint Framework solution in the App Catalog visit: [Manage apps using the Apps site](/sharepoint/use-app-catalog) and [Use the site collection app catalog](/sharepoint/dev/general-development/site-collection-app-catalog).
 
 ## Permissions required to install applications from the Marketplace
 
@@ -33,4 +32,3 @@ Tenant App Catalog administrators can update applications acquired from the Mark
 ## Applications listed in the SharePoint category
 
 All SharePoint Framework applications published in the Marketplace are listed in the **SharePoint** category. At this moment, it is not possible to specify a custom category. Also, even if you configured web parts in your application to be exposed in Microsoft Teams, the application will still be listed in the **SharePoint** category.
-

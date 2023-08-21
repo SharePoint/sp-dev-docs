@@ -1,30 +1,30 @@
 ---
 title: PropertiesDefinition complexType
+description: Describes the PropertiesDefinition complexType) and provides the type information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2c430e31-cb39-7c9a-67fa-1e584068245f
 ---
 
-# PropertiesDefinition complexType 
+# PropertiesDefinition complexType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
-| **Extension base**  | None |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file** | appmanifest.xsd |
+| **Extension base** | None |
 
 ## Definition
 
@@ -36,42 +36,42 @@ ms.assetid: 2c430e31-cb39-7c9a-67fa-1e584068245f
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="StartPage"  type="UrlElementDefinition"
          minOccurs="1"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="SupportedLanguages"  type="SupportedLanguagesDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="Title"  type="TitleDefinition"
          minOccurs="1"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="UninstallingEventEndpoint"  type="UrlElementDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="UpgradedEventEndpoint"  type="UrlElementDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="WebTemplate"  type="WebTemplateDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
-        </xs:element> 
+        </xs:element>
       </xs:all>
     </xs:complexType>
 ```
@@ -149,10 +149,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-

@@ -5,7 +5,6 @@ ms.date: 09/25/2017
 keywords: async,how to,howdoi,howto
 f1_keywords:
 - async,how to,howdoi,howto
-ms.prod: sharepoint
 ms.assetid: 6febe7dc-a552-4c79-aa3e-203d882286e3
 ms.localizationpriority: medium
 ---

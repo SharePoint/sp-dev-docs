@@ -2,7 +2,6 @@
 title: Subscribe to list notifications
 description: Get notified and respond to changes to files in SharePoint Document Libraries
 ms.date: 04/27/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 
@@ -32,9 +31,9 @@ export default class LatestDocumentsWebPart extends BaseClientSideWebPart<ILates
   private _listSubscriptionFactory: ListSubscriptionFactory;
   private _listSubscription: IListSubscription;
 
-  private createListSubscription(): void {
+  private async createListSubscription(): Promise<void> {
     this._listSubscriptionFactory = new ListSubscriptionFactory(this);
-    this._listSubscription = this._listSubscriptionFactory.createSubscription({
+    this._listSubscription = await this._listSubscriptionFactory.createSubscription({
       listId: Guid.parse(this.properties.listId),
       callbacks: {
         notification: this._loadDocuments.bind(this)

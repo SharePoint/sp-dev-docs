@@ -1,7 +1,7 @@
 ---
 title: BCS client object model reference for SharePoint
-ms.date: 09/25/2017
-ms.prod: sharepoint
+description: Guidelines explaining what objects are available to create client-side scripts using the SharePoint client object model.
+ms.date: 06/07/2022
 ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
 ms.localizationpriority: medium
 ---
@@ -480,7 +480,7 @@ The namespace is **Microsoft.BusinessData.MetadataModel**.
 <a name="bkmk_ClientObjectModelFAQ"> </a>
 
 
-- **Does the <Method> tag need to be included in a CAML query when querying an external list**
+- **Does the \<Method\> tag need to be included in a CAML query when querying an external list**
     
     No. 
     

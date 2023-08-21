@@ -1,15 +1,15 @@
 ---
 title: AssemblyRedirect element
+description: Discusses the elements and attributes for AssemblyRedirect element which specifies a transformation from one binary file to another binary file.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8b0795a7-4088-fafd-3698-7d562ca143d0
 ---
 
-# AssemblyRedirect element 
+# AssemblyRedirect element
 
 (AssemblyRedirects element) (WorkflowInfo element) (Action4)
 
@@ -27,7 +27,7 @@ Specifies a transformation from one binary file to another binary file in a vers
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -39,7 +39,7 @@ Specifies a transformation from one binary file to another binary file in a vers
     <xs:element name="AssemblyRedirect" >
          <xs:attribute name="From"   type="s:string"      use="required"     />
          <xs:attribute name="To"   type="s:string"      use="required"     />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -108,11 +108,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
