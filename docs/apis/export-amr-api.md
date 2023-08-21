@@ -41,7 +41,7 @@ A migration performance study identified four areas where a high number of calls
 The SharePoint Migration Export (Asynchronous Metadata Read) API aims to reduce the calls in areas: incremental migration, after migration verification and permission settings.
 
 > [!Note]
-> The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are expected to be covered in a subsequent version.
+> The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are supported for all customers.
 
 Key supported features:
 
