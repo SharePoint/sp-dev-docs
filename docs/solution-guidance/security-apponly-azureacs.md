@@ -18,7 +18,7 @@ SharePoint App-Only is the older, but still very relevant, model of setting up a
 
 ## Setting up an app-only principal with tenant permissions
 > [!NOTE]
-> Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
+> Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly authorized by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
 Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click on the Generate button to generate a client id and client secret and fill the remaining information like shown in the screen-shot below.
 
