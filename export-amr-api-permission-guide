@@ -24,69 +24,71 @@ For both CSOM and RESTFul calls, add the below option to enable/disable AMR expo
 
 - For CSOM, when building `AsyncReadOptions` object, set `IncludePermission` property to `true` or `false`.
   - If you cannot use `IncludePermission` property, please update your CSOM nuget package to the latest version.
-- For RESTFul, add `IncludePermission` key to the request JSON payload's `readOptions` section, set it to `true` or `false`.
+- For RESTFul, add `IncludePermission` key to the request JSON payload's `readOptions` section, and set it to `true` or `false`.
   - For example: `{..., "readOptions":{...,"IncludePermission":true,...}...}`
 
 ## What changes have been introduced to the export result
 
-The new `IncludePermission=true` option will involve an additional tag called `<RoleAssignments>` into Manifest.xml file in export result, which includes all distinguished permission info for each exported SPO object with property `ScopeId`, like below:
+The new `IncludePermission=true` option will involve an additional tag called `<RoleAssignments>` into **Manifest.xml** file in the export result, which includes all distinguished permission info for each exported SPO object with property `ScopeId`, like below:
+
 ```xml
 <...>
-    <RoleAssignments>
-        <RoleAssignment ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" ...>
-            <Assignment RoleId="1073741825" PrincipalId="5" />
-            <Assignment RoleId="1073741826" PrincipalId="6" />
-            ...
-        </RoleAssignment>
-    </RoleAssignments>
+<RoleAssignments>
+    <RoleAssignment ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" ...>
+        <Assignment RoleId="1073741825" PrincipalId="5" />
+        <Assignment RoleId="1073741826" PrincipalId="6" />
+        ...
+    </RoleAssignment>
+</RoleAssignments>
 <...>
 ```
 
-The `RoleAssignments` tag is a list of `RoleAssignment` tags, each `RoleAssignment` tag represents a unique permission scope from exported SPO objects, identified by `ScopeId`. And each `RoleAssignment` tag contains multiple `Assignment` tags, representing an entity within that specific unique permission scope each, such as a user, a group, etc., with a principal ID.
+The `RoleAssignments` tag is a list of `RoleAssignment` tags, each `RoleAssignment` tag represents a unique permission scope from exported SPO objects, identified by `ScopeId`. Each `RoleAssignment` tag contains multiple `Assignment` tags, representing an entity within that specific unique permission scope each, such as a user, a group, etc., with a principal ID.
 
-In the mean time, all involved entities will be listed in `UserGroup.xml` file in export result, to help further user resolution.
+In the meantime, all involved entities will be listed in **UserGroup.xml** file in the export result, to help further user resolution.
 
-Here is an example of `Manifest.xml` file and `UserGroup.xml` with `IncludePermission=true` option:
+Here is an example of **Manifest.xml** file and **UserGroup.xml** with `IncludePermission=true` option:
+
 ```xml
 <!-- Manifest.xml -->
 <...>
-    <SPObject Id="e85f2a94-f760-4bb4-9460-dde1cabc2fd4" ObjectType="SPFile" ParentId="2aba6aee-eb13-4379-b374-8fddc71e7d1a" ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" Url="/SampleDocLib/Forms/AllItems.aspx">
-        <File Url="SampleDocLib/Forms/AllItems.aspx" Id="e85f2a94-f760-4bb4-9460-dde1cabc2fd4" ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" ParentWebUrl="/" Name="AllItems.aspx" ListId="e42a303c-995d-4237-8ce7-3545c41be140" ParentId="2aba6aee-eb13-4379-b374-8fddc71e7d1a" ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" TimeCreated="2023-05-11T05:19:48" TimeLastModified="2023-05-11T05:19:48" Version="1.0" FileSize="2763" Level="1" IsGhosted="true" SetupPath="pages\viewpage.aspx" SetupPathVersion="15" SetupPathUser="12" />
-    </SPObject>
-    <...>
-    <RoleAssignments>
-        <RoleAssignment ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="e42a303c-995d-4237-8ce7-3545c41be140" ObjectType="1" ObjectUrl="SampleDocLib" AnonymousPermMask="0">
-            <Assignment RoleId="1073741825" PrincipalId="5" />
-            <Assignment RoleId="1073741825" PrincipalId="15" />
-            <Assignment RoleId="1073741825" PrincipalId="28" />
-            <Assignment RoleId="1073741826" PrincipalId="4" />
-            <Assignment RoleId="1073741829" PrincipalId="3" />
-            <Assignment RoleId="1073741830" PrincipalId="5" />
-            <Assignment RoleId="1073741924" PrincipalId="13" />
-            <Assignment RoleId="1073741925" PrincipalId="14" />
-            <Assignment RoleId="1073741926" PrincipalId="15" />
-            <Assignment RoleId="1073741927" PrincipalId="16" />
-        </RoleAssignment>
-        <RoleAssignment ScopeId="0b40dd84-46b8-435f-b497-e0fea7cecf1f" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="92f3d976-e7bd-47fc-943f-2d3222e27402" ObjectType="2" ObjectUrl="SampleDocLib/33333333.txt" AnonymousPermMask="0">
-            <Assignment RoleId="1073741829" PrincipalId="3" />
-            <Assignment RoleId="1073741924" PrincipalId="13" />
-            <Assignment RoleId="1073741925" PrincipalId="14" />
-        </RoleAssignment>
-        <RoleAssignment ScopeId="bdc32b67-53e5-4ae4-a8a9-0dbbeaa64d51" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="19c768aa-b6fc-4e20-aa35-d5d5b7716625" ObjectType="2" ObjectUrl="SampleDocLib/44444444.txt" AnonymousPermMask="0">
-            <Assignment RoleId="1073741825" PrincipalId="28" />
-            <Assignment RoleId="1073741826" PrincipalId="4" />
-            <Assignment RoleId="1073741826" PrincipalId="5" />
-            <Assignment RoleId="1073741826" PrincipalId="15" />
-            <Assignment RoleId="1073741826" PrincipalId="31" />
-            <Assignment RoleId="1073741827" PrincipalId="25" />
-            <Assignment RoleId="1073741829" PrincipalId="3" />
-            <Assignment RoleId="1073741924" PrincipalId="13" />
-            <Assignment RoleId="1073741925" PrincipalId="14" />
-            <Assignment RoleId="1073741927" PrincipalId="16" />
-            <Assignment RoleId="1073741928" PrincipalId="33" />
-            <Assignment RoleId="1073741929" PrincipalId="27" />
-        </RoleAssignment>
-    </RoleAssignments>
+<SPObject Id="e85f2a94-f760-4bb4-9460-dde1cabc2fd4" ObjectType="SPFile" ParentId="2aba6aee-eb13-4379-b374-8fddc71e7d1a" ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" Url="/SampleDocLib/Forms/AllItems.aspx">
+    <File Url="SampleDocLib/Forms/AllItems.aspx" Id="e85f2a94-f760-4bb4-9460-dde1cabc2fd4" ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" ParentWebUrl="/" Name="AllItems.aspx" ListId="e42a303c-995d-4237-8ce7-3545c41be140" ParentId="2aba6aee-eb13-4379-b374-8fddc71e7d1a" ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" TimeCreated="2023-05-11T05:19:48" TimeLastModified="2023-05-11T05:19:48" Version="1.0" FileSize="2763" Level="1" IsGhosted="true" SetupPath="pages\viewpage.aspx" SetupPathVersion="15" SetupPathUser="12" />
+</SPObject>
+<...>
+<RoleAssignments>
+    <RoleAssignment ScopeId="08501058-995b-4fc6-b908-66da16e6bb52" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="e42a303c-995d-4237-8ce7-3545c41be140" ObjectType="1" ObjectUrl="SampleDocLib" AnonymousPermMask="0">
+        <Assignment RoleId="1073741825" PrincipalId="5" />
+        <Assignment RoleId="1073741825" PrincipalId="15" />
+        <Assignment RoleId="1073741825" PrincipalId="28" />
+        <Assignment RoleId="1073741826" PrincipalId="4" />
+        <Assignment RoleId="1073741829" PrincipalId="3" />
+        <Assignment RoleId="1073741830" PrincipalId="5" />
+        <Assignment RoleId="1073741924" PrincipalId="13" />
+        <Assignment RoleId="1073741925" PrincipalId="14" />
+        <Assignment RoleId="1073741926" PrincipalId="15" />
+        <Assignment RoleId="1073741927" PrincipalId="16" />
+    </RoleAssignment>
+    <RoleAssignment ScopeId="0b40dd84-46b8-435f-b497-e0fea7cecf1f" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="92f3d976-e7bd-47fc-943f-2d3222e27402" ObjectType="2" ObjectUrl="SampleDocLib/33333333.txt" AnonymousPermMask="0">
+        <Assignment RoleId="1073741829" PrincipalId="3" />
+        <Assignment RoleId="1073741924" PrincipalId="13" />
+        <Assignment RoleId="1073741925" PrincipalId="14" />
+    </RoleAssignment>
+    <RoleAssignment ScopeId="bdc32b67-53e5-4ae4-a8a9-0dbbeaa64d51" RoleDefWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" RoleDefWebUrl="" ObjectId="19c768aa-b6fc-4e20-aa35-d5d5b7716625" ObjectType="2" ObjectUrl="SampleDocLib/44444444.txt" AnonymousPermMask="0">
+        <Assignment RoleId="1073741825" PrincipalId="28" />
+        <Assignment RoleId="1073741826" PrincipalId="4" />
+        <Assignment RoleId="1073741826" PrincipalId="5" />
+        <Assignment RoleId="1073741826" PrincipalId="15" />
+        <Assignment RoleId="1073741826" PrincipalId="31" />
+        <Assignment RoleId="1073741827" PrincipalId="25" />
+        <Assignment RoleId="1073741829" PrincipalId="3" />
+        <Assignment RoleId="1073741924" PrincipalId="13" />
+        <Assignment RoleId="1073741925" PrincipalId="14" />
+        <Assignment RoleId="1073741927" PrincipalId="16" />
+        <Assignment RoleId="1073741928" PrincipalId="33" />
+        <Assignment RoleId="1073741929" PrincipalId="27" />
+    </RoleAssignment>
+</RoleAssignments>
 <...>
 
 <!-- UserGroup.xml -->
@@ -157,9 +159,9 @@ Here is an example of `Manifest.xml` file and `UserGroup.xml` with `IncludePermi
 
 ## Option interaction between `IncludeSecurity` and `IncludePermission`
 
-Before the `IncludePermission` option, the `IncludeSecurity` option has been already used to get a full list of all user & group information of target site. It isn't necessary that you use the `IncludePermission` option with `IncludeSecurity` option. However, if you still want to get a full list of all user and group information of target sites with permission information, you can use `IncludePermission` option with `IncludeSecurity` option together, and here are the 4 combinations of the two options with expected results:
+Before the `IncludePermission` option, the `IncludeSecurity` option has been already used to get a full list of all user & group information of the target site. It isn't necessary that you use the `IncludePermission` option with `IncludeSecurity` option. However, if you still want to get a full list of all user and group information of target sites with permission information, you can use `IncludePermission` option with `IncludeSecurity` option together, here are the 4 combinations of the two options with expected results:
 
-- `IncludeSecurity=true` only: get a full list of all user & group information of target site without permission information.
+- `IncludeSecurity=true` only: get a full list of all user & group information of the target site without permission information.
 - `IncludePermission=true` only: get exported items' permission information, with a list of corresponding user & group information of exported permissions.
-- `IncludeSecurity=true` + `IncludePermission=true`: get exported items' permission information, with a full list of all user & group information of target site.
-- None of them is used: get no permission, nor relating user & group information.
+- `IncludeSecurity=true` + `IncludePermission=true`: get exported items' permission information, with a full list of all user & group information of the target site.
+- None of them is used: get no permission, nor related user & group information.
