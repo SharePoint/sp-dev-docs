@@ -63,12 +63,14 @@ To set up the Azure Queue storage:
 1. Go to **Access Keys** and note the **Storage Account Name** and the **key1 Key value**. You will need these values when you create the flow.
 
 ## Create the flow
+> [!NOTE]
+> The **Request** trigger used below is now **PREMIUM** and will therefore require additional licensing.
 
 To put a message in the queue, you need to create a flow.
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
-1. Search for **Request**, and select **Request - When a HTTP Request is received [PREMIUM]**. **NOTE**: The **Request** trigger is now **PREMIUM** and will therefore require additional licensing.
+1. Search for **Request**, and select **Request - When a HTTP Request is received [PREMIUM]**. 
 1. Enter the following JSON as your request body:
 
     ```json
