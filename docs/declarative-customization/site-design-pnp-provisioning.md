@@ -68,7 +68,7 @@ To put a message in the queue, you need to create a flow.
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
-1. Search for **Request**, and select **Request - When a HTTP Request is received**.
+1. Search for **Request**, and select **Request - When a HTTP Request is received [PREMIUM]**. **NOTE**: The **Request** trigger is now **PREMIUM** and will therefore require additional licensing.
 1. Enter the following JSON as your request body:
 
     ```json
