@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API permission guide"
-description: This article targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool and explains the permission details in the export API.
+description: This article targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool and explains the permission details and options in the export API.
 ms.date: 08/25/2023
 ms.author: jhendr
 author: JoanneHendrickson
