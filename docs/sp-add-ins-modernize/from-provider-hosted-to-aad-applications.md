@@ -1,8 +1,19 @@
+---
+title: Upgrading Provider-hosted applications to Azure Active Directory applications
+description: Upgrading Provider-hosted applications to Azure Active Directory applications.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Upgrading Provider-hosted applications to Azure Active Directory applications
 
 In the SharePoint Add-in model you used to create so called Provider-hosted applications, which were applications built outside of SharePoint Online, hosted on a third party hosting platform like for example Microsoft Azure, and capable of communicating with SharePoint Online and consuming its data via CSOM or REST APIs.
 
 In the modern development world of SharePoint Online, you can register Azure Active Directory (Azure AD) applications and still consume SharePoint Online via CSOM, REST, or Microsoft Graph. In this article you can find detailed information about how to transform an already existing Provider-hosted application into a modern Azure AD application.
+
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider as a much more detailed reference.
 

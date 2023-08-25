@@ -1,6 +1,17 @@
+---
+title: Upgrading from XSLT views rendering to List Formatting
+description: Upgrading from XSLT views rendering to List Formatting.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Upgrading from XSLT views rendering to List Formatting
 
 In the SharePoint classic world, you were used to customize the rendering of lists and libraries using XSLT (eXtensible Stylesheet Language for Transformation) and the *XsltListViewWebPart* control. Nowadays, in the modern world, you can achive better results relying on List Formatting.
+
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider as a much more detailed reference.
 
@@ -422,7 +433,7 @@ Connect-PnPOnline https://<source-tenant-name>.sharepoint.com/sites/<SourceSite>
 Get-PnPSiteTemplate -Out .\travel-requests.xml -ListsToExtract "Travel requests" -Handlers Lists
 ```
 
-While in the following code excerpt you can see how to apply the just extracted template onto a target site. 
+While in the following code excerpt you can see how to apply the just extracted template onto a target site.
 
 ```PowerShell
 Connect-PnPOnline https://<target-tenant-name>.sharepoint.com/sites/<TargetSite>
@@ -441,4 +452,3 @@ You can find additional information about this topic reading the following docum
 * [List Formatting Samples](https://pnp.github.io/List-Formatting/)
 * [Formatting syntax reference](../declarative-customization/formatting-syntax-reference.md)
 * [Advanced formatting concepts](../declarative-customization/formatting-advanced.md)
-

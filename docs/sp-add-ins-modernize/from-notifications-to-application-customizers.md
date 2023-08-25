@@ -1,3 +1,11 @@
+---
+title: Transforming classic SharePoint add-in notifications to SPFx Application Customizers
+description: Transforming classic SharePoint add-in notifications to SPFx Application Customizers.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Transforming classic SharePoint add-in notifications to SPFx Application Customizers
 
 In the SharePoint Add-in model you were used to rely on the JavaScript Object Model for SharePoint to show notifications and status bars using syntax like the following:

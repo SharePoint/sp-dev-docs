@@ -1,12 +1,23 @@
+---
+title: Transforming SharePoint hosted add-ins to SharePoint Framework solutions
+description: Transforming SharePoint hosted add-ins to SharePoint Framework solutions.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Transforming SharePoint hosted add-ins to SharePoint Framework solutions
 
 In the SharePoint Add-in model you used to create so called SharePoint-hosted add ins, which were applications hosted on SharePoint Online, with a dedicated app site automatically created by the SharePoint Add-in model infrastructure. In the SharePoint-hosted add-ins you used to consume SharePoint Online data either in the app site itself, or in the host site, via JavaScript SharePoint Object Model (JSOM).
 
 In the modern development world of SharePoint Online, you can simply create client-side solutions with SharePoint Framework and start consuming SharePoint Online data relying on REST APIs and Microsoft Graph.
 
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
+
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider as a much more detailed reference.
 
-[![IMAGE_ALT](https://img.youtube.com/vi/OLN--qHnFDs/0.jpg)](https://youtu.be/OLN--qHnFDs)
+[![Transforming SharePoint hosted add-ins to SharePoint Framework solutions](https://img.youtube.com/vi/OLN--qHnFDs/0.jpg)](https://youtu.be/OLN--qHnFDs)
 
 ## Creating a client-side solution with SharePoint Framework
 

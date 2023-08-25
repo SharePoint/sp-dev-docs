@@ -1,6 +1,17 @@
+---
+title: Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries
+description: Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries
 
 In SharePoint classic solution, most likely you have been using the Client Side Object Model (CSOM) for .NET Framework as the primary client library for consuming SharePoint data. CSOM has been available for many years with different flavors targeting different versions of SharePoint on-premises and SharePoint Online. Since 2021, Microsoft released a new version of CSOM for SharePoint Online that targets .NET Standard 2.0 and as such can be referenced in .NET Framework 4.5+, .NET Core 2.0+, and .NET 5.0/6.0/7.0/8.0.
+
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider as a much more detailed reference.
 
@@ -57,7 +68,7 @@ using (var context = new ClientContext(siteUrl))
 }
 ```
 
-The *AcquireTokenAsync* method relies on MSAL to retrieve an access token throuhg interactive authentication. The implementation of the method is not fundamental in this context, but you will find it in the [sample about CSOM associated with this article](../samples/From-CSOM-to-PnP-Libraries/SPO-Use-CSOM/).
+The *AcquireTokenAsync* method relies on MSAL to retrieve an access token throuhg interactive authentication. The implementation of the method is not fundamental in this context, but you will find it in the [sample about CSOM associated with this article](https://github.com/pnp/addin-transformation-guidance/tree/main/samples/From-CSOM-to-PnP-Libraries).
 
 In the upcoming sections, you will see how to improve the quality, readability, and maintainability of your code using some modern .NET libraries like PnP Framework and PnP Core SDK.
 

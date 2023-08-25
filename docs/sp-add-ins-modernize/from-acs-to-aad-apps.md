@@ -1,13 +1,24 @@
+---
+title: Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
+description: Upgrading SharePoint applications from Azure Access Control Service (ACS) to Azure Active Directory (Microsoft Entra ID).
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
 
-The SharePoint Add-in model allows you to register applications in Azure Access Control Service (ACS) in order to gain app-only access to your SharePoint Online resources. Depending on how you configure the app-only access, you can grant different levels of permission from read-only to full-control. In the articles ["Accessing SharePoint using an application context, also known as app-only"](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly) and ["Granting access using SharePoint App-Only"](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azureacs) you can find step-by-step guidance about how to configure such kind of applications.
+The SharePoint Add-in model allows you to register applications in Azure Access Control Service (ACS) in order to gain app-only access to your SharePoint Online resources. Depending on how you configure the app-only access, you can grant different levels of permission from read-only to full-control. In the articles ["Accessing SharePoint using an application context, also known as app-only"](../solution-guidance/security-apponly.md) and ["Granting access using SharePoint App-Only"](../solution-guidance/security-apponly-azureacs.md) you can find step-by-step guidance about how to configure such kind of applications.
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/). For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. 
 
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
+ 
 However, the SharePoint Add-in model is an old model and there are newer, more modern, and more versatile development models available like, for example, the SharePoint Framework. Moreover, from a technical point of view, the permissions granted to an app-only application registered with the SharePoint Add-in model gets access to the whole tenant, and you can't selectively choose the target site collections that you want to grant permissions for.
 
-As a suitable and more secure alternative, you can rely on registering an application in Azure Active Directory (Azure AD) eventually using the Resource Specific Consent (RSC) model, which is covered in the article ["Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online"](./Understanding-RSC-for-MSGraph-and-SharePoint-Online.md), in order to target specific site collections only, instead of the whole tenant.
+As a suitable and more secure alternative, you can rely on registering an application in Azure Active Directory (Azure AD) eventually using the Resource Specific Consent (RSC) model, which is covered in the article ["Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online"](./understanding-rsc-for-msgraph-and-sharepoint-online.md), in order to target specific site collections only, instead of the whole tenant.
 
 In this article, you can find detailed information about how the Azure AD application registration model works, and about how to upgrade to the Azure AD model an already existing application registered in ACS with the SharePoint Add-in model.
 

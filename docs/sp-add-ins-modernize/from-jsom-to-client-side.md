@@ -1,6 +1,17 @@
+---
+title: Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs
+description: Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs
 
 While developing solutions with the SharePoint Add-in model you used to rely on the SharePoint JavaScript Object Model (JSOM) to consume SharePoint Online from client-side code. For example, you used to get a reference to the client context with the following syntax.
+
+> [!IMPORTANT]
+> This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
 ```JavaScript
 var context = SP.ClientContext.get_current();

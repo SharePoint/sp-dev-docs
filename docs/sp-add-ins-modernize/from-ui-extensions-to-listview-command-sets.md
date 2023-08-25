@@ -1,3 +1,11 @@
+---
+title: From UI Extensions to SharePoint Framework ListView Command Sets
+description: From UI Extensions to SharePoint Framework ListView Command Sets.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # From UI Extensions to SharePoint Framework ListView Command Sets
 
 In the SharePoint Add-in model you are used to extending the ribbon bar and the ECB (Edit Control Block) menu of lists view and libraries by creating UI Extensions. In the new SharePoint Framework you can achieve the same result by creating the so called ListView Command Set.
