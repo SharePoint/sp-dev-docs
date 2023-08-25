@@ -1,3 +1,11 @@
+---
+title: Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework
+description: Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework.
+ms.date: 08/28/2023
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+
 # Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework
 
 In the SharePoint Add-in model, you were used to rely on the JavaScript Object Model for SharePoint to show dialog windows, using syntax like as follows:
