@@ -2130,6 +2130,8 @@
             href: apis/migrate-webparts-with-migrationapi.md
       - name: Export Migration API (Asynchronous Metadata Read)
         href: apis/export-amr-api.md
+      - name: Permissions guide for Export Migration API (Asynchronous Metadata Read)
+        href: apis/export-amr-api-permission-guide.md
       - name: Azure container and queue
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
