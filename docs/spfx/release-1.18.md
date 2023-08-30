@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.18 preview release notes
 description: Release notes for the SharePoint Framework v1.18 preview release
-ms.date: 08/08/2023
+ms.date: 08/30/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18 preview release notes
@@ -10,6 +10,7 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- rc.1 **Released**: August 30, 2023
 - beta.5 **Released**: August 15, 2023
 - beta.3 **Released**: August 1, 2023
 - beta.2 **Released**: July 18, 2023
@@ -141,7 +142,9 @@ We introduce a new search card view for Adaptive Card Extensions that is intende
 ![Search Card View](../images/118-release-notes/ace-search-box.png)
 
 ### Support onChange event for ACE TextInput and SearchBox
+
 Developers can now use onChange event for TextInput and SearchBox components in Adaptive Card Extensions.
+
 ```typescript
 /**
  * Text change event handler.
@@ -152,6 +155,7 @@ onChange?: (newValue?: string) => void;
 > The `onChange` event for TextInput and SearchBox is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.
 
 ### Ability to detect host's theme for Viva Connections Mobile
+
 Starting with this version developers have access to `hostContext` in the `AdaptiveCardExtensionContext` object. This property allows to detect host's theme.
 ```typescript
 
@@ -173,7 +177,21 @@ export interface IHostContext {
 Starting this version React templates use Fluent UI React v8 instead of v7.
 
 ### Transparent outline icon for Teams-hosted web parts
+
 The default outline icon for Teams-hosted web parts is now transparent. This allows to meet the Teams design guidelines for application.
+
+### TypeScript v4.7 Support
+
+SPFx solutions now support TypeScript v4.7.
+
+### NodeJS v18 support
+
+SPFx solutions now support NodeJS v18.
+
+> [!NOTE]
+> A developer needs to manually set NODE_OPTIONS environment variable to `--openssl-legacy-provider` to use NodeJS v18 after the NodeJS 18 has been installed. This requirement is intended to be removed with the General Availability version of the 1.18. This setting is required to adjust the toolchain to work properly with Webpack 4 which the SPFx tooling is using for now.
+> This can be done using `export NODE_OPTIONS=--openssl-legacy-provider` on Mac/Linux or `set NODE_OPTIONS=--openssl-legacy-provider` on Windows.
+
 
 ## Deprecations
 
