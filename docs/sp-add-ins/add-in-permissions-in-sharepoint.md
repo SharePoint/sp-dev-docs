@@ -1,7 +1,7 @@
 ---
 title: Add-in permissions in SharePoint
 description: Types of add-in permissions, permission request scopes, and managing permissions, and the differences in add-in permission rights, user rights, and Office Store app rights.
-ms.date: 05/01/2020
+ms.date: 08/31/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -22,9 +22,9 @@ The permissions that the add-in has been granted are also stored in the content 
 If an object to which an add-in was granted permission is deleted, the corresponding grants are also deleted. When an object to which an add-in was granted permission is recycled, SharePoint does not modify the corresponding grant. This is so that if the object is restored from the Recycle Bin, the grant is still intact.
 
 When an add-in is removed, all the permissions granted to that add-in at the scope from which it was removed are revoked. This is to ensure that the add-in can't use its credentials to continue accessing protected SharePoint resources remotely after a user removes the add-in from SharePoint.
- 
+
 <a name="Perm_types"> </a>
- 
+
 ## Types of add-in permissions and permission scopes
 
 A SharePoint Add-in uses permission requests to specify the permissions that it needs to function correctly. The permission requests specify both the rights that an add-in needs and the scope at which it needs the rights. These permissions are requested as part of the add-in manifest.
@@ -165,9 +165,6 @@ The following code shows an add-in that is asking for Read access to the web sco
     </AppPermissionRequests>
   </App>
 ```
-
-<br/>
-
 <a name="PermissionsForLists"> </a>
 
 ### Permission request scopes for other SharePoint features
@@ -188,8 +185,6 @@ Table 3 shows the permission request scope for Business Connectivity Services (B
 > [!NOTE] 
 > For more information about the BCS add-in permission request scope, see [Business Connectivity Services in SharePoint](../general-development/business-connectivity-services-in-sharepoint.md).
 
-<br/>
-
 Table 4 shows the permission request scope for Search. It also lists the rights that can be specified for that scope URI.
 
 **Table 4. Search add-in permission request scope URIs and available rights**
@@ -200,9 +195,7 @@ Table 4 shows the permission request scope for Search. It also lists the rights 
 
 > [!NOTE] 
 > For more information about the Search add-in permission request scope, see [Search in SharePoint](../general-development/search-in-sharepoint.md).
- 
-<br/>
- 
+
 Table 5 shows the permission request scope for Project Server 2013. It also lists the rights that can be specified for each scope URI.
  
 > [!NOTE] 
@@ -219,9 +212,6 @@ Table 5 shows the permission request scope for Project Server 2013. It also list
 |http://sharepoint/projectserver/statusing |SubmitStatus|
 |http://sharepoint/projectserver/reporting |Read|
 |http://sharepoint/projectserver/workflow |Elevate|
-
- 
-<br/>
  
 Table 6 shows the permission request scope for social features. It also lists the rights that can be specified for each scope URI.
 
@@ -237,8 +227,6 @@ Table 6 shows the permission request scope for social features. It also lists th
 > [!NOTE] 
 > For more information about social features add-in permission request scope, see [Add-in permission requests for accessing social features](../general-development/get-started-developing-with-social-features-in-sharepoint.md#app-permission-requests-for-accessing-social-features-in-sharepoint-add-ins).
  
-<br/>
-
 Table 7 shows the permission request scope for taxonomy. It also lists the rights that can be specified for that scope URI.
 
 **Table 7. Taxonomy add-in permission request scope URIs and available rights**
@@ -264,8 +252,6 @@ The **BaseTemplateId** property is a child element, not an attribute of the **Ap
   </AppPermissionRequest>
 ```
 
-<br/>
-
 **Table 8. Permission request scope with associated properties**
 
 |**Scope URI**|**Property**|**Type**|
@@ -290,10 +276,11 @@ SharePoint Add-ins that are installed to SharePoint are granted permissions when
 4. On the page that opens, select **here** in the last sentence. This regrants the add-in its permissions and redirects the browser back to the **Site Contents** page.
 
   ![Regranting permissions to an app](../images/RegrantPermissionsToAnApp.png)
-
-  <br/>
  
 When you are developing an add-in or troubleshooting an add-in, there may be occasions when you want to change, or regrant, the permissions of an add-in that has already been installed. You can do so with these steps:
+
+> [!NOTE]
+> Site collection admin is not able to update add-in permissions in AppInv.aspx page by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
 1. Go to `http://{SharePointWebSite}_layouts/15/AppInv.aspx`, where  _\<SharePointWebSite\>_ is the URL of the website where the add-in is installed. Be careful not to add any query parameters on the URL. The form you need only appears on this page if the URL is exactly as shown.
 
@@ -304,19 +291,18 @@ When you are developing an add-in or troubleshooting an add-in, there may be occ
 4. Select **Create**. 
 
 An add-in's permissions for a specific scope are revoked when it is removed from that scope.
- 
+
 <a name="CannotBeHidden"> </a>
- 
+
 ## Why add-ins cannot be hidden from users
 
 Any user with browse rights to a SharePoint website can launch any SharePoint Add-in installed on the site. Whether the user can do anything with the add-in depends on the user's other permissions and what [authorization policy type](add-in-authorization-policy-types-in-sharepoint.md) is being used by the add-in. If the user tries to do something with the add-in that the user does not have permission to do, and the call to SharePoint is using the user+add-in policy, the call fails.
 
-## See also
 <a name="Filename_AdditionalResources"> </a>
+
+## See also
 
 - [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
 - [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
 - [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
 - [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
-    
- 
