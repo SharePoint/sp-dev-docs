@@ -1,7 +1,7 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 06/28/2022
+ms.date: 08/31/2023
 ms.localizationpriority: high
 ---
 
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This article uses the newest version of PnP PowerShell that is released in January 2021. As Azure Functions run PowerShell Core, you'll have to use this version of PnP PowerShell in your Azure Function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
 
-Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page.
+Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example, to register a footer on every page.
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an Application Customizer to render a footer.
 
@@ -31,7 +31,7 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 ## Set up app-only access to your tenant
 
-We are going to use authentication with a clientid and a certificate in this tutorial.
+We are going to use authentication with a client id and a certificate in this tutorial.
 
 1. Create a new self-signed certificate with PnP PowerShell on your computer:
 
@@ -63,14 +63,15 @@ To set up the Azure Queue storage:
 1. Go to **Access Keys** and note the **Storage Account Name** and the **key1 Key value**. You will need these values when you create the flow.
 
 ## Create the flow
+
 > [!NOTE]
-> The **Request** trigger used below is now **PREMIUM** and will therefore require additional licensing.
+> The **Request** trigger used below is now **Premium** and will therefore require additional licensing.
 
 To put a message in the queue, you need to create a flow.
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
-1. Search for **Request**, and select **Request - When a HTTP Request is received [PREMIUM]**. 
+1. Search for **Request**, and select **Request - When an HTTP Request is received [Premium]**. 
 1. Enter the following JSON as your request body:
 
     ```json
