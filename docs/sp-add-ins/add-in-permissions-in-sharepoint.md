@@ -22,7 +22,9 @@ The permissions that the add-in has been granted are also stored in the content 
 If an object to which an add-in was granted permission is deleted, the corresponding grants are also deleted. When an object to which an add-in was granted permission is recycled, SharePoint does not modify the corresponding grant. This is so that if the object is restored from the Recycle Bin, the grant is still intact.
 
 When an add-in is removed, all the permissions granted to that add-in at the scope from which it was removed are revoked. This is to ensure that the add-in can't use its credentials to continue accessing protected SharePoint resources remotely after a user removes the add-in from SharePoint.
- 
+
+<a name="Perm_types"> </a>
+
 ## Types of add-in permissions and permission scopes
 
 A SharePoint Add-in uses permission requests to specify the permissions that it needs to function correctly. The permission requests specify both the rights that an add-in needs and the scope at which it needs the rights. These permissions are requested as part of the add-in manifest.
