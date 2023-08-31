@@ -84,6 +84,8 @@ You can register your add-in in one of three ways, depending on where you are in
 
 Regardless of how you register your SharePoint Add-in, when you are ready to deploy the add-in to staging or production, you need to [Enter the registration values into the web.config and AppManifest.xml files](#EditConfigFiles). If you are using Visual Studio, the Microsoft Office Developer Tools for Visual Studio do this configuration for you.
 
+<a name="EditConfigFiles"> </a>
+
 ## Enter the registration values into the web.config and AppManifest.xml files
 
 Before you package the SharePoint Add-in and before you deploy its remote components, enter some of the registration values in the AppManifest.xml and the web.config file.
@@ -146,9 +148,13 @@ Before you package the SharePoint Add-in and before you deploy its remote compon
     </Properties>
     ```
 
+<a name="UseRedirectUrl"> </a>
+
 ## Use the redirect URL in an add-in that asks for permissions on the fly
 
 If your web application is launched from outside SharePoint (and is, thus, not a true SharePoint Add-in), it has to be designed to ask for permissions from SharePoint at runtime. It has to have code that uses the redirect URI, along with other information, to obtain an access token from ACS. Find the place where this URI is set and use the *exact*  value that you used for the **Redirect URI** field on AppRegNew.aspx or in the Seller Dashboard. This might be in a code file or a configuration file.
+
+<a name="Retrieve"> </a>
 
 ## Retrieve add-in registration and add-in principal information
 
@@ -165,6 +171,8 @@ To do a lookup, you have to remember the client ID (also known as the add-in ID)
 The lookup does not return the add-in secret value.
 
 To see a list of registered add-in principals, go to: `http://<SharePointWebsite>/_layouts/15/AppPrincipals.aspx`.
+
+<a name="AR"> </a>
 
 ## See also
 
