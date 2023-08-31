@@ -49,6 +49,8 @@ If an add-in is granted permission to one of the scopes, the permission applies 
 
 Because permission requests are made without information about the topology of the site collection where the add-in is installed, the scope is expressed as a type instead of as the URL of a specific instance. These scope types are expressed as URIs. Permissions to resources that are stored in the SharePoint content database are organized under the following URI: `http://sharepoint/content`.
 
+<a name="Perm_diff"> </a>
+
 ## Differences between add-in permission rights and user rights
 
 Permissions indicate the activities that an add-in is permitted to do within the requested scope. SharePoint supports four rights levels in the content database. For each scope, an add-in can have the following rights:
@@ -82,6 +84,8 @@ A user cannot grant an add-in permissions that the user himself or herself does 
 
 Permissions that are not known to SharePoint are ignored. This means that, if an add-in requests a permission that SharePoint does not recognize, the add-in can still be installed, but the user is not prompted to grant the permission, and the permission is not granted to the add-in.
 
+<a name="Perm_rightlist"> </a>
+
 ## Available scopes and permissions, and restrictions on Office Store apps permissions
 
 Different scopes have different sets of rights that are available for an add-in to request. This section describes the sets of rights that are available for each scope. Also, it highlights the restrictions for SharePoint Add-ins that are sold through the Office Store.
@@ -89,6 +93,8 @@ Different scopes have different sets of rights that are available for an add-in 
 ### Office Store apps' rights
 
 Only Read, Write, and Manage rights are allowed for Office Store apps. If you try to submit an app to the Office Store that requires FullControl rights, your app is blocked from submission. Because the block is in the Office Store submission pipeline, apps that request more than Manage permissions can still be deployed through the add-in catalog.
+
+<a name="PermissionsForLists"> </a>
 
 ### Permission request scopes for list content and library content
 
@@ -159,6 +165,7 @@ The following code shows an add-in that is asking for Read access to the web sco
     </AppPermissionRequests>
   </App>
 ```
+<a name="PermissionsForLists"> </a>
 
 ### Permission request scopes for other SharePoint features
 
@@ -284,10 +291,14 @@ When you are developing an add-in or troubleshooting an add-in, there may be occ
 4. Select **Create**. 
 
 An add-in's permissions for a specific scope are revoked when it is removed from that scope.
- 
+
+<a name="CannotBeHidden"> </a>
+
 ## Why add-ins cannot be hidden from users
 
 Any user with browse rights to a SharePoint website can launch any SharePoint Add-in installed on the site. Whether the user can do anything with the add-in depends on the user's other permissions and what [authorization policy type](add-in-authorization-policy-types-in-sharepoint.md) is being used by the add-in. If the user tries to do something with the add-in that the user does not have permission to do, and the call to SharePoint is using the user+add-in policy, the call fails.
+
+<a name="Filename_AdditionalResources"> </a>
 
 ## See also
 
