@@ -1,11 +1,10 @@
 ---
 title: Register SharePoint Add-ins
 description: Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
-ms.date: 06/13/2022
+ms.date: 08/31/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-
 # Register SharePoint Add-ins
 
 Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
@@ -44,6 +43,9 @@ You can register your add-in in one of three ways, depending on where you are in
 |Use the AppRegNew.aspx page. |Use the AppRegNew form to register your SharePoint Add-in if you are using the add-in only in one tenant or farm.<br/><br/>For example, if you're creating add-ins for a single organization and you're going to distribute them via the organization add-in catalog, you can use the AppRegNew.aspx page of any website in a tenancy or farm to register the add-in.<br/><br/>You cannot publish an add-in that is registered with AppRegNew.aspx to the Office Store. For add-ins that are published to the Office Store, you must get an identity from the Seller Dashboard.|
 
 ### To register by using AppRegNew.aspx
+
+> [!NOTE]
+> Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
 
@@ -170,8 +172,9 @@ The lookup does not return the add-in secret value.
 
 To see a list of registered add-in principals, go to: `http://<SharePointWebsite>/_layouts/15/AppPrincipals.aspx`.
 
-## See also
 <a name="AR"> </a>
+
+## See also
 
 - [Three authorization systems for SharePoint Add-ins](three-authorization-systems-for-sharepoint-add-ins.md)
 - [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)

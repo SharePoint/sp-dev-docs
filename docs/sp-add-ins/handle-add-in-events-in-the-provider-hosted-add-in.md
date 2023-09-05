@@ -100,7 +100,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
     }
     ```
 
-6. Our installation logic is going to call an SQL stored procedure to register the Hong Kong store as a tenant in the remote web application. It is very important that, if this process fails, the handler signals SharePoint to roll back the installation of the add-in, so add the following **try/catch** blocks in place of `TODO2`. 
+6. Our installation logic is going to call an SQL stored procedure to register the Hong Kong SAR store as a tenant in the remote web application. It is very important that, if this process fails, the handler signals SharePoint to roll back the installation of the add-in, so add the following **try/catch** blocks in place of `TODO2`. 
 
     ```csharp
       try
@@ -126,7 +126,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
       string tenantName = properties.AppEventProperties.HostWebFullUrl.ToString();
     ```
 
-8. Now our code has to deal with a little quirk of the **AppEventProperties.HostWebFullUrl** property. In most other contexts, SharePoint includes a closing `"/"` character at the end of the host web URL, so the logic of our sample code assumes that this character is present. But SharePoint adds this character at the end of the **HostWebFullUrl** value if, and only if, the host web is the root web of a site collection. Because our Hong Kong website is a subweb in the site collection, we need to add this character to ensure that the same tenant name string is used throughout the sample. 
+8. Now our code has to deal with a little quirk of the **AppEventProperties.HostWebFullUrl** property. In most other contexts, SharePoint includes a closing `"/"` character at the end of the host web URL, so the logic of our sample code assumes that this character is present. But SharePoint adds this character at the end of the **HostWebFullUrl** value if, and only if, the host web is the root web of a site collection. Because our Hong Kong SAR website is a subweb in the site collection, we need to add this character to ensure that the same tenant name string is used throughout the sample. 
 
    Add the following code under the initialization of the `tenantName` object.
     
@@ -172,7 +172,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 It is usually a good practice to handle the uninstalling event whenever you are handling the installed event. The basic idea is that the uninstalling handler deletes or recycles things that the installed handler deployed. There are, however, many exceptions, so you really need to understand the use cases of your add-in. For example, a list that is deployed with an add-in and populated with the add-in might still have value even after the add-in itself is uninstalled, in which case you wouldn't want to uninstall the list in the uninstalling event handler. 
 
-The uninstallation event does not run, as you might expect, when a user removes the add-in from the **Site Contents** page. Doing so only moves the add-in to the website's Recycle Bin. A user could restore it, but restoring does not rerun the installed event handler, so you'd want anything that was deployed with the installed event handler to still exist if the add-in is restored. SharePoint components can be moved from the Recycle Bin to the second-stage Recycle Bin. It is only when an add-in is deleted from the second-stage that the uninstalling event happens; when a user does that, the add-in is unrestorable anyway, so we want the Hong Kong store's tenancy to be removed from the corporate database at that point.
+The uninstallation event does not run, as you might expect, when a user removes the add-in from the **Site Contents** page. Doing so only moves the add-in to the website's Recycle Bin. A user could restore it, but restoring does not rerun the installed event handler, so you'd want anything that was deployed with the installed event handler to still exist if the add-in is restored. SharePoint components can be moved from the Recycle Bin to the second-stage Recycle Bin. It is only when an add-in is deleted from the second-stage that the uninstalling event happens; when a user does that, the add-in is unrestorable anyway, so we want the Hong Kong SAR store's tenancy to be removed from the corporate database at that point.
 
 1. Set the value of **Handle Add-in Uninstalling** to **True** (it may still be called **Handle App Uninstalling**). This registers the handler in the AppManifest.xml file just as you earlier registered the installation handler. If you look at the file, you see that they have exactly the same URL. The Office Developer Tools for Visual Studio assumes that you are using the same \*.svc file. We are doing that in this sample, and it is a standard practice. 
 
