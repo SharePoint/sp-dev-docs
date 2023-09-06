@@ -10,12 +10,19 @@ Some existing limitations exist for using Fluent UI Iconography in Adaptive Card
 Currently, ACEs support the "Card Designer" set of icons listed below. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using []"Fluent 1" (Fluent UI v8 and below) icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons) is limited.
 
 ## Manifests value officeFabricIconFontName is partially supported.
-`officeFabricIconFontName`` manifest's property allows developers to use the Fluent icon displayed for the ACE in the Toolbox during an operator's editing session. By default (if not overridden in the code), the same icon will be used in the card bar:
+`officeFabricIconFontName` manifest's property allows developers to use the Fluent icon displayed for the ACE in the Toolbox during an operator's editing session. By default (if not overridden in the code), the same icon will be used in the card bar:
 
 ![Card bar](../../../../docs/images/viva-extensibility/icons-limitations-card-bar.png)
 
-Viva Connections for Mobile does not support arbitrary Fluent UI icons. Therefore, the icon could be missing in the card bar on mobile.
+There are two limitations for this property:
+1. Viva Connections for Mobile does not support arbitrary Fluent UI icons. Therefore, the icon could be missing in the card bar on mobile.
+![Card bar on mobile](../../../../docs/images/viva-extensibility/icons-limitations-card-bar-mobile.png)
+
+2. The toolbox doesn't support the "Card Designer" icons. Therefore, the icon could be missing in the toolbox.
+![Missing icon in the Toolbox](../../../../docs/images/viva-extensibility/icons-limitations-toolbox.png)
+
 The workaround is to override the [card bar's icon](https://learn.microsoft.com/en-us/javascript/api/sp-adaptive-card-extension-base/icardbarparameters?view=sp-typescript-latest#@microsoft-sp-adaptive-card-extension-base-icardbarparameters-icon-member) property in the code.
+
 
 ## "Fluent 1" icons are not supported for Text Input
 In SPFx 1.18, we introduced the ability to add a "text input" component to the card view. This component allows developers to specify iconBefore, iconAfter, and button icon.
