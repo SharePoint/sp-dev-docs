@@ -2,7 +2,6 @@
 title: Granting access using SharePoint App-Only
 description: Granting access using SharePoint App-Only
 ms.date: 08/31/2023
-ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: conceptual
