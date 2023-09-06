@@ -2,7 +2,6 @@
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Authorization Code OAuth flow for SharePoint Add-ins

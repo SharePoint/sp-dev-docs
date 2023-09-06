@@ -2,7 +2,6 @@
 title:  SharePoint Developer Community open source projects
 description: Open-source projects coordinated by the SharePoint PnP initiative
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
