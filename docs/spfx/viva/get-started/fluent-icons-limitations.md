@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Adaptive Card Extesions Iconography Limitations
 Some existing limitations exist for using Fluent UI Iconography in Adaptive Card Extensions. 
-Currently, ACEs support the "Card Designer" set of icons listed below. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using []"Fluent 1" (Fluent UI v8 and below) icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons) is limited.
+Currently, ACEs support the "Card Designer" set of icons listed below. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using []"Fluent 1" (Fluent UI v8 and below) icons](https://developer.microsoft.com/fluentui#/styles/web/icons) is limited.
 
 ## Manifests value officeFabricIconFontName is partially supported.
 `officeFabricIconFontName` manifest's property allows developers to use the Fluent icon displayed for the ACE in the Toolbox during an operator's editing session. By default (if not overridden in the code), the same icon will be used in the card bar:
