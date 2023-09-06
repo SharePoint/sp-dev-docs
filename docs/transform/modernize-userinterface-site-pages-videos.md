@@ -2,8 +2,8 @@
 title: Learning page transformation via short videos
 description: Contains a list of short videos that help you better understand and use page transformation
 ms.date: 12/13/2019
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # SharePoint Page Transformation webcast series

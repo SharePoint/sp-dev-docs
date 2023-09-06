@@ -2,8 +2,8 @@
 title: SharePoint modernization guidance - Support step
 description: MModernization offerings that IT Teams and partners can use with their customers - Support step
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Support

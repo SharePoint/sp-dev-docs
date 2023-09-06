@@ -2,8 +2,8 @@
 title: Understanding Azure Active Directory and OAuth 2.0 in the context of SharePoint Online modern development
 description: Understanding Azure Active Directory and OAuth 2.0 in the context of SharePoint Online modern development.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Understanding Azure Active Directory and OAuth 2.0 in the context of SharePoint Online modern development

@@ -2,8 +2,8 @@
 title: Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
 description: Upgrading SharePoint applications from Azure Access Control Service (ACS) to Azure Active Directory (Microsoft Entra ID).
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory

@@ -2,8 +2,8 @@
 title: From UI Extensions to SharePoint Framework ListView Command Sets
 description: From UI Extensions to SharePoint Framework ListView Command Sets.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # From UI Extensions to SharePoint Framework ListView Command Sets

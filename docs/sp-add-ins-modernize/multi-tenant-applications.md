@@ -2,8 +2,8 @@
 title: Building Multi-tenant applications for SharePoint Online
 description: Building Multi-tenant applications for SharePoint Online
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Building Multi-tenant applications for SharePoint Online

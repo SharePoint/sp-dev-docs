@@ -2,8 +2,8 @@
 title: Upgrading from XSLT views rendering to List Formatting
 description: Upgrading from XSLT views rendering to List Formatting.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading from XSLT views rendering to List Formatting

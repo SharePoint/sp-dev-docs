@@ -2,8 +2,8 @@
 title: What about subsites after Microsoft 365 group connection
 description: Connect a Microsoft 365 group to an existing SharePoint site does connect the group at root site level, but what about the subsites?
 ms.date: 10/16/2018
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # How are subsites impacted after Microsoft 365 group connection

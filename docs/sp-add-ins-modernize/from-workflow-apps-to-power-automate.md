@@ -2,8 +2,8 @@
 title: From SharePoint Add-in model Workflow Apps to Microsoft Power Automate
 description: From SharePoint Add-in model Workflow Apps to Microsoft Power Automate.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # From SharePoint Add-in model Workflow Apps to Microsoft Power Automate

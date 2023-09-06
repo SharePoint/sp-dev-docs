@@ -2,8 +2,8 @@
 title: Create a custom ribbon button in the host web of a SharePoint Add-in
 description: Prepare the host web, add a ribbon custom action, inspect the add-in web feature, and run and test the add-in.
 ms.date: 12/04/2017
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 

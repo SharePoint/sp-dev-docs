@@ -2,8 +2,8 @@
 title: Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online
 description: Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online

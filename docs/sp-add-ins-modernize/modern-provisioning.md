@@ -2,8 +2,8 @@
 title: Understanding modern provisioning of artifacts in Microsoft 365
 description: Understanding modern provisioning of artifacts in Microsoft 365
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Understanding modern provisioning of artifacts in Microsoft 365
