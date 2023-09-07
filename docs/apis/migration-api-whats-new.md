@@ -1,7 +1,7 @@
 ---
 title: "Migration API What's new"
 description: "Learn about the new features and updates to the Migration API."
-ms.date: 08/21/2023
+ms.date: 09/06/2023
 ms.reviewer: jhendr
 author: JoanneHendrickson
 ms.author: jhendr
@@ -22,12 +22,10 @@ We have updated Migration API to provide detailed reasons in case a job is postp
 
 |Possible reasons |Code|Description|
 |:-----|:-----|:-----|
-|DB busy|1，2，3，4|Target DB is busy, the job will be picked up again later|
-|VM busy |5，6|VM is busy, the job will be picked up again later|
-|DB defragment |7|Target DB is doing index defragment, please wait|
-|Tenant blocked |10|Target tenant is blocked from doing migration|
-|Other|11|Unknown reason|
-|Backend not ready yet |12|Backend is not ready yet, please wait|
+|JobInQueue:Resource|1，2，3，4, 5, 6, 12|The job is now in a queue for resource allocation. It is expected to start in [P75] time.|
+|JobInQueue:DBMaint|7|The destination tenant's database is currently in maintenance. The job is in a queue to be executed when the maintenance is completed. We expect the maintenance to be completed at [P75] time.|
+|JobFailure:TenantBlock|10|Migration is blocked at the destination tenant. The job is cancelled. Please check tenant status before resubmitting.|
+|JobCancelled:Unknown|11|The migration job is canceled for unknown reason.|
 
 
 ## New: Speed up small file migration
