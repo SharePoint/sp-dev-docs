@@ -1,4 +1,4 @@
-# Welcome to the SharePoint Framework!
+# Welcome Welcome
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
