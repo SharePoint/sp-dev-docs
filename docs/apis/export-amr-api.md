@@ -1,10 +1,10 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
-ms.date: 06/28/2022
+ms.date: 09/06/2023
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
 audience: ITPro
 ms.subservice: migration-tool
 ms.topic: article
@@ -282,6 +282,15 @@ It returns the AES256CBC encryption key used to decrypt the message in azureMani
 |AzureContainerManifest|Return the URL for accessing the async read manifest|
 |JobQueueUri|URL for accessing Azure queue used for returning notification of migration job process|
 |EncryptionKey|AES256CBC encryption key used to decrypt messages from job/manifest queue|
+
+## Error codes
+
+These error codes are expected behavior under specific conditions.  Use discretion handling them.
+
+|Error code|Error message|Description|
+|:-----|:-----|:-----|
+|-2146232832|The changeToken refers to a time before the start of the current change log.|The change log is limited to 60 days immediately before the current date.  This error code is returned when the changeToken refers to a time outside the 60 day window.|
+|-2147213196|Operation canceled.|The client cancels the read operation. This is an expected behavior and a cancel request is processed.|
 
 ## Set up Guidelines
 
