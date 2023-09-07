@@ -1,16 +1,20 @@
 ---
 title: SharePoint Framework v1.18 preview release notes
 description: Release notes for the SharePoint Framework v1.18 preview release
-ms.date: 06/28/2023
+ms.date: 08/30/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18 preview release notes
 
-This release
+This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.1 **Released**: June 28, 2023
+- rc.1 **Released**: August 30, 2023
+- beta.5 **Released**: August 15, 2023
+- beta.3 **Released**: August 1, 2023
+- beta.2 **Released**: July 18, 2023
+- beta.1 **Released**: June 28, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -42,13 +46,13 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.18 preview release
+Related updated documentation for the 1.18 preview release:
 
 * [Designing Viva Connections custom cards for your dashboard](./viva//design//designing-card.md)
 * [Migrate Adaptive Card Extensions to SharePoint Framework 1.18](./viva/get-started/migrate-to-spfx-1-18.md)
 * [Tutorial - Create a People Search Adaptive Card Extension](./viva/get-started//build-people-search-adaptive-card-extension.md)
 
-New samples showcasing the new Viva Connections features
+New samples showcasing the new Viva Connections features:
 
 * [Start a Chat Text Box input Adaptive Card Extention](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Start-Chat)
 * [Prompt Survey Adaptive Card Extension](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Prompt-Survey)
@@ -137,9 +141,57 @@ We introduce a new search card view for Adaptive Card Extensions that is intende
 
 ![Search Card View](../images/118-release-notes/ace-search-box.png)
 
+### Support onChange event for ACE TextInput and SearchBox
+
+Developers can now use onChange event for TextInput and SearchBox components in Adaptive Card Extensions.
+
+```typescript
+/**
+ * Text change event handler.
+ */
+onChange?: (newValue?: string) => void;
+```
+> [!NOTE]
+> The `onChange` event for TextInput and SearchBox is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.
+
+### Ability to detect host's theme for Viva Connections Mobile
+
+Starting with this version developers have access to `hostContext` in the `AdaptiveCardExtensionContext` object. This property allows to detect host's theme.
+```typescript
+
+export type HostTheme = 'light' | 'dark' | undefined;
+
+export interface IHostContext {
+  /**
+ *
+ * theme is used to define what the the current colour scheme for the VCM app. It has currently 2 values
+      light: If VCM is in light mode, we use the theme 'light',
+      dark: If VCM is in dark mode, we use the theme 'dark'
+ */
+  theme: HostTheme;
+}
+```
+
 ### Fluent UI React v8 support
 
 Starting this version React templates use Fluent UI React v8 instead of v7.
+
+### Transparent outline icon for Teams-hosted web parts
+
+The default outline icon for Teams-hosted web parts is now transparent. This allows to meet the Teams design guidelines for application.
+
+### TypeScript v4.7 Support
+
+SPFx solutions now support TypeScript v4.7.
+
+### NodeJS v18 support
+
+SPFx solutions now support NodeJS v18.
+
+> [!NOTE]
+> A developer needs to manually set NODE_OPTIONS environment variable to `--openssl-legacy-provider` to use NodeJS v18 after the NodeJS 18 has been installed. This requirement is intended to be removed with the General Availability version of the 1.18. This setting is required to adjust the toolchain to work properly with Webpack 4 which the SPFx tooling is using for now.
+> This can be done using `export NODE_OPTIONS=--openssl-legacy-provider` on Mac/Linux or `set NODE_OPTIONS=--openssl-legacy-provider` on Windows.
+
 
 ## Deprecations
 
@@ -148,7 +200,7 @@ Starting this version React templates use Fluent UI React v8 instead of v7.
 
 ## Fixed Issues
 
-This release didn't include fixes on any reported issues within the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+- [#9010](https://github.com/SharePoint/sp-dev-docs/issues/9010) - Placeholder `{tenantDomain}` is not replaced with `SPFX_SERVE_TENANT_DOMAIN`.
 
 ## Feedback and issues
 

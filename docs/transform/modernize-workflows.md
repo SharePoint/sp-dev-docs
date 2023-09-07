@@ -2,8 +2,8 @@
 title: Modernize SharePoint 2013 workflows
 description: Make the switch to Power Automate instead of SharePoint 2013 workflow for your business processes.
 ms.date: 05/25/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Modernize SharePoint 2013 workflows

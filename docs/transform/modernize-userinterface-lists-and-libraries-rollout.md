@@ -2,8 +2,8 @@
 title: Rollout approaches for the modern list and library experience 
 description: Understand which approach you can take to do a controlled rollout of the modern list and library user interface
 ms.date: 03/04/2019
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Rollout approaches for the modern list and library experience

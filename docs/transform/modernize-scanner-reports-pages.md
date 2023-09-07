@@ -2,8 +2,8 @@
 title: The SharePoint modernization scanner reports for the pages scanner mode
 description: Explains the pages output created by the modernization scanner
 ms.date: 01/17/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Pages reports

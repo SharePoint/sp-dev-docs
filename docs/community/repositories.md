@@ -2,7 +2,6 @@
 title:  SharePoint Developer GitHub repositories
 description: List of different SharePoint Developer GitHub repositories and their description
 ms.date: 09/23/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

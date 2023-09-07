@@ -5,8 +5,8 @@ author: andrewconnell
 ms.author: v-johnco
 ms.date: 06/13/2022
 ms.audience: Developer
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Support and feedback

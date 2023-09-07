@@ -2,8 +2,8 @@
 title: The SharePoint modernization scanner reports for the InfoPath scanner mode
 description: Explains the InfoPath output created by the modernization scanner
 ms.date: 05/30/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: InfoPath reports

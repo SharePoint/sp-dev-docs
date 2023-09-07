@@ -2,8 +2,8 @@
 title: Set up an on-premises development environment for SharePoint Add-ins
 description: Install an operating system and prerequisites, and configure services and an isolated add-in domain.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 

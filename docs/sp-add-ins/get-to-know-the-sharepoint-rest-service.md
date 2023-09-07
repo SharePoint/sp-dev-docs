@@ -2,8 +2,8 @@
 title: Get to know the SharePoint REST service
 description: Basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
 ms.date: 03/03/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Get to know the SharePoint REST service
@@ -29,15 +29,18 @@ To access SharePoint resources using REST, construct a RESTful HTTP request by u
 ```csharp
 var items = List.GetByTitle(listname).GetItems();
 ```
+
 # [http](#tab/http)
+
 ```http
 GET https://{site_url}/_api/lists/getbytitle('{list_name}')/items
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
+
 ---
 
-The client.svc web service in SharePoint handles the HTTP request and serves the appropriate response in either Atom or JavaScript Object Notation (JSON) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
+The **client.svc** web service in SharePoint handles the HTTP request and serves the appropriate response in either Atom or JavaScript Object Notation (JSON) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
 
 **SharePoint REST service architecture**
 
@@ -134,11 +137,11 @@ The SharePoint Online (and on-premises SharePoint 2016 or later) REST service su
 ## OData resources
 
 - [Developing Service-Oriented Applications with WCF](/dotnet/framework/wcf/index)
-- [Open Data Protocol](http://www.odata.org/)
-- [OData Protocol URI Conventions](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
-- [Addressing Service Operations](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#AddressingServiceOperations)
-- [OData Protocol Operations](http://www.odata.org/documentation/odata-version-2-0/operations/)
-- [Error Conditions](http://www.odata.org/documentation/odata-version-2-0/operations#ErrorConditions)
+- [Open Data Protocol](https://www.odata.org/)
+- [OData Protocol URI Conventions](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
+- [Addressing Service Operations](https://www.odata.org/documentation/odata-version-2-0/uri-conventions#AddressingServiceOperations)
+- [OData Protocol Operations](https://www.odata.org/documentation/odata-version-2-0/operations/)
+- [Error Conditions](https://www.odata.org/documentation/odata-version-2-0/operations#ErrorConditions)
 
 ## SharePoint REST service topics
 

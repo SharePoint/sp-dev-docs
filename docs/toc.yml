@@ -466,7 +466,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.18 - June 28, 2023
+    - name: SPFx v1.18 - August 15, 2023
       href: spfx/release-1.18.md
     - name: SPFx v1.17.4 - June 21, 2023
       href: spfx/release-1.17.4.md
@@ -592,6 +592,8 @@
       href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
+    - name: Making Quick View compatible with dark mode
+      href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
   - name: Known issues
@@ -2113,6 +2115,8 @@
       href: apis/onenote-migration-service.md
     - name: Sensitivity Labels and the SharePoint Migration API
       href: apis/sp-migration-api-and-sensitivity-labels.md
+    - name: How to export video transcripts using the SharePoint Migration API
+      href: apis/migration-api-video-transcripts.md
     - name: Migration API
       items:
       - name: Import Migration API
@@ -2126,6 +2130,8 @@
             href: apis/migrate-webparts-with-migrationapi.md
       - name: Export Migration API (Asynchronous Metadata Read)
         href: apis/export-amr-api.md
+      - name: Permissions guide for Export Migration API (Asynchronous Metadata Read)
+        href: apis/export-amr-api-permission-guide.md
       - name: Azure container and queue
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption

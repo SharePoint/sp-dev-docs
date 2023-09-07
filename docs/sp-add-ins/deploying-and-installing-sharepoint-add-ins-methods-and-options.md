@@ -2,8 +2,8 @@
 title: Deploying and installing SharePoint Add-ins - methods and options
 description: Publish, install, and uninstall a SharePoint Add-in.
 ms.date: 11/02/2017
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Deploying and installing SharePoint Add-ins: methods and options

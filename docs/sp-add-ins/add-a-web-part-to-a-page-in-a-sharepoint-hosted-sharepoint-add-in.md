@@ -2,7 +2,6 @@
 title: Add a web part to a page in a SharePoint-hosted SharePoint Add-in
 description: Add a web part to a page, and run and test the add-in.
 ms.date: 07/25/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

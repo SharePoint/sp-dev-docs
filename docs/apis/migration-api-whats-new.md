@@ -1,7 +1,7 @@
 ---
 title: "Migration API What's new"
 description: "Learn about the new features and updates to the Migration API."
-ms.date: 04/10/2023
+ms.date: 09/06/2023
 ms.reviewer: jhendr
 author: JoanneHendrickson
 ms.author: jhendr
@@ -15,6 +15,18 @@ ms.custom: admindeeplinkSPO
 # What's new in the Migration API
 
 Check here to see what features or updates have been added to the Migration API. Here's a summary of what's included.
+
+## Updated reason code and descriptions
+
+We have updated Migration API to provide detailed reasons in case a job is postponed. We encourage ISVs take appropriate actions, based on the reasons.
+
+|Possible reasons |Code|Description|
+|:-----|:-----|:-----|
+|JobInQueue:Resource|1，2，3，4, 5, 6, 12|The job is now in a queue for resource allocation. It is expected to start in [P75] time.|
+|JobInQueue:DBMaint|7|The destination tenant's database is currently in maintenance. The job is in a queue to be executed when the maintenance is completed. We expect the maintenance to be completed at [P75] time.|
+|JobFailure:TenantBlock|10|Migration is blocked at the destination tenant. The job is cancelled. Please check tenant status before resubmitting.|
+|JobCancelled:Unknown|11|The migration job is canceled for unknown reason.|
+
 
 ## New: Speed up small file migration
 
