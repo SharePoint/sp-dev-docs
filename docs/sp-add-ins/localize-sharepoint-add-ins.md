@@ -2,8 +2,8 @@
 title: Localize SharePoint Add-ins
 description: Localize a SharePoint Add-in by using resource files, JavaScript resource files, and other techniques.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 

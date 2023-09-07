@@ -2,8 +2,8 @@
 title: Upgrading Provider-hosted applications to Azure Active Directory applications
 description: Upgrading Provider-hosted applications to Azure Active Directory applications.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading Provider-hosted applications to Azure Active Directory applications

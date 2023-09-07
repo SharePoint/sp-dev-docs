@@ -2,8 +2,8 @@
 title: Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries
 description: Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries

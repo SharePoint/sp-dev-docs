@@ -2,8 +2,8 @@
 title: Secure data access and client object models for SharePoint Add-ins
 description: Connectivity options for accessing data on SharePoint and on external systems, and available APIs for accessing data from your add-in.
 ms.date: 11/02/2017
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Secure data access and client object models for SharePoint Add-ins

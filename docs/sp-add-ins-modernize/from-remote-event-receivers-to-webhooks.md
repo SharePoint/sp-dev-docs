@@ -2,8 +2,8 @@
 title: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks
 description: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks

@@ -2,8 +2,8 @@
 title: Explore the app manifest structure and the package of a SharePoint Add-in
 description: Learn about the add-in package structure and the manifest file for a SharePoint Add-in.
 ms.date: 12/13/2017
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 

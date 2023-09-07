@@ -2,8 +2,8 @@
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
 ms.date: 02/09/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transforming to modern site pages using PowerShell

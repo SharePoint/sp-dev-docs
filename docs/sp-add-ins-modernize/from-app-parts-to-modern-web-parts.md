@@ -2,8 +2,8 @@
 title: Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts
 description: Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts

@@ -2,8 +2,8 @@
 title: Creating SharePoint Add-ins that use low-trust authorization
 description: A provider-hosted SharePoint Add-in can get access to resources in the SharePoint tenancy or farm on which the add-in is installed. Primarily intended for add-ins whose remote components are hosted in the cloud.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Creating SharePoint Add-ins that use low-trust authorization

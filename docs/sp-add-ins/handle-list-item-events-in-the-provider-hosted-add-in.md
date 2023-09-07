@@ -2,8 +2,8 @@
 title: Handle list item events in the provider-hosted add-in
 description: Programmatically deploy a list, create and register the list item event receiver, and run the provider-hosted SharePoint Add-in and test the receiver.
 ms.date: 12/04/2017
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Handle list item events in the provider-hosted add-in
