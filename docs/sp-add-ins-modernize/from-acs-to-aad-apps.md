@@ -40,7 +40,7 @@ The application was granted *FullControl* right on the target SharePoint Online 
 
 ```XML
 <AppPermissionRequests AllowAppOnlyPolicy="true">
-  <AppPermissionRequest Scope="https://sharepoint/content/tenant" Right="FullControl" />
+  <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
 </AppPermissionRequests>
 ```
 
