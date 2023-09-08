@@ -53,13 +53,12 @@ Ensure the following before you begin:
     }
 
     $result = Add-MgServicePrincipalPassword -ServicePrincipalId $appPrincipal.Id -BodyParameter $params    # Update the secret
-
     $base64Secret = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($result.SecretText)) # Convert to base64 string.
 
-    $app = Get-MgServicePrincipal -ServicePrincipalId $appPrincipal.Id
-    $existingKeyCredentials = $app.KeyCredentials
-    $dtStart = [System.DateTime]::Now
-    $dtEnd = $dtStart.AddYears(2)
+    $app = Get-MgServicePrincipal -ServicePrincipalId $appPrincipal.Id # get existing app information
+    $existingKeyCredentials = $app.KeyCredentials # read existing credentials
+    $dtStart = [System.DateTime]::Now # Start date
+    $dtEnd = $dtStart.AddYears(2) # End date (equals to secret end date)
 
     $keyCredentials = @( # construct keys
         @{
