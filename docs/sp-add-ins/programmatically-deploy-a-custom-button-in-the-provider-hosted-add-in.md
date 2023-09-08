@@ -2,8 +2,8 @@
 title: Programmatically deploy a custom button in the provider-hosted add-in
 description: Register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
 ms.date: 11/22/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
@@ -209,7 +209,7 @@ Because the add-in now adds and deletes web-scoped custom actions, we need to es
 
 ## Run the add-in and test the button deployment
 
-1. Open the **Site Contents** page of the Hong Kong store's website and remove the **Local Employees** list. 
+1. Open the **Site Contents** page of the Hong Kong SAR store's website and remove the **Local Employees** list. 
     
    > [!NOTE]
    > Retracting an add-in in Visual Studio does not remove lists that are created by the add-in, so you need to manually delete it any time you are testing code that creates it.

@@ -2,7 +2,6 @@
 title: Accessing SharePoint using an application context, also known as app-only
 description: Accessing SharePoint using an application context, also known as app-only
 ms.date: 03/03/2022
-ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: conceptual

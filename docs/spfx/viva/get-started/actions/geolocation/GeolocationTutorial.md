@@ -30,7 +30,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Update your project's hosted workbench URL.
+## Update your project's hosted workbench URL
 
 When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
 
@@ -48,7 +48,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you will see the `GeoLocation` card:
+At this point, if you do **gulp serve**, then you will see the **GeoLocation** card:
 
 ![See the GeoLocation card icon in the webpart toolbox](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
 
@@ -102,7 +102,7 @@ As mentioned earlier, on the Card View, we will add a button, which will show us
 
 We will first add the functionality for the button on the Card View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/cardView/CardView.ts**
 
-Here, replace the definition of `cardButtons` function with the following:
+Here, replace the definition of `cardButtons()` function with the following:
 
 ```typescript
 public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
@@ -117,9 +117,9 @@ public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined
 }
 ```
 
-With this change, we have configured a button with label `My Location` and on click action is `VivaAction.ShowLocation`, which will show user their current location.
+With this change, we have configured a button with label **My Location** and on click action is `VivaAction.ShowLocation`, which will show user their current location.
 
-Next, replace the content of `onCardSelection` function with the following:
+Next, replace the content of `onCardSelection()` function with the following:
 
 ```typescript
 public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
@@ -146,7 +146,7 @@ In the Quick View, we will introduce buttons for 3 actions:
 - Let user choose a location from the map
 - Show a specific location on the map (for our example we will show Mount Everest)
 
-In addition to these, we will have two text-blocks for showing `Latitude` and `Longitude`, which will show the respective coordinates when the `VivaAction.GetLocation` action is executed (more on this later).
+In addition to these, we will have two text blocks for showing **Latitude** and **Longitude**, which will show the respective coordinates when the `VivaAction.GetLocation` action is executed (more on this later).
 
 We will first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/quickView/template/QuickViewTemplate.json**
 
@@ -193,7 +193,7 @@ Replace the content of this file with the following:
 }
 ```
 
-With this, we are providing two text-blocks to show the `Latitude` and `Longitude` of the location we get via `VivaAction.GetLocation`. In addition to these, we described three geolocation actions.
+With this, we are providing two text-blocks to show the **Latitude** and **Longitude** of the location we get via `VivaAction.GetLocation`. In addition to these, we described three geolocation actions.
 
 After adding these actions, your Quick View would look like:
 
@@ -201,7 +201,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a `gulp serve` at this point, then you will be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a **gulp serve** at this point, then you will be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 
@@ -211,14 +211,14 @@ For this, we will leverage the two text-blocks that we had introduced earlier in
 
 In order to do this, we will first introduce new states. First locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/GeoLocationAdaptiveCardExtension.ts**
 
-Here, add the following `states` to the `IGeoLocationAdaptiveCardExtensionState` interface:
+Here, add the following states to the `IGeoLocationAdaptiveCardExtensionState` interface:
 
 ```typescript
 latitude: string;
 longitude: string;
 ```
 
-Next, in the `onInit` function, change `this.state={}` to
+Next, in the `onInit()` function, change `this.state={}` to
 
 ```typescript
 this.state = {
@@ -247,15 +247,15 @@ longitude: "Longitude: " + this.state.longitude
 
 ### Implement the onAction function
 
-So far we have created defined our geolocation actions and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the Third Party Developer to decide what they wish to do with the location coordinates that the user has shared with them.
+So far we have created defined our geolocation actions and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the third-party developer to decide what they wish to do with the location coordinates that the user has shared with them.
 
-For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IGetLocationActionArguments` interface, as follows:
+For this, open the **QuickView.ts** file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IGetLocationActionArguments` interface, as follows:
 
 ```typescript
 import {IGetLocationActionArguments} from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `onAction` function in the QuickView class:
+Finally, introduce the following `onAction()` function in the QuickView class:
 
 ```typescript
 public onAction(action: IGetLocationActionArguments): void {

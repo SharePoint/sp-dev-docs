@@ -2,8 +2,8 @@
 title: Handle list item events in the provider-hosted add-in
 description: Programmatically deploy a list, create and register the list item event receiver, and run the provider-hosted SharePoint Add-in and test the receiver.
 ms.date: 12/04/2017
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Handle list item events in the provider-hosted add-in
@@ -574,13 +574,13 @@ When you are debugging, the add-in receiver is hosted at an Azure Service Bus en
 
 ## Run the add-in and test the list item receiver
 
-1. Open the **Site Contents** page of the Hong Kong store's website, and remove the **Expected Shipments** list if there is one. 
+1. Open the **Site Contents** page of the Hong Kong SAR store's website, and remove the **Expected Shipments** list if there is one. 
 
 2. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 
 3. When the add-in's start page opens, select the **Back to Site** button on the chrome control at the top.
 
-4. From the home page of the Hong Kong store, go to the **Site Contents** page and open the **Expected Shipments** list.
+4. From the home page of the Hong Kong SAR store, go to the **Site Contents** page and open the **Expected Shipments** list.
 
 5. Create an item, and on the new item form, notice that the **Arrived** and **Added to Inventory** fields do not appear.
  

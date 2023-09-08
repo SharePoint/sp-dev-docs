@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
-ms.date: 05/12/2023
+ms.date: 06/26/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries compatibility
@@ -17,7 +17,7 @@ SharePoint Online always uses the latest version of the SharePoint Framework, bu
 |       SharePoint version               | Supported SPFx version |                                   Supported features                                    |
 | ---------------------------------------| ---------------------- | --------------------------------------------------------------------------------------- |
 | SharePoint Online                      | All versions           | All features                                                                            |
-| SharePoint Server Subscription Edition | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
+| SharePoint Server Subscription Edition | v1.5 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
 | SharePoint Server 2019                 | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
 | SharePoint 2016 Feature Pack 2         | v1.1                   | SPFx client-side web parts hosted in classic SharePoint pages.                          |
 
@@ -34,6 +34,8 @@ The following table lists SharePoint Framework and compatible versions of common
 
 |              SPFx               |   Node.js (LTS) |                    NPM                    |   TypeScript   |    React    |
 | ------------------------------- | --------------- | ----------------------------------------- | -------------- | ----------- |
+| [1.17.4](release-1.17.4.md)     | v16.13+         | v5, v6, v7, v8                            | v4.5           | v17.0.1     |
+| [1.17.3](release-1.17.3.md)     | v16.13+         | v5, v6, v7, v8                            | v4.5           | v17.0.1     |
 | [1.17.2](release-1.17.2.md)     | v16.13+         | v5, v6, v7, v8                            | v4.5           | v17.0.1     |
 | [1.17.1](release-1.17.1.md)     | v16.13+         | v5, v6, v7, v8                            | v4.5           | v17.0.1     |
 | [1.17.0](release-1.17.md)       | v16.13+         | v5, v6, v7, v8                            | v4.5           | v17.0.1     |

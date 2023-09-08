@@ -2,8 +2,8 @@
 title: Include a web part on a webpage in the add-in web
 description: Include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 # Include a web part on a webpage in the add-in web
 

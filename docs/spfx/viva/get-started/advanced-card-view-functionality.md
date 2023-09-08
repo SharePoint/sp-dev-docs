@@ -233,7 +233,7 @@ Now you can test the ACE. Build and launch the ACE in the hosted workbench:
 gulp serve
 ```
 
-Once the local webserver has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 > [!NOTE]
 > Remove any old instance of the ACE from your workbench. ACE instances from [the previous tutorial](build-first-sharepoint-adaptive-card-extension.md) will show an error message since the ACE properties have been updated.

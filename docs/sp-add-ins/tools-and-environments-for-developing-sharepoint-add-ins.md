@@ -2,8 +2,8 @@
 title: Tools and environments for developing SharePoint Add-ins
 description: Create a development environment for SharePoint Add-ins on a SharePoint Online site or an on-premises farm.
 ms.date: 11/03/2017
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Tools and environments for developing SharePoint Add-ins

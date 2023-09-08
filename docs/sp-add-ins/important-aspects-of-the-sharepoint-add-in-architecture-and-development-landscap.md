@@ -2,8 +2,8 @@
 title: Important aspects of the SharePoint Add-in architecture and development landscape
 description: The architecture of and the model for SharePoint Add-ins, including add-in hosting and user interface options, deployment system, security system, and lifecycle.
 ms.date: 03/08/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Important aspects of the SharePoint Add-in architecture and development landscape

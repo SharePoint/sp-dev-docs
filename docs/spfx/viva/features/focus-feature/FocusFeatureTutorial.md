@@ -75,7 +75,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
+At this point, if you do **gulp serve**, then you'll see the **FocusFeature** card:
 
 ![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 
@@ -219,6 +219,7 @@ Create a new template file for the second quick view: **./src/adaptiveCardExtens
 ```
 
 Create a new file for the second quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView2.ts**
+
 We'll add the following **onAction** function.
 
 ```typescript
@@ -273,6 +274,7 @@ Create a new template file for the third quick view: **./src/adaptiveCardExtensi
 ```
 
 Create a new file for the third quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView3.ts**
+
 We'll add the following **onAction** function.
 
 ```typescript
@@ -290,17 +292,17 @@ After adding these changes, your Quick Views will look like:
 
 ![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.png)
 
-Second quick view as 
+Second quick view as
 
 ![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.png)
 
-Third quick view as 
+Third quick view as
 
 ![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.png)
 
 ### Implement the focusParameters function
 
-So far we'e modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
+So far we'e modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the third-party developer to decide what they wish to set focus on in the quick view.
 
 For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
@@ -308,7 +310,7 @@ For this, open each respective QuickView file (**./src/adaptiveCardExtensions/fo
 import { IFocusParameters } from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element. Each QuickView should look as follows:
+Finally, introduce the following `focusParameters()` function in the QuickView class so that we set focus on an element. Each QuickView should look as follows:
 
 ```typescript
 public get focusParameters(): IFocusParameters {

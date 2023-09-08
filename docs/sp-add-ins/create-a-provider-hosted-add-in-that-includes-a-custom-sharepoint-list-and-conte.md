@@ -2,8 +2,8 @@
 title: Create a provider-hosted add-in that includes a custom SharePoint list and content type
 description: Create a SharePoint Add-in that combines a cloud-hosted web application with custom SharePoint-hosted list templates, list instances, and custom content types by using the Office Developer Tools for Visual Studio. 
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 

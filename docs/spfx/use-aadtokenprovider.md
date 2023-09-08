@@ -1,7 +1,7 @@
 ---
 title: Working with the AADTokenProvider
 description: Learn how to work with, and configure, the AADTokenProvider API for certain scenarios.
-ms.date: 04/13/2023
+ms.date: 06/30/2023
 ms.localizationpriority: high
 ---
 # Working with the AADTokenProvider
@@ -12,7 +12,7 @@ The [AADTokenProvider](/javascript/api/sp-http-base/aadtokenprovider) API in the
 
 A SPFx component requests an access token from Azure AD to connect to a secured service, such as Microsoft Graph, uses the **AADTokenProvider** to perform this task.
 
-When the component requests an access token from a browser SPFx first attempts to use a hidden `<iframe>` to obtain the token. This technique is referred to as *silent SSO*
+When the component requests an access token from a browser, SPFx first attempts to use a hidden `<iframe>` to obtain the token. This technique is referred to as *silent SSO*.
 
 However in the case where a browser blocks third-party cookies, such as Safari when its Intelligent Tracking Protection (ITP) feature is enabled, SPFx will force a full page redirect to prompt the user to sign in to Azure AD and then obtain the access token.
 
@@ -22,10 +22,10 @@ To support this scenario, a new event was added to the **AADTokenProvider** so d
 
 ### Enabling the popup flow experience
 
-To enable the popup experience, a tenant administrator must first enable the feature on the tenant. This is done using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) to set the `[-IsEnableAppAuthPopupEnabled](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-isenableappauthpopupenabled)` argument on the tenant.
+To enable the popup experience, a tenant administrator must first enable the feature on the tenant. This is done using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) to set the [`-IsEnableAppAuthPopupEnabled`](/powershell/module/sharepoint-online/set-spotenant#-isenableappauthpopupenabled) argument on the tenant.
 
 > [!IMPORTANT]
-> The SPFx will always first attempt to obtain an access token using the *silent SSO* first with the hidden `<iframe>`.
+> The SPFx will always attempt to obtain an access token using the *silent SSO* first with the hidden `<iframe>`.
 >
 > If the SPFx fails to obtain an access token using the silent SSO approach, it will then fall back to the full page redirect or the popup flow experience.
 
