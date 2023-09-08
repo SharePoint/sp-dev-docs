@@ -35,10 +35,10 @@ Ensure the following before you begin:
     ```powershell
     $clientId = 'client id of the add-in'
     ```
-2. Connect to graph with `Application.ReadWrite.All` scope.
+2. Connect to graph with `Application.ReadWrite.All, Directory.ReadWrite.All` scope.
 
     ```powershell
-    Connect-MgGraph -Scopes "Application.ReadWrite.All" # Login with corresponding scope. Should be tenant admin or anyone have the permission.
+    Connect-MgGraph -Scopes "Application.ReadWrite.All,Directory.ReadWrite.All" # Login with corresponding scope. Should be tenant admin or anyone have the permission.
     ```
 3. Generate a new client secret with the following lines:
 
@@ -53,7 +53,32 @@ Ensure the following before you begin:
 
     $result = Add-MgServicePrincipalPassword -ServicePrincipalId $appPrincipal.Id -BodyParameter $params    # Update the secret
 
-    $result.SecretText # Print the new secret
+    $base64Secret = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($result.SecretText)) # Convert to base64 string.
+
+    $app = Get-MgServicePrincipal -ServicePrincipalId $appPrincipal.Id
+    $existingKeyCredentials = $app.KeyCredentials
+    $dtStart = [System.DateTime]::Now
+    $dtEnd = $dtStart.AddYears(2)
+
+    $keyCredentials = @( # construct keys
+        @{
+            Type = "Symmetric"
+            Usage = "Verify"
+            Key = [System.Text.Encoding]::ASCII.GetBytes($result.SecretText)
+            StartDateTime = $dtStart
+            EndDateTIme = $dtEnd
+        },
+        @{
+            type = "Symmetric"
+            usage = "Sign"
+            key = [System.Text.Encoding]::ASCII.GetBytes($result.SecretText)
+            StartDateTime = $dtStart
+            EndDateTIme = $dtEnd
+        }
+    ) + $existingKeyCredentials # combine with existing
+
+    Update-MgServicePrincipal -ServicePrincipalId $appPrincipal.Id -KeyCredentials $keyCredentials # Update keys
+    $base64Secret # Print base64 secret
     $result.EndDateTime # Print the end date.
     ```
 
