@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
-**Released:** September 12, 2023
+**Released:** September 12, 2023 
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
