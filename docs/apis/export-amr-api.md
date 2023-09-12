@@ -106,6 +106,12 @@ Currently there is a maximum of 5000 URL aggregation limits per call.
 The read asynchronous function will include the SPAsyncReadOptions structure, which covers the optional flags to allow the user to specify version and security setting on the site level more is described below.
 
 ```csharp
+IncludePermission {get; set;}
+```
+
+If set, the permissions associated with files and items are included in the export. If absent or set to false, no permission will be included.
+
+```csharp
 IncludeVersions{ get; set; }
 ```
 
