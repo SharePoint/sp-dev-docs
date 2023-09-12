@@ -2,8 +2,8 @@
 title: Sample modernization scripts
 description: Scripts that you can use to automate the modernization of your sites
 ms.date: 11/20/2019
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Scripting your modernization tasks

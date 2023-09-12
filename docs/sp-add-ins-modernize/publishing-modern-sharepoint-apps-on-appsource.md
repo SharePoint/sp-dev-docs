@@ -2,8 +2,8 @@
 title: Publishing modern SharePoint applications on Microsoft AppSource
 description: Publishing modern SharePoint applications on Microsoft AppSource
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Publishing modern SharePoint applications on Microsoft AppSource

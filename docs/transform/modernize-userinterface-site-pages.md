@@ -2,8 +2,8 @@
 title: Transform classic pages to modern pages
 description: Explains how to transform classic wiki and web part pages into modern pages
 ms.date: 02/11/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transform classic pages to modern pages

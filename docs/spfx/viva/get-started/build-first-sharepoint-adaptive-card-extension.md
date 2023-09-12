@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enables developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. Since Adaptive Card Extensions use Microsoft's Adaptive Card Framework to generate UI with its declarative JSON schema, you only need to focus on your component's business logic and let the SharePoint Framework (SPFx) handle making your component look good and work across all platforms.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.13. For more information on installing the SPFx v1.13, see [SharePoint Framework v1.13 release notes](../../release-1.13.md).
+> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -25,9 +25,8 @@ When prompted, enter the following values (*select the default option for all pr
 
 - **Do you want to allow tenant admin the choice of deploying the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Primary Text Template
+- **Which template do you want to use?** Generic Card Template
 - **What is your Adaptive Card Extension name?** HelloWorld
-- **What is your Adaptive Card Extension description?** Hello World description
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
@@ -43,11 +42,11 @@ When you use the gulp task **serve**, by default it will launch a browser with t
       "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
 > [!TIP]
 > You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
@@ -164,24 +163,36 @@ this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
 Locate and open the file: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 
-Card views must extend from these base classes:
+Card views must extend `BaseComponentsCardView` and override `cardViewParameters` property to specify the look and data for the view.
+There are multiple helper methods to simplify the creation of the predefined views:
 
-- `BaseBasicCardView`
+- `BasicCardView`
 
-    :::image type="content" source="../../../images/viva-extensibility/lab1-basic-ace.png" alt-text="BaseBasicCardView":::
+    :::image type="content" source="../../../images/viva-extensibility/lab1-basic-ace.png" alt-text="BasicCardView":::
 
-- `BaseImageCardView`
+- `ImageCardView`
 
-    :::image type="content" source="../../../images/viva-extensibility/lab1-image-ace.png" alt-text="BaseImageCardView":::
+    :::image type="content" source="../../../images/viva-extensibility/lab1-image-ace.png" alt-text="ImageCardView":::
 
-- `BasePrimaryTextCardView`
+- `PrimaryTextCardView`
 
-    :::image type="content" source="../../../images/viva-extensibility/lab1-primary-ace.png" alt-text="BasePrimaryTextCardView":::
+    :::image type="content" source="../../../images/viva-extensibility/lab1-primary-ace.png" alt-text="PrimaryTextCardView":::
+
+- `TextInputCardView`
+
+    :::image type="content" source="../../../images/viva-extensibility/lab1-textinput-ace.png" alt-text="TextInputCardView":::
 
 Each of these Views will render differently and have different constraints on what data can be provided to the template.
 
+As part of the `cardViewParameters` property, you can specify the following:
+- **image**: Image parameters for the card view.
+- **cardBar**: Card bar component for the card view (title and icon).
+- **header**: Header components for the card view.
+- **body**: Body components for the card view.
+- **footer**: Footer components for the card view.
+
 > [!NOTE]
-> The card views for Adaptive Card templates are fixed and cannot be changed.
+> The card views for Adaptive Card templates are limited to predefined [permutations](../permutations) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
 
 Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 
@@ -191,56 +202,62 @@ Additionally, there are two generics for the `properties` and `state` objects sh
 > [!NOTE]
 > SPFx will automatically propagate changes to the ACE's state to each View.
 
-The `data` getter is the only method that must be implemented by a Card view. The return type is unique to the parent class of the View.
-
-The `cardButtons` property determines how many buttons appear on the Card and what action to do when clicked.
-
-If `cardButtons` isn't implemented, then no buttons will appear on the Card.
-
 > [!NOTE]
-> Whereas the initial Card view is specified in the ACE's `renderCard()` method, the initial Quick View is specified as part of a button's action `parameters`. This allows two buttons to potentially open different views.
+> Whereas the initial Card view is specified in the ACE's `renderCard()` method, the initial Quick View is specified as part of a `cardButton` component's action `parameters` in the footer. This allows two buttons to potentially open different views.
 
-Add a second button by adding another object to the array returned by the `cardButtons()` method:
+Add a second button by adding another object to the `footer` property returned from `cardViewParameters` property:
 
 ```typescript
-public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
-  return [
-    {
-      title: strings.QuickViewButton,
-      action: {
-        type: 'QuickView',
-        parameters: {
-          view: QUICK_VIEW_REGISTRY_ID
+public get cardViewParameters(): ComponentsCardViewParameters {
+    return BasicCardView({
+      cardBar: {
+        componentName: 'cardBar',
+        title: this.properties.title
+      },
+      header: {
+        componentName: 'text',
+        text: strings.PrimaryText
+      },
+      footer: [{
+        componentName: 'cardButton',
+        title: strings.QuickViewButton,
+        action: {
+          type: 'QuickView',
+          parameters: {
+            view: QUICK_VIEW_REGISTRY_ID
+          }
         }
-      }
-    },
-    {
-      title: 'Bing',
-      action: {
-        type: 'ExternalLink',
-        parameters: {
-          target: 'https://www.bing.com'
+      }, {
+        componentName: 'cardButton',
+        title: 'Bing',
+        action: {
+          type: 'ExternalLink',
+          parameters: {
+            target: 'https://www.bing.com'
+          }
         }
-      }
-    }
-  ];
-}
+      }]
+    });
+  }
 ```
 
-Initially, there won't be any change in the Card. This is because the **Medium** Card size for
-**BasePrimaryTextCardView** only shows one button. SPFx will select the first element in the tuple.
+:::image type="content" source="../../../images/viva-extensibility/lab1-large.png" alt-text="Rendered large ACE card":::
 
-1. Change the Card size by going to the Property Pane and selecting **Large**.
+Now, when you select the **Bing** button, Bing will open in a new browser tab.
+
+Initially, the Card is displayed in **Large** Card size. Let's switch to the **Medium** size to validate how the Card is looking in this size.
+
+1. Change the Card size by going to the Property Pane and selecting **Medium**.
 
     :::image type="content" source="../../../images/viva-extensibility/lab1-size.png" alt-text="Select the card size":::
 
-    :::image type="content" source="../../../images/viva-extensibility/lab1-large.png" alt-text="Rendered large ACE card":::
+    :::image type="content" source="../../../images/viva-extensibility/lab1-medium.png" alt-text="Rendered medium ACE card":::
 
-1. Now, when you select the **Bing** button, Bing will open in a new browser tab.
+2. Now, the **Bing** button is hidden because **Medium** Card size for cards without an image only shows one button in the footer.
 
 The `onCardSelection()` method determines what will happen if the Card is clicked. If the `onCardSelection()` method isn't implemented, then nothing will happen when the Card is clicked.
 
-1. Change the Card selection to open the **Quick** view by modifying the `onCardSelection()` method:
+1. Change the Card selection to open the **Quick View** by modifying the `onCardSelection()` method:
 
     ```typescript
     public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
@@ -253,7 +270,7 @@ The `onCardSelection()` method determines what will happen if the Card is clicke
     }
     ```
 
-1. Now, when you select the Card, it will open the Quick View.
+2. Now, when you select the Card, it will open the Quick View.
 
 ### ACE Quick Views
 
@@ -270,14 +287,14 @@ A Quick View has more control over the Adaptive Card template schema than a Card
 templating. The properties on the object returned from the `data` getter will automatically be mapped
 to the bound template slot.
 
-For example, `${description}` is bound to `this.properties.description`.
+For example, `${subTitle}` is bound to `strings.SubTitle`.
 
 ```typescript
 // QuickView.ts
 public get data(): IQuickViewData {
   return {
     // ...
-    description: this.properties.description
+    subTitle: strings.SubTitle
   };
 }
 ```
@@ -286,7 +303,8 @@ public get data(): IQuickViewData {
 // QuickViewTemplate.json.ts
 {
   "type": "TextBlock",
-  "text": "${description}",
+  "weight": "Bolder",
+  "text": "${subTitle}",
   "wrap": true
 }
 ```
@@ -296,16 +314,7 @@ public get data(): IQuickViewData {
 
 Let's change this:
 
-1. Remove the `description` property from the Quick View data, and add two buttons.
-1. Update the `IQuickViewData` interface as shown in the following code:
-
-    ```typescript
-    export interface IQuickViewData {
-      title: string;
-      subTitle: string;
-    }
-    ```
-
+1. Make `subTitle` a part of `IHelloWorldAdaptiveCardExtensionState`, and add two buttons.
 1. Update the `data()` method as shown in the following code:
 
     ```typescript
@@ -335,19 +344,6 @@ Let's change this:
     }
     ```
 
-next, remove the reference to `this.properties.description` from the Card view:
-
-1. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
-1. Remove the `description` property in the returned object:
-
-    ```typescript
-    public get data(): IPrimaryTextCardParameters {
-      return {
-        primaryText: strings.PrimaryText
-      };
-    }
-    ```
-
 In its `template()` getter, the Quick View of the ACE you generated returns the object from a JSON file. Let's now modify that template:
 
 1. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**.
@@ -357,7 +353,7 @@ In its `template()` getter, the Quick View of the ACE you generated returns the 
     {
       "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
       "type": "AdaptiveCard",
-      "version": "1.2",
+      "version": "1.5",
       "body": [
         {
           "type": "TextBlock",
@@ -365,9 +361,20 @@ In its `template()` getter, the Quick View of the ACE you generated returns the 
           "text": "${title}"
         },
         {
-          "type": "TextBlock",
-          "text": "${subTitle}",
-          "wrap": true
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "${subTitle}",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "ActionSet",
@@ -413,7 +420,7 @@ The Quick View has two buttons, but the view is currently not handling the **Sub
 Locate and open the file **QuickView.ts** and override the `onAction()` to handle the two button selections as shown in the following code:
 
 ```typescript
-import { ISPFxAdaptiveCard, BaseAdaptiveCardView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
 
 ..
 
@@ -451,29 +458,28 @@ In addition to returning the Property Pane configuration, the **HelloWorldProper
 
 ### Properties
 
-Other than the **Card size** field, the scaffolded ACE has three (3) configurable fields, which are defined in `getPropertyPaneConfiguration()` method & defined in the **IHelloWorldAdaptiveCardExtension** interface:
+Other than the **Card size** field, the scaffolded ACE has one (1) configurable field, which is defined in `getPropertyPaneConfiguration()` method & defined in the **IHelloWorldAdaptiveCardExtensionProperties** interface:
 
 - `title`
-- `iconProperty`
-- `description`
 
 Card views are designed to automatically work across all card sizes. Aside from specifying a default card size, ACEs cannot control this property.
-
-The `title` and `iconProperty` properties, defined in the ACE file (ie: **HelloWorldAdaptiveCardExtension.ts**) are used in the ACE's `title()` and `iconProperty()` getters, respectively, to configure the card's title and icon:
 
 The `title` value is used in the title of the Property Pane and the title displayed on the Card.
 
 ```typescript
-public get title(): string {
-  return this.properties.title;
-}
+ public get cardViewParameters(): ComponentsCardViewParameters {
+    return BasicCardView({
+      cardBar: {
+        componentName: 'cardBar',
+        title: this.properties.title,
+        // ...
 ```
 
-The `iconProperty` value is the URL of the icon used by Card views.
+You can also use the `iconProperty` property to specify an icon for your ACE. By default the value is specified as `iconImageUrl` in the manifest.
 
 ```typescript
 protected get iconProperty(): string {
-  return this.properties.iconProperty || require('./assets/sharepointlogo.png');
+  // return icon url string
 }
 ```
 
@@ -492,29 +498,28 @@ public onInit(): Promise<void> {
 
 Unlike with `properties`, `state` isn't persisted past the current session and should only be used for ephemeral View state.
 
-> [!NOTE]
-> The scaffolded ACE maintains a `description` property in the `state` object. This is obsolete, since the ACE and all its views can simply reference the `description` stored in `properties`.
-
 ### Re-rendering
 
 Re-rendering happens when a property is updated in the PropertyPane or if `setState()` is called.
 
-When you update the Property Pane's **Description Field** value, it will update the description on the Card. Let's see how to do this:
-
-1. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
-1. As a trivial example, update the `subTitle` value when the `description` is updated during the `onPropertyPaneFieldChanged` event. Add the following code to the ACE **HelloWorldAdaptiveCardExtension** class:
-
-    ```typescript
-    protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-      if (propertyPath === 'description') {
+As described above, when changing a **subTitle**  property during Quick View action handling, the `setState()` method is called:
+```typescript
+public onAction(action: IActionArguments): void {
+  if (action.type === 'Submit') {
+    const { id, message } = action.data;
+    switch (id) {
+      case 'button1':
+      case 'button2':
         this.setState({
-          subTitle: newValue
+          subTitle: message
         });
-      }
+        break;
     }
-    ```
+  }
+}
+```
 
-Passing a `Partial<TState>` object to `setState()` method will update all Views with the new values. Updating the **Description Field** in the Property Pane will now update the `subTitle` displayed on the Quick View.
+Passing a `Partial<TState>` object to `setState()` method will update all Views with the new values.
 
 If no value or identical values are passed, a re-render will still occur.
 

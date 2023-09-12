@@ -2,8 +2,8 @@
 title: Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts
 description: Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts
@@ -35,7 +35,7 @@ In the following code excerpt, you can see the actual implementation of the App 
 var hostweburl;
 var appweburl;
 var clientContext;
-var hostweb; 
+var hostweb;
 var documentsLibrary;
 var docs;
 
@@ -63,7 +63,7 @@ function listDocuments(searchfilter) {
         var q = '<View><Query><Where><Contains><FieldRef ' +
             'Name="Title" /><Value Type="Text">' + searchfilter +
             '</Value></Contains></Where></Query></View>';
-        camlQuery.set_viewXml(q); 
+        camlQuery.set_viewXml(q);
 
         docs = documentsLibrary.getItems(camlQuery);
     }
@@ -83,8 +83,8 @@ function onListDocumentsSucceded(sender, args) {
         while (docsEnumerator.moveNext()) {
             var doc = docsEnumerator.get_current();
 
-            var docId = doc.get_item("ID"); 
-            var docServerRedirectedEmbedUri = doc.get_serverRedirectedEmbedUri(); 
+            var docId = doc.get_item("ID");
+            var docServerRedirectedEmbedUri = doc.get_serverRedirectedEmbedUri();
             var docTitle = doc.get_item("Title");
 
             $("#listDocuments").append('<li><a href="' + docServerRedirectedEmbedUri + '">[' + docId + '] ' + docTitle + '</a></li>');
@@ -157,10 +157,9 @@ Now let's create a new SharePoint Framework solution that you use to transform t
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md).
 
-
-```PowerShell
+```powershell
 yo @microsoft/sharepoint
 ```
 
@@ -182,7 +181,7 @@ npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 ```
 
 > [!NOTE]
-> The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](https://learn.microsoft.com/en-us/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](https://learn.microsoft.com/en-us/graph/toolkit/get-started/mgt-spfx).
+> The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx).
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, run the following command:
 
@@ -310,7 +309,7 @@ Then, you'll also need to update the *getPropertyPaneConfiguration* method imple
 
 Notice that the `PropertyPaneTextField` object in the *groupFields* was updated to handle the new *searchFilter* property. There's also a new resource string for the label of the field, which was created in the file *src\webparts\listDocuments\loc\mystrings.d.ts* and whose value is configured in the resource file *src\webparts\listDocuments\loc\en-us.js*.
 
-Another interesting part of the web part code is the *render* method, where the scaffolded solution simply creates an instance of a React component that is defined in the *src\webparts\listDocuments\components* folder. As you can see, the React component receives a set of properties as input arguments to configure its behavior. 
+Another interesting part of the web part code is the *render* method, where the scaffolded solution simply creates an instance of a React component that is defined in the *src\webparts\listDocuments\components* folder. As you can see, the React component receives a set of properties as input arguments to configure its behavior.
 
 Since you replaced the *description* property in the *IListDocumentsWebPartProps* interface, you also need to update the render method accordingly, as you can see in the following code excerpt. Moreover, for the sake of being able to query the list of files using Microsoft Graph, the *render* method provides to the React component also the current Site ID, Web ID, and tenant name.
 
@@ -376,7 +375,7 @@ export interface IListDocumentsProps {
 Now open the *src\webparts\listDocuments\components\ListDocuments.tsx* file, which represents the React component that renders the User Experience of the modern web part. Import the *FileList* component from the MGT library and update the *render* method in order to replace the *description* property with the new *searchFilter* one.
 
 > [!NOTE]
-> You can find further information about the *FileList* component by reading the document [File list component in Microsoft Graph Toolkit](https://learn.microsoft.com/en-us/graph/toolkit/components/file-list).
+> You can find further information about the *FileList* component by reading the document [File list component in Microsoft Graph Toolkit](/graph/toolkit/components/file-list).
 
 Lastly replace the whole return value of the render method, in order to show the value of the *searchFilter* property and the actual list of files using the *MgtFileList* component.
 
@@ -472,13 +471,13 @@ Then, you can run the following command in the terminal window:
 gulp serve
 ```
 
-A browser window starts and you see the SharePoint Framework Workbench, which is a page provided by SharePoint Online for debugging your SharePoint Framework components. Select the *Add* button and choose to add the custom *ListDocuments* web part to the page. 
+A browser window starts and you see the SharePoint Framework Workbench, which is a page provided by SharePoint Online for debugging your SharePoint Framework components. Select the *Add* button and choose to add the custom *ListDocuments* web part to the page.
 
 ![The UI of SharePoint Framework Workbench to test SharePoint Framework components. The image shows how to add a custom web part to the workbench.](../images/add-in-transform/from-app-parts-to-modern-web-parts/from-app-parts-to-modern-web-parts-workbench-add.png)
 
 You see the following output.
 
-![The UI of SharePoint Framework Workbench to test SharePoint Framework components. The image shows how to add a custom web part to the workbench.](../images/add-in-transform/from-app-parts-to-modern-web-parts/from-app-parts-to-modern-web-parts-workbench-output.png)
+![The UI of SharePoint Framework Workbench to test SharePoint Framework components. The image shows the rendered web part.](../images/add-in-transform/from-app-parts-to-modern-web-parts/from-app-parts-to-modern-web-parts-workbench-output.png)
 
 If you select on the pencil, just beside the web part, you're able to show the property pane and to configure a search filter, which is applied to the list of files rendered by the *FileList* control.
 

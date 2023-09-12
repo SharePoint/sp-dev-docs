@@ -2,8 +2,8 @@
 title: Set custom permissions on a list by using the REST interface
 description: Define custom, fine-grained permissions on a SharePoint list by using the REST interface and JavaScript.
 ms.date: 1/15/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Set custom permissions on a list by using the REST interface

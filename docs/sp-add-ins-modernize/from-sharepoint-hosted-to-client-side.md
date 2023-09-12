@@ -2,8 +2,8 @@
 title: Transforming SharePoint hosted add-ins to SharePoint Framework solutions
 description: Transforming SharePoint hosted add-ins to SharePoint Framework solutions.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transforming SharePoint hosted add-ins to SharePoint Framework solutions

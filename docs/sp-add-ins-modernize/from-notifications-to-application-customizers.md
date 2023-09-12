@@ -2,8 +2,8 @@
 title: Transforming classic SharePoint add-in notifications to SPFx Application Customizers
 description: Transforming classic SharePoint add-in notifications to SPFx Application Customizers.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transforming classic SharePoint add-in notifications to SPFx Application Customizers

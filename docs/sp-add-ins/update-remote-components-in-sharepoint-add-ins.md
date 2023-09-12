@@ -2,8 +2,8 @@
 title: Update remote components in SharePoint Add-ins
 description: Update the remote web applications and databases in a SharePoint Add-in.
 ms.date: 11/02/2017
-ms.prod: sharepoint
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Update remote components in SharePoint Add-ins

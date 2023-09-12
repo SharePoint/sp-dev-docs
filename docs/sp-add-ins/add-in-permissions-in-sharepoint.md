@@ -2,7 +2,6 @@
 title: Add-in permissions in SharePoint
 description: Types of add-in permissions, permission request scopes, and managing permissions, and the differences in add-in permission rights, user rights, and Office Store app rights.
 ms.date: 08/31/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

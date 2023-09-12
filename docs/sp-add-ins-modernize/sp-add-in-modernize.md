@@ -21,12 +21,9 @@ These upcoming changes will be impacting SharePoint add-in model and also authen
 
 Here's a high level table of the feature mapping as the add-in model implementation is transformed to use other long term supported features:
 
-
-
 ## Transformation guidance for the add-in techniques
 
 Here's a list of all articles for the transformation guidance when moving away on using SharePoint add-in model, grouped based on the covered topic:
-
 
 * Modern Provisioning
   * [Modern provisioning of artifacts and Information Architecture](./Modern-Provisioning.md)

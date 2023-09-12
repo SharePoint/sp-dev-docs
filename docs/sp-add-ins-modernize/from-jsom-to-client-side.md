@@ -2,8 +2,8 @@
 title: Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs
 description: Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs

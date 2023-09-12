@@ -2,8 +2,8 @@
 title: Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
 description: Upgrading SharePoint applications from Azure Access Control Service (ACS) to Azure Active Directory (Microsoft Entra ID).
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
@@ -11,11 +11,11 @@ ms.localizationpriority: high
 The SharePoint Add-in model allows you to register applications in Azure Access Control Service (ACS) in order to gain app-only access to your SharePoint Online resources. Depending on how you configure the app-only access, you can grant different levels of permission from read-only to full-control. In the articles ["Accessing SharePoint using an application context, also known as app-only"](../solution-guidance/security-apponly.md) and ["Granting access using SharePoint App-Only"](../solution-guidance/security-apponly-azureacs.md) you can find step-by-step guidance about how to configure such kind of applications.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/). For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. 
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://devblogs.microsoft.com/microsoft365dev/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/). For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure.
 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
- 
+
 However, the SharePoint Add-in model is an old model and there are newer, more modern, and more versatile development models available like, for example, the SharePoint Framework. Moreover, from a technical point of view, the permissions granted to an app-only application registered with the SharePoint Add-in model gets access to the whole tenant, and you can't selectively choose the target site collections that you want to grant permissions for.
 
 As a suitable and more secure alternative, you can rely on registering an application in Azure Active Directory (Azure AD) eventually using the Resource Specific Consent (RSC) model, which is covered in the article ["Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online"](./understanding-rsc-for-msgraph-and-sharepoint-online.md), in order to target specific site collections only, instead of the whole tenant.
@@ -28,15 +28,15 @@ If you prefer, you can watch the following video, instead of reading the whole a
 
 ## Upgrading from ACS to Azure AD
 
-In this section we make the assumption that you already have an app-only application registered in SharePoint Online, using the SharePoint Add-in model and ACS. 
+In this section we make the assumption that you already have an app-only application registered in SharePoint Online, using the SharePoint Add-in model and ACS.
 
 ### The application to migrate from
 
-In the screenshot below you can see a sample configuration for the application registered in ACS using the https://[your-tenant].sharepoint.com/_layouts/15/appregnew.aspx URL of your target tenant.
+In the screenshot below you can see a sample configuration for the application registered in ACS using the `https://[your-tenant].sharepoint.com/_layouts/15/appregnew.aspx` URL of your target tenant.
 
 ![The Application Registration page with form fields to register an application in ACS. The fields are: Client Id, Client Secret, Title, App Domain, and Redirect URI.](../images/add-in-transform/from-acs-to-aad-apps/from-acs-to-aad-apps-acs-appregnew.png)
 
-The application was granted *FullControl* right on the target SharePoint Online tenant through the following policy, which was registered via the https://[your-tenant]-admin.sharepoint.com/_layouts/15/appinv.aspx URL of the SharePoint Online Admin Central.
+The application was granted *FullControl* right on the target SharePoint Online tenant through the following policy, which was registered via the `https://[your-tenant]-admin.sharepoint.com/_layouts/15/appinv.aspx` URL of the SharePoint Online Admin Central.
 
 ```XML
 <AppPermissionRequests AllowAppOnlyPolicy="true">
@@ -119,7 +119,7 @@ The cmdlet executes the following steps:
 - uploads the public key of the certificate to Azure AD to configure the certificate for application authentication
 - configures a predefined set of permissions for the application in Azure AD
 
-The above script outputs the Client ID of the application and the thumbprint of the autogenerated certificate. 
+The above script outputs the Client ID of the application and the thumbprint of the autogenerated certificate.
 
 During the whole process you see a prompt dialog to grant to the application the permissions. In the following scree-shot you can see the permissions automatically granted to the application by the cmdlet.
 
@@ -140,16 +140,17 @@ Select on the *New registration* button in order to start the manual application
 ![The form to register a new application. The fields to fill in are Name, Supported account types (can be single-tenat, multi-tenant, multi-tenant and Microsoft Personal Account, Microsoft Personal Account only), optional Redirect URI for the application.](../images/add-in-transform/from-acs-to-aad-apps/from-acs-to-aad-apps-acs-aad-register-an-application.png)
 
 You need to provide a name for your new application. Then you need to choose the accounts that you want to support. Available options are:
+
 - Accounts in this organizational directory only: the application targets a single tenant (i.e. single-tenant).
 - Accounts in any organizational directory: the application targets any tenant (i.e. multi-tenant).
-- Accounts in any organizational directory and personal Microsoft accounts: the application is multi-tenant and will support any personal Microsoft account (like Skype, Xbox, etc.). 
+- Accounts in any organizational directory and personal Microsoft accounts: the application is multi-tenant and will support any personal Microsoft account (like Skype, Xbox, etc.).
 - Personal Microsoft accounts only: the application supports any personal Microsoft account (like Skype, Xbox, etc.).
 
 For the current scenario, you can choose either the single-tenant or multi-tenant option. Let's go for single-tenant one.
 
 Select the *Register* button and register the actual application. You'll now be prompted with a page with a set of useful information about the registered application. You can see the page in the following screenshot.
 
-![The registered app information page including Name, Client ID, Object ID, Tenant ID, etc.](./assets/From-ACS-to-AAD-apps/From-ACS-to-AAD-apps-ACS-AAD-app-registered.png)
+![The registered app information page including Name, Client ID, Object ID, Tenant ID, etc.](../images/add-in-transform/from-acs-to-aad-apps/from-acs-to-aad-apps-acs-aad-app-registered.png)
 
 ### Configuring an X.509 Certificate for the application
 
@@ -168,7 +169,7 @@ The above script creates a new X.509 certificate and it stores its .PFX and .CER
 
 Now, you're ready to upload the certificate into Azure AD. Go back to the Azure AD web page showing the application information and select on the *Certificates & secrets* menu on the left side of the application page. Select the *Certificates* tab in the page and select on *Upload certificate* and upload the .CER file from there. In the following screenshot you can see how the Azure AD portal UI looks like when uploading an X.509 certificate.
 
-![The interface to upload an X.509 certificate for an Azure AD application. There is the Upload certificate button and the upload panel on the right, where you need to specify the .CER certificate file path and an optional description for the certificate. Click on the Add button to upload the certificate.](./assets/From-ACS-to-AAD-apps/From-ACS-to-AAD-apps-ACS-AAD-app-manual-certificate-upload.png)
+![The interface to upload an X.509 certificate for an Azure AD application. There is the Upload certificate button and the upload panel on the right, where you need to specify the .CER certificate file path and an optional description for the certificate. Click on the Add button to upload the certificate.](../images/add-in-transform/from-acs-to-aad-apps/from-acs-to-aad-apps-acs-aad-app-manual-certificate-upload.png)
 
 ### Granting permissions to the application
 
@@ -220,8 +221,8 @@ By granting consent, the value of the *Status* column of the permissions become 
 
 You're now ready to consume SharePoint Online via your newly registered Azure AD application.
 
->[!NOTE]
->If you want to consume it locally, from your development machine, you will have to install the generated certificate in your certificate store. If you used the automatic registration via PnP PowerShell, the certificate will be already registered. If you used the manual process, you will have to manually import the certificate in your Current User certificate store.
+> [!NOTE]
+> If you want to consume it locally, from your development machine, you will have to install the generated certificate in your certificate store. If you used the automatic registration via PnP PowerShell, the certificate will be already registered. If you used the manual process, you will have to manually import the certificate in your Current User certificate store.
 
 In the following code excerpt - grabbed from a .NET 6 Console application - you can see how you can get access to the target SharePoint Online tenant by using the [PnP Framework Library](https://www.nuget.org/packages/PnP.Framework).
 
@@ -259,5 +260,5 @@ As like as it was in the previous sample, the code excerpt reads the title of a 
 
 You can find additional information about this topic reading the following documents:
 
-* [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/)
-* ["Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online"](./Understanding-RSC-for-MSGraph-and-SharePoint-Online.md)
+- [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/)
+- ["Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online"](./Understanding-RSC-for-MSGraph-and-SharePoint-Online.md)

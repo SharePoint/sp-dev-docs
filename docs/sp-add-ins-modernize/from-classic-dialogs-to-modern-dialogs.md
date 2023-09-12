@@ -2,8 +2,8 @@
 title: Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework
 description: Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework.
 ms.date: 08/28/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework
