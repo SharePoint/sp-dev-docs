@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 03/08/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension

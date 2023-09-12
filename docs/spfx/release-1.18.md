@@ -12,7 +12,7 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the preview latest version
+## Install the latest version
 
 Install the latest official release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
@@ -40,7 +40,7 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.18 preview release:
+Related updated documentation for the 1.18 release:
 
 * [Designing Viva Connections custom cards for your dashboard](./viva/design//designing-card.md)
 * [Migrate Adaptive Card Extensions to SharePoint Framework 1.18](./viva/get-started/migrate-to-spfx-1-18.md)
@@ -54,6 +54,7 @@ New samples showcasing the new Viva Connections features:
 
 Video in YouTube showcasing the new template options for Viva Connections
 
+* [Introduction to new features and capabilities within SPFx 1.18](https://www.youtube.com/watch?v=LJAUVd4leRY)
 * [Introducing new Microsoft Viva Connection card layouts in the SharePoint Framework 1.18](https://www.youtube.com/watch?v=S5KCV3ZiAAI)
 
 ### NodeJS v18 support
@@ -117,7 +118,7 @@ export class CardView extends BaseComponentsCardView<
 
 With this release, we introduce more flexible way to configure card views for Adaptive Card Extensions. Developers can now "mix and match" components in a card view configuration based on allowed set of [variations](./viva/design/designing-card.md).
 
-Use new **Generic Card Template (preview)** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
+Use new **Generic Card Template** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
 
 ### Ability to use text input in Adaptive Card Extensions' card views
 
@@ -132,7 +133,7 @@ Developers can now use text input component in a body or footer of a card view. 
 
 ### New Search Card Template for Adaptive Card Extensions
 
-We introduce a new search card view for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template (preview)** in the generator to get started.
+We introduce a new search card view for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template** in the generator to get started.
 
 > [!NOTE]
 > The text input component is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.

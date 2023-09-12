@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
-ms.date: 03/08/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.18
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.14 release notes](../../../../release-1.18.md).
+> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
 
 ## Scaffold an Adaptive Card Extension project
 

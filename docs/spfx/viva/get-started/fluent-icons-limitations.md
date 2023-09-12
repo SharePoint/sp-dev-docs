@@ -1,32 +1,32 @@
 ---
 title: Adaptive Card Extensions Iconography Limitations
 description: The article describes existing limitations for using Fluent Icons in Adaptive Card Extensions.
-ms.date: 09/06/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 
-# Adaptive Card Extesions Iconography Limitations
+# Adaptive Card Extensions Iconography Limitations
 
 Some existing limitations exist for using Fluent UI Iconography in Adaptive Card Extensions. 
 
-Currently, ACEs support the "Card Designer" set of icons listed below. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using []"Fluent 1" (Fluent UI v8 and below) icons](https://developer.microsoft.com/fluentui#/styles/web/icons) is limited.
+Currently, ACEs support the "Card Designer" set of icons listed in this article. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using ["Fluent 1" (Fluent UI v8 and mentioned) icons](https://developer.microsoft.com/fluentui#/styles/web/icons) is limited.
 
 ## Manifests value officeFabricIconFontName is partially supported
 
-The `officeFabricIconFontName` manifest's property allows developers to use the Fluent icon displayed for the ACE in the Toolbox during an operator's editing session. By default (if not overridden in the code), the same icon will be used in the card bar:
+The `officeFabricIconFontName` manifest's property allows developers to use the Fluent icon displayed for the ACE in the Toolbox during an operator's editing session. By default (if not overridden in the code), the same icon is used in the card bar:
 
 ![Card bar](../../../images/viva-extensibility/icons-limitations-card-bar.png)
 
 There are two limitations to this property:
 
-1. Viva Connections for Mobile does not support arbitrary Fluent UI icons. Therefore, the icon could be missing in the card bar on mobile.
+1. Viva Connections for Mobile doesn't support arbitrary Fluent UI icons. Therefore, the icon could be missing in the card bar on mobile.
 ![Card bar on mobile](../../../images/viva-extensibility/icons-limitations-card-bar-mobile.png)
 1. The toolbox doesn't support the "Card Designer" icons. Therefore, the icon could be missing in the toolbox.
 ![Missing icon in the Toolbox](../../../images/viva-extensibility/icons-limitations-toolbox.png)
 
 The workaround is to override the [card bar's icon](/javascript/api/sp-adaptive-card-extension-base/icardbarparameters#@microsoft-sp-adaptive-card-extension-base-icardbarparameters-icon-member) property in the code.
 
-## "Fluent 1" icons are not supported for Text Input
+## "Fluent 1" icons aren't supported for Text Input
 
 In the SharePoint Framework (SPFx) v1.18, we introduced the ability to add a "text input" component to the card view. This component allows developers to specify iconBefore, iconAfter, and button icons.
 
@@ -34,7 +34,7 @@ All these icons (names) should be either from the "Card Designer" set or a URL t
 
 ## "Card Designer" Icons' Set
 
-Below is a set of icons that ACEs fully support. As mentioned, it is a subset of [Fluent 2 iconography](https://github.com/microsoft/fluentui-system-icons/blob/main/icons_filled.md).
+Here's the set of icons that ACEs fully support. This is a subset of [Fluent 2 iconography](https://github.com/microsoft/fluentui-system-icons/blob/main/icons_filled.md).
 
 ![Supported icons](../../../../docs/images/viva-extensibility/icons-limitations-supported-icons.png)
 
