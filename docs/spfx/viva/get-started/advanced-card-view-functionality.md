@@ -49,8 +49,6 @@ Let's modify the properties for our ACE and set the list ID that contains the da
     ```typescript
     export interface IHelloWorldAdaptiveCardExtensionProps {
       title: string;
-      description: string;
-      iconProperty: string;
       listId: string;
     }
     ```
@@ -63,8 +61,6 @@ Let's modify the properties for our ACE and set the list ID that contains the da
         // ...
         "properties": {
           "title": "HelloWorld",
-          "description": "HelloWorld description",
-          "iconProperty": "", // Default to sharepointlogo
           "listId": "" // TODO: enter list id
         }
       }]
@@ -215,15 +211,53 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
 With the ACE updated to fetch items from a SharePoint list, let's update the card to display this data.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
-1. Update the `data()` getter to display data from the list:
+1. Update `cardViewParameters` getter to render Primary Text Card View instead of Basic Card View:
 
     ```typescript
-    public get data(): IPrimaryTextCardParameters {
+     public get cardViewParameters(): ComponentsCardViewParameters {
+      return PrimaryTextCardView({
+        cardBar: {
+          componentName: 'cardBar',
+          title: this.properties.title
+        },
+        header: {
+          componentName: 'text',
+          text: strings.PrimaryText
+        },
+        body: {
+          componentName: 'text',
+          text: ''
+        },
+        footer: {
+          componentName: 'cardButton',
+          title: strings.QuickViewButton,
+          action: {
+            type: 'QuickView',
+            parameters: {
+              view: QUICK_VIEW_REGISTRY_ID
+            }
+          }
+        }
+      });
+    }
+    ```
+1. Update the `cardViewParameters()` getter to display data from the list:
+
+    ```typescript
+    public get cardViewParameters(): ComponentsCardViewParameters {
       const { title, description } = this.state.items[this.state.currentIndex];
-      return {
-        description,
-        primaryText: title
-      };
+      return PrimaryTextCardView({
+        // ...
+        header: {
+          componentName: 'text',
+          text: title
+        },
+        body: {
+          componentName: 'text',
+          text: description
+        },
+        // ...
+      });
     }
     ```
 
@@ -257,39 +291,46 @@ Let's create a medium card view for our ACE:
 
     ```typescript
     import {
-      BaseBasicCardView,
-      IActionArguments,
-      IBasicCardParameters,
-      ICardButton
+      BaseComponentsCardView,
+      ComponentsCardViewParameters,
+      BasicCardView
     } from '@microsoft/sp-adaptive-card-extension-base';
     import {
-      IListItem, QUICK_VIEW_REGISTRY_ID,
       IHelloWorldAdaptiveCardExtensionProps,
-      IHelloWorldAdaptiveCardExtensionState
+      IHelloWorldAdaptiveCardExtensionState,
+      QUICK_VIEW_REGISTRY_ID,
     } from '../HelloWorldAdaptiveCardExtension';
 
-    // Extend from BaseBasicCardView
-    export class MediumCardView extends BaseBasicCardView<IHelloWorldAdaptiveCardExtensionProps, IHelloWorldAdaptiveCardExtensionState> {
-      // Use the Card button to open the Quick View
-      public get cardButtons(): [ICardButton] {
-        return [
-          {
+    export class MediumCardView extends BaseComponentsCardView<
+      IHelloWorldAdaptiveCardExtensionProps,
+      IHelloWorldAdaptiveCardExtensionState,
+      ComponentsCardViewParameters
+    > {
+      public get cardViewParameters(): ComponentsCardViewParameters {
+
+        return BasicCardView({
+          cardBar: {
+            componentName: 'cardBar',
+            title: this.properties.title,
+            icon: {
+              url: this.properties.iconProperty
+            }
+          },
+          header: {
+            componentName: 'text',
+            text: `3 Steps`, // Display the total number of steps
+          },
+          footer: {
+            componentName: 'cardButton',
             title: 'View All',
             action: {
               type: 'QuickView',
               parameters: {
-                view: QUICK_VIEW_REGISTRY_ID
-              }
-            }
-          }
-        ];
-      }
-
-      // Display the total number of steps
-      public get data(): IBasicCardParameters {
-        return {
-          primaryText: `${this.state.items.length} Steps`
-        };
+                view: QUICK_VIEW_REGISTRY_ID,
+              },
+            },
+          },
+        });
       }
     }
     ```
@@ -335,47 +376,76 @@ Change the Card size to **Large** and refresh the browser:
 ACE Card views support user interaction. The buttons can invoke REST APIs or be used to interact with the Card in other ways. In this section, you'll change the Large Card view to iterate through the items in the SharePoint list.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
-1. At the top of the file, add `IActionArguments` as one of the references to import from the **@microsoft/sp-adaptive-card-extension-base** package:
+1. At the top of the file, add `IActionArguments`, `GenericCardViewFooterConfiguration` and `IAdaptiveCardExtensionCardButtonParameters`  as the references to import from the **@microsoft/sp-adaptive-card-extension-base** package:
 
-    ```csharp
-    import { IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+    ```typescript
+    import {
+      // ...
+      GenericCardViewFooterConfiguration,
+      IActionArguments,
+      IAdaptiveCardExtensionCardButtonParameters 
+    } from '@microsoft/sp-adaptive-card-extension-base';
     ```
 
 1. The buttons on the Card view can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
 
     ```typescript
-    public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] {
-      const buttons: ICardButton[] = [];
+    public get cardViewParameters(): ComponentsCardViewParameters {
+      const { title, description } = this.state.items[this.state.currentIndex];
+      let footer: GenericCardViewFooterConfiguration = undefined;
 
-      // Hide the Previous button if at Step 1
       if (this.state.currentIndex > 0) {
-        buttons.push({
+        footer = {
+          componentName: 'cardButton',
           title: 'Previous',
           action: {
             type: 'Submit',
             parameters: {
               id: 'previous',
-              op: -1 // Decrement the index
+              op: -1 // Decrement the current index
             }
           }
-        });
+        };
       }
-
-      // Hide the Next button if at the end
       if (this.state.currentIndex < this.state.items.length - 1) {
-        buttons.push({
+        const nextButton: IAdaptiveCardExtensionCardButtonParameters = {
+          componentName: 'cardButton',
           title: 'Next',
           action: {
             type: 'Submit',
             parameters: {
               id: 'next',
-              op: 1 // Increment the index
+              op: 1 // Increment the current index
             }
           }
-        });
+        };
+
+        if (footer) {
+          footer = [footer as IAdaptiveCardExtensionCardButtonParameters, nextButton];
+        }
+        else {
+          footer = nextButton;
+        }
       }
 
-      return buttons as [ICardButton] | [ICardButton, ICardButton];
+      return PrimaryTextCardView({
+        cardBar: {
+          componentName: 'cardBar',
+          title: this.properties.title,
+          icon: {
+            url: this.properties.iconProperty
+          }
+        },
+        header: {
+          componentName: 'text',
+          text: title
+        },
+        body: {
+          componentName: 'text',
+          text: description
+        },
+        footer: footer
+      });
     }
     ```
 
