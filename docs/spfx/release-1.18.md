@@ -183,10 +183,6 @@ The default outline icon for Microsoft Teams hosted web parts is now transparent
 
 SPFx solutions now support TypeScript v4.7.
 
-> [!NOTE]
-> A developer needs to manually set NODE_OPTIONS environment variable to `--openssl-legacy-provider` to use NodeJS v18 after the NodeJS 18 has been installed. This requirement is intended to be removed with the General Availability version of the 1.18. This setting is required to adjust the toolchain to work properly with Webpack 4 which the SPFx tooling is using for now.
-> This can be done using `export NODE_OPTIONS=--openssl-legacy-provider` on Mac/Linux or `set NODE_OPTIONS=--openssl-legacy-provider` on Windows.
-
 ## Deprecations
 
 - `BaseAdaptiveCardView` - use `BaseAdaptiveCardQuickView` instead
