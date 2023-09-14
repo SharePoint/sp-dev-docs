@@ -35,14 +35,15 @@ Ensure the following before you begin:
     ```powershell
     $clientId = 'client id of the add-in'
     ```
-2. Connect to AzureAD PowerShell.
+
+1. Connect to AzureAD PowerShell.
 
     ```powershell
     $AzureAdCred = Get-Credential
     Connect-AzureAD -Credential $AzureAdCred # Login to AzureAD
     ```
     
-3. Generate a new client secret with the following lines:
+1. Generate a new client secret with the following lines:
 
     ```powershell
     $endDate = (Get-Date).AddYears(1)
@@ -57,10 +58,10 @@ Ensure the following before you begin:
     $secret.EndDate # Print the end date.
     ```
 
-4. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
+1. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
 
     > [!TIP]
-    > By default, the secret lasts one years. You can customize by leveraging the example below to specify the EndDateTime.
+    > By default, the secret lasts one year. You can customize by leveraging the example below to specify the EndDateTime.
     > 
     > ``` powershell
     > $endDate = (Get-Date).AddYears(2) # 2 year.
@@ -73,7 +74,7 @@ Ensure the following before you begin:
 
 1. Open the SharePoint Add-in project in Visual Studio, and open the **web.config** file for the web application project. In the `appSettings` section, there are keys for the client ID and client secret. The following is an example:
 
-    ```XML
+    ```xml
     <appSettings>
       <add key="ClientId" value="your client id here" />
       <add key="ClientSecret" value="your old secret here" />
@@ -83,7 +84,7 @@ Ensure the following before you begin:
 
 1. Change the name of the `ClientSecret` key to `SecondaryClientSecret` as shown in the following example:
 
-    ```XML
+    ```xml
     <add key="SecondaryClientSecret" value="your old secret here" />
     ```
 
@@ -92,7 +93,7 @@ Ensure the following before you begin:
 
 1. Add a new `ClientSecret` key and give it your new client secret. Your markup should now look like the following:
 
-    ```XML
+    ```xml
     <appSettings>
       <add key="ClientId" value="your client id here" />
       <add key="ClientSecret" value="your new secret here" />
