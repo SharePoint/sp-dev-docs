@@ -49,12 +49,13 @@ Ensure the following before you begin:
     $app = Get-AzureADServicePrincipal -Filter "AppId eq '$clientId'"
     $objectId = $app.ObjectId
 
-    $secret = New-AzureADServicePrincipalPasswordCredential -ObjectId $objectId -EndDate $endDate
-    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Verify -Value $secret.Value
-    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Sign -Value $secret.Value
+    $base64secret = New-AzureADServicePrincipalPasswordCredential -ObjectId $objectId -EndDate $endDate
+    $secret = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($base64secret.Value))
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Verify -Value $secret
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Sign -Value $secret
 
-    $secret.Value
-    $secret.EndDate # Print the end date.
+    $base64secret.Value
+    $base64secret.EndDate # Print the end date.
     ```
 
 4. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
