@@ -11,8 +11,8 @@ ms.service: sharepoint
 > [!TIP]
 > Before you start, review the following resources:
 >
-> [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
-> [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
+> - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
+> - [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
 > - [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
 
 ## SharePoint REST endpoint URI structure
