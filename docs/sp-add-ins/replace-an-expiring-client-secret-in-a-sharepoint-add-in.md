@@ -1,7 +1,7 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 06/21/2023
+ms.date: 09/13/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -25,8 +25,8 @@ Removing an expired secret from ACS before you remove it from the application co
 
 Ensure the following before you begin:
 
-- You have installed Microsoft Graph Powershell SDK: [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
-- You're a tenant administrator (or having `Application.ReadWrite.All` permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
+- You have installed Azure Active Directory PowerShell 2.0: [Install Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2)
+- You're a tenant administrator for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
 
 ## Generate a new secret
 
@@ -35,42 +35,36 @@ Ensure the following before you begin:
     ```powershell
     $clientId = 'client id of the add-in'
     ```
-1. Connect to graph with **Application.ReadWrite.All** scope:
+
+1. Connect to AzureAD PowerShell.
 
     ```powershell
-    Connect-MgGraph -Scopes "Application.ReadWrite.All"
-    # login with the corresponding scope; this user should be a tenant admin or anyone granted this permission
+    $AzureAdCred = Get-Credential
+    Connect-AzureAD -Credential $AzureAdCred # Login to AzureAD
     ```
     
 1. Generate a new client secret with the following lines:
 
     ```powershell
-    $appPrincipal = Get-MgServicePrincipal -Filter "AppId eq '$clientId'" # Get principal id by AppId
+    $endDate = (Get-Date).AddYears(1)
+    $app = Get-AzureADServicePrincipal -Filter "AppId eq '$clientId'"
+    $objectId = $app.ObjectId
 
-    $params = @{
-        PasswordCredential = @{
-            DisplayName = "NewSecret" # Replace with a friendly name.
-        }
-    }
+    $secret = New-AzureADServicePrincipalPasswordCredential -ObjectId $objectId -EndDate $endDate
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Verify -Value $secret.Value
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Sign -Value $secret.Value
 
-    $result = Add-MgServicePrincipalPassword -ServicePrincipalId $appPrincipal.Id -BodyParameter $params    # Update the secret
-
-    $result.SecretText # Print the new secret
-    $result.EndDateTime # Print the end date.
+    $secret.Value
+    $secret.EndDate # Print the end date.
     ```
 
 1. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
 
     > [!TIP]
-    > By default, the secret lasts two years if you didn't specify the EndDateTime. You can customize by leveraging the example below to specify the EndDateTime.
+    > By default, the secret lasts one year. You can customize by leveraging the example below to specify the EndDateTime.
     > 
     > ``` powershell
-    > $params = @{
-    >     PasswordCredential = @{
-    >         DisplayName = "NewSecret" # Replace with a firendly name.
-    >         EndDateTime = "2025-01-01T00:00:00Z" # Optional. Specify the end date you want. Using ISO 8601 format.
-    >     }
-    > }
+    > $endDate = (Get-Date).AddYears(2) # 2 year.
     > ```
 
 ## Update the remote web application in Visual Studio to use the new secret
@@ -80,7 +74,7 @@ Ensure the following before you begin:
 
 1. Open the SharePoint Add-in project in Visual Studio, and open the **web.config** file for the web application project. In the `appSettings` section, there are keys for the client ID and client secret. The following is an example:
 
-    ```XML
+    ```xml
     <appSettings>
       <add key="ClientId" value="your client id here" />
       <add key="ClientSecret" value="your old secret here" />
@@ -90,7 +84,7 @@ Ensure the following before you begin:
 
 1. Change the name of the `ClientSecret` key to `SecondaryClientSecret` as shown in the following example:
 
-    ```XML
+    ```xml
     <add key="SecondaryClientSecret" value="your old secret here" />
     ```
 
@@ -99,7 +93,7 @@ Ensure the following before you begin:
 
 1. Add a new `ClientSecret` key and give it your new client secret. Your markup should now look like the following:
 
-    ```XML
+    ```xml
     <appSettings>
       <add key="ClientId" value="your client id here" />
       <add key="ClientSecret" value="your new secret here" />
