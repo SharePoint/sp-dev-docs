@@ -116,7 +116,7 @@ The App Part is then defined in an XML manifest file, where it's also defined th
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="https://schemas.microsoft.com/sharepoint/">
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <ClientWebPart Name="ListDocumentsWebPart" Title="ListDocumentsWebPart Title" Description="ListDocumentsWebPart Description" DefaultWidth="300" DefaultHeight="200">
 
     <!-- Content element identifies the location of the page that will render inside the client web part
@@ -127,7 +127,7 @@ The App Part is then defined in an XML manifest file, where it's also defined th
     <!-- Define properties in the Properties element.
          Remember to put Property Name on the Src attribute of the Content element above. -->
     <Properties>
-      <Property xmlns="https://schemas.microsoft.com/sharepoint/"
+      <Property xmlns="http://schemas.microsoft.com/sharepoint/"
         Name="SearchFilter"
         DefaultValue=""
         Multilingual="true"

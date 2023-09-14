@@ -1,29 +1,23 @@
 ---
-title: SharePoint Framework v1.18 preview release notes
-description: Release notes for the SharePoint Framework v1.18 preview release
-ms.date: 08/30/2023
+title: SharePoint Framework v1.18 release notes
+description: Release notes for the SharePoint Framework v1.18 release
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.18 preview release notes
+# SharePoint Framework v1.18 release notes
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-- rc.1 **Released**: August 30, 2023
-- beta.5 **Released**: August 15, 2023
-- beta.3 **Released**: August 1, 2023
-- beta.2 **Released**: July 18, 2023
-- beta.1 **Released**: June 28, 2023
+**Released:** September 12, 2023 
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the preview latest version
+## Install the latest version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag
+Install the latest official release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from v1.17 to v1.18
@@ -39,28 +33,33 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 1. Install the new v1.18 package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@next --save --save-exact
+    npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 
-Related updated documentation for the 1.18 preview release:
+Related updated documentation for the 1.18 release:
 
-* [Designing Viva Connections custom cards for your dashboard](./viva//design//designing-card.md)
+* [Designing Viva Connections custom cards for your dashboard](./viva/design//designing-card.md)
 * [Migrate Adaptive Card Extensions to SharePoint Framework 1.18](./viva/get-started/migrate-to-spfx-1-18.md)
 * [Tutorial - Create a People Search Adaptive Card Extension](./viva/get-started//build-people-search-adaptive-card-extension.md)
 
 New samples showcasing the new Viva Connections features:
 
-* [Start a Chat Text Box input Adaptive Card Extention](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Start-Chat)
+* [Start a Chat Text Box input Adaptive Card Extension](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Start-Chat)
 * [Prompt Survey Adaptive Card Extension](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Prompt-Survey)
 * [People Search Adaptive Card Extension](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-PeopleSearch)
 
 Video in YouTube showcasing the new template options for Viva Connections
 
+* [Introduction to new features and capabilities within SPFx 1.18](https://www.youtube.com/watch?v=LJAUVd4leRY)
 * [Introducing new Microsoft Viva Connection card layouts in the SharePoint Framework 1.18](https://www.youtube.com/watch?v=S5KCV3ZiAAI)
+
+### NodeJS v18 support
+
+SharePoint Framework solutions now support NodeJS v18 as the default version.
 
 ### Support for Execute Action in Adaptive Card Extensions
 
@@ -119,7 +118,7 @@ export class CardView extends BaseComponentsCardView<
 
 With this release, we introduce more flexible way to configure card views for Adaptive Card Extensions. Developers can now "mix and match" components in a card view configuration based on allowed set of [variations](./viva/design/designing-card.md).
 
-Use new **Generic Card Template (preview)** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
+Use new **Generic Card Template** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
 
 ### Ability to use text input in Adaptive Card Extensions' card views
 
@@ -134,7 +133,7 @@ Developers can now use text input component in a body or footer of a card view. 
 
 ### New Search Card Template for Adaptive Card Extensions
 
-We introduce a new search card view for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template (preview)** in the generator to get started.
+We introduce a new search card view for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template** in the generator to get started.
 
 > [!NOTE]
 > The text input component is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.
@@ -156,7 +155,7 @@ onChange?: (newValue?: string) => void;
 
 ### Ability to detect host's theme for Viva Connections Mobile
 
-Starting with this version developers have access to `hostContext` in the `AdaptiveCardExtensionContext` object. This property allows to detect host's theme.
+Starting with this version, developers have access to `hostContext` in the `AdaptiveCardExtensionContext` object. This property allows to detect host's theme.
 ```typescript
 
 export type HostTheme = 'light' | 'dark' | undefined;
@@ -174,24 +173,15 @@ export interface IHostContext {
 
 ### Fluent UI React v8 support
 
-Starting this version React templates use Fluent UI React v8 instead of v7.
+Starting from this version, React templates use Fluent UI React v8 instead of v7.
 
 ### Transparent outline icon for Teams-hosted web parts
 
-The default outline icon for Teams-hosted web parts is now transparent. This allows to meet the Teams design guidelines for application.
+The default outline icon for Microsoft Teams hosted web parts is now transparent. This ensures that the default icon meets the Microsoft Teams design requirements for application.
 
 ### TypeScript v4.7 Support
 
 SPFx solutions now support TypeScript v4.7.
-
-### NodeJS v18 support
-
-SPFx solutions now support NodeJS v18.
-
-> [!NOTE]
-> A developer needs to manually set NODE_OPTIONS environment variable to `--openssl-legacy-provider` to use NodeJS v18 after the NodeJS 18 has been installed. This requirement is intended to be removed with the General Availability version of the 1.18. This setting is required to adjust the toolchain to work properly with Webpack 4 which the SPFx tooling is using for now.
-> This can be done using `export NODE_OPTIONS=--openssl-legacy-provider` on Mac/Linux or `set NODE_OPTIONS=--openssl-legacy-provider` on Windows.
-
 
 ## Deprecations
 
@@ -200,10 +190,10 @@ SPFx solutions now support NodeJS v18.
 
 ## Fixed Issues
 
-- [#9010](https://github.com/SharePoint/sp-dev-docs/issues/9010) - Placeholder `{tenantDomain}` is not replaced with `SPFX_SERVE_TENANT_DOMAIN`.
+- [#9010](https://github.com/SharePoint/sp-dev-docs/issues/9010) - Placeholder `{tenantDomain}` isn't replaced with `SPFX_SERVE_TENANT_DOMAIN`.
 
 ## Feedback and issues
 
-We are interested on your feedback around the release. Please do let us know any findings or other feedback using the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+We're interested on your feedback around the release. Do let us know any findings or other feedback using the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
 Happy coding! Sharing is caring! 🧡

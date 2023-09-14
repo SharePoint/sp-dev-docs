@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
-ms.date: 09/06/2023
+ms.date: 09/12/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -104,6 +104,12 @@ Currently there is a maximum of 5000 URL aggregation limits per call.
 #### readOptions Flag
 
 The read asynchronous function will include the SPAsyncReadOptions structure, which covers the optional flags to allow the user to specify version and security setting on the site level more is described below.
+
+```csharp
+IncludePermission {get; set;}
+```
+
+If set, the permissions associated with files and items are included in the export. If absent or set to false, no permission will be included.
 
 ```csharp
 IncludeVersions{ get; set; }

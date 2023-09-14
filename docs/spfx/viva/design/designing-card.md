@@ -20,23 +20,39 @@ Cards are used to link resources, surface information, and power direct interact
 
 ## Anatomy of cards
 
-Each dashboard card has the following elements:
+The Connections dashboard is made up of cards that each serve a specific purpose. Each card is a container and is comprised of the following sections and elements:  
 
-:::image type="content" source="../../../images/viva-design/img_card_base.jpg" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
+**Medium card Layout:**
 
-1. **Container**: All card content sits within the container.
-1. **Icon**: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
+:::image type="content" source="../../../images/viva-design/img-medium-card-layout.png" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
 
-    Icons from the pre-defined set are theme-friendly and will automatically adjust to light and dark themes using theme primary color.
+**Large card layout:**
 
-    For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme. Learn about SharePoint themes.
+:::image type="content" source="../../../images/viva-design/img-large-card-layout.png" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
 
-1. **Title**: Typically the app name. All titles should be in sentence case.
-1. **Heading**: Most visually prominent text on the card. Used to communicate key information. Heading text can be static or dynamically updated. All headings should be in sentence case.
+The first section is the **card bar**, which includes the card’s icon and title.
 
-When adding the title and heading, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes (more information about sizes is given below) and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the title, in most cases, a length of 10-12 characters should fit the card width well.
+- **Icon**: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
 
-:::image type="content" source="../../../images/viva-design/img_card_truncation.jpg" alt-text="Diagram that shows the submit time of and Time off options, with the Time off option being the recommended option.":::
+  > [!NOTE]
+  > For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme.
+
+- **Title**: Typically the app name. All titles should be in sentence case.
+
+The second section is the **header**, which will be the most prominent words on the card.
+
+- This content is likely to be read first. It's used to communicate the most information and keywords. Heading text can be static or dynamically updated. All headings should be in sentence case.
+
+The third section is referred to as the **body**.
+
+- The body can contain elements such as text input, a search box, or a text description.
+
+  > [!NOTE]
+  > Use text when the description can addadds valuable secondary informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.  
+
+Finally, the last section of the card is the **footer**.
+
+- The footer section can contain an action button, text input, or a search footer.
 
 ### Layouts and sizes
 
@@ -71,19 +87,13 @@ Images draw viewer's eye, so use images carefully either to create recognition o
 
 Use when you need to have input textbox capabilities on the card e.g. search or other related scenario.
 
-> [!NOTE]
-> This feature is currently in preview and released initially with the preview version of 1.18.
-
 :::image type="content" source="../../../images/viva-design/img-search-box-card.png" alt-text="Screenshot of a text box powered card layout.":::
 
 ## Custom card layouts
 
-In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules. 
+In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules.
 
-There are a number of pre-defined combinations of components that you can choose from to create different card layouts. 
-
-> [!NOTE]
-> This feature is currently in preview and released initially with the preview version of 1.18.
+There are a number of pre-defined combinations of components that you can choose from to create different card layouts.
 
 :::image type="content" source="../../../images/viva-design/img-custom-card-layouts.png" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
 
@@ -107,6 +117,81 @@ These are the possible combinations.
 |  no   	|    yes   	|  text    	| text  	| empty     | Use the “Heading + Description” card layout	|
 |  no   	|    yes   	|  text    	| input 	| actions 	| Allowed custom card layout permutation	|
 |  no   	|    yes   	|  text    	| input 	| empty     | Allowed custom card layout permutation	|
+
+## Card components and layouts
+
+As part of the SPFX 1.18, we introduced card components  to enhance Adaptive Card Extension layouts.  These components are the building blocks of card layouts, representing individual elements within a card. Here are **card components** available:
+
+- Card Bar Component
+- Text
+- Text input
+- Action button
+- Search box
+- Search footer  
+
+With the card components approach, we provide two types of card layout templates, each offering developers varying degrees of flexibility and customization: 
+
+1. **Generic card layout template**
+   1. The generic card template serve as a foundational or base card with no predefined elements/ components.
+   1. Developers can utilize this template to fully customize card design layouts according to their specific needs. 
+1. **Scenario focused card layout template**
+   1. Scenario-focused templates are designed to address specific customer needs, delivering tailored solutions for distinct scenarios. 
+   1. These templates come with pre-built user experiences, enabling developers to initiate their projects swiftly and effortlessly.
+
+### Generic card layout template
+
+While the generic card layout offers developers significant flexibility in customizing the card design, we have established a specific set of component combinations in accordance with our design language and guidelines. This approach not only ensures adherence to our design principles but also guarantees a superb user experience for our customers.
+
+**Examples of the generic card with an image (Allowed combinations)**
+
+| Permutation 	| Card bar 	| headerHeader 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
+|:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
+|     1     	|    yes   	|     text     	| empty 	 | Action button | Previously known as the Image template 	| :::image type="content" source="../../../images/viva-design/img-permutation-01-card-layout.png" alt-text="Permutation 1."::: |
+|     2     	|    yes   	|     text     	| empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Permutation 2."::: |
+|     3     	|    yes   	|     text     	| empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Permutation 3."::: |
+|     4     	|    yes   	|     text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Permutation 4."::: |
+|     5     	|    yes   	|     text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Permutation 5."::: |
+
+> [!NOTE]
+> When using images on a card, note: Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
+
+
+**Examples of generic cards without images (Allowed combinations)**
+
+| Permutation 	| Card bar 	| headerHeader 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
+|:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
+|     1     	|    yes   	|     text     	| empty 	 | Action button | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-01-card-withoutimage.png" alt-text="Permutation 1."::: |
+|     2     	|    yes   	|     text     	| empty 	 | Empty         | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-02-card-withoutimage.png" alt-text="Permutation 2."::: |
+|     3     	|    yes   	|     text     	| empty 	 | Text Input    | New layout                               | :::image type="content" source="../../../images/viva-design/img-examples-03-card-withoutimage.png" alt-text="Permutation 3."::: |
+|     4     	|    yes   	|     text     	| Text       | Action Button | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-04-card-withoutimage.png" alt-text="Permutation 4."::: |
+|     5     	|    yes   	|     text     	| Text       | Empty         | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-05-card-withoutimage.png" alt-text="Permutation 5."::: |
+|     6     	|    yes   	|     text     	| Text       | Text Input    | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-06-card-withoutimage.png" alt-text="Permutation 6."::: |
+|     7     	|    yes   	|     text     	| Text input | Action Button | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-07-card-withoutimage.png" alt-text="Permutation 7."::: |
+|     8     	|    yes   	|     text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-08-card-withoutimage.png" alt-text="Permutation 8."::: |
+
+> [!NOTE]
+> Search box and search footer components can't be used in generic card template layout.
+
+#### Recommended best practice for the generic card layout template and components      
+
+- When adding the text in the heading and body sections, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the header, in most cases, a length of 10-12 characters should fit the card width well. 
+- Whenever you use a text input component, we highly recommend adding an icon button. Although we allow an icon before and an icon after the text input component, we recommend using one icon to clearly communicate the intent of the card.
+
+  > [!NOTE]
+  > Icon before the text input disappears once the textbox is active.
+
+- Generally, we do not recommend using text input with action button AND extra action buttons in the footer BUT if there is a text input with a button AND extra buttons in the footer - we recommend using secondary button style (default or undefined value for the button style property)
+- Although we do support the entire card to be clickable, we do not recommend having selection action on a card if there is a text input in the body or it's a search card. This will not provide a great user experience
+- While we do allow the entire card to be clickable, we strongly advise against enabling selection actions on a card if it contains text input in the body or is a search card template. Doing so will result in a suboptimal user experience.
+
+
+### Scenario focused card layout template
+
+#### Search template
+
+This scenario focused card template allows developers to quickly create a search experience for the users. Examples include people, messages or chats, files etc.
+
+:::image type="content" source="../../../images/viva-design/img-search-template.png" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
 
 ## Interaction
 

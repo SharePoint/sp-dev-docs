@@ -21,7 +21,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 ## Install Node.js
 
-Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v16**.
+Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v18**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
@@ -42,8 +42,9 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.17.* is supported on the following Node.js versions:
+The SharePoint Framework v1.18.* is supported on the following Node.js versions:
 
+- Node.js v18 LTS (*aka: Hydrogen*)
 - Node.js v16 LTS (*aka: Gallium*)
 
 > [!CAUTION]
