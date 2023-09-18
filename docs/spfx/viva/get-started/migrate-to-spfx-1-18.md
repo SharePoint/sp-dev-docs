@@ -1,7 +1,7 @@
 ---
 title: Migrate Adaptive Card Extensions to SharePoint Framework v1.18
 description: SharePoint Framework v1.18 introduces new base classes and modified approach for building Adaptive Card Extensions (ACEs) for Microsoft Viva Connections. This article explains how to migrate your existing ACEs to the new approach.
-ms.date: 06/28/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 
@@ -10,9 +10,6 @@ ms.localizationpriority: high
 SharePoint Framework (SPFx) v1.18 introduces new base classes and a modified approach for building Adaptive Card Extensions (ACEs) for Microsoft Viva Connections.
 
 The changes allow us to switch from "templates"-based to more granular "components"-based card views. It enables more flexibility for developers and increases the number of supported card views variants, or [permutations](../design/designing-card.md).
-
-> [!NOTE]
-> SharePoint Framework v1.18 is currently in preview status and should not be used in production.
 
 This article explains how to migrate your existing ACEs to the new approach.
 

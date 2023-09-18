@@ -1,7 +1,7 @@
 ---
 title: Making Quick View compatible with dark mode in mobile devices
 description: Making Adaptive Card Extension Quick View compatible for both dark and light mode by using different resources for both scenarios.
-ms.date: 08/08/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 # Making Quick View compatible with dark mode in mobile devices
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 > The following tutorial is targeted specifically for Quick View in Mobile for Viva Connections iOS and Android.
 
-To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of CY23, make sure that your card contents look compatible with both light and dark mode. 
+To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of Calender Year 23, make sure that your card contents look compatible with both light and dark mode.
 
 An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) will be available in SPFx 1.18.0 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
