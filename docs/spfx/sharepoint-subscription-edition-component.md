@@ -28,7 +28,7 @@ If you want to use React v16 or Fluent UI React v7 in your custom web parts deve
 
 1. Modify the "dependencies" and "devDependencies" in the npm project:
 
-    Using Yeoman to generate scaffold code and modify the dependences in the **package.json**:
+    Use Yeoman to generate scaffold code, and modify the dependences in the **package.json**:
 
     - Change the **react** and **react-dom** versions to "16.13.1", the **@types/react** version to "16.9.51", and the **@types/react-dom** version to "16.9.8".
 
@@ -42,7 +42,7 @@ If you want to use React v16 or Fluent UI React v7 in your custom web parts deve
 
     Here is an example of a modified **package.json** file:
 
-    ![Microsoft Teams Lead Assistant Dashboard in SharePoint](../images/spfx-component-upgrade-package-json-01.png)
+    ![Package.json example for the SPFx component upgrade](../images/spfx-component-upgrade-package-json-01.png)
 
     Re-run `npm install`.
 
@@ -56,7 +56,7 @@ If you want to use React v16 or Fluent UI React v7 in your custom web parts deve
 
     - If the component has not been exposed by **@microsoft/office-ui-fabric-react-bundle**, you can directly import it from **office-ui-fabric-react**, for example:
 
-        ![Microsoft Teams Lead Assistant Dashboard in SharePoint](../images/spfx-component-upgrade-code-import-01.png)
+        ![Code import example for the SPFx component upgrade](../images/spfx-component-upgrade-code-import-01.png)
 
     > [!NOTE]
     > The **office-ui-fabric-react** version is "7.185.7", and you do not need to declare it in **package.json**.
@@ -67,12 +67,12 @@ If you want to use React v16 or Fluent UI React v7 in your custom web parts deve
 
     1. Copy **react-16-bundle.js**, **react-dom-16-bundle.js**, **office-ui-fabric-7-react-bundle.js**, and **sp-load-themed-styles.js** from your SharePoint Server farm to a folder in your development environment.
 
-        These **.js** files are located in `SharePoint_Setup _template path\LAYOUTS\Next\spclient`, for example: `C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\Next\spclient`.
+        These **.js** files are located in `SharePoint_Setup_template_path\LAYOUTS\Next\spclient`, for example: `C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\Next\spclient`.
 
         > [!NOTE]
-        > You can run `[Microsoft.SharePoint.Utilities.SPUtility]::GetGenericSetupPath("template")` in "SharePoint Management Shell" to get the SharePoint setup template path.
+        > You can run `[Microsoft.SharePoint.Utilities.SPUtility]::GetGenericSetupPath("template")` in "SharePoint Management Shell" to get the `SharePoint_Setup_template_path`.
 
-    1. Copy **SharePoint_Setup _template path\LAYOUTS\Next\spclient\AdaptWorkbenchForReact16Fabric7.ps1** from your SharePoint Server farm to the root folder of the npm project.
+    1. Copy `SharePoint_Setup_template_path\LAYOUTS\Next\spclient\`**AdaptWorkbenchForReact16Fabric7.ps1** from your SharePoint Server farm to the root folder of the npm project.
 
     1. Run `AdaptWorkbenchForReact16Fabric7.ps1 [The path of the copied JS files]` in PowerShell.
 
@@ -84,17 +84,17 @@ If you want to use React v16 or Fluent UI React v7 in your custom web parts deve
 
         For example:
 
-        ![Microsoft Teams Lead Assistant Dashboard in SharePoint](../images/spfx-component-upgrade-tsconfig-json-01.png)
+        ![Tsconfig.json example for the SPFx component upgrade](../images/spfx-component-upgrade-tsconfig-json-01.png)
 
     Run `gulp serve` to test in **workbench.aspx**.
 
-1. Generate **.sppkg** package:
+1. Generate the **.sppkg** package:
 
-    Perform prerequisite steps:
+    Perform the prerequisite steps:
 
-    1. Copy **SharePoint_Setup _template path\LAYOUTS\Next\spclient\gulpAdjustReact16GuidTask.js** from your SharePoint Server farm to the root folder of the npm project.
+    1. Copy `SharePoint_Setup_template_path\LAYOUTS\Next\spclient\`**gulpAdjustReact16GuidTask.js** from your SharePoint Server farm to the root folder of the npm project.
 
-    1. Perform the "3-d" step if you have not done it yet.
+    1. Perform the #3-d step if you have not done it yet.
 
     Bundle the solution by running `gulp bundle --ship`.
 
