@@ -48,75 +48,11 @@ The third section is referred to as the **body**.
 - The body can contain elements such as text input, a search box, or a text description.
 
   > [!NOTE]
-  > Use text when the description can addadds valuable secondary informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.  
+  > Use text when the description can add valuable secondary informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.  
 
 Finally, the last section of the card is the **footer**.
 
 - The footer section can contain an action button, text input, or a search footer.
-
-### Layouts and sizes
-
-There are three types of cards layouts available to choose from.
-
-- Heading
-- Heading + Image
-- Heading + Description
-- Heading + Textbox
-
-All layouts come in two sizes: medium or large. Card size will determine how the space in the dashboard is utilized. It's useful to start with medium size cards. Use large size card if they are needed to showcase additional info that does not fit in the medium size.
-
-#### Heading​​​​​​​
-
-Use when the heading is sufficient to communicate the key information in the card.
-
-:::image type="content" source="../../../images/viva-design/img_card_heading.jpg" alt-text="Diagram of the Time Off task and shows the Heading relationship between the two tasks.":::
-
-#### Heading + Description​​​​​​​
-
-Use when the description can add informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.
-
-:::image type="content" source="../../../images/viva-design/img_card_description.jpg" alt-text="Diagram of the two Time Off tasks and showing the Heading and Description for Medium and Large tasks.":::
-
-### Heading + Image​​​​​​​
-
-Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
-
-:::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
-
-### Heading + Textbox
-
-Use when you need to have input textbox capabilities on the card e.g. search or other related scenario.
-
-:::image type="content" source="../../../images/viva-design/img-search-box-card.png" alt-text="Screenshot of a text box powered card layout.":::
-
-## Custom card layouts
-
-In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules.
-
-There are a number of pre-defined combinations of components that you can choose from to create different card layouts.
-
-:::image type="content" source="../../../images/viva-design/img-custom-card-layouts.png" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
-
-These are the possible combinations.
-
-| image 	| card bar 	| header 	|  body 	|  footer 	| Recommendations                       	|
-|:-----:	|:--------:	|:------:	|:-----:	|:-------:	|---------------------------------------	|
-|  yes  	|    yes   	|  text  	| empty 	| actions 	| Use the "Heading + Image" card layout 	|
-|  yes  	|    yes   	|  text	    | empty 	| empty     | Use the “Heading + Image” card layout    	|
-|  yes  	|    yes   	|  text	    | empty 	| input textbox | Allowed custom card layout permutation	|
-|  yes  	|    yes   	|  text	    | input 	| actions 	| Allowed custom card layout permutation     |
-|  yes  	|    yes   	|  text	    | input 	| empty     | Allowed custom card layout permutation	|
-|  yes  	|    yes   	|  empty	| input 	| actions 	| Allowed custom card layout permutation	|
-|  yes  	|    yes   	|  empty	| input 	| empty     | Allowed custom card layout permutation	|
-|  no   	|    yes   	|  text	    | empty     | actions 	| Use the "Heading + Image" card layout    	|
-|  no   	|    yes   	|  text    	| empty     | empty     | Use the "Heading + Image" card layout    	|
-|  no   	|    yes   	|  text    	| empty     | input textbox |  Allowed custom card layout permutation	|
-|  no   	|    yes   	|  empty	| input 	| actions 	| Allowed custom card layout permutation	|
-|  no   	|    yes   	|  empty	| input 	| empty     | Allowed custom card layout permutation	|
-|  no   	|    yes   	|  text    	| text  	| actions 	| Use the “Heading + Description” card layout	|
-|  no   	|    yes   	|  text    	| text  	| empty     | Use the “Heading + Description” card layout	|
-|  no   	|    yes   	|  text    	| input 	| actions 	| Allowed custom card layout permutation	|
-|  no   	|    yes   	|  text    	| input 	| empty     | Allowed custom card layout permutation	|
 
 ## Card components and layouts
 
@@ -144,13 +80,13 @@ While the generic card layout offers developers significant flexibility in custo
 
 **Examples of the generic card with an image (Allowed combinations)**
 
-| Permutation 	| Card bar 	| headerHeader 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
+| Combination 	| Card bar 	| Header 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
 |:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
-|     1     	|    yes   	|     text     	| empty 	 | Action button | Previously known as the Image template 	| :::image type="content" source="../../../images/viva-design/img-permutation-01-card-layout.png" alt-text="Permutation 1."::: |
-|     2     	|    yes   	|     text     	| empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Permutation 2."::: |
-|     3     	|    yes   	|     text     	| empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Permutation 3."::: |
-|     4     	|    yes   	|     text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Permutation 4."::: |
-|     5     	|    yes   	|     text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Permutation 5."::: |
+|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Image template 	| :::image type="content" source="../../../images/viva-design/img-permutation-01-card-layout.png" alt-text="Permutation 1."::: |
+|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Permutation 2."::: |
+|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Permutation 3."::: |
+|     4     	|    Yes   	|     Text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Permutation 4."::: |
+|     5     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Permutation 5."::: |
 
 > [!NOTE]
 > When using images on a card, note: Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
@@ -158,16 +94,16 @@ While the generic card layout offers developers significant flexibility in custo
 
 **Examples of generic cards without images (Allowed combinations)**
 
-| Permutation 	| Card bar 	| headerHeader 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
+| Combination	| Card bar 	| Header 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
 |:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
-|     1     	|    yes   	|     text     	| empty 	 | Action button | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-01-card-withoutimage.png" alt-text="Permutation 1."::: |
-|     2     	|    yes   	|     text     	| empty 	 | Empty         | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-02-card-withoutimage.png" alt-text="Permutation 2."::: |
-|     3     	|    yes   	|     text     	| empty 	 | Text Input    | New layout                               | :::image type="content" source="../../../images/viva-design/img-examples-03-card-withoutimage.png" alt-text="Permutation 3."::: |
-|     4     	|    yes   	|     text     	| Text       | Action Button | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-04-card-withoutimage.png" alt-text="Permutation 4."::: |
-|     5     	|    yes   	|     text     	| Text       | Empty         | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-05-card-withoutimage.png" alt-text="Permutation 5."::: |
-|     6     	|    yes   	|     text     	| Text       | Text Input    | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-06-card-withoutimage.png" alt-text="Permutation 6."::: |
-|     7     	|    yes   	|     text     	| Text input | Action Button | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-07-card-withoutimage.png" alt-text="Permutation 7."::: |
-|     8     	|    yes   	|     text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-08-card-withoutimage.png" alt-text="Permutation 8."::: |
+|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-01-card-withoutimage.png" alt-text="Permutation 1."::: |
+|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-02-card-withoutimage.png" alt-text="Permutation 2."::: |
+|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                               | :::image type="content" source="../../../images/viva-design/img-examples-03-card-withoutimage.png" alt-text="Permutation 3."::: |
+|     4     	|    Yes   	|     Text     	| Text       | Action Button | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-04-card-withoutimage.png" alt-text="Permutation 4."::: |
+|     5     	|    Yes   	|     Text     	| Text       | Empty         | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-05-card-withoutimage.png" alt-text="Permutation 5."::: |
+|     6     	|    Yes   	|     Text     	| Text       | Text Input    | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-06-card-withoutimage.png" alt-text="Permutation 6."::: |
+|     7     	|    Yes   	|     Text     	| Text input | Action Button | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-07-card-withoutimage.png" alt-text="Permutation 7."::: |
+|     8     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-08-card-withoutimage.png" alt-text="Permutation 8."::: |
 
 > [!NOTE]
 > Search box and search footer components can't be used in generic card template layout.
