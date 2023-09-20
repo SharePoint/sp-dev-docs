@@ -41,7 +41,7 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 1. In the left sidebar, select **More features**
 1. Locate the section **Apps** and select **Open**.
 
-This is start the automatic creation of the SharePoint app catalog to the tenant if it does not exist. If the app catalog already exists, you will be redirect to it. SharePoint app catalog is used to manage and deploy SharePoint Framework solutions.
+This will start the automatic creation of the SharePoint app catalog to the tenant if it does not exist. If the app catalog already exists, you will be redirect to it. SharePoint app catalog is used to manage and deploy SharePoint Framework solutions.
 
 ## Create a new site collection
 
@@ -73,7 +73,7 @@ After SharePoint creates the site, you can browse to your site collection by sel
 > In this case, we are creating a new group associated team site with modern user interface experience. You could just as well create a *communication site* to be used as your test site collection supporting your development.
 
 > [!NOTE]
-> You can potentially use same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do however recommend to use isolated developer tenants for each of the developers for best isolated developer experience.
+> You can potentially use the same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do, however, recommend the use of isolated developer tenants for each developer, for the best isolated developer experience.
 
 ## SharePoint Workbench
 
