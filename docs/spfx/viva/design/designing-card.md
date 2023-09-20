@@ -24,11 +24,11 @@ The Connections dashboard is made up of cards that each serve a specific purpose
 
 **Medium card Layout:**
 
-:::image type="content" source="../../../images/viva-design/img-medium-card-layout.png" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
+:::image type="content" source="../../../images/viva-design/img-medium-card-layout.png" alt-text="Diagram showing the medium card container and card elements, showing the Time off and paid time off available options.":::
 
 **Large card layout:**
 
-:::image type="content" source="../../../images/viva-design/img-large-card-layout.png" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
+:::image type="content" source="../../../images/viva-design/img-large-card-layout.png" alt-text="Diagram showing the large card container and card elements, showing the Time off and paid time off available options.":::
 
 The first section is the **card bar**, which includes the card’s icon and title.
 
@@ -86,7 +86,7 @@ While the generic card layout offers developers significant flexibility in custo
 |     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Generic card with image permutation 2."::: |
 |     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Generic card with image permutation 3."::: |
 |     4     	|    Yes   	|     Text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Generic card with image permutation 4."::: |
-|     5     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Generic card with image p
+|     5     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Generic card with image permutation 5."::: |
 
 > [!NOTE]
 > When using images on a card, note: Images draw the viewer's eye, so use images carefully either to create recognition of a familiar app or website or increase the overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
@@ -127,7 +127,7 @@ While the generic card layout offers developers significant flexibility in custo
 
 This scenario-focused card template allows developers to quickly create a search experience for the users. Examples include people, messages or chats, files etc.
 
-:::image type="content" source="../../../images/viva-design/img-search-template.png" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
+:::image type="content" source="../../../images/viva-design/img-search-template.png" alt-text="Screenshot of the search card, primary button, and secondary button interactions.":::
 
 ## Interaction
 
@@ -137,7 +137,7 @@ There are three possible ways to interact with a card:
 - Primary button
 - Secondary button
 
-:::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
+:::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Screenshot of the image card, primary button, and secondary button interactions.":::
 
 Each of these interactions can be customized. Use these to perform an instant action, send a request to the server, open a quick view (add link), link to a Teams app, open an external website and so on.
 
