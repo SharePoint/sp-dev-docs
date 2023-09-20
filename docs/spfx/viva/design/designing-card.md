@@ -1,7 +1,7 @@
 ---
 title: Dashboard cards design guidance
 description: Design guidance for the Viva Connections custom cards
-ms.date: 06/13/2022
+ms.date: 09/20/2022
 ms.localizationpriority: high
 ---
 # Designing Viva Connections custom cards for your dashboard
@@ -12,11 +12,11 @@ Cards are used to link resources, surface information, and power direct interact
 
 **Integrate rather than duplicate:** Take advantage of the experiences already available on your intranet, such as task assignments and completion, shift schedules, company policies, and more.
 
-**Stay in context:** Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view (link to quick view page here). Next best is to keep user interactions within the dashboard.
+**Stay in context:** Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view (link to quick view page here). The next best is to keep user interactions within the dashboard.
 
 **Bring cards to life with relevant and dynamically refreshable data:** Company stock price, due dates for training or projects, task assignment updates, and remaining vacation days are some examples.
 
-:::image type="content" source="../../../images/viva-design/img-card-design2.gif" alt-text="Moving image that shows process of clocking in for a shift.":::
+:::image type="content" source="../../../images/viva-design/img-card-design2.gif" alt-text="Moving image that shows the process of clocking in for a shift.":::
 
 ## Anatomy of cards
 
@@ -35,7 +35,7 @@ The first section is the **card bar**, which includes the card’s icon and titl
 - **Icon**: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
 
   > [!NOTE]
-  > For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme.
+  > For customized icons, the maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark themes.
 
 - **Title**: Typically the app name. All titles should be in sentence case.
 
@@ -68,9 +68,9 @@ As part of the SPFX 1.18, we introduced card components  to enhance Adaptive Car
 With the card components approach, we provide two types of card layout templates, each offering developers varying degrees of flexibility and customization: 
 
 1. **Generic card layout template**
-   1. The generic card template serve as a foundational or base card with no predefined elements/ components.
+   1. The generic card template serves as a foundational or base card with no predefined elements/ components.
    1. Developers can utilize this template to fully customize card design layouts according to their specific needs. 
-1. **Scenario focused card layout template**
+1. **Scenario-focused card layout template**
    1. Scenario-focused templates are designed to address specific customer needs, delivering tailored solutions for distinct scenarios. 
    1. These templates come with pre-built user experiences, enabling developers to initiate their projects swiftly and effortlessly.
 
@@ -82,28 +82,28 @@ While the generic card layout offers developers significant flexibility in custo
 
 | Combination 	| Card bar 	| Header 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
 |:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
-|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Image template 	| :::image type="content" source="../../../images/viva-design/img-permutation-01-card-layout.png" alt-text="Permutation 1."::: |
-|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Permutation 2."::: |
-|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Permutation 3."::: |
-|     4     	|    Yes   	|     Text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Permutation 4."::: |
-|     5     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Permutation 5."::: |
+|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Image template 	| :::image type="content" source="../../../images/viva-design/img-permutation-01-card-layout.png" alt-text="Generic card with image permutation 1."::: |
+|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Image template	| :::image type="content" source="../../../images/viva-design/img-permutation-02-card-layout.png" alt-text="Generic card with image permutation 2."::: |
+|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-03-card-layout.png" alt-text="Generic card with image permutation 3."::: |
+|     4     	|    Yes   	|     Text     	| Text input | Action Button | New layout                           	| :::image type="content" source="../../../images/viva-design/img-permutation-04-card-layout.png" alt-text="Generic card with image permutation 4."::: |
+|     5     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-permutation-05-card-layout.png" alt-text="Generic card with image p
 
 > [!NOTE]
-> When using images on a card, note: Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
+> When using images on a card, note: Images draw the viewer's eye, so use images carefully either to create recognition of a familiar app or website or increase the overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
 
 
 **Examples of generic cards without images (Allowed combinations)**
 
 | Combination	| Card bar 	| Header 	|  Body 	 |  Footer 	     | Notes                                 	| Sample Card 	|
 |:-----------:	|:--------:	|:------------:	|:-----:	 |:-------:	     |---------------------------------------	|-------------	|
-|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-01-card-withoutimage.png" alt-text="Permutation 1."::: |
-|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-02-card-withoutimage.png" alt-text="Permutation 2."::: |
-|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                               | :::image type="content" source="../../../images/viva-design/img-examples-03-card-withoutimage.png" alt-text="Permutation 3."::: |
-|     4     	|    Yes   	|     Text     	| Text       | Action Button | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-04-card-withoutimage.png" alt-text="Permutation 4."::: |
-|     5     	|    Yes   	|     Text     	| Text       | Empty         | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-05-card-withoutimage.png" alt-text="Permutation 5."::: |
-|     6     	|    Yes   	|     Text     	| Text       | Text Input    | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-06-card-withoutimage.png" alt-text="Permutation 6."::: |
-|     7     	|    Yes   	|     Text     	| Text input | Action Button | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-07-card-withoutimage.png" alt-text="Permutation 7."::: |
-|     8     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-08-card-withoutimage.png" alt-text="Permutation 8."::: |
+|     1     	|    Yes   	|     Text     	| Empty 	 | Action button | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-01-card-withoutimage.png" alt-text="Generic card without image permutation 1."::: |
+|     2     	|    Yes   	|     Text     	| Empty 	 | Empty         | Previously known as the Basic Text       | :::image type="content" source="../../../images/viva-design/img-examples-02-card-withoutimage.png" alt-text="Generic card without image permutation 2."::: |
+|     3     	|    Yes   	|     Text     	| Empty 	 | Text Input    | New layout                               | :::image type="content" source="../../../images/viva-design/img-examples-03-card-withoutimage.png" alt-text="Generic card without image permutation 3."::: |
+|     4     	|    Yes   	|     Text     	| Text       | Action Button | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-04-card-withoutimage.png" alt-text="Generic card without image permutation 4."::: |
+|     5     	|    Yes   	|     Text     	| Text       | Empty         | Previously known as the Primary Text     | :::image type="content" source="../../../images/viva-design/img-examples-05-card-withoutimage.png" alt-text="Generic card without image permutation 5."::: |
+|     6     	|    Yes   	|     Text     	| Text       | Text Input    | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-06-card-withoutimage.png" alt-text="Generic card without image permutation 6."::: |
+|     7     	|    Yes   	|     Text     	| Text input | Action Button | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-07-card-withoutimage.png" alt-text="Generic card without image permutation 7."::: |
+|     8     	|    Yes   	|     Text     	| Text input | Empty         | New layout                             	| :::image type="content" source="../../../images/viva-design/img-examples-08-card-withoutimage.png" alt-text="Generic card without image permutation 8."::: |
 
 > [!NOTE]
 > Search box and search footer components can't be used in generic card template layout.
@@ -114,18 +114,18 @@ While the generic card layout offers developers significant flexibility in custo
 - Whenever you use a text input component, we highly recommend adding an icon button. Although we allow an icon before and an icon after the text input component, we recommend using one icon to clearly communicate the intent of the card.
 
   > [!NOTE]
-  > Icon before the text input disappears once the textbox is active.
+  > The icon before the text input disappears once the textbox is active.
 
-- Generally, we do not recommend using text input with action button AND extra action buttons in the footer BUT if there is a text input with a button AND extra buttons in the footer - we recommend using secondary button style (default or undefined value for the button style property)
-- Although we do support the entire card to be clickable, we do not recommend having selection action on a card if there is a text input in the body or it's a search card. This will not provide a great user experience
+- Generally, we do not recommend using text input with an action button AND extra action buttons in the footer BUT if there is a text input with a button AND extra buttons in the footer - we recommend using a secondary button style (default or undefined value for the button style property)
+- Although we do support the entire card being clickable, we do not recommend having a selection action on a card if there is a text input in the body or it's a search card. This will not provide a great user experience
 - While we do allow the entire card to be clickable, we strongly advise against enabling selection actions on a card if it contains text input in the body or is a search card template. Doing so will result in a suboptimal user experience.
 
 
-### Scenario focused card layout template
+### Scenario-focused card layout template
 
 #### Search template
 
-This scenario focused card template allows developers to quickly create a search experience for the users. Examples include people, messages or chats, files etc.
+This scenario-focused card template allows developers to quickly create a search experience for the users. Examples include people, messages or chats, files etc.
 
 :::image type="content" source="../../../images/viva-design/img-search-template.png" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
 
@@ -139,22 +139,22 @@ There are three possible ways to interact with a card:
 
 :::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
 
-Each of these interactions can be customized. Use these to perform an instant action, send a request to server, open a quick view (add link), link to a Teams app, open an external website and so on.
+Each of these interactions can be customized. Use these to perform an instant action, send a request to the server, open a quick view (add link), link to a Teams app, open an external website and so on.
 
 Here are the best practices for designing card interactions:
 
 - The overall card should always be interactive.
 - If the primary button is used, because of its visual prominence, it should be the most important action on the card.
-- The secondary button can used either on its own or in conjunction with the primary button if two actions are needed (only available in large size card layouts). If it's used with the primary button, make sure it is linked to the second most important action on the card. In that case, the card itself will become the least important action.
-- For button labels, use concise and clear text that accurately reflects button behavior. For example 'View tasks' can better than only 'View'.
+- The secondary button can used either on its own or in conjunction with the primary button if two actions are needed (only available in large-size card layouts). If it's used with the primary button, make sure it is linked to the second most important action on the card. In that case, the card itself will become the least important action.
+- For button labels, use concise and clear text that accurately reflects button behavior. For example 'View tasks' can be better than only 'View'.
 - Make sure each interaction on the card is unique.
-- Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view. Next best is to keep user interactions within the dashboard.
+- Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view. The next best is to keep user interactions within the dashboard.
 
 > [!NOTE]
 > Due to lack of space:
 >
-> - Heading + Image layout does not have buttons with M size cards.
-> - Heading and Heading + Description layouts can only have one button with M size cards.
+> - Heading + Image layout does not have buttons with medium size cards.
+> - Heading and Heading + Description layouts can only have one button with medium size cards.
 
 ### Examples
 
@@ -164,11 +164,11 @@ Here are the best practices for designing card interactions:
 
 ## Platforms and modes
 
-Dashboard cards are supported on iOS, Android, and Web. However there are slight differences the styling between different platforms – fonts (Segoe UI for desktop, Roboto for Android, SF Display Pro for iOS), colors, sizes, and spacing is slightly tweaked to better suit the respective platform and make the cards look consistent with the overall experience of that platform.
+Dashboard cards are supported on iOS, Android, and Web. However, there are slight differences in the styling between different platforms – fonts (Segoe UI for desktop, Roboto for Android, SF Display Pro for iOS), colors, sizes, and spacing are slightly tweaked to better suit the respective platform and make the cards look consistent with the overall experience of that platform.
 
-:::image type="content" source="../../../images/viva-design/img_card_platforms.jpg" alt-text="Screenshot showing how the same card appears on web, i O S, and Android platforms.":::
+:::image type="content" source="../../../images/viva-design/img_card_platforms.jpg" alt-text="Screenshot showing how the same card appears on web, iOS, and Android platforms.":::
 
-Dashboard cards also support both light and dark mode theme. Ensure that colors you use work for both modes – text should be legible, and buttons and icons should be clearly recognizable against the background. To meet accessibility criteria, text should have a color ratio of 4.5:1 against the button background, and non-text components like icon should have a color ratio of 3:1 against the background. [Use this tool to check color contrast](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html).
+Dashboard cards also support both light and dark mode themes. Ensure that the colors you use work for both modes – text should be legible, and buttons and icons should be clearly recognizable against the background. To meet accessibility criteria, text should have a color ratio of 4.5:1 against the button background, and non-text components like icon should have a color ratio of 3:1 against the background. [Use this tool to check color contrast](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html).
 
 :::image type="content" source="../../../images/viva-design/img_card_modes.jpg" alt-text="Screenshot that shows how the same card appears in light mode versus how it appears in dark mode.":::
 
@@ -184,7 +184,7 @@ To display your custom app in the dashboard picker, you will need the following:
 
 **1. Icon:** Unique visual representation of this app. Your custom icon maximum size is 24 px by 24 px and should preferably in PNG or SVG format. SVG icons scale better across different screen resolutions. It is preferable to use a monochromatic icon, but you can use color icons if you want to represent your unique brand with the icons. Either way, make sure the icon has a transparent background, and it looks good both on light and dark theme. [​​​​​​​Learn about SharePoint themes](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview). The same icon is to be used for the dashboard card (see above).
 
-**2. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the quick view (link quick view page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be sentence case.
+**2. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the quick view (link quick view page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be in sentence case.
 
 **3. Descriptive text:** A clear, concise description explains the purpose of the card and provides information about how to use it. It should show up in the tooltip on hover (in web). Make sure the text wraps appropriately and is not too wide or too narrow in the tooltip. The optimal line length is considered to be 50-60 characters per line, including spaces.
 
