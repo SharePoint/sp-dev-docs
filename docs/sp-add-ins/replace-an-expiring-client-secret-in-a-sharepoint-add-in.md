@@ -51,11 +51,10 @@ Ensure the following before you begin:
     $objectId = $app.ObjectId
 
     $base64secret = New-AzureADServicePrincipalPasswordCredential -ObjectId $objectId -EndDate $endDate
-    $secret = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($base64secret.Value))
-    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Verify -Value $secret
-    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Sign -Value $secret
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Verify -Value $base64secret.Value
+    New-AzureADServicePrincipalKeyCredential -ObjectId $objectId -EndDate $endDate -Type Symmetric -Usage Sign -Value $base64secret.Value
 
-    $base64secret.Value
+    [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($base64secret.Value))
     $base64secret.EndDate # Print the end date.
     ```
 
