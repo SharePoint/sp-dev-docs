@@ -74,7 +74,7 @@
         "sp-addins/**.md": "sharepoint-addins"
       },
       "ms.topic":{
-        "solution-guidance/**.md": "solution"
+        "solution-guidance/**.md": "solution-idea"
       }
     },
     "template": [],
