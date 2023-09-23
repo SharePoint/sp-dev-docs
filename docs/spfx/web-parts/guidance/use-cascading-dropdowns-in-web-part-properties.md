@@ -1,7 +1,7 @@
 ---
 title: Use cascading dropdowns in web part properties
 description: Create cascading dropdown controls in the SharePoint client-side web part property pane without developing a custom property pane control.
-ms.date: 02/11/2022
+ms.date: 09/23/2023
 ms.localizationpriority: high
 ---
 # Use cascading dropdowns in web part properties
@@ -10,7 +10,7 @@ When designing the property pane for your SharePoint client-side web parts, you 
 
 ![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)
 
-The source of the working web part is available on GitHub at [sp-dev-fx-webparts/samples/react-custompropertypanecontrols/](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols).
+The source of the working web part is available on GitHub at [sp-dev-fx-webparts/samples/react-react-cascadingdropdowns/](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/react-react-cascadingdropdowns).
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
@@ -76,9 +76,16 @@ You'll build a web part that displays list items from a selected SharePoint list
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
       public render(): void {
-        const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
-          listName: this.properties.listName
-        });
+        const element: React.ReactElement<IListItemsProps> = React.createElement(
+          ListItems,
+          {
+            listName: this.properties.listName,
+            isDarkTheme: this._isDarkTheme,
+            environmentMessage: this._environmentMessage,
+            hasTeamsContext: !!this.context.sdks.microsoftTeams,
+            userDisplayName: this.context.pageContext.user.displayName
+          }
+        );
 
         ReactDom.render(element, this.domElement);
       }
@@ -91,7 +98,6 @@ You'll build a web part that displays list items from a selected SharePoint list
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
-
       protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
         return {
           pages: [
@@ -113,7 +119,6 @@ You'll build a web part that displays list items from a selected SharePoint list
           ]
         };
       }
-
       // ...
     }
     ```
@@ -121,10 +126,19 @@ You'll build a web part that displays list items from a selected SharePoint list
 1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the `IListItemsStrings` interface to:
 
     ```typescript
-    declare interface IListItemsStrings {
+    declare interface IListItemsWebPartStrings {
       PropertyPaneDescription: string;
       BasicGroupName: string;
       ListNameFieldLabel: string;
+      AppLocalEnvironmentSharePoint: string;
+      AppLocalEnvironmentTeams: string;
+      AppLocalEnvironmentOffice: string;
+      AppLocalEnvironmentOutlook: string;
+      AppSharePointEnvironment: string;
+      AppTeamsTabEnvironment: string;
+      AppOfficeEnvironment: string;
+      AppOutlookEnvironment: string;
+      UnknownEnvironment: string;
     }
     ```
 
@@ -135,7 +149,16 @@ You'll build a web part that displays list items from a selected SharePoint list
       return {
         "PropertyPaneDescription": "Description",
         "BasicGroupName": "Group Name",
-        "ListNameFieldLabel": "List"
+        "ListNameFieldLabel": "List",
+        "AppLocalEnvironmentSharePoint": "The app is running on your local environment as SharePoint web part",
+        "AppLocalEnvironmentTeams": "The app is running on your local environment as Microsoft Teams app",
+        "AppLocalEnvironmentOffice": "The app is running on your local environment in office.com",
+        "AppLocalEnvironmentOutlook": "The app is running on your local environment in Outlook",
+        "AppSharePointEnvironment": "The app is running on SharePoint page",
+        "AppTeamsTabEnvironment": "The app is running in Microsoft Teams",
+        "AppOfficeEnvironment": "The app is running in office.com",
+        "AppOutlookEnvironment": "The app is running in Outlook",
+        "UnknownEnvironment": "The app is running in an unknown environment"
       }
     });
     ```
@@ -145,7 +168,11 @@ You'll build a web part that displays list items from a selected SharePoint list
     ```tsx
     public render(): JSX.Element {
       const {
-        listName
+        listName,
+        isDarkTheme,
+        environmentMessage,
+        hasTeamsContext,
+        userDisplayName
       } = this.props;
 
       return (
@@ -166,6 +193,10 @@ You'll build a web part that displays list items from a selected SharePoint list
     ```typescript
     export interface IListItemsProps {
       listName: string;
+      isDarkTheme: boolean;
+      environmentMessage: string;
+      hasTeamsContext: boolean;
+      userDisplayName: string;
     }
     ```
 
@@ -174,6 +205,9 @@ You'll build a web part that displays list items from a selected SharePoint list
     ```console
     gulp serve
     ```
+
+    > [!NOTE]
+    > If this is your first time running the `gulp serve` command on your  workstation, you may need to run the `gulp trust-dev-cert` command first.
 
 1. In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
@@ -190,7 +224,6 @@ At this point, a user specifies which list the web part should use by manually e
     ```typescript
     import {
       IPropertyPaneConfiguration,
-      PropertyPaneTextField,
       PropertyPaneDropdown,
       IPropertyPaneDropdownOption
     } from '@microsoft/sp-property-pane';
@@ -215,6 +248,16 @@ At this point, a user specifies which list the web part should use by manually e
     }
     ```
 
+1. Add a new class variable named `loadingIndicator`. This variable determines whether the property pane should display a loading indicator. while the web part retrieves the information about the lists available in the current site, the loading indicator should be set to `true`.
+
+    ```typescript
+    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
+      // ...
+      private loadingIndicator: boolean = true;
+      // ...
+    }
+    ```
+
 1. Change the `getPropertyPaneConfiguration()` method to use the dropdown control to render the `listName` property:
 
     ```typescript
@@ -223,6 +266,7 @@ At this point, a user specifies which list the web part should use by manually e
 
       protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
         return {
+          showLoadingIndicator: this.loadingIndicator,   
           pages: [
             {
               header: {
@@ -266,20 +310,21 @@ Previously, you associated the dropdown control of the `listName` property with 
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
 
-      private loadLists(): Promise<IPropertyPaneDropdownOption[]> {
-        return new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, reject: (error: any) => void) => {
-          setTimeout((): void => {
-            resolve([{
-              key: 'sharedDocuments',
-              text: 'Shared Documents'
-            },
-            {
-              key: 'myDocuments',
-              text: 'My Documents'
-            }]);
-          }, 2000);
-        });
-      }
+        private async loadLists(): Promise<IPropertyPaneDropdownOption[]> {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          return await new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, _reject: (error: any) => void) => {
+            setTimeout((): void => {
+              resolve([{
+                key: 'sharedDocuments',
+                text: 'Shared Documents'
+              },
+              {
+                key: 'myDocuments',
+                text: 'My Documents'
+              }]);
+            }, 2000);
+          });
+        }
     }
     ```
 
@@ -289,23 +334,27 @@ Previously, you associated the dropdown control of the `listName` property with 
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
 
-      protected onPropertyPaneConfigurationStart(): void {
+      protected async onPropertyPaneConfigurationStart(): Promise<void> {
+        // disable the item selector until lists have been loaded
         this.listsDropdownDisabled = !this.lists;
 
+        // nothing to do until someone selects a list
         if (this.lists) {
           return;
         }
 
-        this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'lists');
+        // show a loading indicator in the property pane while loading lists and items
+        this.loadingIndicator = true;
+        this.context.propertyPane.refresh();
 
-        this.loadLists()
-          .then((listOptions: IPropertyPaneDropdownOption[]): void => {
-            this.lists = listOptions;
-            this.listsDropdownDisabled = false;
-            this.context.propertyPane.refresh();
-            this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-            this.render();
-          });
+        // load the lists from SharePoint
+        const listOptions: IPropertyPaneDropdownOption[] = await this.loadLists();
+        this.lists = listOptions;
+        this.listsDropdownDisabled = false;
+
+        // remove the loading indicator
+        this.loadingIndicator = false;
+        this.context.propertyPane.refresh();
       }
       // ...
     }
@@ -315,7 +364,7 @@ Previously, you associated the dropdown control of the `listName` property with 
 
     - First, the method checks if the information about the lists available in the current site has been loaded.
     - If the list information is loaded, the list dropdown is enabled.
-    - If the list information about lists hasn't been loaded yet, the loading indicator is displayed, which informs the user that the web part is loading information about lists.
+    - If the list information about lists hasn't been loaded yet, the loading indicator is displayed in the property pane, which informs the user that the web part is loading information about lists.
 
     ![Loading indicator displayed in web part while loading information about available lists](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-list-info.png)
 
@@ -323,7 +372,7 @@ Previously, you associated the dropdown control of the `listName` property with 
 
     Next, the dropdown is enabled allowing the user to select a list. By calling `this.context.propertyPane.refresh()`, the web part property pane is refreshed and it reflects the latest changes to the list dropdown.
 
-    After list information is loaded, the loading indicator is removed by a call to the `clearLoadingIndicator()` method. Because calling this method clears the web part user interface, the `render()` method is called to force the web part to re-render.
+    After list information is loaded, the loading indicator is removed by a setting the`this.loadingIndicator` to `false`. Because calling this method changes the property pane interface, the `this.context.propertyPane.refresh()` method is called to force the property pane to re-render.
 
 1. Run the following command to confirm that everything is working as expected:
 
@@ -371,6 +420,10 @@ When building web parts, you often need to allow users to choose an option from 
     export interface IListItemsProps {
       listName: string;
       itemName: string;
+      isDarkTheme: boolean;
+      environmentMessage: string;
+      hasTeamsContext: boolean;
+      userDisplayName: string;
     }
     ```
 
@@ -380,10 +433,17 @@ When building web parts, you often need to allow users to choose an option from 
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
       public render(): void {
-        const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
-          listName: this.properties.listName,
-          itemName: this.properties.itemName
-        });
+        const element: React.ReactElement<IListItemsProps> = React.createElement(
+          ListItems,
+          {
+            listName: this.properties.listName,
+            itemName: this.properties.itemName,
+            isDarkTheme: this._isDarkTheme,
+            environmentMessage: this._environmentMessage,
+            hasTeamsContext: !!this.context.sdks.microsoftTeams,
+            userDisplayName: this.context.pageContext.user.displayName
+          }
+        );
 
         ReactDom.render(element, this.domElement);
       }
@@ -394,11 +454,20 @@ When building web parts, you often need to allow users to choose an option from 
 1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the `IListItemsStrings` interface to:
 
     ```typescript
-    declare interface IListItemsStrings {
+    declare interface IListItemsWebPartStrings {
       PropertyPaneDescription: string;
       BasicGroupName: string;
       ListNameFieldLabel: string;
       ItemNameFieldLabel: string;
+      AppLocalEnvironmentSharePoint: string;
+      AppLocalEnvironmentTeams: string;
+      AppLocalEnvironmentOffice: string;
+      AppLocalEnvironmentOutlook: string;
+      AppSharePointEnvironment: string;
+      AppTeamsTabEnvironment: string;
+      AppOfficeEnvironment: string;
+      AppOutlookEnvironment: string;
+      UnknownEnvironment: string;
     }
     ```
 
@@ -410,7 +479,16 @@ When building web parts, you often need to allow users to choose an option from 
         "PropertyPaneDescription": "Description",
         "BasicGroupName": "Group Name",
         "ListNameFieldLabel": "List",
-        "ItemNameFieldLabel": "Item"
+        "ItemNameFieldLabel": "Item",
+        "AppLocalEnvironmentSharePoint": "The app is running on your local environment as SharePoint web part",
+        "AppLocalEnvironmentTeams": "The app is running on your local environment as Microsoft Teams app",
+        "AppLocalEnvironmentOffice": "The app is running on your local environment in office.com",
+        "AppLocalEnvironmentOutlook": "The app is running on your local environment in Outlook",
+        "AppSharePointEnvironment": "The app is running on SharePoint page",
+        "AppTeamsTabEnvironment": "The app is running in Microsoft Teams",
+        "AppOfficeEnvironment": "The app is running in office.com",
+        "AppOutlookEnvironment": "The app is running in Outlook",
+        "UnknownEnvironment": "The app is running in an unknown environment"
       }
     });
     ```
@@ -421,10 +499,14 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the `ren
 
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
-  public render(): JSX.Element {
+  public render(): React.ReactElement<IListItemsProps> {
     const {
       listName,
-      itemName
+      itemName,
+      isDarkTheme,
+      environmentMessage,
+      hasTeamsContext,
+      userDisplayName
     } = this.props;
 
     return (
@@ -469,36 +551,35 @@ Similar to how users can select a list by using a dropdown, they can select the 
 1. Change the `getPropertyPaneConfiguration()` method to use the dropdown control to render the `itemName` property.
 
     ```typescript
-    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      // ...
-      protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-        return {
-          pages: [
-            {
-              header: {
-                description: strings.PropertyPaneDescription
-              },
-              groups: [
-                {
-                  groupName: strings.BasicGroupName,
-                  groupFields: [
-                    PropertyPaneDropdown('listName', {
-                      label: strings.ListNameFieldLabel,
-                      options: this.lists,
-                      disabled: this.listsDropdownDisabled
-                    }),
-                    PropertyPaneDropdown('itemName', {
-                      label: strings.ItemNameFieldLabel,
-                      options: this.items,
-                      disabled: this.itemsDropdownDisabled
-                    })
-                  ]
-                }
-              ]
-            }
-          ]
-        };
-      }
+    protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+      return {
+        showLoadingIndicator: this.loadingIndicator,   
+        pages: [
+          {
+            header: {
+              description: strings.PropertyPaneDescription
+            },
+            groups: [
+              {
+                groupName: strings.BasicGroupName,
+                groupFields: [
+                  PropertyPaneDropdown('listName', {
+                    label: strings.ListNameFieldLabel,
+                    options: this.lists,
+                    disabled: this.listsDropdownDisabled
+                  }),
+                  PropertyPaneDropdown('itemName', {
+                    label: strings.ItemNameFieldLabel,
+                    options: this.items,
+                    disabled: this.itemsDropdownDisabled,
+                    selectedKey: this.properties.itemName // don't forget to bind this property so it is refreshed when the parent property changes
+                  })
+                ]
+              }
+            ]
+          }
+        ]
+      };
     }
     ```
 
@@ -517,44 +598,42 @@ Previously, you defined a dropdown control to render the `itemName` property in 
 1. Add method to load list items. In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the `ListItemsWebPart` class, add a new method to load available list items from the selected list. (Like the method for loading available lists, you use mock data.)
 
     ```typescript
-    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      // ...
-      private loadItems(): Promise<IPropertyPaneDropdownOption[]> {
-        if (!this.properties.listName) {
-          // resolve to empty options since no list has been selected
-          return Promise.resolve();
-        }
-
-        const wp: ListItemsWebPart = this;
-
-        return new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, reject: (error: any) => void) => {
-          setTimeout(() => {
-            const items = {
-              sharedDocuments: [
-                {
-                  key: 'spfx_presentation.pptx',
-                  text: 'SPFx for the masses'
-                },
-                {
-                  key: 'hello-world.spapp',
-                  text: 'hello-world.spapp'
-                }
-              ],
-              myDocuments: [
-                {
-                  key: 'isaiah_cv.docx',
-                  text: 'Isaiah CV'
-                },
-                {
-                  key: 'isaiah_expenses.xlsx',
-                  text: 'Isaiah Expenses'
-                }
-              ]
-            };
-            resolve(items[wp.properties.listName]);
-          }, 2000);
-        });
+    private async loadItems(): Promise<IPropertyPaneDropdownOption[]> {
+      if (!this.properties.listName) {
+        // return empty options since no list has been selected
+        return [];
       }
+
+      // This is where you'd replace the mock data with the actual data from SharePoint
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      return await new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, reject: (error: any) => void) => {
+        // timeout to simulate async call
+        setTimeout(() => {
+          const items: { [key: string]: { key: string; text: string }[] } = {
+            sharedDocuments: [
+              {
+                key: 'spfx_presentation.pptx',
+                text: 'SPFx for the masses'
+              },
+              {
+                key: 'hello-world.spapp',
+                text: 'hello-world.spapp'
+              }
+            ],
+            myDocuments: [
+              {
+                key: 'isaiah_cv.docx',
+                text: 'Isaiah CV'
+              },
+              {
+                key: 'isaiah_expenses.xlsx',
+                text: 'Isaiah Expenses'
+              }
+            ]
+          };
+          resolve(items[this.properties.listName]);
+        }, 2000);
+      });
     }
     ```
 
@@ -565,30 +644,35 @@ Previously, you defined a dropdown control to render the `itemName` property in 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
-      protected onPropertyPaneConfigurationStart(): void {
+      protected async onPropertyPaneConfigurationStart(): Promise<void> {
+        // disable the item selector until lists have been loaded
         this.listsDropdownDisabled = !this.lists;
+
+        // disable the item selector until items have been loaded or if the list has not been selected
         this.itemsDropdownDisabled = !this.properties.listName || !this.items;
 
+        // nothing to do until someone selects a list
         if (this.lists) {
           return;
         }
 
-        this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'options');
+        // show a loading indicator in the property pane while loading lists and items
+        this.loadingIndicator = true;
+        this.context.propertyPane.refresh();
 
-        this.loadLists()
-          .then((listOptions: IPropertyPaneDropdownOption[]): Promise<IPropertyPaneDropdownOption[]> => {
-            this.lists = listOptions;
-            this.listsDropdownDisabled = false;
-            this.context.propertyPane.refresh();
-            return this.loadItems();
-          })
-          .then((itemOptions: IPropertyPaneDropdownOption[]): void => {
-            this.items = itemOptions;
-            this.itemsDropdownDisabled = !this.properties.listName;
-            this.context.propertyPane.refresh();
-            this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-            this.render();
-          });
+        // load the lists from SharePoint
+        const listOptions: IPropertyPaneDropdownOption[] = await this.loadLists();
+        this.lists = listOptions;
+        this.listsDropdownDisabled = false;
+
+        // load the items from SharePoint
+        const itemOptions: IPropertyPaneDropdownOption[] = await this.loadItems();
+        this.items = itemOptions;
+        this.itemsDropdownDisabled = !this.properties.listName;
+
+        // remove the loading indicator
+        this.loadingIndicator = false;
+        this.context.propertyPane.refresh();
       }
       // ...
     }
@@ -615,37 +699,39 @@ Previously, you defined a dropdown control to render the `itemName` property in 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
-      protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-        if (propertyPath === 'listName' &&
-            newValue) {
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      protected async onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): Promise<void> {
+        if (propertyPath === 'listName' && newValue) {
+          // communicate loading items
+          this.loadingIndicator = true;
+
           // push new list value
           super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
-          // get previously selected item
-          const previousItem: string = this.properties.itemName;
+
           // reset selected item
-          this.properties.itemName = undefined;
-          // push new item value
-          this.onPropertyPaneFieldChanged('itemName', previousItem, this.properties.itemName);
+          this.properties.itemName = ''; // use empty string to force property pane to reset the selected item. undefined will not trigger the reset
+
           // disable item selector until new items are loaded
           this.itemsDropdownDisabled = true;
+
           // refresh the item selector control by repainting the property pane
           this.context.propertyPane.refresh();
-          // communicate loading items
-          this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'items');
 
-          this.loadItems()
-            .then((itemOptions: IPropertyPaneDropdownOption[]): void => {
-              // store items
-              this.items = itemOptions;
-              // enable item selector
-              this.itemsDropdownDisabled = false;
-              // clear status indicator
-              this.context.statusRenderer.clearLoadingIndicator(this.domElement);
-              // re-render the web part as clearing the loading indicator removes the web part body
-              this.render();
-              // refresh the item selector control by repainting the property pane
-              this.context.propertyPane.refresh();
-            });
+          // get new items
+          const itemOptions: IPropertyPaneDropdownOption[] = await this.loadItems();
+
+          // store items
+          this.items = itemOptions;
+
+          // enable item selector
+          this.itemsDropdownDisabled = false;
+
+          // clear status indicator
+          this.loadingIndicator = false;
+
+          // refresh the item selector control by repainting the property pane
+          this.context.propertyPane.refresh();
         }
         else {
           super.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
@@ -655,11 +741,13 @@ Previously, you defined a dropdown control to render the `itemName` property in 
     }
     ```
 
-    After the user selected a list, the web part persists the newly selected value. Because the selected list changed, the web part resets the previously selected list item. Now that a list is selected, the web part property pane loads list items for that particular list. While loading items, the user can't select an item.
+    After the user selects a list, the web part persists the newly selected value. Because the selected list changed, the web part resets the previously selected list item. Now that a list is selected, the web part property pane loads list items for that particular list. While loading items, the user can't select an item.
 
     After the items for the selected list are loaded, they're assigned to the **items** class variable from where they can be referenced by the item dropdown. Now that the information about available list items is available, the item dropdown is enabled allowing users to choose an item. The loading indicator is removed, which clears the web part body that is why the web part should re-render. Finally, the web part property pane refreshes to reflect the latest changes.
 
     ![Item dropdown in the web part property pane showing available list items for the selected list](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
+
+    This article demonstrated how to use cascading dropdowns in the web part property pane, using static values. In a real-world scenario, you might  use an API to retrieve the dropdown choices in each dropdown. An example of a working web part which expands upon this article and loads dropdown choices using an API is available on GitHub at [sp-dev-fx-webparts/samples/react-custompropertypanecontrols/](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols)..
 
 ## See also
 
