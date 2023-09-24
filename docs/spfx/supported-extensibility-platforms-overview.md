@@ -17,8 +17,10 @@ Learn more about using SPFx on SharePoint Online: [SPFx support for SharePoint O
 
 ## SharePoint Server SE
 
-> [!IMPORTANT]
-> SharePoint Server Subscription Edition (SE), announced as a preview in July 2021, supports the same SPFx versions as SharePoint Server 2019.
+SharePoint SE includes support for the SPFx up to version v1.5.1. The support for the SPFx on SharePoint Server SE was changed with feature update 23H1 in March 2023.
+Before it supported the same SPFx versions as SharePoint Server 2019.
+
+Learn more about using SPFx on SharePoint Server 2019 and Subscription Edition: [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).
 
 ## SharePoint Server 2019
 
