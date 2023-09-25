@@ -21,6 +21,14 @@ These upcoming changes will be impacting SharePoint add-in model and also authen
 
 Here's a high level table of the feature mapping as the add-in model implementation is transformed to use other long term supported features:
 
+| Classic technology 	       | New technology 	              
+|--------------------	       |----------------	              
+| SharePoint add-in          | SharePoint Framework
+| Provider hosted add-in     | Azure AD registered apps
+| App registration using ACS | Azure AD registered apps
+| JSOM                       | Graph JS SDK & PnPjs library
+| SharePoint Workflow        | Power Automate Flows
+
 ## Transformation guidance for the add-in techniques
 
 Here's a list of all articles for the transformation guidance when moving away on using SharePoint add-in model, grouped based on the covered topic:
@@ -47,4 +55,4 @@ Here's a list of all articles for the transformation guidance when moving away o
   * [From SharePoint Add-in model Workflow Apps to Microsoft Power Automate](./From-Workflow-Apps-to-Power-Automate.md)
   * [Publishing modern SharePoint applications on Microsoft AppSource](./Publishing-modern-SharePoint-apps-on-AppSource.md)
 
-If some essential guidance is not included, please open an issue at the SharePoint developer documentation and we will try to help you as fast as possible with your specific question.
+If some essential guidance is not included, please open an issue at the [SharePoint developer documentation](https://aka.ms/spdev-issues) and we will try to help you as fast as possible with your specific question.
