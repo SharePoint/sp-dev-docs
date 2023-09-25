@@ -866,6 +866,40 @@
   items:
   - name: Overview
     href: sp-add-ins-modernize/sp-add-in-modernize.md
+  - name: Authentication considerations
+    href: sp-add-ins-modernize/understanding-aad-and-oauth-for-spo-modern.md
+  - name: Tranform from ACS to Azure AD apps
+    href: sp-add-ins-modernize/from-acs-to-aad-apps.md
+  - name: Multi-tenant applications for SharePoint Online
+    href: sp-add-ins-modernize/multi-tenant-applications.md
+  - name: Understanding Resource Specific Consent (RSC)
+    href: sp-add-ins-modernize/understanding-rsc-for-msgraph-and-sharepoint-online.md
+  - name: Transform from app parts to SPFx web part
+    href: sp-add-ins-modernize/from-app-parts-to-modern-web-parts.md
+  - name: Transform from UI Extensions to SPFx List View Command Set
+    href: sp-add-ins-modernize/from-ui-extensions-to-listview-command-sets.md
+  - name: Transform from notifications to SPFx Application Customizers
+    href: sp-add-ins-modernize/from-notifications-to-application-customizers.md
+  - name: Transform from classic dialogs to SPFx dialogs
+    href: sp-add-ins-modernize/from-classic-dialogs-to-modern-dialogs.md
+  - name: Transform from JSOM
+    href: sp-add-ins-modernize/from-jsom-to-client-side.md
+  - name: Transform from CSOM
+    href: sp-add-ins-modernize/from-csom-to-pnp-libraries.md
+  - name: Transform from XSLT rendering to List Formatting
+    href: sp-add-ins-modernize/from-xslt-to-list-formatting.md
+  - name: Transform from remote event receivers to web hooks
+    href: sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md
+  - name: Transform from SharePoint hosted add-ins
+    href: sp-add-ins-modernize/from-sharepoint-hosted-to-client-side.md
+  - name: Transform from provider hosted add-ins to Azure AD apps
+    href: sp-add-ins-modernize/from-provider-hosted-to-aad-applications.md
+  - name: Transform from add-in workflow apps to Microsoft Power Automate
+    href: sp-add-ins-modernize/from-workflow-apps-to-power-automate.md
+  - name: Publishing SharePoint Framework solutions to Microsoft AppSource
+    href: sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md
+  - name: Modern provisioning of artifacts and information architecture
+    href: sp-add-ins-modernize/modern-provisioning.md
 - name: Archive
   items:
   - name: Overview
