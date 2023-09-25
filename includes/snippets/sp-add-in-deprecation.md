@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> SharePoint add-in model is currently still fully supported, but will be officially deprecated soon (by end of 2023). Consider using alternative extensibility options to be more future proven with your extensibility. See the different recommendations from provided [modernization guidance](https://learn.microsoft.com/sharepoint/dev/sp-add-ins-modernize/sp-add-in-modernize).

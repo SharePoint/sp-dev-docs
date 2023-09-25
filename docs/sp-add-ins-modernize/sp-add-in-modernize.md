@@ -1,7 +1,7 @@
 ---
 title: Modernizing your SharePoint add-in model implementations in Microsoft 365
 description: 
-ms.date: 09/12/2023
+ms.date: 09/25/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -15,7 +15,7 @@ Microsoft is looking into officially deprecating SharePoint add-in model in autu
 > [!IMPORTANT]
 > Deprecation means official statement that the feature is no longer being invested, but it's stil supported. End-of-life means that the feature will be discontinued and is no longer available for use.
 
-These upcoming changes will be impacting SharePoint add-in model and also authentication patterns using the classic [SharePoint Online hosted Microsoft Azure Access Control Service](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins) (ACS) authentication patterns, used with the provided hosted add-ins and potentially with other unattended services connecting to SharePoint Online.
+These upcoming changes will be impacting SharePoint add-in model and also authentication patterns using the classic [SharePoint Online hosted Microsoft Azure Access Control Service](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins) (ACS) authentication patterns, used with the provided hosted add-ins and potentially with other unattended services connecting to SharePoint Online.
 
 ## Transformation technologies
 
