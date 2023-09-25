@@ -1,13 +1,15 @@
 ---
 title: Three authorization systems for SharePoint Add-ins
 description: SharePoint Add-ins can use low-trust or high-trust systems or the cross-domain library to get authorization to SharePoint resources.
-ms.date: 05/01/2020
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # Three authorization systems for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In SharePoint, a SharePoint Add-in is an identity principal just like a user, and it must be authenticated and authorized to use SharePoint resources. There are three authorization systems that an add-in can use. They are not mutually exclusive.
 

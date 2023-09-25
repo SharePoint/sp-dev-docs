@@ -1,12 +1,14 @@
 ---
 title: Creating SharePoint Add-ins that use low-trust authorization
 description: A provider-hosted SharePoint Add-in can get access to resources in the SharePoint tenancy or farm on which the add-in is installed. Primarily intended for add-ins whose remote components are hosted in the cloud.
-ms.date: 06/13/2022
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Creating SharePoint Add-ins that use low-trust authorization
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Remote components in a SharePoint Add-in (or external application) can gain authorization to SharePoint resources by passing an access token to SharePoint with each HTTP request. The remote components obtain the access token from a Microsoft Azure Access Control Service (ACS) account that is associated with the customer's Office 365 tenancy. Azure ACS acts as the authorization server in an [OAuth 2.0](http://oauth.net/) transaction, called a flow, with SharePoint as the resource server and the remote components as the client. For related protocol specifications, see [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth). 
 

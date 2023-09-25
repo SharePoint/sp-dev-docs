@@ -1,12 +1,12 @@
 ---
 title: Add-in authorization policy types in SharePoint
 description: Overview of add-in-only policy, user-only policy, and user+add-in policy, and guidelines for using the add-in-only policy.
-ms.date: 12/26/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
-
-
 # Add-in authorization policy types in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Before reading this article, you should first be familiar with the articles [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md) and [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md).
  

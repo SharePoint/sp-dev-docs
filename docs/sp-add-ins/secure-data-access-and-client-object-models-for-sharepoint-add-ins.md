@@ -1,12 +1,14 @@
 ---
 title: Secure data access and client object models for SharePoint Add-ins
 description: Connectivity options for accessing data on SharePoint and on external systems, and available APIs for accessing data from your add-in.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Secure data access and client object models for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In evaluating your data access options for SharePoint Add-ins, you have to assess your add-in environment and consider several factors, such as communication between the client and server, and the permission level that is required for your add-in to perform the required tasks. You also have to evaluate the APIs that are available in the model for SharePoint Add-ins.
 

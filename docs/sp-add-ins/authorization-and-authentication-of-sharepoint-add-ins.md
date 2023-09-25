@@ -1,12 +1,14 @@
 ---
 title: Authorization and authentication of SharePoint Add-ins
 description: Authentication and authorization in SharePoint is used to authorize requests by a SharePoint Add-in to access SharePoint resources.
-ms.date: 12/26/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 
 # Authorization and authentication of SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When a *user* signs in to SharePoint, the user's security token is validated. The token is issued by an identity provider. SharePoint supports several kinds of user authentication. For more information, see [Authentication, authorization, and security in SharePoint](../general-development/authentication-authorization-and-security-in-sharepoint.md).
 

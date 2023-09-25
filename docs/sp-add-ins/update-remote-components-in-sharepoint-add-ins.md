@@ -1,12 +1,14 @@
 ---
 title: Update remote components in SharePoint Add-ins
 description: Update the remote web applications and databases in a SharePoint Add-in.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Update remote components in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Before you begin, be familiar with [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in it.
 

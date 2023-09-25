@@ -1,12 +1,14 @@
 ---
 title: Query a remote service using the web proxy in SharePoint
 description: Access data in a remote domain from a page that is hosted in SharePoint by using the web proxy.
-ms.date: 12/22/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Query a remote service using the web proxy in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When you are building SharePoint Add-ins, you usually have to incorporate data from various sources. For security reasons, there are blocking mechanisms that prevent cross-domain communication. When you use the web proxy, the webpages in your add-in can access data in your remote domain and the SharePoint domain.
 

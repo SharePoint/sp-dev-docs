@@ -1,13 +1,14 @@
 ---
 title: Important aspects of the SharePoint Add-in architecture and development landscape
 description: The architecture of and the model for SharePoint Add-ins, including add-in hosting and user interface options, deployment system, security system, and lifecycle.
-ms.date: 03/08/2023
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Important aspects of the SharePoint Add-in architecture and development landscape
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 <a name="SPAppModelArch_SPCenteredVsCloudCentered"> </a>
 This article supplements the information in the article [SharePoint Add-ins](sharepoint-add-ins.md).

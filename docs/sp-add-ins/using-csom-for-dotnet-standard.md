@@ -1,12 +1,14 @@
 ---
 title: Using CSOM for .NET Standard instead of CSOM for .NET Framework
 description: Explains the differences between using CSOM for .NET Standard versus CSOM for .NET Framework
-ms.date: 05/07/2021
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Using CSOM for .NET Standard instead of CSOM for .NET Framework
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can use the SharePoint client object model (CSOM) to retrieve, update, and manage data in SharePoint. SharePoint makes the CSOM available in several forms:
 

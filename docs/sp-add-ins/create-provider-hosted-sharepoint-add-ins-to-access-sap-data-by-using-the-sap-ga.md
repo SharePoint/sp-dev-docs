@@ -1,12 +1,14 @@
 ---
 title: Create provider-hosted SharePoint Add-ins to access SAP data
 description: Design a SharePoint Add-in to get authorized access to SAP by using the SAP Gateway for Microsoft.
-ms.date: 11/03/2022
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Create provider-hosted SharePoint Add-ins to access SAP data by using the SAP Gateway for Microsoft
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can create a SharePoint Add-in that reads and writes SAP data, and optionally reads and writes SharePoint data, by using the SAP Gateway for Microsoft and the Azure Active Directory Authentication Library for .NET. This article provides the procedures for how you can design the SharePoint Add-in to get authorized access to SAP.
 

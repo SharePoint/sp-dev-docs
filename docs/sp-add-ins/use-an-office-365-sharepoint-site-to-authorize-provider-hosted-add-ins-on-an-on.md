@@ -1,13 +1,15 @@
 ---
 title: Use ACS to authorize low-trust provider-hosted add-ins on an on-premises SharePoint site
 description: Create an environment where you can use ACS to establish trust between a low-trust provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
-ms.date: 06/13/2022
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 
 # Use ACS to authorize low-trust provider-hosted add-ins on an on-premises SharePoint site
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 <a name="Prerequisites"> </a> 
 

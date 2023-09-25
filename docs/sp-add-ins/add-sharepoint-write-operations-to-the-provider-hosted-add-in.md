@@ -1,10 +1,12 @@
 ---
 title: Add SharePoint write operations to the provider-hosted add-in
 description: Write data to SharePoint in a provider-hosted SharePoint Add-in - change a column value on a list item, request Write permission, create a new custom list and insert an item into the list, and check for deleted components.
-ms.date: 10/21/2019
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ---
 # Add SharePoint write operations to the provider-hosted add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps).
 

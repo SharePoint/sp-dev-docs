@@ -1,11 +1,13 @@
 ---
 title: Complete basic operations using JavaScript library code in SharePoint
 description: Write code to perform basic operations using the JavaScript client object model in SharePoint.
-ms.date: 5/6/2019
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 # Complete basic operations using JavaScript library code in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!WARNING]
 > This information is only valid when you use classic SharePoint experiences in SharePoint Online or in on-premises. Usage of classic SharePoint JavaScript Client Object Model is not supported with the modern experiences or with SharePoint Framework.

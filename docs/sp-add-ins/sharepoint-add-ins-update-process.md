@@ -1,13 +1,15 @@
 ---
 title: SharePoint Add-ins update process
 description: Update and migrate SharePoint Add-ins.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # SharePoint Add-ins update process
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You have to update a SharePoint Add-in if you add functionality, fix a bug, or make a security update. An update to an add-in is deployed in a SharePoint Add-in package in the same way that the first version of the add-in is deployed. The SharePoint Add-in update process ensures that the add-in's data is preserved if the update fails for any reason.
  

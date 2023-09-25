@@ -1,12 +1,14 @@
 ---
 title: Creating SharePoint Add-ins that use the cross-domain library
 description: Intended for scenarios where the add-in has cloud-hosted components, but the customer's corporate firewall makes it difficult to use the low-trust system. The user's browser blocks scripts from other domains, but the JavaScript library encapsulates a secure system for working around this restriction.
-ms.date: 03/08/2023
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Creating SharePoint Add-ins that use the cross-domain library
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 There are some scenarios in which neither the low-trust nor the high-trust authorization systems can be used by a SharePoint Add-in, or they are not a good choice as the only means for the add-in to gain authorization to SharePoint resources.
 

@@ -1,12 +1,14 @@
 ---
 title: Update add-in web components in SharePoint
 description: Update pages, lists, content types, and other web components in a SharePoint Add-in.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Update add-in web components in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Prerequisites for updating the add-in web components:
 

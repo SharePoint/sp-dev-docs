@@ -1,13 +1,15 @@
 ---
 title: Troubleshooting high-trust SharePoint Add-ins
 description: Use the Fiddler tool and other guidance for resolving high-trust issues.
-ms.date: 12/29/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 
 # Troubleshooting high-trust SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 ## Use the Fiddler tool
 

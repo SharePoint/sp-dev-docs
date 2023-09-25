@@ -1,12 +1,14 @@
 ---
 title: Create a handler for the update event in SharePoint Add-ins
 description: Create and use a handler and apply rollback logic for the update event of a SharePoint Add-in.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Create a handler for the update event in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Before you begin, be thoroughly familiar with both [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) and [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in them.
 

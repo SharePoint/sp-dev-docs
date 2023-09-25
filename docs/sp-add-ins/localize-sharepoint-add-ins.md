@@ -1,13 +1,15 @@
 ---
 title: Localize SharePoint Add-ins
 description: Localize a SharePoint Add-in by using resource files, JavaScript resource files, and other techniques.
-ms.date: 06/13/2022
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 
 # Localize SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
  
 > [!NOTE] 
 > This topic assumes that you are familiar with the basic creation of SharePoint Add-ins, and with SharePoint features, the distinction between add-in webs and host webs, [the kind of SharePoint components that can be in an add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#types-of-sharepoint-components-that-can-be-in-a-sharepoint-add-in), and the basics of localization with .resx files.

@@ -1,12 +1,14 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 09/13/2023
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Replace an expiring client secret in a SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Client secrets for SharePoint Add-ins that are registered by using the **AppRegNew.aspx** page expire after one year. This article explains how to add a new secret for the add-in, and how to create a new client secret that is valid for a customized date.
 

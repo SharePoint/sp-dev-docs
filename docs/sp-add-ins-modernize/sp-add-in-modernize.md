@@ -8,14 +8,14 @@ ms.localizationpriority: high
 
 # Modernization guidance for existing SharePoint add-in model implementations in Microsoft 365
 
-SharePoint add-in model was introduced as part of the SharePoint 2013 timeframe and it was also provided as an extensibility option for SharePoint Online (Microsoft 365). While SharePoint add-in model is currently still supported in the SharePoint Online, model and patterns and outdated and are not recommended to be used.
+SharePoint add-in model was introduced as part of the SharePoint 2013 timeframe and it was also provided as an extensibility option for SharePoint Online (Microsoft 365). While SharePoint add-in model is currently still supported in the SharePoint Online, model and patterns and outdated and aren't recommended to be used.
 
-Microsoft is looking into officially deprecating SharePoint add-in model in autumn 2023 - spring 2024 timeframe with clear communications on the detailed end-of-life schedule for related features.
+Microsoft is looking into officially deprecating SharePoint add-in model by end of 2023 in SharePoint Online, with clear communications on the detailed end-of-life schedule for related features.
 
 > [!IMPORTANT]
 > Deprecation means official statement that the feature is no longer being invested, but it's stil supported. End-of-life means that the feature will be discontinued and is no longer available for use.
 
-These upcoming changes will be impacting SharePoint add-in model and also authentication patterns using the classic [SharePoint Online hosted Microsoft Azure Access Control Service](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins) (ACS) authentication patterns, used with the provided hosted add-ins and potentially with other unattended services connecting to SharePoint Online.
+These upcoming changes are impacting SharePoint add-in model and also authentication patterns using the classic [SharePoint Online hosted Microsoft Azure Access Control Service](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins) (ACS) authentication patterns, used with the provided hosted add-ins and potentially with other unattended services connecting to SharePoint Online.
 
 ## Transformation technologies
 
@@ -55,4 +55,4 @@ Here's a list of all articles for the transformation guidance when moving away o
   * [From SharePoint Add-in model Workflow Apps to Microsoft Power Automate](./From-Workflow-Apps-to-Power-Automate.md)
   * [Publishing modern SharePoint applications on Microsoft AppSource](./Publishing-modern-SharePoint-apps-on-AppSource.md)
 
-If some essential guidance is not included, please open an issue at the [SharePoint developer documentation](https://aka.ms/spdev-issues) and we will try to help you as fast as possible with your specific question.
+If some essential guidance isn't included, open an issue at the [SharePoint developer documentation](https://aka.ms/spdev-issues) and we'll help you as fast as possible with your specific question.

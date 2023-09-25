@@ -1,13 +1,15 @@
 ---
 title: Creating SharePoint Add-ins that use high-trust authorization
 description: A provider-hosted add-in can establish trust with SharePoint by using digital certificates to establish trust between SharePoint and the on-premises remote components that access SharePoint.  
-ms.date: 12/27/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # Creating SharePoint Add-ins that use high-trust authorization
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 A high-trust add-in is a provider-hosted SharePoint Add-in that is installed to an on-premises SharePoint farm. It cannot be installed to Microsoft SharePoint Online or marketed through the Office Store. A high-trust add-in uses a certificate instead of a context token to establish trust.
  

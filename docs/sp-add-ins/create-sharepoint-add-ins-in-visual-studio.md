@@ -1,12 +1,14 @@
 ---
 title: Create SharePoint Add-ins in Visual Studio
 description: Develop SharePoint Add-ins using templates for projects and project items in Visual Studio.
-ms.date: 11/03/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Create SharePoint Add-ins in Visual Studio
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can develop SharePoint Add-ins by using new templates for projects and project items in **vsnv**. 
  

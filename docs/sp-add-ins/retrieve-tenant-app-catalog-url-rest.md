@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Retrieve the URL of the tenant app catalog
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 To get the URL of the tenant app catalog, execute the following web request:
 
 ```http

@@ -1,12 +1,14 @@
 ---
 title: Create UX components in SharePoint
 description: Create UX components for your add-ins in SharePoint.
-ms.date: 12/14/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Create UX components in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience in SharePoint Add-ins. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users. 
 

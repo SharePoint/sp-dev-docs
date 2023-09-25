@@ -1,11 +1,12 @@
 ---
 title: Use the client chrome control in SharePoint Add-ins
 description: Use the chrome control in SharePoint to use the header styling of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. 
-ms.date: 12/14/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 # Use the client chrome control in SharePoint Add-ins
 

@@ -1,12 +1,14 @@
 ---
 title: Tools and environments for developing SharePoint Add-ins
 description: Create a development environment for SharePoint Add-ins on a SharePoint Online site or an on-premises farm.
-ms.date: 11/03/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Tools and environments for developing SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 There are two basic patterns for development environments for SharePoint Add-ins. The test and debugging SharePoint website can be on:
 

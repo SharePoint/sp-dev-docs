@@ -1,12 +1,14 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
-ms.date: 12/04/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Deploy and install a SharePoint-hosted SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 

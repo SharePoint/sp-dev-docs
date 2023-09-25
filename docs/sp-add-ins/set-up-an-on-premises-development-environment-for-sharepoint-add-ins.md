@@ -1,13 +1,15 @@
 ---
 title: Set up an on-premises development environment for SharePoint Add-ins
 description: Install an operating system and prerequisites, and configure services and an isolated add-in domain.
-ms.date: 06/13/2022
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # Set up an on-premises development environment for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 The requirements for a development environment are less stringent and costly than the requirements for a production environment, and the guidelines described here do not support a production environment installation. 
 

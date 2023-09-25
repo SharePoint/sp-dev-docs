@@ -1,12 +1,14 @@
 ---
 title: Create add-in parts to install with your SharePoint Add-in
 description: Create an add-in part in SharePoint that is available in the Web Part Gallery of the host web when you install your SharePoint Add-in.
-ms.date: 12/14/2020
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # Create add-in parts to install with your SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 With add-in parts, you can show your add-in user experience right in the SharePoint website pages. An add-in part displays the webpage (which is typically an interactive form or a dynamic display of data) that you specify by using an **IFrame** (also referred to as a frame) in a page in the [host web](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md).
 

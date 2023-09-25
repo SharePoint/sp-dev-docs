@@ -1,12 +1,14 @@
 ---
 title: Context Token OAuth flow for SharePoint Add-ins
 description: The OAuth authentication and authorization flow for low-trust, provider-hosted add-ins in SharePoint.
-ms.date: 03/23/2021
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Context Token OAuth flow for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In SharePoint, the OAuth authentication and authorization flow for a provider-hosted, low-trust, add-in involves a series of interactions among your add-in, SharePoint, the authorization server, and the browser at runtime. The authorization server in this scenario is Microsoft Azure Access Control Service (ACS).
 

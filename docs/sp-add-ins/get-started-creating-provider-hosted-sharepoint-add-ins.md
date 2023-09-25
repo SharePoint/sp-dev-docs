@@ -1,13 +1,15 @@
 ---
 title: Get started creating provider-hosted SharePoint Add-ins
 description: Set up a development environment and create your first provider-hosted SharePoint Add-in.
-ms.date: 03/14/2018
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # Get started creating provider-hosted SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see [SharePoint Add-ins](sharepoint-add-ins.md). 
 

@@ -1,11 +1,13 @@
 ---
 title: Add-in permissions in SharePoint
 description: Types of add-in permissions, permission request scopes, and managing permissions, and the differences in add-in permission rights, user rights, and Office Store app rights.
-ms.date: 08/31/2023
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 # Add-in permissions in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Before you read this article, you should first be familiar with the topic [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md). 
 

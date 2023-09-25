@@ -1,12 +1,14 @@
 ---
 title: UX design for SharePoint Add-ins
 description: User experience (UX) options when you build add-ins in SharePoint, including UX scenarios in cloud-hosted add-ins and SharePoint-hosted add-ins.
-ms.date: 11/02/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 # UX design for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 As a developer, you should always give high priority to the user experience (UX) when you are creating add-ins. The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users.
 

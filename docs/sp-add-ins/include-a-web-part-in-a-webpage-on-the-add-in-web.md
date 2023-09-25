@@ -1,11 +1,13 @@
 ---
 title: Include a web part on a webpage in the add-in web
 description: Include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in.
-ms.date: 06/13/2022
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 # Include a web part on a webpage in the add-in web
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in, but it is important that you do this in a way that won't cause problems if you ever need to update the add-in.
 

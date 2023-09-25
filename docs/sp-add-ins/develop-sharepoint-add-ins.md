@@ -1,13 +1,15 @@
 ---
 title: Develop SharePoint Add-ins
 description: In-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.
-ms.date: 12/13/2017
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 
 # Develop SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.
 

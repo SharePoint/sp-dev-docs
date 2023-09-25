@@ -1,13 +1,15 @@
 ---
 title: Work with external data in SharePoint
 description: Resources and guidance for accessing and manipulating external data with JavaScript on pages in SharePoint Add-ins.
-ms.date: 12/22/2017
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
 
 
 # Work with external data in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In your SharePoint Add-ins, you frequently have to retrieve and manipulate data that is exposed by a remote web application or service from within a SharePoint page or component. Because custom code is not allowed on the SharePoint servers, your add-in must use JavaScript for this purpose. The model for SharePoint Add-ins provides multiple options for accessing the remote data and services.
 
