@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
-ms.date: 09/12/2023
+ms.date: 09/26/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -219,6 +219,20 @@ CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 |SystemData.XML|DeploymentSystemData Schema|Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).|
 |UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.|
 |ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.|
+
+#### Encoding invalid XML characters
+
+When invalid XML characters are detected in relevant fields, they're encoded. For any attribute that is XML encoded, decoding is needed for the value. Encoded fields are included in **EncodedAttributes**, in a comma-separated attribute list.
+
+**Example**</br>
+In this  example, these attributes are encoded: URL, ParentWebURL, Name, and Version.
+
+```xml
+<File Url="testlib_x002F_File_0905-1653-31240" Id="e72e2015-91a4-4d07-ae9a-7b6c76918d2a" ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a" ParentWebUrl="_x002F_" Name="File_0905-1653-31240" ListItemIntId="3" ListId="48ea9454-9538-47ae-926d-917df80bc93e" ParentId="33ff2f12-c818-4c8d-8578-c6d057172fd8" ScopeId="385cd4d5-86da-4183-bdac-2e83da1b05fc" TimeCreated="2021-11-08T03:57:05" TimeLastModified="2021-01-17T16:01:48" Version="_x0031_.0" FileSize="1" Level="1" EncodedAttributes="Url,ParentWebUrl,Name,Version">
+``````
+
+>[!Warning]
+>If XSD is replied on to parse manifest files, parsing may fail when **EncodedAttributes** is used.
 
 #### How to retrieve the manifest from the Azure blob
 
