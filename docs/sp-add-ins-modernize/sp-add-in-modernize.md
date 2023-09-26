@@ -13,7 +13,7 @@ SharePoint add-in model was introduced as part of the SharePoint 2013 timeframe 
 Microsoft is looking into officially deprecating SharePoint add-in model by end of 2023 in SharePoint Online, with clear communications on the detailed end-of-life schedule for related features.
 
 > [!IMPORTANT]
-> Deprecation means official statement that the feature is no longer being invested, but it's stil supported. End-of-life means that the feature will be discontinued and is no longer available for use.
+> Deprecation means official statement that the feature is no longer being invested, but it's still supported. End-of-life means that the feature will be discontinued and is no longer available for use.
 
 > [!NOTE] 
 > This upcoming deprecation announcement will impact SharePoint Online. There are no changes on the add-in model supportability within the SharePoint on-premises versions.
