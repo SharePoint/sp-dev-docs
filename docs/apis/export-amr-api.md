@@ -220,7 +220,7 @@ CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 |UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.|
 |ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.|
 
-#### Encoding invalid XML characters
+### Encoding invalid XML characters
 
 When invalid XML characters are detected in relevant fields, they're encoded. For any attribute that is XML encoded, decoding is needed for the value. Encoded fields are included in **EncodedAttributes**, in a comma-separated attribute list.
 
