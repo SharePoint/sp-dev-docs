@@ -130,5 +130,4 @@ The following is an example of an **\<SharePoint:CssRegistration\>** element.
 - [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
 - [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
 - [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
-- [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
 - [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
