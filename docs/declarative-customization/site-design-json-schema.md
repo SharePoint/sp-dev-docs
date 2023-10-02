@@ -32,9 +32,9 @@ The overall JSON structure is specified as follows:
 
 
 
-## Add Content Types from Content Type Gallery
+## Add content types from Content Type Gallery
 
-Use the **addContentTypesFromHub** verb to sync content types from a content type hub to the site.
+Use the **addContentTypesFromHub** verb to sync content types from a content type hub (Content Type Gallery) to the site. 
 
 > [!NOTE]
 > Once **addContentTypesFromHub** is applied on a site, the **addContentType** subaction on a list will be able to add it to the list by name.
