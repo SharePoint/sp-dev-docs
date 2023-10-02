@@ -84,7 +84,7 @@ Users who have vision impairments rely on screen readers to navigate the site UI
 
 ## Alt text and transcripts
 
-Use alt text to provide descriptions of images that can be consumed by screen readers. This is useful for vision-impaired users who cannot consume information visually. Make sure that your alt text is descriptive, keeping in mind that some readers are relying on a screen reader to access the information conveyed in the image.
+Use alt text to provide descriptions of images that can be consumed by screen readers. This is useful for users who have visual impairments who cannot consume information visually. Make sure that your alt text is descriptive, keeping in mind that some readers are relying on a screen reader to access the information conveyed in the image.
 
 Don't rely only on color to convey meaning; rely on both color and shape.
 
@@ -92,7 +92,7 @@ To be fully compliant with accessibility standards, include alt text and a compl
 
 ## Minimum readable contrast
 
-A minimum level of contrast is essential to help users with vision impairments consume the content on the page. It is also important to aid readability in low light and glare situations.
+A minimum level of contrast is essential to help users who have visual impairments consume the content on the page. It is also important to aid readability in low light and glare situations.
 
 The following image shows theme colors on the left and neutral colors on the right.
 
