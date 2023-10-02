@@ -32,7 +32,7 @@ The overall JSON structure is specified as follows:
 
 
 
-## addContentTypesFromHub
+## Add Content Types from Content Type Gallery
 
 Use the **addContentTypesFromHub** verb to sync content types from a content type hub to the site.
 
