@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 description: "This article provides in depth information on how to use the SPO Migration API."
-ms.date: 04/10/2023
+ms.date: 10/05/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
