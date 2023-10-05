@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of Calender Year 23, make sure that your card contents look compatible with both light and dark mode.
 
-An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) will be available in SPFx 1.18.0 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
+An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/@microsoft/teams-js/app.context)) will be available in SPFx 1.19.0 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
 - Replace the contents of this file with the following JSON:
@@ -53,7 +53,76 @@ An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-b
     }
     ```
 
-- Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.
+- Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/helloWorldAdaptiveCardExtension.ts**.
+- Add a new state variable **theme** to the existing interface **IHelloWorldAdaptiveCardExtensionState**.Since the theme  API returns a promise, we need to use a state variable to determine the current theme. For making the theme available to the card we are using API in the **onInit()** function.
+
+
+```typescript
+import type { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
+import { BaseAdaptiveCardExtension } from '@microsoft/sp-adaptive-card-extension-base';
+import { CardView } from './cardView/CardView';
+import { QuickView } from './quickView/QuickView';
+import { helloWorldPropertyPane } from './helloWorldPropertyPane';
+
+export interface IHelloWorldAdaptiveCardExtensionProps {
+  title: string;
+}
+
+export interface IHelloWorldAdaptiveCardExtensionState {
+  theme: string;
+}
+
+const CARD_VIEW_REGISTRY_ID: string = 'HELLOWORLD_CARD_VIEW';
+export const QUICK_VIEW_REGISTRY_ID: string = 'HELLOWORLD_QUICK_VIEW';
+
+export default class helloWorldAdaptiveCardExtension extends BaseAdaptiveCardExtension<
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState
+> {
+  private _deferredPropertyPane: helloWorldPropertyPane;
+
+  public onInit(): Promise<void> {
+    this.state = {
+      theme: "light"
+    }
+    
+    this.context.sdks?.microsoftTeams?.teamsJs.app.getContext().then((context) => {
+      this.setState({
+        theme: context.app.appInfo.theme
+      });
+    });
+
+    // registers the card view to be shown in a dashboard
+    this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
+    // registers the quick view to open via QuickView action
+    this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
+
+    return Promise.resolve();
+  }
+
+  protected loadPropertyPaneResources(): Promise<void> {
+    return import(
+      /* webpackChunkName: 'helloWorld-property-pane'*/
+      './helloWorldPropertyPane'
+    )
+      .then(
+        (component) => {
+          this._deferredPropertyPane = new component.helloWorldPropertyPane();
+        }
+      );
+  }
+
+  protected renderCard(): string | undefined {
+    return CARD_VIEW_REGISTRY_ID;
+  }
+
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+    return this._deferredPropertyPane?.getPropertyPaneConfiguration();
+  }
+}
+```
+
+
 - Add a variable **imageUrl** to the existing interface **IQuickViewData** and add **imageUrl value** to **data()** function.
 
 ```typescript
@@ -98,7 +167,8 @@ export class QuickView extends BaseAdaptiveCardView<
 
 ```typescript
 public get data(): IQuickViewData {
-    const isDarkTheme = (this.context.hostContext.theme === 'dark') ? true : false;
+  // only three options are available for theme: 'light', 'default' and 'contrast'
+    const isDarkTheme = this.state.theme === 'dark' ? true : false;
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
@@ -113,5 +183,3 @@ public get data(): IQuickViewData {
 
 Similarly, we can customize our icons, images, and other elements of Quick View to support both light and dark theme.
 
-> [!NOTE]
-> Please note that the value for ‘this.context.hostContext.theme’ is undefined for web and Teams app as they do not support dark theme and is only available for Viva Connections Mobile iOS and Android.
