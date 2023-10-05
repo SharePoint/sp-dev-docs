@@ -65,6 +65,13 @@ export interface IHelloWorldAdaptiveCardExtensionState {
 - For making the theme available to the card we are using API in the **onInit()** function.
 
 ```typescript
+
+export default class helloWorldAdaptiveCardExtension extends BaseAdaptiveCardExtension<
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState
+> {
+  // ...
+
   public onInit(): Promise<void> {
     this.state = {
       theme: "light"
@@ -83,6 +90,8 @@ export interface IHelloWorldAdaptiveCardExtensionState {
 
   return Promise.resolve();
   }
+  // ...
+}
 ```
 
 - Add a variable **imageUrl** to the existing interface **IQuickViewData** and add **imageUrl value** to **data()** function.
@@ -129,7 +138,7 @@ export class QuickView extends BaseAdaptiveCardView<
 
 ```typescript
 public get data(): IQuickViewData {
-  // only three options are available for theme: 'light', 'default' and 'contrast'
+  // only two options are available for theme: 'dark' and 'default' 
     const isDarkTheme = this.state.theme === 'dark' ? true : false;
     return {
       subTitle: strings.SubTitle,
