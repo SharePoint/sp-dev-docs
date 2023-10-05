@@ -54,74 +54,36 @@ An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/@
     ```
 
 - Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/helloWorldAdaptiveCardExtension.ts**.
-- Add a new state variable **theme** to the existing interface **IHelloWorldAdaptiveCardExtensionState**.Since the theme  API returns a promise, we need to use a state variable to determine the current theme. For making the theme available to the card we are using API in the **onInit()** function.
-
+- Add a new state variable **theme** to the existing interface **IHelloWorldAdaptiveCardExtensionState**.Since the theme  API returns a promise, we need to use a state variable to determine the current theme.
 
 ```typescript
-import type { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
-import { BaseAdaptiveCardExtension } from '@microsoft/sp-adaptive-card-extension-base';
-import { CardView } from './cardView/CardView';
-import { QuickView } from './quickView/QuickView';
-import { helloWorldPropertyPane } from './helloWorldPropertyPane';
-
-export interface IHelloWorldAdaptiveCardExtensionProps {
-  title: string;
-}
-
 export interface IHelloWorldAdaptiveCardExtensionState {
   theme: string;
 }
+```
 
-const CARD_VIEW_REGISTRY_ID: string = 'HELLOWORLD_CARD_VIEW';
-export const QUICK_VIEW_REGISTRY_ID: string = 'HELLOWORLD_QUICK_VIEW';
+- For making the theme available to the card we are using API in the **onInit()** function.
 
-export default class helloWorldAdaptiveCardExtension extends BaseAdaptiveCardExtension<
-  IHelloWorldAdaptiveCardExtensionProps,
-  IHelloWorldAdaptiveCardExtensionState
-> {
-  private _deferredPropertyPane: helloWorldPropertyPane;
-
+```typescript
   public onInit(): Promise<void> {
     this.state = {
       theme: "light"
     }
     
-    this.context.sdks?.microsoftTeams?.teamsJs.app.getContext().then((context) => {
-      this.setState({
-        theme: context.app.appInfo.theme
-      });
+  this.context.sdks?.microsoftTeams?.teamsJs.app.getContext().then((context) => {
+    this.setState({
+      theme: context.app.appInfo.theme
     });
+  });
 
     // registers the card view to be shown in a dashboard
-    this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
+  this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
     // registers the quick view to open via QuickView action
-    this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
+  this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
-    return Promise.resolve();
+  return Promise.resolve();
   }
-
-  protected loadPropertyPaneResources(): Promise<void> {
-    return import(
-      /* webpackChunkName: 'helloWorld-property-pane'*/
-      './helloWorldPropertyPane'
-    )
-      .then(
-        (component) => {
-          this._deferredPropertyPane = new component.helloWorldPropertyPane();
-        }
-      );
-  }
-
-  protected renderCard(): string | undefined {
-    return CARD_VIEW_REGISTRY_ID;
-  }
-
-  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-    return this._deferredPropertyPane?.getPropertyPaneConfiguration();
-  }
-}
 ```
-
 
 - Add a variable **imageUrl** to the existing interface **IQuickViewData** and add **imageUrl value** to **data()** function.
 
