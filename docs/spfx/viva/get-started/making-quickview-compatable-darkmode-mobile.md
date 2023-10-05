@@ -154,3 +154,5 @@ public get data(): IQuickViewData {
 
 Similarly, we can customize our icons, images, and other elements of Quick View to support both light and dark theme.
 
+> [!NOTE]
+> Please note that the value for ‘this.context.sdks.microsoftTeams.teamsJs.app.getContext()’ is undefined for web and Teams app as they do not support dark theme and is only available for Viva Connections Mobile iOS and Android.
