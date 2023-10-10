@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 description: "This article provides in depth information on how to use the SPO Migration API."
-ms.date: 04/10/2023
+ms.date: 10/05/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -233,6 +233,23 @@ ErrorCode:-2147024816
 ErrorType:Microsoft.SharePoint.SPException
 Message:ErrorMessage
 CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
+```
+
+**Event:JobFatalError**
+
+```text
+JobId:8f728c13-95d0-4d54-96bc-4ee912bd32ce
+Time: 02/05/2019 06:57:20.523 
+TotalRetryCount:0 
+MigrationType:None
+MigrationDirection:Import
+ObjectType:
+Url:
+Id:
+ErrorCode:-2147213196
+ErrorType:Microsoft.SharePoint.SPException
+Message:ErrorMessage 
+CorrelationId:b370d5a0-105d-4000-241f-9b2d70449d7b
 ```
 
 **Event:JobWarning**
