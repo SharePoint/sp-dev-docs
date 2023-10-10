@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 03/01/2022
+ms.date: 10/10/2023
 ms.localizationpriority: high
 ---
 
@@ -55,13 +55,18 @@ Refer to the table of contents menu for details on each of the SharePoint Framew
   - Store acquisition - target SPFx solutions directly to Microsoft Teams store
   - Teams store support for partner SPFx solutions
 
+- Microsoft Viva Connections improvements
+  - New card shapes
+  - More flexibiliy with the quick view
+
 - Store improvements
   - Modernize Store app catalog and store UX
   - Modernize end-to-end acquisition process for store solutions
+
 - Improved communications
   - More transparency also on server-side improvements
   - More visibility on the issue resolution
 - Quality improvements
 
 > [!NOTE]
-> The current state of the SharePoint Framework is reviewed near the beginning of the bi-weekly [SPFx & JavaScript Special Interest Group (SIG) community call](https://pnp.github.io/#community). Previous SPFx & JavaScript SIG meeting recordings can be found on the [Microsoft 365 YouTube Channel's playlist: SharePoint Framework & JavaScript SIG Meetings](https://www.youtube.com/playlist?list=PLR9nK3mnD-OXdcwfcHGsGr78nHWLRsv1x)
+> The current state of the SharePoint Framework is reviewed near the beginning of the bi-weekly [Viva Connections & SharePoint Framework community call](https://aka.ms/community/calls). Previous Viva Connections & SharePoint Framework call recordings can be found on the [Microsoft 365 & Power Platform Communtiy YouTube Channel's playlist](https://www.youtube.com/watch?v=z4_5_IQjYRQ&list=PLR9nK3mnD-OXdcwfcHGsGr78nHWLRsv1x)
