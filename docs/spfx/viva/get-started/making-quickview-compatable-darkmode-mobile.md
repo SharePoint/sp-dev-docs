@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of Calender Year 23, make sure that your card contents look compatible with both light and dark mode.
 
-An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/@microsoft/teams-js/app.context)) will be available in SPFx 1.19.0 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
+An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/@microsoft/teams-js/app.context)) will be available in SPFx 1.18.1 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
 - Replace the contents of this file with the following JSON:
