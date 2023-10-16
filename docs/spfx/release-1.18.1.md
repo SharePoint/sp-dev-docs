@@ -49,7 +49,7 @@ Developers can access **partial** Teams JS SDK in Adaptive Card Extensions via A
 ```typescript
 class AdaptiveCardExtensionContext {
   // ...
-  public sdks: IPartialSDKs | undefined;cx
+  public sdks: IPartialSDKs | undefined;
 }
 
 // Accessing the theme details using context
