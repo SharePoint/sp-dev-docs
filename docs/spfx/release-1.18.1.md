@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18.1 preview release notes
 
-This is a _minor release_ that introduces new properly targeting Adaptive Card Extensions for better mobile experience.
+This is a _minor release_ that introduces new property targeting Adaptive Card Extensions for better mobile experience.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
@@ -60,7 +60,7 @@ this.setState({
 ```
 
 > [!NOTE]
-> Currently availability of this SDK is limited to Viva Connections Mobile only. We are working on introducing the support for this feature also for deskot and web site in future releases.
+> Currently availability of this SDK is limited to Viva Connections Mobile only. We are working on introducing the support for this feature also for desktop and web site in future releases.
 
 > [!NOTE]
 > Currently we only provide access to the `theme` property of the `appInfo` object of the Teams' context for Adaptive Card Extensions.
@@ -72,4 +72,4 @@ See more details on the use cases with code samples from the following updated d
 
 ## Summary
 
-Version 1.18.1 is expected to be a small release with the limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input advance.
+Version 1.18.1 is expected to be a small release with limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input in advance.
