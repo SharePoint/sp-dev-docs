@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.18.1 preview release notes
 description: Release notes for the SharePoint Framework v1.18.1 preview release
-ms.date: 10/10/2023
+ms.date: 10/18/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18.1 preview release notes
