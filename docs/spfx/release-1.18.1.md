@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.18.1 preview release notes
 description: Release notes for the SharePoint Framework v1.18.1 preview release
-ms.date: 10/10/2023
+ms.date: 10/18/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18.1 preview release notes
 
-This is a _minor release_ that introduces new properly targeting Adaptive Card Extensions for better mobile experience.
+This is a _minor release_ that introduces a new property targeting Adaptive Card Extensions for a better mobile experience.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
@@ -32,7 +32,7 @@ In the project's **package.json** file, identify all SPFx packages. For each SPF
     npm uninstall @microsoft/{spfx-package-name}
     ```
 
-2. Install the new v1.18.1 package:
+1. Install the new v1.18.1 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@next --save --save-exact
@@ -60,7 +60,7 @@ this.setState({
 ```
 
 > [!NOTE]
-> Currently availability of this SDK is limited to Viva Connections Mobile only. We are working on introducing the support for this feature also for deskot and web site in future releases.
+> Currently availability of this SDK is limited to Viva Connections Mobile only. We are working on introducing the support for this feature for the desktop and web clients in future releases.
 
 > [!NOTE]
 > Currently we only provide access to the `theme` property of the `appInfo` object of the Teams' context for Adaptive Card Extensions.
@@ -72,4 +72,4 @@ See more details on the use cases with code samples from the following updated d
 
 ## Summary
 
-Version 1.18.1 is expected to be a small release with the limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input advance.
+Version 1.18.1 is expected to be a small release with limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input advance.
