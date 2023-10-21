@@ -14,7 +14,7 @@ Microsoft 365 Content Delivery Network (CDN) provides you an easy solution to ho
 > There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Microsoft 365 CDN option, but you could also use the [Azure CDN](./deploy-web-part-to-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location that end users can access using HTTP(S) would be technically suitable for hosting the assets for end users.
 
 > [!IMPORTANT]
-> This article uses the `includeClientSideAssets` attribute, was introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
+> This article uses the `includeClientSideAssets` attribute introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
 > If you're using an on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from a centralized library in your on-premises SharePoint to which your users have access. Please see additional considerations in the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
 
 Make sure that you've completed the following tasks before you begin:
