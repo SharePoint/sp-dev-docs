@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
 description: Use Microsoft Graph Toolkit to easily connect your SharePoint Framework web parts and extensions to Microsoft Graph.
-ms.date: 08/17/2023
+ms.date: 10/22/2023
 ms.localizationpriority: high
 ---
 
@@ -23,7 +23,7 @@ Microsoft Graph Toolkit makes it easy to use Microsoft Graph in your application
 
 When building solutions using SharePoint Framework, you connect to Microsoft Graph using the [MSGraphClient](./use-msgraph.md) exposed by SharePoint Framework. The **MSGraphClient** handles authentication with Microsoft Graph for you, allowing you to focus on building your app. Still, you need to build the necessary API requests, execute them, handle their responses, and show the data in your app.
 
-Microsoft Graph Toolkit simplifies working with Microsoft Graph even further. Not only it handles the authentication, but it also communicates with Microsoft Graph for you and automatically shows the retrieved data in your app, saving you precious time.
+Microsoft Graph Toolkit simplifies working with Microsoft Graph even further. Not only does it handle the authentication, but it also communicates with Microsoft Graph for you and automatically shows the retrieved data in your app, saving you precious time.
 
 The following example shows how to use the toolkit's Agenda component in a plain JavaScript SharePoint Framework web part to display the current user's calendar events:
 
