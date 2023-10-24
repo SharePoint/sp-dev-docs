@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.18.1 preview release notes
 description: Release notes for the SharePoint Framework v1.18.1 preview release
-ms.date: 10/18/2023
+ms.date: 10/24/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18.1 preview release notes
@@ -10,6 +10,7 @@ This is a _minor release_ that introduces a new property targeting Adaptive Card
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- rc.0 **Released**: October 24, 2023
 - beta.0 **Released**: October 10, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
