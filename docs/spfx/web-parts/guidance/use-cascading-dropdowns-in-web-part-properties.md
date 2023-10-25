@@ -10,7 +10,7 @@ When designing the property pane for your SharePoint client-side web parts, you 
 
 ![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)
 
-The source of the working web part is available on GitHub at [sp-dev-fx-webparts/samples/react-react-cascadingdropdowns/](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/react-react-cascadingdropdowns).
+The source of the working web part is available on GitHub at [sp-dev-fx-webparts/samples/react-cascadingdropdowns/](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/react-cascadingdropdowns).
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
