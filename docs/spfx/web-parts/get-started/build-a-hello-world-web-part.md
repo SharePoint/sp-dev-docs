@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 02/20/2023
+ms.date: 11/02/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -90,14 +90,14 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `tenantDomain` to the URL of your SharePoint tenant. For example: `https://contoso.sharepoint.com/_layouts/workbench.aspx`.
 
 > [!TIP]
 > You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
@@ -396,10 +396,11 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
   // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
 
   "preconfiguredEntries": [{
-    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-    "group": { "default": "Other" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+    "group": { "default": "Advanced" },
     "title": { "default": "HelloWorld" },
     "description": { "default": "HelloWorld description" },
     "officeFabricIconFontName": "Page",

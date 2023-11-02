@@ -52,8 +52,8 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
    {
         "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
         "solution": {
-            "name": "mysolution-client-side-solution",
-            "id": "ee1a495d-c7bb-499b-bd71-728aaeb79cd2",
+            "name": "hello-world-client-side-solution",
+            "id": "e8905bc9-2718-4bc8-aea6-03a2b5cf8e76",
             "version": "1.0.0.0",
             "includeClientSideAssets": true,
             "skipFeatureDeployment": true,
@@ -63,30 +63,30 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
                 "websiteUrl": "",
                 "privacyUrl": "",
                 "termsOfUseUrl": "",
-                "mpnId": "Undefined-1.14.0"
+                "mpnId": "Undefined-1.18.0"
             },
             "metadata": {
-            "shortDescription": {
-                "default": "mysolution description"
+                "shortDescription": {
+                "default": "HelloWorld description"
             },
             "longDescription": {
-                "default": "mysolution description"
+                "default": "HelloWorld description"
             },
             "screenshotPaths": [],
             "videoUrl": "",
             "categories": []
             },
-            "features": [
+        "features": [
             {
-                "title": "mysolution Feature",
-                "description": "The feature that activates elements of the mysolution solution.",
-                "id": "d72e47b2-d5a2-479f-9f9a-85e1e7472dee",
+                "title": "hello-world Feature",
+                "description": "The feature that activates elements of the hello-world solution.",
+                "id": "45108667-812b-46ee-a8c3-7edc40b6a933",
                 "version": "1.0.0.0"
             }
-            ]
+        ]
         },
         "paths": {
-            "zippedPackage": "solution/mysolution.sppkg"
+        "zippedPackage": "solution/hello-world.sppkg"
         }
     }
 

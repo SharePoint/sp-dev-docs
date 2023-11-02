@@ -36,44 +36,44 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
     ```json
     {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-        "name": "mysolution-client-side-solution",
-        "id": "ee1a495d-c7bb-499b-bd71-728aaeb79cd2",
-        "version": "1.0.0.0",
-        "includeClientSideAssets": true,
-        "skipFeatureDeployment": true,
-        "isDomainIsolated": false,
-        "developer": {
-        "name": "",
-        "websiteUrl": "",
-        "privacyUrl": "",
-        "termsOfUseUrl": "",
-        "mpnId": "Undefined-1.14.0"
-        },
-        "metadata": {
-        "shortDescription": {
-            "default": "mysolution description"
-        },
-        "longDescription": {
-            "default": "mysolution description"
-        },
-        "screenshotPaths": [],
-        "videoUrl": "",
-        "categories": []
-        },
+        "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+        "solution": {
+            "name": "hello-world-client-side-solution",
+            "id": "e8905bc9-2718-4bc8-aea6-03a2b5cf8e76",
+            "version": "1.0.0.0",
+            "includeClientSideAssets": true,
+            "skipFeatureDeployment": true,
+            "isDomainIsolated": false,
+            "developer": {
+                "name": "",
+                "websiteUrl": "",
+                "privacyUrl": "",
+                "termsOfUseUrl": "",
+                "mpnId": "Undefined-1.18.0"
+            },
+            "metadata": {
+                "shortDescription": {
+                "default": "HelloWorld description"
+            },
+            "longDescription": {
+                "default": "HelloWorld description"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+            },
         "features": [
-        {
-            "title": "mysolution Feature",
-            "description": "The feature that activates elements of the mysolution solution.",
-            "id": "d72e47b2-d5a2-479f-9f9a-85e1e7472dee",
-            "version": "1.0.0.0"
-        }
+            {
+                "title": "hello-world Feature",
+                "description": "The feature that activates elements of the hello-world solution.",
+                "id": "45108667-812b-46ee-a8c3-7edc40b6a933",
+                "version": "1.0.0.0"
+            }
         ]
-    },
-    "paths": {
-        "zippedPackage": "solution/mysolution.sppkg"
-    }
+        },
+        "paths": {
+        "zippedPackage": "solution/hello-world.sppkg"
+        }
     }
     ```
 1. In the console window, enter the following command to bundle your client-side solution:
