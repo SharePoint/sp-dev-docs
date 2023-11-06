@@ -18,6 +18,9 @@ SPFx Extensions enable you to extend the SharePoint user experience within moder
 
 You can build extensions alongside common scripting frameworks, such as Angular and React, or to plain JavaScript projects. For example, you can use React along with components from Office UI Fabric React to create experiences based on the same components used in Microsoft 365.
 
+> [!IMPORTANT]
+> The SharePoint page [HTML DOM](https://www.w3.org/TR/WD-DOM/introduction.html) is not an API. You should avoid taking any dependencies on the page DOM structure or CSS styles, which are subject to change and potentially break your solutions. SharePoint Framework provides a rich API to customize the SharePoint experience in reliable ways and is the only supported means to interact with the SharePoint page HTML DOM.
+
 ## See also
 
 - [Overview of the SharePoint Framework](../sharepoint-framework-overview.md)
