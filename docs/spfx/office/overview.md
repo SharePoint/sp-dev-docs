@@ -39,7 +39,8 @@ Use the SPFx's `context` property on the web part's class and the Microsoft Team
 if (!!this.context.sdks.microsoftTeams) {
   const teamsContext = await this.context.sdks.microsoftTeams.teamsJs.app.getContext();
   switch (teamsContext.app.host.name.toLowerCase()) {
-    case 'teams':
+    case 'teams': // this is the host name for the "classic" Teams client
+    case 'teamsmodern': // this is the host name for the "new" Teams client
       // RUNNING IN MICROSOFT TEAMS
     case 'office':
       // RUNNING IN OFFICE / OFFICE.COM
