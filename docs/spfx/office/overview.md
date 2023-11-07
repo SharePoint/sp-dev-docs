@@ -1,7 +1,7 @@
 ---
 title: Extend Outlook and Office with the SharePoint Framework
 description: Learn how you can use the SharePoint Framework to create apps for Microsoft 365, including Microsoft Teams, Outlook, and Office clients
-ms.date: 11/15/2022
+ms.date: 11/07/2023
 ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
@@ -9,9 +9,6 @@ ms.localizationpriority: high
 The SharePoint Framework (SPFx) v1.16 release added support for the [Microsoft Teams JavaScript client SDK v2](/javascript/api/overview/msteams-client). The Microsoft Teams JavaScript client SDK v2 introduced the ability to enable [Teams apps to run in Outlook at Office, in addition to Microsoft Teams](/microsoftteams/platform/m365-apps/overview).
 
 With this improvement in SPFx v1.16, developers can now use the SPFx to create apps for Outlook and Office using the [existing support for creating apps for Microsoft Teams](/sharepoint/dev/spfx/build-for-teams-overview).
-
-> [!IMPORTANT]
-> The ability to run Microsoft Teams apps in Outlook and Office is currently in beta with anticipated availability in the first half of calendar year 2023.
 
 > [!IMPORTANT]
 > Essential information required for user success
