@@ -1,17 +1,14 @@
 ---
-title: SharePoint Framework v1.18.1 preview release notes
-description: Release notes for the SharePoint Framework v1.18.1 preview release
-ms.date: 10/24/2023
+title: SharePoint Framework v1.18.1 release notes
+description: Release notes for the SharePoint Framework v1.18.1 release
+ms.date: 11/07/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.18.1 preview release notes
+# SharePoint Framework v1.18.1 release notes
 
-This is a _minor release_ that introduces a new property targeting Adaptive Card Extensions for a better mobile experience.
+This is a _minor release_ that introduces a new property targeting Adaptive Card Extensions for a better mobile experience with the Microsot Viva Connections.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-- rc.0 **Released**: October 24, 2023
-- beta.0 **Released**: October 10, 2023
+**Released:** November 7, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -20,7 +17,7 @@ This is a _minor release_ that introduces a new property targeting Adaptive Card
 Install the latest release of the SharePoint Framework (SPFx) by including the **@latest** tag:
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from v1.18 to v1.18.1
@@ -36,7 +33,7 @@ In the project's **package.json** file, identify all SPFx packages. For each SPF
 1. Install the new v1.18.1 package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@next --save --save-exact
+    npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
@@ -45,7 +42,7 @@ In the project's **package.json** file, identify all SPFx packages. For each SPF
 
 ### Partial Support for Teams JS SDK in Adaptive Card Extensions (Mobile only)
 
-Developers can access **partial** Teams JS SDK in Adaptive Card Extensions via ACE's context (in the same way as in web parts).
+Developers can access **partial** Teams JS SDK in Adaptive Card Extensions via ACE's context (in the same way as in web parts). This enables the Adaptive Card Extensions to reflect the user interface based on the Microsoft Teams mobile theme setting.
 
 ```typescript
 class AdaptiveCardExtensionContext {
@@ -73,4 +70,4 @@ See more details on the use cases with code samples from the following updated d
 
 ## Summary
 
-Version 1.18.1 is expected to be a small release with limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input advance.
+Version 1.18.1 is a small release with a limited new capabilities. If you find any issues or have other feedback on the provided capabilities, report them at the [SPFx issue list](https://aka.ms/spfx/issues). Thank you for your input advance.

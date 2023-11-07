@@ -1,7 +1,7 @@
 ---
 title: Making Quick View compatible with dark mode in mobile devices
 description: Making Adaptive Card Extension Quick View compatible for both dark and light mode by using different resources for both scenarios.
-ms.date: 09/12/2023
+ms.date: 11/07/2023
 ms.localizationpriority: high
 ---
 # Making Quick View compatible with dark mode in mobile devices
@@ -9,9 +9,7 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 > The following tutorial is targeted specifically for Quick View in Mobile for Viva Connections iOS and Android.
 
-To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of Calender Year 23, make sure that your card contents look compatible with both light and dark mode.
-
-An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/sp-adaptive-card-extension-base/ipartialsdks?view=sp-typescript-latest)) will be available in SPFx 1.18.1 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
+An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/sp-adaptive-card-extension-base/ipartialsdks?view=sp-typescript-latest)) is available staring with the SPFx 1.18.1 version, to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
 - Replace the contents of this file with the following JSON:
