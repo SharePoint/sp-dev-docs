@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 03/24/2023
+ms.date: 11/07/2023
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -202,7 +202,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 ### When using app-only authentication with Sites.Read.All permission
 
-When you're using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including user’s private ODB content).
+When you're using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including user’s private OneDrive for Business content).
 
 To ensure the service remains fast and reliable, queries using such permission are throttled at 25 requests per second. The search query will return with an http 429 response. When waiting for throttling recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making more calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
