@@ -24,9 +24,9 @@ To learn more about how to migrate SharePoint Add-Ins to alternative solutions c
 
 SharePoint Add-Ins come in two flavors: SharePoint hosted Add-Ins and provider hosted Add-Ins, both of which are effected by this retirement.
 
-[SharePoint hosted Add-Ins primarily bring UX elements](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins#sharepoint-hosted-sharepoint-add-ins) to the site the Add-In was installed into and the app web that was created for the Add-In. A common use case is showing SharePoint Add-In web parts on pages of the host web, using [SharePoint Framework](https://aka.ms/spfx) based web parts is the recommended alternative here. These applications use JavaScript for writing business logic using the logged in user context to authenticate.
+[SharePoint hosted Add-Ins primarily bring UX elements](sharepoint-add-ins.md#sharepoint-hosted-sharepoint-add-ins) to the site the Add-In was installed into and the app web that was created for the Add-In. A common use case is showing SharePoint Add-In web parts on pages of the host web, using [SharePoint Framework](https://aka.ms/spfx) based web parts is the recommended alternative here. These applications use JavaScript for writing business logic using the logged in user context to authenticate.
 
-[Provider hosted SharePoint Add-Ins](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins#provider-hosted-sharepoint-add-ins) run outside of SharePoint and typically have their own UX. They use Azure ACS (Access Control Services) as auth layer to enable calling back into the host web where the SharePoint Add-In was installed. SharePoint provider hosted Add-Ins can be rewritten in various ways as software as a service application hosted externally (e.g. Microsoft Azure) and optionally also offered as Teams application. The auth model for these will be based on Microsoft Entra ID. If there are requirements to integrate in the SharePoint UX then [SharePoint Framework](https://aka.ms/spfx) can be used as calling into external application APIs can be done from SharePoint Framework solutions.
+[Provider hosted SharePoint Add-Ins](sharepoint-add-ins.md#provider-hosted-sharepoint-add-ins) run outside of SharePoint and typically have their own UX. They use Azure ACS (Access Control Services) as auth layer to enable calling back into the host web where the SharePoint Add-In was installed. SharePoint provider hosted Add-Ins can be rewritten in various ways as software as a service application hosted externally (e.g. Microsoft Azure) and optionally also offered as Teams application. The auth model for these will be based on Microsoft Entra ID. If there are requirements to integrate in the SharePoint UX then [SharePoint Framework](https://aka.ms/spfx) can be used as calling into external application APIs can be done from SharePoint Framework solutions.
 
 ### SharePoint Server support for SharePoint Add-Ins
 
@@ -50,7 +50,7 @@ Using the [SharePoint Add-In Report](https://aka.ms/assessment/addinsacsreport) 
 
 ### Migrate business relevant SharePoint Add-Ins by using newer SharePoint development models
 
-SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.ms/spfx) web parts, for the provider hosted Add-Ins any software as a service application platform (e.g. Microsoft Azure) in combination with [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/develop/) for auth can be used as alternative development model.
+SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.ms/spfx) web parts, for the provider hosted Add-Ins any software as a service application platform (e.g. Microsoft Azure) in combination with [Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/) for auth can be used as alternative development model.
 
 To learn more about how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
 

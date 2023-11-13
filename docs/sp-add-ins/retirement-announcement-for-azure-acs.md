@@ -8,7 +8,7 @@ ms.service: sharepoint
 
 # Azure ACS retirement in Microsoft 365
 
-Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the use of Azure ACS (Access Control Services) for SharePoint Online auth needs and believe Microsoft 365 customers will be better served by modern auth offered via [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/develop/).
+Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the use of Azure ACS (Access Control Services) for SharePoint Online auth needs and believe Microsoft 365 customers will be better served by modern auth offered via [Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/).
 
 Azure ACS will stop working for new tenants as of November 1st, 2024 and it will stop working for existing tenants and will be fully retired as of April 2nd, 2026. This applies to all environments including Government Clouds and Department of Defense.
 
@@ -22,7 +22,7 @@ To learn more about how to migrate Azure ACS usage for SharePoint Online and how
 
 Azure ACS is used in SharePoint Online for providing auth for provider hosted SharePoint Add-Ins plus it’s used to grant applications access to SharePoint Online, optionally using application permissions and granular scopes.
 
-To learn more about the provider hosted Add-In use case please check out the respective retirement articles, granting applications access to SharePoint Online will need to be transitioned to [Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/develop/).
+To learn more about the provider hosted Add-In use case please check out the respective retirement articles, granting applications access to SharePoint Online will need to be transitioned to [Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/).
 
 ### Azure ACS usage by SharePoint Server
 
