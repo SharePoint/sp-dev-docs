@@ -1,13 +1,13 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 06/22/2023
+ms.date: 11/16/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
+You can use any text editor to build SharePoint Framework (SPFx9) solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
@@ -67,7 +67,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install gulp-cli yo @microsoft/generator-sharepoint --global
+> npm install gulp-cli yo@4.3.1 @microsoft/generator-sharepoint --global
 > ```
 
 ### Install Gulp
@@ -85,12 +85,12 @@ npm install gulp-cli --global
 [Yeoman](https://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
 
 > [!IMPORTANT]
-> Yeoman v4.x is required by the SPFx v1.13 forward.
+> SharePoint Framework does not currently support Yeoman v5. Yeoman v4.x is required by the SPFx v1.13 forward.
 
 Enter the following command to install Yeoman:
 
 ```console
-npm install yo --global
+npm install yo@4.3.1 --global
 ```
 
 ### Install Yeoman SharePoint generator
