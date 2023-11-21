@@ -16,7 +16,7 @@ To create a new Microsoft Teams app with SPFx for Outlook and Office, you start 
 
 The Yeoman SharePoint Generator will prompt you with a series of questions. Follow the same guidance for creating a new SPFx web part when responding to these questions.
 
-Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to te `supportedHosts` property in the **./config/package-solution.json** file. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
+Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to the `supportedHosts` property in the **./config/package-solution.json** file. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
 
 ## Determine the current runtime host for your app
 
