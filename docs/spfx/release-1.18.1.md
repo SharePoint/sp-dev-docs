@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18.1 release notes
 
-This is a _minor release_ that introduces a new property targeting Adaptive Card Extensions for a better mobile experience with the Microsot Viva Connections.
+This is a _minor release_ that introduces a new property targeting Adaptive Card Extensions for a better mobile experience with the Microsoft Viva Connections.
 
 **Released:** November 7, 2023
 
