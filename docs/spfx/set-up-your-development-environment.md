@@ -67,7 +67,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install gulp-cli yo@4.3.1 @microsoft/generator-sharepoint --global
+> npm install gulp-cli yo @microsoft/generator-sharepoint --global
 > ```
 
 ### Install Gulp
@@ -84,14 +84,17 @@ npm install gulp-cli --global
 
 [Yeoman](https://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
 
-> [!IMPORTANT]
-> SharePoint Framework does not currently support Yeoman v5. Yeoman v4.x is required by the SPFx v1.13 forward.
-
 Enter the following command to install Yeoman:
 
 ```console
-npm install yo@4.3.1 --global
+npm install yo --global
 ```
+> [!IMPORTANT]
+> SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with following command:
+>
+> ```console
+> npm install yo@4.3.1
+> ```
 
 ### Install Yeoman SharePoint generator
 
