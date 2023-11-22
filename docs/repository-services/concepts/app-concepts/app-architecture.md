@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 All files and documents in SharePoint repository services are stored in Containers. All Containers are created and stored within an M365 Tenant. The ISV or LOB app then uses the Microsoft Graph API to interact with the dedicated container(s) for that app. The containers are part of the M365 customer’s tenant regardless of how the app is deployed.
 
-![SharePoint repository services Capabilities](../../images/raaspic2.png)
+![SharePoint repository services Capabilities](../../images/architecture-overview.png)
 
 **Container Relationship**
 
