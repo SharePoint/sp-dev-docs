@@ -5,8 +5,7 @@ ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Microsoft SharePoint repository services 
-### (“SharePoint repository services” Paid Public Preview Terms and Conditions) 
+# Microsoft SharePoint repository services (“SharePoint repository services”) Paid Public Preview Terms and Conditions
 “Company” means the Enterprise customer that uses these Preview Features. 
 
 **By using Microsoft SharePoint repository services, you accept these Terms and Conditions and all rights and obligations within.  If you do not agree to these Terms and Conditions, DO NOT use SharePoint repository services.** These Terms and Conditions govern the use of the Microsoft Offering as described below.   
