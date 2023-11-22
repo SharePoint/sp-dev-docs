@@ -11,7 +11,8 @@ ms.localizationpriority: high
 
 All files and documents in SharePoint repository services are stored in Containers. All Containers are created and stored within an M365 Tenant. The ISV or LOB app then uses the Microsoft Graph API to interact with the dedicated container(s) for that app. The containers are part of the M365 customer’s tenant regardless of how the app is deployed.
 
-![SharePoint repository services Capabilities](../../images/architecture-overview.png)
+<!-- ![SharePoint repository services Capabilities](../../images/architecture-overview.png) -->
+<img src="../../images/architecture-overview.png" alt="SharePoint repository services Capabilities" width="10000"/>
 
 **Container Relationship**
 
@@ -40,7 +41,9 @@ Container Types are the way SharePoint repository services supports this relatio
 - Each container type and application pairing are mapped to a set of permissions. This set of permissions determines the operations an application can invoke against all container instances of that container type.
 - A SharePoint repository services application can only access containers it is authorized to access.
 
-![SharePoint repository services Flow](../../images/app-flow7.jpg)
+
+<img src="../../images/app-flow7.jpg" alt="SharePoint repository services Flow"/>
+<!-- ![SharePoint repository services Flow](../../images/app-flow7.jpg) -->
 
 <br></br>
 
