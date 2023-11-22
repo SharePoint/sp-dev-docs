@@ -40,7 +40,7 @@ Container Types are the way SharePoint repository services supports this relatio
 - Each container type and application pairing are mapped to a set of permissions. This set of permissions determines the operations an application can invoke against all container instances of that container type.
 - A SharePoint repository services application can only access containers it is authorized to access.
 
-![SharePoint repository services Flow](../../images/raasflow.png)
+![SharePoint repository services Flow](../../images/app-flow7.jpg)
 
 <br></br>
 
