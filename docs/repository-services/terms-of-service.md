@@ -43,12 +43,14 @@ Company retains all right, title and interest in and to the input.  The above li
 SharePoint repository services uses pay-as-you-go (PAYG) billing through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint repository services, transactions used to modify and data that is egressed while using application built on SharePoint repository services. Company will be able to view this usage as meter events through the Azure subscription it chooses.  
 
 SharePoint repository services Feature Preview pricing is as follows: 
-| SharePoint repository services Service Meters      | Meter Unit       | Price          |
-| :---        |    :----   |          :--- |
-| Storage        | $/GB/Day        | $0.00667    |
-| Graph API Transactions Class A          | $/1 API call        | $0.00050     |
-| Graph API Transactions Class B          | $/1 API call       | $0.00075   |
-| Express Egress         | $/GB         | $0.12       
+
+
+| SharePoint repository services Service Meters |   Meter Unit  |   Price  |
+|:---------------------------------------------:|:-------------:|:--------:|
+| Storage                                       | $/GB/Day      | $0.00667 |
+| Graph API Transactions Class A                | $/1 API call  | $0.00050 |
+| Graph API Transactions Class B                | $/1 API call  | $0.00075 |
+| Express Egress                                | $/GB          | $0.12    |
 
 ### <ins>TERMINATION FOR NON-PAYMENT </ins>
 
