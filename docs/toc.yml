@@ -534,17 +534,17 @@
     href: repository-services/overview.md
   - name: Getting Started
     items:
-    - name: Getting Started on SharePoint repository services 
+    - name: Getting Started on SharePoint repository services
       href: bing.com
     - name: Enable SharePoint repository services
       href: repository-services/enable-sharepoint-repository-services.md
-    - name: Create your first SharePoint repository services Application 
+    - name: Create your first SharePoint repository services Application
       href: bing.com
-    - name: Free Trial of Container Types 
+    - name: Free Trial of Container Types
       href: bing.com
-    - name: Postman 
+    - name: Postman
       href: bing.com
-    - name: VS Code Extension 
+    - name: VS Code Extension
       href: bing.com
   - name: Adoptions and Use Case Scenarios
     href: repository-services/adoptions-and-use.md
@@ -571,6 +571,13 @@
       href: repository-service/terms-of-service.md
     - name: Terms of Service
       href: repository-service/terms-of-service.md # end
+  - name: Tutorials
+    items:
+      - name: SharePoint repository services - Overview & Configuration
+        href: repository-services/mslearn/m01-01-intro.md
+      - name: SharePoint repository services - Building an App
+        href: repository-services/mslearn/m02-01-intro.md
+    href: repository-services/adoptions-and-use.md
 - name: Microsoft Teams
   items:
   - name: Overview
