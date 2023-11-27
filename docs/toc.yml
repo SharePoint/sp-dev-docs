@@ -542,10 +542,6 @@
       href: bing.com
     - name: Free Trial of Container Types
       href: bing.com
-    - name: Postman
-      href: bing.com
-    - name: VS Code Extension
-      href: bing.com
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
   - name: Concepts
@@ -567,8 +563,6 @@
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
       href: repository-service/terms-of-service.md
-    - name: Terms of Service
-      href: repository-service/terms-of-service.md # end
   - name: Tutorials
     items:
       - name: SharePoint repository services - Overview & Configuration
@@ -576,6 +570,8 @@
       - name: SharePoint repository services - Building an App
         href: embedded/mslearn/m02-01-intro.md
     href: embedded/adoptions-and-use.md
+  - name: Terms of Service
+      href: repository-service/terms-of-service.md # end
 - name: Microsoft Teams
   items:
   - name: Overview
