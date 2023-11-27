@@ -1,6 +1,6 @@
 ---
 title: App Architecture
-description: TODO
+description: Anatomy of a SharePoint Embedded application 
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
