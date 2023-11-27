@@ -1,16 +1,16 @@
 ---
 title: Sharing and Permissions
-description: Outlines Permission Model for SharePoint repository services
+description: Outlines Permission Model for SharePoint Embedded
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-## Sharing and Permissions in SharePoint repository services
+## Sharing and Permissions in SharePoint Embedded
 
 
 ## Sharing
 
-The permission model used in SharePoint repository services is different from that traditional used by SharePoint and follows the OneDrive Consumer model. I.e. Unlike SharePoint you cannot break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
+The permission model used in SharePoint Embedded is different from that traditional used by SharePoint and follows the OneDrive Consumer model. I.e. Unlike SharePoint you cannot break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
 
 ### Container Roles
 Every Container has four predefined roles (that cannot be extended or modified) that users or AAD security groups can be added or removed from:
@@ -39,13 +39,13 @@ In addition, using these APIs have the following dependencies:
 - The type of user that is invoking the API when you are using delegated authorization.
 
 ### Sharing Configuration Settings
-Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint repository services application will not be able to be able to add Guest Users to the Container roles or grant them additive permissions.
+Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint Embedded application will not be able to be able to add Guest Users to the Container roles or grant them additive permissions.
 For further information please refer to:
 - [Sharing & permissions in the SharePoint modern experience - SharePoint in Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/sharepoint/modern-experience-sharing-permissions#guest-sharing)
 - [Manage sharing settings - SharePoint in Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off)
 
 ### Container “Partition”
-Note that the Sharing settings can be defined at the Tenant level as well as separately at the SharePoint Site and OneDrive “partitions”. For SharePoint repository services, we have introduced a new “partition” called Containers that will apply to all SharePoint repository services applications in the Consuming Tenant.
+Note that the Sharing settings can be defined at the Tenant level as well as separately at the SharePoint Site and OneDrive “partitions”. For SharePoint Embedded, we have introduced a new “partition” called Containers that will apply to all SharePoint Embedded applications in the Consuming Tenant.
 This can be configured using the PowerShell cmdlet [Set-SPOTenant](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps) as per this example:
  
      Set-SPOTenant `
@@ -63,7 +63,7 @@ Please note the following:
 ### Guest User Dependencies
 In addition to the Sharing configuration settings, there are a couple of scenarios relating to Guest Users and sharing to be aware of:
 - Guest Users can get unexpected results when granting additive permissions
-- Guest Users may not be able to be added via the SharePoint repository services App
+- Guest Users may not be able to be added via the SharePoint Embedded App
 
 
 ### Guest User granting Additive Permissions
@@ -84,7 +84,7 @@ If this scenario is required to also succeed for Guest Users, then the following
 - ShowPeoplePickerSuggestionsForGuestUsers
 
 ### Adding Guest Users
-If your SharePoint repository services application requires the ability to add Guest Users then Sharing must be enabled on the SharePoint content root in the Consuming Tenant e.g. https://contoso.sharepoint.com.
+If your SharePoint Embedded application requires the ability to add Guest Users then Sharing must be enabled on the SharePoint content root in the Consuming Tenant e.g. https://contoso.sharepoint.com.
 Please note that by default, sharing is enable on the SharePoint content root. However, some Consuming Tenants may have disabled this.
 If this scenario is required, then the SharePoint content root SharingCapability setting needs to be set to any value except disabled using the [Set-SPOSite](https://learn.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet in the Consuming Tenant:
 For example: 

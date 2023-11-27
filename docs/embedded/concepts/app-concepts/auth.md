@@ -1,15 +1,15 @@
 ---
-title: Authentication and Authorization with SharePoint repository services 
-description: This article describes the Authentication process for SharePoint repository services Applications
+title: Authentication and Authorization with SharePoint Embedded
+description: This article describes the Authentication process for SharePoint Embedded Applications
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Authentication and Authorization with SharePoint repository services 
+# Authentication and Authorization with SharePoint Embedded
 
 
-### SharePoint repository services Workflow
-1.	An app creator (enterprise or ISV) builds an app that uses SharePoint repository services containers
+### SharePoint Embedded Workflow
+1.	An app creator (enterprise or ISV) builds an app that uses SharePoint Embedded containers
     - a.	App created in Azure Active Directory
     - b.	Container Type creation requested and ContainerTypeID received to develop app
 2.	A subscriber (Consuming Tenant) installs the app into an M365 tenant
@@ -19,8 +19,8 @@ ms.localizationpriority: high
 6.	The Consuming Tenant security and compliance (S&C) admins can now run M365 S&C workflows against the container
 
 ### App-Only vs Delegated
-SharePoint repository services supports both App-Only and Delegated (App+User) calls for enterprise applications. App-only calls allow applications to utilize the SharePoint repository services platform to manage containers without a signed-in user; while Delegated calls allow applications to manage containers via the SharePoint repository services platform on behalf of the signed-in users. 
-Both App-Only and Delegated SharePoint repository services from trusted (or private) client applications are allowed. SharePoint repository services calls to create containers, either App-Only or Delegated, from public clients are blocked by SharePoint repository services authorization management.
+SharePoint Embedded supports both App-Only and Delegated (App+User) calls for enterprise applications. App-only calls allow applications to utilize the SharePoint Embedded platform to manage containers without a signed-in user; while Delegated calls allow applications to manage containers via the SharePoint Embedded platform on behalf of the signed-in users. 
+Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded calls to create containers, either App-Only or Delegated, from public clients are blocked by SharePoint Embedded authorization management.
 
 
 ### User Roles
@@ -36,12 +36,12 @@ Any user accessing a container must be a member of the container. Membership to 
 
 
 ### ContainerTypeID
-Operation calls to SharePoint repository services are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint repository services onboarding process, SharePoint repository services partners need to inform the SharePoint repository services platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
+Operation calls to SharePoint Embedded are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint Embedded onboarding process, SharePoint Embedded partners need to inform the SharePoint Embedded platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
 
 ### Authorization
-Authorization for SharePoint repository services calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID and User Roles for Delegated (App+User) calls.
+Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID and User Roles for Delegated (App+User) calls.
 
-For App-only calls, SharePoint repository services authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint repository services authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
+For App-only calls, SharePoint Embedded authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint Embedded authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
 
 Consider the examples below with the assumptions: 1) App1 has Create, Read, and Write permissions to ContainerType1; and 2) UserA is a reader for ContainerX of ContainerType1.
 

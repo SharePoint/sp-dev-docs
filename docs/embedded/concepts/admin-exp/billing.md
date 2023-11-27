@@ -1,5 +1,5 @@
 ---
-title: PAYG billing for SharePoint repository services
+title: PAYG billing for SharePoint Embedded 
 description: TODO
 ms.date: 11/14/2023
 ms.localizationpriority: high
@@ -7,29 +7,29 @@ ms.localizationpriority: high
 
 # In this article
   - [Overview](#overview)
-  - [SharePoint repository services Billing experience](#sharepoint-repository-services-billing-experience)
-  - [Set up Pay-as-you-go (PAYG) for SharePoint repository services](#set-up-pay-as-you-go-payg-for-sharepoint-repository-services)
+  - [SharePoint Embedded  Billing experience](#sharepoint-repository-services-billing-experience)
+  - [Set up Pay-as-you-go (PAYG) for SharePoint Embedded ](#set-up-pay-as-you-go-payg-for-sharepoint-repository-services)
   - [Pricing and PAYG meters](#pricing--payg-meters)
   - [Manage consumption and invoices in Azure portal](#manage-consumption-and-invoices-in-azure-portal)
 
 # Overview
-This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint repository services. 
+This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded . 
 
-# SharePoint repository services Billing experience
-SharePoint repository services will be a consumption based PAYG (Pay-as-you-go) offering from SharePoint Online, which means you will pay only for what you use. As a Developer admin for SharePoint repository services, you will set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal. 
+# SharePoint Embedded  Billing experience
+SharePoint Embedded  will be a consumption based PAYG (Pay-as-you-go) offering from SharePoint Online, which means you will pay only for what you use. As a Developer admin for SharePoint Embedded , you will set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal. 
 
 <img width="800" alt="Biling payg" src="https://github.com/cindylay/temp-docs/assets/125297866/68385ce2-f63d-4fba-a590-2d8de3058eee">
 
-# Set up Pay-as-you-go (PAYG) for SharePoint repository services
+# Set up Pay-as-you-go (PAYG) for SharePoint Embedded 
 
-To enable PAYG on SharePoint repository services, you need:
+To enable PAYG on SharePoint Embedded , you need:
 
   1. Existing SharePoint tenancy
   2. An Azure subscription in the tenancy
   3. A resource group attached to the azure subscription 
 
 ## Roles and Permissions
-- Admin who will set up billing relationship for SharePoint repository services will need to have owner or contributor permissions on Azure subscription. 
+- Admin who will set up billing relationship for SharePoint Embedded  will need to have owner or contributor permissions on Azure subscription. 
 - Admin will need to have a SharePoint administrator role to operate billing cmdlets
  
 ## Steps to establish billing 
