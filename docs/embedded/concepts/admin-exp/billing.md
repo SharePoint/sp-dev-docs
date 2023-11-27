@@ -18,7 +18,7 @@ This document outlines the steps an admin will have to follow to set up billing,
 # SharePoint Embedded  Billing experience
 SharePoint Embedded  will be a consumption based PAYG (Pay-as-you-go) offering from SharePoint Online, which means you will pay only for what you use. As a Developer admin for SharePoint Embedded , you will set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal. 
 
-<img width="800" alt="Biling payg" src="https://github.com/cindylay/temp-docs/assets/125297866/68385ce2-f63d-4fba-a590-2d8de3058eee">
+<img width="800" alt="Biling payg" src="../../images/billing-manage.png">
 
 # Set up Pay-as-you-go (PAYG) for SharePoint Embedded 
 
@@ -46,7 +46,6 @@ To enable PAYG on SharePoint Embedded , you need:
 
          New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
   
-![image](https://github.com/cindylay/temp-docs/assets/125297866/1ec76921-d05c-4464-a60c-e1b6f3b27292)
 
  ## Applicable guidelines
  1. Every container type must have an owning application
@@ -61,20 +60,17 @@ To enable PAYG on SharePoint Embedded , you need:
    a. To see all containertypes and billing properties except associated region use:
 
          Get-SPOContainerType
- 
-   ![image](https://github.com/cindylay/temp-docs/assets/125297866/085154af-06ff-43e1-ae77-ad19add8c3e4)
+
 
    b. To see billing properties associated with a container type including region use:
    
          Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 
-      ![image](https://github.com/cindylay/temp-docs/assets/125297866/efefc7cc-297d-4fd6-8f73-7f96dbeb884b)
 
 3. Update Azure subscription or resource group associated with a container type use:
    
          Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
 
-   ![image](https://github.com/cindylay/temp-docs/assets/125297866/08e83dbc-2f88-4877-bbf7-ec9ea9da6168)
 
 
 # Pricing & PAYG meters
@@ -87,13 +83,13 @@ Please review the Pricing and PAYG meters for SharePoint Embedded in the [terms 
 2. Search for **Cost Management + Billing** 
 3. Select **Cost Analysis** to see
      - **Actual cost**
-      ![image](https://github.com/cindylay/temp-docs/assets/125297866/b662fb88-1540-4360-91de-471df2906dc4)
+![image](../../images/billing-1.png)
        
      - Select '**+ Add Filter**' to see breakdown of cost by '**containertypeid**' and '**tenantid**'
          - Select **Tag**
          - In the key,value pair select '**containertypeid**' or '**tenantid**' and select respective containertypeid and tenantid
            
-       ![image](https://github.com/cindylay/temp-docs/assets/125297866/a8bd75ab-1c6a-4317-92c9-ac3fc214b724)
+       ![image](../../images/billing-2.png)
 
 
 5. Select **Billing** on the left navigation to see monthly invoices
