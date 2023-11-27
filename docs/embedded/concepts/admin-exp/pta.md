@@ -8,17 +8,17 @@ ms.localizationpriority: high
 # Developer Admin
 
 ## Overview
-Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem (yet to be finalized), and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the Container Ttypes, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator. 
+Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem (yet to be finalized), and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the Container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator. 
 
 ## Developer Admin Role
 M365 SharePoint Administrator serves as the developer admin. Global Administrators in Microsoft 365 (M365) can assign users the SharePoint Administrator role. The Global Administrator role already has all the permissions of the SharePoint Administrator role. For information about assigning a user the SharePoint administrator role, see Assign admin roles in the Microsoft 365 admin center. 
 
 ##### *Billing responsibilities of Developer admin:*
 
-Developer admin will need to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about PAYG for [SharePoint repository services](./billing.md).
+Developer admin will need to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about PAYG for [SharePoint Embedded](./billing.md).
 
 ## Administration Tools
-Developer admins will be able to manage SharePoint repository services applications with PowerShell commands using SharePoint Online Management Shell. 
+Developer admins will be able to manage SharePoint Embedded applications with PowerShell commands using SharePoint Online Management Shell. 
 
 To get started using PowerShell to manage SharePoint Embedded, you have to install the SharePoint Online Management Shell and connect to SharePoint Online. You need version [`16.0.24211.12000`](https://www.microsoft.com/en-us/download/details.aspx?id=35588) or higher to run the commands for SharePoint Embedded.
 
