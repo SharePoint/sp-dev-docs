@@ -5,13 +5,6 @@ ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# In this article
-  - [Overview](#overview)
-  - [SharePoint Embedded  Billing experience](#sharepoint-repository-services-billing-experience)
-  - [Set up Pay-as-you-go (PAYG) for SharePoint Embedded ](#set-up-pay-as-you-go-payg-for-sharepoint-repository-services)
-  - [Pricing and PAYG meters](#pricing--payg-meters)
-  - [Manage consumption and invoices in Azure portal](#manage-consumption-and-invoices-in-azure-portal)
-
 # Overview
 This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded . 
 
