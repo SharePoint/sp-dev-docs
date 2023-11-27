@@ -528,17 +528,17 @@
       href: spfx/release-1.0.0.md
   - name: Extend SharePoint with SPFx - Learning Path
     href: /training/paths/m365-sharepoint-associate
-- name: SharePoint repository services # start
+- name: SharePoint Embedded # start
   items:
   - name: Overview
-    href: repository-services/overview.md
+    href: embedded/overview.md
   - name: Getting Started
     items:
     - name: Getting Started on SharePoint repository services
       href: bing.com
     - name: Enable SharePoint repository services
-      href: repository-services/enable-sharepoint-repository-services.md
-    - name: Create your first SharePoint repository services Application
+      href: embedded/enable-sharepoint-repository-services.md
+    - name: Create your first SharePoint Embedded Application
       href: bing.com
     - name: Free Trial of Container Types
       href: bing.com
@@ -547,37 +547,35 @@
     - name: VS Code Extension
       href: bing.com
   - name: Adoptions and Use Case Scenarios
-    href: repository-services/adoptions-and-use.md
+    href: embedded/adoptions-and-use.md
   - name: Concepts
     items:
     - name: Application Architecture
-      href: repository-services/concepts/app-concepts/app-architecture.md
+      href: embedded/concepts/app-concepts/app-architecture.md
     - name: Authentication
-      href: repository-services/concepts/app-concepts/auth.md
+      href: embedded/concepts/app-concepts/auth.md
     - name: Sharing and Permissions
-      href: repository-services/concepts/app-concepts/sharing-and-perm.md
+      href: embedded/concepts/app-concepts/sharing-and-perm.md
     - name: Limits and Calling Patterns
-      href: repository-services/concepts/app-concepts/limits-calling.md
+      href: embedded/concepts/app-concepts/limits-calling.md
     - name: Admin Experiences
       items:
       - name: Consuming Tenant Admin
-        href: repository-services/concepts/admin-exp/cta.md
+        href: embedded/concepts/admin-exp/cta.md
       - name: Developer Admin
-        href: repository-services/concepts/admin-exp/pta.md
+        href: embedded/concepts/admin-exp/pta.md
       - name: Billing
-        href: repository-services/concepts/admin-exp/billing.md
-      href: repository-service/terms-of-service.md
-    - name: Terms of Service
+        href: embedded/concepts/admin-exp/billing.md
       href: repository-service/terms-of-service.md
     - name: Terms of Service
       href: repository-service/terms-of-service.md # end
   - name: Tutorials
     items:
       - name: SharePoint repository services - Overview & Configuration
-        href: repository-services/mslearn/m01-01-intro.md
+        href: embedded/mslearn/m01-01-intro.md
       - name: SharePoint repository services - Building an App
-        href: repository-services/mslearn/m02-01-intro.md
-    href: repository-services/adoptions-and-use.md
+        href: embedded/mslearn/m02-01-intro.md
+    href: embedded/adoptions-and-use.md
 - name: Microsoft Teams
   items:
   - name: Overview
