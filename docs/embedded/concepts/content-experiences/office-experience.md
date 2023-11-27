@@ -1,6 +1,6 @@
 ---
 title: Office Experiences
-description: TODO
+description: Overview of Office experiences with SharePoint Embedded content
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
@@ -11,10 +11,10 @@ Office File Experiences for SharePoint Embedded platform will work in a similar 
 
 ## In this article:
 
-1. [Opening Office Documents from your apps](#Opening-Office-Documents-from-SharePoint-repository-services-Apps)
-2. [View or Restore Previous Versions](#View-or-Restore-a-Previous-Version-of-Office-Document-from-SharePoint-repository-services-Apps) 
-3. [Collaborating on SharePoint Embedded Application Office Documents](#Collaborating-on-Office-Documents-from-SharePoint-repository-services-Apps)
-4. [Breadcrumb Properties of SharePoint Embedded Application Office Documents](#Breadcrumb-properties-of-Office-Documents-from-SharePoint-repository-services-Apps) 
+1. [Opening Office Documents from your apps](#Opening-Office-Documents-from-SharePoint-Embedded-Apps)
+2. [View or Restore Previous Versions](#View-or-Restore-a-Previous-Version-of-Office-Document-from-SharePoint-Embedded-Apps) 
+3. [Collaborating on SharePoint Embedded Application Office Documents](#Collaborating-on-Office-Documents-from-SharePoint-Embedded-Apps)
+4. [Breadcrumb Properties of SharePoint Embedded Application Office Documents](#Breadcrumb-properties-of-Office-Documents-from-SharePoint-Embedded-Apps) 
 
 ## Opening Office Documents from SharePoint Embedded Apps 
 Office documents from SharePoint Embedded Apps can be opened for Viewing and Editing in Office Online, where your users can work with documents directly on the website, or in Desktop apps for a richer viewing and editing experience. AutoSave feature saves your files automatically as your users work and is enabled for each Word, Excel and PowerPoint file stored in your SharePoint Embedded Application Apps.  
