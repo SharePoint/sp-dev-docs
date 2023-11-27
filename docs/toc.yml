@@ -557,7 +557,7 @@
       - name: Office Experiences
         href: embedded/concepts/content-experiences/office-experience.md
       - name: User Experiences
-        href: embedded/concepts/content-experiences/user-experience.md
+        href: embedded/concepts/content-experiences/user-experiences-overview.md
     - name: Admin Experiences
       items:
       - name: Consuming Tenant Admin
