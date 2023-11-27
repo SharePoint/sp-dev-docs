@@ -1,6 +1,6 @@
 ---
 title: Partner Tenant Admin
-description: TODO
+description: This article describes the role and responsibilities of Partner Tenant Admin in SharePoint Embedded
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
