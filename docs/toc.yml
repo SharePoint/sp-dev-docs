@@ -537,7 +537,7 @@
     - name: Create your first SharePoint Embedded Application
       href: embedded/mslearn/m01-01-intro.md
     - name: Enable SharePoint Embedded
-      href: embedded/enable-sharepoint-embedded.md
+      href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: Free Trial of Container Types
       href: bing.com
   - name: Adoptions and Use Case Scenarios
@@ -571,7 +571,7 @@
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
   - name: Terms of Service
-    href: repository-service/terms-of-service.md
+    href: embedded/terms-of-service.md
 - name: Microsoft Teams
   items:
   - name: Overview
