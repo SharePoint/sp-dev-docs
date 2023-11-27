@@ -13,7 +13,7 @@ When a consumer installs/registers a SharePoint Embedded application in their Mi
 
 ## Introducing File Storage Containers
 SharePoint Embedded applications use Microsoft Graph APIs to store files and documents in a new entity called a "File Storage Container” or Container for short.  If you’re an ISV, your app will create these containers in your customer’s M365 tenant, and if you’re an enterprise, your app will create these containers in your own tenant. Each container provides a place to store files -- you can think of them a little bit like an API-only Document Library in SharePoint, but with some slight differences. Your app can create many of these containers inside each tenant that uses your app, and each container can be permissioned separately storing many files with multiple terabytes of content. 
-SharePoint repository services containers are dedicated to and accessible by just your app, so the files and documents your app depends on are isolated and secure within that tenant boundary.  
+SharePoint Embedded containers are dedicated to and accessible by just your app, so the files and documents your app depends on are isolated and secure within that tenant boundary.  
 
 ## App managed content experiences
 By default, the content stored within a Microsoft 365 tenant by a SharePoint Embedded application is only accessible through that owning application. SharePoint Embedded applications provide the user experience layer for accessing and managing content, leveraging some of the rich content capabilities that Microsoft 365 offers such as:
@@ -34,7 +34,7 @@ This includes settings from Microsoft Purview compliance, risk, and security set
 * Data loss prevention (DLP)
 * Retention policies, sensitivity labels, conditional access
 
-## Understanding the costs and billing for SharePoint repository services content
+## Understanding the costs and billing for SharePoint Embedded content
 Microsoft 365 customers have different entitlements related to storage, usage, and features depending on the licenses the customer has purchased.
 
 The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage and the number of API calls.
