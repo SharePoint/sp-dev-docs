@@ -33,7 +33,7 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application.
-For more information about using this command, see [Get-SPOApplication cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+For more information about using this command, see [Get-SPOApplication cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spoapplication?view=sharepoint-ps)
 
 ### 4. Container Administration
 
@@ -43,7 +43,7 @@ For more information about using this command, see [Get-SPOApplication cmdlet](h
   ```powershell
   Get-SPOContainer -OwningApplicationId <OwningApplicationId> | FT
   ```
-  OwningApplicationId is the ID of the SharePoint Embedded application. For more infromation about using this command, see [Get-SPOContainer cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+  OwningApplicationId is the ID of the SharePoint Embedded application. For more infromation about using this command, see [Get-SPOContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spocontainer?view=sharepoint-ps)
 
 * #### 4.2 **View details of a Container:** 
   Admins can get the details of a container within an application using the following command. This command will return more details of a container including StorageUsed, Ownership     details, SiteURL, Label information etc.
@@ -51,7 +51,7 @@ For more information about using this command, see [Get-SPOApplication cmdlet](h
   ```powershell
   Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>  
   ```
-  Here, the Identity is the ID of the Container. For more information about using this command, see [Get-SPOContainer cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-  PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+  Here, the Identity is the ID of the Container. For more information about using this command, see [Get-SPOContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spocontainer?view=sharepoint-ps)
 
 * #### 4.3 **Delete Containers:** 
   When admins deletes a Container, it is moved into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted     from the collection, or it exceeds the 93-day retention period, it is permanently deleted.Deleting a container deletes everything within it, including all documents and files.
@@ -64,20 +64,20 @@ For more information about using this command, see [Get-SPOApplication cmdlet](h
    ```powershell
   Remove-SPOContainer -Identity <ContainerId> 
   ```
-  ContainerId is the ID of the container that will be moved to the deleted container collection. For more information about using this command, see [Remove-SPOContainer cmdlet(https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+  ContainerId is the ID of the container that will be moved to the deleted container collection. For more information about using this command, see [Remove-SPOContainer cmdlet(https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spocontainer?view=sharepoint-ps)
 
 * #### 4.4 **View deleted containers:** 
-  Admins can get a list of deleted containers on the deleted container collection using the following command. For more information about using this command, see [Restore-SPODeletedContainer cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+  Admins can get a list of deleted containers on the deleted container collection using the following command. For more information about using this command, see [Get-SPODeletedContainer](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spodeletedcontainer?view=sharepoint-ps)
 ```powershell
 Get-SPODeletedContainer
 ```
 #### 4.5 **Restore deleted containers:** 
-Admins can restore a deleted container from the deleted container collection using the following command. For more information about using this command, see [Restore-SPODeletedContainer cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md)
+Admins can restore a deleted container from the deleted container collection using the following command. For more information about using this command, see [Restore-SPODeletedContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spodeletedcontainer?view=sharepoint-ps)
 ```powershell
 Restore-SPODeletedContainer -Identity <ContainerId>
 ```
 #### 4.6 **Permanently delete Containers** 
-Admins can permanently delete a Container from the deleted container collection if the Container has no further retention policies applied to it. For more information about using this command, see [Remove-SPODeletedContainer cmdlet](https://github.com/cindylay/OfficeDocs-SharePoint-PowerShell/edit/cindy/spocontainer/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md) 
+Admins can permanently delete a Container from the deleted container collection if the Container has no further retention policies applied to it. For more information about using this command, see [Remove-SPODeletedContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spodeletedcontainer?view=sharepoint-ps) 
 ```powershell
 Remove-SPODeletedContainer -Identity <ContainerId>
 ```
@@ -119,9 +119,3 @@ For more information about the tenant level sharing settings, see [Set-SPOTenant
 ### 6. Security and Compliance Administration
 SharePoint Embedded leverages Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions will work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 (M365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported securiity and compliane capabilties, see [Security and Compliance](repository-services/concepts/security-and-compliance.md)
 
-See Also
-1. [Registering a SharePoint Embedded Application the the tenant](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-2. [Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-3. [Delegated & App-Only Permissions](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)  
-4. [Managing security and compliance policies for containers](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-5. [External Sharing Settings for a Tenant](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
