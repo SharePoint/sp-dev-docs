@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 
 # Limits and Calling Patterns 
-This document explains the limits of SharePoint repository services.
+This document explains the limits of SharePoint Embedded.
 
 ## Size limits
 The table below defines the size limits of containers.
@@ -44,7 +44,7 @@ In both cases, a `Retry-After` header is included in the response indicating how
 
 
 ## API rate limits 
-SharePoint repository services provides a variety of APIs. Different APIs have different costs depending on the functionality and complexity of the API. The cost of APIs is normalized and expressed by resource units. API rate limits are also defined using resource units. 
+SharePoint Embedded provides a variety of APIs. Different APIs have different costs depending on the functionality and complexity of the API. The cost of APIs is normalized and expressed by resource units. API rate limits are also defined using resource units. 
 
 |     Resource units per request    |   Operations                                                                  |
 |-----------------------------------|-------------------------------------------------------------------------------|
