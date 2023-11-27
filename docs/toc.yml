@@ -534,16 +534,14 @@
     href: embedded/overview.md
   - name: Getting Started
     items:
-    - name: Getting Started on SharePoint repository services
-      href: bing.com
-    - name: Enable SharePoint repository services
-      href: embedded/enable-sharepoint-repository-services.md
     - name: Create your first SharePoint Embedded Application
-      href: bing.com
+      href: embedded/mslearn/m01-01-intro.md
+    - name: Enable SharePoint Embedded
+      href: embedded/enable-sharepoint-repository-services.md
     - name: Free Trial of Container Types
       href: bing.com
-  - name: Adoptions and Use Case Scenarios
-    href: embedded/adoptions-and-use.md
+- name: Adoptions and Use Case Scenarios
+  href: embedded/adoptions-and-use.md
   - name: Concepts
     items:
     - name: Application Architecture
@@ -562,16 +560,18 @@
         href: embedded/concepts/admin-exp/pta.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
-      href: repository-service/terms-of-service.md
   - name: Tutorials
     items:
       - name: SharePoint repository services - Overview & Configuration
         href: embedded/mslearn/m01-01-intro.md
       - name: SharePoint repository services - Building an App
         href: embedded/mslearn/m02-01-intro.md
-    href: embedded/adoptions-and-use.md
+      - name: Launch Experience
+        href: embedded/tutorials/launch-experience.md
+      - name: Using File Preview
+        href: embedded/tutorials/using-file-preview.md
   - name: Terms of Service
-      href: repository-service/terms-of-service.md # end
+    href: repository-service/terms-of-service.md # end
 - name: Microsoft Teams
   items:
   - name: Overview
