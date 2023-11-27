@@ -19,23 +19,23 @@ Global Administrators in Microsoft 365 can assign users the SharePoint Administr
 
 **Step 2:** In SharePoint admin center, select “Settings” from the left-hand navigation.
 
-<img width="915" alt="image" src="https://github.com/cindylay/temp-docs/assets/132292644/85f69d72-c7d9-4591-a1cb-d10256e862e7">
+<img width="915" alt="image" src="../images/SharePointEmbeddedToS-1.jpg">
 
 **Step 3:** Select “SharePoint Embedded” app in the settings page. The app will be “disabled” if the tenant admin has not enabled the settings before. 
 
-<img width="915" alt="image" src="https://github.com/cindylay/temp-docs/assets/132292644/05e51fdd-751c-41f7-81c7-de1724ac7ab4">
+<img width="915" alt="image" src="../images/SharePointEmbeddedToS-2.jpg">
 
 
 **Step 4:** Selecting SharePoint Embedded will open a flyover. Read the terms of service before enabling the application. The term of service is also present [here](../terms-of-service.md).
 
-<img width="917" alt="image" src="https://github.com/cindylay/temp-docs/assets/132292644/1fae88f6-1c85-47d8-80d8-d992e1506b61">
+<img width="917" alt="image" src="../images/SharePointEmbeddedToS-3.jpg">
 
 
 **Step 5:** Select the check box and click on the enable button to begin using SharePoint Embedded application on the tenant. 
 
-<img width="915" alt="image" src="https://github.com/cindylay/temp-docs/assets/132292644/23f0bf4b-ee28-41f5-b863-8f173b400042">
+<img width="915" alt="image" src="../images/SharePointEmbeddedToS-4.jpg">
 
 SharePoint Embedded application is now available for use on your tenant.
 
-<img width="914" alt="image" src="https://github.com/cindylay/temp-docs/assets/132292644/928b279a-0447-48f3-a309-2c63def03ddc">
+<img width="914" alt="image" src=""../images/SharePointEmbeddedToS-5.jpg">
 
