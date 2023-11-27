@@ -10,9 +10,9 @@ ms.localizationpriority: high
 During Public Preview, by default, SharePoint Embedded applications will not be enabled for use on the Microsoft 365(M365) tenant. To create or register SharePoint Embedded applications in the tenant, tenant admins must review the terms of service and enable the settings in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219). This document explains the steps to enable SharePoint Embedded applications on a M365 tenant.
 
 ## Who can enable SharePoint Embedded?
-Users assigned the SharePoint Administrator role have access to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) and can enable SharePoint Embedded application for their tenant. For information about assigning a user the SharePoint administrator role, see [Assign admin roles in the Microsoft 365 admin center.](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide)
+Users assigned to the SharePoint Administrator role have access to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) and can enable SharePoint Embedded applications for their tenant. For information about assigning a user, the SharePoint administrator role, see [Assign admin roles in the Microsoft 365 admin center.](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide)
 
-Global Administrators in Microsoft 365 can assign users the SharePoint Administrator. The Global Administrator role already has all the permissions of the SharePoint Administrator role. 
+Global Administrators in M365 can assign users the SharePoint Administrator. The Global Administrator role already has all the permissions of the SharePoint Administrator role. 
 
 ## Steps to Enable SharePoint Embedded
 **Step 1:** Login to [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) as a SharePoint Administrator or a Global Administrator. 
