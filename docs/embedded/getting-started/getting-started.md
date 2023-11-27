@@ -17,7 +17,7 @@ SharePoint Embedded is a headless content storage layer for your custom applicat
 
 Here's a high-level overview of a SharePoint Embedded app:
 
-![Architecture](./images/architecture-overview.png)
+![Architecture](../images/architecture-overview.png)
 
 Containers are created within an M365 tenant. You can create many Containers in the same tenant, and you can install your application on many tenants. Here's the high-level flow of SharePoint Embedded application development:
 
