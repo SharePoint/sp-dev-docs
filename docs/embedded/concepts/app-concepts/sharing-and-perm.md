@@ -30,7 +30,7 @@ Your app may have the scenario that you may want to grant additional permissions
 Scenario | Graph API(s) | Notes
 :---|:---|:---
 Grant an additive permission | [POST /drives/{drive-id}/items/{item-id}/invite](https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http) | The sendInvitation property must always be false. </br> You cannot grant additive permissions to the root folder in a Container as this is essentially the same as adding a User to a role. <br/> You cannot use AppOnly permissions.
-Retrieve permissions | [GET /drives/{drive-id}/items/{item-id}/permissions](https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http) <br/> [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http) |  
+Retrieve permissions | [GET /drives/{drive-id}/items/{item-id}/permissions](https://learn.microsoft.com/en-us/graph/api/permission-get?view=graph-rest-1.0&tabs=http) <br/> [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}]([https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http](https://learn.microsoft.com/en-us/graph/api/permission-get?view=graph-rest-1.0&tabs=http)|  
 Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](https://learn.microsoft.com/graph/api/permission-delete?view=graph-rest-1.0&tabs=http) | You can only delete the additive permission on the drive item where it was originally added.
 
 
