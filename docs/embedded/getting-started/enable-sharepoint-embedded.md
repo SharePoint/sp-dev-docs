@@ -37,5 +37,5 @@ Global Administrators in Microsoft 365 can assign users the SharePoint Administr
 
 SharePoint Embedded application is now available for use on your tenant.
 
-<img width="914" alt="image" src=""../images/SharePointEmbeddedToS-5.jpg">
+<img width="914" alt="image" src="../images/SharePointEmbeddedToS-5.jpg">
 
