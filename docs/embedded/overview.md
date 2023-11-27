@@ -43,7 +43,7 @@ The partition created in the consumer’s Microsoft 365 tenant by a SharePoint E
 > Learn more about pricing for SharePoint Embedded, see [Pricing](./terms-of-service.md).
 
 ## Getting Started with SharePoint Embedded
-You can get started building on SharePoint Embdded by following our [Getting Started](./getting-started/getting-started.md) article. Once your basic app structure is in place, use the resources provided here to continue your app development journey. 
+You can get started building on SharePoint Embdded by following our [Getting Started](./mslearn/m01-01-intro.md) article. Once your basic app structure is in place, use the resources provided here to continue your app development journey. 
 
 
 
