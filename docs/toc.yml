@@ -528,7 +528,7 @@
       href: spfx/release-1.0.0.md
   - name: Extend SharePoint with SPFx - Learning Path
     href: /training/paths/m365-sharepoint-associate
-- name: SharePoint Embedded # start
+- name: SharePoint Embedded
   items:
   - name: Overview
     href: embedded/overview.md
@@ -571,7 +571,7 @@
       - name: Using File Preview
         href: embedded/tutorials/using-file-preview.md
   - name: Terms of Service
-    href: repository-service/terms-of-service.md # end
+    href: repository-service/terms-of-service.md
 - name: Microsoft Teams
   items:
   - name: Overview
