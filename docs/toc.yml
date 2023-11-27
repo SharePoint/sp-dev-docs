@@ -543,7 +543,7 @@
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
     - name: Concepts
-     items:
+      items:
      - name: Application Architecture
        href: embedded/concepts/app-concepts/app-architecture.md
      - name: Authentication
