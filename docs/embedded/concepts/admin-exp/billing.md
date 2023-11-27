@@ -37,8 +37,9 @@ To enable PAYG on SharePoint Embedded , you need:
    b. If you do not have a resource group, you can create on by following steps here to [create a resource group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
    
 
-         New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
-  
+```ps
+New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
+```  
 
  ## Applicable guidelines
  1. Every container type must have an owning application
@@ -52,19 +53,22 @@ To enable PAYG on SharePoint Embedded , you need:
 
    a. To see all containertypes and billing properties except associated region use:
 
-         Get-SPOContainerType
+```ps
+Get-SPOContainerType
+```
 
 
    b. To see billing properties associated with a container type including region use:
    
-         Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
-
+```ps
+Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
+```
 
 3. Update Azure subscription or resource group associated with a container type use:
    
-         Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
-
-
+```ps
+Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
+```
 
 # Pricing & PAYG meters
 
@@ -76,13 +80,14 @@ Please review the Pricing and PAYG meters for SharePoint Embedded in the [terms 
 2. Search for **Cost Management + Billing** 
 3. Select **Cost Analysis** to see
      - **Actual cost**
+
 ![image](../../images/billing-1.png)
        
-     - Select '**+ Add Filter**' to see breakdown of cost by '**containertypeid**' and '**tenantid**'
+Select '**+ Add Filter**' to see breakdown of cost by '**containertypeid**' and '**tenantid**'
          - Select **Tag**
          - In the key,value pair select '**containertypeid**' or '**tenantid**' and select respective containertypeid and tenantid
            
-       ![image](../../images/billing-2.png)
+![image](../../images/billing-2.png)
 
 
 5. Select **Billing** on the left navigation to see monthly invoices

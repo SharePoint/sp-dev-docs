@@ -563,7 +563,7 @@
       - name: Consuming Tenant Admin
         href: embedded/concepts/admin-exp/cta.md
       - name: Developer Admin
-        href: embedded/concepts/admin-exp/pta.md
+        href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
   - name: Tutorials
