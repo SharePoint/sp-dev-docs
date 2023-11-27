@@ -1,6 +1,6 @@
 ---
 title: File Previews
-description: TODO
+description: Preview SharePoint Embedded content
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
