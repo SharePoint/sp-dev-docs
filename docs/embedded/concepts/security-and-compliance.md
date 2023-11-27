@@ -12,7 +12,22 @@ Microsoft's SharePoint Embedded provides a faster way to create secure and compl
 
 ##  Compliance Policies using Microsoft Purview 
 
-Currently, SharePoint Embedded supports the following Compliance features using Microsoft Purview. For information on how to retrieve container URL to set various Compliance policies at a Container level, please visit <insert CTA doc link here>. 
+Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview.  You can follow the below steps to retrieve the details of a container that the policy needs to be applied to.
+
+1. View list of registered SharePoint Embedded applications registered in the specified tenant:  
+```
+Get-SPOApplication 
+```
+2. Retrieve list of Containers in a SharePoint Embedded application by providing the ApplicationID returned in Step #1  
+```
+Get-SPOContainer -OwningApplicationId <OwningApplicationID>
+```
+3. Retrive the details of a container including the ContainerSiteURL by providing the ContainerID returned in Step #2.
+```
+Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity<ContainerID>
+```
+For information on how to retrieve ContainerSiteURL to set the various Compliance policies described below at a Container level, please visit [Get-SPOContainer](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spocontainer?view=sharepoint-ps).  
+ 
  
 
 * ### Audit 
@@ -67,29 +82,35 @@ Since SharePoint Embedded applications are built by ISVs and Developers, it is u
     Global Administrators and SharePoint Administrators can set and remove sensitivity labels on a SharePoint Embedded Container by using the newly created SharePoint PowerShell cmdlet –  
 
 ```
-Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel "<SensitivityLabelGUID>" 
+Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID> 
 ```
-<br></br>
-
-
-To learn more about the new Sensitivity Label PowerShell cmdlet and its various configurable optional parameters, please visit [<link to new Sen label cmdlet page – WIP>](learn.microsoft.com)
+<!--To learn more about the new Sensitivity Label PowerShell cmdlet and its various configurable optional parameters, please visit [<link to new Sen label cmdlet page – WIP>](learn.microsoft.com)-->
 
 Sensitivity labels can also be set at the file level for content stored in SharePoint Embedded Containers by opening web-previewable files and choosing a label from the “Sensitivity bar” that’s available for these files. To learn more about setting sensitivity labels at a file level, please visit [Learn about sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels).
 
-* ## Block Download policy
-    Block Download policy allows SharePoint Administrator or Global Administrator to block download of files from SharePoint Embedded Containers. This allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. 
+* ## Block Download policy (Coming Soon)
+  Block Download policy allows SharePoint Administrator or Global Administrator to block download of files from SharePoint Embedded Containers. This allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. 
 
 ```
 Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true 
 ```
+Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. 
+<!--To learn more about the new Block Download PowerShell cmdlet and its various configurable options, please visit [<link to new BDP cmdlet page – WIP>](learn.microsoft.com) -->
 
+* ## Conditional Access policy (Coming Soon)
+SharePoint Embedded supports basic Conditional Access policy configurations such as  
 
-Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. To learn more about the new Block Download PowerShell cmdlet and its various configurable options, please visit [<link to new BDP cmdlet page – WIP>](learn.microsoft.com)
+ * AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web 
 
-* ## Conditional Access policy
-    SharePoint Embedded supports basic Conditional Access policy features such as BlockAccess, AllowLimitedAccess, AllowEditing and ReadOnlyForUnmanagedDevices using the newly built SharePoint PowerShell cmdlet. AuthorizationContext will be supported in the near future.
+ * AllowLimitedAccess: Allows limited, web-only access 
 
-    To learn more about the new Conditional Access Policy PowerShell cmdlet and its various configurable options, please visit [<link to new CAP cmdlet page – WIP>](learn.microsoft.com)
+ * BlockAccess: Blocks Access 
+
+using the below PowerShell cmdlet. AuthorizationContext will also be supported in the near future. 
+```
+Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType> 
+```
+Please read Control access from unmanaged devices documentation to understand more about [Conditional Access Policy](https://learn.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices). 
 
 
 
