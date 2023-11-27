@@ -537,7 +537,7 @@
     - name: Create your first SharePoint Embedded Application
       href: embedded/mslearn/m01-01-intro.md
     - name: Enable SharePoint Embedded
-      href: embedded/enable-sharepoint-repository-services.md
+      href: embedded/enable-sharepoint-embedded.md
     - name: Free Trial of Container Types
       href: bing.com
 - name: Adoptions and Use Case Scenarios
