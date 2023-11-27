@@ -5,9 +5,9 @@ ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-# Office File Experiences for SharePoint repository services Apps
+# Office File Experiences for SharePoint Embedded Apps
 
-Office File Experiences for SharePoint repository services platform will work in a similar manner to Microsoft 365 (M365) platform.
+Office File Experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 (M365) platform.
 
 ## In this article:
 
@@ -16,14 +16,14 @@ Office File Experiences for SharePoint repository services platform will work in
 3. [Collaborating on SharePoint repository services Office Documents](#Collaborating-on-Office-Documents-from-SharePoint-repository-services-Apps)
 4. [Breadcrumb Properties of SharePoint repository services Office Documents](#Breadcrumb-properties-of-Office-Documents-from-SharePoint-repository-services-Apps) 
 
-## Opening Office Documents from SharePoint repository services Apps 
+## Opening Office Documents from SharePoint Embedded Apps 
 Office documents from SharePoint repository services Apps can be opened for Viewing and Editing in Office Online, where your users can work with documents directly on the website, or in Desktop apps for a richer viewing and editing experience. AutoSave feature saves your files automatically as your users work and is enabled for each Word, Excel and PowerPoint file stored in your SharePoint repository services Apps.  
 
-## View or Restore a Previous Version of Office Document from SharePoint repository services Apps 
+## View or Restore a Previous Version of Office Document from SharePoint Embedded Apps 
 Versioning is automatically enabled on each Word, Excel and PowerPoint file stored in your SharePoint repository services Apps which helps your users see what changes have been made in a file, compare different versions, or restore the version you want. This is incredibly important to your users if a mistake was made, a previous version is preferred or in multi-user coauthoring scenarios when your users are collaborating with others and someone makes changes your users didn't want in a file.
 
-## Collaborating on Office Documents from SharePoint repository services Apps
-It's simple for your users to collaborate on your SharePoint repository services Office documents – They can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an Email Invitation or @mention in comments to tag someone for feedback and , **Collaborate in real time** by co-authoring in Office with SharePoint repository services Applications.
+## Collaborating on Office Documents from SharePoint Embedded Apps
+It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – They can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an Email Invitation or @mention in comments to tag someone for feedback and , **Collaborate in real time** by co-authoring in Office with SharePoint repository services Applications.
 
 ### Share your documents:
 
