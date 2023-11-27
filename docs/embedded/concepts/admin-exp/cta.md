@@ -64,19 +64,19 @@ For more information about using this command, see [Get-SPOApplication cmdlet](h
    ```powershell
   Remove-SPOContainer -Identity <ContainerId> 
   ```
-  ContainerId is the ID of the container that will be moved to the deleted container collection. For more information about using this command, see [Remove-SPOContainer cmdlet(https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spocontainer?view=sharepoint-ps)
+  ContainerId is the ID of the container that will be moved to the deleted container collection. For more information about using this command, see [Remove-SPOContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spocontainer?view=sharepoint-ps)
 
 * #### 4.4 **View deleted containers:** 
   Admins can get a list of deleted containers on the deleted container collection using the following command. For more information about using this command, see [Get-SPODeletedContainer](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spodeletedcontainer?view=sharepoint-ps)
 ```powershell
 Get-SPODeletedContainer
 ```
-#### 4.5 **Restore deleted containers:** 
+* #### 4.5 **Restore deleted containers:** 
 Admins can restore a deleted container from the deleted container collection using the following command. For more information about using this command, see [Restore-SPODeletedContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spodeletedcontainer?view=sharepoint-ps)
 ```powershell
 Restore-SPODeletedContainer -Identity <ContainerId>
 ```
-#### 4.6 **Permanently delete Containers** 
+* #### 4.6 **Permanently delete Containers** 
 Admins can permanently delete a Container from the deleted container collection if the Container has no further retention policies applied to it. For more information about using this command, see [Remove-SPODeletedContainer cmdlet](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spodeletedcontainer?view=sharepoint-ps) 
 ```powershell
 Remove-SPODeletedContainer -Identity <ContainerId>
