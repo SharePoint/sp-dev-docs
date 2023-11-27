@@ -31,11 +31,11 @@ Global Administrators in M365 can assign users the SharePoint Administrator. The
 <img width="917" alt="image" src="../images/SharePointEmbeddedToS-3.jpg">
 
 
-**Step 5:** Select the check box and click on the enable button to begin using SharePoint Embedded application on the tenant. 
+**Step 5:** Select the check box and click on the enable button to begin using your SharePoint Embedded application on the tenant. 
 
 <img width="915" alt="image" src="../images/SharePointEmbeddedToS-4.jpg">
 
-SharePoint Embedded application is now available for use on your tenant.
+Your SharePoint Embedded application is now available for use on your tenant.
 
 <img width="914" alt="image" src="../images/SharePointEmbeddedToS-5.jpg">
 
