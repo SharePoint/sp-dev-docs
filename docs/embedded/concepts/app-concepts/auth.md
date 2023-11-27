@@ -1,5 +1,6 @@
 ---
 title: Authentication and Authorization with SharePoint Embedded
+ms.service: sharepoint-online
 description: This article describes the Authentication process for SharePoint Embedded Applications
 ms.date: 11/14/2023
 ms.localizationpriority: high
@@ -27,12 +28,13 @@ Both App-Only and Delegated SharePoint Embedded from trusted (or private) client
 Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles as outlined below. When adding a user to a container, the user must be assigned to one of these roles. 
 
 **Note:** The calling user creating a new container via delegated calls is automatically assigned the owner role. 
-|**Role** | **Description**                                                                                                                                                             |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Reader  | This role allows the user to read the properties and the contents of the container.                                                                                         |
-| Writer  | This role has all permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
-| Manager | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
-| Owner   | This role has all permissions a Manager has, plus the permission to delete containers.                                                                                      |
+
+| **Role** | **Description**                                                                                                                                                             |
+|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Reader   | This role allows the user to read the properties and the contents of the container.                                                                                         |
+| Writer   | This role has all permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
+| Manager  | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
+| Owner    | This role has all permissions a Manager has, plus the permission to delete containers.                                                                                      |
 
 
 ### ContainerTypeID
