@@ -1,6 +1,6 @@
 ---
 title: PAYG billing for SharePoint Embedded 
-description: TODO
+description: This articles explains how to set up PAYG billing
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
@@ -79,10 +79,7 @@ To enable PAYG on SharePoint Embedded , you need:
 
 # Pricing & PAYG meters
 
-|     Meters                               |     Meter   Unit       |     Pricing (In USD $)   |
-|------------------------------------------|------------------------|------------------------|
-|     Storage                              |      $/GB/Day          |     $0.00667           |
-|     Graph   API Transactions Class A     |      $/1   API call    |     $0.00050           |
+Please review the Pricing and PAYG meters for SharePoint Embedded in the [terms of service](../../terms-of-service.md)
 
 #  Manage consumption and invoices in Azure portal
 
