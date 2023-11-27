@@ -1,6 +1,6 @@
 ---
 title: Trial ContainerType
-description: Anatomy of a SharePoint Embedded application 
+description: Descrbing a Trial Container Option
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---

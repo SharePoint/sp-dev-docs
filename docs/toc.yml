@@ -539,7 +539,7 @@
     - name: Enable SharePoint Embedded
       href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: Free Trial of Container Types
-      href: bing.com
+      href: embedded/getting-started/trial-containertype.md
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
   - name: Concepts
