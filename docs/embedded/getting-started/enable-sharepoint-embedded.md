@@ -26,7 +26,7 @@ Global Administrators in M365 can assign users the SharePoint Administrator. The
 <img width="915" alt="image" src="../images/SharePointEmbeddedToS-2.jpg">
 
 
-**Step 4:** Selecting SharePoint Embedded will open a flyover. Read the terms of service before enabling the application. The term of service is also present [here](../terms-of-service.md).
+**Step 4:** Selecting SharePoint Embedded will open a flyover. Read the [terms of service](../terms-of-service.md) before enabling the application.
 
 <img width="917" alt="image" src="../images/SharePointEmbeddedToS-3.jpg">
 
