@@ -1,6 +1,6 @@
 ---
 title: Limits and Calling Patterns
-description: TODO
+description: This article explains the limits of SharePoint Embedded
 ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
