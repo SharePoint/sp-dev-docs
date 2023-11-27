@@ -5,14 +5,6 @@ ms.date: 11/14/2023
 ms.localizationpriority: high
 ---
 
-### In this article
-* What is SharePoint repository services?
-* When should you use SharePoint repository services?
-* What can you do with SharePoint repository services?
-* Key Features
-* [Getting started with SharePoint repository services](./getting-started/getting-started.md)
-
-
 # Overview
 Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution which enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line of business applications and ISVs building multi-tenant applications.
 
