@@ -542,8 +542,8 @@
       href: bing.com
 - name: Adoptions and Use Case Scenarios
   href: embedded/adoptions-and-use.md
-  - name: Concepts
-    items:
+   - name: Concepts
+     items:
     - name: Application Architecture
       href: embedded/concepts/app-concepts/app-architecture.md
     - name: Authentication
