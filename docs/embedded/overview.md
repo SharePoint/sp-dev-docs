@@ -40,7 +40,7 @@ Microsoft 365 customers have different entitlements related to storage, usage, a
 The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage and the number of API calls.
 
 > [!NOTE]
-> Learn more about pricing for SharePoint Embedded, see [Pricing](../todo.md).
+> Learn more about pricing for SharePoint Embedded, see [Pricing](./terms-of-service.md).
 
 ## Getting Started with SharePoint Embedded
 You can get started building on SharePoint Embdded by following our [Getting Started](./getting-started/getting-started.md) article. Once your basic app structure is in place, use the resources provided here to continue your app development journey. 
