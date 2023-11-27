@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 
 # Content Experiences Overview 
-Microsoft's SharePoint Embedded services provides a comprehensive set of Content Experience features like Open & Edit of Office Files, File Preview or In-App Search that you can leverage to build the right user experiences for your applications. 
+Microsoft's SharePoint Embedded provides a comprehensive set of Content Experience features like Open & Edit of Office Files, File Preview or In-App Search that you can leverage to build the right user experiences for your applications. 
 
 ## In this article:
 
@@ -20,10 +20,10 @@ Microsoft's SharePoint Embedded services provides a comprehensive set of Content
 8. [M365 Content Discovery](#Content-Discovery-in-M365) 
 
 ## Open & Edit using Office 
-Office documents from SharePoint Embedded services Apps can be opened for Viewing, Editing and Collaborating using either Office Online, where your users can work with documents directly on the website, or Desktop apps for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint repository services Applications](../../office-experience.md). <br/><br/> You can configure your applications to launch Office clients just the right way  when a user clicks on a Office document from your application including directly launching Desktop Clients or launching Office clients in a specific mode like View (for read-only content) or in Edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../launch-experience.md) 
+Office documents from SharePoint Embedded Apps can be opened for Viewing, Editing and Collaborating using either Office Online, where your users can work with documents directly on the website, or Desktop apps for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint repository services Applications](../../office-experience.md). <br/><br/> You can configure your applications to launch Office clients just the right way  when a user clicks on a Office document from your application including directly launching Desktop Clients or launching Office clients in a specific mode like View (for read-only content) or in Edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../launch-experience.md) 
 
 ## Preview Content 
-Integrate your app with SharePoint Embedded services player plugin to offer file preview experiences on a wide range of supported file types. You can embed the file preview experiences either in an iFrame or open a new page. Learn how to [offer File Preview experiences for content on your applications](../../using-file-preview.md)  
+Integrate your app with SharePoint Embedded player plugin to offer file preview experiences on a wide range of supported file types. You can embed the file preview experiences either in an iFrame or open a new page. Learn how to [offer File Preview experiences for content on your applications](../../using-file-preview.md)  
                                                                             
 ## Download
 You can use [Graph's Download DriveItem API](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content) to offer download file user experiences for your applications. This will generate  a short lived, preauthenticated Url allows users to download files from your applications. Note: A direct link to the file lacks the appropriate authorization from your app. If used directly in a browser, this would yield an access denied.
@@ -32,7 +32,7 @@ You can use [Graph's Download DriveItem API](https://learn.microsoft.com/en-us/g
 You can use the Microsoft Search API to query SharePoint Embedded services container content in your application. Search requests run in the context of the signed-in user. Search results are only scoped to enforce any access control applied to the items by the user. For example, search results will include all content matching the search criteria and accessible by the user regardless of whether the SharePoint repository services application is authorized to access the content. It is recommended to specify the container type accessible by the application in the search request body to ensure search results are properly scoped. 
 
 ## Content Discovery in M365
-Your users will be able to discover and share content from your SharePoint Embedded services applications in their Recommended, Quick Access or Shared With Me feeds on M365 surfaces like Office.com, SharePoint Search results or OneDrive user accounts. This allows your users to leverage  familiar M365 experiences to discover content from your applications. In future releases, M365 Content Discovery can be configured to be disabled across all M365 surfaces.
+Your users will be able to discover and share content from your SharePoint Embedded applications in their Recommended, Quick Access or Shared With Me feeds on M365 surfaces like Office.com, SharePoint Search results or OneDrive user accounts. This allows your users to leverage  familiar M365 experiences to discover content from your applications. In future releases, M365 Content Discovery can be configured to be disabled across all M365 surfaces.
 
 #### Enable Sharing dialog in Office.com
 > [!Note]
