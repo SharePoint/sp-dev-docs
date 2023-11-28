@@ -535,7 +535,7 @@
   - name: Getting Started
     items:
     - name: Create your first SharePoint Embedded Application
-      href: embedded/mslearn/m01-01-intro.md
+      href: embedded/mslearn/m02-01-intro.md
     - name: Enable SharePoint Embedded
       href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: Free Trial of Container Types
@@ -569,9 +569,37 @@
   - name: Tutorials
     items:
     - name: SharePoint repository services - Overview & Configuration
-      href: embedded/mslearn/m01-01-intro.md
+      items:
+      - name: Intro
+        href: embedded/mslearn/m01-01-intro.md
+      - name: placeholder
+        href: embedded/mslearn/m01-02-unit.md
+      - name: Intro
+        href: embedded/mslearn/m01-03-hol.md
+      - name: placeholder
+        href: embedded/mslearn/m01-04-unit.md
+      - name: Intro
+        href: embedded/mslearn/m01-05-hol.md
+      - name: placeholder
+        href: embedded/mslearn/m01-06-unit.md
+      - name: placeholder
+        href: embedded/mslearn/m01-07-hol.md
     - name: SharePoint repository services - Building an App
-      href: embedded/mslearn/m02-01-intro.md
+      items:
+      - name: Intro
+        href: embedded/mslearn/m02-01-intro.md
+      - name: placeholder
+        href: embedded/mslearn/m02-02-unit.md
+      - name: Intro
+        href: embedded/mslearn/m02-03-hol.md
+      - name: placeholder
+        href: embedded/mslearn/m02-04-unit.md
+      - name: Intro
+        href: embedded/mslearn/m02-05-hol.md
+      - name: placeholder
+        href: embedded/mslearn/m02-06-unit.md
+      - name: placeholder
+        href: embedded/mslearn/m02-07-hol.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
