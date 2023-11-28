@@ -12,8 +12,9 @@ ms.localizationpriority: medium
 
 SharePoint App-Only is the older, but still very relevant, model of setting up app-principals. This model works for both SharePoint Online and SharePoint on-premises (2013/2016/2019/subscription edition) and is ideal to prepare your applications for migration from SharePoint on-premises to SharePoint Online. Below steps show how to setup an app principal with tenant full control permissions, but you could also grant just read permissions using this approach.
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://devblogs.microsoft.com/microsoft365dev/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/). For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. But you can change the behavior by running 'set-spotenant -DisableCustomAppAuthentication $false' (needs the latest SharePoint admin PowerShell).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)] 
+
+For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. But you can change the behavior by running 'set-spotenant -DisableCustomAppAuthentication $false' (needs the latest SharePoint admin PowerShell).
 
 ## Setting up an app-only principal with tenant permissions
 

@@ -57,8 +57,7 @@ app@sharepoint permission no longer works in the modern term store user interfac
 
 Your add-in can use low-trust authorization when using the Microsoft Azure Access Control Service (ACS) to establish trust between your provider-hosted add-in and either your Office 365 site or your on-premises SharePoint farm. You can learn more at [Three authorization systems for SharePoint Add-ins 2013](https://msdn.microsoft.com/library/office/dn790706.aspx). 
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 To get a reference to the [ClientContext](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.clientcontext.aspx) object, your add-in should:
 
