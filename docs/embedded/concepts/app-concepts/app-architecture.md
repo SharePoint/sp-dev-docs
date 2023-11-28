@@ -25,20 +25,8 @@ All files and documents in SharePoint Embedded are stored in Containers. All Con
 A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. 
 > Read more on Container Types [here](../app-concepts/containertypes.md)
 
-In the Microsoft ecosystem, each application needs to be registered with Azure AD to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps.
-
-#### More on SharePoint Embedded Container Types
-Container Types are the way SharePoint Embedded supports this relationship and authorizes requests:
-
-1. Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
-
-2. The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
-
-3. Associations between Container Types and Applications can be changed. 
-
-4. Permission mapping between a ContainerTypeID-AppID pair can be changed 
-
-5. An application can be associated with multiple Container Types.
+<!-- In the Microsoft ecosystem, each application needs to be registered with Azure AD to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps.
+ -->
 
 <br></br>
 

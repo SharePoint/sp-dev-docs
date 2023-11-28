@@ -9,26 +9,19 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Container Types
 
-In SharePoint Embedded, all files and documents are stored in Containers and each Container has a specific Container Type.  
 
-A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. An application can have multiple Containers that share the same Container Type. For instance, it is entirely possible for an Application to own only one Container Type but have multiple Containers of that type.  
+In SharePoint Embedded, all files and documents are stored in Containers, and each Container is identified by a Container Type. 
 
-The primary function of a Container Type  is to identify the application workloads that can access a specific Container. Container Types define the permissions and controls and manage access for all Containers of that type. This includes read/write access to various Containers. Container Types are important since they are how SharePoint Embedded supports and authorizes requests. 
+Container Type is a property stamped on every Container instance. Each Container Type is owned by one application; and each application can own only one Container Type.  
 
-In the Microsoft ecosystem, each application needs to be registered with Microsoft Entra to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps. 
+The primary function of a Container Type is to manage the application workload that can access the Containers. Container Type defines the access permissions an application has towards all Containers of that type, including create, read, write, delete Containers; manage Container permissions, etc.  
 
 
-### General guidelines for Container Types: 
+### Here are some general guidelines for Container Types: 
 
-1. Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
+Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
 
-2. The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
-
-3. Associations between Container Types and Applications can be changed. 
-
-4. Permission mapping between a ContainerTypeID-AppID pair can be changed 
-
-5. An application can be associated with multiple Container Types.
+The permission mapping between a ContainerTypeID-AppID pair determines the operations the application is authorized to invoke against all containers of a specific Container Type and their content. 
 
 > Read more in [Application Architecture](./app-architecture.md)
 
