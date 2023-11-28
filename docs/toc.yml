@@ -584,21 +584,21 @@
         href: embedded/mslearn/m01-06-unit.md
       - name: placeholder
         href: embedded/mslearn/m01-07-hol.md
-    - name: SharePoint repository services - Building an App
+    - name: SharePoint Embedded - Building an App
       items:
-      - name: Intro
+      - name: Building an app Introduction
         href: embedded/mslearn/m02-01-intro.md
-      - name: placeholder
+      - name: Creating an App
         href: embedded/mslearn/m02-02-unit.md
-      - name: Intro
+      - name: Setup and Configuration
         href: embedded/mslearn/m02-03-hol.md
-      - name: placeholder
+      - name: Access Containers
         href: embedded/mslearn/m02-04-unit.md
-      - name: Intro
+      - name: Create and Manage Containers
         href: embedded/mslearn/m02-05-hol.md
-      - name: placeholder
+      - name: Container CRUD Operations
         href: embedded/mslearn/m02-06-unit.md
-      - name: placeholder
+      - name: File CRUD Operations
         href: embedded/mslearn/m02-07-hol.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
