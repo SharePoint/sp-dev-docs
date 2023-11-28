@@ -70,7 +70,7 @@ To get  a specific Container as a Drive object, submit an HTTP GET request to th
 GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}
 ```
 
-To learn more about the Microsoft Graph `drives` endpoint, see **[Microsoft Graph REST API: Get Drive](https://learn.microsoft.com/graph/api/resources/drive?view=graph-rest-1.0)**.
+To learn more about the Microsoft Graph `drives` endpoint, see **[Microsoft Graph REST API: Get Drive](/graph/api/resources/drive)**.
 
 ### List the contents of a Container
 
@@ -98,7 +98,7 @@ To delete a file from a Container, submit an HTTP DELETE request to the `drives`
 DELETE https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items/root/{{driveItemID}}
 ```
 
-To learn more about working with files using Microsoft Graph, see **[Microsoft Graph REST API: Drive Items](https://learn.microsoft.com/graph/api/resources/driveitem?view=graph-rest-1.0)**.
+To learn more about working with files using Microsoft Graph, see **[Microsoft Graph REST API: Drive Items](/graph/api/resources/driveitem)**.
 
 ## Summary
 
