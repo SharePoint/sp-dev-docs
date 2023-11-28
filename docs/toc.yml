@@ -552,6 +552,8 @@
       href: embedded/concepts/app-concepts/sharing-and-perm.md
     - name: Limits and Calling Patterns
       href: embedded/concepts/app-concepts/limits-calling.md
+    - name: Terms and Definitions
+      href: embedded/concepts/app-concepts/terms-and-def.md
     - name: Content Experiences
       items:
       - name: Office Experiences
