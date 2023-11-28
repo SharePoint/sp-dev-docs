@@ -32,7 +32,7 @@ To access Containers, an Application must be associated with the corresponding C
 
 <br></br>
 
-## SharePoint Embedded Trial Containers 
+## SharePoint Embedded Trial Container Types 
 
 To aid customers with the development of applications to be used with SharePoint Embedded, we are allowing the creation of a Trial Container Type. Customers will be allowed 1 Trial Container Type at any time in their tenant. The Trial Container Type will *not* be linked to billing and can only be consumed by the Partner tenant.  
 
