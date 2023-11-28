@@ -23,7 +23,7 @@ To delete a trial Container Type, you must remove all Containers of that type fi
 
 `Remove-SPOContainerType`
 
-> Note: the command `Remove-SPOContainerType`` will only delete trial container types. 
+> Note: the command `Remove-SPOContainerType` will only delete trial container types. 
 
  
 Customers can choose to create a new Trial Container Type at any time, if the above steps are performed to remove any pre-existing Trial container type, are performed. The Trial container type is valid for up to 30 days but can be removed at any time within the 30-day window. 
