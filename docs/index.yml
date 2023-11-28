@@ -48,7 +48,7 @@ landingContent:
             url: /sharepoint/dev/embedded/overview
           - text: Enable SharePoint Embedded
             url: /sharepoint/dev/embedded/getting-started/enable-sharepoint-repository-services
-      - linkListType: tutorials
+      - linkListType: tutorial
         links:
           - text: SharePoint Embedded - Overview & Configuration
             url: /sharepoint/dev/embedded/mslearn/m01-01-intro.md
