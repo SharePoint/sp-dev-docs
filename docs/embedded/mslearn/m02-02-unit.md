@@ -60,4 +60,4 @@ In this section, you’ll complete the initial steps to create a web application
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint Embedded environment and web app project](./m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra, to interact with SharePoint Embedded Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint Embedded environment and web app project](m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra, to interact with SharePoint Embedded Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.

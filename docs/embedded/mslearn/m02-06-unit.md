@@ -116,4 +116,4 @@ In this section, you learned how to store and delete files and documents in a Sh
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Create, update and delete files within a Container](./m02-07-hol.md), where you’ll update the existing project to store files in a SharePoint Embedded Container.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Create, update and delete files within a Container](m02-07-hol.md), where you’ll update the existing project to store files in a SharePoint Embedded Container.

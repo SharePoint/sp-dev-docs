@@ -32,4 +32,4 @@ At the end of this module, you should be able to:
 
 ## Next Steps
 
-Let's get started and continue with the first topic in this tutorial, [Create SharePoint Embedded applications](./m02-02-unit.md), where you'll walk through the initial creation of a web application capable of conducting CRUD operations on a SharePoint Embedded Container.
+Let's get started and continue with the first topic in this tutorial, [Create SharePoint Embedded applications](m02-02-unit.md), where you'll walk through the initial creation of a web application capable of conducting CRUD operations on a SharePoint Embedded Container.
