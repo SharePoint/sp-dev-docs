@@ -18,7 +18,7 @@ The primary function of a Container Type  is to identify the application workloa
 In the Microsoft ecosystem, each application needs to be registered with Microsoft Entra to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps. 
  
 
-#### Here are some general guidelines for Container Types: 
+### General guidelines for Container Types: 
 
 Each Container is associated to one immutable Container Type, represented by a ContainerTypeID.h Each Container Type is associated to at least one Application, represented by an AppID,  and a set of operations on SharePoint Embedded (permission mapping).  
 
@@ -29,6 +29,8 @@ Associations between Container Types and Applications, along with the correspond
 An application can be associated with multiple Container Types, with different permission mappings.
 
 ![App Flow](../../images/app-flow7.jpg)
+
+
 
 # SharePoint Embedded Trial Containers 
 
@@ -55,7 +57,7 @@ Customers can choose to create a new Trial Container Type at any time, if the ab
 
 Also note that it is *not possible* to convert a Trial Container Type and/or the associated Containers to a Standard Container Type. 
 
-
+<br></br>
 # Registering a Container Type
 
 
