@@ -6,7 +6,7 @@ ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-## Terms and Definitions
+# Terms and Definitions
 
 Short definitions to key concepts in SharePoint Embedded Application Architecture. These are explained more fully in the [Concepts](../app-concepts/app-architecture.md) section.
 
