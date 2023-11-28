@@ -58,6 +58,7 @@ Customers can choose to create a new Trial Container Type at any time, if the ab
 Also note that it is *not possible* to convert a Trial Container Type and/or the associated Containers to a Standard Container Type. 
 
 <br></br>
+
 # Registering a Container Type
 
 
@@ -92,7 +93,7 @@ GET https://login.microsoftonline.com/{{consumingTenantid}}/adminconsent?client_
 ```
 
 ### Register the new Container Type on your tenant
-Use the [Postman collection](../../mslearn/m01-07-hol.md) included in this repo to register the new Container Type on your tenant. This must be done with Application auth. Currently, the Container Type registration API is only available as a SharePoint API, it's not yet on Graph. SharePoint APIs require a certificate-based credential when application auth is used, so you will need to use the certificate you created earlier. 
+Use the [Postman collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) from the [SharePoint Embedded Samples repo](https://github.com/microsoft/SharePoint-Embedded-Samples) to register the new Container Type on your tenant. This must be done with Application auth. 
 
 Setup the [Postman collection](../../mslearn/m01-07-hol.md) collection and its required Environment variables. Then use the `Register Container Type` request within the *Application > Containers* folder to complete the registration. 
 
