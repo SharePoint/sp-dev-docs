@@ -6,7 +6,7 @@ ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-## Sharing and Permissions in SharePoint Embedded
+# Sharing and Permissions in SharePoint Embedded
 
 
 ## Sharing
