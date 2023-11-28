@@ -30,8 +30,6 @@ In the Microsoft ecosystem, each application needs to be registered with Microso
 
 5. An application can be associated with multiple Container Types.
 
-![App Flow](../../images/app-flow7.jpg)
-
 > Read more in [Application Architecture](./app-architecture.md)
 
 <br></br>
