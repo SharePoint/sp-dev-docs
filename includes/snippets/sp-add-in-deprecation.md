@@ -1,4 +1,5 @@
 > [!IMPORTANT]
-> SharePoint add-in model is currently still fully supported, but will be officially deprecated soon (by end of 2023) in SharePoint Online. Consider using alternative extensibility options to be more future proven with your extensibility. See the different recommendations from provided [modernization guidance](https://learn.microsoft.com/sharepoint/dev/sp-add-ins-modernize/sp-add-in-modernize).
+> The SharePoint Add-In model in SharePoint Online has been retired as of November 27th 2023, checkout the [full retirement announcement](https://aka.ms/retirement/addins/support) to learn more.
 >
-> Deprecation means official statement that the feature is no longer being invested, but it's still supported. End-of-life means that the feature will be discontinued and is no longer available for use.
+> Retirement means that the feature will not get any new investments, but it's still supported. End-of-life means that the feature will be discontinued and is no longer available for use.
+
