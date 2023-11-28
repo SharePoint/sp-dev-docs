@@ -8,7 +8,6 @@ ms.localizationpriority: high
 
 # SharePoint Embedded App Architecture
 
-### Anatomy of a SharePoint Embedded application 
 
 All files and documents in SharePoint Embedded are stored in Containers. All Containers are created and stored within an M365 Tenant. The ISV or LOB app then uses the Microsoft Graph API to interact with the dedicated Container(s) for that app. The Containers are part of the M365 customer’s tenant regardless of how the app is deployed.
 

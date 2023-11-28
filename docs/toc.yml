@@ -538,14 +538,14 @@
       href: embedded/mslearn/m02-01-intro.md
     - name: Enable SharePoint Embedded
       href: embedded/getting-started/enable-sharepoint-embedded.md
-    - name: Free Trial of Container Types
-      href: embedded/getting-started/trial-containertype.md
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
   - name: Concepts
     items:
     - name: Application Architecture
       href: embedded/concepts/app-concepts/app-architecture.md
+    - name: Container Types
+      href: embedded/concepts/app-concepts/containertypes.md
     - name: Authentication
       href: embedded/concepts/app-concepts/auth.md
     - name: Sharing and Permissions
