@@ -20,17 +20,15 @@ In the Microsoft ecosystem, each application needs to be registered with Microso
 
 #### Here are some general guidelines for Container Types: 
 
-Each Container is associated to one immutable Container Type; and each Container Type is associated to at least one AppID and a set of Container operations on SharePoint Embedded (permission mapping). The permission mapping determines the operations an application has permission to invoke against all Container instances of a specific type. 
+Each Container is associated to one immutable Container Type, represented by a ContainerTypeID.h Each Container Type is associated to at least one Application, represented by an AppID,  and a set of operations on SharePoint Embedded (permission mapping).  
 
-Each Container is tied to one and only one Container type. Container Types are immutable. 
+The permission mapping determines the operations an application is authorized to invoke against all  instances of a specific Container Type and their content. 
 
-Each Container Type is tied to at least one application. Similarly, every application has at least one Container Type. Association between Container Type and application can be changed 
+Associations between Container Types and Applications, along with the corresponding permission mappings, can be changed. 
 
-Each Container Type and application pairing are mapped to a set of permissions. This set of permissions determines the operations an application can invoke against all Containers of that Container type. 
+An application can be associated with multiple Container Types, with different permission mappings.
 
-An application can only access Containers it is authorized to access. These permissions are defined by a Container Type 
-
-
+![App Flow](../../images/app-flow7.jpg)
 
 # SharePoint Embedded Trial Containers 
 

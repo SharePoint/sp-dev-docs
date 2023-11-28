@@ -22,23 +22,20 @@ All files and documents in SharePoint Embedded are stored in Containers. All Con
 - Apps can grant permission to other apps to create, read, update, and/or delete Container instances of Container types of the owning app , e.g. to allow backup/restore or DLP apps to operate on content in those Containers and/or create instances of the Container type. Note, the owning application is charged for storage in all instances of a Container type regardless of which app originally instantiated the Container.
 
 ### **SharePoint Embedded Containers and Container Types**
-SharePoint Embedded Containers (Container) are the basic unit of storage on the SharePoint Embedded platform; every SharePoint Embedded Container is created and stored in an M365 Tenant. SharePoint Embedded Containers are similar to Drives in Microsoft Graph. Files and documents stored in Containers/Drives can be referenced as Drive Items.
-
-When a Container is created, it must have a specific ContainerType. ContainerTypes define the permissions and controls and manage access for all Containers of that type. This includes read/write access to various Containers. See a more detailed explanation of Container Types in the section below.
-
-A Container Type is a SharePoint Embedded-Container level property stamped on every instance of SharePoint Embedded Containers. Its primary function is to identify the application workloads that can access a Container instance.
+A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. See more on Container Types [here](../app-concepts/containertypes.md)
 
 In the Microsoft ecosystem, each application needs to be registered with Azure AD to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps.
 
 #### More on SharePoint Embedded Container Types
 Container Types are the way SharePoint Embedded supports this relationship and authorizes requests:
 
-1) Each Container instance is associated to one immutable Container type; and 2) each Container type is associated to at least one AppID and a set of Container operations on SharePoint Embedded (permission mapping). The permission mapping determines the operations an application has permission to invoke against all Container instances of a specific type.
+Each Container is associated to one immutable Container Type, represented by a ContainerTypeID.h Each Container Type is associated to at least one Application, represented by an AppID,  and a set of operations on SharePoint Embedded (permission mapping).  
 
-- Each Container instance is tied to one and only one Container type. Container types are immutable.
-- Each Container type is tied to at least one application. Association between Container type and application can be changed
-- Each Container type and application pairing are mapped to a set of permissions. This set of permissions determines the operations an application can invoke against all Container instances of that Container type.
-- A SharePoint Embedded application can only access Containers it is authorized to access.
+The permission mapping determines the operations an application is authorized to invoke against all  instances of a specific Container Type and their content. 
+
+Associations between Container Types and Applications, along with the corresponding permission mappings, can be changed. 
+
+An application can be associated with multiple Container Types, with different permission mappings.  
 
 
 <img src="../../images/app-flow7.jpg" alt="SharePoint Embedded Flow"/>
