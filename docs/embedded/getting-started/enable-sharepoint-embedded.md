@@ -40,3 +40,5 @@ Your SharePoint Embedded application is now available for use on your tenant.
 
 <img width="914" alt="image" src="../images/SharePointEmbeddedToS-5.jpg">
 
+# Next Steps
+Once SharePoint Embedded is enabled for your organization, developers can start creating a SharePoint Embedded application by following the [SharePoint Embedded:Build an app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/mslearn/m02-01-intro) tutorial.
