@@ -12,7 +12,7 @@ The SharePoint Add-In model was introduced as part of the SharePoint 2013 timefr
 
 [!INCLUDE [sp-Add-In-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
-While SharePoint Add-In model is currently still supported in SharePoint Online, model and patterns and outdated and aren't recommended to be used.
+While SharePoint Add-In model is currently still supported in SharePoint Online, the model and patterns are outdated and aren't recommended to be used.
 
 > [!NOTE] 
 > This upcoming deprecation announcement will impact SharePoint Online. There are no changes on the Add-In model supportability within the SharePoint on-premises versions.
