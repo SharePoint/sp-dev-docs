@@ -532,6 +532,60 @@
       href: spfx/release-1.0.0.md
   - name: Extend SharePoint with SPFx - Learning Path
     href: /training/paths/m365-sharepoint-associate
+- name: SharePoint Embedded
+  items:
+  - name: Overview
+    href: embedded/overview.md
+  - name: Getting Started
+    items:
+    - name: Create your first SharePoint Embedded Application
+      href: embedded/mslearn/m02-01-intro.md
+    - name: Enable SharePoint Embedded
+      href: embedded/getting-started/enable-sharepoint-embedded.md
+  - name: Adoptions and Use Case Scenarios
+    href: embedded/adoptions-and-use.md
+  - name: Concepts
+    items:
+    - name: Application Architecture
+      href: embedded/concepts/app-concepts/app-architecture.md
+    - name: Container Types
+      href: embedded/concepts/app-concepts/containertypes.md
+    - name: Authentication
+      href: embedded/concepts/app-concepts/auth.md
+    - name: Sharing and Permissions
+      href: embedded/concepts/app-concepts/sharing-and-perm.md
+    - name: Limits and Calling Patterns
+      href: embedded/concepts/app-concepts/limits-calling.md
+    - name: Terms and Definitions
+      href: embedded/concepts/app-concepts/terms-and-def.md
+    - name: Content Experiences
+      items:
+      - name: Office Experiences
+        href: embedded/concepts/content-experiences/office-experience.md
+      - name: User Experiences
+        href: embedded/concepts/content-experiences/user-experiences-overview.md
+    - name: Admin Experiences
+      items:
+      - name: Consuming Tenant Admin
+        href: embedded/concepts/admin-exp/cta.md
+      - name: Developer Admin
+        href: embedded/concepts/admin-exp/dev-admin.md
+      - name: Billing
+        href: embedded/concepts/admin-exp/billing.md
+  - name: Tutorials
+    items:
+    - name: Register Container Type
+      href: embedded/tutorials/register-ct.md
+    - name: SharePoint Embedded - Overview & Configuration
+      href: embedded/mslearn/m01-01-intro.md
+    - name: SharePoint Embedded - Building an App
+      href: embedded/mslearn/m02-01-intro.md
+    - name: Launch Experience
+      href: embedded/tutorials/launch-experience.md
+    - name: Using File Preview
+      href: embedded/tutorials/using-file-preview.md
+  - name: Terms of Service
+    href: embedded/terms-of-service.md
 - name: Microsoft Teams
   items:
   - name: Overview
