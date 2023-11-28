@@ -30,7 +30,7 @@ To access Containers, an Application must be associated with the corresponding C
 
 > Read more in [Application Architecture](./app-architecture.md)
 
-<br></br>
+
 
 ## SharePoint Embedded Trial Container Types 
 
