@@ -34,7 +34,7 @@ An application can be associated with multiple Container Types.
 
 > Read more in [Application Architecture](./app-architecture.md)
 
-
+<br></br>
 
 # SharePoint Embedded Trial Containers 
 
