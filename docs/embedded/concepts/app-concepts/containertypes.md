@@ -1,6 +1,6 @@
 ---
 title: Trial ContainerType
-description: Descrbing a Trial Container Option
+description: Descrbing how Container Types work
 ms.date: 11/14/2023
 ms.service: sharepoint-online
 ms.localizationpriority: high
@@ -16,19 +16,23 @@ A Container Type is a SharePoint Embedded-Container level property stamped on ev
 The primary function of a Container Type  is to identify the application workloads that can access a specific Container. Container Types define the permissions and controls and manage access for all Containers of that type. This includes read/write access to various Containers. Container Types are important since they are how SharePoint Embedded supports and authorizes requests. 
 
 In the Microsoft ecosystem, each application needs to be registered with Microsoft Entra to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps. 
- 
+
 
 ### General guidelines for Container Types: 
 
-Each Container is associated to one immutable Container Type, represented by a ContainerTypeID.h Each Container Type is associated to at least one Application, represented by an AppID,  and a set of operations on SharePoint Embedded (permission mapping).  
+Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
 
-The permission mapping determines the operations an application is authorized to invoke against all  instances of a specific Container Type and their content. 
+The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
 
-Associations between Container Types and Applications, along with the corresponding permission mappings, can be changed. 
+Associations between Container Types and Applications can be changed. 
 
-An application can be associated with multiple Container Types, with different permission mappings.
+Permission mapping between a ContainerTypeID-AppID pair can be changed 
+
+An application can be associated with multiple Container Types.
 
 ![App Flow](../../images/app-flow7.jpg)
+
+> Read more in [Application Architecture](./app-architecture.md)
 
 
 

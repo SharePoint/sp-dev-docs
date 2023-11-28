@@ -29,13 +29,15 @@ In the Microsoft ecosystem, each application needs to be registered with Azure A
 #### More on SharePoint Embedded Container Types
 Container Types are the way SharePoint Embedded supports this relationship and authorizes requests:
 
-Each Container is associated to one immutable Container Type, represented by a ContainerTypeID.h Each Container Type is associated to at least one Application, represented by an AppID,  and a set of operations on SharePoint Embedded (permission mapping).  
+Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
 
-The permission mapping determines the operations an application is authorized to invoke against all  instances of a specific Container Type and their content. 
+The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
 
-Associations between Container Types and Applications, along with the corresponding permission mappings, can be changed. 
+Associations between Container Types and Applications can be changed. 
 
-An application can be associated with multiple Container Types, with different permission mappings.  
+Permission mapping between a ContainerTypeID-AppID pair can be changed 
+
+An application can be associated with multiple Container Types.
 
 
 <img src="../../images/app-flow7.jpg" alt="SharePoint Embedded Flow"/>
