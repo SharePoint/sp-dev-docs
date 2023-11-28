@@ -11,36 +11,36 @@ ms.localizationpriority: high
 
 ## Sharing
 
-The permission model used in SharePoint Embedded is different from that traditional used by SharePoint and follows the OneDrive Consumer model. I.e. Unlike SharePoint you cannot break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
+The permission model used in SharePoint Embedded is different from the traditional SharePoint model and follows the OneDrive Consumer model. That is, Unlike SharePoint you can't break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
 
 ### Container Roles
-Every Container has four predefined roles (that cannot be extended or modified) that users or AAD security groups can be added or removed from:
+Every Container has four predefined roles (that can't be extended or modified) that users or Microsoft Entra security groups can be added or removed from:
 - **Owner** – Has full control over the Container
-- **Manager** – As well as being to add, update, and delete content in the Container, they can also maintain permissions of the Container and the content in the Container
+- **Manager** – And being to add, update, and delete content in the Container, they can also maintain permissions of the Container and the content in the Container
 - **Writer** – Can add, update, and delete content in the Container
 - **Reader** – Can only view content in the Container
-If a user is a member of a role, then those permissions will apply to all of the content (files and folders) that in that Container. For example, if *UserA* is made a member of the Reader role, then *UserA* will be able to view and read all content (files and folders) in that Container. 
+If a user is a member of a role, then those permissions apply to all of the content (files and folders) that in that Container. For example, if *UserA* is made a member of the Reader role, then *UserA* is able to view and read all content (files and folders) in that Container. 
 
 
 
 ## Permissions 
 
 ### Additive Permissions
-Your app may have the scenario that you may want to grant additional permissions to a user beyond what they have on the Container. For example, if *UserA* is member of the Reader role, you may want to allow that user to be able to edit a specific document in that Container. To support this scenario, you add and delete additive permissions using the Graph APIs:
+Your app may have the scenario that you may want to grant extra permissions to a user beyond what they have on the Container. For example, if *UserA* is member of the Reader role, you may want to allow that user to be able to edit a specific document in that Container. To support this scenario, you add and delete additive permissions using the Graph APIs:
 
 Scenario | Graph API(s) | Notes
 :---|:---|:---
-Grant an additive permission | [POST /drives/{drive-id}/items/{item-id}/invite](https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http) | The sendInvitation property must always be false. </br> You cannot grant additive permissions to the root folder in a Container as this is essentially the same as adding a User to a role. <br/> You cannot use AppOnly permissions.
+Grant an additive permission | [POST /drives/{drive-id}/items/{item-id}/invite](https://learn.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0&tabs=http) | The sendInvitation property must always be false. </br> You can't grant additive permissions to the root folder in a Container as this is essentially the same as adding a User to a role. <br/> You can't use AppOnly permissions.
 Retrieve permissions | [GET /drives/{drive-id}/items/{item-id}/permissions](https://learn.microsoft.com/en-us/graph/api/permission-get?view=graph-rest-1.0&tabs=http) <br/> [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](https://learn.microsoft.com/en-us/graph/api/permission-get?view=graph-rest-1.0&tabs=http)|  
 Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](https://learn.microsoft.com/graph/api/permission-delete?view=graph-rest-1.0&tabs=http) | You can only delete the additive permission on the drive item where it was originally added.
 
 
 In addition, using these APIs have the following dependencies:
 - How Sharing has been configured in the Consuming Tenant
-- The type of user that is invoking the API when you are using delegated authorization.
+- The type of user that is invoking the API when you're using delegated authorization.
 
 ### Sharing Configuration Settings
-Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint Embedded application will not be able to be able to add Guest Users to the Container roles or grant them additive permissions.
+Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint Embedded application won't be able to add Guest Users to the Container roles or grant them additive permissions.
 For further information please refer to:
 - [Sharing & permissions in the SharePoint modern experience - SharePoint in Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/sharepoint/modern-experience-sharing-permissions#guest-sharing)
 - [Manage sharing settings - SharePoint in Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off)
@@ -86,7 +86,7 @@ If this scenario is required to also succeed for Guest Users, then the following
 
 ### Adding Guest Users
 If your SharePoint Embedded application requires the ability to add Guest Users then Sharing must be enabled on the SharePoint content root in the Consuming Tenant e.g. https://contoso.sharepoint.com.
-Please note that by default, sharing is enable on the SharePoint content root. However, some Consuming Tenants may have disabled this.
+By default, sharing is enabled on the SharePoint content root. However, some Consuming Tenants may have this disabled.
 If this scenario is required, then the SharePoint content root SharingCapability setting needs to be set to any value except disabled using the [Set-SPOSite](https://learn.microsoft.com/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet in the Consuming Tenant:
 For example: 
 

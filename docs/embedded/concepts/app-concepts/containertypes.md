@@ -28,13 +28,13 @@ The permission mapping between a ContainerTypeID-AppID pair determines the opera
 
 ## SharePoint Embedded Trial Container Types 
 
-To aid customers with the development of applications to be used with SharePoint Embedded, we are allowing the creation of a Trial Container Type. Customers will be allowed 1 Trial Container Type at any time in their tenant. The Trial Container Type will *not* be linked to billing and can only be consumed by the Partner tenant.  
+To aid customers with the development of applications to be used with SharePoint Embedded, we're allowing the creation of a Trial Container Type. Customers are allowed one Trial Container Type at any time in their tenant. The Trial Container Type will *not* be linked to billing and can only be consumed by the Partner tenant.  
 
 > Note: The Trial Container Type is the only container type that is restricted to the Partner (creating) tenant and cannot be shared with other consuming tenants. 
 
-Tenants can create a maximum of 5 container types. Trial Container Types do not count against the maximum number of Container Types that a Partner Tenant can create. 
+Tenants can create a maximum of five container types. Trial Container Types do not count against the maximum number of Container Types that a Partner Tenant can create. 
 
-Once the Trial Container Type has been created, the customer can create as many as 5 active Containers of that type. Trial Containers will be allotted 1GB of storage space. A Trial Container Type will expire after 30 days. Once the Trial Container Type is expired, access will be lost to all Containers created using that container type. A new Trial container type can be created; however, it will require the deletion of ALL existing Trial Containers. 
+Once the Trial Container Type is created, the customer can create as many as five active Containers of that type. Trial Containers are allotted 1 GB of storage space. A Trial Container Type will expire after 30 days. Once the Trial Container Type is expired, access will be lost to all Containers created using that container type. A new Trial container type can be created; however, it requires the deletion of ALL existing Trial Containers. 
 
 To delete a trial Container Type, you must remove all Containers of that type first, including from the recycle bin. You can run the following PowerShell commands to purge a container and the Trial Container Type: 
 
