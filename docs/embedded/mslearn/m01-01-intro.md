@@ -1,23 +1,23 @@
 ---
-title: SharePoint repository services - Overview & Configuration
-description: Microsoft SharePoint repository services streamlines the creation of document-centric applications by integrating SharePoint's functionality, beneficial to developers, ISVs, and enterprises. The module offers an overview of SharePoint repository services, its potential for new projects, and instructions on setting up your initial container.
+title: SharePoint Embedded - Overview & Configuration
+description: Microsoft SharePoint Embedded streamlines the creation of document-centric applications by integrating SharePoint's functionality, beneficial to developers, ISVs, and enterprises. The module offers an overview of SharePoint Embedded, its potential for new projects, and instructions on setting up your initial container.
 ms.date: 11/24/2023
 ms.localizationpriority: high
 ---
-# Microsoft SharePoint repository services - Overview & Configuration
+# Microsoft SharePoint Embedded - Overview & Configuration
 
-Microsoft SharePoint repository services provides a faster way to build file and document focused apps. SharePoint repository services are powered by SharePoint and make it easy for every developer, independent software vendor (ISV), and enterprise, to include critical Microsoft 365 file and document capabilities in every app they build.
+Microsoft SharePoint Embedded provides a faster way to build file and document focused apps. SharePoint Embedded are powered by SharePoint and make it easy for every developer, independent software vendor (ISV), and enterprise, to include critical Microsoft 365 file and document capabilities in every app they build.
 
-In this module, you’ll learn what’s possible with SharePoint repository services, determine if it’s right for your next document-based application, and create your first SharePoint repository services container.
+In this module, you’ll learn what’s possible with SharePoint Embedded, determine if it’s right for your next document-based application, and create your first SharePoint Embedded container.
 
 ## Learning Objectives
 
 At the end of this module, you should be able to:
 
-- Describe the components of a SharePoint repository services app.
-- List the key features of SharePoint repository services.
-- Create a SharePoint repository services container.
-- Call SharePoint repository services related APIs (SharePoint and Microsoft Graph).
+- Describe the components of a SharePoint Embedded app.
+- List the key features of SharePoint Embedded.
+- Create a SharePoint Embedded container.
+- Call SharePoint Embedded related APIs (SharePoint and Microsoft Graph).
 
 ## Prerequisites
 
@@ -30,4 +30,4 @@ At the end of this module, you should be able to:
 
 ## Next Steps
 
-Let's get started and continue with the first topic in this tutorial, [Introduction to SharePoint repository services](m01-02-unit.md), where you'll learn the features and benefits of SharePoint repository services for custom application development.
+Let's get started and continue with the first topic in this tutorial, [Introduction to SharePoint Embedded](m01-02-unit.md), where you'll learn the features and benefits of SharePoint Embedded for custom application development.

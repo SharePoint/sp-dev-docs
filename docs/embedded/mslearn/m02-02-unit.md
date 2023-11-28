@@ -1,29 +1,29 @@
 ---
-title: Create SharePoint repository services applications
-description: Developers can leverage SharePoint's file management features in their applications with SharePoint repository services, which involves building one component for CRUD operations via Microsoft Graph APIs and another for the user interface. This section walks through the initial creation of a web application capable of conducting CRUD operations on a SharePoint repository services Container.
+title: Create SharePoint Embedded applications
+description: Developers can leverage SharePoint's file management features in their applications with SharePoint Embedded, which involves building one component for CRUD operations via Microsoft Graph APIs and another for the user interface. This section walks through the initial creation of a web application capable of conducting CRUD operations on a SharePoint Embedded Container.
 ms.date: 11/24/2023
 ms.localizationpriority: high
 ---
-# Create SharePoint repository services applications
+# Create SharePoint Embedded applications
 
-Developers can create applications that utilize the powerful file and document management capabilities in SharePoint through SharePoint repository services. These types of applications have two distinct components. One component is responsible for performing CRUD operations against SharePoint repository services using Microsoft Graph APIs. The other component implements the interface for users to consume and store the documents stored in SharePoint repository services. In this section, you’ll complete the initial steps to create a web application that will perform CRUD operations on a SharePoint repository services Container.
+Developers can create applications that utilize the powerful file and document management capabilities in SharePoint through SharePoint Embedded. These types of applications have two distinct components. One component is responsible for performing CRUD operations against SharePoint Embedded using Microsoft Graph APIs. The other component implements the interface for users to consume and store the documents stored in SharePoint Embedded. In this section, you’ll complete the initial steps to create a web application that will perform CRUD operations on a SharePoint Embedded Container.
 
-## Introducing SharePoint repository services
+## Introducing SharePoint Embedded
 
-That’s what SharePoint repository services brings to developers. It provides a faster way for developers to create file and document focused applications. SharePoint repository services is powered by SharePoint. Developers can integrate the same powerful file and document capabilities that SharePoint has to offer in their own custom applications.
+That’s what SharePoint Embedded brings to developers. It provides a faster way for developers to create file and document focused applications. SharePoint Embedded is powered by SharePoint. Developers can integrate the same powerful file and document capabilities that SharePoint has to offer in their own custom applications.
 
-Another way to look at SharePoint repository services is your custom application leverages SharePoint for all document storage and collaboration features. This effectively uses SharePoint repository services as a “headless-API” to SharePoint’s document storage system.
+Another way to look at SharePoint Embedded is your custom application leverages SharePoint for all document storage and collaboration features. This effectively uses SharePoint Embedded as a “headless-API” to SharePoint’s document storage system.
 
 ## App documents stay in their Microsoft 365 tenant
 
-When a consumer installs/registers a SharePoint repository services application in their Microsoft 365 tenant, SharePoint repository services creates another SharePoint partition. This storage partition does not have a user interface but instead, the documents in the partition is only accessible via APIs. This means that all documents will be accessible to the ISV or developer’s application, but the documents will only reside in the consumer’s Microsoft 365 tenant.
+When a consumer installs/registers a SharePoint Embedded application in their Microsoft 365 tenant, SharePoint Embedded creates another SharePoint partition. This storage partition does not have a user interface but instead, the documents in the partition is only accessible via APIs. This means that all documents will be accessible to the ISV or developer’s application, but the documents will only reside in the consumer’s Microsoft 365 tenant.
 
 ## Consumer Microsoft 365 settings apply to app documents
 
-All documents stored in the SharePoint partition created by the SharePoint repository services app are in the consumer’s Microsoft 365 tenant and therefore are subject to the consumer’s Microsoft 365 tenant settings.
+All documents stored in the SharePoint partition created by the SharePoint Embedded app are in the consumer’s Microsoft 365 tenant and therefore are subject to the consumer’s Microsoft 365 tenant settings.
 
 > [!NOTE]
-> Learn more about configuring SharePoint repository services in your Microsoft 365 tenant, the Microsoft Entra application, and adding content manually using the REST APIs with Postman, see INSERT LINK.
+> Learn more about configuring SharePoint Embedded in your Microsoft 365 tenant, the Microsoft Entra application, and adding content manually using the REST APIs with Postman, see INSERT LINK.
 
 ## Understanding different types app permissions and the On-Behalf-Of flow
 
@@ -56,8 +56,8 @@ Thus, the OBO flow simplifies user experience and enhances the security of the s
 
 ## Summary
 
-In this section, you’ll complete the initial steps to create a web application that will perform CRUD operations on a SharePoint repository services Container.
+In this section, you’ll complete the initial steps to create a web application that will perform CRUD operations on a SharePoint Embedded Container.
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint repository services environment and web app project](./m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra, to interact with SharePoint repository services Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint Embedded environment and web app project](./m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra, to interact with SharePoint Embedded Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.

@@ -1,18 +1,18 @@
 ---
-title: Create REST API to handle CRUD operations with SharePoint repository services
-description: SharePoint repository services applications manage data by performing two fundamental operations—reading/retrieving and storing/deleting files. This section focuses on teaching you to store and delete files in a SharePoint repository services Container with Microsoft Graph REST APIs.
+title: Create REST API to handle CRUD operations with SharePoint Embedded
+description: SharePoint Embedded applications manage data by performing two fundamental operations—reading/retrieving and storing/deleting files. This section focuses on teaching you to store and delete files in a SharePoint Embedded Container with Microsoft Graph REST APIs.
 ms.date: 11/24/2023
 ms.localizationpriority: high
 ---
-# Create REST API to handle CRUD operations with SharePoint repository services
+# Create REST API to handle CRUD operations with SharePoint Embedded
 
-SharePoint repository services applications, like most applications that interact with back-end storage systems and databases, perform two types of operations: reading/retrieving data and files, and storing or deleting files. In this section, you’ll learn how to store and delete files and documents in a SharePoint repository services Container using the Microsoft Graph REST APIs.
+SharePoint Embedded applications, like most applications that interact with back-end storage systems and databases, perform two types of operations: reading/retrieving data and files, and storing or deleting files. In this section, you’ll learn how to store and delete files and documents in a SharePoint Embedded Container using the Microsoft Graph REST APIs.
 
-## SharePoint repository services Containers are like OneDrive Drives and SharePoint Online document libraries
+## SharePoint Embedded Containers are like OneDrive Drives and SharePoint Online document libraries
 
 Unlike the previous section where you needed to obtain an OBO token to make server-side calls to Microsoft Graph for Container management operations, when reading and writing documents to Container, you can make those straight from your React SPA client-side application.
 
-All SharePoint repository services Containers are implemented as existing Microsoft Graph **Drives** and their contents are **DriveItems**. This means you can use the same Microsoft Graph endpoints that you use to access SharePoint Online document libraries or OneDrive instances.
+All SharePoint Embedded Containers are implemented as existing Microsoft Graph **Drives** and their contents are **DriveItems**. This means you can use the same Microsoft Graph endpoints that you use to access SharePoint Online document libraries or OneDrive instances.
 
 ## Reading and writing files with Microsoft Graph
 
@@ -55,7 +55,7 @@ const driveItemId = folderId || 'root'; // get folder, or default to the 'root' 
 const graphResponse = await graphClient.api(`/drives/${driveId}/items/${driveItemId}/children`).get();
 ```
 
-## Creating files in SharePoint repository services Containers
+## Creating files in SharePoint Embedded Containers
 
 To create a file in a `Drive` with Microsoft Graph, you submit an HTTP PUT with a binary stream of the file.
 
@@ -83,7 +83,7 @@ fileReader.addEventListener('loadend', async (event: any) => {
 });
 ```
 
-## Creating folders in SharePoint repository services Containers
+## Creating folders in SharePoint Embedded Containers
 
 Creating folders is similar, except you submit an HTTP POST to Microsoft Graph’s `drive` endpoint with a different payload:
 
@@ -98,7 +98,7 @@ const data = {
 await graphClient.api(endpoint).post(data);
 ```
 
-## Deleting folders and files in SharePoint repository services Containers
+## Deleting folders and files in SharePoint Embedded Containers
 
 Finally, deleting files and folders both use the exact same type of a call because a file and folder are both considered `DriveItem`s as far as Microsoft Graph is concerned.
 
@@ -112,8 +112,8 @@ await graphClient.api(endpoint).delete();
 
 ## Summary
 
-In this section, you learned how to store and delete files and documents in a SharePoint repository services Container using the Microsoft Graph REST APIs.
+In this section, you learned how to store and delete files and documents in a SharePoint Embedded Container using the Microsoft Graph REST APIs.
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Create, update and delete files within a Container](./m02-07-hol.md), where you’ll update the existing project to store files in a SharePoint repository services Container.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Create, update and delete files within a Container](./m02-07-hol.md), where you’ll update the existing project to store files in a SharePoint Embedded Container.

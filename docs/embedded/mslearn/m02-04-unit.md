@@ -1,16 +1,16 @@
 ---
-title: Create REST API to handle read and display operations with SharePoint repository services
-description: "Applications using SharePoint repository services typically execute two primary operations with back-end storage: retrieving and storing/deleting data and files. This section will instruct you on accessing SharePoint repository services Containers through the Microsoft Graph REST APIs."
+title: Create REST API to handle read and display operations with SharePoint Embedded
+description: "Applications using SharePoint Embedded typically execute two primary operations with back-end storage: retrieving and storing/deleting data and files. This section will instruct you on accessing SharePoint Embedded Containers through the Microsoft Graph REST APIs."
 ms.date: 11/24/2023
 ms.localizationpriority: high
 ---
-# Create REST API to handle read and display operations with SharePoint repository services
+# Create REST API to handle read and display operations with SharePoint Embedded
 
-SharePoint repository services applications, like most applications that interact with back-end storage systems and databases, perform two types of operations: reading/retrieving data and files, and storing or deleting files. In this section, you’ll learn how to access SharePoint repository services Containers using the Microsoft Graph REST APIs.
+SharePoint Embedded applications, like most applications that interact with back-end storage systems and databases, perform two types of operations: reading/retrieving data and files, and storing or deleting files. In this section, you’ll learn how to access SharePoint Embedded Containers using the Microsoft Graph REST APIs.
 
-## Overview of our custom app and how it works with SharePoint repository services, SharePoint Online, and Microsoft Graph
+## Overview of our custom app and how it works with SharePoint Embedded, SharePoint Online, and Microsoft Graph
 
-The following exercises in this module will walk you through the steps of creating a web app and web service can manage SharePoint repository services Containers and perform CRUD operations with documents on these Containers.
+The following exercises in this module will walk you through the steps of creating a web app and web service can manage SharePoint Embedded Containers and perform CRUD operations with documents on these Containers.
 
 Let’s look at the two components of the application you’ll build and what each is responsible for.
 
@@ -24,13 +24,13 @@ Not all operations can be performed by the client-side React application because
 
 ### Server-side API that handles higher privileged operations
 
-Not all Container operations can be performed directly by the React application. For these scenarios, including creating, deleting, and getting a list of the SharePoint repository services Containers, we’ll create a server-side API server
+Not all Container operations can be performed directly by the React application. For these scenarios, including creating, deleting, and getting a list of the SharePoint Embedded Containers, we’ll create a server-side API server
 
 For this project, you could use an Azure Functions application or use an Azure Web App to host an ASP.NET Web API project. In our project, we’ll use the lightweight Node.js [Restify](http://restify.com/) server.
 
 This API will receive requests from our React SPA that include the user’s access token they received when they signed into the application. You’ll use this access token and the OBO flow to obtain an access token intended for Microsoft Graph that you can use to perform Container operations as the user.
 
-## Creating SharePoint repository services Containers with Microsoft Graph
+## Creating SharePoint Embedded Containers with Microsoft Graph
 
 One of the tasks our server-side API will need to do is create Containers. This will be done by the server-side API using the On-Behalf-Of flow to obtain an access token intended for Microsoft Graph.
 
@@ -97,7 +97,7 @@ const graphResponse = await graphClient.api(`storage/fileStorage/containers`)
                                        .post(containerRequestData);
 ```
 
-## Getting a list of SharePoint repository services Containers with Microsoft Graph
+## Getting a list of SharePoint Embedded Containers with Microsoft Graph
 
 he other common task you’ll perform is to get a list of all the Containers. This request has the same requirements as the creation of a Container.
 
@@ -109,8 +109,8 @@ const graphResponse = await graphClient.api(`storage/fileStorage/containers?$fil
 
 ## Summary
 
-In this section, you’ll learn how to access SharePoint repository services Containers using the Microsoft Graph REST APIs.
+In this section, you’ll learn how to access SharePoint Embedded Containers using the Microsoft Graph REST APIs.
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Update app to create and list SharePoint repository services Containers](./m02-05-hol.md), where you’ll update the existing project to create and retrieve SharePoint repository services Containers.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Update app to create and list SharePoint Embedded Containers](./m02-05-hol.md), where you’ll update the existing project to create and retrieve SharePoint Embedded Containers.
