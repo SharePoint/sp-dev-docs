@@ -22,22 +22,24 @@ All files and documents in SharePoint Embedded are stored in Containers. All Con
 - Apps can grant permission to other apps to create, read, update, and/or delete Container instances of Container types of the owning app , e.g. to allow backup/restore or DLP apps to operate on content in those Containers and/or create instances of the Container type. Note, the owning application is charged for storage in all instances of a Container type regardless of which app originally instantiated the Container.
 
 ### **SharePoint Embedded Containers and Container Types**
-A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. See more on Container Types [here](../app-concepts/containertypes.md)
+A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. 
+> Read more on Container Types [here](../app-concepts/containertypes.md)
 
 In the Microsoft ecosystem, each application needs to be registered with Azure AD to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps.
 
 #### More on SharePoint Embedded Container Types
 Container Types are the way SharePoint Embedded supports this relationship and authorizes requests:
 
-Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
+1. Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)  
 
-The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
+2. The permission mapping between a ContainerTypeID-AppID pair determines the operations  the application is authorized to invoke against all containers of a specific Container Type and their content. 
 
-Associations between Container Types and Applications can be changed. 
+3. Associations between Container Types and Applications can be changed. 
 
-Permission mapping between a ContainerTypeID-AppID pair can be changed 
+4. Permission mapping between a ContainerTypeID-AppID pair can be changed 
 
-An application can be associated with multiple Container Types.
+5. An application can be associated with multiple Container Types.
 
+<br></br>
 
 <img src="../../images/app-flow7.jpg" alt="SharePoint Embedded Flow"/>
