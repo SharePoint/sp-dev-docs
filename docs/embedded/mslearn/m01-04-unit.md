@@ -80,4 +80,4 @@ SharePoint Embedded introduces the concept of a storage Container that the devel
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup and Configure SharePoint Embedded](./m01-05-hol.md), where you'll create a Microsoft Entra application, configuring SharePoint Embedded on your SharePoint tenant, and generate your first Container Type and Container.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup and Configure SharePoint Embedded](m01-05-hol.md), where you'll create a Microsoft Entra application, configuring SharePoint Embedded on your SharePoint tenant, and generate your first Container Type and Container.

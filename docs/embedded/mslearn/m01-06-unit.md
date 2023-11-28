@@ -108,4 +108,4 @@ In this section, you learned how to use the Microsoft Graph REST APIs to store a
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Access, store, and retrieve files in SharePoint Embedded with Microsoft Graph](./m01-07-hol.md), where you’ll use Postman to access, store, and retrieve files and documents in a SharePoint Embedded Container using the Postman client.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Access, store, and retrieve files in SharePoint Embedded with Microsoft Graph](m01-07-hol.md), where you’ll use Postman to access, store, and retrieve files and documents in a SharePoint Embedded Container using the Postman client.

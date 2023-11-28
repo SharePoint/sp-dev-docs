@@ -113,4 +113,4 @@ In this section, you’ll learn how to access SharePoint Embedded Containers usi
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Update app to create and list SharePoint Embedded Containers](./m02-05-hol.md), where you’ll update the existing project to create and retrieve SharePoint Embedded Containers.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Update app to create and list SharePoint Embedded Containers](m02-05-hol.md), where you’ll update the existing project to create and retrieve SharePoint Embedded Containers.
