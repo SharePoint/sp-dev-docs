@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded - Overview & Configuration
 description: Microsoft SharePoint Embedded streamlines the creation of document-centric applications by integrating SharePoint's functionality, beneficial to developers, ISVs, and enterprises. The module offers an overview of SharePoint Embedded, its potential for new projects, and instructions on setting up your initial container.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Microsoft SharePoint Embedded - Overview & Configuration

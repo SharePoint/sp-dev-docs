@@ -1,7 +1,7 @@
 ---
 title: Understand the structure of SharePoint Embedded
 description: SharePoint Embedded features a unique storage container for managing files in custom apps, accessed via Microsoft Graph APIs; this section teaches Container creation within a Microsoft 365 tenant.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Understand the structure of SharePoint Embedded

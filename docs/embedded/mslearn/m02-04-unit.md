@@ -1,7 +1,7 @@
 ---
 title: Create REST API to handle read and display operations with SharePoint Embedded
 description: "Applications using SharePoint Embedded typically execute two primary operations with back-end storage: retrieving and storing/deleting data and files. This section will instruct you on accessing SharePoint Embedded Containers through the Microsoft Graph REST APIs."
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Create REST API to handle read and display operations with SharePoint Embedded

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded - Building an App
 description: SharePoint Embedded accelerates the development of applications centered on files and documents, enabling developers, ISVs, and enterprises to integrate essential Microsoft 365 file-handling features via SharePoint.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Microsoft SharePoint Embedded: Building an app

@@ -3,7 +3,7 @@ title: Authentication and Authorization with SharePoint Embedded
 ms.service: sharepoint-online
 description: This article describes the Authentication process for SharePoint Embedded Applications
 ms.service: sharepoint-online
-ms.date: 11/14/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 

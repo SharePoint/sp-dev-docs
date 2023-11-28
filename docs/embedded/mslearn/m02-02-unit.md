@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint Embedded applications
 description: Developers can leverage SharePoint's file management features in their applications with SharePoint Embedded, which involves building one component for CRUD operations via Microsoft Graph APIs and another for the user interface. This section walks through the initial creation of a web application capable of conducting CRUD operations on a SharePoint Embedded Container.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Create SharePoint Embedded applications

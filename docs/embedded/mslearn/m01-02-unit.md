@@ -1,7 +1,7 @@
 ---
 title: Introduction to SharePoint Embedded
 description: SharePoint Embedded is a development tool that enhances the speed of creating file and document-focused applications by utilizing the capabilities of SharePoint. In this section you'll learn the features and benefits of SharePoint Embedded for custom application development.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Introduction to SharePoint Embedded

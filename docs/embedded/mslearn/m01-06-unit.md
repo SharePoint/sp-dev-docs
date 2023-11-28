@@ -1,7 +1,7 @@
 ---
 title: Store and access files in SharePoint Embedded with Microsoft Graph REST APIs
 description: Developers will employ familiar Microsoft Graph APIs to manage files within SharePoint Embedded containers, utilizing the Microsoft Graph Drive endpoint for data access. This section covers how to use these REST APIs to handle file storage and retrieval in SharePoint Embedded.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Store and access files in SharePoint Embedded with Microsoft Graph REST APIs

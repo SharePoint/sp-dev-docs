@@ -1,7 +1,7 @@
 ---
 title: Create REST API to handle CRUD operations with SharePoint Embedded
 description: SharePoint Embedded applications manage data by performing two fundamental operations—reading/retrieving and storing/deleting files. This section focuses on teaching you to store and delete files in a SharePoint Embedded Container with Microsoft Graph REST APIs.
-ms.date: 11/24/2023
+ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 # Create REST API to handle CRUD operations with SharePoint Embedded

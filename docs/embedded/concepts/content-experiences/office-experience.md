@@ -1,7 +1,7 @@
 ---
 title: Office Experiences
 description: Overview of Office experiences with SharePoint Embedded content
-ms.date: 11/14/2023
+ms.date: 11/28/2023
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
