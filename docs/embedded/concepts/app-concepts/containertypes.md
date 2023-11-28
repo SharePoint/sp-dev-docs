@@ -28,8 +28,6 @@ To access Containers, an Application must be associated with the corresponding C
 
 4. Permission mapping between a ContainerTypeID-AppID pair can be changed 
 
-5. An application can be associated with multiple Container Types.
-
 > Read more in [Application Architecture](./app-architecture.md)
 
 <br></br>
