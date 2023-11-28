@@ -2,6 +2,7 @@
 title: Trial ContainerType
 description: Descrbing a Trial Container Option
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
@@ -17,9 +18,9 @@ Once the Trial Container Type has been created, the customer can create as many 
 
 To delete a trial Container Type, you must remove all Containers of that type first, including from the recycle bin. You can run the following PowerShell commands to purge a container and the Trial Container Type: 
 
-[`Remove-SPOContainer`](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spocontainer?view=sharepoint-ps)
+[`Remove-SPOContainer`](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainer?view=sharepoint-ps)
 
-[`Remove-SPODeletedContainer`](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spodeletedcontainer?view=sharepoint-ps)
+[`Remove-SPODeletedContainer`](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spodeletedcontainer?view=sharepoint-ps)
 
 `Remove-SPOContainerType`
 

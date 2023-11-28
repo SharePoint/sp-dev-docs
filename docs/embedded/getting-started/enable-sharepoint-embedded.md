@@ -2,6 +2,7 @@
 title: Enable SharePoint Embedded
 description: Steps to Enable SharePoint Embedded for use
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

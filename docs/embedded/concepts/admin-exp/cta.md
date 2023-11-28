@@ -2,6 +2,7 @@
 title: Consuming Tenant Admin
 description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 # Consuming Tenant Admin

@@ -2,6 +2,7 @@
 title: App Architecture
 description: Anatomy of a SharePoint Embedded application 
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

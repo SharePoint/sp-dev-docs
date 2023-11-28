@@ -2,6 +2,7 @@
 title: SharePoint Embedded Public Preview Terms and Conditions
 description: Public Preview Terms and Conditions
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

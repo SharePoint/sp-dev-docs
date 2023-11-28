@@ -2,6 +2,7 @@
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

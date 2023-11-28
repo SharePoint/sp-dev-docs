@@ -2,6 +2,7 @@
 title: Configure Default Launch Experience for your Office Files  
 description: Configure Default Launch Experience for your Office Files  
 ms.date: 11/14/2023
+ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
