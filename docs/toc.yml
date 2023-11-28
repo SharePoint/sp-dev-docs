@@ -573,37 +573,9 @@
     - name: Register your Container Type
       href: embedded/tutorials/containertypes.md
     - name: SharePoint Embedded - Overview & Configuration
-      items:
-      - name: Overview & Configuration Introduction
-        href: embedded/mslearn/m01-01-intro.md
-      - name: SharePoint Embedded Summary
-        href: embedded/mslearn/m01-02-unit.md
-      - name: Enable within Tenant
-        href: embedded/mslearn/m01-03-hol.md
-      - name: Understanding SharePoint Embedded
-        href: embedded/mslearn/m01-04-unit.md
-      - name: Setup and Configuration
-        href: embedded/mslearn/m01-05-hol.md
-      - name: Storing Files
-        href: embedded/mslearn/m01-06-unit.md
-      - name: Using Postman
-        href: embedded/mslearn/m01-07-hol.md
+      href: embedded/mslearn/m01-01-intro.md
     - name: SharePoint Embedded - Building an App
-      items:
-      - name: Building an app Introduction
-        href: embedded/mslearn/m02-01-intro.md
-      - name: Creating an App
-        href: embedded/mslearn/m02-02-unit.md
-      - name: Setup and Configuration
-        href: embedded/mslearn/m02-03-hol.md
-      - name: Access Containers
-        href: embedded/mslearn/m02-04-unit.md
-      - name: Create and Manage Containers
-        href: embedded/mslearn/m02-05-hol.md
-      - name: Container CRUD Operations
-        href: embedded/mslearn/m02-06-unit.md
-      - name: File CRUD Operations
-        href: embedded/mslearn/m02-07-hol.md
+      href: embedded/mslearn/m02-01-intro.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview

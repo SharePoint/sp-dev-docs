@@ -1,15 +1,15 @@
 ---
-title: Store and access files in SharePoint repository services with Microsoft Graph REST APIs
-description: Developers will employ familiar Microsoft Graph APIs to manage files within SharePoint repository services containers, utilizing the Microsoft Graph Drive endpoint for data access. This section covers how to use these REST APIs to handle file storage and retrieval in SharePoint repository services.
+title: Store and access files in SharePoint Embedded with Microsoft Graph REST APIs
+description: Developers will employ familiar Microsoft Graph APIs to manage files within SharePoint Embedded containers, utilizing the Microsoft Graph Drive endpoint for data access. This section covers how to use these REST APIs to handle file storage and retrieval in SharePoint Embedded.
 ms.date: 11/24/2023
 ms.localizationpriority: high
 ---
-# Store and access files in SharePoint repository services with Microsoft Graph REST APIs
+# Store and access files in SharePoint Embedded with Microsoft Graph REST APIs
 
-Developers creating apps that leverage SharePoint repository services will use well known and established Microsoft Graph APIs to access the files and documents in these Containers. The Microsoft Graph Drive endpoint can access data stored within a SharePoint repository services Container. In this section, you’ll learn how to use the Microsoft Graph REST APIs to store and retrieve files and documents in SharePoint repository services Containers.
+Developers creating apps that leverage SharePoint Embedded will use well known and established Microsoft Graph APIs to access the files and documents in these Containers. The Microsoft Graph Drive endpoint can access data stored within a SharePoint Embedded Container. In this section, you’ll learn how to use the Microsoft Graph REST APIs to store and retrieve files and documents in SharePoint Embedded Containers.
 
 > [!IMPORTANT]
-> At this time, many of the Microsoft Graph endpoints used to create, access, and manage SharePoint repository services-specific resource only exist on the Microsoft Graph beta endpoint. However, all endpoints that access the Containers and content within contains are on the Microsoft Graph v1.0 endpoint.
+> At this time, many of the Microsoft Graph endpoints used to create, access, and manage SharePoint Embedded-specific resource only exist on the Microsoft Graph beta endpoint. However, all endpoints that access the Containers and content within contains are on the Microsoft Graph v1.0 endpoint.
 
 ## Working with Containers
 
@@ -60,7 +60,7 @@ GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{{ContainerI
 
 ## Working with the contents of a Container
 
-To work with the contents, or files, in a Container, you’ll use the same Microsoft Graph endpoints available for reading and writing to SharePoint document libraries or OneDrive: the `drives` endpoint. This is because a SharePoint repository services Container is seen as the same thing as a Microsoft Graph `Drive` object and files within the `Drive` are `DriveItems`.
+To work with the contents, or files, in a Container, you’ll use the same Microsoft Graph endpoints available for reading and writing to SharePoint document libraries or OneDrive: the `drives` endpoint. This is because a SharePoint Embedded Container is seen as the same thing as a Microsoft Graph `Drive` object and files within the `Drive` are `DriveItems`.
 
 ### Get a specific Container as a `Drive` object
 
@@ -102,10 +102,10 @@ To learn more about working with files using Microsoft Graph, see **[Microsoft G
 
 ## Summary
 
-Developers creating apps that leverage SharePoint repository services will use well known and established Microsoft Graph APIs to access the files and documents in these Containers. The Microsoft Graph Drive endpoint can access data stored within a SharePoint repository services Container.
+Developers creating apps that leverage SharePoint Embedded will use well known and established Microsoft Graph APIs to access the files and documents in these Containers. The Microsoft Graph Drive endpoint can access data stored within a SharePoint Embedded Container.
 
-In this section, you learned how to use the Microsoft Graph REST APIs to store and retrieve files and documents in SharePoint repository services Containers.
+In this section, you learned how to use the Microsoft Graph REST APIs to store and retrieve files and documents in SharePoint Embedded Containers.
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Access, store, and retrieve files in SharePoint repository services with Microsoft Graph](./m01-07-hol.md), where you’ll use Postman to access, store, and retrieve files and documents in a SharePoint repository services Container using the Postman client.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Access, store, and retrieve files in SharePoint Embedded with Microsoft Graph](./m01-07-hol.md), where you’ll use Postman to access, store, and retrieve files and documents in a SharePoint Embedded Container using the Postman client.
