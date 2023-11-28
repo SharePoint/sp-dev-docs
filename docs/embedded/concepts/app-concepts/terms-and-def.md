@@ -8,9 +8,10 @@ ms.localizationpriority: high
 
 # Terms and Definitions
 
-Short definitions to key concepts in SharePoint Embedded Application Architecture. These are explained more fully in the [Concepts](../app-concepts/app-architecture.md) section.
+Short definitions to key concepts in SharePoint Embedded Application Architecture. 
+> All terms are explained in the [Concepts](../app-concepts/app-architecture.md) section.
 
-
+<br></br>
 
 **Application Workload:** The collection of applications that have access to a Container type
 

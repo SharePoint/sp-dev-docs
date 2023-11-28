@@ -26,8 +26,6 @@ Connect-SPOService -Url "{{SPO Admin Url}}"
 $dummyGuid = [System.Guid]::NewGuid().ToString()
 New-SPOContainerType -ContainerTypeName "{{Name}}" -OwningApplicationId "{{Your new app client Id}}" -AzureSubscriptionId $dummyGuid -ResourceGroup "Dummy" -Region "Dummy"
 ```
-*Note that the above command uses dummy values for billing setup. This only works on developer tenants that have been provided by us. If you want to use Repository
-services on your own tenant with real billing enabled, you will need to contact us.*
 
 The cmdlet will output your new ContainerTypeId, save this somewhere for later use. 
 

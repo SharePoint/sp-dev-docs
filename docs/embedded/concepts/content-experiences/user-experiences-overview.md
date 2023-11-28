@@ -9,6 +9,7 @@ ms.localizationpriority: high
 # Content Experiences Overview 
 Microsoft's SharePoint Embedded provides a comprehensive set of Content Experience features like Open & Edit of Office Files, File Preview or In-App Search that you can leverage to build the right user experiences for your applications. 
 
+<!--
 ## In this article:
 
 1. [Open & Edit using Office](#Open-&-Edit-using-Office)
@@ -19,7 +20,7 @@ Microsoft's SharePoint Embedded provides a comprehensive set of Content Experien
 6. [Deleted Container Collection](#Deleted-Container-Collection)
 7. [Version History](#Version-History)
 8. [M365 Content Discovery](#Content-Discovery-in-M365) 
-
+-->
 ## Open & Edit using Office 
 Office documents from SharePoint Embedded Apps can be opened for Viewing, Editing and Collaborating using either Office Online, where your users can work with documents directly on the website, or Desktop apps for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md). <br/><br/> You can configure your applications to launch Office clients just the right way  when a user clicks on a Office document from your application including directly launching Desktop Clients or launching Office clients in a specific mode like View (for read-only content) or in Edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md) 
 

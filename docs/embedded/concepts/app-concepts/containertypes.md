@@ -9,12 +9,11 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Container Types
 
-
 In SharePoint Embedded, all files and documents are stored in Containers, and each Container is identified by a Container Type. 
 
-Container Type is a property stamped on every Container instance. Each Container Type is owned by one application; and each application can own only one Container Type.  
+Container Type is a property stamped on every Container instance. Each Container Type is owned by one Application; and each Application can own only one Container Type.  
 
-The primary function of a Container Type is to manage the application workload that can access the Containers. Container Type defines the access permissions an application has towards all Containers of that type, including create, read, write, delete Containers; manage Container permissions, etc.  
+The primary function of a Container Type is to manage the application workload that can access the Containers. Container Type defines the access permissions an Application has towards all Containers of that type, including create, read, write, delete containers; manage container permissions, etc.  
 
 
 ### Here are some general guidelines for Container Types: 
@@ -25,9 +24,9 @@ The permission mapping between a ContainerTypeID-AppID pair determines the opera
 
 > Read more in [Application Architecture](./app-architecture.md)
 
-<br></br>
 
-# SharePoint Embedded Trial Containers 
+
+## SharePoint Embedded Trial Container Types 
 
 To aid customers with the development of applications to be used with SharePoint Embedded, we are allowing the creation of a Trial Container Type. Customers will be allowed 1 Trial Container Type at any time in their tenant. The Trial Container Type will *not* be linked to billing and can only be consumed by the Partner tenant.  
 

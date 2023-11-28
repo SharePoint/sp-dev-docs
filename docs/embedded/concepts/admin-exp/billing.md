@@ -6,15 +6,14 @@ ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Overview
+# SharePoint Embedded  Billing experience
 This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded . 
 
-# SharePoint Embedded  Billing experience
 SharePoint Embedded  will be a consumption based PAYG (Pay-as-you-go) offering from SharePoint Online, which means you will pay only for what you use. As a Developer admin for SharePoint Embedded , you will set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal. 
 
 <img width="800" alt="Biling payg" src="../../images/billing-manage.png">
 
-# Set up Pay-as-you-go (PAYG) for SharePoint Embedded 
+## Set up Pay-as-you-go (PAYG) for SharePoint Embedded 
 
 To enable PAYG on SharePoint Embedded , you need:
 
@@ -46,8 +45,9 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId
  1. Every container type must have an owning application
  2. A single owning app can only own one container type at a time
  3. An azure subscription can be attached to any number of container types
- 
-# View/Edit billing properties 
+
+<br></br>
+## View/Edit billing properties 
 
 1. View the properties of billing
    You can view properties of ContainerType and associated billing properties by using one of the two PowerShell cmdlets
@@ -71,11 +71,11 @@ Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
 ```
 
-# Pricing & PAYG meters
+## Pricing & PAYG meters
 
 Please review the Pricing and PAYG meters for SharePoint Embedded in the [terms of service](../../terms-of-service.md)
 
-#  Manage consumption and invoices in Azure portal
+##  Manage consumption and invoices in Azure portal
 
 1. Sign in to [**Azure Portal**](https://portal.azure.com/)
 2. Search for **Cost Management + Billing** 
