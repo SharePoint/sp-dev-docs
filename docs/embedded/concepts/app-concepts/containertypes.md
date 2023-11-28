@@ -9,13 +9,13 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Container Types
 
-In SharePoint Embedded, all files and documents are stored in Containers and each Container has a specific Container Type.  
+In SharePoint Embedded, all files and documents are stored in Containers, and each Container is identified by a Container Type. 
 
-A Container Type is a SharePoint Embedded-Container level property stamped on every instance of a Container. An applications will own one or more Container Types to create Containers. An application can have multiple Containers that share the same Container Type. For instance, it is entirely possible for an Application to own only one Container Type but have multiple Containers of that type.  
+Container Type is a property stamped on every Container instance. Each Container Type is owned by one Application, while each Application can own multiple Container Types. In addition, each Container Type can be associated with multiple Applications, and each Application can be associated with multiple Container Types. 
 
-The primary function of a Container Type  is to identify the application workloads that can access a specific Container. Container Types define the permissions and controls and manage access for all Containers of that type. This includes read/write access to various Containers. Container Types are important since they are how SharePoint Embedded supports and authorizes requests. 
+The primary function of a Container Type is to identify the application workload that can access a specific Container. Container Type defines the access permissions an Application has towards all Containers of that type, including create, read, write, delete containers; manage container permissions, etc.  
 
-In the Microsoft ecosystem, each application needs to be registered with Microsoft Entra to obtain a unique Azure ID (referred here as AppID or ClientID). This rule applies to all variants of the same app. For example, if a developer launches an application on the Web, iOS, and Android, that developer would register these variants as three separate apps on Azure. This will generate three AppIDs. The same Containers can be accessed by all three apps. 
+To access Containers, an Application must be associated with the corresponding Container Types. 
 
 
 ### General guidelines for Container Types: 
@@ -34,7 +34,7 @@ In the Microsoft ecosystem, each application needs to be registered with Microso
 
 <br></br>
 
-# SharePoint Embedded Trial Containers 
+## SharePoint Embedded Trial Containers 
 
 To aid customers with the development of applications to be used with SharePoint Embedded, we are allowing the creation of a Trial Container Type. Customers will be allowed 1 Trial Container Type at any time in their tenant. The Trial Container Type will *not* be linked to billing and can only be consumed by the Partner tenant.  
 
