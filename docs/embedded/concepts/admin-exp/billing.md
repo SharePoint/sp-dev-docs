@@ -71,11 +71,11 @@ Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
 ```
 
-# Pricing & PAYG meters
+## Pricing & PAYG meters
 
 Please review the Pricing and PAYG meters for SharePoint Embedded in the [terms of service](../../terms-of-service.md)
 
-#  Manage consumption and invoices in Azure portal
+##  Manage consumption and invoices in Azure portal
 
 1. Sign in to [**Azure Portal**](https://portal.azure.com/)
 2. Search for **Cost Management + Billing** 
