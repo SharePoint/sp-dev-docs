@@ -19,7 +19,7 @@ ms.service: sharepoint
 You can retrieve a folder inside a document library when you know its URL. For example, you can **retrieve the root folder of your Shared Documents library** by using the endpoint in the following example.
 
 ```http
-GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Shared Documents')
+GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Shared Documents')
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
@@ -60,7 +60,7 @@ The following example shows how to **rename a folder by using the MERGE method**
 First, obtain the folder's OData type with a GET request.
 
 ```http
-GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
+GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/ListItemAllFields
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
@@ -68,7 +68,7 @@ Accept: "application/json;odata=verbose"
 From the result, obtain the `odata.type` value, such as `SP.Data.Shared_x0020_DocumentsItem` (the value may be different depending on your library configuration). Then submit a MERGE request:
 
 ```http
-POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/ListItemAllFields
+POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/ListItemAllFields
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 Content-Type: "application/json"
@@ -89,7 +89,7 @@ X-RequestDigest: "{form_digest_value}"
 The following example shows how to **delete a folder**.
 
 ```http
-POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')
+POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')
 Authorization: "Bearer " + accessToken
 If-Match: "{etag or *}"
 X-HTTP-Method: "DELETE"
@@ -101,7 +101,7 @@ X-RequestDigest: "{form_digest_value}"
 The following example shows how to **retrieve all of the files in a folder**.
 
 ```http
-GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files
+GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/Files
 method: GET
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
@@ -110,7 +110,7 @@ Accept: "application/json;odata=verbose"
 The following example shows how to **retrieve a specific file**.
 
 ```http
-GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files('{file_name}')/$value
+GET https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/Files('{file_name}')/$value
 Authorization: "Bearer " + accessToken
 ```
 
@@ -187,7 +187,7 @@ static void Main(string[] args)
 The following example shows how to **create a file and add it to a folder**.
 
 ```http
-POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files/add(url='a.txt',overwrite=true)
+POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/Files/add(url='a.txt',overwrite=true)
 Authorization: "Bearer " + accessToken
 Content-Length: {length of request body as integer}
 X-RequestDigest: "{form_digest_value}"
@@ -250,7 +250,7 @@ The following example shows how to **create a large binary file**.
 > This approach works only with Internet Explorer 10 and the latest versions of other browsers.
 
 ```http
-POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('/Folder Name')/Files/Add(url='{file_name}', overwrite=true)
+POST https://{site_url}/_api/web/GetFolderByServerRelativeUrl('Folder Name')/Files/Add(url='{file_name}', overwrite=true)
 Authorization: "Bearer " + accessToken
 Content-Length: {length of request body as integer}
 X-RequestDigest: "{form_digest_value}"
