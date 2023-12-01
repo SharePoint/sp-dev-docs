@@ -56,7 +56,7 @@ When using Delegated permissions in Access Tokens, the permissions scopes associ
 
 In order for the tokens to be issued and fully effective, there must be either an explicit user's consent, for those permissions related to personal resources of the current user, or a tenant admin's consent, for those permissions related to tenant-wide resources.
 
-When using Application permissions in Access Tokens, tipically the permissions granted require a tenant admin's consent because such an application will then gain access to target resources tenant-wide, and as such an admin approval is required.
+When using Application permissions in Access Tokens, typically the permissions granted require a tenant admin's consent because such an application will then gain access to target resources tenant-wide, and as such an admin approval is required.
 
 In SharePoint Framework solutions, you will only get Access Tokens with Delegated permissions, meaning that you will only consume Microsoft Graph and any other API/services acting as the signed-in user.
 
@@ -70,7 +70,7 @@ The sample Web Part relies on the ["jwt.ms"](https://jwt.ms) web site provided b
 
 Running the sample web part in the SharePoint Framework Workbench and pressing the "Look inside the Access Token for Microsoft Graph" button you will be brought to the jwt.ms web site where you can see the content of your Access Token. In the following screenshot you can see the output of the jwt.ms web site for a sample Access Token.
 
-![The jwt.ms web site illustrating the content of a sample Access Token, including all the claims defined in the token and their values](../images/add-in-transform/add-in-transform/understanding-aad-oauth-for-spfx/understanding-aad-oauth-for-spfx-msgraph-access-token-claims.png)
+![The jwt.ms web site illustrating the content of a sample Access Token, including all the claims defined in the token and their values](../images/add-in-transform/understanding-aad-oauth-for-spfx/understanding-aad-oauth-for-spfx-msgraph-access-token-claims.png)
 
 Inside every JWT Access Token there are claims, and here you can find a list of the most important ones for an Access Token issued to a SharePoint Framework client with Delegated permission scopes:
 
@@ -89,12 +89,12 @@ If you are consuming the Microsoft Graph, like in the above sample, the _aud_ cl
 > [!NOTE]
 > For a Domain Isolated solution, the *app_displayname* claim will be the one of a dedicated application registered for you in Azure Active Directory by the SharePoint Online services.
 
-On the client side, meaning in SharePoint Framework, you should never rely on the actual content of the Access Token. The provided sample is just for the sake of understanding how the security model works. However, in a common scenario, you can simply benefit of the out of the box capabilities of SharePoint Framework, which hides from you all the plumbing of consuming external APIs from within your code.
+On the client side, meaning in SharePoint Framework, you should never rely on the actual content of the Access Token. The provided sample is just for the sake of understanding how the security model works. However, in a common scenario, you can simply take advantage of the out of the box capabilities of SharePoint Framework, which hides all the plumbing of consuming external APIs from your code.
 
-On the service side, if you are consuming Microsoft Graph, it will be responsibility of Microsoft to evaluate the provided Access Token and to authorize (or deny) access to the requeste API endpoint. In case you are consuming a third-party API/service that you implemented, you can either rely on the configuration options of Microsoft Azure, if you are hosting the service on Microsoft Azure, or you can rely for example on the Microsoft Authentication Library (MSAL) and the Microsoft.Identity.Web library to validate and authorize the tokens.
+On the service side, if you are consuming Microsoft Graph, it will be the responsibility of Microsoft to evaluate the provided Access Token and to authorize (or deny) access to the requeste API endpoint. In case you are consuming a third-party API/service that you implemented, you can either rely on the configuration options of Microsoft Azure, if you are hosting the service on Microsoft Azure, or you can rely, for example, on the Microsoft Authentication Library (MSAL) and the Microsoft.Identity.Web library to validate and authorize the tokens.
 
 > [!NOTE]
-> You can find additional information about the Microsoft Authentication Library reading ["Overview of the Microsoft Authentication Library (MSAL)"](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview). You can find further details about the Microsoft.Identity.Web library reading the article ["Microsoft Identity Web authentication library"](https://learn.microsoft.com/en-us/azure/active-directory/develop/microsoft-identity-web).
+> You can find additional information about the Microsoft Authentication Library by reading ["Overview of the Microsoft Authentication Library (MSAL)"](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview). You can find further details about the Microsoft.Identity.Web library by reading the article ["Microsoft Identity Web authentication library"](https://learn.microsoft.com/en-us/azure/active-directory/develop/microsoft-identity-web).
 
 ## Recommended content
 
