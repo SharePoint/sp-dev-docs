@@ -27,7 +27,7 @@ In Microsoft SharePoint Online, when developing SharePoint Framework (SPFx) solu
 > For further details about consuming Microsoft Graph from within a SharePoint Framework solution you can read the article ["Use the MSGraphClientV3 to connect to Microsoft Graph"](../spfx/use-msgraph.md). For further details about consuming any other third-party APIs from within SharePoint Framework you can read the article ["Connect to Azure AD-secured APIs in SharePoint Framework solutions"](../spfx/use-aadhttpclient.md).
 
 > [!IMPORTANT]
-> There are scenarios where you need to have a dedicated and isolated access to a target API. In such scenario, you can rely on the Domain Isolated configuration for your SharePoint Framework solution. You can find additional details about the Domain Isolated scenario reading the article ["Isolated web parts"](../web-parts/isolated-web-parts.md).
+> There are scenarios where you need to have a dedicated and isolated access to a target API. In such scenario, you can rely on the Domain Isolated configuration for your SharePoint Framework solution. You can find additional details about the Domain Isolated scenario reading the article ["Isolated web parts"](../spfx/web-parts/isolated-web-parts.md).
 
 The "SharePoint Online Client Extensibility Web Application Principal" application is pre-registered by Microsoft SharePoint Online in any Microsoft 365 tenant and allows all the SharePoint Framework solutions to share a unique application to access both Microsoft Graph and any other third-party APIs. In this article, you will understand what the role of Azure Active Directory and OAuth 2.0 in the SharePoint Framework context is.
 
