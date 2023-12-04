@@ -43,7 +43,7 @@ In addition to existing file properties, Audit events related to SharePoint Embe
  * ContainerTypeId 
 
     
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/50f9e071-8559-4182-be7e-ac849a82f083)
+![image](../images/sc1.png)
 
 
 
@@ -54,12 +54,12 @@ To perform an eDiscovery Search on all SharePoint Embedded content, Admins shoul
 
 To perform an eDiscovery Search on all SharePoint Embedded content, Admins should click on ‘All’ SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Online Sites and all SharePoint Embedded Containers.
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/d23bbbe1-b844-468e-a2d2-f8af99036e58)
+![image](../images/sc2.png)
 
 
 To limit the eDiscovery Search to one/few SharePoint Embedded Containers, Admins can ‘Choose sites’ under the ‘SharePoint sites’ workload and provide the desired Container URL –
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/04b8a5c1-8ad7-4dac-aee4-fcb21fa3cd1e)
+![image](../images/sc3.png)
 
    
 * ### Data Lifecycle Management (DLM) 
@@ -68,11 +68,11 @@ SharePoint Embedded supports retention and holds policies on content stored in i
 
 Existing retention policy will automatically apply to all SharePoint Embedded Containers if policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on ‘All’ SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites as well as all Containers within SharePoint Embedded. 
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/9e3d36f6-668b-4e44-b765-29cea7787b3d)
+![image](../images/sc4.png)
     
 To selectively enforce the policy on one/few SharePoint Embedded Containers, copy the Container URL and configure the policy to be selectively enforced only on those Container(s).
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/73606399-10bb-4697-8b69-bfc0ed17cd36)
+![image](../images/sc5.png)
 
 Since SharePoint Embedded do not have any inbuilt user interface, DLM scenarios requiring user interaction are not natively supported. For instance, if an end user attempts to apply a retention label on a Container using a SharePoint Embedded application (app), the app governing the access to the Container must furnish that functionality. In such cases, Graph APIs for DLM functionalities can be leveraged.
 
@@ -84,14 +84,14 @@ Like retention policies, DLP policies can be enforced on all SharePoint Online S
 
 
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/a2bf3ed0-48f1-4b2b-9874-b2fb082ff672)
+![image](../images/sc6.png)
 
 
 
 Admins can also restrict the enforcement of a DLP policy to specific SharePoint Embedded Containers by specifying the relevant Container URL(s) during policy configuration. 
 
 
-![image](https://github.com/SharePoint/sp-dev-docs/assets/146786900/c49b1100-089f-4d21-840d-809de4c63c58)
+![image](../images/sc7.png)
 
 
 
