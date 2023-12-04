@@ -6,12 +6,12 @@ ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Using File Previews 
+# Using File Previews
 
 ### Embedding a file preview in an iFrame
 
-It is possible to preview a 
-[wide range](https://support.microsoft.com/en-us/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4) 
+It is possible to preview a
+[wide range](https://support.microsoft.com/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4)
 of files in your browser without using a special application. Among the files supported, you can view PDF, JPG, MP4, etc.
 
 In order to preview a file in an iFrame, you need to
@@ -23,7 +23,7 @@ In order to preview a file in an iFrame, you need to
 
 ## Get the preview url using Graph
 
-Graph offers the following endpoint to [preview a file](https://learn.microsoft.com/en-us/graph/api/driveitem-preview?view=graph-rest-1.0):
+Graph offers the following endpoint to [preview a file](/graph/api/driveitem-preview):
 
 ```js
 POST https://graph.microsoft.com/{version}/drives/{driveId}/items/{itemId}/preview
@@ -104,6 +104,3 @@ async function preview(driveId, itemId) {
     document.getElementById('preview').src = response;
 }
 ```
-
-
-

@@ -1,12 +1,12 @@
 ---
-title: Configure Default Launch Experience for your Office Files  
-description: Configure Default Launch Experience for your Office Files  
+title: Configure Default Launch Experience for your Office Files
+description: Configure Default Launch Experience for your Office Files
 ms.date: 11/28/2023
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Configure Default Launch Experience for your Office Files  
+# Configure Default Launch Experience for your Office Files
 
 ### In this article:</br>
 1. [Launch Office in 'View' or 'Edit' mode'](#Configure-Launch-mode-of-Office-Clients)</br>
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 When retrieving a driveitem back from the Graph API per:
 
-https://learn.microsoft.com/en-us/graph/api/driveitem-get?view=graph-rest-1.0
+/graph/api/driveitem-get?view=graph-rest-1.0
 
 There is a webUrl property which can be a link to WOPI for rendering supported office file types.  This url will look something like:
     ```
@@ -36,7 +36,7 @@ string modifiedWebUrl = builder.ToString();
 ```
 
 To learn more about WOPI Actions:
-https://learn.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions
+/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions
 
 ### Open Office files directly in Desktop clients
 
@@ -78,6 +78,6 @@ which will turn into
 
 To learn more about Office URI schemes
 
-https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes
+/office/client-developer/office-uri-schemes
 
 > **_NOTE:_** The Uri must be open in a blank window or tab
