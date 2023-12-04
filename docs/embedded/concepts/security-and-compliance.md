@@ -6,7 +6,8 @@ ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Security and Compliance 
+# Security and Compliance
+
 
 Microsoft's SharePoint Embedded provides a faster way to create secure and compliant documents stored in various applications. SharePoint Embedded leverages Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions will work in a similar manner in the SharePoint Embedded platform as they do today on the Microsoft 365 (M365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content.  
 
@@ -14,15 +15,15 @@ In this article, we describe the security and compliance policies that are suppo
 
 Since SharePoint Embedded by design doesn’t have any user interface, some Compliance scenarios necessitating user interaction aren't natively supported. The owning application that governs the Container can choose to support these scenarios and provide optimum experience to end user by leveraging existing Graph API.
 
-##  Compliance Policies using Microsoft Purview 
+##  Compliance Policies using Microsoft Purview
 
 Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview.  You can follow the below steps to retrieve the details of a container that the policy needs to be applied to.
 
-1. View list of registered SharePoint Embedded applications registered in the specified tenant:  
+1. View list of registered SharePoint Embedded applications registered in the specified tenant:
 ```
-Get-SPOApplication 
+Get-SPOApplication
 ```
-2. Retrieve list of Containers in a SharePoint Embedded application by providing the ApplicationID returned in Step #1  
+2. Retrieve list of Containers in a SharePoint Embedded application by providing the ApplicationID returned in Step #1
 ```
 Get-SPOContainer -OwningApplicationId <OwningApplicationID>
 ```
@@ -30,12 +31,10 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationID>
 ```
 Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity<ContainerID>
 ```
-For information on how to retrieve ContainerSiteURL to set the various Compliance policies described below at a Container level, please visit [Get-SPOContainer](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/get-spocontainer?view=sharepoint-ps).  
- 
- 
+For information on how to retrieve ContainerSiteURL to set the various Compliance policies described below at a Container level, please visit [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer).
 
-* ### Audit 
 
+* ### Audit
 The Audit capabilities provided by SharePoint Embedded mirror the existing Audit functionalities currently supported within SharePoint Online. All user and admin operations performed in various applications hosted in SharePoint Embedded are captured, recorded, and retained in your organization's unified audit log. For more information on Audit, please visit [Auditing solutions in Microsoft Purview](https://learn.microsoft.com/en-us/purview/audit-solutions-overview).
 
 In addition to existing file properties, Audit events related to SharePoint Embedded are logged with the following additional data to help filter the Audit search results to isolate the relevant SharePoint Embedded content – 
@@ -46,13 +45,12 @@ In addition to existing file properties, Audit events related to SharePoint Embe
 ![image](../images/sc1.png)
 
 
-
-* ### eDiscovery  
+* ### eDiscovery
 
 Compliance Admins can use eDiscovery tools in Microsoft Purview to search/hold/export content hosted in the SharePoint Embedded platform. For more information on eDiscovery, please visit [Microsoft Purview eDiscovery solutions](https://learn.microsoft.com/en-us/purview/ediscovery).
-To perform an eDiscovery Search on all SharePoint Embedded content, Admins should click on ‘All’ SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Online Sites and all SharePoint Embedded Containers.
 
 To perform an eDiscovery Search on all SharePoint Embedded content, Admins should click on ‘All’ SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Online Sites and all SharePoint Embedded Containers.
+
 
 ![image](../images/sc2.png)
 
@@ -91,6 +89,7 @@ Like retention policies, DLP policies can be enforced on all SharePoint Online S
 Admins can also restrict the enforcement of a DLP policy to specific SharePoint Embedded Containers by specifying the relevant Container URL(s) during policy configuration. 
 
 
+
 ![image](../images/sc7.png)
 
 
@@ -100,43 +99,41 @@ Several scenarios supported by DLP today need user interaction which aren’t na
 Policy tips are shown today for files hosted in SharePoint Online so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can opt to provide additional support by utilizing the existing Graph APIs for this purpose. 
 
 
-## Security Features 
-* ### Sensitivity labels on Containers 
-
+## Security Features
+* ### Sensitivity labels on Containers
 Global Administrators and SharePoint Administrators can set and remove sensitivity labels on a SharePoint Embedded Container by using the newly created SharePoint PowerShell cmdlet –  
 
-```
-Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID> 
-```
 
+```
+Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
+```
 
 To learn more about setting sensitivity labels, please visit [Learn about sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels).
 
-* ## Block Download policy (Coming Soon)
 
+* ### Block Download policy (Coming Soon)
 Block Download policy allows SharePoint Administrator or Global Administrator to block download of files from SharePoint Embedded Containers using the below SharePoint PowerShell cmdlet –
 
+
 ```
-Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true 
+Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
+
 Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/en-us/sharepoint/block-download-from-sites).
 
 
+* ### Conditional Access policy (Coming Soon)
+SharePoint Embedded supports basic Conditional Access policy configurations such as
 
-* ## Conditional Access policy (Coming Soon)
-SharePoint Embedded supports basic Conditional Access policy configurations such as  
+ * AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web
 
- * AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web 
+ * AllowLimitedAccess: Allows limited, web-only access
 
- * AllowLimitedAccess: Allows limited, web-only access 
+ * BlockAccess: Blocks Access
 
- * BlockAccess: Blocks Access 
-
-using the below PowerShell cmdlet. AuthorizationContext will also be supported in the near future. 
+using the below PowerShell cmdlet. AuthorizationContext will also be supported in the near future.
 ```
-Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType> 
+Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType>
 ```
+
 To learn more about Conditional Access Policy, please visit [Control access from unmanaged devices](https://learn.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices). 
-
-
-
