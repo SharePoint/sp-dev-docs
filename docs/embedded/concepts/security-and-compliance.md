@@ -108,7 +108,7 @@ Global Administrators and SharePoint Administrators can set and remove sensitivi
 ```
 Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID> 
 ```
-<!--To learn more about the new Sensitivity Label PowerShell cmdlet and its various configurable optional parameters, please visit [<link to new Sen label cmdlet page – WIP>](learn.microsoft.com)-->
+
 
 To learn more about setting sensitivity labels, please visit [Learn about sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels).
 
@@ -121,7 +121,7 @@ Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/en-us/sharepoint/block-download-from-sites).
 
-<!--To learn more about the new Block Download PowerShell cmdlet and its various configurable options, please visit [<link to new BDP cmdlet page – WIP>](learn.microsoft.com) -->
+
 
 * ## Conditional Access policy (Coming Soon)
 SharePoint Embedded supports basic Conditional Access policy configurations such as  
