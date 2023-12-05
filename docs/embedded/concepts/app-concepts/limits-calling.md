@@ -7,7 +7,10 @@ ms.localizationpriority: high
 ---
 
 # Limits and Calling Patterns 
-This document explains the limits of SharePoint Embedded.
+This document explains the limits of SharePoint Embedded during public preview.
+
+> [!NOTE]
+> These are preview limits which are subject to change.
 
 ## Size limits
 The table below defines the size limits of containers.
@@ -15,7 +18,7 @@ The table below defines the size limits of containers.
 
 |     Resource                                               |   Limit                                                   |
 |------------------------------------------------------------|-----------------------------------------------------------|
-|     Container types that a partner tenant can create       |   5                                                       |
+|     Container types that a partner tenant can create       |   5*                                                       |
 |     Container types that an app can own                    |   1                                                       |
 |     Containers of a container type per tenant              |   100k*                                                   |
 |     Storage per container type per tenant                  |   100TB*                                                  |
@@ -28,7 +31,7 @@ The table below defines the size limits of containers.
 
 
 > [!NOTE]
-> The limit can be increased per request. 
+> \* Limit can be increased per request. 
 
 
 ## Throttling 
@@ -67,8 +70,7 @@ The following table lists the API rate limits for applications and containers.
 |     Requests per user            |   600 resource units per min   |
 
 > [!NOTE]
-> The limit can be increased per request.
-> 
+> \* Limit can be increased per request.
 
 Application limits are defined in resource units, and the actual request rate, such as requests per minute, varies based on the chosen API and its corresponding resource unit cost. As a general rule, you can estimate the request rate by averaging about 2 resource units per request and dividing application resource unit limits by 2. Reducing the usage of permission operations can notably improve the call rate since these operations have the most significant impact on overall resource consumption.
 <br></br>
