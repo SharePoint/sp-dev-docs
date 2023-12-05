@@ -94,7 +94,7 @@ On the client side, meaning in SharePoint Framework, you should never rely on th
 On the service side, if you are consuming Microsoft Graph, it will be the responsibility of Microsoft to evaluate the provided Access Token and to authorize (or deny) access to the requeste API endpoint. In case you are consuming a third-party API/service that you implemented, you can either rely on the configuration options of Microsoft Azure, if you are hosting the service on Microsoft Azure, or you can rely, for example, on the Microsoft Authentication Library (MSAL) and the Microsoft.Identity.Web library to validate and authorize the tokens.
 
 > [!NOTE]
-> You can find additional information about the Microsoft Authentication Library by reading [Overview of the Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview). You can find further details about the Microsoft.Identity.Web library by reading the article [Microsoft Identity Web authentication library](https://learn.microsoft.com/en-us/azure/active-directory/develop/microsoft-identity-web).
+> You can find additional information about the Microsoft Authentication Library by reading [Overview of the Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview). You can find further details about the Microsoft.Identity.Web library by reading the article [Microsoft Identity Web authentication library](/entra/msal/dotnet/microsoft-identity-web).
 
 ## Recommended content
 
@@ -102,5 +102,5 @@ You can find additional information about this topic reading the following docum
 
 * [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../spfx/use-aadhttpclient.md)
 * [Isolated web parts](../spfx/web-parts/isolated-web-parts.md)
-* [Overview of the Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview)
-* [Microsoft Identity Web authentication library](https://learn.microsoft.com/en-us/azure/active-directory/develop/microsoft-identity-web)
+* [Overview of the Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview)
+* [Microsoft Identity Web authentication library](/entra/msal/dotnet/microsoft-identity-web)
