@@ -1,6 +1,6 @@
 ---
 title: Register Container Types
-description: Describing how Container Types work
+description: This article explains how to register a new Container Types work.
 ms.date: 11/28/2023
 ms.service: sharepoint-online
 ms.localizationpriority: high

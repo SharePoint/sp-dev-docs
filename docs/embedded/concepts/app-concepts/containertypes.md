@@ -1,6 +1,6 @@
 ---
 title: Container Type
-description: Describing how Container Types work
+description: This article explains how Container Types work.
 ms.date: 11/28/2023
 ms.service: sharepoint-online
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ Each Container is associated to one immutable Container Type, represented by a C
 The permission mapping between a ContainerTypeID-AppID pair determines the operations the application is authorized to invoke against all containers of a specific Container Type and their content.
 
 > [!TIP]
-> To learn more about application architecture, see [Application Architecture](./app-architecture.md)
+> To learn more about application architecture, see [Application Architecture](./app-architecture.md).
 
 ## SharePoint Embedded Trial Container Types
 
