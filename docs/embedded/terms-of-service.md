@@ -43,12 +43,12 @@ SharePoint Embedded uses pay-as-you-go (PAYG) billing through an Azure subscript
 
 SharePoint Embedded Feature Preview pricing is as follows:
 
-| SharePoint Embedded Service Meters |  Meter Unit |  Price |
-|:---------------------------------------------:|:-------------:|:--------:|
-| Storage                    | $/GB/Day   | $0.00667 |
-| Graph API Transactions Class A        | $/1 API call | $0.00050 |
-| Graph API Transactions Class B        | $/1 API call | $0.00075 |
-| Express Egress                | $/GB     | $0.12  |
+| SharePoint Embedded Service Meters |  Meter Unit  |  Price   |
+| :--------------------------------: | :----------: | :------: |
+|              Storage               |   $/GB/Day   | $0.00667 |
+|   Graph API Transactions Class A   | $/1 API call | $0.00050 |
+|   Graph API Transactions Class B   | $/1 API call | $0.00075 |
+|           Express Egress           |     $/GB     |  $0.12   |
 
 ## TERMINATION FOR NON-PAYMENT
 
