@@ -105,7 +105,7 @@ There are seven out-of-the-box groups as shown in the following table. Use the g
 | Site tools                      | `070951d7-94da-4db8-b06e-9d581f1f55b1` | Web parts for site information and management.                                                         |
 | Advanced                        | `5c03119e-3074-46fd-976b-c60198311f70` | Web parts not in other groups.                                                                         |
 
-If the developer fills an ID not in the previous list, the web part falls back to the **Other** group.
+If the developer fills an ID not in the previous list, the web part falls back to the **Advanced** group.
 
 To see how you can use preconfigured entries when building web parts, you'll build a sample gallery web part. Using several properties, users can configure this web part to show items from a selected list in a specific way. For brevity, you'll omit the actual implementation of the web part logic and will focus on using the `preconfiguredEntries` property to provide preconfigured versions of the gallery web part.
 
