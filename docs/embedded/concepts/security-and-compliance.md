@@ -35,7 +35,7 @@ For information on how to retrieve ContainerSiteURL to set the various Complianc
 
 
 * ### Audit
-The Audit capabilities provided by SharePoint Embedded mirror the existing Audit functionalities currently supported within SharePoint Online. All user and admin operations performed in various applications hosted in SharePoint Embedded are captured, recorded, and retained in your organization's unified audit log. For more information on Audit, please visit [Auditing solutions in Microsoft Purview](https://learn.microsoft.com/en-us/purview/audit-solutions-overview).
+The Audit capabilities provided by SharePoint Embedded mirror the existing Audit functionalities currently supported within SharePoint Online. All user and admin operations performed in various applications hosted in SharePoint Embedded are captured, recorded, and retained in your organization's unified audit log. For more information on Audit, please visit [Auditing solutions in Microsoft Purview](https://learn.microsoft.com/purview/audit-solutions-overview).
 
 In addition to existing file properties, Audit events related to SharePoint Embedded are logged with the following additional data to help filter the Audit search results to isolate the relevant SharePoint Embedded content – 
  * ContainerInstanceId
@@ -47,7 +47,7 @@ In addition to existing file properties, Audit events related to SharePoint Embe
 
 * ### eDiscovery
 
-Compliance Admins can use eDiscovery tools in Microsoft Purview to search/hold/export content hosted in the SharePoint Embedded platform. For more information on eDiscovery, please visit [Microsoft Purview eDiscovery solutions](https://learn.microsoft.com/en-us/purview/ediscovery).
+Compliance Admins can use eDiscovery tools in Microsoft Purview to search/hold/export content hosted in the SharePoint Embedded platform. For more information on eDiscovery, please visit [Microsoft Purview eDiscovery solutions](https://learn.microsoft.com/purview/ediscovery).
 
 To perform an eDiscovery Search on all SharePoint Embedded content, Admins should click on ‘All’ SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Online Sites and all SharePoint Embedded Containers.
 
@@ -62,7 +62,7 @@ To limit the eDiscovery Search to one/few SharePoint Embedded Containers, Admins
    
 * ### Data Lifecycle Management (DLM) 
 
-SharePoint Embedded supports retention and holds policies on content stored in its applications using the Microsoft Purview portal. For more information on DLM, please visit [Learn about Microsoft Purview Data Lifecycle Management](https://learn.microsoft.com/en-us/purview/data-lifecycle-management).
+SharePoint Embedded supports retention and holds policies on content stored in its applications using the Microsoft Purview portal. For more information on DLM, please visit [Learn about Microsoft Purview Data Lifecycle Management](https://learn.microsoft.com/purview/data-lifecycle-management).
 
 Existing retention policy will automatically apply to all SharePoint Embedded Containers if policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on ‘All’ SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites as well as all Containers within SharePoint Embedded. 
 
@@ -76,7 +76,7 @@ Since SharePoint Embedded do not have any inbuilt user interface, DLM scenarios 
 
 * ### Data Loss Protection (DLP) - Coming soon
 
-Using Microsoft Purview, Admins can identify, monitor, and automatically protect sensitive items stored in applications using SharePoint Embedded. For more information on DLP, please visit  [Learn about data loss prevention](https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp).
+Using Microsoft Purview, Admins can identify, monitor, and automatically protect sensitive items stored in applications using SharePoint Embedded. For more information on DLP, please visit  [Learn about data loss prevention](https://learn.microsoft.com/purview/dlp-learn-about-dlp).
 
 Like retention policies, DLP policies can be enforced on all SharePoint Online Sites and SharePoint Embedded Containers by choosing to configure the policy on ‘All sites’. 
 
@@ -108,7 +108,7 @@ Global Administrators and SharePoint Administrators can set and remove sensitivi
 Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
 ```
 
-To learn more about setting sensitivity labels, please visit [Learn about sensitivity labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels).
+To learn more about setting sensitivity labels, please visit [Learn about sensitivity labels](https://learn.microsoft.com/purview/sensitivity-labels).
 
 
 * ### Block Download policy (Coming Soon)
@@ -119,7 +119,7 @@ Block Download policy allows SharePoint Administrator or Global Administrator to
 Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 
-Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/en-us/sharepoint/block-download-from-sites).
+Please note that a SharePoint Advanced Management (SAM) license is needed to enforce this policy. Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
 
 
 * ### Conditional Access policy (Coming Soon)
@@ -136,4 +136,4 @@ using the below PowerShell cmdlet. AuthorizationContext will also be supported i
 Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType>
 ```
 
-To learn more about Conditional Access Policy, please visit [Control access from unmanaged devices](https://learn.microsoft.com/en-us/sharepoint/control-access-from-unmanaged-devices). 
+To learn more about Conditional Access Policy, please visit [Control access from unmanaged devices](https://learn.microsoft.com/sharepoint/control-access-from-unmanaged-devices). 
