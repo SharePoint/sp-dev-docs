@@ -9,7 +9,7 @@ ms.localizationpriority: high
 # Microsoft SharePoint Embedded (“SharePoint Embedded”) Paid Public Preview Terms and Conditions
 
 “Company” means the Enterprise customer that uses these Preview Features. 
-<!-- test -->
+
 **By using Microsoft SharePoint Embedded, you accept these Terms and Conditions and all rights and obligations within. If you do not agree to these Terms and Conditions, DO NOT use SharePoint Embedded.** These Terms and Conditions govern the use of the Microsoft Offering as described below.
 
 “Feedback” is all suggestions, comments, feedback, ideas, or know how, in any form, that Customer provides to Microsoft. It does not include sales forecasts, financial results, future release scheduled, marketing plans and high-level product plans or feature lists for anticipated products.
@@ -47,7 +47,6 @@ SharePoint Embedded Feature Preview pricing is as follows:
 | :--------------------------------: | :----------: | :------: |
 |              Storage               |   $/GB/Day   | $0.00667 |
 |   Graph API Transactions Class A   | $/1 API call | $0.00050 |
-|   Graph API Transactions Class B   | $/1 API call | $0.00075 |
 |           Express Egress           |     $/GB     |  $0.12   |
 
 ## TERMINATION FOR NON-PAYMENT
