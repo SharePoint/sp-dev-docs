@@ -573,7 +573,7 @@
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
     - name: Terms and Definitions
-      href: embedded/concepts/app-concepts/security-and-compliance.md
+      href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
     - name: Register Container Type
