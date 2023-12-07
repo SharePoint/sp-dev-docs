@@ -46,7 +46,7 @@ SharePoint Embedded Feature Preview pricing is as follows:
 | SharePoint Embedded Service Meters |  Meter Unit  |  Price   |
 | :--------------------------------: | :----------: | :------: |
 |              Storage               |   $/GB/Day   | $0.00667 |
-|   Graph API Transactions Class A   | $/1 API call | $0.00050 |
+|   Graph API Transactions    | $/1 API call | $0.00050 |
 |           Express Egress           |     $/GB     |  $0.12   |
 
 ## TERMINATION FOR NON-PAYMENT
