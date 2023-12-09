@@ -65,7 +65,8 @@ You can use the following services and partner programs to help with your migrat
 
 - Friendly link to the blog post: https://aka.ms/retirement/addins/update
 - Friendly link to this article: https://aka.ms/retirement/addins/support
-- Friendly link to Azure ACS retirement article: https://aka.ms/retirement/acs/support
+- Friendly link to the Frequently Asked Questions: https://aka.ms/retirement/addins/faq
+- Friendly link to the Azure ACS retirement article: https://aka.ms/retirement/acs/support
 - Friendly link to Migration Guidance: https://aka.ms/retirement/addins/guidance
 
 A Message Center post in the Microsoft 365 admin center is being sent to all tenants, and the post will be updated periodically with timelines.
