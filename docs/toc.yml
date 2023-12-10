@@ -700,6 +700,8 @@
         href: business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md
 - name: SharePoint Add-ins
   items:
+  - name: Add-In retirement announcement
+    href: sp-add-ins/retirement-announcement-for-add-ins.md
   - name: Overview
     href: sp-add-ins/sharepoint-add-ins.md
   - name: Build SharePoint-hosted add-ins
