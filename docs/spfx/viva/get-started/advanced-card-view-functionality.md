@@ -10,6 +10,8 @@ This tutorial builds off the following tutorial: [Build your first SharePoint Ad
 
 In this tutorial, you'll implement advanced card view functionality. You'll build off the the previous tutorial and create a card view that's powered by data in a SharePoint list.
 
+[!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
+
 ## Create a test list
 
 Prepare this tutorial by creating a new list in a SharePoint site with some sample data:
@@ -20,11 +22,11 @@ Prepare this tutorial by creating a new list in a SharePoint site with some samp
     :::image type="content" source="../../../images/viva-extensibility/lab2-empty-list.png" alt-text="Empty SharePoint list":::
 
 1. Add a few items to the list:
-   
+
     - **Title**: Step 1, **Description**: Use ACEs
     - **Title**: Step 2, **Description**: ???
     - **Title**: Step 3, **Description**: SPFx 🚀 🌝
-  
+
 1. Get the list's ID:
 
     1. While viewing the list, select the *gear* icon in the suite bar to open the **Settings** menu. Then select the **List settings** menu item:
@@ -48,36 +50,37 @@ Let's modify the properties for our ACE and set the list ID that contains the da
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 1. Update the interface used to define the type of the ACE's `properties` property:
 
-  ```typescript
-  export interface IHelloWorldAdaptiveCardExtensionProps {
-    title: string;
-    listId: string;
-  }
-  ```
+    ```typescript
+    export interface IHelloWorldAdaptiveCardExtensionProps {
+      title: string;
+      listId: string;
+    }
+    ```
+
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.manifest.json**.
 1. Initialize the ACE with the ID of the List created in the previous step by setting the following `preConfiguredEntries`:
 
-  ```json
-    "preconfiguredEntries": [{
-      // ...
-      "properties": {
-        "title": "HelloWorld",
-        "listId": "" // TODO: enter list id
-      }
-    }]
-  ```
+    ```json
+      "preconfiguredEntries": [{
+        // ...
+        "properties": {
+          "title": "HelloWorld",
+          "listId": "" // TODO: enter list id
+        }
+      }]
+    ```
 
-  > [!IMPORTANT]
-  > Make sure you enter the ID of the list you previously obtained into the `listId` property in the `preconfiguredEntries` code above.
+    > [!IMPORTANT]
+    > Make sure you enter the ID of the list you previously obtained into the `listId` property in the `preconfiguredEntries` code above.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldPropertyPane.ts**.
 1. Update the Property Pane by adding the following field:
 
-  ```typescript
-  PropertyPaneTextField('listId', {
-    label: 'List ID'
-  })
-  ```
+    ```typescript
+    PropertyPaneTextField('listId', {
+      label: 'List ID'
+    })
+    ```
 
 ### Change the extension state
 
@@ -86,56 +89,56 @@ Next, let's update the state of the extension. When the state changes, it will t
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 1. Add a new interface for the List data by adding the following code to the file:
 
-  ```typescript
-  export interface IListItem {
-    title: string;
-    description: string;
-  }
-  ```
+    ```typescript
+    export interface IListItem {
+      title: string;
+      description: string;
+    }
+    ```
 
 1. Update the interface used to define the ACE's state to use the new **IListItem** interface:
 
-  ```typescript
-  export interface IHelloWorldAdaptiveCardExtensionState {
-    currentIndex: number;
-    items: IListItem[];
-  }
-  ```
+    ```typescript
+    export interface IHelloWorldAdaptiveCardExtensionState {
+      currentIndex: number;
+      items: IListItem[];
+    }
+    ```
 
 1. Update the `state` initialization by updating the `onInit()` method in the ACE:
 
-  ```typescript
-  public onInit(): Promise<void> {
-    this.state = {
-      currentIndex: 0,
-      items: []
-    };
-    // ...
-  }
-  ```
+    ```typescript
+    public onInit(): Promise<void> {
+      this.state = {
+        currentIndex: 0,
+        items: []
+      };
+      // ...
+    }
+    ```
 
 1. Temporarily remove where the `state` is referenced in the ACE and Views by updating the `onPropertyPaneFieldChanged()` method:
 
-  ```typescript
-  // tslint:disable-next-line: no-any
-  protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-  }
-  ```
+    ```typescript
+    // tslint:disable-next-line: no-any
+    protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
+    }
+    ```
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.
 1. Update the `data()` and `onAction()` methods to the following:
 
-  ```typescript
-  public get data(): IQuickViewData {
-    return {
-      subTitle: '',
-      title: strings.Title
-    };
-  }
+    ```typescript
+    public get data(): IQuickViewData {
+      return {
+        subTitle: '',
+        title: strings.Title
+      };
+    }
 
-  public onAction(action: IActionArguments): void {
-  }
-  ```
+    public onAction(action: IActionArguments): void {
+    }
+    ```
 
 Now that the state has been updated, we can now update our ACE to fetch data from the SharePoint list.
 
@@ -148,64 +151,64 @@ First, add a dependency to the SPFx package used to submit HTTP requests to REST
 1. Locate and open the following file in the project: **./package.json**. Take note of the beta version of the SPFx related beta packages used by the other packages listed as dependencies in the `dependencies` section of the **package.json** file.
 1. Install the following NPM package in your project: **@microsoft/sp-http**:
 
-  ```console
-  npm install @microsoft/sp-http -SE
-  ```
+    ```console
+    npm install @microsoft/sp-http -SE
+    ```
 
 ### Fetch the list data
 
 Next, add support for calling the SharePoint REST API and adding the retrieved items to the ACE's state. When the state is updated, it will trigger the ACE to rerender.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
-1. Request the list data using the SPFx **SPHttpClient** API. Add the following to the class that implements the ACE:
+1. Request the list data using the SPFx **SpHttpClient** API. Add the following to the class that implements the ACE:
 
-  ```typescript
-  import { SPHttpClient } from '@microsoft/sp-http';
+    ```typescript
+    import { SPHttpClient } from '@microsoft/sp-http';
 
-  ...
+    ...
 
-  private _fetchData(): Promise<void> {
-    if (this.properties.listId) {
-      return this.context.spHttpClient.get(
-        `${this.context.pageContext.web.absoluteUrl}` +
-          `/_api/web/lists/GetById(id='${this.properties.listId}')/items`,
-        SPHttpClient.configurations.v1
-      )
-        .then((response) => response.json())
-        .then((jsonResponse) => jsonResponse.value.map(
-          (item) => { return { title: item.Title, description: item.Description }; })
-          )
-        .then((items) => this.setState({ items }));
+    private _fetchData(): Promise<void> {
+      if (this.properties.listId) {
+        return this.context.spHttpClient.get(
+          `${this.context.pageContext.web.absoluteUrl}` +
+            `/_api/web/lists/GetById(id='${this.properties.listId}')/items`,
+          SPHttpClient.configurations.v1
+        )
+          .then((response) => response.json())
+          .then((jsonResponse) => jsonResponse.value.map(
+            (item) => { return { title: item.Title, description: item.Description }; })
+            )
+          .then((items) => this.setState({ items }));
+      }
+
+      return Promise.resolve();
     }
-
-    return Promise.resolve();
-  }
-  ```
+    ```
 
 1. Update the ACE to request the list data during when it's initialized by updating the `onInit()` method.
 
-  Replace the last line `return Promise.resolve();` to be `return this._fetchData();` as follows:
+    Replace the last line `return Promise.resolve();` to be `return this._fetchData();` as follows:
 
-  ```typescript
-  public onInit(): Promise<void> {
-    // ...
-    return this._fetchData();
-  }
-  ```
+    ```typescript
+    public onInit(): Promise<void> {
+      // ...
+      return this._fetchData();
+    }
+    ```
 
 1. Update the ACE to request the list data when the Property Pane is updated. Add the following method to the class that implements the ACE. This code will only request the data when the list's ID is changed in the Property Pane:
 
-  ```typescript
-  protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-    if (propertyPath === 'listId' && newValue !== oldValue) {
-      if (newValue) {
-        this._fetchData();
-      } else {
-        this.setState({ items: [] });
+    ```typescript
+    protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
+      if (propertyPath === 'listId' && newValue !== oldValue) {
+        if (newValue) {
+          this._fetchData();
+        } else {
+          this.setState({ items: [] });
+        }
       }
     }
-  }
-  ```
+    ```
 
 ## Card updates
 
@@ -214,54 +217,54 @@ With the ACE updated to fetch items from a SharePoint list, let's update the car
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 1. Update `cardViewParameters` getter to render Primary Text Card View instead of Basic Card View:
 
-  ```typescript
-    public get cardViewParameters(): ComponentsCardViewParameters {
-    return PrimaryTextCardView({
-      cardBar: {
-        componentName: 'cardBar',
-        title: this.properties.title
-      },
-      header: {
-        componentName: 'text',
-        text: strings.PrimaryText
-      },
-      body: {
-        componentName: 'text',
-        text: ''
-      },
-      footer: {
-        componentName: 'cardButton',
-        title: strings.QuickViewButton,
-        action: {
-          type: 'QuickView',
-          parameters: {
-            view: QUICK_VIEW_REGISTRY_ID
+    ```typescript
+      public get cardViewParameters(): ComponentsCardViewParameters {
+      return PrimaryTextCardView({
+        cardBar: {
+          componentName: 'cardBar',
+          title: this.properties.title
+        },
+        header: {
+          componentName: 'text',
+          text: strings.PrimaryText
+        },
+        body: {
+          componentName: 'text',
+          text: ''
+        },
+        footer: {
+          componentName: 'cardButton',
+          title: strings.QuickViewButton,
+          action: {
+            type: 'QuickView',
+            parameters: {
+              view: QUICK_VIEW_REGISTRY_ID
+            }
           }
         }
-      }
-    });
-  }
-  ```
+      });
+    }
+    ```
 
 1. Update the `cardViewParameters()` getter to display data from the list:
 
-  ```typescript
-  public get cardViewParameters(): ComponentsCardViewParameters {
-    const { title, description } = this.state.items[this.state.currentIndex];
-    return PrimaryTextCardView({
-      // ...
-      header: {
-        componentName: 'text',
-        text: title
-      },
-      body: {
-        componentName: 'text',
-        text: description
-      },
-      // ...
-    });
-  }
-  ```
+    ```typescript
+    public get cardViewParameters(): ComponentsCardViewParameters {
+      const { title, description } = this.state.items[this.state.currentIndex];
+      return PrimaryTextCardView({
+        // ...
+        header: {
+          componentName: 'text',
+          text: title
+        },
+        body: {
+          componentName: 'text',
+          text: description
+        },
+        // ...
+      });
+    }
+    ```
 
 Now you can test the ACE. Build and launch the ACE in the hosted workbench:
 
@@ -291,79 +294,79 @@ Let's create a medium card view for our ACE:
 1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts** folder.
 1. Add the following code to create a new **Medium** sized card view:
 
-  ```typescript
-  import {
-    BaseComponentsCardView,
-    ComponentsCardViewParameters,
-    BasicCardView
-  } from '@microsoft/sp-adaptive-card-extension-base';
-  import {
-    IHelloWorldAdaptiveCardExtensionProps,
-    IHelloWorldAdaptiveCardExtensionState,
-    QUICK_VIEW_REGISTRY_ID,
-  } from '../HelloWorldAdaptiveCardExtension';
+    ```typescript
+    import {
+      BaseComponentsCardView,
+      ComponentsCardViewParameters,
+      BasicCardView
+    } from '@microsoft/sp-adaptive-card-extension-base';
+    import {
+      IHelloWorldAdaptiveCardExtensionProps,
+      IHelloWorldAdaptiveCardExtensionState,
+      QUICK_VIEW_REGISTRY_ID,
+    } from '../HelloWorldAdaptiveCardExtension';
 
-  export class MediumCardView extends BaseComponentsCardView<
-    IHelloWorldAdaptiveCardExtensionProps,
-    IHelloWorldAdaptiveCardExtensionState,
-    ComponentsCardViewParameters
-  > {
-    public get cardViewParameters(): ComponentsCardViewParameters {
+    export class MediumCardView extends BaseComponentsCardView<
+      IHelloWorldAdaptiveCardExtensionProps,
+      IHelloWorldAdaptiveCardExtensionState,
+      ComponentsCardViewParameters
+    > {
+      public get cardViewParameters(): ComponentsCardViewParameters {
 
-      return BasicCardView({
-        cardBar: {
-          componentName: 'cardBar',
-          title: this.properties.title,
-          icon: {
-            url: this.properties.iconProperty
-          }
-        },
-        header: {
-          componentName: 'text',
-          text: `3 Steps`, // Display the total number of steps
-        },
-        footer: {
-          componentName: 'cardButton',
-          title: 'View All',
-          action: {
-            type: 'QuickView',
-            parameters: {
-              view: QUICK_VIEW_REGISTRY_ID,
+        return BasicCardView({
+          cardBar: {
+            componentName: 'cardBar',
+            title: this.properties.title,
+            icon: {
+              url: this.properties.iconProperty
+            }
+          },
+          header: {
+            componentName: 'text',
+            text: `3 Steps`, // Display the total number of steps
+          },
+          footer: {
+            componentName: 'cardButton',
+            title: 'View All',
+            action: {
+              type: 'QuickView',
+              parameters: {
+                view: QUICK_VIEW_REGISTRY_ID,
+              },
             },
           },
-        },
-      });
+        });
+      }
     }
-  }
-  ```
+    ```
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 1. Now, register the new View by making the following changes to your ACE:
 
-  ```typescript
-  import { MediumCardView } from './cardView/MediumCardView';
+    ```typescript
+    import { MediumCardView } from './cardView/MediumCardView';
 
-  ..
+    ..
 
-  const MEDIUM_VIEW_REGISTRY_ID: string = 'HelloWorld_MEDIUM_VIEW';
+    const MEDIUM_VIEW_REGISTRY_ID: string = 'HelloWorld_MEDIUM_VIEW';
 
-  ..
+    ..
 
-  public onInit(): Promise<void> {
-    // ...
-    this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
-    this.cardNavigator.register(MEDIUM_VIEW_REGISTRY_ID, () => new MediumCardView());
-    // ...
-  }
-  ```
+    public onInit(): Promise<void> {
+      // ...
+      this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
+      this.cardNavigator.register(MEDIUM_VIEW_REGISTRY_ID, () => new MediumCardView());
+      // ...
+    }
+    ```
 
 1. Update the `renderCard()` method to return either the **Medium** Card View or the **Large** Card View based on the Card size:
 
-  ```typescript
-  protected renderCard(): string | undefined {
-    return this.cardSize === 'Medium' ? MEDIUM_VIEW_REGISTRY_ID : CARD_VIEW_REGISTRY_ID;
-  }
-  ```
+    ```typescript
+    protected renderCard(): string | undefined {
+      return this.cardSize === 'Medium' ? MEDIUM_VIEW_REGISTRY_ID : CARD_VIEW_REGISTRY_ID;
+    }
+    ```
 
 Test your changes by refreshing the workbench:
 
@@ -380,92 +383,92 @@ ACE Card views support user interaction. The buttons can invoke REST APIs or be 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 1. At the top of the file, add `IActionArguments`, `GenericCardViewFooterConfiguration` and `IAdaptiveCardExtensionCardButtonParameters`  as the references to import from the **@microsoft/sp-adaptive-card-extension-base** package:
 
-  ```typescript
-  import {
-    // ...
-    GenericCardViewFooterConfiguration,
-    IActionArguments,
-    IAdaptiveCardExtensionCardButtonParameters 
-  } from '@microsoft/sp-adaptive-card-extension-base';
-  ```
+    ```typescript
+    import {
+      // ...
+      GenericCardViewFooterConfiguration,
+      IActionArguments,
+      IAdaptiveCardExtensionCardButtonParameters
+    } from '@microsoft/sp-adaptive-card-extension-base';
+    ```
 
 1. The buttons on the Card view can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
 
-  ```typescript
-  public get cardViewParameters(): ComponentsCardViewParameters {
-    const { title, description } = this.state.items[this.state.currentIndex];
-    let footer: GenericCardViewFooterConfiguration = undefined;
+    ```typescript
+    public get cardViewParameters(): ComponentsCardViewParameters {
+      const { title, description } = this.state.items[this.state.currentIndex];
+      let footer: GenericCardViewFooterConfiguration = undefined;
 
-    if (this.state.currentIndex > 0) {
-      footer = {
-        componentName: 'cardButton',
-        title: 'Previous',
-        action: {
-          type: 'Submit',
-          parameters: {
-            id: 'previous',
-            op: -1 // Decrement the current index
+      if (this.state.currentIndex > 0) {
+        footer = {
+          componentName: 'cardButton',
+          title: 'Previous',
+          action: {
+            type: 'Submit',
+            parameters: {
+              id: 'previous',
+              op: -1 // Decrement the current index
+            }
           }
-        }
-      };
-    }
-    if (this.state.currentIndex < this.state.items.length - 1) {
-      const nextButton: IAdaptiveCardExtensionCardButtonParameters = {
-        componentName: 'cardButton',
-        title: 'Next',
-        action: {
-          type: 'Submit',
-          parameters: {
-            id: 'next',
-            op: 1 // Increment the current index
+        };
+      }
+      if (this.state.currentIndex < this.state.items.length - 1) {
+        const nextButton: IAdaptiveCardExtensionCardButtonParameters = {
+          componentName: 'cardButton',
+          title: 'Next',
+          action: {
+            type: 'Submit',
+            parameters: {
+              id: 'next',
+              op: 1 // Increment the current index
+            }
           }
-        }
-      };
+        };
 
-      if (footer) {
-        footer = [footer as IAdaptiveCardExtensionCardButtonParameters, nextButton];
+        if (footer) {
+          footer = [footer as IAdaptiveCardExtensionCardButtonParameters, nextButton];
+        }
+        else {
+          footer = nextButton;
+        }
       }
-      else {
-        footer = nextButton;
-      }
+
+      return PrimaryTextCardView({
+        cardBar: {
+          componentName: 'cardBar',
+          title: this.properties.title,
+          icon: {
+            url: this.properties.iconProperty
+          }
+        },
+        header: {
+          componentName: 'text',
+          text: title
+        },
+        body: {
+          componentName: 'text',
+          text: description
+        },
+        footer: footer
+      });
     }
-
-    return PrimaryTextCardView({
-      cardBar: {
-        componentName: 'cardBar',
-        title: this.properties.title,
-        icon: {
-          url: this.properties.iconProperty
-        }
-      },
-      header: {
-        componentName: 'text',
-        text: title
-      },
-      body: {
-        componentName: 'text',
-        text: description
-      },
-      footer: footer
-    });
-  }
-  ```
+    ```
 
 1. Next, update the `state` when a button is selected by implementing the following method:
 
-  ```typescript
-  public onAction(action: IActionArguments): void {
-    if (action.type === 'Submit') {
-      const { id, op } = action.data;
-      switch (id) {
-        case 'previous':
-        case 'next':
-        this.setState({ currentIndex: this.state.currentIndex + op });
-        break;
+    ```typescript
+    public onAction(action: IActionArguments): void {
+      if (action.type === 'Submit') {
+        const { id, op } = action.data;
+        switch (id) {
+          case 'previous':
+          case 'next':
+          this.setState({ currentIndex: this.state.currentIndex + op });
+          break;
+        }
       }
     }
-  }
-  ```
+    ```
 
 Test your changes by reloading the workbench in your browser.
 
@@ -494,29 +497,29 @@ If the latest rendered card is stored, the Dashboard renders this cached card be
 
 The settings for this cache can be configured by overriding the following method:
 
-  ```typescript
-  protected getCacheSettings(): Partial<ICacheSettings> {
-    return {
-      isEnabled: true, // can be set to false to disable caching
-      expiryTimeInSeconds: 86400, // controls how long until the cached card and state are stale
-      cachedCardView: () => new CardView() // function that returns the custom Card view that will be used to generate the cached card
-    };
-  }
-  ```
+```typescript
+protected getCacheSettings(): Partial<ICacheSettings> {
+  return {
+    isEnabled: true, // can be set to false to disable caching
+    expiryTimeInSeconds: 86400, // controls how long until the cached card and state are stale
+    cachedCardView: () => new CardView() // function that returns the custom Card view that will be used to generate the cached card
+  };
+}
+```
 
 ### Rehydrating from cached ACE state
 
 The subset of the ACE state that is cached can be configured by overriding the following method:
 
-  ```typescript
-  protected getCachedState(state: TState): Partial<TState>;
-  ```
+```typescript
+protected getCachedState(state: TState): Partial<TState>;
+```
 
 The object returned by this method will be serialized and cached. By default, no state is cached. In the next call to `onInit`, the deserialized value will be passed to onInit as part of the `ICachedLoadParameters`
 
-  ```typescript
-  public onInit(cachedLoadParameters?: ICachedLoadParameters): Promise<void>;
-  ```
+```typescript
+public onInit(cachedLoadParameters?: ICachedLoadParameters): Promise<void>;
+```
 
 The value can then be used to rehydrate the state of the newly initialized ACE.
 
