@@ -702,6 +702,10 @@
   items:
   - name: Add-In retirement announcement
     href: sp-add-ins/retirement-announcement-for-add-ins.md
+  - name: Azure ACS retirement announcement
+    href: sp-add-ins/retirement-announcement-for-azure-acs.md
+  - name: Add-In and Azure ACS retirement FAQ
+    href: sp-add-ins/add-ins-and-azure-acs-retirements-faq.md
   - name: Overview
     href: sp-add-ins/sharepoint-add-ins.md
   - name: Build SharePoint-hosted add-ins
