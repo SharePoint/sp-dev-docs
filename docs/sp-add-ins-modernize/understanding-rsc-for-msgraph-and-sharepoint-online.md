@@ -1,7 +1,7 @@
 ---
 title: Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online
 description: Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online.
-ms.date: 08/28/2023
+ms.date: 12/12/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -36,7 +36,7 @@ Then, a tenant admin, which can eventually still be you, will have to grant the 
 
 There is also a *Sites.Selected* application permission for SharePoint Online, in case you want to consume SharePoint Online via REST APIs, instead of consuming SharePoint Online via Microsoft Graph. In the following screenshot you can see how the *Sites.Selected* permission for SharePoint Online looks like in Azure AD.
 
-![The UI of Azure Active Directory when configuring the *Sites.Selected* application permission for an application via SharePoint Online.](./assets/understanding-rsc-for-msgraph-and-sharepoint-online/understanding-rsc-for-msgraph-and-sharepoint-online-sites.selected-spo.png)
+![The UI of Azure Active Directory when configuring the *Sites.Selected* application permission for an application via SharePoint Online.](../images/add-in-transform/understanding-rsc-for-msgraph-and-sharepoint-online/understanding-rsc-for-msgraph-and-sharepoint-online-sites.selected-spo.png)
 
 ## Granting permissions to a specific Site Collection
 
