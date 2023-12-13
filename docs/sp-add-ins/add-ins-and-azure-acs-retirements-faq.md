@@ -45,3 +45,7 @@ As web hooks by convention are asynchronous this means that synchronous events, 
 
 > [!Note]
 > It's possible to get remote event receivers to partly work without Azure ACS via using sites.selected, this approach however is not recommended and will stop working with Azure ACS fully retires in April 2026.
+
+## Can I still perform taxonomy updates?
+
+Yes, you can still update taxonomy (termsets, terms, etc) when Azure ACS is not used. When you configure your Microsoft Entra application using the SharePoint `TermStore.ReadWrite.All` permission (delegated or application) when you want to use the CSOM taxonomy APIs. It's recommended to use the Microsoft Graph taxonomy API, for that one you need the Microsoft Graph `TermStore.ReadWrite.All` permission (delegated or application). See the [Microsoft Graph documentation](https://learn.microsoft.com/en-us/graph/api/resources/termstore-set?view=graph-rest-1.0) for more details.
