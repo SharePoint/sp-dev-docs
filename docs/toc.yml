@@ -620,6 +620,8 @@
     href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
   - name: Focus feature in Adaptive Card Extension
     href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+  - name: Overview of Viva Connections Card Designer advance API features
+    href: spfx/viva/features/card-designer/card-designer-api-support.md    
   - name: Design Guidance
     items:
     - name: Introduction
