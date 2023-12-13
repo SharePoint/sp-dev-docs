@@ -81,7 +81,7 @@ If the web part [integrates its properties with SharePoint](../spfx/web-parts/gu
 If you need to troubleshoot a SharePoint page to see if there is a SharePoint Framework extension or web part causing issues you can append **?disable3PCode=1** to the URL to disable loading of SPFx components, for example:
 
 ```text
-https://contoso.sharepoint.com/sites/team?disable3PCode
+https://contoso.sharepoint.com/sites/team?disable3PCode=1
 ```
 
 This will prevent loading of any third party SPFx components on the page.
