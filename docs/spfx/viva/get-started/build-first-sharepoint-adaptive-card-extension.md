@@ -192,7 +192,7 @@ As part of the `cardViewParameters` property, you can specify the following:
 - **footer**: Footer components for the card view.
 
 > [!NOTE]
-> The card views for Adaptive Card templates are limited to predefined [permutations](../permutations) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
+> The card views for Adaptive Card templates are limited to predefined [permutations](../design/designing-card.md) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
 
 Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 
