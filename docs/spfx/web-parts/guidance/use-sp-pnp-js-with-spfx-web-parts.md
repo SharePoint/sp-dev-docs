@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 06/22/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 
@@ -59,7 +59,7 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
   "port": 4321,
   "https": true,
   "initialPage": "https://{your tenant name}/sites/dev/_layouts/15/workbench.aspx"

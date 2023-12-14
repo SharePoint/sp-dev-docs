@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 11/22/2022
+ms.date: 12/14/2023
 ms.custom: scenarios:getting-started
 ---
 
@@ -128,7 +128,7 @@ You can't use the local Workbench to test SharePoint Framework Extensions. You n
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {

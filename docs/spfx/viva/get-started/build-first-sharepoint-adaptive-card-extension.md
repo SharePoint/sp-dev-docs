@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 09/12/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension
@@ -39,7 +39,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"

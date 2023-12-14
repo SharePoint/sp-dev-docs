@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
-ms.date: 09/12/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
@@ -39,7 +39,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
