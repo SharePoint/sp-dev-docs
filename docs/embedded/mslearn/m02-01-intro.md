@@ -14,7 +14,7 @@ In this module, you’ll learn how to create a simple web application that demon
 
 At the end of this module, you should be able to:
 
-- Create an Microsoft Entra application with necessary permissions to access SharePoint Embedded Containers.
+- Create an Microsoft Entra ID application with necessary permissions to access SharePoint Embedded Containers.
 - Create a Node.js-based REST API to handle CRUD tasks between a client-side app and SharePoint Embedded.
 - Create a single-page React application that calls REST API to perform CRUD operations on an existing SharePoint Embedded Container.
 
@@ -26,7 +26,7 @@ At the end of this module, you should be able to:
 - npm (*installed with Node.js)*
 - [Visual Studio Code](https://code.visualstudio.com)
 - Intermediate experience of REST services and APIs.
-- Intermediate experience of Microsoft Entra applications.
+- Intermediate experience of Microsoft Entra ID applications.
 - Intermediate experience of OAuth2 authentication.
 - Intermediate experience calling Microsoft Graph REST APIs.
 

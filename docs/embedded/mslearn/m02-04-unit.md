@@ -36,7 +36,7 @@ One of the tasks our server-side API will need to do is create Containers. This 
 
 This call is first initiated by our React SPA which will include the access token of the currently signed in user.
 
-The API server will first create an instance of a `ConfidentialClientApplication` using the Microsoft Authentication Library (MSAL). To create the `ConfidentialClientApplication` you'll authenticate with Microsoft Entra using our app’s client ID and client secret:
+The API server will first create an instance of a `ConfidentialClientApplication` using the Microsoft Authentication Library (MSAL). To create the `ConfidentialClientApplication` you'll authenticate with Microsoft Entra ID using our app’s client ID and client secret:
 
 ```typescript
 const msalConfig: MSAL.Configuration = {
