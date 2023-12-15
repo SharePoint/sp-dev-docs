@@ -2,13 +2,12 @@
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
 # Security and Compliance
 
-Microsoft's SharePoint Embedded provides a faster way to create secure and compliant documents stored in various applications. SharePoint Embedded leverages Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions will work in a similar manner in the SharePoint Embedded platform as they do today on the Microsoft 365 (M365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content.  
+Microsoft's SharePoint Embedded provides a faster way to create secure and compliant documents stored in various applications. SharePoint Embedded leverages Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions will work in a similar manner in the SharePoint Embedded platform as they do today on the Microsoft 365 (M365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content.
 
 In this article, we describe the security and compliance policies that are supported today on content that resides in the SharePoint Embedded platform, and their capabilities and limitations.
 
@@ -46,7 +45,7 @@ In addition to existing file properties, Audit events related to SharePoint Embe
 
  - `ContainerInstanceId`
  - `ContainerTypeId`
-     
+
 ![Audit events](../images/sc1.png)
 
 ### eDiscovery
@@ -61,14 +60,14 @@ To limit the eDiscovery Search to one/few SharePoint Embedded Containers, Admins
 
 ![choose sites in eDiscovery search](../images/sc3.png)
 
-### Data Lifecycle Management (DLM) 
+### Data Lifecycle Management (DLM)
 
 SharePoint Embedded supports retention and holds policies on content stored in its applications using the Microsoft Purview portal. For more information on DLM, please visit [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
-The existing retention policy will automatically apply to all SharePoint Embedded Containers if the policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on *All* SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites as well as all Containers within SharePoint Embedded. 
+The existing retention policy will automatically apply to all SharePoint Embedded Containers if the policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on *All* SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites as well as all Containers within SharePoint Embedded.
 
 ![retention policy](../images/sc4.png)
-    
+
 To selectively enforce the policy on one/few SharePoint Embedded Containers, copy the Container URL and configure the policy to be selectively enforced only on those Container(s).
 
 ![enforce retention policy](../images/sc5.png)
@@ -79,17 +78,17 @@ Since SharePoint Embedded does not have a built-in user interface, DLM scenarios
 
 Using Microsoft Purview, Admins can identify, monitor, and automatically protect sensitive items stored in applications using SharePoint Embedded. For more information on DLP, please visit  [Learn about data loss prevention](/purview/dlp-learn-about-dlp).
 
-Like retention policies, DLP policies can be enforced on all SharePoint Online Sites and SharePoint Embedded Containers by choosing to configure the policy on ‘All sites’. 
+Like retention policies, DLP policies can be enforced on all SharePoint Online Sites and SharePoint Embedded Containers by choosing to configure the policy on ‘All sites’.
 
 ![DLP Policy](../images/sc6.png)
 
-Admins can also restrict the enforcement of a DLP policy to specific SharePoint Embedded Containers by specifying the relevant Container URL(s) during policy configuration. 
+Admins can also restrict the enforcement of a DLP policy to specific SharePoint Embedded Containers by specifying the relevant Container URL(s) during policy configuration.
 
 ![Configure DLP Policy](../images/sc7.png)
 
 Several scenarios supported by DLP today need user interaction that isn’t natively supported by SharePoint Embedded. For instance, based on its configuration, a DLP policy that prevents external sharing may allow end users to provide a business justification to override the policy. The client app that renders this DLP-flagged file item will need to support such user interactions.
 
-Policy tips are shown today for files hosted in SharePoint Online so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can choose to provide additional support by utilizing the existing Graph APIs for this purpose. 
+Policy tips are shown today for files hosted in SharePoint Online so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can choose to provide additional support by utilizing the existing Graph APIs for this purpose.
 
 ## Security Features
 
@@ -125,4 +124,4 @@ These settings are available with the following PowerShell cmdlet. The `Authoriz
 Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType>
 ```
 
-To learn more about Conditional Access Policy, please visit [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices). 
+To learn more about Conditional Access Policy, please visit [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices).

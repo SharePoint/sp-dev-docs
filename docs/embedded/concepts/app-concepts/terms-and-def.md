@@ -2,7 +2,6 @@
 title: Terms and Definitions
 description: Important Concepts in SharePoint Embedded
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

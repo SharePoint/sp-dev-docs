@@ -2,7 +2,6 @@
 title: Developer Admin
 description: This article describes the role and responsibilities of Developer Tenant Admin in SharePoint Embedded
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 # Developer Admin
