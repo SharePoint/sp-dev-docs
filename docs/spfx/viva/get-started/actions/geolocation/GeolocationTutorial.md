@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
@@ -199,7 +199,7 @@ With this, we are providing two text-blocks to show the **Latitude** and **Longi
 
 After adding these actions, your Quick View would look like:
 
-![Card appearance after introducing changes in the quick-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionQuickView.png)
+![Card appearance after adding actions in the quick-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionQuickView.png)
 
 ### Set up the state for our Adaptive Card Extension
 
