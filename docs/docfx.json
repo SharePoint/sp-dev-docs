@@ -58,6 +58,7 @@
         "business-apps/power-automate/guidance/**.md": "power-automate",
         "declarative-customization/**.md": "sharepoint-online",
         "design/**.md": "sharepoint-online",
+        "embedded/**.md": "sharepoint-online",
         "features/**.md": "sharepoint-online",
         "general-development/**.md": "sharepoint",
         "scenario-guidance/**.md": "sharepoint-online",

@@ -2,7 +2,6 @@
 title: Container Type
 description: This article explains how Container Types work.
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 

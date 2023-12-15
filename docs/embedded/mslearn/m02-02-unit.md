@@ -23,7 +23,7 @@ When a consumer installs/registers a SharePoint Embedded application in their Mi
 All documents stored in the SharePoint partition created by the SharePoint Embedded app are in the consumer’s Microsoft 365 tenant and therefore are subject to the consumer’s Microsoft 365 tenant settings.
 
 > [!NOTE]
-> Learn more about configuring SharePoint Embedded in your Microsoft 365 tenant, the Microsoft Entra application, and adding content manually using the REST APIs with Postman, see INSERT LINK.
+> Learn more about configuring SharePoint Embedded in your Microsoft 365 tenant, the Microsoft Entra ID application, and adding content manually using the REST APIs with Postman, see [SharePoint Embedded - Overview & Configuration](./m01-01-intro.md).
 
 ## Understanding different types app permissions and the On-Behalf-Of flow
 
@@ -43,11 +43,11 @@ Application permissions can only be consented by an administrator because they o
 
 In addition to these two options, a third OAuth 2.0 flow, **On-Behalf-Of** (also known as the *OBO* flow). In the OBO flow, an application performs a task on behalf of the user. Here’s how the entire OBO flow works:
 
-1. A client application authenticates to the authorization server (like Microsoft Entra) and requests an access token for a API (like our project’s API server).
+1. A client application authenticates to the authorization server (like Microsoft Entra ID) and requests an access token for a API (like our project’s API server).
 1. The user signs in and allows the application to act on their behalf.
 1. The client application receives an access token and refresh token representing the user’s session.
 1. When the client application needs to call another service, such as SharePoint Online, on behalf of the user, it sends the access token it obtained earlier in the `Authorization` HTTP header.
-1. Our server-side API validates the access token and processes the request. If it needs to call another service (like SharePoint Online) on behalf of the user, it fetches a token from Microsoft Entra by presenting this already obtained token.
+1. Our server-side API validates the access token and processes the request. If it needs to call another service (like SharePoint Online) on behalf of the user, it fetches a token from Microsoft Entra ID by presenting this already obtained token.
 1. Azure AD issues a 'new' access token for SharePoint Online that our project’s API server can now use to call SharePoint Online.
 
 In a practical scenario dealing with Microsoft Graph or SharePoint Online, when a user wants an app to access their calendar, it's not ideal to have the application sign in for each individual operation. Instead, with the OBO flow, the user only needs to authenticate once and the application will perform all authorized operations on their behalf.
@@ -60,4 +60,4 @@ In this section, you’ll complete the initial steps to create a web application
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint Embedded environment and web app project](m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra, to interact with SharePoint Embedded Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup & configure the SharePoint Embedded environment and web app project](m02-03-hol.md), where you'll set up a project with a server-side REST API, authenticated through Microsoft Entra ID, to interact with SharePoint Embedded Containers via Microsoft Graph API, and a client-side single-page React app to display the contents. Upon completion, you'll have a foundational project ready for further functional expansion in subsequent sections.

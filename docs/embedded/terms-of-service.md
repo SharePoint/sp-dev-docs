@@ -2,13 +2,12 @@
 title: SharePoint Embedded Public Preview Terms and Conditions
 description: Public Preview Terms and Conditions
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
 # Microsoft SharePoint Embedded (“SharePoint Embedded”) Paid Public Preview Terms and Conditions
 
-“Company” means the Enterprise customer that uses these Preview Features. 
+“Company” means the Enterprise customer that uses these Preview Features.
 
 **By using Microsoft SharePoint Embedded, you accept these Terms and Conditions and all rights and obligations within. If you do not agree to these Terms and Conditions, DO NOT use SharePoint Embedded.** These Terms and Conditions govern the use of the Microsoft Offering as described below.
 

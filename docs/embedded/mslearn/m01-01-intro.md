@@ -23,7 +23,7 @@ At the end of this module, you should be able to:
 
 - Admin access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn).
 - Intermediate experience of REST services and APIs.
-- Intermediate experience of Microsoft Entra applications.
+- Intermediate experience of Microsoft Entra ID applications.
 - Intermediate experience working with [Postman](https://www.postman.com).
 - Intermediate experience of OAuth2 authentication.
 - Basic knowledge calling Microsoft Graph REST APIs.
