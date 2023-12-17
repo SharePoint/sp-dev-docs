@@ -41,7 +41,7 @@ For instance, if you have an application that needs to access all the files in a
 
 Application permissions can only be consented by an administrator because they often grant higher privileges.
 
-In addition to these two options, a third OAuth 2.0 flow, **On-Behalf-Of** (also known as the *OBO* flow). In the OBO flow, an application performs a task on behalf of the user. Here’s how the entire OBO flow works:
+In addition to these two options, a third OAuth 2.0 flow, **On-Behalf-Of** (also known as the *OBO* flow) can be used when an application needs to perform a task on behalf of the user. Here’s how the entire OBO flow works:
 
 1. A client application authenticates to the authorization server (like Microsoft Entra ID) and requests an access token for a API (like our project’s API server).
 1. The user signs in and allows the application to act on their behalf.

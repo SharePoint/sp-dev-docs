@@ -99,7 +99,7 @@ const graphResponse = await graphClient.api(`storage/fileStorage/containers`)
 
 ## Getting a list of SharePoint Embedded Containers with Microsoft Graph
 
-he other common task you’ll perform is to get a list of all the Containers. This request has the same requirements as the creation of a Container.
+The other common task you’ll perform is to get a list of all the Containers. This request has the same requirements as the creation of a Container.
 
 The authentication and initialization of a Microsoft Graph client is identical as it is for creating a Container. The only difference is the request that you submit to Microsoft Graph. In this case. you’ll issue a HTTP GET to the same `https://graph.microsoft.com/{version}/storage/fileStorage/containers` endpoint:
 
