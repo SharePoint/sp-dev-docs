@@ -9,6 +9,7 @@ search.appverid: MET150
 ms.subservice: migration-tool
 ms.localizationpriority: high
 ---
+
 # SharePoint Import Migration API (CreationMigrationJob)
 
 ## API Documentation
@@ -402,6 +403,10 @@ QuickXorHash is created for the .zip file which concatenates all smaller files.
 The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The main requirement is that the ExportSettings `SiteUrl` value must be populated with a URL consistent with the source URL used for the rest of the import package. In the case of file shares as a source, the URL would be pre-specified to be the source URL in the rest of the package, whereas a package generated through an export operation at a source site would be its original source site collection URL.
+
+#### Ignoring Web Parts processing for performance
+
+Migration API checks and processes SharePoint web parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, these checks can be bypassed by setting `IgnoreWebParts` to `true`. This will improve the performance of migration tasks when web parts are not migrated.
 
 #### SourceType required
 
@@ -1743,3 +1748,4 @@ https://{site_url}/_api/site/ProvisionMigrationContainers
 
 > [!NOTE]
 > The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
+
