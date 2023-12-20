@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 09/12/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension
@@ -39,7 +39,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
@@ -192,7 +192,7 @@ As part of the `cardViewParameters` property, you can specify the following:
 - **footer**: Footer components for the card view.
 
 > [!NOTE]
-> The card views for Adaptive Card templates are limited to predefined [permutations](../permutations) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
+> The card views for Adaptive Card templates are limited to predefined [permutations](../design/designing-card.md) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
 
 Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 

@@ -1,7 +1,7 @@
 ---
 title: Create a People Search Adaptive Card Extension
 description: Step by step guide on creating People Search Adaptive Card Extension.
-ms.date: 06/28/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create a People Search Adaptive Card Extension
@@ -48,7 +48,7 @@ When you use the gulp task **serve**, by default it opens a browser with the spe
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "initialPage": "https://{tenantDomain}/ _layouts/workbench.aspx"

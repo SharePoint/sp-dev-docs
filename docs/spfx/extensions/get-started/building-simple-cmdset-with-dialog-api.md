@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 11/22/2022
+ms.date: 12/14/2023
 ms.custom: scenarios:getting-started
 ---
 # Build your first ListView Command Set extension
@@ -150,7 +150,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {
