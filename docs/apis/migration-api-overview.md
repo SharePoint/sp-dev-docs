@@ -406,7 +406,7 @@ The main requirement is that the ExportSettings `SiteUrl` value must be populate
 
 #### Ignoring Web Parts processing for performance
 
-Migration API checks and processes SharePoint web parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, these checks can be bypassed by setting IgnoreWebParts to true. This will improve the performance of migration tasks when web parts are not migrated.
+Migration API checks and processes SharePoint web parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, these checks can be bypassed by setting `IgnoreWebParts` to `true`. This will improve the performance of migration tasks when web parts are not migrated.
 
 #### SourceType required
 
