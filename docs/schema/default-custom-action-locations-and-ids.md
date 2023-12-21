@@ -122,25 +122,37 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeSettings**</p></td>
 <td align="left"><p>**Fields**</p></td>
 <td align="left"><p>**AddField**</p><p>**ReorderFields**</p></td>
-<td align="left"><p>**Columns** section on site collection **Content Type** page.</p></td>
+<td align="left"><p>**Columns** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeSettings**</p></td>
 <td align="left"><p>**General**</p></td>
 <td align="left"><p>**ChangeNameDescription**</p><p>**ChangeOptionalSettings**</p><p>**ChangeWorkflowSettings**</p><p>**RemoveContentType**</p></td>
-<td align="left"><p>**Settings** section on site collection **Content Type** page.</p></td>
+<td align="left"><p>**Settings** section on List **Content Type** page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
 <td align="left"><p>**Fields**</p></td>
 <td align="left"><p>**AddField**</p><p>**ReorderFields**</p></td>
-<td align="left"><p>**Columns** section on List **Content Type** page.</p></td>
+<td align="left"><p>**Columns** section on site collection **Content Type** page in SharePoint on premises and on Content Type Hub site collection **Content Type** page in SharePoint Online.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Microsoft.SharePoint.ContentTypeTemplateSettings**</p></td>
 <td align="left"><p>**General**</p></td>
 <td align="left"><p>**ChangeNameDescriptionGroup**</p><p>**ChangeOptionalSettings**</p><p>**ChangeWorkflowSettings**</p><p>**RemoveContentType**</p></td>
-<td align="left"><p>**Settings** section on List **Content Type** page.</p></td>
+<td align="left"><p>**Settings** section on site collection **Content Type** page in SharePoint on premises and on Content Type Hub site collection **Content Type** page in SharePoint Online.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>**Microsoft.SharePoint.ContentTypeSiteTemplateSettings**</p></td>
+<td align="left"><p>**Fields**</p></td>
+<td align="left"><p>**AddField**</p><p>**ReorderFields**</p></td>
+<td align="left"><p>**Columns** section on site collection **Content Type** page in SharePoint Online.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>**Microsoft.SharePoint.ContentTypeSiteTemplateSettings**</p></td>
+<td align="left"><p>**General**</p></td>
+<td align="left"><p>**ChangeNameDescriptionGroup**</p><p>**ChangeOptionalSettings**</p><p>**ChangeWorkflowSettings**</p><p>**RemoveContentType**</p></td>
+<td align="left"><p>**Settings** section on site collection **Content Type** page in SharePoint Online.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Microsoft.SharePoint.Create**</p></td>
