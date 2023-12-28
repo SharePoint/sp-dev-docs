@@ -1,0 +1,85 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "@odata.type": "#microsoft.graph.message",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Image",
+                    "url": "https://raw.githubusercontent.com/SharePoint/sp-dev-docs/main/assets/ace/calendar-top.png"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "This control displays the latest calendar events. You can open the event in Outlook or, if it's a meeting, you can join it simply clicking on the button next to the event.",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${subject}",
+                                    "size": "Medium"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${location.displayName}",
+                                    "spacing": "None"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${formatDateTime(substring(start.dateTime,0,19), 'dd/MM/yyyy hh:mm')}-${formatDateTime(substring(end.dateTime,0,19), 'hh:mm')}",
+                                    "spacing": "None",
+                                    "size": "Small"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAvBJREFUSEvtVUtIalEUXdeKiDDIiIY1i7CIBkqRRrNCAqFM6AsRQhMLx5VSVvTBoqwIIqTIoCYV1aBZ/4EDk4gkmgg16iP9cFQaez+89N4zrz148AZvw+XCufectddeZ68tRCKRCP5iCP8MgM/nQ39/P9bX15Gfnw+bzYb6+nokJyfH5Z8Qg0AggObmZqjVarS2tsLr9WJ4eBhjY2PQ6/UMEA6H8fT0BJlMhoyMDAiCwOsJAayuroKehYUFZGZmgmSbm5vD+fk5HA4H3t/f0d3djcnJScjlcvT29sJisTC7hADcbjd2d3cxMzPDB1AsLS3h5OQEExMTODo64kNnZ2dxe3uLnp4eLC4uQqlUQgiHwxGPx4PDw0POJFbc3NzwhunpaTQ0NODy8hKdnZ1cHnqvra2JDB8fH7mcxKy0tBTC/f19pKmpiTP8TnR1dWFwcBDp6emIahQKhUCPRqPB+Pj4Dy0+A9DNqKys/A1nb28PfX190Gq1XIqioiLk5OSIQtKGh4cHbG1tMaBOp+M3i/wZYHl5GcTm1yANiLZCoUBxcTFSUlIkydbW1qK9vf1ngJKSEmRnZ6OmpgZmsxlOpxPb29u4u7vD6ekpCgoKYDQakZaWJgIEg0Fsbm6yHpQABWl2dXUFSiymBtRQVAq73Q6r1SoeVlVVxZuysrLEtajgU1NT3IAUx8fHvPc/AJfjj0pkMpnQ2NiIlZUVzM/Pf1uDg4MDDA0Nfa3BV3cwEZHf3t7YaV9fXzE6OhrfKigTioqKCiQlJXGjkaNGnZK+nZ2dwWAw8A0qKysD2TpZD92g8vLy+GZH7rmzsyO6aCxm9I/L5YJKpcLFxQUKCwu5h/Ly8qTtOuoxpElLSwt7/efw+/1oa2vjA2M5QELzYH9/HwRAndrR0YHc3Fy8vLxgY2MDIyMjqK6uFk0vFkPJeUDDhWxiYGCAx2U0qObU5XV1dUhNTf3SmyQBojsJ6Pn5GdfX1+xXZBdS8zihEknapsQPH6Mh/FGBh+hUAAAAAElFTkSuQmCC",
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "${onlineMeeting.joinUrl}"
+                                    },
+                                    "$when": "${isOnlineMeeting}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR5JREFUSEvtljGuRFAUhv8rIdGQSHQahc4ORG8PbMICVBZgE+xBL3agU2h0RIJCQsLkSt4kM2/e3Fu8ea+hPef4zvnOjYscx3Hggw95BizLgjAM4boufN/nQmdZhqIokCQJZFl+qCHzPB9pmmIcxzOwbRvyPIdpmrBtmwtQVRWapoHneRBF8axRVRVBEID0fX/QTilAURTs+466rqFpGnRd5wJ0XYdhGGBZFgRBwDRNJ4BOdgdEUQTHcfAbisqyRBzHrwF057QDSZK++fxpHNrUuq6nAUIIXgLoeIZhcClhJbVte2p+UPS1A1YxT/ztDnhewMp5uwNWMU/8AjAtXYouRUwDzIT/OUUf+9g9X5nM+TkT7lfmn/9VcDbInXYDn/BFftWPiLMAAAAASUVORK5CYII=",
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "${webLink}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "separator": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
