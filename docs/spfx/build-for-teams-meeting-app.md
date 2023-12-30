@@ -130,7 +130,7 @@ Add the following JSON to the file:
   "manifestVersion": "1.8",
   "packageName": "{{SPFX_PACKAGE_NAME}}",
   "id": "{{SPFX_COMPONENT_ID}}",
-  "version": "1.0",
+  "version": "1.0.0",
   "developer": { .. },
   "name": {
     "short": "{{SPFX_COMPONENT_NAME}}"
