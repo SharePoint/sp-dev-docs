@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-Ins and Azure ACS retirement FAQ
 description: Answers frequently asked questions related to the retirements of SharePoint Add-In and Azure ACS in Microsoft 365.
-ms.date: 12/08/2023
+ms.date: 01/02/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -22,7 +22,7 @@ Absolutely, both tenant and site collection app catalogs are an essential part o
 
 ## My Add-In uses an app web, what about the data in that web?
 
-If your SharePoint Hosted Add-In is storing data in it's app web then that's something you need to take in account when you're rewriting your Add-In using SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web, when using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data you'll need to use SharePoint APIs to read the needed data from the app web and recreate it in the new location.
+If your SharePoint Hosted Add-In is storing data in it's app web then that's something you need to take in account when you're rewriting your Add-In using SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web, when using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data you'll need to use SharePoint APIs to read the needed data from the app web and recreate it in the new location using a format that works for your updated application.
 
 > [!Important]
 > It's important you do that before you uninstall the SharePoint Add-In as with uninstalling the Add-Ins app web is also deleted. In case you've accidentally deleted the Add-In you can always restore it from the recycle bin, doing so will also restore the Add-In's app web.
@@ -49,3 +49,11 @@ As web hooks by convention are asynchronous this means that synchronous events, 
 ## Can I still perform taxonomy updates?
 
 Yes, you can still update taxonomy (termsets, terms, etc) when Azure ACS is not used. When you configure your Microsoft Entra application using the SharePoint `TermStore.ReadWrite.All` permission (delegated or application) when you want to use the CSOM taxonomy APIs. It's recommended to use the Microsoft Graph taxonomy API, for that one you need the Microsoft Graph `TermStore.ReadWrite.All` permission (delegated or application). See the [Microsoft Graph documentation](https://learn.microsoft.com/en-us/graph/api/resources/termstore-set?view=graph-rest-1.0) for more details.
+
+## Can I still add OOB apps when I'm using the "classic" site contents page?
+
+When you're using the classic "Site Contents" page (_layouts/15/viewlsts.aspx) and you click on "add an app" the list off apps you can add will be a mix of OOB apps (e.g. Document Library, Custom List, Form Library) and possibly installed SharePoint Add-Ins. When SharePoint Add-Ins retire this page will still list the OOB apps and these OOB apps can still be added to the site.
+
+## Are SharePoint CSOM or SharePOint JSOM part of this retirement?
+
+No, both CSOM and JSOM stay working after Add-Ins and Azure ACS have been fully retired. When applications are updated/rewritten we do recommend to use Microsoft Graph and SharePoint REST as APIs for client side code. For server side code the recommendation is to use Microsoft Graph, SharePoint REST or SharePoint CSOM. If there's a Microsoft Graph API then that should be used in favor of SharePoint REST/CSOM, use the latter for the cases where there's no Microsoft Graph API yet.
