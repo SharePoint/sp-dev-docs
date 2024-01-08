@@ -53,4 +53,7 @@ The partition created in the consumer’s Microsoft 365 tenant by a SharePoint E
 
 ## Getting Started with SharePoint Embedded
 
-You can get started building on SharePoint Embedded by following our [Getting Started](./mslearn/m01-01-intro.md) article. Once your basic app structure is in place, use the resources provided here to continue your app development journey.
+You can get started building on SharePoint Embedded from the following Microsoft Learning modules:
+
+- [Microsoft Learning: SharePoint Embedded - overview & configuration](/training/modules/sharepoint-embedded-setup)
+- [Microsoft Learning: SharePoint Embedded - building applications](/training/modules/sharepoint-embedded-create-app)
