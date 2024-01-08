@@ -1,7 +1,7 @@
 ---
 title: Overview of Bot Powered Adaptive Card Extensions
 description: Generic overview about the Bot Powered Adaptive Card Extensions
-ms.date: 08/01/2024
+ms.date: 01/08/2024
 ms.localizationpriority: high
 ---
 # Overview of Bot Powered Adaptive Card Extensions

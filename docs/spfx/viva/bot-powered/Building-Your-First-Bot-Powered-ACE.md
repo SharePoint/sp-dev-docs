@@ -1,14 +1,14 @@
 ---
 title: Building your first Bot Powered Adaptive Card Extension
 description: Learn how to build your first Bot Powered Adaptive Card Extension using the Bot Framework for Microsoft .NET.
-ms.date: 08/01/2024
+ms.date: 01/08/2024
 ms.localizationpriority: high
 ---
 # Building your first Bot Powered Adaptive Card Extension
 
 Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections are a new technology to extend the Microsoft Viva Connections Dashboard leveraging the Bot development model. 
 
-From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework. As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension"](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension).
+From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework. As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension"](/sharepoint/dev/spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension).
 
 In this tutorial you will learn how to build a basic Bot Powered ACE with a step by step approach. You can build Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js.
 
@@ -203,7 +203,7 @@ You can now go back to the configuration of your Azure Bot and select the panel 
 
 A new page will show up, explaining you the purpose of the "Microsoft 365" channel. Click the "Apply" button to enable the new channel and go back to the list of channels configured for your Azure Bot.
 
-![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./images/Azure-Portal-Create-Azure-Bot-11.png)
+![The panel to configure the "Microsoft 365" channel in the list of channels supported by the Azure Bot. There is a description of the purpose of the channel and an "Apply" button to add the channel to the list of channels supported by the Azure Bot.](./images/Azure-Portal-Create-Azure-Bot-11.png)
 
 Right after that, your Azure Bot is fully configured and ready to be used.
 

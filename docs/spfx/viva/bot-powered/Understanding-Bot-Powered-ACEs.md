@@ -1,14 +1,14 @@
 ---
 title: Understanding Bot Powered Adaptive Card Extensions
 description: Provides a technological and architectural overview of the Bot Powered Adaptive Card Extensions
-ms.date: 08/01/2024
+ms.date: 01/08/2024
 ms.localizationpriority: high
 ---
 # Understanding Bot Powered Adaptive Card Extensions
 
 Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections are a new technology to extend the Microsoft Viva Connections Dashboard leveraging the Bot development model.
 
-At the time of this writing, the main extensibility model for the Viva Connections Dashboard is based on client-side ACEs built using the SharePoint Framework. The extensibility model itself is really solid and mature, especially with the latest features introduced with the [component based ACEs](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/design/designing-card) released with SharePoint Framework version 1.18.  However, there are some use cases that cannot be addressed with a client-side development model, like just to make few examples:
+At the time of this writing, the main extensibility model for the Viva Connections Dashboard is based on client-side ACEs built using the SharePoint Framework. The extensibility model itself is really solid and mature, especially with the latest features introduced with the [component based ACEs](/sharepoint/dev/spfx/viva/design/designing-card) released with SharePoint Framework version 1.18.  However, there are some use cases that cannot be addressed with a client-side development model, like just to make few examples:
 
 * Solutions where you already hava server-side Bot, hosted on the cloud, and you want to reuse the same code and effort also to power an ACE running in the Viva Connections dashboard for a better return of investment.
 * Already existing applications mainly developed using C# and .NET, which cannot be used on the client-side in SharePoint Framework, unless you rewrite most of the logic with client-side code, making maintenance and ALM more complex and expensive.
@@ -22,7 +22,7 @@ In all the above scenarios, as well as in many more, being able to generate and 
 ## Architecture of Bot Powered ACEs
 Let's have a look at the architecture of Bot Powered ACEs in order to better understand how they work and what their potentials are.
 
-From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework. As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension"](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension).
+From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework. As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension"](/sharepoint/dev/spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension).
 
 Bot Powered ACEs are based on Azure Bots and whenever you want to create a new Bot Powered ACE you need to register an Azure Bot in the Microsoft Azure Portal and you have to implement a Bot using the Microsoft Bot Framework SDK.
 
@@ -32,7 +32,7 @@ A Bot Powered ACE relies on the Microsoft 365 Channel, which is used also to cre
 
 As a developer, you don't need to dig into all the technical details of how an Azure Bot works. You can simply focus on implementing the Adaptive Card Extension and the Bot architecture will take care of all the plumbing for you.
 
-It is important to know that the Bot Powered ACEs can only be created starting from a specific release of the [Microsoft Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/index-bf-sdk?view=azure-bot-service-4.0). In fact, starting from version 4.21.2 of the Bot Framework SDK there are new types supporting Bot Powered ACEs. Moreover, you can build Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js. As such, depending on your development background and eventually on your already existing code, you can easily on-board on the Bot Powered ACEs experience with your already existing Bots.
+It is important to know that the Bot Powered ACEs can only be created starting from a specific release of the [Microsoft Bot Framework SDK](/azure/bot-service/index-bf-sdk?view=azure-bot-service-4.0). In fact, starting from version 4.21.2 of the Bot Framework SDK there are new types supporting Bot Powered ACEs. Moreover, you can build Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js. As such, depending on your development background and eventually on your already existing code, you can easily on-board on the Bot Powered ACEs experience with your already existing Bots.
 
 ### Bot Framework SDK _SharePointActivityHandler_
 As already stated, starting from version 4.21.2 of the Bot Framework SDK there are new types supporting the creation of Bot Powered ACEs. Specifically, there is a specialized _ActivityHandler_ type with name _SharePointActivityHandler_ that provides the following overridable methods:
