@@ -1,3 +1,9 @@
+---
+title: Overview of Bot Powered Adaptive Card Extensions
+description: Generic overview about the Bot Powered Adaptive Card Extensions
+ms.date: 08/01/2024
+ms.localizationpriority: high
+---
 # Overview of Bot Powered Adaptive Card Extensions
 
 Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections are a new technology to extend the Microsoft Viva Connections Dashboard leveraging the Bot development model. Bot Powered ACEs are an addition to the already existing Viva Connections extensibility model, which is based on SharePoint Framework (SPFx) components. While with SPFx components you create client-side solutions to extend Viva Connections, using the Bot Powered ACEs you can leverage server-side solutions. Depending on your goals, expertise, and scenario you can choose between these two options that are complementary and not alternative.
