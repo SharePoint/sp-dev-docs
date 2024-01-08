@@ -1,0 +1,3 @@
+# Authentication and Authorization in Bot Powered Adaptive Card Extensions
+Here you will find information about how to handle Authentication and Authorization in Bot Powered ACEs.
+Still working on it ...

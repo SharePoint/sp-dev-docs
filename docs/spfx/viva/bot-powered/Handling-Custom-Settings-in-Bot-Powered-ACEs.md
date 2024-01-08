@@ -1,0 +1,3 @@
+# Handling custom settings for Bot Powered Adaptive Card Extensions
+Here you will find information about how to handle custom settings for Bot Powered ACEs.
+Still working on it ...
