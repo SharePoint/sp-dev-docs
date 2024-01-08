@@ -40,4 +40,4 @@ Your SharePoint Embedded application is now available for use on your tenant.
 
 ## Next Steps
 
-Once SharePoint Embedded is enabled for your organization, developers can start creating a SharePoint Embedded application by following the [SharePoint Embedded: Build an app](/sharepoint/dev/embedded/mslearn/m02-01-intro) tutorial.
+Once SharePoint Embedded is enabled for your organization, developers can start creating a SharePoint Embedded application from the following module: [Microsoft Learning: SharePoint Embedded - building applications](/training/modules/sharepoint-embedded-create-app/).
