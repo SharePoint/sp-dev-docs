@@ -11,11 +11,11 @@ You can learn more about the architecture of the Bot Powered ACEs by reading the
 ## Developing a Bot Powered ACE with Microsoft .NET
 In this tutorial, you are going to build a basic Bot Powered ACE to collect user's feedback via a Card View with a textbox and a submission button. In the following picture you can see how the Adaptive Card Extension looks like in the Viva Connections desktop experience.
 
-![The UI of the sample Bot Powered ACE in the Viva Connections desktop experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot Powered ACEs". Then there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Desktop.png)
+![The UI of the sample Bot Powered ACE in the Viva Connections desktop experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot Powered ACEs". Then there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./assets/Bot-Powered-ACE-Collect-Feedback-UI-Desktop.png)
 
 While in the following picture you can see how the Adaptive Card Extension looks like in the Viva Connections mobile experience.
 
-![The UI of the sample Bot Powered ACE in the Viva Connections mobile experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot ...". Then there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Mobile.png)
+![The UI of the sample Bot Powered ACE in the Viva Connections mobile experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot ...". Then there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./assets/Bot-Powered-ACE-Collect-Feedback-UI-Mobile.png)
 
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
 
@@ -34,13 +34,13 @@ Last but not least, for local testing and debugging, you will also need a revers
 ### Creating the Bot solution in Visual Studio 2022
 Once you have installed the Bot Builder Extensions for Microsoft Visual Studio 2022, start Visual Studio and choose to create a new project of type "Empty Bot (Bot Framework v4 - .NET Core 3.1)" like it is illustrated in the following screenshot.
 
-![The UI of Microsoft Visual Studio 2022 to create a new project of type "Empty Bot (Bot Framework v4 - .NET Core 3.1)"](./images/Visual-Studio-Bot-Builder-Extension-Project.png)
+![The UI of Microsoft Visual Studio 2022 to create a new project of type "Empty Bot (Bot Framework v4 - .NET Core 3.1)"](./assets/Visual-Studio-Bot-Builder-Extension-Project.png)
 
 Give a name to your project (for example "CollectFeedbackBotPoweredAce") and choose a folder to store the project files, as well as the related solution. Despite the name of the project template, you will get a .NET 6.0 project.
 
 Then, the very first thing to do is to upgrade the NuGet package with name "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.21.2 or higher. You can do it using the user interface of Visual Studio, right clicking on the project and choosing "Manage NuGet packages ..." like you see in the following image.
 
-![The UI of Microsoft Visual Studio 2022 when upgrading the version of the NuGet package "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.21.2 or higher.](./images/Visual-Studio-NuGet-Bot-Builder-SDK-Version.png)
+![The UI of Microsoft Visual Studio 2022 when upgrading the version of the NuGet package "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.21.2 or higher.](./assets/Visual-Studio-NuGet-Bot-Builder-SDK-Version.png)
 
 Or you can also use the .NET CLI and run the following command in the Package Manager Console, to update the package to the latest release.
 
@@ -59,7 +59,7 @@ Before proceeding with the actual implementation of the Bot Powered ACE, we need
 
 Open a web browser and navigate to the [Azure Management Portal](https://portal.azure.com/). From the Azure Management Portal home page, select "Create a resource" and choose to create an "Azure Bot" service.
 
-![The interface of the Azure Management Portal when creating a new service instance of type Azure Bot.](./images/Azure-Portal-Create-Azure-Bot-01.png)
+![The interface of the Azure Management Portal when creating a new service instance of type Azure Bot.](./assets/Azure-Portal-Create-Azure-Bot-01.png)
 
 Provide a handle for your Bot, which must be compliant with the following rules:
 * String between 4 and 42 characters long
@@ -82,7 +82,7 @@ You can also choose whether to create a new Microsoft Entra ID app or to reuse a
 
 In the following screenshot you can see all the available configuration options.
 
-![The page to register a new Azure Bot. It includes settings about the Bot handle, the target subscription and resource group, the pricing tier, and the Microsoft App ID settings.](./images/Azure-Portal-Create-Azure-Bot-02.png)
+![The page to register a new Azure Bot. It includes settings about the Bot handle, the target subscription and resource group, the pricing tier, and the Microsoft App ID settings.](./assets/Azure-Portal-Create-Azure-Bot-02.png)
 
 Once you are done with the settings, click on the "Review + create" button, review the selected settings and register your Azure Bot by clicking on the "Create" button.
 
@@ -111,7 +111,7 @@ ngrok http --host-header=localhost --hostname=my-bot-powered-ace.ngrok.io 3978
 
 Click "Apply" when you are done configuring the "Messaging endpoint" URL.
 
-![The configuration panel for an Azure Bot. It includes settings about Messaging Endpoint URL, the Microsoft App ID, the Application Insights keys, the Schema Transformation Version, and the OAuth Connection settings.](./images/Azure-Portal-Create-Azure-Bot-03.png)
+![The configuration panel for an Azure Bot. It includes settings about Messaging Endpoint URL, the Microsoft App ID, the Application Insights keys, the Schema Transformation Version, and the OAuth Connection settings.](./assets/Azure-Portal-Create-Azure-Bot-03.png)
 
 Once you have configured the URL for your Bot, you need to configure few additional settings from the "Configuration" panel. Click on the "Manage Password" link, just beside the "Microsoft App ID" setting.
 
@@ -122,7 +122,7 @@ Now select the "Overview" panel and save in a safe place, together with the clie
 * Application (client) ID
 * Directory (tenant) ID
 
-![The "Overview" panel of the Microsoft App. It includes information about the Display Name, the Application ID, the Directory ID, etc.](./images/Azure-Portal-Create-Azure-Bot-04.png)
+![The "Overview" panel of the Microsoft App. It includes information about the Display Name, the Application ID, the Directory ID, etc.](./assets/Azure-Portal-Create-Azure-Bot-04.png)
 
 Now select the "Authentication" panel of the Microsoft App and under the "Platform configurations" section, click on "Add a platform" and select to add a *Web* platform. Then configure the following value for the "Redirect URIs" setting field.
 
@@ -138,7 +138,7 @@ https://my-bot-powered-ace.ngrok.io/auth-end
 
 You should also enable "Implicit grant and hybrid flows" by selecting the options to issue "Access tokens" and "ID tokens". Click on the "Configure" button and your new Web platform will be configured.
 
-![The panel to configure a Web platform for the Microsoft App. You can configure the "Redirect URIs" for the web app and enable the "Implicit grant and hybrid flows" with support for "Access tokens" and "ID tokens".](./images/Azure-Portal-Create-Azure-Bot-05.png)
+![The panel to configure a Web platform for the Microsoft App. You can configure the "Redirect URIs" for the web app and enable the "Implicit grant and hybrid flows" with support for "Access tokens" and "ID tokens".](./assets/Azure-Portal-Create-Azure-Bot-05.png)
 
 Now select the "API permissions" panel and configure the app with the following delegated permissions:
 * email
@@ -149,7 +149,7 @@ Now select the "API permissions" panel and configure the app with the following 
 
 Click on the "Grant admin consent for ..." button, in order to grant the permissions at tenant level.
 
-![The panel to configure the "API permissions". There are few permissions already selected, including: email, offline_access, openid, profile, and User.Read. All of the permissions are granted at tenant level.](./images/Azure-Portal-Create-Azure-Bot-06.png)
+![The panel to configure the "API permissions". There are few permissions already selected, including: email, offline_access, openid, profile, and User.Read. All of the permissions are granted at tenant level.](./assets/Azure-Portal-Create-Azure-Bot-06.png)
 
 Now move to the "Expose an API" panel and configure a unique URI for your application clicking on the "Add" link just beside the "Application ID URI" label. Here you need to configure a value for the "Application ID URI" that matches the following rule:
 
@@ -176,7 +176,7 @@ Now in the "Scopes defined by this API" section add a new scope by clicking on t
 * User consent description: Enables Teams to call this app's APIs with the same rights as the user.
 * State: Enabled.
 
-![The panel to add a new permission scope. There are options to configure the scope name, who can consent the scope, the admin consent display name and description, the user consent display name and description, and the state of the scope.](./images/Azure-Portal-Create-Azure-Bot-07.png)
+![The panel to add a new permission scope. There are options to configure the scope name, who can consent the scope, the admin consent display name and description, the user consent display name and description, and the state of the scope.](./assets/Azure-Portal-Create-Azure-Bot-07.png)
 
 Lastly, in the "Authorized client applications" section, you need to configure the client ID of the Teams clients and authorize them to consume your Microsoft App, so that users should not be asked to consent when the Teams client call your API. The client IDs of the Teams client apps are the following:
 * 1fec8e78-bce4-4aaf-ab1b-5451cc387264: for the Teams mobile and desktop application.
@@ -184,24 +184,24 @@ Lastly, in the "Authorized client applications" section, you need to configure t
 
 For each of them, you should select the permission scope that you just configured for the API.
 
-![The panel to add a new  authorized client application. You can provide the client ID of the authorized client application and you can select the scopes that you want to authorize for that specific client application.](./images/Azure-Portal-Create-Azure-Bot-08.png)
+![The panel to add a new  authorized client application. You can provide the client ID of the authorized client application and you can select the scopes that you want to authorize for that specific client application.](./assets/Azure-Portal-Create-Azure-Bot-08.png)
 
 At the end of this stage, the "Expose an API" panel should look like in the following picture.
 
-![The "Expose an API" panel configured with a custom Application ID URI, a custom scope with name "access_as_user", and a couple of authorized client applications.](./images/Azure-Portal-Create-Azure-Bot-09.png)
+![The "Expose an API" panel configured with a custom Application ID URI, a custom scope with name "access_as_user", and a couple of authorized client applications.](./assets/Azure-Portal-Create-Azure-Bot-09.png)
 
 #### Configuring the Microsoft 365 Channel
 You can now go back to the configuration of your Azure Bot and select the panel "Channels" to configure a new channel for Microsoft 365. In the "Available Channels" section of the page you need to click on the channel with name "Microsoft 365" to enable it.
 
-![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./images/Azure-Portal-Create-Azure-Bot-10.png)
+![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./assets/Azure-Portal-Create-Azure-Bot-10.png)
 
 A new page will show up, explaining you the purpose of the "Microsoft 365" channel. Click the "Apply" button to enable the new channel and go back to the list of channels configured for your Azure Bot.
 
-![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./images/Azure-Portal-Create-Azure-Bot-11.png)
+![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./assets/Azure-Portal-Create-Azure-Bot-11.png)
 
 Right after that, your Azure Bot is fully configured and ready to be used.
 
-![The panel to configure channels for the Azure Bot. There are now three pre-selected channels: "Direct Line", "Web Chat", and "Microsoft 365.](./images/Azure-Portal-Create-Azure-Bot-12.png)
+![The panel to configure channels for the Azure Bot. There are now three pre-selected channels: "Direct Line", "Web Chat", and "Microsoft 365.](./assets/Azure-Portal-Create-Azure-Bot-12.png)
 
 > [!IMPORTANT]
 > If you are using ngrok and you have a free license, you will have to rely on a dynamic URL for your local development environment, rather than on a fixed and named URL. As such, whenever you will start ngrok you will get a new URL that you will have to configure in all the places where you have been instructed to configure the URL in this tutorial. Specifically, you will have to re-configure the URL in the "Messaging endpoint URL" of the Azure Bot, in the "Redirect URIs" of the Microsoft App, and in the "Application ID URI" of the Microsoft App. Then wait few seconds before running the Bot, to allow the new URLs to apply across the Microsoft Azure services.
@@ -437,7 +437,7 @@ public class CollectFeedbackBot : SharePointActivityHandler
 Notice how the constructor relies on a `ConcurrentDictionary` to store the Card View definitions, to support multi-threaded access to the static dictionary. Notice also how the various components are used to define the outline of the `TextInputCardViewParameters` and of the `ImageCardViewParameters`.
 In the following picture you can see a digram that explains the structure of a component based Card View rendered in "Large" format.
 
-![A diagram with the structure of a component based Card View in "Large" format. The shape of the Card View is divided into two main sections, the left one is made of a CardBarComponent, a CardTextComponent, a component that varies depending on the kind of Card View template selected, and a list CardButtonComponent to provide zero, one, or two buttons. On the right section there can be an instance of Microsoft.Bot.Schema.SharePoint.CardImage to render an image, if any, depending on the kind of Card View template selected.](./images/ACE-Component-Based-Structure.png)
+![A diagram with the structure of a component based Card View in "Large" format. The shape of the Card View is divided into two main sections, the left one is made of a CardBarComponent, a CardTextComponent, a component that varies depending on the kind of Card View template selected, and a list CardButtonComponent to provide zero, one, or two buttons. On the right section there can be an instance of Microsoft.Bot.Schema.SharePoint.CardImage to render an image, if any, depending on the kind of Card View template selected.](./assets/ACE-Component-Based-Structure.png)
 
 A component based Card View in "Large" format does have a shape divided into two main sections, the left one is made of a `CardBarComponent`, a `CardTextComponent`, a component that varies depending on the kind of Card View template selected, and a list of `BaseCardComponent` objects to provide zero, one, or two buttons. On the right section there can be an instance of `Microsoft.Bot.Schema.SharePoint.CardImage` to render an image, if any, depending on the kind of Card View template selected
 
@@ -448,7 +448,7 @@ For example, the `TextInputCardViewParameters` instance is made of the following
 * `List<CardButtonComponent>`: defines a list of zero, one, or two action buttons. Each action button does have an `Id` property that is fundamental to identify the button pressed by the user. A button can also have a set of custom properties, which will be provided to the Bot upon submission of the form.
 * `Microsoft.Bot.Schema.SharePoint.CardImage`: defines an image that will be rendered in the right side of the Card View.
 
-In the code excerpt, the images used to render the Card Viewes are downloaded from the web site hosted in the Bot project, and available under the `wwwroot` folder of the project. In that folder, you should upload the `Media` subfolder that you can find in the [samples folder of the reference GitHub repository](../../../../assets/bot-powered/Media). 
+In the code excerpt, the images used to render the Card Viewes are downloaded from the web site hosted in the Bot project, and available under the `wwwroot` folder of the project. In that folder, you should upload the `Media` subfolder that you can find in the [samples folder of the reference GitHub repository](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/support-files/Media). 
 
 #### Handling user's tasks and actions
 When the user clicks on the submit action in a Card View, the `OnSharePointTaskHandleActionAsync` method is triggered and you can handle the submission event. In the following code excerpt you can see how the ACE collects the feedback submission.
@@ -464,7 +464,7 @@ protected override Task<BaseHandleActionResponse> OnSharePointTaskHandleActionAs
         }
     }
     Trace.Write("\n\n\nStarted to handle action.\n\n\n");
-    JObject actionParameters = (JObject)((JObject)turnContext.Activity.Value).Property("data").Value;
+    JObject actionParameters = aceRequest.Data as JObject;
 
     if (actionParameters["type"].ToString().Equals("Submit", StringComparison.InvariantCultureIgnoreCase) &&
         actionParameters["id"].ToString().Equals("SendFeedback", StringComparison.InvariantCultureIgnoreCase))
@@ -638,13 +638,13 @@ In the `manifest.json` file you should replace `<App-Client-ID>` with the actual
 
 Notice the `dashboardCards` section that defines the actual settings for your Bot Powered ACEs. In particular, through this section you can configure the `id` of the Microsoft App backing your Azure Bot, the `displayName` and `description` of the ACE, as well as the `icon` as a Fluent UI Icon, the Bot that handles the requests and that must be configured in the `bots` section of the `manifest.json`, and last but not least the `defaultSize` for your ACE in the Viva Connections Dashboard.
 
-You can consider copying and reusing the images and the `manifest.json` templates from the [samples folder of the reference GitHub repository](../../../../assets/bot-powered/TeamsAppManifest) associated with this tutorial.
+You can consider copying and reusing the images and the `manifest.json` templates from the [samples folder of the reference GitHub repository](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/support-files/TeamsAppManifest) associated with this tutorial.
 
 ### Run and test the solution
 You are now ready to package and deploy your custom solution. You simply need to package the `manifest.json` file and the two images into a .ZIP file, like you would do with any other Microsoft Teams or Microsoft 365 custom application. Name the .ZIP file with whatever name you like, open the App Catalog of your target SharePoint Online tenant, and upload the .ZIP file as a new application package.
 The SharePoint Online server-side infrastructure will recognize the manifest structure and prompt you to enable and deploy the solution on the tenant.
 
-![The UI of the new SharePoint AppCatalog prompting to enable the solution and make it tenant-wide available.](./images/App-Catalog-Package-Publishing.png)
+![The UI of the new SharePoint AppCatalog prompting to enable the solution and make it tenant-wide available.](./assets/App-Catalog-Package-Publishing.png)
 
 Make the solution tenant-wide available, by chooising the option "Enable this app and add it to all sites", and the Bot Powered ACE will become available in the Viva Connections Dashboard.
 
@@ -654,7 +654,7 @@ Make the solution tenant-wide available, by chooising the option "Enable this ap
 
 Now, run the Visual Studio project in debug mode (by pressing F5) and open the Microsoft Viva Connections Dashboard, edit its content and search for the new Bot Powered ACE that you just installed.
 
-![The UI of the new Viva Connections Dashboard while adding a new ACE. There is the new Collect Feedback ACE available in the list of Adaptive Card Extensions. There is also the rendering of the sample ACE in background, already inserted in the Viva Connections Dashboard.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Adding-to-Dashboard.png)
+![The UI of the new Viva Connections Dashboard while adding a new ACE. There is the new Collect Feedback ACE available in the list of Adaptive Card Extensions. There is also the rendering of the sample ACE in background, already inserted in the Viva Connections Dashboard.](./assets/Bot-Powered-ACE-Collect-Feedback-UI-Adding-to-Dashboard.png)
 
 In the next articles of this guidance you will also learn how to publish and host the Bot Powered ACEs in a real hosting environemnt on Microsoft Azure, rather than running them locally on a development environment.
 
