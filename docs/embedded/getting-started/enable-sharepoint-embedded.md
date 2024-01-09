@@ -7,11 +7,11 @@ ms.localizationpriority: high
 
 # Enable SharePoint Embedded
 
-During Public Preview, by default, SharePoint Embedded applications will not be enabled for use on the Microsoft 365 tenant. To create or register SharePoint Embedded applications in the tenant, tenant admins must review the terms of service and enable the settings in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219). This document explains the steps to enable SharePoint Embedded applications on a Microsoft 365 tenant.
+During Public Preview, by default, SharePoint Embedded applications won't be enabled for use on the Microsoft 365 tenant. To create or register SharePoint Embedded applications in the tenant, tenant admins must review the terms of service and enable the settings in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219). This document explains the steps to enable SharePoint Embedded applications on a Microsoft 365 tenant.
 
 ## Who can enable SharePoint Embedded?
 
-Users assigned to the SharePoint Administrator role have access to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) and can enable SharePoint Embedded applications for their tenant. For information about assigning a user, the SharePoint administrator role, see [Assign admin roles in the Microsoft 365 admin center.](/microsoft-365/admin/add-users/assign-admin-roles).
+Users assigned to the SharePoint Administrator role have access to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) and can enable SharePoint Embedded applications for their tenant. For information about assigning a user, the SharePoint Administrator role, see [Assign admin roles in the Microsoft 365 admin center.](/microsoft-365/admin/add-users/assign-admin-roles).
 
 Global Administrators in Microsoft 365 can assign users the SharePoint Administrator. The Global Administrator role already has all the permissions of the SharePoint Administrator role.
 
@@ -22,7 +22,7 @@ Global Administrators in Microsoft 365 can assign users the SharePoint Administr
 
     ![Step 2 - Select 'Settings' in the navigation.](../images/SharePointEmbeddedToS-1.jpg)
 
-1. Select **SharePoint Embedded** app in the settings page. The app will be “disabled” if the tenant admin has not enabled the settings before.
+1. Select **SharePoint Embedded** app in the settings page. The app will be “disabled” if the tenant admin hasn't enabled the settings before.
 
     ![Step 3 - Select 'SharePoint Embedded' on the 'Settings' page.](../images/SharePointEmbeddedToS-2.jpg)
 
