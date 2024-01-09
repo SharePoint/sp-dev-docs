@@ -23,8 +23,11 @@ With the module installed, you can run the following to create a new Container T
 Import-Module "Microsoft.Online.SharePoint.PowerShell"
 Connect-SPOService -Url "{{SPO Admin Url}}"
 $dummyGuid = [System.Guid]::NewGuid().ToString()
-New-SPOContainerType -ContainerTypeName "{{Name}}" -OwningApplicationId "{{Your new app client Id}}" -AzureSubscriptionId $dummyGuid -ResourceGroup "Dummy" -Region "Dummy"
+New-SPOContainerType -ContainerTypeName {{ContainerTypeName}} -OwningApplicationId {{OwningApplicationId}} -AzureSubscriptionId {{AzureSubscriptionId}} -ResourceGroup {{ResourceGroup}} -Region {{Region}}​
 ```
+
+> [!TIP]
+> To learn more about trial containers which are limited, but don't incur costs during the development of your application, see [Developer Admin](../concepts/admin-exp/dev-admin.md).
 
 The cmdlet outputs your new `ContainerTypeId`, save this for later use.
 
