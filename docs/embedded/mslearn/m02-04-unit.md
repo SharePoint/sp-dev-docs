@@ -54,7 +54,7 @@ Then, use the `ConfidentialClientApplication` to obtain an access token on behal
 
 ```typescript
 // get user's access token from the request submitted by the React SPA
-const [bearer, token] = req.headers.authorization.split(' ');
+const [bearer, token] = (req.headers.authorization || '').split(' ');
 
 // set that token to the assertion and the scopes to the permissions we
 //    need in the access token to call Microsoft Graph
@@ -62,7 +62,7 @@ const graphTokenRequest = {
   oboAssertion: token,
   scopes: [
     Scopes.GRAPH_SITES_READ_ALL,
-    Scopes.SPREPOSERVICES_FILESTORAGECONTAINER_SELECTED
+    Scopes.SPEMBEDDED_FILESTORAGECONTAINER_SELECTED
   ]
 };
 
@@ -75,7 +75,7 @@ Now that you have the OBO token for Microsoft graph, create an auth provider and
 
 ```typescript
 const authProvider = (callback: MSGraph.AuthProviderCallback) => {
-  callback(null, graphTokenRequest);
+  callback(null, oboGraphToken);
 };
 
 const graphClient = MSGraph.Client.init({
@@ -109,7 +109,7 @@ const graphResponse = await graphClient.api(`storage/fileStorage/containers?$fil
 
 ## Summary
 
-In this section, you’ll learn how to access SharePoint Embedded Containers using the Microsoft Graph REST APIs.
+In this section, you learned how to access SharePoint Embedded Containers using the Microsoft Graph REST APIs.
 
 ## Next Steps
 
