@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 ## Embedding a file preview in an iFrame
 
-It is possible to preview a [wide range](https://support.microsoft.com/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4) of files in your browser without using a special application. Among the files supported, you can view PDF, JPG, MP4, etc.
+It's possible to preview a [wide range](https://support.microsoft.com/office/file-types-supported-for-previewing-files-in-onedrive-sharepoint-and-teams-e054cd0f-8ef2-4ccb-937e-26e37419c5e4) of files in your browser without using a special application. Among the files supported, you can view PDF, JPG, MP4, etc.
 
 In order to preview a file in an `iframe`, you need to
 
@@ -25,9 +25,9 @@ Microsoft Graph offers the following endpoint to [preview a file](/graph/api/dri
 POST https://graph.microsoft.com/{version}/drives/{driveId}/items/{itemId}/preview
 ```
 
-- `Version` is Graph's version. Eg. "v1.0"
-- The `driveId` is Container id (starts with "b!")
-- The `itemId`, which is the drive item Id.
+- `Version` is Graph's version. For example "v1.0"
+- The `driveId` is Container ID (starts with "b!")
+- The `itemId`, which is the drive item ID.
 
 If you're using the Microsoft Graph C# SDK, the code would be similar to the following:
 
