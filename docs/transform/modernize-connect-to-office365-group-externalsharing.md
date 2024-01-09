@@ -1,7 +1,7 @@
 ---
 title: External sharing after Microsoft 365 group connection
 description: Connect a Microsoft 365 group to an existing SharePoint site can result in different external sharing settings between the Microsoft 365 group and the SharePoint site
-ms.date: 06/19/2018
+ms.date: 12/13/2023
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
@@ -18,4 +18,4 @@ In SharePoint Online you can configure a site's external sharing to be set to on
 Once a site get's connected to a Microsoft 365 group then the Microsoft 365 group's external sharing settings play a role: by default external sharing of Microsoft 365 groups is enabled, which implies that you can for example use the Azure AD management UI and share the created group with an external. From a SharePoint perspective however the external sharing settings defined on the SharePoint site overrule the settings on the Microsoft 365 group.
 
 > [!IMPORTANT]
-> If your site is configured to not allow external users then that setting will be respected, even if the Microsoft 365 group does allow external sharing.
+> Cross check the external sharing settings of your site after group connecting the site as the settings are changed to defaults as part of the group connection process.

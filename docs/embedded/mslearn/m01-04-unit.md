@@ -18,7 +18,7 @@ In production, the provider and consumer tenants will usually be different thing
 
 Providers who create SharePoint Embedded apps will create a few different things in the provider’s Microsoft 365 tenant’s SharePoint Embedded instance and the Microsoft 365’s associated Microsoft Entra ID tenant.
 
-They will create the application codebase and the Microsoft Entra application. The Entra application is what the application will use authenticate and call both Microsoft Graph and SharePoint APIs for SharePoint Embedded tasks including reading and writing files in the SharePoint Embedded Containers.
+They will create the application codebase and the Microsoft Entra ID application. The Entra application is what the application will use authenticate and call both Microsoft Graph and SharePoint APIs for SharePoint Embedded tasks including reading and writing files in the SharePoint Embedded Containers.
 
 Next, the provider will create a **Container Type** in the provider’s SharePoint tenant using the SharePoint Online PowerShell `New-SPOContainerType` cmdlet. The
 
@@ -26,22 +26,22 @@ Next, the provider will create a **Container Type** in the provider’s SharePoi
 
 The Container Type has two important roles in SharePoint Embedded solutions:
 
-1. Defines a relationship between the Microsoft Entra application and all Containers linked to the ContainerType.
+1. Defines a relationship between the Microsoft Entra ID application and all Containers linked to the ContainerType.
 1. Associates all Containers linked to it to a specific Azure Subscription for billing purposes.
 
 > [!IMPORTANT]
-> The Microsoft Entra application can have at most one (1) Container Type associated with it.
+> The Microsoft Entra ID application can have at most one (1) Container Type associated with it.
 
 ### SharePoint Embedded Consumers
 
-After creating the necessary resources in the provider’s tenant, including the Microsoft Entra application, the consumer tenant admin must perform the following two operations:
+After creating the necessary resources in the provider’s tenant, including the Microsoft Entra ID application, the consumer tenant admin must perform the following two operations:
 
-1. Consent to the provider’s Microsoft Entra application within their tenant and optionally, on behalf of all users in the consuming tenant.
+1. Consent to the provider’s Microsoft Entra ID application within their tenant and optionally, on behalf of all users in the consuming tenant.
 1. Register the providers Container Type with the consuming tenant.
 
 The registration of the Container Type with the consuming tenant must be done from the provider tenant and this should be done the first time the app is run in the consuming tenant.
 
-When this happens, Microsoft looks at the Microsoft Entra application’s ID, locates the provider tenant and validate the application owns that Container Type. This is because only the owning application can call the registration settings in the consuming tenant. It also means the provider and consuming tenant are in the same cloud, but can exist in different regions. For example, the provider and consumer tenants can be in the production or GCC High clouds, but not different clouds because Microsoft can’t reach between clouds.
+When this happens, Microsoft looks at the Microsoft Entra ID application’s ID, locates the provider tenant and validate the application owns that Container Type. This is because only the owning application can call the registration settings in the consuming tenant. It also means the provider and consuming tenant are in the same cloud, but can exist in different regions. For example, the provider and consumer tenants can be in the production or GCC High clouds, but not different clouds because Microsoft can’t reach between clouds.
 
 If validated, the registration process will put the permission map and configuration settings in the consuming tenant.
 
@@ -80,4 +80,4 @@ SharePoint Embedded introduces the concept of a storage Container that the devel
 
 ## Next Steps
 
-Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup and Configure SharePoint Embedded](m01-05-hol.md), where you'll create a Microsoft Entra application, configuring SharePoint Embedded on your SharePoint tenant, and generate your first Container Type and Container.
+Let's get started and continue with the next topic in this tutorial, [Hands on Lab - Setup and Configure SharePoint Embedded](m01-05-hol.md), where you'll create a Microsoft Entra ID application, configuring SharePoint Embedded on your SharePoint tenant, and generate your first Container Type and Container.

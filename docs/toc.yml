@@ -572,6 +572,8 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
+    - name: Terms and Definitions
+      href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
     - name: Register Container Type
@@ -618,6 +620,8 @@
     href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
   - name: Focus feature in Adaptive Card Extension
     href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+  - name: Card Designer advance API features
+    href: spfx/viva/features/card-designer/card-designer-api-support.md    
   - name: Design Guidance
     items:
     - name: Introduction
@@ -698,6 +702,12 @@
         href: business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md
 - name: SharePoint Add-ins
   items:
+  - name: Add-In retirement announcement
+    href: sp-add-ins/retirement-announcement-for-add-ins.md
+  - name: Azure ACS retirement announcement
+    href: sp-add-ins/retirement-announcement-for-azure-acs.md
+  - name: Add-In and Azure ACS retirement FAQ
+    href: sp-add-ins/add-ins-and-azure-acs-retirements-faq.md
   - name: Overview
     href: sp-add-ins/sharepoint-add-ins.md
   - name: Build SharePoint-hosted add-ins

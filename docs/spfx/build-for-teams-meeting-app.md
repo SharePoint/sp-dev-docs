@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Build meeting apps for Microsoft Teams with SPFx"
 description: Build meeting apps for Microsoft Teams with the SharePoint Framework.
-ms.date: 04/28/2021
+ms.date: 12/30/2023
 ms.localizationpriority: medium
 ---
 
@@ -130,7 +130,7 @@ Add the following JSON to the file:
   "manifestVersion": "1.8",
   "packageName": "{{SPFX_PACKAGE_NAME}}",
   "id": "{{SPFX_COMPONENT_ID}}",
-  "version": "1.0",
+  "version": "1.0.0",
   "developer": { .. },
   "name": {
     "short": "{{SPFX_COMPONENT_NAME}}"

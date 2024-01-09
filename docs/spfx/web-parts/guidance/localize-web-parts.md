@@ -1,7 +1,7 @@
 ---
 title: Localize SharePoint Framework client-side web parts
 description: Broaden the appeal of your web part by localizing it for different languages spoken by SharePoint users all over the world.
-ms.date: 02/14/2022
+ms.date: 12/05/2023
 ms.localizationpriority: high
 ---
 
@@ -183,8 +183,8 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
     {
       // ...
       "preconfiguredEntries": [{
-        "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-        "group": { "default": "Other" },
+        "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+        "group": { "default": "Advanced" },
         "title": { "default": "Greeting" },
         "description": { "default": "Greets the user" },
         "officeFabricIconFontName": "Page",
@@ -224,8 +224,8 @@ Properties that support localization are of type **ILocalizedString**. Each loca
   {
     // ...
     "preconfiguredEntries": [{
-      "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-      "group": { "default": "Other", "nl-NL": "Anders" },
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+      "group": { "default": "Advanced", "nl-NL": "Anders" },
       "title": { "default": "Greeting", "nl-NL": "Begroeting" },
       "description": { "default": "Greets the user", "nl-NL": "Begroet de gebruiker" },
       "officeFabricIconFontName": "Page",
@@ -591,8 +591,8 @@ Originally, the Greeting web part had the **greeting** property defined where th
       // ...
 
       "preconfiguredEntries": [{
-        "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-        "group": { "default": "Other", "nl-NL": "Anders" },
+        "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+        "group": { "default": "Advanced", "nl-NL": "Anders" },
         "title": { "default": "Greeting", "nl-NL": "Begroeting" },
         "description": { "default": "Greets the user", "nl-NL": "Begroet de gebruiker" },
         "officeFabricIconFontName": "Page",

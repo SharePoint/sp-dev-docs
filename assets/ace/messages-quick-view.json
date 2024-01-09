@@ -1,0 +1,84 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "@odata.type": "#microsoft.graph.message",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Image",
+                    "url": "https://raw.githubusercontent.com/SharePoint/sp-dev-docs/main/assets/ace/email-top.png"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "This control displays the last email message received in your inbox. To view the message, simply click on the button. The message will open directly in Outlook, allowing you to read and respond to it as needed.",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${from.emailAddress.name}",
+                                    "size": "Medium",
+                                    "weight": "${if(isRead, 'normal', 'bolder')}"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${subject}",
+                                    "spacing": "None",
+                                    "weight": "${if(isRead, 'normal', 'bolder')}"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${if(hasAttachments, '📎', '')} ${if(importance == 'normal', '', '❗')} ${if(flag.flagStatus == 'flagged', '🚩', '')}",
+                                    "horizontalAlignment": "Right"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "{{DATE(${sentDateTime}, COMPACT)}} {{TIME(${sentDateTime})}}",
+                                    "spacing": "None",
+                                    "size": "Small"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center"
+                        },
+                        {
+                            "type": "Column",
+                            "width": "auto",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${if(isRead, 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAY5JREFUSEvt1aGLwlAcB/DvQ2FNg6BFMPg3WDRZRayGLWkxKViUgUkYWgRNKy5psG52kxb/BoOwMtEwTaLwjudxntObb3onHMe9uvH97Pd9vDdCKaV44SK/Btjv9zAMAz6fD5lMBoIgeJqbOwELHo/HaLfbME3zFBqNRlGr1ZDNZrmQK3AZvFqtUKlUUCwWT0C/30e320U4HOZCN4BbcCAQcFSy3W49QWfAa/B18TyIHA4Hqus6Wq0WLqu4/mLejl5D9XoduVwOZL1eU1EUEYlE0Ol0EAqFeFl3n282G1SrVViWheFw+AnMZjMoioJSqQS/3/8UcjweoaoqZFlGMpl0AolEAqPRCOVy+SnkI7zX6yGfz2M+nzuBRqMBttFsgkeRy3A2ATuEzWbzFmBjTSYTFAoFLJfLh2qKxWLQNA3pdBqs7i+BVCoFdvctFovzqfWqsNMdj8dBCMF0OnUHvAbee+8f4Lb4RyuybRuPXnBuXbGLLxgMvh+03W5HB4MBGPCTiwGSJIH7y/wu+nLgDSewZ7NrDNFAAAAAAElFTkSuQmCC', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARBJREFUSEvtlS2qhUAYhl+LRbALYhMsrsAF2MXmLhRsJpugu7CJ3QW4AotgE8EiBsFimYNevJxz8Th6YZpThpnv55nvnT+OEELAsHEPgKYue4nGcSS+76NtW9pibtkVRUEUReCGYSCO46Cua6y9KIq3Ev11nqYJaZpC07St/wUURQFd1+F5HmzbhiAIt0DzPCPLMsRxjKqqYJrmJ8B1XfR9vzms7SroPfEeJ0kSkiT5BARBAMMwcBRwVNGZX1mWCMPwGLDr8i3Bat+l+FbpJcARaFmWbZrn+VMJbwHeQXmeb0PLsk4Pwb8Ad47UA6CqdSiRqqqQZZkafMWh6zo0TfNzD5g/ds+PRtsT9j8a6z14AbwnH7bn+xIdAAAAAElFTkSuQmCC')}",
+                                    "selectAction": {
+                                        "type": "Action.OpenUrl",
+                                        "url": "${webLink}"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "separator": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

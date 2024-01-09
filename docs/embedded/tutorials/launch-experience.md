@@ -1,30 +1,34 @@
 ---
-title: Configure Default Launch Experience for your Office Files  
-description: Configure Default Launch Experience for your Office Files  
+title: Configure Default Launch Experience for your Office Files
+description: Configure Default Launch Experience for your Office Files
 ms.date: 11/28/2023
-ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Configure Default Launch Experience for your Office Files  
+# Configure Default Launch Experience for your Office Files
 
-### In this article:</br>
-1. [Launch Office in 'View' or 'Edit' mode'](#Configure-Launch-mode-of-Office-Clients)</br>
-2. [Launch Desktop Clients Directly](#Open-Office-files-directly-in-Desktop-clients)
+## In this article:
 
-### Configure Launch mode of Office Clients
+1. [Launch Office in 'View' or 'Edit' mode'](#configure-launch-mode-of-office-clients)
+1. [Launch Desktop Clients Directly](#open-office-files-directly-in-desktop-clients)
 
-When retrieving a driveitem back from the Graph API per:
+## Configure Launch mode of Office Clients
 
-https://learn.microsoft.com/en-us/graph/api/driveitem-get?view=graph-rest-1.0
+When retrieving a `DriveItem` from the Microsoft Graph API with:
 
-There is a webUrl property which can be a link to WOPI for rendering supported office file types.  This url will look something like:
-    ```
-    https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true
-    ```
-When you use this webUrl it will open WOPI in the default mode (action=default). If you wish to override the default mode to force a specific mode (e.g. View for read-only and Edit for editor) you can augment the webUrl like this:
+```http
+/graph/api/driveitem-get?view=graph-rest-1.0
+```
 
-```C#
+The `webUrl` property in the response can be a link to Web Application Open Platform Interface (WOPI) for rendering supported office file types. The URL will look like:
+
+```http
+https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true
+```
+
+This `webUrl` will open WOPI in the default mode (`action=default`). If you wish to override the default mode to force a specific mode (e.g. View for read-only and Edit for editor), you can augment the `webUrl` like this:
+
+```csharp
 string webUrl = https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true;
 
 System.UriBuilder builder = new System.UriBuilder(webUrl);
@@ -35,49 +39,57 @@ builder.Query = queryDictionary.ToString();
 string modifiedWebUrl = builder.ToString();
 ```
 
-To learn more about WOPI Actions:
-https://learn.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions
+> [!TIP]
+> To learn more about WOPI Actions, see: [WOPI Discovery - WOPI Actions](/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions).
 
 ### Open Office files directly in Desktop clients
 
-To open your files directly in Office desktop you need to create an Office URI scheme. The format is as follows
+To open your files directly in the Office desktop clients, you need to create an Office URI scheme. The format is as follows:
 
-```< scheme-name >:< command-name >"|"< command-argument-descriptor > "|"< command-argument >```
-
-Where:
-- scheme-name is the name of application, for example ms-excel.
-- command-name:
-  - ofv for Open File View
-  - ofe for Open File Edit
-  - nft for New From Template
-- command-argument-descriptor and command-argument
-  - |u|{file url}
-  - |s|{save location} - only for New From Template
-
-> **_NOTE:_**
-New From Template may not work as you would expect for save location since the permissions schema is different from SharePoint Sites.
-
-For example:
+```xml
+<scheme-name>:<command-name>"|"<command-argument-descriptor>"|"<command-argument>
 ```
+
+Use the following table to replace the segments above:
+
+- **scheme-name**: the name of application, for example: *ms-excel*
+- **command-name**:
+  - `ofv` for Open File View
+  - `ofe` for Open File Edit
+  - `nft` for New From Template
+- **command-argument-descriptor** and **command-argument**:
+  - `|u|{file url}`
+  - `|s|{save location}`
+    - *only for New From Template*
+
+> [!NOTE]
+> The **New From Template** may not work as you would expect for save location since the permissions schema is different from SharePoint Sites.
+
+The following contains an example usage of the Office URI scheme:
+
+```text
 ms-word:ofv|u|https://contoso.com/document.docx
 ms-powerpoint:ofe|u|https://contoso.com/presentation.pptx
 ```
 
-Since WebUrl points to Office Online for office documents, getting the actual link requires two steps:
+Because the `webUrl` property points to Office Online for Office documents, you must get the actual link in two steps:
 
-- Getting the WebUrl of the parent folder
-- Appending the name of the file
+1. Getting the WebUrl of the parent folder
+1. Appending the name of the file
 
-For example:
+For example, the following scheme:
 
-`ms-word:ofe|u|{folder.WebUrl]/{item.Name}`
+```text
+ms-word:ofe|u|{folder.WebUrl]/{item.Name}
+```
 
-which will turn into
+... will result in the following scheme:
 
-`ms-word:ofe|u|https://contoso.sharepoint.com/contentstorage/CSP_1234765465/Document%20Library/MyDocument.docx`
+```text
+ms-word:ofe|u|https://contoso.sharepoint.com/contentstorage/CSP_1234765465/Document%20Library/MyDocument.docx
+```
 
-To learn more about Office URI schemes
+To learn more about Office URI schemes, see [Office URI Schemes](/office/client-developer/office-uri-schemes).
 
-https://learn.microsoft.com/en-us/office/client-developer/office-uri-schemes
-
-> **_NOTE:_** The Uri must be open in a blank window or tab
+> [!NOTE]
+> The Uri must be opened in a blank window or new tab.

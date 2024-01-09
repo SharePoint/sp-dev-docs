@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/13/2022
+ms.date: 12/4/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -143,7 +143,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {
