@@ -85,7 +85,7 @@ GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items/root/children
 To upload a file to a Container, submit an HTTP POST request to the `drives` endpoint and include the content of the file in the request:
 
 ```http
-PUT https://graph.microsoft.com/v1.0/drives/{{ContainerId}}/root:/Jan2024.docx:/content
+PUT https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/root:/Jan2024.docx:/content
 
 <binary contents of the file>
 ```
