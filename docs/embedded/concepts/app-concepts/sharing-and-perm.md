@@ -42,14 +42,14 @@ In addition, using these APIs have the following dependencies:
 
 Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint Embedded application won't be able to add Guest Users to the Container roles or grant them additive permissions.
 
-For further information please refer to:
+For more information, see:
 
 - [Sharing & permissions in the SharePoint modern experience - SharePoint in Microsoft 365 | Microsoft Learn](/sharepoint/modern-experience-sharing-permissions#guest-sharing)
 - [Manage sharing settings - SharePoint in Microsoft 365 | Microsoft Learn](/sharepoint/turn-external-sharing-on-or-off)
 
 ### Container “Partition”
 
-Note that the Sharing settings can be defined at the Tenant level as well as separately at the SharePoint Site and OneDrive “partitions”. For SharePoint Embedded, we have introduced a new “partition” called Containers that will apply to all SharePoint Embedded applications in the Consuming Tenant.
+The Sharing settings can be defined at the Tenant level and separately at the SharePoint Site and OneDrive “partitions”. For SharePoint Embedded, we have introduced a new “partition” called Containers that will apply to all SharePoint Embedded applications in the Consuming Tenant.
 
 This can be configured using the PowerShell cmdlet [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) as per this example:
 
@@ -63,7 +63,7 @@ Set-SPOTenant
 
 ![Sharing Partitions](../../images/SharingPartitions.png)
 
-Please note the following:
+Note the following:
 
 - [Microsoft.Online.SharePoint.PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) version 16.0.23701.0 or later is required to configure the Container “partition”
 - Sharing settings for a “partition” can never be more permissive than the Tenant level setting.
@@ -86,14 +86,14 @@ When granting additive permissions and the user invoking the API is a Guest User
 | Guest user            |                   New                   | **Fails** |
 | Guest user            |                Existing                 | Success   |
 
-Note that the user being granted additive permissions indicates whether that user has previously been granted additive permissions for any content in that specific Container.
+The user being granted additive permissions indicates whether that user has previously been granted additive permissions for any content in that specific Container.
 
 The failure scenario is expected behavior depending on the Consuming Tenant configuration settings.
 
 If this scenario is required to also succeed for Guest Users, then the following settings need to be set to `True` using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) PowerShell cmdlet in the Consuming Tenant:
 
 - `-AllowGuestUserShareToUsersNotInSiteCollection`
-  - Note that setting this to `True` also requires [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration) to be enabled.
+  - Setting this to `True` also requires [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration) to be enabled.
 - `-ShowPeoplePickerSuggestionsForGuestUsers`
 
 ## Adding Guest Users

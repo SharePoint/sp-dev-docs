@@ -80,6 +80,6 @@ For more information about billing, see [Billing](./billing.md).
 
 The user or admin who will set up billing relationship for SharePoint Embedded will need to have owner or contributor permissions on Azure subscription.
 
-If you do not have an Azure subscription, follow steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
+If you don't have an Azure subscription, follow steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
 
 The user or admin will need to have a SharePoint administrator role to operate SPO PowerShell cmdlets.

@@ -26,7 +26,7 @@ The `webUrl` property in the response can be a link to Web Application Open Plat
 https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true
 ```
 
-This `webUrl` will open WOPI in the default mode (`action=default`). If you wish to override the default mode to force a specific mode (e.g. View for read-only and Edit for editor), you can augment the `webUrl` like this:
+This `webUrl` will open WOPI in the default mode (`action=default`). If you wish to override the default mode to force a specific mode (for example, View for read-only and Edit for editor), you can augment the `webUrl` like this:
 
 ```csharp
 string webUrl = https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true;
