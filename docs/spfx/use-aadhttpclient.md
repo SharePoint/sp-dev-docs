@@ -376,5 +376,5 @@ All permissions granted through web API requests are stored with the **SharePoin
 
 The service principal can be re-enabled by using the **Enable-SPOTenantServicePrincipal** cmdlet. Instead, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the CLI for Microsoft 365 by using the **[spo serviceprincipal set](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-set/)** command.
 
- > [!NOTE]
-    > the **SharePoint Online Client Extensibility** principal is fully controlled by SharePoint via the API Access page in the SharePoint tenant administration site. Making any changes directy to the principal in the Azure AD portal could result in unpredictable behaviors and it is currently not supported.  
+> [!NOTE]
+> the **SharePoint Online Client Extensibility** principal is fully controlled by SharePoint via the API Access page in the SharePoint tenant administration site. Making any changes directy to the principal in the Azure AD portal could result in unpredictable behaviors and it is currently not supported.  
