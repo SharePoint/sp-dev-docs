@@ -375,3 +375,6 @@ No matter if the administrator denies or approves permissions requested by the s
 All permissions granted through web API requests are stored with the **SharePoint Online Client Extensibility** Azure AD application. If administrators don't want developers to use the web API request model and the **MSGraphClient** and **AadHttpClient** in their solutions, they can disable the **SharePoint Online Client Extensibility** service principal through PowerShell by using the **Disable-SPOTenantServicePrincipal** cmdlet.
 
 The service principal can be re-enabled by using the **Enable-SPOTenantServicePrincipal** cmdlet. Instead, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the CLI for Microsoft 365 by using the **[spo serviceprincipal set](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-set/)** command.
+
+ > [!NOTE]
+    > the **SharePoint Online Client Extensibility** principal is fully controlled by SharePoint via the API Access page in the SharePoint tenant administration site. Making any changes directy to the principal in the Azure AD portal could result in unpredictable behaviors and it is currently not supported.  
