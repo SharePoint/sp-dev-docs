@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 06/27/2023
+ms.date: 01/11/2024
 ms.localizationpriority: high
 ---
 
