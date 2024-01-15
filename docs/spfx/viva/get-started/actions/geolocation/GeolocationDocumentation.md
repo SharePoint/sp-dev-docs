@@ -181,15 +181,12 @@ For actions: `VivaAction.GetLocation` and `VivaAction.ShowLocation`, if the user
 
 ## Availability of geolocation actions
 
-> [!NOTE]
-> These new actions are currently **only available in the browser**. Viva Connections desktop and Viva Connections mobile support will be enabled later.
+The support matrix for location capabilities in Viva Connections is the following:
 
-After General Availability the support matrix for actions will look like:
-
-   Action     | Viva Connection Desktop | Viva Connections Mobile |  Browser
-------------- | ----------------------- | ----------------------- | ---------
-Get Location  | Not Supported           | Supported               | Supported
-Show Location | Not Supported           | Supported               | Supported
+   Action     | Teams Desktop and Web | Teams Mobile          | SharePoint (browser)
+------------- | --------------------- | --------------------- | ---------
+Get Location  | Not Supported         | Supported             | Supported
+Show Location | Not Supported         | Supported             | Supported
 
 ## See Also
 
