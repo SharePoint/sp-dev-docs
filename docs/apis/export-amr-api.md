@@ -35,7 +35,7 @@ Use ``ProvisionMigrationContainers`` method to provision the containers. Check [
 
 ### Use `CreateSPAsyncReadJob` method to start the export
 
-Use `CreateSPAsyncReadJob` method to export metadata from a single URL, or `CreateSPAsyncReadJobWithMultiUrl` from multiple URLs if needed.
+Use `CreateSPAsyncReadJob` method to export metadata from a single URL, or `CreateSPAsyncReadJobWithMultiUrl` from multiple URLs if needed. Check [AMR API Reference](amr-api-reference.md) for details.
 
 Get incremental updates with `ChangeToken` feature.
 
