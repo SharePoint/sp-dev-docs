@@ -47,7 +47,7 @@ Use ``ProvisionMigrationContainers`` method to provision the containers, upload 
 
 `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
-Upon creation of a new migration job, Migration API returns the Job ID, Track the status of the import with ``GetMigrationJobStatus`` method if needed, with the Azure Queue supplied.
+Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with ``GetMigrationJobStatus`` method if needed, with the Azure Queue supplied.
 
 Migration API generates logs in the manifest container. Check the log entries for migration results.
 
@@ -92,7 +92,7 @@ In order to ensure optimal performance for your migration projects, it's importa
 
 To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint Online infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
 
-## Special Topics
+## Special topics
 
 ### Migrating sharing events of files and folders
 

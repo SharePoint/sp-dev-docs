@@ -18,7 +18,7 @@ Manage dependencies easily and ensure your solution is using the latest version 
 
 Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID ``Microsoft.SharePointOnline.CSOM``.
 
-Check [Get to know SharePoint REST service](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
+Check [Get to know SharePoint REST service](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
 
 ## CreateSPAsyncReadJob method
 
@@ -167,7 +167,7 @@ A `EncryptionOption` object, containing the AES256CBCKey used to decrypt the out
 
 By default, AMR API doesn't encrypt the output and event queue. If set with AES256CBCKey, AMR API encrypts the output with the key supplied.
 
-See `[EncryptionOption](https://learn.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
+See `[EncryptionOption](https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
 
 #### azureContainerManifestUri
 
