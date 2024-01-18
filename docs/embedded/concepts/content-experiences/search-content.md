@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Use the Microsoft Search API in Microsoft Graph to search SharPoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This arcticle describes some examples.
 
-## Example 1: Search containers by type
+## Example 1: Search containers by container type
 This example queries all container by the specified container type. The response includes all container instances of the specified container type in the tenant.
 
 ### Request
