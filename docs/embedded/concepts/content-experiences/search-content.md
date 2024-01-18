@@ -143,7 +143,7 @@ Content-Type: application/json
                 "drive"
             ],
             "query": {
-                "queryString": "Title:'mango'"
+                "queryString": "Title:'mango' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
             }
         }
     ]
@@ -528,5 +528,5 @@ Content-type: application/json
 
 ## Recommendation
 
-- When searching for container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying container type will return all content the user has access to but may not be accessible by your application.
+- When searching for contaienr or container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying container type will return all content the user has access to but may not be accessible by your application.
   
