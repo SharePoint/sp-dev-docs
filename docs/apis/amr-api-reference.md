@@ -27,7 +27,7 @@ Creates an AMR job to read all the metadata of the specified SharePoint URL and 
 ### CreateSPAsyncReadJob syntax
 
 ```csharp
-public SPAsyncReadJobInfo CreateSPAsyncReadJob(Uri url,
+public SPAsyncReadJobInfo CreateSPAsyncReadJob(String url,
 SPAsyncReadOptions readOptions,
 EncryptionOption encryptionOption,
 string azureContainerManifestUri,
@@ -173,7 +173,7 @@ See `[EncryptionOption](https://learn.microsoft.com/dotnet/api/microsoft.sharepo
 
 Required.
 
-A **URI** value, which is the destination URL of the Azure Blob Storage Container containing the output manifest package.
+A **String** value, which is the destination URL of the Azure Blob Storage Container containing the output manifest package.
 
 See [Azure](../migration-azure.md) for instructions of using Azure Blob Storage Container in migration.
 
@@ -181,7 +181,7 @@ See [Azure](../migration-azure.md) for instructions of using Azure Blob Storage 
 
 Required.
 
-A **URI** value, which is the URL of the Azure Queue to receive read status messages.
+A **String** value, which is the URL of the Azure Queue to receive read status messages.
 
 Share `azureQueueReportUri` among different jobs if necessary. AMR API returns `JobID` to identify individual jobs created.
 
@@ -215,11 +215,11 @@ Creates an AMR job to read all the metadata of all SharePoint URLs specified, an
 
 ```csharp
 public SPAsyncReadJobInfo CreateSPAsyncReadJobWithMultiUrl(
-        Uri[] urls,
+        String[] urls,
         SPAsyncReadOptions readOptions,
         EncryptionOption encryptionOption,
-        Uri azureContainerManifestUri,
-        Uri azureQueueReportUri)
+        String azureContainerManifestUri,
+        String azureQueueReportUri)
 ```
 
 ### CreateSPAsyncReadJobWithMultiUrl parameters
