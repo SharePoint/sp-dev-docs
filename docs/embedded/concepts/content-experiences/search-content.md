@@ -386,7 +386,7 @@ Content-type: application/json
 ```
 
 ## Example 5: Search by content
-This example queries all the content across all containers of a specific contaienr type by the specified words. The response includes all driveItems that match the criteria.
+This example queries all the content by the specified words across all containers of a specific contaienr type. The response includes all driveItems that match the criteria.
 
 ### Request
 
