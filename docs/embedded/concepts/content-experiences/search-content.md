@@ -526,5 +526,5 @@ Content-type: application/json
 
 ## Recommendation
 
-- When searching for container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying container type will return all content the user has access to but may not be openable by your application.
+- When searching for container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying container type will return all content the user has access to but may not be accessible by your application.
   
