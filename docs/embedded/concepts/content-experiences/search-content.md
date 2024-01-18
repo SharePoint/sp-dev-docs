@@ -12,7 +12,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharPoint Embedded con
 Note: Search API only supports Delegated permissions.
 
 ## Example 1: Search containers by container type
-This example queries all container by the specified container type. The response includes all container instances of the specified container type in the tenant.
+This example queries all containers by the specified container type. The response includes all container instances of the specified container type in the tenant.
 
 ### Request
 
@@ -128,7 +128,7 @@ Content-type: application/json
 ```
 
 ## Example 2: Search containers by title
-This example queries all container by a specified container display name. The response includes all container instances in the tenant that match the criteria.
+This example queries all containers by a specified container display name. The response includes all container instances in the tenant that match the criteria.
 
 ### Request
 
@@ -200,7 +200,7 @@ Content-type: application/json
 ```
 
 ## Example 3: Search containers by container description
-This example queries all container by the specified container type and container description. The response includes all container instances in the tenant that match the criteria.
+This example queries all containers by the specified container type and container description. The response includes all container instances in the tenant that match the criteria.
 
 ### Request
 
@@ -528,5 +528,5 @@ Content-type: application/json
 
 ## Recommendation
 
-- When searching for contaienr or container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying container type will return all content the user has access to but may not be accessible by your application.
+- When searching for container or container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permission to the specified container type. Searching for container content without specifying the container type will return all content the user has access to but may not be accessible by your application.
   
