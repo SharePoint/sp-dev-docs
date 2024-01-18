@@ -95,7 +95,7 @@ Content-type: application/json
                           {
                               "hitId": "b!449DLtqMZEGv-G7C8riA9J6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
                               "rank": 3,
-                              "summary": "Everything about Strawberry",
+                              "summary": "About Strawberry",
                               "resource": {
                                   "@odata.type": "#microsoft.graph.drive",
                                   "id": "b!449DLtqMZEGv-G7C8riA9J6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
