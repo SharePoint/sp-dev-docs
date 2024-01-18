@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Search SharePoint Embedded content
 
-Use the Microsoft Search API in Microsoft Graph to search SharPoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This arcticle describes some examples.
+Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This article describes some examples.
 
 Note: Search API only supports Delegated permissions.
 
@@ -388,7 +388,7 @@ Content-type: application/json
 ```
 
 ## Example 5: Search by content
-This example queries all the content by the specified words across all containers of a specific contaienr type. The response includes all driveItems that match the criteria.
+This example queries all the content by the specified words across all containers of a specific container type. The response includes all driveItems that match the criteria.
 
 ### Request
 
@@ -528,5 +528,5 @@ Content-type: application/json
 
 ## Recommendation
 
-- When searching for container or container content, you should specify the desired container type by including ContainerTypeId as part of your **queryString**. Your application should have access permissions to the specified container type. Searching for container or container content without specifying container type will return all applicable content the user has access to in the tenant, and some of these content may not be accesible by your application.
+- When searching for container or container content, you should specify the desired container type by including the ContainerTypeId as part of your **queryString**. Your application should have access permissions to the specified container type. Searching for container or container content without specifying the container type will return all applicable content the user has access to in the tenant. Some of this content may not be accesible by your application.
   
