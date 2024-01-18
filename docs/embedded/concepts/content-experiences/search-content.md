@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This article describes some examples.
 
-Note: Search API only supports Delegated permissions.
+> Note: Search API only supports Delegated permissions.
 
 ## Example 1: Search containers by container type
 This example queries all containers by the specified container type. The response includes all container instances of the specified container type in the tenant.
