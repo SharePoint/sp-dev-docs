@@ -22,7 +22,7 @@ Check [Get to know SharePoint REST service](https://learn.microsoft.com/sharepoi
 
 ## CreateSPAsyncReadJob method
 
-Creates an AMR job to export all the metadata of the specified SharePoint URL and its children into the specified manifest container.
+Creates an AMR job to read all the metadata of the specified SharePoint URL and its children into the specified manifest container.
 
 ### CreateSPAsyncReadJob syntax
 
@@ -40,7 +40,7 @@ string azureQueueReportUri)
 
 Required.
 
-A **String** value containing the full path URL of the root path of the SharePoint List, files/folders, or Document Library to export. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
+A **String** value containing the full path URL of the root path of the SharePoint List, files/folders, or Document Library to read. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
 
 ##### Example
 
@@ -54,39 +54,39 @@ https://www.contoso.com/Shared%20Document
 
 Required.
 
-A `SPAsyncReadOptions` structure, with `readOption` values specifying the types of metadata to export.
+A `SPAsyncReadOptions` structure, with `readOption` values specifying the types of metadata to read.
 
 ##### IncludeVersions
 
 Optional.
 
-A **Bool** value to indicate if AMR API exports multiple versions of files and List Items.
+A **Bool** value to indicate if AMR API reads multiple versions of files and List Items.
 
-Default value is `false`. When absent or set to `false`, AMR API only exports the latest version of items.
+Default value is `false`. When absent or set to `false`, AMR API only reads the latest version of items.
 
 ##### IncludeSecurity
 
 Optional.
 
-A **Bool** value to indicate if AMR API exports Users and Groups information related to a Site.
+A **Bool** value to indicate if AMR API reads Users and Groups information related to a Site.
 
 Default value is `false`.
 
-AMR API exports Users and Groups as Authors or Modifiers as part of the metadata of the objects.
+AMR API reads Users and Groups as Authors or Modifiers as part of the metadata of the objects.
 
-If set to `true`, AMR API exports all Users in Site Collections. When exporting multiple Document Libraries under the same Site Collection, the same Users and Group may appear in the exported package multiple times.
+If set to `true`, AMR API reads all Users in Site Collections. When reading multiple Document Libraries under the same Site Collection, the same Users and Group may appear in the read package multiple times.
 
 ##### IncludeDirectDescendantsOnly
 
 Optional.
 
-A **Bool** value to indicate if AMR API exports only the metadata of the direct descendants.
+A **Bool** value to indicate if AMR API reads only the metadata of the direct descendants.
 
 Default value is `false`.
 
-If set to `true`, AMR API exports only the metadata of the direct descendants.
+If set to `true`, AMR API reads only the metadata of the direct descendants.
 
-Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when exporting metadata from a Document Library containing large number of items, as described in [Best practice](export-amr-api.md#export-security-and-permissions-on-top-level-if-possible) to avoid slow performance.
+Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when reading metadata from a Document Library containing large number of items, as described in [Best practice](read-amr-api.md#read-security-and-permissions-on-top-level-if-possible) to avoid slow performance.
 
 ##### IncludeExtendedMetadata
 
@@ -94,7 +94,7 @@ Optional.
 
 Default value is `false`.
 
-When set to `false`, AMR API exports basic metadata:
+When set to `false`, AMR API reads basic metadata:
 
 - List
 - Folder
@@ -103,7 +103,7 @@ When set to `false`, AMR API exports basic metadata:
 - Roles
 - Role Assignments
 
-When set to `true`,  AMR API exports all metadata available:
+When set to `true`,  AMR API reads all metadata available:
 
 For Files:
 
@@ -126,24 +126,24 @@ For List Items:
 - Activities
 - List Item shortcuts
 
-Including extended metadata slows down the export significantly. For file share migrations, keep the default value `false`. Set to `true` only when necessary, for complex migration projects.
+Including extended metadata slows down the read significantly. For file share migrations, keep the default value `false`. Set to `true` only when necessary, for complex migration projects.
 
 ##### IncludePermission
 
 Optional.
 
-A **Bool** value to indicate if permissions export is needed. Default value is `false`.
+A **Bool** value to indicate if permissions read is needed. Default value is `false`.
 
-When set to `true`, AMR API exports permission metadata in `RoleAssignments` tags in `Manifest.xml` files. The file includes all distinguished permission metadata for each exported SharePoint object, along with property `ScopeId`.
+When set to `true`, AMR API reads permission metadata in `RoleAssignments` tags in `Manifest.xml` files. The file includes all distinguished permission metadata for each read SharePoint object, along with property `ScopeId`.
 
 ##### Using IncludeSecurity with IncludePermission
 
-`IncludeSecurity` exports the full list of all Users and Groups on the target Site. Optionally use `IncludePermission` to export permission metadata, if needed. There are four possible combinations for using both **readOption**:
+`IncludeSecurity` reads the full list of all Users and Groups on the target Site. Optionally use `IncludePermission` to read permission metadata, if needed. There are four possible combinations for using both **readOption**:
 
-- `IncludeSecurity`=`true`, `IncludePermission`=`false`: exports the full list of all Users and Groups information of the target Site, without permissions.
-- `IncludeSecurity`=`false`, `IncludePermission`=`true`: exports permissions with a list of corresponding User and Group information, related to the permissions exported.
-- `IncludeSecurity`=`true`, `IncludePermission`=`true`: exports permissions with the full list of all User and Group information of the target Site.
-- `IncludeSecurity`=`false`, `IncludePermission`=`false`: exports no permissions, Users or Groups information.
+- `IncludeSecurity`=`true`, `IncludePermission`=`false`: reads the full list of all Users and Groups information of the target Site, without permissions.
+- `IncludeSecurity`=`false`, `IncludePermission`=`true`: reads permissions with a list of corresponding User and Group information, related to the permissions read.
+- `IncludeSecurity`=`true`, `IncludePermission`=`true`: reads permissions with the full list of all User and Group information of the target Site.
+- `IncludeSecurity`=`false`, `IncludePermission`=`false`: reads no permissions, Users or Groups information.
 
 ##### StartChangeToken
 
@@ -153,11 +153,11 @@ A **Integer** value containing the changeToken item.
 
 By default, when no `StartChangeToken` is provided, `CreateSPAsyncReadJob` method returns all items available, based on the parameters. A `CurrentChangeToken` value is returned every time.
 
-To export only the items that changed since last export, set a `StartChangeToken` in subsequent calls to `CreateSPAsyncReadJob`. Use `CurrentChangeToken` returned from last call as the value of `StartChangeToken`.
+To read only the items that changed since last read, set a `StartChangeToken` in subsequent calls to `CreateSPAsyncReadJob`. Use `CurrentChangeToken` returned from last call as the value of `StartChangeToken`.
 
-AMR API returns an error and stops the export, if it receives an invalid `StartChangeToken` value.
+AMR API returns an error and stops the read, if it receives an invalid `StartChangeToken` value.
 
-Be careful when using this feature with large number of items. The export job could run for extended duration. AMR API cancels jobs that run over 10 minutes to protect the SharePoint infrastructure.
+Be careful when using this feature with large number of items. The read job could run for extended duration. AMR API cancels jobs that run over 10 minutes to protect the SharePoint infrastructure.
 
 #### encryptionOption
 
@@ -181,7 +181,7 @@ See [Azure](../migration-azure.md) for instructions of using Azure Blob Storage 
 
 Required.
 
-A **URI** value, which is the URL of the Azure Queue to receive export status messages.
+A **URI** value, which is the URL of the Azure Queue to receive read status messages.
 
 Share `azureQueueReportUri` among different jobs if necessary. AMR API returns `JobID` to identify individual jobs created.
 
@@ -197,11 +197,11 @@ AMR API generates a `JobEnd` event when it estimates item count for each `url`. 
 
 #### AzureContainerManifest
 
-A **Uri** value that contains the URL to access the Azure Blob Storage Container, which contains the metadata exported.
+A **Uri** value that contains the URL to access the Azure Blob Storage Container, which contains the metadata read.
 
 #### JobQueueUri
 
-A **Uri** value that contains the URL of the Azure Queue used for export status.
+A **Uri** value that contains the URL of the Azure Queue used for read status.
 
 #### EncryptionKey
 
@@ -209,7 +209,7 @@ A **Byte Array** value that contains the AES-CBC Key for decrypting the manifest
 
 ## CreateSPAsyncReadJobWithMultiUrl method
 
-Creates an AMR job to export all the metadata of all SharePoint URLs specified, and their children into the specified manifest container.
+Creates an AMR job to read all the metadata of all SharePoint URLs specified, and their children into the specified manifest container.
 
 ### CreateSPAsyncReadJobWithMultiUrl syntax
 
@@ -230,7 +230,7 @@ See `CreateSPAsyncReadJob` method for details of `readOptions`, `encryptionOptio
 
 Required.
 
-A **Uri** **Array** containing the full path URLs of the root paths of the SharePoint Lists, files/folders, or Document Libraries to export. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
+A **Uri** **Array** containing the full path URLs of the root paths of the SharePoint Lists, files/folders, or Document Libraries to read. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
 
 Specify multiple URLs when needed. Aggravated call with multiple URLs may improve the performance. See [Performance](export-amr-api.md#performance) for details.
 

@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Asynchronous Metadata Read (AMR) API Introduction"
-description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool to export metadata from SharePoint.
+description: This document is an overview on how to read metadata from SharePoint, targeted to SharePoint migration tool developers.
 ms.date: 01/16/2024
 ms.author: ranren
 author: underreview
@@ -102,4 +102,4 @@ In order to ensure optimal performance for your migration projects, it's importa
 
 ### I'm seeing throttling messages
 
-To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint Online infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
+To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
