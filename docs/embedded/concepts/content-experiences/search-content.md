@@ -42,89 +42,43 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-   "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)"
-   "value": [
-          {
-              "searchTerms": [],
-              "hitsContainers": [
-                  {
-                      "hits": [
-                          {
-                              "hitId": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "rank": 1,
-                              "summary": "Everything about Mango",
-                              "resource": {
-                                  "@odata.type": "#microsoft.graph.drive",
-                                  "id": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                  "createdBy": {
-                                      "user": {
-                                          "displayName": "Thomas Anderson"
-                                      }
-                                  },
-                                  "lastModifiedDateTime": "2024-01-17T01:03:07Z",
-                                  "name": "AllItems.aspx",
-                                  "parentReference": {
-                                      "sharepointIds": {
-                                          "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                      },
-                                      "siteId": "m365x87330712.sharepoint.com,b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                                  },
-                                  "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71/Document Library/Forms/AllItems.aspx"
-                              }
-                          },
-                          {
-                              "hitId": "b!3puSISF5wkWmOEhjMJDysJ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "rank": 2,
-                              "summary": "Everything about Pineapple",
-                              "resource": {
-                                  "@odata.type": "#microsoft.graph.drive",
-                                  "id": "b!3puSISF5wkWmOEhjMJDysJ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                  "createdBy": {
-                                      "user": {
-                                          "displayName": "Thomas Anderson"
-                                      }
-                                  },
-                                  "lastModifiedDateTime": "2024-01-17T01:04:33Z",
-                                  "name": "AllItems.aspx",
-                                  "parentReference": {
-                                      "sharepointIds": {
-                                          "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                      },
-                                      "siteId": "m365x87330712.sharepoint.com,21929bde-7921-45c2-a638-48633090f2b0,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                                  },
-                                  "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_21929bde-7921-45c2-a638-48633090f2b0/Document Library/Forms/AllItems.aspx"
-                              }
-                          },
-                          {
-                              "hitId": "b!449DLtqMZEGv-G7C8riA9J6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "rank": 3,
-                              "summary": "About Strawberry",
-                              "resource": {
-                                  "@odata.type": "#microsoft.graph.drive",
-                                  "id": "b!449DLtqMZEGv-G7C8riA9J6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                  "createdBy": {
-                                      "user": {
-                                          "displayName": "Thomas Anderson"
-                                      }
-                                  },
-                                  "lastModifiedDateTime": "2024-01-13T21:35:14Z",
-                                  "name": "AllItems.aspx",
-                                  "parentReference": {
-                                      "sharepointIds": {
-                                          "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                      },
-                                      "siteId": "m365x87330712.sharepoint.com,2e438fe3-8cda-4164-aff8-6ec2f2b880f4,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                                  },
-                                  "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_2e438fe3-8cda-4164-aff8-6ec2f2b880f4/Document Library/Forms/AllItems.aspx"
-                              }
-                          }
-                      ],
-                      "total": 3,
-                      "moreResultsAvailable": false
-                  }
-              ]
-          }
-      ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+    "value": [
+        {
+            "searchTerms": [],
+            "hitsContainers": [
+                {
+                    "hits": [
+                        {
+                            "hitId": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                            "rank": 1,
+                            "summary": "Everything about Contoso",
+                            "resource": {
+                                "@odata.type": "#microsoft.graph.drive",
+                                "id": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                                "createdBy": {
+                                    "user": {
+                                        "displayName": "Dylan Williams"
+                                    }
+                                },
+                                "lastModifiedDateTime": "2024-01-18T19:45:25Z",
+                                "name": "AllItems.aspx",
+                                "parentReference": {
+                                    "sharepointIds": {
+                                        "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
+                                    },
+                                    "siteId": "contoso.sharepoint.com,05031a50-e9c7-474c-889e-7cf44659a5b2,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
+                                },
+                                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_05031a50-e9c7-474c-889e-7cf44659a5b2/Document Library/Forms/AllItems.aspx"
+                            }
+                        }
+                    ],
+                    "total": 1,
+                    "moreResultsAvailable": false
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -144,7 +98,7 @@ Content-Type: application/json
                 "drive"
             ],
             "query": {
-                "queryString": "Title:'mango' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+                "queryString": "Title:'contoso' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
             }
         }
     ]
@@ -158,45 +112,45 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-   "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)"
-   "value": [
-          {
-              "searchTerms": [
-                  "mango"
-              ],
-              "hitsContainers": [
-                  {
-                      "hits": [
-                          {
-                              "hitId": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "rank": 1,
-                              "summary": "Everything about Mango",
-                              "resource": {
-                                  "@odata.type": "#microsoft.graph.drive",
-                                  "id": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                  "createdBy": {
-                                      "user": {
-                                          "displayName": "Thomas Anderson"
-                                      }
-                                  },
-                                  "lastModifiedDateTime": "2024-01-17T01:03:07Z",
-                                  "name": "AllItems.aspx",
-                                  "parentReference": {
-                                      "sharepointIds": {
-                                          "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                      },
-                                      "siteId": "m365x87330712.sharepoint.com,b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                                  },
-                                  "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71/Document Library/Forms/AllItems.aspx"
-                              }
-                          }
-                      ],
-                      "total": 1,
-                      "moreResultsAvailable": false
-                  }
-              ]
-          }
-      ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+    "value": [
+        {
+            "searchTerms": [
+                "contoso"
+            ],
+            "hitsContainers": [
+                {
+                    "hits": [
+                        {
+                            "hitId": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                            "rank": 1,
+                            "summary": "Everything about Contoso",
+                            "resource": {
+                                "@odata.type": "#microsoft.graph.drive",
+                                "id": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                                "createdBy": {
+                                    "user": {
+                                        "displayName": "Dylan Williams"
+                                    }
+                                },
+                                "lastModifiedDateTime": "2024-01-18T19:45:25Z",
+                                "name": "AllItems.aspx",
+                                "parentReference": {
+                                    "sharepointIds": {
+                                        "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
+                                    },
+                                    "siteId": "contoso.sharepoint.com,05031a50-e9c7-474c-889e-7cf44659a5b2,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
+                                },
+                                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_05031a50-e9c7-474c-889e-7cf44659a5b2/Document Library/Forms/AllItems.aspx"
+                            }
+                        }
+                    ],
+                    "total": 1,
+                    "moreResultsAvailable": false
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -232,69 +186,46 @@ Content-type: application/json
 {
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
     "value": [
-      {
-          "searchTerms": [],
-          "hitsContainers": [
-              {
-                  "hits": [
-                      {
-                          "hitId": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                          "rank": 1,
-                          "summary": "<c0>Everything</c0> about Mango<ddd/>",
-                          "resource": {
-                              "@odata.type": "#microsoft.graph.drive",
-                              "id": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "createdBy": {
-                                  "user": {
-                                      "displayName": "Thomas Anderson"
-                                  }
-                              },
-                              "lastModifiedDateTime": "2024-01-17T01:03:07Z",
-                              "name": "AllItems.aspx",
-                              "parentReference": {
-                                  "sharepointIds": {
-                                      "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                  },
-                                  "siteId": "m365x87330712.sharepoint.com,b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                              },
-                              "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71/Document Library/Forms/AllItems.aspx"
-                          }
-                      },
-                      {
-                          "hitId": "b!3puSISF5wkWmOEhjMJDysJ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                          "rank": 2,
-                          "summary": "<c0>Everything</c0> about Pineapple<ddd/>",
-                          "resource": {
-                              "@odata.type": "#microsoft.graph.drive",
-                              "id": "b!3puSISF5wkWmOEhjMJDysJ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                              "createdBy": {
-                                  "user": {
-                                      "displayName": "Thomas Anderson"
-                                  }
-                              },
-                              "lastModifiedDateTime": "2024-01-17T01:04:33Z",
-                              "name": "AllItems.aspx",
-                              "parentReference": {
-                                  "sharepointIds": {
-                                      "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
-                                  },
-                                  "siteId": "m365x87330712.sharepoint.com,21929bde-7921-45c2-a638-48633090f2b0,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                              },
-                              "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_21929bde-7921-45c2-a638-48633090f2b0/Document Library/Forms/AllItems.aspx"
-                          }
-                      }
-                  ],
-                  "total": 2,
-                  "moreResultsAvailable": false
-              }
-          ]
-      }
-  ]
+        {
+            "searchTerms": [],
+            "hitsContainers": [
+                {
+                    "hits": [
+                        {
+                            "hitId": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                            "rank": 1,
+                            "summary": "<c0>Everything</c0> about Contoso<ddd/>",
+                            "resource": {
+                                "@odata.type": "#microsoft.graph.drive",
+                                "id": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                                "createdBy": {
+                                    "user": {
+                                        "displayName": "Dylan Williams"
+                                    }
+                                },
+                                "lastModifiedDateTime": "2024-01-18T19:45:25Z",
+                                "name": "AllItems.aspx",
+                                "parentReference": {
+                                    "sharepointIds": {
+                                        "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4"
+                                    },
+                                    "siteId": "contoso.sharepoint.com,05031a50-e9c7-474c-889e-7cf44659a5b2,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
+                                },
+                                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_05031a50-e9c7-474c-889e-7cf44659a5b2/Document Library/Forms/AllItems.aspx"
+                            }
+                        }
+                    ],
+                    "total": 1,
+                    "moreResultsAvailable": false
+                }
+            ]
+        }
+    ]
 }
 ```
 
 ## Example 4: Search for content by title in a specific container
-This example queries all the content in a specific container instance by a specific title. The response includes all driveItems in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance. The response includes all driveItems in the specific container instance that match the criteria.
 
 ### Request
 
@@ -309,7 +240,7 @@ Content-Type: application/json
                 "driveItem"
             ],
             "query": {
-                "queryString": "Title:'mango' AND ContainerId:b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0"
+                "queryString": "Title:'contoso' AND ContainerId:b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0"
             }
         }
     ]
@@ -323,59 +254,59 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)"
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
     "value": [
         {
             "searchTerms": [
-                "mango",
-                "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0"
+                "contoso",
+                "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0"
             ],
             "hitsContainers": [
                 {
                     "hits": [
                         {
-                            "hitId": "01H6SWAJGUN3XLVV4LSRGIJP2K2UYCT2SA",
+                            "hitId": "01SHAK4OWIBDXV4NG2JVFLSGUXVKZ5VF5E",
                             "rank": 1,
-                            "summary": "A mango is an edible stone fruit produced by the tropical tree Mangifera indica. It is believed to have originated in southern Asia, particularly in eastern India, Bangladesh, and<ddd/>",
+                            "summary": "Contoso Detailed Design Contoso Product Specification",
                             "resource": {
                                 "@odata.type": "#microsoft.graph.driveItem",
-                                "size": 412,
+                                "size": 56,
                                 "fileSystemInfo": {
-                                    "createdDateTime": "2024-01-17T01:03:07Z",
-                                    "lastModifiedDateTime": "2024-01-17T01:03:07Z"
+                                    "createdDateTime": "2024-01-18T19:46:48Z",
+                                    "lastModifiedDateTime": "2024-01-18T19:46:48Z"
                                 },
                                 "listItem": {
                                     "@odata.type": "#microsoft.graph.listItem",
                                     "fields": {},
-                                    "id": "baee6ed4-8bd7-4c94-84bf-4ad53029ea40"
+                                    "id": "5eef08c8-da34-4a4d-b91a-97aab3da97a4"
                                 },
-                                "id": "01H6SWAJGUN3XLVV4LSRGIJP2K2UYCT2SA",
+                                "id": "01SHAK4OWIBDXV4NG2JVFLSGUXVKZ5VF5E",
                                 "createdBy": {
                                     "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
+                                        "displayName": "Dylan Williams",
+                                        "email": "dywilliams@contoso.onmicrosoft.com"
                                     }
                                 },
-                                "createdDateTime": "2024-01-17T01:03:07Z",
+                                "createdDateTime": "2024-01-18T19:46:48Z",
                                 "lastModifiedBy": {
                                     "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
+                                        "displayName": "Dylan Williams",
+                                        "email": "dywilliams@contoso.onmicrosoft.com"
                                     }
                                 },
-                                "lastModifiedDateTime": "2024-01-17T01:03:07Z",
-                                "name": "mango.txt",
+                                "lastModifiedDateTime": "2024-01-18T19:46:48Z",
+                                "name": "contoso.txt",
                                 "parentReference": {
-                                    "driveId": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                    "id": "01H6SWAJFPJ5Q5P6YD6VCZHPV7PKILUJ65",
+                                    "driveId": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                                    "id": "01SHAK4OVPJ5Q5P6YD6VCZHPV7PKILUJ65",
                                     "sharepointIds": {
                                         "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4",
-                                        "listItemId": "2",
-                                        "listItemUniqueId": "baee6ed4-8bd7-4c94-84bf-4ad53029ea40"
+                                        "listItemId": "1",
+                                        "listItemUniqueId": "5eef08c8-da34-4a4d-b91a-97aab3da97a4"
                                     },
-                                    "siteId": "m365x87330712.sharepoint.com,b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
+                                    "siteId": "contoso.sharepoint.com,05031a50-e9c7-474c-889e-7cf44659a5b2,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
                                 },
-                                "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71/Document Library/mango.txt"
+                                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_05031a50-e9c7-474c-889e-7cf44659a5b2/Document Library/contoso.txt"
                             }
                         }
                     ],
@@ -404,7 +335,7 @@ Content-Type: application/json
                 "driveItem"
             ],
             "query": {
-                "queryString": "'fruit' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+                "queryString": "'contoso' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
             }
         }
     ]
@@ -422,103 +353,58 @@ Content-type: application/json
     "value": [
         {
             "searchTerms": [
-                "fruit"
+                "contoso"
             ],
             "hitsContainers": [
                 {
                     "hits": [
                         {
-                            "hitId": "01H6SWAJGUN3XLVV4LSRGIJP2K2UYCT2SA",
+                            "hitId": "01SHAK4OWIBDXV4NG2JVFLSGUXVKZ5VF5E",
                             "rank": 1,
-                            "summary": "<ddd/><c0>fruit</c0> produced by the tropical tree Mangifera indica. It is believed to have originated in<ddd/><c0>fruit</c0> varies in size, shape, sweetness, skin color, and flesh color, which may be pale <ddd/>",
+                            "summary": "<c0>Contoso</c0> Detailed Design <c0>Contoso</c0> Product Specification<ddd/>",
                             "resource": {
                                 "@odata.type": "#microsoft.graph.driveItem",
-                                "size": 412,
+                                "size": 56,
                                 "fileSystemInfo": {
-                                    "createdDateTime": "2024-01-17T01:03:07Z",
-                                    "lastModifiedDateTime": "2024-01-17T01:03:07Z"
+                                    "createdDateTime": "2024-01-18T19:46:48Z",
+                                    "lastModifiedDateTime": "2024-01-18T19:46:48Z"
                                 },
                                 "listItem": {
                                     "@odata.type": "#microsoft.graph.listItem",
                                     "fields": {},
-                                    "id": "baee6ed4-8bd7-4c94-84bf-4ad53029ea40"
+                                    "id": "5eef08c8-da34-4a4d-b91a-97aab3da97a4"
                                 },
-                                "id": "01H6SWAJGUN3XLVV4LSRGIJP2K2UYCT2SA",
+                                "id": "01SHAK4OWIBDXV4NG2JVFLSGUXVKZ5VF5E",
                                 "createdBy": {
                                     "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
+                                        "displayName": "Dylan Williams",
+                                        "email": "dywilliams@contoso.onmicrosoft.com"
                                     }
                                 },
-                                "createdDateTime": "2024-01-17T01:03:07Z",
+                                "createdDateTime": "2024-01-18T19:46:48Z",
                                 "lastModifiedBy": {
                                     "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
+                                        "displayName": "Dylan Williams",
+                                        "email": "dywilliams@contoso.onmicrosoft.com"
                                     }
                                 },
-                                "lastModifiedDateTime": "2024-01-17T01:03:07Z",
-                                "name": "mango.txt",
+                                "lastModifiedDateTime": "2024-01-18T19:46:48Z",
+                                "name": "contoso.txt",
                                 "parentReference": {
-                                    "driveId": "b!sd3IsKvnekW7t21LBHuNcZ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                    "id": "01H6SWAJFPJ5Q5P6YD6VCZHPV7PKILUJ65",
-                                    "sharepointIds": {
-                                        "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4",
-                                        "listItemId": "2",
-                                        "listItemUniqueId": "baee6ed4-8bd7-4c94-84bf-4ad53029ea40"
-                                    },
-                                    "siteId": "m365x87330712.sharepoint.com,b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
-                                },
-                                "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_b0c8ddb1-e7ab-457a-bbb7-6d4b047b8d71/Document Library/mango.txt"
-                            }
-                        },
-                        {
-                            "hitId": "01SMRBLT7M5MSDYQRREFDJ4JT3FGVN2APQ",
-                            "rank": 2,
-                            "summary": "<ddd/><c0>fruit</c0>; it is the most economically significant plant in the family Bromeliaceae. The <ddd/>",
-                            "resource": {
-                                "@odata.type": "#microsoft.graph.driveItem",
-                                "size": 443,
-                                "fileSystemInfo": {
-                                    "createdDateTime": "2024-01-17T01:04:33Z",
-                                    "lastModifiedDateTime": "2024-01-17T01:04:33Z"
-                                },
-                                "listItem": {
-                                    "@odata.type": "#microsoft.graph.listItem",
-                                    "fields": {},
-                                    "id": "3c24ebec-3142-4621-9e26-7b29aadd01f0"
-                                },
-                                "id": "01SMRBLT7M5MSDYQRREFDJ4JT3FGVN2APQ",
-                                "createdBy": {
-                                    "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
-                                    }
-                                },
-                                "createdDateTime": "2024-01-17T01:04:33Z",
-                                "lastModifiedBy": {
-                                    "user": {
-                                        "displayName": "Thomas Anderson",
-                                        "email": "thanderson@m365x87330712.onmicrosoft.com"
-                                    }
-                                },
-                                "lastModifiedDateTime": "2024-01-17T01:04:33Z",
-                                "name": "pineapple.txt",
-                                "parentReference": {
-                                    "driveId": "b!3puSISF5wkWmOEhjMJDysJ6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
-                                    "id": "01SMRBLT5PJ5Q5P6YD6VCZHPV7PKILUJ65",
+                                    "driveId": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                                    "id": "01SHAK4OVPJ5Q5P6YD6VCZHPV7PKILUJ65",
                                     "sharepointIds": {
                                         "listId": "26d6a67d-bd07-4646-9c5b-85b0e519d6f4",
                                         "listItemId": "1",
-                                        "listItemUniqueId": "3c24ebec-3142-4621-9e26-7b29aadd01f0"
+                                        "listItemUniqueId": "5eef08c8-da34-4a4d-b91a-97aab3da97a4"
                                     },
-                                    "siteId": "m365x87330712.sharepoint.com,21929bde-7921-45c2-a638-48633090f2b0,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
+                                    "siteId": "contoso.sharepoint.com,05031a50-e9c7-474c-889e-7cf44659a5b2,e00b849e-3cec-4ade-8f7b-96d1f0f598fa"
                                 },
-                                "webUrl": "https://m365x87330712.sharepoint.com/contentstorage/CSP_21929bde-7921-45c2-a638-48633090f2b0/Document Library/pineapple.txt"
+                                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_05031a50-e9c7-474c-889e-7cf44659a5b2/Document Library/contoso.txt"
                             }
                         }
                     ],
-                    "total": 2,
+                    "total": 1,
                     "moreResultsAvailable": false
                 }
             ]
@@ -527,7 +413,8 @@ Content-type: application/json
 }
 ```
 
-## Recommendation
+## Known Limitation
 
-- When searching for container or container content, you should specify the desired container type by including the ContainerTypeId as part of your **queryString**. Your application should have access permissions to the specified container type. Searching for container or container content without specifying the container type will return all applicable content the user has access to in the tenant. Some of this content may not be accesible by your application.
+-  Search requests run in the context of the signed-in user. Search results are only scoped to enforce any access control applied to the items by the user. For example, search results will include all container or container content matching the search criteria and accessible by the user regardless of whether the SharePoint Embedded application is authorized to access. You should specify the desired container type by including the ContainerTypeId as part of your **queryString** when searching for containers or container content to ensure search results are properly scoped.
+-  For your application to access the containers or container content in search results, it must have access permissions to the corresponding container types. 
   
