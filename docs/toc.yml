@@ -562,6 +562,8 @@
         href: embedded/concepts/content-experiences/office-experience.md
       - name: User Experiences
         href: embedded/concepts/content-experiences/user-experiences-overview.md
+      - name: Search Content
+        href: embedded/concepts/content-experiences/search-content.md
     - name: Admin Experiences
       items:
       - name: Consuming Tenant Admin
@@ -570,7 +572,7 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
-    - name: Terms and Definitions
+    - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
