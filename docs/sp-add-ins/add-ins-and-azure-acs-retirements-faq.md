@@ -20,6 +20,10 @@ No, SharePoint Framework (SPFx) is the recommended development model for SharePo
 
 Absolutely, both tenant and site collection app catalogs are an essential part of the SharePoint developer ecosystem. They're used for both Add-Ins (retired) and SharePoint Framework (SPFx) based solutions (not retired), using the app catalogs for SharePoint Framework solution deployment stays fully supported, no changes! What will change is the support for SharePoint Add-Ins in the app catalog, after the end of life of SharePoint Add-Ins in Microsoft 365 (April 2026), you'll no longer be able to install and deploy SharePoint Add-Ins via the app catalog.
 
+## Will the SharePoint Store / public market place stay?
+
+Absolutely, the SharePoint / public market place are also used to offer SharePoint Framework (SPFx) based solutions and there will be no changes for that. You can still acquire SPFx solutions from the store, now and after Add-Ins have retired. Acquiring SharePoint Add-Ins via the store will not be possible anymore from July 1st 2024.
+
 ## My Add-In uses an app web, what about the data in that web?
 
 If your SharePoint Hosted Add-In is storing data in it's app web then that's something you need to take in account when you're rewriting your Add-In using SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web, when using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data you'll need to use SharePoint APIs to read the needed data from the app web and recreate it in the new location using a format that works for your updated application.
