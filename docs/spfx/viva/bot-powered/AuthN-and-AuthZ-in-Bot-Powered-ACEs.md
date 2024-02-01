@@ -67,8 +67,8 @@ If you select the "Copy Token" button, you can then open the [https://jwt.ms](ht
 
 Before digging into the actual development of the authentication logic in the Bot Powered ACE, it's important to understand how the authentication flow works.
 Whenever you configure an OAuth connection for your Bot, when the user signs in there's a popup dialog (both on desktop and on mobile) taking care of the actual authentication. The dialog allows the user to authenticate against the target Identity Provider. Then, it returns a magic code (a sequence of numbers), which you can then use in your own Bot code to acquire a token through the OAuth connection.
-When the configured Identity Provider is Microsoft Entra ID (also known as Azure Active Directory) the handling of the magic code is automatic and you need to use it in your code to acquire a token. For other Identity Providers, the user needs to copy the value of the magic code and provide it manually to your ACE. It's up to you to provide a custom button to do so. When the user selects the button, you can show a custom UI and collect the magic code in the logic. Once you have the magic code, you can acquire an actual access token. At the time of this writing, you need to manually define the UI to collect the magic code value. In fact, there isn't any native component or Card View template to do that.
-Even when you use Microsoft Entra ID, in case the user's browser blocks cookies, the end user needs to manually copy the magic code value in the clipboard. Then, they need to provide it to the Bot Powered ACE via a custom "Complete sign in" button and a custom developed user experience.
+When the configured Identity Provider is Microsoft Entra ID (previously known as Azure Active Directory) the handling of the magic code is automatic and you need to use it in your code to acquire a token. For other Identity Providers, the user needs to copy the value of the magic code and provide it manually to your ACE. It's up to you to provide a custom button to do so. When the user selects the button, you can show a custom UI and collect the magic code in the logic. Once you have the magic code, you can acquire an actual access token. At the time of this writing, you need to manually define the UI to collect the magic code value. In fact, there isn't any native component or Card View template to do that.
+Even when you use Microsoft Entra ID, in case the user's browser blocks cookies, the end user needs to manually copy the magic code value in the clipboard. Then, the user needs to provide the magic code to the Bot Powered ACE via a custom "Complete sign in" button and a custom developed user experience.
 The following diagram explains how the authentication flow works.
 
 ![The flow diagram explaining how the authentication process works in Bot Powered ACEs depending on the different types of OAuth connections configured.](./images/Bot-Powered-ACEs-SignIn-Flow-Diagram.png)
@@ -180,9 +180,9 @@ signInCardViewResponse.ViewId = SignInCardView_ID;
 cardViews.TryAdd(signInCardViewResponse.ViewId, signInCardViewResponse);
 ```
 
-First of all, you need to use the `SignInCardViewParameters` factory method to create a Sign In Card View, which is designed to implement the sign in logic. The Sign In Card View looks like a Primary Text Card View, in fact there are text components both in the header and in the body. However, the footer requires you to provide a button to implement extra logic to handle the completion of the sign in flow. By default, any Sign In Card View has a Sign in button that is provided out of the box in the Card View template. The extra button defined in the Card View is the one to implement the "Complete sign in" logic, which is needed as explained in the flow diagram in section ["Understanding the Bot Powered ACE authentication flow."](#understanding-the-bot-powered-ace-authentication-flow)
+First of all, you need to use the `SignInCardViewParameters` factory method to create a Sign In Card View, which is designed to implement the sign in logic. The Sign In Card View looks like a Primary Text Card View, in fact there are text components both in the header and in the body. However, the footer requires you to provide a button to implement extra logic to handle the completion of the sign in flow. By default, every Sign In Card View has a Sign in button that is provided out of the box in the Card View template. The extra button defined in the Card View is the one to implement the "Complete sign in" logic, which is needed as explained in the flow diagram in section ["Understanding the Bot Powered ACE authentication flow."](#understanding-the-bot-powered-ace-authentication-flow)
 In the sample implementation, when the user selects the "Complete sign in" button a custom Quick View is rendered in order to collect the magic code and process it to acquire the access token.
-One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value `signIn`.
+One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn".
 
 In the following code excerpt you can see the SignedOut card implementation, which defines a card that confirms to the user that the sign out was completed:
 
@@ -220,7 +220,7 @@ cardViews.TryAdd(signedOutCardViewResponse.ViewId, signedOutCardViewResponse);
 ```
 
 The Signed out Card View is a basic card with a simple text message in the body and a button to go back to the home Card View.
-In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in the article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
+In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in this article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
 
 Here follows the definition of the Quick View used to implement the "Complete sign in" logic.
 
@@ -332,8 +332,8 @@ protected async override Task<CardViewResponse> OnSharePointTaskGetCardViewAsync
 }
 ```
 
-You can retrieve the value of the magic code from the object of type `AceRequest` provided to the `OnSharePointTaskGetCardViewAsync` method. The magic code value is a property of the property of type `JObject` with name `Data`. Once you have the magic code value, you need to provide it to an infrastructural service of type `UserTokenClient`, which is available via dependency injection in the Bot logic.
-To properly handle the user token, which is a JWT (JSON Web Token) object, you can use the `System.IdentityModel.Tokens.Jwt` NuGet package. As such, add the package to your project and implement the following infrastructural methods like in the following code excerpt.
+You can retrieve the value of the magic code from the object of type `AceRequest` provided to the `OnSharePointTaskGetCardViewAsync` method. The magic code value is a dictionary value of the property of type `JObject` with name `Data`. Once you have the magic code value, you need to provide it to an infrastructural service of type `UserTokenClient`, which is available via dependency injection in the Bot logic.
+To properly handle the user token, which is a JWT (JSON Web Token) object, you can use the `System.IdentityModel.Tokens.Jwt` NuGet package. As such, add the package to your project and implement the following infrastructural methods.
 
 ```CSharp
 private async Task<(string displayName, string upn)> GetAuthenticatedUser(string magicCode, ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -347,7 +347,7 @@ private async Task<(string displayName, string upn)> GetAuthenticatedUser(string
         if (response != null && !string.IsNullOrEmpty(response.Token))
         {
             var token = new System.IdentityModel.Tokens.Jwt.JwtSecurityToken(response.Token);
-            displayName = token.Claims.FirstOrDefault(c => c.Type == "name")?.Value;
+            displayName = token.Claims.FirstOrDefault(c => c.Type == System.IdentityModel.Tokens.Jwt.JwtRegisteredClaimNames.Name)?.Value;
             upn = token.Claims.FirstOrDefault(c => c.Type == "upn")?.Value;
         }
     }
@@ -494,7 +494,7 @@ protected async override Task<BaseHandleActionResponse> OnSharePointTaskHandleAc
 
 The key part of the method is still the processing of the object of type `AceRequest`. If the user selects the "Submit" button in the "Complete sign in" Quick View, you can extract the magic code value from the `Data` property of the request and then you can go through the same process as before, invoking the `GetAuthenticatedUser` method.
 
-In the above code excerpt, you can also see how the sign out is handled, invoking the `SignOutUser` method, which is illustrated in the following code excerpt.
+In the above code excerpt, you can also see how the sign out is handled, invoking the custom `SignOutUser` method, which is illustrated in the following code excerpt.
 
 ```CSharp
 private async Task SignOutUser(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -511,7 +511,7 @@ private async Task SignOutUser(ITurnContext<IInvokeActivity> turnContext, Cancel
 }
 ```
 
-The method uses the `UserTokenClient` service to invoke its `SignOutUserAsync` method.
+The method uses the `UserTokenClient` service to invoke the `SignOutUserAsync` method.
 
 ### Configuring the manifest
 
@@ -530,6 +530,9 @@ The `id` property is the actual Client ID of the Microsoft App behind the scenes
 
 You're now ready to package the solution, deploy it on the SharePoint Online App Catalog, and play with. You can follow the instructions provided in section ["Run and test the solution"](./Building-Your-First-Bot-Powered-ACE.md#run-and-test-the-solution) of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
 
+When you deploy and run a multitenant Bot Powered ACE solution on a target tenant and you run it for the first time, users need to grant consent to your Azure Bot application to access Microsoft Graph with delegated permissions. The user's consent is collected through a custom dialog provided by Microsoft Entra ID. In the following picture you can see the user's consent dialog in action.
+
+![The popup dialog of Microsoft Entra ID to collect the user's consent to access specific resources based on the current Azure Bot application permissions.](./images/Bot-Powered-ACE-Secured-Consent-Multitenant.png)
 
 ## Important things to know
 
