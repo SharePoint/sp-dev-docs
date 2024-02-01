@@ -222,7 +222,6 @@ cardViews.TryAdd(signedOutCardViewResponse.ViewId, signedOutCardViewResponse);
 The Signed out Card View is a basic card with a simple text message in the body and a button to go back to the home Card View.
 In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in the article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
 
-
 Here follows the definition of the Quick View used to implement the "Complete sign in" logic.
 
 ```CSharp
@@ -515,6 +514,7 @@ private async Task SignOutUser(ITurnContext<IInvokeActivity> turnContext, Cancel
 The method uses the `UserTokenClient` service to invoke its `SignOutUserAsync` method.
 
 ### Configuring the manifest
+
 The implementation of the Bot Powered ACE is now complete and you just need to create a manifest file and deploy it into the target tenant SharePoint Online App Catalog. You can find step by step instructions about how to do that in the section ["Define the **manifest.json** file for the solution"](./Building-Your-First-Bot-Powered-ACE.md#define-the-manifestjson-file-for-the-solution) section of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
 
 To properly support authentication, you need to add a `webApplicationInfo` section to the **manifest.json** file, like illustrated in the following excerpt.
