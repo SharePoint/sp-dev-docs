@@ -1,41 +1,58 @@
 ---
 title: Overview of Viva Connections Extensibility
 description: Build engaging experiences for Microsoft Viva Connections with the SharePoint Framework.
-ms.date: 03/08/2023
+ms.date: 02/01/2024
 ms.localizationpriority: high
 ---
 # Overview of Viva Connections Extensibility
 
-Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx) as client-side extensibility or by using server-side implementations using a bot. Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive.
+[Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) is available as a desktop via the installable Microsoft Teams client, tablet and as mobile app in Microsoft Teams. All of these experiences, desktop & mobile, leverage the **SPFx or bots for all customizations and extensibility opportunities**.
+
+Viva Connections has a set of out of the box cards which are exposed through the dashboard feature. This dashboard **can be adjusted and configured based on the company requirements**. You can introduce new cards and experiences based on your business requirements.
+
+Viva Connections dashboard is available in the desktop, tablet and mobile experiences. It enables end users to easily access the most relevant information and applications directly for their role in the dashboard. You can personalize or introduce seperate dashboards based on audiences, which can be created using your company requirements.
 
 > [!TIP]
 > See the [Extend Microsoft Viva Connections learning path](https://aka.ms/m365/dev/learn/connections) for a structured way to learn how you can extend Viva Connections, what tools you need, and how to get started.
 
 ## Extensibility opportunities
 
-Viva Connections is available as a desktop via the installable Microsoft Teams client, tablet and as mobile app in Microsoft Teams. Both of these experiences, desktop & mobile, leverage the SPFx for all customizations and extensibility opportunities.
-
-### Viva Connections & Viva Home desktop experience
-
-The Viva Connections & Viva Home desktop experience is implemented using SharePoint modern pages in SharePoint Online. Developers use the SPFx to customize modern pages in SharePoint using client-side web parts and extensions.
+Viva Connections personalization and extensibility model is based on the Adaptive Card Extensions (ACEs) which can be created using the widely adopted SharePoint Framework (SPFx) as client-side extensibility or by using server-side implementations using a bot. 
 
 To learn more about customizing modern pages in SharePoint with SPFx, see [Overview of SPFx client-side web parts](../web-parts/overview-client-side-web-parts.md) & [Overview of SPFx Extensions](../extensions/overview-extensions.md).
 
-### Viva Connections & Viva Home dashboard & mobile experience
+### Viva Connections desktop experience
 
-The Viva Connections & Viva Home dashboard & mobile experience can be extended and customized using Adaptive Card Extensions (ACEs). Developers must use the SPFx create custom ACEs enabling customized experiences in Viva Connections dashboards and the Viva Connections mobile app.
+The Viva Connections desktop experience can be extended and customized using Adaptive Card Extensions (ACEs). Developers can use both SPFx and the bot powered option to introduce new Viva Connections Adaptive Card extensions to customize the dashboard based on the business requirements.
 
-To learn more about creating ACEs, see the following tutorial: [Build your first SharePoint Adaptive Card Extension](get-started/build-first-sharepoint-adaptive-card-extension.md).
+![Example Viva Connections desktop layout as available in 2024](./images/viva-connections-desktop.png)
 
-## Prerequisites
+### Viva Connections mobile & tablet experience
 
-The SPFx v1.13 release introduced support for building solutions to customize and extend Microsoft Viva Connections. To learn more about the SPFx v1.13 release, including prerequisites & how to install it, see: [SharePoint Framework v1.13 release notes](../release-1.13.md).
+The Viva Connections mobile experience is aligned with the desktop experience and is exposing by default the same ACEs as configured for the desktop area, optiomized for the mobile experiences.
+
+![Example Viva Connections mobile layout as available in 2024](./images/viva-connections-mobile-and-tablet.png)
+
+## Choosing the right model
+
+Here are the considerations on choosing the right extensibility model for your deployment:
+
+* SPFx created ACEs pattern is suitable for you when
+  * Your team is familiar with client-side web stack development
+  * You've built other extensibility to Microsoft 365 using SPFx - for SharePoint, Microsoft Teams, Office or Outlook
+  * You want the extensibility to be automatically hosted in the Microsoft 365 without costs
+
+* Bot powered ACEs is suitable for you when
+  * You've an existing bot which is used in the Microsoft Teams - you can easily extend that to be exposed in the Viva Connections as well
+  * You've implemented Microsoft 365 extensibility with server-side implementation hosted in Microsoft Azure
 
 ## Start building for Microsoft Viva Connections
 
-Once you've completed the prerequisites, start creating your first Adaptive Card Extension (ACE) in the following tutorials:
+Here are the resources to get started on creating your first Adaptive Card Extension (ACE) depending on your chosen path:
 
-- [Build your first SharePoint Adaptive Card Extension](get-started/build-first-sharepoint-adaptive-card-extension.md)
+- [Build your first SharePoint Adaptive Card Extension with SPFx](get-started/build-first-sharepoint-adaptive-card-extension.md)
+- [Overview of Bot Powered Adaptive Card Extensions](bot-powered/Overview-Bot-Powered-ACEs.md)
+- [Building your first Bot Powered Adaptive Card Extension](bot-powered/Building-Your-First-Bot-Powered-ACE.md)
 - [Advanced Card View Functionality](get-started/advanced-card-view-functionality.md)
 - [Advanced Quick View Functionality](get-started/advanced-quick-view-functionality.md)
 - [Adaptive Card Extensions and Teams Apps](get-started/adaptive-card-extensions-and-teams.md)

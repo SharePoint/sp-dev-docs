@@ -664,6 +664,14 @@
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
+  - name: Bot Powered ACEs
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
