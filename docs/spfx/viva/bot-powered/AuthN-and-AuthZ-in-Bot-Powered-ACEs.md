@@ -182,7 +182,7 @@ cardViews.TryAdd(signInCardViewResponse.ViewId, signInCardViewResponse);
 
 First of all, you need to use the `SignInCardViewParameters` factory method to create a Sign In Card View, which is designed to implement the sign in logic. The Sign In Card View looks like a Primary Text Card View, in fact there are text components both in the header and in the body. However, the footer requires you to provide a button to implement extra logic to handle the completion of the sign in flow. By default, every Sign In Card View has a Sign in button that is provided out of the box in the Card View template. The extra button defined in the Card View is the one to implement the "Complete sign in" logic, which is needed as explained in the flow diagram in section ["Understanding the Bot Powered ACE authentication flow."](#understanding-the-bot-powered-ace-authentication-flow)
 In the sample implementation, when the user selects the "Complete sign in" button a custom Quick View is rendered in order to collect the magic code and process it to acquire the access token.
-One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn".
+One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn."
 
 In the following code excerpt you can see the SignedOut card implementation, which defines a card that confirms to the user that the sign out was completed:
 
@@ -530,7 +530,7 @@ The `id` property is the actual Client ID of the Microsoft App behind the scenes
 
 You're now ready to package the solution, deploy it on the SharePoint Online App Catalog, and play with. You can follow the instructions provided in section ["Run and test the solution"](./Building-Your-First-Bot-Powered-ACE.md#run-and-test-the-solution) of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
 
-When you deploy and run a multitenant Bot Powered ACE solution on a target tenant and you run it for the first time, users need to grant consent to your Azure Bot application to access Microsoft Graph with delegated permissions. The user's consent is collected through a custom dialog provided by Microsoft Entra ID. In the following picture you can see the user's consent dialog in action.
+Consider a Bot Powered ACE configured for multitenant and deployed on a target tenant. The first time users run it, they need to grant consent to your Azure Bot application to access Microsoft Graph with delegated permissions. The user's consent is collected through a custom dialog provided by Microsoft Entra ID. In the following picture, you can see the user's consent dialog in action.
 
 ![The popup dialog of Microsoft Entra ID to collect the user's consent to access specific resources based on the current Azure Bot application permissions.](./images/Bot-Powered-ACE-Secured-Consent-Multitenant.png)
 
