@@ -10,9 +10,9 @@ ms.localizationpriority: high
 ### SharePoint Embedded Workflow
 
 1. An app creator (enterprise or ISV) builds an app that uses SharePoint Embedded containers
-    - App created in Azure Active Directory
+    - App created in Microsoft Entra ID
     - Container Type creation requested and ContainerTypeID received to develop app
-1. A subscriber (Consuming Tenant) installs the app into an Microsoft 365 tenant
+1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
 1. The app instantiates a container
 1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
 1. The app can link to the webUrl property of DriveItems to view, edit and co-author Office document types in Office Online (via Web browser)
@@ -56,6 +56,6 @@ Consider the examples below with the assumptions:
 |                                Example                                | Result  |                                   Reason                                   |
 | --------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------- |
 | App1 attempts an App-Only call to write a container of ContainerType1 | Allowed | App1 has the permission to write to containers of ContainerType1           |
-| App1 attempts to delete a container of ContainerType1                 | Denied  | App1 does not have the permission to delete containers of ContainerType1.  |
+| App1 attempts to delete a container of ContainerType1                 | Denied  | App1 doesn't have the permission to delete containers of ContainerType1.  |
 | User A makes a delegated request to read from ContainerX on App1      | Allowed | Both UserA and App1 have permissions to read containers of ContainerType1. |
-| UserA makes a delegated request to write to ContainerX on App1        | Denied  | UserA's role as a reader does not grant them write access                  |
+| UserA makes a delegated request to write to ContainerX on App1        | Denied  | UserA's role as a reader doesn't grant them write access                  |

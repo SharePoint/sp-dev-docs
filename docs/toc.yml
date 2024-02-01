@@ -538,10 +538,10 @@
     href: embedded/overview.md
   - name: Getting Started
     items:
-    - name: Create your first SharePoint Embedded Application
-      href: embedded/mslearn/m02-01-intro.md
     - name: Enable SharePoint Embedded
       href: embedded/getting-started/enable-sharepoint-embedded.md
+    - name: SharePoint Embedded for Visual Studio Code
+      href: embedded/getting-started/spembedded-for-vscode.md
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
   - name: Concepts
@@ -564,6 +564,8 @@
         href: embedded/concepts/content-experiences/office-experience.md
       - name: User Experiences
         href: embedded/concepts/content-experiences/user-experiences-overview.md
+      - name: Search Content
+        href: embedded/concepts/content-experiences/search-content.md
     - name: Admin Experiences
       items:
       - name: Consuming Tenant Admin
@@ -572,22 +574,24 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
-    - name: Terms and Definitions
+    - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
     - name: Register Container Type
       href: embedded/tutorials/register-ct.md
-    - name: SharePoint Embedded - Overview & Configuration
-      href: embedded/mslearn/m01-01-intro.md
-    - name: SharePoint Embedded - Building an App
-      href: embedded/mslearn/m02-01-intro.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
   - name: Terms of Service
     href: embedded/terms-of-service.md
+  - name: SharePoint Embedded Learning Modules
+    items:
+      - name: SharePoint Embedded - overview & configuration
+        href: /training/modules/sharepoint-embedded-setup
+      - name: SharePoint Embedded - building applications
+        href: /training/modules/sharepoint-embedded-create-app
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -621,7 +625,7 @@
   - name: Focus feature in Adaptive Card Extension
     href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
   - name: Card Designer advance API features
-    href: spfx/viva/features/card-designer/card-designer-api-support.md    
+    href: spfx/viva/features/card-designer/card-designer-api-support.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -660,6 +664,14 @@
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
+  - name: Bot Powered ACEs
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
