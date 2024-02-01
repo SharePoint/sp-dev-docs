@@ -23,6 +23,7 @@ In this series of articles, you can understand what Bot Powered Adaptive Card Ex
 The series of articles covers the following articles:
 1. [Building your first Bot Powered Adaptive Card Extension](./Building-Your-First-Bot-Powered-ACE.md)
 1. [Understanding Bot Powered Adaptive Card Extensions](Understanding-Bot-Powered-ACEs.md)
+1. [Authentication and Authorization in Bot Powered Adaptive Card Extensions](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)
 
 By reading the above articles, you're able to manage the development of Bot Powered ACEs for Microsoft Viva Connections and to apply the potential of this new technology.
 

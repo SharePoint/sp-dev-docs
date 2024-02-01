@@ -660,3 +660,8 @@ Now, run the Visual Studio project in debug mode (by pressing F5). Open the Micr
 ![The UI of the new Viva Connections Dashboard while adding a new ACE. There is the new Collect Feedback ACE available in the list of Adaptive Card Extensions. There is also the rendering of the sample ACE in background, already inserted in the Viva Connections Dashboard.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Adding-to-Dashboard.png)
 
 In the upcoming articles of this guidance, you also learn how to publish and host the Bot Powered ACEs in a real hosting environment on Microsoft Azure, rather than running them locally on a development environment.
+
+## Additional readings
+Now that you have built your first Bot Powered ACE, you are ready to dig into additional details reading the following articles. 
+ 
+* [Authentication and Authorization in Bot Powered Adaptive Card Extensions](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)
