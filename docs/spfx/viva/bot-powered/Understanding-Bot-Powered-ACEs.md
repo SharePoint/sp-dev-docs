@@ -6,8 +6,6 @@ ms.localizationpriority: high
 ---
 # Understanding Bot Powered Adaptive Card Extensions
 
-Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections are a new technology to extend the Microsoft Viva Connections Dashboard applying the Bot development model.
-
 Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections can be used to build custom experiences for the Microsoft Viva Connections Dashboard using the Bot development model.
 
 Bot Powered ACEs is the new addative extensibility extensibility model for the Viva Connections Dashboard, which can be also extended using the client-side ACEs built using the SharePoint Framework. SPFx based extensibility model is solid and mature, especially with the latest features introduced with the [component based ACEs](/sharepoint/dev/spfx/viva/design/designing-card) released with SharePoint Framework version 1.18.x.  However, there are some use cases that can't be addressed with a client-side development model, like just to make few examples:
@@ -42,8 +40,6 @@ As a developer, you don't need to dig into all the technical details of how an A
 It's important to know that the Bot Powered ACEs can only be created starting from a specific release of the [Microsoft Bot Framework SDK](/azure/bot-service/index-bf-sdk). In fact, starting from version 4.21.2 of the Bot Framework SDK there are new types supporting Bot Powered ACEs. You can develop Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js. As such, depending on your development background and eventually on your already existing code, you can extend your already existing Bots to support Bot Powered ACEs.
 
 ### Bot Framework SDK `SharePointActivityHandler`
-
-As already stated, starting from version 4.21.2 of the Bot Framework SDK there are new types supporting the creation of Bot Powered ACEs. Specifically, there's a specialized `ActivityHandler` type with name `SharePointActivityHandler` that provides the following overridable methods:
 
 Starting from version 4.21.2 of the Bot Framework SDK there are new types supporting the creation of Bot Powered ACEs. Specifically, there's a specialized `ActivityHandler` type with name `SharePointActivityHandler` that provides the following overridable methods:
 
