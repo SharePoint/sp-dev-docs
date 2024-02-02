@@ -14,9 +14,9 @@ In this tutorial, you learn how to build a basic Bot Powered ACE with a step by 
 
 You can learn more about the architecture of the Bot Powered ACEs by reading the article ["Understanding Bot Powered Adaptive Card Extensions."](./Understanding-Bot-Powered-ACEs.md)
 
-
 > [!TIP]
 > You can also follow these steps by watching this video on the Microsoft 365 & Power Platform Community YouTube Channel.
+
 > [!Video https://www.youtube.com/embed/JgyyJi0SWDs]
 
 ## Developing a Bot Powered ACE with Microsoft .NET
