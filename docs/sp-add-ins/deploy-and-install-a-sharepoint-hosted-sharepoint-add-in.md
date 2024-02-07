@@ -1,7 +1,7 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
-ms.date: 09/26/2023
+ms.date: 02/06/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -64,6 +64,8 @@ As the site collection is being created, SharePoint takes you back to the **Shar
 3. Find the **Employee Orientation** add-in in the **Add-ins you can add** section, and select its tile.
 
 4. Select **Trust It** in the consent dialog. The **Site Contents** page automatically opens and the add-in appears with a notation that it is installing. After it installs, users can select the tile to run the add-in.
+> [!Important]
+> it might take up to 24 hours for add-ins to be available for consumption once installed.
 
 ## Remove the add-in
 
