@@ -15,7 +15,6 @@ In order to preview a file in an `iframe`, you need to
 
 1. Call Graph's driveItem preview endpoint and obtain the GetUrl
 1. Use the URL in an iFrame (or even open it in a new page)
-1. If you want to load the preview dynamically...
 
 ## Get the preview url using Graph
 
@@ -48,8 +47,13 @@ The JSON response includes the preview URLs for each document. Use the one obtai
 }
 ```
 
+> [!TIP]
+> It is possible to remove the banner at the top by adding the parameter `nb=true` to the obtained URL. E.g.
+> `https://contoso.sharepoint.com/restOfUrl/embed.aspx?param1=value&nb=true`
+
 > [!CAUTION]
 > Currently **getUrl** contains a parameter with an encrypted token that can only be used with your application. However, this may change in the near future and you may be asked to add an auth header as you do with  other requests.
+
 
 ## Use the URL in an `iframe`
 
@@ -97,12 +101,4 @@ async function preview(driveId, itemId) {
 
   document.getElementById('preview').src = response + "&nb=true"; //Use nb=true to suppress banner
 }
-```
-
-## Remarks
-
-Embedded Preview is an offering from OneDrive. It is possible to remove the 'OneDrive' banner by adding the parameter `nb=true` to the url. E.g.
-
-```html
-https://contoso.sharepoint.com/restOfUrl/embed.aspx?param1=value&nb=true
 ```
