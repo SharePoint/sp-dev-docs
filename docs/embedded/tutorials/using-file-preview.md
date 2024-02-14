@@ -1,7 +1,7 @@
 ---
 title: File Previews
 description: Preview SharePoint Embedded content
-ms.date: 11/28/2023
+ms.date: 02/14/2024
 ms.localizationpriority: high
 ---
 
