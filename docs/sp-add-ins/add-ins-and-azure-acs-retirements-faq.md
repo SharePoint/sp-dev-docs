@@ -61,3 +61,14 @@ When you're using the classic "Site Contents" page (_layouts/15/viewlsts.aspx) a
 ## Are SharePoint CSOM or SharePOint JSOM part of this retirement?
 
 No, both CSOM and JSOM stay working after Add-Ins and Azure ACS have been fully retired. When applications are updated/rewritten we do recommend to use Microsoft Graph and SharePoint REST as APIs for client side code. For server side code the recommendation is to use Microsoft Graph, SharePoint REST or SharePoint CSOM. If there's a Microsoft Graph API then that should be used in favor of SharePoint REST/CSOM, use the latter for the cases where there's no Microsoft Graph API yet.
+
+## Do I need to delete Azure ACS principals that are not needed anymore?
+
+Azure ACS principals will automatically expire (default lifetime is 2 years) so you can just let the principals expire. If you want to delete the principals after remediation then follow this guidance:
+
+- For principals that have Site, Web or List permissions navigate the site collection holding the principal and append `_layouts/15/appprincipals.aspx` to the url to load the **Site Collection App Permissions** page. On this page delete the needed principals by clicking on the cross icon
+- For principals that have tenant permissions copy the principal app id from the report and navigate to https://entra.microsoft.com/#view/Microsoft_AAD_IAM/EnterpriseApplicationListBladeV2, past the app id in the search box and press enter. Click on the shown enterprise app to load it, click on **Properties** , followed by clicking **Delete**
+
+For principals that have Site, Web or List and Tenant permissions both above steps have to be applied.
+
+Also do understand that Azure ACS can be turned off for the whole tenant as mentioned in the [Azure ACS retirement announcement](https://aka.ms/retirement/acs/support), doing this will automatically prevent still present and non-expired principals from working.
