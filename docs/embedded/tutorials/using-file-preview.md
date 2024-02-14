@@ -82,7 +82,7 @@ public async Task<ActionResult<string>> GetPreviewUrl(string driveId, string ite
 {
   // Obtain tokens for the the request
   // Use the function created in the first step
-  return url;
+  return url + "&nb=true"; //Use nb=true to suppress banner
 }
 ```
 
@@ -95,6 +95,14 @@ async function preview(driveId, itemId) {
       credentials: 'include',
   }).then(response => response.text());
 
-  document.getElementById('preview').src = response;
+  document.getElementById('preview').src = response + "&nb=true"; //Use nb=true to suppress banner
 }
+```
+
+## Remarks
+
+Embedded Preview is an offering from OneDrive. It is possible to remove the 'OneDrive' banner by adding the parameter `nb=true` to the url. E.g.
+
+```html
+https://contoso.sharepoint.com/restOfUrl/embed.aspx?param1=value&nb=true
 ```
