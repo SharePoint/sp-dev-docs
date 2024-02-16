@@ -1,7 +1,7 @@
 ---
 title: File Previews
 description: Preview SharePoint Embedded content
-ms.date: 11/28/2023
+ms.date: 02/14/2024
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,6 @@ In order to preview a file in an `iframe`, you need to
 
 1. Call Graph's driveItem preview endpoint and obtain the GetUrl
 1. Use the URL in an iFrame (or even open it in a new page)
-1. If you want to load the preview dynamically...
 
 ## Get the preview url using Graph
 
@@ -48,8 +47,13 @@ The JSON response includes the preview URLs for each document. Use the one obtai
 }
 ```
 
+> [!TIP]
+> It is possible to remove the banner at the top by adding the parameter `nb=true` to the obtained URL. E.g.
+> `https://contoso.sharepoint.com/restOfUrl/embed.aspx?param1=value&nb=true`
+
 > [!CAUTION]
 > Currently **getUrl** contains a parameter with an encrypted token that can only be used with your application. However, this may change in the near future and you may be asked to add an auth header as you do with  other requests.
+
 
 ## Use the URL in an `iframe`
 
@@ -82,7 +86,7 @@ public async Task<ActionResult<string>> GetPreviewUrl(string driveId, string ite
 {
   // Obtain tokens for the the request
   // Use the function created in the first step
-  return url;
+  return url + "&nb=true"; //Use nb=true to suppress banner
 }
 ```
 
@@ -95,6 +99,6 @@ async function preview(driveId, itemId) {
       credentials: 'include',
   }).then(response => response.text());
 
-  document.getElementById('preview').src = response;
+  document.getElementById('preview').src = response + "&nb=true"; //Use nb=true to suppress banner
 }
 ```
