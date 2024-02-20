@@ -1,12 +1,14 @@
 ---
 title: Convert an autohosted SharePoint Add-in to a provider-hosted add-in
 description: Steps to convert an autohosted SharePoint Add-in to a provider-hosted add-in, including deploying to Azure SQL, creating an Azure website, and registering the add-in.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Convert an autohosted SharePoint Add-in to a provider-hosted add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Microsoft SharePoint introduced a new approach to extending SharePoint sites in addition to the previous approach of using solution-based customizations. This new extensibility model for SharePoint, called the add-in model, enables developers to create custom implementations that can be deployed to SharePoint environments regardless of whether they are running in an on-premises, SharePoint Online, or hybrid deployment.
  

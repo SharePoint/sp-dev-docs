@@ -1,12 +1,14 @@
 ---
 title: Create provider-hosted SharePoint Add-ins to access SAP data
 description: Design a SharePoint Add-in to get authorized access to SAP by using the SAP Gateway for Microsoft.
-ms.date: 11/03/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Create provider-hosted SharePoint Add-ins to access SAP data by using the SAP Gateway for Microsoft
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can create a SharePoint Add-in that reads and writes SAP data, and optionally reads and writes SharePoint data, by using the SAP Gateway for Microsoft and the Azure Active Directory Authentication Library for .NET. This article provides the procedures for how you can design the SharePoint Add-in to get authorized access to SAP.
 
@@ -38,8 +40,7 @@ The process involves an OAuth "flow" in which the application, which can be a Sh
 > [!TIP]
 > If your SharePoint Add-in accesses SharePoint in addition to accessing SAP Gateway for Microsoft, it needs to use *both* systems: Azure AD to get an access token to SAP Gateway for Microsoft, and the ACS authorization system to get an access token to SharePoint. The tokens from the two sources are not interchangeable. For more information, see [Add SharePoint access to the ASP.NET application (optional)](#add-sharepoint-access-to-the-aspnet-application-optional).
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 

@@ -1,13 +1,15 @@
 ---
 title: Give your provider-hosted add-in the SharePoint look-and-feel
 description: Get to know the base add-in, configure Visual Studio to rebuild the corporate database, add SharePoint chrome and top bar to the start page, run the add-in, and test the new UI.
-ms.date: 12/04/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Give your provider-hosted add-in the SharePoint look-and-feel
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 
@@ -27,7 +29,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 2. On the **New SharePoint Site** page, fill out the form for a new team site by entering these values (also shown in the following screen shot):
 
-   - **Title**: Fabrikam Hong Kong Store
+   - **Title**: Fabrikam Hong Kong SAR Store
    - **URL**: hongkong
     
    *Figure 1. Form for creating a new SharePoint subsite*

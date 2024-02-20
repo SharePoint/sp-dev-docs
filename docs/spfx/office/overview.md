@@ -1,24 +1,14 @@
 ---
 title: Extend Outlook and Office with the SharePoint Framework
 description: Learn how you can use the SharePoint Framework to create apps for Microsoft 365, including Microsoft Teams, Outlook, and Office clients
-ms.date: 11/15/2022
+ms.date: 11/21/2023
 ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
 
 The SharePoint Framework (SPFx) v1.16 release added support for the [Microsoft Teams JavaScript client SDK v2](/javascript/api/overview/msteams-client). The Microsoft Teams JavaScript client SDK v2 introduced the ability to enable [Teams apps to run in Outlook at Office, in addition to Microsoft Teams](/microsoftteams/platform/m365-apps/overview).
 
-With this improvement in SPFx v1.16, developers can now use the SPFx to create apps for Outlook and Office using the [existing support for creating apps for Microsoft Teams](/sharepoint/dev/spfx/build-for-teams-overview).
-
-> [!IMPORTANT]
-> The ability to run Microsoft Teams apps in Outlook and Office is currently in beta with anticipated availability in the first half of calendar year 2023.
-
-> [!IMPORTANT]
-> Essential information required for user success
->
-> To test using Microsoft Teams apps in Outlook and Office, including those created with the SPFx, you must configure your Microsoft 365 tenant's release preferences for *targetted release*. For more information on changing your organizations release preferences, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365).
->
-> It takes 5 business days for your tenant's release preferences to take effect. In other words, change your tenant from the **standard release** track to the **target release** track on the 5th of the month, you won't be able to test your Microsoft Teams apps created with the SPFx in Outlook or Office until the 11th of the month.
+With this improvement in SPFx v1.16 forward, developers can now use the SPFx to create apps for Outlook and Office using the [existing support for creating apps for Microsoft Teams](/sharepoint/dev/spfx/build-for-teams-overview).
 
 ## Create Microsoft Teams apps for Outlook and Office
 
@@ -26,7 +16,7 @@ To create a new Microsoft Teams app with SPFx for Outlook and Office, you start 
 
 The Yeoman SharePoint Generator will prompt you with a series of questions. Follow the same guidance for creating a new SPFx web part when responding to these questions.
 
-Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to te `supportedHosts` property in the **./config/package-solution.json** file. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
+Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to the `supportedHosts` property in the **./config/package-solution.json** file. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
 
 ## Determine the current runtime host for your app
 
@@ -39,7 +29,8 @@ Use the SPFx's `context` property on the web part's class and the Microsoft Team
 if (!!this.context.sdks.microsoftTeams) {
   const teamsContext = await this.context.sdks.microsoftTeams.teamsJs.app.getContext();
   switch (teamsContext.app.host.name.toLowerCase()) {
-    case 'teams':
+    case 'teams': // this is the host name for the "classic" Teams client
+    case 'teamsmodern': // this is the host name for the "new" Teams client
       // RUNNING IN MICROSOFT TEAMS
     case 'office':
       // RUNNING IN OFFICE / OFFICE.COM

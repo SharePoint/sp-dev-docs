@@ -1,12 +1,13 @@
 ---
 title: Add custom columns to a SharePoint-hosted SharePoint Add-in
 description: Create custom column types, run the add-in, and test the columns.
-ms.date: 01/06/2021
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 # Add custom columns to a SharePoint-hosted SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the third in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins | Next steps](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#next-steps).
 

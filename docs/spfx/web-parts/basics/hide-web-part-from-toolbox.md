@@ -1,7 +1,7 @@
 ---
 title: Hide a web part from the toolbox
 description: How to hide a web part from showing up in the web part toolbox on a modern page
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.localizationpriority: high
 ---
 
@@ -30,8 +30,8 @@ By default a SharePoint Framework client-side web part will be displayed in the 
   "hiddenFromToolbox": true,
 
   "preconfiguredEntries": [{
-    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-    "group": { "default": "Other" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
+    "group": { "default": "Advanced" },
     "title": { "default": "HelloWorld" },
     "description": { "default": "HelloWorld description" },
     "officeFabricIconFontName": "Page",

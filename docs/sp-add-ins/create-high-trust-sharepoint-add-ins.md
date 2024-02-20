@@ -1,13 +1,15 @@
 ---
 title: Create high-trust SharePoint Add-ins
 description: Use a high-trust add-in to establish a trust between the remote web application and SharePoint. Primarily intended for use with an on-premises, rather than cloud-based, web application.
-ms.date: 12/29/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Create high-trust SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 A high-trust add-in is a provider-hosted SharePoint Add-in that uses digital certificates to establish trust between the remote web application and SharePoint. "High-trust" is not the same as "full trust". A high-trust add-in must still request [add-in permissions](add-in-permissions-in-sharepoint.md). The add-in is considered "high-trust" because it is trusted to use any user identity that the add-in needs, because the add-in is responsible for creating the user portion of the access token that it passes to SharePoint.
 

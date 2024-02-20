@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/13/2022
+ms.date: 12/4/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -14,6 +14,9 @@ SharePoint Framework (SPFx) Extensions are client-side components that run insid
 You can also follow the steps in this article by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/DnfRIl2YN8g]
+
+> [!IMPORTANT]
+> The SharePoint page [HTML DOM](https://www.w3.org/TR/WD-DOM/introduction.html) is not an API. You should avoid taking any dependencies on the page DOM structure or CSS styles, which are subject to change and potentially break your solutions. SharePoint Framework provides a rich API to customize the SharePoint experience in reliable ways and is the only supported means to interact with the SharePoint page HTML DOM.
 
 ## Create an extension project
 
@@ -140,7 +143,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {

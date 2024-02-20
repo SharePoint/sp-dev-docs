@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 03/24/2022
+ms.date: 11/02/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -14,7 +14,7 @@ Microsoft 365 Content Delivery Network (CDN) provides you an easy solution to ho
 > There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Microsoft 365 CDN option, but you could also use the [Azure CDN](./deploy-web-part-to-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location that end users can access using HTTP(S) would be technically suitable for hosting the assets for end users.
 
 > [!IMPORTANT]
-> This article uses the `includeClientSideAssets` attribute, was introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
+> This article uses the `includeClientSideAssets` attribute introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
 > If you're using an on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from a centralized library in your on-premises SharePoint to which your users have access. Please see additional considerations in the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
 
 Make sure that you've completed the following tasks before you begin:
@@ -52,8 +52,8 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
    {
         "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
         "solution": {
-            "name": "mysolution-client-side-solution",
-            "id": "ee1a495d-c7bb-499b-bd71-728aaeb79cd2",
+            "name": "hello-world-client-side-solution",
+            "id": "e8905bc9-2718-4bc8-aea6-03a2b5cf8e76",
             "version": "1.0.0.0",
             "includeClientSideAssets": true,
             "skipFeatureDeployment": true,
@@ -63,30 +63,30 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
                 "websiteUrl": "",
                 "privacyUrl": "",
                 "termsOfUseUrl": "",
-                "mpnId": "Undefined-1.14.0"
+                "mpnId": "Undefined-1.18.0"
             },
             "metadata": {
-            "shortDescription": {
-                "default": "mysolution description"
+                "shortDescription": {
+                "default": "HelloWorld description"
             },
             "longDescription": {
-                "default": "mysolution description"
+                "default": "HelloWorld description"
             },
             "screenshotPaths": [],
             "videoUrl": "",
             "categories": []
             },
-            "features": [
+        "features": [
             {
-                "title": "mysolution Feature",
-                "description": "The feature that activates elements of the mysolution solution.",
-                "id": "d72e47b2-d5a2-479f-9f9a-85e1e7472dee",
+                "title": "hello-world Feature",
+                "description": "The feature that activates elements of the hello-world solution.",
+                "id": "45108667-812b-46ee-a8c3-7edc40b6a933",
                 "version": "1.0.0.0"
             }
-            ]
+        ]
         },
         "paths": {
-            "zippedPackage": "solution/mysolution.sppkg"
+        "zippedPackage": "solution/hello-world.sppkg"
         }
     }
 

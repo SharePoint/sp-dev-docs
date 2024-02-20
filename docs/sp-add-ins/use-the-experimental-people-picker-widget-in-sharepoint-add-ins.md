@@ -1,12 +1,14 @@
 ---
 title: Use the experimental People Picker widget in SharePoint Add-ins
 description: Use the People Picker widget in your add-ins to help users find and select people and groups.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Use the experimental People Picker widget in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can use the People Picker widget on any webpage, even if the page is not hosted in SharePoint. Use the People Picker widget in your add-ins to help users find and select people and groups.
 

@@ -14,9 +14,6 @@ Retention labels may classify contents as records, which place restrictions on w
 
 CSOM methods are available to apply (set) a retention label (ComplianceTag) on one or many items (ListItems) in SharePoint. Retention labels can be applied using this method without being published to the location by an existing label policy. 
 
-> [!IMPORTANT]
-> Some information relates to prerelease product that may be substantially modified before it’s released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## SetComplianceTagOnBulkItems
 
 This method can be used to set a ComplianceTag on one or many ListItems. It is strongly recommended to use this method for this purpose.

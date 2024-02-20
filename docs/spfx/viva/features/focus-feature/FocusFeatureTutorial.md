@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the focus feature
 description: Step by step guide on how to create an Adaptive Card Extension with the focus feature.
-ms.date: 04/04/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with focus feature
@@ -18,9 +18,9 @@ yo @microsoft/sharepoint
 
 When prompted, enter the following values (select the default option for all prompts omitted below):
 
-- **What is your solution name?** HelloWorld
+- **What is your solution name?** focus-feature
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Primary Text Template
+- **Which template do you want to use?** Geneic Card Template
 - **What is your Adaptive Card Extension name?** HelloWorld
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -30,7 +30,7 @@ Before moving forward, update the title and description fields of your ACE to gi
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
-  "id": "53b7c8c0-00cc-4d20-a0a7-529aa6dff29f",
+  "id": "2c2fb587-a351-40f9-83f7-0840e3ee857f",
   "alias": "HelloWorldAdaptiveCardExtension",
   "componentType": "AdaptiveCardExtension",
 
@@ -48,11 +48,11 @@ Before moving forward, update the title and description fields of your ACE to gi
     "group": { "default": "Dashboard" },
     "title": { "default": "Focus feature advanced I" },
     "description": { "default": "Focus feature advanced I" },
-    "officeFabricIconFontName": "SharePointLogo",
+    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20230308.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
     "properties": {
       "title": "Focus feature advanced I"
     },
-    "cardSize": "Medium"
+    "cardSize": "Large"
   }]
 }
 ```
@@ -66,16 +66,16 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
+At this point, if you do **gulp serve**, then you'll see the **FocusFeature** card:
 
 ![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 
@@ -96,7 +96,7 @@ Replace the content of this file as below:
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.2",
+  "version": "1.5",
   "body": [
     {
       "type": "TextBlock",
@@ -174,7 +174,7 @@ Create a new template file for the second quick view: **./src/adaptiveCardExtens
 {
    "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
    "type":"AdaptiveCard",
-   "version":"1.2",
+   "version":"1.5",
    "body":[
       {
          "type":"TextBlock",
@@ -219,6 +219,7 @@ Create a new template file for the second quick view: **./src/adaptiveCardExtens
 ```
 
 Create a new file for the second quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView2.ts**
+
 We'll add the following **onAction** function.
 
 ```typescript
@@ -242,7 +243,7 @@ Create a new template file for the third quick view: **./src/adaptiveCardExtensi
 {
   "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
   "type":"AdaptiveCard",
-  "version":"1.2",
+  "version":"1.5",
   "body":[
      {
         "type":"TextBlock",
@@ -273,6 +274,7 @@ Create a new template file for the third quick view: **./src/adaptiveCardExtensi
 ```
 
 Create a new file for the third quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView3.ts**
+
 We'll add the following **onAction** function.
 
 ```typescript
@@ -290,17 +292,17 @@ After adding these changes, your Quick Views will look like:
 
 ![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.png)
 
-Second quick view as 
+Second quick view as
 
 ![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.png)
 
-Third quick view as 
+Third quick view as
 
 ![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.png)
 
 ### Implement the focusParameters function
 
-So far we'e modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
+So far we'e modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the third-party developer to decide what they wish to set focus on in the quick view.
 
 For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
@@ -308,7 +310,7 @@ For this, open each respective QuickView file (**./src/adaptiveCardExtensions/fo
 import { IFocusParameters } from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element. Each QuickView should look as follows:
+Finally, introduce the following `focusParameters()` function in the QuickView class so that we set focus on an element. Each QuickView should look as follows:
 
 ```typescript
 public get focusParameters(): IFocusParameters {

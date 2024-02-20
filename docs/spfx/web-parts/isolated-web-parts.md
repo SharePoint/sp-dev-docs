@@ -1,7 +1,7 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 03/08/2023
+ms.date: 02/13/2024
 ms.localizationpriority: high
 ---
 
@@ -52,6 +52,9 @@ Despite the web part using isolated permissions, there's nothing specific to how
 Solutions with isolated web parts are deployed the same way as regular SharePoint Framework solutions. The only difference is, that the API permission requests are deployed as isolated. This is clearly visible on the API management page, where the API permission requests are grouped per solution to which they apply.
 
 API permissions granted on the tenant-level can be used by any SharePoint Framework solution or piece of script on the tenant. Isolated permissions on the other hand, can only be used by the solution that requested them.
+
+> [!Important]
+> it might take up to 24 hours for isolated web parts to be available for consumption once deployed. During that time, users can recive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error.
 
 ### Using isolated web parts
 

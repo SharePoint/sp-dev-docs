@@ -1,13 +1,15 @@
 ---
 title: Customize a list view in SharePoint Add-ins using client-side rendering
 description: Customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint.
-ms.date: 12/20/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Customize a list view in SharePoint Add-ins using client-side rendering
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In SharePoint, client-side rendering provides a way for you to produce your own output for a set of controls that are hosted on a SharePoint page. It enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of SharePoint list views. With client-side rendering, you can specify your own JavaScript resources and host them in the data storage options that are available to your add-ins, such as in a document library. A SharePoint-hosted add-in includes only SharePoint components. A SharePoint-hosted add-in has its resources in an isolated subsite of the host web, called the add-in web.
 

@@ -1,7 +1,7 @@
 ---
 title: Explore Geolocation capability via property pane of card-desinger card in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, and in this tutorial we see how we can explore this capability via the property pane of the card-designer card.
-ms.date: 03/08/2023
+ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
 
@@ -20,7 +20,7 @@ Here, click on the '+' icon in the middle of the page, and add the `card-designe
 
 Next, click the pencil icon adjacent to this card to open the property pane.
 
-### Update the card strings
+## Update the card strings
 
 Here, first set the `card size` to `Large`.
 
@@ -28,13 +28,13 @@ To provide descriptive labels, change `Title` to `GeoLocation`, `Heading` to `Ge
 
 ![Adding strings in the property pane of card designer card](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneStrings.png)
 
-### Adding action on Card View
+## Adding action on Card View
 
 Under `Actions`, click the drop-down menu of `card action` and select `Select location from a map` option.
 
 ![Set the on-click action to "Select location from a map" from the drop-down menu of card-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneCardAction.png)
 
-### Adding action on Primary button
+## Adding action on Primary button
 
 Next, for the `Primary Button`, set the `Title` to `My Location` and from its action drop-down menu, select `Display a specified or current location`.
 
@@ -54,7 +54,7 @@ For our example, we are putting in `27.98884062493244` as the value for the text
 
 ![Set the on-click action to "Display a specified or current location" from the drop-down menu for the secondary button and pass coordinates of your choice in the respective location text-boxes](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneSecondaryButtonAction.png)
 
-### Try the geolocation actions
+## Try the geolocation actions
 
 Now close the property pane and click `Preview` from the top right hand corner of the page:
 

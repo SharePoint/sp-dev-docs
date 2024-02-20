@@ -1,9 +1,9 @@
 ---
 title: Determine SharePoint REST service endpoint URIs
 description: Guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.
-ms.date: 1/14/2020
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Determine SharePoint REST service endpoint URIs
@@ -11,8 +11,8 @@ ms.localizationpriority: high
 > [!TIP]
 > Before you start, review the following resources:
 >
-> [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
-> [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
+> - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
+> - [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
 > - [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
 
 ## SharePoint REST endpoint URI structure

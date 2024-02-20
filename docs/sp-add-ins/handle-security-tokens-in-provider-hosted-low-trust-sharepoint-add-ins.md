@@ -1,20 +1,21 @@
 ---
 title: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
 description: The context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
-ms.date: 05/01/2020
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Handle security tokens in provider-hosted low-trust SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!IMPORTANT]
 > This article is entirely about the use of security tokens in the low-trust authorization system, not the high-trust system. For information about the use of tokens in the high-trust system, see [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md).
 
 SharePoint Add-ins that use the [low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) to gain access to SharePoint data participate in an OAuthflow that involves the passing of security tokens (in [JSON Web Token](https://datatracker.ietf.org/doc/rfc7519/) format) among SharePoint, Microsoft Azure Access Control Service (ACS), the remote components of the SharePoint Add-in, and, in some cases, the user's browser.
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the **https://accounts.accesscontrol.windows.net** hostname (which isn't impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 There are different flows depending on the design of the add-in, but all of them involve at least the following two types of tokens:
 

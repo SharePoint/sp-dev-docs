@@ -1,11 +1,13 @@
 ---
 title: Create a developer site on an existing Office 365 subscription
 description: Set up an Office 365 developer site for SharePoint Add-ins.
-ms.date: 08/24/2020
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 # Create a developer site on an existing Office 365 subscription
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 An Office 365 developer site makes it easier to get set up and start creating, testing, and deploying your Office and SharePoint Add-ins more quickly. Many Office 365 Business, Enterprise, Education, and Government subscriptions include a site template that you can use to create a developer site.
 

@@ -1,7 +1,7 @@
 ---
 title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/07/2022
+ms.date: 12/14/2023
 ms.custom: scenarios:getting-started
 ---
 
@@ -250,7 +250,7 @@ You're now ready to test your code in SharePoint Online.
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {

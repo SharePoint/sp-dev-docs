@@ -1,11 +1,13 @@
 ---
 title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
-ms.date: 12/09/2019
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 # Publish SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You've finished developing your SharePoint Add-in—the final step is to make it available to your users. You can do this by publishing the add-in to one of the following:
 

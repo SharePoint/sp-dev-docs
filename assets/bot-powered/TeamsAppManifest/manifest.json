@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.16",
+  "version": "1.0.0",
+  "id": "<App-Client-ID>",
+  "packageName": "collectfeedback.botpoweredace",
+  "developer": {
+    "name": "<Your Company name>",
+    "websiteUrl": "<Your Company WebSite>",
+    "privacyUrl": "<Your Company Privacy Policy>",
+    "termsOfUseUrl": "<Your Company Terms of Use>",
+    "mpnId": "<Your MPN ID>"
+  },
+  "name": {
+    "short": "Collect Feedaback Bot Powered ACE",
+    "full": "This is a basic sample of a Bot Powered ACE for Microsoft Viva Connections Dashboard to collect user's feedback"
+  },
+  "description": {
+    "short": "Basic sample of a Bot Powered ACE for Microsoft Viva Connections Dashboard to collect user's feedback",
+    "full": "Basic sample of how to use the latest release of the Bot Framework SDK to build a Bot Powered ACE for Microsoft Viva Connections Dashboard to collect user's feedback"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "<App-Client-ID>",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "supportsCalling": false,
+      "supportsVideo": false,
+      "supportsFiles": false,
+      "scopes": [
+        "team",
+        "personal",
+        "groupchat"
+      ]
+    }
+  ],
+  "dashboardCards": [
+    {
+      "id": "<App-Client-ID>",
+      "displayName": "Collect Feedaback",
+      "description": "Bot Powered ACE to collect user's feedback",
+      "icon": {
+        "officeUIFabricIconName": "Feedback"
+      },
+      "contentSource": {
+        "sourceType": "bot",
+        "botConfiguration": {
+          "botId": "<App-Client-ID>"
+        }
+      },
+      "defaultSize": "medium"
+    }
+  ],
+  "permissions": [
+    "identity"
+  ],
+  "validDomains": [
+    "<your-ngrok-reverse-proxy-name>.ngrok.io"
+  ]
+}

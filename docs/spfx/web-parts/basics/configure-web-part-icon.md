@@ -1,7 +1,7 @@
 ---
 title: Configure web part icon
 description: The available options for configuring the icon for your SharePoint client-side web parts.
-ms.date: 06/16/2018
+ms.date: 12/05/2023
 ms.localizationpriority: high
 ---
 
@@ -50,9 +50,9 @@ For a list of available Fluent UI icons, see [Icons](https://developer.microsoft
       "requiresCustomScript": false,
       "preconfiguredEntries": [
         {
-          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
           "group": {
-            "default": "Other"
+            "default": "Advanced"
           },
           "title": {
             "default": "Weather"
@@ -98,9 +98,9 @@ In addition to using Fluent UI icons, the SharePoint Framework also allows you t
       "requiresCustomScript": false,
       "preconfiguredEntries": [
         {
-          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
           "group": {
-            "default": "Other"
+            "default": "Advanced"
           },
           "title": {
             "default": "Weather"
@@ -147,9 +147,9 @@ A number of services are available online that you can use to base64-encode your
       "requiresCustomScript": false,
       "preconfiguredEntries": [
         {
-          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+          "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
           "group": {
-            "default": "Other"
+            "default": "Advanced"
           },
           "title": {
             "default": "Weather"
@@ -202,9 +202,9 @@ Specify the image's absolute URL in the `fullPageAppIconImageUrl` property in th
   "requiresCustomScript": false,
   "preconfiguredEntries": [
     {
-      "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Advanced
       "group": {
-        "default": "Other"
+        "default": "Advanced"
       },
       "title": {
         "default": "Weather"

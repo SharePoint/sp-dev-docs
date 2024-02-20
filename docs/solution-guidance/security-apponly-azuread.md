@@ -2,7 +2,6 @@
 title: Granting access via Azure AD App-Only
 description: Granting access via Azure AD App-Only
 ms.date: 02/26/2022
-ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: conceptual
@@ -12,8 +11,7 @@ ms.localizationpriority: medium
 
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you're using SharePoint Online, if you're using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://devblogs.microsoft.com/microsoft365dev/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 ## Setting up an Azure AD app for app-only access
 

@@ -40,24 +40,20 @@ landingContent:
             url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis
 
   # Card (optional)
-  - title: Contact us
+  - title: SharePoint Embedded
     linkLists:
-      - linkListType: video
-        links:
-          - text: Microsoft 365 Community
-            url: https://www.youtube.com/channel/UC_mKdhw-V6CeCM7gTo_Iy7w
       - linkListType: overview
         links:
-          - text: Developer Blog
-            url: https://devblogs.microsoft.com/microsoft365dev/
-          - text: Community
-            url: https://pnp.github.io/
-          - text: Submit a new idea
-            url: https://aka.ms/feedback/sharepoint
-          - text: Issues
-            url: https://github.com/SharePoint/sp-dev-docs/issues
-          - text: Forum
-            url: https://aka.ms/spdev-community
+          - text: Overview of SharePoint Embedded
+            url: /sharepoint/dev/embedded/overview
+          - text: Enable SharePoint Embedded
+            url: /sharepoint/dev/embedded/getting-started/enable-sharepoint-embedded
+      - linkListType: tutorial
+        links:
+          - text: SharePoint Embedded - Overview & Configuration
+            url: /training/modules/sharepoint-embedded-setup
+          - text: SharePoint Embedded - Building an App
+            url: /training/modules/sharepoint-embedded-create-app
 
   # Card (optional)
   - title: Samples
@@ -185,3 +181,23 @@ landingContent:
             url: /sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online
           - text: Modernize your classic SharePoint sites
             url: /sharepoint/dev/transform/modernize-classic-sites
+
+  # Card (optional)
+  - title: Contact us
+    linkLists:
+      - linkListType: video
+        links:
+          - text: Microsoft 365 Community
+            url: https://www.youtube.com/channel/UC_mKdhw-V6CeCM7gTo_Iy7w
+      - linkListType: overview
+        links:
+          - text: Developer Blog
+            url: https://devblogs.microsoft.com/microsoft365dev/
+          - text: Community
+            url: https://pnp.github.io/
+          - text: Submit a new idea
+            url: https://aka.ms/feedback/sharepoint
+          - text: Issues
+            url: https://github.com/SharePoint/sp-dev-docs/issues
+          - text: Forum
+            url: https://aka.ms/spdev-community

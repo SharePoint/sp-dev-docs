@@ -1,13 +1,15 @@
 ---
 title: Programmatically deploy a custom button in the provider-hosted add-in
 description: Register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
-ms.date: 11/22/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
 # Programmatically deploy a custom button in the provider-hosted add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps). 
 
@@ -209,7 +211,7 @@ Because the add-in now adds and deletes web-scoped custom actions, we need to es
 
 ## Run the add-in and test the button deployment
 
-1. Open the **Site Contents** page of the Hong Kong store's website and remove the **Local Employees** list. 
+1. Open the **Site Contents** page of the Hong Kong SAR store's website and remove the **Local Employees** list. 
     
    > [!NOTE]
    > Retracting an add-in in Visual Studio does not remove lists that are created by the add-in, so you need to manually delete it any time you are testing code that creates it.

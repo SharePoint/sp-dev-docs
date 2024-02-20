@@ -1,12 +1,14 @@
 ---
 title: Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
 description: Use the client-side People Picker control to quickly search for and select valid user accounts for people, groups, and claims in your organization.
-ms.date: 03/28/2023
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!IMPORTANT]
 > This topic assumes that you know how to create a SharePoint-hosted SharePoint Add-in. To learn how to create one, see [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).

@@ -1,13 +1,12 @@
 ---
 title: Add first-run logic to the provider-hosted add-in
 description: Include "first run" code in a provider-hosted SharePoint Add-in by creating the basic class for deploying components, adding the basic startup logic, and programmatically deploying a SharePoint list. 
-ms.date: 04/02/2021
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
 ---
-
-
 # Add first-run logic to the provider-hosted add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps). 
 
@@ -293,7 +292,7 @@ Because the add-in now adds a list to the host web, not just items to an existin
 
 ## Run the add-in and test the first-run logic
 
-1. Open the **Site Contents** page of the Hong Kong store's website, and then remove the **Local Employees** list. 
+1. Open the **Site Contents** page of the Hong Kong SAR store's website, and then remove the **Local Employees** list. 
 
 2. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 

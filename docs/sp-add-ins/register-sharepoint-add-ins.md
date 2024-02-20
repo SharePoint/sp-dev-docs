@@ -1,17 +1,17 @@
 ---
 title: Register SharePoint Add-ins
 description: Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
-
 # Register SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 For the remote components of a provider-hosted SharePoint Add-in to interact with SharePoint using OAuth, the add-in must first register with the [Azure ACS](https://msdn.microsoft.com/library/azure/gg429788.aspx) cloud-based service and the SharePoint App Management Service of the tenancy or farm. (It is called "App Management Service" because SharePoint Add-ins were originally called "apps for SharePoint.")
 
@@ -44,6 +44,9 @@ You can register your add-in in one of three ways, depending on where you are in
 |Use the AppRegNew.aspx page. |Use the AppRegNew form to register your SharePoint Add-in if you are using the add-in only in one tenant or farm.<br/><br/>For example, if you're creating add-ins for a single organization and you're going to distribute them via the organization add-in catalog, you can use the AppRegNew.aspx page of any website in a tenancy or farm to register the add-in.<br/><br/>You cannot publish an add-in that is registered with AppRegNew.aspx to the Office Store. For add-ins that are published to the Office Store, you must get an identity from the Seller Dashboard.|
 
 ### To register by using AppRegNew.aspx
+
+> [!NOTE]
+> Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
 
@@ -170,8 +173,9 @@ The lookup does not return the add-in secret value.
 
 To see a list of registered add-in principals, go to: `http://<SharePointWebsite>/_layouts/15/AppPrincipals.aspx`.
 
-## See also
 <a name="AR"> </a>
+
+## See also
 
 - [Three authorization systems for SharePoint Add-ins](three-authorization-systems-for-sharepoint-add-ins.md)
 - [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)

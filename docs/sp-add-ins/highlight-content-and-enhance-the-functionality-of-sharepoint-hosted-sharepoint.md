@@ -1,12 +1,14 @@
 ---
 title: Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
 description: Construct the SharePoint callout control, add it to your page, and customize its appearance and behavior to provide a flexible way to engage your user and showcase your add-in's functionality. 
-ms.date: 12/20/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 The SharePoint callout control provides a flexible way to engage your user and showcase your SharePoint-hosted add-in's functionality. You can configure it in a variety of ways to suit your add-in's UI. You can construct this control, add it to your page, and customize its appearance and behavior.
  

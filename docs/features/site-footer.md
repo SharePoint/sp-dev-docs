@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Site footer
 description: SharePoint Site footers can be used to show a logo or set of links/labels in a modern SharePoint site. They can be configured using the UI settings or by using APIs.
-ms.date: 07/14/2022
+ms.date: 09/24/2023
 ms.localizationpriority: high
 ---
 
@@ -35,7 +35,7 @@ Set-PnPFooter -Enabled:$true # for enabling the footer
 ```
 
 > [!NOTE]
-> Above PowerShell scripts assumes that you have already installed PnP PowerShell cmdlets for your environment and you are not using multi-factor authentication. You can install PnP PowerShell cmdlets to your computer by opening PowerShell console in administrative mode and executing following command: `Install-Module SharePointPnPPowerShellOnline`. If you are using multi-factor authentication, you can enable MFA login by updating the `Connect-PnPOnline` line as follows: `Connect-PnPOnline -Url "<SiteURL>" -UseWebLogin`.
+> Above PowerShell scripts assumes that you have already installed PnP PowerShell cmdlets for your environment and you are not using multi-factor authentication. You can install PnP PowerShell cmdlets to your computer by opening PowerShell console in administrative mode and executing following command: `Install-Module PnP.PowerShell -Scope CurrentUser`. If you are using multi-factor authentication, you can enable MFA login by updating the `Connect-PnPOnline` line as follows: `Connect-PnPOnline -Url "<SiteURL>" -Interactive`.
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 

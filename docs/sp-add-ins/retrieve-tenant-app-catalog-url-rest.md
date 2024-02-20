@@ -2,11 +2,13 @@
 title: Retrieve the URL of the tenant app catalog
 description: Use the SharePoint REST API to retrieve the URL of the tenant app catalog
 ms.date: 1/15/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Retrieve the URL of the tenant app catalog
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 To get the URL of the tenant app catalog, execute the following web request:
 

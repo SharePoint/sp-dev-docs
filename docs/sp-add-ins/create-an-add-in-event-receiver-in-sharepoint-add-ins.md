@@ -1,13 +1,15 @@
 ---
 title: Create an add-in event receiver in SharePoint Add-ins
 description: Create handlers for the SharePoint Add-in install and uninstall events in SharePoint Add-ins.
-ms.date: 12/22/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Create an add-in event receiver in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 It is helpful if you first have an understanding of provider-hosted SharePoint Add-ins, and for you to have developed a few that go at least a little beyond the "Hello World" level. See [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
 

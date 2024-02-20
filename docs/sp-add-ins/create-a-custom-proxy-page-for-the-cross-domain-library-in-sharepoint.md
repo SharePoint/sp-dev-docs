@@ -1,13 +1,15 @@
 ---
 title: Create a custom proxy page for the cross-domain library in SharePoint
 description: Create a custom proxy page to access data in a remote service from a SharePoint webpage by using the cross domain library in SharePoint.
-ms.date: 12/22/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
 # Create a custom proxy page for the cross-domain library in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When you are building SharePoint Add-ins, you usually have to incorporate data from various sources. However, for security reasons, there are blocking mechanisms that prevent communication with more than one domain at a time.
 

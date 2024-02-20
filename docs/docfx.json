@@ -34,8 +34,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-SharePoint",
       "uhfHeaderID": "MSDocsHeader-M365-IT",
-      "extendBreadcrumb": "true",
       "breadcrumb_path":"/sharepoint/dev/breadcrumb/toc.json",
       "ms.suite": "office",
       "ms.author": "vesaj",
@@ -47,9 +47,6 @@
       "search.appverid": "MET150"
     },
     "fileMetadata": {
-      "ms.prod": {
-        "solution-guidance/**.md": "sharepoint"
-      },
       "ms.service": {
         "apis/*.md": "sharepoint-online",
         "apis/webhooks/**.md": "sharepoint-online",
@@ -58,11 +55,13 @@
         "business-apps/power-automate/guidance/**.md": "power-automate",
         "declarative-customization/**.md": "sharepoint-online",
         "design/**.md": "sharepoint-online",
+        "embedded/**.md": "sharepoint-online",
         "features/**.md": "sharepoint-online",
-        "general-development/**.md": "sharepoint",
+        "general-development/**.md": "sharepoint-online",
         "scenario-guidance/**.md": "sharepoint-online",
         "schema/**.md": "sharepoint-online",
-        "spfx/**.md": "sharepoint"
+        "spfx/**.md": "sharepoint-online",
+        "solution-guidance/**.md": "sharepoint-online"
       },
       "ms.subservice":{
         "general-development/**.md": "sharepoint-framework",
@@ -73,7 +72,7 @@
         "sp-addins/**.md": "sharepoint-addins"
       },
       "ms.topic":{
-        "solution-guidance/**.md": "solution"
+        "solution-guidance/**.md": "solution-idea"
       }
     },
     "template": [],

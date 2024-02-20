@@ -1,12 +1,14 @@
 ---
 title: Design SharePoint Add-ins
 description: An overview of the design and architecture options available in SharePoint Add-ins, and how to make the right decisions to ease your add-in's development.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Design SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 Let's say you have a killer idea for an add-in. In this section, we'll guide you through the design decisions you need to make and offer best practices to build your add-in. For example, what makes a good user interface? What are the add-in "shapes" available? When should I use one instead of another? What options do I have for data access? 
 
