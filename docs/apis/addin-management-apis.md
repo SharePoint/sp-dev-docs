@@ -45,8 +45,8 @@ POST {adminSiteUrl}/_api/web/AvailableAddIns
 | Name               | Required | Type     | Description                                                                      |
 |--------------------|----------|----------|----------------------------------------------------------------------------------|
 | serverRelativeUrls | no       | string[] | List of the server relative url of sites that want to get the available Add-ins. |    
-| fullUrls           | no       | string[] | List of the full url of sites that want to get the available Add-ins.            |    
-Max total count for serverRelativeUrls and fullUrls is 500. And they can't be both empty.
+| absoluteUrls       | no       | string[] | List of the absolute url of sites that want to get the available Add-ins.        |    
+Max total count for serverRelativeUrls and absoluteUrls is 500. And they can't be both empty.
 
 ### Responses
 
@@ -88,10 +88,10 @@ Max total count for serverRelativeUrls and fullUrls is 500. And they can't be bo
 
 ### SPErrorWithServerRelativeUrl
 
-| Name              | Type   | Description                                            |
-|-------------------|--------|--------------------------------------------------------|
-| serverRelativeUrl | string | The serverRelativeUrl or fullUrl in the request body.  |
-| errorMessage      | string | The error message why fetch the site's Add-ins failed. |
+| Name              | Type   | Description                                               |
+|-------------------|--------|-----------------------------------------------------------|
+| serverRelativeUrl | string | The serverRelativeUrl or absoluteUrl in the request body. |
+| errorMessage      | string | The error message why fetch the site's Add-ins failed.    |
 
 ## Get Add-in permissions in site collections
 
@@ -116,8 +116,9 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 | Name              | Type     | Description                                                                                                                    |
 |-------------------|----------|--------------------------------------------------------------------------------------------------------------------------------|
 | serverRelativeUrl | string   | The server relative url of the site collection. It will return site collection scope permissions of the given site collection. |
-| fullUrl           | string   | The full url of the site collection. It will return site collection scope permissions of the given site collection.            |
+| absoluteUrl       | string   | The absolute url of the site collection. It will return site collection scope permissions of the given site collection.        |
 | appIdentifiers    | string[] | The identifier list of the Add-ins.                                                                                            |
+The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
 
 ### Responses
 
@@ -134,7 +135,7 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 | siteCollectionScopedPermissions | SPSiteCollectionScopedPermissionInfo[] | This is the permissions grant in site collection scope level.                                                                                                                                      |
 | appIdentifier                   | string                                 | The identifier of the Add-in.                                                                                                                                                                      |
 | serverRelativeUrl               | string                                 | The server relative url of the site collection.                                                                                                                                                    |
-| fullUrl                         | string                                 | The full url of the site collection.                                                                                                                                                               |
+| absoluteUrl                     | string                                 | The absolute url of the site collection.                                                                                                                                                           |
 | allowAppOnly                    | bool                                   | This identifies if the Add-in allows app only mode. For more information, see [Add-in authorization policy types in SharePoint](../sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md). |
 
 #### SPTenantScopedPermissionInfo
@@ -159,11 +160,11 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 
 #### SPAddinPermissionFailedInfo
 
-| Name              | Type   | Description                                                 |
-|-------------------|--------|-------------------------------------------------------------|
-| serverRelativeUrl | string | The server relative url or full url of the site collection. |
-| appIdentifier     | string | The identifier list of the Add-in.                          |
-| errorMessage      | string | The error message why fetch the Add-in permission failed.   |
+| Name              | Type   | Description                                                     |
+|-------------------|--------|-----------------------------------------------------------------|
+| serverRelativeUrl | string | The server relative url or absolute url of the site collection. |
+| appIdentifier     | string | The identifier list of the Add-in.                              |
+| errorMessage      | string | The error message why fetch the Add-in permission failed.       |
 
 ## Get tenant ACS service principals
 
@@ -217,8 +218,8 @@ POST {adminSiteUrl}/_api/web/GetAddinPrincipalsHavingPermissionsInSites
 | Name               | Required | Type     | Description                                 |
 |--------------------|----------|----------|---------------------------------------------|
 | serverRelativeUrls | no       | string[] | List site collections' server relative url. |
-| fullUrls           | no       | string[] | List site collections' full url.            |
-Max total count for serverRelativeUrls and fullUrls is 500. And they can't be both empty.
+| absoluteUrls       | no       | string[] | List site collections' absolute url.        |  
+Max total count for serverRelativeUrls and absoluteUrls is 500. And they can't be both empty.
 
 ### Responses
 
@@ -234,15 +235,15 @@ Max total count for serverRelativeUrls and fullUrls is 500. And they can't be bo
 | title             | string | The title of the Add-in.                        |
 | appIdentifier     | string | The app identifier.                             |
 | serverRelativeUrl | string | The server relative url of the site collection. |
-| fullUrl           | string | The full url of the site collection.            |
+| absoluteUrl       | string | The absolute url of the site collection.        |
 
 
 #### SPErrorWithServerRelativeUrl
 
-| Name              | Type   | Description                                              |
-|-------------------|--------|----------------------------------------------------------|
-| serverRelativeUrl | string | The site collection's server relative url or full url.   |
-| errorMessage      | string | The error message why fetch the Add-in principal failed. |
+| Name              | Type   | Description                                                |
+|-------------------|--------|------------------------------------------------------------|
+| serverRelativeUrl | string | The site collection's server relative url or absolute url. |
+| errorMessage      | string | The error message why fetch the Add-in principal failed.   |
 
 ## Uninstall Add-ins
 
@@ -267,9 +268,9 @@ POST {adminSiteUrl}/_api/web/UninstallAddins
 | Name              | Type   | Description                      |
 |-------------------|--------|----------------------------------|
 | serverRelativeUrl | string | The site's server relative url.  |
-| fullUrl           | string | The site's full url.             |
+| absoluteUrl       | string | The site's absolute url.         |
 | appInstanceIds    | Guid[] | The instance ids of the Add-ins. |
-The serverRelativeUrl and fullUrl can't be both empty.
+The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
 
 ### Responses
 
@@ -284,7 +285,7 @@ The serverRelativeUrl and fullUrl can't be both empty.
 |-------------------|--------|---------------------------------|
 | appInstanceId     | Guid   | The instance id of the Add-in.  |
 | serverRelativeUrl | string | The site's server relative url. |
-| fullUrl           | string | The site's full url.            |
+| absoluteUrl       | string | The site's absolute url.        |
 | uninstallJobId    | Guid   | The triggered uninstall job id. |
 
 #### SPFailToTriggerUninstallAddinJobResponse
@@ -315,15 +316,15 @@ POST {adminSiteUrl}/_api/web/GetAddinUninstallJobDetail
 |-------------------|----------|--------|---------------------------------|
 | jobId             | yes      | Guid   | This uninstall job id.          |
 | serverRelativeUrl | no       | string | The site's server relative url. |
-| fullUrl           | no       | string | The site's full url.            |
-The serverRelativeUrl and fullUrl can't be both empty.
+| absoluteUrl       | no       | string | The site's absolute url.        |
+The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
 
 ### Responses
 
 | Name              | Type                          | Description                                      |
 |-------------------|-------------------------------|--------------------------------------------------|
 | serverRelativeUrl | string                        | The site's server relative url.                  |
-| fullUrl           | string                        | The site's full url.                             |
+| absoluteUrl       | string                        | The site's absolute url.                         |
 | taskStartTime     | DateTime                      | The time when the task starts executing.         |
 | jobId             | Guid                          | The uninstall job id.                            |
 | siteId            | Guid                          | The site collection id.                          |
