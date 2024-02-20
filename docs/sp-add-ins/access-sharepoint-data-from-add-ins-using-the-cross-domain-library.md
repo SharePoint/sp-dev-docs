@@ -1,13 +1,14 @@
 ---
 title: Access SharePoint data from add-ins using the cross-domain library
 description: Access data in a SharePoint website from your add-in by using the cross domain library in SharePoint.
-ms.date: 03/08/2023
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 
 # Access SharePoint data from add-ins using the cross-domain library
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When you build SharePoint Add-ins, you usually have to incorporate data from various sources. But for [security reasons](https://msdn.microsoft.com/library/cc709423.aspx), blocking mechanisms prevent communication with more than one domain at a time. These security mechanisms are implemented in most browsers, making it difficult or impossible to accomplish client-side calls across domains.
 

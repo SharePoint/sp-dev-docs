@@ -1,13 +1,15 @@
 ---
 title: High-trust configuration scripts for SharePoint
 description: Get customizable Windows PowerShell scripts that configure a SharePoint farm to use a high-trust SharePoint Add-in.
-ms.date: 03/25/2020
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
 # High-trust configuration scripts for SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 The following scripts are used to designate one or more X.509 digital certificates as trusted issuers of access tokens in a staging or production Microsoft SharePoint farm. For a script that is more appropriate for a SharePoint Add-ins development environment, see [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md). No single set of scripts can work for every SharePoint farm because there are too many different ways that the certificates can be acquired and stored. For that reason, please note the following:
 

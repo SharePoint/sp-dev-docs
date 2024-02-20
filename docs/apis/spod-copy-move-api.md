@@ -1,10 +1,10 @@
 ---
 title: Microsoft 365 Copy and Move API (CreateCopyJobs)
 description: "Microsoft 365 Copy and Move API (CreateCopyJobs)"
-ms.date: 06/29/2022
+ms.date: 10/05/2023
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
 audience: ITPro
 f1.keywords:
 - NOCSH
@@ -140,6 +140,6 @@ Currently, the following limitations are:
 
 |       What        |             Limitation              |
 | :---------------- | :---------------------------------- |
-| File size         | A file must be less than 2 GB.      |
-| Number of items   | No more than 30,000 items in a job. |
-| Total size of job | Job size not to exceed 100 GB.      |
+| File size         | [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#moving-and-copying-across-sites) |
+| Number of items   | [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#moving-and-copying-across-sites) |
+| Total size of job | [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#moving-and-copying-across-sites)    |

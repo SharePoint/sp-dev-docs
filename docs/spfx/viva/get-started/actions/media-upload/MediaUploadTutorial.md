@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 03/08/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
@@ -20,7 +20,7 @@ When prompted, enter the following values (select the default option for all pro
 
 - **What is your solution name?** media-upload-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Primary Text Template
+- **Which template do you want to use?** Generic Card Template
 - **What is your Adaptive Card Extension name?** MediaUpload
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -34,16 +34,16 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you'll see the `MediaUpload` card:
+At this point, if you do **gulp serve**, then you'll see the **MediaUpload** card:
 
 ![See the MediaUpload card icon in the webpart toolbox](./img/mediaUploadTutorialACE.PNG)
 
@@ -93,12 +93,14 @@ As mentioned earlier, on the Card View, we'll add a button, which will allow the
 
 Locate and open the following file in your project: **./src/adaptiveCardExtensions/mediaUpload/cardView/CardView.ts**
 
-Here, replace the definition of `cardButtons` function with the following:
+Here, replace the definition of `footer` in `cardViewParameters` getter with the following:
 
 ```typescript
-public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
-  return [
-    {
+public get cardViewParameters(): ComponentsCardViewParameters {
+  return return PrimaryTextCardView({
+    // ...
+    footer: {
+      componentName: 'cardButton',
       title: strings.UploadPNG,
       action: {
         type: 'VivaAction.SelectMedia',
@@ -107,13 +109,14 @@ public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined
         }
       }
     }
-  ];
+  });
 }
 ```
+You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extensions-base`:
 
-With this change, we have configured a button with label `Upload PNG file` and on click action is `VivaAction.SelectMedia`, which load the file uploader modal.
+With this change, we have configured a button with label **Upload PNG file** and on click action is `VivaAction.SelectMedia`, which load the file uploader modal.
 
-Next, replace the content of `onCardSelection` function with the following:
+Next, replace the content of `onCardSelection()` function with the following:
 
 ```typescript
 public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
@@ -143,11 +146,12 @@ In the Quick View, we will introduce buttons for three actions:
 We will first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/mediaUpload/quickView/template/QuickViewTemplate.json**
 
 Replace the content of this file with the following:
+
 ```json
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.2",
+  "version": "1.5",
   "body": [
     {
       "type": "TextBlock",
@@ -192,7 +196,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a `gulp serve` at this point, then you'll be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a **gulp serve** at this point, then you'll be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 
@@ -206,7 +210,7 @@ Here, add the following `states` to the `IMediaUploadAdaptiveCardExtensionState`
 filesUploaded: string;
 ```
 
-Next, in the `onInit` function, change `this.state={}` to
+Next, in the `onInit()` function, change `this.state={}` to
 
 ```typescript
 this.state = {
@@ -232,9 +236,9 @@ filesUploaded: this.state.filesUploaded
 
 ### Implement the onAction function
 
-So far we have created defined our media upload action and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the Third Party Developer to decide what they wish to do with the media information uploaded.
+So far we have created defined our media upload action and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the third party developer to decide what they wish to do with the media information uploaded.
 
-For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/mediaUpload/quickView/QuickView.ts**) and import the `ISelectMediaActionArguments` interface, as follows:
+For this, open the **QuickView.ts** file (**./src/adaptiveCardExtensions/mediaUpload/quickView/QuickView.ts**) and import the `ISelectMediaActionArguments` interface, as follows:
 
 ```typescript
 import {ISelectMediaActionArguments} from '@microsoft/sp-adaptive-card-extension-base';

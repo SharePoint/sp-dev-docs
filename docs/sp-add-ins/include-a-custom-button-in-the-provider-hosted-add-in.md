@@ -1,13 +1,15 @@
 ---
 title: Include a custom button in the provider-hosted add-in
 description: Create a custom list on the host website, add a custom button, request Read permissions, run the add-in, and test the button.
-ms.date: 10/21/2019
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
 # Include a custom button in the provider-hosted add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 This is the third in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps).
 
@@ -20,7 +22,7 @@ A SharePoint Add-in can include custom actions, which is the SharePoint term for
 
 The custom button is going to be on the ribbon of a specific list that records the employees of the local store. In a later article in this series, you'll learn how to programmatically add a custom list to a host website, but for now you'll add one manually.
 
-1. From the home page of the Fabrikam Hong Kong Store, go to **Site Contents** > **Add an add-in** > **Custom List**. 
+1. From the home page of the Fabrikam Hong Kong SAR Store, go to **Site Contents** > **Add an add-in** > **Custom List**. 
 1. In the **Adding Custom List** dialog, specify **Local Employees** as the name, and then select **Create**. 
 1. On the **Site Contents** page, open the **Local Employees** list.
 1. On the **List** tab on the ribbon, select **List Settings**.

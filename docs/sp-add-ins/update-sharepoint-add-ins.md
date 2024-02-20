@@ -1,12 +1,14 @@
 ---
 title: Update SharePoint Add-ins
 description: Create and deploy an update for a SharePoint Add-in.
-ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Update SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can update your SharePoint Add-in by using the updating support built into SharePoint. Within 24 hours after you upload an updated version of the add-in to the organization's add-in catalog, or the add-in is accepted at the Office Store, a notification that an update is available appears next to the add-in on the **Site Contents** page of every website where it is installed. As you can see in Figure 1, a link is provided for users to immediately install the update.
  

@@ -1,12 +1,14 @@
 ---
 title: Tenancies and deployment scopes for SharePoint Add-ins
 description: Deploy SharePoint Add-ins to tenant scope and web scope SharePoint tenants. 
-ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Tenancies and deployment scopes for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 A SharePoint **tenancy** is a set of site collections in either a SharePoint farm or in SharePoint Online. In SharePoint Online, the site collections belong to a single customer account. In a SharePoint farm, the site collections can be all the site collections in a SharePoint web application or a subset of them, or it can be a set of site collections from across multiple web applications in the farm. A tenancy can have a SharePoint add-in catalog just as a SharePoint web application can.
 

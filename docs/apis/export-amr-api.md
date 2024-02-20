@@ -1,10 +1,10 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
-ms.date: 06/28/2022
+ms.date: 09/26/2023
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
 audience: ITPro
 ms.subservice: migration-tool
 ms.topic: article
@@ -41,7 +41,7 @@ A migration performance study identified four areas where a high number of calls
 The SharePoint Migration Export (Asynchronous Metadata Read) API aims to reduce the calls in areas: incremental migration, after migration verification and permission settings.
 
 > [!Note]
-> The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are expected to be covered in a subsequent version.
+> The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are supported for all customers.
 
 Key supported features:
 
@@ -104,6 +104,12 @@ Currently there is a maximum of 5000 URL aggregation limits per call.
 #### readOptions Flag
 
 The read asynchronous function will include the SPAsyncReadOptions structure, which covers the optional flags to allow the user to specify version and security setting on the site level more is described below.
+
+```csharp
+IncludePermission {get; set;}
+```
+
+If set, the permissions associated with files and items are included in the export. If absent or set to false, no permission will be included.
 
 ```csharp
 IncludeVersions{ get; set; }
@@ -214,6 +220,35 @@ CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 |UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.|
 |ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.|
 
+### Encoding invalid XML characters
+
+When invalid XML characters are detected in relevant fields, they're encoded. For any attribute that is XML encoded, decoding is needed for the value. Encoded fields are included in `EncodedAttributes`, in a comma-separated attribute list.
+
+**Example**
+
+In this  example, these attributes are encoded: URL, ParentWebURL, Name, and Version.
+
+```xml
+<File Url="testlib_x002F_File_0905-1653-31240"
+      Id="e72e2015-91a4-4d07-ae9a-7b6c76918d2a"
+      ParentWebId="7206fc09-e4af-48b3-8730-ed7321396d7a"
+      ParentWebUrl="_x002F_"
+      Name="File_0905-1653-31240"
+      ListItemIntId="3"
+      ListId="48ea9454-9538-47ae-926d-917df80bc93e"
+      ParentId="33ff2f12-c818-4c8d-8578-c6d057172fd8"
+      ScopeId="385cd4d5-86da-4183-bdac-2e83da1b05fc"
+      TimeCreated="2021-11-08T03:57:05"
+      TimeLastModified="2021-01-17T16:01:48"
+      Version="_x0031_.0"
+      FileSize="1"
+      Level="1"
+      EncodedAttributes="Url,ParentWebUrl,Name,Version">
+```
+
+>[!Warning]
+>If XSD is replied on to parse manifest files, parsing may fail when **EncodedAttributes** is used.
+
 #### How to retrieve the manifest from the Azure blob
 
 The following example code demonstrates how to get the Azure blob of a manifest file and decipher it:
@@ -282,6 +317,15 @@ It returns the AES256CBC encryption key used to decrypt the message in azureMani
 |AzureContainerManifest|Return the URL for accessing the async read manifest|
 |JobQueueUri|URL for accessing Azure queue used for returning notification of migration job process|
 |EncryptionKey|AES256CBC encryption key used to decrypt messages from job/manifest queue|
+
+## Error codes
+
+These error codes are expected behavior under specific conditions.  Use discretion handling them.
+
+|Error code|Error message|Description|
+|:-----|:-----|:-----|
+|-2146232832|The changeToken refers to a time before the start of the current change log.|The change log is limited to 60 days immediately before the current date.  This error code is returned when the changeToken refers to a time outside the 60 day window.|
+|-2147213196|Operation canceled.|The client cancels the read operation. This is an expected behavior and a cancel request is processed.|
 
 ## Set up Guidelines
 

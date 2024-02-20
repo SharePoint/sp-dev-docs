@@ -1,7 +1,7 @@
 ---
 title: Make custom CSS files themable in SharePoint
 description: Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint theming engine.
-ms.date: 06/13/2022
+ms.date: 09/28/2023
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 ms.localizationpriority: high
 ---
@@ -103,7 +103,7 @@ CSS files must be checked in and published. If CSS files are changed, you must r
 
 ## Register the CSS file
 
-You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a **\<SharePoint:CssRegistration\>** element to the **<head>** element of the master page. The following shows the format of the **\<SharePoint:CssRegistration\>** element.
+You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a **\<SharePoint:CssRegistration\>** element to the `<head>` element of the master page. The following shows the format of the **\<SharePoint:CssRegistration\>** element.
 
 ```HTML
 <SharePoint:CssRegistration Name="CSSFileLocation" runat="server" />
@@ -130,5 +130,4 @@ The following is an example of an **\<SharePoint:CssRegistration\>** element.
 - [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
 - [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
 - [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
-- [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
 - [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)

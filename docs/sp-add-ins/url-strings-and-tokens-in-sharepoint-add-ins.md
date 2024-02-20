@@ -1,13 +1,15 @@
 ---
 title: URL strings and tokens in SharePoint Add-ins
 description: The URL tokens that can be used at the beginning of a URL and inside a URL in a SharePoint Add-in.
-ms.date: 12/13/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # URL strings and tokens in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!IMPORTANT]
 > For general information about constructing URLs in SharePoint and the use of tokens in those URLs, see [URLs and tokens in SharePoint](../general-development/urls-and-tokens-in-sharepoint.md). This topic describes the tokens that are available in SharePoint Add-ins.

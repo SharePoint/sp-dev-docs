@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.15.2 release notes
 description: Release notes for the SharePoint Framework v1.15.2 release
-ms.date: 08/09/2022
+ms.date: 06/27/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15.2 release notes
@@ -48,7 +48,9 @@ Previously it was assumed and required that API to be already present in the ten
 
 Now developers are able to specify **optional** attributes `appId` and `replyUrl` in `webApiPermissionRequests` section of `package-solution.json`.
 
-When these attributes are present, administartors are presented standard Azure AD app registration consent as part of the API approval process.
+When these attributes are present, administrators are presented standard Azure AD app registration consent as part of the API approval process.
+
+For more information on this feature, see: [Requesting permissions to Azure AD applications in another tenant](use-aadhttpclient.md#requesting-permissions-to-azure-ad-applications-in-another-tenant).
 
 ### New Action types for media - General Availability
 
@@ -103,7 +105,7 @@ The action will be rendered as below:
 
 ![Select file button](../images/release-notes/114/file-action.jpg)
 
-The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
+The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relevant files:
 
 ![Select file panel](../images/release-notes/114/media-panel.jpg)
 

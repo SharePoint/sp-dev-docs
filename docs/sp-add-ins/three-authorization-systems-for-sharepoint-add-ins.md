@@ -1,13 +1,15 @@
 ---
 title: Three authorization systems for SharePoint Add-ins
 description: SharePoint Add-ins can use low-trust or high-trust systems or the cross-domain library to get authorization to SharePoint resources.
-ms.date: 05/01/2020
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Three authorization systems for SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In SharePoint, a SharePoint Add-in is an identity principal just like a user, and it must be authenticated and authorized to use SharePoint resources. There are three authorization systems that an add-in can use. They are not mutually exclusive.
 
@@ -19,8 +21,7 @@ In SharePoint, a SharePoint Add-in is an identity principal just like a user, an
 
 A provider-hosted SharePoint Add-in can register with Microsoft Azure Access Control Service (ACS), which issues an access token to the add-in that allows the add-in access to the resources in the SharePoint tenancy or farm on which the add-in is installed. Azure ACS is the trusted token issuer in an OAuth 2.0 Framework "flow" that includes SharePoint and the remote components of the add-in. Add-ins that use this system can be sold in the Office Store. The low-trust system is primarily intended for add-ins whose remote components are hosted in the cloud.
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
     
 For more information about creating a SharePoint Add-in that uses the low-trust system, see [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md).
     

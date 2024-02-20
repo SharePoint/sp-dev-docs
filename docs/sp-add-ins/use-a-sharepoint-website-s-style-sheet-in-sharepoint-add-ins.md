@@ -1,13 +1,15 @@
 ---
 title: Use a SharePoint website's style sheet in SharePoint Add-ins
 description: Reference a style sheet of a SharePoint website in your SharePoint Add-in and use it to style your webpages.
-ms.date: 12/14/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 
 # Use a SharePoint website's style sheet in SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 You can reference the style sheet of a SharePoint website in your SharePoint Add-in and use it to style your webpages by using the style sheet in SharePoint. In addition, if someone changes the SharePoint website's style sheet or theme, you can adopt the new set of styles in your add-in without modifying the style sheet reference in your add-in.
  

@@ -1,12 +1,14 @@
 ---
 title: Package and publish high-trust SharePoint Add-ins
 description: Package and publish a high-trust SharePoint Add-in for on-premises use.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Package and publish high-trust SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 <a name="Prereqs"> </a>
 

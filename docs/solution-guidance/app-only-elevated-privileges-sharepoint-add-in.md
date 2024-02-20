@@ -81,6 +81,8 @@ You have a couple of options to elevate permissions.
 - Service Account
   - Remotely hosted code (Example: Azure WebJob)
 
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
+
 ### OAuth (AllowAppOnlyPolicy)
 
 In this option the AllowAppOnlyPolicy is set to true in the AppPermissionRequests element and permissions are set in the SharePoint Add-in manifest. OAuth is used to return access tokens to allow the SharePoint Add-in to execute operations it has permissions to perform.

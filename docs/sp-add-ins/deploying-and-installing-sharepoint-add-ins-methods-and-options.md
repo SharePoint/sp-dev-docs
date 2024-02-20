@@ -1,12 +1,14 @@
 ---
 title: Deploying and installing SharePoint Add-ins - methods and options
 description: Publish, install, and uninstall a SharePoint Add-in.
-ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Deploying and installing SharePoint Add-ins: methods and options
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 In this article, you'll learn more about the options for publishing your SharePoint Add-in, as well as how to install and uninstall it.
 

@@ -2,8 +2,8 @@
 title: The SharePoint modernization scanner reports for the publishing portal scanner mode
 description: Explains the publishing portal output created by the modernization scanner
 ms.date: 10/23/2019
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Publishing Portal reports

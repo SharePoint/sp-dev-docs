@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
-ms.date: 03/01/2023
+ms.date: 11/21/2023
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,15 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
 
-In addition to SharePoint Online, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
+Write once and surface exactly the same code across [multiple applications](./office/overview.md). Below picture shows example case with a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/) available from GitHub.
+
+![Text Input in body](../images/overview/spfx-across-apps.png)
+
+Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections.md) by building custom Adaptive Card Extensions.
+
+![Text Input in body](../images/overview/viva-spfx-extensibility.png)
+
+In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
 To learn more about where developers can use SPFx, see [Supported extensibility platforms](supported-extensibility-platforms-overview.md).
 
@@ -29,10 +37,15 @@ The following are some of the key features included as part of the SPFx:
 - End users can use SPFx client-side solutions that are approved by the tenant administrators (or their delegates) on all sites, including self-service team, group, or personal sites.
 - SPFx web parts can be added to both classic and modern pages.
 - SPFx solutions can be used to extend Microsoft Teams.
+- SPFx can be used to extend Microsoft Viva Connections.
+- SPFx can be use to extend Outlook and Office 365 app (Office)
 
 The runtime model improves on the Script Editor web part. It includes a robust client API, an HttpClient object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
 If you work primarily with C#, you want to learn more about client-side JavaScript development. Most of your existing JavaScript knowledge related to SharePoint, however, is transferable, as the data models haven't changed, and you’ll use the same [REST services](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) depending on your requirements. If you're a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE [Visual Studio Code](https://code.visualstudio.com).
+
+> [!IMPORTANT]
+> The SharePoint page [HTML DOM](https://www.w3.org/TR/WD-DOM/introduction.html) is not an API. You should avoid taking any dependencies on the page DOM structure or CSS styles, which are subject to change and potentially break your solutions. SharePoint Framework provides a rich API to customize the SharePoint experience in reliable ways and is the only supported means to interact with the SharePoint page HTML DOM.
 
 > [!NOTE]
 > All supported scenarios for SharePoint Framework are included in the documentation. Any scenario which is not covered in the documentation, is considered as unsupported. If you need to validate the supportability of your planned scenario, please use the available Microsoft support channels.

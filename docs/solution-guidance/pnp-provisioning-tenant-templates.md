@@ -1,7 +1,7 @@
 ---
 title: PnP Provisioning Tenant Templates
 description: Think of Tenant Templates as an extension on top of PnP Provisioning or Site Templates. Instead of just provisioning artifacts to a site, you can now create sites, create teams, provision Azure AD entries, provision taxonomy etc.
-ms.date: 04/28/2022
+ms.date: 09/21/2023
 ms.localizationpriority: high
 ---
 
@@ -81,21 +81,20 @@ As the only way to create a team programmatically is by using the Microsoft Grap
 You can do this as follows:
 
 ```
-Connect-PnPOnline -Graph -LaunchBrowser
+Register-PnPManagementShellAccess
 ```
 
-This will copy a so-called device code to your clipboard and it will step your through a wizard to provide consent. Notice that this is a one time action only. After you performed this consent step you can use the normal ways of connecting with PnP PowerShell as you are used to. 
+This is a one time action only. After you performed this consent step you can use the normal ways of connecting with PnP PowerShell as you are used to. 
 
 The flow the provisioning engine uses is as follows:
 
-1. You login using your credentials with `Connect-PnPOnline`
-2. You apply the template with Apply-PnPTenantTemplate -Path yourtemplate.pnp
+1. You login using your credentials with `Connect-PnPOnline <tenant>.sharepoint.com -Interactive`
+2. You apply the template with `Invoke-PnPTenantTemplate -Path yourtemplate.pnp`
 3. The Provisioning Engine will start to provision any SharePoint artifact it finds in that template
 4. The moment the engine encounters an artifact which requires an access token for the Microsoft Graph it will call back to PnP PowerShell to acquire such a token
 5. PnP PowerShell will try, using the credentials you used in step 1 and the consent you provided earlier as written above, to acquire a token using the PnP Management Shell multi-tenant Azure application registration. The moment it successfully acquired the token it will return this token to the provisioning engine which will use that token to make the appropriate calls to the Microsoft Graph API.
 
-If at a later state you want to remove this consent, login to your Azure Portal, and navigate to the Azure Active Directory. In the Enterprise Applications section you will find an entry called "PnP Management Shell". Remove this entry to clear the consent.
-
+If at a later state you want to remove this consent, login to your Azure Portal, and navigate to the Azure Active Directory. In the Enterprise Applications section you will find an entry called "PnP Management Shell" with client id 31359c7f-bd7e-475c-86db-fdb8c937548e. Remove this entry to clear the consent.
 
 ## See also
 

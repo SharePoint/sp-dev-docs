@@ -2,13 +2,15 @@
 title: SharePoint Add-ins
 description: Create self-contained extensions of SharePoint websites, called SharePoint Add-ins, that run without custom code on the SharePoint server.
 ms.date: 03/08/2023
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # SharePoint Add-ins
 
 There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-hosted. To make the best decision about the right kind to develop for your scenario, start by learning what both types of SharePoint Add-ins have in common.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!NOTE]
 > A device app, such as mobile app, isn't really a "SharePoint Add-in" even when it accesses SharePoint. The same is true of a web application that is launched from outside of SharePoint. If you want to develop any of these kinds of apps, see [Access SharePoint from mobile and native device apps](https://msdn.microsoft.com/library/42014171-5ee5-421d-9cde-413efc3aecef%28Office.15%29.aspx).

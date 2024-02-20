@@ -466,8 +466,16 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.18.2 - November 21, 2023
+      href: spfx/release-1.18.2.md
+    - name: SPFx v1.18.1 - November 7, 2023
+      href: spfx/release-1.18.1.md
+    - name: SPFx v1.18 - September 12, 2023
+      href: spfx/release-1.18.md
+    - name: SPFx v1.17.4 - June 21, 2023
+      href: spfx/release-1.17.4.md
     - name: SPFx v1.17.3 - May 31, 2023
-      href: spfx/release-1.17.3.md 
+      href: spfx/release-1.17.3.md
     - name: SPFx v1.17.2 - May 9, 2023
       href: spfx/release-1.17.2.md
     - name: SPFx v1.17.1 - April 12, 2023
@@ -524,6 +532,66 @@
       href: spfx/release-1.0.0.md
   - name: Extend SharePoint with SPFx - Learning Path
     href: /training/paths/m365-sharepoint-associate
+- name: SharePoint Embedded
+  items:
+  - name: Overview
+    href: embedded/overview.md
+  - name: Getting Started
+    items:
+    - name: Enable SharePoint Embedded
+      href: embedded/getting-started/enable-sharepoint-embedded.md
+    - name: SharePoint Embedded for Visual Studio Code
+      href: embedded/getting-started/spembedded-for-vscode.md
+  - name: Adoptions and Use Case Scenarios
+    href: embedded/adoptions-and-use.md
+  - name: Concepts
+    items:
+    - name: Application Architecture
+      href: embedded/concepts/app-concepts/app-architecture.md
+    - name: Container Types
+      href: embedded/concepts/app-concepts/containertypes.md
+    - name: Authentication
+      href: embedded/concepts/app-concepts/auth.md
+    - name: Sharing and Permissions
+      href: embedded/concepts/app-concepts/sharing-and-perm.md
+    - name: Limits and Calling Patterns
+      href: embedded/concepts/app-concepts/limits-calling.md
+    - name: Terms and Definitions
+      href: embedded/concepts/app-concepts/terms-and-def.md
+    - name: Content Experiences
+      items:
+      - name: Office Experiences
+        href: embedded/concepts/content-experiences/office-experience.md
+      - name: User Experiences
+        href: embedded/concepts/content-experiences/user-experiences-overview.md
+      - name: Search Content
+        href: embedded/concepts/content-experiences/search-content.md
+    - name: Admin Experiences
+      items:
+      - name: Consuming Tenant Admin
+        href: embedded/concepts/admin-exp/cta.md
+      - name: Developer Admin
+        href: embedded/concepts/admin-exp/dev-admin.md
+      - name: Billing
+        href: embedded/concepts/admin-exp/billing.md
+    - name: Security and Compliance
+      href: embedded/concepts/security-and-compliance.md
+  - name: Tutorials
+    items:
+    - name: Register Container Type
+      href: embedded/tutorials/register-ct.md
+    - name: Launch Experience
+      href: embedded/tutorials/launch-experience.md
+    - name: Using File Preview
+      href: embedded/tutorials/using-file-preview.md
+  - name: Terms of Service
+    href: embedded/terms-of-service.md
+  - name: SharePoint Embedded Learning Modules
+    items:
+      - name: SharePoint Embedded - overview & configuration
+        href: /training/modules/sharepoint-embedded-setup
+      - name: SharePoint Embedded - building applications
+        href: /training/modules/sharepoint-embedded-create-app
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -556,6 +624,8 @@
     href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
   - name: Focus feature in Adaptive Card Extension
     href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+  - name: Card Designer advance API features
+    href: spfx/viva/features/card-designer/card-designer-api-support.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -566,6 +636,8 @@
       href: spfx/viva/design/designing-quick-view.md
     - name: Quick View Samples
       href: spfx/viva/design/quick-view-samples.md
+    - name: Adaptive Card Extensions Iconography Limitations
+      href: spfx/viva/get-started/fluent-icons-limitations.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -584,8 +656,24 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
     - name: Media Upload capability via property pane of an ACE
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
+    - name: Create a People Search Adaptive Card Extension
+      href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
+    - name: Making Quick View compatible with dark mode
+      href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
+    - name: Migrate existing ACEs to SharePoint Framework v1.18
+      href: spfx/viva/get-started/migrate-to-spfx-1-18.md
+  - name: Bot Powered Adaptive Card Extensions
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
+    - name: Authentication and Authorization in Bot Powered ACEs
+      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
@@ -628,6 +716,12 @@
         href: business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md
 - name: SharePoint Add-ins
   items:
+  - name: Add-In retirement announcement
+    href: sp-add-ins/retirement-announcement-for-add-ins.md
+  - name: Azure ACS retirement announcement
+    href: sp-add-ins/retirement-announcement-for-azure-acs.md
+  - name: Add-In and Azure ACS retirement FAQ
+    href: sp-add-ins/add-ins-and-azure-acs-retirements-faq.md
   - name: Overview
     href: sp-add-ins/sharepoint-add-ins.md
   - name: Build SharePoint-hosted add-ins
@@ -850,6 +944,44 @@
       href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
     - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
+- name: SharePoint Add-ins modernization
+  items:
+  - name: Overview
+    href: sp-add-ins-modernize/sp-add-in-modernize.md
+  - name: Authentication considerations
+    href: sp-add-ins-modernize/understanding-aad-and-oauth-for-spo-modern.md
+  - name: Tranform from ACS to Azure AD apps
+    href: sp-add-ins-modernize/from-acs-to-aad-apps.md
+  - name: Multi-tenant applications for SharePoint Online
+    href: sp-add-ins-modernize/multi-tenant-applications.md
+  - name: Understanding Resource Specific Consent (RSC)
+    href: sp-add-ins-modernize/understanding-rsc-for-msgraph-and-sharepoint-online.md
+  - name: Transform from app parts to SPFx web part
+    href: sp-add-ins-modernize/from-app-parts-to-modern-web-parts.md
+  - name: Transform from UI Extensions to SPFx List View Command Set
+    href: sp-add-ins-modernize/from-ui-extensions-to-listview-command-sets.md
+  - name: Transform from notifications to SPFx Application Customizers
+    href: sp-add-ins-modernize/from-notifications-to-application-customizers.md
+  - name: Transform from classic dialogs to SPFx dialogs
+    href: sp-add-ins-modernize/from-classic-dialogs-to-modern-dialogs.md
+  - name: Transform from JSOM
+    href: sp-add-ins-modernize/from-jsom-to-client-side.md
+  - name: Transform from CSOM
+    href: sp-add-ins-modernize/from-csom-to-pnp-libraries.md
+  - name: Transform from XSLT rendering to List Formatting
+    href: sp-add-ins-modernize/from-xslt-to-list-formatting.md
+  - name: Transform from remote event receivers to web hooks
+    href: sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md
+  - name: Transform from SharePoint hosted add-ins
+    href: sp-add-ins-modernize/from-sharepoint-hosted-to-client-side.md
+  - name: Transform from provider hosted add-ins to Azure AD apps
+    href: sp-add-ins-modernize/from-provider-hosted-to-aad-applications.md
+  - name: Transform from add-in workflow apps to Microsoft Power Automate
+    href: sp-add-ins-modernize/from-workflow-apps-to-power-automate.md
+  - name: Publishing SharePoint Framework solutions to Microsoft AppSource
+    href: sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md
+  - name: Modern provisioning of artifacts and information architecture
+    href: sp-add-ins-modernize/modern-provisioning.md
 - name: Archive
   items:
   - name: Overview
@@ -2088,7 +2220,7 @@
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
   - name: CSOM methods for applying retention labels
-    href: apis/csom-methods-for-applying-retention-labels.md    
+    href: apis/csom-methods-for-applying-retention-labels.md
   - name: SharePoint Add-in Management APIs
     href: apis/addin-management-apis.md
   - name: Microsoft 365 Copy and Move API
@@ -2105,6 +2237,8 @@
       href: apis/onenote-migration-service.md
     - name: Sensitivity Labels and the SharePoint Migration API
       href: apis/sp-migration-api-and-sensitivity-labels.md
+    - name: How to export video transcripts using the SharePoint Migration API
+      href: apis/migration-api-video-transcripts.md
     - name: Migration API
       items:
       - name: Import Migration API
@@ -2118,6 +2252,8 @@
             href: apis/migrate-webparts-with-migrationapi.md
       - name: Export Migration API (Asynchronous Metadata Read)
         href: apis/export-amr-api.md
+      - name: Permissions guide for Export Migration API (Asynchronous Metadata Read)
+        href: apis/export-amr-api-permission-guide.md
       - name: Azure container and queue
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption

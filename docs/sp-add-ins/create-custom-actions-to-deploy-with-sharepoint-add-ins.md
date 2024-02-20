@@ -1,12 +1,14 @@
 ---
 title: Create custom actions to deploy with SharePoint Add-ins
 description: Create a custom action in SharePoint that deploys to the host web when you deploy a SharePoint Add-in.
-ms.date: 12/20/2017
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Create custom actions to deploy with SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When you are creating a SharePoint Add-in, custom actions let you interact with the lists and the ribbon in the host web. A custom action deploys to the host web when end users install your add-in. Custom actions can open a remote webpage and pass information through the query string. 
 

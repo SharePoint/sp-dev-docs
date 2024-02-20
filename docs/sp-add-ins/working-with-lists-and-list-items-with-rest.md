@@ -2,8 +2,8 @@
 title: Working with lists and list items with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Working with lists and list items with REST
@@ -618,7 +618,7 @@ X-HTTP-Method: "DELETE"
 
 ## Using ETag values to determine document and list item versioning
 
-The SharePoint REST service, which follows the [OData standard](http://www.odata.org/developers/protocols/operations), uses [Header ETags](http://docs.oasis-open.org/odata/odata/v4.01/cs01/part1-protocol/odata-v4.01-cs01-part1-protocol.html#sec_HeaderETag) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**, **MERGE**, or **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
+The SharePoint REST service, which follows the [OData standard](https://www.odata.org/developers/protocols/operations), uses [Header ETags](https://docs.oasis-open.org/odata/odata/v4.01/cs01/part1-protocol/odata-v4.01-cs01-part1-protocol.html#sec_HeaderETag) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**, **MERGE**, or **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
 
 If the **ETag** you specify in your request doesn't match the **ETag** of the document or list item on the server, the REST service returns a 412 exception, per the OData specification.
 

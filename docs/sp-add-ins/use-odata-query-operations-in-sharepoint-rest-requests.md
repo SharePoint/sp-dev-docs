@@ -1,9 +1,9 @@
 ---
 title: Use OData query operations in SharePoint REST requests
 description: Use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.
-ms.date: 08/05/2021
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 # Use OData query operations in SharePoint REST requests
@@ -22,7 +22,7 @@ The SharePoint REST service supports a wide range of OData query string operator
 
 ## Select fields to return
 
-Use the [$select](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#SelectSystemQueryOption) query option to specify which fields to return for a given list, list item, or other SharePoint object represented by an entity set. You can use `$select=*` to return all available fields.
+Use the [$select](https://www.odata.org/documentation/odata-version-2-0/uri-conventions#SelectSystemQueryOption) query option to specify which fields to return for a given list, list item, or other SharePoint object represented by an entity set. You can use `$select=*` to return all available fields.
 
 > [!NOTE]
 > In general, if you do not specify the `$select` query option, the REST service returns all available fields by default. However, in a few cases, some SharePoint objects include properties that are very resource intensive to retrieve; to optimize REST service performance, these properties are not included in the default query, and must be explicitly requested.For example, the **SPWeb.EffectiveBasePermissions** property is not returned by default, and must be explicitly requested by using the `$select` query option.
@@ -39,7 +39,7 @@ Bulk expansion and selection of related items isn't supported.
 
 ## Select items to return
 
-Use the [$filter](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#FilterSystemQueryOption) query option to select which items to return. [OData query operators supported in the SharePoint REST service](#odata-query-operators-supported-in-the-sharepoint-rest-service) lists the filter query comparison options and functions you can use with the SharePoint REST service.
+Use the [$filter](https://www.odata.org/documentation/odata-version-2-0/uri-conventions#FilterSystemQueryOption) query option to select which items to return. [OData query operators supported in the SharePoint REST service](#odata-query-operators-supported-in-the-sharepoint-rest-service) lists the filter query comparison options and functions you can use with the SharePoint REST service.
 
 ## Query for single value lookup fields
 
@@ -58,11 +58,11 @@ Because multi-value lookup fields are returned as a string of multiple values, t
 
 ## Sort returned items
 
-Use the [$orderby](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#OrderBySystemQueryOption) query option to specify how to sort the items in your query return set. To sort by multiple fields, specify a comma-separated list of fields. You can also specify whether to sort the items in ascending or descending order by appending the **asc** or **desc** keyword to your query.
+Use the [$orderby](https://www.odata.org/documentation/odata-version-2-0/uri-conventions#OrderBySystemQueryOption) query option to specify how to sort the items in your query return set. To sort by multiple fields, specify a comma-separated list of fields. You can also specify whether to sort the items in ascending or descending order by appending the **asc** or **desc** keyword to your query.
 
 ## Page through returned items
 
-Use the [$top](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#TopSystemQueryOption) and [$skiptoken](https://msdn.microsoft.com/library/dd942121.aspx) query options to select a subset of the items that would otherwise be returned by your query.
+Use the [$top](https://www.odata.org/documentation/odata-version-2-0/uri-conventions#TopSystemQueryOption) and [$skiptoken](/openspecs/windows_protocols/ms-odata/4dda9434-c2c5-4577-8e01-7bf9e822d90a) query options to select a subset of the items that would otherwise be returned by your query.
 
 > [!NOTE]
 > The $skip query option does not work with queries for SharePoint list items.

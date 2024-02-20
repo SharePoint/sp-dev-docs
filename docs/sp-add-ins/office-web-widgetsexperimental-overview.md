@@ -1,12 +1,14 @@
 ---
 title: Office Web Widgets - Experimental overview
 description: Experimental widgets that you can use in Office Add-ins, SharePoint Add-ins, and websites.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: medium
+ms.service: sharepoint
 ---
 
 # Office Web Widgets - Experimental overview
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 > [!WARNING] 
 > The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md).

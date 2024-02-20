@@ -1,17 +1,17 @@
 ---
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
-ms.date: 06/13/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 # Authorization Code OAuth flow for SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!NOTE]
 > This article assumes that you're familiar with [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) and with the concepts and principles behind OAuth. For more information about OAuth, see [OAuth.net](http://oauth.net/) and [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth).
 
-> [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement doesn't impact the SharePoint Add-in model, which uses the **https://accounts.accesscontrol.windows.net** hostname (which isn't impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
 In some scenarios, an add-in can request permission to access SharePoint resources on the fly; that is, an add-in can request permission to access SharePoint resources dynamically at runtime, instead of at add-in installation time. This type of add-in doesn't have to be launched from, or even installed on, SharePoint. For example, it could be a native device add-in, an add-in that is launched from any website, or an Office Add-in launched from an Office application that wants to access resources on SharePoint on the fly.
 

@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 description: "This article provides in depth information on how to use the SPO Migration API."
-ms.date: 04/10/2023
+ms.date: 10/05/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -9,6 +9,7 @@ search.appverid: MET150
 ms.subservice: migration-tool
 ms.localizationpriority: high
 ---
+
 # SharePoint Import Migration API (CreationMigrationJob)
 
 ## API Documentation
@@ -235,6 +236,23 @@ Message:ErrorMessage
 CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
 ```
 
+**Event:JobFatalError**
+
+```text
+JobId:8f728c13-95d0-4d54-96bc-4ee912bd32ce
+Time: 02/05/2019 06:57:20.523 
+TotalRetryCount:0 
+MigrationType:None
+MigrationDirection:Import
+ObjectType:
+Url:
+Id:
+ErrorCode:-2147213196
+ErrorType:Microsoft.SharePoint.SPException
+Message:ErrorMessage 
+CorrelationId:b370d5a0-105d-4000-241f-9b2d70449d7b
+```
+
 **Event:JobWarning**
 
 ```text
@@ -385,6 +403,10 @@ QuickXorHash is created for the .zip file which concatenates all smaller files.
 The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The main requirement is that the ExportSettings `SiteUrl` value must be populated with a URL consistent with the source URL used for the rest of the import package. In the case of file shares as a source, the URL would be pre-specified to be the source URL in the rest of the package, whereas a package generated through an export operation at a source site would be its original source site collection URL.
+
+#### Ignoring Web Parts processing for performance
+
+Migration API checks and processes SharePoint web parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, these checks can be bypassed by setting `IgnoreWebParts` to `true`. This will improve the performance of migration tasks when web parts are not migrated.
 
 #### SourceType required
 
@@ -1726,3 +1748,4 @@ https://{site_url}/_api/site/ProvisionMigrationContainers
 
 > [!NOTE]
 > The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
+

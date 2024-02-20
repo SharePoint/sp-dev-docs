@@ -112,7 +112,7 @@ The following table lists the locale identifiers (LCID) and currency formats, or
 |1028  <br/> |NT$125 (Taiwan)  <br/> |
 |1054  <br/> |฿125 (Thailand)  <br/> |
 |7169  <br/> |125 .ت.د (Tunisia)  <br/> |
-|1055  <br/> |125 TL (Turkey)  <br/> |
+|1055  <br/> |125 TL (Türkiye)  <br/> |
 |14337  <br/> |125 .إ.د (U.A.E)  <br/> |
 |2057  <br/> |£125 (United Kingdom)  <br/> |
 |1033  <br/> |$125 (United States)  <br/> |

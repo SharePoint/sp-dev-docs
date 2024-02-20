@@ -99,6 +99,16 @@
       "source_path": "docs/spfx/sharepoint-2019-support.md",
       "redirect_url": "/sharepoint/dev/spfx/sharepoint-2019-and-subscription-edition-support",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/mslearn/m01-01-intro.md",
+      "redirect_url": "/training/modules/sharepoint-embedded-setup/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/mslearn/m02-01-intro.md",
+      "redirect_url": "/training/modules/sharepoint-embedded-create-app/",
+      "redirect_document_id": false
     }
   ]
 }

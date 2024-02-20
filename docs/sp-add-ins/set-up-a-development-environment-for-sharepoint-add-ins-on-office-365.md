@@ -1,13 +1,15 @@
 ---
 title: Set up a development environment for SharePoint Add-ins on Microsoft 365
 description: Install Visual Studio and sign up for a Microsoft 365 developer subscription.
-ms.date: 02/04/2022
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 
 
 # Set up a development environment for SharePoint Add-ins on Microsoft 365
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 To get an understanding of your options before you carry out any procedures in this article, see [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md). 
 

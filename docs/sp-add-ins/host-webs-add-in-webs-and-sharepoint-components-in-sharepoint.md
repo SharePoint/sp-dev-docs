@@ -1,11 +1,13 @@
 ---
 title: Host webs, add-in webs, and SharePoint components in SharePoint
 description: Which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web or the add-in web, and how the add-in web is deployed in an isolated domain.
-ms.date: 01/06/2021
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
+ms.service: sharepoint
 ---
 # Host webs, add-in webs, and SharePoint components in SharePoint
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 When an add-in that includes SharePoint components is installed on a website, it is listed on the **Site Contents** page from which it can be launched. That listing, which is the launch point of the add-in, is the only required addition to the website, although certain other things can optionally be added, such as a custom action or an add-in part. For information about these options, see [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#AccessingApp).
 

@@ -1,12 +1,13 @@
 ---
 title: Choose patterns for developing and hosting your SharePoint Add-in
 description: Match your hosting pattern to development goals, choose a pattern for provider-hosted add-ins, combine provider hosting and SharePoint hosting, and use add-ins in Azure Web Roles.
-ms.date: 02/05/2021
-ms.prod: sharepoint
+ms.date: 09/26/2023
 ms.localizationpriority: high
 ---
 
 # Choose patterns for developing and hosting your SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 The SharePoint Add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
 
