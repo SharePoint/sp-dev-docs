@@ -23,6 +23,9 @@ When the new SharePoint Migration Export (Asynchronous Metadata Read) API perfor
 
 This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
 
+> [!IMPORTANT]
+> AMR is designed exclusively for import scenarios. It exhibits poor scalability when handling requests for metadata, permissions, or versions. Note that we can't provide performance assurances for AMR usage in data export scenarios, such as cross-tenant migrations.
+
 ### Background
 
 Currently, the [SharePoint Online Migration API](migration-api-overview.md), lets your migration tool efficiently migrate large amounts data to SharePoint Online. However, the lack of an official API to read content from SharePoint Online means that these tools must rely on CSOM/Vroom function calls to perform individual metadata read operations.
