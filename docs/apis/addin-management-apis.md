@@ -42,11 +42,11 @@ POST {adminSiteUrl}/_api/web/AvailableAddIns
 
 ### Request body
 
-| Name               | Required | Type     | Description                                                                      |
-|--------------------|----------|----------|----------------------------------------------------------------------------------|
-| serverRelativeUrls | no       | string[] | List of the server relative url of sites that want to get the available Add-ins. |    
-| absoluteUrls       | no       | string[] | List of the absolute url of sites that want to get the available Add-ins.        |    
-Max total count for serverRelativeUrls and absoluteUrls is 500. And they can't be both empty.
+| Name               | Required | Type     | Description                                                                                                                |
+|--------------------|----------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| serverRelativeUrls | no       | string[] | List of the server relative url of sites that want to get the available Add-ins.                                           |    
+| urls               | no       | string[] | List of the url of sites that want to get the available Add-ins, both server relative url and absolute url are acceptable. |    
+Max total count for serverRelativeUrls and urls is 500. And they can't be both empty.
 
 ### Responses
 
@@ -88,10 +88,10 @@ Max total count for serverRelativeUrls and absoluteUrls is 500. And they can't b
 
 ### SPErrorWithServerRelativeUrl
 
-| Name              | Type   | Description                                               |
-|-------------------|--------|-----------------------------------------------------------|
-| serverRelativeUrl | string | The serverRelativeUrl or absoluteUrl in the request body. |
-| errorMessage      | string | The error message why fetch the site's Add-ins failed.    |
+| Name              | Type   | Description                                            |
+|-------------------|--------|--------------------------------------------------------|
+| serverRelativeUrl | string | The serverRelativeUrl or url in the request body.      |
+| errorMessage      | string | The error message why fetch the site's Add-ins failed. |
 
 ## Get Add-in permissions in site collections
 
@@ -113,12 +113,12 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 
 #### SPAddinPermissionRequest
 
-| Name              | Type     | Description                                                                                                                    |
-|-------------------|----------|--------------------------------------------------------------------------------------------------------------------------------|
-| serverRelativeUrl | string   | The server relative url of the site collection. It will return site collection scope permissions of the given site collection. |
-| absoluteUrl       | string   | The absolute url of the site collection. It will return site collection scope permissions of the given site collection.        |
-| appIdentifiers    | string[] | The identifier list of the Add-ins.                                                                                            |
-The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
+| Name              | Type     | Description                                                                               |
+|-------------------|----------|-------------------------------------------------------------------------------------------|
+| serverRelativeUrl | string   | The server relative url of the site collection.                                           |
+| url               | string   | The url of the site collection, both server relative url and absolute url are acceptable. |
+| appIdentifiers    | string[] | The identifier list of the Add-ins.                                                       |
+The serverRelativeUrl and url can't be both empty. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
 
@@ -215,11 +215,11 @@ POST {adminSiteUrl}/_api/web/GetAddinPrincipalsHavingPermissionsInSites
 
 ### Request body
 
-| Name               | Required | Type     | Description                                 |
-|--------------------|----------|----------|---------------------------------------------|
-| serverRelativeUrls | no       | string[] | List site collections' server relative url. |
-| absoluteUrls       | no       | string[] | List site collections' absolute url.        |  
-Max total count for serverRelativeUrls and absoluteUrls is 500. And they can't be both empty.
+| Name               | Required | Type     | Description                                                                           |
+|--------------------|----------|----------|---------------------------------------------------------------------------------------|
+| serverRelativeUrls | no       | string[] | List site collections' server relative url.                                           |
+| urls               | no       | string[] | List site collections' url, both server relative url and absolute url are acceptable. |  
+Max total count for serverRelativeUrls and urls is 500. And they can't be both empty.
 
 ### Responses
 
@@ -265,12 +265,12 @@ POST {adminSiteUrl}/_api/web/UninstallAddins
 
 #### SPUninstallAddinRequest
 
-| Name              | Type   | Description                      |
-|-------------------|--------|----------------------------------|
-| serverRelativeUrl | string | The site's server relative url.  |
-| absoluteUrl       | string | The site's absolute url.         |
-| appInstanceIds    | Guid[] | The instance ids of the Add-ins. |
-The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
+| Name              | Type   | Description                                                               |
+|-------------------|--------|---------------------------------------------------------------------------|
+| serverRelativeUrl | string | The site's server relative url.                                           |
+| url               | string | The site's url, both server relative url and absolute url are acceptable. |
+| appInstanceIds    | Guid[] | The instance ids of the Add-ins.                                          |
+The serverRelativeUrl and url can't be both empty. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
 
@@ -312,12 +312,12 @@ POST {adminSiteUrl}/_api/web/GetAddinUninstallJobDetail
 
 ### Request body
 
-| Name              | Required | Type   | Description                     |
-|-------------------|----------|--------|---------------------------------|
-| jobId             | yes      | Guid   | This uninstall job id.          |
-| serverRelativeUrl | no       | string | The site's server relative url. |
-| absoluteUrl       | no       | string | The site's absolute url.        |
-The serverRelativeUrl and absoluteUrl can't be both empty. If both serverRelativeUrl and absoluteUrl are provided, the absoluteUrl will be used.
+| Name              | Required | Type   | Description                                                                |
+|-------------------|----------|--------|----------------------------------------------------------------------------|
+| jobId             | yes      | Guid   | This uninstall job id.                                                     |
+| serverRelativeUrl | no       | string | The site's server relative url.                                            |
+| url               | no       | string | The site's url, both server relative url and absolute url are acceptable.  |
+The serverRelativeUrl and url can't be both empty. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
 
