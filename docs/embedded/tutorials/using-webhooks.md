@@ -10,12 +10,12 @@ ms.localizationpriority: high
 ## Set Up Webhooks with SharePoint Embedded
 Webhooks are automated messages that are transmitted by an application when a trigger is activated. They can be used in SPE to enable the automation of workflows, the integration of systems, and to respond to events in real time.
 You will use webhooks to invoke the Azure Cognitive Service APIs from the application whenever an existing file is updated, or a new file is uploaded.
-To set up webhooks with your [current SharePoint Embedded application](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-create-app/), you need to
+To set up webhooks with your [current SharePoint Embedded application](/training/modules/sharepoint-embedded-create-app/), you need to
 1.	Create and register a webhook endpoint to get notifications whenever there is change in your container. This will be done using REST APIs.
 2.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribe to the changes by making a POST call.
-3.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with ACS tutorial](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/tutorials/doc-processing-acs).
+3.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with ACS tutorial](/doc-processing-acs.md).
 
-![using-webhooks](../images/Using-Webhooks.png)
+![using webhooks schema](../images/Using-Webhooks.png)
 
 > [!TIP]
 > To learn more about the Graph APIs used in this tutorial, see [Create subscription](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/subscription_post_subscriptions.md).

@@ -9,11 +9,11 @@ ms.localizationpriority: high
 
 ## Utilizing Azure Cognitive Services
 Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pretrained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
-You have already learnt how to use webhooks with [the application](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/tutorials/using-webhooks). This tutorial will cover connecting it with ACS to extract data from invoices.
-To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/tutorials/using-webhooks) and then:
+You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks). This tutorial will cover connecting it with ACS to extract data from invoices.
+To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](/using-webhooks.md) and then:
 1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files which are added or updated.
 2.	Call ACS’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
-![document-processing](../images/Document-Processing.png)
+![document processing schema](../images/Document-Processing.png)
 
 > [!TIP]
 > To learn more about the Graph APIs used in this tutorial, see [Track changes for a Drive](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_delta.md), [Get a DriveItem resource](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_get.md), and [Upload or replace the contents of a DriveItem](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_put_content.md).
@@ -90,8 +90,8 @@ At this point if you restart the app along with tunneling and subscription, you 
 
 ## Call ACS's Document Intelligence service API
 To use the ACS Document Intelligence APIs, you need to create a Multi-Service or Document Intelligence resource for Azure AI services. Follow the tutorials below to create the resource:
-- [Quickstart: Create a multi-service resource for Azure AI services](https://learn.microsoft.com/en-us/azure/ai-services/multi-service-resource?tabs=windows&pivots=azportal)
-- [Get started with Document Intelligence](https://learn.microsoft.com/en-gb/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?view=doc-intel-3.1.0&viewFallbackFrom=form-recog-3.0.0&preserve-view=true&pivots=programming-language-javascript)
+- [Quickstart: Create a multi-service resource for Azure AI services](/azure/ai-services/multi-service-resource?tabs=windows&pivots=azportal)
+- [Get started with Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?view=doc-intel-3.1.0&viewFallbackFrom=form-recog-3.0.0&preserve-view=true&pivots=programming-language-javascript)
 
 After this step, you should have an endpoint and a key ready to use.
 
