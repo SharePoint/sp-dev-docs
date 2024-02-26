@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 ## Utilizing Azure Cognitive Services
 Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pretrained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
-You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks). This tutorial will cover connecting it with ACS to extract data from invoices.
+You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with ACS to extract data from invoices.
 To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](/using-webhooks.md) and then:
 1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files which are added or updated.
 2.	Call ACS’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
