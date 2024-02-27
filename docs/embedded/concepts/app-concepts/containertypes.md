@@ -24,10 +24,16 @@ The permission mapping between a ContainerTypeID-AppID pair determines the opera
 
 ## SharePoint Embedded Trial Container Types
 
+## SharePoint Embedded Trial Container Types
+
 To aid customers with the development of applications to be used with SharePoint Embedded, we're allowing the creation of a Trial Container Type. Customers are allowed one Trial Container Type at any time in their tenant. The Trial Container Type won't be linked to billing and can only be consumed by the Partner tenant.
 
 > [!NOTE]
 > The Trial Container Type is the only Container Type that is restricted to the Partner (creating) tenant and cannot be shared with other consuming tenants.
+
+### Create a Trial Container Type: Visual Studio Code Extension
+You can create a Trial Container Type using the SharePoint Embedded Visual Studio Code Extension [here](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension)
+
 
 Tenants can create a maximum of five Container Types. Trial Container Types don't count against the maximum number of Container Types that a Partner tenant can create.
 
