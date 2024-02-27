@@ -7,18 +7,21 @@ ms.localizationpriority: high
 
 # Create and Register a Container Type
 
-This article will explain how to create and register a billable [Container Type](../concepts/app-concepts/containertypes.md) in SharePoint Embedded. This Co
+This article will explain how to create and register a billable [Container Type](../concepts/app-concepts/containertypes.md) in SharePoint Embedded.
 
-**Pre-requsites:**
+**Pre-requisites:**
 * You must have admin credentials to a M365 developer tenant
 * You must register your application in [Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-setup/5-exercise-setup-configure-sharepoint-embedded)
-* You must have an Azure Subscription Id and Resource Group configured
+
 
 
 ## Set up an Azure Subscription Id, Resource Group, and Region
 
 ### 1. Set up Azure Subscription Id
 Login to Azure Portal with the admin credentials of your tenant
+
+
+(TODO: add the extra existing Sub id)
 
 Navigate to [Subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2)
 ![alt text](azuresubscription.png)
@@ -38,6 +41,11 @@ Click "Create" to create a resource group and name it something appropiate to yo
 Make sure that:
 * The appropiate Azure Subcription is selected for the resource group
 * The appropiate physical region is selected. For ex. (US) East US
+
+>> Note: The Region Group does NOT require your Containers to live in that specified region. Your content is not restricted to the specified region
+
+**TODO: Need to explain Region and Resource Group in relation to SharePoint Embedded
+**
 
 Click Review + Create and your validation should pass if the inputs are correct.
 
@@ -79,6 +87,9 @@ New-SPOContainerType -ContainerTypeName {{ContainerTypeName}} -OwningApplication
 The cmdlet outputs your new `ContainerTypeId`, save this for later use.
 
 ### 3. Grant admin consent for your app
+
+TODO: Take this out of the article and put it into the register CT article....
+* this is step 1 for register
 
 You can grant admin consent to an app by visiting the following link with the
 `{{consumingTenantId}}` and `{{appId}}` values set.

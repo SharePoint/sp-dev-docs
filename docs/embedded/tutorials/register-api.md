@@ -7,16 +7,24 @@ ms.localizationpriority: high
 
 # Register File Storage Container Type Application Permissions
 
+TODO: Explain Registration API purpose
+- called in Consuming Tenant
+- Can be called 1+ times
+- container.selected scope adds entry in enterprise applications
+
+
 This registers the `fileStorageContainerType` within the Consuming Tenant.  
 
 The calling app's identity from token will be used to determine the owning tenant of the app and validate the ownership of the container type. Only the owning app can register container type app permissions.
 
 >>  Note this API must be called with a cert-based access token
-
+TODO: Expand on this certificate based auth
 
 ## Container.Selected Scope 
 
 This API uses the Container.Selected scope. To call this API you must configure this scope in your App manifest.  
+
+TODO: This is NOT a Graph API, clearly state this is a SharePoint API 
 
 >>  Note that other SharePoint Embedded Graph APIs run with the FileStorageContainer.Selected Scope on Microsoft Graph 
 
@@ -69,8 +77,9 @@ Select Manage > Manifest from the left-hand navigation. Locate the property requ
 ## HTTP request
 
 ```http
-PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
+PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
+TODO: Explain RootSiteUrl, 
 
 ### REST Operation example: register permissions for a certain container type
 
@@ -124,3 +133,7 @@ Content-type: application/json
 | 401       | Request lacks valid authentication credentials.                                                                                                                        |
 | 403       | Provided authentication credentials are valid but insufficient to perform requested operation. Examples: the calling app is not the owning app of the container type.  |
 | 404       | Container type does not exist.                                                                                                                                         |
+
+
+
+TODO: Guest Apps Permissions (same article)

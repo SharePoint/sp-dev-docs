@@ -22,9 +22,17 @@ The permission mapping between a ContainerTypeID-AppID pair determines the opera
 > [!TIP]
 > To learn more about application architecture, see [Application Architecture](./app-architecture.md).
 
-## SharePoint Embedded Trial Container Types
 
-## SharePoint Embedded Trial Container Types
+## TODO: Introduce two types
+* introduce the limits and difference between trial and billable container type
+* each type has different requirements
+
+### Create a SharePoint Embedded Paid ContainerType
+links: register-ct tutorial
+
+
+
+### SharePoint Embedded Trial Container Types
 
 To aid customers with the development of applications to be used with SharePoint Embedded, we're allowing the creation of a Trial Container Type. Customers are allowed one Trial Container Type at any time in their tenant. The Trial Container Type won't be linked to billing and can only be consumed by the Partner tenant.
 
@@ -34,10 +42,13 @@ To aid customers with the development of applications to be used with SharePoint
 ### Create a Trial Container Type: Visual Studio Code Extension
 You can create a Trial Container Type using the SharePoint Embedded Visual Studio Code Extension [here](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension)
 
+* TODO: PS can create a trial containertype as well
 
 Tenants can create a maximum of five Container Types. Trial Container Types don't count against the maximum number of Container Types that a Partner tenant can create.
 
 Once the Trial Container Type is created, the customer can create as many as five active Containers of that type. Trial Containers are allotted 1 GB of storage space. A Trial Container Type will expire after 30 days. Once the Trial Container Type is expired, access will be lost to all Containers created using that Container Type. A new Trial Container Type can be created; however, it requires the deletion of ALL existing Trial Containers.
+
+## Delete a trial CT
 
 To delete a trial Container Type, you must remove all Containers of that type first, including from the recycle bin. You can run the following PowerShell commands to purge a container and the Trial Container Type:
 
@@ -51,3 +62,7 @@ To delete a trial Container Type, you must remove all Containers of that type fi
 Customers can choose to create a new Trial Container Type at any time, if the above steps are performed to remove any pre-existing Trial Container Type, are performed. The Trial Container Type is valid for up to 30 days but can be removed at any time within the 30-day window.
 
 Also note that it isn't possible* to convert a Trial Container Type and/or the associated Containers to a Standard Container Type.
+
+
+#TODO:
+- paid deletion is not supported
