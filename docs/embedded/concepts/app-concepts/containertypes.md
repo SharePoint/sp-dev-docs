@@ -4,7 +4,7 @@ description: This article explains how Container Types work.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
-
+ 
 # SharePoint Embedded Container Types
 
 In SharePoint Embedded, all files and documents are stored in Containers, and each Container is identified by a Container Type.
