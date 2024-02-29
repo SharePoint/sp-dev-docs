@@ -65,7 +65,18 @@ Here, the Identity is the ID of the Container. For more information about using 
 
 ### Delete Containers
 
-When admins deletes a Container, it's moved into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted from the collection, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
+Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some example of the potential issues that an application may encounter when deleting a container. 
+
+- Data Loss: Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app may no longer function as expected or may lose access to critical information. 
+
+- Broken Links: If the SharePoint Embedded application contains links or references to the deleted container, those links will become broken, leading to errors or malfunctioning features within the app. 
+ 
+- Permissions Issues: Deleting a container can impact permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it may encounter permission issues and fail to function properly. 
+
+Therefore, it is essential to carefully consider the impact of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues. 
+
+### Permanent Deletion
+When admins delete a Container, it's moved into the Recycle Bin. A deleted container can be restored from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
 
 Admins should notify the Container owners before you delete a Container so they can move their data to another location, and also inform users when the Container will be deleted.
 
