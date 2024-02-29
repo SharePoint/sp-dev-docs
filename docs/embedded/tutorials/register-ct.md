@@ -24,19 +24,19 @@ Login to Azure Portal with the admin credentials of your tenant
 (TODO: add the extra existing Sub id)
 
 Navigate to [Subscriptions](https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2)
-![alt text](azuresubscription.png)
+![alt text](./regct-image/azuresubscription.png)
 
 If you do not have an existing subscription set-up, click add
-![alt text](suboption.png)
+![alt text](./regct-image/suboption.png)
 
 Choose a subscription plan. You will be prompted to add in credit card information that will be billed when you create File Storage Containers. This will set you up with an Azure Subscription Id.
 
 ### 2. Set up a Resource Group and Region
 Navigate to [Resource Groups](https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups) in Azure Portal.
-![alt text](resource-group.png)
+![alt text](./regct-image/resource-group.png)
 
 Click "Create" to create a resource group and name it something appropiate to your application. Then click Review + Create
-![alt text](c-rg.png)
+![alt text](./regct-image/c-rg.png)
 
 Make sure that:
 * The appropiate Azure Subcription is selected for the resource group
