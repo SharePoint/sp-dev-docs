@@ -7,24 +7,165 @@ ms.localizationpriority: high
 
 # Register File Storage Container Type Application Permissions
 
-TODO: Explain Registration API purpose
-- called in Consuming Tenant
-- Can be called 1+ times
-- container.selected scope adds entry in enterprise applications
+TODO:
+- Remove or relocate the container.selected scopsection from this article
 
 
-This registers the `fileStorageContainerType` within the Consuming Tenant.  
+In order for a SharePoint Embedded application to be able interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. This is achieved by the owning application invoking the registration API that specifies what permissions can be performed against its Container Type. The registration API also provides the ability to grant access to other Guest Apps that may also want to also interact with its Containers. For example, a SharePoint Embedded application can grant permissions to another application so that it can perform backup operations against its Containers.
 
-The calling app's identity from token will be used to determine the owning tenant of the app and validate the ownership of the container type. Only the owning app can register container type app permissions.
+As the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so will result in access denied errors when invoking other APIs against Container and/or the content in the Containers.
 
->>  Note this API must be called with a cert-based access token
-TODO: Expand on this certificate based auth
+There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. Just be aware  that the last successful invoke and associated settings will be the settings persisted and hence used in the Consuming Tenant.
 
+> Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
+ 
+> The registration API is NOT a Graph API and can only be invoke using AppOnly and a cert-based access token. 
+
+
+## Container Type Permissions
+
+The registration API determines what permissions a SharePoint Embedded application can perform against Containers and Content in Containers for the specified Container Type.
+
+| Permission | Description |
+| ---------- | ----------- |
+| None | Has no permissions to any Containers or content of this Container Type. |
+| ReadContent| 	Can read content of Containers of this Container Type. |
+| WriteContent | Can write content to Containers for this Container Type. This can't be granted without the ReadContent permission. |
+| Create | Can create Containers of this Container Type. |
+| Delete | Can delete Containers of this Container Type. |
+| Read | Can read the metadata of Containers of this Container Type. |
+| Write |	Can update the metadata of Containers of this Container Type. |
+| EnumeratePermissions | Can enumerate the members of a Container and their roles for Containers of this Container Type. |
+| AddPermissions | Can add members to the Container for Containers of this Container Type. |
+| UpdatePermissions | Can update (change roles of) existing memberships in the Container for Containers of this Container Type. |
+| DeletePermissions |	Can delete other members (but not self) from the Container for Containers of this Container Type. |
+| DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type. |
+| ManagePermissions |	Can add, remove (including self) or update members in the Container roles for Containers of this Container Type. |
+| Full | Has all permissions for Containers of this Container Type. |
+
+
+
+## HTTP request
+
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
+```
+
+> NOTE that this is NOT a Graph API
+>
+> {RootSiteURL} is the SharePoint URL of the Consuming Tenant. For example, https://contoso.sharepoint.com.
+
+### Request body
+
+In the request body, supply a JSON representation of the Container Type permissions for the SharePoint Embedded applications.
+
+### Response
+
+If successful, this method returns a `200 OK` response code and the Container Type permissions configured for the SharePoint Embedded applications in the response body.
+
+| HTTP Code | Description |
+| :--------: | ----------- |
+| 400 | Bad request. |
+| 401 | Request lacks valid authentication credentials. |
+| 403 | Provided authentication credentials are valid but insufficient to perform requested operation. Examples: the calling app is not the owning app of the container type. |
+| 404 | Container type does not exist. |
+
+
+## Examples
+
+### Register the Container Type in a Consuming Tenant
+
+Registrator the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
+
+#### Request
+```json
+PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
+      "delegated": ["full"],
+      "appOnly": ["full"]
+    }   
+  ]
+}
+```
+
+#### Response
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "value": [
+    {
+      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
+      "delegated": ["full"],
+      "appOnly": ["full"]
+    }
+  ]
+}
+```
+
+### Register the Container Type in a Consuming Tenant with permissions for a Guest App
+
+Registrator the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
+
+#### Request
+```json
+PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
+      "delegated": ["full"],
+      "appOnly": ["full"]
+    },
+    {
+      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
+      "delegated": [read", "write"],
+      "appOnly": ["none"]
+    }
+  ]
+}
+```
+
+#### Response
+```json
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "value": [
+    {
+      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
+      "delegated": ["full"],
+      "appOnly": ["read"]
+    },
+    {
+      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
+      "delegated": ["read", "write"],
+      "appOnly": ["none"]
+    }
+  ]
+}
+```
+
+
+>
+> TODO Remove or relocate the following
+>
 ## Container.Selected Scope 
 
 This API uses the Container.Selected scope. To call this API you must configure this scope in your App manifest.  
-
-TODO: This is NOT a Graph API, clearly state this is a SharePoint API 
 
 >>  Note that other SharePoint Embedded Graph APIs run with the FileStorageContainer.Selected Scope on Microsoft Graph 
 
@@ -66,74 +207,9 @@ Select Manage > Manifest from the left-hand navigation. Locate the property requ
 ],
 ```
 
-
 ## Required Permissions
 |      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
 |:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. |
 
 > You must configure the `Container.Selected` scope in your App manifest
-
-## HTTP request
-
-```http
-PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
-```
-TODO: Explain RootSiteUrl, 
-
-### REST Operation example: register permissions for a certain container type
-
-## Request
-```json
-PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
-Content-Type: application/json
-
-{
-  "value": [
-    {
-      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
-      "delegated": ["read", "write"],
-      "appOnly": ["read"]
-    },
-    {
-      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
-      "delegated": ["none"],
-      "appOnly": ["full"]
-    }
-  ]
-}
-
-```
-
-## Response
-```json
-HTTP/1.1 200 OK
-Content-type: application/json
-
-{
-  "value": [
-    {
-      "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
-      "delegated": ["read", "write"],
-      "appOnly": ["read"]
-    },
-    {
-      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
-      "delegated": ["none"],
-      "appOnly": ["full"]
-    }
-  ]
-}
-
-
-```
-| HTTP Code |                                                                               Description                                                                              |
-|:---------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 400       | Bad request.                                                                                                                                                           |
-| 401       | Request lacks valid authentication credentials.                                                                                                                        |
-| 403       | Provided authentication credentials are valid but insufficient to perform requested operation. Examples: the calling app is not the owning app of the container type.  |
-| 404       | Container type does not exist.                                                                                                                                         |
-
-
-
-TODO: Guest Apps Permissions (same article)
