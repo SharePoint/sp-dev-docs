@@ -1,17 +1,29 @@
 ---
-title: Create and Register Container Types
-description: This article explains how to register a new Container Types work.
+title: Create a Paid Container Types
+description: This article explains how to create a Container Type.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 
-# Create and Register a Container Type
+<!-- 
+TODO:
+- Link to a tenant that customers can use to try out trial container types (Not M365)
+- Fix images for Azure Subscription Id, Resource Group, etc.
+- Define steps for setting up an Azure Subscription Id (which subscription plan should customers choose if they are completely new)
+- Add link to tutorial for registering application
 
-This article will explain how to create and register a billable [Container Type](../concepts/app-concepts/containertypes.md) in SharePoint Embedded.
+- Add an explanation for region and resource group in SharePoint Embedded. Explain the difference that Region does NOT define what geo-location Containers can be created and stored. Explain that region basically means nothing except for the location that it is set in.
+- Note: The Region Group does NOT require your Containers to live in that specified region. Your content is not restricted to the specified region
+ -->
+
+
+# Create a Paid a SharePoint Embedded Container Type
+This article will explain how to create a paid [Container Type](../concepts/app-concepts/containertypes.md) in SharePoint Embedded. Read more about Paid Container Types [here](../concepts/app-concepts/paid-containertype.md).
+
 
 **Pre-requisites:**
 * You must have admin credentials to a M365 developer tenant
-* You must register your application in [Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-setup/5-exercise-setup-configure-sharepoint-embedded)
+* You must register your application in [Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-setup/5-exercise-setup-configure-sharepoint-embedded). See tutorial on how to [register an app with Microsoft Entra ID](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 
 
