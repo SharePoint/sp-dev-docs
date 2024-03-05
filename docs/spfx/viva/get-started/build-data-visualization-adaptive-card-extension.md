@@ -12,7 +12,6 @@ This tutorial provides step-by-step guidance on implementing Data Visualization 
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.19
 >
-> For more information on installing the SPFx v1.19, see [SharePoint Framework v1.14 release notes](../../../../release-1.19.md).
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension
 - [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 
@@ -133,14 +132,14 @@ Based on the configuration in cardView, a chart can be rendered in 2 layouts
 
 - Regular 
   - Adding 0 or 1 components along with a dataVisualization component in the body:
-    :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/regular-chart.png":::
+    :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/regular-chart.png" alt-text="Card with chart":::
 
-- Right hand side
+- Right side
   - Adding more than 1 component in the cardView along with dataVisualization component in the body will render the chart on the right side of the card
   - Example:
     1. Header and Footer along with chart
     2. Header, Text in the body along with chart
-    :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/chart-on-right-side.png":::
+    :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/chart-on-right-side.png" alt-text="Card with chart on the right side":::
 
 
 ### Explore the Quick Views
