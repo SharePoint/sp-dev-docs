@@ -20,7 +20,7 @@ TODO:
 # Create a Standard Container Type in SharePoint Embedded
 SharePoint Embedded [stores](../concepts/app-concepts/app-architecture.md) content securely in File Storage Containers. Each Container has a Container Type. No Containers can be created until a Container Type is created.  
 
-The [Container Type](../concepts/app-concepts/containertypes.md), represented by a `ContainerTypeId` asssociates all Containers linked to it with a specific Azure Subscription. This article will explain how to create a Standard [Container Type](../concepts/app-concepts/containertypes.md). Read more about Container Types [here](../concepts/app-concepts/containertypes.md). If you would like to try out SharePoint Embedded for free you can quickly get started with a [Trial Container Type](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/app-concepts/containertypes#sharepoint-embedded-trial-container-types).
+The [Container Type](../concepts/app-concepts/containertypes.md), represented by a `ContainerTypeId` asssociates all Containers linked to it with a specific Azure Subscription. This creates a billing relationship between the tenant and Containers of a Container Type. This article will explain how to create a Standard [Container Type](../concepts/app-concepts/containertypes.md). Read more about Container Types [here](../concepts/app-concepts/containertypes.md). If you would like to try out SharePoint Embedded for free you can quickly get started with a [Trial Container Type](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/app-concepts/containertypes#sharepoint-embedded-trial-container-types).
 
 
 **Pre-requisites:**
