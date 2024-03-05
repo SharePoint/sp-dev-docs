@@ -24,6 +24,58 @@ SharePoint Embedded supports both App-Only and Delegated (App+User) calls for en
 
 Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded calls to create containers, either App-Only or Delegated, from public clients are blocked by SharePoint Embedded authorization management.
 
+## Container.Selected Scope 
+
+The [Register Container Type API](register-api-documentation.md) API uses the Container.Selected scope. You will to call this API. To use it, you must configure this scope in your App manifest.  
+
+>>  Note that other SharePoint Embedded Graph APIs run with the FileStorageContainer.Selected Scope on Microsoft Graph 
+
+
+### Configure your App Manifest
+
+In your app manifest you will need to: 
+
+Select Manage > Manifest from the left-hand navigation. Locate the property requiredResourceAccess and edit it so it looks like the following JSON:
+
+```json
+"requiredResourceAccess": [
+  {
+    "resourceAppId": "00000003-0000-0ff1-ce00-000000000000",
+    "resourceAccess": [
+      {
+        "id": "4d114b1a-3649-4764-9dfb-be1e236ff371",
+        "type": "Scope"
+      },
+      {
+        "id": "19766c1b-905b-43af-8756-06526ab42875",
+        "type": "Role"
+      }
+    ]
+  },
+  {
+    "resourceAppId": "00000003-0000-0000-c000-000000000000",
+    "resourceAccess": [
+      {
+        "id": "085ca537-6565-41c2-aca7-db852babc212",
+        "type": "Scope"
+      },
+      {
+        "id": "40dc41bc-0f7e-42ff-89bd-d9516947e474",
+        "type": "Role"
+      }
+    ]
+  }
+],
+```
+
+## Required Permissions
+|      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
+|:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. |
+
+> You must configure the `Container.Selected` scope in your App manifest
+
+
 ### User Roles
 
 Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles as outlined below. When adding a user to a container, the user must be assigned to one of these roles.
