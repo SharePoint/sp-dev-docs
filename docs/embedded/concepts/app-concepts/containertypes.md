@@ -76,7 +76,7 @@ Region              : EastUS
 ```
 
 ## Registering Container Types
-To register both Trial and Standard Container Types, please refer to the following [tutorial](../../tutorials/register-containertype.md)
+To register both Trial and Standard Container Types, please refer to the following [tutorial](../app-concepts/register-api-documentation.md)
 
 ## Deleting Trial Container Types
 
