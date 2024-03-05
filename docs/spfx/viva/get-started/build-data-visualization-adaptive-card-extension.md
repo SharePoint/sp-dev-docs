@@ -133,7 +133,7 @@ Based on the configuration in cardView, a chart can be rendered in 2 layouts
 #### Regular ####
 
 Adding 0 or 1 components along with a dataVisualization component in the body
-:::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/regular-chart.png" alt-text="Card with chart":::
+
 ![Regular](../../../../docs/images/viva-extensibility/data-visualization/regular-chart.png)
 
 #### Right side ####
