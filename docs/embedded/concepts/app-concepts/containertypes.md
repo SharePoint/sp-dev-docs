@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Container Types
 description: This article explains how Container Types work.
-ms.date: 11/28/2023
+ms.date: 03/05/2023
 ms.localizationpriority: high
 ---
  
@@ -9,23 +9,26 @@ ms.localizationpriority: high
 
 In SharePoint Embedded, all files and documents are stored in Containers, and each Container is identified by a Container Type.
 
-Container Type is a property stamped on every Container instance. Each Container Type is owned by one Application; and each Application can own only one Container Type.
+Container Type is a property stamped on every Container instance. Each Container Type is owned by one SharePoint Embedded Application; and each Application can own only one Container Type.
 
 The primary function of a Container Type is to manage the application workload that can access the Containers. Container Type defines the access permissions an Application has towards all Containers of that type, including create, read, write, delete containers; manage container permissions, etc.
 
 ## Here are some general guidelines for Container Types:
 
-Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)
+- Each Container is associated to one immutable Container Type, represented by a ContainerTypeID. Each Container Type is associated to at least one Application, represented by an AppID. Each ContainerTypeID-AppID pair is associated to an independent set of operations on SharePoint Embedded (permission mapping)
 
-The permission mapping between a ContainerTypeID-AppID pair determines the operations the application is authorized to invoke against all containers of a specific Container Type and their content.
+- The permission mapping between a ContainerTypeID-AppID pair determines the operations the application is authorized to invoke against all containers of a specific Container Type and their content.
 
+- The Container Type associates all Containers linked to it to a specific Azure Subscription for billing purposes.
+
+- SharePoint Embedded provides both a Standard Container Type and Trial Container Type for testing out SharePoint Embedded.
 > [!TIP]
 > To learn more about application architecture, see [Application Architecture](./app-architecture.md).
 
-SharePoint Embedded provides both a Standard Container Type and Trial Container Type for testing out SharePoint Embedded.
+
  
 ### Trial Container Types
-To enable customers to experience developing SharePoint Embedded applications and evaluate the features it offers, we provide customers the capability to create a Trial Container Type. Each customer can only have one Trial Container Type in their tenant at a time. Trial Container Types are not associated with a billing profile and can only be used by the tenant developing the application; the partner tenant is always the same as the consuming tenant. The Trial Container Type is valid for up to 30 days but can be removed at any time within the 30-day window.
+To enable customers to experience developing SharePoint Embedded applications and evaluate the features it offers, we provide customers the capability to create a Trial Container Type. Each customer can only have one Trial Container Type in their tenant at a time. Trial Container Types are not associated with a billing profile and can only be used by the tenant developing the application; in this case, the partner tenant is always the same as the consuming tenant. The Trial Container Type is valid for up to 30 days but can be removed at any time within the 30-day window.
 
 #### There are two ways to create a Trial Container Type:
 
@@ -103,5 +106,5 @@ Remove-SPOContainerType
 [-ContainerTypeId <ContainerTypeId>]
 ```
 > > Note:
->  For trial container type, partner tenant admin is always same as consuming tenant  
+>  For trial Container Types, the partner tenant is always same as consuming tenant  
 >  Deletion of a Standard Container Type is not supported.
