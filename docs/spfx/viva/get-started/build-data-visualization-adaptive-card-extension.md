@@ -138,7 +138,9 @@ Adding 0 or 1 components along with a dataVisualization component in the body
 #### Right side ####
 
 Adding more than 1 component in the cardView along with dataVisualization component in the body will render the chart on the right side of the card.
-For example, configuring a Header and Footer along with dataVisualization component in body.
+
+For example: Header and Footer along with dataVisualization component in body.
+
 :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/chart-on-right-side.png" alt-text="Card with chart on the right side":::
 
 
