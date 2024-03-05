@@ -130,15 +130,13 @@ The **body** section of the card view specifies the dataVisualization component.
 
 Based on the configuration in cardView, a chart can be rendered in 2 layouts
 
-- Regular 
-  - Adding 0 or 1 components along with a dataVisualization component in the body:
+#### Regular ####
+  - Adding 0 or 1 components along with a dataVisualization component in the body
     :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/regular-chart.png" alt-text="Card with chart":::
 
-- Right side
+#### Right side ####
   - Adding more than 1 component in the cardView along with dataVisualization component in the body will render the chart on the right side of the card
-  - Example:
-    1. Header and Footer along with chart
-    2. Header, Text in the body along with chart
+  - Example: Header and Footer along with chart
     :::image type="content" source="../../../../docs/images/viva-extensibility/data-visualization/chart-on-right-side.png" alt-text="Card with chart on the right side":::
 
 
