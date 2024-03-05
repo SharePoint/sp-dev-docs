@@ -1,5 +1,5 @@
 ---
-title: Create a Paid Container Types
+title: Create a Standard Container Types
 description: This article explains how to create a Container Type.
 ms.date: 11/28/2023
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ TODO:
  -->
 
 
-# Create a Paid a SharePoint Embedded Container Type
+# Create a Standard a SharePoint Embedded Container Type
 This article will explain how to create a paid [Container Type](../concepts/app-concepts/containertypes.md) in SharePoint Embedded. Read more about Paid Container Types [here](../concepts/app-concepts/paid-containertype.md).
 
 
 **Pre-requisites:**
-* You must have admin credentials to a M365 developer tenant
+* You must have admin credentials to a M365 tenant
 * You must register your application in [Microsoft Entra ID](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-setup/5-exercise-setup-configure-sharepoint-embedded). See tutorial on how to [register an app with Microsoft Entra ID](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/walkthrough-register-app-azure-active-directory).
 
 
