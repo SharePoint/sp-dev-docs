@@ -1,7 +1,7 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
-ms.date: 02/13/2024
+ms.date: 03/05/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -65,7 +65,8 @@ As the site collection is being created, SharePoint takes you back to the **Shar
 
 4. Select **Trust It** in the consent dialog. The **Site Contents** page automatically opens and the add-in appears with a notation that it is installing. After it installs, users can select the tile to run the add-in.
 > [!Important]
-> it might take up to 24 hours for add-ins to be available for consumption once installed. During that time, users can recive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error.
+> it might take up to 24 hours for add-ins to be available for consumption once installed. During that time, users can recive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error. If you need to shortcut that time and you have administrative permissions in your tenant, you can add that URL to the Application mentioned in the error ('00000003-0000-0ff1-ce00-000000000000') 
+using [Microsoft Graph Powershell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/overview?view=graph-powershell-1.0)
 
 ## Remove the add-in
 
