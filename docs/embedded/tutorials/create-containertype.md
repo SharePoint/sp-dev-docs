@@ -56,12 +56,11 @@ Make sure that:
 
 >> Note: The Region Group does NOT require your Containers to live in that specified region. Your content is not restricted to the specified region
 
-**TODO: Need to explain Region and Resource Group in relation to SharePoint Embedded
-**
+Region refers to where the CT is created  for example “US-East”. This does NOT affect geographically where containers can live and does not affect geographically where applications are installed. Also, regions do not place limits on where SharePoint Embedded Applications can be used.
 
 Click Review + Create and your validation should pass if the inputs are correct.
 
-Now you have all the necessary resources to create a Billable Container Type.
+Now you have all the necessary resources to create a Standard Container Type which will defines the billing relationship between your Containers and Azure SubscriptionId.
 
 <br></br>
 
