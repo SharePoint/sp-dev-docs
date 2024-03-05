@@ -7,7 +7,7 @@ ms.localizationpriority: high
  
 # SharePoint Embedded Container Types
 
-In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. This Container Type links all Containers to a specific Azure Subscription for billing. Each Container Type is owned by a single SharePoint Embedded Application, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions an SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
+In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. Each Container Type is owned by a single SharePoint Embedded Application, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions an SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
 
 ## Types of Container Types
 There are two types of Container Types that a developer tenant can create
@@ -80,13 +80,13 @@ To register both Trial and Standard Container Types, please refer to the followi
 
 ## Deleting Trial Container Types
 
-Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type refer to the Consuming Tenant Admin [article](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/admin-exp/cta#delete-containers)
+Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type refer to the Consuming Tenant Admin [article](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/admin-exp/cta#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
 
 ```ps
 Remove-SPOContainerType
 [-ContainerTypeId <ContainerTypeId>]
 ```
-Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
+
 
 
 
