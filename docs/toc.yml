@@ -548,6 +548,8 @@
       href: embedded/concepts/app-concepts/app-architecture.md
     - name: Container Types
       href: embedded/concepts/app-concepts/containertypes.md
+    - name: Register Container Type API
+      href: embedded/concepts/app-concepts/register-api-documentation.md
     - name: Authentication
       href: embedded/concepts/app-concepts/auth.md
     - name: Sharing and Permissions
