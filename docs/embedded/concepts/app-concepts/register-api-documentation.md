@@ -7,10 +7,6 @@ ms.localizationpriority: high
 
 # Register File Storage Container Type Application Permissions
 
-TODO:
-- Remove or relocate the container.selected scopsection from this article
-
-
 In order for a SharePoint Embedded application to be able interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. This is achieved by the owning application invoking the registration API that specifies what permissions can be performed against its Container Type. The registration API also provides the ability to grant access to other Guest Apps that may also want to also interact with its Containers. For example, a SharePoint Embedded application can grant permissions to another application so that it can perform backup operations against its Containers.
 
 As the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so will result in access denied errors when invoking other APIs against Container and/or the content in the Containers.
