@@ -15,7 +15,7 @@ There are no restrictions on how many times the registration API can be invoked.
 
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
  
-> The registration API is NOT a Graph API and can only be invoked using AppOnly and a cert-based access token. Learn more about authentication [here](./auth.md).
+> The registration API is NOT a Graph API and can only be invoked using AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
 
 
 ## Container Type Permissions
