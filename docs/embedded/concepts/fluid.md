@@ -1,14 +1,17 @@
+---
+title: Fluid Framework in SharePoint Embedded Applications 
+description: Details Fluid Integration with SharePoint Embedded Applications
+ms.date: 03/06/2024
+ms.localizationpriority: high
+---
+
 # Fluid Framework in SharePoint Embedded Applications 
-
- 
-
 Integrate Fluid Framework with SharePoint Embedded to easily and quickly build document collaboration into your applications.
 
  
 ## Background 
 
-[Fluid Framework](aka.ms/Fluid) is a collection of client libraries for distributing, synchronizing, and saving shared state. These libraries allow multiple clients to simultaneously create and operate on shared data structures in real-time using coding patterns similar to those used to work with local data. 
-
+[Fluid Framework](https://fluidframework.com/) is a collection of client libraries for distributing, synchronizing, and saving shared state. These libraries allow multiple clients to simultaneously create and operate on shared data structures in real-time using coding patterns similar to those used to work with local data. 
  
 
 ## Get started 
@@ -31,11 +34,12 @@ Admin credentials to a [M365 tenant](https://www.microsoft.com/en-us/microsoft-3
 
 ## Create a Container Type on your tenant 
 
-If you have never worked with [SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview) you will need to create an application and Container Type. 
+If you have never worked with [SharePoint Embedded](./../overview.md) you will need to [register](https://learn.microsoft.com/azure/healthcare-apis/register-application) an application in Microsoft Entra ID and a Container Type. 
 
-Create a free trial [M365 tenant](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing) or use another tenant that you have 
+Create a free trial [M365 tenant](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing) or use another tenant that you have 
 
-Open up VS Code and download the SharePoint Embedded [Visual Studio Code Extension](https://techcommunity.microsoft.com/t5/sharepoint-embedded-blog/introducing-the-sharepoint-embedded-visual-studio-code-extension/ba-p/4040723)
+Open up VS Code and download the SharePoint Embedded [Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md)
+
 Log into the Visual Studio Extension and follow the instructions to: 
 
 1. Create your Container Type 
