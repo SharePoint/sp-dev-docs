@@ -540,6 +540,8 @@
     items:
     - name: Enable SharePoint Embedded
       href: embedded/getting-started/enable-sharepoint-embedded.md
+    - name: SharePoint Embedded for Visual Studio Code
+      href: embedded/getting-started/spembedded-for-vscode.md
   - name: Adoptions and Use Case Scenarios
     href: embedded/adoptions-and-use.md
   - name: Concepts
@@ -564,6 +566,8 @@
         href: embedded/concepts/content-experiences/office-experience.md
       - name: User Experiences
         href: embedded/concepts/content-experiences/user-experiences-overview.md
+      - name: Search Content
+        href: embedded/concepts/content-experiences/search-content.md
     - name: Admin Experiences
       items:
       - name: Consuming Tenant Admin
@@ -572,7 +576,7 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
-    - name: Terms and Definitions
+    - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
@@ -662,6 +666,16 @@
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
+  - name: Bot Powered Adaptive Card Extensions
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
+    - name: Authentication and Authorization in Bot Powered ACEs
+      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
