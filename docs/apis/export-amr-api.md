@@ -2,7 +2,6 @@
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
 ms.date: 09/26/2023
-ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
 audience: ITPro
@@ -22,6 +21,9 @@ The goal of the new Migration Asynchronous Metadata Read (AMR) API is to reduce 
 When the new SharePoint Migration Export (Asynchronous Metadata Read) API performs a read operation of a provided URL, the Microsoft backend software aggregates all the information into a designated manifest. The ISV can read back from the manifest and parse the metadata without sending thousands of calls individually.  The AMR API also has the ability to load balance the server, and supports an unlimited amount of metadata to be migrated.
 
 This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
+
+> [!IMPORTANT]
+> AMR is designed exclusively for import scenarios. It exhibits poor scalability when handling requests for metadata, permissions, or versions. Note that we can't provide performance assurances for AMR usage in data export scenarios, such as cross-tenant migrations.
 
 ### Background
 

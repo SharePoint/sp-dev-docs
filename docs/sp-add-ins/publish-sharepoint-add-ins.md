@@ -1,7 +1,7 @@
 ---
 title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
-ms.date: 09/26/2023
+ms.date: 03/05/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -17,6 +17,9 @@ You've finished developing your SharePoint Add-in—the final step is to make it
 For information about how to package your add-in for publication by using Visual Studio 2012, see [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md).
 
 ## Publishing to AppSource
+
+> [!Important]
+> As of March 1, 2024 net new Add-Ins are not accepted anymore for submission to AppSource. Check out the [full SharePoint Add-In retirement](https://aka.ms/retirement/addins/support) to learn more.
 
 To publish an add-in to AppSource, you must first [open a developer account](/office/dev/store/open-a-developer-account).
 

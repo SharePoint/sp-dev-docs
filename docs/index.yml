@@ -51,9 +51,9 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: SharePoint Embedded - Overview & Configuration
-            url: /sharepoint/dev/embedded/mslearn/m01-01-intro
+            url: /training/modules/sharepoint-embedded-setup
           - text: SharePoint Embedded - Building an App
-            url: /sharepoint/dev/embedded/mslearn/m02-01-intro
+            url: /training/modules/sharepoint-embedded-create-app
 
   # Card (optional)
   - title: Samples
