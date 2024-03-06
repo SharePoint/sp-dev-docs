@@ -56,7 +56,7 @@ As the site collection is being created, SharePoint takes you back to the **Shar
 > It might take up to 24 hours for add-ins to be available for consumption once installed. During that time, users can receive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error. If you need to shortcut that time and you have administrative permissions in your tenant, you can add that URL to the Application mentioned in the error ('00000003-0000-0ff1-ce00-000000000000') 
 using [Microsoft Graph Powershell](/powershell/microsoftgraph/overview).
 >
-> For example: let's assume you get the "AADSTS50011 The redirect URI `https://contoso-79d42f062409ae.sharepoint.com/_forms/default.aspx` specified in the request does not match the redirectr URIs configured for the application '00000003-0000-0ff1-ce00-000000000000'." when accessing the add-in.
+> For example: let's assume you get the "AADSTS50011 The redirect URI `https://contoso-79d42f062409ae.sharepoint.com/_forms/default.aspx` specified in the request does not match the redirect URIs configured for the application '00000003-0000-0ff1-ce00-000000000000'." when accessing the add-in.
 > 
 > Top make the add-in immediately available, an user with admin rights can run the following script in PowerShell:
 >
