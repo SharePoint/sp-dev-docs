@@ -15,7 +15,7 @@ There are no restrictions on how many times the registration API can be invoked.
 
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
  
-> The registration API is NOT a Graph API and can only be invoke using AppOnly and a cert-based access token. 
+> The registration API is NOT a Graph API and can only be invoked using AppOnly and a cert-based access token. Learn more about authentication [here](./auth.md).
 
 
 ## Container Type Permissions
@@ -43,10 +43,7 @@ The registration API determines what permissions a SharePoint Embedded applicati
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+ 
 ``` http
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
@@ -75,7 +72,7 @@ If successful, this method returns a `200 OK` response code and the Container Ty
 
 ### Register the Container Type in a Consuming Tenant
 
-Registrator the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
+Register the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
 #### Request
 ```json
@@ -111,7 +108,7 @@ Content-type: application/json
 
 ### Register the Container Type in a Consuming Tenant with permissions for a Guest App
 
-Registrator the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
+Register the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
 
 #### Request
 ```json

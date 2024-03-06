@@ -9,15 +9,15 @@ ms.localizationpriority: high
 
 In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. Each Container Type is owned by a single SharePoint Embedded Application, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions an SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
 
-## Types of Container Types
-There are two types of Container Types that a developer tenant can create
-1. Trial Container Types
-2. Standard Container Types
+## Two Kinds of Container Types
+There are two kinds of Container Types that a developer tenant can create:
+1. [Trial Container Types](#trial-container-types)
+2. [Standard Container Types](#standard-container-types)
  
 ## Trial Container Types
 To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. Trial Container Types are not linked to a billing profile and can only be utilized by the tenant developing the application; in this scenario, the partner tenant is always the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
 
-- You can use [SharePoint Embedded Visual Studio Code Extension](https://techcommunity.microsoft.com/t5/sharepoint-embedded-blog/introducing-the-sharepoint-embedded-visual-studio-code-extension/ba-p/4040723) to create a Trial Container Type with just a few clicks. The VS Code extension also registers your Container Type and creates Containers for you.
+- You can use [SharePoint Embedded Visual Studio Code Extension](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/getting-started/spembedded-for-vscode) to create a Trial Container Type with just a few clicks. The VS Code extension also registers your Container Type and creates Containers for you.
 
 - A Trial Container Type can be created using SPO Powershell. You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
    
@@ -40,9 +40,9 @@ Standard Container Types are associated with a billing profile in [Azure Portal]
 - An Azure subscription and Resource Group must be present in the [Azure Portal](portal.azure.com).
 - An App regisration must be created in [Azure Entra]
   
-To meet the pre-requisites of creating a Standard Container Type, refer to [register containertype](bing.com).
 
-#### Create a Standard ContainerType
+
+## Create a Standard ContainerType
 
 A developer admin can create a new billable Container Type using the following PowerShell cmdlet. Tenants can create a maximum of five Container Types. Trial Container Types don't count against the maximum number of Container Types that a Partner tenant can create.
 
