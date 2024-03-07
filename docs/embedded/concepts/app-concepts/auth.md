@@ -1,6 +1,6 @@
 ---
 title: Authentication and Authorization with SharePoint Embedded
-description: This article describes the Authentication process for SharePoint Embedded Applications
+description: This article describes the Authentication process for SharePoint Embedded Applications.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
@@ -26,16 +26,17 @@ Both App-Only and Delegated SharePoint Embedded from trusted (or private) client
 
 ## Container.Selected Scope 
 
-The [Register Container Type API](register-api-documentation.md) API uses the Container.Selected scope. You will to call this API. To use it, you must configure this scope in your App manifest.  
+The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. You will to call this API. To use it, you must configure this scope in your App manifest.  
 
->>  Note that other SharePoint Embedded Graph APIs run with the FileStorageContainer.Selected Scope on Microsoft Graph 
+> [!NOTE]
+> Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph 
 
 
 ### Configure your App Manifest
 
-In your app manifest you will need to: 
+In your app manifest you'll need to: 
 
-Select Manage > Manifest from the left-hand navigation. Locate the property requiredResourceAccess and edit it so it looks like the following JSON:
+Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it looks like the following JSON:
 
 ```json
 "requiredResourceAccess": [
@@ -69,10 +70,12 @@ Select Manage > Manifest from the left-hand navigation. Locate the property requ
 ```
 
 ## Required Permissions
+
 |      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
 |:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. |
 
+> [!IMPORTANT]
 > You must configure the `Container.Selected` scope in your App manifest
 
 
@@ -94,16 +97,16 @@ Any user accessing a container must be a member of the container. Membership to 
 
 Operation calls to SharePoint Embedded are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint Embedded onboarding process, SharePoint Embedded partners need to inform the SharePoint Embedded platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
 
-### Authorization
+## Authorization
 
 Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID and User Roles for Delegated (App+User) calls.
 
 For App-only calls, SharePoint Embedded authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint Embedded authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
 
-Consider the examples below with the assumptions:
+Consider the following examples with the assumptions:
 
 1. App1 has Create, Read, and Write permissions to ContainerType1; and...
-1. UserA is a reader for ContainerX of ContainerType1.
+2. UserA is a reader for ContainerX of ContainerType1.
 
 |                                Example                                | Result  |                                   Reason                                   |
 | --------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------- |

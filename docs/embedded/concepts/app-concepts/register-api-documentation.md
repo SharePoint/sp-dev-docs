@@ -13,9 +13,10 @@ As the registration API controls the permissions that a SharePoint Embedded appl
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. Just be aware  that the last successful invoke and associated settings will be the settings persisted and hence used in the Consuming Tenant.
 
+> [!NOTE]
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
- 
-> The registration API is NOT a Graph API and can only be invoked using AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
+> 
+> The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
 
 
 ## Container Type Permissions
@@ -48,9 +49,10 @@ The registration API determines what permissions a SharePoint Embedded applicati
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
 
-> NOTE that this is NOT a Graph API
+> [!NOTE]
+> This is NOT a Graph API
 >
-> {RootSiteURL} is the SharePoint URL of the Consuming Tenant. For example, https://contoso.sharepoint.com.
+> `{RootSiteURL}` is the SharePoint URL of the Consuming Tenant. For example, https://contoso.sharepoint.com.
 
 ### Request body
 

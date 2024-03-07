@@ -10,11 +10,14 @@ ms.localizationpriority: high
 In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. Each Container Type is owned by a single SharePoint Embedded Application, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions an SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
 
 ## Two Kinds of Container Types
+
 There are two kinds of Container Types that a developer tenant can create:
+
 1. [Trial Container Types](#trial-container-types)
-2. [Standard Container Types](#standard-container-types)
+1. [Standard Container Types](#standard-container-types)
  
 ## Trial Container Types
+
 To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. Trial Container Types are not linked to a billing profile and can only be utilized by the tenant developing the application; in this scenario, the partner tenant is always the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
 
 - You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode) to create a Trial Container Type with just a few clicks. The VS Code extension also registers your Container Type and creates Containers for you.
@@ -36,9 +39,10 @@ After creating the Trial Container Type, customers can create up to five active 
 
 
 ## Standard Container Types
-Standard Container Types are associated with a billing profile in [Azure Portal](portal.azure.com) when they are created. The billing profile includes a n Azure Subscription ID and a Region Group. There are two pre-requisites to creating s Standard Container Type
-- An Azure subscription and Resource Group must be present in the [Azure Portal](portal.azure.com).
-- An App regisration must be created in [Azure Entra]
+
+Standard Container Types are associated with a billing profile in [Azure Portal](https://portal.azure.com) when they are created. The billing profile includes a n Azure Subscription ID and a Region Group. There are two pre-requisites to creating s Standard Container Type
+- An Azure subscription and Resource Group must be present in the [Azure Portal](https://portal.azure.com).
+- An App registration must be created in [Microsoft Entra ID](https://entra.microsoft.com)
   
 
 
@@ -59,12 +63,15 @@ New-SPOContainerType
 
 
 ## Viewing ContainerTypes
+
 Developer Admin can view all the SharePoint Embedded Container Types created by them on their tenant using this PowerShell commandlet. This cmdlet retrieves and returns the list of Container Types  created for a SharePoint Embedded Application in the tenant. 
 
 ```ps
 Get-SPOContainerType   
 ```
-Example of an output of the Get-SPOContainerType  cmdlet
+
+Example output of the `Get-SPOContainerType`  cmdlet
+
 ```ps
 ContainerTypeId     : 4f0af585-8dcc-0000-223d-661eb2c604e4
 ContainerTypeName   : ContosoLegal
@@ -76,6 +83,7 @@ Region              : EastUS
 ```
 
 ## Registering Container Types
+
 In order to create and interact with Containers, it is necessary to [register](../app-concepts/register-api-documentation.md) a Container Type in the Consuming Tenant. This is achieved by the owning application invoking the [registration API](../app-concepts/register-api-documentation.md) that specifies what permissions can be performed against its Container Type.
 
 ## Deleting Trial Container Types
