@@ -9,24 +9,24 @@ ms.localizationpriority: high
 
 ### SharePoint Embedded Workflow
 
-1. An app creator (enterprise or ISV) builds an app that uses SharePoint Embedded containers
+1. An app creator (an enterprise or Independent Software Vendor-ISV) builds an app that uses SharePoint Embedded containers
     - App created in Microsoft Entra ID
     - Container Type creation requested and ContainerTypeID received to develop app
 1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
 1. The app instantiates a container
 1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
-1. The app can link to the webUrl property of DriveItems to view, edit and co-author Office document types in Office Online (via Web browser)
+1. The app can link to the webUrl property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
 1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
 
 ### App-Only vs Delegated
 
 SharePoint Embedded supports both App-Only and Delegated (App+User) calls for enterprise applications. App-only calls allow applications to utilize the SharePoint Embedded platform to manage containers without a signed-in user; while Delegated calls allow applications to manage containers via the SharePoint Embedded platform on behalf of the signed-in users.
 
-Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded calls to create containers, either App-Only or Delegated, from public clients are blocked by SharePoint Embedded authorization management.
+Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making api calls to create containers, whether they are App-Only or Delegated.
 
 ## Container.Selected Scope 
 
-The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. You will to call this API. To use it, you must configure this scope in your App manifest.  
+The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. You'll to call this API. To use it, you must configure this scope in your App manifest.  
 
 > [!NOTE]
 > Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph 
@@ -34,7 +34,7 @@ The [Register Container Type API](register-api-documentation.md) uses the Contai
 
 ### Configure your App Manifest
 
-In your app manifest you'll need to: 
+In your app manifest you need to: 
 
 Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it looks like the following JSON:
 
@@ -73,7 +73,7 @@ Select **Manage > Manifest** from the left-hand navigation. Locate the property 
 
 |      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
 |:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. |
+| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
 
 > [!IMPORTANT]
 > You must configure the `Container.Selected` scope in your App manifest
@@ -81,7 +81,7 @@ Select **Manage > Manifest** from the left-hand navigation. Locate the property 
 
 ### User Roles
 
-Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles as outlined below. When adding a user to a container, the user must be assigned to one of these roles.
+Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. If you add a user to a container, the user must be assigned to one of these roles.
 
 > [!NOTE]
 > The calling user creating a new container via delegated calls is automatically assigned the owner role.
@@ -99,7 +99,7 @@ Operation calls to SharePoint Embedded are authorized based on both the AppID of
 
 ## Authorization
 
-Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID and User Roles for Delegated (App+User) calls.
+Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID, and User Roles for Delegated (App+User) calls.
 
 For App-only calls, SharePoint Embedded authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint Embedded authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
 

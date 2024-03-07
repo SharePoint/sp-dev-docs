@@ -7,7 +7,7 @@ ms.localizationpriority: high
  
 # SharePoint Embedded Container Types
 
-In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. Each Container Type is owned by a single SharePoint Embedded Application, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions an SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
+In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. A single SharePoint Embedded Application owns each Container Type, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions a SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
 
 ## Two Kinds of Container Types
 
@@ -18,11 +18,11 @@ There are two kinds of Container Types that a developer tenant can create:
  
 ## Trial Container Types
 
-To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. Trial Container Types are not linked to a billing profile and can only be utilized by the tenant developing the application; in this scenario, the partner tenant is always the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
+To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. The tenant developing the application can utilize Trial Container Types, which aren't linked to a billing profile. In this scenario, the partner tenant remains the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
 
-- You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode) to create a Trial Container Type with just a few clicks. The VS Code extension also registers your Container Type and creates Containers for you.
+- You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode) to create a Trial Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
 
-- A Trial Container Type can be created using SPO Powershell. You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+- A Trial Container Type can be created using SharePoint PowerShell. You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
    
 ```ps
 New-SPOContainerType
@@ -30,7 +30,7 @@ New-SPOContainerType
 [ -ContainerTypeName <ContainerTypeName>]
 [ -OwningApplicationId <OwningApplicationId>]
 ```
-After creating the Trial Container Type, customers can create up to five active Containers in the trial Container Type. Trial Containers are provided with 1 GB of storage space. The Trial Container Type expires after 30 days, resulting in the loss of access to all Containers created using that Container Type. Customers can create a new Trial Container Type, but doing so requires the deletion of ALL existing Trial Containers
+After a Trial Container Type is created, customers can create up to five active Containers in the trial Container Type. Trial Containers are provided with 1 GB of storage space. The Trial Container Type expires after 30 days, resulting in the loss of access to all Containers created using that Container Type. Customers can create a new Trial Container Type, but doing so requires the deletion of ALL existing Trial Containers.
 
 > [!NOTE]
 > The Trial Container Type is the only Container Type that is restricted to the Partner (creating) tenant and cannot be shared with other consuming tenants.
@@ -40,8 +40,8 @@ After creating the Trial Container Type, customers can create up to five active 
 
 ## Standard Container Types
 
-Standard Container Types are associated with a billing profile in [Azure Portal](https://portal.azure.com) when they are created. The billing profile includes a n Azure Subscription ID and a Region Group. There are two pre-requisites to creating s Standard Container Type
-- An Azure subscription and Resource Group must be present in the [Azure Portal](https://portal.azure.com).
+Standard Container Types are associated with a billing profile in [Azure portal](https://portal.azure.com) when they're created. The billing profile includes an Azure Subscription ID and a Region Group. There are two prerequisites to creating s Standard Container:
+- An Azure subscription and Resource Group must be present in the [Azure portal](https://portal.azure.com)
 - An App registration must be created in [Microsoft Entra ID](https://entra.microsoft.com)
   
 
@@ -50,7 +50,7 @@ Standard Container Types are associated with a billing profile in [Azure Portal]
 
 A developer admin can create a new billable Container Type using the following PowerShell cmdlet. Tenants can create a maximum of five Container Types. Trial Container Types don't count against the maximum number of Container Types that a Partner tenant can create.
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet and must have the latest version of SharePoint PowerShell module.
+You must be a SharePoint Administrator or Global Administrator to run this cmdlet and must have the latest version of SharePoint PowerShell module.
 
 ```ps
 New-SPOContainerType
@@ -84,11 +84,11 @@ Region              : EastUS
 
 ## Registering Container Types
 
-In order to create and interact with Containers, it is necessary to [register](../app-concepts/register-api-documentation.md) a Container Type in the Consuming Tenant. This is achieved by the owning application invoking the [registration API](../app-concepts/register-api-documentation.md) that specifies what permissions can be performed against its Container Type.
+In order to create and interact with Containers, you must [register](../app-concepts/register-api-documentation.md) the Container Type within the Consuming Tenant. The owning application defines the permissions for the Container Type by invoking the [registration API](../app-concepts/register-api-documentation.md).
 
 ## Deleting Trial Container Types
 
-Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type refer to [Consuming Tenant Admin](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/admin-exp/cta#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
+Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type, refer to [Consuming Tenant Admin](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/admin-exp/cta#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
 
 ```ps
 Remove-SPOContainerType
