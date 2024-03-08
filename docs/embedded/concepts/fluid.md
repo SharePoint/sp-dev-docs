@@ -6,67 +6,59 @@ ms.localizationpriority: high
 ---
 
 # Fluid Framework in SharePoint Embedded Applications 
-Integrate Fluid Framework with SharePoint Embedded to easily and quickly build document collaboration into your applications.
 
+Leverage Fluid Framework and [SharePoint Embedded](../overview.md) to seamlessly and efficiently incorporate document collaboration into your applications
  
 ## Background 
 
 [Fluid Framework](https://fluidframework.com/) is a collection of client libraries for distributing, synchronizing, and saving shared data. These libraries allow multiple clients to simultaneously create and operate on shared data structures in real-time. Fluid Framework allows developers to use the same practices with shared data as with local data--for example, a Fluid object works in the same way as a local Typescript object.
  
 
-## Get started 
+## Quickstart 
 
-Get started [building](https://github.com/microsoft/FluidExamples/) with Fluid Framework.
-
- 
-
-In this article, you'll get started using SharePoint Embedded Apps
-To get started building with Fluid, you need: 
-
-1. Admin credentials to a [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing) tenant
-
-1. Microsoft Entra ID Application (for example, created using VS Code Extension)
-
-1. Retrieve `Client ID` 
-
-1. `ContainerTypeId` 
-   
-1. A Container created with the same ContainerTypeId as above
-
-1. [Visual Studio Code](https://code.visualstudio.com/download)
-
- 
-
-## Get started with SharePoint Embedded
-
-TODO: take them through vs code ext set up or have them use existing SPE app
-
-To work To create a [SharePoint Embedded](./../overview.md) Container Type, you need to first [register](https://learn.microsoft.com/azure/healthcare-apis/register-application) an application in Microsoft Entra ID. 
-
-Create a free trial [Microsoft 365 tenant](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing) or use another tenant that you have.
-
-Open up Visual Studio Code and download the SharePoint Embedded [Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md).
-
-Sign-in to the Visual Studio Extension and follow the instructions to: 
-
- 
+Start [building](https://github.com/microsoft/FluidExamples/) in the Fluid [Sample Apps Directory](https://github.com/microsoft/FluidExamples/tree/main/item-counter-spe). You'll need to [create](#get-started-with-sharepoint-embedded) a SharePoint Embedded application first.
 
 
-### Gather data (rename)
+### Get started with SharePoint Embedded
 
-To get started on Fluid apps you will need the `ClientID` from your Microsoft Entra Application and the `ContainerTypeId` associated with the Containers created on that application.
+Try SharePoint Embedded for free by creating a [Trial Container Type](./app-concepts/containertypes.md).
 
-You will need your ClientID gain the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeid` is necessary for access the Containers associated with your Microsoft Entra application
+1. Set up a free trial [Microsoft 365 tenant](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing). Alternatively, you can use an existing tenant if you have admin credentials.
 
-TODO:
-An easy way to retrieve both your `ContainerTypeId` and `ClientID` 
-is to export the Postman Config file in the Visual Studio Code Extension. Hover over the App name on the side bar and select on the arrow. 
+1. Sign into the [SharePoint Embedded Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md) and follow the steps to create an application and Trial Container Type.
 
-Save both your ContainerTypeId and ClientID from the Postman config `.json` file you exported.  
 
-Now you have all the information you need to run the Fluid Sample App. 
+## Pre-requisites
 
- 
+To get started building with Fluid Framework, you need:
+
+
+1. **Admin Credentials**: You’ll need administrative credentials for a [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing) tenant.
+
+1. **SharePoint Embedded Application**: Ensure that you’ve registered your application in [Microsoft Entra ID](https://entra.microsoft.com/). If you do not have a SharePoint Embedded application refer to the [earlier section](#get-started-with-sharepoint-embedded).
+
+1. **Application (Client) ID**: Obtain the `Client ID` for your SharePoint Embedded Application.
+
+1. **Container Type Information**:
+   - Identify the `ContainerTypeId` associated with your app’s Container Type.
+
+1. **Containers**:
+   - Make sure you have at least one Container of the same Container Type linked to your SharePoint Embedded Application.
+
+
+## Get started with Fluid
+
+### Access App information
+
+You will need the `ClientID` from your Microsoft Entra Application and the `ContainerTypeId` associated with the Containers created on that application.
+
+The `ClientID` is essential for acquiring the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeId` is necessary for accessing Containers associated with your Microsoft Entra application
+
+If you used the [Visual Studio Code Extension](../getting-started/spembedded-for-vscode.md) you can [export](https://learn.microsoft.com/sharepoint/dev/embedded/getting-started/spembedded-for-vscode#export-postman-environment) your Postman Environment to easily view your both your `ContainerTypeId` and `ClientID`.
+
+Otherwise, you can access your `ContainerTypeId` by using the [`Get-SPOContainerType`](https://learn.microsoft.com/sharepoint/dev/embedded/concepts/admin-exp/dev-admin#viewing-of-container-types) Powershell commandlet. Your `ClientID` is available in [Microsoft Entra ID](https://entra.microsoft.com/) by navigating to **Identity** > **App Registrations** > **All applications** to view your application overview.
+
+
 
 ## Run Fluid Sample App: Item Counter 
 
@@ -76,21 +68,21 @@ Now you can test out and start building with the [Fluid Sample App](https://gith
 
 **Steps:** 
 
-1. `cd` to where you like work on Fluid Apps or create a new folder
+1. Gather your `ClientID` and `ContainerTypeId` of your SharePoint Embedded Application as well as your tenant admin credentials
+
+1. `cd` to where you like to clone the Fluid Sample App
 
 1. `git clone https://github.com/microsoft/FluidExamples.git ` 
 
-1. `cd repo`
+1. Navigate to the Item Counter directory `cd .\FluidExamples\item-counter-spe\`
 
-1. `cd item-counter-spe` 
+1. Create an empty `.env` file and input your `ClientID` and `ContainerTypeId` with no spaces like so: 
 
-1. Create empty `.env` file and input your ClientID and ContainerTypeId like so: 
+    ```
+    SPE_CLIENT_ID=YOUR_CLIENTID
 
-```
-SPE_CLIENT_ID=YOUR_CLIENTID
-
-SPE_CONTAINER_TYPE_ID=YOUR_CONTAINERTYPE_ID
-``` 
+    SPE_CONTAINER_TYPE_ID=YOUR_CONTAINERTYPE_ID
+    ``` 
 
 1. `npm install`
 
