@@ -7,11 +7,11 @@ ms.localizationpriority: high
 
 # Register File Storage Container Type Application Permissions
 
-In order for a SharePoint Embedded application to be able interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. This is achieved by the owning application invoking the registration API that specifies what permissions can be performed against its Container Type. The registration API also provides the ability to grant access to other Guest Apps that may also want to also interact with its Containers. For example, a SharePoint Embedded application can grant permissions to another application so that it can perform backup operations against its Containers.
+In order for a SharePoint Embedded application interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. Container Type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its Container Type. The registration API also grants access to other Guest Apps to interact with the owning application's Containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its Containers.
 
-As the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so will result in access denied errors when invoking other APIs against Container and/or the content in the Containers.
+Since the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against Container and/or the content in the Containers.
 
-There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. Just be aware  that the last successful invoke and associated settings will be the settings persisted and hence used in the Consuming Tenant.
+There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API will determine the settings used in the Consuming Tenant.
 
 > [!NOTE]
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
@@ -74,7 +74,7 @@ If successful, this method returns a `200 OK` response code and the Container Ty
 
 ### Register the Container Type in a Consuming Tenant
 
-Register the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
+Register the Container Type in the Consuming Tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
 #### Request
 ```json
@@ -110,7 +110,7 @@ Content-type: application/json
 
 ### Register the Container Type in a Consuming Tenant with permissions for a Guest App
 
-Register the Container Type in the Consuming Tenant and grant full permssions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
+Register the Container Type in the Consuming Tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition, grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
 
 #### Request
 ```json
