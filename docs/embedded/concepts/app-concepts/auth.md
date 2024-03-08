@@ -22,11 +22,11 @@ ms.localizationpriority: high
 
 SharePoint Embedded supports both App-Only and Delegated (App+User) calls for enterprise applications. App-only calls allow applications to utilize the SharePoint Embedded platform to manage containers without a signed-in user; while Delegated calls allow applications to manage containers via the SharePoint Embedded platform on behalf of the signed-in users.
 
-Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making api calls to create containers, whether they are App-Only or Delegated.
+Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making API calls to create containers, whether they're App-Only or Delegated.
 
 ## Container.Selected Scope 
 
-The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. You'll to call this API. To use it, you must configure this scope in your App manifest.  
+The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. To call it, you must configure this scope in your App manifest.  
 
 > [!NOTE]
 > Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph 
