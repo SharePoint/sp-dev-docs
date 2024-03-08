@@ -4,6 +4,7 @@ description: This article describes the role and responsibilities of Consuming T
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
+
 # Consuming Tenant Admin
 
 The organizations that use the SharePoint Embedded applications on their Microsoft 365(Microsoft 365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator. Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the Containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and available to the consuming tenant administrator.
@@ -76,6 +77,7 @@ Deleting a container can have implications on the functionality of a SharePoint 
 Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues. 
 
 ### Permanent Deletion
+
 When admins delete a Container, it goes into the Recycle Bin. A deleted container can be restored from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
 
 Admins should notify the Container owners before you delete a Container so they can move their data to another location, and also inform users when the Container will be deleted.
