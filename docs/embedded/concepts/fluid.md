@@ -37,26 +37,26 @@ To get started building with Fluid Framework, you need:
 
 1. **SharePoint Embedded Application**: Ensure that you register your application in [Microsoft Entra ID](https://entra.microsoft.com/). If you don't have a SharePoint Embedded application, refer to the [earlier section](#get-started-with-sharepoint-embedded).
 
-1. **Application (Client) ID**: Obtain the `Client ID` for your SharePoint Embedded Application.
+1. **Application (Client) ID**: Obtain the `ClientID` for your SharePoint Embedded Application.
 
 1. **Container Type Information**:
    - Identify the `ContainerTypeId` associated with your app’s Container Type.
 
 1. **Containers**:
-   - Make sure you have *at least* one Container of the same Container Type linked to your SharePoint Embedded Application.
+   - Make sure you have *at least* one Container created of the same Container Type linked to your SharePoint Embedded Application.
 
 
 ## Get started with Fluid
 
 ### Access App information
 
-You need the `ClientID` from your Microsoft Entra Application and the `ContainerTypeId` associated with the Containers created on that application.
+You need the `ClientID` from your application and the `ContainerTypeId` associated with the Containers created on that application.
 
-The `ClientID` is essential for acquiring the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeId` is necessary for accessing Containers associated with your Microsoft Entra application.
+The `ClientID` is essential for acquiring the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeId` is necessary for accessing Containers associated with your SharePoint Embedded application.
 
 If you used the [Visual Studio Code Extension](../getting-started/spembedded-for-vscode.md), you can [export](https://learn.microsoft.com/sharepoint/dev/embedded/getting-started/spembedded-for-vscode#export-postman-environment) your Postman Environment to easily view your both your `ContainerTypeId` and `ClientID`.
 
-Otherwise, you can access your `ContainerTypeId` by using the [`Get-SPOContainerType`](https://learn.microsoft.com/sharepoint/dev/embedded/concepts/admin-exp/dev-admin#viewing-of-container-types) PowerShell commandlet. Your `ClientID` is available in [Microsoft Entra ID](https://entra.microsoft.com/) by navigating to **Identity** > **App Registrations** > **All applications** to view your application overview.
+Otherwise, you can access your `ContainerTypeId` by using the [`Get-SPOContainerType`](https://learn.microsoft.com/sharepoint/dev/embedded/concepts/admin-exp/dev-admin#viewing-of-container-types) PowerShell commandlet. Your `ClientID` is available in [Microsoft Entra ID](https://entra.microsoft.com/) by navigating to **Identity** > **App Registrations** > **Applications** > **All applications** to view your application overview.
 
 
 
@@ -70,7 +70,7 @@ Now you can test out and start building with the [Fluid Sample App](https://gith
 
 1. Gather your `ClientID` and `ContainerTypeId` of your SharePoint Embedded Application and tenant admin credentials
 
-1. `cd` to where you like to clone the Fluid Sample App
+1. `cd` to where you like to clone the [Fluid Examples repo](https://github.com/microsoft/FluidExamples)
 
 1. `git clone https://github.com/microsoft/FluidExamples.git ` 
 
@@ -94,7 +94,7 @@ Now you can test out and start building with the [Fluid Sample App](https://gith
 
 1. Grant admin consent for your app in the pop-up window
    
-1. Copy the full URL to another browser tab or send it to someone who has credentials to the same tenant. These can be user credentials as long as they are on the same tenant. The live changes to the Item Counter on both browsers show that the data is synched between clients.
+1. Copy the full URL to another browser tab or send it to someone who has credentials to the same tenant. These can be user credentials as long as they are on the same tenant. The live changes to the Item Counter on both browsers show that the data is synced between clients.
    
 1. Congrats on getting your first Fluid App to run! More details can be found in the Item Counter [README](https://github.com/microsoft/FluidExamples/tree/main/item-counter-spe).
    
