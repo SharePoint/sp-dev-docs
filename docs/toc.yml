@@ -574,6 +574,8 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
+    - name: Fluid Framework
+      href: embedded/concepts/fluid.md
     - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
