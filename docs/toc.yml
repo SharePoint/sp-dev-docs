@@ -580,8 +580,6 @@
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
-    - name: Register Container Type
-      href: embedded/tutorials/register-ct.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview

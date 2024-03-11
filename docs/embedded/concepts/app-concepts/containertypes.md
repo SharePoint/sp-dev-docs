@@ -20,7 +20,7 @@ There are two kinds of Container Types that a developer tenant can create:
 
 To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. The tenant developing the application can utilize Trial Container Types, which aren't linked to a billing profile. In this scenario, the partner tenant remains the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
 
-- You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode) to create a Trial Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
+- You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode.md) to create a Trial Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
 
 - A Trial Container Type can be created using SharePoint PowerShell. You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
    
@@ -88,7 +88,7 @@ In order to create and interact with Containers, you must [register](../app-conc
 
 ## Deleting Trial Container Types
 
-Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type, refer to [Consuming Tenant Admin](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/concepts/admin-exp/cta#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
+Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type, refer to [Consuming Tenant Admin](../admin-exp/cta.md#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell commandlet.
 
 ```ps
 Remove-SPOContainerType
