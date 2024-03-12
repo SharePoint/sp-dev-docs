@@ -17,7 +17,7 @@ To set up automatic AI processing with your current SharePoint application upon 
 ![document processing schema](../images/Document-Processing.png)
 
 > [!TIP]
-> To learn more about the Graph APIs used in this tutorial, see [Track changes for a Drive](https://learn.microsoft.com/graph/api/driveitem-delta), [Get a DriveItem resource](https://learn.microsoft.com/graph/api/driveitem-get), and [Upload or replace the contents of a DriveItem](https://learn.microsoft.com/graph/api/driveitem-put-content).
+> To learn more about the Graph APIs used in this tutorial, see [Track changes for a Drive](/graph/api/driveitem-delta), [Get a DriveItem resource](/graph/api/driveitem-get), and [Upload or replace the contents of a DriveItem](/graph/api/driveitem-put-content).
 
 
 ## Get the delta changes of a container

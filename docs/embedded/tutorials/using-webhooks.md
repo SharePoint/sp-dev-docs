@@ -19,7 +19,7 @@ To set up webhooks with your [current SharePoint Embedded application](/training
 ![using webhooks schema](../images/Using-Webhooks.png)
 
 > [!TIP]
-> To learn more about the Graph APIs used in this tutorial, see [Create subscription](https://learn.microsoft.com/en-us/graph/api/subscription-post-subscriptions).
+> To learn more about the Graph APIs used in this tutorial, see [Create subscription](/graph/api/subscription-post-subscriptions).
 
 
 ## Create and register a webhook
