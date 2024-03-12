@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded.
 
-SharePoint Embedded  will be a consumption based PAYG (Pay-as-you-go) offering from SharePoint Online, which means you'll pay only for what you use. As a Developer admin for SharePoint Embedded, you'll set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal.
+SharePoint Embedded  will be a consumption based Pay-as-you-go (PAYG) offering from SharePoint Online, which means you'll pay only for what you use. As a Developer admin for SharePoint Embedded, you'll set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal.
 
 ![Billing pay-as-you-go.](../../images/billing-manage.png)
 

@@ -66,13 +66,13 @@ Here, the Identity is the ID of the Container. For more information about using 
 
 ### Delete Containers
 
-Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container. 
+Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container.
 
-- Data Loss: Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app may no longer function as expected or may lose access to critical information. 
-- Broken Links: If the SharePoint Embedded application contains links or references to the deleted container, those links become broken, leading to errors or malfunctioning features within the app. 
-- Permissions Issues: Deleting a container can affect permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it may encounter permission issues and fail to function properly. 
+- Data Loss: Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app might no longer function as expected or might lose access to critical information.
+- Broken Links: If the SharePoint Embedded application contains links or references to the deleted container, those links become broken, leading to errors or malfunctioning features within the app.
+- Permissions Issues: Deleting a container can affect permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it might encounter permission issues and fail to function properly.
 
-Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues. 
+Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues.
 
 ### Permanent Deletion
 
@@ -128,6 +128,7 @@ Set-SPOTenant -ContainerSharingCapability <ContainerSharingCapabilities>
 ```
 
 > [!NOTE]
+>
 > - External sharing for SharePoint Embedded defaults to the tenant setting set with `Set-SPOTenant [-SharingCapability <SharingCapabilities>]`.
 > - External sharing settings for SharePoint Embedded must be equally or more restrictive than the tenant-wide external sharing settings.
 
