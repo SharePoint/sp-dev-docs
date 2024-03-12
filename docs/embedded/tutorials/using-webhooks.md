@@ -10,8 +10,11 @@ ms.localizationpriority: high
 ## Set Up Webhooks with SharePoint Embedded
 
 Webhooks are automated messages that are transmitted by an application when a trigger is activated. They can be used in SPE to enable the automation of workflows, the integration of systems, and to respond to events in real time.
+
 You will use webhooks to invoke the Azure Cognitive Services APIs from the application whenever an existing file is updated, or a new file is uploaded.
-To set up webhooks with your [current SharePoint Embedded application](/training/modules/sharepoint-embedded-create-app/), you need to
+
+To set up webhooks with your [current SharePoint Embedded application](/training/modules/sharepoint-embedded-create-app/), you need to:
+
 1.	Create and register a webhook endpoint to get notifications whenever there is change in your container. This will be done using REST APIs.
 1.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribe to the changes by making a POST call.
 1.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with Azure Cognitive Services tutorial](/doc-processing-acs.md).
@@ -25,6 +28,7 @@ To set up webhooks with your [current SharePoint Embedded application](/training
 ## Create and register a webhook
 
 Open the **index.ts** file and add an endpoint `onReceiptAdded`.
+
 ```ts
 server.post('/api/onReceiptAdded', async (req, res, next) => {
   try {
@@ -38,11 +42,13 @@ server.post('/api/onReceiptAdded', async (req, res, next) => {
 ```
 
 You also need to add the query parser plugin at the top of this file so that it runs at server startup.
+
 ```ts
 server.use(restify.plugins.bodyParser(), restify.plugins.queryParser()); 
 ```
 
 Create **onReceiptAdded.ts** and implement the method `onReceiptAdded` to read `validationToken` and `driveId`. `validationToken` is required when Graph makes a one-time call to verify the endpoint upon creation of the webhook subscription. `driveId` is the container-id for which  the subscription is created.
+
 ```ts
 require('isomorphic-fetch');
 
@@ -72,6 +78,7 @@ require('isomorphic-fetch');
 
 Follow the [documentation](https://ngrok.com/docs/getting-started/) to create a tunnel for your backend server by utilizing ngrok.
 After starting the app, run the following command in a terminal:
+
 ```pwsh
 ngrok http 3001
 ```
@@ -80,6 +87,7 @@ On successful completion, you should get the following output. The public facing
 ![ngrok registration](../images/ngrok-registration.png)
 
 Once the tunneling is active, you can subscribe to delta changes in container by adding the webhook URL. To do that, open Postman and make the following `POST` request with appropriate graph access token and `notificationUrl` with the `driveId` appended as a query parameter to ensure that you get notifications for changes only in the desired container. 
+
 ```json
 POST  https://graph.microsoft.com/v1.0/subscriptions 
 { 
@@ -92,6 +100,7 @@ POST  https://graph.microsoft.com/v1.0/subscriptions
 ```
 
 You can use the following code snippet for setting the max possible expiration time of 4230 minutes from the current time by adding this to the "Pre-request Script" section. It will set an environment variable which can be used in request body. 
+
 ```js
 var now = new Date()
 var duration = 1000 * 60 * 4230; // max lifespan of driveItem subscription is 4230 minutes

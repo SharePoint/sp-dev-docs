@@ -10,8 +10,11 @@ ms.localizationpriority: high
 ## Utilizing Azure Cognitive Services
 
 Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pretrained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
+
 You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
+
 To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](/using-webhooks.md) and then:
+
 1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files which are added or updated.
 1.	Call Azure Cognitive Services’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
 ![document processing schema](../images/Document-Processing.png)
@@ -23,6 +26,7 @@ To set up automatic AI processing with your current SharePoint application upon 
 ## Get the delta changes of a container
 
 Open **GraphProvider.ts** and implement method `getDriveChanges` to get the list of changed items.
+
 ```ts
 public static async getDriveChanges(driveId: string): Promise<any[]> {
     let changedItems: any[] = [];
@@ -55,6 +59,7 @@ public static async getDriveChanges(driveId: string): Promise<any[]> {
 ```
 
 Implement method `getDriveItem` to fetch a file from a container.
+
 ```ts
 public static async getDriveItem(driveId: string, itemId: string): Promise<any> {
     return await this.graphClient.api(`/drives/${driveId}/items/${itemId}`).get();
@@ -62,6 +67,7 @@ public static async getDriveItem(driveId: string, itemId: string): Promise<any> 
 ```
 
 Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`.
+
 ```ts
 export abstract class ReceiptProcessor {
 
@@ -91,13 +97,16 @@ export abstract class ReceiptProcessor {
 At this point if you restart the app along with tunneling and subscription, you should see the recently added/updated files listed in console.
 
 ## Call Azure Cognitive Services' Document Intelligence service API
+
 To use the Azure Cognitive Services Document Intelligence APIs, you need to create a Multi-Service or Document Intelligence resource for Azure AI Service. Follow the tutorials below to create the resource:
+
 - [Quickstart: Create a multi-service resource for Azure AI services](/azure/ai-services/multi-service-resource?tabs=windows&pivots=azportal)
 - [Get started with Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?view=doc-intel-3.1.0&viewFallbackFrom=form-recog-3.0.0&preserve-view=true&pivots=programming-language-javascript)
 
 After this step, you should have an endpoint and a key ready to use.
 
 Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials.
+
 ```ts
 private static dac = new DocumentAnalysisClient(
     `${process.env["DAC_RESOURCE_ENDPOINT"]}`,
@@ -106,6 +115,7 @@ private static dac = new DocumentAnalysisClient(
 ```
 
 Create method `getDriveItemStream`.
+
 ```ts
 private static async getDriveItemStream(url: string): Promise<Readable> {
         const token = GraphProvider.graphAccessToken;
@@ -123,6 +133,7 @@ private static async getDriveItemStream(url: string): Promise<Readable> {
 ```
 
 Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we are taking the `prebuilt-invoice` model, but other models can be chosen.
+
 ```ts
 private static async analyzeReceiptStream(stream: Readable): Promise<any> {
 
@@ -143,6 +154,7 @@ private static async analyzeReceiptStream(stream: Readable): Promise<any> {
 ```
 
 Create method `removeUnwantedFields` to remove the undesireable fields in Azure Cognitive Services’s repsonse.
+
 ```ts 
 private static removeUnwantedFields(fields: any) {
         for (const prop in fields) {
@@ -157,6 +169,7 @@ private static removeUnwantedFields(fields: any) {
 ```
 
 Finally, open **GraphProvider.ts** to add the `addDriveItem` method at the end of the `GraphProvider` class.
+
 ```ts 
 public static async addDriveItem(driveId: string, parentId: any, fileName: string, receiptString: string) {
         await this.graphClient.api(`/drives/${driveId}/items/${parentId}:/${fileName}:/content`).put(receiptString);
