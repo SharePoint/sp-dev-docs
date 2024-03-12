@@ -8,21 +8,23 @@ ms.localizationpriority: high
 # Using Webhooks
 
 ## Set Up Webhooks with SharePoint Embedded
+
 Webhooks are automated messages that are transmitted by an application when a trigger is activated. They can be used in SPE to enable the automation of workflows, the integration of systems, and to respond to events in real time.
-You will use webhooks to invoke the Azure Cognitive Service APIs from the application whenever an existing file is updated, or a new file is uploaded.
+You will use webhooks to invoke the Azure Cognitive Services APIs from the application whenever an existing file is updated, or a new file is uploaded.
 To set up webhooks with your [current SharePoint Embedded application](/training/modules/sharepoint-embedded-create-app/), you need to
 1.	Create and register a webhook endpoint to get notifications whenever there is change in your container. This will be done using REST APIs.
-2.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribe to the changes by making a POST call.
-3.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with ACS tutorial](/doc-processing-acs.md).
+1.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribe to the changes by making a POST call.
+1.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with Azure Cognitive Services tutorial](/doc-processing-acs.md).
 
 ![using webhooks schema](../images/Using-Webhooks.png)
 
 > [!TIP]
-> To learn more about the Graph APIs used in this tutorial, see [Create subscription](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/subscription_post_subscriptions.md).
+> To learn more about the Graph APIs used in this tutorial, see [Create subscription](https://learn.microsoft.com/en-us/graph/api/subscription-post-subscriptions).
 
 
 ## Create and register a webhook
-Open the `index.ts` file and add an endpoint `onReceiptAdded`.
+
+Open the **index.ts** file and add an endpoint `onReceiptAdded`.
 ```ts
 server.post('/api/onReceiptAdded', async (req, res, next) => {
   try {
@@ -40,7 +42,7 @@ You also need to add the query parser plugin at the top of this file so that it 
 server.use(restify.plugins.bodyParser(), restify.plugins.queryParser()); 
 ```
 
-Create `onReceiptAdded.ts` and implement the method `onReceiptAdded` to read `validationToken` and `driveId`. `validationToken` is required when Graph makes a one-time call to verify the endpoint upon creation of the webhook subscription. `driveId` is the container-id for which  the subscription is created.
+Create **onReceiptAdded.ts** and implement the method `onReceiptAdded` to read `validationToken` and `driveId`. `validationToken` is required when Graph makes a one-time call to verify the endpoint upon creation of the webhook subscription. `driveId` is the container-id for which  the subscription is created.
 ```ts
 require('isomorphic-fetch');
 
@@ -67,6 +69,7 @@ require('isomorphic-fetch');
 ```
 
 ## Connect to Graph and subscribe to changes
+
 Follow the [documentation](https://ngrok.com/docs/getting-started/) to create a tunnel for your backend server by utilizing ngrok.
 After starting the app, run the following command in a terminal:
 ```pwsh

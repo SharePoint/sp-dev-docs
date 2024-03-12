@@ -1,26 +1,28 @@
 ---
-title: Document Processing with ACS
-description: Enabling document processing with ACS
+title: Document Processing with Azure Cognitive Services
+description: Enabling document processing with Azure Cognitive Services
 ms.date: 02/26/2024
 ms.localizationpriority: high
 ---
 
-# Enabling Document Processing with ACS
+# Enabling Document Processing with Azure Cognitive Services
 
 ## Utilizing Azure Cognitive Services
+
 Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pretrained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
-You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with ACS to extract data from invoices.
+You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
 To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](/using-webhooks.md) and then:
 1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files which are added or updated.
-2.	Call ACS’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
+1.	Call Azure Cognitive Services’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
 ![document processing schema](../images/Document-Processing.png)
 
 > [!TIP]
-> To learn more about the Graph APIs used in this tutorial, see [Track changes for a Drive](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_delta.md), [Get a DriveItem resource](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_get.md), and [Upload or replace the contents of a DriveItem](https://onedrive.visualstudio.com/OneDrive%20Service/_git/apidocs?path=/docs/rest-api/api/driveitem_put_content.md).
+> To learn more about the Graph APIs used in this tutorial, see [Track changes for a Drive](https://learn.microsoft.com/graph/api/driveitem-delta), [Get a DriveItem resource](https://learn.microsoft.com/graph/api/driveitem-get), and [Upload or replace the contents of a DriveItem](https://learn.microsoft.com/graph/api/driveitem-put-content).
 
 
 ## Get the delta changes of a container
-Open `GraphProvider.ts` and implement method `getDriveChanges` to get the list of changed items.
+
+Open **GraphProvider.ts** and implement method `getDriveChanges` to get the list of changed items.
 ```ts
 public static async getDriveChanges(driveId: string): Promise<any[]> {
     let changedItems: any[] = [];
@@ -59,7 +61,7 @@ public static async getDriveItem(driveId: string, itemId: string): Promise<any> 
 }
 ```
 
-Create a new file `ReceiptProcessor.ts` and implement a method `processDrive`.
+Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`.
 ```ts
 export abstract class ReceiptProcessor {
 
@@ -88,14 +90,14 @@ export abstract class ReceiptProcessor {
 
 At this point if you restart the app along with tunneling and subscription, you should see the recently added/updated files listed in console.
 
-## Call ACS's Document Intelligence service API
-To use the ACS Document Intelligence APIs, you need to create a Multi-Service or Document Intelligence resource for Azure AI services. Follow the tutorials below to create the resource:
+## Call Azure Cognitive Services' Document Intelligence service API
+To use the Azure Cognitive Services Document Intelligence APIs, you need to create a Multi-Service or Document Intelligence resource for Azure AI Service. Follow the tutorials below to create the resource:
 - [Quickstart: Create a multi-service resource for Azure AI services](/azure/ai-services/multi-service-resource?tabs=windows&pivots=azportal)
 - [Get started with Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/get-started-sdks-rest-api?view=doc-intel-3.1.0&viewFallbackFrom=form-recog-3.0.0&preserve-view=true&pivots=programming-language-javascript)
 
 After this step, you should have an endpoint and a key ready to use.
 
-Now open `ReceiptProcessor.ts` to create method `dac` to store the ACS credentials.
+Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials.
 ```ts
 private static dac = new DocumentAnalysisClient(
     `${process.env["DAC_RESOURCE_ENDPOINT"]}`,
@@ -120,7 +122,7 @@ private static async getDriveItemStream(url: string): Promise<Readable> {
     }
 ```
 
-Create method `analyzeReceiptStream` to get the OCR fields through ACS processing. Here we are taking the `prebuilt-invoice` model, but other models can be chosen.
+Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we are taking the `prebuilt-invoice` model, but other models can be chosen.
 ```ts
 private static async analyzeReceiptStream(stream: Readable): Promise<any> {
 
@@ -140,7 +142,7 @@ private static async analyzeReceiptStream(stream: Readable): Promise<any> {
     }
 ```
 
-Create method `removeUnwantedFields` to remove the undesireable fields in ACS’s repsonse.
+Create method `removeUnwantedFields` to remove the undesireable fields in Azure Cognitive Services’s repsonse.
 ```ts 
 private static removeUnwantedFields(fields: any) {
         for (const prop in fields) {
@@ -154,7 +156,7 @@ private static removeUnwantedFields(fields: any) {
     }
 ```
 
-Finally, open `GraphProvider.ts` to add the `addDriveItem` method at the end of the `GraphProvider` class.
+Finally, open **GraphProvider.ts** to add the `addDriveItem` method at the end of the `GraphProvider` class.
 ```ts 
 public static async addDriveItem(driveId: string, parentId: any, fileName: string, receiptString: string) {
         await this.graphClient.api(`/drives/${driveId}/items/${parentId}:/${fileName}:/content`).put(receiptString);
