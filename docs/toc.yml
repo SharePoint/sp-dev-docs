@@ -550,6 +550,8 @@
       href: embedded/concepts/app-concepts/app-architecture.md
     - name: Container Types
       href: embedded/concepts/app-concepts/containertypes.md
+    - name: Register Container Type API
+      href: embedded/concepts/app-concepts/register-api-documentation.md
     - name: Authentication
       href: embedded/concepts/app-concepts/auth.md
     - name: Sharing and Permissions
@@ -580,8 +582,6 @@
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
-    - name: Register Container Type
-      href: embedded/tutorials/register-ct.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
