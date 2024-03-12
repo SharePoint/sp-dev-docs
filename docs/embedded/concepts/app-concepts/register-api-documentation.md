@@ -7,9 +7,9 @@ ms.localizationpriority: high
 
 # Register File Storage Container Type Application Permissions
 
-In order for a SharePoint Embedded application interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. Container Type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its Container Type. The registration API also grants access to other Guest Apps to interact with the owning application's Containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its Containers.
+In order for a SharePoint Embedded application to interact with Containers in a Consuming Tenant, the Container Type must first be registered in the Consuming Tenant. Container Type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its Container Type. The registration API also grants access to other Guest Apps to interact with the owning application's Containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its Containers.
 
-Since the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against Container and/or the content in the Containers.
+Since the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against the Container and/or the content in the Containers.
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API will determine the settings used in the Consuming Tenant.
 
@@ -17,7 +17,6 @@ There are no restrictions on how many times the registration API can be invoked.
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
 > 
 > The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
-
 
 ## Container Type Permissions
 
@@ -40,11 +39,8 @@ The registration API determines what permissions a SharePoint Embedded applicati
 | ManagePermissions |	Can add, remove (including self) or update members in the Container roles for Containers of this Container Type. |
 | Full | Has all permissions for Containers of this Container Type. |
 
-
-
 ## HTTP request
 
- 
 ``` http
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
@@ -66,9 +62,8 @@ If successful, this method returns a `200 OK` response code and the Container Ty
 | :--------: | ----------- |
 | 400 | Bad request. |
 | 401 | Request lacks valid authentication credentials. |
-| 403 | Provided authentication credentials are valid but insufficient to perform requested operation. Examples: the calling app is not the owning app of the container type. |
+| 403 | Provided authentication credentials are valid but insufficient to perform the requested operation. Examples: the calling app is not the owning app of the container type. |
 | 404 | Container type does not exist. |
-
 
 ## Examples
 
@@ -153,4 +148,3 @@ Content-type: application/json
   ]
 }
 ```
-
