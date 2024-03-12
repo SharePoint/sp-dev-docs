@@ -11,33 +11,33 @@ In order for a SharePoint Embedded application to interact with Containers in a 
 
 Since the registration API controls the permissions that a SharePoint Embedded application can perform against the Container in the Consuming Tenant, this should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against the Container and/or the content in the Containers.
 
-There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it is invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API will determine the settings used in the Consuming Tenant.
+There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it's invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API will determine the settings used in the Consuming Tenant.
 
 > [!NOTE]
 > Only the Owning Application of the Container Type can invoke the registration API in the Consuming Tenant.
-> 
+>
 > The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
 
 ## Container Type Permissions
 
 The registration API determines what permissions a SharePoint Embedded application can perform against Containers and Content in Containers for the specified Container Type.
 
-| Permission | Description |
-| ---------- | ----------- |
-| None | Has no permissions to any Containers or content of this Container Type. |
-| ReadContent| 	Can read content of Containers of this Container Type. |
-| WriteContent | Can write content to Containers for this Container Type. This can't be granted without the ReadContent permission. |
-| Create | Can create Containers of this Container Type. |
-| Delete | Can delete Containers of this Container Type. |
-| Read | Can read the metadata of Containers of this Container Type. |
-| Write |	Can update the metadata of Containers of this Container Type. |
-| EnumeratePermissions | Can enumerate the members of a Container and their roles for Containers of this Container Type. |
-| AddPermissions | Can add members to the Container for Containers of this Container Type. |
-| UpdatePermissions | Can update (change roles of) existing memberships in the Container for Containers of this Container Type. |
-| DeletePermissions |	Can delete other members (but not self) from the Container for Containers of this Container Type. |
-| DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type. |
-| ManagePermissions |	Can add, remove (including self) or update members in the Container roles for Containers of this Container Type. |
-| Full | Has all permissions for Containers of this Container Type. |
+|      Permission      |                                                    Description                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| None                 | Has no permissions to any Containers or content of this Container Type.                                            |
+| ReadContent          | Can read content of Containers of this Container Type.                                                             |
+| WriteContent         | Can write content to Containers for this Container Type. This can't be granted without the ReadContent permission. |
+| Create               | Can create Containers of this Container Type.                                                                      |
+| Delete               | Can delete Containers of this Container Type.                                                                      |
+| Read                 | Can read the metadata of Containers of this Container Type.                                                        |
+| Write                | Can update the metadata of Containers of this Container Type.                                                      |
+| EnumeratePermissions | Can enumerate the members of a Container and their roles for Containers of this Container Type.                    |
+| AddPermissions       | Can add members to the Container for Containers of this Container Type.                                            |
+| UpdatePermissions    | Can update (change roles of) existing memberships in the Container for Containers of this Container Type.          |
+| DeletePermissions    | Can delete other members (but not self) from the Container for Containers of this Container Type.                  |
+| DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type.                                |
+| ManagePermissions    | Can add, remove (including self) or update members in the Container roles for Containers of this Container Type.   |
+| Full                 | Has all permissions for Containers of this Container Type.                                                         |
 
 ## HTTP request
 
@@ -62,8 +62,8 @@ If successful, this method returns a `200 OK` response code and the Container Ty
 | :--------: | ----------- |
 | 400 | Bad request. |
 | 401 | Request lacks valid authentication credentials. |
-| 403 | Provided authentication credentials are valid but insufficient to perform the requested operation. Examples: the calling app is not the owning app of the container type. |
-| 404 | Container type does not exist. |
+| 403 | Provided authentication credentials are valid but insufficient to perform the requested operation. Examples: the calling app isn't the owning app of the container type. |
+| 404 | Container type doesn't exist. |
 
 ## Examples
 
@@ -72,6 +72,7 @@ If successful, this method returns a `200 OK` response code and the Container Ty
 Register the Container Type in the Consuming Tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
 #### Request
+
 ```json
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 Content-Type: application/json
@@ -82,12 +83,13 @@ Content-Type: application/json
       "appId": "71392b2f-1765-406e-86af-5907d9bdb2ab",
       "delegated": ["full"],
       "appOnly": ["full"]
-    }   
+    }
   ]
 }
 ```
 
 #### Response
+
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json
@@ -108,6 +110,7 @@ Content-type: application/json
 Register the Container Type in the Consuming Tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls. In addition, grant a Guest App (AppId 89ea5c94-7736-4e25-95ad-3fa95f62b6) read and write permissions only for Delegated calls.
 
 #### Request
+
 ```json
 PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
 Content-Type: application/json
@@ -129,6 +132,7 @@ Content-Type: application/json
 ```
 
 #### Response
+
 ```json
 HTTP/1.1 200 OK
 Content-type: application/json

@@ -4,7 +4,7 @@ description: This article explains how Container Types work.
 ms.date: 03/05/2023
 ms.localizationpriority: high
 ---
- 
+
 # SharePoint Embedded Container Types
 
 In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. A single SharePoint Embedded Application owns each Container Type, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions a SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
@@ -15,14 +15,14 @@ There are two kinds of Container Types that a developer tenant can create:
 
 1. [Trial Container Types](#trial-container-types)
 1. [Standard Container Types](#standard-container-types)
- 
+
 ## Trial Container Types
 
 To enable customers to explore the development of SharePoint Embedded applications and assess its features, we offer the ability to create a Trial Container Type. Each customer can have only one Trial Container Type in their tenant at a time. The tenant developing the application can utilize Trial Container Types, which aren't linked to a billing profile. In this scenario, the partner tenant remains the same as the consuming tenant. The Trial Container Type remains valid for up to 30 days but can be removed at any time within this period. There are two ways to create a Trial Container Type:
 
 - You can use [SharePoint Embedded Visual Studio Code Extension](../../getting-started/spembedded-for-vscode.md) to create a Trial Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
 - A Trial Container Type can be created using SharePoint PowerShell. You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
-   
+
 ```powershell
 New-SPOContainerType
 [–TrialContainerType]
@@ -33,7 +33,7 @@ After a Trial Container Type is created, customers can create up to five active 
 
 > [!NOTE]
 > The Trial Container Type is the only Container Type that is restricted to the Partner (creating) tenant and cannot be shared with other consuming tenants.
-> 
+>
 > It is not possible to convert a Trial Container Type and/or the associated Containers to a Standard Container Type.
 
 ## Standard Container Types
@@ -59,10 +59,10 @@ New-SPOContainerType
 
 ## Viewing ContainerTypes
 
-Developer Admin can view all the SharePoint Embedded Container Types created by them on their tenant using this PowerShell cmdlet. This cmdlet retrieves and returns the list of Container Types  created for a SharePoint Embedded Application in the tenant. 
+Developer Admin can view all the SharePoint Embedded Container Types created by them on their tenant using this PowerShell cmdlet. This cmdlet retrieves and returns the list of Container Types  created for a SharePoint Embedded Application in the tenant.
 
 ```powershell
-Get-SPOContainerType   
+Get-SPOContainerType
 ```
 
 Example output of the `Get-SPOContainerType`  cmdlet

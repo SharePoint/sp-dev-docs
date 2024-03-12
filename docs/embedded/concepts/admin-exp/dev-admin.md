@@ -41,7 +41,7 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId
 New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId>
 ```
 
-OwningApplicationId is the ID of the SharePoint Embedded application. Azure Subscription ID is the ID of the Azure Active Directory profile (Microsoft Entra ID) for billing purposes.
+OwningApplicationId is the ID of the SharePoint Embedded application. Azure Subscription ID is the ID of the Microsoft Entra ID profile for billing purposes.
 
 ### Viewing of container types
 

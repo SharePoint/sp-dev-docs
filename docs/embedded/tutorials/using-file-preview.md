@@ -54,7 +54,6 @@ The JSON response includes the preview URLs for each document. Use the one obtai
 > [!CAUTION]
 > Currently **getUrl** contains a parameter with an encrypted token that can only be used with your application. However, this may change in the near future and you may be asked to add an auth header as you do with  other requests.
 
-
 ## Use the URL in an `iframe`
 
 The next step is simply to use the URL obtained in the previous step in a new page. You could have an endpoint in your application that serves a new page as similar to this one:
@@ -73,7 +72,7 @@ The next step is simply to use the URL obtained in the previous step in a new pa
 
 ## Load the document preview dynamically
 
-If you intend to dynamically load the preview in the same page without leaving it, you may get a CORS error if you attempt to access the Microsoft Graph endpoint directly from a script from your page.
+If you intend to dynamically load the preview in the same page without leaving it, you might get a CORS error if you attempt to access the Microsoft Graph endpoint directly from a script from your page.
 
 One way to solve this problem is to create an endpoint in your application that makes the request and returns the url.
 
@@ -90,7 +89,7 @@ public async Task<ActionResult<string>> GetPreviewUrl(string driveId, string ite
 }
 ```
 
-The client side application can then use the browser's `fetch` API to request and inject the url into the `iframe`:
+The client-side application can then use the browser's `fetch` API to request and inject the url into the `iframe`:
 
 ```javascript
 async function preview(driveId, itemId) {

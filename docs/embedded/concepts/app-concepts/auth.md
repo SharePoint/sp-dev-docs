@@ -24,16 +24,16 @@ SharePoint Embedded supports both App-Only and Delegated (App+User) calls for en
 
 Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making API calls to create containers, whether they're App-Only or Delegated.
 
-## Container.Selected Scope 
+## Container.Selected Scope
 
-The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. To call it, you must configure this scope in your App manifest.  
+The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. To call it, you must configure this scope in your App manifest.
 
 > [!NOTE]
-> Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph 
+> Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph
 
 ### Configure your App Manifest
 
-In your app manifest you need to: 
+In your app manifest you need to:
 
 Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it looks like the following JSON:
 

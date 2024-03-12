@@ -11,7 +11,7 @@ Integrate Fluid Framework and [SharePoint Embedded](../overview.md) to seamlessl
 
 ## Background
 
-[Fluid Framework](https://fluidframework.com/) is a collection of client libraries for distributing, synchronizing, and saving shared data. These libraries allow multiple clients to simultaneously create and operate on shared data structures in real-time. Fluid Framework allows developers to use the same practices with shared data as with local data--for example, a Fluid object works in the same way as a local Typescript object.
+[Fluid Framework](https://fluidframework.com/) is a collection of client libraries for distributing, synchronizing, and saving shared data. These libraries allow multiple clients to simultaneously create and operate on shared data structures in real-time. Fluid Framework allows developers to use the same practices with shared data as with local data--for example, a Fluid object works in the same way as a local TypeScript object.
 
 ## Quickstart
 
@@ -68,7 +68,7 @@ Now you can test out and start building with the [Fluid Sample App](https://gith
 
 1. `npm install`
 1. `npm run dev`
-1. Once webpack is completed, go to `https://localhost:8080`
+1. Once Webpack is completed, go to `https://localhost:8080`
 1. Sign in with the Admin credentials for your tenant
 1. Grant admin consent for your app in the pop-up window
 1. Copy the full URL to another browser tab or send it to someone who has credentials to the same tenant. These can be user credentials as long as they are on the same tenant. The live changes to the Item Counter on both browsers show that the data is synced between clients.
