@@ -11,11 +11,11 @@ ms.localizationpriority: high
 
 1. An app creator (an enterprise or Independent Software Vendor-ISV) builds an app that uses SharePoint Embedded containers
     - App created in Microsoft Entra ID
-    - Container Type creation requested and ContainerTypeID received to develop app
+    - Container Type creation requested and ContainerTypeID received to develop the app
 1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
 1. The app instantiates a container
 1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
-1. The app can link to the webUrl property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
+1. The app can link to the `webUrl` property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
 1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
 
 ### App-Only vs Delegated
@@ -30,7 +30,6 @@ The [Register Container Type API](register-api-documentation.md) uses the Contai
 
 > [!NOTE]
 > Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph 
-
 
 ### Configure your App Manifest
 
@@ -78,7 +77,6 @@ Select **Manage > Manifest** from the left-hand navigation. Locate the property 
 > [!IMPORTANT]
 > You must configure the `Container.Selected` scope in your App manifest
 
-
 ### User Roles
 
 Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. If you add a user to a container, the user must be assigned to one of these roles.
@@ -106,7 +104,7 @@ For App-only calls, SharePoint Embedded authorization is determined by the confi
 Consider the following examples with the assumptions:
 
 1. App1 has Create, Read, and Write permissions to ContainerType1; and...
-2. UserA is a reader for ContainerX of ContainerType1.
+1. UserA is a reader for ContainerX of ContainerType1.
 
 |                                Example                                | Result  |                                   Reason                                   |
 | --------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------- |
