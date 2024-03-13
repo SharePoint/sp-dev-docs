@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pre-trained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
 
-You have already learned how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
+You have already learned how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](./using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
 
 To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](./using-webhooks.md) and then:
 
