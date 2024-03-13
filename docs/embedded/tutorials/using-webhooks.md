@@ -9,15 +9,15 @@ ms.localizationpriority: high
 
 ## Set Up Webhooks with SharePoint Embedded
 
-Webhooks are automated messages that are transmitted by an application when a trigger is activated. They can be used in SPE to enable the automation of workflows, the integration of systems, and to respond to events in real time.
+Webhooks are automated messages that are transmitted by an application when a trigger is activated. They can be used in SPE to enable the automation of workflows, the integration of systems, and to respond to events in real-time.
 
 You will use webhooks to invoke the Azure Cognitive Services APIs from the application whenever an existing file is updated, or a new file is uploaded.
 
 To set up webhooks with your [current SharePoint Embedded application](/training/modules/sharepoint-embedded-create-app/), you need to:
 
-1.	Create and register a webhook endpoint to get notifications whenever there is change in your container. This will be done using REST APIs.
-1.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribe to the changes by making a POST call.
-1.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with Azure Cognitive Services tutorial](/doc-processing-acs.md).
+1.	Create and register a webhook endpoint to get notifications whenever there is a change in your container. This will be done using REST APIs.
+1.	Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on the cloud. For the purposes of this tutorial, you will be employing the former by utilizing ngrok and then subscribing to the changes by making a POST call.
+1.	Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with Azure Cognitive Services tutorial](./doc-processing-acs.md).
 
 ![using webhooks schema](../images/Using-Webhooks.png)
 
@@ -83,10 +83,10 @@ After starting the app, run the following command in a terminal:
 ngrok http 3001
 ```
 
-On successful completion, you should get the following output. The public facing endpoint for app is highlighted in red rectangle.
+On successful completion, you should get the following output. The public-facing endpoint for the app is highlighted in the red rectangle.
 ![ngrok registration](../images/ngrok-registration.png)
 
-Once the tunneling is active, you can subscribe to delta changes in container by adding the webhook URL. To do that, open Postman and make the following `POST` request with appropriate graph access token and `notificationUrl` with the `driveId` appended as a query parameter to ensure that you get notifications for changes only in the desired container. 
+Once the tunneling is active, you can subscribe to delta changes in the container by adding the webhook URL. To do that, open Postman and make the following `POST` request with the appropriate graph access token and `notificationUrl` with the `driveId` appended as a query parameter to ensure that you get notifications for changes only in the desired container. 
 
 ```json
 POST  https://graph.microsoft.com/v1.0/subscriptions 
@@ -99,7 +99,7 @@ POST  https://graph.microsoft.com/v1.0/subscriptions
 } 
 ```
 
-You can use the following code snippet for setting the max possible expiration time of 4230 minutes from the current time by adding this to the "Pre-request Script" section. It will set an environment variable which can be used in request body. 
+You can use the following code snippet for setting the max possible expiration time of 4230 minutes from the current time by adding this to the "Pre-request Script" section. It will set an environment variable that can be used in the request body. 
 
 ```js
 var now = new Date()
@@ -110,6 +110,5 @@ var expiryDateTime = expiry.toISOString();
 pm.environment.set("ContainerSubscriptionExpiry", expiryDateTime);
 ```
 
-At this point, if you add/update any file in the container, you will get notification at previously added endpoint (`/api/onReceiptAdded`) and a log message at console:
+At this point, if you add/update any file in the container, you will get a notification at the previously added endpoint (`/api/onReceiptAdded`) and a log message at the console:
 `Received driveId: <containerId>`
-
