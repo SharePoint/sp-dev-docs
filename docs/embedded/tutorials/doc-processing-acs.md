@@ -9,13 +9,13 @@ ms.localizationpriority: high
 
 ## Utilizing Azure Cognitive Services
 
-Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pretrained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
+Azure Cognitive Services is a set of cloud-based APIs that you can use in AI applications and data flows. It provides pre-trained models that are ready to use in your applications, requiring no data and no model training on your part. They can be easily integrated into applications via HTTP REST interfaces.
 
-You have already learnt how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
+You have already learned how to use webhooks with [the application](/training/modules/sharepoint-embedded-create-app/) to get a notification whenever an existing file is updated, or a new file is uploaded in the [Using Webhooks tutorial](/using-webhooks.md). This tutorial will cover connecting it with Azure Cognitive Services to extract data from invoices.
 
-To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](/using-webhooks.md) and then:
+To set up automatic AI processing with your current SharePoint application upon a change in your container, you need to follow [Using Webhooks](./using-webhooks.md) and then:
 
-1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files which are added or updated.
+1.	Get the delta changes of the container. You are currently able to get the notification whenever there is any change in our container and will now get the files that are added or updated.
 1.	Call Azure Cognitive Services’s Document Intelligence service API. You will need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You may store them as shown in this tutorial or you may process them as you like.
 ![document processing schema](../images/Document-Processing.png)
 
@@ -25,7 +25,7 @@ To set up automatic AI processing with your current SharePoint application upon 
 
 ## Get the delta changes of a container
 
-Open **GraphProvider.ts** and implement method `getDriveChanges` to get the list of changed items.
+Open **GraphProvider.ts** and implement the method `getDriveChanges` to get the list of changed items.
 
 ```ts
 public static async getDriveChanges(driveId: string): Promise<any[]> {
@@ -58,7 +58,7 @@ public static async getDriveChanges(driveId: string): Promise<any[]> {
 }
 ```
 
-Implement method `getDriveItem` to fetch a file from a container.
+Implement the method `getDriveItem` to fetch a file from a container.
 
 ```ts
 public static async getDriveItem(driveId: string, itemId: string): Promise<any> {
@@ -94,7 +94,7 @@ export abstract class ReceiptProcessor {
     }
 ```  
 
-At this point if you restart the app along with tunneling and subscription, you should see the recently added/updated files listed in console.
+At this point if you restart the app along with tunneling and subscription, you should see the recently added/updated files listed in the console.
 
 ## Call Azure Cognitive Services' Document Intelligence service API
 
@@ -153,7 +153,7 @@ private static async analyzeReceiptStream(stream: Readable): Promise<any> {
     }
 ```
 
-Create method `removeUnwantedFields` to remove the undesireable fields in Azure Cognitive Services’s repsonse.
+Create method `removeUnwantedFields` to remove the undesirable fields in Azure Cognitive Services’s response.
 
 ```ts 
 private static removeUnwantedFields(fields: any) {
@@ -177,4 +177,4 @@ public static async addDriveItem(driveId: string, parentId: any, fileName: strin
 ```
 
 Now, restart the demo app and setup the tunneling using ngrok and delta change subscription on the container again.
-If you add/update any file (supported formats: 'JPEG', 'JPG', 'PNG', 'BMP', 'TIFF', 'PDF') in this container, you should see a new JSON file created and contains the fields extracted from file.
+If you add/update any file (supported formats: 'JPEG', 'JPG', 'PNG', 'BMP', 'TIFF', 'PDF') in this container, you should see a new JSON file created and containing the fields extracted from the file.
