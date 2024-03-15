@@ -49,8 +49,8 @@ Yes, remote event receivers are part of this retirement. Remote event receivers 
 
 As webhooks are asynchronous by definition, synchronous events that allow an app to block or cancel a SharePoint action are no longer possible. If event blocking is being used to prevent accidental data updates/deletes by unauthorized users, then possible workarounds are securing the protected files/folders so they cannot be updated/deleted anymore, or by moving this type of data to a hidden library. In general, moving from synchronous to asynchronous events will require updating your application logic.
 
-> [!Note]
-> It's possible to get remote event receivers to partly work without Azure ACS by using sites.selected. This approach is **not** recommended, and will stop working when Azure ACS fully retires in April 2026.
+> [!Important]
+> We strongly recommend to switch to webhooks over remote event receivers, but we do also support remote event receivers registered using an Entra application. These remote event receivers will follow a slightly different retirement path: they'll stay working until July 1, 2027 whereas the remote event receivers registered using Azure ACS will stop working on April 2, 2026. Furthermore, these event receivers will still work for new tenants onboarding after November 1, 2024 whereas remote event receivers registered using Azure ACS will not work anymore. Check the [Use remote event receivers without Azure ACS dependency](../sp-add-ins-modernize/use-remote-event-receivers-without-azure-acs-dependency.md) article to learn more.
 
 ## Can I still perform taxonomy updates?
 
