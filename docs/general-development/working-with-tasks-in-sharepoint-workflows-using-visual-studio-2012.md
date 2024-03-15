@@ -1,14 +1,14 @@
 ---
 title: Working with Tasks in SharePoint 2013 Platform Workflows using Visual Studio
-description: Learn about the revised workflow task framework that was introduced in SharePoint 2013, (and which is available in SharePoint 2016, 2019, and Subscription Edition) which is built on the Workflow Manager (which was more recently superceded by 'SharePoint Workflow Manager').
-ms.date: 10/15/2022
+description: Learn about the revised workflow task framework that was introduced in SharePoint 2013, (and which is available in SharePoint 2016, 2019, and Subscription Edition). This is built on the Workflow Manager (which was more recently superceded by 'SharePoint Workflow Manager').
+ms.date: 03/15/2024
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ms.localizationpriority: medium
 ---
 
 
 # Working with Tasks in SharePoint 2013 Workflows using Visual Studio
-Learn about the revised workflow task framework that was introduced in SharePoint 2013, (and which is available in SharePoint 2016, 2019, and Subscription Edition) which is built on the Workflow Manager (which was more recently superceded by 'SharePoint Workflow Manager').
+Learn about the revised workflow task framework that was introduced in SharePoint 2013, (and which is available in SharePoint 2016, 2019, and Subscription Edition). This is built on the Workflow Manager (which was more recently superceded by 'SharePoint Workflow Manager').
  **Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
 
 > [!NOTE]
