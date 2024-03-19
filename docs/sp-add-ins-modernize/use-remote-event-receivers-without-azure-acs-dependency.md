@@ -13,7 +13,7 @@ The classical usage of Remote Event Receivers, which we'll name RERs in the rema
 However, there's an option to use RERs via an Entra application, so without having a dependency on Azure ACS. In the coming chapters you'll learn how to configure the Entra app for registering the RERs and you'll learn more about the differences between a RER registered using Azure ACS versus one registered using an Entra app.
 
 > [!Important]
-> Although these RERs do not depend on Azure ACS they still will retire, the main difference is that they'll keep working until July 1, 2027 and that they'll also work for new tenants onboarding after November 1, 2024. RERs depending on Azure ACS will follow the Azure ACS retirement path, so they'll stop working on April 2, 2026 and for new tenants onboarding after November 1, 2024 they'll not work anymore.
+> Although these RERs do not depend on Azure ACS they still will retire, the main difference is that they'll keep working until July 1, 2027 and that they'll also work for new tenants onboarding after November 1, 2024. RERs depending on Azure ACS will follow the Azure ACS retirement path, so they'll stop working on April 2, 2026 and for new tenants onboarding after November 1, 2024 they'll not work anymore. Check out [this blog post](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/remote-event-receivers-retirement-update-in-sharepoint-online/ba-p/4068938) to learn more.
 
 ## Step 1: Configure your Entra application for registering a RER
 
