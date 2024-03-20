@@ -292,22 +292,22 @@ Updates an item in a SharePoint list.
 
 ## Support for SharePoint Server
 
-The following tables list all of the actions and triggers that are supported for SharePoint On-Premises 2013, 2016, or 2019. Any actions or triggers that are not mentioned are unsupported.
+The following tables list all of the actions and triggers that are supported for SharePoint On-Premises 2016, or 2019. Any actions or triggers that are not mentioned are unsupported.
 
 ### Supported triggers
 
-| Trigger    | SharePoint 2013    | SharePoint 2016    | SharePoint 2019|
-| :-- | :-- | :-- | :-- |
-| When a file is created in a folder | Yes | Yes | Yes |
-| When a file is created or modified in a folder | Yes | Yes | Yes |
-| When an item is created | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
-| When an item is created or modified | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
-| When a file is created (properties only) | No | No | Yes<sup>1</sup> |
-| When a file is created or modified (properties only) | No | No | Yes<sup>1</sup> |
-| When an item is deleted | No | No | Yes<sup>2</sup> |
-| When a file is deleted | No | No | Yes<sup>2</sup> |
-| Resolve Person | No | No | Yes |
-| Set content approval status | No | No | Yes |
+| Trigger    | SharePoint 2016    | SharePoint 2019|
+| :-- | :-- | :-- |
+| When a file is created in a folder | Yes | Yes |
+| When a file is created or modified in a folder | Yes | Yes |
+| When an item is created | Yes<sup>1</sup> | Yes<sup>1</sup> |
+| When an item is created or modified | Yes<sup>1</sup> | Yes<sup>1</sup> |
+| When a file is created (properties only) | No | Yes<sup>1</sup> |
+| When a file is created or modified (properties only) | No | Yes<sup>1</sup> |
+| When an item is deleted | No | Yes<sup>2</sup> |
+| When a file is deleted | No | Yes<sup>2</sup> |
+| Resolve Person | No | Yes |
+| Set content approval status | No | Yes |
 
 > [!NOTE]
 > 1. Does not support “Limit Columns by View”.
@@ -318,27 +318,27 @@ The following tables list all of the actions and triggers that are supported for
 
 ### Supported actions
 
-| Action    | SharePoint 2013    | SharePoint 2016    | SharePoint 2019|
-| :-- | :-- | :-- | :-- |
-| Get file metadata | Yes | Yes | Yes |
-| Get file metadata using path | Yes | Yes | Yes |
-| Get folder metadata | Yes | Yes | Yes |
-| Get folder metadata using path | Yes | Yes | Yes |
-| Get file content | Yes | Yes | Yes |
-| Create file | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
-| Update file | Yes | Yes | Yes |
-| Copy file [deprecated]<sup>2</sup>| Yes | Yes | Yes |
-| List folder | Yes | Yes | Yes |
-| Extract folder | Yes | Yes | Yes |
-| Get attachments | Yes | Yes | Yes |
-| Add attachment | Yes | Yes | Yes |
-| Delete attachment | Yes | Yes | Yes |
-| Get items | Yes<sup>3</sup> | Yes<sup>3</sup> | Yes<sup>3</sup> |
-| Get item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
-| Create item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
-| Update item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
-| Delete item | Yes | Yes | Yes |
-| Send an HTTP request to SharePoint | Yes | Yes | Yes |
+| Action    | SharePoint 2016    | SharePoint 2019|
+| :-- | :-- | :-- |
+| Get file metadata | Yes | Yes |
+| Get file metadata using path | Yes | Yes |
+| Get folder metadata | Yes | Yes |
+| Get folder metadata using path | Yes | Yes |
+| Get file content | Yes | Yes |
+| Create file | Yes<sup>1</sup> | Yes<sup>1</sup> |
+| Update file | Yes | Yes |
+| Copy file [deprecated]<sup>2</sup>|  Yes | Yes |
+| List folder | Yes | Yes |
+| Extract folder | Yes | Yes |
+| Get attachments | Yes | Yes |
+| Add attachment |  Yes | Yes |
+| Delete attachment | Yes | Yes |
+| Get items | Yes<sup>3</sup> | Yes<sup>3</sup> |
+| Get item | Yes<sup>4</sup> | Yes<sup>4</sup> |
+| Create item | Yes<sup>4</sup> | Yes<sup>4</sup> |
+| Update item | Yes<sup>4</sup> | Yes<sup>4</sup> |
+| Delete item | Yes | Yes |
+| Send an HTTP request to SharePoint | Yes | Yes |
 
 > [!NOTE]
 > 1. Does not support creating a large file by uploading it as a set of chunks.
