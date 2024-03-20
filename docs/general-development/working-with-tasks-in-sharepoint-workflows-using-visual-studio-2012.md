@@ -6,7 +6,7 @@ ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ms.localizationpriority: medium
 ---
 
-# Working with Tasks in SharePoint Workflows using Visual Studio 2012
+# Working with Tasks in SharePoint Workflows using Visual Studio
 
 Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager'; see associated [announcement](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/announcing-the-release-of-sharepoint-workflow-manager-for/ba-p/3744881) ).
 
@@ -65,10 +65,10 @@ Both SharePoint Designer 2013 and Visual Studio provide workflow authors two way
 **Figure 3. Single-task wizard**
 ![The screenshot shows how to modify the properties either in the Properties tool window, or with the wizard.](../images/WorkingWithTasksSharePointWorkflowsFig3.png)
 
-SharePoint lets you specify whether multiple tasks should run serially or in parallel, and specifying the criteria for task completion. Should SharePoint wait for all tasks to be completed, or for a percentage of them to be completed with a specific outcome? To create multiple tasks in Visual Studio 2012, use the **CompositeTask** activity, whose wizard and properties resemble the **SingleTask** activity, as shown in Figure 4.
+SharePoint lets you specify whether multiple tasks should run serially or in parallel, and specifying the criteria for task completion. Should SharePoint wait for all tasks to be completed, or for a percentage of them to be completed with a specific outcome? To create multiple tasks in Visual Studio, use the **CompositeTask** activity, whose wizard and properties resemble the **SingleTask** activity, as shown in Figure 4.
 
 **Figure 4. Composite task wizard**
-![The screenshot shows how to create multiple tasks in Visual Studio 2012.](../images/WorkingWithTasksSharePointWorkflowsFig4.png)
+![The screenshot shows how to create multiple tasks in Visual Studio.](../images/WorkingWithTasksSharePointWorkflowsFig4.png)
 
 ## How to: Create and assign tasks in custom workflows
 
@@ -143,7 +143,7 @@ Notice that the **Outcome** property automatically created a variable named **ou
 
 To test the workflow, do the following:
 
-1. Press **F5** to build and run, or select the **Start** button in Visual Studio 2012. If you're testing in an on-premises installation of SharePoint, Visual Studio 2012 starts the Workflow Manager Test Service Host utility and deploys the workflow to the developer site. After a moment, the developer site opens.
+1. Press **F5** to build and run, or select the **Start** button in Visual Studio. If you're testing in an on-premises installation of SharePoint, Visual Studio starts the Workflow Manager Test Service Host utility and deploys the workflow to the developer site. After a moment, the developer site opens.
 1. Navigate to the **Announcements** list and create a list item, then start the custom workflow manually.
 1. Return to the workflow instance status page to find the task that was created by the workflow. Select on the task to see the form. Note the **Task Name** and **Assigned To** fields that were defined in the workflow, as shown in Figure 12.
 
@@ -159,7 +159,7 @@ To test the workflow, do the following:
 
 The previous walkthrough demonstrated how to create a simple task and configure its properties. However, sometimes the default options might not meet your needs. For example, consider a task that asks someone to review a document. Upon reviewing the draft document, the reviewer should exercise one of two options: send the draft document back to the author for revision, or forward the document to the editor. Unfortunately, neither of the default options ( **Approved** and **Rejected**) meets the reviewers needs. More appropriate options would be "Return to Author" and "Proceed to Editor".
 
-When creating workflows using either SharePoint Designer 2013 or Visual Studio 2012, you can create custom workflow tasks that include custom task outcomes. To do this, you create a custom task as a special content type and then add a custom site column that defines the outcomes you desire. You can derive the custom column from the field type called **OutcomeChoice**, which is a choice field.
+When creating workflows using either SharePoint Designer 2013 or Visual Studio, you can create custom workflow tasks that include custom task outcomes. To do this, you create a custom task as a special content type and then add a custom site column that defines the outcomes you desire. You can derive the custom column from the field type called **OutcomeChoice**, which is a choice field.
 
 This approach can pose a challenge, however, in that the content type that the custom task is derived from is the **Workflow Task (SharePoint)** content type, which includes the default **TaskOutcome** site column that contains the **Approved** and **Rejected** options. However, you can work around the default setting by removing the **TaskOutcome** column from the custom task content type and ensure it isn't present in the workflow task list. Otherwise, it would result in showing multiple options. For example, consider a custom outcome that had two options, "Red Pill" and "Blue Pill." If the default outcome isn't removed, then the users completing the task would be presented with all available outcome options, as shown in Figure 14, even if those outcome options don't apply.
 
@@ -172,7 +172,7 @@ As a best practice, you want to create a different workflow task list for each t
 
 To begin the walkthrough for creating a custom workflow task using Visual Studio, you first want to ensure that you have access to a SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, or SharePoint Server Subscription Edition developer site.
 
-1. In Visual Studio 2012, create a new SharePoint app project that is configured as a SharePoint-hosted add-in.
+1. In Visual Studio, create a new SharePoint app project that is configured as a SharePoint-hosted add-in.
 1. To the project, add a new **Announcement** list instance. You'll use this as the container for items used to test the workflow.
 1. Next, add a workflow item the project by right-clicking the project icon in the **Solution Explorer** and selecting **Add**, followed by **New Item**.
 1. In the **Add New Item** dialog box, select the **Workflow** project item from the **Office/SharePoint** category and name it "CustomTaskWorkflow"; then select **Next**.
@@ -317,7 +317,7 @@ The final step is to configure the workflow task list. By default, the task list
 
 Now let's test the workflow.
 
-1. In Visual Studio 2012, press **F5** or select the **Start** button. If testing in an on-premises local install of SharePoint, Visual Studio 2012 will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
+1. In Visual Studio, press **F5** or select the **Start** button. If testing in an on-premises local install of SharePoint, Visual Studio will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
 1. Navigate to the **Announcements** list and create a new item. After creating the item, start the custom workflow manually.
 1. Next, return to the workflow instance's status page to find the task that was created by the workflow.
 1. Select on the task and, using the **Edit** button in the ribbon, switch to edit mode. At the bottom of the form there should be four buttons. The first two buttons are the custom outcome buttons that, when pressed, will mark the task as complete. The second two buttons are the default **Save** and **Cancel** buttons that simply update the list item without completing the task, as shown in Figure 19.
@@ -329,7 +329,7 @@ Now let's test the workflow.
 
 Microsoft introduced workflows into the SharePoint Server 2007 platform, and they remained mostly unchanged in SharePoint Server 2010 in architecture, implementation, or process. This was also true for tasks in SharePoint workflows. However, SharePoint Server 2013 has introduced many changes to workflows in architecture and implementation. (And these changes remain accessible in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition.)
 
-This article discussed the changes related to workflow tasks that were driven from changes to the workflow story in SharePoint. It demonstrated how to create a simple workflow that applied tasks in SharePoint using Visual Studio 2012. These types of tasks are suitable for many developers, although at times custom tasks and custom outcomes are desired, which can be accomplished using Visual Studio 2012 as has been shown.
+This article discussed the changes related to workflow tasks that were driven from changes to the workflow story in SharePoint. It demonstrated how to create a simple workflow that applied tasks in SharePoint using Visual Studio. These types of tasks are suitable for many developers, although at times custom tasks and custom outcomes are desired, which can be accomplished using Visual Studio as has been shown.
 
 ## See also
 
