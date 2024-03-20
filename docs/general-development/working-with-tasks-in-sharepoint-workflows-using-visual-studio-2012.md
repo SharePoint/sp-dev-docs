@@ -434,7 +434,7 @@ As a best practice, you want to create a different workflow task list for each t
 
 ### Create a SharePoint app project
 
-To begin the walkthrough for creating a custom workflow task using Visual Studio, you first want to ensure that you have access to a SharePoint Server 2013, 2016, 2019, or Subscription Edition developer site.
+To begin the walkthrough for creating a custom workflow task using Visual Studio, you first want to ensure that you have access to a SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, or SharePoint Server Subscription Edition developer site.
 
 
 
