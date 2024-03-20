@@ -1,18 +1,19 @@
 ---
-title: Working with Tasks in SharePoint Workflows using Visual Studio 2012
-description: Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager.
-ms.date: 10/15/2022
+title: Working with Tasks in SharePoint 2013 Workflows using Visual Studio
+description: Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager').
+ms.date: 03/19/2024
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ms.localizationpriority: medium
 ---
 
 # Working with Tasks in SharePoint Workflows using Visual Studio 2012
 
-Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager.
- **Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
+Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager'; see associated [announcement](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/announcing-the-release-of-sharepoint-workflow-manager-for/ba-p/3744881) ).
+
+**Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
 
 > [!NOTE]
-> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new SharePoint Online tenants and removed from existing SharePoint Online tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code [here](https://www.voitanos.io/blog/sharepoint-2013-workflow-custom-tasks/).
 
@@ -20,13 +21,13 @@ One of the greatest benefits that the SharePoint brings to Windows Workflow Foun
 
 ## Reviewing workflow tasks in SharePoint 2007 and SharePoint 2010
 
-Both SharePoint 2007 and SharePoint 2010 implemented workflow tasks in a similar manner. When you created a workflow association on a list, content type, or site (in SharePoint 2010), you designated a specific list as the location where the workflow tasks would be created. This list was a standard SharePoint **Task** list (ID = 107) that used the standard SharePoint **Task** content type (ID = 0x0108). Users then could access items in the list to view, edit, and complete the task. The workflow instances monitored the task items in the list for updates if the workflow was configured to do so.
+Both SharePoint Server 2007 and SharePoint Server 2010 implemented workflow tasks in a similar manner. When you created a workflow association on a list, content type, or site (in SharePoint Server 2010), you designated a specific list as the location where the workflow tasks would be created. This list was a standard SharePoint **Task** list (ID = 107) that used the standard SharePoint **Task** content type (ID = 0x0108). Users then could access items in the list to view, edit, and complete the task. The workflow instances monitored the task items in the list for updates if the workflow was configured to do so.
 
 However, the default rendering of the task form in SharePoint was pre-determined, even for custom workflows. For full flexibility, you needed to use ASP.NET [Web Forms](https://dotnet.microsoft.com/apps/aspnet/web-apps) or [InfoPath Forms](/previous-versions/office/developer/sharepoint-2010/ms540731(v=office.14)) when you created custom form solutions to support your tasks.
 
-## What's new with tasks in SharePoint
+## What's new with tasks in SharePoint Server 2013
 
-The manner in which tasks are created, managed, and handled in SharePoint has changed due to changes in the SharePoint architecture.
+The manner in which tasks are created, managed, and handled in SharePoint Server 2013 has changed due to changes in the SharePoint architecture.
 
 The central change is that workflows are no longer managed and processed inside of SharePoint. Instead, SharePoint utilizes a new component called Workflow Manager, which runs externally. Workflow Manager hosts the Windows Workflow Foundation runtime and necessary services required by the Windows Workflow Foundation. When a workflow is published or a new instance of a published workflow is started, SharePoint notifies Workflow Manager, which in turn processes the workflow episodes. When a workflow needs to access information in SharePoint, such as list item properties or user properties, it authenticates itself using the OAuth and talks back to SharePoint with web service calls using the REST APIs.
 
@@ -40,7 +41,7 @@ You might sometimes need to customize the appearance or the behavior of task fie
 
 For more information about using client-side rendering, see  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](/sharepoint/dev/sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering).
 
-Individual task items are based on content types. Importantly, there are some changes to content types in SharePoint. In SharePoint 2007 and SharePoint 2010, workflow tasks were created with the **Task** content type (ID = 0x0108). This is the same content type that is used to manually create non-workflow tasks in the task lists. SharePoint changes this by introducing a new content type, **Workflow Task (SharePoint)** (ID = 0x0108003365C4474CAE8C42BCE396314E88E51F), which inherits from the Task content type and which indicates that the tasks are to be used only for workflow.
+Individual task items are based on content types. Importantly, there are some changes to content types in SharePoint Server 2013. In SharePoint Server 2007 and SharePoint Server 2010, workflow tasks were created with the **Task** content type (ID = 0x0108). This is the same content type that is used to manually create non-workflow tasks in the task lists. SharePoint Server 2013 changes this by introducing a new content type, **Workflow Task (SharePoint 2013)** (ID = 0x0108003365C4474CAE8C42BCE396314E88E51F), which inherits from the Task content type and which indicates that the tasks are to be used only for workflow.
 
 This new **Workflow Task** content type differs from the earlier **Task** content type in that it has two new columns:
 
@@ -59,7 +60,7 @@ Prior to SharePoint, the workflow task list used the same list template as the s
 
 ## Creating workflow task options in SharePoint
 
-Both SharePoint Designer 2013 and Visual Studio 2012 provide workflow authors two ways to create workflow tasks. One is to create a single task that is assigned to a person or a group. The other is to create a task and assign it to multiple people. When creating a single task in a custom workflow using Visual Studio 2012, use the **SingleTask** activity. By using this activity, you can modify the properties either in the **Properties** tool window, or with the wizard, as shown in Figure 3.
+Both SharePoint Designer 2013 and Visual Studio provide workflow authors two ways to create workflow tasks. One is to create a single task that is assigned to a person or a group. The other is to create a task and assign it to multiple people. When creating a single task in a custom workflow using Visual Studio, use the **SingleTask** activity. By using this activity, you can modify the properties either in the **Properties** tool window, or with the wizard, as shown in Figure 3.
 
 **Figure 3. Single-task wizard**
 ![The screenshot shows how to modify the properties either in the Properties tool window, or with the wizard.](../images/WorkingWithTasksSharePointWorkflowsFig3.png)
@@ -169,7 +170,7 @@ As a best practice, you want to create a different workflow task list for each t
 
 ### Create a SharePoint app project
 
-To begin the walkthrough for creating a custom workflow task using Visual Studio 2012, you first want to ensure that you have access to a SharePoint developer site.
+To begin the walkthrough for creating a custom workflow task using Visual Studio, you first want to ensure that you have access to a SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, or SharePoint Server Subscription Edition developer site.
 
 1. In Visual Studio 2012, create a new SharePoint app project that is configured as a SharePoint-hosted add-in.
 1. To the project, add a new **Announcement** list instance. You'll use this as the container for items used to test the workflow.
@@ -218,7 +219,7 @@ After creating the site column, the next step is to create a specialized content
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <!-- Parent ContentType: Workflow Task (SharePoint) (0x0108003365C4474CAE8C42BCE396314E88E51F) -->
+  <!-- Parent ContentType: Workflow Task (SharePoint 2013) (0x0108003365C4474CAE8C42BCE396314E88E51F) -->
   <ContentType
       ID="0x0108003365C4474CAE8C42BCE396314E88E51F00D368DFB2B31A447BB184BA1334E5119E"
       Name="CustomContentType"
@@ -279,7 +280,7 @@ Now we can create the single task.
 
 1. Finally, set the **Outcome Options** to use the new custom content type and custom outcome column.
 
-    The dialog box determines what is available by looking at all the content types that are derived from the **Workflow Task (SharePoint)** content type, as shown in Figure 18.
+    The dialog box determines what is available by looking at all the content types that are derived from the **Workflow Task (SharePoint 2013)** content type, as shown in Figure 18.
 
     **Figure 18. Outcome Options settings**
     ![The screenshot shows that the dialog box determines what is available by looking at all the content types that are derived from the Workflow Task content type.](../images/WorkingWithTasksSharePointWorkflowsFig18.png)
@@ -292,7 +293,7 @@ Also, notice that the **Outcome** property automatically created a variable name
 
 ### Update the workflow task list
 
-The final step is to configure the workflow task list. By default, the task list that the app creates only accepts the content type **Workflow Task (SharePoint)**. This workflow uses a custom content type for the custom outcome. Open the  `Elements.xml` file for the workflow task list and change the **\<ContentTypeBinding\>** element's **ContentTypeId** attribute to match the content type in the project, as shown in the code example following.
+The final step is to configure the workflow task list. By default, the task list that the app creates only accepts the content type **Workflow Task (SharePoint 2013)**. This workflow uses a custom content type for the custom outcome. Open the  `Elements.xml` file for the workflow task list and change the **\<ContentTypeBinding\>** element's **ContentTypeId** attribute to match the content type in the project, as shown in the code example following.
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
@@ -326,7 +327,7 @@ Now let's test the workflow.
 
 ## Conclusion
 
-Microsoft introduced workflows into the SharePoint 2007 platform, and they remained mostly unchanged in SharePoint 2010 in architecture, implementation, or process. This was also true for tasks in SharePoint workflows. However, SharePoint has introduced many changes to workflows in architecture and implementation.
+Microsoft introduced workflows into the SharePoint Server 2007 platform, and they remained mostly unchanged in SharePoint Server 2010 in architecture, implementation, or process. This was also true for tasks in SharePoint workflows. However, SharePoint Server 2013 has introduced many changes to workflows in architecture and implementation. (And these changes remain accessible in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition.)
 
 This article discussed the changes related to workflow tasks that were driven from changes to the workflow story in SharePoint. It demonstrated how to create a simple workflow that applied tasks in SharePoint using Visual Studio 2012. These types of tasks are suitable for many developers, although at times custom tasks and custom outcomes are desired, which can be accomplished using Visual Studio 2012 as has been shown.
 
