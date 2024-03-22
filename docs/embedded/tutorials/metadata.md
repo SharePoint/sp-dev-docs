@@ -1,15 +1,15 @@
 ---
-title: Add Container Metadata
+title: SharePoint Embedded Container Metadata
 description: Add metadata in Containers and Files
 ms.date: 3/21/2024
 ms.localizationpriority: high
 ---
 
-# Add Container Metadata
+# Using Metadata on Containers and Files
 
 **TODO: Update toc.yml with this file path**
 
-In SharePoint Embedded, columns can be added to containers to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
+In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
 
 ### Authorization and Authentication
 

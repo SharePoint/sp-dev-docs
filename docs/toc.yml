@@ -584,6 +584,8 @@
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
+    - name: Using Metadata
+      href: embedded/tutorials/metadata.md
   - name: Terms of Service
     href: embedded/terms-of-service.md
   - name: SharePoint Embedded Learning Modules
