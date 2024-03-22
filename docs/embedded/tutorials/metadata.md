@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Container Metadata
 description: Add metadata in Containers and Files
-ms.date: 3/21/2024
+ms.date: 3/22/2024
 ms.localizationpriority: high
 ---
 
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
 
 
-## Sections
+#### Sections
 1. [Authorization and Authentication](#authorization-and-authentication)
 1. [Limitations](#limitations)
 1. [POST: Create a column in a fileStorageContainer](#create-a-column-in-a-filestoragecontainer)
@@ -24,7 +24,7 @@ In SharePoint Embedded, columns can be added to [Containers](../concepts/app-con
 
 
 
-### Authorization and Authentication
+## Authorization and Authentication
 
 App+User (Delegated) or App-only (Application) Bearer {token} is required in Authorization header.
 
@@ -54,45 +54,28 @@ App+User (Delegated) or App-only (Application) Bearer {token} is required in Aut
 
 ## Limitations
 
-When working with Metadata APIs in SharePoint Embedded there are a few limitations to consider. This importance guidance to follow in the request body of each API call.
+The following are the properties that SharePoint Embedded Metadata supports:
 
-| Property name          | Type                        | Property Needed       | Reason                                                        |
-| ---------------------- | --------------------------- | --------------------- | ------------------------------------------------------------- |
-| boolean                | booleanColumn               | Yes                   |                                                               |
-| calculated             | calculatedColumn            | No                    | Type not supported                                            |
-| choice                 | choiceColumn                | Yes                   |                                                               |
-| columnGroup            | string                      | No                    | Used for site column management UI                            |
-| contentApprovalStatus  | contentApprovalStatusColumn | No                    | Type not supported                                            |
-| currency               | currencyColumn              | Yes                   |                                                               |
-| dateTime               | dateTimeColumn              | Yes                   |                                                               |
-| defaultValue           | defaultColumnValue          | No                    | Defaults in doclibs don’t work                                |
-| description            | string                      | No?                   | App expected to control schema, no description needed         |
-| displayName            | string                      | No                    | App expected to control schema, no description needed         |
-| enforceUniqueValues    | Boolean                     | No                    | Functionality not supported                                   |
-| geolocation            | geolocationColumn           | No                    | Type not supported                                            |
-| hidden                 | Boolean                     | No                    | UI related                                                    |
-| hyperlinkOrPicture     | hyperlinkOrPictureColumn    | Yes                   |                                                               |
-| isDeletable            | Boolean                     | Yes                   | OOTB fields might be undeletable                              |
-| isReorderable          | Boolean                     | No                    | App won’t care about order (UI would)                         |
-| id                     | string                      | Yes                   | Why isn’t this a guid?                                        |
-| indexed                | Boolean                     | Yes                   |                                                               |
-| isSealed               | Boolean                     | Yes                   | OOTB fields might be sealed                                   |
-| lookup                 | lookupColumn                | No                    | Type not supported (odd because OOTB fields might be lookups) |
-| name                   | string                      | Yes                   |                                                               |
-| number                 | numberColumn                | Yes                   |                                                               |
-| personOrGroup          | personOrGroupColumn         | Yes                   |                                                               |
-| propagateChanges       | Boolean                     | No                    | Site column related                                           |
-| readOnly               | Boolean                     | Yes                   | OOTB fields might be read-only                                |
-| required               | Boolean                     | No                    | Functionality not supported                                   |
-| sourceContentType      | contentTypeInfo             | No                    | Content Types are not for now                                 |
-| term                   | termColumn                  | No                    | Type not supported                                            |
-| text                   | textColumn                  | Yes                   |                                                               |
-| thumbnail              | thumbnailColumn             | No                    | Type not supported                                            |
-| type                   | columnTypes                 | Yes                   | Limited                                                       |
-| validation             | columnValidation            | No                    | Functionality not supported                                   |
+| Property name          | Type                      |
+| ---------------------- | ------------------------- |
+| boolean                | booleanColumn             |
+| choice                 | choiceColumn              |
+| currency               | currencyColumn            | 
+| dateTime               | dateTimeColumn            |
+| hyperlinkOrPicture     | hyperlinkOrPictureColumn  |
+| isDeletable            | Boolean                   |
+| id                     | string                    |
+| indexed                | Boolean                   |
+| isSealed               | Boolean                   |
+| name                   | string                    |
+| number                 | numberColumn              |
+| personOrGroup          | personOrGroupColumn       |
+| readOnly               | Boolean                   |
+| text                   | textColumn                |
+| type                   | columnTypes               |
 
 
-### Create a column in a fileStorageContainer
+## Create a column in a fileStorageContainer
 
 This API will let callers create a new column instance in a fileStorageContainer.
 
@@ -150,7 +133,7 @@ Content-type: application/json
 }
 ```
 
-### Get a column in a fileStorageContainer by id
+## Get a column in a fileStorageContainer by id
 
 This API will let callers get a fileStorageContainer column instance by id.
 
@@ -192,7 +175,7 @@ Content-type: application/json
 }
 ```
 
-### Update a column in a fileStorageContainer by id
+## Update a column in a fileStorageContainer by id
 
 This API will let callers update a fileStorageContainer column instance by id.
 You can update any property of the column other than the **id** property.
@@ -243,7 +226,7 @@ Content-type: application/json
 }
 ```
 
-### Delete a column from a fileStorageContainer
+## Delete a column from a fileStorageContainer
 
 This API will let callers delele a fileStorageContainer column instance by id.
 
@@ -268,7 +251,7 @@ DELETE https://graph.microsoft.com/beta/storage/fileStorage/containers/{containe
 HTTP/1.1 204 No Content
 ```
 
-### List columns in a fileStorageContainer
+## List columns in a fileStorageContainer
 
 This API will let callers enumerate the columns in a fileStorageContainer.
 
@@ -330,7 +313,7 @@ Content-type: application/json
 }
 ```
 
-### Get column values of an item in a fileStorageContainer's drive
+## Get column values of an item in a fileStorageContainer's drive
 
 This is an existing API used to showcase our new feature of getting the column values of an item in a fileStorageContainer's drive.
 This API supports OData $select features for `column`.
@@ -382,7 +365,7 @@ Content-type: application/json
 }
 ```
 
-### Patch column values of an item in a fileStorageContainer's drive
+## Patch column values of an item in a fileStorageContainer's drive
 
 This is an existing API used to showcase our new feature of updating and deleting the column values of an item in a fileStorageContainer's drive.
 
@@ -447,7 +430,7 @@ Content-type: application/json
 }
 ```
 
-### Query a fileStorageContainer's driveitems with Odata query options on custom columns
+## Query a fileStorageContainer's driveitems with Odata query options on custom columns
 
 This API will let users query drive items in a fileStorageContainer with `$expand`, `$filter`, and `$orderby` Odata query options on their custom columns.
 
