@@ -9,8 +9,10 @@ ms.localizationpriority: high
 
 ## In this article:
 
-1. [Launch Office in 'View' or 'Edit' mode'](#configure-launch-mode-of-office-clients)
-1. [Launch Desktop Clients Directly](#open-office-files-directly-in-desktop-clients)
+- [Configure Default Launch Experience for your Office Files](#configure-default-launch-experience-for-your-office-files)
+  - [In this article:](#in-this-article)
+  - [Configure Launch mode of Office Clients](#configure-launch-mode-of-office-clients)
+    - [Open Office files directly in Desktop clients](#open-office-files-directly-in-desktop-clients)
 
 ## Configure Launch mode of Office Clients
 
