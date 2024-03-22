@@ -7,9 +7,22 @@ ms.localizationpriority: high
 
 # Using Metadata on Containers and Files
 
-**TODO: Update toc.yml with this file path**
-
 In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
+
+
+## Sections
+1. [Authorization and Authentication](#authorization-and-authentication)
+1. [Limitations](#limitations)
+1. [POST: Create a column in a fileStorageContainer](#create-a-column-in-a-filestoragecontainer)
+1. [GET: Get a column in a fileStorageContainer by id](#get-a-column-in-a-filestoragecontainer-by-id)
+1. [PATCH: Update a column in a fileStorageContainer by id](#update-a-column-in-a-filestoragecontainer-by-id)
+1. [DELETE: Delete a column from a fileStorageContainer](#delete-a-column-from-a-filestoragecontainer)
+1. [GET: List columns in a fileStorageContainer](#list-columns-in-a-filestoragecontainer)
+1. [GET: Get column values of an item in a fileStorageContainer's drive](#get-column-values-of-an-item-in-a-filestoragecontainers-drive)
+1. [PATCH: Patch column values of an item in a fileStorageContainer's drive](#patch-column-values-of-an-item-in-a-filestoragecontainers-drive)
+1. [GET: Query a fileStorageContainer's driveitems with Odata query options on custom columns](#query-a-filestoragecontainers-driveitems-with-odata-query-options-on-custom-columns)
+
+
 
 ### Authorization and Authentication
 
