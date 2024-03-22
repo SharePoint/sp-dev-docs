@@ -41,6 +41,8 @@ App+User (Delegated) or App-only (Application) Bearer {token} is required in Aut
 
 ## Limitations
 
+When working with Metadata APIs in SharePoint Embedded there are a few limitations to consider. This importance guidance to follow in the request body of each API call.
+
 | Property name          | Type                        | Property Needed       | Reason                                                        |
 | ---------------------- | --------------------------- | --------------------- | ------------------------------------------------------------- |
 | boolean                | booleanColumn               | Yes                   |                                                               |
