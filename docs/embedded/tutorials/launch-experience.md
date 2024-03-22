@@ -6,13 +6,13 @@ ms.localizationpriority: high
 ---
 
 # Configure Default Launch Experience for your Office Files
-
+<!-- 
 ## In this article:
 
 - [Configure Default Launch Experience for your Office Files](#configure-default-launch-experience-for-your-office-files)
   - [In this article:](#in-this-article)
   - [Configure Launch mode of Office Clients](#configure-launch-mode-of-office-clients)
-    - [Open Office files directly in Desktop clients](#open-office-files-directly-in-desktop-clients)
+    - [Open Office files directly in Desktop clients](#open-office-files-directly-in-desktop-clients) -->
 
 ## Configure Launch mode of Office Clients
 
