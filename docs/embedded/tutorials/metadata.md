@@ -74,6 +74,22 @@ The following are the properties that SharePoint Embedded Metadata supports:
 | text                   | textColumn                |
 | type                   | columnTypes               |
 
+> [!NOTE]
+> Please name columns according to the appropiate column naming convention
+
+### Column Naming Conventions
+
+Column Names must adhere to the following rules:
+- Cannot contain "!".
+- Cannot start with a digit, period, minus sign or question mark.  
+- Cannot contain any space or any non-alphanumeric characters except "_" or "\".  
+- Cannot look like either type of cell reference.  
+  - A1 mode cell reference with 1 to 3 characters followed by 1 to 5 digits (e.g. A3 F02563, ZZZ12).  
+  - R1C1 mode cell references that look like r, or c, or r[#], c[#] or r[#]c[#].  
+- Cannot be any localized word for "true" or "false".  
+- Cannot be specific names, including "Author", "Created", "Description", etc.  
+
+
 
 ## Create a column in a fileStorageContainer
 
