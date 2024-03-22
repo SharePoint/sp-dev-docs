@@ -25,7 +25,7 @@ If a user is a member of a role, then those permissions apply to all of the cont
 
 ### Additive Permissions
 
-Your app may have the scenario that you may want to grant extra permissions to a user beyond what they have on the Container. For example, if *UserA* is member of the Reader role, you may want to allow that user to be able to edit a specific document in that Container. To support this scenario, you add and delete additive permissions using the Graph APIs:
+Your app might have the scenario that you might want to grant extra permissions to a user beyond what they have on the Container. For example, if *UserA* is member of the Reader role, you might want to allow that user to be able to edit a specific document in that Container. To support this scenario, you add and delete additive permissions using the Microsoft Graph APIs:
 
 |           Scenario            |                                                                           Microsoft Graph API(s)                                                                            |                                                                                                          Notes                                                                                                          |
 | :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,11 +73,11 @@ Note the following:
 In addition to the Sharing configuration settings, there are a couple of scenarios relating to Guest Users and sharing to be aware of:
 
 - Guest Users can get unexpected results when granting additive permissions
-- Guest Users may not be able to be added via the SharePoint Embedded App
+- Guest Users might not be able to be added via the SharePoint Embedded App
 
 ## Guest User granting Additive Permissions
 
-When granting additive permissions and the user invoking the API is a Guest User, then you may get unexpected results.
+When granting additive permissions and the user invoking the API is a Guest User, then you might get unexpected results.
 
 |      Admin User       | User being granted additive permissions |  Outcome  |
 | :-------------------- | :-------------------------------------: | :-------- |
@@ -86,21 +86,21 @@ When granting additive permissions and the user invoking the API is a Guest User
 | Guest user            |                   New                   | **Fails** |
 | Guest user            |                Existing                 | Success   |
 
-The user being granted additive permissions indicates whether that user has previously been granted additive permissions for any content in that specific Container.
+The user being granted additive permissions indicate whether that user has previously been granted additive permissions for any content in that specific Container.
 
 The failure scenario is expected behavior depending on the Consuming Tenant configuration settings.
 
 If this scenario is required to also succeed for Guest Users, then the following settings need to be set to `True` using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) PowerShell cmdlet in the Consuming Tenant:
 
 - `-AllowGuestUserShareToUsersNotInSiteCollection`
-  - Setting this to `True` also requires [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration) to be enabled.
+  - Setting this to `True` also requires [SharePoint and OneDrive integration with Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration) to be enabled.
 - `-ShowPeoplePickerSuggestionsForGuestUsers`
 
 ## Adding Guest Users
 
 If your SharePoint Embedded application requires the ability to add Guest Users then Sharing must be enabled on the SharePoint content root in the Consuming Tenant (`https://contoso.sharepoint.com`).
 
-By default, sharing is enabled on the SharePoint content root. However, some Consuming Tenants may have this disabled.
+By default, sharing is enabled on the SharePoint content root. However, some Consuming Tenants might have this disabled.
 
 If this scenario is required, then the SharePoint content root SharingCapability setting needs to be set to any value except disabled using the [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) PowerShell cmdlet in the Consuming Tenant:
 

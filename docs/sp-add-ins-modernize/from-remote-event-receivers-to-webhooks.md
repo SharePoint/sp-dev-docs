@@ -1,7 +1,7 @@
 ---
 title: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks
 description: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks.
-ms.date: 08/28/2023
+ms.date: 03/15/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -12,7 +12,10 @@ In the SharePoint Add-in model you can create Remote Event Receivers, which can 
 
 The synchronous events allow a developer to intercept an event while it is happening and with custom logic the Remote Event Receiver can even cancel the currently running operation. 
 
-The asynchronous events allow a developer to be notified of an event after it already occured, as such you can only keep track of the event or react to the event, but you cannot cancel the already occurred event, unless you implement your own compensation logic. Due to their nature and logic, the synchronous events are often called *-ing* events (ItemAdding, ItemUpdating, ItemDeleting, etc.), while the asynchronous events are often called *-ed* events (ItemAdded, ItemUpdated, ItemDeleted, etc.).
+The asynchronous events allow a developer to be notified of an event after it already occurred, as such you can only keep track of the event or react to the event, but you cannot cancel the already occurred event, unless you implement your own compensation logic. Due to their nature and logic, the synchronous events are often called *-ing* events (ItemAdding, ItemUpdating, ItemDeleting, etc.), while the asynchronous events are often called *-ed* events (ItemAdded, ItemUpdated, ItemDeleted, etc.).
+
+> [!Important]
+> Remote Event Receivers can also be used without having a dependency on Azure ACS (which is retired), check the [Use remote event receivers without Azure ACS dependency](./use-remote-event-receivers-without-azure-acs-dependency.md) article to learn more.
 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.

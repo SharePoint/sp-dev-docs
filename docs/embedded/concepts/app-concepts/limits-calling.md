@@ -30,13 +30,13 @@ The following table defines the size limits of containers"
 | Number of users shared per folder or file                 | 5k                                                     |
 
 > [!NOTE]
-> \* Limit can be increased per request.
+> Limit can be increased per request.
 
 ## Throttling
 
 ### Patterns and best practices
 
-When applications hit service limits, you'll receive an HTTP status code 429 ("Too many requests"). You may also receive an HTTP status code 503 ("Server Too Busy").
+When applications hit service limits, you'll receive an HTTP status code 429 ("Too many requests"). You might also receive an HTTP status code 503 ("Server Too Busy").
 
 In general, the following are the best practices to handle throttling:
 
@@ -44,7 +44,7 @@ In general, the following are the best practices to handle throttling:
 - Avoid request spikes.
 - Honor the `Retry-After` HTTP header.
 
-In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
+In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` might result in more throttling.
 
 ## API rate limits
 
