@@ -30,7 +30,7 @@ App+User (Delegated) or App-only (Application) Bearer {token} is required in Aut
 
 > [!NOTE]
 > Container owners can Create, Update and Delete Container columns
-> All Container member can Read and List Container columns 
+> All Container members can Read and List Container columns 
 
 ### `microsoft.graph.fileStorageContainer` properties
 
