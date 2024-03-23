@@ -1,11 +1,11 @@
 ---
 title: SharePoint Embedded Container Metadata
-description: Add metadata in Containers and Files
+description: Add metadata in Containers and Files.
 ms.date: 3/22/2024
 ms.localizationpriority: high
 ---
 
-# Using Metadata on Containers and Files
+# Using Metadata with SharePoint Embedded Containers
 
 In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
 
@@ -14,8 +14,8 @@ In SharePoint Embedded, columns can be added to [Containers](../concepts/app-con
 1. [Authorization and Authentication](#authorization-and-authentication)
 1. [Limitations](#limitations)
 1. [POST: Create a column in a fileStorageContainer](#create-a-column-in-a-filestoragecontainer)
-1. [GET: Get a column in a fileStorageContainer by id](#get-a-column-in-a-filestoragecontainer-by-id)
-1. [PATCH: Update a column in a fileStorageContainer by id](#update-a-column-in-a-filestoragecontainer-by-id)
+1. [GET: Get a column in a fileStorageContainer by ID](#get-a-column-in-a-filestoragecontainer-by-id)
+1. [PATCH: Update a column in a fileStorageContainer by ID](#update-a-column-in-a-filestoragecontainer-by-id)
 1. [DELETE: Delete a column from a fileStorageContainer](#delete-a-column-from-a-filestoragecontainer)
 1. [GET: List columns in a fileStorageContainer](#list-columns-in-a-filestoragecontainer)
 1. [GET: Get column values of an item in a fileStorageContainer's drive](#get-column-values-of-an-item-in-a-filestoragecontainers-drive)
@@ -28,6 +28,10 @@ In SharePoint Embedded, columns can be added to [Containers](../concepts/app-con
 
 App+User (Delegated) or App-only (Application) Bearer {token} is required in Authorization header.
 
+> [!NOTE]
+> Container owners can Create, Update and Delete Container columns
+> All Container member can Read and List Container columns 
+
 ### `microsoft.graph.fileStorageContainer` properties
 
 | Property                   | Type                                                           | Description                                                | Key | Required | ReadOnly |
@@ -35,9 +39,9 @@ App+User (Delegated) or App-only (Application) Bearer {token} is required in Aut
 | `id`                       | `Edm.String`                                                   | unique stable identifier of the storage container instance | Yes | Yes      | Yes      |
 | `displayName`              | `Edm.String`                                                   | display name of the container                              | No  | Yes      | No       |
 | `description`              | `Edm.String`                                                   | description of the container                               | No  | No       | No       |
-| `containerTypeId`          | `Edm.Guid`                                                     | container type id                                          | No  | Yes      | Yes      |
+| `containerTypeId`          | `Edm.Guid`                                                     | container type ID                                          | No  | Yes      | Yes      |
 | `containerTypeDisplayName` | `Edm.String`                                                   | display name of the container type                         | No  | No       | Yes      |
-| `externalGroupId`          | `Edm.Guid`                                                     | external group id                                          | No  | No       | No       |
+| `externalGroupId`          | `Edm.Guid`                                                     | external group ID                                          | No  | No       | No       |
 | `permissions`              | `Collection<microsoft.graph.permission>`                       | permissions of users / groups in the container             | No  | No       | No       |
 | `customProperties`         | `microsoft.graph.fileStorageContainerCustomPropertyDictionary` | custom properties                                          | No  | No       | No       |
 | `viewpoint`                | `microsoft.graph.fileStorageContainerViewpoint`                | data that is specific to the current user                  | No  | No       | No       |
@@ -64,7 +68,7 @@ The following are the properties that SharePoint Embedded Metadata supports:
 | dateTime               | dateTimeColumn            |
 | hyperlinkOrPicture     | hyperlinkOrPictureColumn  |
 | isDeletable            | Boolean                   |
-| id                     | string                    |
+| ID                     | string                    |
 | indexed                | Boolean                   |
 | isSealed               | Boolean                   |
 | name                   | string                    |
@@ -80,20 +84,20 @@ The following are the properties that SharePoint Embedded Metadata supports:
 ### Column Naming Conventions
 
 Column Names must adhere to the following rules:
-- Cannot contain "!".
-- Cannot start with a digit, period, minus sign or question mark.  
-- Cannot contain any space or any non-alphanumeric characters except "_" or "\".  
-- Cannot look like either type of cell reference.  
-  - A1 mode cell reference with 1 to 3 characters followed by 1 to 5 digits (e.g. A3 F02563, ZZZ12).  
+- Can't contain "!".
+- Can't start with a digit, period, minus sign or question mark.  
+- Can't contain any space or any nonalphanumeric characters except "_" or "\".  
+- Can't look like either type of cell reference.  
+  - A1 mode cell reference with 1 to 3 characters followed by 1 to 5 digits (for example, A3 F02563, ZZZ12).  
   - R1C1 mode cell references that look like r, or c, or r[#], c[#] or r[#]c[#].  
-- Cannot be any localized word for "true" or "false".  
-- Cannot be specific names, including "Author", "Created", "Description", etc.  
+- Can't be any localized word for "true" or "false".  
+- Can't be specific names, including "Author", "Created", "Description", etc.  
 
 
 
 ## Create a column in a fileStorageContainer
 
-This API will let callers create a new column instance in a fileStorageContainer.
+This API lets callers create a new column instance in a fileStorageContainer.
 
 ##### Required permissions (at least one of)
 
@@ -125,6 +129,8 @@ Content-Type: application/json
   }
 }
 ```
+> [!NOTE]
+> Note Type is not supported. `maxLength` should =< 255.
 
 ##### Response
 
@@ -149,9 +155,9 @@ Content-type: application/json
 }
 ```
 
-## Get a column in a fileStorageContainer by id
+## Get a column in a fileStorageContainer by ID
 
-This API will let callers get a fileStorageContainer column instance by id.
+This API lets callers get a fileStorageContainer column instance by ID.
 
 ##### Required permissions (at least one of)
 
@@ -160,7 +166,7 @@ This API will let callers get a fileStorageContainer column instance by id.
 | FileStorageContainer.Selected | Application |
 | FileStorageContainer.Selected | Delegated   |
 
-#### REST Operation example: get a column in a fileStorageContainer by id
+#### REST Operation example: get a column in a fileStorageContainer by ID
 
 ##### Request
 
@@ -191,9 +197,9 @@ Content-type: application/json
 }
 ```
 
-## Update a column in a fileStorageContainer by id
+## Update a column in a fileStorageContainer by ID
 
-This API will let callers update a fileStorageContainer column instance by id.
+This API lets callers update a fileStorageContainer column instance by ID.
 You can update any property of the column other than the **id** property.
 
 ##### Required permissions (at least one of)
@@ -203,7 +209,7 @@ You can update any property of the column other than the **id** property.
 | FileStorageContainer.Selected | Application |
 | FileStorageContainer.Selected | Delegated   |
 
-#### REST Operation example: update a column in a fileStorageContainer by id
+#### REST Operation example: update a column in a fileStorageContainer by ID
 
 ##### Request
 
@@ -213,7 +219,8 @@ Content-Type: application/json
 
 {
   "required": true,
-  "hidden": false
+  "hidden": false,
+  "description": "This is my new column description"
 }
 ```
 
@@ -244,7 +251,7 @@ Content-type: application/json
 
 ## Delete a column from a fileStorageContainer
 
-This API will let callers delele a fileStorageContainer column instance by id.
+This API lets callers delete a fileStorageContainer column instance by ID.
 
 ##### Required permissions (at least one of)
 
@@ -269,7 +276,7 @@ HTTP/1.1 204 No Content
 
 ## List columns in a fileStorageContainer
 
-This API will let callers enumerate the columns in a fileStorageContainer.
+This API lets callers enumerate the columns in a fileStorageContainer.
 
 ##### Required permissions (at least one of)
 
@@ -448,7 +455,7 @@ Content-type: application/json
 
 ## Query a fileStorageContainer's driveitems with Odata query options on custom columns
 
-This API will let users query drive items in a fileStorageContainer with `$expand`, `$filter`, and `$orderby` Odata query options on their custom columns.
+This API lets users query drive items in a fileStorageContainer with `$expand`, `$filter`, and `$orderby` Odata query options on their custom columns.
 
 ##### Required permissions (at least one of)
 
