@@ -7,29 +7,14 @@ ms.localizationpriority: high
 
 # Using Metadata with SharePoint Embedded Containers
 
-In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata are schematized and can be queried. Note the APIs to create and manage columns are on container instances level – an application is responsible for defining and managing the columns across its containers. 
-
-
-#### Sections
-1. [Authorization and Authentication](#authorization-and-authentication)
-1. [Limitations](#limitations)
-1. [POST: Create a column in a fileStorageContainer](#create-a-column-in-a-filestoragecontainer)
-1. [GET: Get a column in a fileStorageContainer by ID](#get-a-column-in-a-filestoragecontainer-by-id)
-1. [PATCH: Update a column in a fileStorageContainer by ID](#update-a-column-in-a-filestoragecontainer-by-id)
-1. [DELETE: Delete a column from a fileStorageContainer](#delete-a-column-from-a-filestoragecontainer)
-1. [GET: List columns in a fileStorageContainer](#list-columns-in-a-filestoragecontainer)
-1. [GET: Get column values of an item in a fileStorageContainer's drive](#get-column-values-of-an-item-in-a-filestoragecontainers-drive)
-1. [PATCH: Patch column values of an item in a fileStorageContainer's drive](#patch-column-values-of-an-item-in-a-filestoragecontainers-drive)
-1. [GET: Query a fileStorageContainer's driveitems with Odata query options on custom columns](#query-a-filestoragecontainers-driveitems-with-odata-query-options-on-custom-columns)
-
-
+In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Microsoft Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata is schematized and can be queried. Note the APIs to create and manage columns are on the container instances level – an application is responsible for defining and managing the columns across its containers. 
 
 ## Authorization and Authentication
 
-App+User (Delegated) or App-only (Application) Bearer {token} is required in Authorization header.
+App+User (Delegated) or App-only (Application) Bearer {token} is required in the Authorization header.
 
 > [!NOTE]
-> Container owners can Create, Update and Delete Container columns
+> Container owners can Create, Update, and Delete Container columns
 > All Container members can Read and List Container columns 
 
 ### `microsoft.graph.fileStorageContainer` properties
@@ -79,13 +64,13 @@ The following are the properties that SharePoint Embedded Metadata supports:
 | type                   | columnTypes               |
 
 > [!NOTE]
-> Please name columns according to the appropiate column naming convention
+> Please name columns according to the appropriate column naming convention
 
 ### Column Naming Conventions
 
 Column Names must adhere to the following rules:
 - Can't contain "!".
-- Can't start with a digit, period, minus sign or question mark.  
+- Can't start with a digit, period, minus sign, or question mark.  
 - Can't contain any space or any nonalphanumeric characters except "_" or "\".  
 - Can't look like either type of cell reference.  
   - A1 mode cell reference with 1 to 3 characters followed by 1 to 5 digits (for example, A3 F02563, ZZZ12).  
@@ -129,6 +114,7 @@ Content-Type: application/json
   }
 }
 ```
+
 > [!NOTE]
 > Note Type is not supported. `maxLength` should =< 255.
 
