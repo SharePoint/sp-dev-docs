@@ -981,7 +981,7 @@
   - name: Transform from remote event receivers to web hooks
     href: sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md
   - name: Using remote event receivers without having a dependency on Azure ACS
-    href: use-remote-event-receivers-without-azure-acs-dependency.md
+    href: sp-add-ins-modernize/use-remote-event-receivers-without-azure-acs-dependency.md
   - name: Transform from SharePoint hosted add-ins
     href: sp-add-ins-modernize/from-sharepoint-hosted-to-client-side.md
   - name: Transform from provider hosted add-ins to Azure AD apps
