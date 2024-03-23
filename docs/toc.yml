@@ -586,6 +586,8 @@
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
+    - name: Using Metadata
+      href: embedded/tutorials/metadata.md
     - name: Using Document Processing with Azure Cognitive Services
       href: embedded/tutorials/doc-processing-acs.md
     - name: Using Webhooks
