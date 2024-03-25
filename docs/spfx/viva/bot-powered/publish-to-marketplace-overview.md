@@ -23,7 +23,7 @@ Bot Powered ACEs enable existing Microsoft Teams developers, with existing bot i
 Market place acceptance criteria overview:
 
 - Follow the [market place guidance for Teams solutions](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish)
-- Use [Teams manifest version](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema) 1.17 or higher
+- Use [Teams manifest version](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) 1.17 or higher
 - Have a valid Teams bot implementation (see lines 27-39) that's used as Bot Powered ACE (see line 53)
 
 ![A snippet from a Teams application manifest showing how an existing Teams bot is used as Bot Powered ACE.](./images/Bot-Powered-ACEs-Market-Place-ValidManifest.png)
