@@ -682,6 +682,8 @@
       href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
     - name: Authentication and Authorization in Bot Powered ACEs
       href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
+    - name: Bringing Bot Powered ACEs to the market place
+      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
