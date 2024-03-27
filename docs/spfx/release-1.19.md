@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
-!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 - beta.0 **Released**: March 27, 2024
 
