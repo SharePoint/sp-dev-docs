@@ -1,6 +1,6 @@
 ---
 title: SharePoint Framework v1.19 developer preview release notes
-description: Release notes for the SharePoint Framework v1.19 developer preview release
+description: Release notes for the SharePoint Framework v1.19 developer preview release.
 ms.date: 03/27/2024
 ms.localizationpriority: high
 ---
@@ -16,7 +16,7 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 ## Install the preview latest version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag
+Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag.
 
 ```console
 npm install @microsoft/generator-sharepoint@next --global
@@ -68,16 +68,9 @@ The tooling was upgraded from Webpack 4 to Webpack 5.
 > [!NOTE]
 > If you have webpack configuration customizations in your project - reference the [official Webpack documentation](https://webpack.js.org/migrate/5/) for the migration details.
 
-### Buildtime packages release is decoupled from the SPFx release
+### Build time packages release is decoupled from the SPFx release
 
-Starting from this release, the buildtime packages are decoupled from the SPFx release. This means that the buildtime packages are released independently from the SPFx release. This change allows us to release new features and fixes to the buildtime packages without waiting for the next SPFx release.
-
-### GA of Bot-driven Adaptive Card Extensions support in Teams app catalog
-
-We are excited to announce the general availability of Bot-driven Adaptive Card Extensions in the Teams app catalog. This feature allows you to build and deploy Adaptive Card Extensions that are driven by a bot to the Teams app catalog.
-
-> [!NOTE]
-> When developing a Teams app with Bot-driven Adaptive Card Extensions, you need to use `devPreview` schema version for the Teams app definition. The public version will be available soon with no changes to the format.
+Starting from this release, the build time packages are decoupled from the SPFx release. This means that the build time packages are released independently from the SPFx release. This change allows us to release new features and fixes to the build time packages without waiting for the next SPFx release.
 
 ### Optional footer for the Search Adaptive Card Extension
 
@@ -108,7 +101,7 @@ You can now specify `imageAlt` property for the Property Pane's choice group opt
 
 ## Deprecations
 
-- Node.js 16 is not supported with the SPFx 1.19
+- Node.js 16 isn't supported with the SPFx 1.19
 
 ## Fixed Issues
 
