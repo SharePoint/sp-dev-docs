@@ -70,7 +70,9 @@ The tooling was upgraded from Webpack 4 to Webpack 5.
 
 ### Build time packages release is decoupled from the SPFx release
 
-Starting from this release, the build time packages are decoupled from the SPFx release. This means that the build time packages are released independently from the SPFx release. This change allows us to release new features and fixes to the build time packages without waiting for the next SPFx release.
+From this release forward, the build time packages are decoupled from the SPFx release. This means that the build time packages are released independently from the SPFx release. This change allows us to release new features and fixes to the build time packages without waiting for the next SPFx release.
+
+This includes packages like `@microsoft/eslint-plugin-spfx`, `@microsoft/sp-module-interfaces`, and other similar build time packages.
 
 ### Optional footer for the Search Adaptive Card Extension
 
@@ -94,7 +96,7 @@ You can now specify `imageAlt` property for the Property Pane's choice group opt
 
 ### `inlineLabel` property for the Property Pane's Toggle control
 
-`PropertyPaneToggle` now supports `inlineLabel` property that specifies whether the label (not the onText/offText) should be positioned inline with the toggle control. Left (right in RTL) side when on/off text provided VS right (left in RTL) side when no on/off text.
+`PropertyPaneToggle` now supports `inlineLabel` property that specifies whether the label (not the onText/offText) should be positioned inline with the toggle control. Left (right in RTL) side when on/off text provided vs. right (left in RTL) side when no on/off text.
 
 > [!NOTE]
 > When not providing on/off text user may get confused in differentiating the on/off states of the toggle.
