@@ -13,6 +13,8 @@ Organizations that create file management applications with the help of SharePoi
 ## Developer Admin Role
 
 A Microsoft 365 SharePoint Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Administrator role. The Global Administrator role already has all the permissions of the SharePoint Administrator role. For information about assigning a user the SharePoint administrator role, see Assign admin roles in the Microsoft 365 admin center.
+Update:
+A new dedicated role of SharePoint Embedded Administrotr role has been added to Entra ID, the M365 admin center's Ux is also expected very soon. For details check the New SPE admin role [SharePoint Embedded.](./admin.md)
 
 ### Billing responsibilities of Developer admin
 
