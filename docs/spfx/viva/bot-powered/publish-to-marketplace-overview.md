@@ -18,7 +18,9 @@ Because Bot Powered ACEs are packaged using the Microsoft Teams solution model t
 Bot Powered ACEs enable existing Microsoft Teams developers, with existing bot implementations, extend their bot implementations to be available in the Viva Connections and this approach is what we support for the market place today. You can also develop stand-alone Bot Powered ACEs which have no other functional Teams component, these however will be allowed for market place submission in a later phase. So, currently, market place will only accept a Teams applications which already contains a bot implementation that's being used by the Teams application. So if your Teams application was already on the market place and you've extended your application to also offer Bot Powered ACEs then you're simply submitting an update to your existing application. Both updated and new Teams applications need to follow the [market place guidance for Teams solutions](https://learn.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish).
 
 > [!Note]
-> We're working on support for bringing "stand-alone" Bot Powered ACEs to the market place and will update this guidance whenever that change happens.
+>
+> - Bot Powered ACEs require the [Teams app manifest version](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) 1.17 or higher, which is coming soon. The current devPreview schema can be already be used to build and test your Bot Powered ACEs so that you're ready to switch to version 1.17 and submit to the market place once 1.17 becomes available.
+> - We're working on support for bringing "stand-alone" Bot Powered ACEs to the market place and will update this guidance whenever that change happens.
 
 Market place acceptance criteria overview:
 
