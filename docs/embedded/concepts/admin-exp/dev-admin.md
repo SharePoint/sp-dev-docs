@@ -8,13 +8,13 @@ ms.localizationpriority: high
 
 ## Overview
 
-Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem (yet to be finalized), and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the Container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
+Organizations that create file management applications with the help of SharePoint Embedded are referred to as the Developer Ecosystem (yet to be finalized), and the person responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the Container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
 
 ## Developer Admin Role
 
 A Microsoft 365 SharePoint Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Administrator role. The Global Administrator role already has all the permissions of the SharePoint Administrator role. For information about assigning a user the SharePoint administrator role, see Assign admin roles in the Microsoft 365 admin center.
-Update:
-A new dedicated role of SharePoint Embedded Administrotr role has been added to Entra ID, the M365 admin center's Ux is also expected very soon. For details check the New SPE admin role [SharePoint Embedded.](./admin.md)
+
+The SharePoint Embedded Administrator role can also be used to assign a user admin rights on the SharePoint Embedded configuration without giving them full SharePoint administration rights.
 
 ### Billing responsibilities of Developer admin
 
@@ -33,7 +33,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 ### Creation of container types
 
-Using PowerShell cmdlets, the developer administrator can create container types and attach it to an application ID (One to one mapping) and Azure subscription ID. The administrator can also create trial container types that have a validity of 30 days to get a feel of the standard container types. The following commands can be used to create SharePoint Embedded applications on the developer admin’s tenant:
+Using PowerShell cmdlets, the developer administrator can create container types and attach them to an application ID (one-to-one mapping) and Azure subscription ID. The administrator can also create trial container types that have a validity of 30 days to get a feel of the standard container types. The following commands can be used to create SharePoint Embedded applications on the developer admin’s tenant:
 
 ```powershell
 New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>​
@@ -56,7 +56,7 @@ Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 
 ### Manage properties of container types
 
-Using PowerShell cmdlets, the developer administrator can change the properties of container types, both standard and trial. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
+Using PowerShell cmdlets, the developer administrator can change the properties of container types, both standard and trial. The following commands can be used to change the properties of SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
@@ -67,7 +67,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
 
 ## Manage billing profile of applications/ container types
 
-Using PowerShell cmdlets, the developer administrator can change the billing profile of container types. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
+Using PowerShell cmdlets, the developer administrator can change the billing profile of container types. The following commands can be used to change the properties of SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
@@ -80,8 +80,8 @@ For more information about billing, see [Billing](./billing.md).
 
 ## Roles and Permissions
 
-The user or admin who will set up billing relationship for SharePoint Embedded will need to have owner or contributor permissions on Azure subscription.
+The user or admin who will set up a billing relationship for SharePoint Embedded must have owner or contributor permissions on an Azure subscription.
 
-If you don't have an Azure subscription, follow steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
+If you don't have an Azure subscription, follow the steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
 
-The user or admin will need to have a SharePoint administrator role to operate SPO PowerShell cmdlets.
+The user or admin must have a SharePoint administrator role to operate SPO PowerShell cmdlets.
