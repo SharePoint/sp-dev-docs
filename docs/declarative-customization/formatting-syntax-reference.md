@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 04/08/2023
+ms.date: 04/03/2024
 ms.localizationpriority: high
 ---
 
@@ -25,8 +25,9 @@ Any other value will result in an error.
 
 ### filepreview
 
-Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary.
-If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/fluentui#/styles/web/file-type-icons) is shown instead.
+Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document library.
+
+If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbnail fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/fluentui#/styles/web/file-type-icons) is shown instead.
 
 ```json
 "elmType": "filepreview",
@@ -34,6 +35,7 @@ If the thumbnail loads successfully, a small [brand type icon](https://developer
   "src": "@thumbnail.medium"
  }
 ```
+
 ### img src security
 
 Images from the following domains are allowed:
@@ -293,11 +295,11 @@ An optional property that is meant for debugging. It outputs error messages and 
 
 An optional property that allows an element to duplicate itself for each member of a specific multi-value field or an array. The value of `"forEach"` property should be in the format of either `"iteratorName in @currentField"` or `"iteratorName in [$FieldName]"` or `"iteratorName in Expression-Returning-An-Array"`.
 
-`iteratorName` represents the name of iterator variable that is used to represent the current member of the multi-value field. The name of the iterator can be any combination of alphanumeric characters and underscore (`_`) that does not start with a digit.
+`iteratorName` represents the name of the iterator variable that is used to represent the current member of the multi-value field. The name of the iterator can be any combination of alphanumeric characters and an underscore (`_`) that does not start with a digit.
 
-The field used in the loop must be in a supported field type with multi-value option enabled: Person, Lookup, and Choice. An expression returning an array can also be used.
+The field used in the loop must be in a supported field type with multi-value options enabled: Person, Lookup, and Choice. An expression returning an array can also be used.
 
-In the element with `forEach` or its children elements, the iterator variable can be referred as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
+In the element with `forEach` or its children elements, the iterator variable can be referred to as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
 
 `forEach` cannot be applied to the root element, and will render no element if there is no value in the field.
 
@@ -371,19 +373,19 @@ Refer to this article for more information about how to allow list domains - htt
 Note - This action is only available in the newer version of the Microsoft Lists App.
 
     ```JSON
-  {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-    "elmType": "button",
-    "customRowAction": {
-      "action": "embed",
-      "actionInput": {
-        "src": "https://www.relecloud.com/embed/ll00hWQMJxQ",
-        "height": "350",
-        "width": "700"
-      }
-    },
-    "txtContent": "Click here to open recipe video 👩‍🍳"
-  }
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+      "elmType": "button",
+      "customRowAction": {
+        "action": "embed",
+        "actionInput": {
+          "src": "https://www.relecloud.com/embed/ll00hWQMJxQ",
+          "height": "350",
+          "width": "700" 
+        }
+      },
+      "txtContent": "Click here to open recipe video 👩‍🍳"
+    }
     ```
 
 The `actionParams` attribute can have the following options when using the `executeFlow` action:
@@ -394,26 +396,26 @@ The `actionParams` attribute can have the following options when using the `exec
 
 ## customCardProps
 
-Add a custom card to the element, that shows up on hover or click event. Following customization is available -
+Add a custom card to the element, that shows up on hover or click event. The following customization is available -
 
 - `"formatter"`: JSON object that defines formatting for custom cards.
 - `"openOnEvent"`: Event on which the customCard should open.
   - Valid values: `click`, `hover`
-- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned. This is the preferred location but is not guaranteed depending on space.
+- `"directionalHint"`: Specify the direction relative to the target in which the custom card will be positioned. This is the preferred location but is not guaranteed depending on space.
   - Valid values: `bottomAutoEdge`, `bottomCenter`, `bottomLeftEdge`, `bottomRightEdge`, `leftBottomEdge`, `leftCenter`, `leftTopEdge`, `rightBottomEdge`, `rightCenter`, `rightTopEdge`, `topAutoEdge`, `topCenter`, `topLeftEdge`, `topRightEdge`
 - `"isBeakVisible"`: Specify if the beak is to be shown or not.
 - `"beakStyle"`: Specifies the style object for custom card's beak.
 
 ## defaultHoverField
 
-Adds the profile card for the people fields or file hover card for files in document library.
+Adds the profile card for the people fields or file hovercard for files in the document library.
 
 - `"defaultHoverField": "[$Editor]"` adds a profile card for the editor field
 - `"defaultHoverField": "[$FileLeafRef]"` adds a file hover card in documentLibrary
 
 ## columnFormatterReference
 
-This will be replaced with the referenced column's formatter JSON. Multi level reference is not supported.
+This will be replaced with the referenced column's formatter JSON. Multi-level reference is not supported.
 
 ```JSON
 {
@@ -459,11 +461,11 @@ An optional property, that allows overriding the default styles of file type ico
 
 ## Expressions
 
-Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
+Values for `txtContent`, style properties, and attribute properties can be expressed as expressions so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
 
 Expressions can be written using Excel-style expressions in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update, or by using Abstract Syntax Tree expressions in SharePoint Online, SharePoint Server Subscription Edition, and SharePoint Server 2019.
 
-All fields in ViewFields can be referred in expresisons, even if it is marked `Explicit`.
+All fields in ViewFields can be referred in expressions, even if it is marked `Explicit`.
 
 ### Excel-style expressions
 
@@ -705,11 +707,11 @@ Operators specify the type of operation to perform. The following operators are 
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
-- **replace**: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, only the first instance of the value will be replaced.
+- **replace**: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. In case of string, only the first instance of the value will be replaced.
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
   - `"txtContent":"=replace([$MultiChoiceField], 'Choice 1', 'Choice 2')"` returns an array replacing Choice 1 with Choice 2
   - `"txtContent":"=replace([$MultiUserField], @me, 'kaylat@contoso.com')"` returns an array replacing @me with 'kaylat@contoso.com'
-- **replaceAll**: searches a string for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, all instances of the value will be replaced.
+- **replaceAll**: searches a string for a specified value and returns a new string (or array) where the specified value is replaced. In case of string, all instances of the value will be replaced.
   - `"txtContent":"=replaceAll('H-e-l-l-o W-o-r-l-d', '-', '')"` results in _Hello World_
 - **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
   - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
