@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Use column formatting to customize SharePoint
 
-You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed.
+You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting doesn't change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed.
 
 For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this:
 
@@ -24,17 +24,17 @@ A list with the appearance of the **Effort**, **Assigned To**, and **Status** fi
 
 Both column formatting and [SharePoint Framework Field Customizer](../spfx/extensions/get-started/building-simple-field-customizer.md) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed.
 
-Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes.
+Column formatting is more easily and broadly applied. However, it's less flexible, because it doesn't allow for custom code; it only allows for certain predefined elements and attributes.
 
 The following table compares column formatting and the Field Customizer.
 
 | Field type        | Column formatting          | Field Customizer  |
 | ------------- |:-------------| :-----|
 | Conditional formatting based on item values and value ranges      | Supported | Supported |
-| Action links       | Support for static hyperlinks that do not launch script      |  Support for any hyperlink, including those that invoke custom script   |
+| Action links       | Support for static hyperlinks that don't launch script      |  Support for any hyperlink, including those that invoke custom script   |
 | Data visualizations | Support for simple visualizations that can be expressed using HTML and CSS      |   Support for arbitrary data visualizations  |
 
-If you can accomplish your scenario by using column formatting, it’s typically quicker and easier to do that than to use a Field Customizer. Anyone who can create and manage views in a list can use column formatting to create and publish customizations. Use a Field Customizer for more advanced scenarios that column formatting does not support.
+If you can accomplish your scenario by using column formatting, it’s typically quicker and easier to do that than to use a Field Customizer. Anyone who can create and manage views in a list can use column formatting to create and publish customizations. Use a Field Customizer for more advanced scenarios that column formatting doesn't support.
 
 ## Get started with column formatting
 
@@ -174,7 +174,7 @@ The following image shows a field with conditional date formatting applied:
 
 ![Status field with the Overdue text colored red](../images/sp-columnformatting-overdue.png)
 
-This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the `[$FieldName]` syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
+This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that `DueDate` is referenced using the `[$FieldName]` syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
 
 > [!NOTE]
 > If you have spaces in the field name, those are defined as `_x0020_`. For example, a field named "Due Date" should be referenced as `$Due_x0020_Date`.
@@ -555,7 +555,7 @@ The following image shows an example of constructing a simple sentence from the 
 
 ![Screenshot of a field reads "North America, APAC, and Europe"](../images/sp-columnformatting-multi-value-1.png)
 
-This examples uses operator `loopIndex` and `length` to identify the last member of the field, and attribute `forEach` to duplicate HTML elements.
+This example uses operator `loopIndex` and `length` to identify the last member of the field, and attribute `forEach` to duplicate HTML elements.
 
 ```json
 {
@@ -589,11 +589,12 @@ This examples uses operator `loopIndex` and `length` to identify the last member
 ```
 
 ### Complex HTML elements formatting
+
 The following image shows an example of building a list of users with pictures, email addresses and a simple counter for the number of members at the top.
 
 ![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/sp-columnformatting-multi-value-2.png)
 
-This examples uses operator `loopIndex` to control the margins all rows but the first one, and attribute `forEach` to build the list of members.
+This example uses operator `loopIndex` to control the margins all rows but the first one, and attribute `forEach` to build the list of members.
 
 ```json
 {
@@ -746,7 +747,7 @@ You can use predefined icons from Fluent UI. For details, see the [Fluent UI web
 
 ## Creating custom JSON
 
-Creating custom column formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON column schema reference to assist in creation of column formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
+Creating custom column formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON column schema reference to help creation of column formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
 
 > [!TIP]
 > At any point, select **Ctrl**+**Space** for property/value suggestions.
