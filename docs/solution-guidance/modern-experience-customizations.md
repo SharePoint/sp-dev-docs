@@ -81,7 +81,7 @@ The SharePoint "modern" experiences are supported in SharePoint 2019 in on-premi
 ## See also
 
 - [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds/)
-- [Microsoft Teams, SharePoint, and Microsoft 365 Groups integration (IT Admins)](/microsoft-365/solutions/groups-sharepoint-teams-governance?view=o365-worldwide)
+- [Microsoft Teams, SharePoint, and Microsoft 365 Groups integration (IT Admins)](/microsoft-365/solutions/groups-sharepoint-teams-governance)
 - [Create a team site in SharePoint Online](https://support.office.com/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d)
 - [Turn scripting capabilities on or off](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f)
 - ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)
