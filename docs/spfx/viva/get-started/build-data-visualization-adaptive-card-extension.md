@@ -32,25 +32,7 @@ When prompted, enter the following values (select the default option for all oth
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/ _layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-At this point, if you do `gulp serve`, and select the add icon in the hosted workbench to open the toolbox, you'll see the **Data Visualization** card:
+Next, run **gulp serve** from the command line in the root of the project. Select the add icon in the hosted workbench to open the toolbox, you'll see the **Data Visualization** card:
 
 ![See the Data Visualization card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/data-visualization/toolbox.png)
 
