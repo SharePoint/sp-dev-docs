@@ -215,7 +215,7 @@ An optional property that specifies style attributes to apply to the element spe
 'transform' // Only translate(arg) and translate(arg, arg) are currently supported
 ```
 
-The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the [Expression object section](#Expressions).
+The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the [Expression object section](#expressions).
 
 ```json
 {
