@@ -30,31 +30,6 @@ When prompted, enter the following values (*select the default option for all pr
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-### Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-> [!TIP]
-> You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
->
-> ```console
-> gulp serve --nobrowser
-> ```
-
 ## Serve the ACE in the workbench
 
 Before digging into the code, run the scaffolded output and see what an Adaptive Card Extension looks like.
