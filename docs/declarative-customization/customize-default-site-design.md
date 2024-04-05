@@ -20,7 +20,6 @@ To customize a default site template, apply a new template script using PowerShe
 | WebTemplate    | 68 | Communication site template |
 | WebTemplate    | 69 | Channel site template |
 
-
 The following example shows how to use the **IsDefault** switch to apply the Contoso company theme to the default site templates. The site script referenced by ID contains the JSON script to apply the correct theme.
 
 ```powershell
@@ -32,8 +31,6 @@ C:\> Add-SPOSiteDesign `
   -IsDefault
 ```
 
-<br/>
-
 ```javascript
 RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"Contoso company theme", Description:"Applies standard company theme to site", SiteScriptIds:["89516c6d-9f4d-4a57-ae79-36b0c95a817b"],  WebTemplate:"68", IsDefault: true}});
 ```
@@ -42,7 +39,6 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 
 The default site template for a communication site is the **Topic** template. The default for a team site is the **Team collaboration** template. When you apply a new default site template, it updates the Microsoft-provided default templates.
 
-
 ## Restore the default site templates
 
 To restore a site template to the defaults, remove the site template script that you applied. In the previous example, if the site template created had the ID `db752673-18fd-44db-865a-aa3e0b28698e`, you would remove it as shown in the following example.
@@ -50,8 +46,6 @@ To restore a site template to the defaults, remove the site template script that
 ```powershell
 C:\> Remove-SPOSiteDesign db752673-18fd-44db-865a-aa3e0b28698e
 ```
-
-<br/>
 
 ```javascript
 RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", {id:"db752673-18fd-44db-865a-aa3e0b28698e"});
