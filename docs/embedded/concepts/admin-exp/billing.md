@@ -24,7 +24,7 @@ To enable PAYG on SharePoint Embedded, you need:
 ## Roles and Permissions
 
 - Admin who will set up billing relationship for SharePoint Embedded  will need to have owner or contributor permissions on Azure subscription.
-- Admin will need to have a SharePoint administrator role to operate billing cmdlets.
+- Admin will need to have a SharePoint Embedded Administrator role to operate billing cmdlets.
 
 ## Steps to establish billing
 
