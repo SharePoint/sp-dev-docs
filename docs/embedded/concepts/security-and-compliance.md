@@ -1,7 +1,7 @@
 ---
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
-ms.date: 11/28/2023
+ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
 
@@ -64,7 +64,7 @@ To limit the eDiscovery Search to one/few SharePoint Embedded Containers, Admins
 
 SharePoint Embedded supports retention and holds policies on content stored in its applications using the Microsoft Purview compliance portal. For more information on DLM, see [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
-The existing retention policy will automatically apply to all SharePoint Embedded Containers if the policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on *All* SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites and all Containers within SharePoint Embedded.
+The existing retention policy is applied to all SharePoint Embedded Containers if the policy is configured for ‘All sites’. Similarly, creating a new retention/hold policy on *All* SharePoint Sites workload will automatically enforce the policy on all SharePoint Online Sites and all Containers within SharePoint Embedded.
 
 ![retention policy](../images/sc4.png)
 
@@ -86,7 +86,7 @@ Admins can also restrict the enforcement of a DLP policy to specific SharePoint 
 
 ![Configure DLP Policy](../images/sc7.png)
 
-Several scenarios supported by DLP today need user interaction that isn’t natively supported by SharePoint Embedded. For instance, based on its configuration, a DLP policy that prevents external sharing might allow end users to provide a business justification to override the policy. The client app that renders this DLP-flagged file item will need to support such user interactions.
+Several scenarios supported by DLP today need user interaction that isn’t natively supported by SharePoint Embedded. For instance, based on its configuration, a DLP policy that prevents external sharing might allow end users to provide a business justification to override the policy. The client app that renders this DLP-flagged file item needs to support such user interactions.
 
 Policy tips are shown today for files hosted in SharePoint Online so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can choose to provide more support by utilizing the existing Graph APIs for this purpose.
 

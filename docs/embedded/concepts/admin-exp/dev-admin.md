@@ -1,7 +1,7 @@
 ---
 title: Developer Admin
-description: This article describes the role and responsibilities of Developer Tenant Admin in SharePoint Embedded
-ms.date: 11/28/2023
+description: This article describes the role and responsibilities of Developer Tenant Admin in SharePoint Embedded.
+ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
 # Developer Admin
@@ -16,11 +16,11 @@ A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin.
 
 ### Billing responsibilities of Developer admin
 
-The developer admin will need to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about PAYG for [SharePoint Embedded.](./billing.md).
+The developer admin need to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about PAYG for [SharePoint Embedded.](./billing.md).
 
 ## Administration Tools
 
-Developer admins will be able to manage SharePoint Embedded applications with PowerShell commands using SharePoint Online Management Shell.
+Developer admins are able to manage SharePoint Embedded applications with PowerShell commands using SharePoint Online Management Shell.
 
 To get started using PowerShell to manage SharePoint Embedded, you have to install the SharePoint Online Management Shell and connect to SharePoint Online.
 
@@ -33,6 +33,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 > 
 > If you are a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
+
 ## PowerShell cmdlets for admin experience
 
 ### Creation of container types
@@ -84,8 +85,6 @@ For more information about billing, see [Billing](./billing.md).
 
 ## Roles and Permissions
 
-The user or admin who will set up billing relationship for SharePoint Embedded will need to have owner or contributor permissions on a Azure subscription.
+The user or admin who will set up billing relationship for SharePoint Embedded need to have owner or contributor permissions on an Azure subscription.
 
-If you don't have an Azure subscription, follow steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
-
-
+If you don't have an Azure subscription, follow steps here to [create a subscription.](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
