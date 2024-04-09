@@ -1,9 +1,10 @@
 ---
 title: Consuming Tenant Admin
-description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded
+description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
+
 # Consuming Tenant Admin
 
 > [!IMPORTANT]
@@ -30,9 +31,9 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 ## 1. Application Administration
 
-With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have read and/or write access and the level of access to these SharePoint Embedded applications.
+With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have "read" and/or "write" access and the level of access to these SharePoint Embedded applications.
 
-The following commands can be used manage SharePoint Embedded applications registered on your Microsoft 365 tenants.
+The following commands can be used to manage SharePoint Embedded applications registered on your Microsoft 365 tenants.
 
 ```powershell
 Get-SPOApplication
@@ -46,13 +47,13 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information about using this command, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication)
+OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information about using this command, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
 
 ## 1. Container Administration
 
 ### View Containers
 
-Admins can get a list of all the containers for a SharePoint Embedded application using the following commands. This command will list all the active containers within the application.
+Admins can get a list of all the containers for a SharePoint Embedded application using the following commands. This command lists all the active containers within the application.
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> | FT
@@ -62,7 +63,7 @@ The `OwningApplicationId` is the ID of the SharePoint Embedded application. For 
 
 ### View details of a Container
 
-Admins can get the details of a container within an application using the following command. This command will return more details of a container including StorageUsed, Ownership details, SiteURL, Label information etc.
+Admins can get the details of a container within an application using the following command. This command returns more details of a container including StorageUsed, Ownership details, SiteURL, Label information etc.
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>
@@ -72,9 +73,19 @@ Here, the Identity is the ID of the Container. For more information about using 
 
 ### Delete Containers
 
-When admins deletes a Container, it's moved into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted from the collection, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
+Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container.
 
-Admins should notify the Container owners before you delete a Container so they can move their data to another location, and also inform users when the Container will be deleted.
+- Data Loss: Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app might no longer function as expected or might lose access to critical information.
+- Broken Links: If the SharePoint Embedded application contains links or references to the deleted container, those links become broken, leading to errors or malfunctioning features within the app.
+- Permissions Issues: Deleting a container can affect permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it might encounter permission issues and fail to function properly.
+
+Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues.
+
+### Permanent Deletion
+
+When admins delete a Container, it goes into the Recycle Bin. A deleted container can be restored from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
+
+Admins should notify the Container owners before they delete a Container so they can move their data to another location, and also inform users when the Container will be deleted.
 
 > [!WARNING]
 > Deleting a container may cause unexpected issues for the SharePoint Embedded application the Container belongs to and may interrupt usage of the application.
@@ -111,7 +122,7 @@ Remove-SPODeletedContainer -Identity <ContainerId>
 
 <!-- ## 5. Tenant Administration
 
-SharePoint Online enables admins to manage various tenant-wide settings with the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) PowerShell command. This command allows administrators to modify global settings that impact the behavior and functionality of SharePoint Online for all users in the organization.
+SharePoint Online enables admins to manage various tenant-wide settings with the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) PowerShell command. This command allows administrators to modify global settings that affect the behavior and functionality of SharePoint Online for all users in the organization.
 
 These tenant-wide settings are also applicable to all SharePoint Embedded applications on the tenant. These settings include conditional access policies, BlockDownloadFileTypePolicy, and SharingCapability to name a few. Learn more about the Set-SPOTenant settings here: [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant).
 
@@ -125,10 +136,10 @@ Set-SPOTenant -ContainerSharingCapability <ContainerSharingCapabilities>
 
 > [!NOTE]
 >
-> * External sharing for SharePoint Embedded is defaulted to the tenant setting set with `Set-SPOTenant [-SharingCapability <SharingCapabilities>]`.
-> * External sharing settings for SharePoint Embedded must be equally or more restrictive than the tenant-wide external sharing settings.
+> - External sharing for SharePoint Embedded defaults to the tenant setting set with `Set-SPOTenant [-SharingCapability <SharingCapabilities>]`.
+> - External sharing settings for SharePoint Embedded must be equally or more restrictive than the tenant-wide external sharing settings.
 
-Other unique sharing settings for SharePoint Embedded application include:
+Other unique sharing settings for SharePoint Embedded applications include:
 
 ```powershell
 Set-SPOTenant -ContainerDefaultShareLinkScope

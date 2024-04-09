@@ -14,9 +14,9 @@ The following screenshot shows a list with a Flow button added to the Action col
 
 ![screenshot of the sample](../images/sp-columnformatting-flow.png)
 
-You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  For flows that are [solution-aware](/power-automate/overview-solution-flows), the Flow Launch Panel will be displayed after choosing the button and you must select Run Flow to start the flow. For flows that are not solution-aware, The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
+You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item. For flows that are [solution-aware](/power-automate/overview-solution-flows), the Flow Launch Panel will be displayed after choosing the button and you must select Run Flow to start the flow. For flows that aren't solution-aware, The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
 
-To use the sample below, you must substitute the ID of the Flow you want to run.  This ID is contained within the `actionParams` property of the `customRowAction` attribute inside the `button` element.
+To use the sample below, you must substitute the ID of the Flow you want to run. This ID is contained within the `actionParams` property of the `customRowAction` attribute inside the `button` element.
 
 To obtain the ID of a flow that is solution-aware:
 
@@ -28,7 +28,7 @@ To obtain the ID of a flow that is solution-aware:
 1. Select Export > Get flow identifier.
 1. Copy the ID.
 
-To obtain the ID of a flow that is not solution-aware:
+To obtain the ID of a flow that isn't solution-aware:
 
 1. Select **Flow > See your flows** in the SharePoint list where the Flow is configured.
 1. Select the Flow you want to run.
@@ -82,7 +82,7 @@ On hover - Metadata on the column "Status" is made available in column formattin
 
 ![Preview Image 2](../images/HoverImage-2.png)
 
-You can use formatting to define custom call out that can be commissioned basis user defined actions like click or hover.
+You can use formatting to define custom call out that can be commissioned basis user-defined actions like click or hover.
 
 This example uses `customCardProps`, `openOnEvent`, `directionalHint` and `isBeakVisible`:
 
@@ -271,23 +271,23 @@ A special json property `inlineEditField` is used with value as the field intern
 
 ![Inline Editing using inlineEditField property](../images/sp-columnformatting-inline-editing.gif)
 
-This allows the users to edit items in-place, within the view, without navigating away to grid based editing or to a item edit form.
+This allows the users to edit items in-place, within the view, without navigating away to grid-based editing or to an item edit form.
 
 ### Supported Field Types
 
 List of supported field types for inline editing:
 
 - Single line text
-- Multi line text (without RTF)
+- Multiline text (without RTF)
 - Number
 - DateTime
 - Choice and MultiChoice
-- User and Multi user
+- User and Multiuser
 - Lookup
 
 ### Hover Borders and Customizations
 
-The inline editing adds a hover border on the elements to indicate these elements have an associated action. The default border is `neutralSecondary` , and on click, the editor appears with a `themePrimary` border. These border colors can be overriden via setting style on the same element with `inlineEditField` by using some special attributes - `--inline-editor-border-width`, `--inline-editor-border-style`, `--inline-editor-border-radius`, and `--inline-editor-border-color`.
+The inline editing adds a hover border on the elements to indicate these elements have an associated action. The default border is `neutralSecondary`, and on click, the editor appears with a `themePrimary` border. These border colors can be overridden via setting style on the same element with `inlineEditField` by using some special attributes - `--inline-editor-border-width`, `--inline-editor-border-style`, `--inline-editor-border-radius`, and `--inline-editor-border-color`.
 
 ```json
 {
@@ -305,7 +305,7 @@ The inline editing adds a hover border on the elements to indicate these element
 
 ## Set multiple field values of an Item using customRowAction
 
-With the new `setValue` and `customRowAction` properties, formatters can render action buttons which modify the item internally without opening editors or forms. `setValue` also allows setting multiple field values of the item at once.
+With the new `setValue` and `customRowAction` properties, formatters can render action buttons that modify the item internally without opening editors or forms. `setValue` also allows setting multiple field values of the item at once.
 
 The below JSON will set value of `FieldInternalName_1`, `FieldInternalName_2`, and `FieldInternalName_3`with the values provided:
 
@@ -327,38 +327,42 @@ The below JSON will set value of `FieldInternalName_1`, `FieldInternalName_2`, a
 ### Supported Field Types
 
 - Single line text
-- Multi line text (without RTF)
+- Multiline text (without RTF)
 - Number
 - DateTime
 - Choice and MultiChoice
-- User and Multi user
+- User and Multiuser
 
 ### Value Field values in `actionInput`:
 
 - Text values:
   - a valid string like `"Choice 1"`
-  - value from other columns : `[$ColumnName]`
+  - value from other columns: `[$ColumnName]`
   - an [expression](./formatting-syntax-reference.md#expressions) such as:
 
-    `"if([$column]> 10, "Choice A", "Choice B")"`
+      ```
+      "if([$column]> 10, "Choice A", "Choice B")"
+      ```
 
     or
 
-    `{operator: "+", operands" : ["Choice", "A"]}`
+      ```
+      {operator: "+", operands" : ["Choice", "A"]}
+      ```
 
 - Number:
   - a valid number
-  - value from other columns : `[$ColumnName]`
+  - value from other columns: `[$ColumnName]`
   - an [expression](./formatting-syntax-reference.md#expressions)
 - Date values:
   - a date string
   - `@now` token
-  - [expressions](./formatting-syntax-reference.md#expressions) which return a date using builtin date functions
-  - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference.md#expressions) like 7 days from today
+  - [expressions](./formatting-syntax-reference.md#expressions) that return a date using built-in date functions
+  - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference.md#expressions) like seven days from today
   - an empty string `""` clears the field value
 - Multi-Choice and Multi-Person:
   - Multi value fields are special, as they need an array value to save multiple values.
-  - `appendTo`, `removeFrom`, and `replace`, three functions which can operate on multivalue fields.
+  - `appendTo`, `removeFrom`, and `replace`, three functions that can operate on multivalue fields.
     - `appendTo([$MultiChoiceField], 'MyValue')`
     - `removeFrom([$MultiUserField], @me)`: removes all occurrences that match the second parameter
     - `replace([$MultiChoiceField], 'Choice 1', 'Choice 3')`: replaces all occurrences of second parameter with third.
