@@ -97,7 +97,7 @@ Policy tips are shown today for files hosted in SharePoint Online so that users 
 Global Administrators and SharePoint Administrators can set and remove sensitivity labels on a SharePoint Embedded Container by using the newly created SharePoint PowerShell cmdlet:
 
 ```powershell
-Set -SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
+Set-SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
 ```
 
 To learn more about setting sensitivity labels, see [Learn about sensitivity labels](/purview/sensitivity-labels).
