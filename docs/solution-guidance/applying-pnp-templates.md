@@ -26,8 +26,8 @@ Once the above tools are installed, you can proceed with the following sections.
 
 ## Available templates
 
-The Look Book templates are based on the PnP Provisioning engine. As such, every single template is a `.PNP` (PNP stands for Patterns & Practices) file, which is nothing more than an OpenXML file that includes all the needed content to deploy the template.
-Here follows a table where you can find the list of all the Look Book templates, a link do download the corresponding `.PNP` template file, the configuration parameters, and the prerequisites.
+The Look Book templates are based on the PnP Provisioning engine. As such, every single template is a `.pnp` (pnp stands for Patterns & Practices) file, which is nothing more than an OpenXML file that includes all the needed content to deploy the template.
+Here follows a table where you can find the list of all the Look Book templates, a link do download the corresponding `.pnp` template file, the configuration parameters, and the prerequisites.
 
 Category|Template|Site Type|Parameters|Prerequisites
 --------|--------|---------|----------|-------------
