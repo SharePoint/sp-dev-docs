@@ -57,6 +57,8 @@
       href: declarative-customization/site-design-trigger-flow-tutorial.md
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md
+    - name: Applying PnP Templates to SharePoint Sites
+      href: declarative-customization/site-design-pnp-provisioning.md
     - name: SPO PowerShell cmdlets
       href: declarative-customization/site-design-powershell.md
     - name: PnP PowerShell cmdlets
