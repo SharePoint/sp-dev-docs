@@ -1,7 +1,7 @@
 ---
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
-ms.date: 10/21/2021
+ms.date: 02/13/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -12,7 +12,7 @@ To build and deploy client-side web parts using the SharePoint Framework, you ne
 
 If you already have a Microsoft 365 tenant, see the section [Create app catalog site](#create-app-catalog-site).
 
-If you don't have one, you can get a Microsoft 365 developer subscription when you join the [Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription.
+If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can [sign up for a 1-month free trial or purchase a Microsoft 365 plan](https://www.microsoft.com/en-us/microsoft-365/try).
 
 You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 

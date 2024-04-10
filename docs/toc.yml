@@ -468,6 +468,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.19 - March 27, 2024
+      href: spfx/release-1.19.md      
     - name: SPFx v1.18.2 - November 21, 2023
       href: spfx/release-1.18.2.md
     - name: SPFx v1.18.1 - November 7, 2023
@@ -552,6 +554,8 @@
       href: embedded/concepts/app-concepts/app-architecture.md
     - name: Container Types
       href: embedded/concepts/app-concepts/containertypes.md
+    - name: Register Container Type API
+      href: embedded/concepts/app-concepts/register-api-documentation.md
     - name: Authentication
       href: embedded/concepts/app-concepts/auth.md
     - name: Sharing and Permissions
@@ -576,16 +580,22 @@
         href: embedded/concepts/admin-exp/dev-admin.md
       - name: Billing
         href: embedded/concepts/admin-exp/billing.md
+    - name: Fluid Framework
+      href: embedded/concepts/fluid.md
     - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
   - name: Tutorials
     items:
-    - name: Register Container Type
-      href: embedded/tutorials/register-ct.md
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
+    - name: Using Metadata
+      href: embedded/tutorials/metadata.md
+    - name: Using Document Processing with Azure Cognitive Services
+      href: embedded/tutorials/doc-processing-acs.md
+    - name: Using Webhooks
+      href: embedded/tutorials/using-webhooks.md
   - name: Terms of Service
     href: embedded/terms-of-service.md
   - name: SharePoint Embedded Learning Modules
@@ -666,7 +676,7 @@
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
-  - name: Bot Powered ACEs
+  - name: Bot Powered Adaptive Card Extensions
     items:
     - name: Overview of Bot Powered Adaptive Card Extensions
       href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
@@ -674,6 +684,10 @@
       href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
     - name: Building your first Bot Powered Adaptive Card Extension
       href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
+    - name: Authentication and Authorization in Bot Powered ACEs
+      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
+    - name: Bringing Bot Powered ACEs to the market place
+      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
@@ -972,6 +986,8 @@
     href: sp-add-ins-modernize/from-xslt-to-list-formatting.md
   - name: Transform from remote event receivers to web hooks
     href: sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md
+  - name: Using remote event receivers without having a dependency on Azure ACS
+    href: sp-add-ins-modernize/use-remote-event-receivers-without-azure-acs-dependency.md
   - name: Transform from SharePoint hosted add-ins
     href: sp-add-ins-modernize/from-sharepoint-hosted-to-client-side.md
   - name: Transform from provider hosted add-ins to Azure AD apps

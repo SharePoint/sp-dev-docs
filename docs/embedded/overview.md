@@ -1,13 +1,13 @@
 ---
 title: SharePoint Embedded Overview
-description: Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line of business applications and ISVs building multitenant applications.
+description: Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 
 # Overview of SharePoint Embedded
 
-Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line of business applications and ISVs building multitenant applications.
+Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
 
 ## App documents stay in their Microsoft 365 tenant
 
@@ -19,7 +19,7 @@ SharePoint Embedded applications use Microsoft Graph APIs to store files and doc
 
 SharePoint Embedded containers are dedicated to and accessible by just your app, so the files and documents your app depends on are isolated and secure within that tenant boundary.
 
-## App managed content experiences
+## App-managed content experiences
 
 By default, the content stored within a Microsoft 365 tenant by a SharePoint Embedded application is only accessible through that owning application. SharePoint Embedded applications provide the user experience layer for accessing and managing content, using some of the rich content capabilities that Microsoft 365 offers such as:
 
@@ -47,7 +47,7 @@ This includes settings from Microsoft Purview compliance, risk, and security set
 
 Microsoft 365 customers have different entitlements related to storage, usage, and features depending on the licenses the customer has purchased.
 
-The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage and the number of API calls.
+The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements including the total amount of Microsoft SharePoint storage that can be used by your organization. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage and the number of API calls.
 
 > [!NOTE]
 > Learn more about pricing for SharePoint Embedded, see [Pricing](./terms-of-service.md).
