@@ -17,7 +17,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 In order to provision the look book templates, you need to have the following software tools installed on your machine:
 
-- [PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell)
+- [PowerShell](/powershell/scripting/install/installing-powershell)
 - [PnP PowerShell](https://pnp.github.io/powershell/)
 
 Once the above tools are installed, you can proceed with the following sections.
@@ -82,7 +82,7 @@ Here follows a brief guidance about the meaning of the prerequisites:
 - App Catalog: you need to have a fully functional tenant-wide App Catalog in your target tenant, and you need to execute the provisioning using a user who has admin access to the App Catalog site.
 - Regular user: you can execute the provisioning with a regular user of SharePoint Online. 
 
-> Note: If you don't have the App Catalog configured in your tenant, and the template that you are willing to provision requires the App Catalog, you can follow the instructions provided in this [online document](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant#create-app-catalog-site).
+> Note: If you don't have the App Catalog configured in your tenant, and the template that you are willing to provision requires the App Catalog, you can follow the instructions provided in this [online document](/sharepoint/dev/spfx/set-up-your-developer-tenant#create-app-catalog-site).
 
 ## Provisioning a template
 
