@@ -1,13 +1,13 @@
 ---
 title: Applying PnP Templates to SharePoint Sites
-description: This article explains how to manually provision a Look Book PnP template using PnP PowerShell.
+description: This article explains how to manually provision a look book PnP template using PnP PowerShell.
 ms.date: 04/10/2024
 ms.localizationpriority: high
 ---
 
 # Applying PnP Templates to SharePoint Sites
 
-In this page, you can find detailed information about how to manually provision a Look Book template on your tenant.
+In this page, you can find detailed information about how to manually provision a look book template on your tenant.
 
 You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
@@ -15,7 +15,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 ## Software prerequisites
 
-In order to provision the Look Book templates, you need to have the following software tools installed on your machine:
+In order to provision the look book templates, you need to have the following software tools installed on your machine:
 
 - [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell)
 - [PnP PowerShell](https://pnp.github.io/powershell/)
@@ -26,8 +26,8 @@ Once the above tools are installed, you can proceed with the following sections.
 
 ## Available templates
 
-The Look Book templates are based on the PnP Provisioning engine. As such, every single template is a `.pnp` (pnp stands for Patterns & Practices) file, which is nothing more than an OpenXML file that includes all the needed content to deploy the template.
-Here follows a table where you can find the list of all the Look Book templates, a link do download the corresponding `.pnp` template file, the configuration parameters, and the prerequisites.
+The look book templates are based on the PnP Provisioning engine. As such, every single template is a `.pnp` (pnp stands for Patterns & Practices) file, which is nothing more than an OpenXML file that includes all the needed content to deploy the template.
+Here follows a table where you can find the list of all the look book templates, a link do download the corresponding `.pnp` template file, the configuration parameters, and the prerequisites.
 
 Category|Template|Site Type|Parameters|Prerequisites
 --------|--------|---------|----------|-------------
@@ -118,6 +118,6 @@ Remember to provide a value for all the  parameters declared in the above table.
 
 ## Next Steps
 
-Now that the Look Book template is provisioned on your tenant, feel free to browse to the site URL that you selected and play with the new site.
+Now that the look book template is provisioned on your tenant, feel free to browse to the site URL that you selected and play with the new site.
 
 In there's any issue, don't hesitate to file an issue in the [PnP Provisioning Service repository on GitHub](https://github.com/SharePoint/sp-provisioning-service/issues).
