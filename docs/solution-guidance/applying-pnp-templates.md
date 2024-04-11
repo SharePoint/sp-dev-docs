@@ -116,6 +116,16 @@ Invoke-PnPSiteTemplate -Path .\your-template-file.pnp -Parameters @{"SiteTitle"=
 Replace \<tenant\> with the actual name of your SharePoint Online tenant in Microsoft 365.
 Remember to provide a value for all the  parameters declared in the above table.
 
+#### Example script for applying Learning Pathways solution
+
+This is how the PowerShell script is for applying the Learning Pathways solution which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
+
+```powershell
+Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
+
+Invoke-PnPSiteTemplate -Path c:\temp\M365LP.pnp -Parameters @{"SiteUrl"="/sites/M365LP"}
+```
+
 ## Next Steps
 
 Now that the look book template is provisioned on your tenant, feel free to browse to the site URL that you selected and play with the new site.
