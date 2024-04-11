@@ -73,7 +73,7 @@ Here follows a brief guidance about the parameters:
 - **CommunicationSiteTitle**: is the title of the Consumer Retail Communication Site provisioned on the target tenant for the Global Marketing Hub template.
 - **CommunicationSiteUrl**: is the server-relative URL of the Communication Site provisioned by the template Global Marketing Hub. It can be something like: _/sites/name-of-the-site_.
 - **BenefitsSiteTitle**: is the title of the Communication Site provisioned by the Human Resources Hub template.
-- **BenefitsSiteUrl**: is the server-relative URL of the Communication Siteprovisioned by the Human Resources Hub template. It can be something like: _/sites/name-of-the-site_.
+- **BenefitsSiteUrl**: is the server-relative URL of the Communication Site provisioned by the Human Resources Hub template. It can be something like: _/sites/name-of-the-site_.
 
 
 Here follows a brief guidance about the meaning of the prerequisites:
@@ -118,7 +118,7 @@ Remember to provide a value for all the  parameters declared in the above table.
 
 #### Example script for applying Learning Pathways solution
 
-This is how the PowerShell script is for applying the Learning Pathways solution which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
+This is how the PowerShell script would look like for applying the [Learning Pathways solution](https://learn.microsoft.com/en-us/office365/customlearning/), which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
 
 ```powershell
 Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
