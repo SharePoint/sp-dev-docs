@@ -118,7 +118,7 @@ Remember to provide a value for all the  parameters declared in the above table.
 
 #### Example script for applying Learning Pathways solution
 
-This is how the PowerShell script would look like for applying the [Learning Pathways solution](https://learn.microsoft.com/office365/customlearning/), which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
+This is how the PowerShell script would look like for applying the [Learning Pathways solution](/office365/customlearning/), which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
 
 ```powershell
 Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
