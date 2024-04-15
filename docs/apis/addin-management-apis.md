@@ -46,6 +46,7 @@ POST {adminSiteUrl}/_api/web/AvailableAddIns
 |--------------------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | serverRelativeUrls | no       | string[] | List of the server relative url of sites that want to get the available Add-ins. Maximum size is 500.                                           |    
 | urls               | no       | string[] | List of the url of sites that want to get the available Add-ins, both server relative url and absolute url are acceptable. Maximum size is 500. |    
+
 When urls is not null, serverRelativeUrls will be disregarded.
 
 ### Responses
@@ -118,6 +119,7 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 | serverRelativeUrl | string   | The server relative url of the site collection.                                           |
 | url               | string   | The url of the site collection, both server relative url and absolute url are acceptable. |
 | appIdentifiers    | string[] | The identifier list of the Add-ins.                                                       |
+
 The serverRelativeUrl and url can't be both null. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
@@ -218,6 +220,7 @@ POST {adminSiteUrl}/_api/web/GetAddinPrincipalsHavingPermissionsInSites
 |--------------------|----------|----------|------------------------------------------------------------------------------------------------------------|
 | serverRelativeUrls | no       | string[] | List site collections' server relative url. Maximum size is 500.                                           |
 | urls               | no       | string[] | List site collections' url, both server relative url and absolute url are acceptable. Maximum size is 500. |  
+
 When urls is not null, serverRelativeUrls will be disregarded.
 
 ### Responses
@@ -269,6 +272,7 @@ POST {adminSiteUrl}/_api/web/UninstallAddins
 | serverRelativeUrl | string | The site's server relative url.                                           |
 | url               | string | The site's url, both server relative url and absolute url are acceptable. |
 | appInstanceIds    | Guid[] | The instance ids of the Add-ins.                                          |
+
 The serverRelativeUrl and url can't be both null. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
@@ -316,6 +320,7 @@ POST {adminSiteUrl}/_api/web/GetAddinUninstallJobDetail
 | jobId             | yes      | Guid   | This uninstall job id.                                                     |
 | serverRelativeUrl | no       | string | The site's server relative url.                                            |
 | url               | no       | string | The site's url, both server relative url and absolute url are acceptable.  |
+
 The serverRelativeUrl and url can't be both null. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
