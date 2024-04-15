@@ -42,6 +42,7 @@ POST {adminSiteUrl}/_api/web/AvailableAddIns
 
 ### Request body
 
+
 | Name               | Required | Type     | Description                                                                                                                                     |
 |--------------------|----------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | serverRelativeUrls | no       | string[] | List of the server relative url of sites that want to get the available Add-ins. Maximum size is 500.                                           |    
