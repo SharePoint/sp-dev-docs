@@ -121,7 +121,6 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 The serverRelativeUrl and url can't be both null. If both serverRelativeUrl and url are provided, the url will be used.
 
 ### Responses
-``
 | Name             | Type                          | Description                                                           |
 |------------------|-------------------------------|-----------------------------------------------------------------------|
 | addinPermissions | SPAddinPermissionInfo[]       | The returned permissions.                                             |
