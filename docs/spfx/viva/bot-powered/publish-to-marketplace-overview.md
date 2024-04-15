@@ -19,7 +19,7 @@ Bot Powered ACEs enable existing Microsoft Teams developers, with existing bot i
 
 > [!Note]
 >
-> - Bot Powered ACEs require the [Teams app manifest version](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) 1.17 or higher, which is coming soon. The current devPreview schema can be already be used to build and test your Bot Powered ACEs so that you're ready to switch to version 1.17 and submit to the market place once 1.17 becomes available.
+> - Bot Powered ACEs require the [Teams app manifest version](https://learn.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) 1.17 or higher.
 > - We're working on support for bringing "stand-alone" Bot Powered ACEs to the market place and will update this guidance whenever that change happens.
 
 Market place acceptance criteria overview:
