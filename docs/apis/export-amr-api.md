@@ -19,6 +19,8 @@ The SharePoint Asynchronous Metadata Read (AMR) API asynchronously exports metad
 
 Use AMR API to export metadata from SharePoint, for incremental migration, post-migration validation, and creating structures.
 
+AMR is designed exclusively for import scenarios. It exhibits poor scalability when handling requests for metadata, permissions, or versions. We can't provide performance assurances for AMR usage in data export scenarios, such as cross-tenant migrations.
+
 ## What's new
 
 ### January 2024
@@ -84,11 +86,11 @@ This example shows how to export metadata from nested folders with over 1 millio
 
 ## Performance
 
-AMR API processes jobs through a queue mechanism with pre-configured workload management settings. AMR API processes the jobs on a best-effort basis, without Service Level Agreement (SLA) or guaranteed performance.
+AMR API processes jobs through a queue mechanism with preconfigured workload management settings. AMR API processes the jobs on a best-effort basis, without Service Level Agreement (SLA) or guaranteed performance.
 
 ### Lab-tested performance baseline
 
-We have completed preliminary performance tests in lab setting. AMR API exported about 400 items per second for every 250-K objects, in the average case. The peak performance reached 700 items per second.
+We tested the performance in lab setting. AMR API exported about 400 items per second for every 250-K objects, in the average case. The peak performance reached 700 items per second.
 
 There are multiple factors that affect the real-life performance. These factors include:
 
@@ -103,3 +105,9 @@ In order to ensure optimal performance for your migration projects, it's importa
 ### I'm seeing throttling messages
 
 To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
+
+### Tenant-to-Tenant migrations
+
+AMR isn't intended for scenario where contents from a SharePoint tenant are moved to another. This type of migration requires the use of many resource-heavy read options. The long processing time of these read options slows down the overall migration significantly.
+
+Microsoft provides no performance guarantee in this scenario. Use Graph or CSOM as needed.
