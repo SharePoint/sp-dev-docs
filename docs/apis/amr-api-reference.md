@@ -18,7 +18,7 @@ Manage dependencies easily and ensure your solution is using the latest version 
 
 Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID ``Microsoft.SharePointOnline.CSOM``.
 
-Check [Get to know SharePoint REST service](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
+Check [Get to know SharePoint REST service](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
 
 ## CreateSPAsyncReadJob method
 
@@ -86,7 +86,7 @@ Default value is `false`.
 
 If set to `true`, AMR API reads only the metadata of the direct descendants.
 
-Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when reading metadata from a Document Library containing large number of items, as described in [Best practice](read-amr-api.md#read-security-and-permissions-on-top-level-if-possible) to avoid slow performance.
+Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when reading metadata from a Document Library containing large number of items, as described in [Best practice](export-amr-api.md#read-security-and-permissions-on-top-level-if-possible) to avoid slow performance.
 
 ##### IncludeExtendedMetadata
 
@@ -167,7 +167,7 @@ A `EncryptionOption` object, containing the AES256CBCKey used to decrypt the out
 
 By default, AMR API doesn't encrypt the output and event queue. If set with AES256CBCKey, AMR API encrypts the output with the key supplied.
 
-See `[EncryptionOption](https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
+See `[EncryptionOption](/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
 
 #### azureContainerManifestUri
 
@@ -175,7 +175,7 @@ Required.
 
 A **String** value, which is the destination URL of the Azure Blob Storage Container containing the output manifest package.
 
-See [Azure](../migration-azure.md) for instructions of using Azure Blob Storage Container in migration.
+See [Azure](migration-azure.md) for instructions of using Azure Blob Storage Container in migration.
 
 #### azureQueueReportUri
 
@@ -185,7 +185,7 @@ A **String** value, which is the URL of the Azure Queue to receive read status m
 
 Share `azureQueueReportUri` among different jobs if necessary. AMR API returns `JobID` to identify individual jobs created.
 
-See [Azure](../migration-azure.md) for instructions of using Azure Queue in migration. Check [Migration events in Azure Queue](events.md) for types of events.
+See [Azure](migration-azure.md) for instructions of using Azure Queue in migration. Check [Migration events in Azure Queue](migration-events.md) for types of events.
 
 ### CreateSPAsyncReadJob return values
 
@@ -193,7 +193,7 @@ See [Azure](../migration-azure.md) for instructions of using Azure Queue in migr
 
 A **Guid** value, which contains Job ID, the unique identifier of the migration job. The method returns a ``null`` value, if it fails to create the job.
 
-AMR API generates a `JobEnd` event when it estimates item count for each `url`. Check [Events](events.md#jobend) for details.
+AMR API generates a `JobEnd` event when it estimates item count for each `url`. Check [Events](migration-events.md) for details.
 
 #### AzureContainerManifest
 
