@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Asynchronous Metadata Read (AMR) API Introduction"
 description: This document is an overview on how to read metadata from SharePoint, targeted to SharePoint migration tool developers.
-ms.date: 01/16/2024
+ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
 manager: dapodean

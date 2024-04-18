@@ -1,3 +1,18 @@
+---
+title: "SharePoint Asynchronous Metadata Read (AMR) API Reference Guide"
+description: "This article provides in depth information on how to use the SharePoint AMR API."
+ms.date: 04/18/2024
+ms.author: ranren
+author: underreview
+manager: dapodean
+audience: ITPro
+ms.subservice: migration-tool
+ms.topic: article
+ms.localizationpriority: high
+ms.collection:
+  - SPMigration
+  - m365-collaboration
+---
 # SharePoint Asynchronous Metadata Read (AMR) API Reference Guide
 
 Use this document as the guide when using SharePoint Asynchronous Metadata Read (AMR) API.

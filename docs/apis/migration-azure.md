@@ -18,7 +18,7 @@ Migration API destroys Used containers 30-90 days after completed migration jobs
 
 #### Decorate the traffic to avoid throttling
 
-[Decorate your HTTP traffic](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic) to avoid throttling.
+[Decorate your HTTP traffic](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic) to avoid throttling.
 
 #### Encryption
 

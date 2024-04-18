@@ -1,3 +1,18 @@
+---
+title: "Migration events in Azure Queue"
+description: "This article provides in depth information on how to use Azure Queue events in migration."
+ms.date: 04/18/2024
+ms.author: ranren
+author: underreview
+manager: dapodean
+audience: ITPro
+ms.subservice: migration-tool
+ms.topic: article
+ms.localizationpriority: high
+ms.collection:
+  - SPMigration
+  - m365-collaboration
+---
 # Migration events in Azure Queue
 
 This document lists all types of events Migration API and AMR API write to the Azure Queue. Use these events to get status updates on migration jobs.
