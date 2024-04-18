@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the focus feature
 description: Step by step guide on how to create an Adaptive Card Extension with the focus feature.
-ms.date: 04/04/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with focus feature
@@ -25,7 +25,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Before moving forward, update the title and description fields of your ACE to give it a personal touch.
+Before moving forward, update the `title` and `description` fields of your ACE to give it a personal touch.
 
 ```json
 {
@@ -57,25 +57,7 @@ Before moving forward, update the title and description fields of your ACE to gi
 }
 ```
 
-## Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-At this point, if you do **gulp serve**, then you'll see the **FocusFeature** card:
+Next, run **gulp serve** from the command line in the root of the project to start the build and debugging process. In the hosted workbench, you'll see the **FocusFeature** card:
 
 ![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 

@@ -19,55 +19,55 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
 1. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
-1. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
+1. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file: [https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json](https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json)
 
-   ```powershell
-    $site_script = '
-    {
-        "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
-            "actions": [
-                {
-                    "verb": "createSPList",
-                    "listName": "Customer Tracking",
-                    "templateType": 100,
-                    "subactions": [
-                        {
-                            "verb": "setDescription",
-                            "description": "List of Customers and Orders"
-                        },
-                        {
-                            "verb": "addSPField",
-                            "fieldType": "Text",
-                            "displayName": "Customer Name",
-                            "isRequired": false,
-                            "addToDefaultView": true
-                        },
-                        {
-                            "verb": "addSPField",
-                            "fieldType": "Number",
-                            "displayName": "Requisition Total",
-                            "addToDefaultView": true,
-                            "isRequired": true
-                        },
-                        {
-                            "verb": "addSPField",
-                            "fieldType": "User",
-                            "displayName": "Contact",
-                            "addToDefaultView": true,
-                            "isRequired": true
-                        },
-                        {
-                            "verb": "addSPField",
-                            "fieldType": "Note",
-                            "displayName": "Meeting Notes",
-                            "isRequired": false
-                        }
-                    ]
-                }
-            ]
-    }
-    '
-   ```
+    ```powershell
+     $site_script = '
+     {
+       "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+         "actions": [
+           {
+             "verb": "createSPList",
+             "listName": "Customer Tracking",
+             "templateType": 100,
+             "subactions": [
+               {
+                 "verb": "setDescription",
+                 "description": "List of Customers and Orders"
+               },
+               {
+                 "verb": "addSPField",
+                 "fieldType": "Text",
+                 "displayName": "Customer Name",
+                 "isRequired": false,
+                 "addToDefaultView": true
+               },
+               {
+                 "verb": "addSPField",
+                 "fieldType": "Number",
+                 "displayName": "Requisition Total",
+                 "addToDefaultView": true,
+                 "isRequired": true
+               },
+               {
+                 "verb": "addSPField",
+                 "fieldType": "User",
+                 "displayName": "Contact",
+                 "addToDefaultView": true,
+                 "isRequired": true
+               },
+               {
+                 "verb": "addSPField",
+                 "fieldType": "Note",
+                 "displayName": "Meeting Notes",
+                 "isRequired": false
+               }
+             ]
+           }
+         ]
+     }
+     '
+    ```
 
 The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site template) if applied programmatically using the `Invoke-SPOSiteDesign` command. If they are applied through the UI or using the `Add-SPOSiteDesignTask` command then the limit is 300 cumulative actions (or 100K characters).
 
@@ -102,13 +102,12 @@ C:\> Add-SPOSiteDesign
 
 The previous cmdlet creates a new site template named Contoso customer tracking.
 
-| Parameter            | Value                | Site template type |
-| :------------------- | :------------------- |:----------------|
-| WebTemplate  | 64 | Team site template |
-| WebTemplate  | 1 | Team site (with group creation disabled) |
-| WebTemplate  | 68 | Communication site template |
-| WebTemplate    | 69 | Channel site template |
-
+|  Parameter  | Value |            Site template type            |
+| :---------- | :---- | :--------------------------------------- |
+| WebTemplate | 64    | Team site template                       |
+| WebTemplate | 1     | Team site (with group creation disabled) |
+| WebTemplate | 68    | Communication site template              |
+| WebTemplate | 69    | Channel site template                    |
 
 The JSON response displays the **ID** of the new site template. You can use it in subsequent cmdlets to update or modify the site template.
 
@@ -156,7 +155,6 @@ You can also use the `Set-SPOHubSite` cmdlet. Review the [PowerShell cmdlets for
 
 >[!NOTE]
 > [Channel sites](/sharepoint/teams-connected-sites) are automatically blocked from joining a hub site.
-
 
 ## See also
 

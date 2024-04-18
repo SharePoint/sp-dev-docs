@@ -7,12 +7,7 @@ ms.localizationpriority: high
 
 # Configure Default Launch Experience for your Office Files
 
-## In this article:
-
-1. [Launch Office in 'View' or 'Edit' mode'](#configure-launch-mode-of-office-clients)
-1. [Launch Desktop Clients Directly](#open-office-files-directly-in-desktop-clients)
-
-## Configure Launch mode of Office Clients
+## Configure the Launch mode of Office Clients
 
 When retrieving a `DriveItem` from the Microsoft Graph API with:
 
@@ -26,7 +21,7 @@ The `webUrl` property in the response can be a link to Web Application Open Plat
 https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true
 ```
 
-This `webUrl` will open WOPI in the default mode (`action=default`). If you wish to override the default mode to force a specific mode (e.g. View for read-only and Edit for editor), you can augment the `webUrl` like this:
+This `webUrl` will open WOPI in the default mode (`action=default`). If you wish to override the default mode to force a specific mode (for example, View for read-only and Edit for editor), you can augment the `webUrl` like this:
 
 ```csharp
 string webUrl = https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true;
@@ -52,7 +47,7 @@ To open your files directly in the Office desktop clients, you need to create an
 
 Use the following table to replace the segments above:
 
-- **scheme-name**: the name of application, for example: *ms-excel*
+- **scheme-name**: the name of the application, for example: *ms-excel*
 - **command-name**:
   - `ofv` for Open File View
   - `ofe` for Open File Edit

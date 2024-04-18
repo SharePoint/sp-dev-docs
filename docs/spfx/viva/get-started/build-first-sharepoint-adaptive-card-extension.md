@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 09/12/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension
@@ -29,31 +29,6 @@ When prompted, enter the following values (*select the default option for all pr
 - **What is your Adaptive Card Extension name?** HelloWorld
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
-
-### Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-> [!TIP]
-> You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
->
-> ```console
-> gulp serve --nobrowser
-> ```
 
 ## Serve the ACE in the workbench
 
@@ -192,7 +167,7 @@ As part of the `cardViewParameters` property, you can specify the following:
 - **footer**: Footer components for the card view.
 
 > [!NOTE]
-> The card views for Adaptive Card templates are limited to predefined [permutations](../permutations) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
+> The card views for Adaptive Card templates are limited to predefined [permutations](../design/designing-card.md) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
 
 Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 

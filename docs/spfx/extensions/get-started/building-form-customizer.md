@@ -1,7 +1,7 @@
 ---
 title: Build your first Form customizer extension
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type.
-ms.date: 07/21/2022
+ms.date: 12/14/2023
 ms.custom: scenarios:getting-started
 ---
 
@@ -124,7 +124,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
       "port": 4321,
       "https": true,
       "serveConfigurations": {

@@ -64,13 +64,13 @@ The column is represented by specifying the **internal name** of the field surro
 
 While the formula supports many of the available column types, we do not currently support the following column types:
 
-* Person or Group with multiple selections
-* Choice with multiple selections
-* Time calculations in Date and Time column
-* Currency columns
-* Location columns
-* Calculated columns
-* Managed Metadata columns
+- Person or Group with multiple selections
+- Choice with multiple selections
+- Time calculations in Date and Time column
+- Currency columns
+- Location columns
+- Calculated columns
+- Managed Metadata columns
 
 #### Quick formula reference
 
@@ -136,7 +136,6 @@ The following formula checks if the Yes/No column `[$Promoted]` is equal to a Ye
 
 > [!NOTE]
 > When accessing lookup columns in column or view formatting, you have access to the lookup value and lookup id as separate values. In form formatting and conditional field expressions, both values are returned as a single line of text. For instance, a lookup column referencing an item with item ID 1 (in the source list) with a value of `Toronto` will have a value of `1;#Toronto` when used in form formatting or conditional field expressions.
-
 
 The following formula checks if the lookup column `[$City]` has a value equal to *Toronto*. To do so, it splits the lookup value result by the separator and checks against the value.
 

@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 03/08/2023
+ms.date: 12/14/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
@@ -25,25 +25,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-At this point, if you do **gulp serve**, then you'll see the **MediaUpload** card:
+Next, run **gulp serve** from the command line in the root of the project. When the hosted workbench loads, you'll see the **MediaUpload** card:
 
 ![See the MediaUpload card icon in the webpart toolbox](./img/mediaUploadTutorialACE.PNG)
 
@@ -51,9 +33,7 @@ At this point, if you do **gulp serve**, then you'll see the **MediaUpload** car
 
 At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick views.
 
-In the Card View, we'll provide a button that will perform the following actions:
-
-- Upload an image file
+In the Card View, we'll provide a button that will perform the following actions: **Upload an image file**
 
 ### Update the labels that will show up on the card
 

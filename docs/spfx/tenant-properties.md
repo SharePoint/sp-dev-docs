@@ -219,13 +219,13 @@ m365 spo storageentity remove --key <key>
 
 ## Custom script and site collection app catalogs
 
-It's only allowed to set tenant properties on site collection app catalogs in sites that have custom scripts enabled. When you try to set a tenant property in a "no-script site", the following error will be shown:
+It's only allowed to set tenant properties on site collection app catalogs in sites that have custom scripts enabled. When you try to set a tenant property in a "no-script site", the following error is shown:
 
 `Access denied. You do not have permission to perform this action or access this resource.`
 
 You can learn more about custom scripts here: [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
-The error message will also be shown if you aren't owner or site collection administrator of the site.
+The error message will be shown if you aren't owner or site collection administrator of the site.
 
 ## See also
 

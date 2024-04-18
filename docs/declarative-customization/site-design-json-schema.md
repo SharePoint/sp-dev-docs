@@ -432,7 +432,7 @@ Associates a ListViewCommandSet to the list
 #### JSON values
 
 - `title`: The title of the extension.
-- `location`: A required parameter to specify where the command is displayed. Options are: ContextMenu or CommandBar.
+- `location`: A required parameter to specify where the command is displayed. Options are: ClientSideExtension.ListViewCommandSet.ContextMenu or ClientSideExtension.ListViewCommandSet.CommandBar.
 - `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
 
@@ -466,7 +466,7 @@ Associates a ListViewCommandSet to the list
       {
         "verb": "associateListViewCommandSet",
         "title": "HelloWorld",
-        "location": "CommandBar",
+        "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
         "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
         "clientSideComponentProperties": "{\"sampleText\":\"added by a site template\"}"
       }

@@ -1,7 +1,7 @@
 ---
 title:  Tutorials and training for SharePoint Development
 description: Different tutorials and other resources around SharePoint development.
-ms.date: 06/28/2022
+ms.date: 02/13/2024
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
@@ -12,7 +12,7 @@ Here are the different tutorials and training assets available for you to get st
 
 ## Setting up your development environment
 
-- [Set up your Office 365 tenant](/sharepoint/dev/spfx/set-up-your-developer-tenant) | [video](https://www.youtube.com/watch?v=yc1IYgYp7qQ&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq) - Includes how to get a free tenant from Microsoft 365 developer program
+- [Set up your Microsoft 365 tenant](/sharepoint/dev/spfx/set-up-your-developer-tenant) | [video](https://www.youtube.com/watch?v=yc1IYgYp7qQ&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq)
 - [Set up development environment](/sharepoint/dev/spfx/set-up-your-development-environment) | [video](https://www.youtube.com/watch?v=-2-jWsEa2Yw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=2) - Install needed tooling to get started
 
 ## Getting started tutorials for SharePoint Framework
