@@ -59,12 +59,12 @@ Migration generates workload to the SPO backend differently from end user genera
 
 Don't use user mode in your migration solution. Running migration in user mode triggers increased throttling, resulting in poor performance.
 
-To learn more on how to register an app ID and how to implement app-based authentication, check [How to register an app ID](https://learn.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-registration-portal) and [Microsoft Graph Auth guidance](https://learn.microsoft.com/en-us/graph/auth).
+To learn more on how to register an app ID and how to implement app-based authentication, check [How to register an app ID](/azure/active-directory/develop/active-directory-v2-registration-portal) and [Microsoft Graph Auth guidance](/graph/auth).
 
 ### Microsoft Entra ID Permissions
 
 Microsoft Entra ID provides two type of permission: Delegated Permission and Application Permissions. Check[
-Permissions and consent in the Azure Active Directory v1.0 endpoint](https://learn.microsoft.com/en-us/azure/active-directory/develop/v1-permissions-and-consent) for details.
+Permissions and consent in the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/v1-permissions-and-consent) for details.
 
 For SharePoint and OneDrive migration scenarios, follow the Microsoft Entra ID permission specification.
 
@@ -86,7 +86,7 @@ Migration API processes jobs through a queue mechanism with pre-configured workl
 
 ### Optimize migration performance
 
-In order to ensure optimal performance for your migration projects, it's important to plan carefully, especially when dealing with large-scale migrations. For more information on how to estimate timespans and optimize performance, see our [performance guide](https://learn.microsoft.com/en-us/sharepointmigration/sharepoint-online-and-onedrive-migration-speed).
+In order to ensure optimal performance for your migration projects, it's important to plan carefully, especially when dealing with large-scale migrations. For more information on how to estimate timespans and optimize performance, see our [performance guide](/sharepointmigration/sharepoint-online-and-onedrive-migration-speed).
 
 ### I'm seeing throttling messages
 
@@ -96,8 +96,8 @@ To ensure good user experiences for all Microsoft 365 customers, SharePoint uses
 
 ### Migrating sharing events of files and folders
 
-Check [Sharing events](https://learn.microsoft.com/en-us/sharepoint/dev/apis/migration-api-shared) article for instructions when migrating shared events metadata with files and folders.
+Check [Sharing events](/sharepoint/dev/apis/migration-api-shared) article for instructions when migrating shared events metadata with files and folders.
 
 ### Web Parts
 
-Use SPMT's Web Part serializer DLL to migrate Web Parts into SharePoint. Check [Migrate Web Parts](https://learn.microsoft.com/en-us/sharepoint/dev/apis/migrate-webparts-with-migrationapi) for instructions.
+Use SPMT's Web Part serializer DLL to migrate Web Parts into SharePoint. Check [Migrate Web Parts](/sharepoint/dev/apis/migrate-webparts-with-migrationapi) for instructions.

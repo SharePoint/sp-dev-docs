@@ -47,15 +47,105 @@ TotalRetryCount:0
 MigrationType:None
 MigrationDirection:Import
 CorrelationId:c308c0ea-a7f5-4be9-acd4-1ebd39867434
-JobProgress
-JobId:845daca4-5529-4b0e-85ab-a603efee5b12Time:09/29/2020 19:56:32.265FilesCreated:15BytesProcessed:45ObjectsProcessed:217TotalExpectedSPObjects:403TotalErrors:0TotalWarnings:0TotalRetryCount:0MigrationType:NoneMigrationDirection:ImportWaitTimeOnSqlThrottlingMilliseconds:0TotalDurationInMs:0CpuDurationInMs:0SqlDurationInMs:0SqlQueryCount:0CreatedOrUpdatedFileStatsBySize:{"0-1K":{"Count":15,"TotalSize":45,"TotalDownloadTime":251,"TotalCreationTime":6754}}ObjectsStatsByType:{"SPUser":{"Count":1,"TotalTime":289,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFolder":{"Count":2,"TotalTime":144,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPDocumentLibrary":{"Count":1,"TotalTime":173,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFile":{"Count":200,"TotalTime":6765,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPListItem":{"Count":14,"TotalTime":2111,"AccumulatedVersions":0,"ObjectsWithVersions":0}}TotalExpectedBytes:0CorrelationId:ccd97e9f-a0cc-0000-ceb9-37a900bec68d
 ```
 
-## JobEnd
+## JobProgress
 
 ```log
-JobId:16d658cf-ecd3-485f-9c9e-1ca268565e24Time:09/29/2020 20:29:38.180FilesCreated:200BytesProcessed:600ObjectsProcessed:403TotalExpectedSPObjects:403TotalErrors:0TotalWarnings:0TotalRetryCount:0MigrationType:NoneMigrationDirection:ImportWaitTimeOnSqlThrottlingMilliseconds:0TotalDurationInMs:372294.0861CpuDurationInMs:17351SqlDurationInMs:98359SqlQueryCount:1998CreatedOrUpdatedFileStatsBySize:{"0-1K":{"Count":200,"TotalSize":600,"TotalDownloadTime":15448,"TotalCreationTime":275662}}ObjectsStatsByType:{"SPUser":{"Count":1,"TotalTime":44,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFolder":{"Count":2,"TotalTime":108,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPDocumentLibrary":{"Count":1,"TotalTime":50,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFile":{"Count":200,"TotalTime":293628,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPListItem":{"Count":200,"TotalTime":76541,"AccumulatedVersions":0,"ObjectsWithVersions":0}}TotalExpectedBytes:0CorrelationId:59db7e9f-a003-0000-ceb9-300001119ee3
+JobId:845daca4-5529-4b0e-85ab-a603efee5b12
+Time:09/29/2020 19:56:32.265
+FilesCreated:15
+BytesProcessed:45
+ObjectsProcessed:217
+TotalExpectedSPObjects:403
+TotalErrors:0
+TotalWarnings:0
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+WaitTimeOnSqlThrottlingMilliseconds:0
+TotalDurationInMs:0
+CpuDurationInMs:0
+SqlDurationInMs:0
+SqlQueryCount:0
+CreatedOrUpdatedFileStatsBySize:
+{
+  "0-1K": {
+    "Count": 15,
+    "TotalSize": 45,
+    "TotalDownloadTime": 251,
+    "TotalCreationTime": 6754
+  }
+}
+ObjectsStatsByType:
+{
+  "SPUser": {
+    "Count": 1,
+    "TotalTime": 289,
+    "AccumulatedVersions": 0,
+    "ObjectsWithVersions": 0
+  },
+  "SPFolder": {
+    "Count": 2,
+    "TotalTime": 144,
+    "AccumulatedVersions": 0,
+    "ObjectsWithVersions": 0
+  },
+  "SPDocumentLibrary": {
+    "Count": 1,
+    "TotalTime": 173,
+    "AccumulatedVersions": 0,
+    "ObjectsWithVersions": 0
+  },
+  "SPFile": {
+    "Count": 200,
+    "TotalTime": 6765,
+    "AccumulatedVersions": 0,
+    "ObjectsWithVersions": 0
+  },
+  "SPListItem": {
+    "Count": 14,
+    "TotalTime": 2111,
+    "AccumulatedVersions": 0,
+    "ObjectsWithVersions": 0
+  }
+}
+TotalExpectedBytes:0
+CorrelationId:ccd97e9f-a0cc-0000-ceb9-37a900bec68d
 ```
+
+## JobEnd (Import)
+
+```json
+{
+"Event": "JobEnd",
+"JobId": "aed28dcc-efc3-46c3-89f2-b5df71ccfe85",
+"Time": "04/11/2024 14:51:53.531",
+"FilesCreated": "5",
+"BytesProcessed": "260999",
+"ObjectsProcessed": "6",
+"TotalErrors": "2",
+"TotalWarnings": "0",
+"FilesCreatedIrrespectiveOfVersions": "1",
+"BytesProcessedOnlyCurrentVersion": "111001"
+}
+```
+
+### **FilesCreatedIrrespectiveOfVersions** property
+
+An integer.
+
+The number of files created, exclusive of file versions. If a file has multiple versions, this count increases by 1 only when all the versions are migrated.
+
+List items are not counted in this property.
+
+### **BytesProcessedOnlyCurrentVersion** property
+
+An integer. The bytes processed with last version of the file. If a file has multiple versions, this byte count increases only when all the versions are migrated.
+
+List items are not counted in this property.
+
+## JobEnd (AMR)
 
 AMR API generates `JobEnd` event with estimation of item counts in `TotalExpectedSPObjects` field:
 
@@ -77,14 +167,38 @@ MigrationDirection:Export
 ## JobDeleted
 
 ```log
-JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecdTime:09/29/2020 19:56:29.053CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68JobCancelled
-JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecdTime:09/29/2020 19:58:29.053TotalRetryCount:0CancelledByUser:falseMigrationType:NoneMigrationDirection:ImportCorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:56:29.053
+CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
+```
+
+### JobCancelled
+
+```log
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:58:29053
+TotalRetryCount:0
+CancelledByUser:false
+MigrationType:None
+MigrationDirection:Import
+CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
 ```
 
 ## JobError
 
 ```log
-JobId:b427d8d7-2b91-4da0-aee5-4b5a5a5d867eTime: 02/05/2019 06:56:09.732TotalRetryCount:0MigrationType:NoneMigrationDirection:ImportObjectType:FileUrl:Shared Documents/file.pdfId:fae7b4b0-2912-11e9-b0f3-7b554a52d6abErrorCode:-2147024816ErrorType:Microsoft.SharePoint.SPExceptionMessage:ErrorMessageCorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
+JobId:b427d8d7-2b91-4da0-aee5-4b5a5a5d867e
+Time: 02/05/2019 06:56:09.732
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+ObjectType:File
+Url:Shared Documents/file.pdf
+Id:fae7b4b0-2912-11e9-b0f3-7b554a52d6ab
+ErrorCode:-2147024816
+ErrorType:Microsoft.SharePoint.SPException
+Message:ErrorMessage
+CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
 ```
 
 ## JobFatalError

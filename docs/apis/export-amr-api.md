@@ -100,7 +100,7 @@ There are multiple factors that affect the real-life performance. These factors 
 
 ### Optimize migration performance
 
-In order to ensure optimal performance for your migration projects, it's important to plan carefully, especially when dealing with large-scale migrations. For more information on how to estimate timespans and optimize performance, see our [performance guide](https://learn.microsoft.com/en-us/sharepointmigration/sharepoint-online-and-onedrive-migration-speed).
+In order to ensure optimal performance for your migration projects, it's important to plan carefully, especially when dealing with large-scale migrations. For more information on how to estimate timespans and optimize performance, see our [performance guide](/sharepointmigration/sharepoint-online-and-onedrive-migration-speed).
 
 ### I'm seeing throttling messages
 
