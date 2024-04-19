@@ -1,3 +1,18 @@
+---
+title: "Preparing the content for Migration API"
+description: "This article provides in depth information on how to use create and use manifest packages with SharePoint Migration API"
+ms.date: 04/18/2024
+ms.author: ranren
+author: underreview
+manager: dapodean
+audience: ITPro
+ms.subservice: migration-tool
+ms.topic: article
+ms.localizationpriority: high
+ms.collection:
+  - SPMigration
+  - m365-collaboration
+---
 
 # XML manifest files
 
@@ -5,7 +20,7 @@ Migration API relies on XML manifest files to process the content import correct
 
 ## XML Validation
 
-The package structure for Manifest files is based on a constrained version of [SharePoint Content Migration Schemas](https://learn.microsoft.com/en-us/sharepoint/dev/schema/content-migration-schemas).
+The package structure for Manifest files is based on a constrained version of [SharePoint Content Migration Schemas](/sharepoint/dev/schema/content-migration-schemas).
 
 ## Encoding invalid XML characters
 

@@ -1,3 +1,18 @@
+---
+title: "Preparing the content for Migration API"
+description: "This article provides in depth information on how to use create and use content packages with SharePoint Migration API"
+ms.date: 04/18/2024
+ms.author: ranren
+author: underreview
+manager: dapodean
+audience: ITPro
+ms.subservice: migration-tool
+ms.topic: article
+ms.localizationpriority: high
+ms.collection:
+  - SPMigration
+  - m365-collaboration
+---
 
 # Preparing the content for Migration API
 
@@ -39,7 +54,7 @@ Migration API imports ``.zip`` files as compressed archive files if referenced i
 
 Migrate small files in batch for improved performance. Migration API **optionally** uncompresses a compressed ``.zip`` archive to improve the performance, based on manifest in ``ArchivedFiles.xml``.
 
-Include ``QuickXorHash`` value of the archive when using this feature. Compute it with [QuickXorHash Algorithm](https://learn.microsoft.com/onedrive/developer/code-snippets/quickxorhash).
+Include ``QuickXorHash`` value of the archive when using this feature. Compute it with [QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash).
 
 Migration API processes non-archived files in ``Manifest.xml`` without manifest in ``ArchiveFiles.xml`` as usual.
 

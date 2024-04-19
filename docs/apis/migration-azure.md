@@ -1,3 +1,19 @@
+---
+title: "Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API"
+description: "This article provides in depth information on how to use the SharePoint Migration API with Azure Containers and Queues."
+ms.date: 04/18/2024
+ms.author: ranren
+author: underreview
+manager: dapodean
+audience: ITPro
+ms.subservice: migration-tool
+ms.topic: article
+ms.localizationpriority: high
+ms.collection:
+  - SPMigration
+  - m365-collaboration
+---
+
 # Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API
 
 Use Azure Blob Storage Containers to store contents, manifest files and logs. Access migration status updates with Azure Queues.

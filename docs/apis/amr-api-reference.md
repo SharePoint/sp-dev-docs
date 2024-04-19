@@ -101,7 +101,7 @@ Default value is `false`.
 
 If set to `true`, AMR API reads only the metadata of the direct descendants.
 
-Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when reading metadata from a Document Library containing large number of items, as described in [Best practice](export-amr-api.md#read-security-and-permissions-on-top-level-if-possible) to avoid slow performance.
+Use this `readOption` along with `IncludeSecurity` `readOption` together to improve performance when reading metadata from a Document Library containing large number of items, as described in [Best practice](export-amr-api.md) to avoid slow performance.
 
 ##### IncludeExtendedMetadata
 
