@@ -1,5 +1,5 @@
 ---
-title: "Preparing the content for Migration API"
+title: "Preparing the manifest for Migration API"
 description: "This article provides in depth information on how to use create and use manifest packages with SharePoint Migration API"
 ms.date: 04/18/2024
 ms.author: ranren
