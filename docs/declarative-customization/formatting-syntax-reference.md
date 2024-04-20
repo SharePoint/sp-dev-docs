@@ -750,7 +750,7 @@ For examples, see [Formatting multi-value fields](column-formatting.md#formattin
 
 **String related operators** - Some of the previously detailed operators can be used when working with string values:
 
-- `\+`
+- `+`
 - `indexOf` (*for string length workaround*)
 
 `+` can be used when there's a need to concatenate strings, for instance:
