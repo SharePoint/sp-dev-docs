@@ -14,12 +14,12 @@ Specifies the type of element to create. Valid elements include:
 - `div`
 - `span`
 - `a`
-- `[img](#img-src-security)`
+- [`img`](#img-src-security)
 - `svg`
 - `path`
 - `button`
 - `p`
-- `[filepreview](#filepreview)`
+- [`filepreview`](#filepreview)
 
 Any other value will result in an error.
 
@@ -546,17 +546,17 @@ The following example contains an Expression object that performs the expression
 
 Operators specify the type of operation to perform. Valid operator values include:
 
-- `\+`
-- `\-`
+- `+`
+- `-`
 - `/`
-- `\*`
+- `*`
 - `<`
-- `\>`
-- `\%`
+- `>`
+- `%`
 - `==`
 - `!=`
 - `<=`
-- `\>=`
+- `>=`
 - `||`
 - `&&`
 - `toString()`
@@ -599,17 +599,17 @@ Operators specify the type of operation to perform. Valid operator values includ
 
 **Binary arithmetic operators** - The standard arithmetic binary operators that expect two operands include are:
 
-- `\+`
-- `\-`
+- `+`
+- `-`
 - `/`
-- `\*`
+- `*`
 - `<`
-- `\>`
-- `\%`
+- `>`
+- `%`
 - `==`
 - `!=`
 - `<=`
-- `\>=`
+- `>=`
 
 **Unary operators** - The standard unary operators that expect only one operand are:
 
