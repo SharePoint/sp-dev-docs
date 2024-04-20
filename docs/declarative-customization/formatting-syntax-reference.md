@@ -590,6 +590,7 @@ Operators specify the type of operation to perform. Valid operator values includ
 - `replaceAll`
 - `padStart`
 - `padEnd`
+- `getThumbnailImage`
 - `getUserImage`
 - `addDays`
 - `addMinutes`
