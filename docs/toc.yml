@@ -2171,6 +2171,8 @@
       href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
     - name: Provisioning Tenant Templates
       href: solution-guidance/pnp-provisioning-tenant-templates.md
+    - name: Applying PnP Templates to SharePoint Sites
+      href: solution-guidance/applying-pnp-templates.md
     - name: PnP Open XML File format
       href: solution-guidance/the-pnp-office-open-xml-file-format.md
     - name: PnP provisioning schema

@@ -81,31 +81,6 @@ The client-side toolchain uses HTTPS endpoints by default. Part of the [Set up y
 >
 > If you didn't trust the dev cert, follow the steps outlined on this page: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
 
-### Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `tenantDomain` to the URL of your SharePoint tenant. For example: `https://contoso.sharepoint.com/_layouts/workbench.aspx`.
-
-> [!TIP]
-> You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
->
-> ```console
-> gulp serve --nobrowser
-> ```
-
 ### Start the local web server & launch the hosted workbench
 
 Assuming you've installed & trusted developer certificate, execute the following command in the console to build and preview your web part:
@@ -115,11 +90,6 @@ gulp serve
 ```
 
 This command executes a series of gulp tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment.
-
-> [!NOTE]
-> If you're seeing issues working with the hosted workbench, please see details on installing a developer certificate: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
->
-> If you're still seeing issues, see: [SharePoint Framework known issues and frequently asked questions](../../known-issues-and-common-questions.yml)
 
 ```console
 gulp serve

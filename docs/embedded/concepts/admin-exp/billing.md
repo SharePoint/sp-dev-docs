@@ -1,15 +1,15 @@
 ---
 title: PAYG billing for SharePoint Embedded
 description: This article explains how to set up PAYG billing
-ms.date: 11/28/2023
+ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded  Billing experience
 
-This document outlines the steps an admin will have to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded.
+This document outlines the steps an admin has to follow to set up billing, evaluate actual and forecast costs, and pay invoices on SharePoint Embedded.
 
-SharePoint Embedded  will be a consumption based Pay-as-you-go (PAYG) offering from SharePoint Online, which means you'll pay only for what you use. As a Developer admin for SharePoint Embedded, you'll set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal.
+SharePoint Embedded  will be a consumption based Pay-as-you-go (PAYG) offering from SharePoint Online, which means you pay only for what you use. As a Developer admin for SharePoint Embedded, you set up billing on a container type using SharePoint Online Management Shell and manage forecast of actual costs and invoices in Microsoft Azure portal.
 
 ![Billing pay-as-you-go.](../../images/billing-manage.png)
 
@@ -23,8 +23,8 @@ To enable PAYG on SharePoint Embedded, you need:
 
 ## Roles and Permissions
 
-- Admin who will set up billing relationship for SharePoint Embedded  will need to have owner or contributor permissions on Azure subscription.
-- Admin will need to have a SharePoint administrator role to operate billing cmdlets.
+- Admin who sets up billing relationship for SharePoint Embedded need to have owner or contributor permissions on Azure subscription.
+- Admin needs to have a SharePoint Embedded Administrator role to operate billing cmdlets.
 
 ## Steps to establish billing
 
