@@ -30,7 +30,7 @@ To reference the SharePoint Client Side Object Model (CSOM) in your solution, us
 
 Manage dependencies easily and ensure your solution is using the latest version of the CSOM library with NuGet packages.
 
-Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID ``Microsoft.SharePointOnline.CSOM``.
+Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID `Microsoft.SharePointOnline.CSOM`.
 
 Check [Get to know SharePoint REST service](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
 
@@ -78,37 +78,37 @@ A **String** value that contains the valid URI, including SAS token, to access t
 
 See [Azure](migration-azure.md) for instructions of using Azure Blob Storage Containers in migration.
 
-Requires ``Read``, and ``List`` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
+Requires `Read`, and `List` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
 
 #### azureContainerManifestUri
 
 Required.
 
-A **String** value that contains the valid URI, including SAS token, to access the Azure Blob Storage Container, which contains the block blobs for the manifest and other package describing XML files. Migration API writes log to this container. This container can't be the same as the one used for the ``azureContainerSourceUri``.
+A **String** value that contains the valid URI, including SAS token, to access the Azure Blob Storage Container, which contains the block blobs for the manifest and other package describing XML files. Migration API writes log to this container. This container can't be the same as the one used for the `azureContainerSourceUri`.
 
 See [Azure](migration-azure.md) for instructions of using Azure Blob Storage Containers in migration.
 
-Requires ``Read``, ``List``, and ``Write`` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
+Requires `Read`, `List`, and `Write` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
 
 #### azureQueueReportUri
 
 Optional.
 
-A **String** value that contains the valid URL, including SAS token, to access the user-provided Azure Queue for migration job progress. Use ``null`` if receiving import status updates isn't necessary.
+A **String** value that contains the valid URL, including SAS token, to access the user-provided Azure Queue for migration job progress. Use `null` if receiving import status updates isn't necessary.
 
-If this value isn't ``null``, and the SAS token contains the correct permissions, Migration API writes import status updates to the queue at the URL provided.
+If this value isn't `null`, and the SAS token contains the correct permissions, Migration API writes import status updates to the queue at the URL provided.
 
 Share the notification queue among multiple migration jobs. Migration API identifies each job with unique Job ID values in the notification queue.
 
 See [Azure](migration-azure.md) for instructions of using Azure Queue in migration. Check [Migration events in Azure Queue](migration-events.md) for types of events.
 
-Requires ``Add``, ``Read``, and ``Update`` permissions only. If the SAS token has other permissions, the migration job will be unable to add events to the queue.
+Requires `Add`, `Read`, and `Update` permissions only. If the SAS token has other permissions, the migration job will be unable to add events to the queue.
 
 ### CreateMigrationJob return value
 
 #### Job ID
 
-A **Guid** value, which contains Job ID, the unique identifier of the migration job. The method returns a ``null`` value, if it fails to create the job. Use Job ID to query the status of migration jobs with ``GetMigrationJobStatus`` method.
+A **Guid** value, which contains Job ID, the unique identifier of the migration job. The method returns a `null` value, if it fails to create the job. Use Job ID to query the status of migration jobs with `GetMigrationJobStatus` method.
 
 ### Example
 
@@ -189,11 +189,11 @@ public SPMigrationJobState GetMigrationJobStatus(Guid MigrationJobId)
 
 Required.
 
-A **Guid** value, which contains the migration Job ID, returned from ``CreateMigrationJob``.
+A **Guid** value, which contains the migration Job ID, returned from `CreateMigrationJob`.
 
 ### GetMigrationJobStatus return value
 
-A ``SPMigrationJobState`` object, which contains the status of the migration job.
+A `SPMigrationJobState` object, which contains the status of the migration job.
 
 ### GetMigrationJobStatus example
 
