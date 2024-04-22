@@ -1,6 +1,6 @@
 ---
 title: "Preparing the manifest for Migration API"
-description: "This article provides in depth information on how to use create and use manifest packages with SharePoint Migration API"
+description: "This article provides in-depth information on how to use create and use manifest packages with SharePoint Migration API"
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -16,7 +16,7 @@ ms.collection:
 
 # XML manifest files
 
-Migration API relies on XML manifest files to process the content import correctly. Create manifest files in well-defined format. AMR API also exports metadata in this format.
+Migration API relies on XML manifest files to process the content import correctly. Create manifest files in a well-defined format. AMR API also exports metadata in this format.
 
 ## XML Validation
 
@@ -26,7 +26,7 @@ The package structure for Manifest files is based on a constrained version of [S
 
 AMR API encodes invalid XML characters in fields. Decode the attributes listed in `EncodedAttributes`.
 
-Migration API doesn't support invalid XML characters encoding.
+Migration API doesn't support invalid XML character encoding.
 
 ### Example
 
@@ -88,33 +88,33 @@ Used to process archived small files in batch.
 
 Required.
 
-An xml file contains the export settings specified with the```SPExportSettings``` and other classes. It also specifies the export settings, used in the subsequent import process at the migration target site. It also maintains a catalog of all objects exported to the migration package.
+An XML file contains the export settings specified with the `SPExportSettings` and other classes. It also specifies the export settings, used in the subsequent import process at the migration target site. It also maintains a catalog of all objects exported to the migration package.
 
 ### Ignore Web Parts
 
-Migration API checks and processes SharePoint Web Parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, bypass these checks by setting ```IgnoreWebParts``` to ```true```. This practice improves the performance of migration tasks when not migrating Web Parts.
+Migration API checks and processes SharePoint Web Parts in certain types of files. For sources other than SharePoint Server and SharePoint Online, bypass these checks by setting `IgnoreWebParts` to `true`. This practice improves the performance of migration tasks when not migrating Web Parts.
 
 ### Specify content source
 
-Migration API requires a ```SourceType``` value, containing the source of the content. It should contain a value from the following list:
+Migration API requires a `SourceType` value, containing the source of the content. It should contain a value from the following list:
 
-#### Accepted ```SourceType``` values
+#### Accepted `SourceType` values
 
-- ``AmazonS3``
-- ``AzureStorage``
-- ``Box``
-- ``Dropbox``
-- ``Egnyte``
-- ``FileShare``
-- ``GoogleCloudStorage``
-- ``GoogleDrive``
-- ``MicrosoftStream``
-- ``OneDrive``
-- ``SharePointOnline``
-- ``SharePointOnPremServer``
-- ``Other``
+- `AmazonS3`
+- `AzureStorage`
+- `Box`
+- `Dropbox`
+- `Egnyte`
+- `FileShare`
+- `GoogleCloudStorage`
+- `GoogleDrive`
+- `MicrosoftStream`
+- `OneDrive`
+- `SharePointOnline`
+- `SharePointOnPremServer`
+- `Other`
 
-When declaring to ```Other```, include an extra ```DetailedSource``` value to provide more detail on the content source information.
+When declaring to `Other`, include an extra `DetailedSource` value to provide more detail on the content source information.
 
 ### ExportSettings.xml Example
 
@@ -130,9 +130,9 @@ When declaring to ```Other```, include an extra ```DetailedSource``` value to pr
 
 Optional.
 
-An XML manifest file that maintains a simple lookup list, which records all SharePoint List Item references. Place it at the root of the Azure Blob Store Container defined by the ```CreateMigrationJob```’s ```azureContainerManifestUri``` parameter.
+An XML manifest file that maintains a simple lookup list, which records all SharePoint List Item references. Place it at the root of the Azure Blob Store Container defined by the `CreateMigrationJob`’s `azureContainerManifestUri` parameter.
 
-Not required if the Import Package doesn't contain Defining Fields or Views on a List or Document Library. Omission of this file generates a warning message in the log. Include a file with a childless ``root`` node to avoid this warning message.
+Not required if the import package doesn't contain Defining Fields or Views on a List or Document Library. The omission of this file generates a warning message in the log. Include a file with a childless `root` node to avoid this warning message.
 
 ## Manifest.xml
 
@@ -140,11 +140,11 @@ Required.
 
 An XML manifest file that contains the complete list of both the contents and the structure of the content package. Migration API uses this manifest file to reconstitute the source and its components.
 
-Place all instances of the Manifest.xml file for a package at the root of the Azure Blob Store Container.
+Place all instances of the **Manifest.xml** file for a package at the root of the Azure Blob Store Container.
 
-This manifest file is also the primary descriptor for metadata within the package, and provides the List, Folder and Item hierarchy, along with metadata for the items including references back to users and groups defined in ``UserGroupMap.xml`` file.
+This manifest file is also the primary descriptor for metadata within the package, and provides the List, Folder, and Item hierarchy, along with metadata for the items including references back to users and groups defined in **UserGroupMap.xml** file.
 
-Use more than one ``Manifest.xml`` if needed. The manifests are identified with different file names. Migration API locates all manifests through references in ```SystemData.xml``` file’s ```ManifestFile``` entries.
+Use more than one **Manifest.xml** if needed. The manifests are identified with different file names. Migration API locates all manifests through references in **SystemData.xml** file’s `ManifestFile` entries.
 
 ### Document Library/List ID consistency
 
@@ -176,7 +176,7 @@ Contains the list of all defined Roles on the Web.
 
 #### Role object
 
-Defines a Role with ID, internal permissions rights mask flags and display information.
+Defines a Role with ID, internal permissions rights mask flags, and display information.
 
 ##### RoleId value
 
@@ -199,7 +199,7 @@ Includes the list of distinct Assignment objects (if any).
 Contains the actual membership of one distinct User or Group and their actual Role, where
 
 - RoleId values map to the RoleId values of the Role objects.
-- PrincipalId values map to ID values of User or Group objects respectively in ``UserGroups.xml``.
+- PrincipalId values map to ID values of User or Group objects respectively in **UserGroups.xml**.
 
 #### Permissions Example
 
@@ -241,7 +241,7 @@ SharePoint Server usually generates this XML manifest file. It contains a list o
 - language packs
 - and so forth.
 
-Include no child node under the root for file shares. Omission of this file generates a warning message in the log.
+Include no child node under the root for file shares. The omission of this file generates a warning message in the log.
 
 ## RootObjectMap.xml
 
@@ -249,31 +249,31 @@ Optional.
 
 Maintains a list of mappings of secondary (dependent) objects. Migration API uses this manifest file to correctly place dependent objects.
 
-The most common ``RootObject`` included is a single object of type List. The ``ID`` of this item should be the List ```ID``` of the target list, and the ``ParentWebID`` should match the ``ID`` of the parent target web containing this list in order for migration to be successful. The ``ID``, ``WebUrl`` and ``Url`` values of this object must also match the related structure laid out in the ``Manifest.xml`` file.
+The most common `RootObject` included is a single object of type List. The `ID` of this item should be the List `ID` of the target list, and the `ParentWebID` should match the `ID` of the parent target web containing this list in order for migration to be successful. The `ID`, `WebUrl`, and `Url` values of this object must also match the related structure laid out in the **Manifest.xml** file.
 
 ## SystemData.xml
 
 Required.
 
-Contains various low-level system data. It also records the number and paths of ``Manifest.xml`` files in the manifest package, when there are multiple manifests.
+Contains various low-level system data. It also records the number and paths of **Manifest.xml** files in the manifest package, when there are multiple manifests.
 
 ### Versions
 
-```SchemaVersion``` references to the current ```Build``` and ```DatabaseVersion``` of the target farm, currently “15.0.0.0”.
+`SchemaVersion` references to the current `Build` and `DatabaseVersion` of the target farm, currently “15.0.0.0”.
 
-```SiteVersion``` should match the target site collection ```UIVersion```, currently ```15```.
+`SiteVersion` should match the target site collection `UIVersion`, currently `15`.
 
 ### Multiple Manifests
 
-List all ```Manifest.xml``` files in the package in ```SystemData.xml```, as ```ManifestFile``` entries.
+List all **Manifest.xml** files in the package in **SystemData.xml**, as `ManifestFile` entries.
 
 ### Immutable SystemObjects
 
-List all ```SystemObjects``` defining dependent objects that remain immutable by Migration API.
+List all `SystemObjects` defining dependent objects that remain immutable by Migration API.
 
 ### SystemData.xml example
 
-This example ``SystemData.xml`` file shows the common objects from a file share import. Use different ``ID``s for each package, and the ``URL``s may be different.
+This example **SystemData.xml** file shows the common objects from a file share import. Use different `ID`s for each package, and the `URL`s may be different.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -296,9 +296,9 @@ This example ``SystemData.xml`` file shows the common objects from a file share 
 
 Required.
 
-Records Users and User Security Groups for managing permissions. Migration API uses manifest to ascertain the membership of Users and Groups, along with their roles and specific assignments. These assignments include unique permissions set at the level of the object and its offspring, unless a deeper child object overrides them.
+Records Users and User Security Groups for managing permissions. Migration API uses the manifest to ascertain the membership of Users and Groups, along with their roles and specific assignments. These assignments include unique permissions set at the level of the object and its offspring, unless a deeper child object overrides them.
 
-User or Group entries aren't mandatory, but omission prevents author or security information from population during import. Migration API generates warnings in such case.
+User or Group entries aren't mandatory, but omission prevents author or security information from the population during import. Migration API generates warnings in such cases.
 
 ### User identifiers
 
@@ -308,7 +308,7 @@ Manifest all Users and Groups within the exported Web(s).
 
 #### User object
 
-Includes the information about specific Users, including identification of a specific security principle as a domain group or not, sign in, and the base64 encoded SystemId (SID) of the security principle.
+Includes the information about specific Users, including identification of a specific security principle as a domain group or not, sign-in, and the base64 encoded SystemId (SID) of the security principle.
 
 #### Group object
 
@@ -340,29 +340,29 @@ The following example shows how to manifest Users and Groups.
 </UserGroupMap>
 ```
 
-Make sure Sign-in and SystemId values of users match the values in SharePoint.
+Make sure the Sign-in and SystemId values of users match the values in SharePoint.
 
 ### Deleted Users
 
-Include an ``IsDeleted`` value as ``true`` for deleted accounts. This practice prevents lookup failures in the import process, which negatively impacts performance.
+Include an `IsDeleted` value as `true` for deleted accounts. This practice prevents lookup failures in the import process, which negatively impacts performance.
 
 ### Unresolved User identifiers
 
-If Migration API is unable to resolve a User with the Sign-in information, and SystemId **is not** provided, Migration API replaces this User with ``System Account`` in the associated metadata (such as Author or Editor) in the package, and generates a warning in the import logs:
+If Migration API is unable to resolve a User with the Sign-in information, and SystemId **is not** provided, Migration API replaces this User with `System Account` in the associated metadata (such as Author or Editor) in the package and generates a warning in the import logs:
 
-```log
+```text
 Failed to ensure user 'user@contoso.com'
 ```
 
 If Migration API is unable to resolve a User with the Sign-in while the SystemId **is** provided, Migration API creates a new deleted User with the provided Sign-in and SystemId. Migration API uses this User with associated metadata within the package. Migration API generates a warning in the import logs:
 
-```log
+```text
 Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values
 ```
 
 ### Avoid non-UPN email addresses in User identifiers
 
-The ``Login`` attribute of the User identifier requires a UPN. **Do not use** non-UPN email addresses. Using non-UPN email addresses causes unexpected behavior in SharePoint Online.
+The `Login` attribute of the User identifier requires a UPN. **Do not use** non-UPN email addresses. Using non-UPN email addresses causes unexpected behavior in SharePoint Online.
 
 ### Examples
 
@@ -383,7 +383,7 @@ This example manifests the User only once, with a UPN email address.
 
 #### Incorrect example
 
-This example **incorrectly** uses a non-UPN email address and **incorrectly** includes more than identifier for a single user.
+This example **incorrectly** uses a non-UPN email address and **incorrectly** includes more than one identifier for a single user.
 
 ```xml
 <User Id="1" Login="i:0#.f|membership|robert@contoso.com" …/>
@@ -402,4 +402,4 @@ Optional.
 
 This XML manifest file maintains a list of Web Parts and tracks whether each is a view or form.
 
-This file is optional if the Import Package doesn't contain Web Parts. The omission of this file generates a warning message in the log. Alternatively, include a manifest file with a childless ``root`` node to avoid the warning message.
+This file is optional if the Import Package doesn't contain Web Parts. The omission of this file generates a warning message in the log. Alternatively, include a manifest file with a childless `root` node to avoid the warning message.
