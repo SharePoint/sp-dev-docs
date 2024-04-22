@@ -81,7 +81,7 @@ This example shows how to export metadata from nested folders with over 1 millio
 
 - Use `CreateSPAsyncReadJob` method at the root URL, for example: `www.contoso.com/my-resource-document`, and set **readOption** `IncludeDirectDescendantsOnly` to `true`.
 - Utilize `SMTotalFileCount` attribute to get the file count in folders.
-- Continue to use `createSPAsyncReadJob` method at subfolder level, on each of the sub folders, if the folder has more than 10,000 items.
+- Continue to use `createSPAsyncReadJob` method at subfolder level, on each of the subfolders, if the folder has more than 10,000 items.
 - Use `CreateSPAsyncReadJobWithMultiUrl` method, combining subfolders with less than 10,000 items.
 
 ## Performance
