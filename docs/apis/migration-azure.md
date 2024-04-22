@@ -66,19 +66,19 @@ public SPProvisionedMigrationContainersInfo ProvisionMigrationContainers()
 
 ##### Return values
 
-An ``SPProvisionedMigrationContainersInfo`` object, containing the URI, access tokens and encryption key of the provisioned containers.
+An `SPProvisionedMigrationContainersInfo` object, containing the URI, access tokens and encryption key of the provisioned containers.
 
 ###### DataContainerUri value
 
 A **Uri** value containing the URI of the newly created container for storing migration **content**, along with the SAS access token.
 
-Pass this value to ``CreateMigrationJob`` method as ``azureContainerSourceUri`` parameter.
+Pass this value to `CreateMigrationJob` method as `azureContainerSourceUri` parameter.
 
 ###### MetadataContainer value
 
 A **Uri** value containing the URI of the newly created container for storing **manifest** files, along with the SAS access token.
 
-Pass this value to ``CreateMigrationJob`` method as ``azureContainerManifestUri`` parameter.
+Pass this value to `CreateMigrationJob` method as `azureContainerManifestUri` parameter.
 
 ###### EncryptionKey
 
@@ -90,7 +90,7 @@ You can also provide your own Azure Blob Storage Containers. Provide the URI wit
 
 ## Azure Queues
 
-SharePoint-provided Azure Queues have no extra cost to the customer. Provision the queue with ``ProvisionMigrationQueue`` method, without the need to manually setup in Azure admin console.
+SharePoint-provided Azure Queues have no extra cost to the customer. Provision the queue with `ProvisionMigrationQueue` method, without the need to manually setup in Azure admin console.
 
 Migration API provisions Azure Queues in the same datacenter of the SharePoint instance.
 
@@ -123,13 +123,13 @@ public SPProvisionedMigrationQueueInfo ProvisionMigrationQueue()
 
 #### Return value
 
-A ``SPProvisionedMigrationQueueInfo`` object containing the information of the newly created Azure Queue.
+A `SPProvisionedMigrationQueueInfo` object containing the information of the newly created Azure Queue.
 
 ##### JobQueueUri value
 
-A ``Uri`` value containing the URI and SAS access token of the newly created Azure Queue.
+A `Uri` value containing the URI and SAS access token of the newly created Azure Queue.
 
-Pass this value to ``CreateMigrationJob`` method's ``azureQueueReportUri`` parameter.
+Pass this value to `CreateMigrationJob` method's `azureQueueReportUri` parameter.
 
 ## Use endpoints in Azure Government
 
@@ -137,5 +137,5 @@ Use Azure Government endpoints for Microsoft 365 Government.
 
 ### Required endpoints in Azure Government
 
-- ``https://*.blob.core.usgovcloudapi.net``
-- ``https://*.queue.core.usgovcloudapi.net``
+- `https://*.blob.core.usgovcloudapi.net`
+- `https://*.queue.core.usgovcloudapi.net`
