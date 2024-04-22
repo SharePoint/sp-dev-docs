@@ -1,6 +1,6 @@
 ---
 title: "Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API"
-description: "This article provides in depth information on how to use the SharePoint Migration API with Azure Containers and Queues."
+description: "This article provides in-depth information on how to use the SharePoint Migration API with Azure Containers and Queues."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -16,9 +16,9 @@ ms.collection:
 
 # Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API
 
-Use Azure Blob Storage Containers to store contents, manifest files and logs. Access migration status updates with Azure Queues.
+Use Azure Blob Storage Containers to store contents, manifest files, and logs. Access migration status updates with Azure Queues.
 
-This guide provides provisioning, permission and other requirements with SharePoint-provided Azure resources.
+This guide provides provisioning, permission, and other requirements with SharePoint-provided Azure resources.
 
 ## Azure Blob Storage Containers
 
@@ -26,11 +26,11 @@ Migration API uses Azure Blob Storage Containers for temporary storage of conten
 
 ### Using SharePoint-provided containers
 
-SharePoint-provided containers have no extra cost to the customer. Provision SharePoint-provided containers with ``ProvisionMigrationContainers`` method, without the need to manually setup in Azure admin console.
+SharePoint-provided containers have no extra cost to the customer. Provision SharePoint-provided containers with `ProvisionMigrationContainers` method, without the need to manually set up in the Azure admin console.
 
 Migration API provisions the containers in the same datacenter of the SharePoint instance. Migration API uses a container exclusively once for each request, to ensure security.
 
-Migration API destroys Used containers 30-90 days after completed migration jobs.
+Migration API destroys Used containers 30-90 days after completing migration jobs.
 
 #### Decorate the traffic to avoid throttling
 
@@ -66,7 +66,7 @@ public SPProvisionedMigrationContainersInfo ProvisionMigrationContainers()
 
 ##### Return values
 
-An `SPProvisionedMigrationContainersInfo` object, containing the URI, access tokens and encryption key of the provisioned containers.
+An `SPProvisionedMigrationContainersInfo` object, containing the URI, access tokens, and encryption key of the provisioned containers.
 
 ###### DataContainerUri value
 
@@ -90,7 +90,7 @@ You can also provide your own Azure Blob Storage Containers. Provide the URI wit
 
 ## Azure Queues
 
-SharePoint-provided Azure Queues have no extra cost to the customer. Provision the queue with `ProvisionMigrationQueue` method, without the need to manually setup in Azure admin console.
+SharePoint-provided Azure Queues have no extra cost to the customer. Provision the queue with `ProvisionMigrationQueue` method, without the need to manually set up in Azure admin console.
 
 Migration API provisions Azure Queues in the same datacenter of the SharePoint instance.
 
