@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Import Migration API"
-description: "This article provides in depth information on how to use the SPO Migration API."
+description: "This article provides in-depth information on how to use the SPO Migration API."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -31,19 +31,19 @@ Start a migration job with three steps. Check the guidance in each of the steps 
 
 ### Prepare the content
 
-Package the contents in the defined format and upload to Azure Blob Storage Containers as the content package.
+Package the contents in the defined format and upload them to Azure Blob Storage Containers as the content package.
 
 Check [Content package](migration-content-package.md) to see the detailed requirements.
 
 ### Create the manifest files
 
-Based on the contents, create manifest files in XML format, and upload to Azure Blob Storage Containers as the manifest package.
+Based on the contents, create manifest files in XML format, and upload them to Azure Blob Storage Containers as the manifest package.
 
 Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
-### Use Migration API to start migration and get status
+### Use Migration API to start the migration and get status
 
-Use `ProvisionMigrationContainers` method to provision the containers, upload the content package and Manifest into respective containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
+Use `ProvisionMigrationContainers` method to provision the containers, upload the content package, and manifest into respective containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
@@ -55,7 +55,7 @@ Migration API generates logs in the manifest container. Check the log entries fo
 
 ### Use app-based authentication
 
-Migration generates workload to the SPO backend differently from end user generated traffic. To properly allocate resources with our elastic capability, only use app-based authentication in your migration solution.
+Migration generates workload to the SPO backend differently from end user-generated traffic. To properly allocate resources with our elastic capability, only use app-based authentication in your migration solution.
 
 Don't use user mode in your migration solution. Running migration in user mode triggers increased throttling, resulting in poor performance.
 
@@ -63,18 +63,18 @@ To learn more on how to register an app ID and how to implement app-based authen
 
 ### Microsoft Entra ID Permissions
 
-Microsoft Entra ID provides two type of permission: Delegated Permission and Application Permissions. Check[
+Microsoft Entra ID provides two types of permission: Delegated Permission and Application Permissions. Check[
 Permissions and consent in the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/v1-permissions-and-consent) for details.
 
 For SharePoint and OneDrive migration scenarios, follow the Microsoft Entra ID permission specification.
 
-For migration tools that rely on end user signed in and presence, use Delegated permission.
+For migration tools that rely on end-user signed in and presence, use Delegated permission.
 
 For service-based migration tools that run without a signed-in user present, such as applications that run as background services, use Application permission.
 
 ### App IDs
 
-You can choose to share a single App ID to cover multiple migration solutions created, or create individual App ID for each of the products. Make sure to register App IDs. Sharing App IDs doesn't affect performance or throttling.
+You can choose to share a single App ID to cover multiple migration solutions created or create individual App ID for each of the products. Make sure to register App IDs. Sharing App IDs doesn't affect performance or throttling.
 
 ### Keep destination SPO site unactivated
 
