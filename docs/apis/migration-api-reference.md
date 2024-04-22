@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Migration API Reference Guide"
-description: "This article provides in depth information on how to use the SharePoint Migration API."
+description: "This article provides in-depth information on how to use the SharePoint Migration API."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -74,9 +74,9 @@ A **String** value that contains the unique identifier of the destination web ta
 
 Required.
 
-A **String** value that contains the valid URI, including SAS token, to access the Azure Blob Storage Container that contains the binary files of type block.
+A **String** value that contains the valid URI, including the SAS token, to access the Azure Blob Storage Container that contains the binary files of type block.
 
-See [Azure](migration-azure.md) for instructions of using Azure Blob Storage Containers in migration.
+See [Azure](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
 
 Requires `Read`, and `List` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
 
@@ -84,9 +84,9 @@ Requires `Read`, and `List` permissions only. Ensure that the start time of the 
 
 Required.
 
-A **String** value that contains the valid URI, including SAS token, to access the Azure Blob Storage Container, which contains the block blobs for the manifest and other package describing XML files. Migration API writes log to this container. This container can't be the same as the one used for the `azureContainerSourceUri`.
+A **String** value that contains the valid URI, including the SAS token, to access the Azure Blob Storage Container, which contains the block blobs for the manifest and other packages describing XML files. Migration API writes log to this container. This container can't be the same as the one used for the `azureContainerSourceUri`.
 
-See [Azure](migration-azure.md) for instructions of using Azure Blob Storage Containers in migration.
+See [Azure](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
 
 Requires `Read`, `List`, and `Write` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
 
@@ -94,13 +94,13 @@ Requires `Read`, `List`, and `Write` permissions only. Ensure that the start tim
 
 Optional.
 
-A **String** value that contains the valid URL, including SAS token, to access the user-provided Azure Queue for migration job progress. Use `null` if receiving import status updates isn't necessary.
+A **String** value that contains the valid URL, including the SAS token, to access the user-provided Azure Queue for migration job progress. Use `null` if receiving import status updates isn't necessary.
 
 If this value isn't `null`, and the SAS token contains the correct permissions, Migration API writes import status updates to the queue at the URL provided.
 
 Share the notification queue among multiple migration jobs. Migration API identifies each job with unique Job ID values in the notification queue.
 
-See [Azure](migration-azure.md) for instructions of using Azure Queue in migration. Check [Migration events in Azure Queue](migration-events.md) for types of events.
+See [Azure](migration-azure.md) for instructions on using Azure Queue in migration. Check [Migration events in Azure Queue](migration-events.md) for types of events.
 
 Requires `Add`, `Read`, and `Update` permissions only. If the SAS token has other permissions, the migration job will be unable to add events to the queue.
 
@@ -114,17 +114,17 @@ A **Guid** value, which contains Job ID, the unique identifier of the migration 
 
 ```csharp
 Guid MigrationJobId = TargetSite.CreateMigrationJob(
-TargetWebId, 
-azureContainerSourceUri, 
-azureContainerManifestUri, 
+TargetWebId,
+azureContainerSourceUri,
+azureContainerManifestUri,
 azureQueueReportUri);
 ```
 
 ## CreateMigrationJobEncrypted method
 
-Creates a new migration import job with encrypted PRIME package.
+Creates a new migration import job with an encrypted PRIME package.
 
-Check the encryption instructions in [Azure]](migration-azure.md) for Azure Blob Storage Container and Azure Queue encryption used.
+Check the encryption instructions in [Azure](migration-azure.md) for Azure Blob Storage Container and Azure Queue encryption used.
 
 ### CreateMigrationJobEncrypted syntax
 
@@ -179,7 +179,7 @@ Migration API removes completed migration jobs from the timer job queue. Check t
 ### GetMigrationJobStatus syntax
 
 ```csharp
-[ClientNS.ClientCallableMethod] 
+[ClientNS.ClientCallableMethod]
 public SPMigrationJobState GetMigrationJobStatus(Guid MigrationJobId)
 ```
 
@@ -189,7 +189,7 @@ public SPMigrationJobState GetMigrationJobStatus(Guid MigrationJobId)
 
 Required.
 
-A **Guid** value, which contains the migration Job ID, returned from `CreateMigrationJob`.
+A **Guid** value, which contains the migration Job ID, is returned from `CreateMigrationJob`.
 
 ### GetMigrationJobStatus return value
 
