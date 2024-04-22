@@ -1,6 +1,6 @@
 ---
 title: "Migration events in Azure Queue"
-description: "This article provides in depth information on how to use Azure Queue events in migration."
+description: "This article provides in-depth information on how to use Azure Queue events in migration."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -15,7 +15,7 @@ ms.collection:
 ---
 # Migration events in Azure Queue
 
-This document lists all types of events Migration API and AMR API write to the Azure Queue. Use these events to get status updates on migration jobs.
+This document lists all types of events Migration API and AMR API written to the Azure Queue. Use these events to get status updates on migration jobs.
 
 ## JobQueued
 
@@ -152,13 +152,13 @@ An integer.
 
 The number of files created, exclusive of file versions. If a file has multiple versions, this count increases by 1 only when all the versions are migrated.
 
-List items are not counted in this property.
+List items aren't counted in this property.
 
 ### **BytesProcessedOnlyCurrentVersion** property
 
-An integer. The bytes processed with last version of the file. If a file has multiple versions, this byte count increases only when all the versions are migrated.
+An integer. The bytes are processed with the last version of the file. If a file has multiple versions, this byte count increases only when all the versions are migrated.
 
-List items are not counted in this property.
+List items aren't counted in this property.
 
 ## JobEnd (AMR)
 
@@ -220,8 +220,8 @@ CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
 
 ```log
 JobId:8f728c13-95d0-4d54-96bc-4ee912bd32ce
-Time: 02/05/2019 06:57:20.523 
-TotalRetryCount:0 
+Time: 02/05/2019 06:57:20.523
+TotalRetryCount:0
 MigrationType:None
 MigrationDirection:Import
 ObjectType:
@@ -229,7 +229,7 @@ Url:
 Id:
 ErrorCode:-2147213196
 ErrorType:Microsoft.SharePoint.SPException
-Message:ErrorMessage 
+Message:ErrorMessage
 CorrelationId:b370d5a0-105d-4000-241f-9b2d70449d7b
 ```
 
