@@ -33,7 +33,7 @@ Export metadata from SharePoint in three steps:
 
 ### Provision the destination containers and the queue
 
-Use ``ProvisionMigrationContainers`` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
+Use `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Use `CreateSPAsyncReadJob` method to start the export
 
