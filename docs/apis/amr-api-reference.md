@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Asynchronous Metadata Read (AMR) API Reference Guide"
-description: "This article provides in depth information on how to use the SharePoint AMR API."
+description: "This article provides in-depth information on how to use the SharePoint AMR API."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -31,7 +31,7 @@ To reference the SharePoint Client Side Object Model (CSOM) in your solution, us
 
 Manage dependencies easily and ensure your solution is using the latest version of the CSOM library with NuGet packages.
 
-Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID ``Microsoft.SharePointOnline.CSOM``.
+Get the latest version of the CSOM package at the [SharePoint Client-side Object Model Libraries](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM) with the ID `Microsoft.SharePointOnline.CSOM`.
 
 Check [Get to know SharePoint REST service](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) for instructions on REST API.
 
@@ -89,7 +89,7 @@ Default value is `false`.
 
 AMR API reads Users and Groups as Authors or Modifiers as part of the metadata of the objects.
 
-If set to `true`, AMR API reads all Users in Site Collections. When reading multiple Document Libraries under the same Site Collection, the same Users and Group may appear in the read package multiple times.
+If set to `true`, AMR API reads all Users in Site Collections. When reading multiple Document Libraries under the same Site Collection, the same Users and Group might appear in the read package multiple times.
 
 ##### IncludeDirectDescendantsOnly
 
@@ -206,7 +206,7 @@ See [Azure](migration-azure.md) for instructions of using Azure Queue in migrati
 
 #### Job ID
 
-A **Guid** value, which contains Job ID, the unique identifier of the migration job. The method returns a ``null`` value, if it fails to create the job.
+A **Guid** value, which contains Job ID, the unique identifier of the migration job. The method returns a `null` value, if it fails to create the job.
 
 AMR API generates a `JobEnd` event when it estimates item count for each `url`. Check [Events](migration-events.md) for details.
 
@@ -247,7 +247,7 @@ Required.
 
 A **Uri** **Array** containing the full path URLs of the root paths of the SharePoint Lists, files/folders, or Document Libraries to read. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
 
-Specify multiple URLs when needed. Aggravated call with multiple URLs may improve the performance. See [Performance](export-amr-api.md#performance) for details.
+Specify multiple URLs when needed. Aggravated call with multiple URLs might improve the performance. See [Performance](export-amr-api.md#performance) for details.
 
 ## Errors
 
@@ -255,7 +255,7 @@ Specify multiple URLs when needed. Aggravated call with multiple URLs may improv
 
 The changeToken refers to a time before the start of the current change log.
 
-The change log is limited to 60 days immediately before the current date. AMR API returns this error code when the specified `changeToken` refers to a time outside the 60 day window.
+The change log is limited to 60 days immediately before the current date. AMR API returns this error code when the specified `changeToken` refers to a time outside the 60-day window.
 
 ### -2147213196
 
