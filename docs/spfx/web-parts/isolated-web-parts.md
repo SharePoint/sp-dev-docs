@@ -9,6 +9,9 @@ ms.localizationpriority: high
 
 Using this capability, you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
 
+> [!IMPORTANT]
+> The isolated web parts feature has been retired and will stop working as of April 2, 2026. Check the [retirement announcement](./isolated-web-parts-retirement.md) to learn more.
+
 ## Why isolated web parts
 
 To allow your SharePoint Framework solutions to securely access APIs secured with Azure AD, you can use the API management to specify which APIs can be accessed by scripts in your tenant and with which permissions. Next, using the SharePoint Framework, you can easily retrieve an access token for the specific API. While it significantly simplifies communicating with APIs secured with Azure AD, it allows all scripts, not just specific SharePoint Framework solutions, to obtain an access token for any of the approved APIs. If one of the scripts you use in your tenant was exploited, then it could access any of the approved APIs on behalf of the current user.
