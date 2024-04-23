@@ -1,15 +1,16 @@
 ---
-title: SharePoint Framework v1.19 developer preview release notes
-description: Release notes for the SharePoint Framework v1.19 developer preview release.
-ms.date: 03/27/2024
+title: SharePoint Framework v1.19 release candidate release notes
+description: Release notes for the SharePoint Framework v1.19 release candidate release.
+ms.date: 04/23/2024
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.19 developer preview release notes
+# SharePoint Framework v1.19 release candidate release notes
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- RC **Released**: April 23, 2024
 - beta.0 **Released**: March 27, 2024
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
@@ -42,7 +43,7 @@ In the project's **package.json** file, identify all SPFx v1.18.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.19 preview release:
+Related updated documentation for the 1.19 release candidate:
 
 * *Introduction to Chart Card ACE* - coming soon
 * *Tutorial - Create your first Chart Card ACE* - coming soon - see the referenced video on current guidance
@@ -103,11 +104,11 @@ You can now specify `imageAlt` property for the Property Pane's choice group opt
 
 ## Deprecations
 
-- Node.js 16 isn't supported with the SPFx 1.19
+- Node.js 16 is not supported with the SPFx 1.19 and forward.
 
 ## Fixed Issues
 
-TBD
+No new updates.
 
 ## Feedback and issues
 
