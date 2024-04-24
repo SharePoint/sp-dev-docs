@@ -21,6 +21,10 @@ Use Migration API to migrate content from file shares, SharePoint Server, and ot
 
 ## What's new
 
+### April 2024
+
+We added new fields in ``JobEnd`` events to indicate the count and bytes imported for files. Check [Migration events in Azure Queue](migration-events.md#jobend-import) for details.
+
 ### January 2024
 
 We reformatted this document to bring clarity and correct errors.
@@ -28,6 +32,10 @@ We reformatted this document to bring clarity and correct errors.
 ## Migration steps overview
 
 Start a migration job with three steps. Check the guidance in each of the steps in this section.
+
+### Provision the destination containers and the queue
+
+Use `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Prepare the content
 

@@ -150,7 +150,7 @@ Use more than one **Manifest.xml** if needed. The manifests are identified with 
 
 Use consistent Web ID and Document Library ID/List ID at the source and the target location. Inconsistent Web IDs generate errors as Migration API can't find the parent web for the import operation.
 
-Likewise, Migration API can't import items with incorrect Document Library IDs and List IDs into the target Document Library or List. Don't reuse IDs within the same site collection, to avoid Migration API importing packages to the same target site collection, regardless of the destination web. @Huan
+Likewise, Migration API can't import items with incorrect Document Library IDs and List IDs into the target Document Library or List. Don't reuse IDs within the same site collection, to avoid Migration API importing packages to the same target site collection, regardless of the destination web.
 
 ### GUID consistency
 

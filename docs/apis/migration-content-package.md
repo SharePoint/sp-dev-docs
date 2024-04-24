@@ -104,9 +104,6 @@ blob.UploadFromStream(stm);
 blob.CreateSnapshot();
 ```
 
-> [!NOTE]
-> The requirement to use and enforce the latest snapshots on all files is coming in a future build. Until then, it will be ignored. @Huan?
-
 ### Permissions
 
 To ensure the immutability of source blobs, Migration API accepts an SAS key with only `Read` and `List` access flags set for the content package container.

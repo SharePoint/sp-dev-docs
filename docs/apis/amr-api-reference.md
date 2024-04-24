@@ -23,8 +23,6 @@ AMR API aggregates SharePoint metadata into a manifest package. Use the package 
 
 AMR API supports both SharePoint Client Side Object Model (CSOM) and REST.
 
-CSOM consumes more resources than REST. Use REST whenever possible for best performance. Reduce resource consumption and ensure that your migration jobs run efficiently with REST.
-
 ### Use NuGet Packages with CSOM
 
 To reference the SharePoint Client Side Object Model (CSOM) in your solution, use NuGet packages.
@@ -55,7 +53,7 @@ string azureQueueReportUri)
 
 Required.
 
-A **String** value containing the full path URL of the root path of the SharePoint List, files/folders, or Document Library to read. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
+A **String** value containing the full path URL of the path of the SharePoint List, files/folders, or Document Library **to read**. AMR API returns all the metadata of files, folders, and root objects, **including subfolders and any children content**.
 
 ##### Example
 
@@ -151,15 +149,6 @@ A **Bool** value to indicate if permissions read is needed. Default value is `fa
 
 When set to `true`, AMR API reads permission metadata in `RoleAssignments` tags in `Manifest.xml` files. The file includes all distinguished permission metadata for each read SharePoint object, along with property `ScopeId`.
 
-##### Using IncludeSecurity with IncludePermission
-
-`IncludeSecurity` reads the full list of all Users and Groups on the target Site. Optionally use `IncludePermission` to read permission metadata, if needed. There are four possible combinations for using both **readOption**:
-
-- `IncludeSecurity`=`true`, `IncludePermission`=`false`: reads the full list of all Users and Groups information of the target Site, without permissions.
-- `IncludeSecurity`=`false`, `IncludePermission`=`true`: reads permissions with a list of corresponding User and Group information, related to the permissions read.
-- `IncludeSecurity`=`true`, `IncludePermission`=`true`: reads permissions with the full list of all User and Group information of the target Site.
-- `IncludeSecurity`=`false`, `IncludePermission`=`false`: reads no permissions, Users or Groups information.
-
 ##### StartChangeToken
 
 Optional.
@@ -178,9 +167,9 @@ Be careful when using this feature with large number of items. The read job coul
 
 Optional.
 
-A `EncryptionOption` object, containing the AES256CBCKey used to decrypt the output.
+A `EncryptionOption` object, containing the AES-256-CBC Key used to decrypt the output.
 
-By default, AMR API doesn't encrypt the output and event queue. If set with AES256CBCKey, AMR API encrypts the output with the key supplied.
+By default, AMR API doesn't encrypt the output and event queue. If set with AES-256-CBC Key, AMR API encrypts the output with the key supplied.
 
 See `[EncryptionOption](/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
 
@@ -220,7 +209,7 @@ A **Uri** value that contains the URL of the Azure Queue used for read status.
 
 #### EncryptionKey
 
-A **Byte Array** value that contains the AES-CBC Key for decrypting the manifest files and messages in the Azure Queue.
+A **Byte Array** value that contains the AES-256-CBC Key for decrypting the manifest files and messages in the Azure Queue.
 
 ## CreateSPAsyncReadJobWithMultiUrl method
 

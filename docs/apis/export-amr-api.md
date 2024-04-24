@@ -15,9 +15,9 @@ ms.collection:
 ---
 # SharePoint Asynchronous Metadata Read (AMR) API Introduction
 
-The SharePoint Asynchronous Metadata Read (AMR) API asynchronously exports metadata from SharePoint contents.
+The SharePoint Asynchronous Metadata Read (AMR) API asynchronously exports metadata from SharePoint and OneDrive.
 
-Use AMR API to export metadata from SharePoint, for incremental migration, post-migration validation, and creating structures.
+Use AMR API to export metadata from SharePoint, for incremental migration, and post-migration validation.
 
 AMR is designed exclusively for import scenarios. It exhibits poor scalability when handling requests for metadata, permissions, or versions. We can't provide performance assurances for AMR usage in data export scenarios, such as cross-tenant migrations.
 
@@ -51,7 +51,7 @@ Check Azure Queue supplied for export status. Monitor events as listed in [Event
 
 AMR API exports metadata in the manifest container supplied, under folder named by `JobID`. Check [Manifest files](migration-manifest.md) for the format and validation of the metadata.
 
-AMR API splits manifest package larger than 25 MB into multiple packages per request.
+AMR API splits manifest package larger than 25 MB into multiple manifest files per request.
 
 ## Best practice
 
