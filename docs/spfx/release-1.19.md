@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.19 release candidate release notes
 description: Release notes for the SharePoint Framework v1.19 release candidate release.
-ms.date: 04/23/2024
+ms.date: 04/25/2024
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.19 release candidate release notes
@@ -10,7 +10,7 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-- RC **Released**: April 23, 2024
+- RC **Released**: April 25, 2024
 - beta.0 **Released**: March 27, 2024
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
@@ -46,7 +46,7 @@ In the project's **package.json** file, identify all SPFx v1.18.x packages. For 
 Related updated documentation for the 1.19 release candidate:
 
 * *Introduction to Chart Card ACE* - coming soon
-* *Tutorial - Create your first Chart Card ACE* - coming soon - see the referenced video on current guidance
+* *Tutorial - Create your first Chart Card ACE* - coming soon - see the below referenced video on current guidance
 
 New samples showcasing the new Viva Connections features:
 
