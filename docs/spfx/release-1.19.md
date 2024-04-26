@@ -51,7 +51,7 @@ We introduce a new data visualization card view for Adaptive Card Extensions tha
 
 Related updated documentation for the SPFx v1.19 release candidate:
 
-- **[Create a Data Visualization Adaptive Card Extension](/spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension.
+- **[Create a Data Visualization Adaptive Card Extension](spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension.
 - **[Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)** (video) - This video focuses on the creation of ACE data visualization cards with SPFx and also showcases the future plans within this area. Example charts are also demonstrated in the context of example Viva Connections experience.
 
 New samples showcasing the new data visualization ACE template:
