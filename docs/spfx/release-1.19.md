@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.19 release candidate release notes
 
-This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
+This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework (SPFx).
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
@@ -17,13 +17,13 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 ## Install the preview latest version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag.
+Install the latest preview release of the SPFx by using the **@next** tag.
 
 ```console
 npm install @microsoft/generator-sharepoint@next --global
 ```
 
-## Upgrading projects from v1.18 to v1.19
+## Upgrading projects from the SPFx v1.18 to v1.19
 
 In the project's **package.json** file, identify all SPFx v1.18.x packages. For each SPFx package:
 
@@ -43,24 +43,21 @@ In the project's **package.json** file, identify all SPFx v1.18.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.19 release candidate:
-
-* *Introduction to Chart Card ACE* - coming soon
-* *Tutorial - Create your first Chart Card ACE* - coming soon - see the below referenced video on current guidance
-
-New samples showcasing the new Viva Connections features:
-
-* [Chart Card - Three Series sample](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)
-
-Video in YouTube showcasing the new template options for Viva Connections
-
-* [Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)
-
 ### New Data Visualization Card Template for Adaptive Card Extensions
 
 We introduce a new data visualization card view for Adaptive Card Extensions that is intended to be used for charting scenarios. Use new Data Visualization Card Template in the generator to get started.
 
 ![Preview of chart chard](../images/119-release-notes/chart-card-viva-connections.png)
+
+Related updated documentation for the SPFx v1.19 release candidate:
+
+- **[Create a Data Visualization Adaptive Card Extension](spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension.
+- **[Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)** (video) - This video focuses on the creation of ACE data visualization cards with SPFx and also showcases the future plans within this area. Example charts are also demonstrated in the context of example Viva Connections experience.
+
+New samples showcasing the new data visualization ACE template:
+
+- **[Chart Card - Page Creation](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-PageCreation)**: This Adaptive Card Extension displays a line chart showing pages and news creation history on the current SharePoint site.
+- **[Chart Card - Three Series](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)**: Baseline example of the chart card rendering options, which was introduced as part of the SPFx 1.19 release. Chart card can be used to render simple charts directly in the card view, so that you can include graphical details on your business situation directly in the Viva Connections dashboard.
 
 ### Webpack 5 support
 
@@ -104,7 +101,7 @@ You can now specify `imageAlt` property for the Property Pane's choice group opt
 
 ## Deprecations
 
-- Node.js 16 is not supported with the SPFx 1.19 and forward.
+- Node.js 16 isn't supported with the SPFx 1.19 and forward.
 
 ## Fixed Issues
 

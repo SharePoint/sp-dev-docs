@@ -467,7 +467,7 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.19 - April 25, 2024
-      href: spfx/release-1.19.md      
+      href: spfx/release-1.19.md
     - name: SPFx v1.18.2 - November 21, 2023
       href: spfx/release-1.18.2.md
     - name: SPFx v1.18.1 - November 7, 2023
@@ -668,6 +668,8 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
     - name: Create a People Search Adaptive Card Extension
       href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
+    - name: Create a Data Visualization Adaptive Card Extension
+      href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
