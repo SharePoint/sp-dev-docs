@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Import Migration API"
-description: "This article provides in-depth information on how to use the SharePoint Migration API."
+description: "This article provides overview information on how to use the SharePoint Migration API."
 ms.date: 04/28/2024
 ms.author: ranren
 author: underreview
