@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Import Migration API"
-description: "This article provides in-depth information on how to use the SPO Migration API."
-ms.date: 04/18/2024
+description: "This article provides in-depth information on how to use the SharePoint Migration API."
+ms.date: 04/28/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
