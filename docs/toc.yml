@@ -2270,7 +2270,7 @@
       - name: SharePoint Asynchronous Metadata Read (AMR) API Reference
         href: apis/amr-api-reference.md
     - name: Azure container and queue
-      href: apis/migration-api-azure.md
+      href: apis/migration-azure.md
     - name: Migration Content Package
       href: apis/migration-content-package.md
     - name: Manifest Files
