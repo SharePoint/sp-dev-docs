@@ -51,8 +51,6 @@ Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
 ### Use Migration API to start the migration and get status
 
-Use `ProvisionMigrationContainers` method to provision the containers, upload the content package, and manifest into respective containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
-
 `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
 Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with `GetMigrationJobStatus` method if needed, with the Azure Queue supplied.
