@@ -13,7 +13,7 @@ ms.collection:
   - SPMigration
   - m365-collaboration
 ---
-# SharePoint Asynchronous Metadata Read (AMR) API Reference Guide
+# SharePoint Asynchronous Metadata Read (AMR) API Introduction
 
 Use this document as the guide when using SharePoint Asynchronous Metadata Read (AMR) API.
 
