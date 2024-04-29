@@ -24,6 +24,9 @@ Absolutely, both tenant and site collection app catalogs are an essential part o
 
 Absolutely. The SharePoint Store and public marketplace are also used to offer SharePoint Framework (SPFx) based solutions, and that will not change. You can still acquire SPFx solutions from the store, now and after Add-Ins have retired. Acquiring SharePoint Add-Ins via the store will not be possible anymore from July 1st, 2024.
 
+> [!Note]
+> If you've acquired an Add-In from the store before July 1st, 2024, and that Add-In was installed by a SharePoint Admin (Add-In was added to the tenant app catalog), then after July 1st this Add-In can still be installed on other sites in that tenant. Installing an Add-In that was never installed before will not be possible anymore, this includes installing all Add-Ins as regular user (non SharePoint Admin).
+
 ## My Add-In uses an app web; what about the data in that web?
 
 If your SharePoint Hosted Add-In is storing data in its app web, then that's something you need to take into account when you're rewriting your Add-In using the SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web. When using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data, you'll need to use SharePoint APIs to copy the needed data from the app web, and recreate it in the new location using a format that works for your updated application.
