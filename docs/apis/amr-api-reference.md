@@ -171,7 +171,7 @@ A `EncryptionOption` object, containing the AES-256-CBC Key used to decrypt the 
 
 By default, AMR API doesn't encrypt the output and event queue. If set with AES-256-CBC Key, AMR API encrypts the output with the key supplied.
 
-See `[EncryptionOption](/dotnet/api/microsoft.sharepoint.client.encryptionoption)` class for details.
+See [`EncryptionOption`](/dotnet/api/microsoft.sharepoint.client.encryptionoption) class for details.
 
 #### azureContainerManifestUri
 
