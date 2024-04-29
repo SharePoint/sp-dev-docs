@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Import Migration API"
-description: "This article provides in-depth information on how to use the SPO Migration API."
-ms.date: 04/18/2024
+description: "This article provides overview information on how to use the SharePoint Migration API."
+ms.date: 04/28/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -50,8 +50,6 @@ Based on the contents, create manifest files in XML format, and upload them to A
 Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
 ### Use Migration API to start the migration and get status
-
-Use `ProvisionMigrationContainers` method to provision the containers, upload the content package, and manifest into respective containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 

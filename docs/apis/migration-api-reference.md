@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Migration API Reference Guide"
 description: "This article provides in-depth information on how to use the SharePoint Migration API."
-ms.date: 04/18/2024
+ms.date: 04/28/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -20,9 +20,7 @@ This guide describes the usage of SharePoint Migration API, which imports conten
 
 ## CSOM and REST
 
-AMR API supports both SharePoint Client Side Object Model (CSOM) and REST.
-
-CSOM consumes more resources than REST. Use REST whenever possible for best performance. Reduce resource consumption and ensure that your migration jobs run efficiently with REST.
+Migration API supports both SharePoint Client Side Object Model (CSOM) and REST.
 
 ### Use NuGet Packages with CSOM
 
