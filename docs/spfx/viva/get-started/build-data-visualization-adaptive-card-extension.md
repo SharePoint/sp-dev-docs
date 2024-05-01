@@ -1,14 +1,12 @@
 ---
 title: Create a Data Visualization Adaptive Card Extension
 description: Step-by-step guide on creating Data Visualization Adaptive Card Extension.
-ms.date: 04/05/2024
+ms.date: 05/01/2024
 ms.localizationpriority: high
 ---
 # Create a Data Visualization Adaptive Card Extension
 
 The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Visualization Template that can be used to implement line charts. This tutorial provides step-by-step guidance on implementing Data Visualization with Adaptive Card Extensions (ACEs).
-
-[!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
 
 > [!NOTE]
 > Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension: [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
@@ -27,7 +25,7 @@ When prompted, enter the following values (select the default option for all oth
 
 - **What is your solution name?** dataVisualization-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Data Visualization Card Template (preview)
+- **Which template do you want to use?** Data Visualization Card Template
 - **What is your Adaptive Card Extension name?** DataVisualization
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
