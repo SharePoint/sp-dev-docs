@@ -1,14 +1,12 @@
 ---
 title: Create a Data Visualization Adaptive Card Extension
 description: Step-by-step guide on creating Data Visualization Adaptive Card Extension.
-ms.date: 04/05/2024
+ms.date: 05/01/2024
 ms.localizationpriority: high
 ---
 # Create a Data Visualization Adaptive Card Extension
 
 The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Visualization Template that can be used to implement line charts. This tutorial provides step-by-step guidance on implementing Data Visualization with Adaptive Card Extensions (ACEs).
-
-[!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
 
 > [!NOTE]
 > Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension: [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
@@ -27,7 +25,7 @@ When prompted, enter the following values (select the default option for all oth
 
 - **What is your solution name?** dataVisualization-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Data Visualization Card Template (preview)
+- **Which template do you want to use?** Data Visualization Card Template
 - **What is your Adaptive Card Extension name?** DataVisualization
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -131,3 +129,93 @@ The ACE class is located in the following file: **./src/adaptiveCardExtensions/d
 ### Explore the ACE class
 
 The ACE class is located in the following file: **./src/adaptiveCardExtensions/dataVisualization/dataVisualizationAdaptiveCardExtension.ts** and mostly has the same code as [Generic Card View](./build-first-sharepoint-adaptive-card-extension.md).
+
+## Support for multiple data series in the chart
+
+The ACE `dataVisualization` component supports multiple series lines in the chart. To add multiple lines to the chart, add additional entries to the `body.series` array on the `LineChartCardView` object in the card view.
+
+For example, consider the following data series:
+
+```typescript
+// Sample Data
+const seriesData : IDataPoint<Date>[] = [
+  { x: new Date(2024, 1, 1), y: 1000 },
+  { x: new Date(2024, 2, 1), y: 2400 },
+  { x: new Date(2024, 3, 1), y: 2000 },
+  { x: new Date(2024, 4, 1), y: 2900 },
+  { x: new Date(2024, 5, 1), y: 3000 },
+  { x: new Date(2024, 6, 1), y: 3100 }
+];
+
+const seriesData2 : IDataPoint<Date>[] = [
+  { x: new Date(2024, 1, 1), y: 600 },
+  { x: new Date(2024, 2, 1), y: 1200 },
+  { x: new Date(2024, 3, 1), y: 3200 },
+  { x: new Date(2024, 4, 1), y: 2800 },
+  { x: new Date(2024, 5, 1), y: 3600 },
+  { x: new Date(2024, 6, 1), y: 4500 }
+];
+
+const seriesData3 : IDataPoint<Date>[] = [
+  { x: new Date(2024, 1, 1), y: 5200 },
+  { x: new Date(2024, 2, 1), y: 1000 },
+  { x: new Date(2024, 3, 1), y: 1800 },
+  { x: new Date(2024, 4, 1), y: 2900 },
+  { x: new Date(2024, 5, 1), y: 600 },
+  { x: new Date(2024, 6, 1), y: 400 }
+];
+```
+
+Add all three series to the data visualization card view and optionally set the color of specific series:
+
+```typescript
+export class CardView extends BaseComponentsCardView<
+  IRecentSalesAdaptiveCardExtensionProps,
+  IRecentSalesAdaptiveCardExtensionState,
+  IDataVisualizationCardViewParameters
+> {
+  public get cardViewParameters(): IDataVisualizationCardViewParameters {
+    return LineChartCardView({
+      cardBar: {
+        componentName: 'cardBar',
+        title: this.properties.title
+      },
+      body: {
+        componentName: 'dataVisualization',
+        dataVisualizationKind: 'line',
+        series: [{
+          data: seriesData,
+          lastDataPointLabel: '3.1K'
+        },
+        {
+          data: seriesData2,
+          lastDataPointLabel: '4.5K',
+          color: '#800080'
+        },
+        {
+          data: seriesData3,
+          lastDataPointLabel: '0.4K',
+          color: '#01CBAE'
+        }]
+      }
+    });
+  }
+
+  public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
+    return {
+      type: 'QuickView',
+      parameters: { view: QUICK_VIEW_REGISTRY_ID }
+    };
+  }
+}
+```
+
+This card when in the large mode will generate the following rendering:
+
+![Chart with three series displayed](../../../../docs/images/viva-extensibility/data-visualization/chart-three-series.png)
+
+## See Also
+
+- Video: **[Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)**
+- Sample: **[Chart Card - Page Creation](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-PageCreation)**
+- Sample: **[Chart Card - Three Series](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)**

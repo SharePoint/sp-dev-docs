@@ -466,8 +466,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.19 - March 27, 2024
-      href: spfx/release-1.19.md      
+    - name: SPFx v1.19 - April 25, 2024
+      href: spfx/release-1.19.md
     - name: SPFx v1.18.2 - November 21, 2023
       href: spfx/release-1.18.2.md
     - name: SPFx v1.18.1 - November 7, 2023
@@ -668,6 +668,8 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
     - name: Create a People Search Adaptive Card Extension
       href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
+    - name: Create a Data Visualization Adaptive Card Extension
+      href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
@@ -2243,37 +2245,40 @@
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
-    - name: What's new in the Migration API
-      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
-    - name: Migration permission guidance
-      href: apis/migration-perm-guidance.md
-    - name: Migrating OneNote folders
-      href: apis/onenote-migration-service.md
-    - name: Sensitivity Labels and the SharePoint Migration API
-      href: apis/sp-migration-api-and-sensitivity-labels.md
-    - name: How to export video transcripts using the SharePoint Migration API
-      href: apis/migration-api-video-transcripts.md
-    - name: Migration API
+    - name: Content-Specific Migration Guidance
       items:
-      - name: Import Migration API
-        items:
-        - name: Import Migration API (CreateMigrationJob)
+      - name: OneNote Folders
+        href: apis/onenote-migration-service.md
+      - name: Sensitivity Labels
+        href: apis/sp-migration-api-and-sensitivity-labels.md
+      - name: Video Transcripts
+        href: apis/migration-api-video-transcripts.md
+      - name: Sharing
+        href: apis/migration-api-shared.md
+      - name: Web Parts
+        href: apis/migrate-webparts-with-migrationapi.md
+    - name: SharePoint Migration API
+      items:
+        - name: SharePoint Migration API Overview
           href: apis/migration-api-overview.md
-          items:
-          - name: Sharing
-            href: apis/migration-api-shared.md
-          - name: Migrate web parts using the Migration API
-            href: apis/migrate-webparts-with-migrationapi.md
-      - name: Export Migration API (Asynchronous Metadata Read)
+        - name: SharePoint Migration API Reference
+          href: apis/migration-api-reference.md
+    - name: Asynchronous Metadata Read (AMR) API
+      items:
+      - name: SharePoint Asynchronous Metadata Read (AMR) API Overview
         href: apis/export-amr-api.md
-      - name: Permissions guide for Export Migration API (Asynchronous Metadata Read)
-        href: apis/export-amr-api-permission-guide.md
-      - name: Azure container and queue
-        href: apis/migration-api-azure-container-and-queue.md
-      - name: Encryption
-        href: apis/migration-api-encryption.md
+      - name: SharePoint Asynchronous Metadata Read (AMR) API Reference
+        href: apis/amr-api-reference.md
+    - name: Azure container and queue
+      href: apis/migration-azure.md
+    - name: Migration Content Package
+      href: apis/migration-content-package.md
+    - name: Manifest Files
+      href: apis/migration-manifest.md
+    - name: Events
+      href: apis/migration-events.md
   - name: Microsoft Syntex REST API
     items:
       - name: Overview

@@ -14,12 +14,12 @@ Specifies the type of element to create. Valid elements include:
 - `div`
 - `span`
 - `a`
-- `[img](#img-src-security)`
+- [`img`](#img-src-security)
 - `svg`
 - `path`
 - `button`
 - `p`
-- `[filepreview](#filepreview)`
+- [`filepreview`](#filepreview)
 
 Any other value will result in an error.
 
@@ -554,17 +554,17 @@ The following example contains an Expression object that performs the expression
 
 Operators specify the type of operation to perform. Valid operator values include:
 
-- `\+`
-- `\-`
+- `+`
+- `-`
 - `/`
-- `\*`
+- `*`
 - `<`
-- `\>`
-- `\%`
+- `>`
+- `%`
 - `==`
 - `!=`
 - `<=`
-- `\>=`
+- `>=`
 - `||`
 - `&&`
 - `toString()`
@@ -598,6 +598,7 @@ Operators specify the type of operation to perform. Valid operator values includ
 - `replaceAll`
 - `padStart`
 - `padEnd`
+- `getThumbnailImage`
 - `getUserImage`
 - `addDays`
 - `addMinutes`
@@ -607,17 +608,17 @@ Operators specify the type of operation to perform. Valid operator values includ
 
 **Binary arithmetic operators** - The standard arithmetic binary operators that expect two operands include are:
 
-- `\+`
-- `\-`
+- `+`
+- `-`
 - `/`
-- `\*`
+- `*`
 - `<`
-- `\>`
-- `\%`
+- `>`
+- `%`
 - `==`
 - `!=`
 - `<=`
-- `\>=`
+- `>=`
 
 **Unary operators** - The standard unary operators that expect only one operand are:
 
@@ -758,7 +759,7 @@ For examples, see [Formatting multi-value fields](column-formatting.md#formattin
 
 **String related operators** - Some of the previously detailed operators can be used when working with string values:
 
-- `\+`
+- `+`
 - `indexOf` (*for string length workaround*)
 
 `+` can be used when there's a need to concatenate strings, for instance:
