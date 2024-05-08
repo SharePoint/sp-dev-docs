@@ -74,9 +74,11 @@ Required.
 
 A **String** value that contains the valid URI, including the SAS token, to access the Azure Blob Storage Container that contains the binary files of type block.
 
-See [Azure](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
+See [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
 
-Requires `Read`, and `List` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
+When using content containers not provided by this method, Migration API requires `Read`, and `List` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
+
+Migration API doesn't require `List` permission from containers provisioned with `ProvisionMigrationContainers` method.
 
 #### azureContainerManifestUri
 
@@ -84,9 +86,9 @@ Required.
 
 A **String** value that contains the valid URI, including the SAS token, to access the Azure Blob Storage Container, which contains the block blobs for the manifest and other packages describing XML files. Migration API writes log to this container. This container can't be the same as the one used for the `azureContainerSourceUri`.
 
-See [Azure](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
+See [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for instructions on using Azure Blob Storage Containers in migration.
 
-Requires `Read`, `List`, and `Write` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
+When using content containers not provided by this method, Migration API requires `Read`, `List`, and `Write` permissions only. Ensure that the start time of the SAS token is set at or before the job submission. Also, when setting the expiration time, allow a reasonable duration for the import process to complete.
 
 #### azureQueueReportUri
 
