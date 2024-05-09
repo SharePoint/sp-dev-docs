@@ -38,6 +38,37 @@ In addition, using these APIs have the following dependencies:
 - How Sharing has been configured in the Consuming Tenant
 - The type of user that is invoking the API when you're using delegated authorization.
 
+## Container Type Role-Based Sharing Settings
+
+SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container membership,  offering a choice between restrictive and open sharing model. This sharing setting is part of container type configuration. This configuration can only be set by application owner developers.
+
+### Restrictive Sharing Model
+
+In the restrictive sharing model, only users who are a member of either the Owner or Manager roles are permitted to add new permissions to a files.
+
+### Non-restrictive Sharing Model (default)
+
+The non-restrictive sharing model allows any users with edit permissions to a file to add new permissions to this file.
+
+This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
+
+```powershell
+Set-SPOContainerTypeConfiguration
+    -ContainerTypeID <Identifier>
+    -sharingRestricted $True
+```
+Invoking the additive permission API with different roles will have different outcomes:
+|      Container Role      | SharingRestricted: False |  SharingRestricted: True  |
+| :-------------------- | :-------------------------------------: | :--------: |
+| Owner                 |                  Sucess                 | Success   |
+| Manager               |                  Sucess                 | Success   |
+| Writer                |                  Sucess                 | **Fails** |
+| Reader                |                  Fails                 | **Fails**   |
+| Guest User (with edit permission on the file) |                   Sucess                   | **Fails**  |
+| Guest User (without edit permission on the file) |                Fails                 | **Fails**  |
+
+
+
 ## Sharing Configuration Settings
 
 Invoking the additive permission APIs and sharing content is dependent on the Sharing configuration settings in the Consuming Tenant. For example, if the Consuming Tenant has been configured to disable sharing to Guest Users, then your SharePoint Embedded application won't be able to add Guest Users to the Container roles or grant them additive permissions.
