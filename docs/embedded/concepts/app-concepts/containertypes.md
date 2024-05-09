@@ -7,6 +7,13 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Container Types
 
+In SharePoint Embedded, files and documents are stored in Containers, with each container instance stamped with an immutable Container Type property. Each Container Type is owned by only one SharePoint Embedded application, and each SharePoint Embedded application can only own one Container Type. Container Type serves three general purposes:
+1.	It links all Containers of that type to a specific Azure Subscription for billing. 
+2.	It specifies the permissions a SharePoint Embedded Application has for all container instances of that type, such as creating, reading, writing, deleting containers and content, and managing container permissions.
+3.	It configures expected behaviors of all container instances of that type, such as sharing, content discoverability, etc.
+Container Type is created and managed by the SharePoint Embedded application developer, and is strongly tied to the SharePoint Embedded application. Container Type can be created with or without linkage to an Azure billing profile, for trial/development and production purposes respectively.
+
+
 In SharePoint Embedded, files and documents are stored in Containers, each identified by a Container Type, which is a property stamped on every instance. A Container Type links all Containers to a specific Azure Subscription for billing. A single SharePoint Embedded Application owns each Container Type, and each SharePoint Embedded Application can own only one Container Type. It specifies the access permissions a SharePoint Embedded Application has for all Containers of that type, such as creating, reading, writing, deleting containers, and managing container permissions.
 
 ## Two Kinds of Container Types
