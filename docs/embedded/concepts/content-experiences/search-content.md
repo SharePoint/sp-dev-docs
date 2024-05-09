@@ -11,7 +11,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded co
 
 > [!NOTE]
 > 1. Search API only supports Delegated permissions.
-> 2. Your search requests must specify and set the`includeHiddenContent` parameter if your application has opted our from content discoverability in Microsoft 365. To learn more about SharePoint Embedded content discoverability, read. 
+> 2. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted our from content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md). 
 
 ## Example 1: Search containers by container type
 
