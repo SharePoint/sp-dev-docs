@@ -39,6 +39,8 @@ The following restrictions are applied to Container Type in the Trial status:
 •	Developer must delete all Container instances of an existing Container Type in Trial status to create a new Container Type for trial.
 •	The Container Type is restricted to work in the developer tenant. It cannot be deployed in other consuming tenants.
 
+## Standard Container Type
+
 Container Type can also be created with an Azure billing profile, which includes an Azure Subscription ID and a Region Group. This Container Type is in the Standard status and is billable. You need the following to create a Container Type in the Standard status:
 •	An Azure subscription and Resource Group must be present in the Azure portal
 •	An App registration must be created in Microsoft Entra ID
