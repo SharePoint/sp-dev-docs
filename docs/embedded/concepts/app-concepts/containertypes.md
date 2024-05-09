@@ -22,8 +22,8 @@ Container Type is created and managed by the SharePoint Embedded application dev
 
 A Container Type can be created for trial/development purposes and is not linked to any Azure billing profile. This enables developers to explore SharePoint Embedded application development and assess its features for free. In this scenario, the developer tenant is the same as the consuming tenant.  Each developer can have only one Container Type in the Trial status in their tenant at a time; and the Container Type is valid for up to 30 days but can be removed at any time within this period. To create a Container Type for trial purposes, you can:
 
-•	Use SharePoint Embedded Visual Studio Code Extension to create the Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
-•	Use SharePoint PowerShell. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. If you're a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
+1. Use SharePoint Embedded Visual Studio Code Extension to create the Container Type in just a few steps. The Visual Studio Code extension also registers your Container Type and creates Containers for you.
+2. Use SharePoint PowerShell. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. If you're a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
 ```powershell
 New-SPOContainerType
@@ -33,11 +33,11 @@ New-SPOContainerType
 ```
 
 The following restrictions are applied to Container Type in the Trial status:
-•	Up to five active Container instances of the Container Type can be created.
-•	Each Container instance has up to 1GB of storage space.
-•	The Container Type expires after 30 days and access to any existing Container instances of that type will be removed. 
-•	Developer must delete all Container instances of an existing Container Type in Trial status to create a new Container Type for trial.
-•	The Container Type is restricted to work in the developer tenant. It cannot be deployed in other consuming tenants.
+1. Up to five active Container instances of the Container Type can be created.
+2. Each Container instance has up to 1GB of storage space.
+3. The Container Type expires after 30 days and access to any existing Container instances of that type will be removed. 
+4. eveloper must delete all Container instances of an existing Container Type in Trial status to create a new Container Type for trial.
+5. The Container Type is restricted to work in the developer tenant. It cannot be deployed in other consuming tenants.
 
 ## Standard Container Type
 
