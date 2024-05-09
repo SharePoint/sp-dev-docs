@@ -81,9 +81,9 @@ Region              : EastUS
 
 In order to create and interact with Containers, you must [register](../app-concepts/register-api-documentation.md) the Container Type within the Consuming Tenant. The owning application defines the permissions for the Container Type by invoking the [registration API](../app-concepts/register-api-documentation.md).
 
-## Deleting Trial Container Types
+## Deleting Container Types
 
-Developer Admins can only delete Trial Container Types and not Standard Container Types. To delete a trial Container Type, you must remove all Containers of the Trial Container Type first, including from the recycle bin. To remove Containers from the Trial Container Type, refer to [Consuming Tenant Admin](../admin-exp/cta.md#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell cmdlet.
+Developer Admins can only delete Container Types in Trial status. To delete a Container Type in Trial status, you must remove all Containers of the Container Type first, including from the deleted container collection. To remove Containers, refer to [Consuming Tenant Admin](../admin-exp/cta.md#delete-containers). Once all the Containers are deleted, Developer Admins can delete the Container Types using the below PowerShell cmdlet.
 
 ```powershell
 Remove-SPOContainerType
