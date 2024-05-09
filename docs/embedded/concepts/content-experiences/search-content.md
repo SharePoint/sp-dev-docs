@@ -234,7 +234,7 @@ Content-type: application/json
 
 ## Example 4: Search for content by title in a specific container
 
-This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365.. The response includes all driveItems in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems in the specific container instance that match the criteria.
 
 ### Request
 
@@ -332,7 +332,7 @@ Content-type: application/json
 ```
 
 ## Example 5: Search by content
-This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365.. The response includes all driveItems that match the criteria.
+This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems that match the criteria.
 
 ### Request
 
