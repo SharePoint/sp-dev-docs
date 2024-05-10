@@ -89,7 +89,7 @@ You can follow these steps by watching the video on the Microsoft 365 Platform C
 
 Open the file **./src/extensions/helloWorld/HelloWorldCommandSet.ts**.
 
-Notice the base class for the ListView Command Set is imported from the **\@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.
+Notice the base class for the ListView Command Set is imported from the **\@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.  Update the file to match this.
 
 ```typescript
 import { override } from '@microsoft/decorators';
