@@ -157,20 +157,6 @@ landingContent:
             url: /sharepoint/dev/apis/webhooks/get-started-webhooks
 
   # Card
-  - title: SharePoint Add-ins
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Overview of SharePoint Add-ins
-            url: /sharepoint/dev/sp-add-ins/sharepoint-add-ins
-      - linkListType: get-started
-        links:
-          - text: Create provider-hosted SharePoint Add-ins
-            url: /sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins
-          - text: Create SharePoint-hosted SharePoint Add-ins
-            url: /sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins
-
-  # Card
   - title: Solution guidance
     linkLists:
       - linkListType: overview
