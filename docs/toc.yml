@@ -966,7 +966,7 @@
     href: sp-add-ins-modernize/sp-add-in-modernize.md
   - name: Authentication considerations
     href: sp-add-ins-modernize/understanding-aad-and-oauth-for-spo-modern.md
-  - name: Tranform from ACS to Azure AD apps
+  - name: Transform from ACS to Azure AD apps
     href: sp-add-ins-modernize/from-acs-to-aad-apps.md
   - name: Multi-tenant applications for SharePoint Online
     href: sp-add-ins-modernize/multi-tenant-applications.md
