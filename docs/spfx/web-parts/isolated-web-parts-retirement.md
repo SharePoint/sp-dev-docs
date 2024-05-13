@@ -22,7 +22,7 @@ April 2, 2026 | Domain isolated web parts will be turned off for existing tenant
 
 Domain isolated web parts allow developers to create web parts that run in a separate domain from the host page, providing an additional layer of security and isolation. Due to the performance implications of running in dedicated domain we saw limited usage of this feature.
 
-To understand whether you have installed domain isolated web parts and granted permissions you can verify if the [SharePoint admin center API access page](https://learn.microsoft.com/sharepoint/api-access) contains permissions listed under the “Isolated” grouping.
+To understand whether you have installed domain isolated web parts and granted permissions you can verify if the [SharePoint admin center API access page](/sharepoint/api-access) contains permissions listed under the “Isolated” grouping.
 
 ![SharePoint admin center showing the permissions granted for domain isolated web parts](../../images/discoverdomainisolatedwebpartusage.png)
 
@@ -34,35 +34,35 @@ If you see permissions listed under **Isolated** then use the instructions below
 To use this script follow these steps:
 
 1. Copy PowerShell script file contents (end of this page) and save it as `Find-DomainIsolatedWebparts.ps1` on your local drive.
-2. [Install PnP PowerShell](https://pnp.github.io/powershell/articles/installation.html) in case that is not yet available.
-3. [Configure PnP PowerShell to authenticate with Microsoft Entra](https://pnp.github.io/powershell/articles/authentication.html#setting-up-access-to-your-own-azure-ad-app), preferably configure for using application permissions as that’s required to check for domain isolated web parts across the whole tenant. If you have an Entra application configured with a cert and the SharePoint Sites.Read.All permission you can just use that, if not follow below guidance to create such an application. Replace the values between `<>` with relevant values for your tenant.
+1. [Install PnP PowerShell](https://pnp.github.io/powershell/articles/installation.html) in case that is not yet available.
+1. [Configure PnP PowerShell to authenticate with Microsoft Entra](https://pnp.github.io/powershell/articles/authentication.html#setting-up-access-to-your-own-azure-ad-app), preferably configure for using application permissions as that’s required to check for domain isolated web parts across the whole tenant. If you have an Entra application configured with a cert and the SharePoint Sites.Read.All permission you can just use that, if not follow below guidance to create such an application. Replace the values between `<>` with relevant values for your tenant.
 
-```PowerShell
-Register-PnPAzureADApp -ApplicationName FindDomainIsolatedWebparts -Tenant <contoso.onmicrosoft.com> -Store CurrentUser -SharePointApplicationPermissions "Sites.Read.All" -Username "<joe@contoso.onmicrosoft.com>" -Interactive
-```
+    ```PowerShell
+    Register-PnPAzureADApp -ApplicationName FindDomainIsolatedWebparts -Tenant <contoso.onmicrosoft.com> -Store CurrentUser -SharePointApplicationPermissions "Sites.Read.All" -Username "<joe@contoso.onmicrosoft.com>" -Interactive
+    ```
 
-4. Connect to your tenant app catalog using the client id and certificate. Replace the values between `<>` with relevant values for your tenant. If you don’t know your app catalog site URL you can connect to an arbitrary site in your tenant and then use `Get-PnPTenantAppCatalogUrl`.
+1. Connect to your tenant app catalog using the client id and certificate. Replace the values between `<>` with relevant values for your tenant. If you don’t know your app catalog site URL you can connect to an arbitrary site in your tenant and then use `Get-PnPTenantAppCatalogUrl`.
 
-```PowerShell
-Connect-PnPOnline <https://contoso.sharepoint.com/sites/appcatalog> -ClientId <5be692c9-0a1a-4f07-b3e8-7b79f1582375> -Thumbprint <B49C5854E08EA0D401C4604C870A27167B07BD7D> -tenant <contoso.onmicrosoft.com>
-```
+    ```PowerShell
+    Connect-PnPOnline <https://contoso.sharepoint.com/sites/appcatalog> -ClientId <5be692c9-0a1a-4f07-b3e8-7b79f1582375> -Thumbprint <B49C5854E08EA0D401C4604C870A27167B07BD7D> -tenant <contoso.onmicrosoft.com>
+    ```
 
-5. Run the script to discover domain isolated web part usage
+1. Run the script to discover domain isolated web part usage
 
-```PowerShell
-.\Find-DomainIsolatedWebparts.ps1
-```
+    ```PowerShell
+    .\Find-DomainIsolatedWebparts.ps1
+    ```
 
 ## Call to Action Guidance
 
 If you are using domain isolated web parts in your SPFx solutions, you will need to migrate them to regular web parts before April 2026. Otherwise, your web parts will stop working after that date. Microsoft is working on to be announced features that offer an alternative strategy for domain isolated web parts, but we strongly recommend to move away from domain isolated web parts.
 
-To migrate your web parts, you will need to switch the "isDomainIsolated" property from the package-solution.json file to false, increment the version and redeploy your solution. Next to that you also need to ensure that the permissions granted to the domain isolated web part, listed under the “Isolated” grouping in the API access page of SharePoint admin center, are now granted as “Organization-wide” permissions. Check the [Manage access to Microsoft Entra ID-secured APIs](https://learn.microsoft.com/sharepoint/api-access?WT.mc_id=365AdminCSH_spo) article to learn more.
+To migrate your web parts, you will need to switch the "isDomainIsolated" property from the package-solution.json file to false, increment the version and redeploy your solution. Next to that you also need to ensure that the permissions granted to the domain isolated web part, listed under the “Isolated” grouping in the API access page of SharePoint admin center, are now granted as “Organization-wide” permissions. Check the [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access?WT.mc_id=365AdminCSH_spo) article to learn more.
 
 ## PowerShell script to discover domain isolated web part usage
 
 ```PowerShell
-<# 
+<#
 .Synopsis
 
     Detects solutions containing domain isolated web parts and the SharePoint pages holding those web parts.
@@ -72,9 +72,9 @@ To migrate your web parts, you will need to switch the "isDomainIsolated" proper
         - solutions.csv: contains the solutions with domain isolated web parts
         - pages.csv: contains the pages holding the domain isolated web parts
 
-    Optionally you can skip the search for pages with domain isolated web parts by using the -SkipPages parameter. 
-    
-    This script uses search to find the relevant pages, so when you use Connect-PnPOnline with delegated permissions you can only see 
+    Optionally you can skip the search for pages with domain isolated web parts by using the -SkipPages parameter.
+
+    This script uses search to find the relevant pages, so when you use Connect-PnPOnline with delegated permissions you can only see
     the pages that the current account has access to. For a complete search use Connect-PnPOnline with application permissions.
 
 .Example
@@ -83,7 +83,7 @@ To migrate your web parts, you will need to switch the "isDomainIsolated" proper
     Find-DomainIsolatedWebparts.ps1 -SkipPages $false
 
 .Notes
-    
+
     Useful references:
         - https://aka.ms/retirement/domainisolatedwebparts/support
         - https://aka.ms/sppnp-powershell
@@ -99,24 +99,24 @@ begin
     # Verify there's an app catalog and that we're connected to it
     $appCatalog = Get-PnPTenantAppCatalogUrl
 
-    if ($null -eq $appCatalog) 
+    if ($null -eq $appCatalog)
     {
         Write-Host "No app catalog found, exiting as there can't be any domain isolated web parts without a configured app catalog!" -ForegroundColor Green
         exit
     }
 
-    if ($appCatalog -ne (Get-PnPConnection).Url.TrimEnd("/")) 
+    if ($appCatalog -ne (Get-PnPConnection).Url.TrimEnd("/"))
     {
         Write-Host "You need to connect to your tenant app catalog first. Use Connect-PnPOnline to connect to $appCatalog" -ForegroundColor Red
         exit
     }
 }
-process 
-{ 
+process
+{
     # check for apps that use domain isolation
     $solutionsWithDomainIsolatedWebParts = Get-PnPListItem -List AppCatalog -Query "<View><ViewFields><FieldRef Name='Title'/><FieldRef Name='AppPublisher'/><FieldRef Name='AppShortDescription'/><FieldRef Name='AppVersion'/><FieldRef Name='IsClientSideSolutionDeployed'/><FieldRef Name='SkipFeatureDeployment'/><FieldRef Name='UniqueSolutionId'/><FieldRef Name='IsolatedDomain'/></ViewFields><Query><Where><IsNotNull><FieldRef Name='IsolatedDomain'/></IsNotNull></Where></Query></View>"
 
-    if ($null -eq $solutionsWithDomainIsolatedWebParts) 
+    if ($null -eq $solutionsWithDomainIsolatedWebParts)
     {
         Write-Host "No domain isolated web parts found!" -ForegroundColor Green
         exit
@@ -125,17 +125,17 @@ process
     $solutionsToExport = @()
     $pagesToExport = @()
 
-    if ($SkipPages -eq $false -and [string]::IsNullOrEmpty((Get-PnPConnection).Certificate.Thumbprint)) 
+    if ($SkipPages -eq $false -and [string]::IsNullOrEmpty((Get-PnPConnection).Certificate.Thumbprint))
     {
         Write-Host
-        Write-Host "WARNING: You'll be searching for pages containing domain isolated web parts using delegated permissions. Only the pages that the current account can access will be returned. For a complete search use Connect-PnPOnline with applicaiton permissions" -ForegroundColor Yellow        
+        Write-Host "WARNING: You'll be searching for pages containing domain isolated web parts using delegated permissions. Only the pages that the current account can access will be returned. For a complete search use Connect-PnPOnline with applicaiton permissions" -ForegroundColor Yellow
         Write-Host
     }
 
     # inspect the manifest to find the web part ids
     foreach ($domainIsolatedSolution in $solutionsWithDomainIsolatedWebParts) {
 
-        if ($domainIsolatedSolution.FieldValues.IsClientSideSolutionDeployed -eq $false) 
+        if ($domainIsolatedSolution.FieldValues.IsClientSideSolutionDeployed -eq $false)
         {
             Write-Host "Skipping solution ""$($domainIsolatedSolution.FieldValues.Title)"" as it is not deployed" -ForegroundColor Yellow
             continue
@@ -145,8 +145,8 @@ process
         Write-Host "Inspecting solution ""$($domainIsolatedSolution.FieldValues.Title)"" with id $($domainIsolatedSolution.FieldValues.UniqueSolutionId)..." -ForegroundColor Green
 
         $solutionsToExport += [pscustomobject]@{
-            'Title' = $domainIsolatedSolution.FieldValues.Title; 
-            'Solution Id' = $domainIsolatedSolution.FieldValues.UniqueSolutionId; 
+            'Title' = $domainIsolatedSolution.FieldValues.Title;
+            'Solution Id' = $domainIsolatedSolution.FieldValues.UniqueSolutionId;
             'Publisher' = $domainIsolatedSolution.FieldValues.AppPublisher;
             'Description' = $domainIsolatedSolution.FieldValues.AppShortDescription;
             'Version' = $domainIsolatedSolution.FieldValues.AppVersion;
@@ -154,7 +154,7 @@ process
             'Isolated domain' = $domainIsolatedSolution.FieldValues.IsolatedDomain;
         }
 
-        if ($SkipPages -eq $true) 
+        if ($SkipPages -eq $true)
         {
             Write-Host "Skipping search for pages with domain isolated web parts" -ForegroundColor Yellow
             continue
@@ -163,8 +163,8 @@ process
         $components = Get-PnPListItem -List "Lists/ComponentManifests" -Query "<View><ViewFields><FieldRef Name='ClientComponentName'/><FieldRef Name='ClientComponentId'/></ViewFields><Query><Where><Eq><FieldRef Name='SolutionId'/><Value Type='Text'>$($domainIsolatedSolution.FieldValues.UniqueSolutionId)</Value></Eq></Where></Query></View>"
 
         if ($null -ne $components) {
-            
-            foreach($component in $components) 
+
+            foreach($component in $components)
             {
                 Write-Host "Searching for pages using component: ""$($component.FieldValues.ClientComponentName)"" with id $($component.FieldValues.ClientComponentId)..." -ForegroundColor Blue
 
@@ -172,7 +172,7 @@ process
                 $pages = Submit-PnPSearchQuery -Query "FileExtension:aspx SPFxExtensionJson:$($component.FieldValues.ClientComponentId)" -All -RelevantResults | Select-Object SPWebUrl,OriginalPath
 
                 if ($null -ne $pages) {
-                    foreach($page in $pages) 
+                    foreach($page in $pages)
                     {
                         Write-Host $page.OriginalPath
 
@@ -181,7 +181,7 @@ process
                             'Publisher' = $domainIsolatedSolution.FieldValues.AppPublisher;
                             'Component' = $component.FieldValues.ClientComponentName;
                             'Component Id' = $component.FieldValues.ClientComponentId;
-                            'Site' = $page.SPWebUrl; 
+                            'Site' = $page.SPWebUrl;
                             'Page' = $page.OriginalPath;
                         }
                     }
@@ -194,7 +194,7 @@ process
 
     $solutionsToExport | Export-CSV "solutions.csv" -NoTypeInformation
 
-    if ($SkipPages -eq $false) 
+    if ($SkipPages -eq $false)
     {
         $pagesToExport | Export-CSV "pages.csv" -NoTypeInformation
     }
