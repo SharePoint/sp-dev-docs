@@ -199,6 +199,8 @@
         href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
         href: spfx/web-parts/isolated-web-parts.md
+      - name: Isolated web parts are retired
+        href: spfx/web-parts/isolated-web-parts-retirement.md
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
       - name: Microsoft Teams and SPFx Web parts
