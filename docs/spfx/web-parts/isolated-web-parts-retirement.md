@@ -33,21 +33,21 @@ If you see permissions listed under **Isolated** then use the instructions below
 
 To use this script follow these steps:
 
-1. Copy PowerShell script file contents (end of this page) and save it as `Find-DomainIsolatedWebparts.ps1` on your local drive.
+1. Copy PowerShell script file contents (end of this page) and save it as **Find-DomainIsolatedWebparts.ps1** on your local drive.
 1. [Install PnP PowerShell](https://pnp.github.io/powershell/articles/installation.html) in case that is not yet available.
-1. [Configure PnP PowerShell to authenticate with Microsoft Entra](https://pnp.github.io/powershell/articles/authentication.html#setting-up-access-to-your-own-azure-ad-app), preferably configure for using application permissions as that’s required to check for domain isolated web parts across the whole tenant. If you have an Entra application configured with a cert and the SharePoint Sites.Read.All permission you can just use that, if not follow below guidance to create such an application. Replace the values between `<>` with relevant values for your tenant.
+1. [Configure PnP PowerShell to authenticate with Microsoft Entra](https://pnp.github.io/powershell/articles/authentication.html#setting-up-access-to-your-own-azure-ad-app), preferably configure for using application permissions as that’s required to check for domain isolated web parts across the whole tenant. If you have a Microsoft Entra application configured with a cert and the SharePoint Sites.Read.All permission you can just use that, if not follow below guidance to create such an application. Replace the values between `<>` with relevant values for your tenant:
 
     ```PowerShell
     Register-PnPAzureADApp -ApplicationName FindDomainIsolatedWebparts -Tenant <contoso.onmicrosoft.com> -Store CurrentUser -SharePointApplicationPermissions "Sites.Read.All" -Username "<joe@contoso.onmicrosoft.com>" -Interactive
     ```
 
-1. Connect to your tenant app catalog using the client id and certificate. Replace the values between `<>` with relevant values for your tenant. If you don’t know your app catalog site URL you can connect to an arbitrary site in your tenant and then use `Get-PnPTenantAppCatalogUrl`.
+1. Connect to your tenant app catalog using the client id and certificate. Replace the values between `<>` with relevant values for your tenant. If you don’t know your app catalog site URL you can connect to an arbitrary site in your tenant and then use **Get-PnPTenantAppCatalogUrl**:
 
     ```PowerShell
     Connect-PnPOnline <https://contoso.sharepoint.com/sites/appcatalog> -ClientId <5be692c9-0a1a-4f07-b3e8-7b79f1582375> -Thumbprint <B49C5854E08EA0D401C4604C870A27167B07BD7D> -tenant <contoso.onmicrosoft.com>
     ```
 
-1. Run the script to discover domain isolated web part usage
+1. Run the script to discover domain isolated web part usage:
 
     ```PowerShell
     .\Find-DomainIsolatedWebparts.ps1
@@ -57,7 +57,9 @@ To use this script follow these steps:
 
 If you are using domain isolated web parts in your SPFx solutions, you will need to migrate them to regular web parts before April 2026. Otherwise, your web parts will stop working after that date. Microsoft is working on to be announced features that offer an alternative strategy for domain isolated web parts, but we strongly recommend to move away from domain isolated web parts.
 
-To migrate your web parts, you will need to switch the "isDomainIsolated" property from the package-solution.json file to false, increment the version and redeploy your solution. Next to that you also need to ensure that the permissions granted to the domain isolated web part, listed under the “Isolated” grouping in the API access page of SharePoint admin center, are now granted as “Organization-wide” permissions. Check the [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access?WT.mc_id=365AdminCSH_spo) article to learn more.
+To migrate your web parts, you will need to switch the `isDomainIsolated` property from the **package-solution.json** file to false, increment the version and redeploy your solution.
+
+Next to that you also need to ensure that the permissions granted to the domain isolated web part, listed under the **Isolated** grouping in the **API access** page of SharePoint admin center, are now granted as **Organization-wide** permissions. Check the [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access?WT.mc_id=365AdminCSH_spo) article to learn more.
 
 ## PowerShell script to discover domain isolated web part usage
 
