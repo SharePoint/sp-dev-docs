@@ -81,7 +81,8 @@ For sharePoint Embedded apps, sharing configurations can be adjusted at the appl
 This setting can only be set by SharePoint Embedded admins, and can be configured using powershell cmdlet [Set-SPOApplication](/powershell/module/sharepoint-online/set-SPOApplication) as per this example:
 
 ```powershell
-Set-SPOApplication <OwningApplicationID>
+Set-SPOApplication 
+    -OwningApplicationID <indentifier>
     -OverrideTenantSharingCapability $true
     -SharingCapability ExistingExternalUserSharing
 ```
