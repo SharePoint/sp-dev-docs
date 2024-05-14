@@ -50,66 +50,67 @@ To configure the form in a list or library:
 
     ```JSON
     {
-        "elmType": "div",
-        "attributes": {
-            "class": "ms-borderColor-neutralTertiary"
-        },
-        "style": {
-            "width": "99%",
-            "border-top-width": "0px",
-            "border-bottom-width": "1px",
-            "border-left-width": "0px",
-            "border-right-width": "0px",
-            "border-style": "solid",
-            "margin-bottom": "16px"
-        },
-        "children": [
+      "elmType": "div",
+      "attributes": {
+        "class": "ms-borderColor-neutralTertiary"
+      },
+      "style": {
+        "width": "99%",
+        "border-top-width": "0px",
+        "border-bottom-width": "1px",
+        "border-left-width": "0px",
+        "border-right-width": "0px",
+        "border-style": "solid",
+        "margin-bottom": "16px"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "display": "flex",
+            "box-sizing": "border-box",
+            "align-items": "center"
+          },
+          "children": [
             {
-                "elmType": "div",
-                "style": {
-                    "display": "flex",
-                    "box-sizing": "border-box",
-                    "align-items": "center"
-                },
-                "children": [
-                    {
-                        "elmType": "div",
-                        "attributes": {
-                            "iconName": "Group",
-                            "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
-                            "title": "Details"
-                        },
-                        "style": {
-                            "flex": "none",
-                            "padding": "0px",
-                            "padding-left": "0px",
-                            "height": "36px"
-                        }
-                    }
-                ]
-            },
-            {
-                "elmType": "div",
-                "attributes": {
-                    "class": "ms-fontColor-neutralSecondary ms-fontWeight-bold ms-fontSize-24"
-                },
-                "style": {
-                    "box-sizing": "border-box",
-                    "width": "100%",
-                    "text-align": "left",
-                    "padding": "21px 12px",
-                    "overflow": "hidden"
-                },
-                "children": [
-                    {
-                        "elmType": "div",
-                        "txtContent": "='Contact details for ' + [$Title]"
-                    }
-                ]
+              "elmType": "div",
+              "attributes": {
+                "iconName": "Group",
+                "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
+                "title": "Details"
+              },
+              "style": {
+                "flex": "none",
+                "padding": "0px",
+                "padding-left": "0px",
+                "height": "36px"
+              }
             }
-        ]
+          ]
+        },
+        {
+          "elmType": "div",
+          "attributes": {
+            "class": "ms-fontColor-neutralSecondary ms-fontWeight-bold ms-fontSize-24"
+          },
+          "style": {
+            "box-sizing": "border-box",
+            "width": "100%",
+            "text-align": "left",
+            "padding": "21px 12px",
+            "overflow": "hidden"
+          },
+          "children": [
+            {
+              "elmType": "div",
+              "txtContent": "='Contact details for ' + [$Title]"
+            }
+          ]
+        }
+      ]
     }
     ```
+
 1. To preview your changes, click the **Preview** button.
 1. To save your changes, click the **Save** button.
 1. Close and open the form again to view the custom header.
@@ -180,23 +181,23 @@ To configure the form in a list or library:
 
     ```JSON
     {
-        "sections": [
-            {
-                //give a display name for the section
-                "displayname": "",
-                "fields": [
-                    //reference your fields here using their display name
-                    "Title"
-                ]
-            },
-            {
-                //give a display name for the section
-                "displayname": "",
-                "fields": [
-                    //reference your fields here using their display name
-                ]
-            }
-        ]
+      "sections": [
+        {
+          //give a display name for the section
+          "displayname": "",
+          "fields": [
+            //reference your fields here using their display name
+            "Title"
+          ]
+        },
+        {
+          //give a display name for the section
+          "displayname": "",
+          "fields": [
+            //reference your fields here using their display name
+          ]
+        }
+      ]
     }
     ```
 
@@ -204,30 +205,30 @@ To configure the form in a list or library:
 
     ```JSON
     {
-        "sections": [
-            {
-                "displayname": "",
-                "fields": [
-                    "Title"
-                ]
-            },
-            {
-                "displayname": "Details",
-                "fields": [
-                    "Department",
-                    "Email",
-                    "Country"
-                ]
-            },
-            {
-                "displayname": "Application",
-                "fields": [
-                    "Application Id",
-                    "Approver",
-                    "Reviewer"
-                ]
-            }
-        ]
+      "sections": [
+        {
+          "displayname": "",
+          "fields": [
+            "Title"
+          ]
+        },
+        {
+          "displayname": "Details",
+          "fields": [
+            "Department",
+            "Email",
+            "Country"
+          ]
+        },
+        {
+          "displayname": "Application",
+          "fields": [
+            "Application Id",
+            "Approver",
+            "Reviewer"
+          ]
+        }
+      ]
     }
     ```
 

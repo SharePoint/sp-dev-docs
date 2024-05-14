@@ -14,9 +14,9 @@ All files and documents in SharePoint Embedded are stored in Containers. All Con
 ## Container Relationship
 
 - Every Container Type is owned by one SharePoint Embedded Application
-- Only the app owning a Container Type may create instances of a Container.
+- Only the app owning a Container Type might create instances of a Container.
 - Container instances must belong to a Container Type.
-- An app may instantiate zero or more Container instances for a given Container Type.
+- An app might instantiate zero or more Container instances for a given Container Type.
 - Apps can grant permission to other apps to create, read, update, and/or delete Container instances of Container Types of the owning app, for example, to allow backup/restore or DLP apps to operate on content in those Containers and/or create instances of the Container Type. Note, the owning application is charged for storage in all instances of a Container Type regardless of which app originally instantiated the Container.
 
 ## SharePoint Embedded Containers and Container Types
