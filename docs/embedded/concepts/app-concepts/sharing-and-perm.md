@@ -74,7 +74,7 @@ Invoking the additive permission API with different roles will have different ou
 
 By default, SharePoint Embedded app sharing configuration will be the same as consuming tenant sharing configuration. For example, if the consuming Tenant has been configured to disable sharing to Guest users, then your SharePoint Embedded application won’t be able to add Guest Users to the Container roles or grant them additive permissions.
 
-### Application Sharing Configuration Settings override
+### Application External Sharing Override
 
 For sharePoint Embedded apps, sharing configurations can be adjusted at the application level, Consuming tenant admin can config permissions that are either more restrictive or more permissive than tenant level sharing settings. For example, even if a tenant's settings prohibit sharing with guest users, a SharePoint Embedded application can be configured to allow guest sharing. Consequently, all containers within that SharePoint Embedded application would have the ability to include guest users or extend additional permissions, while other SharePoint Embedded applications and SharePoint sites maintain restricted sharing permissions.
 
@@ -89,5 +89,5 @@ Set-SPOApplication
 
 Note the following:
 
-- [Microsoft.Online.SharePoint.PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) version 16.0.23701.0 or later is required to configure sharing capability at an application level
+- [Microsoft.Online.SharePoint.PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) version 16.0.24810.12000 or later is required to configure sharing capability at an application level
 

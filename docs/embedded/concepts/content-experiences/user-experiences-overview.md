@@ -50,12 +50,12 @@ Set-SPOContainerTypeConfiguration
     -ContainerTypeID <Identifier>
     -discoverabilityDisabled $False
 ```
-In this way, your files will be integrated into the Microsoft file environment, participating in intelligent file discovery and Copilot experiences.
+In this way, your files will be integrated into the Microsoft365 environment, participating in intelligent file discovery and Copilot experiences.
 
 Note the following:
 
 1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
-2. To enable the sharing user experience for your content in Office.com additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
+2. To enable the sharing user experience for your content in Office.com, additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
 
 ```http
 PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
