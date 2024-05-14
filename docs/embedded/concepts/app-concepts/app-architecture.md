@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 All files and documents in SharePoint Embedded are stored in Containers. All Containers are created and stored within a Microsoft 365 Tenant. The ISV or LOB app then uses the Microsoft Graph API to interact with the dedicated Container(s) for that app. The Containers are part of the Microsoft 365 customer’s tenant regardless of how the app is deployed.
 
-![SharePoint Embedded Capabilities](../../images/architecture-overview.png)
+![SharePoint Embedded Capabilities](../../images/apparc-2.png)
 
 ## Container Relationship
 
@@ -23,4 +23,6 @@ All files and documents in SharePoint Embedded are stored in Containers. All Con
 
 Container Type is a property stamped on every Container instance. Each Container Type is owned by one Application; and each Application can own only one Container Type. To learn more about Container Types, see [Container Type](./containertypes.md)
 
-![SharePoint Embedded Flow](../../images/app-flow7.jpg)
+![SharePoint Embedded Flow](../../images/apparc-1.png)
+
+All content is stored in the Consuming Tenant
