@@ -18,7 +18,7 @@ Storage Scenario   |  Meter Decision   |
 |User uploads 10GB in the container on 1st day of the month and then deletes the 10GB on 2nd day of the month and keeps the container empty for rest of the month           |On the last day of the month,storage consumption should record it as 10GB on 1st day and then charge for 0GB storage for rest of the days of the month |
 
 ## API Transactions 
-Graph API calls that the SharePoint Embedded application explicitly makes towards containers or container content are counted as a transaction, and customers are charged based on the number of transactions they make. Any calls that internal services make to the containers like ediscovery search are not chargeable.
+Graph API calls that the SharePoint Embedded application explicitly makes towards containers or container content are counted as a transaction, and customers are charged based on the number of transactions they make. Any calls that internal services make to the containers, like ediscovery search, are not chargeable.
 
 ## Egress
 Egress refers to the data transferred out of the SharePoint Embedded platform to external destinations. Egress is data (bytes) leaving the SharePoint Embedded application server to the users desktop or mobile client. Egress charges are associated with the actual data transfer, i.e., the content of files or media being moved from a server to a user's client. Therefore, the following are eligible for egress charge: 
