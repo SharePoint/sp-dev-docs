@@ -1,6 +1,6 @@
 ---
-title: Adoptions and Use Case Scenarios
-description: Adoptions and Use Cases for SharePoint Embedded
+title: Scenarios and Use Cases
+description: Scenarios and Use Cases for SharePoint Embedded
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
