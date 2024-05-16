@@ -74,7 +74,7 @@ To selectively enforce the policy on one/few SharePoint Embedded Containers, cop
 
 Since SharePoint Embedded doesn't have a built-in user interface, DLM scenarios requiring user interaction aren't natively supported. For instance, if an end user attempts to apply a retention label on a Container using a SharePoint Embedded application (app), the app governing the access to the Container must furnish that functionality. In such cases, Graph APIs for DLM functionalities can be used.
 
-### Data Loss Protection (DLP) - Coming soon
+### Data Loss Protection (DLP)
 
 Using Microsoft Purview, Admins can identify, monitor, and automatically protect sensitive items stored in applications using SharePoint Embedded. For more information on DLP, see  [Learn about data loss prevention](/purview/dlp-learn-about-dlp).
 
@@ -102,7 +102,7 @@ Set-SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <Sen
 
 To learn more about setting sensitivity labels, see [Learn about sensitivity labels](/purview/sensitivity-labels).
 
-### Block Download policy (Coming Soon)
+### Block Download policy
 
 Block Download policy allows SharePoint Administrator or Global Administrator to block the download of files from SharePoint Embedded Containers using the following SharePoint PowerShell cmdlet –
 
@@ -112,7 +112,7 @@ Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 
 A SharePoint Advanced Management (SAM) license is needed to enforce this policy. Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
 
-### Conditional Access policy (Coming Soon)
+### Conditional Access policy
 
 SharePoint Embedded supports basic Conditional Access policy configurations such as:
 
