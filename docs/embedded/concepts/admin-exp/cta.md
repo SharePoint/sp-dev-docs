@@ -27,7 +27,7 @@ Consuming tenant admins are able to manage SharePoint Embedded applications with
 To get started using PowerShell to manage SharePoint Embedded, you have to install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) and [connect to SharePoint Online](/powershell/module/sharepoint-online/connect-sposervice).
 
 > [!IMPORTANT]
-> You need version 16.0.24211.12000 or higher to run the commands for SharePoint Embedded.
+> You must use the latest version of SharePoint PowerShell to use container administration cmdlets.
 
 ## Application Administration
 
