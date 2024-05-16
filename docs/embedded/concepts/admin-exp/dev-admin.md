@@ -25,7 +25,7 @@ Developer admins are able to manage SharePoint Embedded applications with PowerS
 To get started using PowerShell to manage SharePoint Embedded, you have to install the SharePoint Online Management Shell and connect to SharePoint Online.
 
 > [!IMPORTANT]
-> You need version 16.0.24211.12000 or higher to run the commands for SharePoint Embedded.
+> You need version the latest version of SharePoint Online Management Shell.
 
 > [!IMPORTANT]
 > Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to execute SharePoint Embedded Container commandlets mentioned in this article.
