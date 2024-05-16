@@ -92,7 +92,6 @@ Open the file **./src/extensions/helloWorld/HelloWorldCommandSet.ts**.
 Notice the base class for the ListView Command Set is imported from the **\@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.
 
 ```typescript
-import { override } from '@microsoft/decorators';
 import { Log } from '@microsoft/sp-core-library';
 import {
   BaseListViewCommandSet,

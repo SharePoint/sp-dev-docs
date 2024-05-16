@@ -83,6 +83,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'addShortcut'
 'pinToQuickAccess'
 'unpinFromQuickAccess'
+'manageForms'
 ```
 
 ## hide
