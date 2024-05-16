@@ -16,7 +16,8 @@ In SharePoint Embedded, files and documents are stored in Containers, with each 
 Container Type is created and managed by the SharePoint Embedded application developer, and is strongly tied to the SharePoint Embedded application. Container Type can be created with or without linkage to an Azure billing profile, for trial/development and production purposes respectively.
 
 > [!NOTE]
-> You must specify the purpose of the Container Type you are creating at creation time. Dependent on the purpose, you may or may not need to provide your Azure Subscription ID. A Container Type set for trial purpose cannot be converted for production; or vice versa. 
+> 1. You must specify the purpose of the Container Type you are creating at creation time. Dependent on the purpose, you may or may not need to provide your Azure Subscription ID. A Container Type set for trial purpose cannot be converted for production; or vice versa.
+> 2. You must use the latest version of SharePoint Powershell for container type configurations. 
 
 ## Trial Container Type
 
