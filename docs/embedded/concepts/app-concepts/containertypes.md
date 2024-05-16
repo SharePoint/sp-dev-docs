@@ -43,8 +43,8 @@ The following restrictions are applied to Container Type in the Trial status:
 ## Standard Container Type
 
 Container Type can also be created with an Azure billing profile, which includes an Azure Subscription ID and a Region Group. This Container Type is in the Standard status and is billable. You need the following to create a Container Type in the Standard status:
-•	An Azure subscription and Resource Group must be present in the Azure portal
-•	An App registration must be created in Microsoft Entra ID
+-	An Azure subscription and Resource Group must be present in the Azure portal
+-	An App registration must be created in Microsoft Entra ID
 Each developer tenant can create up to five Container Types in the Standard status. To create one, use the following Powershell cmdlet:
 
 ```powershell
