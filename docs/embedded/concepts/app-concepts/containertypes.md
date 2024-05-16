@@ -57,7 +57,7 @@ New-SPOContainerType
 > [!NOTE]
 > The user or admin who will set up billing relationship for SharePoint Embedded will need to have owner or contributor permissions on the Azure subscription.
 > 
-## Viewing ContainerTypes
+## Viewing Container Types
 
 Developer Admin can view all the SharePoint Embedded Container Types created by them on their tenant using this PowerShell cmdlet. This cmdlet retrieves and returns the list of Container Types  created for a SharePoint Embedded Application in the tenant.
 
