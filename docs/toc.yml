@@ -544,8 +544,8 @@
       href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: SharePoint Embedded for Visual Studio Code
       href: embedded/getting-started/spembedded-for-vscode.md
-  - name: Adoptions and Use Case Scenarios
-    href: embedded/adoptions-and-use.md
+  - name: Scenarios and Use Cases
+    href: embedded/scenarios-and-use-cases.md
   - name: Concepts
     items:
     - name: Application Architecture
