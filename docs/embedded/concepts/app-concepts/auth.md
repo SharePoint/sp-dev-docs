@@ -93,8 +93,8 @@ Any user accessing a Container must be a member of the Container. Membership to 
 
 Container permissions only apply for delegated access and not for app-only access, because a user context is required.
 
-> [!NOTE]
-> The calling user creating a new container via delegated calls is automatically assigned the owner role.
+> [!IMPORTANT]
+> The calling user creating a new container via delegated calls is automatically assigned the Owner role.
 
 |  Role   |                                                                                 Description                                                                                 |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
