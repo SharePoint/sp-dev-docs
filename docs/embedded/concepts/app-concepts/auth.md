@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Authentication and Authorization with SharePoint Embedded
 
-SharePoint Embedded uses a mix of Graph and SharePoint (Vroom, CSOM...) APIs. tll APIs to eventually be on Graph. 
+SharePoint Embedded uses a mix of Graph and SharePoint APIs. All APIs will be eventually available be on Graph. 
 
 ## Auth Flow 
 
