@@ -29,7 +29,7 @@ The scope and app role above authorizes your Microsoft Entra ID application to c
 
 #### Configure your app manifest
 
-In the Azure Portal, navigate to your App Registration. Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it looks like the following JSON:
+In the Azure Portal, navigate to your App Registration. Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it includes the following entries:
 
 ```json
 "requiredResourceAccess": [
