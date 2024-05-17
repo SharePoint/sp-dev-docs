@@ -5,41 +5,41 @@ The Azure Cost Management and Billing portal provides a comprehensive overview o
 
 ## Step-by-Step Guide
 
-### Sign in to the Azure Portal
+### 1. Sign in to the Azure Portal
 1. Open your web browser and navigate to the [Azure portal](https://portal.azure.com/).
 2. Sign in using your Azure account credentials.
 
-### Navigate to Cost Management + Billing
+### 2. Navigate to Cost Management + Billing
 
 1. Once signed in, locate the left-hand navigation menu.
 2. Click on "Cost Management + Billing". If it's not visible, you can search for it using the search bar at the top of the portal.
    
    ![image](https://github.com/cindylay/sp-dev-docs/assets/132292644/56c1be00-a2b3-4000-a3c6-e24450842d22)
 
-### Select Your Subscription
+### 3. Select Your Subscription
 
 1. In the Cost Management + Billing section, you will see a list of your subscriptions.
 2. Select the subscription for which you want to view the billing details.
 
-### View Billing Overview
+### 4. View Billing Overview
 
 1. After selecting your subscription, you will be taken to the Overview page.
 2. Here, you can see a summary of your costs, including current spending, forecasted costs, and any spending anomalies.
 
-### Access Cost Analysis
+### 5. Access Cost Analysis
 
 1. For a more detailed view, click on "Cost analysis" under the Cost Management section.
 2. In the Cost Analysis page, you can customize the date range to view costs for specific periods.
-3. Use the filters to break down costs by tags - app id, tenant id or container type id. Filters can also set by Meters, Resources etc.
+3. Use the filters to break down costs by tags - app id, tenant id or container type id. Filters can also set by Meters, Resources etc.Refer to the [SharePoint Embedded meters](docs/embedded/concepts/admin-exp/meters.md) article to learn more about the pay-as-you-go meters supported.
 
 <img width="1270" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/3e34b2a4-7315-49a5-8bef-0bb18421564a">
 
-### Download Invoices
+### 6. Download Invoices
 
 1. To download invoices, go to the "Invoices" section under Billing.
 2. Here, you can view and download your billing invoices for any billing period.
 
-### Set Up Budgets and Alerts
+### 7. Set Up Budgets and Alerts
 
 1. To better manage your spending, you can set up budgets and alerts.
 2. Click on "Budgets" under the Cost Management section.
