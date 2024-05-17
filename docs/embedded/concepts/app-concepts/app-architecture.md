@@ -17,6 +17,8 @@ All files and documents in SharePoint Embedded (SPE) are stored in Containers. A
 
 Container Type is a property stamped on every Container instance. Each Container Type is owned by one Application; and each Application can own only one Container Type. To learn more about Container Types, see [Container Type](./containertypes.md)
 
+Add a use case using Contoso, Fabrikam and change the diagram to reflect that
+
 ![SharePoint Embedded Flow](../../images/apparc-1.png)
 
 All content is stored in the Consuming Tenant...
