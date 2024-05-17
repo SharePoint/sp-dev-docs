@@ -91,7 +91,7 @@ Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapabil
 Admins can get a list of all the containers for a SharePoint Embedded application using the following commands. This command lists all the active containers within the application.
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> |FT
 ```
 ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/b433f7a7-fe60-4c64-89a1-a2b9f083428c)
 
