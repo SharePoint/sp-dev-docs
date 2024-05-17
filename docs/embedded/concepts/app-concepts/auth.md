@@ -67,7 +67,25 @@ In the Azure Portal, navigate to your App Registration. Select **Manage > Manife
 
 ### Container Type permissions
 
-TBD: Describe Container Type permissions
+Container Type permissions are granted to a Microsoft Entra ID application via [Container Type registration](/register-api-docuemntation.md).
+
+|      Permission      |                                                    Description                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| None                 | Has no permissions to any Containers or content of this Container Type.                                            |
+| ReadContent          | Can read content of Containers of this Container Type.                                                             |
+| WriteContent         | Can write content to Containers for this Container Type. This can't be granted without the ReadContent permission. |
+| Create               | Can create Containers of this Container Type.                                                                      |
+| Delete               | Can delete Containers of this Container Type.                                                                      |
+| Read                 | Can read the metadata of Containers of this Container Type.                                                        |
+| Write                | Can update the metadata of Containers of this Container Type.                                                      |
+| EnumeratePermissions | Can enumerate the members of a Container and their roles for Containers of this Container Type.                    |
+| AddPermissions       | Can add members to the Container for Containers of this Container Type.                                            |
+| UpdatePermissions    | Can update (change roles of) existing memberships in the Container for Containers of this Container Type.          |
+| DeletePermissions    | Can delete other members (but not self) from the Container for Containers of this Container Type.                  |
+| DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type.                                |
+| ManagePermissions    | Can add, remove (including self) or update members in the Container roles for Containers of this Container Type.   |
+| Full                 | Has all permissions for Containers of this Container Type.                                                         |
+
 
 ### Container permissions
 
