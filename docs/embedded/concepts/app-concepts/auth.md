@@ -7,10 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Authentication and Authorization
 
-To use SharePoint Embedded (SPE), your application will use Microsoft Graph APIs. To learn more about Microsoft Graph authentication and authorization, [read here](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
-SPE supports both user delegated and application only access.
-
-## Authorization
+To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
 
 ### Pre-Requisites
 
@@ -20,14 +17,18 @@ SPE supports both user delegated and application only access.
 > [!NOTE] 
 > SharePoint Embedded blocks public clients from making API calls to create containers.
 
+## Authorization
+
 ### Using Microsoft Graph for SharePoint Embedded
 
-* Delegated access to SPE APIs require the `FileStorageContainer.Selected` scope
-* App-only access to SPE APIs rquire the `FileStorageContainer.Selected` app role
+SPE supports both user delegated and application only access via Microsoft Graph. These are the permissions that your application needs to request based on the type of access:
+* Delegated access require the `FileStorageContainer.Selected` scope
+* App-only access rquire the `FileStorageContainer.Selected` app role
 
-The scope and app role above authorizes your Microsoft Entra ID application to call the SPE API endpoints on a given tenant.
+> [!IMPORTANT] 
+> The scope and app role above authorizes your Microsoft Entra ID application to call Microsoft Graph for SPE on a given tenant. However, your application must be granted permissions to a Container Type to effectively access Containers of that type.
 
-### Container Type registration
+#### Container Type registration
 
 While SPE is used exclusively via Microsoft Graph, there is one exception: registering a Container Type on a consuming tenant. Read more about [Container Types](/containertypes.md).
 
@@ -37,9 +38,6 @@ To [register a Container Type](register-api-documentation.md), your application 
 |:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
 
-> [!IMPORTANT]
-> You must request the `Container.Selected` scope in your app manifest.
-                                                                                 |
 #### Configure your app manifest
 
 In the Azure Portal, navigate to your App Registration. Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it includes the following entries:
@@ -75,8 +73,6 @@ In the Azure Portal, navigate to your App Registration. Select **Manage > Manife
 ],
 ```
 
-> [!IMPORTANT] 
-> Your application being granted the permissions above (delegated or app-only) is not enough to get access to SPE Containers. Your application must be granted permissions to a Container Type.
 
 ### Container Type permissions
 
