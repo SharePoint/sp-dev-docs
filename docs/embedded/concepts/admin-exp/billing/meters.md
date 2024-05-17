@@ -6,23 +6,23 @@ ms.localizationpriority: high
 ---
 
 # SharePoint Embedded Meters
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage in the [Azure Cost Management](https://ms.portal.azure.com/) portal as meter events through the Azure subscription it chooses. 
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/). 
 
 SharePoint Embedded has three billing meters:
 
 | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SharePoint Embedded Service Meters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Meter Unit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
-| :--------------------------------:   | :----------:   |
-|              Storage                 |   $/GB     |
-|   Graph API Transactions             | $/Transactions    |
-|           Egress                     |  $/GB      |
+| :--------------------------------:   | :----------:       |
+|              Storage                 |   $/GB             |
+|   API Transactions                   | $/Transactions     |
+|           Egress                     |  $/GB              |
 
 
 ## Storage
-Storage consumption meters in SharePoint Embedded apply to the storage used by files, documents, metadata, versions of files and documents. Storage consumption also includes all content in the recycle bin within SharePoint Embedded containers.
+Storage consumption meters in SharePoint Embedded apply to the storage used by files and documents along with their metadata and versions. Storage consumption also includes all content in the recycle bin and deleted container collection within SharePoint Embedded.
 
 
 ## API Transactions 
-Graph API calls made explicitly by the SharePoint Embedded application towards containers or container content are counted as transactions, and customers are billed based on the number of these transactions. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of  Graph API that can act on the containers and the container contents.
+Microsoft Graph calls made explicitly by the SharePoint Embedded application towards containers or container content are counted as transactions, and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph that can act on the containers and the container contents.
 
 However, calls made by internal services to the containers, which the application has no control over, are **not** chargeable. Some examples of such non-chargeable transactions include:
 
