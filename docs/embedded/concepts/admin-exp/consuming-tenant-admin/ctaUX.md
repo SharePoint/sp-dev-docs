@@ -1,3 +1,9 @@
+---
+title: Manage Containers in SharePoint Admin Center
+description: This article describes how administrator can manage containers in SPAC.
+ms.date: 05/21/2024
+ms.localizationpriority: high
+---
 # Manage Containers in SharePoint Admin Center
 
 The organizations that use the SharePoint Embedded applications on their Microsoft 365 (M365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can manage containers through a graphical user interface (GUI) using the [SharePoint Administrator Center](https://go.microsoft.com/fwlink/?linkid=2185219) (SPAC). 
@@ -125,7 +131,5 @@ Upon clicking Delete, the container is permanently deleted and the status of the
 1. Sort containers by created date and storage
 2. Filter containers by created date, application name and publisher name
 3. Edit sensitivity label of a container
-4. Add users to a container
-5. Reassign user roles in a containers
-6. Remove users from a container
+4. Add and remove users to/from a container
 
