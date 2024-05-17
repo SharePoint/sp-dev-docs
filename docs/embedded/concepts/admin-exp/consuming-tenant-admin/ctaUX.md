@@ -14,21 +14,14 @@ The following actions are supported in SPAC:
 5. Restore a deleted container
 6. Purge a deleted container
 
-The following is view of a Global Admin
+Global admin will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
 
 ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/7fc0e225-5bc1-4772-bd93-13e3f4d72708)
 
-The following is the view of a SPE Admin
+SharePoint Embedded Admins will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
 ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/ab6cba19-70d2-4385-9ab9-e97c23ad1ad1)
 
-
-> [!IMPORTANT]
-> Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to get access to container management on SPAC.
-> 
-> Global Administrators can continue to execute SharePoint Embedded container cmdlets.
-> 
-> If you are a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
 ## Active Containers
 The Active Containers page displays all the active containers within the tenant, providing a comprehensive overview and management capabilities. This page includes the following metadata for each container:
@@ -47,13 +40,18 @@ The Active Containers page displays all the active containers within the tenant,
 ### View details of a containers
 The detailed container view provides a deeper dive into container-specific metadata, organized under two tabs:
 
-1. **General:** Displays all the general metadata about a container, such as its purpose, usage, and configuration settings.
-2. **Membership:** Shows the user permissions for different users associated with the container. 
+1. **General:** This panel displays all the general metadata about a container, such as its purpose, usage, and configuration settings.
 
 ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/cd85c8dc-31be-46ee-9e8c-5e1318496359)
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/f4c8c143-01d3-473f-842d-733a5eb6b4d5)
+2. **Membership:** This panel shows the user permissions for different users associated with the container.
 
+> [!IMPORTANT]
+> The SharePoint Embedded platform supports four distinct [roles](docs/embedded/concepts/app-concepts/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
+>
+> Admins should verify the mapping of the roles provided by the platform to those used in the application.
+
+![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/f4c8c143-01d3-473f-842d-733a5eb6b4d5)
 
   
 ## Deleted Containers
@@ -71,11 +69,18 @@ The deleted containers page lists down all the soft deleted containers present i
 
 
  ## Soft delete a container
+
+> [!Warning]
+>
+>Deleting a container may cause unexpected issues for the SharePoint Embedded application it belongs to and may interrupt the application's usage. This action should only be performed by admins when absolutely necessary.
+
 Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container.
 
-Data Loss: Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app might no longer function as expected or might lose access to critical information.
-Broken Links: If the SharePoint Embedded application contains links or references to the deleted container, those links become broken, leading to errors or malfunctioning features within the app.
-Permissions Issues: Deleting a container can affect permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it might encounter permission issues and fail to function properly.
+1. **Data Loss:** Deleting a container removes all its content. If the SharePoint Embedded application relies on the data stored within the deleted container, the app might no longer function as expected or might lose access to critical information.
+
+2. **Broken Links:** If the SharePoint Embedded application contains links or references to the deleted container, those links become broken, leading to errors or malfunctioning features within the app.
+
+3. **Permissions Issues:** Deleting a container can affect permissions settings. If the SharePoint Embedded app relies on specific permissions granted to the deleted container, it might encounter permission issues and fail to function properly.
 Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues.
 
 A container can be soft deleted from the Active containers page for any business reason by the CTA. By default, the delete button is deactivated. On selecting a container, the delete button is activated. The CTA can then select the delete button.
@@ -117,7 +122,7 @@ On successfully restoring, “Container restored” message is shown on the top 
 
 > [!Warning]
 >
->Deleting a container may cause unexpected issues for the SharePoint Embedded application the container belongs to and may interrupt usage of the application.
+>Deleting a container may cause unexpected issues for the SharePoint Embedded application it belongs to and may interrupt the application's usage. This action should only be performed by admins when absolutely necessary.
 
 The CTA can permanently delete (purge) a soft-deleted container if they decide to.
 
