@@ -1,7 +1,7 @@
 ---
 title: Content Experiences Overview
 description: Experiences with SharePoint Embedded content
-ms.date: 11/14/2023
+ms.date: 05/17/2024
 ms.localizationpriority: high
 ---
 
