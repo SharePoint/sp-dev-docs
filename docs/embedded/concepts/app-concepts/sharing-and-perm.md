@@ -20,7 +20,7 @@ In SharePoint Embedded, users cannot break the permission inheritance; they can 
 
 ## Role-based Sharing Settings
 
-SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model (default). This sharing setting is part of [container type configuration](containertypes.md). This configuration can only be set by application owner's developers. To learn more about container permission roles, please refer to [Authentication and Authorization with SharePoint Embedded](../docs/embedded/concepts/app-concepts/auth.md#user-roles).
+SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model (default). This sharing setting is part of [container type configuration](containertypes.md#configuring-container-types). This configuration can only be set by application owner's developers. To learn more about container permission roles, please refer to [Authentication and Authorization with SharePoint Embedded](../docs/embedded/concepts/app-concepts/auth.md#user-roles).
 
 ### Restrictive Sharing Model
 
