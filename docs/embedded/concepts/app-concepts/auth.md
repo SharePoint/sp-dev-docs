@@ -1,15 +1,18 @@
 ---
-title: Authentication and Authorization with SharePoint Embedded
-description: This article describes the Authentication process for SharePoint Embedded Applications.
+title: SharePoint Embedded Authentication and Authorization
+description: This article describes the authentication and authorization model for SharePoint Embedded applications.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
 
-# Authentication and Authorization with SharePoint Embedded
+# SharePoint Embedded Authentication and Authorization
 
-SharePoint Embedded uses a mix of Graph and SharePoint APIs. All APIs will be eventually available be on Graph. 
+SharePoint Embedded (SPE) works on top of Microsoft Graph. To learn more about Microsoft Graph authentication and authorization, [read here](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
+SPE supports both user delegated and application only access.
 
-## Auth Flow 
+## Authorization
+
+SharePoint Embe
 
 * Developers start with an app registered in Entra already
 * Enable Admin Consent on behalf of the application
