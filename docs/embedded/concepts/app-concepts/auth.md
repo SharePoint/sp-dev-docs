@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Authentication and Authorization
 
-SharePoint Embedded (SPE) works on top of Microsoft Graph. To learn more about Microsoft Graph authentication and authorization, [read here](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
+To use SharePoint Embedded (SPE), your application will use Microsoft Graph APIs. To learn more about Microsoft Graph authentication and authorization, [read here](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
 SPE supports both user delegated and application only access.
 
 ## Authorization
