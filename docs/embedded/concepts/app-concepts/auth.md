@@ -11,12 +11,11 @@ SharePoint Embedded uses a mix of Graph and SharePoint APIs. All APIs will be ev
 
 ## Auth Flow 
 
-* Enable SharePoint Embedded 
 * Developers start with an app registered in Entra already
 * Enable Admin Consent on behalf of the application
 * Create Tokens: SharePoint and Graph Tokens 
 * Register the ContainerType in the consuming tenant with app-only auth 
-* Create Containers and build your app with delegated or App=only auth 
+* Create Containers and build your app with delegated or App-only auth 
 
 ### App-Only vs Delegated
 
