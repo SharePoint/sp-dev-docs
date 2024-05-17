@@ -11,16 +11,6 @@ ms.localizationpriority: high
 
 The permission model used in SharePoint Embedded is different from the traditional SharePoint model and follows the OneDrive Consumer model. That is, Unlike SharePoint you can't break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
 
-### Container Roles
-
-Every Container has four predefined roles (that can't be extended or modified) that users or Microsoft Entra security groups can be added or removed from:
-
-- **Owner**: Has full control over the Container
-- **Manager**: And being to add, update, and delete content in the Container, they can also maintain permissions of the Container and the content in the Container
-- **Writer**: Can add, update, and delete content in the Container
-- **Reader**: Can only view content in the Container
-If a user is a member of a role, then those permissions apply to all of the content (files and folders) that in that Container. For example, if *UserA* is made a member of the Reader role, then *UserA* is able to view and read all content (files and folders) in that Container.
-
 ## Permissions
 
 ### Additive Permissions
@@ -41,7 +31,7 @@ In addition, using these APIs have the following dependencies:
 
 ## Application Owner Developers Sharing Settings
 
-SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container membership,  offering a choice between restrictive and open sharing model. This sharing setting is part of container type configuration. This configuration can only be set by application owner developers.
+SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model. This sharing setting is part of container type configuration. This configuration can only be set by application owner's developers.
 
 ### Restrictive Sharing Model
 
@@ -70,7 +60,7 @@ Invoking the additive permission API with different roles will have different ou
 
 
 
-## Consuming Tenand Admin Sharing Configuration Settings
+## Consuming Tenant Admin Sharing Configuration Settings
 
 By default, SharePoint Embedded app sharing configuration will be the same as consuming tenant sharing configuration. For example, if the consuming Tenant has been configured to disable sharing to Guest users, then your SharePoint Embedded application won’t be able to add Guest Users to the Container roles or grant them additive permissions.
 
