@@ -3,7 +3,7 @@
  
 The Consuming Tenant Administrator (CTA) can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator (SPE Admin). Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
-For more information on how to assign the SharePoint Embedded Admin role, refer to the [learn article](docs/embedded/concepts/admin-exp/adminrole.md)
+For more information on how to assign the SharePoint Embedded Admin role, refer to the [SPE Admin]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md))
 
  The following are some of the container specific commands actions currently supported on PowerShell: 
 
