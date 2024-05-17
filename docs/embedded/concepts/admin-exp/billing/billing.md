@@ -14,7 +14,7 @@ SharePoint Embedded will is a consumption-based Pay-as-you-go (PAYG) offering fr
    <img width="800" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/53212756-569e-402c-8045-cb4d3bff4d50">
 
    
-2. **Pass-through (Coming Soon):** With this model, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admin in the developer tenant do not need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint admin or Global admin) will need to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
+2. **Pass-through (Coming Soon):** With this model, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admin in the developer tenant do not need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint Admin or Global Admin) will need to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
    <img width="800" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/c365892d-077c-4c71-9d94-1bfdccf26734">
 
