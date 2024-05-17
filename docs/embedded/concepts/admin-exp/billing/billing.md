@@ -1,6 +1,6 @@
 ---
 title: PAYG billing for SharePoint Embedded
-description: This article explains how to set up PAYG billing
+description: This article explains the billing models and how to set up PAYG billing
 ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
