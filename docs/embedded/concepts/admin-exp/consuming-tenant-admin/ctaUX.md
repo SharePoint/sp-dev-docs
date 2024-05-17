@@ -16,7 +16,8 @@ The following actions are supported in SPAC:
 
 Global admin will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/7fc0e225-5bc1-4772-bd93-13e3f4d72708)
+
+<img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/44a7749e-ed3c-41ed-ac18-e4b35730e544">
 
 SharePoint Embedded Admins will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
