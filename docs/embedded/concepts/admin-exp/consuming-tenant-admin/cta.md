@@ -5,6 +5,7 @@ ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
 
+
 # Consuming Tenant Admin
 
 > [!IMPORTANT]
