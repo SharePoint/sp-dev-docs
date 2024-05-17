@@ -22,12 +22,12 @@ Storage consumption meters in SharePoint Embedded apply to the storage used by f
 
 
 ## API Transactions 
-Microsoft Graph calls made explicitly by the SharePoint Embedded application towards containers or container content are counted as transactions, and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph that can act on the containers and the container contents.
+Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph that can act on the containers and the container contents.
 
-However, calls made by internal services to the containers, which the application has no control over, are **not** chargeable. Some examples of such non-chargeable transactions include:
+However, calls made by internal services to the containers, which the application has no control over, are **not** charged. Some examples of such non-chargeable transactions include:
 
 1. Queries performed by the eDiscovery service to search through container content for compliance or legal purposes.
-2. Admin actions taken by the Sharepoint Embedded admin or Global Admin on containers through SharePoint Admin Center or SPO PowerShell.
+2. Admin actions taken by the Sharepoint Embedded Admin or Global Admin on containers through SharePoint Admin Center or SPO PowerShell.
 
 ## Egress
 Egress refers to the data dowmloaded from the SharePoint Embedded platform to the customer's client device. Eligible scenarios for egress charges include downloading files and videos from the SharePoint Embedded application to a customer's client device, such as a desktop or mobile device.
