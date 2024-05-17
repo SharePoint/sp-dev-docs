@@ -1,3 +1,10 @@
+---
+title: SharePoint Embedded Administrator 
+description: This article explains the new admin role for SharePoint Embedded
+ms.date: 04/09/2024
+ms.localizationpriority: high
+---
+
 # The SharePoint Embedded Administrator 
 
 The SharePoint Embedded admin (SPE Admin) role is a dedicated role to manage SharePoint Embedded containers through SPO PowerShell and SPAC. This is required for developer admins to create new container types through PowerShell cmdlets and for consuming tenants admins to manage containers created on their tenants. 
