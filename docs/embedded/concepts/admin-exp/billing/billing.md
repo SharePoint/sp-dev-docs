@@ -29,12 +29,12 @@ To enable PAYG on SharePoint Embedded, you need:
 
 ### Roles and Permissions
 
-- Admin who sets up billing relationship for SharePoint Embedded need to have owner or contributor permissions on Azure subscription.
-- Admin needs to have a SharePoint Embedded Administrator role to operate billing cmdlets.
+- Admin who sets up billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
+- Admin needs to have a SharePoint Embedded Administrator or Global Admin role to operate billing cmdlets.
 
 ## Set up a Standard Billing Container Type: 
 
-For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center.
+For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
 Here are the step-by-step instructions on how to create a standard billing container: 
 
@@ -60,9 +60,9 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 > 
 > An Azure subscription can be attached to any number of container types.
 
-### View/Edit billing properties of Standard Container Type
+### View & Edit billing properties of Standard Container Type
 
-View the properties of billing. You can view properties of a ContainerType and associated billing properties by using one of the two PowerShell cmdlets:
+You can view properties of a ContainerType and associated billing properties by using one of the two PowerShell cmdlets:
 
 1. To see all Container Types and billing properties except associated region:
 
@@ -76,14 +76,12 @@ View the properties of billing. You can view properties of a ContainerType and a
     Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
     ```
 
-1. Update Azure subscription or resource group associated with a container type:
+1. To update Azure subscription or resource group associated with a container type:
 
     ```powershell
     Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
     ```
-## Set up a Pass-through Container Type 
-Coming Soon
 
-## SharePoint Embedded meters
+## SharePoint Embedded Meters
 Refer to the [SharePoint Embedded meters](docs/embedded/concepts/admin-exp/meters.md) article to learn more about the pay-as-you-go meters supported.
 
