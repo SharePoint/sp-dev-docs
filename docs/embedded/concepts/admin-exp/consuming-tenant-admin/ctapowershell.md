@@ -1,6 +1,6 @@
 ---
 title: Consuming Tenant Admin PowerShell
-description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
+description: This article describes how an admin can manage containers through SPO PowerShell.
 ms.date: 04/09/2024
 ms.localizationpriority: high
 ---
