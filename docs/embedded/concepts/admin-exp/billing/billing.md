@@ -7,14 +7,14 @@ ms.localizationpriority: high
 
 # SharePoint Embedded  Billing
 
-SharePoint Embedded will be a consumption-based Pay-as-you-go (PAYG) offering from SharePoint Online, meaning you pay only for what you use. SharePoint Embedded provides two flexible billing models which the tenant developing the SharePOint Embedded application can select for each specific container type, tailoring it to their unique business requirements. The two billing models are
+SharePoint Embedded will is a consumption-based Pay-as-you-go (PAYG) offering from, meaning you pay only for what you use. SharePoint Embedded provides two billing models which the tenant developing the SharePoint Embedded application can select for each specific container types, tailoring it to their unique business requirements. The two billing models are
 
-1. **Standard:** With this model, all consumption-based charges are directly billed to the tenant that owns/developed the application. Admins in the developer tenant  must establish an effective billing profile when creating a standard container type.
+1. **Standard:** With this model, all consumption-based charges are directly billed to the tenant that owns/develops the application. Admin in the developer tenant  must establish an valid billing profile when creating a standard container type.
 
    <img width="800" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/53212756-569e-402c-8045-cb4d3bff4d50">
 
    
-3. **Pass-through:** With this model, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admins in the developer tenant do not need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint admin or Global admin) will need to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
+2. **Pass-through (Coming Soon):** With this model, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admin in the developer tenant do not need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint admin or Global admin) will need to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
    <img width="800" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/c365892d-077c-4c71-9d94-1bfdccf26734">
 
