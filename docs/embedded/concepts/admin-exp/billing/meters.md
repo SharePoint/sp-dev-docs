@@ -22,7 +22,7 @@ Storage consumption meters in SharePoint Embedded apply to the storage used by f
 
 
 ## API Transactions 
-Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph that can act on the containers and the container contents.
+Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph calls that can be made by a SharePoint Embedded application.
 
 However, calls made by internal services to the containers, which the application has no control over, are **not** charged. Some examples of such non-chargeable transactions include:
 
@@ -30,7 +30,7 @@ However, calls made by internal services to the containers, which the applicatio
 2. Admin actions taken by the Sharepoint Embedded Admin or Global Admin on containers through SharePoint Admin Center or SPO PowerShell.
 
 ## Egress
-Egress refers to the data dowmloaded from the SharePoint Embedded platform to the customer's client device. Eligible scenarios for egress charges include downloading files and videos from the SharePoint Embedded application to a customer's client device, such as a desktop or mobile device.
+Egress refers to the data downloaded from the SharePoint Embedded platform to the customer's client device such as a desktop or mobile device.
 
 However, certain types of data transfers are exempt from egress charges. These exemptions ensure that customers are not billed for data transfers occurring within integrated Microsoft services, promoting seamless usage without additional costs for these specific internal operations. Some examples of these exemptions include:
 
