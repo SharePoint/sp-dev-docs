@@ -24,8 +24,12 @@ SharePoint Embedded supports both App-Only and Delegated (App+User) calls for en
 
 Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making API calls to create containers, whether they're App-Only or Delegated.
 
-## Using SharePoint APIs 
+Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID, and User Roles for Delegated (App+User) calls.
 
+For App-only calls, SharePoint Embedded authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint Embedded authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
+
+
+### Using SharePoint APIs 
 > [!NOTE] 
 > You need to add the scope of Sites.FullControl.All due to scopes changing
 
@@ -34,19 +38,45 @@ Using ContainerType Management APIs
 * Have to call them directly so permissions are different 
 * Scope needed: Container.Selected Scope 
 
-Using Graph APIs 
+### Using Graph APIs 
 
 * FileStorageContainer.Selected 
 * You will have access to selected container types 
 * Scope needed: ContainerType permissions manage the permission WITHIN the scope
 
-  
+## Container Permission Roles
+Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. If you add a user to a container, the user must be assigned to one of these roles.
+
+> [!NOTE]
+> The calling user creating a new container via delegated calls is automatically assigned the owner role.
+
+|  Role   |                                                                                 Description                                                                                 |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reader  | This role allows the user to read the properties and the contents of the container.                                                                                         |
+| Writer  | This role has all permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
+| Manager | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
+| Owner   | This role has all permissions a Manager has, plus the permission to delete containers.     
+
+
 ## Container.Selected Scope
 
 The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. To call it, you must configure this scope in your App manifest.
 
 > [!NOTE]
 > Other SharePoint Embedded Graph APIs run with the `FileStorageContainer.Selected` scope on Microsoft Graph
+
+
+## Required Permissions
+
+|      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
+|:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
+
+> [!IMPORTANT]
+> You must configure the `Container.Selected` scope in your App manifest
+                                                                                 |
+
+
 
 ### Configure your App Manifest
 
@@ -85,38 +115,7 @@ Select **Manage > Manifest** from the left-hand navigation. Locate the property 
 ],
 ```
 
-## Required Permissions
-
-|      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
-|:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
-
-> [!IMPORTANT]
-> You must configure the `Container.Selected` scope in your App manifest
-
-### User Roles
-
-Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. If you add a user to a container, the user must be assigned to one of these roles.
-
-> [!NOTE]
-> The calling user creating a new container via delegated calls is automatically assigned the owner role.
-
-|  Role   |                                                                                 Description                                                                                 |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reader  | This role allows the user to read the properties and the contents of the container.                                                                                         |
-| Writer  | This role has all permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
-| Manager | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
-| Owner   | This role has all permissions a Manager has, plus the permission to delete containers.                                                                                      |
-
-### ContainerTypeID
-
-Operation calls to SharePoint Embedded are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint Embedded onboarding process, SharePoint Embedded partners need to inform the SharePoint Embedded platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
-
-## Authorization
-
-Authorization for SharePoint Embedded calls is a function of the AppID and ContainerTypeID for App-Only calls; and a function of AppID, ContainerTypeID, and User Roles for Delegated (App+User) calls.
-
-For App-only calls, SharePoint Embedded authorization is determined by the configured permissions tied to the AppID-ContainerTypeID pair. For Delegated calls, SharePoint Embedded authorization is the intersection of the application’s permissions against a container type and the permissions granted to the user’s roles.
+### Example of SPE Authorization call
 
 Consider the following examples with the assumptions:
 
@@ -143,4 +142,8 @@ Consider the following examples with the assumptions:
 1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
 1. The app can link to the `webUrl` property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
 1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
+
+### ContainerTypeID
+
+Operation calls to SharePoint Embedded are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint Embedded onboarding process, SharePoint Embedded partners need to inform the SharePoint Embedded platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
 
