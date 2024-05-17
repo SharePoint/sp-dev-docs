@@ -127,3 +127,7 @@ Admins can permanently delete a Container from the deleted container collection 
 ```powershell
 Remove-SPODeletedContainer -Identity <ContainerId>
 ```
+
+## Security and Compliance Administration
+
+SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../security-and-compliance.md).
