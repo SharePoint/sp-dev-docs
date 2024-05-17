@@ -21,7 +21,7 @@ Global admin will also see "Active Containers" and "Deleted Containers" page alo
 
 SharePoint Embedded Admins will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/ab6cba19-70d2-4385-9ab9-e97c23ad1ad1)
+<img width="1246" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d4922158-2740-4ec3-8447-069b0d83d5f8">
 
 
 ## Active Containers
