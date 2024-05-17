@@ -1,3 +1,10 @@
+---
+title: Consuming Tenant Admin PowerShell
+description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
+ms.date: 04/09/2024
+ms.localizationpriority: high
+---
+
 # Consuming Tenant Admin PowerShell 
 
  
