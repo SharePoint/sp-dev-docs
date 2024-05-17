@@ -1,3 +1,9 @@
+---
+title: SharePoint Embedded Consumption Management in Azure
+description: This article describes how to view SharePoint Embedded application consumption in Azure Portal.
+ms.date: 05/21/2024
+ms.localizationpriority: high
+---
 
 # Manage SharePoint Embedded Consumption in Azure portal
 
