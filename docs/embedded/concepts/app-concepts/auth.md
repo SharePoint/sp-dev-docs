@@ -7,16 +7,16 @@ ms.localizationpriority: high
 
 # Authentication and Authorization with SharePoint Embedded
 
-### SharePoint Embedded Workflow
+SharePoint Embedded uses a mix of Graph and SharePoint (Vroom, CSOM...) APIs. tll APIs to eventually be on Graph. 
 
-1. An app creator (an enterprise or Independent Software Vendor-ISV) builds an app that uses SharePoint Embedded containers
-    - App created in Microsoft Entra ID
-    - Container Type creation requested and ContainerTypeID received to develop the app
-1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
-1. The app instantiates a container
-1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
-1. The app can link to the `webUrl` property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
-1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
+## Auth Flow 
+
+* Enable SharePoint Embedded 
+* Developers start with an app registered in Entra already
+* Enable Admin Consent on behalf of the application
+* Create Tokens: SharePoint and Graph Tokens 
+* Register the ContainerType in the consuming tenant with app-only auth 
+* Create Containers and build your app with delegated or App=only auth 
 
 ### App-Only vs Delegated
 
@@ -24,6 +24,23 @@ SharePoint Embedded supports both App-Only and Delegated (App+User) calls for en
 
 Both App-Only and Delegated SharePoint Embedded from trusted (or private) client applications are allowed. SharePoint Embedded authorization management blocks public clients from making API calls to create containers, whether they're App-Only or Delegated.
 
+## Using SharePoint APIs 
+
+> [!NOTE] 
+> You need to add the scope of Sites.FullControl.All due to scopes changing
+
+Using ContainerType Management APIs 
+* These are NOT Graph APIs 
+* Have to call them directly so permissions are different 
+* Scope needed: Container.Selected Scope 
+
+Using Graph APIs 
+
+* FileStorageContainer.Selected 
+* You will have access to selected container types 
+* Scope needed: ContainerType permissions manage the permission WITHIN the scope
+
+  
 ## Container.Selected Scope
 
 The [Register Container Type API](register-api-documentation.md) uses the Container.Selected scope. To call it, you must configure this scope in your App manifest.
@@ -112,3 +129,18 @@ Consider the following examples with the assumptions:
 | App1 attempts to delete a container of ContainerType1                 | Denied  | App1 doesn't have the permission to delete containers of ContainerType1.  |
 | User A makes a delegated request to read from ContainerX on App1      | Allowed | Both UserA and App1 have permissions to read containers of ContainerType1. |
 | UserA makes a delegated request to write to ContainerX on App1        | Denied  | UserA's role as a reader doesn't grant them write access                  |
+
+
+## Old Content
+
+### SharePoint Embedded Workflow
+
+1. An app creator (an enterprise or Independent Software Vendor-ISV) builds an app that uses SharePoint Embedded containers
+    - App created in Microsoft Entra ID
+    - Container Type creation requested and ContainerTypeID received to develop the app
+1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
+1. The app instantiates a container
+1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
+1. The app can link to the `webUrl` property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
+1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
+
