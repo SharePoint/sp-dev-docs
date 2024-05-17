@@ -3,7 +3,7 @@
  
 The Consuming Tenant Administrator (CTA) can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator (SPE Admin). Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
-For more information on how to assign the SharePOint Embedded Admin role, refer to the [learn article](docs/embedded/concepts/admin-exp/adminrole.md)
+For more information on how to assign the SharePoint Embedded Admin role, refer to the [learn article](docs/embedded/concepts/admin-exp/adminrole.md)
 
  The following are some of the container specific commands actions currently supported on PowerShell: 
 
@@ -25,8 +25,11 @@ For more information on how to assign the SharePOint Embedded Admin role, refer 
 
 ## Administration through SharePoint PowerShell
 
-Consuming tenant admin can manage SharePoint Embedded applications with PowerShell commands using SharePoint Online Management Shell. To get started using PowerShell to manage SharePoint Embedded, you have to install the SharePoint Online Management Shell and connect to SharePoint Online. Make sure you have the latest version of PowerShell installed.
+Consuming tenant admin can manage SharePoint Embedded applications with PowerShell commands using [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+To get started using PowerShell to manage SharePoint Embedded, you have to install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) and [connect to SharePoint Online](/powershell/module/sharepoint-online/connect-sposervice).
 
+> [!IMPORTANT]
+> You must use the latest version of SharePoint PowerShell to use container administration cmdlets.
  ## Application Administration
 
 With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have "read" and/or "write" access and the level of access to these SharePoint Embedded applications.
