@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded  Billing
 
-SharePoint Embedded will is a consumption-based Pay-as-you-go (PAYG) offering from, meaning you pay only for what you use. SharePoint Embedded provides two billing models which the tenant developing the SharePoint Embedded application can select for each specific container types, tailoring it to their unique business requirements. The two billing models are
+SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering from, meaning you pay only for what you use. SharePoint Embedded provides two billing models which the tenant developing the SharePoint Embedded application can select for each specific container types, tailoring it to their unique business requirements. The two billing models are
 
 1. **Standard:** With this model, all consumption-based charges are directly billed to the tenant that owns/develops the application. Admin in the developer tenant  must establish an valid billing profile when creating a standard container type.
 
