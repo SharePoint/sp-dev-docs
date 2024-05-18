@@ -42,14 +42,14 @@ SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf o
 
 ### Access on behalf of a user
 
-SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
 > [!IMPORTANT] 
 > Using SPE on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
 
 ### Access without a user
 
-SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
+SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE] 
 > An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
@@ -69,28 +69,28 @@ To [register a container type](register-api-documentation.md) on a consuming ten
 
 ### Container type application permissions
 
-Container Type permissions are granted to a Microsoft Entra ID application via [container type registration](/register-api-docuemntation.md).
+Container type application permissions are granted to SPE applications via [container type registration](/register-api-docuemntation.md).
 
 |      Permission      |                                                    Description                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| None                 | Has no permissions to any Containers or content of this Container Type.                                            |
-| ReadContent          | Can read content of Containers of this Container Type.                                                             |
-| WriteContent         | Can write content to Containers for this Container Type. This can't be granted without the ReadContent permission. |
-| Create               | Can create Containers of this Container Type.                                                                      |
-| Delete               | Can delete Containers of this Container Type.                                                                      |
-| Read                 | Can read the metadata of Containers of this Container Type.                                                        |
-| Write                | Can update the metadata of Containers of this Container Type.                                                      |
-| EnumeratePermissions | Can enumerate the members of a Container and their roles for Containers of this Container Type.                    |
-| AddPermissions       | Can add members to the Container for Containers of this Container Type.                                            |
-| UpdatePermissions    | Can update (change roles of) existing memberships in the Container for Containers of this Container Type.          |
-| DeletePermissions    | Can delete other members (but not self) from the Container for Containers of this Container Type.                  |
-| DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type.                                |
-| ManagePermissions    | Can add, remove (including self) or update members in the Container roles for Containers of this Container Type.   |
-| Full                 | Has all permissions for Containers of this Container Type.                                                         |
+| None                 | Has no permissions to any containers or content of this container type.                                            |
+| ReadContent          | Can read content of containers of this container type.                                                             |
+| WriteContent         | Can write content to containers for this container type. This can't be granted without the ReadContent permission. |
+| Create               | Can create containers of this container type.                                                                      |
+| Delete               | Can delete containers of this container type.                                                                      |
+| Read                 | Can read the metadata of containers of this container type.                                                        |
+| Write                | Can update the metadata of containers of this container type.                                                      |
+| EnumeratePermissions | Can enumerate the members of a container and their roles for containers of this container type.                    |
+| AddPermissions       | Can add members to the container for containers of this container type.                                            |
+| UpdatePermissions    | Can update (change roles of) existing memberships in the container for containers of this container type.          |
+| DeletePermissions    | Can delete other members (but not self) from the container for containers of this container type.                  |
+| DeleteOwnPermissions | Can remove own membership from the container for containers of this container type.                                |
+| ManagePermissions    | Can add, remove (including self) or update members in the container roles for containers of this container type.   |
+| Full                 | Has all permissions for containers of this container type.                                                         |
 
 ### Container permissions
 
-Any user accessing a Container must be a member of the Container. Membership to a Container is categorized into four roles. These roles can be granted to users or groups, and they will define the access level that such users or groups will have on a given Container.
+Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. These roles can be granted to users or groups, and they will define the access level that such users or groups will have on a given container.
 
 Container permissions only apply for delegated access and not for app-only access, because a user context is required.
 
