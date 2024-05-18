@@ -42,14 +42,16 @@ SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf o
 
 ### Access on behalf of a user
 
-SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+
+In addition to your SPE application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it is acting on behalf of will be required to have [container permissions](#container-permissions). The effective permissions that the SPE application will have are the intersection of the SPE application permissions and the user permissions when acting on behalf of a user.
 
 > [!IMPORTANT] 
 > Using SPE on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
 
 ### Access without a user
 
-SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
+SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE] 
 > An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
@@ -69,7 +71,7 @@ To [register a container type](register-api-documentation.md) on a consuming ten
 
 ### Container type application permissions
 
-Container type application permissions are granted to SPE applications via [container type registration](/register-api-docuemntation.md).
+SPE applications need to be granted container type application permissions by the owner SPE application before they can access containers of the given container type. Container type application permissions are granted to SPE applications via [container type registration](/register-api-docuemntation.md).
 
 |      Permission      |                                                    Description                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -87,6 +89,9 @@ Container type application permissions are granted to SPE applications via [cont
 | DeleteOwnPermissions | Can remove own membership from the container for containers of this container type.                                |
 | ManagePermissions    | Can add, remove (including self) or update members in the container roles for containers of this container type.   |
 | Full                 | Has all permissions for containers of this container type.                                                         |
+
+> [!NOTE]
+> The combination of Microsoft Graph permissions and container type application permissions encompass the client authorization for SPE applications.
 
 ### Container permissions
 
