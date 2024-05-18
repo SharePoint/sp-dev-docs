@@ -66,8 +66,8 @@ These are the `Office 365 SharePoint Online` permissions that your application n
 
 | Scope name | Scope Id | Type | Operation |
 |:---:|:---:|:---:|:---:|
-| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | Enables SPE container type management on an owning tenant. |
-| Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | Enables SPE container type registration on a consuming tenant. |
+| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | In the context of SPE, enables container type management on an owning tenant. |
+| Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SPE, enables container type registration on a consuming tenant. |
 
 > [!NOTE] 
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
@@ -112,21 +112,21 @@ Any user accessing a container must be a member of the container. Membership to 
 
 ## Let's recap
 
-Here's key learnings:
+Here are some key learnings on SPE authentication and authorization:
 1. SPE applications interact with SPE via Microsoft Graph
 2. SPE applications need container type application permissions to access containers of that container type
-3. When using access on behalf of a user, SPE applications can only access container that the user is a member of
+3. When using access on behalf of a user, SPE applications can only access containers that the user is a member of
 4. When using access without a user, SPE applications can access containers enabled by the container type application permissions they have been granted
 5. SPE applications use access on behalf of users whenever possible to enhance security and auditability
 
 ## What's next
 
-Here's what you need to do next:
-1. Configure your SPE application manifest to request the required permissions:
-   - Microsoft Graph delegated `FileStorageContainer.Selected` to access containers on consuming tenants
-   - Office 365 SharePoint Online application `Sites.FullControl.All` to manage container types on the owning tenant
-   - Office 365 SharePoint Online application `Container.Selected` to register a container on consuming tenants
-2. Grant admin consent to your SPE application on both owning and consuming tenants (which can be the same tenant).
+Here are some actions you can take next:
+1. Configure your SPE [application manifest](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
+   - Microsoft Graph delegated `FileStorageContainer.Selected` (Scope `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
+   - Office 365 SharePoint Online application `Sites.FullControl.All` (Role `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
+   - Office 365 SharePoint Online application `Container.Selected` (Role `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
+2. [Grant admin consent](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your SPE application on both owning and consuming tenants (which can be the same tenant).
 3. [Create a new container type](containertypes.md) on the owning tenant.
 4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.
 5. [Create a container](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-post?view=graph-rest-beta)
