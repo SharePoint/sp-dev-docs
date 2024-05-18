@@ -123,9 +123,11 @@ Here are some key learnings on SPE authentication and authorization:
 
 Here are some actions you can take next:
 1. Configure your SPE [application manifest](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
-   - Microsoft Graph delegated `FileStorageContainer.Selected` (Scope `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
-   - Office 365 SharePoint Online application `Sites.FullControl.All` (Role `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
-   - Office 365 SharePoint Online application `Container.Selected` (Role `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
+   - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
+     - `FileStorageContainer.Selected` (type: `Scope`, id: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
+   - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
+     - `Sites.FullControl.All` (type: `Role`, id: `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
+     - `Container.Selected` (type: `Role`, id: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 2. [Grant admin consent](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your SPE application on both owning and consuming tenants (which can be the same tenant).
 3. [Create a new container type](containertypes.md) on the owning tenant.
 4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.
