@@ -14,7 +14,7 @@ To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph.
 These are important definitions to take into account to understand SPE authentication and authorization.
 
 SharePoint Embedded application
-: A Microsoft Entra ID application registration. As an owner or guest application to a container type, it will have access to container of that container type.  
+: A Microsoft Entra ID application registration. As an owner or guest application to a container type, it will have access to containers of that container type.  
 
 Container type
 : A [container type](containertypes.md) is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
@@ -62,10 +62,12 @@ Currently, there are two types of operations that are not accessible via Microso
 - [Container type management](containertypes.md) on owning tenants
 - [Container type registration](register-api-documentation.md) on consuming tenants
 
-| Scope name | Scope Id | Type | Description |
+These are the `Office 365 SharePoint Online` permissions that your application needs to perform those types of operations.
+
+| Scope name | Scope Id | Type | Operation |
 |:---:|:---:|:---:|:---:|
-| Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
-| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | Allows the application to utilize the file storage container platform to manage container types in the tenant without a signed in user. |
+| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | Enables SPE container type management on an owning tenant. |
+| Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | Enables SPE container type registration on a consuming tenant. |
 
 > [!NOTE] 
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
@@ -96,32 +98,36 @@ SPE applications need to be granted container type application permissions by th
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container is categorized into four roles. These roles can be granted to users or groups, and they will define the access level that such users or groups will have on a given container.
-
-Container permissions only apply for delegated access and not for app-only access, because a user context is required.
+Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions will define the access level that users will have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. An SPE application accessing container without a user will get the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
 
-|  Role   |                                                                                 Description                                                                                 |
-| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  Permission | Description |
+| --- | --- |
 | Reader  | This role allows the user to read the properties and the contents of the container.                                                                                         |
 | Writer  | This role has all permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
 | Manager | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
 | Owner   | This role has all permissions a Manager has, plus the permission to delete containers.     
 
-### Example of SPE Authorization call
+## Let's recap
 
-Consider the following examples with the assumptions:
+Here's key learnings:
+1. SPE applications interact with SPE via Microsoft Graph
+2. SPE applications need container type application permissions to access containers of that container type
+3. When using access on behalf of a user, SPE applications can only access container that the user is a member of
+4. When using access without a user, SPE applications can access containers enabled by the container type application permissions they have been granted
+5. SPE applications use access on behalf of users whenever possible to enhance security and auditability
 
-1. App1 has Create, Read, and Write permissions to ContainerType1; and...
-1. UserA is a reader for ContainerX of ContainerType1.
+## What's next
 
-|                                Example                                | Result  |                                   Reason                                   |
-| --------------------------------------------------------------------- | ------- | -------------------------------------------------------------------------- |
-| App1 attempts an App-Only call to write a container of ContainerType1 | Allowed | App1 has the permission to write to containers of ContainerType1           |
-| App1 attempts to delete a container of ContainerType1                 | Denied  | App1 doesn't have the permission to delete containers of ContainerType1.  |
-| User A makes a delegated request to read from ContainerX on App1      | Allowed | Both UserA and App1 have permissions to read containers of ContainerType1. |
-| UserA makes a delegated request to write to ContainerX on App1        | Denied  | UserA's role as a reader doesn't grant them write access                  |
-
+Here's what you need to do next:
+1. Configure your SPE application manifest to request the required permissions:
+   - Microsoft Graph delegated `FileStorageContainer.Selected` to access containers on consuming tenants
+   - Office 365 SharePoint Online application `Sites.FullControl.All` to manage container types on the owning tenant
+   - Office 365 SharePoint Online application `Container.Selected` to register a container on consuming tenants
+2. Grant admin consent to your SPE application on both owning and consuming tenants (which can be the same tenant).
+3. [Create a new container type](containertypes.md) on the owning tenant.
+4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.
+5. [Create a container](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-post?view=graph-rest-beta)
 
