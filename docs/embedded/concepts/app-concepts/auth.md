@@ -20,7 +20,7 @@ Container type
 : A [container type](containertypes.md) is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
 
 Owning Tenant
-: The Microsoft Entra ID tenant where a container type is defined.
+: The Microsoft Entra ID tenant where a container type is created. This is often also the tenant where your SharePoint Embedded application is registered.
 
 Consuming Tenant
 : The Microsoft Entra ID tenant where a container type is used. Only a consuming tenant may have containers of such container type. A same Microsoft Entra ID tenant may be both owning and consuming tenant of a given container type.
@@ -32,28 +32,26 @@ Consuming Tenant
 
 ## Authorization
 
-### Using Microsoft Graph for SharePoint Embedded
-
-SPE supports [access on behalf of a suer](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) via Microsoft Graph.
+SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http).
 
 > [!IMPORTANT] 
-> Microsoft Graph permissions granted to your SPE application allows it to call the SharePoint Embedded endpoints. However, your application must be granted [permissions to a container type](#container-type-application-permissions) to effectively access containers of that type.
+> Microsoft Graph permissions granted to your SPE application allows it to call SPE endpoints. However, your application must be granted [permissions to a container type](#container-type-application-permissions) before it gets access to containers of that type.
 
-#### Access on behalf of a user
+### Access on behalf of a user
 
 SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
 > [!IMPORTANT] 
-> Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
+> Using SPE on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
 
-#### Access without a user
+### Access without a user
 
 SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE] 
 > An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
-#### Container type registration
+### Container type registration
 
 While SPE is used exclusively via Microsoft Graph, there is one exception: registering a container type on a consuming tenant.
 
@@ -117,21 +115,4 @@ Consider the following examples with the assumptions:
 | User A makes a delegated request to read from ContainerX on App1      | Allowed | Both UserA and App1 have permissions to read containers of ContainerType1. |
 | UserA makes a delegated request to write to ContainerX on App1        | Denied  | UserA's role as a reader doesn't grant them write access                  |
 
-
-## Old Content
-
-### SharePoint Embedded Workflow
-
-1. An app creator (an enterprise or Independent Software Vendor-ISV) builds an app that uses SharePoint Embedded containers
-    - App created in Microsoft Entra ID
-    - Container Type creation requested and ContainerTypeID received to develop the app
-1. A subscriber (Consuming Tenant) installs the app into a Microsoft 365 tenant
-1. The app instantiates a container
-1. The app uses Graph APIs to manage files and folders (DriveItems) in the Container (Drive)
-1. The app can link to the `webUrl` property of DriveItems to view, edit, and coauthor Office document types in Office Online (via Web browser)
-1. The Consuming Tenant security and compliance (S & C) admins can now run Microsoft 365 S & C workflows against the container
-
-### ContainerTypeID
-
-Operation calls to SharePoint Embedded are authorized based on both the AppID of the calling application and targeting ContainerTypeID. As part of the SharePoint Embedded onboarding process, SharePoint Embedded partners need to inform the SharePoint Embedded platform the set of operations to authorize for the AppID against the specified ContainerTypeID. Once configured, the AppID is authorized for the set of operations against all container instances of the specific container type.
 
