@@ -56,18 +56,19 @@ SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-
 > [!NOTE] 
 > An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
-### Container type registration
+### Exceptional access patterns
 
-While SPE is used exclusively via Microsoft Graph, there is one exception: registering a container type on a consuming tenant.
-
-To [register a container type](register-api-documentation.md) on a consuming tenant, your application must request the `Container.Selected` app role on the `SharePoint` resource, NOT on Microsoft Graph.
+Currently, there are two types of operations that are not accessible via Microsoft Graph:
+- [Container type management](containertypes.md) on owning tenants
+- [Container type registration](register-api-documentation.md) on consuming tenants
 
 | Scope name | Scope Id | Type | Description |
 |:---:|:---:|:---:|:---:|
 | Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
+| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | Allows the application to utilize the file storage container platform to manage container types in the tenant without a signed in user. |
 
 > [!NOTE] 
-> Registering a container type on a consuming tenant will become a Microsoft Graph operation soon and this step will no longer be needed. Stay tuned.
+> Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
 
 ### Container type application permissions
 
