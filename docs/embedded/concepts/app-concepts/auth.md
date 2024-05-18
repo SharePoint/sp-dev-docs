@@ -34,62 +34,41 @@ Consuming Tenant
 
 ### Using Microsoft Graph for SharePoint Embedded
 
-SPE supports both user delegated and application only access via Microsoft Graph. These are the permissions that your application needs to request based on the type of access:
-* Delegated access require the `FileStorageContainer.Selected` scope
-* App-only access rquire the `FileStorageContainer.Selected` app role
+SPE supports [access on behalf of a suer](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) via Microsoft Graph.
 
 > [!IMPORTANT] 
-> The scope and app role above authorizes your Microsoft Entra ID application to call Microsoft Graph for SPE on a given tenant. However, your application must be granted permissions to a Container Type to effectively access Containers of that type.
+> Microsoft Graph permissions granted to your SPE application allows it to call the SharePoint Embedded endpoints. However, your application must be granted [permissions to a container type](#container-type-application-permissions) to effectively access containers of that type.
 
-#### Container Type registration
+#### Access on behalf of a user
 
-While SPE is used exclusively via Microsoft Graph, there is one exception: registering a Container Type on a consuming tenant. Read more about [Container Types](/containertypes.md).
+SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
-To [register a Container Type](register-api-documentation.md), your application must request the `Container.Selected` app role on the `SharePoint` resource, NOT on Microsoft Graph.
+> [!IMPORTANT] 
+> Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
 
-|      ScopeName     |     Type    |                                                                                                                                Description                                                                                                                                |
-|:------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Container.Selected | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
+#### Access without a user
 
-#### Configure your app manifest
+SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require the Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
-In the Azure Portal, navigate to your App Registration. Select **Manage > Manifest** from the left-hand navigation. Locate the property `requiredResourceAccess` and edit it so it includes the following entries:
+> [!NOTE] 
+> An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
-```json
-"requiredResourceAccess": [
-  {
-    "resourceAppId": "00000003-0000-0ff1-ce00-000000000000",
-    "resourceAccess": [
-      {
-        "id": "4d114b1a-3649-4764-9dfb-be1e236ff371",
-        "type": "Scope"
-      },
-      {
-        "id": "19766c1b-905b-43af-8756-06526ab42875",
-        "type": "Role"
-      }
-    ]
-  },
-  {
-    "resourceAppId": "00000003-0000-0000-c000-000000000000",
-    "resourceAccess": [
-      {
-        "id": "085ca537-6565-41c2-aca7-db852babc212",
-        "type": "Scope"
-      },
-      {
-        "id": "40dc41bc-0f7e-42ff-89bd-d9516947e474",
-        "type": "Role"
-      }
-    ]
-  }
-],
-```
+#### Container type registration
 
+While SPE is used exclusively via Microsoft Graph, there is one exception: registering a container type on a consuming tenant.
 
-### Container Type permissions
+To [register a container type](register-api-documentation.md) on a consuming tenant, your application must request the `Container.Selected` app role on the `SharePoint` resource, NOT on Microsoft Graph.
 
-Container Type permissions are granted to a Microsoft Entra ID application via [Container Type registration](/register-api-docuemntation.md).
+| Scope name | Scope Id | Type | Description |
+|:---:|:---:|:---:|:---:|
+| Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | Allows the application to utilize the file storage container platform to manage containers without a signed in user. The specific file storage containers and the permissions granted to them are configured in Microsoft 365 by the developer of each container type. |
+
+> [!NOTE] 
+> Registering a container type on a consuming tenant will become a Microsoft Graph operation soon and this step will no longer be needed. Stay tuned.
+
+### Container type application permissions
+
+Container Type permissions are granted to a Microsoft Entra ID application via [container type registration](/register-api-docuemntation.md).
 
 |      Permission      |                                                    Description                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -107,7 +86,6 @@ Container Type permissions are granted to a Microsoft Entra ID application via [
 | DeleteOwnPermissions | Can remove own membership from the Container for Containers of this Container Type.                                |
 | ManagePermissions    | Can add, remove (including self) or update members in the Container roles for Containers of this Container Type.   |
 | Full                 | Has all permissions for Containers of this Container Type.                                                         |
-
 
 ### Container permissions
 
