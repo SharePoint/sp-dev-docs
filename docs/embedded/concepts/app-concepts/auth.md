@@ -9,13 +9,26 @@ ms.localizationpriority: high
 
 To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
 
-### Pre-Requisites
+## Definitions
 
-* A Microsoft Entra ID application registration
-* Your tenant has a Microsoft 365 subscription
+These are important definitions to take into account to understand SPE authentication and authorization.
 
-> [!NOTE] 
-> SharePoint Embedded blocks public clients from making API calls to create containers.
+SharePoint Embedded application
+: A Microsoft Entra ID application registration. As an owner or guest application to a container type, it will have access to container of that container type.  
+
+Container type
+: A [container type](containertypes.md) is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
+
+Owning Tenant
+: The Microsoft Entra ID tenant where a container type is defined.
+
+Consuming Tenant
+: The Microsoft Entra ID tenant where a container type is used. Only a consuming tenant may have containers of such container type. A same Microsoft Entra ID tenant may be both owning and consuming tenant of a given container type.
+
+## Pre-Requisites
+
+* A Microsoft Entra ID application registration. See [register an application](https://learn.microsoft.com/en-us/graph/auth-register-app-v2?view=graph-rest-1.0).
+* Your Microsoft Entra ID tenant has a Microsoft 365 subscription
 
 ## Authorization
 
