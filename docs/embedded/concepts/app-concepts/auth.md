@@ -25,6 +25,9 @@ Owning Tenant
 Consuming Tenant
 : The Microsoft Entra ID tenant where a container type is used. Only a consuming tenant may have containers of such container type. A same Microsoft Entra ID tenant may be both owning and consuming tenant of a given container type.
 
+Container
+: A container is the basic storage unit in SharePoint Embedded. Also, a container defines a security and compliance boundary.
+
 ## Pre-Requisites
 
 * A Microsoft Entra ID application registration. See [register an application](https://learn.microsoft.com/en-us/graph/auth-register-app-v2?view=graph-rest-1.0).
