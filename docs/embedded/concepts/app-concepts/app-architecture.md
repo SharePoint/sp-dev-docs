@@ -11,16 +11,21 @@ All files and documents in SharePoint Embedded (SPE) are stored in containers, w
 
 ![SharePoint Embedded Architecture](../../images/SPEArch.png)
 
+## SharePoint Embedded application
+A Microsoft Entra ID application registration. As an owning or guest application to a container type, it will have access to containers of that container type.  
+
 ## Owning Tenant and Consuming Tenant
-SPE introduces the concepts of owning tenant and consuming tenant. Owning tenant develops and owns their SPE application and is the owner of the corresponding container type for the app. Consuming tenant is the tenant where the SPE application is registered and deployed. All container and content created via the SPE application is stored within the cosnuming tenant's M365 tenant boundary. 
+SPE introduces the concepts of owning tenant and consuming tenant. Owning tenant is a Microsoft Entra ID tenant where a container type is created. This is often also the tenant where your SharePoint Embedded application is registered. Consuming tenant is a Microsoft Entra ID tenant where a container type is used. Only a consuming tenant may have containers of such container type. All container and content created via the SPE application is stored within the consuming tenant's M365 tenant boundary. 
 
-A tenant can be both the owning and consuming tenant in the SPE ecosystem. For example, an orgranization can build thier own line of business application with SPE. 
+The same Microsoft Entra ID tenant can be both owning and consuming tenant of a given container type in the SPE ecosystem. 
 
-## Container Type and Owning Application
+## Container, Container Type and Owning Application
 
-A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](./containertypes.md).
+A container is the basic storage unit in SPE. Also, a container defines a security and compliance boundary.
 
-Container type is represented on each container as an immutable property and is used across the entire SharePoint Embedded ecosystem. Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer (the owning tenant) is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
+A container type is a SPE resource that defines the relationship, access privileges, and billing accountability between a SPE application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](./containertypes.md).
+
+Container type is represented on each container as an immutable property and is used across the entire SPE ecosystem. Each container type is strongly coupled with one SPE application, which is referred to as the owning application. The owning application developer (the owning tenant) is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
 
 ## Access Model
 An SPE application's access to containers and container content is determined by a set of permissions configured between the application and the container type it attempts to access. This set of permission is determined at container type creation time for owning application. The SPE ecosystem allows SPE applications to access containers of container types it does not own.

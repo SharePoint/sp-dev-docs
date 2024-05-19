@@ -7,42 +7,23 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Authentication and Authorization
 
-To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/en-us/graph/auth/auth-concepts?view=graph-rest-1.0).
-
-## Definitions
-
-These are important definitions to take into account to understand SPE authentication and authorization.
-
-SharePoint Embedded application
-: A Microsoft Entra ID application registration. As an owner or guest application to a container type, it will have access to containers of that container type.  
-
-Container type
-: A [container type](containertypes.md) is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
-
-Owning Tenant
-: The Microsoft Entra ID tenant where a container type is created. This is often also the tenant where your SharePoint Embedded application is registered.
-
-Consuming Tenant
-: The Microsoft Entra ID tenant where a container type is used. Only a consuming tenant may have containers of such container type. A same Microsoft Entra ID tenant may be both owning and consuming tenant of a given container type.
-
-Container
-: A container is the basic storage unit in SharePoint Embedded. Also, a container defines a security and compliance boundary.
+To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more aboue the [SPE architecture] (./app-architecture.md).
 
 ## Pre-Requisites
 
-* A Microsoft Entra ID application registration. See [register an application](https://learn.microsoft.com/en-us/graph/auth-register-app-v2?view=graph-rest-1.0).
+* A Microsoft Entra ID application registration. See [register an application](https://learn.microsoft.com/graph/auth-register-app-v2?view=graph-rest-1.0).
 * Your Microsoft Entra ID tenant has a Microsoft 365 subscription
 
 ## Authorization
 
-SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http).
+SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf of a user](https://learn.microsoft.com/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/graph/auth-v2-service?view=graph-rest-1.0&tabs=http).
 
 > [!IMPORTANT] 
 > Microsoft Graph permissions granted to your SPE application allows it to call SPE endpoints. However, your application must be granted [permissions to a container type](#container-type-application-permissions) before it gets access to containers of that type.
 
 ### Access on behalf of a user
 
-SPE operations [on behalf of a user](https://learn.microsoft.com/en-us/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+SPE operations [on behalf of a user](https://learn.microsoft.com/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
 In addition to your SPE application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it is acting on behalf of will be required to have [container permissions](#container-permissions). The effective permissions that the SPE application will have are the intersection of the SPE application permissions and the user permissions when acting on behalf of a user.
 
@@ -51,10 +32,10 @@ In addition to your SPE application receiving consent for `FileStorageContainer.
 
 ### Access without a user
 
-SPE operations [without a user](https://learn.microsoft.com/en-us/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/en-us/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
+SPE operations [without a user](https://learn.microsoft.com/graph/auth-v2-service?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE] 
-> An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+> An administrator on the consuming tenant must consent to your SPE application's request for permissions. Learn more [here](https://learn.microsoft.com/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 ### Exceptional access patterns
 
@@ -122,14 +103,14 @@ Here are some key learnings on SPE authentication and authorization:
 ## What's next
 
 Here are some actions you can take next:
-1. Configure your SPE [application manifest](https://learn.microsoft.com/en-us/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
+1. Configure your SPE [application manifest](https://learn.microsoft.com/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
      - `FileStorageContainer.Selected` (type: `Scope`, id: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
      - `Sites.FullControl.All` (type: `Role`, id: `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
      - `Container.Selected` (type: `Role`, id: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
-2. [Grant admin consent](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your SPE application on both owning and consuming tenants (which can be the same tenant).
+2. [Grant admin consent](https://learn.microsoft.com/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your SPE application on both owning and consuming tenants (which can be the same tenant).
 3. [Create a new container type](containertypes.md) on the owning tenant.
 4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.
-5. [Create a container](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-post?view=graph-rest-beta)
+5. [Create a container](https://learn.microsoft.com/graph/api/filestoragecontainer-post?view=graph-rest-beta)
 
