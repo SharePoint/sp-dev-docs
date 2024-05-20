@@ -14,11 +14,11 @@ SharePoint Embedded provides a comprehensive set of user experience features lik
 
 Office documents from SharePoint Embedded applications can be opened for viewing, editing and collaborating using either on the web, or Office applications for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
 
-You can configure your applications to launch Office applications just the right way when a user selects on an Office document from your application including directly launching Office Application or launching Office Application in a specific mode like view (for read-only content) or in edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
+You can set up your applications to launch Office when a user clicks on an Office document within your application. This includes options to directly launch an Office application or to open it in a specific mode, such as view (for read-only content) or edit (for editing mode). Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
 
 ## Preview Content
 
-Integrate your app with SharePoint Embedded player plugin to offer File Preview experiences on a wide range of supported file types. You can embed the File Preview experiences either in an iFrame or open a new page. Learn how to [offer File Preview experiences for content on your applications](../../tutorials/using-file-preview.md)
+Integrate your application with SharePoint Embedded player plugin to offer file preview experiences on a wide range of supported file types. You can embed the file preview experiences either in an iFrame or open a new page. Learn how to [offer File Preview experiences for content on your applications](../../tutorials/using-file-preview.md)
 
 ## Download
 
