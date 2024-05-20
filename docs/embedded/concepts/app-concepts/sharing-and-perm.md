@@ -39,7 +39,7 @@ Set-SPOContainerTypeConfiguration
 ```
 
 ## Sharing Configuration Setting
-By default, SharePoint Embedded app sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to Container roles or grant them additive permissions.
+By default, SharePoint Embedded application sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to Container roles or grant them additive permissions.
 
 ### Application External Sharing Override
 
