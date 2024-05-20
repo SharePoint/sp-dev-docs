@@ -34,8 +34,8 @@ This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfigur
 
 ```powershell
 Set-SPOContainerTypeConfiguration
-    -ContainerTypeID <Identifier>
-    -sharingRestricted $True
+    -ContainerTypeID <ContainerTypeID>
+    -sharingRestricted <bool>
 ```
 
 ## Sharing Configuration Setting
