@@ -136,8 +136,6 @@ Upon clicking Delete, the container is permanently deleted and the status of the
 
 ![](../../../images/ctaux15.png)
 
-old-img
-<img width="1279" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d5ef9ceb-d1c0-4f74-b39d-77c21fc3079d">
 
 ## Coming Soon
 1. Sort containers by created date and storage
