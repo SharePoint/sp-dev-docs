@@ -43,7 +43,7 @@ By default, SharePoint Embedded app sharing configuration is the same as the con
 
 ### Application External Sharing Override
 
-For SharePoint Embedded apps, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guest users, SharePoint Embedded applications can be configured to allow guest sharing. Consequently, all Containers within that SharePoint Embedded application would have the ability to include guest users or extend additional permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
+For SharePoint Embedded applications, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guest users, SharePoint Embedded applications can be configured to allow guest sharing. Consequently, all Containers within that SharePoint Embedded application would have the ability to include guest users or extend additional permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
 
 This setting can only be set by consuming tenant SharePoint Embedded admin, and can be configured using the latest powershell cmdlet [Set-SPOApplication](../admin-exp/consuming-tenant-admin/ctapowershell.md#set-sharing-capability-of-applications) as shown in this example:
 
