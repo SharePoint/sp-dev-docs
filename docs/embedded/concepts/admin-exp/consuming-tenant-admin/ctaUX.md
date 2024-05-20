@@ -126,20 +126,18 @@ The CTA selects the container to be permanently deleted. The “Permanently dele
 
 ![](../../../images/ctaux12.png)
 
-old-img
-<img width="1277" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/9ced70e2-0da8-4b08-8c8f-becaccf292ee">
 
 Upon clicking the button, a pop-up appears warning the CTA on the action they are performing. If absolutely sure, the CTA can proceed and click on “Delete”. Otherwise the CTA can cancel the action.
 
 ![](../../../images/ctaux13.png)
 
-old-img
-<img width="1277" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/36b55434-264a-4891-abc7-087b11920729">
 
 Upon clicking Delete, the container is permanently deleted and the status of the same appears in the top-right corner of the page.Upon successful deletion, the container is permanently removed from the deleted container collection and cannot be restored.
 
 ![](../../../images/ctaux15.png)
 
+old-img
+<img width="1279" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d5ef9ceb-d1c0-4f74-b39d-77c21fc3079d">
 
 ## Coming Soon
 1. Sort containers by created date and storage
