@@ -7,11 +7,11 @@ ms.localizationpriority: high
 
 # The SharePoint Embedded Administrator 
 
-The SharePoint Embedded admin, also known as the SPE Admin role, is a dedicated role to manage SharePoint Embedded Containers through SPO PowerShell and SharePoint admin center. This is required for developer admins to create new Container types through PowerShell cmdlets and  consume tenants admins to manage Containers created on their tenants. 
+The SharePoint Embedded admininistrator is a dedicated role to manage SharePoint Embedded Containers through SPO PowerShell and SharePoint admin center. This is required for developer admins to create new Container types through PowerShell cmdlets and  consume tenants admins to manage Containers created on their tenants. 
 
-The Global Administrator (Global Admin) role already has all the permissions of the SharePoint Embedded admin role. A SharePoint Administrator (SP Admin) can assign themselves the SharePoint Embedded Admin role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded. 
+The Global Administrator (Global admin) role already has all the permissions of the SharePoint Embedded admin role. A SharePoint Administrator can assign themselves the SharePoint Embedded admin role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded. 
 
-The SharePoint Embedded admin role is available in Microsoft Entra and Microsoft 365 Admin Center (MAC). The SPE Admin doesn't have access to site management. This means that a SPE Admin won't be able to see Active and Deleted sites page on SharePoint Administrator Center as well as not be able to run site specific PowerShell cmdlets. 
+The SharePoint Embedded admin role is available in Microsoft Entra and Microsoft 365 Admin Center (MAC). This role doesn't have access to site management. This means that a SharePoint Embedded admin won't be able to see Active and Deleted sites page on SharePoint Administrator Center as well as not be able to run site specific PowerShell cmdlets. 
 
 ## SharePoint Embedded Administrator tasks in developer tenant
 The following are some of the Container specific commands actions currently supported on PowerShell:
@@ -31,20 +31,20 @@ b)	Container Type management
 The following are some of the Container specific commands actions currently supported on PowerShell:
 
 a)	Application administration
-- Get details of all SPE applications in CTA’s tenant
-- Get detail of a specific SPE application in CTA’s tenant
-- Get the permissions of owning applications in the CTA’s tenant
-- Configure External sharing setting of a Container of a SPE application in CTA’s tenant
+- Get details of all SharePoint Embedded applications in the tenant
+- Get detail of a specific application in the tenant
+- Get the permissions of owning applications in the tenant
+- Configure External sharing setting of a container of an application in tenant
 
 b)	Container administration
-- Get details of all Containers of a SPE application in CTA’s tenant
-- Get details of all Containers of a SPE application in CTA’s tenant sorted basis storage
-- Get details of a specific Container of a SPE application in CTA’s tenant
-- Set Sensitivity label of a specific Container of a SPE application in CTA’s tenant
-- Soft delete a Container of a SPE application in CTA’s tenant
-- Get details of all soft deleted Containers in CTA’s tenant
-- Restore a soft deleted Container of a SPE application in CTA’s tenant
-- Permanently delete a soft deleted Container of a SPE application in CTA’s tenant
+- Get details of all containers of an application in the tenant
+- Get details of all Containers of an application in the tenant sorted by storage
+- Get details of a specific container of an application in the tenant
+- Set Sensitivity label of a specific Container of an application in the tenant
+- Soft delete a Container of an application in the tenant
+- Get details of all soft deleted Containers in the tenant
+- Restore a soft deleted Container of an application in the tenant
+- Permanently delete a soft deleted Container of an application in the tenant
 
 The following are some of the actions currently supported on SPAC:
 
@@ -55,15 +55,15 @@ d)	Soft delete a Container
 e)	Restore a deleted Container
 f)	Purge a deleted Container
 
-## Assigning the SharePoint Embedded Admin Role 
+## Assigning the SharePoint Embedded admin Role 
 
-The Global Admin can assign the SPE admin role to users through both Entra and Microsoft admin center.  
+The Global admin can assign the SharePoint Embedded admin role to users through both Entra and Microsoft admin center.  
 
 ### Through Entra 
 
-Follow the following steps to assign the role of SPE Admin on Entra: 
+Follow the following steps to assign the role of SharePoint Embedded admin on Entra: 
 
-1. Sign into Entra as a Global Admin 
+1. Sign into Entra as a Global admin 
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/a8e5c70e-7537-4027-8893-68a9e5108893)
 
@@ -71,7 +71,7 @@ Follow the following steps to assign the role of SPE Admin on Entra:
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6748a676-2a26-47a2-8429-1d24293d318a)
 
-1. Select the user to assign the role of SPE Admin under **“All users”**
+1. Select the user to assign the role of SharePoint Embedded admin under **“All users”**
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8b95316c-f324-4500-80d5-1b693568fdcf)
 
@@ -89,13 +89,13 @@ Follow the following steps to assign the role of SPE Admin on Entra:
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/0fc19905-786e-4e9e-b592-a255c0eb71ff)
 
-1. The selected user is assigned the role of SharePoint Embedded Admin
+1. The selected user is assigned the role of SharePoint Embedded admin
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/199eb669-565f-4022-ba82-3472403c63cf)
 
 ### Through Microsoft 365 Admin Center
 
-1. Sign into MAC as a Global Admin
+1. Sign into MAC as a Global admin
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8a52b7c6-91ed-4491-9e9d-26bffc1f0385)
 
@@ -103,7 +103,7 @@ Follow the following steps to assign the role of SPE Admin on Entra:
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/933ebbd5-595a-4d7b-b4e6-4f718ee38317)
 
-1. Select the user to assign the role of SharePoint Embedded Admin
+1. Select the user to assign the role of SharePoint Embedded admin
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/e9e806e0-efb4-4e35-b192-0e640f8e8431)
 
@@ -117,7 +117,7 @@ Follow the following steps to assign the role of SPE Admin on Entra:
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2227cf77-a9a0-498e-8cf4-76e4eb160df2)
 
-1. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded Admin
+1. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded admin
 
     ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6c64d48d-3c3b-48dc-8f01-0dae15322572)
 
