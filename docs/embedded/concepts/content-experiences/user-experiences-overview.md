@@ -25,7 +25,6 @@ Integrate your application with SharePoint Embedded player plugin to offer file 
 You can use [Microsoft Graph's Download DriveItem API](/graph/api/driveitem-get-content) to offer download file user experiences for your applications. This will generate  a short lived, preauthenticated Url allows users to download files from your applications.
 
 > [!note]
-
 >A direct link to the file lacks the appropriate authorization from your application. If used directly in a browser, this would yield an access denied.
 
 ## Content discovery in Microsoft 365
