@@ -117,7 +117,7 @@ The following commands can be used to change the configuration settings of Share
 Set-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId > -DiscoverabilityDisabled $value
 ```
 
-For `-DiscoverabilityDisabled` `$value` can be set to `$true`; `$false`
+For `DiscoverabilityDisabled` `$value` can be set to `$true`; `$false`
 
 The default value `$true` - ensures all content will be hidden
 
@@ -125,7 +125,7 @@ The default value `$true` - ensures all content will be hidden
 Set-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId > -SharingRestricted $value
 ```
 
-For `--SharingRestricted` `$value` can be set to `$true`; `$false`
+For `SharingRestricted` `$value` can be set to `$true`; `$false`
 
 
 ```powershell
