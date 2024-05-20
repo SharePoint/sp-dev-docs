@@ -9,15 +9,13 @@ ms.localizationpriority: high
 
 
 ## Additive Permissions
-In SharePoint Embedded, users cannot break the permission inheritance; they can only add "additive permissions" to content such as files and folders within a Container. To grant extra permissions to a user beyond what they have on the Container, for example, if *UserA* is member of the Reader role, you can allow that user to edit a specific document in that Container using the Microsoft Graph: 
+In SharePoint Embedded, content always inherits permissions from its parent hierarchy. While you cannot alter this inherited permission structure, you can extend access within a container by applying "additive permissions" to specific files and folders. For instance, if _UserA_ belongs to the Reader role, you can grant the user edit permission to a particular document in that container using Microsoft Graph: 
 
 |           Scenario            |                                                                           Microsoft Graph API(s)                                                                            |                                                                                                          Notes                                                                                                          |
 | :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Grant an additive permission  | [POST /drives/{drive-id}/items/{item-id}/invite](/graph/api/driveitem-invite)                                                                                               | The sendInvitation property must always be false. You can't grant additive permissions to the root folder in a Container as this is essentially the same as adding a User to a role. You can't use AppOnly permissions. |
 | Retrieve permissions          | [GET /drives/{drive-id}/items/{item-id}/permissions](/graph/api/permission-get) & [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-get), |                                                                                                                                                                                                                         |
 | Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-delete)                                                                             | You can only delete the additive permission on the drive item where it was originally added.                                                                                                                            |
-
-
 
 
 ## Role-based Sharing Setting
@@ -40,15 +38,8 @@ Set-SPOContainerTypeConfiguration
     -sharingRestricted $True
 ```
 
-<<<<<<< HEAD
 ## Sharing Configuration Setting
-
-By default, SharePoint Embedded app sharing configuration is the same as consuming tenant sharing configuration. For example, if the consuming Tenant disabled sharing to Guest users, then your SharePoint Embedded application won’t be able to add Guest Users to the Container roles or grant them additive permissions.
-=======
-## Consuming Tenant Admin Sharing Configuration Settings
-
 By default, SharePoint Embedded app sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to Container roles or grant them additive permissions.
->>>>>>> 74c0ca4e9b82ce9d4bdf5b84d1c5f03e7b215ec5
 
 ### Application External Sharing Override
 
@@ -61,9 +52,4 @@ Set-SPOApplication
     -OwningApplicationID <indentifier>
     -OverrideTenantSharingCapability $true
     -SharingCapability ExistingExternalUserSharing
-<<<<<<< HEAD
 ```
-=======
-```
-
->>>>>>> 74c0ca4e9b82ce9d4bdf5b84d1c5f03e7b215ec5
