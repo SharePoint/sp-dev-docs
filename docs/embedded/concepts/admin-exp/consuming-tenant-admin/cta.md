@@ -15,12 +15,12 @@ ms.localizationpriority: high
 > 
 > If you are a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
-The organizations that use the SharePoint Embedded applications on their Microsoft 365 (M365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and can be performed by the consuming tenant administrator. They can do so either using the PowerShell cmdlets or through SharePoint Administrator Center (SPAC).
+The organizations that use the SharePoint Embedded applications on their Microsoft 365 (M365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator. Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and can be performed by the consuming tenant administrator. They can do so either using the PowerShell cmdlets or through SharePoint Administrator Center (SPAC).
 
 ## Consuming Tenant Admin Role
 
-Microsoft 365 SharePoint Embedded Administrator (SPE Admin) serves as the consuming tenant admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. 
-For information on SPE admin role, see [SPE Admin](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md)
+Microsoft 365 SharePoint Embedded Administrator serves as the consuming tenant admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. 
+For information on SharePoint Embedded Admin admin role, [see](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md)
 
 
 ## Administration Tools
@@ -29,25 +29,25 @@ Consuming tenant admins can manage SharePoint Embedded applications with
 
 ### SharePoint Online Management Shell
 
-On PowerShell, the SPE Admin can run the following cmdlets:
+On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
 1.	Enumerate applications in a tenant
 2.	Enumerate containers of an application in a tenant
 3.	Enumerate containers of an application sorted basis storage
 4.	Edit sensitivity label on a container
 5.	Set sharing capability configuration on a container
 
-For information on CTA in PowerShell, see [CTA PowerShell](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md)
+For information on consuming tenant admin in PowerShell, [see](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md)
 
 
 ### SharePoint Administrator Center (SPAC)
 
-The SPE Admin can access the Active and Deleted containers page on SPAC and perform SPE application level and SPE container level actions. This includes the following:
+The SharePoint Embedded Admin can access the Active and Deleted containers page on SPAC and perform SharePoint Embedded application level and container level actions. This includes the following:
 1. 	View Active container page
 2. 	View Deleted container page
 3.  View the detailed information of a container
 4.  Soft delete, restore and purge deleted containers
    
-For information on CTA in SPAC, see [CTA UX](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md)
+For information on consuming tenant admin in SPAC, [see](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md)
 
 
 ## Security and Compliance Administration
