@@ -1,7 +1,7 @@
 ---
 title: "Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API"
 description: "This article provides in-depth information on how to use the SharePoint Migration API with Azure Containers and Queues."
-ms.date: 04/18/2024
+ms.date: 05/08/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -74,11 +74,15 @@ A **Uri** value containing the URI of the newly created container for storing mi
 
 Pass this value to `CreateMigrationJob` method as `azureContainerSourceUri` parameter.
 
+The SAS access token contains `Read` and `Write` permissions only. It doesn't contain `List`.
+
 ###### MetadataContainer value
 
 A **Uri** value containing the URI of the newly created container for storing **manifest** files, along with the SAS access token.
 
 Pass this value to `CreateMigrationJob` method as `azureContainerManifestUri` parameter.
+
+The SAS access token contains `Read` and `Write` permissions only. It doesn't contain `List`.
 
 ###### EncryptionKey
 
@@ -96,7 +100,7 @@ Migration API provisions Azure Queues in the same datacenter of the SharePoint i
 
 Alternatively, use user-provided Azure Queues if desired. Check the requirement in the Migration API Reference document.
 
-### Encryption
+### Azure Queue Encryption
 
 When using `CreateMigrationJobEncrypted` method, Migration API encrypts the messages written to the Azure Queue.
 
@@ -115,7 +119,7 @@ Make sure you preserve `JobId` and the `IV` values returned by `CreateMigrationJ
 
 Provisions a new instance of Azure Queue for migration use.
 
-#### Syntax
+#### ProvisionMigrationQueue Syntax
 
 ```csharp
 public SPProvisionedMigrationQueueInfo ProvisionMigrationQueue()

@@ -1,7 +1,7 @@
 ---
 title: Content Experiences Overview
 description: Experiences with SharePoint Embedded content
-ms.date: 11/14/2023
+ms.date: 05/17/2024
 ms.localizationpriority: high
 ---
 
@@ -42,6 +42,7 @@ A direct link to the file lacks the appropriate authorization from your app. If 
 
 ## Content Discovery in Microsoft 365
 
+
 You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, the Copilot experience, or other Microsoft intelligent file discovery features. 
 
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
@@ -59,6 +60,7 @@ Note the following:
 1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
 1. To enable the sharing user experience for your content in Office.com, additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
 
+
 ```http
 PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
 Content-Type: application/json
@@ -72,8 +74,4 @@ Content-Type: application/json
 
 ## Recycle Bin
 
-You can use the Microsoft Graph APIs to either soft-delete or permanent-delete items in containers. Soft-deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using the Microsoft Graph APIs. An item in recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.
-
-## Deleted Container Collection
-
-You can use the SharePoint Embedded services container Graph API to delete containers and move them into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted from the collection, or it exceeds the 93-day retention period, it's permanently deleted.
+You can use the Microsoft Graph to either soft-delete or permanent-delete items in containers. Soft-deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using the Microsoft Graph APIs. An item in recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.

@@ -199,6 +199,8 @@
         href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
         href: spfx/web-parts/isolated-web-parts.md
+      - name: Isolated web parts retirement announcement
+        href: spfx/web-parts/isolated-web-parts-retirement.md
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
       - name: Microsoft Teams and SPFx Web parts
@@ -544,8 +546,8 @@
       href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: SharePoint Embedded for Visual Studio Code
       href: embedded/getting-started/spembedded-for-vscode.md
-  - name: Adoptions and Use Case Scenarios
-    href: embedded/adoptions-and-use.md
+  - name: Scenarios and Use Cases
+    href: embedded/scenarios-and-use-cases.md
   - name: Concepts
     items:
     - name: Application Architecture
@@ -964,7 +966,7 @@
     href: sp-add-ins-modernize/sp-add-in-modernize.md
   - name: Authentication considerations
     href: sp-add-ins-modernize/understanding-aad-and-oauth-for-spo-modern.md
-  - name: Tranform from ACS to Azure AD apps
+  - name: Transform from ACS to Azure AD apps
     href: sp-add-ins-modernize/from-acs-to-aad-apps.md
   - name: Multi-tenant applications for SharePoint Online
     href: sp-add-ins-modernize/multi-tenant-applications.md

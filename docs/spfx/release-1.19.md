@@ -4,7 +4,7 @@ description: Release notes for the SharePoint Framework v1.19 release.
 ms.date: 04/30/2024
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.19 release candidate release notes
+# SharePoint Framework v1.19 release notes
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework (SPFx).
 
@@ -48,7 +48,7 @@ We introduce a new data visualization card view for Adaptive Card Extensions tha
 
 Related updated documentation for the SPFx v1.19 release:
 
-- **[Create a Data Visualization Adaptive Card Extension](spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension.
+- **[Create a Data Visualization Adaptive Card Extension](viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension.
 - **[Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)** (video) - This video focuses on the creation of ACE data visualization cards with SPFx and also showcases the future plans within this area. Example charts are also demonstrated in the context of example Viva Connections experience.
 
 New samples showcasing the new data visualization ACE template:
@@ -98,7 +98,7 @@ You can now specify `imageAlt` property for the Property Pane's choice group opt
 
 ## Deprecations
 
-- Node.js 16 isn't supported with the SPFx 1.19 and forward.
+- Node.js v16 isn't supported with the SPFx v1.19 and forward.
 
 ## Fixed Issues
 
@@ -108,7 +108,7 @@ No new updates.
 
 We are also providing guidance on how to handle the font settings applied within the SharePoint Brand Center in the custom SPFx solutions. Please see following video as the demonstration on how you can use CSS custom properties within your solution to ensure that the custom solution is following the site level font settings.
 
-- **[Using SharePoint Brand center font settings in custom SPFx solutions](https://www.youtube.com/watch?v=IP19PeHb0Zg)** (video) - This video focuses on making custom SPFx solution aware of the font settings applied from the [SharePoint Brand Center](https://learn.microsoft.com/en-us/sharepoint/brand-center-overview).
+- **[Using SharePoint Brand center font settings in custom SPFx solutions](https://www.youtube.com/watch?v=IP19PeHb0Zg)** (video) - This video focuses on making custom SPFx solution aware of the font settings applied from the [SharePoint Brand Center](/sharepoint/brand-center-overview).
 
 ## Feedback and issues
 

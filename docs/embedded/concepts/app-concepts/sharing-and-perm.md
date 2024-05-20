@@ -1,15 +1,15 @@
 ---
 title: Sharing and Permissions
 description: Outlines Permission Model for SharePoint Embedded
-ms.date: 11/28/2023
+ms.date: 5/17/24
 ms.localizationpriority: high
 ---
 
 # Sharing and Permissions in SharePoint Embedded
 
-## Sharing
 
-The permission model used in SharePoint Embedded is different from the traditional SharePoint model and follows the OneDrive Consumer model. That is, Unlike SharePoint you can't break the permission inheritance. However, you can apply “additive permissions” to the Content (files and folders) that are in a Container.
+## Additive Permissions
+In SharePoint Embedded, users can't break the permission inheritance; they can only add "additive permissions" to content such as files and folders within a container. To grant extra permissions to a user beyond what they have on the Container, for example, if *UserA* is member of the Reader role, you can allow that user to edit a specific document in that Container using the Microsoft Graph: 
 
 ## Permissions
 
@@ -23,10 +23,7 @@ Your app might have the scenario that you might want to grant extra permissions 
 | Retrieve permissions          | [GET /drives/{drive-id}/items/{item-id}/permissions](/graph/api/permission-get) & [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-get), |                                                                                                                                                                                                                         |
 | Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-delete)                                                                             | You can only delete the additive permission on the drive item where it was originally added.                                                                                                                            |
 
-In addition, using these APIs have the following dependencies:
 
-- How Sharing has been configured in the Consuming Tenant
-- The type of user that is invoking the API when you're using delegated authorization.
 
 
 ## Application Owner Developers Sharing Settings
@@ -43,6 +40,7 @@ The non-restrictive sharing model allows any users with edit permissions to a fi
 
 This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
 
+
 ```powershell
 Set-SPOContainerTypeConfiguration
     -ContainerTypeID <Identifier>
@@ -57,6 +55,7 @@ Invoking the additive permission API with different roles will have different ou
 | Reader                |                  Fails                 | **Fails**   |
 | Guest User (with edit permission on the file) |                   Sucess                   | **Fails**  |
 | Guest User (without edit permission on the file) |                Fails                 | **Fails**  |
+
 
 
 
@@ -80,4 +79,5 @@ Set-SPOApplication
 Note the following:
 
 - [Microsoft.Online.SharePoint.PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) version 16.0.24810.12000 or later is required to configure sharing capability at an application level
+
 
