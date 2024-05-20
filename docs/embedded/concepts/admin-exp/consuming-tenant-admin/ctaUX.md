@@ -43,9 +43,6 @@ The Active Containers page displays all the active containers within the tenant,
 
 ![Active Containers spe admin](../../../images/ctaux3.png)
 
-old-img
-<img width="1246" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/0531ec13-8f21-4f9e-8c9d-86158dfd0438">
-
 
 ### View details of a containers
 The detailed container view provides a deeper dive into container-specific metadata, organized under two tabs:
@@ -54,18 +51,14 @@ The detailed container view provides a deeper dive into container-specific metad
 
 ![](../../../images/ctaux4.png)
 
-old-img 
-<img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d17c14c3-c253-4b62-8d18-4319688b2223">
 
-2. **Membership:** This panel shows the user permissions for different users associated with the container.
+1. **Membership:** This panel shows the user permissions for different users associated with the container.
 
 > [!IMPORTANT]
 > The SharePoint Embedded platform supports four distinct [roles](docs/embedded/concepts/app-concepts/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
 >
 ![](../../../images/ctaux5.png)
 
-old-img
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/f4c8c143-01d3-473f-842d-733a5eb6b4d5)
 
  ## Deleted Containers
 The deleted containers page lists all containers in the tenants deleted container collection. It lists the following metadata:
@@ -80,8 +73,6 @@ The deleted containers page lists all containers in the tenants deleted containe
 
 ![](../../../images/ctaux6.png)
 
-old-img
-<img width="1247" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/54a287b9-232e-4027-af96-a9389b6f4ac4">
 
  ## Delete a container
 
@@ -99,23 +90,16 @@ A container can be deleted from the Active containers page for any business reas
 
 ![](../../../images/ctaux7.png)
 
-old-img
-<img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/1fed0fb2-4e95-4a51-a379-91223520ec9b">
 
 This opens a side panel that warns the user about the effect on the associated SPE application due to the deletion of a container as well as inform the user about the restoration policy. The CTA can at this stage either cancel the panel and go back to the active containers page or proceed further with the deleting by clicking on “Delete container”.
 
 ![](../../../images/ctaux8.png)
-
-old-img
-<img width="1280" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/9d770bb3-e389-4a70-8db2-3ff85b864595">
 
  
 The selected container is successfully deleted and moved into the deleted containers page.
 
 ![](../../../images/ctaux9.png)
 
-old-img
-<img width="1277" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/69f0b5a3-05e0-4855-968c-6c020edfa13f">
 
 **Deleted containers are permanently purged after 93 days unless there is a retention policy applied to the containers**
 
@@ -124,16 +108,11 @@ A container in the deleted container collection can be restored on the Deleted c
 
 ![](../../../images/ctaux10.png)
 
-old-img
-![image](https://github.com/cindylay/sp-dev-docs/assets/132292644/3ce195df-13b3-4152-ad36-6c1ddf253f35)
-
  
 Restoration of the container happens in the background and the status of the same is displayed on the top right corner of the page. Upon successful restoration, the container will be available in the Active Containers page.
 
 ![](../../../images/ctaux11.png)
 
-old-img
-<img width="1275" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/2a2a3a2a-1b0c-4791-b24d-f89c3b34afd4">
 
 ## Permanently delete a container
 
@@ -161,8 +140,6 @@ Upon clicking Delete, the container is permanently deleted and the status of the
 
 ![](../../../images/ctaux15.png)
 
-old-img
-<img width="1279" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d5ef9ceb-d1c0-4f74-b39d-77c21fc3079d">
 
 ## Coming Soon
 1. Sort containers by created date and storage
