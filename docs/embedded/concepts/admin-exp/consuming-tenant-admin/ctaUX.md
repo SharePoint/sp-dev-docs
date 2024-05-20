@@ -20,7 +20,7 @@ The following actions are supported in SPAC:
 5. Restore a deleted container
 6. Permanently deleted a container
 
-**Global Admin** will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
+**Global admin** will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
 
 <img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/44a7749e-ed3c-41ed-ac18-e4b35730e544">
 
