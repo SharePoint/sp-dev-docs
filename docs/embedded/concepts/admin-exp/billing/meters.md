@@ -1,6 +1,6 @@
 ---
 title: SharePoint Embedded Meters
-description: This article describes the the meters in SharePoint Embedded.
+description: This article describes the meters in SharePoint Embedded.
 ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
@@ -24,18 +24,18 @@ Storage consumption meters in SharePoint Embedded apply to the storage used by f
 ## API Transactions 
 Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph calls that can be made by a SharePoint Embedded application.
 
-However, calls made by internal services to the containers, which the application has no control over, are **not** charged. Some examples of such non-chargeable transactions include:
+However, calls made by internal services to the containers, which the application has no control over, are **not** charged. Some examples of such nonchargeable transactions include:
 
 1. Queries performed by the eDiscovery service to search through container content for compliance or legal purposes.
-2. Admin actions taken by the Sharepoint Embedded Admin or Global Admin on containers through SharePoint Admin Center or SPO PowerShell.
+2. Admin actions taken by the SharePoint Embedded Admin or Global Admin on containers through SharePoint Admin Center or SPO PowerShell.
 
 ## Egress
 Egress refers to the data downloaded from the SharePoint Embedded platform to the customer's client device such as a desktop or mobile device.
 
-However, certain types of data transfers are exempt from egress charges. These exemptions ensure that customers are not billed for data transfers occurring within integrated Microsoft services, promoting seamless usage without additional costs for these specific internal operations. Some examples of these exemptions include:
+However, certain types of data transfers are exempt from egress charges. These exemptions ensure that customers aren't billed for data transfers occurring within integrated Microsoft services, promoting seamless usage without extra costs for these specific internal operations. Some examples of these exemptions include:
 
-1.	File downloads from the SharePoint Embedded application server to the customer's Office Desktop client are not charged.
-2.	File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC) are not charged.
+1.	File downloads from the SharePoint Embedded application server to the customer's Office Desktop client aren't charged.
+2.	File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC) aren't charged.
 
 
 
