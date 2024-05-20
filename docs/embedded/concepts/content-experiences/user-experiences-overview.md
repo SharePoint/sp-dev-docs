@@ -5,18 +5,18 @@ ms.date: 05/17/2024
 ms.localizationpriority: high
 ---
 
-# User Experiences Overview
+# User experiences overview
 
 SharePoint Embedded provides a comprehensive set of user experience features like open & edit of Office files, file preview or in-app search that you can use to build the right user experiences for your applications.
 
 
-## Open & Edit using Office
+## Open & edit using Office
 
 Office documents from SharePoint Embedded applications can be opened for viewing, editing and collaborating using either on the web, or Office applications for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
 
 You can set up your applications to launch Office when a user clicks on an Office document within your application. This includes options to directly launch an Office application or to open it in a specific mode, such as view (for read-only content) or edit (for editing mode). Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
 
-## Preview Content
+## Preview content
 
 Integrate your application with SharePoint Embedded player plugin to offer file preview experiences on a wide range of supported file types. You can embed the file preview experiences either in an iFrame or open a new page. Learn how to [offer File Preview experiences for content on your applications](../../tutorials/using-file-preview.md)
 
@@ -28,7 +28,7 @@ Note the following:
 
 A direct link to the file lacks the appropriate authorization from your application. If used directly in a browser, this would yield an access denied.
 
-## Content Discovery in Microsoft 365
+## Content discovery in Microsoft 365
 
 You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded application content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, Recommeneded or other Microsoft intelligent file discovery features. 
 
@@ -56,6 +56,6 @@ Content-Type: application/json
 }
 ```
 
-## Recycle Bin
+## Recycle bin
 
 You can use Microsoft Graph to either delete or permanently delete items in containers. Deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using Microsoft Graph. An item in recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.
