@@ -18,8 +18,6 @@ In SharePoint Embedded, users cannot break the permission inheritance; they can 
 | Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-delete)                                                                             | You can only delete the additive permission on the drive item where it was originally added.                                                                                                                            |
 
 
-
-
 ## Role-based Sharing Setting
 
 SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on Container permission roles,  offering a choice between restrictive and open sharing model (default). This sharing setting is part of [container type configuration](containertypes.md#configuring-container-types). This configuration can only be set by application owner's developers. To learn more about container permission roles, please refer to [Authentication and Authorization with SharePoint Embedded](auth.md#container-permissions).
@@ -41,13 +39,7 @@ Set-SPOContainerTypeConfiguration
 ```
 
 ## Sharing Configuration Setting
-
-By default, SharePoint Embedded app sharing configuration is the same as consuming tenant sharing configuration. For example, if the consuming Tenant disabled sharing to Guest users, then your SharePoint Embedded application won’t be able to add Guest Users to the Container roles or grant them additive permissions.
-=======
-## Consuming Tenant Admin Sharing Configuration Settings
-
 By default, SharePoint Embedded app sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to Container roles or grant them additive permissions.
->>>>>>> 74c0ca4e9b82ce9d4bdf5b84d1c5f03e7b215ec5
 
 ### Application External Sharing Override
 
@@ -62,7 +54,3 @@ Set-SPOApplication
     -SharingCapability ExistingExternalUserSharing
 <<<<<<< HEAD
 ```
-=======
-```
-
->>>>>>> 74c0ca4e9b82ce9d4bdf5b84d1c5f03e7b215ec5
