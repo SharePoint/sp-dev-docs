@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 ## Overview
 
-Organizations that create file management applications with the help of SharePoint Embedded(SPE) are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the Containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
+Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the Containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
 
 ## Developer Admin Role
 
@@ -22,7 +22,7 @@ Organizations that create file management applications with the help of SharePoi
 
 A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
-For information on SPE admin role, see [SPE Admin](../adminrole.md).
+For information on SharePoint Embedded Administrator role, [see](../adminrole.md).
 
 The following are some of the Container specific commands actions currently supported on PowerShell:
 a)	Creation of container types
@@ -42,7 +42,7 @@ b)	container type management
 There are two types of billing models followed: 
 
 Standard billing:
-The developer admin is responsible for the billing of SPE applications. The developer admin needs to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about [PAYG for SharePoint Embedded](./billing.md).
+The developer admin is responsible for the billing of SharePoint Embedded applications. The developer admin needs to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about [PAYG for SharePoint Embedded](./billing.md).
 
 Direct to Customer billing:
 In this model, the customer, or the Consuming Tenant Admin, is responsible for billing. To ensure the Direct to Customer (DTC) Billing model, the developer admin must set the billing property of Direct to customer to enabled.
