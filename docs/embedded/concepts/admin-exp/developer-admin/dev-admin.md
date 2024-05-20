@@ -136,8 +136,6 @@ The developer admin can view the container type configuration settings using the
 ```powershell
 Get-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId >
 ```
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/46346e26-59e6-4acf-808b-4deafabe03d2)
-
 
 ## Manage billing profile of applications/ container types
 
