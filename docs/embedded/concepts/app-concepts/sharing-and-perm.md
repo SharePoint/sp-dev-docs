@@ -1,7 +1,7 @@
 ---
 title: Sharing and Permissions
 description: Outlines Permission Model for SharePoint Embedded
-ms.date: 5/17/24
+ms.date: 5/21/24
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 
 ## Additive Permissions
-In SharePoint Embedded, users can't break the permission inheritance; they can only add "additive permissions" to content such as files and folders within a container. To grant extra permissions to a user beyond what they have on the Container, for example, if *UserA* is member of the Reader role, you can allow that user to edit a specific document in that Container using the Microsoft Graph: 
+In SharePoint Embedded, users can't break the permission inheritance; they can only add "additive permissions" to content such as files and folders within a Container. To grant extra permissions to a user beyond what they have on the Container, for example, if *UserA* is member of the Reader role, you can allow that user to edit a specific document in that Container using the Microsoft Graph: 
 
 ## Permissions
 
@@ -17,7 +17,7 @@ In SharePoint Embedded, users can't break the permission inheritance; they can o
 
 Your app might have the scenario that you might want to grant extra permissions to a user beyond what they have on the Container. For example, if *UserA* is member of the Reader role, you might want to allow that user to be able to edit a specific document in that Container. To support this scenario, you add and delete additive permissions using the Microsoft Graph APIs:
 
-|           Scenario            |                                                                           Microsoft Graph API(s)                                                                            |                                                                                                          Notes                                                                                                          |
+|           Scenario            |                                                                           Microsoft Graph APIs                                                                            |                                                                                                          Notes                                                                                                          |
 | :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Grant an additive permission  | [POST /drives/{drive-id}/items/{item-id}/invite](/graph/api/driveitem-invite)                                                                                               | The sendInvitation property must always be false. You can't grant additive permissions to the root folder in a Container as this is essentially the same as adding a User to a role. You can't use AppOnly permissions. |
 | Retrieve permissions          | [GET /drives/{drive-id}/items/{item-id}/permissions](/graph/api/permission-get) & [GET /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-get), |                                                                                                                                                                                                                         |
@@ -32,11 +32,11 @@ SharePoint Embedded offers a role-based sharing model that allows developers to 
 
 ### Restrictive Sharing Model
 
-In the restrictive sharing model, only users who are a member of either the Owner or Manager roles are permitted to add new permissions to a files.
+In the restrictive sharing model, only users who are a member of either the Owner or Manager roles are permitted to add new permissions to a file.
 
-### Non-restrictive Sharing Model (default)
+### Nonrestrictive Sharing Model (default)
 
-The non-restrictive sharing model allows any users with edit permissions to a file to add new permissions to this file.
+The nonrestrictive sharing model allows any users with edit permissions to a file to add new permissions to this file.
 
 This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
 
@@ -46,28 +46,29 @@ Set-SPOContainerTypeConfiguration
     -ContainerTypeID <Identifier>
     -sharingRestricted $True
 ```
-Invoking the additive permission API with different roles will have different outcomes:
-|      Container Role      | SharingRestricted: False |  SharingRestricted: True  |
-| :-------------------- | :-------------------------------------: | :--------: |
-| Owner                 |                  Sucess                 | Success   |
-| Manager               |                  Sucess                 | Success   |
-| Writer                |                  Sucess                 | **Fails** |
-| Reader                |                  Fails                 | **Fails**   |
-| Guest User (with edit permission on the file) |                   Sucess                   | **Fails**  |
-| Guest User (without edit permission on the file) |                Fails                 | **Fails**  |
+Invoking the additive permission API with different roles have different outcomes:
 
+|      Container Role                               | SharingRestricted: False                 |  SharingRestricted: True  |
+| :-----------------------------------------------: | :--------------------------------------: | :-----------------------: |
+| Owner                                             |                  Success                 | Success                   |
+| Manager                                           |                  Success                 | Success                   |
+| Writer                                            |                  Success                 | **Fails**                 |
+| Reader                                            |                  Fails                   | **Fails**                 |
+| Guest User (with edit permissions on the file)    |                   Success                | **Fails**                 |
+| Guest User (without edit permissions on the file) |                Fails                     | **Fails**                 |
+ 
 
 
 
 ## Consuming Tenant Admin Sharing Configuration Settings
 
-By default, SharePoint Embedded app sharing configuration will be the same as consuming tenant sharing configuration. For example, if the consuming Tenant has been configured to disable sharing to Guest users, then your SharePoint Embedded application won’t be able to add Guest Users to the Container roles or grant them additive permissions.
+By default, SharePoint Embedded app sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to Container roles or grant them additive permissions.
 
 ### Application External Sharing Override
 
-For sharePoint Embedded apps, sharing configurations can be adjusted at the application level, Consuming tenant admin can config permissions that are either more restrictive or more permissive than tenant level sharing settings. For example, even if a tenant's settings prohibit sharing with guest users, a SharePoint Embedded application can be configured to allow guest sharing. Consequently, all containers within that SharePoint Embedded application would have the ability to include guest users or extend additional permissions, while other SharePoint Embedded applications and SharePoint sites maintain restricted sharing permissions.
+For SharePoint Embedded apps, sharing configurations can be adjusted at the application level, Consuming tenant admin can config permissions that are either more restrictive or more permissive than tenant level sharing settings. For example, even if a tenant's settings prohibit sharing with guests, a SharePoint Embedded application can be configured to allow guest sharing. So, all containers within that SharePoint Embedded application would have the ability to include guest users or extend extra permissions, while other SharePoint Embedded applications and SharePoint sites maintain restricted sharing permissions.
 
-This setting can only be set by SharePoint Embedded admins, and can be configured using powershell cmdlet [Set-SPOApplication](/powershell/module/sharepoint-online/set-SPOApplication) as per this example:
+This setting is only set by SharePoint Embedded admins, and can be configured using PowerShell cmdlet [Set-SPOApplication](/powershell/module/sharepoint-online/set-SPOApplication) as per this example:
 
 ```powershell
 Set-SPOApplication 
