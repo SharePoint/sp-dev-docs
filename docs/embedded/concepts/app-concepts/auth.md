@@ -91,7 +91,7 @@ Any user accessing a container must be a member of the container. Membership to 
 | Manager | This role has all permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
 | Owner   | This role has all permissions a Manager has, plus the permission to delete containers.     
 
-## Conclusion
+## Let's Recap
 
 Here are some key learnings on SPE authentication and authorization:
 1. SPE applications interact with SPE via Microsoft Graph
