@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 
 ## Additive Permissions
-In SharePoint Embedded, content always inherits permissions from its parent hierarchy. While you cannot alter this inherited permission structure, you can extend access within a container by applying "additive permissions" to specific files and folders. For instance, if UserA belongs to the Reader role, you can grant them edit permission to a particular document in that container using Microsoft Graph: 
+In SharePoint Embedded, content always inherits permissions from its parent hierarchy. While you cannot alter this inherited permission structure, you can extend access within a container by applying "additive permissions" to specific files and folders. For instance, if _UserA_ belongs to the Reader role, you can grant the user edit permission to a particular document in that container using Microsoft Graph: 
 
 |           Scenario            |                                                                           Microsoft Graph API(s)                                                                            |                                                                                                          Notes                                                                                                          |
 | :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
