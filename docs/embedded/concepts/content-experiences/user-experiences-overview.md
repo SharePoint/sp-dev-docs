@@ -24,7 +24,7 @@ Microsoft's SharePoint Embedded provides a comprehensive set of Content Experien
 
 ## Open & Edit using Office
 
-Office documents from SharePoint Embedded Apps can be opened for Viewing, Editing and Collaborating using either Office Online, where your users can work with documents directly on the website, or Desktop apps for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
+Office documents from SharePoint Embedded Apps can be opened for Viewing, Editing, and Collaborating using either Office Online, where your users can work with documents directly on the website, or Desktop apps for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
 
 You can configure your applications to launch Office clients just the right way when a user selects on an Office document from your application including directly launching Desktop Clients or launching Office clients in a specific mode like View (for read-only content) or in Edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
 
@@ -34,7 +34,7 @@ Integrate your app with SharePoint Embedded player plugin to offer File Preview 
 
 ## Download
 
-You can use [Microsoft Graph's Download DriveItem API](/graph/api/driveitem-get-content) to offer download file user experiences for your applications. This will generate  a short lived, preauthenticated Url allows users to download files from your applications.
+You can use [Microsoft Graph's Download DriveItem API](/graph/api/driveitem-get-content) to offer download file user experiences for your applications. This will generate a short-lived, preauthenticated Url that allows users to download files from your applications.
 
 Note the following:
 
@@ -42,20 +42,24 @@ A direct link to the file lacks the appropriate authorization from your app. If 
 
 ## Content Discovery in Microsoft 365
 
-You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, the Copilot experience or other Microsoft intelligent file discovery features. 
+
+You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, the Copilot experience, or other Microsoft intelligent file discovery features. 
 
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
+
 ```powershell
 Set-SPOContainerTypeConfiguration
     -ContainerTypeID <Identifier>
     -discoverabilityDisabled $False
 ```
+
 In this way, your files will be integrated into the Microsoft365 environment, participating in intelligent file discovery and Copilot experiences.
 
-> [!note]
->1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
-> 
-> 2. To enable the sharing user experience for your content in Office.com, additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
+Note the following:
+
+1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
+1. To enable the sharing user experience for your content in Office.com, additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
+
 
 ```http
 PUT /storageContainerTypes/{containerTypeId}/applicationPermissions
