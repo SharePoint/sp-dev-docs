@@ -50,6 +50,6 @@ This setting can only be set by consuming tenant SharePoint Embedded admin, and 
 ```powershell
 Set-SPOApplication 
     -OwningApplicationID <OwningApplicationId>
-    -OverrideTenantSharingCapability $true
-    -SharingCapability ExistingExternalUserSharing
+    -OverrideTenantSharingCapability <bool>
+    -SharingCapability <SharingCapability>
 ```
