@@ -12,7 +12,7 @@ SharePoint Embedded provides a comprehensive set of user experience features lik
 
 ## Open & Edit using Office
 
-Office documents from SharePoint Embedded applications can be opened for viewing, editing and collaborating using either on the website, or Office applications for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
+Office documents from SharePoint Embedded applications can be opened for viewing, editing and collaborating using either on the web, or Office applications for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
 
 You can configure your applications to launch Office applications just the right way when a user selects on an Office document from your application including directly launching Office Application or launching Office Application in a specific mode like view (for read-only content) or in edit for editor mode. Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
 
