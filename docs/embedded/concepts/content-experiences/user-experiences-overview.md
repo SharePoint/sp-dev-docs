@@ -30,7 +30,7 @@ A direct link to the file lacks the appropriate authorization from your app. If 
 
 ## Content Discovery in Microsoft 365
 
-You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, the Copilot experience or other Microsoft intelligent file discovery features. 
+You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, Recommeneded or other Microsoft intelligent file discovery features. 
 
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 ```powershell
@@ -38,7 +38,7 @@ Set-SPOContainerTypeConfiguration
     -ContainerTypeID <ContainerTypeID>
     -discoverabilityDisabled $False
 ```
-In this way, your files will be integrated into the Microsoft365 environment, participating in intelligent file discovery and Copilot experiences.
+In this way, your files will be integrated into the Microsoft365 environment, participating in intelligent file discovery.
 
 > [!note]
 >1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
