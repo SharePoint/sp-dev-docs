@@ -52,5 +52,4 @@ Set-SPOApplication
     -OwningApplicationID <indentifier>
     -OverrideTenantSharingCapability $true
     -SharingCapability ExistingExternalUserSharing
-<<<<<<< HEAD
 ```
