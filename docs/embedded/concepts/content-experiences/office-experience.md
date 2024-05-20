@@ -9,14 +9,6 @@ ms.localizationpriority: high
 
 Office File Experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 (Microsoft 365) platform.
 
-<!--
-## In this article:
-
-1. [Opening Office Documents from your apps](#Opening-Office-Documents-from-SharePoint-Embedded-Apps)
-2. [View or Restore Previous Versions](#View-or-Restore-a-Previous-Version-of-Office-Document-from-SharePoint-Embedded-Apps)
-3. [Collaborating on SharePoint Embedded Application Office Documents](#Collaborating-on-Office-Documents-from-SharePoint-Embedded-Apps)
-4. [Breadcrumb Properties of SharePoint Embedded Application Office Documents](#Breadcrumb-properties-of-Office-Documents-from-SharePoint-Embedded-Apps)
--->
 
 ## Opening Office Documents from SharePoint Embedded Apps
 
@@ -72,7 +64,7 @@ Breadcrumb properties are used by Office clients to display breadcrumb-style ele
 > [!NOTE]
 > We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels)
 
-Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from Container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
+Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
 
 ![Screenshot of breadcrumb pattern in SharePoint Embedded Applications](../../images/office2.png)
 

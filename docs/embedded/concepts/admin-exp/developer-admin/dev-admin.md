@@ -8,34 +8,34 @@ ms.localizationpriority: high
 
 ## Overview
 
-Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the Containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
+Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
 
 ## Developer Admin Role
 
 > [!IMPORTANT]
-> Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to execute SharePoint Embedded Container commandlets mentioned in this article.
+> Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to execute SharePoint Embedded container commandlets mentioned in this article.
 > 
-> Global Administrators can continue to execute SharePoint Embedded Container cmdlets.
+> Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 > 
 > If you are a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
 
 A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
 
-The following are some of the Container specific commands actions currently supported on PowerShell:
-a)	Creation of container types
-- Creation of Standard container type with standard billing
-- Creation of Standard container type with direct to customer billing
-- Creation of Trial container type
+The following are some of the container specific commands actions currently supported on PowerShell:
+* Creation of container types
+  - Creation of Standard container type with standard billing
+  - Creation of Standard container type with direct to customer billing
+  - Creation of Trial container type
 
-b)	container type management
-- Viewing of container types in the developer tenant
-- Editing properties of a container type in the developer tenant
-- Configuration properties of a container type in the developer tenant
-- Manage billing of applications/ container types for standard billing
+* Container type management
+  - Viewing of container types in the developer tenant
+  - Editing properties of a container type in the developer tenant
+  - Configuration properties of a container type in the developer tenant
+  - Manage billing of applications/ container types for standard billing
 
 
-### Billing responsibilities of Developer admin
+### Billing responsibilities of the developer admin
 
 There are two types of billing models followed: 
 
@@ -101,7 +101,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
                      [-WhatIf] [-Confirm]
 ```
 
-### Container Type Configuration Properties
+### Container type configuration properties
 
 The developer administrator can change container type configuration settings using PowerShell commandlets. The following container type properties can be set:
 

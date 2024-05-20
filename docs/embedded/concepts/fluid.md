@@ -19,10 +19,10 @@ Start [building](https://github.com/microsoft/FluidExamples/) in the Fluid [Samp
 
 ### Get started with SharePoint Embedded
 
-Try SharePoint Embedded for free by creating a [Trial Container Type](./app-concepts/containertypes.md).
+Try SharePoint Embedded for free by creating a container type for [trial purposes](./app-concepts/containertypes.md).
 
 1. Set up a free trial [Microsoft 365 tenant](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing). Alternatively, you can use an existing tenant if you have admin credentials.
-1. Sign into the [SharePoint Embedded Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md) and follow the steps to create an application and Trial Container Type.
+1. Sign into the [SharePoint Embedded Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md) and follow the steps to create an application and container type for trial purposes.
 
 ## Prerequisites
 
@@ -32,17 +32,17 @@ To get started building with Fluid Framework, you need:
 1. **SharePoint Embedded Application**: Ensure that you register your application in [Microsoft Entra ID](https://entra.microsoft.com/). If you don't have a SharePoint Embedded application, refer to the [earlier section](#get-started-with-sharepoint-embedded).
 1. **Application (Client) ID**: Obtain the `ClientID` for your SharePoint Embedded Application.
 1. **Container Type Information**:
-   - Identify the `ContainerTypeId` associated with your app’s Container Type.
+   - Identify the `ContainerTypeId` associated with your app’s container type.
 1. **Containers**:
-   - Make sure you have *at least* one Container created of the same Container Type linked to your SharePoint Embedded Application.
+   - Make sure you have *at least* one container created of the same container type linked to your SharePoint Embedded Application.
 
 ## Get started with Fluid
 
 ### Access App information
 
-You need the `ClientID` from your application and the `ContainerTypeId` associated with the Containers created on that application.
+You need the `ClientID` from your application and the `ContainerTypeId` associated with the containers created on that application.
 
-The `ClientID` is essential for acquiring the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeId` is necessary for accessing Containers associated with your SharePoint Embedded application.
+The `ClientID` is essential for acquiring the correct access tokens when working with Fluid Framework and documents. The `ContainerTypeId` is necessary for accessing containers associated with your SharePoint Embedded application.
 
 If you used the [Visual Studio Code Extension](../getting-started/spembedded-for-vscode.md), you can [export](/sharepoint/dev/embedded/getting-started/spembedded-for-vscode#export-postman-environment) your Postman Environment to easily view your both your `ContainerTypeId` and `ClientID`.
 
