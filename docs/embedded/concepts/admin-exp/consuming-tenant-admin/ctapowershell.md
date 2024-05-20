@@ -47,24 +47,15 @@ The following commands can be used to manage SharePoint Embedded applications re
 Get-SPOApplication
 ```
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/1394144c-85b1-4b80-9487-8abb3848703b)
-
-
 ```powershell
 
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2920ee6d-bb8f-4787-831c-eeb0ed21e96c)
-
-
 ```powershell
 
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
-
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/bb6f7fc5-b0f5-4821-a0b9-7a9f2735cab4)
-
 
 OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information about using this command, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
 
@@ -81,9 +72,6 @@ Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapabil
 
 < $OverrideTenantSharingCapability > can take the following values: $true; $false
  
- 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/f898f21e-1769-4740-a7ac-fb83cb48b94b)
-
 ## Container Administration
 
 ### View Containers
@@ -93,12 +81,10 @@ Admins can get a list of all the containers for a SharePoint Embedded applicatio
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> |FT
 ```
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/b433f7a7-fe60-4c64-89a1-a2b9f083428c)
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId>|FT
 ```
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/fe535b18-6545-4f20-a9d6-b7178fa97fa6)
 
 The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). To enumerate Microsoft Loop containers, use Owning App ID: a187e399-0c36-4b98-8f04-1edc167a0996 for all the cmdlets of container administration. 
 
@@ -110,9 +96,6 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <valu
 
  <value> can be Ascending; Descending
  
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/d08ae597-2a65-4b7f-8134-2eacb8dc01a7)
-
-
 
 ### View details of a Container
 
@@ -130,16 +113,12 @@ Consuming tenant admins can set the sensitivity label of a container of an appli
 ```powershell
 Set-SPOContainer -Identity <ContainerID> -SensitivityLabel <SensitivityLabel>
 ```
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/4b059ca9-d180-46df-927f-e331bcc52b33)
 
 Consuming tenant admins can remove the sensitivity label of a container of an application using the following:
 
 ```powershell
 Set-SPOContainer -Identity b! <ContainerID> -RemoveLabel
 ```
-
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/c94231bf-305c-4456-8600-cb3d5d99affd)
-
 
 The ContainerId is the ID of the container whose sensitivity label is being set
 
