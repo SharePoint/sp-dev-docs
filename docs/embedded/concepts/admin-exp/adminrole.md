@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 The SharePoint Embedded Admininistrator is a dedicated role to manage SharePoint Embedded containers through SPO PowerShell and SharePoint admin center. This is required for developer admins to create new container types through PowerShell cmdlets and  consume tenants admins to manage containers created on their tenants. 
 
-The Global Administrator (Global admin) role already has all the permissions of the SharePoint Embedded Admininistrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Admininistrator role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded. 
+The Global Administrator role already has all the permissions of the SharePoint Embedded Admininistrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Admininistrator role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded. 
 
 The SharePoint Embedded Admininistrator role is available in Microsoft Entra and Microsoft 365 Admin Center. This role doesn't have access to site management. This means that a SharePoint Embedded Admininistrator won't be able to see Active and Deleted sites page on SharePoint Administrator Center as well as not be able to run site specific PowerShell cmdlets. 
 
