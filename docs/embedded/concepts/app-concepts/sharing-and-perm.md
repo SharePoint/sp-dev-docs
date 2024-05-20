@@ -1,4 +1,4 @@
----
+[---
 title: Sharing and Permissions
 description: Outlines Permission Model for SharePoint Embedded
 ms.date: 5/21/24
@@ -82,3 +82,4 @@ Note the following:
 - [Microsoft.Online.SharePoint.PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) version 16.0.24810.12000 or later is required to configure sharing capability at an application level
 
 
+](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/app-concepts/sharing-and-perm.md)
