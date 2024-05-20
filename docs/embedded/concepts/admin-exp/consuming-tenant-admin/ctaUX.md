@@ -24,15 +24,10 @@ The following actions are supported in SharePoint Admin Center:
 
 ![Active Containers global admin](../../../images/ctaux1.png)
 
-old-img
-<img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/44a7749e-ed3c-41ed-ac18-e4b35730e544">
 
 **SharePoint Embedded admin** will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
 ![Active Containers spe admin](../../../images/ctaux2.png)
-
-old-img
-<img width="1246" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d4922158-2740-4ec3-8447-069b0d83d5f8">
 
 
 ## Active Containers
