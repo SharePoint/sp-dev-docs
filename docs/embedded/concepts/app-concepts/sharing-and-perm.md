@@ -30,12 +30,12 @@ Only Container members who are either the Owner or Manager roles are permitted t
 
 Any Container members and guest users with edit permissions to add new permissions to this file.
 
-This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration]([/powershell/module/sharepoint-online/set-SPOApplication) as per this example:
+This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 
 ```powershell
 Set-SPOContainerTypeConfiguration
     -ContainerTypeID <ContainerTypeID>
-    -sharingRestricted <bool>
+    -sharingRestricted $false
 ```
 
 ## Sharing Configuration Setting
@@ -50,6 +50,6 @@ This setting can only be set by consuming tenant SharePoint Embedded admin, and 
 ```powershell
 Set-SPOApplication 
     -OwningApplicationID <OwningApplicationId>
-    -OverrideTenantSharingCapability <bool>
+    -OverrideTenantSharingCapability $true
     -SharingCapability <SharingCapability>
 ```
