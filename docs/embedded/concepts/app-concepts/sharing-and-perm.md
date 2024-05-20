@@ -28,7 +28,7 @@ Only Container members who are either the Owner or Manager roles are permitted t
 
 ### Open Sharing Model
 
-Any Container members and guest users with edit permissions to add new permissions to this file.
+Any Container members and guest users with edit permissions can add new permissions to this file.
 
 This can be configured using the PowerShell cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 
