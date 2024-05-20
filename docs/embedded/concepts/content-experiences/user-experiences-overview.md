@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # User Experiences Overview
 
-Microsoft's SharePoint Embedded provides a comprehensive set of user experience features like open & edit of Office files, file preview or in-app search that you can use to build the right user experiences for your applications.
+SharePoint Embedded provides a comprehensive set of user experience features like open & edit of Office files, file preview or in-app search that you can use to build the right user experiences for your applications.
 
 
 ## Open & Edit using Office
