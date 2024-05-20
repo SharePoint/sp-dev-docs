@@ -8,18 +8,18 @@ ms.localizationpriority: high
 # Manage Containers in SharePoint PowerShell 
 
  
-The Consuming Tenant Administrator (CTA) can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator (SPE Admin). Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
+The Consuming Tenant Administrator can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
-For more information on how to assign the SharePoint Embedded Admin role, refer to the [SPE Admin]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md))
+For more information on how to assign the SharePoint Embedded Admin role, refer to the [SharePoint Embedded Admin]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md))
 
  The following are some of the container specific commands actions currently supported on PowerShell: 
 
 ### Application administration 
-- Get details of all SPE applications registered in the tenant
-- Get details of all SPE applications in CTA’s tenant sorted basis storage 
-- Get detail of a specific SPE application in the tenant
+- Get details of all SharePoint Embedded applications registered in the tenant
+- Get details of all SharePoint Embedded applications the tenant sorted basis storage 
+- Get detail of a specific SharePoint Embedded application in the tenant
 - Get the permissions of owning applications in the tenant 
-- Configure External sharing setting of a container of a SPE application in the tenant
+- Configure External sharing setting of a container of a SharePoint Embedded application in the tenant
 
  ### Container administration 
 - Get details of all containers of a particular SharePoint Embedded application in the tenant
@@ -70,7 +70,7 @@ OwningApplicationId is the ID of the SharePoint Embedded application and Applica
 
 ### Set Sharing Capability of applications
 
-CTA can set the sharing capability at an application level to determine whether files of the containers of the application be shared with external guests or not.
+Consuming tenant admins can set the sharing capability at an application level to determine whether files of the containers of the application be shared with external guests or not.
 
 ```powershell
 Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapability <SharingCapability> - OverrideTenantSharingCapability <$ OverrideTenantSharingCapability >
@@ -102,7 +102,7 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId>|FT
 
 The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). To enumerate Microsoft Loop containers, use Owning App ID: a187e399-0c36-4b98-8f04-1edc167a0996 for all the cmdlets of container administration. 
 
-CTA can also get a list of all the containers of a SharePoint Embedded application sorted by storage using the following commands.
+Consuming tenant admins can also get a list of all the containers of a SharePoint Embedded application sorted by storage using the following commands.
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value>
@@ -116,8 +116,8 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <valu
 
 ### View details of a Container
 
-CTA can get the details of a container within an application using the following command. This command returns more details of a container including StorageUsed, Ownership details, SiteURL, Label information, Owners count etc.
-CTA can use the following command:
+Consuming tenant admins can get the details of a container within an application using the following command. This command returns more details of a container including StorageUsed, Ownership details, SiteURL, Label information, Owners count etc.
+Consuming tenant admins can use the following command:
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>
@@ -125,14 +125,14 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <Container
 Here, The ContainerId is the ID of the container.
 
 ### Sensitivity Label of a container
-CTA can set the sensitivity label of a container of an application using the following:
+Consuming tenant admins can set the sensitivity label of a container of an application using the following:
 
 ```powershell
 Set-SPOContainer -Identity <ContainerID> -SensitivityLabel <SensitivityLabel>
 ```
 ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/4b059ca9-d180-46df-927f-e331bcc52b33)
 
-CTA can remove the sensitivity label of a container of an application using the following:
+Consuming tenant admins can remove the sensitivity label of a container of an application using the following:
 
 ```powershell
 Set-SPOContainer -Identity b! <ContainerID> -RemoveLabel
