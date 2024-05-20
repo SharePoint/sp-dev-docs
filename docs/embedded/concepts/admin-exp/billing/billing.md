@@ -5,7 +5,7 @@ ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded  Billing
+# SharePoint Embedded billing
 
 SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models which the tenant developing the SharePoint Embedded application can select for each specific container types, tailoring it to their unique business requirements. The two billing models are
 
@@ -32,7 +32,7 @@ To enable PAYG on SharePoint Embedded, you need:
 - Admin who sets up billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
 - Admin needs to have a SharePoint Embedded Administrator or Global Admin role to operate billing cmdlets.
 
-## Set up a Standard Billing Container Type: 
+## Set up a Standard Billing container type: 
 
 For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
@@ -60,9 +60,9 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 > 
 > An Azure subscription can be attached to any number of container types.
 
-### View & Edit billing properties of Standard Container Type
+### View & Edit billing properties of Standard container type
 
-You can view properties of a ContainerType and associated billing properties by using one of the two PowerShell cmdlets:
+You can view properties of a container type and associated billing properties by using one of the two PowerShell cmdlets:
 
 1. To see all container types and billing properties except associated region:
 
