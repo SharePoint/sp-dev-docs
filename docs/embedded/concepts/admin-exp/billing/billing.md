@@ -64,7 +64,7 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 
 You can view properties of a ContainerType and associated billing properties by using one of the two PowerShell cmdlets:
 
-1. To see all Container Types and billing properties except associated region:
+1. To see all container types and billing properties except associated region:
 
     ```powershell
     Get-SPOContainerType
