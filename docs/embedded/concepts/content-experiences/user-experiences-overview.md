@@ -58,4 +58,4 @@ Content-Type: application/json
 
 ## Recycle Bin
 
-You can use the Microsoft Graph to either soft-delete or permanent-delete items in containers. Soft-deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using the Microsoft Graph APIs. An item in recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.
+You can use Microsoft Graph to either delete or permanently delete items in containers. Deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using Microsoft Graph. An item in recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.
