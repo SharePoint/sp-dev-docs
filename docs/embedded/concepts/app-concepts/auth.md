@@ -5,7 +5,7 @@ ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded Authentication and Authorization
+# SharePoint Embedded authentication and authorization
 
 To use SharePoint Embedded, your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more about the [SharePoint Embedded architecture](./app-architecture.md).
 
