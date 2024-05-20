@@ -40,19 +40,6 @@ Set-SPOContainerTypeConfiguration
     -ContainerTypeID <Identifier>
     -sharingRestricted $True
 ```
-Invoking the additive permission API with different roles have different outcomes:
-
-|      Container Role                               | SharingRestricted: False                 |  SharingRestricted: True  |
-| :-----------------------------------------------: | :--------------------------------------: | :-----------------------: |
-| Owner                                             |                  Success                 | Success                   |
-| Manager                                           |                  Success                 | Success                   |
-| Writer                                            |                  Success                 | **Fails**                 |
-| Reader                                            |                  Fails                   | **Fails**                 |
-| Guest User (with edit permissions on the file)    |                   Success                | **Fails**                 |
-| Guest User (without edit permissions on the file) |                Fails                     | **Fails**                 |
- 
-
-
 
 ## Consuming Tenant Admin Sharing Configuration Settings
 
