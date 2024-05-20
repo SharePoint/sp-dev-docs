@@ -35,7 +35,7 @@ You can control how your content appears in the Microsoft 365 experience. The de
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
 ```powershell
 Set-SPOContainerTypeConfiguration
-    -ContainerTypeID <Identifier>
+    -ContainerTypeID <ContainerTypeID>
     -discoverabilityDisabled $False
 ```
 In this way, your files will be integrated into the Microsoft365 environment, participating in intelligent file discovery and Copilot experiences.
