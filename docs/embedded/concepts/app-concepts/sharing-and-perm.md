@@ -28,7 +28,7 @@ Only container members who are either the Owner or Manager roles are permitted t
 
 ### Open Sharing Model
 
-Any container members and guest users with edit permissions can add new permissions to this file.
+Any container members and guests with edit permissions can add new permissions to this file.
 
 This can be configured using the PowerShell cmdlet [Set-SPOcontainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 
@@ -39,11 +39,11 @@ Set-SPOcontainerTypeConfiguration
 ```
 
 ## Sharing Configuration Setting
-By default, SharePoint Embedded application sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for Guest users, then the SharePoint Embedded application is unable to add Guest Users to container roles or grant them additive permissions.
+By default, SharePoint Embedded application sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for guests, then the SharePoint Embedded application is unable to add guests to container roles or grant them additive permissions.
 
 ### Application External Sharing Override
 
-For SharePoint Embedded applications, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guest users, SharePoint Embedded applications can be configured to allow guest sharing. Consequently, all containers within that SharePoint Embedded application would have the ability to include guest users or extend additional permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
+For SharePoint Embedded applications, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guests, SharePoint Embedded applications can be configured to allow guest sharing. Consequently, all containers within that SharePoint Embedded application would have the ability to include guests or extend additional permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
 
 This setting can only be set by consuming tenant SharePoint Embedded admin, and can be configured using the latest powershell cmdlet [Set-SPOApplication](../admin-exp/consuming-tenant-admin/ctapowershell.md#set-sharing-capability-of-applications) as shown in this example:
 
