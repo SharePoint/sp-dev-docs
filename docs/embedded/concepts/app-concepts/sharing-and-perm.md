@@ -5,10 +5,10 @@ ms.date: 5/17/24
 ms.localizationpriority: high
 ---
 
-# Sharing and Permissions in SharePoint Embedded
+# Sharing and permissions in SharePoint Embedded
 
 
-## Additive Permissions
+## Additive permissions
 In SharePoint Embedded, content always inherits permissions from its parent hierarchy. While you cannot alter this inherited permission structure, you can extend access within a container by applying "additive permissions" to specific files and folders. For instance, if _UserA_ belongs to the Reader role, you can grant the user edit permission to a particular document in that container using Microsoft Graph: 
 
 |           Scenario            |                                                                           Microsoft Graph API(s)                                                                            |                                                                                                          Notes                                                                                                          |
@@ -18,15 +18,15 @@ In SharePoint Embedded, content always inherits permissions from its parent hier
 | Delete an additive permission | [DELETE /drives/{drive-id}/items/{item-id}/permissions/{perm-id}](/graph/api/permission-delete)                                                                             | You can only delete the additive permission on the drive item where it was originally added.                                                                                                                            |
 
 
-## Role-based Sharing Setting
+## Role-based sharing setting
 
 SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model. By default, the sharing setting is configured to the open model, permitting unrestricted content sharing by all users. This sharing setting is part of [container type configuration](containertypes.md#configuring-container-types). This configuration can only be set by application owner's developers. To learn more about container permission roles, please refer to [Authentication and Authorization with SharePoint Embedded](auth.md#container-permissions).
 
-### Restrictive Sharing Model
+### Restrictive sharing model
 
 Only container members who are either the Owner or Manager roles are permitted to add new permissions to files.
 
-### Open Sharing Model
+### Open sharing model
 
 Any container members and guests with edit permissions can add new permissions to this file.
 
@@ -38,10 +38,10 @@ Set-SPOcontainerTypeConfiguration
     -sharingRestricted $false
 ```
 
-## Sharing Configuration Setting
+## Sharing configuration setting
 By default, SharePoint Embedded application sharing configuration is the same as the consuming tenant sharing configuration. For example, if the consuming tenant is configured to disable sharing for guests, then the SharePoint Embedded application is unable to add guests to container roles or grant them additive permissions.
 
-### Application External Sharing Override
+### Application external sharing override
 
 For SharePoint Embedded applications, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guests, SharePoint Embedded applications can be configured to allow guest sharing. Consequently, all containers within that SharePoint Embedded application would have the ability to include guests or extend additional permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
 

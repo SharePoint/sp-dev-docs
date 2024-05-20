@@ -24,15 +24,10 @@ The following actions are supported in SharePoint Admin Center:
 
 ![Active Containers global admin](../../../images/ctaux1.png)
 
-old-img
-<img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/44a7749e-ed3c-41ed-ac18-e4b35730e544">
 
 **SharePoint Embedded admin** will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
 ![Active Containers spe admin](../../../images/ctaux2.png)
-
-old-img
-<img width="1246" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d4922158-2740-4ec3-8447-069b0d83d5f8">
 
 
 ## Active Containers
@@ -92,7 +87,7 @@ old-img
 
 > [!Warning]
 >
->Deleting a container may cause unexpected issues for the SharePoint Embedded application it belongs to and may interrupt the application's usage. This action should only be performed by admins when absolutely necessary.
+> Deleting a container may cause unexpected issues for the SharePoint Embedded application it belongs to and may interrupt the application's usage. This action should only be performed by admins when absolutely necessary.
 
 Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container.
 
@@ -102,14 +97,14 @@ Deleting a container can have implications on the functionality of a SharePoint 
 
 A container can be deleted from the Active containers page for any business reason by the CTA. By default, the delete button is deactivated. On selecting a container, the delete button is activated. The CTA can then select the delete button.
 
-![](../../../images/ctaux6.png)
+![](../../../images/ctaux7.png)
 
 old-img
 <img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/1fed0fb2-4e95-4a51-a379-91223520ec9b">
 
 This opens a side panel that warns the user about the effect on the associated SPE application due to the deletion of a container as well as inform the user about the restoration policy. The CTA can at this stage either cancel the panel and go back to the active containers page or proceed further with the deleting by clicking on “Delete container”.
 
-![](../../../images/ctaux7.png)
+![](../../../images/ctaux8.png)
 
 old-img
 <img width="1280" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/9d770bb3-e389-4a70-8db2-3ff85b864595">
@@ -117,7 +112,7 @@ old-img
  
 The selected container is successfully deleted and moved into the deleted containers page.
 
-![](../../../images/ctaux8.png)
+![](../../../images/ctaux9.png)
 
 old-img
 <img width="1277" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/69f0b5a3-05e0-4855-968c-6c020edfa13f">
@@ -127,7 +122,7 @@ old-img
 ## Restore a container
 A container in the deleted container collection can be restored on the Deleted containers page by selecting the corresponding containers by selecting the "Restore" link
 
-![](../../../images/ctaux9.png)
+![](../../../images/ctaux10.png)
 
 old-img
 ![image](https://github.com/cindylay/sp-dev-docs/assets/132292644/3ce195df-13b3-4152-ad36-6c1ddf253f35)
@@ -135,7 +130,7 @@ old-img
  
 Restoration of the container happens in the background and the status of the same is displayed on the top right corner of the page. Upon successful restoration, the container will be available in the Active Containers page.
 
-![](../../../images/ctaux10.png)
+![](../../../images/ctaux11.png)
 
 old-img
 <img width="1275" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/2a2a3a2a-1b0c-4791-b24d-f89c3b34afd4">
@@ -150,7 +145,7 @@ The CTA can permanently delete a deleted container from the deleted container co
 
 The CTA selects the container to be permanently deleted. The “Permanently delete” button is enabled. 
 
-![](../../../images/ctaux11.png)
+![](../../../images/ctaux12.png)
 
 old-img
 <img width="1277" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/9ced70e2-0da8-4b08-8c8f-becaccf292ee">
