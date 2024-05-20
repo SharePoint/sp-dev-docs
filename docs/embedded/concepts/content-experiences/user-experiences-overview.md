@@ -32,7 +32,7 @@ A direct link to the file lacks the appropriate authorization from your app. If 
 
 You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded app content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, the Copilot experience or other Microsoft intelligent file discovery features. 
 
-If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/set-SPOContainerTypeConfiguration) as per this example:
+If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 ```powershell
 Set-SPOContainerTypeConfiguration
     -ContainerTypeID <ContainerTypeID>
