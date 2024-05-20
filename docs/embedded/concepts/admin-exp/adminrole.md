@@ -63,62 +63,19 @@ The Global admin can assign the SharePoint Embedded Admin role to users through 
 
 Follow the following steps to assign the role of SharePoint Embedded Admininistrator on Entra: 
 
-1. Sign into Entra as a Global admin 
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/a8e5c70e-7537-4027-8893-68a9e5108893)
-
-1. Select the **“Users”** tab on the left-hand panel and select **“All users”**
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6748a676-2a26-47a2-8429-1d24293d318a)
-
-1. Select the user to assign the role of SharePoint Embedded Admininistrator under **“All users”**
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8b95316c-f324-4500-80d5-1b693568fdcf)
-
-1. Select the **“Assigned role”** tab on the left panel
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/75e69958-a139-41e9-9b25-59e343c469c0)
-
-1. Select on **“Add assignments”** button and search for **“SharePoint Embedded”** in the panel that opens
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/c2d9db27-bc82-49a4-82fe-f0e3cab71db9)
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2a1a8b56-6e19-4bb6-9fa0-27208abb80a1)
-
-1. Select the “SharePoint Embedded Administrator” option and select on **“Add”**
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/0fc19905-786e-4e9e-b592-a255c0eb71ff)
-
-1. The selected user is assigned the role of SharePoint Embedded admininistrator
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/199eb669-565f-4022-ba82-3472403c63cf)
+1. Sign into Entra as a Global admin
+2. Select the **“Users”** tab on the left-hand panel and select **“All users”**
+3. Select the user to assign the role of SharePoint Embedded Admininistrator under **“All users”**
+4. Select the **“Assigned role”** tab on the left panel
+5. Select on **“Add assignments”** button and search for **“SharePoint Embedded”** in the panel that opens
+6. Select the “SharePoint Embedded Administrator” option and select on **“Add”**
+7. The selected user is assigned the role of SharePoint Embedded admininistrator
 
 ### Through Microsoft 365 Admin Center
 
 1. Sign into M365 Admin Center as a Global admin
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8a52b7c6-91ed-4491-9e9d-26bffc1f0385)
-
-1. Select **“Users”** and select **“Active users”** under it
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/933ebbd5-595a-4d7b-b4e6-4f718ee38317)
-
-1. Select the user to assign the role of SharePoint Embedded Admininistrator
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/e9e806e0-efb4-4e35-b192-0e640f8e8431)
-
-1. Select on **“Manage roles”** option under Roles
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/59e019ae-85aa-4282-bd15-5ba6f18d7ea7)
-
-1. Select **“Admin center access”** and under **“Collaboration”**, select **“SharePoint Embedded Administrator”**
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/92786c95-ce03-4526-a591-bcabe7a4c700)
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2227cf77-a9a0-498e-8cf4-76e4eb160df2)
-
-1. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded Admininistrator
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6c64d48d-3c3b-48dc-8f01-0dae15322572)
-
-    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/bd94f615-8de6-49e7-b2ef-c80ffaf90d44)
+2. Select **“Users”** and select **“Active users”** under it
+3. Select the user to assign the role of SharePoint Embedded Admininistrator
+4. Select on **“Manage roles”** option under Roles
+5. Select **“Admin center access”** and under **“Collaboration”**, select **“SharePoint Embedded Administrator”**
+6. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded Admininistrator
