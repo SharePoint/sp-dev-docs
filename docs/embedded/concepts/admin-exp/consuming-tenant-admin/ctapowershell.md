@@ -8,7 +8,7 @@ ms.localizationpriority: high
 # Manage Containers in SharePoint PowerShell 
 
  
-The Consuming Tenant Administrator can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Consuming Tenant Admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
+The consuming tenant administrator can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
 For more information on how to assign the SharePoint Embedded Admin role, refer to the [SharePoint Embedded Admin]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md))
 
@@ -100,6 +100,7 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <valu
 ### View details of a Container
 
 Consuming tenant admins can get the details of a container within an application using the following command. This command returns more details of a container including StorageUsed, Ownership details, SiteURL, Label information, Owners count etc.
+
 Consuming tenant admins can use the following command:
 
 ```powershell
@@ -123,7 +124,7 @@ Set-SPOContainer -Identity b! <ContainerID> -RemoveLabel
 The ContainerId is the ID of the container whose sensitivity label is being set
 
 
-### Delete Containers
+### Delete containers
 
 Deleting a container can have implications on the functionality of a SharePoint Embedded app, Here are some examples of the potential issues that an application can encounter when deleting a container.
 
