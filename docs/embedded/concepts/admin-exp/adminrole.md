@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Administrator 
 description: This article explains the new admin role for SharePoint Embedded
-ms.date: 04/09/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
