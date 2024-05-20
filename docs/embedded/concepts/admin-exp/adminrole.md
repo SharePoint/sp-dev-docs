@@ -49,17 +49,11 @@ b)	Container administration
 The following are some of the actions currently supported on SPAC:
 
 a)	View Active container page
-
 b)	View Deleted container page
-
 c)	View the detailed information of a container
-
 d)	Soft delete a container
-
 e)	Restore a deleted container
-
 f)	Purge a deleted container
-
 
 ## Assigning the SPE Admin Role 
 
@@ -68,66 +62,63 @@ The Global Admin can assign the SPE admin role to users through both Entra and M
 ### Through Entra 
 
 Follow the following steps to assign the role of SPE Admin on Entra: 
+
 1. Sign into Entra as a Global Admin 
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/a8e5c70e-7537-4027-8893-68a9e5108893)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/a8e5c70e-7537-4027-8893-68a9e5108893)
 
-2. Select “Users” tab on the left-hand panel and select “All users”
+1. Select “Users” tab on the left-hand panel and select “All users”
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6748a676-2a26-47a2-8429-1d24293d318a)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6748a676-2a26-47a2-8429-1d24293d318a)
 
-3. Select the user to assign the role of SPE Admin under “All users”
+1. Select the user to assign the role of SPE Admin under “All users”
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8b95316c-f324-4500-80d5-1b693568fdcf)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8b95316c-f324-4500-80d5-1b693568fdcf)
 
-4. Select the “Assigned role” tab on the left panel
+1. Select the “Assigned role” tab on the left panel
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/75e69958-a139-41e9-9b25-59e343c469c0)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/75e69958-a139-41e9-9b25-59e343c469c0)
 
-5. Click on “Add assignments” button and search for “SharePoint Embedded” in the panel that opens.
+1. Click on “Add assignments” button and search for “SharePoint Embedded” in the panel that opens.
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/c2d9db27-bc82-49a4-82fe-f0e3cab71db9)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/c2d9db27-bc82-49a4-82fe-f0e3cab71db9)
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2a1a8b56-6e19-4bb6-9fa0-27208abb80a1)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2a1a8b56-6e19-4bb6-9fa0-27208abb80a1)
 
-6. Select the “SharePoint Embedded Administrator” option and click on “Add”
+1. Select the “SharePoint Embedded Administrator” option and click on “Add”
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/0fc19905-786e-4e9e-b592-a255c0eb71ff)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/0fc19905-786e-4e9e-b592-a255c0eb71ff)
 
+1. The selected user is assigned the role of SPE Admin
 
-7. The selected user is assigned the role of SPE Admin
-
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/199eb669-565f-4022-ba82-3472403c63cf)
-
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/199eb669-565f-4022-ba82-3472403c63cf)
 
 ### Through M365 Admin Center
 
 1. Sign into MAC as a Global Admin
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8a52b7c6-91ed-4491-9e9d-26bffc1f0385)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/8a52b7c6-91ed-4491-9e9d-26bffc1f0385)
 
-2. Select “Users” and select “Active users” under it
+1. Select “Users” and select “Active users” under it
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/933ebbd5-595a-4d7b-b4e6-4f718ee38317)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/933ebbd5-595a-4d7b-b4e6-4f718ee38317)
 
-3. Select the user to assign the role of SPE Admin
+1. Select the user to assign the role of SPE Admin
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/e9e806e0-efb4-4e35-b192-0e640f8e8431)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/e9e806e0-efb4-4e35-b192-0e640f8e8431)
 
-4. Click on “Manage roles” option under Roles
+1. Click on “Manage roles” option under Roles
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/59e019ae-85aa-4282-bd15-5ba6f18d7ea7)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/59e019ae-85aa-4282-bd15-5ba6f18d7ea7)
 
-5. Select “Admin center access” and under “Collaboration”, select “SharePoint Embedded Administrator”
+1. Select “Admin center access” and under “Collaboration”, select “SharePoint Embedded Administrator”
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/92786c95-ce03-4526-a591-bcabe7a4c700)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/92786c95-ce03-4526-a591-bcabe7a4c700)
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2227cf77-a9a0-498e-8cf4-76e4eb160df2)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/2227cf77-a9a0-498e-8cf4-76e4eb160df2)
 
-6. Click on Save changes and the selected user is assigned the role of SPE Admin 
+1. Click on Save changes and the selected user is assigned the role of SPE Admin
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6c64d48d-3c3b-48dc-8f01-0dae15322572)
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/6c64d48d-3c3b-48dc-8f01-0dae15322572)
 
-![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/bd94f615-8de6-49e7-b2ef-c80ffaf90d44)
-
-
+    ![image](https://github.com/cindylay/sp-dev-docs/assets/136049061/bd94f615-8de6-49e7-b2ef-c80ffaf90d44)
