@@ -1,13 +1,13 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 11/28/2023
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded Authentication and Authorization
 
-To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more aboue the [SPE architecture] (./app-architecture.md).
+To use SharePoint Embedded (SPE), your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more about the [SPE architecture] (./app-architecture.md).
 
 ## Pre-Requisites
 
@@ -25,7 +25,7 @@ SPE operations are exposed via Microsoft Graph. SPE supports [access on behalf o
 
 SPE operations [on behalf of a user](https://learn.microsoft.com/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require SPE applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
-In addition to your SPE application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it is acting on behalf of will be required to have [container permissions](#container-permissions). The effective permissions that the SPE application will have are the intersection of the SPE application permissions and the user permissions when acting on behalf of a user.
+In addition to your SPE application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it's acting on behalf of is required to have [container permissions](#container-permissions). The effective permissions that the SPE application has are the intersection of the SPE application permissions and the user permissions when acting on behalf of a user.
 
 > [!IMPORTANT] 
 > Using SPE on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves auditability of actions performed by your SPE application.
@@ -39,13 +39,13 @@ SPE operations [without a user](https://learn.microsoft.com/graph/auth-v2-servic
 
 ### Exceptional access patterns
 
-Currently, there are two types of operations that are not accessible via Microsoft Graph:
+Currently, there are two types of operations that aren't accessible via Microsoft Graph:
 - [Container type management](containertypes.md) on owning tenants
 - [Container type registration](register-api-documentation.md) on consuming tenants
 
 These are the `Office 365 SharePoint Online` permissions that your application needs to perform those types of operations.
 
-| Scope name | Scope Id | Type | Operation |
+| Scope name | Scope ID | Type | Operation |
 |:---:|:---:|:---:|:---:|
 | Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application | In the context of SPE, enables container type management on an owning tenant. |
 | Container.Selected | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SPE, enables container type registration on a consuming tenant. |
@@ -79,7 +79,7 @@ SPE applications need to be granted container type application permissions by th
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions will define the access level that users will have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. An SPE application accessing container without a user will get the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. An SPE application accessing container without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
@@ -95,20 +95,20 @@ Any user accessing a container must be a member of the container. Membership to 
 
 Here are some key learnings on SPE authentication and authorization:
 1. SPE applications interact with SPE via Microsoft Graph
-2. SPE applications need container type application permissions to access containers of that container type
-3. When using access on behalf of a user, SPE applications can only access containers that the user is a member of
-4. When using access without a user, SPE applications can access containers enabled by the container type application permissions they have been granted
-5. SPE applications use access on behalf of users whenever possible to enhance security and auditability
+1. SPE applications need container type application permissions to access containers of that container type
+1. When using access on behalf of a user, SPE applications can only access containers that the user is a member of
+1. When using access without a user, SPE applications can access containers enabled by the container type application permissions they have been granted
+1. SPE applications use access on behalf of users whenever possible to enhance security and auditability
 
 ## What's next
 
 Here are some actions you can take next:
 1. Configure your SPE [application manifest](https://learn.microsoft.com/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
-     - `FileStorageContainer.Selected` (type: `Scope`, id: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
+     - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
-     - `Sites.FullControl.All` (type: `Role`, id: `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
-     - `Container.Selected` (type: `Role`, id: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
+     - `Sites.FullControl.All` (type: `Role`, ID: `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
+     - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 2. [Grant admin consent](https://learn.microsoft.com/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your SPE application on both owning and consuming tenants (which can be the same tenant).
 3. [Create a new container type](containertypes.md) on the owning tenant.
 4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.

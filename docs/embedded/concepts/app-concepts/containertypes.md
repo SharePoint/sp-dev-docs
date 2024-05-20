@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Container Types
 description: This article explains how Container Types work.
-ms.date: 04/09/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -13,7 +13,7 @@ Each container type is strongly coupled with one SharePoint Embedded application
 
 Container type is represented on each container instance as an immutable property (ContainerTypeID) and is used across the entire SharePoint Embedded ecosystem, including:
 
-- Access authorization. A SharePoint Embedded application must be associated to a container type to get access to container instances of that type. Once associated, the application has access to all container instances of that type. The actual access privilege is determined by the application-ContainerTypeID permission setting. The owning application by default has full access privilege to all container instances of the container type it is strongly coupled with. Learn more about [SharePoint Embedded Authorization](../app-concepts/auth.md).
+- Access authorization. A SharePoint Embedded application must be associated to a container type to get access to container instances of that type. Once associated, the application has access to all container instances of that type. The actual access privilege is determined by the application-ContainerTypeID permission setting. The owning application by default has full access privilege to all container instances of the container type it's strongly coupled with. Learn more about [SharePoint Embedded Authorization](../app-concepts/auth.md).
 - Easy exploration. Container type can be created for trial purposes, allowing developers to explore SharePoint Embedded application development and assess its features for free.
 - Billing. Container type for non-trial purposes are billable and must be created with an Azure Subscription. Usage of containers is metered and charged. Learn more about [metering](../admin-exp/meters.md) and the [SharePoint Embedded billing experience](../admin-exp/billing.md).
 - Configurable behaviors. Container type defines selected behaviors for all container instances of that type. Learn more about setting [Container type configuration](../app-concepts/containertypes.md#configuring-container-types) 
