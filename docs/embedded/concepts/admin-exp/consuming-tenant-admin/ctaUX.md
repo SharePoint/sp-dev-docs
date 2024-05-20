@@ -9,7 +9,7 @@ ms.localizationpriority: high
 The organizations that use the SharePoint Embedded applications on their Microsoft 365 (M365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can manage containers through a graphical user interface (GUI) using the [SharePoint Administrator Center](https://go.microsoft.com/fwlink/?linkid=2185219) (SPAC). 
 
 To manage SharePoint Embedded containers, CTA need to be assigned the Microsoft 365 SharePoint Embedded Administrator role. Global Administrators in Microsoft 365 have all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a CTA for SharePoint Embedded. This role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
-For information on SharePoint Embedded admin role, see [SPE Admin](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md).
+For information on SharePoint Embedded admin role, see [SharePoint Embedded Admin](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md).
 
 The following actions are supported in SPAC:
 
@@ -20,11 +20,11 @@ The following actions are supported in SPAC:
 5. Restore a deleted container
 6. Permanently deleted a container
 
-Global Admin will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
+**Global Admin** will also see "Active Containers" and "Deleted Containers" page along with Site administration pages when they log in to SharePoint Admin Center. 
 
 <img width="1243" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/44a7749e-ed3c-41ed-ac18-e4b35730e544">
 
-SharePoint Embedded Admins will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
+**SharePoint Embedded admin** will only see "Active Containers" and "Deleted Containers" page when they log in to SharePoint Admin Center. 
 
 <img width="1246" alt="image" src="https://github.com/cindylay/sp-dev-docs/assets/132292644/d4922158-2740-4ec3-8447-069b0d83d5f8">
 
