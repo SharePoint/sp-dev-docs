@@ -134,7 +134,7 @@ Upon clicking the button, a pop-up appears warning the CTA on the action they ar
 
 Upon clicking Delete, the container is permanently deleted and the status of the same appears in the top-right corner of the page.Upon successful deletion, the container is permanently removed from the deleted container collection and cannot be restored.
 
-![](../../../images/ctaux15.png)
+![new delete container](../../../images/ctaux15-n.png)
 
 
 ## Coming Soon
