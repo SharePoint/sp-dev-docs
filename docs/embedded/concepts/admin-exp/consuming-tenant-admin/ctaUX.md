@@ -55,7 +55,7 @@ The detailed container view provides a deeper dive into container-specific metad
 1. **Membership:** This panel shows the user permissions for different users associated with the container.
 
 > [!IMPORTANT]
-> The SharePoint Embedded platform supports four distinct [roles](docs/embedded/concepts/app-concepts/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
+> The SharePoint Embedded platform supports four distinct [roles](../../app-concepts/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
 >
 
 ![SharePoint Embedded Membership Roles](../../../images/ctaux5.png)

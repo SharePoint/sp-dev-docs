@@ -25,7 +25,7 @@ The same Microsoft Entra ID tenant can be both owning and consuming tenant of a 
 
 A container is the basic storage unit in SharePoint Embedded. Also, a container defines a security and compliance boundary.
 
-A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between an application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](./containertypes.md).
+A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between an application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](../app-concepts/).
 
 The container type is represented on each container as an immutable property and is used across the entire SharePoint Embedded ecosystem. Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer (the owning tenant) is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
 
