@@ -1,7 +1,7 @@
 ---
 title: Using Webhooks
 description: Use webhooks with SharePoint Embedded.
-ms.date: 02/26/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -75,6 +75,7 @@ export const onReceiptAdded = async (req: Request, res: Response) => {
 ## Connect to Graph and subscribe to changes
 
 Follow the [documentation](https://ngrok.com/docs/getting-started/) to create a tunnel for your backend server by utilizing ngrok.
+
 After starting the app, run the following command in a terminal:
 
 ```powershell

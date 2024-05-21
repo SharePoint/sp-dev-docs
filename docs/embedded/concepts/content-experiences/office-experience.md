@@ -1,14 +1,13 @@
 ---
 title: Office Experiences
 description: Overview of Office experiences with SharePoint Embedded content
-ms.date: 11/28/2023
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
 # Office file experiences for SharePoint Embedded
 
 Office file experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 platform.
-
 
 ## Opening Office documents from SharePoint Embedded
 
@@ -62,7 +61,7 @@ There are different options for sharing SharePoint Embedded Application Office D
 Breadcrumb properties are used by Office clients to display breadcrumb-style elements within Office client UI that aid your users in associating Office files with your Application.
 
 > [!NOTE]
-> We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels)
+> We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels).
 
 Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
 

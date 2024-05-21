@@ -1,27 +1,27 @@
 ---
 title: Consuming Tenant Admin PowerShell
 description: This article describes how an admin can manage containers through SPO PowerShell.
-ms.date: 04/09/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded container management in PowerShell 
+# SharePoint Embedded container management in PowerShell
 
 The consuming tenant administrator can manage containers using PowerShell commands, designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
 For more information on assigning the SharePoint Embedded admin role, see the [SharePoint Embedded Administrator](../adminrole.md).
 
- The following are some of the container specific commands actions currently supported on PowerShell: 
+The following are some of the container-specific commands actions currently supported on PowerShell:
 
-### Application administration 
+### Application administration
 
 - Get details of all SharePoint Embedded applications registered in the tenant
-- Get details of all SharePoint Embedded applications the tenant sorted basis storage 
+- Get details of all SharePoint Embedded applications the tenant sorted basis storage
 - Get detail of a specific SharePoint Embedded application in the tenant
-- Get the permissions of owning applications in the tenant 
+- Get the permissions of owning applications in the tenant
 - Configure External sharing setting of a container of a SharePoint Embedded application in the tenant
 
- ### Container administration 
+### Container administration
 
 - Get details of all containers of a particular SharePoint Embedded application in the tenant
 - Get details of a specific container
@@ -29,7 +29,7 @@ For more information on assigning the SharePoint Embedded admin role, see the [S
 - Soft delete a container
 - Get details of all soft deleted containers
 - Restore a soft deleted container
-- Permanently delete a soft deleted container 
+- Permanently delete a soft deleted container
 
 ## Administration through SharePoint PowerShell
 
@@ -39,8 +39,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 > [!IMPORTANT]
 > You must use the latest version of SharePoint PowerShell to use container administration cmdlets.
 
-
- ## Application Administration
+## Application Administration
 
 With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have "read" and/or "write" access and the level of access to these SharePoint Embedded applications.
 
@@ -70,11 +69,10 @@ Consuming tenant admins can set the sharing capability at an application level t
 Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapability <SharingCapability> - OverrideTenantSharingCapability <$ OverrideTenantSharingCapability >
 ```
 
-
 `SharingCapability` can take the following values: `Disabled`; `ExistingExternalUserSharingOnly`; `ExternalUserSharingOnly`;  ExternalUserAndGuestSharing
 
 `$OverrideTenantSharingCapability` can take the following values: `$true`; `$false`
- 
+
 ## Container Administration
 
 ### View Containers
@@ -89,7 +87,7 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> |FT
 Get-SPOContainer -OwningApplicationId <OwningApplicationId>|FT
 ```
 
-The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). To enumerate Microsoft Loop containers, use Owning App ID: a187e399-0c36-4b98-8f04-1edc167a0996 for all the cmdlets of container administration. 
+The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). To enumerate Microsoft Loop containers, use Owning App ID: a187e399-0c36-4b98-8f04-1edc167a0996 for all the cmdlets of container administration.
 
 Consuming tenant admins can also get a list of all the containers of a SharePoint Embedded application sorted by storage using the following commands.
 
@@ -98,7 +96,6 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <valu
 ```
 
 `<value>` can be Ascending; Descending
- 
 
 ### View details of a Container
 
@@ -109,6 +106,7 @@ Consuming tenant admins can use the following command:
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>
 ```
+
 Here, The ContainerId is the ID of the container.
 
 ### Sensitivity Label of a container
@@ -125,7 +123,6 @@ Set-SPOContainer -Identity b! <ContainerID> -RemoveLabel
 ```
 
 The ContainerId is the ID of the container whose sensitivity label is being set
-
 
 ### Delete containers
 
@@ -175,12 +172,13 @@ Admins can permanently delete a container from the deleted container collection 
 ```powershell
 Remove-SPODeletedContainer -Identity <ContainerId>
 ```
+
 ## Coming Soon
 
 1. Add users to containers
-2. Reassign user permission in a container
-3. Remove user from a container
-   
+1. Reassign user permission in a container
+1. Remove user from a container
+
 ## Security and Compliance Administration
 
 SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../security-and-compliance.md).

@@ -1,7 +1,7 @@
 ---
 title: Content Experiences Overview
 description: Experiences with SharePoint Embedded content
-ms.date: 05/17/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -9,12 +9,11 @@ ms.localizationpriority: high
 
 SharePoint Embedded provides a comprehensive set of user experience features like open & edit of Office files, file preview or in-app search that you can use to build the right user experiences for your applications.
 
-
 ## Open & edit using Office
 
 Office documents from SharePoint Embedded applications can be opened for viewing, editing and collaborating using either on the web, or Office applications for a richer viewing and editing experience. Learn more about [Office experiences available on SharePoint Embedded](./office-experience.md).
 
-You can set up your applications to launch Office when a user clicks on an Office document within your application. This includes options to directly launch an Office application or to open it in a specific mode, such as view (for read-only content) or edit (for editing mode). Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
+You can set up your applications to launch Office when a user selects on an Office document within your application. This includes options to directly launch an Office application or to open it in a specific mode, such as view (for read-only content) or edit (for editing mode). Learn how to [configure the right Office Experience for your Office Documents](../../tutorials/launch-experience.md)
 
 ## Preview content
 
@@ -24,24 +23,27 @@ Integrate your application with SharePoint Embedded player plugin to offer file 
 
 You can use [Microsoft Graph's Download DriveItem API](/graph/api/driveitem-get-content) to offer download file user experiences for your applications. This will generate  a short lived, preauthenticated Url allows users to download files from your applications.
 
-> [!note]
+> [!NOTE]
 >A direct link to the file lacks the appropriate authorization from your application. If used directly in a browser, this would yield an access denied.
 
 ## Content discovery in Microsoft 365
 
-You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded application content will be hidden everywhere in Microsoft 365 environment including office.com, oneDrive.com, Recommeneded or other Microsoft intelligent file discovery features. 
+You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded application content will be hidden in Microsoft 365 environments including office.com, oneDrive.com, or other Microsoft intelligent file discovery features.
 
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
+
 ```powershell
 Set-SPOContainerTypeConfiguration
     -ContainerTypeID <ContainerTypeID>
     -discoverabilityDisabled $False
 ```
+
 In this way, your files will be integrated into the Microsoft 365 environment, participating in intelligent file discovery.
 
-> [!note]
->1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
-> 
+> [!NOTE]
+>
+> 1. If you modify the settings after creating some content, it may take up to 30 days for these changes to achieve full consistency across all consuming tenants.
+>
 > 2. To enable the sharing user experience for your content in Office.com, additional application permissions **must** be added at the time of the container type registration process. To add more permission to enable sharing dialog, refer to the following code:
 
 ```http

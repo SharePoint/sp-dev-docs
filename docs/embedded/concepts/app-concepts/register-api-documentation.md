@@ -1,7 +1,7 @@
 ---
 title: Register File Storage container Type Application Permissions
 description: Register the container type.
-ms.date: 03/05/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
