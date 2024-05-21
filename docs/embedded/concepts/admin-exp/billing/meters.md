@@ -22,7 +22,7 @@ Storage consumption meters in SharePoint Embedded apply to the storage used by f
 
 
 ## API Transactions 
-Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph calls that can be made by a SharePoint Embedded application.
+Each Microsoft Graph call made explicitly by the SharePoint Embedded application are counted one transaction and customers are billed based on the transaction count. See the [examples](https://learn.microsoft.com/graph/api/resources/filestoragecontainer?view=graph-rest-beta) of Microsoft Graph calls that can be made by a SharePoint Embedded application.
 
 However, calls made by internal services to the containers, which the application has no control over, are **not** charged. Some examples of such nonchargeable transactions include:
 
