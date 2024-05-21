@@ -1,11 +1,11 @@
 ---
-title: SharePoint Embedded Meters
+title: SharePoint Embedded Billing Meters
 description: This article describes the meters in SharePoint Embedded.
 ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded Meters
+# SharePoint Embedded Billing Meters
 SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/). 
 
 SharePoint Embedded has three billing meters:

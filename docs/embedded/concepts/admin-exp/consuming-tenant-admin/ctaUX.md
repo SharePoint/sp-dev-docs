@@ -4,7 +4,7 @@ description: This article describes how administrator can manage containers in S
 ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
-# Manage Containers in SharePoint Admin Center
+# Manage SharePoint Embedded containers in SharePoint Admin Center
 
 The organizations that use the SharePoint Embedded applications on their Microsoft 365 (M365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can manage containers through a graphical user interface (GUI) using the [SharePoint Administrator Center](https://go.microsoft.com/fwlink/?linkid=2185219). 
 

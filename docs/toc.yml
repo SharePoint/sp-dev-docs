@@ -542,8 +542,6 @@
     href: embedded/overview.md
   - name: Getting Started
     items:
-    - name: Enable SharePoint Embedded
-      href: embedded/getting-started/enable-sharepoint-embedded.md
     - name: SharePoint Embedded for Visual Studio Code
       href: embedded/getting-started/spembedded-for-vscode.md
   - name: Scenarios and Use Cases
@@ -562,8 +560,6 @@
       href: embedded/concepts/app-concepts/sharing-and-perm.md
     - name: Limits and Calling Patterns
       href: embedded/concepts/app-concepts/limits-calling.md
-    - name: Terms and Definitions
-      href: embedded/concepts/app-concepts/terms-and-def.md
     - name: Content Experiences
       items:
       - name: Office Experiences
@@ -574,12 +570,22 @@
         href: embedded/concepts/content-experiences/search-content.md
     - name: Admin Experiences
       items:
+      - name: Billing
+        href: embedded/concepts/admin-exp/billing/billing.md
+      - name: Billing Management
+        href: embedded/concepts/admin-exp/billing/billingmanagement.md
+      - name: SharePoint Embedded Billing Meters
+        href: embedded/concepts/admin-exp/billing/meters.md
       - name: Consuming Tenant Admin
-        href: embedded/concepts/admin-exp/cta.md
+        href: embedded/concepts/admin-exp/consuming-tenant-admin/cta.md
+      - name: Container Management in PowerShell 
+        href: embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md
+      - name: Consuming Tenant Admin UX
+        href: embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md
       - name: Developer Admin
         href: embedded/concepts/admin-exp/dev-admin.md
-      - name: Billing
-        href: embedded/concepts/admin-exp/billing.md
+      - name: SharePoint Embedded Admin
+        href: embedded/concepts/admin-exp/adminrole.md
     - name: Fluid Framework
       href: embedded/concepts/fluid.md
     - name: Security and Compliance
@@ -590,14 +596,10 @@
       href: embedded/tutorials/launch-experience.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
-    - name: Using Metadata
-      href: embedded/tutorials/metadata.md
     - name: Using Document Processing with Azure Cognitive Services
       href: embedded/tutorials/doc-processing-acs.md
     - name: Using Webhooks
       href: embedded/tutorials/using-webhooks.md
-  - name: Terms of Service
-    href: embedded/terms-of-service.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration

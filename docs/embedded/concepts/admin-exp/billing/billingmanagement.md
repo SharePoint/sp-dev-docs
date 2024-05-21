@@ -1,13 +1,13 @@
 ---
-title: SharePoint Embedded Consumption Management in Azure
+title: SharePoint Embedded Billing Management
 description: This article describes how to view SharePoint Embedded application consumption in Azure portal.
 ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# Manage SharePoint Embedded Consumption in Azure portal
+# SharePoint Embedded Billing Management
 
-The Azure Cost Management and Billing portal provide a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details in the Azure Cost Management portal.
+The Azure Cost Management and Billing portal provide a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Azure Cost Management portal.
 
 ## Step-by-Step Guide
 
