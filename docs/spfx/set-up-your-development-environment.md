@@ -1,13 +1,13 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 11/16/2023
+ms.date: 05/15/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use any text editor to build SharePoint Framework (SPFx9) solutions. You can use a macOS, Windows, or Linux environment as well.
+You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
@@ -36,7 +36,7 @@ This version is the currently recommended version of Node.js to use with the Sha
 > - Windows users can use the **\*.msi** installers for x86 or x64 depending on your Windows installation. There are usually only two available **\*.msi** files with names similar to **node-v{version-number}-x[86|64].msi**.
 > - macOS users can use the **\*.pkg** installer that's usually is named **node-v{version-number}.pkg**.
 
-You can check if you already have Node.js already installed, including installed version, by running the following command:
+You can check if you already have Node.js installed, including the installed version, by running the following command:
 
 ```console
 node --version
@@ -92,7 +92,7 @@ Enter the following command to install Yeoman:
 npm install yo --global
 ```
 > [!IMPORTANT]
-> SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with following command:
+> SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with the following command:
 >
 > ```console
 > npm install yo@4.3.1
@@ -134,11 +134,13 @@ gulp trust-dev-cert
 While not required for SPFx development, you may also find the following tools useful:
 
 - [Fiddler](https://www.telerik.com/fiddler)
-- [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
+- [Postman](https://www.postman.com/)
 - [Windows Terminal](https://github.com/Microsoft/Terminal)
 - [Cmder for Windows](https://cmder.app/)
 - [Oh My Zsh](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
+- [Teams Toolkit VS Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+- [SharePoint Framework Toolkit VS Code extension](https://marketplace.visualstudio.com/items?itemName=m365pnp.viva-connections-toolkit)
 
 ## Next steps
 
