@@ -40,7 +40,7 @@ The following are some of the container specific commands actions currently supp
 There are two types of billing models followed: 
 
 Standard billing:
-The developer admin is responsible for the billing of SharePoint Embedded applications. The developer admin needs to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about [PAYG for SharePoint Embedded](./billing.md).
+The developer admin is responsible for the billing of SharePoint Embedded applications. The developer admin needs to establish billing for SharePoint Embedded while creating container types given they have owner or contributor permissions on the Azure subscription that they use to establish the billing relationship on the product. To learn more about how to set up billing and manage cost and invoice, read about [PAYG for SharePoint Embedded](../billing/billing.md).
 
 Direct to Customer billing:
 In this model, the customer, or the consuming tenant admin, is responsible for billing. To ensure the Direct to Customer (DTC) Billing model, the developer admin must set the billing property of Direct to customer to enabled.
@@ -148,7 +148,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
                      [-Confirm]
 ```
 
-For more information about billing, see [Billing](./billing.md).
+For more information about billing, see [Billing](../billing/billing.md).
 
 ## Roles and Permissions
 

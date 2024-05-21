@@ -95,5 +95,5 @@ You can view properties of a container type and associated billing properties by
 
 ## SharePoint Embedded meters
 
-Refer to the [SharePoint Embedded meters](docs/embedded/concepts/admin-exp/meters.md) article to learn more about the pay-as-you-go meters supported.
+Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
 

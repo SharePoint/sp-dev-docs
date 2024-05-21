@@ -36,7 +36,7 @@ The Azure Cost Management and Billing portal provide a comprehensive overview of
 
 1. For a more detailed view, select "Cost analysis" under the Cost Management section.
 1. In the Cost Analysis page, you can customize the date range to view costs for specific periods.
-1. Use the filters to break down costs by tags - app ID, tenant ID or container type ID. Filters can also set by Meters, Resources etc. Refer to the [SharePoint Embedded meters](docs/embedded/concepts/admin-exp/meters.md) article to learn more about the pay-as-you-go meters supported.
+2. Use the filters to break down costs by tags - app ID, tenant ID or container type ID. Filters can also set by Meters, Resources etc. Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
 
 ![Meters](../../../images/billmanag2.png)
 

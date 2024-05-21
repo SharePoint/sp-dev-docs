@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 The consuming tenant administrator can manage containers using PowerShell commands, designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
-For more information on assigning the SharePoint Embedded admin role, see the [SharePoint Embedded Administrator]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md)).
+For more information on assigning the SharePoint Embedded admin role, see the [SharePoint Embedded Administrator](../adminrole.md).
 
  The following are some of the container specific commands actions currently supported on PowerShell: 
 
@@ -97,7 +97,7 @@ Consuming tenant admins can also get a list of all the containers of a SharePoin
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value>
 ```
 
- <value> can be Ascending; Descending
+`<value>` can be Ascending; Descending
  
 
 ### View details of a Container
@@ -183,4 +183,4 @@ Remove-SPODeletedContainer -Identity <ContainerId>
    
 ## Security and Compliance Administration
 
-SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../security-and-compliance.md).
+SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../security-and-compliance.md).

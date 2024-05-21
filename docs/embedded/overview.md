@@ -8,6 +8,7 @@ ms.localizationpriority: high
 # Overview of SharePoint Embedded
 
 Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
+
 SharePoint Embedded allows you to integrate advanced Microsoft 365 features into your apps including full featured collaborative functions from Office, Purview's security and compliance tools, and Copilot capabilities.
 
 ## App documents stay in their Microsoft 365 tenant
