@@ -17,12 +17,12 @@ The SharePoint Embedded administrator role is available in Microsoft Entra and M
 
 The following are some of the container specific commands actions currently supported on PowerShell:
 
-* Creation of container types
+- Creation of container types
   - Creation of a Standard container type with standard billing
   - Creation of a Standard container type with direct to customer billing
   - Creation of a Trial container type
 
-* Container type management
+- Container type management
   - Viewing of container types in the developer tenant
   - Editing properties of a container type in the developer tenant
   - Configuration properties of a container type in the developer tenant
@@ -32,21 +32,21 @@ The following are some of the container specific commands actions currently supp
 
 The following are some of the container specific commands actions currently supported on PowerShell:
 
-* Application administration
-    - Get details of all SharePoint Embedded applications in the tenant
-    - Get detail of a specific application in the tenant
-    - Get the permissions of owning applications in the tenant
-    - Configure External sharing setting of a container of an application in tenant
+- Application administration
+  - Get details of all SharePoint Embedded applications in the tenant
+  - Get detail of a specific application in the tenant
+  - Get the permissions of owning applications in the tenant
+  - Configure External sharing setting of a container of an application in tenant
 
-* Container administration
-    - Get details of all containers of an application in the tenant
-    - Get details of all containers of an application in the tenant sorted by storage
-    - Get details of a specific container of an application in the tenant
-    - Set Sensitivity label of a specific container of an application in the tenant
-    - Soft delete a container of an application in the tenant
-    - Get details of all soft deleted containers in the tenant
-    - Restore a soft deleted container of an application in the tenant
-    - Permanently delete a soft deleted container of an application in the tenant
+- Container administration
+  - Get details of all containers of an application in the tenant
+  - Get details of all containers of an application in the tenant sorted by storage
+  - Get details of a specific container of an application in the tenant
+  - Set Sensitivity label of a specific container of an application in the tenant
+  - Soft delete a container of an application in the tenant
+  - Get details of all soft deleted containers in the tenant
+  - Restore a soft deleted container of an application in the tenant
+  - Permanently delete a soft deleted container of an application in the tenant
 
 The following are some of the actions currently supported on SharePoint Admin Center:
 
@@ -66,18 +66,18 @@ The Global admin can assign the SharePoint Embedded Admin role to users through 
 Follow the following steps to assign the role of SharePoint Embedded administrator on Entra: 
 
 1. Sign into Entra as a Global admin
-2. Select the **“Users”** tab on the left-hand panel and select **“All users”**
-3. Select the user to assign the role of SharePoint Embedded administrator under **“All users”**
-4. Select the **“Assigned role”** tab on the left panel
-5. Select on **“Add assignments”** button and search for **“SharePoint Embedded”** in the panel that opens
-6. Select the 'SharePoint Embedded administrator' option and select on **“Add”**
-7. The selected user is assigned the role of SharePoint Embedded administrator
+1. Select the **“Users”** tab on the left-hand panel and select **“All users”**
+1. Select the user to assign the role of SharePoint Embedded administrator under **“All users”**
+1. Select the **“Assigned role”** tab on the left panel
+1. Select on **“Add assignments”** button and search for **“SharePoint Embedded”** in the panel that opens
+1. Select the 'SharePoint Embedded administrator' option and select on **“Add”**
+1. The selected user is assigned the role of SharePoint Embedded administrator
 
 ### Through Microsoft 365 Admin Center
 
 1. Sign into Microsoft 365 Admin Center as a Global admin
-2. Select **“Users”** and select **“Active users”** under it
-3. Select the user to assign the role of SharePoint Embedded administrator
-4. Select on **“Manage roles”** option under Roles
-5. Select **“Admin center access”** and under **“Collaboration”**, select **“SharePoint Embedded administrator”**
-6. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded administrator
+1. Select **“Users”** and select **“Active users”** under it
+1. Select the user to assign the role of SharePoint Embedded administrator
+1. Select on **“Manage roles”** option under Roles
+1. Select **“Admin center access”** and under **“Collaboration”**, select **“SharePoint Embedded administrator”**
+1. Select **"Save changes"**. Now the selected user is assigned the role of SharePoint Embedded administrator
