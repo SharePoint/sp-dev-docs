@@ -25,7 +25,7 @@ The same Microsoft Entra ID tenant can be both owning and consuming tenant of a 
 
 A container is the basic storage unit in SharePoint Embedded. Also, a container defines a security and compliance boundary.
 
-A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between an application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](../app-concepts/).
+A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between an application and a set of containers. Also, the container type defines behaviors on the set of containers. Learn more about [container types](containertypes.md).
 
 The container type is represented on each container as an immutable property and is used across the entire SharePoint Embedded ecosystem. Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer (the owning tenant) is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
 
@@ -35,11 +35,11 @@ An application's access to containers and container content is determined by a s
 
 In this illustration, multiple applications are deployed in the tenancy, including two apps developed by ISVs (App 1 and 2) and a LOB app (App 3). Each application can access only to the stack of containers of the container type they own. 
 
-![SharePoint container type](../../images/SPECTDedicated.png)
+![SPE multi app architecture](../../images/SPECTDedicated.png)
 
 In this illustration, both App 1 and App 2 in the tenancy have access to the same container type. Both apps can access the stack of the containers of that type.
 
-![SharePoint container type](../../images/SPECTShared.png)
+![SPE multi app architecture sharing Container Types](../../images/SPECTShared.png)
 
 #### Example
 

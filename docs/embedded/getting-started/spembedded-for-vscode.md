@@ -10,10 +10,10 @@ ms.localizationpriority: high
 The SharePoint Embedded Visual Studio Code extension helps developers get started with SharePoint Embedded application development. With the extension, developers can:
 
 1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
-1. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-container-types)
-1. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-container-types)
-1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
-1. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
+2. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-use)
+3. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use)
+4. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
+5. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
 
 ## Installing SharePoint Embedded for Visual Studio Code
 
@@ -37,7 +37,7 @@ If you don't have administrator access to a Microsoft 365 tenant, get your own t
 
 ### Create a free trial container type
 
-Once you've signed in, the first (and only) thing to do next is to create a [free trial container type](../concepts/app-concepts/containertypes.md#trial-container-types). A free trial container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded.
+Once you've signed in, the first (and only) thing to do next is to create a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use). A free trial container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded.
 
 ![Create free trial container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a8186b2b-bdf9-400b-820b-2e6ebe51d393)
 

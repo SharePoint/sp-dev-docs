@@ -583,7 +583,7 @@
       - name: Consuming Tenant Admin UX
         href: embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md
       - name: Developer Admin
-        href: embedded/concepts/admin-exp/dev-admin.md
+        href: embedded/concepts/admin-exp/developer-admin/dev-admin.md
       - name: SharePoint Embedded Admin
         href: embedded/concepts/admin-exp/adminrole.md
     - name: Fluid Framework

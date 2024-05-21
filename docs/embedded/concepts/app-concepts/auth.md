@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded authentication and authorization
 
-To use SharePoint Embedded, your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](https://learn.microsoft.com/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more about the [SharePoint Embedded architecture](./app-architecture.md).
+To use SharePoint Embedded, your application needs to use Microsoft Graph. Learn more about [Microsoft Graph authentication and authorization](/graph/auth/auth-concepts?view=graph-rest-1.0). Learn more about the [SharePoint Embedded architecture](./app-architecture.md).
 
 ## Overview
 
@@ -21,12 +21,12 @@ Here are some key principles with SharePoint Embedded authentication and authori
 
 ## Pre-Requisites
 
-* A Microsoft Entra ID application registration. See [register an application](https://learn.microsoft.com/graph/auth-register-app-v2?view=graph-rest-1.0).
+* A Microsoft Entra ID application registration. See [register an application](/graph/auth-register-app-v2?view=graph-rest-1.0).
 * Your Microsoft Entra ID tenant has a Microsoft 365 subscription
 
 ## Authorization
 
-SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embedded supports [access on behalf of a user](https://learn.microsoft.com/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](https://learn.microsoft.com/graph/auth-v2-service?view=graph-rest-1.0&tabs=http).
+SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embedded supports [access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) and also [access without a user](/graph/auth-v2-service?view=graph-rest-1.0&tabs=http).
 
 > [!IMPORTANT] 
 > Microsoft Graph permissions granted to your application allows it to call SharePoint Embedded endpoints. However, your application must be granted [permissions to a container type](#container-type-application-permissions) before it gets access to containers of that type.
@@ -112,6 +112,6 @@ Here are some actions you can take next:
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 2. [Grant admin consent](https://learn.microsoft.com/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
 3. [Create a new container type](containertypes.md) on the owning tenant.
-4. [Register a container type](register-api-docuemntation.md) on the consuming tenant.
+4. [Register a container type](register-api-documentation.md) on the consuming tenant.
 5. [Create a container](https://learn.microsoft.com/graph/api/filestoragecontainer-post?view=graph-rest-beta)
 
