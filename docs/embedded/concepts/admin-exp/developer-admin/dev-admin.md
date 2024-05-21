@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 ## Overview
 
-Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported and can be performed by the developer administrator.
+Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported in the developer administrator role.
 
 ## Developer Admin Role
 
@@ -105,7 +105,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
 
 The developer administrator can change container type configuration settings using PowerShell commandlets. The following container type properties can be set:
 
-1.	Discoverability Disabled: Controls if file items inside the container will surface in other M365 properties (MRU, etc).
+1.	Discoverability Disabled: Controls if file items inside the container surface in other Microsoft 365 properties (MRU, etc.).
 
 1.	Sharing Restricted: Only manager and owner can share files in the container if restricted sharing is true.
 
@@ -117,7 +117,7 @@ Set-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId > -Discover
 
 For `DiscoverabilityDisabled` `$value` can be set to `$true`; `$false`
 
-The default value `$true` - ensures all content will be hidden
+The default value `$true` - ensures all content is hidden.
 
 ```powershell
 Set-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId > -SharingRestricted $value
@@ -139,7 +139,7 @@ Get-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId >
 
 ## Manage billing profile of applications/ container types
 
-Using PowerShell cmdlets, the developer administrator can change the billing profile of container types. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
+The developer administrator can change the billing profile of container types using PowerShell cmdlets. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
@@ -152,6 +152,6 @@ For more information about billing, see [Billing](./billing.md).
 
 ## Roles and Permissions
 
-The user or admin who will set up billing relationship for SharePoint Embedded need to have owner or contributor permissions on an Azure subscription.
+The user or admin who creates the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on an Azure subscription.
 
 If you don't have an Azure subscription, follow steps here to [create a subscription.](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)

@@ -7,14 +7,14 @@ ms.localizationpriority: high
 
 # Manage Containers in SharePoint PowerShell 
 
- 
-The consuming tenant administrator can manage containers using PowerShell commands, specifically designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
+The consuming tenant administrator can manage containers using PowerShell commands, designed for container management. To access these commands, they must be assigned the role of Microsoft 365 SharePoint Embedded Administrator. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role inherently includes all permissions of the SharePoint Embedded Administrator role. Additionally, a SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded. The SharePoint Embedded Administrator role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
 
-For more information on how to assign the SharePoint Embedded Admin role, refer to the [SharePoint Embedded Admin]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md))
+For more information on assigning the SharePoint Embedded admin role, see the [SharePoint Embedded Administrator]([docs/embedded/concepts/admin-exp/adminrole.md](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md)).
 
  The following are some of the container specific commands actions currently supported on PowerShell: 
 
 ### Application administration 
+
 - Get details of all SharePoint Embedded applications registered in the tenant
 - Get details of all SharePoint Embedded applications the tenant sorted basis storage 
 - Get detail of a specific SharePoint Embedded application in the tenant
@@ -22,6 +22,7 @@ For more information on how to assign the SharePoint Embedded Admin role, refer 
 - Configure External sharing setting of a container of a SharePoint Embedded application in the tenant
 
  ### Container administration 
+
 - Get details of all containers of a particular SharePoint Embedded application in the tenant
 - Get details of a specific container
 - Set Sensitivity label of a specific container
@@ -37,6 +38,8 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 > [!IMPORTANT]
 > You must use the latest version of SharePoint PowerShell to use container administration cmdlets.
+
+
  ## Application Administration
 
 With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have "read" and/or "write" access and the level of access to these SharePoint Embedded applications.
@@ -59,7 +62,7 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <Ap
 
 OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information about using this command, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
 
-### Set Sharing Capability of applications
+### Set sharing capability of applications
 
 Consuming tenant admins can set the sharing capability at an application level to determine whether files of the containers of the application be shared with external guests or not.
 
@@ -68,9 +71,9 @@ Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapabil
 ```
 
 
-<SharingCapability> can take the following values: Disabled; ExistingExternalUserSharingOnly; ExternalUserSharingOnly;  ExternalUserAndGuestSharing
+`SharingCapability` can take the following values: `Disabled`; `ExistingExternalUserSharingOnly`; `ExternalUserSharingOnly`;  ExternalUserAndGuestSharing
 
-< $OverrideTenantSharingCapability > can take the following values: $true; $false
+`$OverrideTenantSharingCapability` can take the following values: `$true`; `$false`
  
 ## Container Administration
 
@@ -134,7 +137,7 @@ Deleting a container can have implications on the functionality of a SharePoint 
 
 Therefore, it's essential to carefully consider the consequences of deleting a container and ensure that appropriate measures are taken to mitigate any potential issues.
 
-### Permanent Deletion
+### Permanent deletion
 
 When admins delete a Container, it goes into the Recycle Bin. A deleted container can be restored from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it's permanently deleted. Deleting a container deletes everything within it, including all documents and files.
 
@@ -165,14 +168,15 @@ Admins can restore a deleted container from the deleted container collection usi
 Restore-SPODeletedContainer -Identity <ContainerId>
 ```
 
-### Permanently delete Containers
+### Permanently delete containers
 
-Admins can permanently delete a Container from the deleted container collection if the Container has no further retention policies applied to it. For more information about using this command, see [Remove-SPODeletedContainer cmdlet](/powershell/module/sharepoint-online/remove-spodeletedcontainer).
+Admins can permanently delete a container from the deleted container collection if the container has no further retention policies applied to it. For more information about using this command, see [Remove-SPODeletedContainer cmdlet](/powershell/module/sharepoint-online/remove-spodeletedcontainer).
 
 ```powershell
 Remove-SPODeletedContainer -Identity <ContainerId>
 ```
 ## Coming Soon
+
 1. Add users to containers
 2. Reassign user permission in a container
 3. Remove user from a container
