@@ -33,7 +33,7 @@ SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embed
 
 ### Access on behalf of a user
 
-SharePoint Embedded operations [on behalf of a user](https://learn.microsoft.com/graph/auth-v2-user?view=graph-rest-1.0&tabs=http) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](https://learn.microsoft.com/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
 In addition to your application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it's acting on behalf of is required to have [container permissions](#container-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
 

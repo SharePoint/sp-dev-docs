@@ -1,7 +1,7 @@
 ---
 title: Sharing and Permissions
 description: Outlines Permission Model for SharePoint Embedded
-ms.date: 05/21/24
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
