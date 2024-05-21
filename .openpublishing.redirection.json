@@ -109,6 +109,46 @@
       "source_path": "docs/embedded/mslearn/m02-01-intro.md",
       "redirect_url": "/training/modules/sharepoint-embedded-create-app/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/adoptions-and-use.md",
+      "redirect_url": "/sharepoint/dev/embedded/scenarios-and-use-cases",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/billing.md",
+      "redirect_url": "/sharepoint/dev/embedded/concepts/admin-exp/billing/billing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/cta.md",
+      "redirect_url": "/sharepoint/dev/embedded/concepts/admin-exp/consuming-tenant-admin/cta",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/dev-admin.md",
+      "redirect_url": "/sharepoint/dev/embedded/concepts/admin-exp/developer-admin/dev-admin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/terms-and-def.md",
+      "redirect_url": "/sharepoint/dev/embedded/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/getting-started/enable-sharepoint-embedded.md",
+      "redirect_url": "/sharepoint/dev/embedded/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/terms-of-service.md",
+      "redirect_url": "/sharepoint/dev/embedded/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/metadata.md",
+      "redirect_url": "/sharepoint/dev/embedded/overview",
+      "redirect_document_id": false
     }
   ]
 }
