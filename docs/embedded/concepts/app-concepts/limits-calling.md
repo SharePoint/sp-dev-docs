@@ -1,6 +1,6 @@
 ---
 title: Limits and Calling Patterns
-description: This article explains the limits of SharePoint Embedded
+description: This article explains the limits of SharePoint Embedded.
 ms.date: 11/28/2023
 ms.localizationpriority: high
 ---
@@ -36,7 +36,7 @@ The following table defines the size limits of containers"
 
 ### Patterns and best practices
 
-When applications hit service limits, you'll receive an HTTP status code 429 ("Too many requests"). You might also receive an HTTP status code 503 ("Server Too Busy").
+When applications hit service limits, you receive an HTTP status code 429 ("Too many requests"). You might also receive an HTTP status code 503 ("Server Too Busy").
 
 In general, the following are the best practices to handle throttling:
 
@@ -53,7 +53,7 @@ SharePoint Embedded provides various APIs. Different APIs have different costs d
 | Resource units per request |                                 Operations                                 |
 | -------------------------- | -------------------------------------------------------------------------- |
 | 1                          | Single item query, such as get item                                        |
-| 2                          | Multi item query, such as list children  Create, update, delete and upload |
+| 2                          | Multi-item query, such as list children  Create, update, delete, and upload |
 | 5                          | All permission resource operations, including $expand=permissions          |
 
 > [!NOTE]
