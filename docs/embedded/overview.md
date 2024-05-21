@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Overview
 description: Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
-ms.date: 11/28/2023
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -52,7 +52,7 @@ Microsoft 365 customers have different entitlements related to storage, usage, a
 The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements including the total amount of Microsoft SharePoint storage that can be used by your organization. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage and the number of API calls.
 
 > [!NOTE]
-> Learn more about billing for SharePoint Embedded, see [Billing Meters](./concepts/admin-exp/billing/meters.md).
+> Learn more about billing for SharePoint Embedded, see [Billing Meters](concepts/admin-exp/billing/meters.md).
 
 ## Getting Started with SharePoint Embedded
 

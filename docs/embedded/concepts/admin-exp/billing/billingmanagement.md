@@ -7,11 +7,12 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Billing Management
 
-The Azure Cost Management and Billing portal provide a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Azure Cost Management portal.
+The Microsoft Cost Management portal provides a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Microsoft Cost Management portal.
 
 ## Step-by-Step Guide
 
 ### Sign in to Azure portal
+
 1. Open your web browser and navigate to the [Azure portal](https://portal.azure.com/).
 1. Sign in using your Azure account credentials.
 
@@ -19,8 +20,8 @@ The Azure Cost Management and Billing portal provide a comprehensive overview of
 
 1. Once signed in, locate the left-hand navigation menu.
 1. Select on "Cost Management + Billing". If it's not visible, you can search for it using the search bar at the top of the portal.
-   
-   ![Cost Management](../../../images/billmanag1.png)
+
+    ![Cost Management](../../../images/billmanag1.png)
 
 ### Select Your Subscription
 
@@ -36,7 +37,7 @@ The Azure Cost Management and Billing portal provide a comprehensive overview of
 
 1. For a more detailed view, select "Cost analysis" under the Cost Management section.
 1. In the Cost Analysis page, you can customize the date range to view costs for specific periods.
-2. Use the filters to break down costs by tags - app ID, tenant ID or container type ID. Filters can also set by Meters, Resources etc. Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
+1. Use the filters to break down costs by tags - app ID, tenant ID or container type ID. Filters can also set by Meters, Resources etc. Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
 
 ![Meters](../../../images/billmanag2.png)
 
@@ -50,8 +51,7 @@ The Azure Cost Management and Billing portal provide a comprehensive overview of
 1. To better manage your spending, you can set up budgets and alerts.
 1. Select "Budgets" under the Cost Management section.
 
-   ![Budgets](../../../images/billmanag3.png)
+    ![Budgets](../../../images/billmanag3.png)
 
 1. Create a new budget by specifying the amount and the time period.
 1. Set up alerts to notify you when spending approaches or exceeds your budget.
-

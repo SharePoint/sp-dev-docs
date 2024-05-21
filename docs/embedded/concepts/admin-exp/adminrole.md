@@ -1,21 +1,21 @@
 ---
-title: SharePoint Embedded administrator 
+title: SharePoint Embedded administrator
 description: This article explains the new admin role for SharePoint Embedded.
 ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# The SharePoint Embedded administrator 
+# The SharePoint Embedded administrator
 
-The SharePoint Embedded administrator is a dedicated role to manage SharePoint Embedded containers through [SharePoint PowerShell](/powershell/module/sharepoint-online/connect-sposervice) and SharePoint admin center. This role is required for [developer admins](./developer-admin/dev-admin.md) to create new container types through PowerShell cmdlets and also for consuming tenant admins to manage containers created in their tenants. 
+The SharePoint Embedded administrator is a dedicated role to manage SharePoint Embedded containers through [SharePoint PowerShell](/powershell/module/sharepoint-online/connect-sposervice) and SharePoint admin center. This role is required for [developer admins](./developer-admin/dev-admin.md) to create new container types through PowerShell cmdlets and also for consuming tenant admins to manage containers created in their tenants.
 
-The global administrator role already has all the permissions of the SharePoint Embedded administrator role. A SharePoint administrator can assign themselves the SharePoint Embedded administrator role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded. 
+The global administrator role already has all the permissions of the SharePoint Embedded administrator role. A SharePoint administrator can assign themselves the SharePoint Embedded administrator role to act as a consuming tenant admin or a developer administrator for SharePoint Embedded.
 
-The SharePoint Embedded administrator role is available in Microsoft Entra and Microsoft 365 Admin Center. This role doesn't have access to site management. This means that a SharePoint Embedded administrator can't see 'Active sites' and 'Deleted sites' pages on the SharePoint Admin Center and also can't run site specific PowerShell cmdlets. 
+The SharePoint Embedded administrator role is available in Microsoft Entra and Microsoft 365 Admin Center. This role doesn't have access to site management. This means that a SharePoint Embedded administrator can't see 'Active sites' and 'Deleted sites' pages on the SharePoint Admin Center and also can't run site specific PowerShell cmdlets.
 
 ## SharePoint Embedded administrator tasks in the developer tenant
 
-The following are some of the container specific commands actions currently supported on PowerShell:
+The following are some of the container-specific commands actions currently supported on PowerShell:
 
 - Creation of container types
   - Creation of a Standard container type with standard billing
@@ -30,7 +30,7 @@ The following are some of the container specific commands actions currently supp
 
 ## SharePoint Embedded administrator tasks in consuming tenant
 
-The following are some of the container specific commands actions currently supported on PowerShell:
+The following are some of the container-specific commands actions currently supported on PowerShell:
 
 - Application administration
   - Get details of all SharePoint Embedded applications in the tenant
@@ -57,13 +57,13 @@ The following are some of the actions currently supported on SharePoint Admin Ce
 - Restore a deleted container
 - Purge a deleted container
 
-## Assigning the SharePoint Embedded administrator Role 
+## Assigning the SharePoint Embedded administrator Role
 
-The Global admin can assign the SharePoint Embedded Admin role to users through both Entra and Microsoft admin center.  
+The Global admin can assign the SharePoint Embedded Admin role to users through both Entra and Microsoft admin center.
 
-### Through Entra 
+### Through Entra
 
-Follow the following steps to assign the role of SharePoint Embedded administrator on Entra: 
+Follow the following steps to assign the role of SharePoint Embedded administrator on Entra:
 
 1. Sign into Entra as a Global admin
 1. Select the **“Users”** tab on the left-hand panel and select **“All users”**

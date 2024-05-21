@@ -1,7 +1,7 @@
 ---
 title: Fluid Framework in SharePoint Embedded Applications
 description: Details Fluid Integration with SharePoint Embedded Applications
-ms.date: 03/06/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 1/30/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -10,10 +10,10 @@ ms.localizationpriority: high
 The SharePoint Embedded Visual Studio Code extension helps developers get started with SharePoint Embedded application development. With the extension, developers can:
 
 1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
-2. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-use)
-3. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use)
-4. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
-5. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
+1. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-use)
+1. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use)
+1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
+1. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
 
 ## Installing SharePoint Embedded for Visual Studio Code
 
