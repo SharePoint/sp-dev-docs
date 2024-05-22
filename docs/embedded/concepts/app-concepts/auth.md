@@ -91,7 +91,7 @@ SharePoint Embedded applications need to be granted container type application p
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
