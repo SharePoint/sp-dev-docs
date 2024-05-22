@@ -51,15 +51,16 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 Currently, there are two types of operations that aren't accessible via Microsoft Graph:
 
-- [Container type management](containertypes.md) on owning tenants
-- [Container type registration](register-api-documentation.md) on consuming tenants
+- [Container type management](containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
+- [Container type registration](register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
 
-These are the `Office 365 SharePoint Online` permissions that your application needs to perform those types of operations.
+To perform [container type management](containertypes.md) operations, you must be a SharePoint Embedded Administrator or Global Administrator.
+
+To [register a container type](register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
 
 |      Scope name       |               Scope ID               |    Type     |                                             Operation                                             |
 | :-------------------: | :----------------------------------: | :---------: | :-----------------------------------------------------------------------------------------------: |
-| Sites.FullControl.All | 678536fe-1083-478a-9c59-b99265e6b0d3 | Application |   In the context of SharePoint Embedded, enables container type management on an owning tenant.   |
-|  Container.Selected   | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SharePoint Embedded, enables container type registration on a consuming tenant. |
+| Container.Selected   | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SharePoint Embedded, enables container type registration on a consuming tenant. |
 
 > [!NOTE]
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
@@ -90,7 +91,7 @@ SharePoint Embedded applications need to be granted container type application p
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing container without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container grants users container permissions. These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
@@ -110,7 +111,6 @@ Here are some actions you can take next:
    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
      - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
-     - `Sites.FullControl.All` (type: `Role`, ID: `678536fe-1083-478a-9c59-b99265e6b0d3`) to manage container types on the owning tenant
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
 1. [Create a new container type](containertypes.md) on the owning tenant.
