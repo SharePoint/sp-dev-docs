@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 05/21/2024
+ms.date: 05/22/2024
 ms.localizationpriority: high
 ---
 
