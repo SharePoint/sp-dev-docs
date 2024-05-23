@@ -83,16 +83,16 @@ Admins can get a list of all the containers for a SharePoint Embedded applicatio
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> |FT
 ```
 
-```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId>|FT
-```
+The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). 
 
-The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). To enumerate Microsoft Loop containers, use Owning App ID: a187e399-0c36-4b98-8f04-1edc167a0996 for all the cmdlets of container administration.
+> [!Note]
+> To enumerate Microsoft Loop containers, use Owning App ID: **a187e399-0c36-4b98-8f04-1edc167a0996** for all the cmdlets of container administration.
 
+### View containers sorted by storage
 Consuming tenant admins can also get a list of all the containers of a SharePoint Embedded application sorted by storage using the following commands.
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value> |FT
 ```
 
 `<value>` can be Ascending; Descending
@@ -102,6 +102,11 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <valu
 Consuming tenant admins can get the details of a container within an application using the following command. This command returns more details of a container including StorageUsed, Ownership details, SiteURL, Label information, Owners count etc.
 
 Consuming tenant admins can use the following command:
+
+```powershell
+Get-SPOContainer -Identity <ContainerId>
+```
+OR  
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>
