@@ -106,13 +106,7 @@ Consuming tenant admins can use the following command:
 ```powershell
 Get-SPOContainer -Identity <ContainerId>
 ```
-OR  
-
-```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId>
-```
-
-Here, The ContainerId is the ID of the container.
+Here, The containerId is the ID of the container.
 
 ### Sensitivity Label of a container
 Consuming tenant admins can set the sensitivity label of a container of an application using the following:
