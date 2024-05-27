@@ -34,9 +34,17 @@ If your SharePoint Hosted Add-In is storing data in its app web, then that's som
 > [!Important]
 > It's important you retrieve the data **before** you uninstall the SharePoint Add-In, because the app web is deleted when you uninstall the Add-In. In case you've accidentally deleted the Add-In, you can restore it from the recycle bin, which will also restore the Add-In's app web.
 
+## Can SharePoint Online users still acquire my Add-In from the public marketplace after July 1st?
+
+Users will still be able to browse your Add-In in the public marketplace (https://appsource.microsoft.com/), but when using the "Get it now" button the SharePoint Online user will see a message stating that Add-Ins are retired with a button that redirects the user to the Add-In vendor's site. Installing an Add-In via the public marketplace will not be possible anymore as of July 1st 2024.
+
 ## Can I still use my Add-In on SharePoint on-premises?
 
 SharePoint Add-Ins in SharePoint on-premises are not retired and will continue to work after April 2026 when deployed using a SharePoint on-premises app catalog. But acquiring them from the SharePoint Store/public marketplace will not be possible after April 2026.
+
+## Can I, as Add-In vendor, still update my Add-In?
+
+Yes, as Add-In vendor you can still submit updated versions of your Add-In via Partner Center as you might need to patch an issue.
 
 ## My Add-In is used for both SharePoint Online and SharePoint on-premises; what do you advise?
 
