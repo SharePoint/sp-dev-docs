@@ -16,40 +16,41 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 1. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
 
 > [!IMPORTANT]
-> To start building with SharePoint Embedded you will need an Microsoft 365 tenant.
+> To start building with SharePoint Embedded you will need administrative access to Microsoft 365 tenant.
 > If you do not already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-## Installing SharePoint Embedded for Visual Studio Code
 
-To get started with the SharePoint Embedded Visual Studio Code extension, you need to have [Visual Studio Code](https://code.visualstudio.com/) installed on your machine.
+## Install SharePoint Embedded for Visual Studio Code
 
-Next, you need to install the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) from the Visual Studio Marketplace. You can find the extension by searching for "SharePoint Embedded" in the Visual Studio Code Extensions view, or by visiting the previous link.
+1. Open a new window in [Visual Studio Code](https://code.visualstudio.com/) and navigate to "**Extensions**" on the activity bar.
+1. Search "SharePoint Embedded" in the Extensions view. You can also view the extension in [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension).
+1. Press "Install" and the SharePoint Embedded icon will load on the activity bar.
+1. Click on the icon to open the SharePoint Embedded view and create a container type with trial configuration.
 
 ![SharePoint Embedded on Visual Studio Code Marketplace](../images/spe-vscode-marketplace.png)
 
-Once you have installed the extension, you can access it from the Visual Studio Code Activity Bar, where you'll see a new icon for SharePoint Embedded. Clicking on the icon will open the SharePoint Embedded view, where you can perform various tasks related to SharePoint Embedded application development.
 
-## Getting Started
-
-### Sign In
+## Sign in with admin credentials
 
 To use the extension, you'll need to sign into a Microsoft 365 tenant with an administrator account.
-If you don't have administrator access to a Microsoft 365 tenant, get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
+
+A window will pop-up in your browser to authenticate and redirect you to the extension.
 
 ![Sign in](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/636d45f9-5912-4e2c-9a50-8f5efa472638)
 
 
 
-### Create a free trial container type
+## Create a container type with trial configuration
 
-Once you've signed in, the first (and only) thing to do next is to create a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use). A free trial container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded.
+Once you've signed in, the first (and only) thing to do next is to create a [container type with trial configuration](../concepts/app-concepts/containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded.
 
 ![Create free trial container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a8186b2b-bdf9-400b-820b-2e6ebe51d393)
 
 > [!NOTE]
 > SharePoint Embedded for Visual Studio Code only supports free trial container types at this time. Paid container types must be made using the SharePoint Online PowerShell Module.
 
-#### Create a Microsoft Entra ID App
+## Create a Microsoft Entra ID App
 
 Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications.
 
