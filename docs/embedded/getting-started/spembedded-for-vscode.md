@@ -7,13 +7,17 @@ ms.localizationpriority: high
 
 # SharePoint Embedded for Visual Studio Code
 
-The SharePoint Embedded Visual Studio Code extension helps developers get started with SharePoint Embedded application development. With the extension, developers can:
+The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. With the extension, developers can:
 
 1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
 1. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-use)
 1. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use)
 1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
 1. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
+
+> [!IMPORTANT]
+> To start building with SharePoint Embedded you will need an Microsoft 365 tenant.
+> If you do not already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
 ## Installing SharePoint Embedded for Visual Studio Code
 
@@ -30,10 +34,11 @@ Once you have installed the extension, you can access it from the Visual Studio 
 ### Sign In
 
 To use the extension, you'll need to sign into a Microsoft 365 tenant with an administrator account.
+If you don't have administrator access to a Microsoft 365 tenant, get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
 
 ![Sign in](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/636d45f9-5912-4e2c-9a50-8f5efa472638)
 
-If you don't have administrator access to a Microsoft 365 tenant, get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+
 
 ### Create a free trial container type
 
