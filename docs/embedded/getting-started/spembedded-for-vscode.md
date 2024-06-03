@@ -12,7 +12,7 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
 1. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-use)
 1. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-use)
-1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
+1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and autopopulate its runtime configuration
 1. Export container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
 
 > [!IMPORTANT]
@@ -25,17 +25,17 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 1. Open a new window in [Visual Studio Code](https://code.visualstudio.com/) and navigate to "**Extensions**" on the activity bar.
 1. Search "SharePoint Embedded" in the Extensions view. You can also view the extension in [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension).
 1. Press "Install" and the SharePoint Embedded icon will load on the activity bar.
-1. Click on the icon to open the SharePoint Embedded view and create a container type with trial configuration.
+1. Select on the icon to open the SharePoint Embedded view and create a container type with trial configuration.
 
 ![SharePoint Embedded on Visual Studio Code Marketplace](../images/spe-vscode-marketplace.png)
 
 
 ## Sign in with admin credentials
 
-To use the extension, you'll need to sign into a Microsoft 365 tenant with an administrator account.
+To use the extension, you need to sign into a Microsoft 365 tenant with an administrator account.
 If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-A window will pop-up in your browser to authenticate and redirect you to the extension.
+A window will pop up in your browser to authenticate and redirect you to the extension.
 
 ![Sign in](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/636d45f9-5912-4e2c-9a50-8f5efa472638)
 
