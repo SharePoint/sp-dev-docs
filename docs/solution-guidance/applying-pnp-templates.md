@@ -1,7 +1,7 @@
 ---
 title: Applying PnP Templates to SharePoint Sites
 description: This article explains how to manually provision a look book PnP template using PnP PowerShell.
-ms.date: 04/10/2024
+ms.date: 06/05/2024
 ms.localizationpriority: high
 ---
 
@@ -108,7 +108,7 @@ Remember to provide a value for all the  parameters declared in the above table.
 Download the `.PNP` template file that you want to provision, save it in a local folder, and run the following PowerShell command:
 
 ```powershell
-Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
+Connect-PnPOnline https://<tenant>.sharepoint.com/sites/<URL-of-your-target-site>
 
 Invoke-PnPSiteTemplate -Path .\your-template-file.pnp -Parameters @{"SiteTitle"="<Title-of-your-target-site>";"SiteUrl"="/sites/<URL-of-your-target-site>"}
 ```
@@ -118,10 +118,10 @@ Remember to provide a value for all the  parameters declared in the above table.
 
 #### Example script for applying Learning Pathways solution
 
-This is how the PowerShell script would look like for applying the [Learning Pathways solution](/office365/customlearning/), which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to previously created site with URL of */sites/M365LP*.
+This is how the PowerShell script would look for applying the [Learning Pathways solution](/office365/customlearning/), which only has the `SiteUrl` parameter and the pnp file for the Learning Pathways is located in the *c:\temp* folder and you want to target to a previously created site with URL of */sites/M365LP*.
 
 ```powershell
-Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
+Connect-PnPOnline https://<tenant>.sharepoint.com/sites/<URL-of-your-target-site>
 
 Invoke-PnPSiteTemplate -Path c:\temp\M365LP.pnp -Parameters @{"SiteUrl"="/sites/M365LP"}
 ```
@@ -130,4 +130,4 @@ Invoke-PnPSiteTemplate -Path c:\temp\M365LP.pnp -Parameters @{"SiteUrl"="/sites/
 
 Now that the look book template is provisioned on your tenant, feel free to browse to the site URL that you selected and play with the new site.
 
-In there's any issue, don't hesitate to file an issue in the [PnP Provisioning Service repository on GitHub](https://github.com/SharePoint/sp-provisioning-service/issues).
+If there's any issue, don't hesitate to file an issue in the [PnP Provisioning Service repository on GitHub](https://github.com/SharePoint/sp-provisioning-service/issues).
