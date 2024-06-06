@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 12/05/2023
+ms.date: 06/06/2024
 ms.localizationpriority: high
 ---
 # Simplify adding web parts with preconfigured entries
@@ -170,7 +170,7 @@ In the web part manifest, add web part properties so that users can configure th
 
     Web part properties specified in the manifest must also be added to the web part properties interface.
 
-1. In the code editor, open the **./src/webparts/gallery/IGalleryWebPartProps.ts** file. Change its code to:
+1. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file and find **IGalleryWebPartProps** interface. Change its code to:
 
     ```typescript
     export interface IGalleryWebPartProps {
@@ -272,7 +272,7 @@ In the web part manifest, add web part properties so that users can configure th
 1. Update the main React component interface to match the web part property interface, because we're bypassing all the web part properties to this component. In the code editor, open the **./src/webparts/gallery/components/IGalleryProps.ts** file, and change its code to:
 
     ```typescript
-    import { IGalleryWebPartProps } from '../IGalleryWebPartProps';
+    import { IGalleryWebPartProps } from '../GalleryWebPart';
 
     export interface IGalleryProps extends IGalleryWebPartProps { }
     ```
