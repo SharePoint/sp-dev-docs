@@ -1,7 +1,7 @@
 ---
 title: Publishing modern SharePoint applications on Microsoft AppSource
 description: Publishing modern SharePoint applications on Microsoft AppSource
-ms.date: 08/28/2023
+ms.date: 08/06/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -16,7 +16,7 @@ If you prefer, you can watch the following video, instead of reading the whole a
 
 ## How to publish an application on the marketplace
 
-First of all, you need to make sure that you are a member of the Microsoft Partner Network (MPN). If you are not a registerd member, you can enroll through the following link: [https://aka.ms/joinmarketplace](https://aka.ms/joinmarketplace). In order to being able to sell your products on the marketplace, you will also need to provide a payout profile, a tax profile, and to compile the billing profile. The process will require a review and approval phase on the Microsoft side.
+First of all, you need to make sure that you are a member of the Microsoft Partner Network (MPN). If you are not a registered member, you can enroll through the following link: [https://aka.ms/joinmarketplace](https://aka.ms/joinmarketplace). In order to being able to sell your products on the marketplace, you will also need to provide a payout profile, a tax profile, and to compile the billing profile. The process will require a review and approval phase on the Microsoft side.
 
 ![The initial step of the Partner enrollment program. You need to provide your email address and follow the registration steps.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-01.png)
 
@@ -24,7 +24,7 @@ Once you are a registered partner, you have to complete the onboarding process f
 
 ![The *"Registered programs"* section of the Microsoft *"Partner Center"* with the *"Office Store"* program subscribed and active.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-02.png)
 
-Once yoy will be enrolled in the *"Office Store"* programm (it can take up to 48 hours) you should be able to find the *"Office Store"* program in your Partner Center dashboard, under [*"Account settings"* -> *"Programs"* -> *"Registered programs"*](https://partner.microsoft.com/en-us/dashboard/account/v3/settings/programs).
+Once you are enrolled in the *"Office Store"* programm (it can take up to 48 hours) you should be able to find the *"Office Store"* program in your Partner Center dashboard, under [*"Account settings"* -> *"Programs"* -> *"Registered programs"*](https://partner.microsoft.com/en-us/dashboard/account/v3/settings/programs).
 
 ![The *"Registered programs"* section of the Microsoft *"Partner Center"* with the *"Office Store"* program subscribed and active.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-03.png)
 
