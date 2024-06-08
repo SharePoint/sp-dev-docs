@@ -24,7 +24,7 @@ Once you are a registered partner, you have to complete the onboarding process f
 
 ![The *"Registered programs"* section of the Microsoft *"Partner Center"* with the *"Office Store"* program subscribed and active.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-02.png)
 
-Once you are enrolled in the *"Office Store"* programm (it can take up to 48 hours) you should be able to find the *"Office Store"* program in your Partner Center dashboard, under [*"Account settings"* -> *"Programs"* -> *"Registered programs"*](https://partner.microsoft.com/en-us/dashboard/account/v3/settings/programs).
+Once you are enrolled in the *"Office Store"* program (it can take up to 48 hours) you should be able to find the *"Office Store"* program in your Partner Center dashboard, under [*"Account settings"* -> *"Programs"* -> *"Registered programs"*](https://partner.microsoft.com/en-us/dashboard/account/v3/settings/programs).
 
 ![The *"Registered programs"* section of the Microsoft *"Partner Center"* with the *"Office Store"* program subscribed and active.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-03.png)
 
