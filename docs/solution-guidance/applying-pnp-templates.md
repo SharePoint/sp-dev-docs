@@ -93,7 +93,7 @@ In order to execute the actual provisioning, you need to execute a PowerShell cm
 Download the `.PNP` template file that you want to provision, save it in a local folder, and run the following PowerShell command:
 
 ```powershell
-Connect-PnPOnline https://<tenant>-admin.sharepoint.com/ -Interactive
+Connect-PnPOnline https://<tenant>.sharepoint.com/sites/<URL-of-your-target-site> -Interactive
 
 Invoke-PnPTenantTemplate -Path .\your-template-file.pnp -Parameters @{"SiteTitle"="<Title-of-your-target-site>";"SiteUrl"="/sites/<URL-of-your-target-site>"}
 ```
@@ -108,7 +108,7 @@ Remember to provide a value for all the  parameters declared in the above table.
 Download the `.PNP` template file that you want to provision, save it in a local folder, and run the following PowerShell command:
 
 ```powershell
-Connect-PnPOnline https://<tenant>-admin.sharepoint.com/
+Connect-PnPOnline https://<tenant>.sharepoint.com/sites/<URL-of-your-target-site> -Interactive
 
 Invoke-PnPSiteTemplate -Path .\your-template-file.pnp -Parameters @{"SiteTitle"="<Title-of-your-target-site>";"SiteUrl"="/sites/<URL-of-your-target-site>"}
 ```
