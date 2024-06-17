@@ -1,40 +1,31 @@
 ---
 title: Office Experiences
 description: Overview of Office experiences with SharePoint Embedded content
-ms.date: 11/28/2023
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
-# Office File Experiences for SharePoint Embedded Apps
+# Office file experiences for SharePoint Embedded
 
-Office File Experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 (Microsoft 365) platform.
+Office file experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 platform.
 
-<!--
-## In this article:
+## Opening Office documents from SharePoint Embedded
 
-1. [Opening Office Documents from your apps](#Opening-Office-Documents-from-SharePoint-Embedded-Apps)
-2. [View or Restore Previous Versions](#View-or-Restore-a-Previous-Version-of-Office-Document-from-SharePoint-Embedded-Apps)
-3. [Collaborating on SharePoint Embedded Application Office Documents](#Collaborating-on-Office-Documents-from-SharePoint-Embedded-Apps)
-4. [Breadcrumb Properties of SharePoint Embedded Application Office Documents](#Breadcrumb-properties-of-Office-Documents-from-SharePoint-Embedded-Apps)
--->
+Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web, or in Office application for a richer viewing and editing experience. AutoSave feature saves your files automatically as your user's work and is enabled for each Word, Excel and PowerPoint file stored in your SharePoint Embedded Application Apps.
 
-## Opening Office Documents from SharePoint Embedded Apps
+## View or restore a previous version of Office document from SharePoint Embedded
 
-Office documents from SharePoint Embedded Apps can be opened for Viewing and Editing in Office Online, where your users can work with documents directly on the website, or in Desktop apps for a richer viewing and editing experience. AutoSave feature saves your files automatically as your user's work and is enabled for each Word, Excel and PowerPoint file stored in your SharePoint Embedded Application Apps.
+Versioning is automatically enabled on each Word, Excel and PowerPoint file stored in your SharePoint Embedded Apps that helps your users to see what changes have been made in a file, compare different versions, or restore the version you want. This is incredibly important to your users if a mistake was made, a previous version is preferred or in multi-user coauthoring scenarios when your users are collaborating with others and someone makes changes your users didn't want in a file.
 
-## View or Restore a Previous Version of Office Document from SharePoint Embedded Apps
+## Collaborating on Office documents from SharePoint Embedded
 
-Versioning is automatically enabled on each Word, Excel and PowerPoint file stored in your SharePoint Embedded Application Apps that helps your users see what changes have been made in a file, compare different versions, or restore the version you want. This is incredibly important to your users if a mistake was made, a previous version is preferred or in multi-user coauthoring scenarios when your users are collaborating with others and someone makes changes your users didn't want in a file.
-
-## Collaborating on Office Documents from SharePoint Embedded Apps
-
-It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an Email Invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
+It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an email invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
 
 ### Share your documents
 
-#### Send an Email Invite
+#### Send an email invite
 
-Share your SharePoint Embedded documents by Sending an email invitation to specific people:
+Share your SharePoint Embedded documents by sending an email invitation to specific people:
 
 - Select Share, start typing the email addresses or contact names of people you want to share with. When you begin to enter info in the box, you can also choose a contact from the list that appears.
 - Include a message if you want and hit Send.
@@ -65,14 +56,14 @@ There are different options for sharing SharePoint Embedded Application Office D
 | Secure your SharePoint Embedded Application docs only to specific people.                | When you need to prevent recipients from forwarding a shared link, use the **Specific People**  permission. **Specific people**  gives access only to the people you specify, although other people might already have access. If people forward the sharing invitation, only people who already have access to the item will be able to use the link. |
 | Reshare the link with specific people                                                    | **People with existing access**  can be used by people who already have access to the document or folder. It doesn't change the permissions on the item. Use this if you just want to send a link to somebody who already has access.                                                                                                               |
 
-## Breadcrumb properties on Office Documents from SharePoint Embedded Application Apps
+## Breadcrumb properties on Office documents from SharePoint Embedded
 
 Breadcrumb properties are used by Office clients to display breadcrumb-style elements within Office client UI that aid your users in associating Office files with your Application.
 
 > [!NOTE]
-> We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels)
+> We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels).
 
-Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from Container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
+Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
 
 ![Screenshot of breadcrumb pattern in SharePoint Embedded Applications](../../images/office2.png)
 

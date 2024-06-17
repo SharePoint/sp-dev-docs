@@ -1,7 +1,7 @@
 ---
 title: Search SharePoint Embedded containers and content
 description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 1/14/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -10,11 +10,13 @@ ms.localizationpriority: high
 Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This article describes some examples.
 
 > [!NOTE]
-> Search API only supports Delegated permissions.
+>
+> 1. Search API only supports Delegated permissions.
+> 2. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted our from content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
 
 ## Example 1: Search containers by container type
 
-This example queries all containers by the specified container type. The response includes all container instances of the specified container type in the tenant.
+This example queries all containers by the specified container type with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances of the specified container type in the tenant.
 
 ### Request
 
@@ -30,6 +32,9 @@ Content-Type: application/json
       ],
       "query": {
         "queryString": "ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
       }
     }
   ]
@@ -84,7 +89,8 @@ Content-type: application/json
 ```
 
 ## Example 2: Search containers by title
-This example queries all containers by a specified container display name. The response includes all container instances in the tenant that match the criteria.
+
+This example queries all containers by a specified container display name and the SharePoint Embedded application didn't opt out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria.
 
 ### Request
 
@@ -156,7 +162,8 @@ Content-type: application/json
 ```
 
 ## Example 3: Search containers by container description
-This example queries all containers by the specified container type and container description. The response includes all container instances in the tenant that match the criteria.
+
+This example queries all containers by the specified container type and container description, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria.
 
 ### Request
 
@@ -172,6 +179,9 @@ Content-Type: application/json
       ],
       "query": {
         "queryString": "Description:'Everything' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
       }
     }
   ]
@@ -227,7 +237,7 @@ Content-type: application/json
 
 ## Example 4: Search for content by title in a specific container
 
-This example queries all the content by a specific title in a specific container instance. The response includes all driveItems in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems in the specific container instance that match the criteria.
 
 ### Request
 
@@ -243,6 +253,9 @@ Content-Type: application/json
       ],
       "query": {
         "queryString": "Title:'contoso' AND ContainerId:b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
       }
     }
   ]
@@ -322,7 +335,8 @@ Content-type: application/json
 ```
 
 ## Example 5: Search by content
-This example queries all the content by the specified words across all containers of a specific container type. The response includes all driveItems that match the criteria.
+
+This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems that match the criteria.
 
 ### Request
 
@@ -338,6 +352,9 @@ Content-Type: application/json
       ],
       "query": {
         "queryString": "'contoso' AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
       }
     }
   ]

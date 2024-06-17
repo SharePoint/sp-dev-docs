@@ -1,7 +1,7 @@
 ---
-title: Adoptions and Use Case Scenarios
-description: Adoptions and Use Cases for SharePoint Embedded
-ms.date: 11/28/2023
+title: Scenarios and Use Cases
+description: Scenarios and Use Cases for SharePoint Embedded
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -35,7 +35,7 @@ Where your application is enabling a business-critical or time sensitive process
 
 ### Description
 
-When building applications on top of SharePoint, it will still be possible for a user with permissions to navigate to the underlying site. Based on their permission level, a user might can complete actions in the SharePoint interface that weren't intended by your application, for example changing site settings. These actions might have unintended consequences for your application or content.
+When building applications on top of SharePoint, it will still be possible for a user with permissions to navigate to the underlying site. Based on their permission level, a user might complete actions in the SharePoint interface that weren't intended by your application, for example changing site settings. These actions might have unintended consequences for your application or content.
 
 Because SharePoint Embedded is headless, there's no user interface other than what is provided by your custom application. If you don't supply a method to change content or settings through your application, then it won’t be possible for a user to circumvent this through SharePoint. You have the choice for which collaborative features are available in your application, for example sharing.
 

@@ -24,6 +24,9 @@ Absolutely, both tenant and site collection app catalogs are an essential part o
 
 Absolutely. The SharePoint Store and public marketplace are also used to offer SharePoint Framework (SPFx) based solutions, and that will not change. You can still acquire SPFx solutions from the store, now and after Add-Ins have retired. Acquiring SharePoint Add-Ins via the store will not be possible anymore from July 1st, 2024.
 
+> [!Note]
+> If you've acquired an Add-In from the store before July 1st, 2024, and that Add-In was installed by a SharePoint Admin (Add-In was added to the tenant app catalog), then after July 1st this Add-In can still be installed on other sites in that tenant. Installing an Add-In that was never installed before will not be possible anymore, this includes installing all Add-Ins as regular user (non SharePoint Admin).
+
 ## My Add-In uses an app web; what about the data in that web?
 
 If your SharePoint Hosted Add-In is storing data in its app web, then that's something you need to take into account when you're rewriting your Add-In using the SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web. When using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data, you'll need to use SharePoint APIs to copy the needed data from the app web, and recreate it in the new location using a format that works for your updated application.
@@ -31,9 +34,17 @@ If your SharePoint Hosted Add-In is storing data in its app web, then that's som
 > [!Important]
 > It's important you retrieve the data **before** you uninstall the SharePoint Add-In, because the app web is deleted when you uninstall the Add-In. In case you've accidentally deleted the Add-In, you can restore it from the recycle bin, which will also restore the Add-In's app web.
 
+## Can SharePoint Online users still acquire my Add-In from the public marketplace after July 1st?
+
+Users will still be able to browse your Add-In in the public marketplace (https://appsource.microsoft.com/), but when using the "Get it now" button the SharePoint Online user will see a message stating that Add-Ins are retired with a button that redirects the user to the Add-In vendor's site. Installing an Add-In via the public marketplace will not be possible anymore as of July 1st 2024.
+
 ## Can I still use my Add-In on SharePoint on-premises?
 
 SharePoint Add-Ins in SharePoint on-premises are not retired and will continue to work after April 2026 when deployed using a SharePoint on-premises app catalog. But acquiring them from the SharePoint Store/public marketplace will not be possible after April 2026.
+
+## Can I, as Add-In vendor, still update my Add-In?
+
+Yes, as Add-In vendor you can still submit updated versions of your Add-In via Partner Center as you might need to patch an issue.
 
 ## My Add-In is used for both SharePoint Online and SharePoint on-premises; what do you advise?
 

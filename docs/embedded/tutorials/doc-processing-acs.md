@@ -1,7 +1,7 @@
 ---
 title: Document Processing with Azure Cognitive Services
 description: Enabling document processing with Azure Cognitive Services.
-ms.date: 02/26/2024
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -176,4 +176,4 @@ public static async addDriveItem(driveId: string, parentId: any, fileName: strin
 
 Now, restart the demo app and set up the tunneling using ngrok and delta change subscription on the container again.
 
-If you add/update any file (supported formats: 'JPEG', 'JPG', 'PNG', 'BMP', 'TIFF', 'PDF') in this container, you should see a new JSON file created and containing the fields extracted from the file.
+If you add/update any file (supported formats: JPEG, JPG, PNG, BMP, TIFF, PDF) in this container, you should see a new JSON file created and containing the fields extracted from the file.

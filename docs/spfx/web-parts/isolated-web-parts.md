@@ -1,13 +1,16 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 02/13/2024
+ms.date: 05/39/2024
 ms.localizationpriority: high
 ---
 
 # Isolated web parts
 
 Using this capability, you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
+
+> [!IMPORTANT]
+> The isolated web parts feature has been deprecated and will be retired as of April 2, 2026. Check the [retirement announcement](./isolated-web-parts-retirement.md) to learn more.
 
 ## Why isolated web parts
 
@@ -53,19 +56,22 @@ Solutions with isolated web parts are deployed the same way as regular SharePoin
 
 API permissions granted on the tenant-level can be used by any SharePoint Framework solution or piece of script on the tenant. Isolated permissions on the other hand, can only be used by the solution that requested them.
 
-> [!Important]
-> it might take up to 24 hours for isolated web parts to be available for consumption once deployed. During that time, users can recive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error.
+> [!IMPORTANT]
+> It might take up to 24 hours for isolated web parts to be available for consumption once deployed. During that time, users can receive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error.
 
 ### Using isolated web parts
 
 When added to the page, isolated web parts are displayed using an iframe. This `<iframe>` points to a unique domain assigned to the SharePoint Framework solution where the web part is located. This domain is also referenced in the return URL of the Azure AD application created to host the isolated permissions for the particular SharePoint Framework solution. Using the unique domain allows to ensure, that only web parts from the particular SharePoint Framework solution can obtain an access token for the isolated set of permissions.
 
 ### Property pane for isolated web parts
+
 Property pane for isolated web parts is rendered as a separate `<iframe>` with _additional_ instance of the same web part. It brings some specifics that developers should be aware of:
+
 - Isolated web part's lifecycle events such as `render` will be called twice: once for the web part itself and once for the property pane.
 - The property pane's `<iframe>` size is limited to the panel's dimensions. Take it into consideration if you plan to use modals or any wide controls in your property pane.
 
 ### Disposal of isolated web parts
+
 `onDispose` method for isolated web parts _may not be called_ as `<iframe>` removal from DOM automatically cleans all the resources, including socket connections, associated with the iframe's document.
 
 ### Upgrading existing project to use isolated permissions

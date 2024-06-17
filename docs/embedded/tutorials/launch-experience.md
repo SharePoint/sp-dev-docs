@@ -1,7 +1,7 @@
 ---
 title: Configure Default Launch Experience for your Office Files
 description: Configure Default Launch Experience for your Office Files
-ms.date: 11/28/2023
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -45,7 +45,7 @@ To open your files directly in the Office desktop clients, you need to create an
 <scheme-name>:<command-name>"|"<command-argument-descriptor>"|"<command-argument>
 ```
 
-Use the following table to replace the segments above:
+Use the following table to replace the preceding segments:
 
 - **scheme-name**: the name of the application, for example: *ms-excel*
 - **command-name**:
