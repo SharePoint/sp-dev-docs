@@ -54,9 +54,11 @@ The partition created in the consumer’s Microsoft 365 tenant by a SharePoint E
 > [!NOTE]
 > Learn more about billing for SharePoint Embedded, see [Billing Meters](concepts/admin-exp/billing/meters.md).
 
-## Getting Started with SharePoint Embedded
+## Get Started with SharePoint Embedded
 
-You can get started building on SharePoint Embedded from the following Microsoft Learning modules:
+Create a "File Storage Container" in 15 minutes or less:
+- [Free trial: SharePoint Embedded for Visual Studio Code](./getting-started/spembedded-for-vscode.md)
 
+Follow manual set-up on SharePoint Embedded from the following Microsoft Learning modules:
 - [Microsoft Learning: SharePoint Embedded - overview & configuration](/training/modules/sharepoint-embedded-setup)
 - [Microsoft Learning: SharePoint Embedded - building applications](/training/modules/sharepoint-embedded-create-app)
