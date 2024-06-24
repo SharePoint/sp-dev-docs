@@ -52,27 +52,58 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 ## Create a container type with trial configuration
 
-Once you've signed in, create a [container type with trial configuration](../concepts/app-concepts/containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [containertypes](../concepts/app-concepts/containertypes.md).
+Once you've signed in,  you will be prompted to create a [container type with trial configuration](../concepts/app-concepts/containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [containertypes](../concepts/app-concepts/containertypes.md).
+
+* Click on **Create Trial Container Type**
+* Follow the prompts to name your container type. You can change your container type name later on
 
 ![Create free trial container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a8186b2b-bdf9-400b-820b-2e6ebe51d393)
 
+![Name container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/f465d36e-57e8-472a-9d10-7374a28b24b1)
+
+
 > [!NOTE]
-> SharePoint Embedded for Visual Studio Code only supports free trial container types at this time. Paid container types must be made using the SharePoint Online PowerShell Module.
+> SharePoint Embedded for Visual Studio Code only supports container types with trial configuration at this time. Other container types with standard or pass-through billing configurations must be created using the SharePoint Online PowerShell Module.
 
 ## Create a Microsoft Entra ID App
 
-Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications.
+Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications. Learn more about SharePoint Embedded [app architecture](../concepts/app-concepts/app-architecture.md)
+
+* Follow the prompts to name your new Entra application or select an existing application ID
 
 ![Create App](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/944ecf1b-491c-4e5c-b887-73a5d709e9c5)
 
 > [!NOTE]
 > If you choose an existing application, the extension will update that app's configuration settings for it to work with both SharePoint Embedded and this extension. Doing this is NOT recommended on production applications.
 
-#### Name your free trial container type
 
-Once you have a Microsoft Entra ID application, the last step is to provide a name for your new free trial container type.
+After your container type is created and your application is configure, you will be able to view your Local tenant registration as a tree in the left nav-bar
 
-![Name container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/f465d36e-57e8-472a-9d10-7374a28b24b1)
+![vscodetree](../images/vscodetree.png)
+
+## Register container type
+
+After creating a container type, you will need to register that container type on your local tenant. Learn more about container type [registration](../concepts/app-concepts/register-api-documentation.md).
+
+* Follow the prompt and click **'Register on local tenant'**
+* If you do not see the prompt, right-click on your `<container-type-name>` and select **Register** from the menu
+
+![register](../images/vscoderegister.png)
+
+#### Grant admin consent
+
+You will need to grant admin consent in an external browser window
+
+## Create a container
+
+You can create up to five containers of trial container type to upload and manage content.
+
+* Right-click on the **Containers** drop-down from the tree in the left nav-bar and select **Create container**
+* 
+
+![create container](../images/vscodecontcreate.png)
+![name container](../images/vscodecontname.png)
+
 
 ### Load Sample App
 
