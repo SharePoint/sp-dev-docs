@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 06/19/2024
+ms.date: 06/25/2024
 ms.localizationpriority: high
 ---
 
@@ -90,16 +90,16 @@ After creating a container type, you will need to register that container type o
 
 ![register](../images/vscoderegister.png)
 
-#### Grant admin consent
+#### Granting admin consent
 
-You will need to grant admin consent in an external browser window
+An external browser window will pop open to grant admin consent
 
 ## Create a container
 
 You can create up to five containers of trial container type to upload and manage content.
 
 * Right-click on the **Containers** drop-down from the tree in the left nav-bar and select **Create container**
-* 
+* Enter a name for the container you would like to create
 
 ![create container](../images/vscodecontcreate.png)
 ![name container](../images/vscodecontname.png)
