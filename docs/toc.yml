@@ -594,6 +594,8 @@
     items:
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
+    - name: Using Metadata with SharePoint Embedded Containers
+      href: embedded/tutorials/metadata.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
     - name: Using Document Processing with Azure Cognitive Services
