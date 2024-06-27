@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - CLI for Microsoft 365 commands
 description: Use the CLI for Microsoft 365 to create, retrieve, and remove site designs and site scripts.
-ms.date: 06/28/2024
+ms.date: 06/27/2024
 ms.localizationpriority: high
 ---
 
