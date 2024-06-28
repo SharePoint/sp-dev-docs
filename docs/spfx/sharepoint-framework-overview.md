@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
-ms.date: 11/21/2023
+ms.date: 6/27/2024
 ms.localizationpriority: high
 ---
 
@@ -52,7 +52,7 @@ If you work primarily with C#, you want to learn more about client-side JavaScri
 
 ## SharePoint Framework license
 
-The SharePoint Framework components are licensed under this [Microsoft EULA](https://unpkg.com/@microsoft/sp-core-library@1.8.2/EULA/Microsoft%20Sharepoint%20Framework%20-%20Standalone%20(free)%20Use%20Terms.docx).
+The SharePoint Framework components are licensed under this [Microsoft EULA](https://aka.ms/spfx/license).
 
 ## Questions?
 

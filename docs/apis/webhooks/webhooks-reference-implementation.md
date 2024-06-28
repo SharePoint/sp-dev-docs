@@ -1,7 +1,7 @@
 ---
 title: SharePoint webhooks sample reference implementation
 description: This SharePoint Patterns and Practices (PnP) reference implementation shows how you can use SharePoint webhooks in your application.
-ms.date: 09/23/2022
+ms.date: 06/05/2024
 ms.localizationpriority: high
 ---
 # SharePoint webhooks sample reference implementation
@@ -10,19 +10,16 @@ The SharePoint Patterns and Practices (PnP) reference implementation shows how y
 
 The reference implementation only works with [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md).
 
-You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
-
-<br/>
+You can also follow these steps by watching the video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/P4a1_EWokwM]
-
-<br/>
 
 **Applies to** Office 365 Multi Tenant (MT).
 
 Microsoft Azure is used to host the various components needed to implement SharePoint webhooks.
 
 Source code and other materials for the reference implementation are available in two flavors:
+
 - A SharePoint provider-hosted application version
 - An Office 365 Azure AD application, which can be found in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference).
 
@@ -35,9 +32,7 @@ The application shows you how to manage webhooks, specifically for a SharePoint 
 ### Deployment guides
 
 - The [SharePoint webhooks reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the SharePoint provider-hosted reference implementation.
-
 - To deploy the Office 365 Azure AD application, use the steps described at [SharePoint webhooks Azure AD reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/Deployment%20guide.md), which shows you how to use a Web API function as webhook service.
-
 - If you're more interested in using Azure Functions, see the [Azure Functions guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/azure%20functions%20guide.md) for more details on how to use Azure Functions in this reference implementation.
 
 ### Introduction to webhooks
@@ -48,9 +43,9 @@ Webhooks notify your application about changes in SharePoint that the applicatio
 
 The reference implementation works with a SharePoint list. To add a webhook to a SharePoint list, your application first creates a webhook subscription by sending a [`POST /_api/web/lists('list-id')/subscriptions`](./lists/create-subscription.md) request. The request includes the following items:
 
-* A payload that identifies the list that you're adding the webhook for.
-* The location of your webhook service URL to send the notifications.
-* The expiration date of the webhook.
+- A payload that identifies the list that you're adding the webhook for.
+- The location of your webhook service URL to send the notifications.
+- The expiration date of the webhook.
 
 After you've requested SharePoint to add your webhook, SharePoint validates that your webhook service endpoint exists. It sends a validation string to your service endpoint. SharePoint expects that your service endpoint returns the validation string within 5 seconds. If this process fails, the webhook creation is canceled. If you've deployed your service, this works and SharePoint returns an HTTP 201 message on the POST request that the application initially sent. The payload in the response contains the ID of the new webhook subscription.
 
@@ -74,8 +69,6 @@ public async Task<SubscriptionModel> AddListWebHookAsync(string siteUrl, string 
 }
 ```
 
-<br/>
-
 When making a call to SharePoint, you need to provide authentication information, and in this case you're using a **Bearer** authentication header with an **access token**. To obtain the access token, intercept the token via an **ExecutingWebRequest** event handler:
 
 ```csharp
@@ -89,7 +82,7 @@ cc.ExecutingWebRequest += Cc_ExecutingWebRequest;
 // Capture the OAuth access token since we want to reuse that one in our REST requests
 private void Cc_ExecutingWebRequest(object sender, WebRequestEventArgs e)
 {
-    this.accessToken = e.WebRequestExecutor.RequestHeaders.Get("Authorization").Replace("Bearer ", "");
+  this.accessToken = e.WebRequestExecutor.RequestHeaders.Get("Authorization").Replace("Bearer ", "");
 }
 ```
 
@@ -123,7 +116,6 @@ To avoid getting the same change repeatedly, it's important that you inform Shar
 The following are some key things to note about changes:
 
 - SharePoint does not call your service in real-time: when a change happens on a list that has a webhook, SharePoint queues a webhook callout. Once each minute, this queue is read and the appropriate service endpoints are called. This batching of requests is important. For example, if a bulk upload of 1000 records occurred at once, batching prevents SharePoint from calling your endpoint 1000 times. So your endpoint is only called once, but when you call the `GetChanges()` method, you get 1000 change events that you need to process.
-
 - To guarantee an immediate response, regardless of the number of changes there, it's important that the workload of your service endpoint runs asynchronously. In the reference implementation, we leveraged the power of Azure: the service serializes the incoming payload and stores it in an Azure Storage queue while there's an Azure web job that runs continuously and checks for messages in the queue. When there are messages in the queue, the web job processes them and also executes your logic asynchronously.
 
 ## Complete end-to-end flow
@@ -157,7 +149,7 @@ Create a web job that on a weekly basis reads all the subscription IDs from the 
 > [!NOTE]
 > This web job is not part of this reference implementation.
 
-The actual renewal of a SharePoint list webhook can be done by using a `[PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)](./lists/update-subscription.md)` REST call.
+The actual renewal of a SharePoint list webhook can be done by using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](./lists/update-subscription.md) REST call.
 
 In the reference implementation, updating of webhooks is implemented in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project.
 
@@ -176,7 +168,7 @@ Updating a webhook is done by using the **UpdateListWebHookAsync** method:
 /// <returns>true if successful, exception in case something went wrong</returns>
 public async Task<bool> UpdateListWebHookAsync(string siteUrl, string listId, string subscriptionId, string webHookEndPoint, DateTime expirationDateTime, string accessToken)
 {
-    // webhook update code...
+  // webhook update code...
 }
 ```
 
@@ -184,10 +176,8 @@ public async Task<bool> UpdateListWebHookAsync(string siteUrl, string listId, st
 
 Because SharePoint is calling out to your webhook service endpoint, your endpoint needs to be reachable by SharePoint. This makes development and debugging slightly more complex. The following are some strategies that you can use to make your life easier:
 
-* During initial development, you provide your own serialized payload to your service processing logic. This makes it possible to completely test your processing logic without deploying the service endpoint (and even without configuring a webhook).
-
-* If you have access to Azure resources, you can deploy your endpoint to Azure by using a debug build and configuring the Azure App Service for debugging. This allows you to set a remote breakpoint and do remote debugging using Visual Studio.
-
+- During initial development, you provide your own serialized payload to your service processing logic. This makes it possible to completely test your processing logic without deploying the service endpoint (and even without configuring a webhook).
+- If you have access to Azure resources, you can deploy your endpoint to Azure by using a debug build and configuring the Azure App Service for debugging. This allows you to set a remote breakpoint and do remote debugging using Visual Studio.
 - If you do not want to deploy your service during development time, you need to use a secure tunnel for your service. The idea is that you tell SharePoint that the notification service is located on a shared public endpoint. In the client, you install a component that connects to that shared public service, and whenever a call is made to the public endpoint, the client component is notified and it pushes the payload to your service running on localhost. [ngrok](https://ngrok.com/) is an implementation of such a secure tunnel tool that you can use to debug your webhook service locally.
 
 ## See also

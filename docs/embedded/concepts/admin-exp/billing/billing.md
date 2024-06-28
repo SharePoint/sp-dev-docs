@@ -36,7 +36,7 @@ To enable PAYG on SharePoint Embedded, you need:
 
 ## Set up a Standard Billing container type
 
-For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
+For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
 Here are the step-by-step instructions on how to create a standard billing container:
 
