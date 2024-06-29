@@ -10,7 +10,7 @@ ms.service: sharepoint
 
 # SharePoint admin APIs authentication and authorization
 
-SharePoint admin APIs are accessible via [SharePoint client object model (CSOM)](./complete-basic-operations-using-sharepoint-client-library-code), [SharePoint REST service](./get-to-know-the-sharepoint-rest-service), and [Microsoft Graph](../apis/sharepoint-rest-graph).
+SharePoint admin APIs are accessible via [SharePoint client object model (CSOM)](./complete-basic-operations-using-sharepoint-client-library-code.md), [SharePoint REST service](./get-to-know-the-sharepoint-rest-service.md), and [Microsoft Graph](../apis/sharepoint-rest-graph.md).
 
 ## Overview
 
@@ -54,9 +54,9 @@ Here are some actions you can take next to use applications for admin API calls:
 1. Configure your [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions for Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`).
 1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on the target tenant.
 
-| Access type         | Permission name         | resourceAccess Id                      | resourceAccess type |
-| :------------------ | :---------------------- | :------------------------------------- | :------------------ |
-| On behalf of a user | `AllSites.FullControl`  | `56680e0d-d2a3-4ae1-80d8-3c4f2100e3d0` | Scope               |
-| Without a user      | `Sites.FullControl.All` | `a82116e5-55eb-4c41-a434-62fe8a61c773` | Role                |
+| Access type         | Permission name         | `resourceAccess` id                    | `resourceAccess` type |
+| :------------------ | :---------------------- | :------------------------------------- | :-------------------- |
+| On behalf of a user | `AllSites.FullControl`  | `56680e0d-d2a3-4ae1-80d8-3c4f2100e3d0` | Scope                 |
+| Without a user      | `Sites.FullControl.All` | `a82116e5-55eb-4c41-a434-62fe8a61c773` | Role                  |
 
-1. Use your application to [invoke admin APIs](./get-to-know-the-sharepoint-rest-service).
+1. Use your application to [invoke admin APIs](./get-to-know-the-sharepoint-rest-service.md).
