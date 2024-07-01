@@ -62,11 +62,19 @@ The table below defines the resource unit limits for an application in a tenant:
 > [!NOTE]
 > Microsoft reserves the right to change the resource unit limits.
 
+For multitenant applications:
+
+a. Each tenant hosting the application is considered distinct, operating independently from others. Consequently, every application is subject to its own usage limits within each tenant as defined above.
+
+b. The consumption of resource units by the application is to be measured on a per-tenant, per-application basis. This ensures that each tenant-application pair remains within the permissible resource limits specified for that particular tenant.
+
+c. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
+
 In terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
 | Resource units per request | Operations                                              |
 | -------------------------- | ------------------------------------------------------- |
-| 1	                         | <li>Single item query, such as get item <li>Delta with a token |
+| 1	                         | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item |
 | 2	                         | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
 | 5	                         | <li>All permission resource operations, including $expand=permissions |
 
