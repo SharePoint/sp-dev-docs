@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 06/27/2024
+ms.date: 07/01/2024
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -62,11 +62,17 @@ The table below defines the resource unit limits for an application in a tenant:
 > [!NOTE]
 > Microsoft reserves the right to change the resource unit limits.
 
+For multitenant applications:
+
+1. Each tenant hosting the application is considered distinct, operating independently from others. Consequently, every application is subject to its own usage limits within each tenant as defined above.
+1. The consumption of resource units by the application is to be measured on a per-tenant, per-application basis. This ensures that each tenant-application pair remains within the permissible resource limits specified for that particular tenant.
+1. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
+
 In terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
 | Resource units per request | Operations                                              |
 | -------------------------- | ------------------------------------------------------- |
-| 1	                         | <li>Single item query, such as get item <li>Delta with a token |
+| 1	                         | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item |
 | 2	                         | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
 | 5	                         | <li>All permission resource operations, including $expand=permissions |
 
