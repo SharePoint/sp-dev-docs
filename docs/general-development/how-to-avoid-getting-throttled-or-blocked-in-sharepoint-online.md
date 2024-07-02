@@ -64,11 +64,9 @@ The table below defines the resource unit limits for an application in a tenant:
 
 For multitenant applications:
 
-a. Each tenant hosting the application is considered distinct, operating independently from others. Consequently, every application is subject to its own usage limits within each tenant as defined above.
-
-b. The consumption of resource units by the application is to be measured on a per-tenant, per-application basis. This ensures that each tenant-application pair remains within the permissible resource limits specified for that particular tenant.
-
-c. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
+1. Each tenant hosting the application is considered distinct, operating independently from others. Consequently, every application is subject to its own usage limits within each tenant as defined above.
+1. The consumption of resource units by the application is to be measured on a per-tenant, per-application basis. This ensures that each tenant-application pair remains within the permissible resource limits specified for that particular tenant.
+1. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
 
 In terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
