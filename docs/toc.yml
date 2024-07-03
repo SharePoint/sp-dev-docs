@@ -2203,6 +2203,8 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+  - name: Admin APIs authentication and authorization
+    href: sp-add-ins/sharepoint-admin-apis-authentication-and-authorization.md
   - name: SharePoint CSOM API
     items:
     - name: Complete basic operations
