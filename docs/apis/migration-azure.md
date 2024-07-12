@@ -1,7 +1,7 @@
 ---
 title: "Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API"
 description: "This article provides in-depth information on how to use the SharePoint Migration API with Azure Containers and Queues."
-ms.date: 05/08/2024
+ms.date: 07/03/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -32,9 +32,9 @@ Migration API provisions the containers in the same datacenter of the SharePoint
 
 Migration API destroys Used containers 30-90 days after completing migration jobs.
 
-#### Decorate the traffic to avoid throttling
+#### Avoid throttling by decorating the traffic
 
-[Decorate your HTTP traffic](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic) to avoid throttling.
+Avoid throttling by [decorating your HTTP traffic](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic).
 
 #### Encryption
 
@@ -76,6 +76,8 @@ Pass this value to `CreateMigrationJob` method as `azureContainerSourceUri` para
 
 The SAS access token contains `Read` and `Write` permissions only. It doesn't contain `List`.
 
+SharePoint enforces HTTPS connections to containers by setting `spr=https` field in SAS tokens.
+
 ###### MetadataContainer value
 
 A **Uri** value containing the URI of the newly created container for storing **manifest** files, along with the SAS access token.
@@ -83,6 +85,8 @@ A **Uri** value containing the URI of the newly created container for storing **
 Pass this value to `CreateMigrationJob` method as `azureContainerManifestUri` parameter.
 
 The SAS access token contains `Read` and `Write` permissions only. It doesn't contain `List`.
+
+SharePoint enforces HTTPS connections to containers by setting `spr=https` field in SAS tokens.
 
 ###### EncryptionKey
 
@@ -102,9 +106,9 @@ Alternatively, use user-provided Azure Queues if desired. Check the requirement 
 
 ### Azure Queue Encryption
 
-When using `CreateMigrationJobEncrypted` method, Migration API encrypts the messages written to the Azure Queue.
+`CreateMigrationJobEncrypted` method encrypts the messages written to the Azure Queue.
 
-Make sure you preserve `JobId` and the `IV` values returned by `CreateMigrationJobEncrypted` method, to decrypt the message.
+To decrypt the messages, make sure you preserve `JobId` and the `IV` values returned by `CreateMigrationJobEncrypted` method.
 
 #### Encrypted message sample
 

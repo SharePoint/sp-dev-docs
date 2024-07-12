@@ -1,7 +1,7 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 02/13/2024
+ms.date: 05/39/2024
 ms.localizationpriority: high
 ---
 
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 Using this capability, you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
 
 > [!IMPORTANT]
-> The isolated web parts feature has been retired and will stop working as of April 2, 2026. Check the [retirement announcement](./isolated-web-parts-retirement.md) to learn more.
+> The isolated web parts feature has been deprecated and will be retired as of April 2, 2026. Check the [retirement announcement](./isolated-web-parts-retirement.md) to learn more.
 
 ## Why isolated web parts
 

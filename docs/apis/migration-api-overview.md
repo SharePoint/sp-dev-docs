@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Import Migration API"
 description: "This article provides overview information on how to use the SharePoint Migration API."
-ms.date: 04/28/2024
+ms.date: 07/03/2024
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -20,6 +20,10 @@ The SharePoint Migration API imports contents into SharePoint at scale. It proce
 Use Migration API to migrate content from file shares, SharePoint Server, and other cloud-based services.
 
 ## What's new
+
+### July 2024
+
+We started enforcing HTTPS connection to SharePoint provided Azure Blob Storage Containers by adding a `spr=https` field in SAS tokens. This enforcement is fully effective on July 21, 2024. Check [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for details.
 
 ### April 2024
 
@@ -61,7 +65,7 @@ Migration API generates logs in the manifest container. Check the log entries fo
 
 ### Use app-based authentication
 
-Migration generates workload to the SPO backend differently from end user-generated traffic. To properly allocate resources with our elastic capability, only use app-based authentication in your migration solution.
+Migration generates workload to the SharePoint backend differently from end user-generated traffic. To properly allocate resources with our elastic capability, only use app-based authentication in your migration solution.
 
 Don't use user mode in your migration solution. Running migration in user mode triggers increased throttling, resulting in poor performance.
 
@@ -82,13 +86,13 @@ For service-based migration tools that run without a signed-in user present, suc
 
 You can choose to share a single App ID to cover multiple migration solutions created or create individual App ID for each of the products. Make sure to register App IDs. Sharing App IDs doesn't affect performance or throttling.
 
-### Keep destination SPO site unactivated
+### Keep destination SharePoint Site unactivated
 
-To avoid migration issues, deactivate the target site for users until the migration completion. The source could remain active, allowing read and write to keep productivity. Switch users to the new SPO destination sites after migration completion.
+To avoid migration issues, deactivate the target site for users until the migration completion. The source could remain active, allowing read and write to keep productivity. Switch users to the new SharePoint destination sites after migration completion.
 
 ## Performance
 
-Migration API processes jobs through a queue mechanism with pre-configured workload management settings. Migration API processes the jobs on a best-effort basis, without Service Level Agreement (SLA) or guaranteed performance.
+Migration API processes jobs through a queue mechanism with preconfigured workload management settings. Migration API processes the jobs on a best-effort basis, without Service Level Agreement (SLA) or guaranteed performance.
 
 ### Optimize migration performance
 
@@ -96,9 +100,9 @@ In order to ensure optimal performance for your migration projects, it's importa
 
 ### I'm seeing throttling messages
 
-To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint Online infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
+To ensure good user experiences for all Microsoft 365 customers, SharePoint uses throttling to protect the SharePoint infrastructure. Avoid getting throttled by following [throttling guidance](https://aka.ms/spo429).
 
-## Special topics
+## Special articles
 
 ### Migrating sharing events of files and folders
 
@@ -106,4 +110,4 @@ Check [Sharing events](/sharepoint/dev/apis/migration-api-shared) article for in
 
 ### Web Parts
 
-Use SPMT's Web Part serializer DLL to migrate Web Parts into SharePoint. Check [Migrate Web Parts](/sharepoint/dev/apis/migrate-webparts-with-migrationapi) for instructions.
+Use SharePoint Migration Tool (SPMT)'s Web Part serializer DLL to migrate Web Parts into SharePoint. Check [Migrate Web Parts](/sharepoint/dev/apis/migrate-webparts-with-migrationapi) for instructions.

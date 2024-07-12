@@ -594,6 +594,8 @@
     items:
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
+    - name: Using Metadata with SharePoint Embedded Containers
+      href: embedded/tutorials/metadata.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
     - name: Using Document Processing with Azure Cognitive Services
@@ -2203,6 +2205,8 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+  - name: Admin APIs authentication and authorization
+    href: sp-add-ins/sharepoint-admin-apis-authentication-and-authorization.md
   - name: SharePoint CSOM API
     items:
     - name: Complete basic operations

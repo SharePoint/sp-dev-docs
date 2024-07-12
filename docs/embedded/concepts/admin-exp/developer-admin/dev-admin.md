@@ -13,13 +13,11 @@ Organizations that create file management applications with the help of SharePoi
 ## Developer Admin Role
 
 > [!IMPORTANT]
-> Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to execute SharePoint Embedded container commandlets mentioned in this article.
+> Global Administrators can assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra to execute SharePoint Embedded container commandlets mentioned in this article.
 >
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
->
-> If you are a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
-A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a Developer Admin for SharePoint Embedded. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
+A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
 
 The following are some of the container-specific commands actions currently supported on PowerShell:
 
