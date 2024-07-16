@@ -105,8 +105,9 @@ Consuming tenant admins can use the following command:
 
 ```powershell
 Get-SPOContainer -Identity <ContainerId>
+Get-SPOContainer -Identity <siteURL>
 ```
-Here, The containerId is the ID of the container.
+Here, The containerId is the ID of the container & siteURL is the URL of the sharepoint site that is associated with the container.
 
 ### Sensitivity Label of a container
 Consuming tenant admins can set the sensitivity label of a container of an application using the following:
@@ -118,7 +119,7 @@ Set-SPOContainer -Identity <ContainerID> -SensitivityLabel <SensitivityLabel>
 Consuming tenant admins can remove the sensitivity label of a container of an application using the following:
 
 ```powershell
-Set-SPOContainer -Identity b! <ContainerID> -RemoveLabel
+Set-SPOContainer -Identity <ContainerID> -RemoveLabel
 ```
 
 The ContainerId is the ID of the container whose sensitivity label is being set
