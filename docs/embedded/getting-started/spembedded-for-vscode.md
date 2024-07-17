@@ -24,7 +24,7 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 ![SharePoint Embedded VS Extensions](../images/vsx-images/1downloadvsx.png)
 
 
-## Sign in with admin credentials
+### Sign in with admin credentials
 
 To use the extension, you need to sign into a Microsoft 365 tenant with an administrator account.
 If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
@@ -34,7 +34,7 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 
 * Authentication will open a new tab in an external browser to sent to permissions
-* A pop-up window will prompt permissions, select **Acce[pt**
+* A pop-up window will prompt permissions, select **Accept**
  
  
 ![consentperms](../images/vsx-images/3vsx-grant-admin-consent.png)
@@ -72,16 +72,16 @@ Every container type is owned by a Microsoft Entra ID application. The first ste
 After your container type is created and your application is configure, you will be able to view your Local tenant registration as a tree in the left nav-bar
 
 
-## Register container type
+## Register your trial container type
 
-After creating a container type, you will need to register that container type on your local tenant. Learn more about container type [registration](../concepts/app-concepts/register-api-documentation.md).
+After creating your trial container type, you will need to register that container type on your local tenant. Learn more about container type [registration](../concepts/app-concepts/register-api-documentation.md).
 
 * Follow the prompt and click **'Register on local tenant'** on the lower right corner of the VS Code window
 * If you do not see the prompt, you can right-click on your `<container-type-name>` and select **Register** from the menu
 
 ![register](../images/vsx-images/7aregister-ct.png)
 
-#### Granting permissions
+#### Grant permissions
 
 When registering your container type you will need to grant permissions to access your application
 
@@ -91,9 +91,9 @@ An external browser window will pop open for you to login and grant admin consen
 
 ![login permissions](../images/vsx-images/9alogin-grant-permissions.png)
 
-## Create a container
+## Create your first container
 
-With your trial container type registered, you can create your first container. Only five containers of trial container type can be created to upload and manage content.
+With your trial container type registered, you can now create your first container. Only five containers of trial container type can be created to upload and manage content.
 
 * Right-click on the **Containers** drop-down from the tree in the left nav-bar and select **Create container**
 * Enter a name for the container you would like to create
@@ -109,13 +109,13 @@ You also have the option to recycle and recover containers within the extension.
 ![final home page](../images/vsx-images/a-final-home-page.png)
 
 
-### Load Sample App
+## Load Sample App
 
 With your free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type. This allows you to immediately run the sample app on your local machine.
 
 ![Load Sample App](../images/vsx-images/vsxsa-c.png)
 
-### Export Postman Environment
+## Export Postman Environment
 
 The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
 
