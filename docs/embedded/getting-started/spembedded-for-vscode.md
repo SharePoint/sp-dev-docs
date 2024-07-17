@@ -24,7 +24,7 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 ![SharePoint Embedded VS Extensions](../images/vsx-images/1downloadvsx.png)
 
 
-### Sign in with admin credentials
+#### Sign in with admin credentials
 
 To use the extension, you need to sign into a Microsoft 365 tenant with an administrator account.
 If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
@@ -101,7 +101,7 @@ With your trial container type registered, you can now create your first contain
 ![create container](../images/vsx-images/10acreate-container.png)
 ![name container](../images/vsx-images/11aname-first-cont.png)
 
-### Recycling Containers
+#### Recycling Containers
 
 You also have the option to recycle and recover containers within the extension.
 
