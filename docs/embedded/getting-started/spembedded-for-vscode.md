@@ -111,7 +111,7 @@ You can also recycle and recover containers within the extension.
 
 ## Load Sample App
 
-With your free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type. You can run the sample app on your local machine by running `npm run start` in the correct directory.
+With your free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type.
 
 ![Load Sample App](../images/vsx-images/n15vsxsa-c.png)
 
