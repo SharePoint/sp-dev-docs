@@ -7,14 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded for Visual Studio Code
 
-The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. With the extension, developers can:
-
-1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
-1. Create and manage [container types for trial use](../concepts/app-concepts/containertypes.md#trial-use)
-1. Create containers 
-1. Add guest apps on a [container type for trial use](../concepts/app-concepts/containertypes.md#trial-use)
-1. Load SharePoint Embedded [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and autopopulate its runtime configuration
-1. Export the container type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
+The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. 
 
 > [!IMPORTANT]
 > To start building with SharePoint Embedded you will need administrative access to Microsoft 365 tenant.
@@ -28,7 +21,7 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 1. Press **"Install"** and the SharePoint Embedded icon will load on the activity bar.
 1. Select on the icon to open the SharePoint Embedded view and create a container type with trial configuration.
 
-![SharePoint Embedded on Visual Studio Code Marketplace](../images/vscodelaunch.png)
+![SharePoint Embedded VS Extensions](../images/vsx-images/1downloadvsx.png)
 
 
 ## Sign in with admin credentials
@@ -37,15 +30,15 @@ To use the extension, you need to sign into a Microsoft 365 tenant with an admin
 If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
 
-![Install](../images/vscodeinstall.png)
+![Install](../images/vsx-images/2vsx-signin.png)
 
 
 * Authentication will open a new tab in an external browser to sent to permissions
-* A pop-up window will prompt permissions, select **Open**
+* A pop-up window will prompt permissions, select **Acce[pt**
  
  
-![consentperms](../images/vscodeconsentperms.png)
-![login](../images/vscodelogin.png)
+![consentperms](../images/vsx-images/3vsx-grant-admin-consent.png)
+
 
 
 
@@ -54,13 +47,12 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 Once you've signed in,  you will be prompted to create a [container type with trial configuration](../concepts/app-concepts/containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [containertypes](../concepts/app-concepts/containertypes.md).
 
+![home screen](../images/vsx-images/4vsx-home-screen.png)
+
 * Click on **Create Trial Container Type**
 * Follow the prompts to name your container type. You can change your container type name later on
 
-![Create free trial container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a8186b2b-bdf9-400b-820b-2e6ebe51d393)
-
-![Name container type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/f465d36e-57e8-472a-9d10-7374a28b24b1)
-
+![create container type](../images/vsx-images/5a-name-ct.png)
 
 > [!NOTE]
 > SharePoint Embedded for Visual Studio Code only supports container types with trial configuration at this time. Other container types with standard or pass-through billing configurations must be created using the SharePoint Online PowerShell Module.
@@ -71,7 +63,7 @@ Every container type is owned by a Microsoft Entra ID application. The first ste
 
 * Follow the prompts to name your new Entra application or select an existing application ID
 
-![Create App](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/944ecf1b-491c-4e5c-b887-73a5d709e9c5)
+![Create App](../images/vsx-images/6aname-app.png)
 
 > [!NOTE]
 > If you choose an existing application, the extension will update that app's configuration settings for it to work with both SharePoint Embedded and this extension. Doing this is NOT recommended on production applications.
@@ -79,7 +71,6 @@ Every container type is owned by a Microsoft Entra ID application. The first ste
 
 After your container type is created and your application is configure, you will be able to view your Local tenant registration as a tree in the left nav-bar
 
-![vscodetree](../images/vscodetree.png)
 
 ## Register container type
 
@@ -88,21 +79,34 @@ After creating a container type, you will need to register that container type o
 * Follow the prompt and click **'Register on local tenant'**
 * If you do not see the prompt, right-click on your `<container-type-name>` and select **Register** from the menu
 
-![register](../images/vscoderegister.png)
+![register](../images/vsx-images/7aregister-ct.png)
 
-#### Granting admin consent
+#### Granting permissions
 
-An external browser window will pop open to grant admin consent
+When registering your container type you will need to grant permissions to access your application
+
+![register permissions](../images/vsx-images/8aopenconsentlink.png)
+
+An external browser window will pop open for you to login and grant admin consent
+
+![login permissions](../images/vsx-images/9alogin-grant-permissions.png)
 
 ## Create a container
 
-You can create up to five containers of trial container type to upload and manage content.
+With your trial container type registered, you can create your first container. Only five containers of trial container type can be created to upload and manage content.
 
 * Right-click on the **Containers** drop-down from the tree in the left nav-bar and select **Create container**
 * Enter a name for the container you would like to create
 
-![create container](../images/vscodecontcreate.png)
-![name container](../images/vscodecontname.png)
+![create container](../images/vsx-images/10acreate-container.png)
+![name container](../images/vsx-images/11aname-first-cont.png)
+
+### Recycling Containers
+
+You also have the option to recycle and recover containers within the extension.
+
+![recycle containers](../images/vsx-images/12arecycle-cont.png)
+![final home page](../images/vsx-images/a-final-home-page.png)
 
 
 ### Load Sample App
