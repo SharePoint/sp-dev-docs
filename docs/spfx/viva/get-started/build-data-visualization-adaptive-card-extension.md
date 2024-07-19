@@ -322,7 +322,7 @@ export class CardView extends BaseComponentsCardView<
 }
 ```
 The rendered bar chart looks something like this:
-<img>
+![Vertically grouped bar chart](../../../../docs/images/viva-extensibility/data-visualization/bar-chart.png)
 
 ### Pie/Donut Charts
 Here is an example of the CardView.ts file that renders a Pie chart with the given data:
@@ -372,10 +372,10 @@ export class CardView extends BaseComponentsCardView<
 }
 ```
 Notice how the `dataVisualizationKind` is set to `pie` and `PieChartCardView` is returned with the required parameters. Upon refreshing the card on the workbench, you will see that a pie chart is rendered:
-<img>
+![Pie chart example](../../../../docs/images/viva-extensibility/data-visualization/pie-chart.png)
 
 The `isDonut` flag indicates if the pie chart should be rendered as a donut chart, which is `false` by default. When set to true, the donut chart is rendered as follows:
-<img>
+![Donut chart example](../../../../docs/images/viva-extensibility/data-visualization/donut-chart.png)
 
 The numeric text in the center displays the sum of all the y values in the series.
 
