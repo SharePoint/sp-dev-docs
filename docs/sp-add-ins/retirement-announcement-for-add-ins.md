@@ -54,6 +54,17 @@ SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.
 
 To learn more about how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
 
+### Disable Add-In usage for your tenant
+
+Admins can disable SharePoint Add-Ins with the [Set-SPOTenant SharePoint Management Shell PowerShell command](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps).
+
+```PowerShell
+Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
+Set-SPOTenant -IsSharePointAddInsDisabled $true
+```
+
+After SharePoint Add-Ins are disabled, users will not be able to add SharePoint Add-Ins to their sites, and admins cannot add new SharePoint Add-Ins to the tenant and site collection app catalogs. SharePoint Add-Ins already added to sites will stay available and can still be used by the site's users.
+
 ## How do I get help?
 
 You can use the following services and partner programs to help with your migration from SharePoint Add-Ins:
