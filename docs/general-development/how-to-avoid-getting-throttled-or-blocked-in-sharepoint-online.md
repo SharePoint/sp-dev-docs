@@ -230,6 +230,9 @@ If you have applications or components, that are causing your people search requ
 1. Try consolidating the requests into a single query. For example, instead of making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
 1. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
+### When accessing OneDrive sites
+When a client attempts to access many OneDrive site collections that do not exist in excess, we may throttle requests from that client's IP address. The client will receive an HTTP 429 response when accessing any OneDrive site collection during the throttling period.
+
 ## What should you do if you get blocked in SharePoint Online?
 
 Blocking is the most extreme form of throttling. We rarely ever block a tenant unless we detect long-term, excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is placed at the app or user level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.
