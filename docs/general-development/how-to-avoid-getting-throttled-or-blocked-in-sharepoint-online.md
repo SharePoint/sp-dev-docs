@@ -231,7 +231,7 @@ If you have applications or components, that are causing your people search requ
 1. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
 ### When accessing OneDrive sites
-When a client attempts to access many OneDrive site collections that do not exist in excess, we may throttle requests from that client's IP address. The client will receive an HTTP 429 response when accessing any OneDrive site collection during the throttling period.
+When a client makes excessive attempts to access many OneDrive site collections that do not exist, we may throttle requests from that client's IP address. The client will receive an HTTP 429 response when accessing any OneDrive site collection during the throttling period.
 
 ## What should you do if you get blocked in SharePoint Online?
 
