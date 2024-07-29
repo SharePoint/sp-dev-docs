@@ -42,7 +42,7 @@ The following restrictions are applied to container type in the trial status:
 - Up to five active containers of the container type can be created.
 - Each container has up to 1 GB of storage space.
 - The container type expires after 30 days and access to any existing containers of that container type will be removed.
-- Developer must delete all containers of an existing container type in trial status to create a new container type for trial.
+- Developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
 
 ## Standard/Non-trial use
