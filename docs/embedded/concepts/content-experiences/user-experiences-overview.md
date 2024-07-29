@@ -28,7 +28,7 @@ You can use [Microsoft Graph's Download DriveItem API](/graph/api/driveitem-get-
 
 ## Content discovery in Microsoft 365
 
-You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded application content will be hidden in Microsoft 365 environments including office.com, oneDrive.com, or other Microsoft intelligent file discovery features.
+You can control how your content appears in the Microsoft 365 experience. The default behavior is SharePoint Embedded application content will be hidden in Microsoft 365 environments including office.com, oneDrive.com, or other Microsoft intelligent file discovery features. The default behavior also excludes M365 Copilot from grounding with your SharePoint Embedded application content.
 
 If you want to opt into the Microsoft 365 experience, during container type creation, you can change the default settings using cmdlet [Set-SPOContainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 
