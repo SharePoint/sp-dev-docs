@@ -15,7 +15,7 @@ With the standard billing model, all consumption-based charges are directly bill
 
 ![Standard](../../../images/1bill521.png)
 
-### Pass-through (Coming Soon)
+### Pass-through
 
 With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admins in the developer tenant don't need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint Admin or Global Admin) needs to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
