@@ -54,4 +54,4 @@ SharePoint Embedded uses Microsoft’s comprehensive compliance and data governa
 
 ## Set Up Billing for Pass-through Billing App
 
-To use Pass-through Billing SharePoint Embedded App, SharePoint Embedded Admin need to set up Microsoft Syntex billing in Microsoft 365 admin center.
+To use Pass-through Billing SharePoint Embedded App, SharePoint Embedded Admin need to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/).
