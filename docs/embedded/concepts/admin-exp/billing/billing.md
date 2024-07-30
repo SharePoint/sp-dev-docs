@@ -93,7 +93,7 @@ For Pass-through Billing container types, developer admin don't have to set up b
 ```powershell
 New-SPOContainerType -ContainerTypeName <ContainerTypeName>
                      -OwningApplicationId <OwningApplicationId>
-                     -sPassThroughBilling 
+                     -isPassThroughBilling 
 ```
 
 ## SharePoint Embedded meters
