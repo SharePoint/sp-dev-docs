@@ -54,7 +54,7 @@ SharePoint Embedded uses Microsoft’s comprehensive compliance and data governa
 
 ## Set Up Billing for Pass-through App
 
-To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin need to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/).
+To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin needs to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/). No user can access any Pass-through SharePoint Embedded apps before a valid billing is set up for SharePoint Embedded platform.
 
 ### [Meters](../billing/meters.md)
 SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
@@ -79,3 +79,6 @@ SharePoint Embedded has three billing meters as shown. Refer to the [product pag
 
 ### [Billing Management](../billing/billingmanagement.md)
 The [Microsoft Cost Management portal](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal) provides a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Microsoft Cost Management portal.
+
+### Invalid Billing/Turn off SharePoint Embedded
+If you turn off SharePoint Embedded or disconnect the linked Azure subscription, all users will immediately lose access to any application built on the service along with any read and write permissions.
