@@ -56,4 +56,19 @@ SharePoint Embedded uses Microsoft’s comprehensive compliance and data governa
 
 To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin need to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-### Meters
+### [Meters](../billing/meters.md)
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
+
+SharePoint Embedded has three billing meters as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details 
+
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SharePoint Embedded Service Meters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Meter Unit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :--------------------------------:   | :----------:       |
+|              Storage                 |   $/GB             |
+|   API Transactions                   | $/Transactions     |
+|           Egress                     |  $/GB              |
+
+### Set Up Guide
+1. A valid Azure subscription is required, You can create one by following steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+2. A valid Azure resource group is required. You can create one by following steps here to [create an resrouce group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
+3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section.
+
