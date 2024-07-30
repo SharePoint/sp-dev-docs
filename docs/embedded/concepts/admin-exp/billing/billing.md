@@ -88,7 +88,7 @@ You can view properties of a container type and associated billing properties by
 
 
 ## Set up a Pass-through Billing container type
-For Pass-through Billing container types, developer admin don't have to set up billing in the developer tenant. SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet with  `isPassThroughBilling` specified.
+For Pass-through Billing container types, developer admin doesn't have to set up billing in the developer tenant. SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet with  `isPassThroughBilling` specified.
 
 ```powershell
 New-SPOContainerType -ContainerTypeName <ContainerTypeName>
