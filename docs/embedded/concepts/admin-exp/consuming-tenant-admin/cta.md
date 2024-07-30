@@ -70,5 +70,5 @@ SharePoint Embedded has three billing meters as shown. Refer to the [product pag
 ### Set Up Guide
 1. A valid Azure subscription is required, You can create one by following steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 2. A valid Azure resource group is required. You can create one by following steps here to [create an resrouce group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
-3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section.
+3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select Use content AI with Microsoft Syntex. 
   ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
