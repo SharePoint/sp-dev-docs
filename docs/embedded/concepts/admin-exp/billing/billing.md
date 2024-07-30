@@ -21,32 +21,33 @@ With pass-through billing, consumption-based charges are billed directly to the 
 
 ![Pass Through](../../../images/2bill521.png)
 
-## Prerequisites to set up Pay-as-you-go for SharePoint Embedded
+## Prerequisites to create SharePoint Embedded container type
+New container type will be created using **SharePoint Online Management Shell**:
+1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
+1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
+1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
+1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
+1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation.
 
-To enable PAYG on SharePoint Embedded, you need:
-
-1. Existing SharePoint tenancy
-1. An Azure subscription in the tenancy
-1. A resource group attached to the Azure subscription
 
 ### Roles and Permissions
 
 - Admin who sets up billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
 - Admin needs to have a SharePoint Embedded Administrator or Global Admin role to operate billing cmdlets.
 
+### Azure Subscription
+For Standard Billing container type, developer admin need to set up:
+- An existing SharePoint tenancy
+- An Azure subscription in the tenancy
+- A resource group attached to the Azure subscription
+
 ## Set up a Standard Billing container type
 
 For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
-Here are the step-by-step instructions on how to create a standard billing container:
-
-1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
-1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
-1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation.
-1. Create container type using `New-SPOContainerType` cmdlet by providing an **azure subscription**, **resource group** associated with the subscription and a **region**.
-
-    1. If you don't have an Azure subscription, you can create on by following steps here to [create an Azure subscription in your tenancy](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
-    1. If you don't have a resource group, you can create on by following steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
+SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet by providing an **azure subscription**, **resource group** associated with the subscription and a **region**.
+- If you don't have an Azure subscription, you can create on by following steps here to [create an Azure subscription in your tenancy](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions),
+- If you don't have a resource group, you can create on by following steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
 
 ```powershell
 New-SPOContainerType -ContainerTypeName <ContainerTypeName>
@@ -84,6 +85,16 @@ You can view properties of a container type and associated billing properties by
     ```powershell
     Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
     ```
+
+
+## Set up a Pass-through Billing container type
+For Pass-through Billing container types, developer admin don't have to set up billing in the developer tenant. SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet with  `isPassThroughBilling` specified.
+
+```powershell
+New-SPOContainerType -ContainerTypeName <ContainerTypeName>
+                     -OwningApplicationId <OwningApplicationId>
+                     -sPassThroughBilling 
+```
 
 ## SharePoint Embedded meters
 
