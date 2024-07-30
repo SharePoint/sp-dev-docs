@@ -68,7 +68,14 @@ SharePoint Embedded has three billing meters as shown. Refer to the [product pag
 |           Egress                     |  $/GB              |
 
 ### Set Up Guide
-1. A valid Azure subscription is required, You can create one by following steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+1. A valid Azure subscription is required. You can create one by following steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 2. A valid Azure resource group is required. You can create one by following steps here to [create an resrouce group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
-3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select Use content AI with Microsoft Syntex. 
+3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.** 
   ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+4. Select **Go to Syntex settings**.
+5. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
+![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+6. Follow the instruction on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
+
+### [Billing Management](../billing/billingmanagement.md)
+The [Microsoft Cost Management portal](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal) provides a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Microsoft Cost Management portal.
