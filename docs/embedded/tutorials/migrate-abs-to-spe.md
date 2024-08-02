@@ -21,6 +21,13 @@ This tutorial will guide you through the process of migrating content from Azure
 1. Azure Blob Storage container
     - For more information how to set up [ABS container](https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction)
 
+### Packages
+1. Microsoft Graph SDK (version 5.56.0)
+1. Azure.Identity (version 1.12.0)
+1. Azure.Storage.Blobs (version 12.21.0)
+1. CommandLineParser (version 2.9.1)
+1. Newtonsoft.Json (13.0.3)
+
 # Authenication
 
 ## Azure Blob Storage
