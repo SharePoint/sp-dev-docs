@@ -28,7 +28,7 @@ This tutorial will guide you through the process of migrating content from Azure
 1. CommandLineParser (version 2.9.1)
 1. Newtonsoft.Json (13.0.3)
 
-# Authenication
+# Authentication
 
 ## Azure Blob Storage
 
