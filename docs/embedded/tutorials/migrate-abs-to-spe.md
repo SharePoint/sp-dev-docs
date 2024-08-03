@@ -37,16 +37,18 @@ This tutorial will guide you through the process of migrating content from Azure
 
 ### SharePoint Embedded site
 
-1. App type - A guest app
+Minimum Requirements
+1. App type - Owning app
 1. Credentials - SPE client id and SPE container
     -  Have permissions to Write and Create folder in the container
 1. Permission - "User.Read", "FileStorage.Container.Selected", "Files.ReadWrite"
+1. Add `Mobile and desktop application` - add redirect URI `http://localhost`
 
 ## Overview of the Sample App
 
 ### Description
 
-The sample app is called "MigrateABStoSPE" and it is designed to migrate files from an Azure Blob Storage (ABS) container to a SharePoint Online (SPE) container. It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS and JSON data respectively. The app authenticates with both ABS and SPE using client credentials and performs the migration of files.
+The sample app is called "MigrateABStoSPE" and it is designed to migrate files from an Azure Blob Storage (ABS) container to a SharePoint Embedded (SPE) container. It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS and JSON data respectively. The app authenticates with both ABS and SPE using client credentials and performs the migration of files.
 
 ### Running the Sample App
 
@@ -200,6 +202,8 @@ To recap, we:
 Understanding these steps is crucial for migrating content from ABS container to SPE container. Now, try implementing these steps in your own projects and see the difference it makes!
 
 Happy coding!
+
+https://review.learn.microsoft.com/en-us/sharepoint/dev/embedded/tutorials/azure/storage/blobs/storage-blobs-introduction
 
 ### Next Steps
 - For more information about Blob Storage, see [Blob Storage documentation](../../../../azure/storage/blobs/storage-blobs-introduction).
