@@ -58,8 +58,8 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
 1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
 1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
-    - The SPE client ID: This is the client ID that you are authenticating against in the SPE.
-    - The SPE container ID: This is the container ID that you are migrating content to in the SPE.
+    - The SPE client ID: This is the client that you are authenticating against in the SPE.
+    - The SPE container ID: This is the container that you are migrating content to in the SPE.
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
