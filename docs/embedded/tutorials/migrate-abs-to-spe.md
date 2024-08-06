@@ -9,11 +9,11 @@ ms.localizationpriority: high
 
 ## Purpose
 
-This tutorial will guide you through the process of migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE). This is particularly useful for smaller customers who need to move their content efficiently.
+This tutorial will guide you through migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE). This is particularly useful for customers who have 500 docs in the blob storage container.
 
 ### Prerequisites
 
-1. .NET Core SDK
+1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 1. Dotnet environment to run sample app
     - It can be run Windows, Linux and MacOs
 1. SharePoint Embedded container
@@ -66,23 +66,9 @@ For example, the command to run the application with the required arguments woul
 
    `dotnet run Program.cs -s "<sas url>" -c "<clientid>" -o "<container id>" [-b "[\""example1.txt\"", \""example2.txt\"", \""example3.txt\""]"]`
 
-### Code Structure
-
-The code is organized into a single file named "Program.cs" within the "MigrateABStoSPE" namespace. The file contains the main entry point of the application, which is the Main method. It also includes several helper methods and a class definition for the Options class.
-
-The Options class is a nested class within the Program class and defines the command-line options that the app accepts. These options include the container-level SAS URL, the SPE client ID, the SPE container ID, and an optional list of blobs to copy in JSON format.
-
-The Main method is an asynchronous method that serves as the entry point of the application. It starts by parsing the command-line arguments using the Parser.Default.ParseArguments method and populating the corresponding variables with the provided values. It then calls the ValidateArguments method to validate the provided arguments.
-
-After validating the arguments, the app proceeds to authenticate with both SPE and ABS using the provided credentials. If the authentication is successful, it retrieves the list of blobs to migrate from the ABS container. If no blob list is provided, it retrieves all the blobs in the container.
-
-Next, the app iterates over the list of blobs and prints each blob's name to the console. It then creates an instance of the FileMigrator class and calls its MigrateFiles method to perform the actual migration of files.
-
-Finally, the app checks if any blobs failed to upload during the migration process. If there are failed blobs, it prints them to the console along with a line of code that can be used to re-run the migration for those specific blobs. If all the blobs were successfully migrated, it prints a success message to the console.
-
 ### Blob and SPE Item Structure
 
-ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder.
+ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder. If you migrate the file to the root, you can ignore this section.
 
 **Source**
 - Container Name: Container1
@@ -103,14 +89,14 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
 
-### Connecting to Azure Blob Storage Container
+This provides code snippets in how to accomplish the migration. Keep in mind all the validation has been removed.
 
+### Connecting to Azure Blob Storage Container
 ```C#
     _containerClient = new BlobContainerClient(new Uri(_containerLevelSASUrl));
 ```
 
 ### Connecting to SharePoint Embedded
-
 ```C#
     string[] _scopes = { "User.Read", "FileStorage.Container.Selected", "Files.ReadWrite" };
     InteractiveBrowserCredentialOptions interactiveBrowserCredentialOptions = new InteractiveBrowserCredentialOptions()
@@ -126,21 +112,146 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
     var user = await _graphClient.Me.GetAsync();
 ```
 
-### Downloading Data from Azure Blob Storage Container
+### Getting the blob list
+```C#
+    var blobs = new List<string>();
+    await foreach (var blobItem in _containerClient.GetBlobsAsync())
+    {
+        blobs.Add(blobItem.Name);
+    }
+    return blobs;
+```
 
+### Thread pooling
+```C#
+    private CountdownEvent _countdown;
+
+    // This is how the thread pool knows how many files are being migrated
+    _countdown = new CountdownEvent(blobs.Count);
+```
+
+### Traverse blob list
+```C#
+    /// It creates a new folder in the destination. The name of the folder is the blob's container name.
+    containerFolder = await _gcm.CreateFolder(_containerName, "root");
+
+    /// Traverse the blob list
+    foreach (var blobName in fileList)
+    {
+        FileStructure fs = new FileStructure() { blobName = blobName };
+
+        /// This function parses the flat file into folder hierarchy and create the folder structure in the destination. It will retrieve the parentFolderId that the file should be copied to.
+        /// If you are going to copy it to root you can comment this line out. The parentFolderId will be containerFolder.Id
+        fs.parentFolderId = TraverseFileListing(fs, containerFolder.Id)
+
+        /// This is where the thread pool happens
+        ThreadPool.QueueUserWorkItem(MigrateFile, fs);
+    }
+
+    // Call so the program doesn't end, it waits for all the files to be processed
+    _countdown.Wait();
+```
+
+### Traverse file listing
+```C#
+    // Check if file exist before traversing to same time
+    ...
+
+    // Parse for folder path not including the file name and put it in an array
+    var pathSegments = filePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+    string[] directoriesParts = pathSegments.Take(pathSegments.Length - 1).ToArray();
+
+    // Traverse the folder listing and create 1 folder at a time
+    string relativePath = _containerName;
+    string newFolderId = parentFolderId;
+    foreach (string folderName in directoriesParts)
+    {
+        string newPath = relativePath + _separator + folderName;
+        ...
+
+        DriveItem subFolder = await _gcm.CheckIfItemExists(folderName, newFolderId);
+        if (subFolder == null)
+        {
+            subFolder = await _gcm.CreateFolder(folderName, newFolderId);
+            ...
+        }
+        newFolderId = subFolder.Id;
+
+        relativePath = newPath;
+    }
+
+    return newFolderId;
+```
+
+### Check if item exists
+```C#
+    var item = await _graphClient.Drives[_containerId].Items[parentFolderId].ItemWithPath(itemPath).GetAsync();
+```
+
+### Create folder
+```C#
+    private const int _maxRetry = 3;
+
+    var folder = new DriveItem
+    {
+        Name = folderName,
+        Folder = new Folder(),
+        AdditionalData = new Dictionary<string, object>()
+        {
+            { "@microsoft.graph.conflictBehavior", "fail" }
+        }
+    };
+
+    // FOr more information on retry handler, https://github.com/microsoftgraph/msgraph-sdk-dotnet/blob/dev/docs/upgrade-to-v5.md#per-request-options.
+    var retryHandlerOption = new RetryHandlerOption
+    {
+        MaxRetry = _maxRetry,
+        ShouldRetry = (delay, attempt, message) => true
+    };
+
+    var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId].Children.PostAsync(folder, requestConfiguration => requestConfiguration.Options.Add(retryHandlerOption));
+```
+
+### MigrateFile
+```C#
+    internal async void MigrateFile(Object stateInfo)
+    {
+        var fileStructure = (FileStructure)stateInfo;
+
+        // Check if file exists in destination
+        ...
+
+        // Migrate the file
+        bool result = await TransferBlobToSharePointAsync(fileStructure.blobName, fileStructure.parentFolderId);
+
+        // Signal the countdown event that a file has been migrated
+        _countdown.Signal();
+
+        return;
+    }
+```
+
+### TransferBlobToSharePointAsync
+```C#
+    Stream blobStream = await _abm.DownloadBlobStreamAsync(blobName);
+
+    string fileName = Path.GetFileName(blobName);
+    await _gcm.UploadStreamToSharePointAsync(blobStream, parentFolderId, fileName);
+```
+
+### DownloadBlobStreamAsync
 ```C#
     BlobClient blobClient = _containerClient.GetBlobClient(blobName);
 
     MemoryStream memoryStream = new MemoryStream();
     await blobClient.DownloadToAsync(memoryStream);
     memoryStream.Position = 0; // Reset the stream position to the beginning
-    return memoryStream;
 ```
 
-### Upload Data to SharePoint Embedded
-
+### UploadStreamToSharePointAsync
 ```C#
-    private const int _maxChunkSize = 320 * 1024;
+    int _maxChunkSize = 320 * 1024;
+
     var uploadSessionRequestBody = new CreateUploadSessionPostRequestBody()
     {
         AdditionalData = new Dictionary<string, object>
@@ -156,7 +267,12 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
         .CreateUploadSession
         .PostAsync(uploadSessionRequestBody);
 
+    // The stream is the same stream from the downloading the blob
     var fileUploadTask = new LargeFileUploadTask<DriveItem>(uploadSession, stream, _maxChunkSize, _graphClient.RequestAdapter);
+        IProgress<long> progress = new Progress<long>(prog => Console.WriteLine($"Uploaded {fileName} {prog} bytes"));
+
+    // Check uploadResult.UploadSucceeded to see if it is successful
+    var uploadResult = await fileUploadTask.UploadAsync(progress);
 ```
 
 ## Handling Errors and Exceptions
