@@ -59,13 +59,14 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
 1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
 1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
+    - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
     - The SPE container ID: This is the container you are migrating content to in the SPE.
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
 
-   `dotnet run Program.cs -s "<sas url>" -c "<clientid>" -o "<container id>" [-b "[\""example1.txt\"", \""example2.txt\"", \""example3.txt\""]"]`
+`dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]`
 
 ### Blob and SPE Item Structure
 
@@ -109,7 +110,7 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
     _graphClient = new GraphServiceClient(interactiveBrowserCredential, scopes, null);
 
-    // Will open up a brower to provide your credentials
+    // Will open up a browser to provide your credentials
     var user = await _graphClient.Me.GetAsync();
 ```
 
@@ -133,19 +134,19 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
 ### Traverse blob list
 ```C#
-    /// It creates a new folder in the destination. The name of the folder is the blob's container name.
+    // It creates a new folder in the destination. The name of the folder is the blob's container name.
     containerFolder = await _gcm.CreateFolder(_containerName, "root");
 
-    /// Traverse the blob list
+    // Traverse the blob list
     foreach (var blobName in fileList)
     {
         FileStructure fs = new FileStructure() { blobName = blobName };
 
-        /// This function parses the flat file into folder hierarchy and create the folder structure in the destination. It will retrieve the parentFolderId that the file should be copied to.
-        /// If you are going to copy it to root you can comment this line out. The parentFolderId will be containerFolder.Id
+        // This function parses the flat file into folder hierarchy and create the folder structure in the destination. It will retrieve the parentFolderId that the file should be copied to.
+        // If you are going to copy it to root you can comment this line out. The parentFolderId will be containerFolder.Id
         fs.parentFolderId = TraverseFileListing(fs, containerFolder.Id)
 
-        /// This is where the thread pool happens
+        // This is where the thread pool happens
         ThreadPool.QueueUserWorkItem(MigrateFile, fs);
     }
 
