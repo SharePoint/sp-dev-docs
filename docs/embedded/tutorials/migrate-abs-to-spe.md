@@ -299,14 +299,8 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
 ### Verification
 1. When the file is queued, it will print to stdout.
-
-1. If the upload is **successfully** it will print out to stdout and add to array to an array blobUploadSuccessfully. When the application is complete, this data wil be set as an environment variable named `BLOB_UPLOAD_SUCCESSFULLY`.
-
-1. If the upload **fails** it will print out to stdout and add to array blobUploadFailed. When the application is complete, this data wil be set as an environment variable named `BLOB_UPLOAD_FAILED`.
-
-1. If the file **already exist** in the destination it will print out to stdout and add to array blobExistJoined. When the application is complete, this data wil be set as an environment variable named `BLOB_EXIST`.
-
-1. To access the environment, open a new powershell or command prompt and type `echo $env:BLOB_EXIST` for example.
+1. If all blobs are uploaded successfully, it will print to stdout `Congratulations`
+1. If there are errors, it will output it to a file. The file name will be print to stdout. It will also, print out a command for incremental re-run.
 
 ## Conclusion
 
