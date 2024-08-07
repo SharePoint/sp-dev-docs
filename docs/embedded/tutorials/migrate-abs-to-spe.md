@@ -13,6 +13,8 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 
 ### Prerequisites
 
+1. M365 subscription
+1. Azure account
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 1. Dotnet environment to run sample app
     - It can be run Windows, Linux and MacOs
@@ -38,7 +40,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 ### SharePoint Embedded site
 
 Minimum Requirements
-1. App type - Owning app
+1. An app registration in Azure
 1. Credentials - SPE client id and SPE container
     -  Have permissions to Write and Create folder in the container
 1. Permission - "User.Read", "FileStorageContainer.Selected", "Files.ReadWrite"
@@ -61,7 +63,7 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE.
+    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get [container id](../../../../graph/api/filestorage-list-containers?view=graph-rest-1.0&tabs=http)
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
@@ -79,7 +81,7 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
     - Blob name: FolderA/FolderB/FolderC/blob3.txt
 
 **Destination**
-- root
+- Drive Item folder
     - Container1
         - FolderA
             - blob1.txt
@@ -320,8 +322,6 @@ To recap, we:
 Understanding these steps is crucial for migrating content from ABS container to SPE container. Now, try implementing these steps in your own projects and see the difference it makes!
 
 Happy coding!
-
-https://review.learn.microsoft.com/en-us/sharepoint/dev/embedded/tutorials/azure/storage/blobs/storage-blobs-introduction
 
 ### Next Steps
 - For more information about Blob Storage, see [Blob Storage documentation](../../../../azure/storage/blobs/storage-blobs-introduction).
