@@ -63,7 +63,7 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get [container id](../../../../graph/api/filestorage-list-containers?view=graph-rest-1.0&tabs=http)
+    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get [container id](../../../../graph/api/filestorage-list-containers)
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
