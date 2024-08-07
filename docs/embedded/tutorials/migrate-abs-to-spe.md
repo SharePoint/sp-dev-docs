@@ -1,11 +1,11 @@
 ---
-title: Sample App To Migrate from Azure Blob Storage container to SharePoint Embedded container 
+title: Sample App to Migrate from Azure Blob Storage container to SharePoint Embedded container
 description: Tutorial in how to migrate from Azure Blob Storage container to SharePoint Embedded container
 ms.date: 07/31/2024
 ms.localizationpriority: high
 ---
 
-# Tutorial For Migrating Content From ABS to SPE
+# Tutorial For Migrating Content From ABS To SPE
 
 ## Purpose
 
@@ -41,8 +41,9 @@ Minimum Requirements
 1. App type - Owning app
 1. Credentials - SPE client id and SPE container
     -  Have permissions to Write and Create folder in the container
-1. Permission - "User.Read", "FileStorage.Container.Selected", "Files.ReadWrite"
+1. Permission - "User.Read", "FileStorageContainer.Selected", "Files.ReadWrite"
 1. Add `Mobile and desktop application` - add redirect URI `http://localhost`
+![alt text](../images/app-registration-console-platform.png)
 
 ## Overview of the Sample App
 
@@ -58,8 +59,8 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
 1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
 1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
-    - The SPE client ID: This is the client that you are authenticating against in the SPE.
-    - The SPE container ID: This is the container that you are migrating content to in the SPE.
+    - The SPE client ID: This is the client you are authenticating against in the SPE.
+    - The SPE container ID: This is the container you are migrating content to in the SPE.
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
@@ -68,7 +69,7 @@ For example, the command to run the application with the required arguments woul
 
 ### Blob and SPE Item Structure
 
-ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder. If you migrate the file to the root, you can ignore this section.
+ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder. If you are migrating to the root folder, you can ignore this section.
 
 **Source**
 - Container Name: Container1
@@ -89,7 +90,7 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
 
-This provides code snippets in how to accomplish the migration. Keep in mind all the validation has been removed.
+This provides code snippets on how to accomplish the migration. Keep in mind all the validation has been removed.
 
 ### Connecting to Azure Blob Storage Container
 ```C#
@@ -98,7 +99,7 @@ This provides code snippets in how to accomplish the migration. Keep in mind all
 
 ### Connecting to SharePoint Embedded
 ```C#
-    string[] _scopes = { "User.Read", "FileStorage.Container.Selected", "Files.ReadWrite" };
+    string[] _scopes = { "User.Read", "FileStorageContainer.Selected", "Files.ReadWrite" };
     InteractiveBrowserCredentialOptions interactiveBrowserCredentialOptions = new InteractiveBrowserCredentialOptions()
     {
         ClientId = clientId,
@@ -112,7 +113,7 @@ This provides code snippets in how to accomplish the migration. Keep in mind all
     var user = await _graphClient.Me.GetAsync();
 ```
 
-### Getting the blob list
+### Geting the blob list
 ```C#
     var blobs = new List<string>();
     await foreach (var blobItem in _containerClient.GetBlobsAsync())
@@ -202,7 +203,7 @@ This provides code snippets in how to accomplish the migration. Keep in mind all
         }
     };
 
-    // FOr more information on retry handler, https://github.com/microsoftgraph/msgraph-sdk-dotnet/blob/dev/docs/upgrade-to-v5.md#per-request-options.
+    // For more information on retry handler, https://github.com/microsoftgraph/msgraph-sdk-dotnet/blob/dev/docs/upgrade-to-v5.md#per-request-options.
     var retryHandlerOption = new RetryHandlerOption
     {
         MaxRetry = _maxRetry,
@@ -280,21 +281,21 @@ This provides code snippets in how to accomplish the migration. Keep in mind all
 ### Common Issues
 
 1. File already exists in destination
-    - This app checks to see if the file name exist in the destination before it uploads. If there is a file with the exact same name it will not do the upload again. It will print to stdout a message that the file already exist. To fix you can either delete the file from the destination, or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
+    - This app checks to see if the file name exists in the destination before it uploads. If there is a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
 1. Passing a blob list
-    - The blob list is string that would be converted into Json value. The double quotes that wraps each item in the array would need to be escape. The app checks if this value is in correct format, if it isn't it will print an error to stdout and exit the program.
-    - For example: 
+    - The blob list is string that would be converted into Json value. The double quotes that wrap each item in the array would need to be escaped. The app checks if this value is in correct format, if it isn't it will print an error to stdout and exit the program.
+    - For example:
         - Correct: `"[\""example1.txt\", \""example2.txt\", \""example3.txt\"]"`
         - Incorrect: `"["example1.txt", "example2.txt", "example3.txt"]"`
 1. Not giving enough permission to access the ABS container
-    - The minimum permissions is Read and List
+    - The minimum permissions are Read and List
 1. Assigning the correct permissions to the SPE container
-    - The container exists because you can get lists all of the containers. However, when you try to do something to act on the container, it just exits the program.
+    - The container exists because you can get lists of all the containers. However, when you try to do something to act on the container, it just exits the program.
 
 ## Testing the Migration
 
 ### Verification
-1. When the file is queued, it will print to stdout. 
+1. When the file is queued, it will print to stdout.
 
 1. If the upload is **successfully** it will print out to stdout and add to array to an array blobUploadSuccessfully. When the application is complete, this data wil be set as an environment variable named `BLOB_UPLOAD_SUCCESSFULLY`.
 
