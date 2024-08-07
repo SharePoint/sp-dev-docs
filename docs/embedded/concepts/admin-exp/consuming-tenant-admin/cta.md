@@ -51,3 +51,34 @@ For information on consuming tenant admin in SharePoint Admin see [container man
 ## Security and Compliance Administration
 
 SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../security-and-compliance.md).
+
+## Set Up Billing for Pass-through App
+
+To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin needs to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/). No user can access any Pass-through SharePoint Embedded apps before a valid billing is set up for SharePoint Embedded platform.
+
+### [Meters](../billing/meters.md)
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
+
+SharePoint Embedded has three billing meters as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details 
+
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SharePoint Embedded Service Meters &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Meter Unit &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :--------------------------------:   | :----------:       |
+|              Storage                 |   $/GB             |
+|   API Transactions                   | $/Transactions     |
+|           Egress                     |  $/GB              |
+
+### Set Up Guide
+1. A valid Azure subscription is required. You can create one by following steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+2. A valid Azure resource group is required. You can create one by following steps here to [create an resrouce group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
+3. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.** 
+  ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+4. Select **Go to Syntex settings**.
+5. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
+![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+6. Follow the instruction on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
+
+### [Billing Management](../billing/billingmanagement.md)
+The [Microsoft Cost Management portal](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal) provides a comprehensive overview of your costs, allowing you to track and analyze your spending for SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Microsoft Cost Management portal.
+
+### Invalid Billing/Turn off SharePoint Embedded
+If you turn off SharePoint Embedded or disconnect the linked Azure subscription, all users will immediately lose access to any application built on the service along with any read and write permissions.
