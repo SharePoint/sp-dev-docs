@@ -19,9 +19,9 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. Dotnet environment to run sample app
     - It can be run Windows, Linux and MacOs
 1. SharePoint Embedded container
-    - For more information how to set up [SPE container](https://aka.ms/start-spe)
+    - For more information on how to set up a [SPE container](https://aka.ms/start-spe)
 1. Azure Blob Storage container
-    - For more information how to set up [ABS container](../../../../azure/storage/blobs/storage-blobs-introduction)
+    - For more information on how to set up an [ABS container](../../../../azure/storage/blobs/storage-blobs-introduction)
 
 ### Packages
 1. Microsoft Graph SDK (version 5.56.0)
@@ -63,7 +63,7 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get [container id](../../../../graph/api/filestorage-list-containers)
+    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](../../../../graph/api/filestorage-list-containers)
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
