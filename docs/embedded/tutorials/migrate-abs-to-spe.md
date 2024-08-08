@@ -14,7 +14,9 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 ### Prerequisites
 
 1. M365 subscription
+    - For more information on how to get a [M365 subscription](../../../../training/m365/)
 1. Azure account
+    - For more information on how to set up an [Azure account](https://azure.microsoft.com/Account/Services)
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 1. Dotnet environment to run sample app
     - It can be run Windows, Linux and MacOs
