@@ -43,7 +43,7 @@ Minimum Requirements
 1. An app registration in Azure
 1. Credentials - SPE client id and SPE container
     -  Have permissions to Write and Create folder in the container
-1. Permission - "User.Read", "FileStorageContainer.Selected", "Files.ReadWrite"
+1. Permission - "User.Read", "FileStorageContainer.Selected"
 1. Add `Mobile and desktop application` - add redirect URI `http://localhost`
 ![alt text](../images/app-registration-console-platform.png)
 
@@ -93,7 +93,7 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
 
-This provides code snippets on how to accomplish the migration. Keep in mind all the validation has been removed.
+This section provides code snippets on how to accomplish the migration. All the validation has been removed for readability.
 
 ### Connecting to Azure Blob Storage Container
 ```C#
@@ -102,7 +102,7 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
 ### Connecting to SharePoint Embedded
 ```C#
-    string[] _scopes = { "User.Read", "FileStorageContainer.Selected", "Files.ReadWrite" };
+    string[] _scopes = { "User.Read", "FileStorageContainer.Selected" };
     InteractiveBrowserCredentialOptions interactiveBrowserCredentialOptions = new InteractiveBrowserCredentialOptions()
     {
         ClientId = clientId,
@@ -194,8 +194,6 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
 ### Create folder
 ```C#
-    private const int _maxRetry = 3;
-
     var folder = new DriveItem
     {
         Name = folderName,
@@ -205,15 +203,7 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
             { "@microsoft.graph.conflictBehavior", "fail" }
         }
     };
-
-    // For more information on retry handler, https://github.com/microsoftgraph/msgraph-sdk-dotnet/blob/dev/docs/upgrade-to-v5.md#per-request-options.
-    var retryHandlerOption = new RetryHandlerOption
-    {
-        MaxRetry = _maxRetry,
-        ShouldRetry = (delay, attempt, message) => true
-    };
-
-    var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId].Children.PostAsync(folder, requestConfiguration => requestConfiguration.Options.Add(retryHandlerOption));
+    var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId].Children.PostAsync(folder);
 ```
 
 ### MigrateFile
@@ -285,22 +275,22 @@ This provides code snippets on how to accomplish the migration. Keep in mind all
 
 1. File already exists in destination
     - This app checks to see if the file name exists in the destination before it uploads. If there is a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
-1. Passing a blob list
-    - The blob list is string that would be converted into Json value. The double quotes that wrap each item in the array would need to be escaped. The app checks if this value is in correct format, if it isn't it will print an error to stdout and exit the program.
-    - For example:
-        - Correct: `"[\""example1.txt\", \""example2.txt\", \""example3.txt\"]"`
-        - Incorrect: `"["example1.txt", "example2.txt", "example3.txt"]"`
+1. The file for the list of blobs is not found
+1. The format for the list of blobs - one blob per line, without quotes around the blob name
 1. Not giving enough permission to access the ABS container
     - The minimum permissions are Read and List
-1. Assigning the correct permissions to the SPE container
-    - The container exists because you can get lists of all the containers. However, when you try to do something to act on the container, it just exits the program.
+1. Not giving enough permissions to the SPE container
+    - The required scope is User.Read and FileStorageContainer.Selected
+    - Remember to grant admin consent
+    - Remember to create the mobile & console platform app
 
 ## Testing the Migration
 
 ### Verification
-1. When the file is queued, it will print to stdout.
+
+1. When the file is queued, it will print to stdout
 1. If all blobs are uploaded successfully, it will print to stdout `Congratulations`
-1. If there are errors, it will output it to a file. The file name will be print to stdout. It will also, print out a command for incremental re-run.
+1. If there are errors, it will send the failed blob list to a file. The file name will be print to stdout. It will also, print out a command for incremental re-run.
 
 ## Conclusion
 
