@@ -13,10 +13,10 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 
 ### Prerequisites
 
-1. M365 subscription
-    - For more information on how to get a [M365 subscription](/training/m365/)
-1. Azure account
-    - For more information on how to set up an [Azure account](https://azure.microsoft.com/Account/Services)
+1. A Microsoft Entra ID application registration. See [register an application](/graph/auth-register-app-v2).
+1. Your Microsoft Entra ID tenant has a [Microsoft 365 subscription](/training/m365/).
+1. A Microsoft Entra ID tenant. If you don't have a tenant, create a [free Azure account to get free subscription](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+1. An account that has at least the Global Administrator or SharePoint Embedded Administrator role.
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 1. Dotnet environment to run sample app
     - It can be run Windows, Linux and MacOs
@@ -338,4 +338,4 @@ Happy coding!
 
 ### Code Repository
 
-GitHub link
+The sample app can be found in the [SharePoint Embedded Samples repository](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/migrate-abs-to-spe).
