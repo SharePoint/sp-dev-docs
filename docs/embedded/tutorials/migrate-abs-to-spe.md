@@ -1,15 +1,15 @@
 ---
-title: Sample App to Migrate from Azure Blob Storage container to SharePoint Embedded container
-description: Tutorial in how to migrate from Azure Blob Storage container to SharePoint Embedded container
+title: Tutorial to Migrate from Azure Blob Storage container to SharePoint Embedded container
+description: Tutorial in how to migrate from Azure Blob Storage container to SharePoint Embedded container Using C#
 ms.date: 07/31/2024
 ms.localizationpriority: high
 ---
 
-# Tutorial For Migrating Content From ABS To SPE
+# Tutorial For Migrating Content From Azure Blob Storage Container To SharePoint Embedded Container
 
 ## Purpose
 
-This tutorial will guide you through migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE). This is particularly useful for customers who have 500 docs in the blob storage container.
+This tutorial will guide you through migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE) using C#. This is particularly useful for customers who have 500 docs in the blob storage container.
 
 ### Prerequisites
 
@@ -25,13 +25,6 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. Azure Blob Storage container
     - For more information on how to set up an [ABS container](/azure/storage/blobs/storage-blobs-introduction)
 
-### Packages
-1. Microsoft Graph SDK (version 5.56.0)
-1. Azure.Identity (version 1.12.0)
-1. Azure.Storage.Blobs (version 12.21.0)
-1. CommandLineParser (version 2.9.1)
-1. Newtonsoft.Json (13.0.3)
-
 ## Authentication
 
 ### Azure Blob Storage
@@ -39,62 +32,24 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. Credentials - Container level Shared Access Signature (SAS) URL.
 1. Permission - Read and List
 
-### SharePoint Embedded site
+### SharePoint Embedded
 
-Minimum Requirements
-1. An app registration in Azure
-1. Credentials - SPE client id and SPE container
-    -  Have permissions to Write and Create folder in the container
-1. Permission - "User.Read", "FileStorageContainer.Selected"
-1. Add `Mobile and desktop application` - add redirect URI `http://localhost`
+1. An [Azure account](https://portal.azure.com)
+1. A SharePoint Tenant where you will create your containers and its Tenant Id
+1. An onboarded application id (sometimes called client id) and its corresponding ContainerTypeId
+1. Create new App Registration in [Azure's App Registration portal](https://portal.azure.com).
+1. In the App Registration, add a new Mobile & Console application platform in [Azure's App Registration Authenticate portal](https://portal.azure.com)
 ![alt text](../images/app-registration-console-platform.png)
-
-## Overview of the Sample App
-
-### Description
-
-The sample app is called "MigrateABStoSPE" and it is designed to migrate files from an Azure Blob Storage (ABS) container to a SharePoint Embedded (SPE) container. It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS and JSON data respectively. The app authenticates with both ABS and SPE using client credentials and performs the migration of files.
-
-### Running the Sample App
-
-1.	Open a terminal or command prompt.
-1.	Navigate to the directory where the Program.cs file is located.
-1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command is not recognized, you can download and install the .NET Core SDK from the official Microsoft website.
-1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
-1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
-    - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
-    - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
-    - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](/graph/api/filestorage-list-containers)
-    - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
-
-For example, the command to run the application with the required arguments would look like this:
-
-`dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]`
-
-### Blob and SPE Item Structure
-
-ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder. If you are migrating to the root folder, you can ignore this section.
-
-**Source**
-- Container Name: Container1
-    - Blob name: FolderA/blob1.txt
-    - Blob name: FolderA/FolderB/blob2.txt
-    - Blob name: FolderA/FolderB/FolderC/blob3.txt
-
-**Destination**
-- Drive Item folder
-    - Container1
-        - FolderA
-            - blob1.txt
-            - FolderB
-                - blob2.txt
-                - FolderC
-                    - blob3.txt
-
+1. A ContainerType
+1. A Container
+1. Having the application registered in the consuming tenant (even if the owner of the application is the same as the consuming)
+1. Having the containerType registered in the consuming tenant (even if the owner of the CT is the same as the consuming)
+1. Consuming tenant user name and password credentials - will be required to authenticate the Graph client
+1. Permission - "User.Read", "FileStorageContainer.Selected"
 
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
 
+### Description
 This section provides code snippets on how to accomplish the migration. All the validation has been removed for readability.
 
 ### Connecting to Azure Blob Storage Container
@@ -114,7 +69,7 @@ This section provides code snippets on how to accomplish the migration. All the 
 
     _graphClient = new GraphServiceClient(interactiveBrowserCredential, scopes, null);
 
-    // Will open up a browser to provide your credentials
+    // Will open up a browser to provide your consuming tenant admin credentials
     var user = await _graphClient.Me.GetAsync();
 ```
 
@@ -136,6 +91,15 @@ This section provides code snippets on how to accomplish the migration. All the 
     _countdown = new CountdownEvent(blobs.Count);
 ```
 
+### FileStructure
+```C#
+    public class FileStructure
+    {
+        public string blobName { get; set; }
+        public string parentFolderId { get; set; }
+    }
+```
+
 ### Traverse blob list
 ```C#
     // It creates a new folder in the destination. The name of the folder is the blob's container name.
@@ -150,7 +114,8 @@ This section provides code snippets on how to accomplish the migration. All the 
         // If you are going to copy it to root you can comment this line out. The parentFolderId will be containerFolder.Id
         fs.parentFolderId = TraverseFileListing(fs, containerFolder.Id)
 
-        // This is where the thread pool happens
+        // This is where the thread pool happens.
+        // It takes in callback function and an Object parameter.
         ThreadPool.QueueUserWorkItem(MigrateFile, fs);
     }
 
@@ -160,9 +125,6 @@ This section provides code snippets on how to accomplish the migration. All the 
 
 ### Traverse file listing
 ```C#
-    // Check if file exist before traversing to same time
-    ...
-
     // Parse for folder path not including the file name and put it in an array
     var pathSegments = filePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
     string[] directoriesParts = pathSegments.Take(pathSegments.Length - 1).ToArray();
@@ -208,17 +170,24 @@ This section provides code snippets on how to accomplish the migration. All the 
     var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId].Children.PostAsync(folder);
 ```
 
-### MigrateFile
+### Migrate File
 ```C#
+    // The parameter must be of type Object.
     internal async void MigrateFile(Object stateInfo)
     {
         var fileStructure = (FileStructure)stateInfo;
 
-        // Check if file exists in destination
+        // Check if file exists in destination. If it exists
+        // - don't upload
+        // - check if the file is newer in the source than the destination - then upload
         ...
 
         // Migrate the file
-        bool result = await TransferBlobToSharePointAsync(fileStructure.blobName, fileStructure.parentFolderId);
+        // This where you download the blob as a stream from abs (code below)
+        ...
+
+        // Then upload the stream to SPE (code below)
+        ...
 
         // Signal the countdown event that a file has been migrated
         _countdown.Signal();
@@ -227,15 +196,7 @@ This section provides code snippets on how to accomplish the migration. All the 
     }
 ```
 
-### TransferBlobToSharePointAsync
-```C#
-    Stream blobStream = await _abm.DownloadBlobStreamAsync(blobName);
-
-    string fileName = Path.GetFileName(blobName);
-    await _gcm.UploadStreamToSharePointAsync(blobStream, parentFolderId, fileName);
-```
-
-### DownloadBlobStreamAsync
+### Downloading From The Blob From ABS As A Stream
 ```C#
     BlobClient blobClient = _containerClient.GetBlobClient(blobName);
 
@@ -244,7 +205,7 @@ This section provides code snippets on how to accomplish the migration. All the 
     memoryStream.Position = 0; // Reset the stream position to the beginning
 ```
 
-### UploadStreamToSharePointAsync
+### Uploading The Stream To SPE
 ```C#
     int _maxChunkSize = 320 * 1024;
 
@@ -264,12 +225,70 @@ This section provides code snippets on how to accomplish the migration. All the 
         .PostAsync(uploadSessionRequestBody);
 
     // The stream is the same stream from the downloading the blob
-    var fileUploadTask = new LargeFileUploadTask<DriveItem>(uploadSession, stream, _maxChunkSize, _graphClient.RequestAdapter);
+    var fileUploadTask = new LargeFileUploadTask<DriveItem>(uploadSession, memoryStream, _maxChunkSize, _graphClient.RequestAdapter);
         IProgress<long> progress = new Progress<long>(prog => Console.WriteLine($"Uploaded {fileName} {prog} bytes"));
 
     // Check uploadResult.UploadSucceeded to see if it is successful
     var uploadResult = await fileUploadTask.UploadAsync(progress);
 ```
+
+## Overview Of The Sample App
+
+### Description
+
+There is a sample app called "MigrateABStoSPE" and it is designed to migrate files from an Azure Blob Storage (ABS) container to a SharePoint Embedded (SPE) container. The code snippets provide in the `Migrating Data from Azure Blob Storage container to SharePoint Embedded container` are from the sample app.
+
+It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS and JSON data respectively. The app authenticates with both ABS and SPE using client credentials and performs the migration of files.
+
+### Packages
+1. Microsoft Graph SDK (version 5.56.0)
+1. Azure.Identity (version 1.12.0)
+1. Azure.Storage.Blobs (version 12.21.0)
+1. CommandLineParser (version 2.9.1)
+1. Newtonsoft.Json (13.0.3)
+
+### Out Of Scope
+
+1. How to deal with file already exist in destination - it fails, it doesn't overwrite or rename
+1. How to deal with ABS version newer than destination - it fails, because the file already exists in destination
+
+### Running The Sample App
+
+1.	Open a terminal or command prompt.
+1.	Navigate to the directory where the Program.cs file is located.
+1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command is not recognized, you can download and install the .NET Core SDK from the official Microsoft website.
+1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
+1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
+    - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
+    - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
+    - The SPE client ID: This is the client you are authenticating against in the SPE.
+    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](/graph/api/filestorage-list-containers)
+    - (optional) File name with full path that contains the blob list.
+    - (optional) File name with full path where to output failed blobs.
+
+For example, the command to run the application with the required arguments would look like this:
+
+`dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]`
+
+### Blob and SPE Item Structure
+
+ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container Id provided, with the container name as the top folder. If you are migrating to the root folder, you can ignore this section.
+
+**Source**
+- Container Name: Container1
+    - Blob name: FolderA/blob1.txt
+    - Blob name: FolderA/FolderB/blob2.txt
+    - Blob name: FolderA/FolderB/FolderC/blob3.txt
+
+**Destination**
+- Drive Item folder
+    - Container1
+        - FolderA
+            - blob1.txt
+            - FolderB
+                - blob2.txt
+                - FolderC
+                    - blob3.txt
 
 ## Handling Errors and Exceptions
 
@@ -302,6 +321,8 @@ In this tutorial, we explored how to migrate content from ABS container to SPE c
 
 To recap, we:
 1. Authenticated with ABS and Graph
+1. How to use thread pool to queue migration of blob
+1. Check if item exist in destination
 1. Retrieved the blob list from ABS container
 1. Uploaded the blob to the SPE container
 
