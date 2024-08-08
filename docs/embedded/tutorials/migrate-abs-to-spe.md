@@ -14,7 +14,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 ### Prerequisites
 
 1. M365 subscription
-    - For more information on how to get a [M365 subscription](../../../../training/m365/)
+    - For more information on how to get a [M365 subscription](/training/m365/)
 1. Azure account
     - For more information on how to set up an [Azure account](https://azure.microsoft.com/Account/Services)
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
@@ -23,7 +23,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. SharePoint Embedded container
     - For more information on how to set up a [SPE container](https://aka.ms/start-spe)
 1. Azure Blob Storage container
-    - For more information on how to set up an [ABS container](../../../../azure/storage/blobs/storage-blobs-introduction)
+    - For more information on how to set up an [ABS container](/azure/storage/blobs/storage-blobs-introduction)
 
 ### Packages
 1. Microsoft Graph SDK (version 5.56.0)
@@ -65,7 +65,7 @@ The sample app is called "MigrateABStoSPE" and it is designed to migrate files f
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](../../../../graph/api/filestorage-list-containers)
+    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](/graph/api/filestorage-list-containers)
     - (Optional) The list of blobs you want to copy in JSON format: This is an optional argument that allows you to specify a list of blobs to copy. The format should be an array of strings in JSON format.
 
 For example, the command to run the application with the required arguments would look like this:
@@ -310,7 +310,7 @@ Understanding these steps is crucial for migrating content from ABS container to
 Happy coding!
 
 ### Next Steps
-- For more information about Blob Storage, see [Blob Storage documentation](../../../../azure/storage/blobs/storage-blobs-introduction).
+- For more information about Blob Storage, see [Blob Storage documentation](/azure/storage/blobs/storage-blobs-introduction).
 - For more information about SPE, see [SharePoint Embedded documentation](https://aka.ms/start-spe).
 
 ## Appendix
