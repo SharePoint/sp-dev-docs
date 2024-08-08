@@ -310,7 +310,7 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 ### Verification
 
 1. When the file is queued, it will print to stdout
-1. If all blobs are uploaded successfully, it will print to stdout `Congratulations`
+1. It will print out the stats of the total blobs that were processed: total, success, exists in destination and failed.
 1. If there are errors, it will send the failed blob list to a file. The file name will be print to stdout. It will also, print out a command for incremental re-run.
 
 ## Conclusion
