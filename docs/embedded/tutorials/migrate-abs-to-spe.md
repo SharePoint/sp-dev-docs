@@ -103,7 +103,9 @@ This section provides code snippets on how to accomplish the migration. All the 
 ### Traverse blob list
 ```C#
     // It creates a new folder in the destination. The name of the folder is the blob's container name.
-    containerFolder = await _gcm.CreateFolder(_containerName, "root");
+    // root means it is the root of the document library.
+    // If you want to copy it to another drive item, you can put the drive item id here.
+    containerFolder = await _graphClient.CreateFolder(_containerName, "root");
 
     // Traverse the blob list
     foreach (var blobName in fileList)
@@ -112,7 +114,7 @@ This section provides code snippets on how to accomplish the migration. All the 
 
         // This function parses the flat file into folder hierarchy and create the folder structure in the destination. It will retrieve the parentFolderId that the file should be copied to.
         // If you are going to copy it to root you can comment this line out. The parentFolderId will be containerFolder.Id
-        fs.parentFolderId = TraverseFileListing(fs, containerFolder.Id)
+        fs.parentFolderId = TraverseBlobName(fs, containerFolder.Id)
 
         // This is where the thread pool happens.
         // It takes in callback function and an Object parameter.
@@ -123,7 +125,7 @@ This section provides code snippets on how to accomplish the migration. All the 
     _countdown.Wait();
 ```
 
-### Traverse file listing
+### Traverse blob name
 ```C#
     // Parse for folder path not including the file name and put it in an array
     var pathSegments = filePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
@@ -137,10 +139,10 @@ This section provides code snippets on how to accomplish the migration. All the 
         string newPath = relativePath + _separator + folderName;
         ...
 
-        DriveItem subFolder = await _gcm.CheckIfItemExists(folderName, newFolderId);
+        DriveItem subFolder = await _graphClient.CheckIfItemExists(folderName, newFolderId);
         if (subFolder == null)
         {
-            subFolder = await _gcm.CreateFolder(folderName, newFolderId);
+            subFolder = await _graphClient.CreateFolder(folderName, newFolderId);
             ...
         }
         newFolderId = subFolder.Id;
