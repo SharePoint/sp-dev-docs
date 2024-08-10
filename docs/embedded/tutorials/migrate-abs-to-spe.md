@@ -37,9 +37,11 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. An [Azure account](https://portal.azure.com)
 1. A SharePoint Tenant where you will create your containers and its Tenant ID
 1. An onboarded application ID (sometimes called client ID) and its corresponding ContainerTypeId
-1. Create a new App Registration in [Azure's App Registration portal](https://portal.azure.com).
-1. In the App Registration, add a new Mobile & Console application platform in [Azure's App Registration Authenticate portal](https://portal.azure.com)
-![alt text](../images/app-registration-console-platform.png)
+1. Create a new App Registration in [Microsoft Entra ID portal](https://entra.microsoft.com).
+1. In the App Registration, add a new Mobile & Console application platform in [Microsoft Entra ID App Registration Authenticate portal](https://entra.microsoft.com)
+ 
+    ![Screenshot of Microsoft Entra ID application configuration](../images/app-registration-console-platform.png)
+
 1. A ContainerType
 1. A Container
 1. Having the application registered in the consuming tenant (even if the owner of the application is the same as the consuming)
@@ -50,6 +52,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
 
 ### Description
+
 This section provides code snippets on how to accomplish the migration. All the validation has been removed for readability.
 
 ### Connecting to Azure Blob Storage Container
