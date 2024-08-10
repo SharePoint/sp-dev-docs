@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 08/08/2022
+ms.date: 08/08/2024
 ms.localizationpriority: high
 ---
 
@@ -95,7 +95,7 @@ The SharePoint Framework includes eight built-in themes: six on light background
 Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner) to build a custom theme. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme.
 
 > [!NOTE]
-> The theme generator definitions do not currently include the following color slots / key/value pairs:
+> The theme generator definitions do not currently include the following color slots and key/value pairs:
 > 
 > - "primaryBackground"
 > - "primaryText"
