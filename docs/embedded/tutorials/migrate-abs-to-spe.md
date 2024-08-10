@@ -19,11 +19,16 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. An account with at least the Global Administrator or SharePoint Embedded Administrator role.
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/download/dotnet/8.0)
 1. Dotnet environment to run the sample app
-  - It can be run on Windows, Linux and macOS
+
+    - It can be run on Windows, Linux and macOS
+
 1. SharePoint Embedded container
-  - For more information on how to set up a [SPE container](https://aka.ms/start-spe)
+
+    - For more information on how to set up a [SPE container](https://aka.ms/start-spe)
+
 1. Azure Blob Storage container
-  - For more information on how to set up an [ABS container](/azure/storage/blobs/storage-blobs-introduction)
+    
+    - For more information on how to set up an [ABS container](/azure/storage/blobs/storage-blobs-introduction)
 
 ## Authentication
 
@@ -277,6 +282,7 @@ It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS a
 1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command is not recognized, you can download and install the .NET Core SDK from the official Microsoft website.
 1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
 1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
+	
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
     - The SPE client ID: This is the client you are authenticating against in the SPE.
@@ -313,12 +319,17 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 ### Common Issues
 
 1. File already exists in the destination
+ 
     - This app checks to see if the file name exists in the destination before it uploads. If there is a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
+
 1. The file for the list of blobs is not found
 1. The format for the list of blobs - one blob per line, without quotes around the blob name
 1. Not giving enough permission to access the ABS container
+
     - The minimum permissions are Read and List
+
 1. Not giving enough permissions to the SPE container
+
     - The required scope is "User.Read" and "FileStorageContainer.Selected"
     - Remember to grant admin consent
     - Remember to create the mobile & console platform app
@@ -338,6 +349,7 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 In this tutorial, we explored how to migrate content from ABS container to SPE container. By following the steps outlined, writing your own app to migrate content should be easy.
 
 To recap, we:
+
 1. Authenticated with ABS and Graph
 1. How to use a thread pool to queue migration of blob
 1. Check if the item exists in destination
@@ -349,6 +361,7 @@ Understanding these steps is crucial for migrating content from ABS container to
 Happy coding!
 
 ### Next Steps
+
 - For more information about Blob Storage, see [Blob Storage documentation](/azure/storage/blobs/storage-blobs-introduction).
 - For more information about SPE, see [SharePoint Embedded documentation](https://aka.ms/start-spe).
 
