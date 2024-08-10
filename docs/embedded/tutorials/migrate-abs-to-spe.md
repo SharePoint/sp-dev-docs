@@ -9,13 +9,13 @@ ms.localizationpriority: high
 
 ## Purpose
 
-This tutorial will guide you through migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE) using C#. This is particularly useful for customers who have 500 docs in the blob storage container.
+This tutorial will guide you through migrating content from Azure Blob Storage (ABS) to SharePoint Embedded (SPE) using C#. This is useful for customers who have 500 docs in the blob storage container.
 
 ### Prerequisites
 
 1. A Microsoft Entra ID application registration. See [register an application](/graph/auth-register-app-v2).
 1. Your Microsoft Entra ID tenant has a [Microsoft 365 subscription](/training/m365/).
-1. A Microsoft Entra ID tenant. If you don't have a tenant, create a [free Azure account to get a free subscription](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+1. A Microsoft Entra ID tenant. If you don't have a tenant, create a [free Azure account to get a free subscription](https://azure.microsoft.com/free/).
 1. An account with at least the Global Administrator or SharePoint Embedded Administrator role.
 1. .NET Core SDK [version 8.0.303](https://dotnet.microsoft.com/download/dotnet/8.0)
 1. Dotnet environment to run the sample app
@@ -27,7 +27,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
     - For more information on how to set up a [SPE container](https://aka.ms/start-spe)
 
 1. Azure Blob Storage container
-    
+
     - For more information on how to set up an [ABS container](/azure/storage/blobs/storage-blobs-introduction)
 
 ## Authentication
@@ -40,18 +40,18 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 ### SharePoint Embedded
 
 1. An [Azure account](https://portal.azure.com)
-1. A SharePoint Tenant where you will create your containers and its Tenant ID
+1. A SharePoint Tenant where you'll create your containers and its Tenant ID
 1. An onboarded application ID (sometimes called client ID) and its corresponding ContainerTypeId
 1. Create a new App Registration in [Microsoft Entra ID portal](https://entra.microsoft.com).
 1. In the App Registration, add a new Mobile & Console application platform in [Microsoft Entra ID App Registration Authenticate portal](https://entra.microsoft.com)
- 
+
     ![Screenshot of Microsoft Entra ID application configuration](../images/app-registration-console-platform.png)
 
 1. A ContainerType
 1. A Container
 1. Having the application registered in the consuming tenant (even if the owner of the application is the same as the consuming)
 1. Having the containerType registered in the consuming tenant (even if the owner of the CT is the same as the consuming)
-1. Consuming tenant user name and password credentials - will be required to authenticate the Graph client
+1. Consuming tenant user name and password credentials - will be required to authenticate the Microsoft Graph client
 1. Permission - "User.Read", "FileStorageContainer.Selected"
 
 ## Migrating Data from Azure Blob Storage container to SharePoint Embedded container
@@ -62,13 +62,13 @@ This section provides code snippets on how to accomplish the migration. All the 
 
 ### Connecting to Azure Blob Storage Container
 
-```C#
+```c#
 _containerClient = new BlobContainerClient(new Uri(_containerLevelSASUrl));
 ```
 
 ### Connecting to SharePoint Embedded
 
-```C#
+```c#
 string[] _scopes = { "User.Read", "FileStorageContainer.Selected" };
 InteractiveBrowserCredentialOptions interactiveBrowserCredentialOptions = new InteractiveBrowserCredentialOptions()
   {
@@ -85,7 +85,7 @@ var user = await _graphClient.Me.GetAsync();
 
 ### Getting the blob list
 
-```C#
+```c#
 var blobs = new List<string>();
 await foreach (var blobItem in _containerClient.GetBlobsAsync())
 {
@@ -96,7 +96,7 @@ return blobs;
 
 ### Thread pooling
 
-```C#
+```c#
 private CountdownEvent _countdown;
 
 // This is how the thread pool knows how many files are being migrated
@@ -105,7 +105,7 @@ _countdown = new CountdownEvent(blobs.Count);
 
 ### FileStructure
 
-```C#
+```c#
 public class FileStructure
 {
   public string blobName { get; set; }
@@ -115,7 +115,7 @@ public class FileStructure
 
 ### Traverse blob list
 
-```C#
+```c#
 // It creates a new folder in the destination. The name of the folder is the blob's container name.
 // root means it is the root of the document library.
 // If you want to copy it to another drive item, you can put the drive item ID here.
@@ -141,7 +141,7 @@ _countdown.Wait();
 
 ### Traverse blob name
 
-```C#
+```c#
 // Parse for folder path not including the file name and put it in an array
 var pathSegments = filePath.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
 string[] directoriesParts = pathSegments.Take(pathSegments.Length - 1).ToArray();
@@ -170,13 +170,13 @@ return newFolderId;
 
 ### Check if the item exists
 
-```C#
+```c#
 var item = await _graphClient.Drives[_containerId].Items[parentFolderId].ItemWithPath(itemPath).GetAsync();
 ```
 
 ### Create folder
 
-```C#
+```c#
 var folder = new DriveItem
 {
   Name = folderName,
@@ -191,7 +191,7 @@ var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId
 
 ### Migrate File
 
-```C#
+```c#
 // The parameter must be of type Object.
 internal async void MigrateFile(Object stateInfo)
 {
@@ -218,7 +218,7 @@ internal async void MigrateFile(Object stateInfo)
 
 ### Downloading From The Blob From ABS As A Stream
 
-```C#
+```c#
 BlobClient blobClient = _containerClient.GetBlobClient(blobName);
 
 MemoryStream memoryStream = new MemoryStream();
@@ -228,7 +228,7 @@ memoryStream.Position = 0; // Reset the stream position to the beginning
 
 ### Uploading The Stream To SPE
 
-```C#
+```c#
 int _maxChunkSize = 320 * 1024;
 
 var uploadSessionRequestBody = new CreateUploadSessionPostRequestBody()
@@ -279,14 +279,14 @@ It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS a
 
 1.	Open a terminal or command prompt.
 1.	Navigate to the directory where the Program.cs file is located.
-1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command is not recognized, you can download and install the .NET Core SDK from the official Microsoft website.
+1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command isn't recognized, you can download and install the .NET Core SDK from the official Microsoft website.
 1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
 1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
-	
+
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
-    - The SPE tenant ID: This is the tenant you are authenticating against in the SPE.
-    - The SPE client ID: This is the client you are authenticating against in the SPE.
-    - The SPE container ID: This is the container you are migrating content to in the SPE. For more information on how to get the [container id](/graph/api/filestorage-list-containers)
+    - The SPE tenant ID: This is the tenant you're authenticating against in the SPE.
+    - The SPE client ID: This is the client you're authenticating against in the SPE.
+    - The SPE container ID: This is the container you're migrating content to in the SPE. For more information on how to get the [container ID](/graph/api/filestorage-list-containers)
     - (optional) File name with full path that contains the blob list.
     - (optional) File name with full path where to output failed blobs.
 
@@ -296,33 +296,35 @@ For example, the command to run the application with the required arguments woul
 
 ### Blob and SPE Item Structure
 
-ABS container does not adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container ID provided, with the container name as the top folder. If you are migrating to the root folder, you can ignore this section.
+ABS container doesn't adhere to a folder structure, all the blobs are stored in a flat listing structure. When migrating to SPE, the sample app parses the blob name and creates the folder structure in the container ID provided, with the container name as the top folder. If you're migrating to the root folder, you can ignore this section.
 
 **Source**
+
 - Container Name: Container1
-    - Blob name: FolderA/blob1.txt
-    - Blob name: FolderA/FolderB/blob2.txt
-    - Blob name: FolderA/FolderB/FolderC/blob3.txt
+  - Blob name: FolderA/blob1.txt
+  - Blob name: FolderA/FolderB/blob2.txt
+  - Blob name: FolderA/FolderB/FolderC/blob3.txt
 
 **Destination**
+
 - Drive Item folder
-    - Container1
-        - FolderA
-            - blob1.txt
-            - FolderB
-                - blob2.txt
-                - FolderC
-                    - blob3.txt
+  - Container1
+    - FolderA
+      - blob1.txt
+      - FolderB
+        - blob2.txt
+        - FolderC
+          - blob3.txt
 
 ## Handling Errors and Exceptions
 
 ### Common Issues
 
 1. File already exists in the destination
- 
-    - This app checks to see if the file name exists in the destination before it uploads. If there is a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
 
-1. The file for the list of blobs is not found
+    - This app checks to see if the file name exists in the destination before it uploads. If there's a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it, you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
+
+1. The file for the list of blobs isn't found
 1. The format for the list of blobs - one blob per line, without quotes around the blob name
 1. Not giving enough permission to access the ABS container
 
@@ -339,8 +341,8 @@ ABS container does not adhere to a folder structure, all the blobs are stored in
 ### Verification
 
 1. When the file is queued, it will print to stdout
-1. It will print out the stats of the total blobs that were processed: total, success, exists in destination, and failed.
-1. If there are errors, it will send the failed blob list to a file. The file name will be printed to stdout. It will also, print out a command for an incremental re-run.
+1. It will print the stats of the total blobs that were processed: total, success, exists in destination, and failed.
+1. If there are errors, it will send the failed blob list to a file. The file name will be printed to stdout. It will also, print a command for an incremental re-run.
 
 ## Conclusion
 
