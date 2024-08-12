@@ -431,6 +431,79 @@ Content-type: application/json
   ]
 }
 ```
+## Example 5: Search containers by container custom property
+
+This example queries all containers by the specified custom propery key:value pair, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. **Note** the custom property name must be appended with text "OWSTEXT" in the query string.
+
+### Request
+
+```HTTP
+POST /search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": [
+        "drive"
+      ],
+      "query": {
+        "queryString": "customPropertyNametOWSTEXT:customPropertyValue AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
+      }
+    }
+  ]
+}
+```
+
+### Response
+
+```HTTP
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+  "value": [
+    {
+      "searchTerms": [],
+      "hitsContainers": [
+        {
+          "hits": [
+            {
+              "hitId": "b!C4Psl-ZZZkaZINVay8RKt2fqu3agJbVNlIUjNuIzqlPhOJMrr7ThS4aR8L8XdZu4",
+              "rank": 1,
+              "summary": "Everything about Contoso",
+              "resource": {
+                "@odata.type": "#microsoft.graph.drive",
+                "id": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                "createdBy": {
+                  "user": {
+                    "displayName": "Dylan Williams"
+                  }
+                },
+                "lastModifiedDateTime": "2024-08-02T17:31:06Z",
+                "name": "AllItems.aspx",
+                "parentReference": {
+                  "sharepointIds": {
+                    "listId": "2b9338e1-b4af-4be1-8691-f0bf17759bb8"
+                  },
+                  "siteId": "contoso.sharepoint.com,97ec830b-59e6-4666-9920-d55acbc44ab7,76bbea67-25a0-4db5-9485-2336e233aa53"
+                },
+                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_97ec830b-59e6-4666-9920-d55acbc44ab7/Document Library/Forms/AllItems.aspx"
+              }
+            }
+          ],
+          "total": 1,
+          "moreResultsAvailable": false
+        }
+      ]
+    }
+  ]
+}
+```
 
 ## Known Limitation
 
