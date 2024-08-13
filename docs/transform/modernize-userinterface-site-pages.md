@@ -1,14 +1,14 @@
 ---
 title: Transform classic pages to modern pages
 description: Explains how to transform classic wiki and web part pages into modern pages
-ms.date: 02/11/2021
+ms.date: 08/13/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Transform classic pages to modern pages
 
-Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
+Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
 SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) library ([source code](https://github.com/pnp/pnpframework/tree/dev/src/lib/PnP.Framework/Modernization)) and does bring page transformation capabilities which will be explained in the upcoming chapters.
 
@@ -42,5 +42,5 @@ Publishing page | x | x | x | x | x
 - [Using SharePoint Page Transformation from PowerShell](modernize-userinterface-site-pages-powershell.md)
 - [Using SharePoint Page Transformation from .Net](modernize-userinterface-site-pages-dotnet.md)
 - [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md)
-- [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/)
+- [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book/)
 - [Classic and modern web part experiences](https://support.office.com/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)
