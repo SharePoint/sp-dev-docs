@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 05/15/2024
+ms.date: 08/13/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -95,7 +95,7 @@ npm install yo --global
 > SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with the following command:
 >
 > ```console
-> npm install yo@4.3.1
+> npm install yo@4.3.1 --global
 > ```
 
 ### Install Yeoman SharePoint generator
