@@ -61,6 +61,7 @@ _=+#####!
 
 For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.yml).
 
+
 ### Use your favorite code editor
 
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
@@ -69,6 +70,15 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP).
+
+
+### Specify your Tenant domain
+
+Open **serve.json** in the **config** folder and replace the {tenantDomain} placeholder in `initialPage` with the name of your Sharepoint tenant domain. E.g.
+
+```typescript
+"initialPage": "https://contoso.sharepoint.com/_layouts/workbench.aspx"
+```
 
 ## Preview the web part
 
