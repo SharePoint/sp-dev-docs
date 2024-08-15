@@ -8,7 +8,7 @@ ms.service: sharepoint
 
 # Transform classic pages to modern pages
 
-Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
+Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://adoption.microsoft.com/en-us/sharepoint-look-book/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
 SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) library ([source code](https://github.com/pnp/pnpframework/tree/dev/src/lib/PnP.Framework/Modernization)) and does bring page transformation capabilities which will be explained in the upcoming chapters.
 
