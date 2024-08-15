@@ -1,7 +1,7 @@
 ---
 title: Search SharePoint Embedded containers and content
 description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 05/21/2024
+ms.date: 08/15/2024
 ms.localizationpriority: high
 ---
 
@@ -12,7 +12,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded co
 > [!NOTE]
 >
 > 1. Search API only supports Delegated permissions.
-> 2. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted our from content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
+> 1. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted out of content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
 
 ## Example 1: Search containers by container type
 
@@ -237,7 +237,7 @@ Content-type: application/json
 
 ## Example 4: Search for content by title in a specific container
 
-This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` in the specific container instance that match the criteria.
 
 ### Request
 
@@ -336,7 +336,7 @@ Content-type: application/json
 
 ## Example 5: Search by content
 
-This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems that match the criteria.
+This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` that match the criteria.
 
 ### Request
 
@@ -433,7 +433,10 @@ Content-type: application/json
 ```
 ## Example 5: Search containers by container custom property
 
-This example queries all containers by the specified custom propery key:value pair, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. **Note** the custom property name must be appended with text "OWSTEXT" in the query string.
+This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded application, opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. 
+
+> [!NOTE]
+> The custom property name must be appended with the text "OWSTEXT" in the query string.
 
 ### Request
 
