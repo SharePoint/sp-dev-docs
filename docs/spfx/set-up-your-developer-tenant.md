@@ -12,6 +12,8 @@ To build and deploy client-side web parts using the SharePoint Framework, you ne
 
 If you already have a Microsoft 365 tenant, see the section [Create app catalog site](#create-app-catalog-site).
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
+
 If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can [sign up for a 1-month free trial or purchase a Microsoft 365 plan](https://www.microsoft.com/en-us/microsoft-365/try).
 
 You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
