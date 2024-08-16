@@ -95,7 +95,7 @@ npm install yo --global
 > SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with the following command:
 >
 > ```console
-> npm install yo@4.3.1
+> npm install yo@4.3.1 --global
 > ```
 
 ### Install Yeoman SharePoint generator
