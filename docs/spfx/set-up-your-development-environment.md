@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 08/14/2024
+ms.date: 08/19/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -131,7 +131,7 @@ gulp trust-dev-cert
 
 ## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
 
-Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve**.json file in the `initialPage` property:
+Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
 
 ```json
 {
