@@ -65,7 +65,7 @@ You can start using this option by updating your quick view implementation to be
 
 Out-of-the-box OneDrive (files) card is using this rendering option as a reference point.
 
-![Sample chart card layouts](../images/120-release-notes/html-quick-views.png)
+![Preview on HTML quick views](../images/120-release-notes/html-quick-views.png)
 
 Related updated documentation for the SPFx v1.20 release:
 
