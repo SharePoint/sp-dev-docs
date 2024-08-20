@@ -5,6 +5,9 @@ ms.date: 01/27/2023
 ---
 # Building Microsoft Teams Tabs using SharePoint Framework
 
+> [!Important]
+> When you are planning to embed SharePoint sites in Microsoft Teams, please use the [Viva Connections model](/sharepoint/guide-to-setting-up-viva-connections) for the supported experience.
+
 Starting with SharePoint Framework v1.8, you can build tabs for Microsoft Teams with the SharePoint Framework tooling and use SharePoint as a host for your solutions. As part of the SharePoint Framework v1.10 you can also publish your solution as Microsoft Teams personal app.
 
 The benefits to use the SharePoint Framework as the platform for your Microsoft Teams tabs include the following:
