@@ -71,6 +71,8 @@ To keep things simple for your users, you would build a single SharePoint page t
 This approach is ideal for organizations that want to offer their users a Me-experience in Microsoft Teams with as little effort and custom development as possible.
 
 ## Build a multi-tab personal Teams app
+> [!Important]
+> When you are planning to embed SharePoint sites in Microsoft Teams, please use the [Viva Connections model](/sharepoint/guide-to-setting-up-viva-connections) for the supported experience.
 
 Another approach to offer your users a Me-experience in Microsoft Teams using SharePoint Framework is by building a multi-tab [personal Teams app](/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka).
 
