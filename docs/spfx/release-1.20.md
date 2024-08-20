@@ -4,7 +4,7 @@ description: Release notes for the SharePoint Framework v1.20 preview release.
 ms.date: 08/20/2024
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.19 release notes
+# SharePoint Framework v1.20 release notes
 
 This release focuses primarely on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
 
