@@ -1,7 +1,7 @@
 ---
 title: Build a Me-experience in Microsoft Teams
 description: Extend Microsoft Teams using SharePoint Framework to offer your colleagues a Me-experience.
-ms.date: 06/13/2022
+ms.date: 08/21/2024
 ms.localizationpriority: medium
 ---
 
@@ -15,11 +15,11 @@ This article presents a sample scenario of how to extend Microsoft Teams using S
 
 ![Sample Me-experience in Microsoft Teams](../images/me-experience/me-experience-preview.png)
 
-In the following sections, we present a few ways of how you could implement a Me-experience in Microsoft Teams using SharePoint Framework, and for each one we mention its benefits and considerations for you to consider.
+In the following sections, we present a few ways of how you could implement a Me-experience in Microsoft Teams using SharePoint Framework, and for each one, we mention its benefits and considerations for you to consider.
 
 ## Embed a modern SharePoint page
 
-Recently SharePoint Online introduced the ability to [embed modern SharePoint pages in Microsoft Teams](/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
+Recently SharePoint Online introduced the ability to [embed modern SharePoint pages in Microsoft Teams](/sharepoint/dev/features/embed-pages-to-teams). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
 
 ![Modern SharePoint page with several SharePoint Framework web parts showing personalized information for the current user](../images/me-experience/me-experience-sharepoint-page.png)
 
@@ -28,7 +28,7 @@ Once the page is ready, in Microsoft Teams, you would create a personal app poin
 ![Building personal Teams app using App Studio](../images/me-experience/me-experience-app-studio.png)
 
 > [!CAUTION]
-> When embedding a modern SharePoint page in Teams, you shouldn't use the URL of the page as it won't work in the desktop Teams app. Instead, use a special [URL pointing to the `teamslogon.aspx` page](/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka#embed-sharepoint-modern-sites--pages-into-microsoft-teams-with-app-studio).
+> When embedding a modern SharePoint page in Teams, you shouldn't use the URL of the page as it won't work in the desktop Teams app. Instead, use a special [URL pointing to the `teamslogon.aspx` page](/sharepoint/dev/features/embed-pages-to-teams#embed-sharepoint-modern-sites--pages-into-microsoft-teams-with-app-studio).
 
 To improve the experience, you would enable showing the page in full screen, which will remove the header and navigation allowing users to focus on the content.
 
@@ -46,13 +46,13 @@ While creating the dashboard SharePoint page, you can make use of all page capab
 
 #### Combine information from different sources
 
-By using a mix of web parts, you can combine truly personal information, such as emails, meetings, or the documents the person recently worked on, with other information coming from the organization, but nevertheless relevant to the person based on their role or region.
+By using a mix of web parts, you can combine truly personal information, such as emails, meetings, or the documents the person recently worked on, with other information coming from the organization, but relevant to the person based on their role or region.
 
 It also doesn't matter if the web parts you put on the page are provided by Microsoft or built by your organization and whether they're deployed in a single or multiple solutions.
 
-#### Package and distribute application in your organization without code
+#### Package and distribute applications in your organization without code
 
-To offer the Me-experience built this way to your users, you would package it as a personal Teams app. Using [App Studio](/microsoftteams/platform/concepts/build-and-test/app-studio-overview?WT.mc_id=m365-9762-wmastyka), you can create the personal app and publish it to your organizational catalog for everyone else to use.
+To offer the Me-experience built this way to your users, you would package it as a personal Teams app. Using [App Studio](/microsoftteams/platform/concepts/build-and-test/app-studio-overview), you can create the personal app and publish it to your organizational catalog for everyone else to use.
 
 ### Considerations for embedding SharePoint pages as tabs
 
@@ -72,13 +72,16 @@ This approach is ideal for organizations that want to offer their users a Me-exp
 
 ## Build a multi-tab personal Teams app
 
+> [!IMPORTANT]
+> When you are planning to embed SharePoint sites in Microsoft Teams, please use the [Viva Connections model](/sharepoint/guide-to-setting-up-viva-connections) for the supported experience.
+
 Another approach to offer your users a Me-experience in Microsoft Teams using SharePoint Framework is by building a multi-tab [personal Teams app](/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka).
 
 ![Multi-tab personal Teams app built using SharePoint Framework](../images/me-experience/me-experience-multitab-personal-app.png)
 
-Personal Teams apps can consist of one or more tabs. Each tab points to a different URL. When [building personal Teams app using SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction?WT.mc_id=m365-9762-wmastyka), you can make each tab point to a SharePoint Framework web part. By combining relevant web parts in a single personal Teams app, you can offer users a single place to access relevant information.
+Personal Teams apps can consist of one or more tabs. Each tab points to a different URL. When [building personal Teams app using SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction), you can make each tab point to a SharePoint Framework web part. By combining relevant web parts in a single personal Teams app, you can offer users a single place to access relevant information.
 
-In this approach, you would start by putting all web parts that you want to expose in a SharePoint Framework project.
+In this approach, you would start by putting all the web parts that you want to expose in a SharePoint Framework project.
 
 ![SharePoint Framework project with the different web parts that make up the Me-experience](../images/me-experience/me-experience-spfx-project.png)
 
@@ -158,7 +161,7 @@ To let users configure web parts exposed on the different tabs, you could build 
 
 ### Advantages of building multi-tab personal Teams apps
 
-Building the Me-experience as a multi-tab personal Teams app requires some development work. In return, it offers more benefits related to personalization and distribution of the solution.
+Building the Me-experience as a multi-tab personal Teams app requires some development work. In return, it offers more benefits related to the personalization and distribution of the solution.
 
 #### User-specific configuration
 
@@ -178,7 +181,7 @@ In comparison to building a dashboard using a modern SharePoint page and exposin
 
 #### Limited to custom web parts
 
-When building multi-tab personal Teams apps, you can point only to custom web parts. Referencing standard web part provided by Microsoft is not supported.
+When building multi-tab personal Teams apps, you can point only to custom web parts. Referencing the standard web part provided by Microsoft is not supported.
 
 #### All web parts should be in the same project
 
@@ -186,7 +189,7 @@ While not necessary, having all web parts in the same project will help you simp
 
 #### Custom web part required for exposing settings
 
-Personal Teams apps don't have a standard UI for configuring settings. Instead, the recommended pattern is to [expose settings on a separate tab](/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka#help-and-settings). The developer is in control of the user experience of that tab and can adjust it to match the specific application requirements.
+Personal Teams apps don't have a standard UI for configuring settings. Instead, the recommended pattern is to [expose settings on a separate tab](/microsoftteams/platform/concepts/design/personal-apps#help-and-settings). The developer is in control of the user experience of that tab and can adjust it to match the specific application requirements.
 
 Translating this to SharePoint Framework, it means that you would need to build a separate web part that allows users to configure the application. The settings tab can expose configuration for all the other tabs so that users can configure the whole application from one place.
 
@@ -194,7 +197,7 @@ Translating this to SharePoint Framework, it means that you would need to build 
 
 Personal Teams apps don't offer any infrastructure for persisting their configuration. Each application must decide for itself how and where it persists user's preferences.
 
-While SharePoint Framework web parts have a standard way of persisting settings when used on SharePoint pages or in Microsoft Teams tabs, when exposed as personal Teams apps, they can't use this infrastructure. Instead, you need to [choose a way to store user's preferences](/sharepoint/dev/spfx/build-for-teams-configure-in-teams?WT.mc_id=m365-9762-wmastyka). Additionally, you need to ensure that your web parts can retrieve their configuration from this location.
+While SharePoint Framework web parts have a standard way of persisting settings when used on SharePoint pages or in Microsoft Teams tabs, when exposed as personal Teams apps, they can't use this infrastructure. Instead, you need to [choose a way to store user's preferences](/sharepoint/dev/spfx/build-for-teams-configure-in-teams). Additionally, you need to ensure that your web parts can retrieve their configuration from this location.
 
 #### Each web part is a separate tab
 
@@ -263,7 +266,7 @@ export default class Planning extends React.Component<IPlanningProps, {}> {
 }
 ```
 
-Such container web part allows you to reuse your existing code without duplicating it. Additionally, you will improve the user experience by combining related information and decrease the number of different tabs exposed.
+Such a container web part allows you to reuse your existing code without duplicating it. Additionally, you will improve the user experience by combining related information and decrease the number of different tabs exposed.
 
 ### Advantages of combining multiple web parts in a single tab
 
@@ -271,13 +274,13 @@ Combining information from multiple web parts in a single tab allows you to simp
 
 #### Group related information together
 
-The ability to rearrange how information is presented in when exposed in a personal Teams app allows you to improve the user-experience. By putting related or similar information on a single tab, you help users to quickly glance over what's relevant to them.
+The ability to rearrange how information is presented in when exposed in a personal Teams app allows you to improve the user experience. By putting related or similar information on a single tab, you help users quickly glance over what's relevant to them.
 
 Grouping related information together also lowers the number of different tabs displayed in the personal app, making it easier for users to navigate between the different sections.
 
 #### Control the user experience
 
-When grouping related information together, you will build new React component and reference existing components from within. While doing this, you have the full control of how the information is presented and can consider different aspects such as importance of the displayed information, its relevance to the user, device, screen size, etc.
+When grouping related information together, you will build a new React component and reference existing components from within. While doing this, you have full control of how the information is presented and can consider different aspects such as importance of the displayed information, its relevance to the user, device, screen size, etc.
 
 #### Reuse existing code
 
@@ -285,7 +288,7 @@ When you build SharePoint Framework web parts using React, the main functionalit
 
 ### Considerations for grouping multiple web parts in a single tab
 
-Combining multiple web parts in a single tab allows you to make a better use of the available screen estate and provide the user with a comprehensive view of the relevant information. There are however some specific considerations that you should take into account before you choose this approach.
+Combining multiple web parts in a single tab allows you to make better use of the available screen estate and provides the user with a comprehensive view of the relevant information. There are however some specific considerations that you should take into account before you choose this approach.
 
 #### Combining web parts requires development effort
 
