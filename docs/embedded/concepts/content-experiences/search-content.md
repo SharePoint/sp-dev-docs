@@ -431,9 +431,9 @@ Content-type: application/json
   ]
 }
 ```
-## Example 5: Search containers by container custom property
+## Example 6: Search containers by container custom property
 
-This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded application, opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. 
+This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded applicatio that has opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. 
 
 > [!NOTE]
 > The custom property name must be appended with the text "OWSTEXT" in the query string.
