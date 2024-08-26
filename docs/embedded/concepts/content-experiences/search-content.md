@@ -507,6 +507,127 @@ Content-type: application/json
   ]
 }
 ```
+## Example 7: Search for content with specific content properties in response body
+
+This example queries container content by specific words and requires the response to include all specified attributes on the content.
+
+### Request
+
+```HTTP
+POST /search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": [
+        "driveItem"
+      ],
+      "query": {
+        "queryString": "Everything about contoso"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
+      },
+      "fields": [
+        "SampleOWSText",
+        "id",
+        "name",
+        "parentReference",
+        "file",
+        "folder",
+        "webUrl",
+        "createdDateTime",
+        "lastModifiedDateTime",
+        "size",
+        "fileSystemInfo",
+        "createdBy",
+        "lastModifiedBy",
+        "fileSystemInfo",
+        "fileSystemInfo"
+      ]
+    }
+  ]
+}
+```
+
+### Response
+
+```HTTP
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+  "value": [
+    {
+      "searchTerms": [
+        "everything",
+        "about",
+        "contoso"
+      ],
+      "hitsContainers": [
+        {
+          "hits": [
+            {
+              "hitId": "017JL52SWZQ2M5MULUKFBIL7SZ56EB4V2Z",
+              "rank": 1,
+              "summary": "Everything about Contoso",
+              "resource": {
+                "@odata.type": "#microsoft.graph.driveItem",
+                "size": 17363,
+                "fileSystemInfo": {
+                  "createdDateTime": "2024-06-20T21:49:03Z",
+                  "lastModifiedDateTime": "2024-04-01T16:57:00Z"
+                },
+                "listItem": {
+                  "@odata.type": "#microsoft.graph.listItem",
+                  "id": "d69986d9-7451-4251-85fe-59ef881e5759",
+                  "fields": {
+                    "sampleOWSText": "Sample Value",
+                    "id": "AAAAAH_MwHAjYctMtjgTN1cWJnYHAApvY20ubJFGtzLui9sETKcAAAAAASsAAApvY20ubJFGtzLui9sETKcAAAAAJqsAAA2",
+                    "size": 17363,
+                    "createdBy": "Dylan Williams"
+                  }
+                },
+                "id": "017JL52SWZQ2M5MULUKFBIL7SZ56EB4V2Z",
+                "createdBy": {
+                  "user": {
+                    "displayName": "Dylan Williams",
+                    "email": "dywilliams@contoso.onmicrosoft.com"
+                  }
+                },
+                "createdDateTime": "2024-06-20T21:49:03Z",
+                "lastModifiedBy": {
+                  "user": {
+                    "displayName": "Dylan Williams",
+                    "email": "dywilliams@contoso.onmicrosoft.com"
+                  }
+                },
+                "lastModifiedDateTime": "2024-04-01T16:57:00Z",
+                "name": "Constoso Details.docx",
+                "parentReference": {
+                  "driveId": "b!rWzsZXXFWEOeeP31bSE5BTjn_6qC3dFNloUBMv62EMilewHuRwQrQau-zcJu2BT0",
+                  "id": "017JL52SXQSKBKPB7VKZCJE5ZSWUN4LZDZ",
+                  "sharepointIds": {
+                    "listId": "ee017ba5-0447-412b-abbe-cdc26ed814f4",
+                    "listItemId": "1",
+                    "listItemUniqueId": "d69986d9-7451-4251-85fe-59ef881e5759"
+                  },
+                  "siteId": "contoso.sharepoint.com,65ec6cad-c575-4358-9e78-fdf56d213905,aaffe738-dd82-4dd1-9685-0132feb610c8"
+                },
+                "webUrl": "https://contoso.sharepointt.com/contentstorage/CSP_65ec6cad-c575-4358-9e78-fdf56d213905/Document Library/Constoso Details.docx"
+              }
+            }
+          ],
+          "total": 1,
+          "moreResultsAvailable": false
+        }
+      ]
+    }  
+  ]
+}
+```
 
 ## Known Limitation
 
