@@ -84,6 +84,7 @@ SharePoint Embedded applications need to be granted container type application p
 | DeletePermissions    | Can delete other members (but not self) from the container for containers of this container type.                  |
 | DeleteOwnPermissions | Can remove own membership from the container for containers of this container type.                                |
 | ManagePermissions    | Can add, remove (including self) or update members in the container roles for containers of this container type.   |
+| ManageContent        | Can manage the content of the container                                                                            |
 | Full                 | Has all permissions for containers of this container type.                                                         |
 
 > [!NOTE]
