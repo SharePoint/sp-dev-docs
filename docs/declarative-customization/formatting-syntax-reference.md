@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 04/05/2024
+ms.date: 08/28/2024
 ms.localizationpriority: high
 ---
 
@@ -309,7 +309,7 @@ See [Formatting multi-value fields](column-formatting.md#formatting-multi-value-
 
 `button` elements can be used to launch a specific action on the parent item. Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is selected. This action must be one of the following values:
 
-- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. The following example demonstrates a button that, when selected, simulates a select on the item, which results in opening the list item. Adding this example button to a document library simulates a select on the file or folder, which results in the file or folder being opened.
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. The following example demonstrates a button that, when selected, simulates a selection on the item, which results in opening the list item. Adding this example button to a document library simulates a selection on the file or folder, which results in the file or folder being opened.
 
     ```json
     {
@@ -403,8 +403,8 @@ See [Formatting multi-value fields](column-formatting.md#formatting-multi-value-
   The `actionInput` attribute can have the following options when using the `embed` action:
 
   - **src**: The URL of the content you want to embed. _(required)_
-  - **height**: The height of the callout within which the embedded content will render. Default value is 300. _(optional)_
-  - **width**: The width of the callout within which the embedded content will render. Default value is 300. _(optional)_
+  - **height**: The height of the callout within which the embedded content will render. The default value is 300. _(optional)_
+  - **width**: The width of the callout within which the embedded content will render. The default value is 300. _(optional)_
 
 ## customCardProps
 
@@ -413,14 +413,14 @@ Add a custom card to the element, that shows up on hover or `click` event. The f
 - `"formatter"`: JSON object that defines formatting for custom cards.
 - `"openOnEvent"`: Event on which the customCard should open.
   - Valid values: `click`, `hover`
-- `"directionalHint"`: Specify the direction relative to the target in which the custom card will be positioned. This is the preferred location but isn't guaranteed depending on space.
+- `"directionalHint"`: Specify the direction relative to the target in which the custom card will be positioned. This is the preferred location but it isn't guaranteed depending on space.
   - Valid values: `bottomAutoEdge`, `bottomCenter`, `bottomLeftEdge`, `bottomRightEdge`, `leftBottomEdge`, `leftCenter`, `leftTopEdge`, `rightBottomEdge`, `rightCenter`, `rightTopEdge`, `topAutoEdge`, `topCenter`, `topLeftEdge`, `topRightEdge`
 - `"isBeakVisible"`: Specify if the beak is to be shown or not.
-- `"beakStyle"`: Specifies the style object for custom card's beak.
+- `"beakStyle"`: Specifies the style object for the custom card's beak.
 
 ## defaultHoverField
 
-Adds the profile card for the people fields or file hover card for files in the document library.
+Adds the profile card for the people fields or file hovercard for files in the document library.
 
 - `"defaultHoverField": "[$Editor]"` adds a profile card for the editor field
 - `"defaultHoverField": "[$FileLeafRef]"` adds a file hover card in documentLibrary
@@ -428,7 +428,8 @@ Adds the profile card for the people fields or file hover card for files in the 
 ## columnFormatterReference
 
 This will be replaced with the referenced column's formatter JSON. Multi-level reference isn't supported.
-References for multi-choice column formatter template and column formatters not based on templates are not supported.
+
+References for multi-choice column formatter templates and column formatters not based on templates are not supported.
 
 ```json
 {
@@ -479,7 +480,7 @@ Values for `txtContent`, style properties, and attribute properties can be expre
 
 Expressions can be written using Excel-style expressions in SharePoint Online and SharePoint Server Subscription Edition starting with the 22H2 feature update, or by using Abstract Syntax Tree expressions in SharePoint Online, SharePoint Server Subscription Edition, and SharePoint Server 2019.
 
-All fields in `ViewFields` can be referred in expressions, even if it's marked `Explicit`.
+All fields in `ViewFields` can be referred to in expressions, even if it's marked `Explicit`.
 
 ### Excel-style expressions
 
@@ -637,13 +638,13 @@ Operators specify the type of operation to perform. Valid operator values includ
 - `sin`: returns the sine of a number
   - `"txtContent": "=sin(90)"` results in _0.8939966636005579_
 - `toDateString()`: returns a date in a short-friendly format
-  - `"txtContent": "=toDateString(@now)"` result doesn't vary based on user's locale and it will look like _"Wed Aug 03 2022"_
-- `toLocaleString()`: returns a language sensitive representation of a date
-  - `"txtContent":"=toLocaleString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
-- `toLocaleDateString()`: returns a language sensitive representation of just the date portion of a date
-  - `"txtContent":"=toLocaleDateString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019"_
-- `toLocaleTimeString()`: returns a language sensitive representation of just the time portion of a date
-  - `"txtContent":"=toLocaleTimeString(@now)"` results vary based on user's locale, but en-us looks like _"1:22:24 PM"_
+  - `"txtContent": "=toDateString(@now)"` result doesn't vary based on the user's locale and it will look like _"Wed Aug 03 2022"_
+- `toLocaleString()`: returns a language-sensitive representation of a date
+  - `"txtContent":"=toLocaleString(@now)"` results vary based on the user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
+- `toLocaleDateString()`: returns a language-sensitive representation of just the date portion of a date
+  - `"txtContent":"=toLocaleDateString(@now)"` results vary based on the user's locale, but en-us looks like _"2/5/2019"_
+- `toLocaleTimeString()`: returns a language-sensitive representation of just the time portion of a date
+  - `"txtContent":"=toLocaleTimeString(@now)"` results vary based on the user's locale, but en-us looks like _"1:22:24 PM"_
 - `toLowerCase`: returns the value converted to lower case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toLowerCase('DogFood')"` results in _"dogfood"_
 - `abs`: returns the absolute value for a given number - _Only available in SharePoint Online_
@@ -720,7 +721,7 @@ Operators specify the type of operation to perform. Valid operator values includ
   - `"txtContent":"=substring('DogFood', 3, 6)"` results in _Foo_
   - `"txtContent":"=substring('DogFood', 6, 3)"` results in _Foo_
 
-  The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
+  The substring() method returns the part of the string between the start and end indexes or to the end of the string.
 
 - `replace`: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. For strings, only the first instance of the value will be replaced.
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
@@ -736,16 +737,16 @@ Operators specify the type of operation to perform. Valid operator values includ
   - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
   - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _DogFoodABA_
   - `"txtContent":"=padEnd('DogFood', 5, 'A')"` results in _DogFood_
-- `getThumbnailImage`: returns a URL pointing to image for a given image field and preferred size.
-  - `"src":"=getThumbnailImage([$ImageField], 400, 200)"` results in a URL pointing to image for a given image field with 400 width and 200 height
+- `getThumbnailImage`: returns a URL pointing to an image for a given image field and preferred size.
+  - `"src":"=getThumbnailImage([$ImageField], 400, 200)"` results in a URL pointing to an image for a given image field with 400 width and 200 height
 
 **Conditional operator** - The conditional operator is:
 
-- `?`: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to `a ? b : c`, where if the expression `a` evaluates to true, then the result is `b`, else the result is `c`. For Excel style expressions you write these with an `if` statement. Regardless, there are three operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
+- `?`: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to `a ? b : c`, where if the expression `a` evaluates to true, then the result is `b`, else the result is `c`. For Excel-style expressions, you write these with an `if` statement. Regardless, there are three operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
   - `"txtContent":"=if(4 < 5, 'yes', 'no')"` results in _"yes"_
   - `"txtContent":"=if(4 > 5, 'yes', 'no')"` results in _"no"_
 
-**Multi-value field-related operators** - The following operators are only used in a context with multi-value field of type Person, Lookup, or Choice.
+**Multi-value field-related operators** - The following operators are only used in a context with multi-value fields of type Person, Lookup, or Choice.
 
 - `length`
 - `join`
@@ -755,11 +756,11 @@ Operators specify the type of operation to perform. Valid operator values includ
 
 `join` concatenates values in a multi-value field with a specified separator. The first operand shall point to a value in a multi-value field, for example `"@currentField.lookupValue"`, `"[$AssignedTo.title]"`. The second operand shall be a string literal that is the separator that joins the values together.
 
-`loopIndex`, when provided with a name of iterator variable, returns the current index (starting from 0) of the iterator. The name of iterator must be provided as a string literal. `loopIndex` would only work within the element with respective `forEach` enabled or its children elements.
+`loopIndex`, when provided with the name of the iterator variable, returns the current index (starting from 0) of the iterator. The name of the iterator must be provided as a string literal. `loopIndex` would only work within the element with respective `forEach` enabled or its children elements.
 
 For examples, see [Formatting multi-value fields](column-formatting.md#formatting-multi-value-fields).
 
-**String related operators** - Some of the previously detailed operators can be used when working with string values:
+**String-related operators** - Some of the previously detailed operators can be used when working with string values:
 
 - `+`
 - `indexOf` (*for string length workaround*)
@@ -770,7 +771,7 @@ For examples, see [Formatting multi-value fields](column-formatting.md#formattin
 "txtContent": "=[$column1] + ' ' + [$column2] + 'some other text'"
 ```
 
-`indexOf` since the operator `length` doesn't work for string value types (it will return 1 or 0), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We'll use `'^'` or any other character to use to find out the end of the string.
+`indexOf` Since the operator `length` doesn't work for string value types (it will return 1 or 0), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We'll use `'^'` or any other character to use to find out the end of the string.
 
 ## Operands
 
@@ -782,7 +783,7 @@ The values for `txtContent`, styles, and attributes can be either strings or Exp
 
 ### "@currentField"
 
-Will evaluate to the value of the current field.
+Will evaluate the value of the current field.
 
 Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify `@currentField.title` to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list of their properties.
 
@@ -1003,9 +1004,9 @@ The Approval Status field object has the following property (with example value)
 }
 ```
 
-`displayValue` is localized string of the approval status.
+`displayValue` is a localized string of the approval status.
 
-`@currentField` or `[$__ModerationStatus]`will also internally map to the following internal numeric value:
+`@currentField` or `[$__ModerationStatus]` will also internally map to the following internal numeric value:
 
 - 0: Approved
 - 1: Denied
@@ -1013,7 +1014,7 @@ The Approval Status field object has the following property (with example value)
 - 3: Draft
 - 4: Scheduled
 
-`[$_ModerationStatus]` field supports comparisons to both strings and the numeric value. The numeric comparisons work across locales and languages, and that will be the recommended way for this field.
+`[$_ModerationStatus]` field supports comparisons to both strings and the numeric value. The numeric comparisons work across locales and languages which will be the recommended way for this field.
 
 The following expressions evaluate to the output on the right, for when the status is `Pending`:
 
@@ -1064,17 +1065,17 @@ If the value of a field is an object, the object's properties can be accessed. F
 
 In column and view formatting, you can refer to any field's metadata by specifying the **internal name** of the field surrounded by square brackets and preceded by an exclamation mark: `[!InternalName]`.
 
-Currently field's display name is available in this metadata, and can be accessed using DisplayName property: `[!SalesLead.DisplayName]`.
+Currently field's display name is available in this metadata, and can be accessed using `DisplayName` property: `[!SalesLead.DisplayName]`.
 
 ### "@currentWeb"
 
-This will evaluate to the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
+This will evaluate the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
 
 ### "@me"
 
-This will evaluate to the email address of the current logged in user.
+This will evaluate the email address of the currently logged-in user.
 
-This field can be used to display the current user's email address, but more likely it will be used within conditions. The following is an example of setting the color for a person field to red when it's equal to the current logged in user and blue otherwise:
+This field can be used to display the current user's email address, but more likely it will be used within conditions. The following is an example of setting the color for a person field to red when it's equal to the currently logged-in user and blue otherwise:
 
 ```json
 {
@@ -1115,11 +1116,11 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ### "@now"
 
-This will evaluate to the current date and time.
+This will evaluate the current date and time.
 
 ### "@rowIndex"
 
-This will evaluate to the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
+This will evaluate the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
 
 Here's an example of using the value within a view format to apply alternating styles to rows:
 
@@ -1132,7 +1133,7 @@ Here's an example of using the value within a view format to apply alternating s
 
 ### "@window.innerHeight"
 
-This will evaluate to a number equal to the height of the browser window (in pixels) when the list was rendered.
+This will be evaluated to a number equal to the height of the browser window (in pixels) when the list is rendered.
 
 ### "@window.innerWidth"
 
@@ -1142,14 +1143,14 @@ This will evaluate to a number equal to the width of the browser window (in pixe
 
 In a document library, there's a series of tokens that can be used to retrieve the URL to the thumbnail of a file, including:
 
-- `@thumbnail.small`, `@thumbnail.medium`, and `@thumbnail.large` evaluate to the thumbnail URL in three different predefined sizes.
-- `@thumbnail.<bounding size>` evaluates to the URL to the largest thumbnails that isn't larger than the bounding size in both width and height. For example, `@thumbnail.150` evaluates to the URL to a thumbnail not larger than 150×150 pixels.
-- `@thumbnail.<bounding width>x<bounding height>` evaluates to the URL to the largest thumbnail that isn't larger than the bounding width and bounding height. For example, `@thumbnail.100x200` evaluates to the URL to a thumbnail not wider than 100 pixels and not higher than 200 pixels.
+- `@thumbnail.small`, `@thumbnail.medium`, and `@thumbnail.large` evaluate the thumbnail URL in three predefined sizes.
+- `@thumbnail.<bounding size>` evaluates the URL to the largest thumbnail that isn't larger than the bounding size in both width and height. For example, `@thumbnail.150` evaluates to the URL to a thumbnail not larger than 150×150 pixels.
+- `@thumbnail.<bounding width>x<bounding height>` evaluates the URL to the largest thumbnail that isn't larger than the bounding width and bounding height. For example, `@thumbnail.100x200` evaluates to the URL to a thumbnail not wider than 100 pixels and not higher than 200 pixels.
 
 These tokens will yield no value on non-file items including folders.
 
 > [!NOTE]
-> The aspect ratio of thumbnail generated is the same as how the file looks like, changing the bounding sizes will not affect the aspect ratio of the thumbnail.
+> The aspect ratio of the thumbnail generated is the same as how the file looks, changing the bounding sizes will not affect the aspect ratio of the thumbnail.
 
 > [!TIP]
 > Thumbnails are only available for a list of supported file formats. It means that sometimes the URL generated is not accessible due to lack of support on certain formats. However, if a valid thumbnail token is set as the _only_ `src` attribute of an `img` tag, we will take care of it and hide the image when it is not available.
@@ -1214,12 +1215,12 @@ This also works with field name:
 
 ### "@isSelected"
 
-This will evaluate to `true` for selected item(s) in a view and `false` otherwise.
+This will evaluate to `true` for the selected item(s) in a view and `false` otherwise.
 
 ### "@lcid"
 
-This will evaluate to the LCID of current culture. This can be used to format the date, time and numbers.
+This will evaluate to the LCID of the current culture. This can be used to format the date, time, and numbers.
 
 ### "@UIlcid"
 
-This will evaluate to the LCID of current UI culture. This can be used to show localized display strings.
+This will evaluate to the LCID of the current UI culture. This can be used to show localized display strings.
