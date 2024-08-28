@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Overview of Viva Connections Card Designer advance API features
 
-Advance API features for the Viva Connections Card Designer enable the dashboard editors to create API powered quick view experiences without actual code. This new option is supported with all the different form factors or Viva Connections dashboard - mobile, tablet and desktop.
+Advance API features for the Viva Connections Card Designer enable the dashboard editors to create API powered Quick View experiences without actual code. This new option is supported with all the different form factors or Viva Connections dashboard - mobile, tablet and desktop.
 
 > [!IMPORTANT]
 > First version of this feature is rolling out worldwide by end of the 2023 calendar year. User interface for Card designer will be further evolved within early 2024 for a better end user experience with the advance API features.
@@ -41,7 +41,7 @@ Needed permissions can be also granted directly to the SharePoint Framework exte
     ![API acess page in the SharePoint admin center](./img/sharepoint-admin-api-management.png)
 
 
-1. Move the Microsoft Entra admin center to confirm that the needed app registrations are available. 
+1. Move the Microsoft Entra admin center to confirm that the needed app registrations are available.
 
     ![API options in the Data source selection in the webpart toolbox](./img/entra-app-registration.png)
 
@@ -59,7 +59,7 @@ When the needed API permissions are available, dashboard designer can use the AP
 https://graph.microsoft.com/v1.0/me/events?$take=5&$select=id,webLink,subject,start,end,location
 ```
 
-Combining that API call with a custom adaptive card presentation, you could, for example,  present the user's upcoming meetings with following quick view rendering.
+Combining that API call with a custom adaptive card presentation, you could, for example,  present the user's upcoming meetings with following Quick View rendering.
 
 ![API options in the Data source selection in the webpart toolbox](./img/quick-view-upcoming-meetings.png)
 

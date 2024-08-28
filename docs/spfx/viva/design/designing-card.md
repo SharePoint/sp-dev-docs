@@ -12,7 +12,7 @@ Cards are used to link resources, surface information, and power direct interact
 
 **Integrate rather than duplicate:** Take advantage of the experiences already available on your intranet, such as task assignments and completion, shift schedules, company policies, and more.
 
-**Stay in context:** Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view (link to quick view page here). The next best is to keep user interactions within the dashboard.
+**Stay in context:** Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick View (link to Quick View page here). The next best is to keep user interactions within the dashboard.
 
 **Bring cards to life with relevant and dynamically refreshable data:** Company stock price, due dates for training or projects, task assignment updates, and remaining vacation days are some examples.
 
@@ -20,7 +20,7 @@ Cards are used to link resources, surface information, and power direct interact
 
 ## Anatomy of cards
 
-The Connections dashboard is made up of cards that each serve a specific purpose. Each card is a container and is comprised of the following sections and elements:  
+The Connections dashboard is made up of cards that each serve a specific purpose. Each card is a container and is comprised of the following sections and elements:
 
 **Medium card Layout:**
 
@@ -48,7 +48,7 @@ The third section is referred to as the **body**.
 - The body can contain elements such as text input, a search box, or a text description.
 
   > [!NOTE]
-  > Use text when the description can add valuable secondary informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.  
+  > Use text when the description can add valuable secondary informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.
 
 Finally, the last section of the card is the **footer**.
 
@@ -63,15 +63,15 @@ As part of the SPFX 1.18, we introduced card components  to enhance Adaptive Car
 - Text input
 - Action button
 - Search box
-- Search footer  
+- Search footer
 
-With the card components approach, we provide two types of card layout templates, each offering developers varying degrees of flexibility and customization: 
+With the card components approach, we provide two types of card layout templates, each offering developers varying degrees of flexibility and customization:
 
 1. **Generic card layout template**
    1. The generic card template serves as a foundational or base card with no predefined elements/ components.
-   1. Developers can utilize this template to fully customize card design layouts according to their specific needs. 
+   1. Developers can utilize this template to fully customize card design layouts according to their specific needs.
 1. **Scenario-focused card layout template**
-   1. Scenario-focused templates are designed to address specific customer needs, delivering tailored solutions for distinct scenarios. 
+   1. Scenario-focused templates are designed to address specific customer needs, delivering tailored solutions for distinct scenarios.
    1. These templates come with pre-built user experiences, enabling developers to initiate their projects swiftly and effortlessly.
 
 ### Generic card layout template
@@ -108,9 +108,9 @@ While the generic card layout offers developers significant flexibility in custo
 > [!NOTE]
 > Search box and search footer components can't be used in generic card template layout.
 
-#### Recommended best practice for the generic card layout template and components      
+#### Recommended best practice for the generic card layout template and components
 
-- When adding the text in the heading and body sections, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the header, in most cases, a length of 10-12 characters should fit the card width well. 
+- When adding the text in the heading and body sections, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the header, in most cases, a length of 10-12 characters should fit the card width well.
 - Whenever you use a text input component, we highly recommend adding an icon button. Although we allow an icon before and an icon after the text input component, we recommend using one icon to clearly communicate the intent of the card.
 
   > [!NOTE]
@@ -139,7 +139,7 @@ There are three possible ways to interact with a card:
 
 :::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Screenshot of the image card, primary button, and secondary button interactions.":::
 
-Each of these interactions can be customized. Use these to perform an instant action, send a request to the server, open a quick view (add link), link to a Teams app, open an external website and so on.
+Each of these interactions can be customized. Use these to perform an instant action, send a request to the server, open a Quick View (add link), link to a Teams app, open an external website and so on.
 
 Here are the best practices for designing card interactions:
 
@@ -148,7 +148,7 @@ Here are the best practices for designing card interactions:
 - The secondary button can used either on its own or in conjunction with the primary button if two actions are needed (only available in large-size card layouts). If it's used with the primary button, make sure it is linked to the second most important action on the card. In that case, the card itself will become the least important action.
 - For button labels, use concise and clear text that accurately reflects button behavior. For example 'View tasks' can be better than only 'View'.
 - Make sure each interaction on the card is unique.
-- Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick view. The next best is to keep user interactions within the dashboard.
+- Design cards to avoid making users jump around to different experiences. For example, it's ideal if you can keep interactions within the Viva Connections app using Quick View. The next best is to keep user interactions within the dashboard.
 
 > [!NOTE]
 > Due to lack of space:
@@ -184,7 +184,7 @@ To display your custom app in the dashboard picker, you will need the following:
 
 **1. Icon:** Unique visual representation of this app. Your custom icon maximum size is 24 px by 24 px and should preferably in PNG or SVG format. SVG icons scale better across different screen resolutions. It is preferable to use a monochromatic icon, but you can use color icons if you want to represent your unique brand with the icons. Either way, make sure the icon has a transparent background, and it looks good both on light and dark theme. [​​​​​​​Learn about SharePoint themes](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview). The same icon is to be used for the dashboard card (see above).
 
-**2. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the quick view (link quick view page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be in sentence case.
+**2. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the Quick View (link Quick View page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be in sentence case.
 
 **3. Descriptive text:** A clear, concise description explains the purpose of the card and provides information about how to use it. It should show up in the tooltip on hover (in web). Make sure the text wraps appropriately and is not too wide or too narrow in the tooltip. The optimal line length is considered to be 50-60 characters per line, including spaces.
 

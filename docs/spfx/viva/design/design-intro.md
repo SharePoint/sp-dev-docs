@@ -23,7 +23,7 @@ To learn more about how to create custom cards, see Getting Started - Adaptive C
 
 The Viva Connections Dashboard is the digital toolset for your employees. You can create a curated experience using dashboard cards to give your employees access to their most critical content and tools.
 
-The cards are designed to enable quick task completion by interacting with a card directly or by opening a quick view.
+The cards are designed to enable quick task completion by interacting with a card directly or by opening a Quick View.
 
 :::image type="content" source="../../../images/viva-design/viva-design_dashboard_overview.jpg" alt-text="Dashboard in mobile and in Desktop view":::
 

@@ -99,7 +99,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
   ```
 
 1. Finally locate **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts** and update the `onCardSelection()` getter to:
-  
+
   ```typescript
   public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
     return {
@@ -123,11 +123,11 @@ Once the local web server has loaded, navigate to the hosted workbench: `https:/
 
 Open the Toolbox and select your ACE. Select the Card to open the Quick View:
 
-:::image type="content" source="../../../images/viva-extensibility/lab3-ace-1.png" alt-text="Rendered quick view":::
+:::image type="content" source="../../../images/viva-extensibility/lab3-ace-1.png" alt-text="Rendered Quick View":::
 
 Since the `onAction()` handler has not been changed to handle the item click, selecting on an item does nothing. You'll address this in the next step.
 
-## Create a new quick view
+## Create a new Quick View
 
 1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Add the following JSON to the **DetailedQuickViewTemplate.json** file:
@@ -296,7 +296,7 @@ Update the Quick View to navigate between views:
 
 Reload the workbench, select on the Card to open the Quick View, and select on an item in the Quick View.
 
-:::image type="content" source="../../../images/viva-extensibility/lab3-detailed.png" alt-text="Selecting an item in the quick view":::
+:::image type="content" source="../../../images/viva-extensibility/lab3-detailed.png" alt-text="Selecting an item in the Quick View":::
 
 Try selecting **Back** and selecting another item.
 

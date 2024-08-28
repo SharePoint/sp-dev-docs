@@ -45,7 +45,7 @@ Select the **DataVisualization** component to add it to the workbench. The defau
 
 ### Explore the Card View
 
-Locate and open the following file: **./src/adaptiveCardExtensions/dataVisualization/cardView/CardView.ts**. The card view implements the `BaseComponentsCardView` base class `cardViewParameters` getter to specify the card configuration:
+Locate and open the following file: **./src/adaptiveCardExtensions/dataVisualization/cardView/CardView.ts**. The Card View implements the `BaseComponentsCardView` base class `cardViewParameters` getter to specify the card configuration:
 
 ```typescript
 const seriesData : IDataPoint<Date>[] = [
@@ -72,11 +72,11 @@ export class CardView extends BaseComponentsCardView<..> {
 }
 ```
 
-Notice how the `body` section of the card view specifies the `dataVisualization` component.
+Notice how the `body` section of the Card View specifies the `dataVisualization` component.
 
 ### Explore possible layouts
 
-Based on the configuration in card view, a chart can be rendered in two layouts:
+Based on the configuration in Card View, a chart can be rendered in two layouts:
 
 #### Regular
 
@@ -86,7 +86,7 @@ Adding zero or one component along with a `dataVisualization` component in the b
 
 #### Right side
 
-Adding more than one component in the card view along with `dataVisualization` component in the body renders the chart on the right side of the card. For example: Header and Footer along with `dataVisualization` component in body.
+Adding more than one component in the Card View along with `dataVisualization` component in the body renders the chart on the right side of the card. For example: Header and Footer along with `dataVisualization` component in body.
 
 Locate & replace the `cardViewParameters()` getter with the following code to add a `header` and `footer` to the card:
 
@@ -135,7 +135,7 @@ The ACE class is located in the following file: **./src/adaptiveCardExtensions/d
 
 ## Support for multiple data series in the chart
 
-The ACE `dataVisualization` component supports multiple series lines in the chart. To add multiple lines to the chart, add other entries to the `body.series` array on the `LineChartCardView` object in the card view.
+The ACE `dataVisualization` component supports multiple series lines in the chart. To add multiple lines to the chart, add other entries to the `body.series` array on the `LineChartCardView` object in the Card View.
 
 For example, consider the following data series:
 
@@ -169,7 +169,7 @@ const seriesData3 : IDataPoint<Date>[] = [
 ];
 ```
 
-Add all three series to the data visualization card view and optionally set the color of specific series:
+Add all three series to the data visualization Card View and optionally set the color of specific series:
 
 ```typescript
 export class CardView extends BaseComponentsCardView<
@@ -246,13 +246,13 @@ const seriesData2: IDataPoint<string>[] = [
 const seriesData3: IDataPoint<string>[] = [
   { x: "Jan", y: 19762},
   { x: "Feb", y: 12926},
-  { x: "Mar", y: 17670}, 
+  { x: "Mar", y: 17670},
   { x: "Apr", y: 19055},
   { x: "May", y: 18142}
 ];
 ```
 
-Add all three series to the data visualization card view and optionally set the name or color of the individual series:
+Add all three series to the data visualization Card View and optionally set the name or color of the individual series:
 
 ```typescript
 export class CardView extends BaseComponentsCardView<

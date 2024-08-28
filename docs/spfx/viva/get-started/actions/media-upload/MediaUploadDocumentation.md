@@ -147,7 +147,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
 If you don't want to write up a new ACE but still want to see the media upload in action, be sure to explore [this tutorial](./MediaUploadPropertyPane.md) which allows you to explore this through the property pane.
 
 > [!NOTE]
-> The media upload action can be added on the card view, buttons of the card view, or inside the quick view itself.
+> The media upload action can be added on the Card View, buttons of the Card View, or inside the Quick View itself.
 
 ## Availability of media upload action
 

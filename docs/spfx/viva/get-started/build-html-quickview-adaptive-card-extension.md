@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) v1.20 release introduced a new option to use HTML to render the Viva Connection Adaptive Card Extension (ACE) Quick Views. This enables more advanced user experiences. You can even use whatever suitable JavaScript web framework you prefer (ie: React etc.) in your Quick View experiences.
 
-You can start using this option by updating your quick view implementation to be inherited from xxx class, which will be automatically detected by the underlying platform.
+You can start using this option by updating your Quick View implementation to be inherited from xxx class, which will be automatically detected by the underlying platform.
 
 > [!IMPORTANT]
 > This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.md).
@@ -45,7 +45,7 @@ Once local web server is running, navigate to the hosted Workbench: `https://{te
 
 Open the **Web Part Toolbox** and select your ACE.
 
-Once added to the page, select the **Preview** link in the top-right area of the workbench to interact with the ACE. Next, select the **Quick view** button. This will open the default Adaptive Card implementation of the Quick View defined in the **src/adaptiveCardExtensions/htmlQuickView/quickView/template/QuickViewTemplate.json** file:
+Once added to the page, select the **Preview** link in the top-right area of the workbench to interact with the ACE. Next, select the **Quick View** button. This will open the default Adaptive Card implementation of the Quick View defined in the **src/adaptiveCardExtensions/htmlQuickView/quickView/template/QuickViewTemplate.json** file:
 
 ![Screenshot of the default ACE & Quick View](../../../images/viva-extensibility/ace-basic-html-quickview-01.png)
 
@@ -175,9 +175,9 @@ The last step is to update the Quick View component to import the style sheet an
             <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
           </div>
           <div>
-            <h3>Welcome to HTML powered SPFx quick views!</h3>
+            <h3>Welcome to HTML powered SPFx Quick Views!</h3>
             <p>
-            Starting with SPFx 1.20, you can use any HTML in the ACE quick views to build engaging employee experiences!
+            Starting with SPFx 1.20, you can use any HTML in the ACE Quick Views to build engaging employee experiences!
             </p>
             <h4>Learn more about Viva Connections extensibility development:</h4>
               <ul class="${styles.links}">
@@ -195,7 +195,7 @@ The last step is to update the Quick View component to import the style sheet an
 
 With all the changes now applied, retest solution in the hosted workbench to see the new HTML enabled Quick View:
 
-![Preview on HTML quick views](../../../images/120-release-notes/html-quick-views.png)
+![Preview on HTML Quick Views](../../../images/120-release-notes/html-quick-views.png)
 
 ## See Also
 
