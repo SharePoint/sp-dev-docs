@@ -428,6 +428,7 @@ Adds the profile card for the people fields or file hover card for files in the 
 ## columnFormatterReference
 
 This will be replaced with the referenced column's formatter JSON. Multi-level reference isn't supported.
+References for multi-choice column formatter template and column formatters not based on templates are not supported.
 
 ```json
 {
