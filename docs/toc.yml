@@ -638,19 +638,21 @@
   items:
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
-  - name: Location capabilities in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
-  - name: Media upload in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
-  - name: Focus feature in Adaptive Card Extension
-    href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
-  - name: Card Designer advance API features
-    href: spfx/viva/features/card-designer/card-designer-api-support.md
-  - name: Design Guidance
+  - name: Adaptive Card Extension Features
+    items:
+    - name: Location capabilities in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+    - name: Media upload in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
+    - name: Focus feature in Adaptive Card Extension
+      href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+    - name: Card Designer advance API features
+      href: spfx/viva/features/card-designer/card-designer-api-support.md
+  - name: Adaptive Card Extension Design Guidance
     items:
     - name: Introduction
       href: spfx/viva/design/design-intro.md
-    - name: Card Design
+    - name: Card View Design
       href: spfx/viva/design/designing-card.md
     - name: Quick View Design
       href: spfx/viva/design/designing-quick-view.md
@@ -658,6 +660,18 @@
       href: spfx/viva/design/quick-view-samples.md
     - name: Adaptive Card Extensions Iconography Limitations
       href: spfx/viva/get-started/fluent-icons-limitations.md
+  - name: Bot Powered Adaptive Card Extensions
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
+    - name: Authentication and Authorization in Bot Powered ACEs
+      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
+    - name: Bringing Bot Powered ACEs to the market place
+      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -688,18 +702,6 @@
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
     - name: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
       href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
-  - name: Bot Powered Adaptive Card Extensions
-    items:
-    - name: Overview of Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
-    - name: Understanding Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
-    - name: Building your first Bot Powered Adaptive Card Extension
-      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
-    - name: Authentication and Authorization in Bot Powered ACEs
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
-    - name: Bringing Bot Powered ACEs to the market place
-      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
