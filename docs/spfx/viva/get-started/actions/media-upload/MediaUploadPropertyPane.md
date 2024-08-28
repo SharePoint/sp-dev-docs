@@ -10,7 +10,7 @@ ms.localizationpriority: high
 In this tutorial we'll see how we can explore this capability via the property pane of the card-designer card.
 
 - Update the card strings
-- Introduce media upload actions on the card view, primary button, and secondary button.
+- Introduce media upload actions on the Card View, primary button, and secondary button.
 
 First, figure out the domain to the URL of your SharePoint tenant and site you want to use for testing and access the `workbench.aspx` page. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 

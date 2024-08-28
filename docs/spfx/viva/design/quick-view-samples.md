@@ -7,14 +7,14 @@ ms.localizationpriority: high
 
 # Viva Connections Adaptive Card Extension Quick View samples
 
-You can find 12 different quick view samples for the Viva Connections Adaptive Card extensions provided by Microsoft. These samples can be used for inspiration on how the quick views could look like. Samples can be reused and copied to your own solutions.
+You can find 12 different Quick View samples for the Viva Connections Adaptive Card extensions provided by Microsoft. These samples can be used for inspiration on how the Quick Views could look like. Samples can be reused and copied to your own solutions.
 
 > [!TIP]
-> Sample adaptive card designs for the quick views are available from [GitHub](https://github.com/pnp/AdaptiveCards-Templates)
+> Sample adaptive card designs for the Quick Views are available from [GitHub](https://github.com/pnp/AdaptiveCards-Templates)
 
 ## News and article listing
 
-Design for presenting news and company updates with numerous referenced articles or posts. This design is for showcasing quick view design option with the Viva Connections dashboard.
+Design for presenting news and company updates with numerous referenced articles or posts. This design is for showcasing Quick View design option with the Viva Connections dashboard.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/benefits)
 

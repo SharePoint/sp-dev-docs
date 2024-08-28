@@ -90,7 +90,7 @@ The `onBeforeAction` handler is added to `BaseAdaptiveCardExtension` class to al
 
 ### Ability to specify initial focus element in an Adaptive Card Extension Quick View
 
-New `focusParameters` virtual property allows to set focus when the view is rendered for accessibility purposes. If not overridden, the focus element defaulted to the first actionable element of the quick view.
+New `focusParameters` virtual property allows to set focus when the view is rendered for accessibility purposes. If not overridden, the focus element defaulted to the first actionable element of the Quick View.
 
 ```typescript
   /** @virtual */

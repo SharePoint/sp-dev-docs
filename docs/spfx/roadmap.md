@@ -59,7 +59,7 @@ Refer to the table of contents menu for details on each of the SharePoint Framew
 
 - Microsoft Viva Connections improvements
   - New card shapes
-  - More flexibiliy with the quick view
+  - More flexibiliy with the Quick View
 
 - Store improvements
   - Modernize Store app catalog and store UX

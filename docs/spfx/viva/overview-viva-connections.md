@@ -1,23 +1,23 @@
 ---
 title: Overview of Viva Connections Extensibility
 description: Build engaging experiences for Microsoft Viva Connections with the SharePoint Framework.
-ms.date: 02/01/2024
+ms.date: 08/28/2024
 ms.localizationpriority: high
 ---
 # Overview of Viva Connections Extensibility
 
-[Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) is available as a desktop via the installable Microsoft Teams client, tablet and as mobile app in Microsoft Teams. All of these experiences, desktop & mobile, leverage the **SPFx or bots for all customizations and extensibility opportunities**.
+[Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) is available as a desktop via the installable Microsoft Teams client, tablet and as mobile app in Microsoft Teams. All of these experiences, desktop & mobile, use the **SharePoint Framework (SPFx) or bots for all customizations and extensibility opportunities**.
 
-Viva Connections has a set of out of the box cards which are exposed through the dashboard feature. This dashboard **can be adjusted and configured based on the company requirements**. You can introduce new cards and experiences based on your business requirements.
+Viva Connections has a set of out of the box cards that are exposed through the dashboard feature. This dashboard **can be adjusted and configured based on the company requirements**. You can introduce new cards and experiences based on your business requirements.
 
-Viva Connections dashboard is available in the desktop, tablet and mobile experiences. It enables end users to easily access the most relevant information and applications directly for their role in the dashboard. You can personalize or introduce seperate dashboards based on audiences, which can be created using your company requirements.
+Viva Connections dashboard is available in the desktop, tablet and mobile experiences. It enables end users to easily access the most relevant information and applications directly for their role in the dashboard. You can personalize or introduce separate dashboards based on audiences, which can be created using your company requirements.
 
 > [!TIP]
 > See the [Extend Microsoft Viva Connections learning path](https://aka.ms/m365/dev/learn/connections) for a structured way to learn how you can extend Viva Connections, what tools you need, and how to get started.
 
 ## Extensibility opportunities
 
-Viva Connections personalization and extensibility model is based on the Adaptive Card Extensions (ACEs) which can be created using the widely adopted SharePoint Framework (SPFx) as client-side extensibility or by using server-side implementations using a bot. 
+Viva Connections personalization and extensibility model is based on the **Adaptive Card Extensions (ACEs)** which can be created using the widely adopted SharePoint Framework (SPFx) as client-side extensibility or by using server-side implementations using a bot.
 
 To learn more about customizing modern pages in SharePoint with SPFx, see [Overview of SPFx client-side web parts](../web-parts/overview-client-side-web-parts.md) & [Overview of SPFx Extensions](../extensions/overview-extensions.md).
 
@@ -29,7 +29,7 @@ The Viva Connections desktop experience can be extended and customized using Ada
 
 ### Viva Connections mobile & tablet experience
 
-The Viva Connections mobile experience is aligned with the desktop experience and is exposing by default the same ACEs as configured for the desktop area, optiomized for the mobile experiences.
+The Viva Connections mobile experience is aligned with the desktop experience and is exposing by default the same ACEs as configured for the desktop area, optimized for the mobile experiences.
 
 ![Example Viva Connections mobile layout as available in 2024](./images/viva-connections-mobile-and-tablet.png)
 
@@ -37,14 +37,14 @@ The Viva Connections mobile experience is aligned with the desktop experience an
 
 Here are the considerations on choosing the right extensibility model for your deployment:
 
-* SPFx created ACEs pattern is suitable for you when
-  * Your team is familiar with client-side web stack development
-  * You've built other extensibility to Microsoft 365 using SPFx - for SharePoint, Microsoft Teams, Office or Outlook
-  * You want the extensibility to be automatically hosted in the Microsoft 365 without costs
+- SPFx created ACEs pattern is suitable for you when
+  - Your team is familiar with client-side web stack development
+  - You've built other extensibility to Microsoft 365 using SPFx - for SharePoint, Microsoft Teams, Office or Outlook
+  - You want the extensibility to be automatically hosted in the Microsoft 365 without costs
 
-* Bot powered ACEs is suitable for you when
-  * You've an existing bot which is used in the Microsoft Teams - you can easily extend that to be exposed in the Viva Connections as well
-  * You've implemented Microsoft 365 extensibility with server-side implementation hosted in Microsoft Azure
+- Bot powered ACEs is suitable for you when
+  - You have an existing bot that is used in the Microsoft Teams - you can easily extend that to be exposed in the Viva Connections as well
+  - You've implemented Microsoft 365 extensibility with server-side implementation hosted in Microsoft Azure
 
 ## Start building for Microsoft Viva Connections
 

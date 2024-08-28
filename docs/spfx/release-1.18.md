@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
-**Released:** September 12, 2023 
+**Released:** September 12, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -63,11 +63,11 @@ SharePoint Framework solutions now support NodeJS v18 as the default version.
 
 ### Support for Execute Action in Adaptive Card Extensions
 
-Developers can use `Execute` action for both card view and quick view actions.
+Developers can use `Execute` action for both Card View and Quick View actions.
 
-### BaseComponentsCardView as a new default card view for Adaptive Card Extensions
+### BaseComponentsCardView as a new default Card View for Adaptive Card Extensions
 
-We introduce new default class for Adaptive Card Extensions card views. With these new class developers can specify a set of components that is rendered in a card view.
+We introduce new default class for Adaptive Card Extensions Card Views. With these new class developers can specify a set of components that is rendered in a Card View.
 
 For more information on the new designs, see [Designing Viva Connections custom cards for your dashboard](./viva/design/designing-card.md).
 
@@ -114,15 +114,15 @@ export class CardView extends BaseComponentsCardView<
 }
 ```
 
-### Adaptive Card Extensions flexible card views
+### Adaptive Card Extensions flexible Card Views
 
-With this release, we introduce more flexible way to configure card views for Adaptive Card Extensions. Developers can now "mix and match" components in a card view configuration based on allowed set of [variations](./viva/design/designing-card.md).
+With this release, we introduce more flexible way to configure Card Views for Adaptive Card Extensions. Developers can now "mix and match" components in a Card View configuration based on allowed set of [variations](./viva/design/designing-card.md).
 
 Use new **Generic Card Template** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
 
-### Ability to use text input in Adaptive Card Extensions' card views
+### Ability to use text input in Adaptive Card Extensions' Card Views
 
-Developers can now use text input component in a body or footer of a card view. For more information on the layout options, see [Designing Viva Connections custom cards for your dashboard](./viva/design/designing-card.md).
+Developers can now use text input component in a body or footer of a Card View. For more information on the layout options, see [Designing Viva Connections custom cards for your dashboard](./viva/design/designing-card.md).
 
 > [!NOTE]
 > The text input component is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.
@@ -133,7 +133,7 @@ Developers can now use text input component in a body or footer of a card view. 
 
 ### New Search Card Template for Adaptive Card Extensions
 
-We introduce a new search card view for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template** in the generator to get started.
+We introduce a new search Card View for Adaptive Card Extensions that is intended to be used for search scenarios. Use new **Search Card Template** in the generator to get started.
 
 > [!NOTE]
 > The text input component is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.

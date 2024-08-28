@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.20 preview release notes
 description: Release notes for the SharePoint Framework v1.20 preview release.
-ms.date: 08/20/2024
+ms.date: 08/28/2024
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.20 release notes
 
-This release focuses primarely on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
+This release focuses primarily on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
@@ -44,38 +44,38 @@ In the project's **package.json** file, identify all SPFx v1.19 packages. For ea
 
 ### New Data Visualization Card options for Viva Connections
 
-As part of the 1.19 release, we provided new line chart card layout option and with the 1.20, we are introducing three new data visualization options: bar chart, pie chart and donat chart.
+As part of the SPFx v1.19 release, we provided new line chart card layout option and with SPFx v1.20, we're introducing three new data visualization options: bar chart, pie chart and donut chart.
 
 ![Sample chart card layouts](../images/120-release-notes/chart-cards-options.png)
 
 Related updated documentation for the SPFx v1.20 release:
 
-- **[Create a Data Visualization Adaptive Card Extension](viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension - updated with the 1.20 release details
+- **[Create a Data Visualization Adaptive Card Extension](viva/get-started/build-data-visualization-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating Data Visualization Adaptive Card Extension - updated with the SPFx v1.20 release details
 - **[Introduction to new data visualization components for Viva Connections](https://www.youtube.com/watch?v=zBLEEF6cC7I)** (video) - This video focuses on the creation of ACE data visualization cards with SPFx and also showcases the future plans within this area. Example charts are also demonstrated in the context of example Viva Connections experience.
 
 New sample showcasing the new data visualization options for ACEs:
 
-- **[Chart Card - Data Visualization Options](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-DataVisualizationOptions)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx 1.20 release.
+- **[Chart Card - Data Visualization Options](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-DataVisualizationOptions)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx v1.20 release.
 
 ### HTML Quick View support for Viva Connections cards
 
-With the 1.20 version, we are introducing new option to use HTML to render the Viva Connection Adaptive Card Extension quick views. This will enable more advance user experiences and you can use whatever suitable JavaScript extensibility model (React etc.) in your quick view experiences.
+With the SPFx v1.20 version, we're introducing new option to use HTML to render the Viva Connection Adaptive Card Extension Quick Views. This enables more advanced user experiences. You can even use whatever suitable JavaScript web framework you prefer (that is: React etc.) in your Quick View experiences.
 
-You can start using this option by updating your quick view implementation to be inherited from xxx class, which will be automatically detected by the underlaying platform.
+You can start using this option by updating your Quick View implementation to be inherited from xxx class, which will be automatically detected by the underlying platform.
 
 Out-of-the-box OneDrive (files) card is using this rendering option as a reference point.
 
-![Preview on HTML quick views](../images/120-release-notes/html-quick-views.png)
+![Preview on HTML Quick Views](../images/120-release-notes/html-quick-views.png)
 
 Related updated documentation for the SPFx v1.20 release:
 
-- **HTML based quick views**: Conceptual documentation for the HTML Quick views - coming soon
-- **Creating your first HTML based quick view** (tutorial): Step-by-step guide on creating an ACE with the a custom HTML quick view - coming soon
-- **[Introduction to new data visualization components for Viva Connections](https://www.youtube.com/watch?v=DaRoCFNtFrY)** (video) - This video focuses on the creation of ACE data visualization cards with SPFx and also showcases the future plans within this area. Example charts are also demonstrated in the context of example Viva Connections experience.
+- **[Build an HTML Quick View SharePoint Framework Adaptive Card Extension](./viva/get-started/build-html-quickview-adaptive-card-extension.md)** (tutorial): Step-by-step guide on creating an ACE with a custom HTML Quick View.
+- **[Introduction to HTML Quick Views with SPFx in Viva Connections cards](https://youtu.be/kL6Nsx-K8Oo)** (video) - This video explains how you can create the Viva Connections card Quick Views using HTML. This enables more complex user interfaces for the Viva Connections vs the previously supported adaptive card option. Adaptive Cards will keep on being supported also as an option. You can use whatever JavaScript frameworks you'd like in the actual implementation, which provides more flexibility for developers.
 
 New sample showcasing the new data visualization options for ACEs:
 
-- **[Basic Card - HTML Quick View](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/BasicCard-HTML-QuickView)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx 1.20 release.
+- **[Basic Card - HTML Quick View](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/BasicCard-HTML-QuickView)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx v1.20 release.
+
 
 ## Deprecations
 

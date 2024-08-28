@@ -115,11 +115,11 @@ Based on the received feedback from the ecosystem, we "relaxed" applied ESLint r
 
 ### Defer loading Adaptive Card Extension Quick View
 
-When an ACE is loaded on a page we load both the card view and quick view. However, we don't need load the quick view until it is interacted with. By defer loading a quick view, we will gain performance when loading an ACE.
+When an ACE is loaded on a page we load both the card view and Quick View. However, we don't need load the Quick View until it is interacted with. By defer loading a Quick View, we will gain performance when loading an ACE.
 
-Below is an example to defer load quick view.
+Below is an example to defer load Quick View.
 
-Remove importing quick view files in your class that extends `BaseAdaptiveCardExtension`.
+Remove importing Quick View files in your class that extends `BaseAdaptiveCardExtension`.
 
 ```typescript
 this.quickViewNavigator.register(

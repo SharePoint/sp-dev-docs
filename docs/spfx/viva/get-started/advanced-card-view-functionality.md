@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
 
-In this tutorial, you'll implement advanced card view functionality. You'll build off the the previous tutorial and create a card view that's powered by data in a SharePoint list.
+In this tutorial, you'll implement advanced Card View functionality. You'll build off the the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
 [!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
 
@@ -281,18 +281,18 @@ Open the Toolbox and select your ACE:
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-1.png" alt-text="Select the ACE from the Toolbox":::
 
-## Conditional card views
+## Conditional Card Views
 
 By default, Views are automatically responsive to the Card size. However, ACEs can optionally provide different Views for any given Card size.
 
 Change the HelloWorld ACE to display the total count of List items in the **Medium** Card size, and display the List items in the **Large** Card size to maximize the use of available space.
 
-### Medium card view
+### Medium Card View
 
-Let's create a medium card view for our ACE:
+Let's create a medium Card View for our ACE:
 
 1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts** folder.
-1. Add the following code to create a new **Medium** sized card view:
+1. Add the following code to create a new **Medium** sized Card View:
 
     ```typescript
     import {
@@ -378,7 +378,7 @@ Change the Card size to **Large** and refresh the browser:
 
 ## Large Card interactivity
 
-ACE Card views support user interaction. The buttons can invoke REST APIs or be used to interact with the Card in other ways. In this section, you'll change the Large Card view to iterate through the items in the SharePoint list.
+ACE Card Views support user interaction. The buttons can invoke REST APIs or be used to interact with the Card in other ways. In this section, you'll change the Large Card View to iterate through the items in the SharePoint list.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 1. At the top of the file, add `IActionArguments`, `GenericCardViewFooterConfiguration` and `IAdaptiveCardExtensionCardButtonParameters`  as the references to import from the **@microsoft/sp-adaptive-card-extension-base** package:
@@ -392,7 +392,7 @@ ACE Card views support user interaction. The buttons can invoke REST APIs or be 
     } from '@microsoft/sp-adaptive-card-extension-base';
     ```
 
-1. The buttons on the Card view can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
+1. The buttons on the Card View can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
 
     ```typescript
     public get cardViewParameters(): ComponentsCardViewParameters {
@@ -484,14 +484,14 @@ Select the **Next** button until you get to the last item in the list. The card 
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-6.png" alt-text="Card displaying the last item in the list with only a Previous button":::
 
-## Caching Card view and ACE state
+## Caching Card View and ACE state
 
 Starting in SPFx v1.14, ACEs have a client-side caching layer that can be configured to store:
 
 1. The latest rendered card.
 1. The state of the ACE.
 
-### Rendering from cached Card view
+### Rendering from cached Card View
 
 If the latest rendered card is stored, the Dashboard renders this cached card before the ACE is initialized, improving perceived performance.
 
@@ -502,7 +502,7 @@ protected getCacheSettings(): Partial<ICacheSettings> {
   return {
     isEnabled: true, // can be set to false to disable caching
     expiryTimeInSeconds: 86400, // controls how long until the cached card and state are stale
-    cachedCardView: () => new CardView() // function that returns the custom Card view that will be used to generate the cached card
+    cachedCardView: () => new CardView() // function that returns the custom Card View that will be used to generate the cached card
   };
 }
 ```
@@ -529,10 +529,10 @@ After this lab you should be familiar with:
 
 - Changing the default `properties` of an ACE
 - Changing the ACE `properties`/`state` interfaces
-- Creating and registering Card views
-- Conditionally rendering Card view elements
-- Advanced Card view manipulation
-- Caching Card view and ACE state
+- Creating and registering Card Views
+- Conditionally rendering Card View elements
+- Advanced Card View manipulation
+- Caching Card View and ACE state
 
 ## See Also
 

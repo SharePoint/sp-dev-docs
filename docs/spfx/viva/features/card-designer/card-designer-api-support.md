@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Overview of Viva Connections Card Designer advance API features
 
-Advance API features for the Viva Connections Card Designer enable the dashboard editors to create API powered quick view experiences without actual code. This new option is supported with all the different form factors or Viva Connections dashboard - mobile, tablet and desktop.
+Advance API features for the Viva Connections Card Designer enable the dashboard editors to create API powered Quick View experiences without actual code. This new option is supported with all the different form factors or Viva Connections dashboard - mobile, tablet and desktop.
 
 > [!IMPORTANT]
 > First version of this feature is rolling out worldwide by end of the 2023 calendar year. User interface for Card designer will be further evolved within early 2024 for a better end user experience with the advance API features.
@@ -16,7 +16,7 @@ Advance API features for the Viva Connections Card Designer enable the dashboard
 By default this feature isn't currently available in the tenants and it has to be enabled by using SharePoint Online Management Shell with following command.
 
 ```powershell
-    Set-SPOTenant -IsDataAccessInCardDesignerEnabled $true
+Set-SPOTenant -IsDataAccessInCardDesignerEnabled $true
 ```
 
 > [!IMPORTANT]
@@ -38,16 +38,15 @@ Needed permissions can be also granted directly to the SharePoint Framework exte
 
 1. Move to the API management page in the SharePoint administration - first time you access this page, the needed app registrations are automatically created to the tenant.
 
-    ![API acess page in the SharePoint admin center](./img/sharepoint-admin-api-management.png)
+    ![API access page in the SharePoint admin center](./img/sharepoint-admin-api-management.png)
 
+1. Move the Microsoft Entra admin center to confirm that the needed app registrations are available.
 
-1. Move the Microsoft Entra admin center to confirm that the needed app registrations are available. 
-
-    ![API options in the Data source selection in the webpart toolbox](./img/entra-app-registration.png)
+    ![Microsoft Entra admin center app registration](./img/entra-app-registration.png)
 
 1. Move to the **SharePoint Online Client Extensibility Web Application Principal** registration and include the needed permissions, which you'd like to be available for the dashboard editors when they use Card Designer feature.
 
-    ![API options in the Data source selection in the webpart toolbox](./img/entra-app-permissions.png)
+    ![Microsoft Entra admin center app permissions](./img/entra-app-permissions.png)
 
 Notice that after you granted the permissions in the Microsoft Entra admin center, the matching permissions are also visible in the API management page in the SharePoint admin center.
 
@@ -55,22 +54,21 @@ Notice that after you granted the permissions in the Microsoft Entra admin cente
 
 When the needed API permissions are available, dashboard designer can use the API features to get dynamic content based on the user identity. As an example, you could use the following Microsoft Graph endpoint to get the following events for the particular user.
 
-```
+```text
 https://graph.microsoft.com/v1.0/me/events?$take=5&$select=id,webLink,subject,start,end,location
 ```
 
-Combining that API call with a custom adaptive card presentation, you could, for example,  present the user's upcoming meetings with following quick view rendering.
+Combining that API call with a custom adaptive card presentation, you could, for example,  present the user's upcoming meetings with following Quick View rendering.
 
-![API options in the Data source selection in the webpart toolbox](./img/quick-view-upcoming-meetings.png)
+![Screenshot of an ACE Quick View showing upcoming meetings](./img/quick-view-upcoming-meetings.png)
 
 > [!TIP]
-> You can use the [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) to see the different avaialble APIs from Microsoft Graph and their output in JSON. Using that output with [Adaptive Card Designer](), you can easily create powerful experiences with the Card Designer advance API features.
-
+> You can use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to see the different available APIs from Microsoft Graph and their output in JSON. Using that output with [Adaptive Card Designer](https://adaptivecards.io/designer/), you can easily create powerful experiences with the Card Designer advance API features.
 
 ## References
 
 - [YouTube - Introduction to new advance API features in Viva Connections Card Designer](https://www.youtube.com/watch?v=NjZj1F6D6jw)
-- [Viva Connections Card designer](https://learn.microsoft.com/en-us/viva/connections/create-dashboard#design-your-own-card-with-a-quick-view)
-- [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Viva Connections Card designer](/viva/connections/create-dashboard#design-your-own-card-with-a-quick-view)
+- [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 - [Adaptive Card Designer](https://www.adaptivecards.io/designer/)
-- [SharePoint Online Management Shell](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+- [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
