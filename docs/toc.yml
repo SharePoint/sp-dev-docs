@@ -468,6 +468,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.20 - August 20, 2024
+      href: spfx/release-1.20.md      
     - name: SPFx v1.19 - April 25, 2024
       href: spfx/release-1.19.md
     - name: SPFx v1.18.2 - November 21, 2023
@@ -602,6 +604,8 @@
       href: embedded/tutorials/doc-processing-acs.md
     - name: Using Webhooks
       href: embedded/tutorials/using-webhooks.md
+    - name: Migrate ABS to SPE
+      href: embedded/tutorials/migrate-abs-to-spe.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration

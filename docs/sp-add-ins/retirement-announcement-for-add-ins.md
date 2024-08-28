@@ -10,6 +10,9 @@ ms.service: sharepoint
 
 Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the SharePoint Add-In extensibility model and believe Microsoft 365 customers will be better served by modern SharePoint extensibility models.
 
+> [!IMPORTANT]
+> The SharePoint add-in model deprecation in SharePoint Online does not impact [SharePoint Framework (SPFx)](https://aka.ms/spfx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported also in future.
+
 SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024 and they will stop working for existing tenants and will be fully retired as of April 2nd, 2026. This applies to all environments including Government Clouds and Department of Defense.
 
 In parallel with the SharePoint Add-In retirement, adding, updating and acquiring SharePoint Add-Ins via the public marketplace (a.k.a. store) will also be retiring. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace, from July 1st, 2024 SharePoint Add-Ins cannot be acquired anymore from the public marketplace. Using a tenant app catalog will stay supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.

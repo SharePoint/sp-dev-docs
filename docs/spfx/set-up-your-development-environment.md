@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 05/15/2024
+ms.date: 08/19/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -95,7 +95,7 @@ npm install yo --global
 > SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with the following command:
 >
 > ```console
-> npm install yo@4.3.1
+> npm install yo@4.3.1 --global
 > ```
 
 ### Install Yeoman SharePoint generator
@@ -128,6 +128,25 @@ gulp trust-dev-cert
 
 > [!NOTE]
 > This assumes you have installed all dependencies with `npm install` after creating the project. This step will install all gulp tasks as part of a project.
+
+## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
+
+Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
+}
+```
+
+The SPFx build toolchain will replace this value on the fly with a value defined in an environment variable on your local workstation.
+
+Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to specify the tenant domain (or site URL) for serve configurations across different SPFx solutions. If a URL in the serve configuration (for example, `pageUrl` for Field Customizer) contains the `{tenantDomain}` placeholder, it will be automatically replaced with the variable's value.
+
+For more information on how to set the environment variable on your developer environment, including Windows or macOS, see [Setting the SharePoint Framework Hosted Workbench Test Site](https://www.voitanos.io/blog/set-spfx-hosted-workbench-test-site/).
 
 ## Optional tools
 
