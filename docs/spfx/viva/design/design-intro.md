@@ -25,7 +25,7 @@ The Viva Connections Dashboard is the digital toolset for your employees. You ca
 
 The cards, called Adaptive Card Extensions (ACEs) are designed to enable quick task completion by interacting with a card directly (the Card View) or by opening a Quick View from the Card View.
 
-:::image type="content" source="../../../images/viva-design/viva-design_dashboard_overview.jpg" alt-text="Dashboard in mobile and in Desktop view":::
+![Dashboard in mobile and in Desktop view](../../../images/viva-design/viva-design_dashboard_overview.jpg)
 
 ## Types of cards
 
@@ -35,7 +35,7 @@ ACEs are implemented using two types of cards: the Card View and an optional Qui
 
 The Card View is the primary view for an ACE. The Card View is defined using Adaptive Cards and is rendered on the Viva Connections experience.
 
-![Example Viva Connections mobile layout as available in 2024](./images/viva-connections-mobile-and-tablet.png)
+![Example Viva Connections mobile layout as available in 2024](../images/viva-connections-mobile-and-tablet.png)
 
 ### Quick View
 
