@@ -1,7 +1,7 @@
 ---
 title: Create a Data Visualization Adaptive Card Extension
 description: Step-by-step guide on creating Data Visualization Adaptive Card Extension.
-ms.date: 08/19/2024
+ms.date: 08/28/2024
 ms.localizationpriority: high
 ---
 # Create a Data Visualization Adaptive Card Extension
@@ -12,7 +12,7 @@ The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Vi
 > Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension: [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 
 > [!IMPORTANT]
-> Line chart data visualization type was released as part of the [SPFx 1.19  release](../../release-1.19.md). Other data visualization types are released as part of the [SPFx 1.20 release](../../release-1.20.md).
+> Line chart data visualization type was released as part of the [SPFx 1.19 release](../../release-1.19.md). Other data visualization types, such as the bar chart, donut chart, and pie charts, were introduced in the [SPFx 1.20 release](../../release-1.20.md).
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -219,7 +219,9 @@ This card when in the large mode generates the following rendering:
 
 ## Support for more chart types
 
-The [SharePoint Framework v1.20](../../release-1.20.md) introduces support for newer chart types, enabling developers to create visually appealing data visualizations like bar, pie, and donut charts. This section provides an example of each of them.
+The [SharePoint Framework v1.20](../../release-1.20.md) introduces support for newer chart types, enabling developers to create visually appealing data visualizations like bar, pie, and donut charts.
+
+![Screenshot of example ACE's using different data visualization options.](../../../images/viva-extensibility/data-visualization/ace-dataviz-allup.png)
 
 ### Bar Chart
 
@@ -286,11 +288,12 @@ export class CardView extends BaseComponentsCardView<
 ```
 
 The rendered bar chart looks something like this:
+
 ![Vertically grouped bar chart](../../../../docs/images/viva-extensibility/data-visualization/bar-chart.png)
 
 ### Pie/Donut Charts
 
-Here's an example of the CardView.ts file that renders a Pie chart with the given data:
+Here's an example of the **CardView.ts** file that renders a pie chart with the given data:
 
 ```typescript
 import {
@@ -339,15 +342,18 @@ export class CardView extends BaseComponentsCardView<
 ```
 
 Notice how the `dataVisualizationKind` is set to `pie` and `PieChartCardView` is returned with the required parameters. Upon refreshing the card on the workbench, you see that a pie chart is rendered:
+
 ![Pie chart example](../../../../docs/images/viva-extensibility/data-visualization/pie-chart.png)
 
 The `isDonut` flag indicates if the pie chart should be rendered as a donut chart, which is `false` by default. When set to true, the donut chart is rendered as follows:
+
 ![Donut chart example](../../../../docs/images/viva-extensibility/data-visualization/donut-chart.png)
 
-The numeric text in the center displays the sum of all the y values in the series.
+The numeric text in the center displays the sum of all the **y** values in the series.
 
 ## See Also
 
 - Video: **[Introducing new Viva Connections chart card layout option](https://www.youtube.com/watch?v=JOIb4KhiWAI)**
 - Sample: **[Chart Card - Page Creation](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-PageCreation)**
 - Sample: **[Chart Card - Three Series](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)**
+- Sample: **[Chart Card - Data Visualization Options](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-DataVisualizationOptions)**
