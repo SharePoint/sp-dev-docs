@@ -11,6 +11,14 @@ Microsoft SharePoint Embedded is a cloud-based file and document management syst
 
 SharePoint Embedded allows you to integrate advanced Microsoft 365 features into your apps including full featured collaborative functions from Office, Purview's security and compliance tools, and Copilot capabilities.
 
+
+
+> [!IMPORTANT]
+Help us shape the future of SharePoint Embedded!
+Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your experience!
+
+
+
 ## App documents stay in their Microsoft 365 tenant
 
 When a consumer uses a SharePoint Embedded application in their Microsoft 365 tenant, SharePoint Embedded creates another partition within their tenant. This storage partition doesn't have a user experience and the documents in the partition are only accessible via APIs. This means that all documents will be accessible to the developer’s application, but the documents will only reside in the consumer’s Microsoft 365 tenant. Within this new storage partition inside of a Microsoft 365 tenant, a SharePoint Embedded application can create many "File Storage Containers" for storing content.
