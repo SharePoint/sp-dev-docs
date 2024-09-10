@@ -410,6 +410,8 @@
         href: design/designing-a-web-part-icon.md
       - name: Using semantic slots
         href: design/semantic_slots.md
+      - name: Using Brand center fonts
+        href: design/use-brand-center-fonts-in-spfx-components.md
     - name: Authoring pages
       href: design/authoring-pages.md
     - name: Design considerations
