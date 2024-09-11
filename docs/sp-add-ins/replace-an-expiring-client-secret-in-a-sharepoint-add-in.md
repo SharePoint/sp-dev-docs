@@ -17,7 +17,7 @@ Client secrets for SharePoint Add-ins that are registered by using the **AppRegN
 
 ## Recommended maintenance schedule
 
-We recommend creating new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
+We recommend creating new secrets a minimum of 30 days before they expire. This gives you a month before the old credentials expire.
 
 We recommend only removing secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
 
@@ -28,7 +28,7 @@ Removing an expired secret from ACS before you remove it from the application co
 Ensure the following before you begin:
 
 - You have installed Microsoft Graph Powershell SDK: [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
-- You're a tenant administrator (or having `Application.ReadWrite.All` permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
+- You're a tenant administrator (or having **Application.ReadWrite.All** permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
 
 ## Generate a new secret
 
@@ -38,13 +38,13 @@ Ensure the following before you begin:
     $clientId = 'client id of the add-in'
     ```
 
-2. Connect to graph with `Application.ReadWrite.All, Directory.ReadWrite.All` scope.
+1. Connect to Microsoft Graph with **Application.ReadWrite.All**, **Directory.ReadWrite.All** scope.
 
     ```powershell
-    Connect-MgGraph -Scopes "Application.ReadWrite.All,Directory.ReadWrite.All" # Login with corresponding scope. Should be tenant admin or anyone have the permission.
+    Connect-MgGraph -Scopes "Application.ReadWrite.All,Directory.ReadWrite.All" # Login with corresponding scope. Should the tenant admin or anyone else have the permission.
     ```
     
-3. Generate a new client secret with the following lines:
+1. Generate a new client secret with the following lines:
 
     ```powershell
     $appPrincipal = Get-MgServicePrincipal -Filter "AppId eq '$clientId'" # Get principal id by AppId
@@ -80,12 +80,12 @@ Ensure the following before you begin:
     $result.EndDateTime # Print the end date.
     ```
 
-4. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
+1. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
 
     > [!TIP]
-    > By default, the secret lasts two years if you didn't specify the EndDateTime. You can customize by leveraging the example below to specify the EndDateTime.
+    > By default, the secret lasts two years if you didn't specify the EndDateTime. You can customize by using the example below to specify the EndDateTime.
     > 
-    > ``` powershell
+    > ```powershell
     > $params = @{
     >     PasswordCredential = @{
     >         DisplayName = "NewSecret" # Replace with a firendly name.
@@ -97,7 +97,7 @@ Ensure the following before you begin:
 ## Update the remote web application in Visual Studio to use the new secret
 
 > [!IMPORTANT]
-> If your add-in was originally created with a pre-release version of the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the **TokenHelper.[cs|vb]** file. If the file does not contain the string `secondaryClientSecret`, it is out of date and must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the **TokenHelper.[cs|vb]** file from it to the web application project of your SharePoint Add-in.
+> If your add-in was created with a pre-release version of the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the **TokenHelper.[cs|vb]** file. If the file does not contain the string `secondaryClientSecret`, it is out of date and must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the **TokenHelper.[cs|vb]** file from it to the web application project of your SharePoint Add-in.
 
 1. Open the SharePoint Add-in project in Visual Studio, and open the **web.config** file for the web application project. In the `appSettings` section, there are keys for the client ID and client secret. The following is an example:
 
