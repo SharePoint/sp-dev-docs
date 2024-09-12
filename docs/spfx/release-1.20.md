@@ -36,7 +36,7 @@ In the project's **package.json** file, identify all SPFx v1.19 packages. For ea
 1. Install the new v1.20 preview package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@1.20.0-beta.0 --save --save-exact
+    npm install @microsoft/{spfx-package-name}@next --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
