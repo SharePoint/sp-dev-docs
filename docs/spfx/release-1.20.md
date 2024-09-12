@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.20 preview release notes
 description: Release notes for the SharePoint Framework v1.20 preview release.
-ms.date: 08/28/2024
+ms.date: 09/12/2024
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.20 release notes
@@ -10,7 +10,8 @@ This release focuses primarily on the new features within the [Microsoft Viva Co
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.0 **Released:** August 20, 2024
+* rc.0 **Released:** September 12, 2024
+* beta.0 **Released:** August 20, 2024
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -75,7 +76,6 @@ Related updated documentation for the SPFx v1.20 release:
 New sample showcasing the new data visualization options for ACEs:
 
 - **[Basic Card - HTML Quick View](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/BasicCard-HTML-QuickView)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx v1.20 release.
-
 
 ## Deprecations
 
