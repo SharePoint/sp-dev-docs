@@ -134,7 +134,7 @@ The last step is to update the Quick View component to import the style sheet an
     Replace this line with the following line:
 
     ```typescript
-    import { BaseHTMLQuickView } from '@microsoft/sp-adaptive-card-extension-base';
+    import { BaseWebQuickView } from '@microsoft/sp-adaptive-card-extension-base';
     ```
 
 1. Add the following two `import` statements after the existing `import` statements:
@@ -147,7 +147,7 @@ The last step is to update the Quick View component to import the style sheet an
 1. Locate the `QuickView` class declaration and change the base class it extends from the following:
 
     ```typescript
-    export class QuickView extends BaseHTMLQuickView<
+    export class QuickView extends BaseWebQuickView<
       IHtmlQuickViewAdaptiveCardExtensionProps,
       IHtmlQuickViewAdaptiveCardExtensionState,
       IQuickViewData
@@ -157,7 +157,7 @@ The last step is to update the Quick View component to import the style sheet an
     ... to the following:
 
     ```typescript
-    export class QuickView extends BaseHTMLQuickView<
+    export class QuickView extends BaseWebQuickView<
       IHtmlQuickViewAdaptiveCardExtensionProps,
       IHtmlQuickViewAdaptiveCardExtensionState
     > {
