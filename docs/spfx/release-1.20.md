@@ -10,7 +10,7 @@ This release focuses primarily on the new features within the [Microsoft Viva Co
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-* rc.0 **Released:** September 12, 2024
+* rc.1 **Released:** September 12, 2024
 * beta.0 **Released:** August 20, 2024
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
