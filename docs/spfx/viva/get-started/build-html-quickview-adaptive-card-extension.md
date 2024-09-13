@@ -1,7 +1,7 @@
 ---
 title: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll learn how to use HTML to implement a QuickView.
-ms.date: 08/27/2024
+ms.date: 09/13/2024
 ms.localizationpriority: high
 ---
 # Build an HTML Quick View SharePoint Framework Adaptive Card Extension
