@@ -108,7 +108,7 @@ Any user accessing a container must be a member of the container. Membership to 
 
 Here are some actions you can take next:
 
-1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request the required permissions:
+1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you may use [Entra PowerShell](/powershell/entra-powershell/manage-apps?view=entra-powershell#assign-permissions-to-an-app) or [Azure CLI](/cli/azure/ad/app/permission?view=azure-cli-latest#az-ad-app-permission-add)) to request the required permissions:
    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
      - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
