@@ -100,7 +100,7 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
                      -isPassThroughBilling 
 ```
 
-### [Set Up Guide in Consuming Tenant Admin Center]()
+### [Set Up Guide in Consuming Tenant Admin Center](../../admin-exp/consuming-tenant-admin/cta.md#set-up-billing-for-pass-through-app)
 
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
