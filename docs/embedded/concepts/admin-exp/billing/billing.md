@@ -100,6 +100,17 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
                      -isPassThroughBilling 
 ```
 
+### [Set Up Guide in Consuming Tenant Admin Center]()
+
+1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
+
+  ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+
+1. Select **Go to Syntex settings**.
+1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
+![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
+
 ## SharePoint Embedded meters
 
 Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
