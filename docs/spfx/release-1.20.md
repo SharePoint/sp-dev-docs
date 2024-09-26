@@ -1,29 +1,26 @@
 ---
-title: SharePoint Framework v1.20 preview release notes
-description: Release notes for the SharePoint Framework v1.20 preview release.
-ms.date: 09/12/2024
+title: SharePoint Framework v1.20 release notes
+description: Release notes for the SharePoint Framework v1.20 release.
+ms.date: 09/26/2024
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.20 release notes
 
 This release focuses primarily on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-* rc.1 **Released:** September 12, 2024
-* beta.0 **Released:** August 20, 2024
+**Released:** September 26, 2024
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the preview version
+## Install the latest version
 
-Install the preview release of the SharePoint Framework (SPFx) by using the **@next** tag
+Install the latest generally available release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from the SPFx v1.19 to v1.20 preview version
+## Upgrading projects from the SPFx v1.19 to v1.20 version
 
 In the project's **package.json** file, identify all SPFx v1.19 packages. For each SPFx package:
 
@@ -33,10 +30,10 @@ In the project's **package.json** file, identify all SPFx v1.19 packages. For ea
     npm uninstall @microsoft/{spfx-package-name}@1.19
     ```
 
-1. Install the new v1.20 preview package:
+1. Install the new v1.20 package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@next --save --save-exact
+    npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
@@ -77,13 +74,24 @@ New sample showcasing the new data visualization options for ACEs:
 
 - **[Basic Card - HTML Quick View](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/BasicCard-HTML-QuickView)**: Baseline example of the data visualization card rendering options, which was introduced as part of the SPFx v1.20 release.
 
+### Fix for [object|object] issue
+
+As part of the transitioning to WebPack 5 with the SPFx 1.19, exception details where impacted as called out with in issue [#9834](https://github.com/SharePoint/sp-dev-docs/issues/9834).
+
+This issue has been fixed and is by default fixed for any new project created with the SPFx Yeoman generator 1.20. For the previously created project, you can fix this issue with following updates:
+
+- SPFx tools packages version is 1.20.2
+- update `@rushstack/eslint-config` from 2.5.1 to 4.0.1
+- Optional: fix new lint errors such as *"@typescript-eslint/no-unsafe-function-type rule is not found"* by modifying .eslintrc.js
+- Optional: fix other lint rules related to the code and not ESLint configuration
+
 ## Deprecations
 
 No new updates.
 
 ## Fixed Issues
 
-No new updates.
+- [#9834](https://github.com/SharePoint/sp-dev-docs/issues/9834) - SPFx 1.19.0 - Error during bundle says [object Object] instead of displaying a clear message.
 
 ## Feedback and issues
 
