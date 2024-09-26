@@ -1,17 +1,17 @@
 ---
 title: PAYG billing for SharePoint Embedded
 description: This article explains the billing models and how to set up PAYG billing.
-ms.date: 05/21/2024
+ms.date: 08/26/2024
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded billing
 
-SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models which the tenant developing the SharePoint Embedded application can select for respective container types, tailoring it to their unique business requirements. The two billing models are Standard and Pass-through billing.
+SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models that the tenant developing the SharePoint Embedded application can select for respective container types, tailoring it to their unique business requirements. The two billing models are Standard and Pass-through billing.
 
 ### Standard
 
-With the standard billing model, all consumption-based charges are directly billed to the tenant that owns/develops the application. The admin in the developer tenant  must establish a valid billing profile when creating a standard container type.
+With the standard billing model, all consumption-based charges are directly billed to the tenant who owns or develops the application. The admin in the developer tenant  must establish a valid billing profile when creating a standard container type.
 
 ![Standard](../../../images/1bill521.png)
 
@@ -38,7 +38,7 @@ A new container type will be created using **SharePoint Online Management Shell*
 
 ### Azure Subscription
 
-For Standard Billing container type, the developer admin needs to set up:
+For the Standard Billing container type, the developer admin needs to set up:
 
 - An existing SharePoint tenancy
 - An Azure subscription in the tenancy
@@ -92,6 +92,7 @@ You can view the properties of a container type and associated billing propertie
 
 
 ## Set up a Pass-through Billing container type
+
 For Pass-through Billing container types, the developer admin doesn't have to set up billing in the developer tenant. SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet with  `isPassThroughBilling` specified.
 
 ```powershell
@@ -104,11 +105,13 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
-  ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+    ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
 
 1. Select **Go to Syntex settings**.
 1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
-![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+ 
+    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+
 1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
 
 ## SharePoint Embedded meters
