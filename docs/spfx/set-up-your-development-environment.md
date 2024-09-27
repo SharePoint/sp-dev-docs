@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 08/19/2024
+ms.date: 09/27/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -42,7 +42,7 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-SharePoint Framework v1.19.* is supported on Node.js v18 LTS (*aka: Hydrogen*).
+SharePoint Framework v1.20.* is supported on Node.js v18 LTS (*aka: Hydrogen*).
 
 SharePoint Framework v1.18.* is supported on the following Node.js versions:
 
