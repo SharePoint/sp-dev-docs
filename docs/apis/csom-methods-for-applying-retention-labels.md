@@ -6,7 +6,7 @@ ms.author: kyrachurney
 ms.date: 4/18/2023
 ---
 
-# CSOM methods for applying retention labels (setting ComplianceTags)
+# CSOM methods for applying retention labels and managing settings of record labels
 
 Retention labels let you apply retention settings for governance control at the item level, and are part of the Microsoft Purview compliance solutions. [Learn more about retention labels.](/microsoft-365/compliance/retention#retention-labels)
 
