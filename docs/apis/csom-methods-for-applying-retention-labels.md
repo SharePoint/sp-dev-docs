@@ -3,7 +3,7 @@ title: CSOM methods for retention labels
 description: CSOM methods are available to apply (set) a retention label (ComplianceTag) on one or many items (ListItems) in SharePoint. Also includes settings of retention labels in ODB and SPO.
 author: kyracatwork
 ms.author: kyrachurney
-ms.date: 4/18/2023
+ms.date: 9/30/2024
 ---
 
 # CSOM methods for applying retention labels and managing settings of record labels
