@@ -34,42 +34,92 @@ public List<int> SetComplianceTagOnBulkItems(
 
 Attribute [RemoteAttribute](/dotnet/api/microsoft.sharepoint.client.remoteattribute)
 
-## REST API for Retention Labels Settings
+## GetAllowFilesWithKeepLabelToBeDeletedODB
 
-Setting up Retention Labels settings for Microsoft Purview Records Management in Microsoft 365 is essential to properly monitor and enforce your organization's compliance policies. These APIs correspond to the settings under **[Microsoft Purview portal](https://purview.microsoft.com/)** or the **[Microsoft Purview compliance portal](/purview/purview-compliance-portal)** > **Records Management settings** > **Retention Labels**.
+Get whether files with Keep Label can be deleted in ODB.
 
-### Authentication and Permissions
 
-__Permissions:__ Need to use account credentials of user who has __Tenant Admin__ role.
+```c#
 
-__Required scopes:__ Sites.FullControl.All
+public static bool GetAllowFilesWithKeepLabelToBeDeletedODB()
+```
 
-__Authentication:__ Generate user token using [https://login.microsoftonline.com/common/oauth2/token](https://login.microsoftonline.com/common/oauth2/token) and using the user credentials to generate a bearer token to be used for authentication to the API.
+## SetAllowFilesWithKeepLabelToBeDeletedODB
 
-__Request Headers:__ Bearer token. Learn here: [https://learn.microsoft.com/graph/auth/auth-concepts](/graph/auth/auth-concepts).
+Set whether files with Keep Label can be deleted in ODB
 
-### API Reference
 
-The common namespace is `SP.CompliancePolicy.SPPolicyStoreProxy`, and the prefix to use before each endpoint is `https://<tenant-name>.sharepoint.com/_api/SP.CompliancePolicy.SPPolicyStoreProxy`.
+```c#
+public static void SetAllowFilesWithKeepLabelToBeDeletedODB(bool allowDeletion)
+```
 
-|Setting Name|Request Method|Endpoint|Request Body|Response|
-| -------- | -------- | -------- | -------- | -------- |
-|Deleting content labeled for retention in OneDrive for Business|GET|`GetAllowFilesWithKeepLabelToBeDeletedODB`|N/A|`{"odata.metadata": https://<tenant-name>.sharepoint.com/_api/$metadata#Edm.Boolean","value": <Boolean>}`|
-||POST|`SetAllowFilesWithKeepLabelToBeDeletedODB`|`{"allowDeletion": <Boolean>}`|If successful, returns 200 OK.|
-|Deleting content labeled for retention in SharePoint Online|GET|`GetAllowFilesWithKeepLabelToBeDeletedSPO`|N/A|`{"odata.metadata": https://<tenant-name>.sharepoint.com/_api/$metadata#Edm.Boolean","value": <Boolean>}`|
-||POST|`SetAllowFilesWithKeepLabelToBeDeletedSPO`|`{"allowDeletion": <Boolean>}`|If successful, returns 200 OK.|
-|Enable record versioning|GET|`GetAdvancedRecordVersioningDisabled`|N/A|`{"odata.metadata": https://<tenant-name>.sharepoint.com/_api/$metadata#Edm.Boolean","value": <Boolean>}`|
-||POST|`SetAdvancedRecordVersioningDisabled`|`{"disabled":<Boolean>}` |If successful, returns 200 OK.|
-|Allow users to edit record properties|GET|`GetMetadataEditBlockingEnabled`|N/A|`{"odata.metadata": https://<tenant-name>.sharepoint.com/_api/$metadata#Edm.Boolean","value": <Boolean>}`|
-||POST|`SetMetadataEditBlockingEnabled`|`{"enabled":<Boolean>}` |If successful, returns 200 OK.|
+Parameters
 
-Example: To get the value of *Deleting content labeled for retention in OneDrive for Business,* do the following:
+- 'allowDeletion' [Boolean](/dotnet/api/system.boolean)
 
-1. Get the tenant name. In this case, assume it's contoso.
+## GetAllowFilesWithKeepLabelToBeDeletedSPO
+Get whether files with Keep Label can be deleted in SPO.
 
-1. Make a GET API call to `https://contoso.sharepoint.com/_api/SP.CompliancePolicy.SPPolicyStoreProxy.GetAllowFilesWithKeepLabelToBeDeletedODB`.
+```c#
 
-1. You get a response as `{"odata.metadata": https://contoso.sharepoint.com/_api/$metadata#Edm.Boolean","value": true}` if it's enabled, or as `{"odata.metadata": https://contoso.sharepoint.com/_api/$metadata#Edm.Boolean","value": false}` if it's disabled.
+public static bool GetAllowFilesWithKeepLabelToBeDeletedSPO()
+```
+
+## SetAllowFilesWithKeepLabelToBeDeletedSPO
+
+Set whether files with Keep Label can be deleted in SPO.
+
+```c#
+public static void SetAllowFilesWithKeepLabelToBeDeletedSPO(bool allowDeletion)
+```
+
+Parameters
+
+- 'allowDeletion' [Boolean](/dotnet/api/system.boolean)
+
+## GetAdvancedRecordVersioningDisabled
+
+Get whether advanced record versioning is disabled.
+
+```c#
+
+public static bool GetAdvancedRecordVersioningDisabled()
+```
+
+## SetAdvancedRecordVersioningDisabled
+
+Set to enable or disable the advanced record versioning.
+
+```c#
+public static void SetAdvancedRecordVersioningDisabled(bool disabled)
+```
+
+Parameters
+
+- 'disabled' [Boolean](/dotnet/api/system.boolean)
+
+## GetMetadataEditBlockingEnabled
+
+Get whether metadata edit blocking is enabled.
+
+```c#
+
+public static bool GetMetadataEditBlockingEnabled()
+
+```
+
+## SetMetadataEditBlockingEnabled
+
+Set metadata edit blocking enabled setting.
+
+
+```c#
+public static void SetMetadataEditBlockingEnabled(bool enabled)
+```
+
+Parameters
+
+- 'enabled' [Boolean](/dotnet/api/system.boolean)
 
 ### Applies to
 
