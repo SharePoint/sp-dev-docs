@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 08/19/2024
+ms.date: 10/01/2024
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -33,7 +33,7 @@ This version is the currently recommended version of Node.js to use with the Sha
 > [!TIP]
 > The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
 >
-> - Windows users can use the **\*.msi** installers for x86 or x64 depending on your Windows installation. There are usually only two available **\*.msi** files with names similar to **node-v{version-number}-x[86|64].msi**.
+> - Windows users can use the **\*.msi** installers for x86 or x64 depending on your Windows installation. There are usually only two **\*.msi** files with names similar to **node-v{version-number}-x[86|64].msi**.
 > - macOS users can use the **\*.pkg** installer that's usually is named **node-v{version-number}.pkg**.
 
 You can check if you already have Node.js installed, including the installed version, by running the following command:
@@ -42,12 +42,7 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-SharePoint Framework v1.19.* is supported on Node.js v18 LTS (*aka: Hydrogen*).
-
-SharePoint Framework v1.18.* is supported on the following Node.js versions:
-
-- Node.js v18 LTS (*aka: Hydrogen*)
-- Node.js v16 LTS (*aka: Gallium*)
+SharePoint Framework v1.20.* is supported on Node.js v18 LTS (*aka Hydrogen*).
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
@@ -92,7 +87,7 @@ Enter the following command to install Yeoman:
 npm install yo --global
 ```
 > [!IMPORTANT]
-> SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you are using previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx version 1.13 until 1.18.1. You can install latest v4 version with the following command:
+> SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you use a previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx v1.13 until v1.18.1. You can install the latest Yeoman v4 version with the following command:
 >
 > ```console
 > npm install yo@4.3.1 --global
@@ -169,7 +164,7 @@ You're now ready to [build your first client-side web part](web-parts/get-starte
 
 The SPFx is available on SharePoint Online (SPO), SharePoint Server Subscription Edition (SE), SharePoint Server 2019, & SharePoint Server 2016. The configuration instructions on this page assume you're creating solutions using the latest version of the SPFx for SharePoint Online.
 
-SharePoint Online contains all versions of the SPFx, including all previous and the latest version. Each SPFx solution contains information to tell SPO which SPFx runtime it depends.
+SharePoint Online contains all versions of the SPFx, including all previous and the latest version. Each SPFx solution contains information to tell SPO which SPFx runtime it depends on.
 
 If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
 
