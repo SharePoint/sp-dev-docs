@@ -26,7 +26,7 @@ When testing your application, verify that it's working as intended when install
 
 When testing your application against checks described in the following section, verify that it works as expected at least on Windows 10 in the latest versions of Microsoft Edge, Google Chrome, Firefox, and Microsoft Teams Desktop client (if your application exposes web parts in Teams).
 
-## Can I rely on unpublished offers in Partner Center for managing a multi-tenant Client ID for customers?
+### Can I rely on unpublished offers in Partner Center for managing a multi-tenant Client ID for customers?
 
 No, offers setup in Partner Center must be published to the Marketplace before using the client IDs in production.
 
