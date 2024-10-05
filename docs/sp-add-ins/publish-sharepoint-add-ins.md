@@ -1,7 +1,7 @@
 ---
 title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
-ms.date: 03/05/2024
+ms.date: 10/05/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -24,6 +24,9 @@ For information about how to package your add-in for publication by using Visual
 To publish an add-in to AppSource, you must first [open a developer account](/office/dev/store/open-a-developer-account).
 
 When you upload an add-in to AppSource for publication, Microsoft performs a validation check. For example, it checks that the add-in is free of viruses and that the add-in manifest markup is valid and complete, and verifies that any SharePoint solution packages (.wsp files) that you included in the add-in do not contain elements that aren't allowed, or SharePoint features with a scope that is broader than web. The package is also inspected for objectionable content. If the add-in package passes validation, it's wrapped into a file and signed by Microsoft.
+
+> [!Important]
+> Add-ins are registered in Partner Center and from there published to AppSource. As part of the Partner Center registration there's also an option to setup a client id and secret for your add-ins. The use of this client id and secret is only supported when the add-in is **also published**. Leaving add-ins as unpublished in partner center, but relying on the created client id is an unsupported scenario.
 
 > [!NOTE]
 > Pricing model management is not supported for Office marketplace products. Existing paid products that migrated from Seller Dashboard will need to move to a SaaS model or be made free by July 2020. For details, see [Moving from paid to free add-ins](/office/dev/store/moving-from-paid-to-free-addins). You can monetize your add-in through the Microsoft Commercial Marketplace; for details, see [Monetize your add-in](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace).
