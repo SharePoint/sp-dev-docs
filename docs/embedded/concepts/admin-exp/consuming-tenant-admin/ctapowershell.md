@@ -54,12 +54,17 @@ Get-SPOApplication
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-```powershell
+For more information, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
 
+### View guest application permissions
+
+Admins can view the guest application permissions for any SharePoint Embedded application within their tenant using this command.
+
+```powershell
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the ID of the application that has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information about using this command, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
+OwningApplicationId is the ID of the SharePoint Embedded application and ApplicationId is the guest application ID which has access to the SharePoint Embedded application. Application Administration cmdlets aren't applicable for Microsoft Loop. For more information, see [Get-SPOApplication cmdlet](/powershell/module/sharepoint-online/get-spoapplication).
 
 ### Set sharing capability of applications
 
@@ -173,12 +178,18 @@ Admins can permanently delete a container from the deleted container collection 
 Remove-SPODeletedContainer -Identity <ContainerId>
 ```
 
-## Coming Soon
+### Guest application permission management
 
-1. Add users to containers
-1. Reassign user permission in a container
-1. Remove user from a container
+If permitted, Admins can add, edit, and remove guest application access to SharePoint Embedded applications. A guest application is defined as any application within the enterprise applications of the owning tenant. For more information about using this command, see [Set-SPOApplicationPermission](/powershell/module/sharepoint-online/set-spoapplicationpermission).
 
+```powershell
+Set-SPOApplicationPermission
+   [[-OwningApplicationId] <OwningApplicationid>]
+   [[-ApplicationId] <ApplicationId>]
+   [[-PermissionAppOnly] <AppOnlyPermission>]
+   [[-PermissionDelegated] <DelegatedPermission>]
+```
+ 
 ## Security and Compliance Administration
 
 SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../security-and-compliance.md).
