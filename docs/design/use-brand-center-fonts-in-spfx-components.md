@@ -1,7 +1,7 @@
 ---
 title: Use SharePoint brand center fonts in SharePoint Framework solutions
 description: Developers can use the fonts defined in Brand center in their SharePoint Framework (SPFx) components. This article demonstrates how you can use the fonts defined in the SharePoint brand center in your SPFx components.
-ms.date: 08/10/2024
+ms.date: 10/07/2024
 ms.localizationpriority: high
 ---
 
@@ -126,13 +126,13 @@ With the web part on the page, select one of the custom fonts from the Brand cen
 
     ![Screenshot of the SharePoint settings menu](../images/brand-center-spfx-02.png)
 
-1. On the **Change the look** panel, select **Font (preview)**.
+1. On the **Change the look** panel, select **Font**.
 
     ![Screenshot of the SharePoint setting Change the look panel](../images/brand-center-spfx-03.png)
 
-1. On the **Font (preview)** panel, select one of the fonts to view the changes on your web part.
+1. On the **Font** panel, select one of the fonts to view the changes on your web part.
 
-    ![Screenshot of the SharePoint setting Font (preview) panel](../images/brand-center-spfx-04.png)
+    ![Screenshot of the SharePoint setting Font panel](../images/brand-center-spfx-04.png)
 
     Notice the fonts on the page will change, including those in our custom web part:
 
