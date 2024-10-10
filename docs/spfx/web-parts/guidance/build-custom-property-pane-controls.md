@@ -170,7 +170,7 @@ The web part you're building shows list items from the selected SharePoint list.
 
 1. In the **src/webparts/listItems/components/ListItems.tsx** file, change the contents of the `render()` method to:
 
-    ```tsx
+    ```typescript
     export default class ListItems extends React.Component<IListItemsProps, {}> {
       public render(): React.ReactElement<IListItemsProps> {
         const {
@@ -261,7 +261,7 @@ When creating a custom property pane control that uses React in the SharePoint F
 
 1. Define the asynchronous dropdown React component. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **AsyncDropdown.tsx**, and enter the following code:
 
-    ```tsx
+    ```typescript
     import * as React from 'react';
     import { Dropdown, IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
     import { Spinner } from 'office-ui-fabric-react/lib/components/Spinner';
@@ -683,7 +683,7 @@ When building SharePoint Framework web parts, you might need to implement a conf
 
 In the **src/webparts/listItems/components/ListItems.tsx** file, change the `render()` method to:
 
-```tsx
+```typescript
 export default class ListItems extends React.Component<IListItemsProps, {}> {
   public render(): React.ReactElement<IListItemsProps> {
     const {
