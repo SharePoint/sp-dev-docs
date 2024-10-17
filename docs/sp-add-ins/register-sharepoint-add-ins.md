@@ -46,6 +46,9 @@ You can register your add-in in one of three ways, depending on where you are in
 > [!NOTE]
 > Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
+> [!IMPORTANT]
+> Add-in secrets expire. If you register the add-in on the Seller Dashboard, you can set the expiration for up to three years. In the dashboard, you can also add new secrets when the old ones reach their expiration date. The new secret will be enabled in all instances of the add-in. If you register the add-in with AppRegNew.aspx, the secret expires in one year. For details, see [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
+
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
 
       **AppRegNew page form**
@@ -53,9 +56,6 @@ You can register your add-in in one of three ways, depending on where you are in
       ![The form on the App Reg New page with boxes for client ID, client secret, title, app domain, and redirect URL. Buttons named "generate" are beside the first two. In the corner are Create and Cancel buttons.](../images/appregnewaspx.PNG)
 
 1. Enter values for the follow form fields:
-
-        > [!IMPORTANT]
-        > Add-in secrets expire. If you register the add-in on the Seller Dashboard, you can set the expiration for up to three years. In the dashboard, you can also add new secrets when the old ones reach their expiration date. The new secret will be enabled in all instances of the add-in. If you register the add-in with AppRegNew.aspx, the secret expires in one year. For details, see [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
 
     - **Title**. A user-friendly title; for example, **Contoso photo printing add-in**. Users are prompted to grant or deny the add-in the permissions that the add-in is requesting. This title appears as the name of the add-in on the consent prompt.
     - **Add-in Domain**. The host name of the remote component of the SharePoint Add-in. If the remote application isn't using port 443, the add-in domain must also include the port number. The add-in domain must match the URL bindings you use for your web application. Do not include protocol ("https:") or "/" characters in this value. If your web application host is using a DNS CNAME alias, use the alias. Some examples:
