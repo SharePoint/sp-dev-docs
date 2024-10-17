@@ -21,12 +21,12 @@ For new tenants, apps using an ACS app-only access token is disabled by default.
 > [!NOTE]
 > Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
-Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click on the Generate button to generate a client id and client secret and fill the remaining information like shown in the screen-shot below.
+Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page fill the remaining information like shown in the screen-shot below.
 
-![Create a new Client ID & secret](media/apponly/sharepointapponly1.png)
+![Create a new Client ID & secret](media/apponly/sharepointapponly1new.png)
 
 > [!IMPORTANT]
-> Store the retrieved information (client id and client secret) since you'll need this in the next step!
+> After pressing `Create` you'll be presented with a client id and client secret, store the retrieved information (client id and client secret) since you'll need this in the next step!
 
 Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`. Once the page is loaded add your client id and look up the created principal:
 
