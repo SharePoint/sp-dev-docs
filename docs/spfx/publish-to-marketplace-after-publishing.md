@@ -1,7 +1,7 @@
 ---
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
-ms.date: 10/18/2024
+ms.date: 10/21/2024
 ms.localizationpriority: high
 ---
 
@@ -72,6 +72,9 @@ If Microsoft doesn't receive a suitable response from you, it reaches out to you
 * Your app isn't maintained or abandoned and unused.
 * There's no response from you on Microsoft's reach outs.
 
+> [!Note]
+> After de-listing your app is not available anymore on Microsoft AppSource and customers cannot install anymore. Customers that had the app installed are not impacted, installed apps stay working after de-listing. Upgrading installed apps to a newer version however is not possible anymore as long as the app is de-listed on Microsoft AppSource.
+
 ## Discontinuing your published app
 
 You must maintain your app's user experience as at the initial app review. If you don't maintain the app actively, or no longer wish to support the app, ensure that you discontinue your published app from your Partner Center account.
@@ -79,4 +82,4 @@ You must maintain your app's user experience as at the initial app review. If yo
 To discontinue your app:
 
 * To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**.
-* Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
+* Contact your customers where appropriate. After **Stop Selling** the apps installed in your customers tenants are stil there, it's up to the app owner to work with their customers to uninstall their app. Delete or revoke any security or authorization tokens generated for your app.
