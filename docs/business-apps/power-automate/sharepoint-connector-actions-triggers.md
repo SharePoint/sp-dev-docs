@@ -32,7 +32,7 @@ For more info about how to use this trigger, see this tutorial video: [Introduci
 
 ### When an item is deleted
 
-Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection user account.
+Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection admins account.
 
 ### For a selected item
 
@@ -70,7 +70,7 @@ Triggers when a file is created, and also each time it is modified in a SharePoi
 
 ### When a file is deleted
 
-Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection user account.
+Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection admins account.
 
 ### For a selected file
 
