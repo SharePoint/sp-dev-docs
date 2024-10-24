@@ -132,6 +132,16 @@ The following formula checks if the Yes/No column `[$Promoted]` is equal to a Ye
 =if([$Promoted] == true, 'true', 'false')
 ```
 
+The following are also valid:
+
+```
+=if([$Promoted], 'true', 'false')
+```
+
+```
+=[$Promoted]
+```
+
 ##### Lookup column
 
 > [!NOTE]
