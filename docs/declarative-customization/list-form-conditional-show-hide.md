@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 06/28/2022
+ms.date: 10/30/2024
 ms.localizationpriority: high
 ---
 
@@ -38,7 +38,7 @@ You can show or hide columns in a list form based on another column's value by s
 To specify a conditional formula for a column, in the **Edit columns** pane:
 
 1. Navigate to the desired column for which you want to set a conditional formula
-1. Select the far right hand edge of the column name to display the options menu **(...)**
+1. Select the far right-hand edge of the column name to display the options menu **(...)**
 1. In the more options, select **Edit conditional formula**.
 1. In the **Edit conditional formula** dialog:
     - To determine whether this column is shown or hidden, specify a conditional formula based on the value of another column.
@@ -56,7 +56,7 @@ For example, the following formula checks if the value for the *Category* column
 =if([$Category] == 'Product Management', 'true', 'false')
 ```
 
-Returning _true_ results in showing the column on the form while returning _false_ hides the column.
+Returning _true_ shows the column on the form while returning _false_ hides the column.
 
 The column is represented by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "ProductName", use `[$ProductName]`.
 
@@ -66,7 +66,7 @@ While the formula supports many of the available column types, we do not current
 
 - Person or Group with multiple selections
 - Choice with multiple selections
-- Time calculations in Date and Time column
+- Time calculations in **Date and Time** column
 - Currency columns
 - Location columns
 - Calculated columns
@@ -98,7 +98,7 @@ You can also do arithmetic calculations, such as adding the value of two columns
 
 ##### Date column
 
-The following formula checks if the date column `[$StartDate]` is equal to a specific date. To do so, it uses the *Date()* function to convert a given string into a date:
+The following formula checks if the date column `[$StartDate]` equals a specific date. To do so, it uses the *Date()* function to convert a given string into a date:
 
 ```
 =if([$StartDate] == Date('4/6/2020'), 'true', 'false')
@@ -126,7 +126,7 @@ The following formula checks if an email of person column `[$Owner]` is equal to
 
 ##### Boolean (Yes/No) column
 
-The following formula checks if the Yes/No column `[$Promoted]` is equal to a Yes. To do so, it checks for the value _true_ which maps to _Yes_ for users.
+The following formula checks if the Yes/No column `[$Promoted]` equals a Yes. To do so, it checks for the value _true_ which maps to _Yes_ for users.
 
 ```
 =if([$Promoted] == true, 'true', 'false')
@@ -145,7 +145,7 @@ The following are also valid:
 ##### Lookup column
 
 > [!NOTE]
-> When accessing lookup columns in column or view formatting, you have access to the lookup value and lookup id as separate values. In form formatting and conditional field expressions, both values are returned as a single line of text. For instance, a lookup column referencing an item with item ID 1 (in the source list) with a value of `Toronto` will have a value of `1;#Toronto` when used in form formatting or conditional field expressions.
+> When accessing lookup columns in a column or view formatting, you can access the lookup value and lookup id as separate values. In form formatting and conditional field expressions, both values are returned as a single line of text. For instance, a lookup column referencing an item with item ID 1 (in the source list) with a value of `Toronto` will have a value of `1;#Toronto` when used in form formatting or conditional field expressions.
 
 The following formula checks if the lookup column `[$City]` has a value equal to *Toronto*. To do so, it splits the lookup value result by the separator and checks against the value.
 
