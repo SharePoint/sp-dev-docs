@@ -9,6 +9,8 @@ ms.localizationpriority: high
 
 The first release of the SharePoint Framework in February 2017 only contained support for client-side web parts. This was just a start on the journey to provide additional modern customization capabilities to SharePoint.
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
+
 The following is a list of key capabilities released after General Availability:
 
 - [Dynamic data and web part connections](./dynamic-data.md)
@@ -57,7 +59,7 @@ Refer to the table of contents menu for details on each of the SharePoint Framew
 
 - Microsoft Viva Connections improvements
   - New card shapes
-  - More flexibiliy with the quick view
+  - More flexibiliy with the Quick View
 
 - Store improvements
   - Modernize Store app catalog and store UX

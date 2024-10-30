@@ -1,7 +1,7 @@
 ---
 title: Register SharePoint Add-ins
 description: Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
-ms.date: 09/26/2023
+ms.date: 10/17/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -20,8 +20,6 @@ For the remote components of a provider-hosted SharePoint Add-in to interact wit
 
 To register your add-in with Azure ACS, you specify the following information:
 
-- A GUID for the add-in, called a client ID.
-- A password for the add-in, called a client secret.
 - A display name of the add-in that is used on the consent page where the user is prompted to trust the add-in.
 - A URL for the domain where the remote add-in is hosted.
 - A redirect URL.
@@ -40,7 +38,7 @@ You can register your add-in in one of three ways, depending on where you are in
 |**Registration method**|**Details**|
 |:-----|:-----|
 |Use Visual Studio and Microsoft Office Developer Tools for Visual Studio to create a temporary add-in identity. |The Office Developer Tools for Visual Studio Wizard creates a temporary registration for your add-in with ACS and the App Management Service of your SharePoint test website.<br/><br/>When you run the add-in from Visual Studio (F5), this identity is used. The tools also insert the client ID and secret in the web.config and AppManifest.xml files.<br/><br/>When you're ready to publish your add-in, you can use the Visual Studio publish wizard to go to the Seller Dashboard to register it. If you are not marketing your SharePoint Add-in in the Office Store, use AppRegNew.aspx to register it. (Exact steps are in the next section.)<br/><br/>**Note**:  If your add-in requests permission to access SharePoint resources dynamically at run time, instead of on add-in installation, you cannot use Visual Studio to create add-in identities. |
-|Register the add-in through the Seller Dashboard. |If you're going to use your add-in in more than one SharePoint tenant or farm, use the Seller Dashboard to register your add-in, regardless of whether you market it in the Office Store or make it available via the add-in catalog.<br/><br/>When you register in the Seller Dashboard, you can design your add-in with a multitenant architecture without requiring tenant or farm administrators to register it separately.<br/><br/>Also, if you plan to publish your add-in in the Office Store, you have to use the Seller Dashboard to register your add-in. You don't have to use the store to publish an add-in that is registered with the Seller Dashboard. For more information, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).|
+|Register the add-in through the Seller Dashboard. |If you're going to use your add-in in more than one SharePoint tenant or farm, use the Seller Dashboard to register your add-in, regardless of whether you market it in the Office Store or make it available via the add-in catalog.<br/><br/>When you register in the Seller Dashboard, you can design your add-in with a multi-tenant architecture without requiring tenant or farm administrators to register it separately.<br/><br/>Also, if you plan to publish your add-in in the Office Store, you have to use the Seller Dashboard to register your add-in. You don't have to use the store to publish an add-in that is registered with the Seller Dashboard. For more information, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).|
 |Use the AppRegNew.aspx page. |Use the AppRegNew form to register your SharePoint Add-in if you are using the add-in only in one tenant or farm.<br/><br/>For example, if you're creating add-ins for a single organization and you're going to distribute them via the organization add-in catalog, you can use the AppRegNew.aspx page of any website in a tenancy or farm to register the add-in.<br/><br/>You cannot publish an add-in that is registered with AppRegNew.aspx to the Office Store. For add-ins that are published to the Office Store, you must get an identity from the Seller Dashboard.|
 
 ### To register by using AppRegNew.aspx
@@ -48,19 +46,16 @@ You can register your add-in in one of three ways, depending on where you are in
 > [!NOTE]
 > Site collection admin is not able to register add-in with Azure ACS in AppRegNew.aspx by default unless explicitly allowed by the SharePoint tenant admin. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
+> [!IMPORTANT]
+> Add-in secrets expire. If you register the add-in on the Seller Dashboard, you can set the expiration for up to three years. In the dashboard, you can also add new secrets when the old ones reach their expiration date. The new secret will be enabled in all instances of the add-in. If you register the add-in with AppRegNew.aspx, the secret expires in one year. For details, see [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
+
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
 
       **AppRegNew page form**
 
-      ![The form on the App Reg New page with boxes for client ID, client secret, title, app domain, and redirect URL. Buttons named "generate" are beside the first two. In the corner are Create and Cancel buttons.](../images/9a38d876-2189-418c-9314-ae493a4cab61.PNG)
+      ![The form on the App Reg New page with boxes for client ID, client secret, title, app domain, and redirect URL. Buttons named "generate" are beside the first two. In the corner are Create and Cancel buttons.](../images/appregnewaspx.PNG)
 
 1. Enter values for the follow form fields:
-
-    - **Add-in ID**. Also known as client ID; a GUID that can be generated (when you select **Generate**) or pasted into AppRegNew.aspx. The value must be unique for each add-in, and *must be lowercase*.
-    - **Add-in Secret**. Also known as the client secret, an opaque string. It is generated on the AppRegNew.aspx page by using the **Generate** button. The following is an example of an add-in secret: `xvVpG0AgVIJfch6ldu4dLUlcZyysmGqBRbpFDu6AfJw=`.
-
-        > [!IMPORTANT]
-        > Add-in secrets expire. If you register the add-in on the Seller Dashboard, you can set the expiration for up to three years. In the dashboard, you can also add new secrets when the old ones reach their expiration date. The new secret will be enabled in all instances of the add-in. If you register the add-in with AppRegNew.aspx, the secret expires in one year. For details, see [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
 
     - **Title**. A user-friendly title; for example, **Contoso photo printing add-in**. Users are prompted to grant or deny the add-in the permissions that the add-in is requesting. This title appears as the name of the add-in on the consent prompt.
     - **Add-in Domain**. The host name of the remote component of the SharePoint Add-in. If the remote application isn't using port 443, the add-in domain must also include the port number. The add-in domain must match the URL bindings you use for your web application. Do not include protocol ("https:") or "/" characters in this value. If your web application host is using a DNS CNAME alias, use the alias. Some examples:
@@ -81,7 +76,7 @@ You can register your add-in in one of three ways, depending on where you are in
         - https://www.northwindtraders.com/home/index
         - https://adventureworks.com/
 
-1. Select **Create** on the form. The page reloads and shows a confirmation of the values that you entered. Make a record of these values in a form that is easy to copy and paste. You need to enter the values in web.config and AppManifest.xml files or in the Visual Studio Publish wizard.
+1. Select **Create** on the form. The page reloads and shows you the created Client Id and Client Secret. Make a record of these values in a form that is easy to copy and paste. You need to enter the values in web.config and AppManifest.xml files or in the Visual Studio Publish wizard.
 
 Regardless of how you register your SharePoint Add-in, when you are ready to deploy the add-in to staging or production, you need to [Enter the registration values into the web.config and AppManifest.xml files](#EditConfigFiles). If you are using Visual Studio, the Microsoft Office Developer Tools for Visual Studio do this configuration for you.
 

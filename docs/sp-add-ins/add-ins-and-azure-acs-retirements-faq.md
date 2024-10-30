@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-Ins and Azure ACS retirement FAQ
 description: Answers frequently asked questions related to the retirements of SharePoint Add-In and Azure ACS in Microsoft 365.
-ms.date: 01/02/2024
+ms.date: 10/05/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -85,3 +85,7 @@ Azure ACS principals will automatically expire (default lifetime is 2 years) so 
 For principals that have Site, Web or List permissions **and** Tenant permissions, you'll need to follow both procedures described above.
 
 A good practice is for admins to turn off Azure ACS app-only access for the entire tenant, having first ensured there is no remaining business relevant Azure ACS usage, as mentioned in the [Azure ACS retirement announcement](https://aka.ms/retirement/acs/support). Doing this will automatically prevent any remaining un-expired principals from working.
+
+## Can I rely on unpublished offers in Partner Center for managing a multi-tenant Client ID for customers?
+
+No, offers setup in Partner Center must be published on Microsoft stores before using the client IDs in production.

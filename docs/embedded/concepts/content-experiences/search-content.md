@@ -1,7 +1,7 @@
 ---
 title: Search SharePoint Embedded containers and content
 description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 05/21/2024
+ms.date: 08/15/2024
 ms.localizationpriority: high
 ---
 
@@ -12,7 +12,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded co
 > [!NOTE]
 >
 > 1. Search API only supports Delegated permissions.
-> 2. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted our from content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
+> 1. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted out of content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
 
 ## Example 1: Search containers by container type
 
@@ -237,7 +237,7 @@ Content-type: application/json
 
 ## Example 4: Search for content by title in a specific container
 
-This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` in the specific container instance that match the criteria.
 
 ### Request
 
@@ -336,7 +336,7 @@ Content-type: application/json
 
 ## Example 5: Search by content
 
-This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all driveItems that match the criteria.
+This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` that match the criteria.
 
 ### Request
 
@@ -428,6 +428,203 @@ Content-type: application/json
         }
       ]
     }
+  ]
+}
+```
+## Example 6: Search containers by container custom property
+
+This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded applicatio that has opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. 
+
+> [!NOTE]
+> The custom property name must be appended with the text "OWSTEXT" in the query string.
+
+### Request
+
+```HTTP
+POST /search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": [
+        "drive"
+      ],
+      "query": {
+        "queryString": "customPropertyNametOWSTEXT:customPropertyValue AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
+      }
+    }
+  ]
+}
+```
+
+### Response
+
+```HTTP
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+  "value": [
+    {
+      "searchTerms": [],
+      "hitsContainers": [
+        {
+          "hits": [
+            {
+              "hitId": "b!C4Psl-ZZZkaZINVay8RKt2fqu3agJbVNlIUjNuIzqlPhOJMrr7ThS4aR8L8XdZu4",
+              "rank": 1,
+              "summary": "Everything about Contoso",
+              "resource": {
+                "@odata.type": "#microsoft.graph.drive",
+                "id": "b!UBoDBcfpTEeInnz0Rlmlsp6EC-DsPN5Kj3uW0fD1mPp9ptYmB71GRpxbhbDlGdb0",
+                "createdBy": {
+                  "user": {
+                    "displayName": "Dylan Williams"
+                  }
+                },
+                "lastModifiedDateTime": "2024-08-02T17:31:06Z",
+                "name": "AllItems.aspx",
+                "parentReference": {
+                  "sharepointIds": {
+                    "listId": "2b9338e1-b4af-4be1-8691-f0bf17759bb8"
+                  },
+                  "siteId": "contoso.sharepoint.com,97ec830b-59e6-4666-9920-d55acbc44ab7,76bbea67-25a0-4db5-9485-2336e233aa53"
+                },
+                "webUrl": "https://contoso.sharepoint.com/contentstorage/CSP_97ec830b-59e6-4666-9920-d55acbc44ab7/Document Library/Forms/AllItems.aspx"
+              }
+            }
+          ],
+          "total": 1,
+          "moreResultsAvailable": false
+        }
+      ]
+    }
+  ]
+}
+```
+## Example 7: Search for content with specific content properties in response body
+
+This example queries container content by specific words and requires the response to include all specified attributes on the content.
+
+### Request
+
+```HTTP
+POST /search/query
+Content-Type: application/json
+
+{
+  "requests": [
+    {
+      "entityTypes": [
+        "driveItem"
+      ],
+      "query": {
+        "queryString": "Everything about contoso"
+      },
+      "sharePointOneDriveOptions": {
+        "includeHiddenContent": true
+      },
+      "fields": [
+        "SampleOWSText",
+        "id",
+        "name",
+        "parentReference",
+        "file",
+        "folder",
+        "webUrl",
+        "createdDateTime",
+        "lastModifiedDateTime",
+        "size",
+        "fileSystemInfo",
+        "createdBy",
+        "lastModifiedBy",
+        "fileSystemInfo",
+        "fileSystemInfo"
+      ]
+    }
+  ]
+}
+```
+
+### Response
+
+```HTTP
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.searchResponse)",
+  "value": [
+    {
+      "searchTerms": [
+        "everything",
+        "about",
+        "contoso"
+      ],
+      "hitsContainers": [
+        {
+          "hits": [
+            {
+              "hitId": "017JL52SWZQ2M5MULUKFBIL7SZ56EB4V2Z",
+              "rank": 1,
+              "summary": "Everything about Contoso",
+              "resource": {
+                "@odata.type": "#microsoft.graph.driveItem",
+                "size": 17363,
+                "fileSystemInfo": {
+                  "createdDateTime": "2024-06-20T21:49:03Z",
+                  "lastModifiedDateTime": "2024-04-01T16:57:00Z"
+                },
+                "listItem": {
+                  "@odata.type": "#microsoft.graph.listItem",
+                  "id": "d69986d9-7451-4251-85fe-59ef881e5759",
+                  "fields": {
+                    "sampleOWSText": "Sample Value",
+                    "id": "AAAAAH_MwHAjYctMtjgTN1cWJnYHAApvY20ubJFGtzLui9sETKcAAAAAASsAAApvY20ubJFGtzLui9sETKcAAAAAJqsAAA2",
+                    "size": 17363,
+                    "createdBy": "Dylan Williams"
+                  }
+                },
+                "id": "017JL52SWZQ2M5MULUKFBIL7SZ56EB4V2Z",
+                "createdBy": {
+                  "user": {
+                    "displayName": "Dylan Williams",
+                    "email": "dywilliams@contoso.onmicrosoft.com"
+                  }
+                },
+                "createdDateTime": "2024-06-20T21:49:03Z",
+                "lastModifiedBy": {
+                  "user": {
+                    "displayName": "Dylan Williams",
+                    "email": "dywilliams@contoso.onmicrosoft.com"
+                  }
+                },
+                "lastModifiedDateTime": "2024-04-01T16:57:00Z",
+                "name": "Constoso Details.docx",
+                "parentReference": {
+                  "driveId": "b!rWzsZXXFWEOeeP31bSE5BTjn_6qC3dFNloUBMv62EMilewHuRwQrQau-zcJu2BT0",
+                  "id": "017JL52SXQSKBKPB7VKZCJE5ZSWUN4LZDZ",
+                  "sharepointIds": {
+                    "listId": "ee017ba5-0447-412b-abbe-cdc26ed814f4",
+                    "listItemId": "1",
+                    "listItemUniqueId": "d69986d9-7451-4251-85fe-59ef881e5759"
+                  },
+                  "siteId": "contoso.sharepoint.com,65ec6cad-c575-4358-9e78-fdf56d213905,aaffe738-dd82-4dd1-9685-0132feb610c8"
+                },
+                "webUrl": "https://contoso.sharepointt.com/contentstorage/CSP_65ec6cad-c575-4358-9e78-fdf56d213905/Document Library/Constoso Details.docx"
+              }
+            }
+          ],
+          "total": 1,
+          "moreResultsAvailable": false
+        }
+      ]
+    }  
   ]
 }
 ```

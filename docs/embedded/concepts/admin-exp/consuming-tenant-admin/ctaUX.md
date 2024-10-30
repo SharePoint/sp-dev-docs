@@ -1,15 +1,15 @@
 ---
 title: Manage Containers in SharePoint Admin Center
 description: This article describes how administrator can manage containers in SPAC.
-ms.date: 05/21/2024
+ms.date: 10/16/2024
 ms.localizationpriority: high
 ---
 # Manage SharePoint Embedded containers in SharePoint Admin Center
 
 The organizations that use the SharePoint Embedded applications on their Microsoft 365 (Microsoft 365) tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can manage containers through a graphical user interface (GUI) using the [SharePoint Administrator Center](https://go.microsoft.com/fwlink/?linkid=2185219).
 
-To manage SharePoint Embedded containers, CTA need to be assigned the Microsoft 365 SharePoint Embedded Administrator role. Global Administrators in Microsoft 365 have all the permissions of the SharePoint Embedded Administrator role. A SharePoint Administrator can assign themselves the SharePoint Embedded Administrator role to act as a CTA for SharePoint Embedded. This role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
-For information on SharePoint Embedded admin role, see [SharePoint Embedded Admin](https://github.com/cindylay/sp-dev-docs/blob/update-ga/docs/embedded/concepts/admin-exp/adminrole.md).
+To manage SharePoint Embedded containers, CTA need to be assigned the Microsoft 365 SharePoint Embedded Administrator role. Global Administrators in Microsoft 365 have all the permissions of the SharePoint Embedded Administrator role.  A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded. This role is available in both Microsoft Entra and the Microsoft 365 Admin Center.
+For information on SharePoint Embedded admin role, see [SharePoint Embedded Admin](../adminrole.md).
 
 The following actions are supported in SharePoint Admin Center:
 

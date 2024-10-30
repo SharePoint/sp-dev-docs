@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Adaptive Card Extensions Iconography Limitations
 
-Some existing limitations exist for using Fluent UI Iconography in Adaptive Card Extensions. 
+Some existing limitations exist for using Fluent UI Iconography in Adaptive Card Extensions.
 
 Currently, ACEs support the "Card Designer" set of icons listed in this article. This set of icons is a subset of [Fluent 2 (Fluent UI v9) iconography](https://github.com/microsoft/fluentui-system-icons/blobl/main/icons_filled.md). It means using ["Fluent 1" (Fluent UI v8 and mentioned) icons](https://developer.microsoft.com/fluentui#/styles/web/icons) is limited.
 
@@ -28,7 +28,7 @@ The workaround is to override the [card bar's icon](/javascript/api/sp-adaptive-
 
 ## "Fluent 1" icons aren't supported for Text Input
 
-In the SharePoint Framework (SPFx) v1.18, we introduced the ability to add a "text input" component to the card view. This component allows developers to specify iconBefore, iconAfter, and button icons.
+In the SharePoint Framework (SPFx) v1.18, we introduced the ability to add a "text input" component to the Card View. This component allows developers to specify iconBefore, iconAfter, and button icons.
 
 All these icons (names) should be either from the "Card Designer" set or a URL to a custom image (preferably an \*.svg).
 

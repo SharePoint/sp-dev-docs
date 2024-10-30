@@ -42,7 +42,7 @@ In the project's **package.json** file, identify all SPFx v1.18.x packages. For 
 
 ### New Data Visualization Card Template for Adaptive Card Extensions
 
-We introduce a new data visualization card view for Adaptive Card Extensions that is intended to be used for charting scenarios. Use new Data Visualization Card Template in the generator to get started.
+We introduce a new data visualization Card View for Adaptive Card Extensions that is intended to be used for charting scenarios. Use new Data Visualization Card Template in the generator to get started.
 
 ![Sample chart card layouts](../images/119-release-notes/chart-card-viva-connections.png)
 
@@ -54,7 +54,7 @@ Related updated documentation for the SPFx v1.19 release:
 New samples showcasing the new data visualization ACE template:
 
 - **[Chart Card - Page Creation](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-PageCreation)**: This Adaptive Card Extension displays a line chart showing pages and news creation history on the current SharePoint site.
-- **[Chart Card - Three Series](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)**: Baseline example of the chart card rendering options, which was introduced as part of the SPFx 1.19 release. Chart card can be used to render simple charts directly in the card view, so that you can include graphical details on your business situation directly in the Viva Connections dashboard.
+- **[Chart Card - Three Series](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/ChartCard-ThreeSeries)**: Baseline example of the chart card rendering options, which was introduced as part of the SPFx 1.19 release. Chart card can be used to render simple charts directly in the Card View, so that you can include graphical details on your business situation directly in the Viva Connections dashboard.
 
 ### Webpack 5 support
 

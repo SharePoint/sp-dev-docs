@@ -10,6 +10,9 @@ ms.service: sharepoint
 
 Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the SharePoint Add-In extensibility model and believe Microsoft 365 customers will be better served by modern SharePoint extensibility models.
 
+> [!IMPORTANT]
+> The SharePoint add-in model deprecation in SharePoint Online does not impact [SharePoint Framework (SPFx)](https://aka.ms/spfx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported also in future.
+
 SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024 and they will stop working for existing tenants and will be fully retired as of April 2nd, 2026. This applies to all environments including Government Clouds and Department of Defense.
 
 In parallel with the SharePoint Add-In retirement, adding, updating and acquiring SharePoint Add-Ins via the public marketplace (a.k.a. store) will also be retiring. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace, from July 1st, 2024 SharePoint Add-Ins cannot be acquired anymore from the public marketplace. Using a tenant app catalog will stay supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
@@ -53,6 +56,17 @@ Using the [SharePoint Add-In Report](https://aka.ms/assessment/addinsacsreport) 
 SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.ms/spfx) web parts, for the provider hosted Add-Ins any software as a service application platform (e.g. Microsoft Azure) in combination with [Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/) for auth can be used as alternative development model.
 
 To learn more about how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
+
+### Disable Add-In usage for your tenant
+
+Admins can disable SharePoint Add-Ins with the [Set-SPOTenant SharePoint Management Shell PowerShell command](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps).
+
+```PowerShell
+Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
+Set-SPOTenant -IsSharePointAddInsDisabled $true
+```
+
+After SharePoint Add-Ins are disabled, users will not be able to add SharePoint Add-Ins to their sites, and admins cannot add new SharePoint Add-Ins to the tenant and site collection app catalogs. SharePoint Add-Ins already added to sites will stay available and can still be used by the site's users.
 
 ## How do I get help?
 

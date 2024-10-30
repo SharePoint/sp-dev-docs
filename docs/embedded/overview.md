@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Overview
 description: Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
-ms.date: 05/21/2024
+ms.date: 08/17/2024
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,11 @@ ms.localizationpriority: high
 
 Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
 
-SharePoint Embedded allows you to integrate advanced Microsoft 365 features into your apps including full featured collaborative functions from Office, Purview's security and compliance tools, and Copilot capabilities.
+SharePoint Embedded allows you to integrate advanced Microsoft 365 features into your apps including full-featured collaborative functions from Office, Purview's security and compliance tools, and Copilot capabilities.
+
+> [!IMPORTANT]
+> Help us shape the future of SharePoint Embedded!
+> Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your experience!
 
 ## App documents stay in their Microsoft 365 tenant
 
@@ -54,9 +58,13 @@ The partition created in the consumer’s Microsoft 365 tenant by a SharePoint E
 > [!NOTE]
 > Learn more about billing for SharePoint Embedded, see [Billing Meters](concepts/admin-exp/billing/meters.md).
 
-## Getting Started with SharePoint Embedded
+## Get Started with SharePoint Embedded
 
-You can get started building on SharePoint Embedded from the following Microsoft Learning modules:
+Create a "File Storage Container" in 15 minutes or less:
+
+- [Free trial: SharePoint Embedded for Visual Studio Code](./getting-started/spembedded-for-vscode.md)
+
+Follow manual set-up on SharePoint Embedded from the following Microsoft Learning modules:
 
 - [Microsoft Learning: SharePoint Embedded - overview & configuration](/training/modules/sharepoint-embedded-setup)
 - [Microsoft Learning: SharePoint Embedded - building applications](/training/modules/sharepoint-embedded-create-app)

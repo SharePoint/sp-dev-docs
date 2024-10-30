@@ -31,7 +31,7 @@ Next, run **gulp serve** from the command line in the root of the project. When 
 
 ## Add media upload action to your Adaptive Card Extension
 
-At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick views.
+At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick Views.
 
 In the Card View, we'll provide a button that will perform the following actions: **Upload an image file**
 

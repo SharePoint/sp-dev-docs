@@ -1,7 +1,7 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 06/22/2023
+ms.date: 10/23/2024
 ms.service: power-automate
 search.app:
   - Flow
@@ -32,7 +32,7 @@ For more info about how to use this trigger, see this tutorial video: [Introduci
 
 ### When an item is deleted
 
-Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection user account.
+Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection admin account.
 
 ### For a selected item
 
@@ -59,7 +59,7 @@ Triggers the flow when you create a file in a SharePoint folder. This trigger do
 
 ### When a file is created or modified (properties only)
 
-Triggers the flow when you create a file, and each time you modify the file properties in a library. Specify a value in the "Folder" property to target a specific folder; otherwise the trigger applies to the entire library. Returns only the custom file properties associated with that file.
+Triggers the flow when you create a file, and each time you modify the file properties in a library. Specify a value in the "Folder" property to target a specific folder; otherwise, the trigger applies to the entire library. Returns only the custom file properties associated with that file.
 
 ### When a file is created or modified in a folder [deprecated]
 
@@ -70,7 +70,7 @@ Triggers when a file is created, and also each time it is modified in a SharePoi
 
 ### When a file is deleted
 
-Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection user account.
+Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection admin account.
 
 ### For a selected file
 

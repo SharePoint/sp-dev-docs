@@ -159,11 +159,11 @@ This property will be explicitly used to wind up the server, meaning all debug U
 
 Following features are still in preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
 
-### Adaptive Card Extensions card view caching
+### Adaptive Card Extensions Card View caching
 
 For improved performance, SPFx now supports local caching of your Adaptive Card Extension's
-card views. The cached card view will be immediately rendered when loading your Adaptive Card
-Extension. After your Adaptive Card Extension loads, it can optionally update the card view.
+Card Views. The cached Card View will be immediately rendered when loading your Adaptive Card
+Extension. After your Adaptive Card Extension loads, it can optionally update the Card View.
 
 ```typescript
 interface ICacheSettings {
@@ -188,8 +188,8 @@ BaseAdaptiveCardExtension.getCacheSettings(): Partial<ICacheSettings>;
 By default caching is enabled with default settings. An Adaptive Card Extension can customize its
 cache settings by overriding `getCacheSettings` to return the settings it wants to override.
 
-When the last known card view shouldn't be cached, you can provide a specific card view to be
-cached and displayed on the next page load through `ICacheSettings.cachedCardView`. This card view
+When the last known Card View shouldn't be cached, you can provide a specific Card View to be
+cached and displayed on the next page load through `ICacheSettings.cachedCardView`. This Card View
 doesn't need to have been previously registered.
 
 An Adaptive Card Extension can also locally cache its current state. By default no state is cached.
@@ -202,7 +202,7 @@ If `getCachedState` is overridden, then the cached values will be provided when 
 Extension is initialized on the next page load.
 
 `onInit` has a new overload, which passes information about the cached card state. If the card wasn't
-loaded from a cached card view, then `cachedLoadParameters` will be `undefined`.
+loaded from a cached Card View, then `cachedLoadParameters` will be `undefined`.
 
 ```typescript
 interface ICachedLoadParameters {

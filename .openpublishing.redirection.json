@@ -144,11 +144,6 @@
       "source_path": "docs/embedded/terms-of-service.md",
       "redirect_url": "/sharepoint/dev/embedded/overview",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "docs/embedded/tutorials/metadata.md",
-      "redirect_url": "/sharepoint/dev/embedded/overview",
-      "redirect_document_id": false
     }
   ]
 }

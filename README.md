@@ -1,4 +1,4 @@
-# Welcome to the SharePoint Framework!
+# Welcome to the SharePoint Framework! 
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
@@ -21,7 +21,6 @@ Review all the SPFx releases here from the [initial GA release in February 2017]
 * [Setup your Office 365 Developer Tenant](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
 * [Setup your Machine](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
 * [Go build your first web part](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
-
 
 ## Learn More
 

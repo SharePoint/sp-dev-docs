@@ -1,6 +1,6 @@
 ---
 title: Focus feature in Adaptive Card Extension
-description: The focus feature allows developers to determine focus of elements in the Quick View. 
+description: The focus feature allows developers to determine focus of elements in the Quick View.
 ms.date: 04/04/2023
 ---
 # Focus feature in Adaptive Card Extension
@@ -19,7 +19,7 @@ Just like the way that developers can set a template and data via `get data()` a
 ```typescript
 /**
    * An optional focus element to set focus when the view is rendered for accessibility purposes.
-   * @remarks If not overriden, the focus element defaulted to the first actionable element of the quick view.
+   * @remarks If not overriden, the focus element defaulted to the first actionable element of the Quick View.
    *
    * @virtual
    */
@@ -30,13 +30,13 @@ Just like the way that developers can set a template and data via `get data()` a
 
 This new function allows developers to customize what the focus element is by returning `IFocusParameters`. The return values are as follows:
 
-- `focusTarget`: Set to the root element of the quick view by default.
+- `focusTarget`: Set to the root element of the Quick View by default.
 - `ariaLive` [OPTIONAL]: Determines reading priority from a screen reader standpoint. Set to off by default.
 
 ```typescript
 {
   /**
-   * Sets the default focus on the DOM. Developers pass in the id of a unique element that is to attain focus within a quick view.
+   * Sets the default focus on the DOM. Developers pass in the id of a unique element that is to attain focus within a Quick View.
    * If the `focusTarget` is not defined then the root element is selected.
    */
   focusTarget: string | undefined;
@@ -77,7 +77,7 @@ You can take a look at [this tutorial](./FocusFeatureTutorial.md), which goes ov
     }
     ```
 
-1. **Read all contents of the quick view**
+1. **Read all contents of the Quick View**
 
     In your template json file, add the following action:
 

@@ -410,6 +410,8 @@
         href: design/designing-a-web-part-icon.md
       - name: Using semantic slots
         href: design/semantic_slots.md
+      - name: Using Brand center fonts
+        href: design/use-brand-center-fonts-in-spfx-components.md
     - name: Authoring pages
       href: design/authoring-pages.md
     - name: Design considerations
@@ -468,6 +470,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.20 - September 26, 2024
+      href: spfx/release-1.20.md
     - name: SPFx v1.19 - April 25, 2024
       href: spfx/release-1.19.md
     - name: SPFx v1.18.2 - November 21, 2023
@@ -578,7 +582,7 @@
         href: embedded/concepts/admin-exp/billing/meters.md
       - name: Consuming Tenant Admin
         href: embedded/concepts/admin-exp/consuming-tenant-admin/cta.md
-      - name: Container Management in PowerShell 
+      - name: Container Management in PowerShell
         href: embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md
       - name: Consuming Tenant Admin UX
         href: embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md
@@ -594,12 +598,16 @@
     items:
     - name: Launch Experience
       href: embedded/tutorials/launch-experience.md
+    - name: Using Metadata with SharePoint Embedded Containers
+      href: embedded/tutorials/metadata.md
     - name: Using File Preview
       href: embedded/tutorials/using-file-preview.md
     - name: Using Document Processing with Azure Cognitive Services
       href: embedded/tutorials/doc-processing-acs.md
     - name: Using Webhooks
       href: embedded/tutorials/using-webhooks.md
+    - name: Migrate ABS to SPE
+      href: embedded/tutorials/migrate-abs-to-spe.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration
@@ -632,19 +640,21 @@
   items:
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
-  - name: Location capabilities in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
-  - name: Media upload in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
-  - name: Focus feature in Adaptive Card Extension
-    href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
-  - name: Card Designer advance API features
-    href: spfx/viva/features/card-designer/card-designer-api-support.md
-  - name: Design Guidance
+  - name: Adaptive Card Extension Features
+    items:
+    - name: Location capabilities in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+    - name: Media upload in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
+    - name: Focus feature in Adaptive Card Extension
+      href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+    - name: Card Designer advance API features
+      href: spfx/viva/features/card-designer/card-designer-api-support.md
+  - name: Adaptive Card Extension Design Guidance
     items:
     - name: Introduction
       href: spfx/viva/design/design-intro.md
-    - name: Card Design
+    - name: Card View Design
       href: spfx/viva/design/designing-card.md
     - name: Quick View Design
       href: spfx/viva/design/designing-quick-view.md
@@ -652,6 +662,18 @@
       href: spfx/viva/design/quick-view-samples.md
     - name: Adaptive Card Extensions Iconography Limitations
       href: spfx/viva/get-started/fluent-icons-limitations.md
+  - name: Bot Powered Adaptive Card Extensions
+    items:
+    - name: Overview of Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
+    - name: Understanding Bot Powered Adaptive Card Extensions
+      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
+    - name: Building your first Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
+    - name: Authentication and Authorization in Bot Powered ACEs
+      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
+    - name: Bringing Bot Powered ACEs to the market place
+      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -674,24 +696,14 @@
       href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
     - name: Create a Data Visualization Adaptive Card Extension
       href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
+    - name: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
+      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md      
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
     - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
-  - name: Bot Powered Adaptive Card Extensions
-    items:
-    - name: Overview of Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
-    - name: Understanding Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
-    - name: Building your first Bot Powered Adaptive Card Extension
-      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
-    - name: Authentication and Authorization in Bot Powered ACEs
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
-    - name: Bringing Bot Powered ACEs to the market place
-      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
@@ -2203,6 +2215,8 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+  - name: Admin APIs authentication and authorization
+    href: sp-add-ins/sharepoint-admin-apis-authentication-and-authorization.md
   - name: SharePoint CSOM API
     items:
     - name: Complete basic operations
