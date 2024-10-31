@@ -144,23 +144,23 @@ The following table lists all the available font slots from SharePoint brand cen
 
 |  Font slot  | Custom Font Token |   Fluent Design Tolen    |  Short Description  |                                                       Used in Product Location                                                       |
 | ----------- | ----------------- | ------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Body        | customFont100     | caption2          | Caption small       |                                                                                                                                      |
-| Body        | customFont200     | caption2Strong    | Caption medium      | News Badge, Image caption, Site WP activity, Avatar Role/Job, Hero Badge                                                             |
-| Body        | customFont300     | caption1          | Caption large       | Image Overlay                                                                                                                        |
-| Interactive | customFont400     | caption1Strong    | Label small         | Avatar link                                                                                                                          |
-| Interactive | customFont500     | caption1Stronger  | Label medium        | Footer links, Top Navigation links, Hub navigation links, Left navigation, Hero button                                               |
-| Interactive | customFont600     | body1             | Label large         | Button                                                                                                                               |
-| Body        | customFont700     | body1Strong       | Paragraph small     | Quick links description, News sub description, Site web part information, Site web part description, Avatar name, Avatar description |
-| Body        | customFont800     | body1Stronger     | Paragraph medium    | News description, RTE Normal, RTE Table Cell, Hero Description                                                                       |
-| Body        | customFont900     | body2             | Paragraph large     |                                                                                                                                      |
-| Headline    | customFont1000    | subtitle2         | Heading extra small | News subtitle, RTE H4, RTE Table Header, RTE, Table Column, Site WP site title, Call to action text, Hero call to action             |
-| Headline    | customFont1100    | subtitle2Stronger | Heading small       | Quick Links title, News title, Footer title, RTE H3, RTE Pull quote, Section heading, Hero title, Hero small tile title              |
-| Headline    | customFont1200    | subtitle1         | Heading medium      | RTE H2, Hero title large                                                                                                             |
-| Headline    | customFont1300    | title3            | Heading large       | Web part title, Hero tile title                                                                                                      |
-| Headline    | customFont1400    | title2            | Heading extra large |                                                                                                                                      |
-| Title       | customFont1500    | title1            | Title small         | Hub title                                                                                                                            |
-| Title       | customFont1600    | largeTitle        | Title medium        | Page title, Site title                                                                                                               |
-| Title       | customFont1700    | display           | Title large         |                                                                                                                                      |
+| Body        | CustomFont100     | caption2          | Caption small       |                                                                                                                                      |
+| Body        | CustomFont200     | caption2Strong    | Caption medium      | News Badge, Image caption, Site WP activity, Avatar Role/Job, Hero Badge                                                             |
+| Body        | CustomFont300     | caption1          | Caption large       | Image Overlay                                                                                                                        |
+| Interactive | CustomFont400     | caption1Strong    | Label small         | Avatar link                                                                                                                          |
+| Interactive | CustomFont500     | caption1Stronger  | Label medium        | Footer links, Top Navigation links, Hub navigation links, Left navigation, Hero button                                               |
+| Interactive | CustomFont600     | body1             | Label large         | Button                                                                                                                               |
+| Body        | CustomFont700     | body1Strong       | Paragraph small     | Quick links description, News sub description, Site web part information, Site web part description, Avatar name, Avatar description |
+| Body        | CustomFont800     | body1Stronger     | Paragraph medium    | News description, RTE Normal, RTE Table Cell, Hero Description                                                                       |
+| Body        | CustomFont900     | body2             | Paragraph large     |                                                                                                                                      |
+| Headline    | CustomFont1000    | subtitle2         | Heading extra small | News subtitle, RTE H4, RTE Table Header, RTE, Table Column, Site WP site title, Call to action text, Hero call to action             |
+| Headline    | CustomFont1100    | subtitle2Stronger | Heading small       | Quick Links title, News title, Footer title, RTE H3, RTE Pull quote, Section heading, Hero title, Hero small tile title              |
+| Headline    | CustomFont1200    | subtitle1         | Heading medium      | RTE H2, Hero title large                                                                                                             |
+| Headline    | CustomFont1300    | title3            | Heading large       | Web part title, Hero tile title                                                                                                      |
+| Headline    | CustomFont1400    | title2            | Heading extra large |                                                                                                                                      |
+| Title       | CustomFont1500    | title1            | Title small         | Hub title                                                                                                                            |
+| Title       | CustomFont1600    | largeTitle        | Title medium        | Page title, Site title                                                                                                               |
+| Title       | CustomFont1700    | display           | Title large         |                                                                                                                                      |
 
 > [!TIP]
 > Don't forget to include the `--fontFamily` prefix when using one of the custom font slot tokens in your style sheets.
