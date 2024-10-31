@@ -142,7 +142,7 @@ With the web part on the page, select one of the custom fonts from the Brand cen
 
 The following table lists all the available font slots from SharePoint brand center that developers can use in their custom SPFx components:
 
-|  Font slot  | Custom Font Token |   Fluent Design Tolen    |  Short Description  |                                                       Used in Product Location                                                       |
+|  Font slot  | Custom Font Token |   Fluent Design Token    |  Short Description  |                                                       Used in Product Location                                                       |
 | ----------- | ----------------- | ------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Body        | CustomFont100     | caption2          | Caption small       |                                                                                                                                      |
 | Body        | CustomFont200     | caption2Strong    | Caption medium      | News Badge, Image caption, Site WP activity, Avatar Role/Job, Hero Badge                                                             |
