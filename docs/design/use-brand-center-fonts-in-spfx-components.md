@@ -34,7 +34,7 @@ For example, to change the primary font in your web part, add the following styl
 font-family: var(--fontFamilyCustomFont100, var(--fontFamilyBase));
 ```
 
-This tells the SPFx runtime to set the `font-family` style to the variable `--fontFamilyCustomFont100`, but if that value isn't set, it will default to the `--fontFamilyBase` slot.
+This tells the web part to use the value defined in the SharePoint styling context with the variable `--fontFamilyCustomFont100`, but if that value isn't set, it will default to the `--fontFamilyBase` slot.
 
 The resulting class will now look like this:
 
