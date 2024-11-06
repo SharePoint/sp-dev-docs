@@ -180,7 +180,7 @@ It’s critical to restore the Service Principal from the recycle bin within 30 
 
 ### How to restore deleted Service Principals?
 
-Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/en-us/graph/api/directory-deleteditems-restore?tabs=http).
+Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/graph/api/directory-deleteditems-restore?tabs=http).
 
 ## See also
 

@@ -1,6 +1,6 @@
 ---
 title: Create a workflow with elevated permissions by using the SharePoint Workflow platform. Guidance for sites that enable workflow after November 7 2024.
-description: Create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions grant permissions to the workflow app and wrap actions with the App Step.
+description: Create SharePoint workflows that access objects in SharePoint that require elevated permissions for sites that enable workflow after November 7 2024. These solutions grant permissions to the workflow app and wrap actions with the App Step.
 ms.date: 11/04/2024
 ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
 ms.localizationpriority: high
@@ -154,4 +154,4 @@ It’s critical to restore the Service Principal from the recycle bin within 30 
 
 ### How to restore deleted Service Principals?
 
-Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/en-us/graph/api/directory-deleteditems-restore?tabs=http).
+Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/graph/api/directory-deleteditems-restore?tabs=http).
