@@ -1,7 +1,7 @@
 ---
 title: Create a workflow with elevated permissions by using the SharePoint Workflow platform
 description: Create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions grant permissions to the workflow app and wrap actions with the App Step.
-ms.date: 05/18/2023
+ms.date: 11/04/2024
 ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
 ms.localizationpriority: high
 ---
@@ -11,6 +11,7 @@ ms.localizationpriority: high
 This article describes how to create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions use two features: granting permissions to the workflow app and wrapping actions with the App Step.
 
 > [!NOTE]
+> SharePoint 2013 workflow has been deprecated since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://aka.ms/sp-workflows-2013support).
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 > [!IMPORTANT]
@@ -25,6 +26,9 @@ To solve this, you have to create a workflow with elevated permissions by doing 
 1. Allow the workflow to use add-in permissions.
 1. Grant full control permission to the workflow.
 1. Develop the workflow to wrap actions inside an App Step.
+
+> [!IMPORTANT]
+> When you want to use workflows with elevated permissions on sites that did not yet have workflow enabled on November 7, 2024, then the configuration steps to follow will be different. More details can be found [in this article](workflow-with-elevated-permissions-new-guidance.md).
 
 ## Allow a workflow to use add-in permissions on a SharePoint site
 
@@ -49,6 +53,9 @@ The first step is to allow the workflow to use add-in permissions. You configure
     ![Workflow can use app permissions feature](../images/SPD15-WFAppPermissions2.png)
 
 ## Grant full control permission to a workflow
+
+> [!IMPORTANT]
+> When you want to use workflows with elevated permissions on sites or sub sites that did not yet have workflow enabled after November 7 2024, then the configuration steps to follow will be different. More details can be found [in this article](workflow-with-elevated-permissions-new-guidance.md).
 
 For the workflow to function properly, it must be granted full control on the site. The following procedure grants full control permission to the workflow.
 
@@ -160,6 +167,20 @@ The first step to solve this problem is to allow the application to authorize by
 The following diagram illustrates the change in permissions.
 
 ![Permissions matrix.](../images/SPD15-WFAppPermissions15.png)
+
+## Deletion of workflow principals
+
+> [!Important]
+> If the workflow principals (as listed via `/_layouts/15/appprincipals.aspx` or via Microsoft Entra admin center) are deleted, then they need to be restored within 30 days.
+>
+> - When the deleted principal was for a site that was configured to use SharePoint 2013 workflow before November 7th , that will break workflows running for that site
+> - When the deleted principal was the tenant level workflow app, this will break workflows running in all sites that were configured for workflow after November 7th, 2024
+
+It’s critical to restore the Service Principal from the recycle bin within 30 days. If the restore does not happen during that period of time, workflows will be broken.
+
+### How to restore deleted Service Principals?
+
+Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/en-us/graph/api/directory-deleteditems-restore?tabs=http).
 
 ## See also
 
