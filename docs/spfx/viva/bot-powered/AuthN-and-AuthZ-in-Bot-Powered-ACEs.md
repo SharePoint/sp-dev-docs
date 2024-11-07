@@ -10,12 +10,12 @@ Bot Powered Adaptive Card Extensions (ACEs) often require a security context. In
 Being the Bot Powered ACEs based on the Azure Bot technology, also Authentication and Authorization use the same security architecture of regular Azure Bots.
 To secure a Bot Powered ACE, there are some configuration steps that you need to accomplish. You also need to write some code in your implementation to handle the sign-in and sign out flows. In this article, you learn about the architecture of Bot Powered ACEs from a security point of view.
 
-# Understanding the Bot Powered ACE authentication options
+## Understanding the Bot Powered ACE authentication options
 
 Before digging into the actual development of the authentication logic in the Bot Powered ACEs, it's important to understand how the authentication flow works.
 
 In fact, you can support different scenarios:
-- [Microsoft Entra ID Single Sign-on (SSO)](#microsoft-entra-id-signle-sign-on-sso)
+- [Microsoft Entra ID Single Sign-on (SSO)](#microsoft-entra-id-single-sign-on-sso)
 - [Other OAuth Identity Providers with Bot Framework magic code](#other-oauth-identity-providers-with-bot-framework-magic-code)
 
 The following diagram explains how the authentication flow works.
@@ -24,7 +24,7 @@ The following diagram explains how the authentication flow works.
 
 In the following sections, you can find additional information about each of the available options.
 
-## Microsoft Entra ID Single Sign-on (SSO)
+### Microsoft Entra ID Single Sign-on (SSO)
 
 If you choose to support Microsoft Entra ID (previously known as Azure Active Directory v2) single sign-on, the user's authentication is automatic and transparent to the user. Your code automatically gets the security context and you can easily access information about who the current user is. You can also retrieve an access token to consume Microsoft Graph or any other third party APIs on behalf of the current user. Indeed, in order to get an access token the Microsoft App behind the scenes of your Bot Powered ACE needs to be granted permissions accordingly.
 
@@ -32,7 +32,7 @@ To support Microsoft Entra ID SSO, there are some configuration requirements tha
 
 If your code has single sign-on logic but the application isn't set up correctly in Microsoft Azure, the Bot Powered ACE doesn't show up. If that is the case, users see an error when adding the Bot Powered ACE to the dashboard.
 
-## Other OAuth Identity Providers with Bot Framework magic code
+### Other OAuth Identity Providers with Bot Framework magic code
 
 Another option that you have is to rely on external OAuth Identity Providers, which can still be Microsoft Entra ID or any other third party Identity Provider. For example, the third party Identity Provider can be: GitHub, Facebook, Live, Google, etc. If that is the case, the authentication requires you to manually handle a magic code value provided by the user during the authentication phase, based on how the bot framework authentication works. 
 
@@ -42,7 +42,7 @@ When the Identity Provider is Microsoft Entra ID and the user is on a desktop en
 
 You can find implementation details about this scenario reading the article ["Building Bot Powered Adaptive Card Extensions with Magic Code authentication."](./AuthN-and-AuthZ-in-Bot-Powered-ACEs-Magic-Code.md)
 
-# Important things to know
+## Important things to know
 
 There are some architectural things that are worth being aware of, when developing custom Bot Powered ACEs with authentication and authorization:
 
