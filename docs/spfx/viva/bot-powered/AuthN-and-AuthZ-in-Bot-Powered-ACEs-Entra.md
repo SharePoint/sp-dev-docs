@@ -20,7 +20,7 @@ Following picture you can see how the Adaptive Card Extension looks like in the 
 ![The UI of the sample Bot Powered ACE in the Viva Connections mobile experience. There is a Card View showing a welcome message for an authenticated users.](./images/Bot-Powered-ACE-Welcome-User-UI-Mobile-SSO.png)
 
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
-The whole source code of the .NET sample is available in the following GitHub repository: [Welcome User Bot Powered ACE SSO](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAceSSO).
+The whole source code of the .NET sample is available in the following GitHub repository: [Welcome User Bot Powered ACE SSO](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce-SSO).
 
 ## Developing a Secured Bot Powered ACE with Microsoft .NET
 
@@ -229,7 +229,7 @@ The Signed out Card View is a basic card view with a simple text message in the 
 > [!NOTE]
 > As already stated before, when you have single sign-on in place, you can still trigger the sign out logic. However, as soon as the user goes back to the home card view, the single sign-on logic is triggered and the user is authenticated again.
 
-In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in this article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
+In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in this article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce-SSO).
 
 #### Handling single sign-on dedicated logic
 
@@ -364,7 +364,7 @@ The `GetUserToken` method retrieves an instance of the `UserTokenClient` service
 * the ID of the sender (From) for the current Activity of the Bot instance
 * the name of the OAuth connection defined in the configuration of the Azure Bot
 * the ID of the Channel for the Bot instance
-* the magic code value, which is null if there's single sign-on in place or there's a cached user's token
+* the magic code value, which is null if there's single sign-on in place or there's an already cached user's token
 * the cancellation token for the asynchronous request
 
 The result of the `GetUserTokenAsync` method is an instance of the `TokenResponse` type that includes a `Token` property with the actual value of the access token.

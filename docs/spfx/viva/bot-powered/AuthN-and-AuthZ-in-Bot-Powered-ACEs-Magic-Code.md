@@ -6,12 +6,15 @@ ms.localizationpriority: high
 ---
 # Building Bot Powered Adaptive Card Extensions with Magic Code authentication
 
-To secure a Bot Powered Adaptive Card Extension (ACE), you need some configuration steps on Microsoft Azure and some custom logic in the code base. To authenticate the users, you can configure a third party Identity Provider or Microsoft Entra ID without Single Sign-on (SSO). In this document, you find a step by step guidance that helps you accomplish this task.
+To secure a Bot Powered Adaptive Card Extension (ACE), you need some configuration steps on Microsoft Azure and some custom logic in the code base, depending on the authentication provider you want to use. In fact, you can configure a third party Identity Provider or Microsoft Entra ID as the authentication provider. 
+Being the Bot Powered ACEs based on the Azure Bot technology, also Authentication and Authorization use the same security architecture of regular Azure Bots. As such, when authenticating users with an Identity Provider, the Bot Framework relies on a magic code to complete the authentication process.
+In this article, you find a step by step guidance that helps you build a solution that authenticates with a Microsoft Entra ID without single sign-on, but actually relying on the magic code. However, the same technique can be used to configure any third party Identity Provider.
 
 ## Understanding the sample scenario
 
 Let's assume that you want to create a Bot Powered ACE to write a welcome message for users, writing their name and the user principal name in a Card View. You want to authenticate users via OAuth with a third party Identity Provider. For the sake of simplicity, in this article we use Microsoft Entra ID without single sign-on, but it could be any other Identity Provider. 
 When on a desktop environment and with Microsoft Entra ID, the magic code handling is supported automatically. As such, the end user sees a dance of dialogs on the screen, and the ACE authentication happens automatically. In fact, aside from selecting a "Sign-in" button, there isn't need to do any manual operation to complete the authentication flow.
+When using a third party Identity Provider, the user needs to manually copy and paste the value of the magic code to complete the sign in flow.
 Following picture, you can see how the Adaptive Card Extension looks like in the Viva Connections desktop experience.
 
 ![The UI of the sample Bot Powered ACE in the Viva Connections desktop experience. There is a Card View showing a sign-in interface with a "Sign-in" button. There is also another Card View showing a welcome message for an authenticated users.](./images/Bot-Powered-ACE-Welcome-User-UI-Desktop.png)
@@ -19,6 +22,11 @@ Following picture, you can see how the Adaptive Card Extension looks like in the
 Following picture you can see how the Adaptive Card Extension looks like in the Viva Connections mobile experience.
 
 ![The UI of the sample Bot Powered ACE in the Viva Connections mobile experience. There is a Card View showing a sign-in interface with a "Sign-in" button. There is also another Card View showing a welcome message for an authenticated users.](./images/Bot-Powered-ACE-Welcome-User-UI-Mobile.png)
+
+In both scenarios (desktop and mobile), there are:
+
+- a "Sign in" button to initiate the sign-in flow 
+- a "Complete sign in" button to provide the magic code obtained by the Bot Framework and complete the authentication flow
 
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
 The whole source code of the .NET sample is available in the following GitHub repository: [Welcome User Bot Powered ACE](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
@@ -132,11 +140,9 @@ cardViews.TryAdd(homeCardViewResponse.ViewId, homeCardViewResponse);
 
 As you can see, it's a Primary Text Card View, which simply renders a text with the current user display name in the header. There's also another text with the user principal name in the body. Additionally there's a "Sign out" button that allows the user to sign out, when there's a current authenticated session.
 
-When it comes to the implementation of the Sign-In card view, you have two options:
-
 #### Implementing sign-in card view with automatic magic code handling
 
-In case you want to support Microsoft Entra ID (Azure Active Directory v2) authentication with magic code automatic handling, you need to implement the Sign-In card as follows:
+To support Microsoft Entra ID (Azure Active Directory v2) authentication with magic code automatic handling, you need to implement the Sign-In card as follows:
 
 ```CSharp
 // SignIn Card View (Sign-In Card View)
@@ -174,9 +180,9 @@ signInCardViewResponse.ViewId = SignInCardView_ID;
 cardViews.TryAdd(signInCardViewResponse.ViewId, signInCardViewResponse);
 ```
 
-You need to use the `SignInCardViewParameters` factory method to create a Sign In Card View, which is designed to implement the sign in logic. The Sign In Card View looks like a Primary Text Card View, in fact there are text components both in the header and in the body. However, the footer requires you to provide a button to implement extra logic to handle the completion of the sign in flow. By default, every Sign In Card View has a Sign in button that is provided out of the box in the Card View template. The extra button in the Card View is for the "Complete sign in" logic. You can find further details in the flow diagram in section ["Understanding the Bot Powered ACE authentication flow."](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md#understanding-the-bot-powered-ace-authentication-options)
+You need to use the `SignInCardViewParameters` factory method to create a Sign In Card View, which is designed to implement the sign in logic. The Sign In Card View looks like a Primary Text Card View, in fact there are text components both in the header and in the body. However, the footer requires you to provide a button to implement extra logic to handle the completion of the sign in flow. By default, every Sign In Card View has a Sign in button that is provided out of the box in the Card View template. The extra button in the Card View is for the "Complete sign in" logic. You can find further details in the flow diagram illustrated in ["Understanding the Bot Powered ACE authentication flow."](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md#understanding-the-bot-powered-ace-authentication-options)
 In the sample implementation, when the user selects the "Complete sign in" button a custom Quick View is rendered in order to collect the magic code and process it to acquire the access token.
-One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn," which is the one required to configure the automatic magic code handling without single sign-on. 
+One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn," which is the value required to configure the automatic magic code handling without single sign-on, in case you use Microsoft Entra ID. 
 
 #### Implementing other card views
 
@@ -385,7 +391,7 @@ The `GetUserToken` method retrieves an instance of the `UserTokenClient` service
 * the ID of the sender (From) for the current Activity of the Bot instance
 * the name of the OAuth connection defined in the configuration of the Azure Bot
 * the ID of the Channel for the Bot instance
-* the magic code value, which can be null if there's single sign-on or a cached user's token
+* the magic code value, which can be null if there's an already cached user's token
 * the cancellation token for the asynchronous request
 
 The result of the `GetUserTokenAsync` method is an instance of the `TokenResponse` type that includes a `Token` property with the actual value of the access token.
