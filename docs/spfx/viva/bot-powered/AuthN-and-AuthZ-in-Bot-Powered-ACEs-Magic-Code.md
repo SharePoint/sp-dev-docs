@@ -25,8 +25,8 @@ Following picture you can see how the Adaptive Card Extension looks like in the 
 
 In both scenarios (desktop and mobile), there are:
 
-- a "Sign in" button to initiate the sign-in flow 
-- a "Complete sign in" button to provide the magic code obtained by the Bot Framework and complete the authentication flow
+- "Sign in" button to initiate the sign-in flow 
+- "Complete sign in" button to provide the magic code obtained by the Bot Framework and complete the authentication flow
 
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
 The whole source code of the .NET sample is available in the following GitHub repository: [Welcome User Bot Powered ACE](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
@@ -84,6 +84,8 @@ Go back to the Visual Studio project that you created before. Open the **appsett
   "ConnectionName": "<Connection-Name>"
 }
 ```
+
+To have the latest types needed to support the security infrastructure of the Bot Powered ACE, upgrade the NuGet package with name "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.22.9 or higher.
 
 Rename the **EmptyBot.cs** file into **WelcomeUserBot.cs**, change the base class from `ActivityHandler` to `SharePointActivityHandler`, and import the namespace `Microsoft.Bot.Builder.SharePoint`.
 Follow the instructions provided in the ["Implement the actual Bot Powered ACE"](./Building-Your-First-Bot-Powered-ACE.md#implement-the-actual-bot-powered-ace) section of the reference article ["Building your first Bot Powered Adaptive Card Extension"](./Building-Your-First-Bot-Powered-ACE.md) to implement the basic code of the Bot Powered ACE. Specifically, implement four Card Views:

@@ -100,6 +100,8 @@ Go back to the Visual Studio project that you created before. Open the **appsett
 }
 ```
 
+To have the latest types needed to support the security infrastructure of the Bot Powered ACE, upgrade the NuGet package with name "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.22.9 or higher.
+
 Rename the **EmptyBot.cs** file into **WelcomeUserBot.cs**, change the base class from `ActivityHandler` to `SharePointActivityHandler`, and import the namespace `Microsoft.Bot.Builder.SharePoint`.
 Follow the instructions provided in the ["Implement the actual Bot Powered ACE"](./Building-Your-First-Bot-Powered-ACE.md#implement-the-actual-bot-powered-ace) section of the reference article ["Building your first Bot Powered Adaptive Card Extension"](./Building-Your-First-Bot-Powered-ACE.md) to implement the basic code of the Bot Powered ACE. Specifically, implement four Card Views:
 
@@ -231,6 +233,94 @@ The Signed out Card View is a basic card view with a simple text message in the 
 
 In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in this article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce-SSO).
 
+#### Implementing Bot Powered ACEs specific methods
+
+You also need to implement couple of methods to handle the card view rendering and any action, like a button selection, in the UI of the card views. Following code excerpt shows how to implement both the `OnSharePointTaskGetCardViewAsync` and `OnSharePointTaskHandleActionAsync` methods.
+
+```CSharp
+protected async override Task<CardViewResponse> OnSharePointTaskGetCardViewAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
+{
+    // Check to see if the user has already signed in
+    var (displayName, upn) = await GetAuthenticatedUser(magicCode: null, turnContext, cancellationToken);
+    if (displayName != null && upn != null)
+    {
+        var homeCardView = cardViews[HomeCardView_ID];
+        if (homeCardView != null)
+        {
+            ((homeCardView.CardViewParameters.Header.ToList())[0] as CardTextComponent).Text = $"Welcome {displayName}!";
+            ((homeCardView.CardViewParameters.Body.ToList())[0] as CardTextComponent).Text = $"Your UPN is: {upn}";
+            return homeCardView;
+        }
+    }
+    else
+    {
+        var signInCardView = cardViews[SignInCardView_ID];
+        if (signInCardView != null)
+        {
+            var signInResource = await GetSignInResource(turnContext, cancellationToken);
+            var signInLink = signInResource != null ? new Uri(signInResource.SignInLink) : new Uri(string.Empty);
+
+            signInCardView.AceData.Properties = Newtonsoft.Json.Linq.JObject.FromObject(new Dictionary<string, object>() {
+                { "uri", signInLink },
+                { "connectionName", this._connectionName }
+            });
+            return signInCardView;
+        }
+    }
+
+    return cardViews[ErrorCardView_ID];
+}
+
+protected async override Task<BaseHandleActionResponse> OnSharePointTaskHandleActionAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
+{
+    if (turnContext != null)
+    {
+        if (cancellationToken.IsCancellationRequested)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+        }
+    }
+    JObject actionParameters = aceRequest.Data as JObject;
+
+    if (actionParameters != null)
+    {
+        var actionId = actionParameters["id"].ToString();
+        if (actionId == "SignOut")
+        {
+            await SignOutUser(turnContext, cancellationToken);
+
+            return new CardViewHandleActionResponse
+            {
+                RenderArguments = cardViews[SignedOutCardView_ID]
+            };
+        }
+        else if (actionId == "OkSignedOut")
+        {
+            return new CardViewHandleActionResponse
+            {
+                RenderArguments = cardViews[SignInCardView_ID]
+            };
+        }
+        else if (actionId == "OkError")
+        {
+            return new CardViewHandleActionResponse
+            {
+                RenderArguments = cardViews[HomeCardView_ID]
+            };
+        }
+    }
+
+    return new CardViewHandleActionResponse
+    {
+        RenderArguments = cardViews[ErrorCardView_ID]
+    };
+}
+```
+
+The `OnSharePointTaskGetCardViewAsync` method handles the rendering of the Welcome card view, rendering the display name and the user principal name of the currently authenticated user, if any. On the contrary, if there isn't a user's security context, it renders the Sign-in card view, configuring the name of the OAuth connection to use and retrieving the Sign-in URL from the infrastructural services provided by the Bot Framework via the `GetSignInResource` method.
+
+The `OnSharePointTaskHandleActionAsync` method handles the selection of all the buttons provided in the UI of the Bot Powered ACE.
+
 #### Handling single sign-on dedicated logic
 
 To authenticate users with single sign-on, you need to override the `OnSignInInvokeAsync` method to handle the single sign-on request.
@@ -313,7 +403,7 @@ If you're using dependency injection, you can configure the cache manager as a s
 
 Once you support the single sign-on logic, you can rely on a set of utility methods to retrieve the current user's information. These methods retrieve the current authenticated user, their token, and provide the sign out logic, if there's need.
 
-Here follows the internal logic that you should rely on to manage the access token and the current user's identity retrieval through the `GetAuthenticatedUser` and `GetUserToken` methods.
+Here follows the internal logic that you should rely on to manage the access token and the current user's identity retrieval through the `GetAuthenticatedUser`, `GetUserToken`, and `GetSignInResource` methods.
 
 ```CSharp
 private async Task<(string displayName, string upn)> GetAuthenticatedUser(string magicCode, ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -352,6 +442,16 @@ private async Task<TokenResponse> GetUserToken(string magicCode, ITurnContext<II
         magicCode,
         cancellationToken).ConfigureAwait(false);
 }
+
+private async Task<SignInResource> GetSignInResource(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Get the UserTokenClient service instance
+    var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+
+    // Retrieve the Sign In Resource from the UserTokenClient service instance
+    var signInResource = await userTokenClient.GetSignInResourceAsync(_connectionName, (Microsoft.Bot.Schema.Activity)turnContext.Activity, null, cancellationToken).ConfigureAwait(false);
+    return signInResource;
+}
 ```
 
 The `GetAuthenticatedUser` method accepts the magic code value and the Bot `TurnContext` instance. Internally it uses the `GetUserToken` method to retrieve the actual access token value and then uses the `JwtSecurityToken` class of `System.IdentityModel.Tokens.Jwt` to decode the token and get access to the user's display name and user principal name.
@@ -369,6 +469,8 @@ The `GetUserToken` method retrieves an instance of the `UserTokenClient` service
 
 The result of the `GetUserTokenAsync` method is an instance of the `TokenResponse` type that includes a `Token` property with the actual value of the access token.
 Once you have the access token and you extracted the display name and the user principal name, you can render them in the welcome card view.
+
+The `GetSignInResource` method relies on an instance of the `UserTokenClient` service and retrieves the URL to use for signing in the user invoking the `GetSignInResourceAsync` method.
 
 In the code excerpt, you can also see how the sign out is handled, invoking the custom `SignOutUser` method, which is illustrated in the following code excerpt.
 
