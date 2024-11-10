@@ -28,7 +28,8 @@ In this series of articles, you can understand what Bot Powered Adaptive Card Ex
 
 The series of articles covers the following topics:
 
-1. [Building your first Bot Powered Adaptive Card Extension](Building-Your-First-Bot-Powered-ACE.md)
+1. [Building your first Bot Powered Adaptive Card Extension with .NET](Building-Your-First-Bot-Powered-ACE.md)
+1. [Building your first Bot Powered Adaptive Card Extension with Microsoft Teams Toolkit and TypeScript](Building-Your-First-Bot-Powered-ACE-TTK-TS.md)
 1. [Understanding Bot Powered Adaptive Card Extensions](Understanding-Bot-Powered-ACEs.md)
 1. [Authentication and Authorization in Bot Powered Adaptive Card Extensions](AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)
 1. [Building Bot Powered Adaptive Card Extensions with Microsoft Entra ID and Single Sign-on](AuthN-and-AuthZ-in-Bot-Powered-ACEs-Entra.md)

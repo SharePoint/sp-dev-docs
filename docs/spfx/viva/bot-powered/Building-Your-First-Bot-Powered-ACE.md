@@ -1,12 +1,12 @@
 ---
-title: Building your first Bot Powered Adaptive Card Extension
+title: Building your first Bot Powered Adaptive Card Extension with .NET
 description: Learn how to build your first Bot Powered Adaptive Card Extension using the Bot Framework for Microsoft .NET.
 ms.date: 10/30/2024
 ms.localizationpriority: high
 ---
-# Building your first Bot Powered Adaptive Card Extension
+# Building your first Bot Powered Adaptive Card Extension with .NET
 
-Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections enables extending the Microsoft Viva Connections Dashboard using the Bot development model.
+Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections enable extending the Microsoft Viva Connections Dashboard using the Bot development model.
 
 From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework (SPFx). As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension."](../get-started/build-first-sharepoint-adaptive-card-extension.md)
 
@@ -478,6 +478,17 @@ For example, the `TextInputCardViewParameters` instance is made of the following
 * `Microsoft.Bot.Schema.SharePoint.CardImage`: defines an image that is rendered in the right side of the Card View.
 
 In the code excerpt, the images used to render the Card Views are downloaded from the web site hosted in the Bot project, and available under the **wwwroot** folder of the project. In that folder, you should upload the **Media** subfolder that you can find in the [samples folder of the reference GitHub repository](https://github.com/SharePoint/sp-dev-docs/tree/main/assets/bot-powered/Media).
+
+#### Serving Card Views requests
+
+To serve the card views, you need to implement the `OnSharePointTaskGetCardViewAsync` method so that it will return the instance of the card view to collect feedback that you created in the constructor. Here follows the method implementation.
+
+```CSharp
+protected override Task<CardViewResponse> OnSharePointTaskGetCardViewAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
+{
+    return Task.FromResult(cardViews[CollectFeedbackCardView_ID]);
+}
+```
 
 #### Handling user's tasks and actions
 
