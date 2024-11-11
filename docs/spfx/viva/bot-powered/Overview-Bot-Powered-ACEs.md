@@ -26,11 +26,14 @@ From a developer point of view, you build the ACE once and you can benefit of it
 
 In this series of articles, you can understand what Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections are, their architecture, and how to build real-life solutions.
 
-The series of articles covers the following articles:
+The series of articles covers the following topics:
 
-1. [Building your first Bot Powered Adaptive Card Extension](Building-Your-First-Bot-Powered-ACE.md)
+1. [Building your first Bot Powered Adaptive Card Extension with .NET](Building-Your-First-Bot-Powered-ACE.md)
+1. [Building your first Bot Powered Adaptive Card Extension with Microsoft Teams Toolkit and TypeScript](Building-Your-First-Bot-Powered-ACE-TTK-TS.md)
 1. [Understanding Bot Powered Adaptive Card Extensions](Understanding-Bot-Powered-ACEs.md)
 1. [Authentication and Authorization in Bot Powered Adaptive Card Extensions](AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)
+1. [Building Bot Powered Adaptive Card Extensions with Microsoft Entra ID and Single Sign-on](AuthN-and-AuthZ-in-Bot-Powered-ACEs-Entra.md)
+1. [Building Bot Powered Adaptive Card Extensions with Magic Code authentication](AuthN-and-AuthZ-in-Bot-Powered-ACEs-Magic-Code.md)
 
 By reading the above articles, you're able to manage the development of Bot Powered ACEs for Microsoft Viva Connections and to apply the potential of this new technology.
 
