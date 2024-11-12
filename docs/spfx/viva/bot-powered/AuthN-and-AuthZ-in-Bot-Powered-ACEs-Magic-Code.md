@@ -31,7 +31,7 @@ In both scenarios (desktop and mobile), there are:
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
 The whole source code of the .NET sample is available in the following GitHub repository: [Welcome User Bot Powered ACE](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
 
-## Developing a Secured Bot Powered ACE with Microsoft .NET
+## Developing a Secured Bot Powered ACE with Microsoft .NET and Magic Code
 
 First of all, you should create a Bot Powered ACE following the guidance provided in article ["Building your first Bot Powered Adaptive Card Extension,"](./Building-Your-First-Bot-Powered-ACE.md) stopping before the section ["Implement the actual Bot Powered ACE."](./Building-Your-First-Bot-Powered-ACE.md#implement-the-actual-bot-powered-ace)
 For the sake of simplicity, assume that the Bot Powered ACE project name is "WelcomeUserBotPoweredAce" and register the Azure Bot accordingly to the guidance. 
@@ -537,8 +537,8 @@ To properly support authentication, you need to add a `webApplicationInfo` secti
 
 The `id` property is the actual Client ID of the Microsoft App behind the scenes of your Azure Bot. The `resource` property is the unique URI that you configured for that Microsoft App.
 
-You're now ready to package the solution, deploy it on the SharePoint Online App Catalog, and play with it. You can follow the instructions provided in section ["Run and test the solution"](./Building-Your-First-Bot-Powered-ACE.md#run-and-test-the-solution) of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
-
 Consider a Bot Powered ACE configured for multitenant and deployed on a target tenant. The first time users run it, they need to grant consent to your Azure Bot application to access Microsoft Graph with delegated permissions. The user's consent is collected through a custom dialog provided by Microsoft Entra ID. In the following picture, you can see the user's consent dialog in action.
 
 ![The popup dialog of Microsoft Entra ID to collect the user's consent to access specific resources based on the current Azure Bot application permissions.](./images/Bot-Powered-ACE-Secured-Consent-Multitenant.png)
+
+You're now ready to package the solution, deploy it on the SharePoint Online App Catalog, and play with it. You can follow the instructions provided in section ["Run and test the solution"](./Building-Your-First-Bot-Powered-ACE.md#run-and-test-the-solution) of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
