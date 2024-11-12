@@ -528,3 +528,9 @@ Right after that, your Azure Bot is fully configured and ready to be used.
 ![The panel to configure channels for the Azure Bot. There are now three pre-selected channels: "Direct Line", "Web Chat", and "Microsoft 365.](./images/Azure-Portal-Create-Azure-Bot-12-TTK.png)
 
 You're now ready to run and test your Bot Powered ACE built with Microsoft Teams Toolkit and TypeScript.
+
+## Additional readings
+
+Now that you have built your first Bot Powered ACE with Microsoft Teams Toolkit and TypeScript, you are ready to dig into additional details reading the following articles. 
+ 
+* [Authentication and Authorization in Bot Powered Adaptive Card Extensions](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)
