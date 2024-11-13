@@ -544,7 +544,7 @@
   items:
   - name: Overview
     href: embedded/overview.md
-  - name: Getting Started
+  - name: Get Started
     items:
     - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
@@ -685,7 +685,6 @@
     - name: Build your first SharePoint Adaptive Card Extension
       href: spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension.md
     - name: Advanced Card View Functionality
-      href: spfx/viva/get-started/advanced-card-view-functionality.md
     - name: Advanced Quick View Functionality
       href: spfx/viva/get-started/advanced-quick-view-functionality.md
     - name: Adaptive Card Extensions and Teams Apps
