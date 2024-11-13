@@ -546,7 +546,7 @@
     href: embedded/overview.md
   - name: Getting Started
     items:
-    - name: SharePoint Embedded for Visual Studio Code
+    - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
   - name: Scenarios and Use Cases
     href: embedded/scenarios-and-use-cases.md
