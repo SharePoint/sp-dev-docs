@@ -1,7 +1,7 @@
 ---
 title: Building Bot Powered Adaptive Card Extensions with Magic Code authentication
 description: Learn how to secure Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections using any identity provider and a magic code.
-ms.date: 11/08/2024
+ms.date: 11/15/2024
 ms.localizationpriority: high
 ---
 # Building Bot Powered Adaptive Card Extensions with Magic Code authentication
@@ -36,20 +36,79 @@ The whole source code of the .NET sample is available in the following GitHub re
 First of all, you should create a Bot Powered ACE following the guidance provided in article ["Building your first Bot Powered Adaptive Card Extension,"](./Building-Your-First-Bot-Powered-ACE.md) stopping before the section ["Implement the actual Bot Powered ACE."](./Building-Your-First-Bot-Powered-ACE.md#implement-the-actual-bot-powered-ace)
 For the sake of simplicity, assume that the Bot Powered ACE project name is "WelcomeUserBotPoweredAce" and register the Azure Bot accordingly to the guidance. 
 
-### Configuring security for a Bot Powered ACE
+## Configuring security for the Bot Powered ACE
 
 Before starting to develop the actual Bot Powered ACE, you need to enrich the configuration of the Azure Bot and of the Microsoft App behind the scenes of the Azure Bot.
-To access the Microsoft App backing the Azure Bot, open the "Configuration" panel of the Azure Bot and select the "Manage Password" link. In the Microsoft Entra ID application, select the Authentication panel and add the following URL as another "Redirect URI" for the application.
+To access the Microsoft App backing the Azure Bot, open the "Configuration" panel of the Azure Bot and select the "Manage Password" link. 
+
+Now, select the "Authentication" panel of the Microsoft App and under the "Platform configurations" section, select on "Add a platform" and select to add a *Web* platform. Then configure the following value for the "Redirect URIs" setting field.
 
 ```http
 https://token.botframework.com/.auth/web/redirect
 ```
 
-Select the "Save" button of the Authentication page when you're done configuring the extra URL. Then you need to configure an OAuth connection for the Azure Bot. To configure the OAuth connection, go back to the "Configuration" panel of the Azure Bot and select the "Add OAuth Connection Settings" button.
+You should also enable "Implicit grant and hybrid flows" by selecting the options to issue "Access tokens" and "ID tokens." Select the "Configure" button and your new Web platform is configured.
+
+![The panel to configure a Web platform for the Microsoft App. You can configure the "Redirect URIs" for the web app and enable the "Implicit grant and hybrid flows" with support for "Access tokens" and "ID tokens".](./images/Azure-Portal-Create-Azure-Bot-05.png)
+
+Now, select the "API permissions" panel and configure the app with the following delegated permissions:
+
+* email
+* offline_access
+* openid
+* profile
+* User.Read
+
+Select the "Grant admin consent for ..." button, in order to grant the permissions at tenant level.
+
+![The panel to configure the "API permissions". There are few permissions already selected, including: email, offline_access, openid, profile, and User.Read. All of the permissions are granted at tenant level.](./images/Azure-Portal-Create-Azure-Bot-06.png)
+
+Now, move to the "Expose an API" panel and configure a unique URI for your application selecting the "Add" link just beside the "Application ID URI" label. Here you need to configure a value for the "Application ID URI" that matches the following rule:
+
+```http
+api://<your-ngrok-reverse-proxy-name>.ngrok.io/<App-Client-ID>
+```
+
+For example, if you plan to use the name *welcome-bot-powered-ace* with ngrok, and the Client ID of your application is *fff49e21-925f-4dc9-be03-2680c4783091* the "Application ID URI" should be:
+
+```http
+api://welcome-bot-powered-ace.ngrok.io/fff49e21-925f-4dc9-be03-2680c4783091
+```
+
+> [!NOTE]
+> Mind the api:// moniker at the beginning of the Application ID URI value, and be careful to not use http:// or https:// unless you want to use a verified domain of the organization or its subdomain.
+
+Now in the "Scopes defined by this API" section add a new scope by selecting the "Add a scope" button. Provide the following settings for the new scope:
+
+* Scope name: *access_as_user*.
+* Who can consent?: Admins and users.
+* Admin consent display name: Teams can access the user's profile.
+* Admin consent description: Allows Teams to call the app's web APIs as the current user.
+* User consent display name: Teams can access the user's profile and make requests on the user's behalf.
+* User consent description: Enables Teams to call this app's APIs with the same rights as the user.
+* State: Enabled.
+
+![The panel to add a new permission scope. There are options to configure the scope name, who can consent the scope, the admin consent display name and description, the user consent display name and description, and the state of the scope.](./images/Azure-Portal-Create-Azure-Bot-07.png)
+
+Lastly, in the "Authorized client applications" section, you need to configure the client ID of the "SharePoint Online Web Client Extensibility" application. You also need to authorize that client application to consume your Microsoft App, so that users shouldn't be asked to consent when the Viva Connections client calls your API. The client ID of the "SharePoint Online Web Client Extensibility" application is the following one:
+
+* 08e18876-6177-487e-b8b5-cf950c1e598c
+
+While adding it to the list of "Authorized client applications", select the permission scope that you configured for the API.
+
+![The panel to add a new authorized client application. You can provide the client ID of the authorized client application and you can select the scopes that you want to authorize for that specific client application.](./images/Azure-Portal-Create-Azure-Bot-08.png)
+
+At the end of this stage, the "Expose an API" panel should look like in the following picture.
+
+![The "Expose an API" panel configured with a custom Application ID URI, a custom scope with name "access_as_user", and a couple of authorized client applications.](./images/Azure-Portal-Create-Azure-Bot-09.png)
+
+## Configuring the OAuth connection for the Azure Bot
+
+Then you need to configure an OAuth connection for the Azure Bot. To configure the OAuth connection, go back to the "Configuration" panel of the Azure Bot and select the "Add OAuth Connection Settings" button.
 
 ![The configuration panel for an Azure Bot. It includes settings about Messaging Endpoint URL, the Microsoft App ID, the Application Insights keys, the Schema Transformation Version, and the OAuth Connection settings. The "Add OAuth Connection Settings" button is highlighted.](./images/Azure-Portal-Configure-OAuth-Connection-Azure-Bot-01.png)
 
-You're prompted with a panel to configure the name of the new OAuth connection and the service provider that you want to use. The name can be whatever text you like, but you need to save it in a safe place because you need it later. Let's name the connection "WelcomeUserBot-EntraID." The service provider defines the Identity Provider to use for the actual OAuth connection. There are plenty of options. In order to rely on Microsoft Entra ID, even without single sign-on, choose "Azure Active Directory v2."
+You're prompted with a panel to configure the name of the new OAuth connection and the service provider that you want to use. The name can be whatever text you like, but you need to save it in a safe place because you need it later. Let's name the connection "WelcomeUserBot-EntraID." The service provider configuration field defines the Identity Provider to use for the actual OAuth connection. There are plenty of options. In order to rely on Microsoft Entra ID, choose "Azure Active Directory v2."
 After selecting the service provider, you have to configure it. For "Azure Active Directory v2" you have to provide:
 
 * Client ID: the client ID of the Microsoft App behind the scenes of your Azure Bot. It's the value that you get while registering the Azure Bot.
@@ -71,7 +130,7 @@ If you select the "Copy Token" button, you can then open the [https://jwt.ms](ht
 > [!NOTE]
 > If you inspect the claims of the token, you can see the `aud` (Audience, which is the Client ID of the Microsoft Graph) `app_displayname` (App display name), `iss` (Token issuer), `appid` (Client ID), `tid` (Tenant ID), `scp` (Permission scopes). You can also double-check that they refer to the application that you just configured.
 
-### Implementing security in your Bot
+## Implementing security in your Bot
 
 Go back to the Visual Studio project that you created before. Open the **appsettings.json** file and add a new setting called "ConnectionName" and set its value to the name of the OAuth connection that you created. Here you can see how the settings file should look like.
 
@@ -95,7 +154,7 @@ Follow the instructions provided in the ["Implement the actual Bot Powered ACE"]
 * Signed-Out: it's the Card View to confirm when an authenticated user signed out.
 * Error: it's the Card View to show an error message, in case an error occurs.
 
-#### Implementing the welcome card view
+### Implementing the welcome card view
 
 In the following code excerpt, you can see how the welcome Card View is defined in the constructor of the Bot.
 
@@ -142,7 +201,7 @@ cardViews.TryAdd(homeCardViewResponse.ViewId, homeCardViewResponse);
 
 As you can see, it's a Primary Text Card View, which simply renders a text with the current user display name in the header. There's also another text with the user principal name in the body. Additionally there's a "Sign out" button that allows the user to sign out, when there's a current authenticated session.
 
-#### Implementing sign-in card view with automatic magic code handling
+### Implementing sign-in card view with automatic magic code handling
 
 To support Microsoft Entra ID (Azure Active Directory v2) authentication with magic code automatic handling, you need to implement the Sign-In card as follows:
 
@@ -186,7 +245,7 @@ You need to use the `SignInCardViewParameters` factory method to create a Sign I
 In the sample implementation, when the user selects the "Complete sign in" button a custom Quick View is rendered in order to collect the magic code and process it to acquire the access token.
 One last important thing to notice is the setting of the `CardViewType` property for the Card View object to value "signIn," which is the value required to configure the automatic magic code handling without single sign-on, in case you use Microsoft Entra ID. 
 
-#### Implementing other card views
+### Implementing other card views
 
 In the following code excerpt you can see the SignedOut card implementation, which defines a card that confirms to the user that the sign out was completed:
 
@@ -227,7 +286,7 @@ The Signed out Card View is a basic card view with a simple text message in the 
 
 In the sample solution, there's also an Error Card View, which for the sake of simplicity isn't illustrated in this article but is available in the [reference solution](https://github.com/pnp/viva-dev-bot-powered-aces/tree/main/samples/dotnet/WelcomeUserBotPoweredAce).
 
-#### Implementing magic code handling quick view
+### Implementing magic code handling quick view
 
 Here follows the definition of the Quick View used to implement the "Complete sign in" logic.
 
@@ -290,11 +349,11 @@ It's a Quick View with a number input field with ID **magicCode** and a submit b
 > [!IMPORTANT]
 > Being the "Complete sign in" user experience developed by you, it is completely customizable. So the layout, text messages, buttons, etc. are up to you and you can freely design them.
 
-### Handling the magic code
+## Handling the magic code
 
 Once you have the magic code, either automatically with Microsoft Entra ID or manually with any other Identity Provider, you need to process its value to acquire an actual access token. Depending on the sign in flow, you can handle the magic code while rendering a Card View in the `OnSharePointTaskGetCardViewAsync` method, or in the `OnSharePointTaskHandleActionAsync` method when the user submits the magic code via the "Complete sign in" manual experience.
 
-#### Automatically handling the magic code
+### Automatically handling the magic code
 
 In the following code excerpt, you can see how to process the magic code automatically submitted by the Microsoft Entra ID experience, when rendering a card view.
 
@@ -433,7 +492,7 @@ private async Task<SignInResource> GetSignInResource(ITurnContext<IInvokeActivit
 
 While the **connectionName** property contains the name of the OAuth connection configured for the Azure Bot.
 
-#### Manually handling the magic code with the "Complete sign in" custom logic
+### Manually handling the magic code with the "Complete sign in" custom logic
 
 In case you need to manually handle the magic code, you need to implement some custom logic in the `OnSharePointTaskHandleActionAsync` method. Here follows a code excerpt of the method.
 
@@ -522,7 +581,7 @@ private async Task SignOutUser(ITurnContext<IInvokeActivity> turnContext, Cancel
 
 The method uses the `UserTokenClient` service to invoke the `SignOutUserAsync` method.
 
-### Configuring the manifest
+## Configuring the manifest
 
 The implementation of the Bot Powered ACE is now complete and you just need to create a manifest file and deploy it into the target tenant SharePoint Online App Catalog. You can find step by step instructions about how to do that in the section ["Define the **manifest.json** file for the solution"](./Building-Your-First-Bot-Powered-ACE.md#define-the-manifestjson-file-for-the-solution) section of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)
 
@@ -536,9 +595,5 @@ To properly support authentication, you need to add a `webApplicationInfo` secti
 ```
 
 The `id` property is the actual Client ID of the Microsoft App behind the scenes of your Azure Bot. The `resource` property is the unique URI that you configured for that Microsoft App.
-
-Consider a Bot Powered ACE configured for multitenant and deployed on a target tenant. The first time users run it, they need to grant consent to your Azure Bot application to access Microsoft Graph with delegated permissions. The user's consent is collected through a custom dialog provided by Microsoft Entra ID. In the following picture, you can see the user's consent dialog in action.
-
-![The popup dialog of Microsoft Entra ID to collect the user's consent to access specific resources based on the current Azure Bot application permissions.](./images/Bot-Powered-ACE-Secured-Consent-Multitenant.png)
 
 You're now ready to package the solution, deploy it on the SharePoint Online App Catalog, and play with it. You can follow the instructions provided in section ["Run and test the solution"](./Building-Your-First-Bot-Powered-ACE.md#run-and-test-the-solution) of the reference article ["Building your first Bot Powered Adaptive Card Extension."](./Building-Your-First-Bot-Powered-ACE.md)

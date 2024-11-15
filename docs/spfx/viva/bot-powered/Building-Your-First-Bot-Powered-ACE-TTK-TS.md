@@ -1,7 +1,7 @@
 ---
 title: Building your first Bot Powered Adaptive Card Extension with Microsoft Teams Toolkit and TypeScript
 description: Learn how to build your first Bot Powered Adaptive Card Extension (ACE) using the Bot Framework with Microsoft Teams Toolkit and TypeScript.
-ms.date: 11/10/2024
+ms.date: 11/15/2024
 ms.localizationpriority: high
 ---
 # Building your first Bot Powered Adaptive Card Extension with Microsoft Teams Toolkit and TypeScript
@@ -26,7 +26,7 @@ Following picture you can see how the Adaptive Card Extension looks like in the 
 
 From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
 
-## Prerequirements
+### Prerequirements
 
 First of all, in order to develop a Bot Powered ACE with Microsoft Teams Toolkit and TypeScript, you need to have the following tools and packages installed on your development machine:
 
