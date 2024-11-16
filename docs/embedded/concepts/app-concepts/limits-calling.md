@@ -1,7 +1,7 @@
 ---
 title: Limits and Calling Patterns
 description: This article explains the limits of SharePoint Embedded.
-ms.date: 05/21/2024
+ms.date: 11/16/2024
 ms.localizationpriority: high
 ---
 
@@ -20,8 +20,8 @@ The following table defines the size limits of containers"
 | --------------------------------------------------------- | ------------------------------------------------------ |
 | Container types that a partner tenant can create          | 5*                                                     |
 | Container types that an app can own                       | 1                                                      |
-| Containers of a container type per tenant                 | 100k*                                                  |
-| Storage per container type per tenant                     | 100 TB*                                                 |
+| Containers of a container type per consuming tenant       | 100k*                                                  |
+| Storage per container type per consuming tenant           | 100 TB*                                                |
 | Files and folders per container                           | 30M                                                    |
 | Storage per container                                     | 25 TB                                                   |
 | Files and folders with additive permissions per container | 5k                                                     |
