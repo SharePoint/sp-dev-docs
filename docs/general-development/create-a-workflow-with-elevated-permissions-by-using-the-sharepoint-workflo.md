@@ -12,14 +12,14 @@ This article describes how to create SharePoint workflows that access objects in
 
 > [!NOTE]
 > SharePoint 2013 workflow has been deprecated since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://aka.ms/sp-workflows-2013support).
-> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+> SharePoint 2010 workflows have been retired since August 1, 2020, for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 > [!IMPORTANT]
 > This article assumes that the SharePoint Workflow platform has been installed and configured and that SharePoint has been configured for add-ins. For more information about SharePoint Workflows and SharePoint Add-ins, including installation and configuration, see [Workflows in SharePoint](workflows-in-sharepoint.md) and [Install and manage SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md).
 
 Imagine that as a SharePoint administrator, you would like to define some processes for managing user requests for purchases of add-ins from the Office Store. In the simplest case, you want to send an acknowledgment email when a user requests an add-in. In addition, you might also want to add structure to the request approval process.
 
-By default, workflow does not have permissions to access the app catalog. Catalog lists in SharePoint require owner (full control) permissions. Workflows generally run at a permission level equivalent to write.
+By default, workflow does not have permission to access the app catalog. Catalog lists in SharePoint require owner (full control) permissions. Workflows generally run at a permission level equivalent to write.
 
 To solve this, you have to create a workflow with elevated permissions by doing the following in the Site Collection site:
 
@@ -37,7 +37,7 @@ The first step is to allow the workflow to use add-in permissions. You configure
 > [!IMPORTANT]
 > The procedure must be completed by a user that has **Site Administrator** permissions.
 
-### To allow workflow to use add-in permissions
+### To allow the workflow to use add-in permissions
 
 1. Select the **Settings** icon as shown in the figure to open the **Site settings** page.
 
@@ -55,7 +55,7 @@ The first step is to allow the workflow to use add-in permissions. You configure
 ## Grant full control permission to a workflow
 
 > [!IMPORTANT]
-> When you want to use workflows with elevated permissions on sites or sub sites that did not yet have workflow enabled after November 7 2024, then the configuration steps to follow will be different. More details can be found [in this article](workflow-with-elevated-permissions-new-guidance.md).
+> When you want to use workflows with elevated permissions on sites or sub-sites that did not yet have workflow enabled after November 7, 2024, then the configuration steps to follow will be different. More details can be found [in this article](workflow-with-elevated-permissions-new-guidance.md).
 
 For the workflow to function properly, it must be granted full control on the site. The following procedure grants full control permission to the workflow.
 
@@ -83,7 +83,7 @@ For the workflow to function properly, it must be granted full control on the si
     Example: `http://{hostname}/{the Site Collection}/_layouts/15/appinv.aspx`.
 
     > [!NOTE]
-    > The 'app' in this step refers to the workflow add-in in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable add-in permissions, you are enabling for all workflows within the Site Collection.
+    > The 'app' in this step refers to the workflow add-in in general and not just a specific workflow. Individual workflows cannot be access-controlled. When you enable add-in permissions, you are enabling all workflows within the Site Collection.
 
     For more information about setting up a workflow, see the [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/series/looping-through-content-in-a-sharepoint-2013-site-workflow/)
 
@@ -114,7 +114,7 @@ For the workflow to function properly, it must be granted full control on the si
 
 ## Wrap actions inside an App Step
 
-Finally, you need to wrap the workflow actions inside an App Step. The following procedure wraps a **Send an Email** action inside an App Step. The workflow in this example sends an acknowledgement email message from a custom list.
+Finally, you need to wrap the workflow actions inside an App Step. The following procedure wraps a **Send an Email** action inside an App Step. The workflow in this example sends an acknowledgment email message from a custom list.
 
 ### To wrap actions inside an App Step
 
@@ -159,10 +159,10 @@ To understand why elevating permissions for a workflow is required, consider tha
 
 Two reasons why it is necessary to elevate permissions to create a workflow in the App Request list are:
 
-- By default, workflow only has write permission.
+- By default, the workflow only has write permission.
 - The user has no permissions.
 
-The first step to solve this problem is to allow the application to authorize by using only its identity and ignoring that of the user. This is done by enabling the App Step feature. The second step grants full control permission to the workflow.
+The first step to solve this problem is to allow the application to be authorized by using only its identity and ignoring that of the user. This is done by enabling the App Step feature. The second step grants full control permission to the workflow.
 
 The following diagram illustrates the change in permissions.
 
@@ -173,14 +173,14 @@ The following diagram illustrates the change in permissions.
 > [!Important]
 > If the workflow principals (as listed via `/_layouts/15/appprincipals.aspx` or via Microsoft Entra admin center) are deleted, then they need to be restored within 30 days.
 >
-> - When the deleted principal was for a site that was configured to use SharePoint 2013 workflow before November 7th , that will break workflows running for that site
-> - When the deleted principal was the tenant level workflow app, this will break workflows running in all sites that were configured for workflow after November 7th, 2024
+> - When the deleted principal was for a site that was configured to use SharePoint 2013 workflow before November 7th, that will break workflows running for that site
+> - When the deleted principal was the tenant-level workflow app, this will break workflows running in all sites that were configured for workflow after November 7th, 2024
 
 It’s critical to restore the Service Principal from the recycle bin within 30 days. If the restore does not happen during that period of time, workflows will be broken.
 
 ### How to restore deleted Service Principals?
 
-Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](https://learn.microsoft.com/graph/api/directory-deleteditems-restore?tabs=http).
+Currently, service principals can be listed, viewed, hard deleted, or restored via the deletedItems Microsoft Graph API. To restore applications using Microsoft Graph, see [Restore deleted item - Microsoft Graph v1.0](/graph/api/directory-deleteditems-restore).
 
 ## See also
 
