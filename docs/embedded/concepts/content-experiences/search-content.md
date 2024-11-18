@@ -641,14 +641,14 @@ Content-type: application/json
 - For your application to access the containers or container content in search results, it must have access permissions to the corresponding container types.
 
 
-# Filter SharePoint Embedded content
+# Enumerate (filter) SharePoint Embedded content
 
 
-Content can also be filtered using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [filter query parameter](https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http) reference.
+Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http) reference.
 
-## Example 1: Filter content by a specific column property and view the results
+## Example 1: enumerate content by a specific column property and view the results
 
-This example filters the specified container content by the column property that is on the item.  
+This example enumerates the specified container content by the column property that is on the item.  
 
 ### Request
 
@@ -802,9 +802,9 @@ Content-type: application/json
 }
 ```
 
-## Example 2: Filter content by a specific column property and Order the results
+## Example 2: Enumerate content by a specific column property and Order the results
 
-This example filters the specified container content by the column property that is on the item and will order the results by the column specified.  
+This example enumerates the specified container content by the column property that is on the item and will order the results by the column specified.  
 
 ### Request
 
@@ -820,7 +820,7 @@ Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
 
 > [!NOTE]
 >
-> When a container has more than 5,000 items and you are using the filter method with the OrderBy clause, you must include the following in the header of your request.
+> When a container has more than 5,000 items and you are using the enumerate method with the OrderBy clause, you must include the following in the header of your request.
 > 
 >  Content-Type: application/json
 >  
@@ -828,9 +828,9 @@ Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
 
 
 
-## Example 3: Filter content by mulitple column properties and Order the results
+## Example 3: Enumerate content by mulitple column properties and Order the results
 
-This example filters the specified container content by the column property you specify and the name of the document (listitem/fields/FileLeafRef) that is on the item and will order the results by the column specified.  
+This example enumerates the specified container content by the column property you specify and the name of the document (listitem/fields/FileLeafRef) that is on the item and will order the results by the column specified.  
 
 ### Request
 
