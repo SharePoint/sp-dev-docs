@@ -18,9 +18,7 @@ The overall JSON structure is specified as follows:
     ...
     <one or more verb actions>
     ...
-  ],
-  "bindata": { },
-  "version": 1
+  ]
 }
 ```
 
