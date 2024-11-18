@@ -1,7 +1,7 @@
 ---
 title: SharePoint site template and site script overview
 description: Use SharePoint site scripts and site templates to provide custom configurations to apply when new sites are created.
-ms.date: 06/28/2022
+ms.date: 11/18/2024
 ms.localizationpriority: high
 ---
 
