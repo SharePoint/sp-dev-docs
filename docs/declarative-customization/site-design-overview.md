@@ -102,8 +102,7 @@ The following example is a script that has two top-level actions. First, it appl
         }
       ]
     }
-  ],
-  "version": 1
+  ]
 }
 ```
 
