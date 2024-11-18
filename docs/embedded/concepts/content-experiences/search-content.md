@@ -842,7 +842,3 @@ Headers:
 Content-Type: application/json
 Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
 ```
-
-
-## Known Limitations
-- When a container has more than 5,000 items, the filter functionality does not return results when using custom columns or the OrderBy clause, regardless of the number of items in the container.  You must add the header value of Prefer: HonorNonIndexedQueriesWarningMayFailRandomly when executing the request.
