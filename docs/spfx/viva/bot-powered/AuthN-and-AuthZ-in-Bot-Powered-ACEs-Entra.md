@@ -30,7 +30,7 @@ First of all, you should create a Bot Powered ACE following the guidance provide
 
 For the sake of simplicity, assume that the Bot Powered ACE project name is **WelcomeUserBotPoweredAce** and register the Azure Bot according to the guidance. 
 
-## Configuring security for the bot-powered ACE
+## Configuring security for the Bot Powered ACE
 
 Before starting to develop the actual Bot Powered ACE, you need to enrich the configuration of the Azure Bot and of the Microsoft App behind the scenes of the Azure Bot.
 To access the Microsoft App backing the Azure Bot, open the **Configuration** panel of the Azure Bot and select the **Manage Password** link. 
