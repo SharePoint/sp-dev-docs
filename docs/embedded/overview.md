@@ -60,6 +60,8 @@ The partition created in the consumer’s Microsoft 365 tenant by a SharePoint E
 
 ## Get Started with SharePoint Embedded
 
+[Review the prerequisites](./concepts/admin-exp/billing/billing.md)
+
 Create a "File Storage Container" in 15 minutes or less:
 
 - [Free trial: SharePoint Embedded for Visual Studio Code](./getting-started/spembedded-for-vscode.md)

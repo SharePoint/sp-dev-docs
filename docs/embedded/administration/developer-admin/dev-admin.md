@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 ## Overview
 
-Organizations that create file management applications with the help of SharePoint Embedded are referred to as Developer Ecosystem and the persona responsible for the management of the applications is called the developer administrator. Developer administrators can perform various administrative actions on the SharePoint Embedded applications created and on the container types, the blueprint for the containers that hold the content of instances of the application. They can also create and manage trial container types to get started with the SharePoint Embedded experience, attach billing profiles to their application, etc. In this article, we describe the enterprise manageability features that are supported in the developer administrator role.
+Organizations that use SharePoint Embedded for file management are included in the Developer Ecosystem, which is overseen by developer administrators. These administrators are responsible for managing applications and the container types that have containers, the foundation of an application that needs to store content. Additionally, they can connect billing profiles to their applications. This article describes the management features available to developer administrators.
 
 ## Developer Admin Role
 
@@ -17,7 +17,7 @@ Organizations that create file management applications with the help of SharePoi
 >
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 
-A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
+A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
 
 The following are some of the container-specific commands actions currently supported on PowerShell:
 
@@ -26,10 +26,11 @@ The following are some of the container-specific commands actions currently supp
   - Creation of Standard container type with direct to customer billing
   - Creation of Trial container type
 - Container type management
-  - Viewing of container types in the developer tenant
-  - Editing properties of a container type in the developer tenant
-  - Configuration properties of a container type in the developer tenant
+  - Viewing of container types in the tenant
+  - Editing properties of a container type in the tenant
+  - Configuration properties of a container type in the tenant
   - Manage billing of applications/ container types for standard billing
+  - Removing a container type in the tenant
 
 ### Billing responsibilities of the developer admin
 
@@ -54,7 +55,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 ### Creation of container types
 
-The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated to an application ID, a one to one mapping, and an Azure subscription ID. The developer administrator can also create Trial container types that have a validity of 30 days to test out SharePoint Embedded. The following commands can be used to create SharePoint Embedded container types on the developer admin’s tenant:
+The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated to an application ID, a one to one mapping, and an Azure subscription ID. The developer administrator can also create Trial container types that have a validity of 30 days to test out SharePoint Embedded. The following [commands](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/new-spocontainertype?view=sharepoint-ps) can be used to create SharePoint Embedded container types on the developer admin’s tenant:
 
 Standard billing container type:
 

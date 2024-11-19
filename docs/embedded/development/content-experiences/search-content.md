@@ -16,7 +16,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded co
 
 ## Example 1: Search containers by container type
 
-This example queries all containers by the specified container type with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances of the specified container type in the tenant.
+This example queries all containers by the specified container type with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances, `drive`,   of the specified container type in the tenant. 
 
 ### Request
 
@@ -507,9 +507,9 @@ Content-type: application/json
   ]
 }
 ```
-## Example 7: Search for content with specific content properties in response body
+## Example 7: Search for content with specific content properties in response body and sort the results
 
-This example queries container content by specific words and requires the response to include all specified attributes on the content.
+This example queries container content by specific words and requires the response to include all specified attributes on the content.  Properties that are [sortable](https://learn.microsoft.com/en-us/sharepoint/technical-reference/crawled-and-managed-properties-overview) can be used to sort the results.
 
 ### Request
 
@@ -545,7 +545,13 @@ Content-Type: application/json
         "lastModifiedBy",
         "fileSystemInfo",
         "fileSystemInfo"
-      ]
+      ],
+        "sortProperties": [
+          {
+            "name": "Created",
+            "isDescending": false
+          }
+        ]
     }
   ]
 }
@@ -629,7 +635,210 @@ Content-type: application/json
 }
 ```
 
-## Known Limitation
+## Known Limitations
 
 - Search requests run in the context of the signed-in user. Search results are only scoped to enforce any access control applied to the items by the user. For example, search results will include all container or container content matching the search criteria and accessible by the user regardless of whether the SharePoint Embedded application is authorized to access. You should specify the desired container type by including the ContainerTypeId as part of your **queryString** when searching for containers or container content to ensure search results are properly scoped.
 - For your application to access the containers or container content in search results, it must have access permissions to the corresponding container types.
+
+
+# Enumerate (filter) SharePoint Embedded content
+
+
+Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http) reference.
+
+## Example 1: enumerate content by a specific column property and view the results
+
+This example enumerates the specified container content by the column property that is on the item.  
+
+### Request
+
+```HTTP
+GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items?$filter=startswith(listitem/fields/{{ColumnProperty}}, '{{Value}}')&$expand=listitem($expand=fields)
+
+```
+
+### Response
+
+```HTTP
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#drives('b%21CORq-a8orUGIrd3_z9t1_vjCBSeqM3JKhDglEU3DIDvEl-Hms0qoQ7QCWYNQfGOF')/items(listItem(fields()))",
+  "value": [
+    {
+      "@odata.etag": "\"{B8051D89-836E-4B8E-BD2B-7634BAC92825},21\"",
+      "@microsoft.graph.downloadUrl": "https://<tenant>.sharepoint.com/contentstorage/CSP_f96ae408-28af-41ad-88ad-ddffcfdb75fe/_layouts/15/download.aspx?UniqueId=b8051d89-836e-4b8e-bd2b-7634bac92825&Translate=false&tempauth=v1.eyJzaXRlaWQiOiJmOTZhZTQwOC0yOGFmLTQxYWQtODhhZC1kZGZmY2ZkYjc1ZmUiLCJhcHBfZGlzcGxheW5hbWUiOiJTUEUtQmFzZWJhbGwiLCJhcHBpZCI6ImZiN2NmNTIwLWNiMzMtNDViZi1hMjM4LWFlNTFkMzE2NjY1ZiIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9wdWNlbGlrZW50ZXJwcmlzZS5zaGFyZXBvaW50LmNvbUAxNTNhNmViZS1mZjYyLTRiY2UtYjFiYy1hMWVkYTNiYzY2NDUiLCJleHAiOiIxNzMxNjE3MDE3In0.CgoKBHNuaWQSAjY5EgsIzpKzp9W7wj0QBRoNMjAuMTkwLjEzNS40MioscW54cjFGalBneHh2N1lGTkp1dUpxTFZWdFFIS1hOQ2RlQ3EvUUk2aHhlcz0wuAE4AUIQoWPmC1YwAABF4iHcgCWrfkoQaGFzaGVkcHJvb2Z0b2tlbnIpMGguZnxtZW1iZXJzaGlwfDEwMDM3ZmZlOWE5NDg5ZGRAbGl2ZS5jb216ATKCARIJvm46FWL_zksRsbyh7aO8ZkWSAQVTdGV2ZZoBB1B1Y2VsaWuiASdzdGV2ZUBwdWNlbGlrZW50ZXJwcmlzZS5vbm1pY3Jvc29mdC5jb22qARAxMDAzN0ZGRTlBOTQ4OUREsgFyY29udGFpbmVyLnNlbGVjdGVkIGFsbGZpbGVzLnJlYWQgYWxsZmlsZXMud3JpdGUgY29udGFpbmVyLnNlbGVjdGVkIGFsbHNpdGVzLnJlYWQgYWxscHJvZmlsZXMucmVhZCBhbGxwcm9maWxlcy5yZWFkyAEB.tfaYgtjhQxMctJeHUWb9RU7CChHXqFHT0FaM9Dt7J9I&ApiVersion=2.1",
+      "createdDateTime": "2024-09-20T16:46:00Z",
+      "eTag": "\"{B8051D89-836E-4B8E-BD2B-7634BAC92825},21\"",
+      "id": "01UELPCREJDUC3Q3UDRZF32K3WGS5MSKBF",
+      "lastModifiedDateTime": "2024-11-01T08:14:28Z",
+      "name": "ClaimExample-1.docx",
+      "size": 2299607,
+      "webUrl": "https://<tenant>.sharepoint.com/contentstorage/CSP_f96ae408-28af-41ad-88ad-ddffcfdb75fe/_layouts/15/Doc.aspx?sourcedoc=%7BB8051D89-836E-4B8E-BD2B-7634BAC92825%7D&file=ClaimExample-1.docx&action=default&mobileredirect=true",
+      "cTag": "\"c:{B8051D89-836E-4B8E-BD2B-7634BAC92825},5\"",
+      "commentSettings": {
+        "commentingDisabled": {
+          "isDisabled": false
+        }
+      },
+      "createdBy": {
+        "application": {
+          "displayName": "SPEContainerType",
+          "id": "fb7cf520-cb33-45bf-a238-ae51d316665f"
+        },
+        "user": {
+          "displayName": "SharePoint App"
+        }
+      },
+      "lastModifiedBy": {
+        "application": {
+          "displayName": "SPEContainerType",
+          "id": "fb7cf520-cb33-45bf-a238-ae51d316665f"
+        },
+        "user": {
+          "displayName": "Steve Pucelik",
+          "email": "Steve@<tenant>.onmicrosoft.com"
+        }
+      },
+      "parentReference": {
+        "driveId": "b!CORq-a8orUGIrd3_z9t1_vjCBSeqM3JKhDglEU3DIDvEl-Hms0qoQ7QCWYNQfGOF",
+        "driveType": "other",
+        "id": "01UELPCRF6Y2GOVW7725BZO354PWSELRRZ",
+        "path": "/drives/b!CORq-a8orUGIrd3_z9t1_vjCBSeqM3JKhDglEU3DIDvEl-Hms0qoQ7QCWYNQfGOF/root:",
+        "sharepointIds": {
+          "listId": "e6e197c4-4ab3-43a8-b402-5983507c6385",
+          "listItemUniqueId": "c4782251-bdd3-4766-a747-b2a2f51c3a00",
+          "siteId": "f96ae408-28af-41ad-88ad-ddffcfdb75fe",
+          "siteUrl": "https://<teannt>.sharepoint.com/contentstorage/CSP_f96ae408-28af-41ad-88ad-ddffcfdb75fe",
+          "tenantId": "153a6ebe-ff62-4bce-b1bc-a1eda3bc6645",
+          "webId": "2705c2f8-33aa-4a72-8438-25114dc3203b"
+        }
+      },
+      "file": {
+        "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "hashes": {
+          "quickXorHash": "DMzi0kCsuukcHlMXiPX9tmTCXtA="
+        }
+      },
+      "fileSystemInfo": {
+        "createdDateTime": "2024-09-20T16:46:00Z",
+        "lastModifiedDateTime": "2024-11-01T08:14:28Z"
+      },
+      "shared": {
+        "scope": "unknown"
+      },
+      "listItem@odata.context": "https://graph.microsoft.com/v1.0/$metadata#drives('b%21CORq-a8orUGIrd3_z9t1_vjCBSeqM3JKhDglEU3DIDvEl-Hms0qoQ7QCWYNQfGOF')/items('01UELPCREJDUC3Q3UDRZF32K3WGS5MSKBF')/listItem(fields())/$entity",
+      "listItem": {
+        "@odata.etag": "\"{B8051D89-836E-4B8E-BD2B-7634BAC92825},21\"",
+        "createdDateTime": "2024-09-20T16:46:00Z",
+        "eTag": "\"{B8051D89-836E-4B8E-BD2B-7634BAC92825},21\"",
+        "id": "23",
+        "lastModifiedDateTime": "2024-11-01T08:14:28Z",
+        "webUrl": "https://<tenant>.sharepoint.com/contentstorage/CSP_f96ae408-28af-41ad-88ad-ddffcfdb75fe/_layouts/15/Doc.aspx?sourcedoc=%7BB8051D89-836E-4B8E-BD2B-7634BAC92825%7D&file=ClaimExample-1.docx&action=default&mobileredirect=true",
+        "createdBy": {
+          "application": {
+            "displayName": "SPEContainerType",
+            "id": "fb7cf520-cb33-45bf-a238-ae51d316665f"
+          },
+          "user": {
+            "displayName": "SharePoint App"
+          }
+        },
+        "lastModifiedBy": {
+          "application": {
+            "displayName": "SPEContainerType",
+            "id": "fb7cf520-cb33-45bf-a238-ae51d316665f"
+          },
+          "user": {
+            "displayName": "Steve Pucelik",
+            "email": "Steve@M<tenant>.onmicrosoft.com"
+          }
+        },
+        "parentReference": {
+          "id": "0",
+          "path": "Document Library",
+          "siteId": "f96ae408-28af-41ad-88ad-ddffcfdb75fe"
+        },
+        "contentType": {
+          "id": "0x0101004368E78BC3115C4CAD94FEA35E0F9D90",
+          "name": "Document"
+        },
+        "fields@odata.context": "https://graph.microsoft.com/v1.0/$metadata#drives('b%21CORq-a8orUGIrd3_z9t1_vjCBSeqM3JKhDglEU3DIDvEl-Hms0qoQ7QCWYNQfGOF')/items('01UELPCREJDUC3Q3UDRZF32K3WGS5MSKBF')/listItem/fields/$entity",
+        "fields": {
+          "@odata.etag": "\"{B8051D89-836E-4B8E-BD2B-7634BAC92825},21\"",
+          "id": "23",
+          "FileLeafRef": "ClaimExample-1.docx",
+          "<ColumnProperty>": "<Value>",
+          "ContentType": "Document",
+          "Created": "2024-09-20T16:46:00Z",
+          "AuthorLookupId": "1073741822",
+          "Modified": "2024-11-01T08:14:28Z",
+          "EditorLookupId": "7",
+          "_CheckinComment": "",
+          "LinkFilenameNoMenu": "ClaimExample-1.docx",
+          "LinkFilename": "ClaimExample-1.docx",
+          "DocIcon": "docx",
+          "FileSizeDisplay": "2299607",
+          "ItemChildCount": "0",
+          "FolderChildCount": "0",
+          "_ComplianceFlags": "",
+          "_ComplianceTag": "",
+          "_ComplianceTagWrittenTime": "",
+          "_ComplianceTagUserId": "",
+          "_CommentCount": "",
+          "_LikeCount": "",
+          "_DisplayName": "Confidential \\ Internal only",
+          "AppAuthorLookupId": "1",
+          "AppEditorLookupId": "1",
+          "Edit": "0",
+          "_UIVersionString": "19.0",
+          "MediaServiceImageTags@odata.type": "#Collection(microsoft.graph.Json)",
+          "MediaServiceImageTags": []
+        }
+      }
+    }
+  ]
+}
+```
+
+## Example 2: Enumerate content by a specific column property and Order the results
+
+This example enumerates the specified container content by the column property that is on the item and will order the results by the column specified.  
+
+### Request
+
+```HTTP
+GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items?$filter=listitem/fields/{{ColumnProperty}} eq '{{Value}}'&$select=id,name,lastModifiedDateTime,size&$expand=listitem($expand=fields)&$orderby=createdDateTime desc
+
+Headers:
+
+Content-Type: application/json
+Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
+```
+
+
+> [!NOTE]
+>
+> When a container has more than 5,000 items and you are using the enumerate method with the OrderBy clause, you must include the following in the header of your request.
+> 
+>  Content-Type: application/json
+>  
+>  Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
+
+
+
+## Example 3: Enumerate content by mulitple column properties and Order the results
+
+This example enumerates the specified container content by the column property you specify and the name of the document (listitem/fields/FileLeafRef) that is on the item and will order the results by the column specified.  
+
+### Request
+
+```HTTP
+GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items?$filter=listitem/fields/{{ColumnProperty1}} eq '{{Value}}' AND listitem/fields/FileLeafRef eq '{{Value}}' &$select=id,name,lastModifiedDateTime,size&$expand=listitem($expand=fields)&$orderby=createdDateTime desc
+
+Headers:
+
+Content-Type: application/json
+Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
+```
