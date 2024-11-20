@@ -25,15 +25,21 @@ With pass-through billing, consumption-based charges are billed directly to the 
 
 A new container type will be created using **SharePoint Online Management Shell**:
 
+
 1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
 1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
 1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
 1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
 1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation.
 
+### Tenant requirements
+- An active instance of SharePoint is required in your Microsoft 365 tenant.
+- Users who will be authenticating into SharePoint Embedded Container Types and Containers must be in Entra ID (Members and Guests)
+-  NOTE:  An Office license is not required to collaborate on Microsoft Office documents stored in a container.
+
 ### Roles and Permissions
 
-- The admin who sets up the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
+- The user who sets up the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
 - Admin needs to have a SharePoint Embedded Administrator or Global Admin role to operate billing cmdlets.
 
 ### Azure Subscription
