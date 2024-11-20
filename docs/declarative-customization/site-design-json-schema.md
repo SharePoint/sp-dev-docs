@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 09/23/2022
+ms.date: 11/18/2024
 ms.localizationpriority: high
 ---
 
@@ -18,9 +18,7 @@ The overall JSON structure is specified as follows:
     ...
     <one or more verb actions>
     ...
-  ],
-  "bindata": { },
-  "version": 1
+  ]
 }
 ```
 
