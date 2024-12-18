@@ -1,10 +1,10 @@
 ---
-title: Extending an already existing Teams Bot to become a Bot Powered Adaptive Card Extension
+title: Extending an existing Teams Bot to become a Bot Powered Adaptive Card Extension
 description: Learn how to extend a Teams Bot to become a Bot Powered Adaptive Card Extension for Microsoft Viva Connections.
 ms.date: 12/12/2024
 ms.localizationpriority: high
 ---
-# Extending an already existing Teams Bot to become a Bot Powered Adaptive Card Extension
+# Extending an existing Teams Bot to become a Bot Powered Adaptive Card Extension
 
 The main purpose of having the new Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections is to make it possible to reuse already existing bots, enriching their user experience with the support for Microsoft Viva Connections Dashboard. In fact, the return on investment that you can achieve by using and extending an already existing effort is a fundamental benefit of the Bot Powered ACEs.
 
