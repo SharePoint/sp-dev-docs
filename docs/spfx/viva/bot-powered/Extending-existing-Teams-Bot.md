@@ -6,9 +6,9 @@ ms.localizationpriority: high
 ---
 # Extending an already existing Teams Bot to become a Bot Powered Adaptive Card Extension
 
-The main purpose of having the new Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections is to make it possible to reuse already existing bots, enriching their user experience with the support for Microsoft Viva Connections Dashboard. In fact, the return of investment that you can achieve by using and extending an already existing effort is a fundamental benefit of the Bot Powered ACEs.
+The main purpose of having the new Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections is to make it possible to reuse already existing bots, enriching their user experience with the support for Microsoft Viva Connections Dashboard. In fact, the return on investment that you can achieve by using and extending an already existing effort is a fundamental benefit of the Bot Powered ACEs.
 
-In this article, you're going to learn how to upgrade an already existing Teams Bot into a Bot Powered Adaptive Card Extension (ACE) experience.
+In this article, you'll learn how to upgrade an already existing Teams Bot into a Bot Powered Adaptive Card Extension (ACE) experience.
 
 ## Updating the code of an already existing bot
 
@@ -24,7 +24,7 @@ You also need to import the **adaptivecards** package with version 1.2.3, execut
 npm i adaptivecards@1.2.3 --save
 ```
 
-Then, open the **teamsBot.ts** file (or whatever name you gave to the main bot source code file) and add an import statement to import all the types needed by Bot Powered ACEs. The update source code file should look like the following one.
+Then, open the **teamsBot.ts** file (or whatever name you gave to the main bot source code file) and add an import statement to import all the types needed by Bot Powered ACEs. The updated source code file should look like the following one.
 
 ```TypeScript
 import { 
@@ -45,6 +45,7 @@ import * as AdaptiveCards from 'adaptivecards';
 ```
 
 Then, you need to initialize some infrastructural data in the bot constructor, to support the rendering of the Bot Powered ACE. It's a common habit to define a set of Card Views and Quick Views in the constructor of the Bot Powered ACE. You can then reuse them while rendering the actual user experience of the ACE. You can learn more about implementing Bot Powered ACEs by reading the article [Building your first Bot Powered Adaptive Card Extension with Microsoft Teams Toolkit and TypeScript](./Building-Your-First-Bot-Powered-ACE-TTK-TS.md).
+
 In the following code excerpt, you can see the updated constructor of the bot.
 
 ```TypeScript
@@ -135,7 +136,7 @@ export class TeamsBot extends TeamsActivityHandler {
 }
 ```
 
-Then, you need to add some new custom logic to the bot to support rendering as a Bot Powered ACE. Override the **onInvokeActivity** method of the base class and provide support for any of the following actions:
+Then, you need to add some new custom logic to the bot to support rendering as a Bot Powered ACE. Override the `onInvokeActivity` method of the base class and provide support for any of the following actions:
 
 - **cardExtension/getCardView**: handles the rendering of a Card View.
 - **cardExtension/getQuickView**: handles the rendering of a Quick View.
@@ -199,7 +200,7 @@ protected async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> 
 
 You can read the article [Overview of Bot Powered Adaptive Card Extensions](Overview-Bot-Powered-ACEs.md), to learn about the basic requirement for a Bot Powered ACE to provide at least one Card View. You can optionally provide more Card Views and one or more Quick Views, in case you want to have a better and more personalized user experience.
 
-In this article, you're going to add both a Card View and a Quick View. As such, you're going to implement the actions **cardExtension/getCardView** and **cardExtension/getQuickView**, respectively with methods **onSharePointTaskGetCardViewAsync** and **onSharePointTaskGetQuickViewAsync**. While you don't need to implement all the other methods.
+In this article, you'll add both a Card View and a Quick View. As such, you're going to implement the actions **cardExtension/getCardView** and **cardExtension/getQuickView**, respectively with methods `onSharePointTaskGetCardViewAsync` and `onSharePointTaskGetQuickViewAsync`. While you don't need to implement all the other methods.
 
 ```TypeScript
 /**
@@ -312,11 +313,11 @@ protected async onSharePointTaskHandleActionAsync(
 }
 ```
 
-The **onSharePointTaskGetCardViewAsync** method simply returns the Card View defined in the constructor as the only element in the dictionary of Card Views. The **onSharePointTaskGetQuickViewAsync** method creates an Adaptive Card using the **adaptivecards** package that you imported previously, and then returns the card into a Quick View object.
+The `onSharePointTaskGetCardViewAsync` method returns the Card View defined in the constructor as the only element in the dictionary of Card Views. The `onSharePointTaskGetQuickViewAsync` method creates an Adaptive Card using the **adaptivecards** package that you imported previously and then returns the card into a Quick View object.
 
 ## Updating the manifest of an already existing bot
 
-Your bot is now ready to support rendering as a Bot Powered ACE in Microsoft Viva Connection. However, in order to make it available as a new ACE in the Viva Connections Dashboard, you need to update the **manifest.json** file of the solution to declare this new capability. Specifically, you need to add a section `dashboardCards`, for example right after the `bots` configured as follows. Here you can see an excerpt of the **manifest.json** file.
+Your bot is now ready to support rendering as a Bot Powered ACE in Microsoft Viva Connection. However, to make it available as a new ACE in the Viva Connections Dashboard, you need to update the **manifest.json** file of the solution to declare this new capability. Specifically, you need to add a section `dashboardCards`, for example right after the `bots` configured as follows. Here you can see an excerpt of the **manifest.json** file.
 
 ```JSON
 "dashboardCards": [
@@ -351,7 +352,7 @@ The setting includes the domain of the bot in the list of valid domains so that 
 
 ## Deploying the updated bot
 
-You can now package and deploy the solution using the out of the box capabilities of Microsoft Teams Toolkit. You simply need to trigger the actions to **Provision**, **Deploy**, and **Publish** the bot in Microsoft Teams. After no more than 24 hours, your bot becomes available in Microsoft Viva Connections as a new Bot Powered ACE.
+You can now package and deploy the solution using the out-of-the-box capabilities of Microsoft Teams Toolkit. You simply need to trigger the actions to **Provision**, **Deploy**, and **Publish** the bot in Microsoft Teams. After no more than 24 hours, your bot becomes available in Microsoft Viva Connections as a new Bot Powered ACE.
 
 ## Configure the Bot in Azure
 
@@ -361,7 +362,7 @@ Open the **Configuration** panel of the Bot. Notice that the Microsoft Teams Too
 
 - **User-Assigned Managed Identity**: if your Bot app doesn't need to access resources outside of its home tenant and if your Bot app is hosted on an Azure resource that supports Managed Identities.
 - **Single Tenant**: if your Bot app doesn't need to access resources outside of its home tenant, but your Bot app isn't hosted on an Azure resource that supports Managed Identities.
-- **Multi-Tenant**: if your Bot app needs to access resources outside of its home tenant or serves multiple tenants.
+- **Multi-Tenant**: if your Bot app needs to access resources outside its home tenant or serves multiple tenants.
 
 Notice also that the "Messaging endpoint" URL for your Bot targets the URL of the Web App provisioned on Microsoft Azure by the Microsoft Teams Toolkit.
 
