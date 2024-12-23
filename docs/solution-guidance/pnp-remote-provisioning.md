@@ -31,7 +31,6 @@ The general recommendation is that if you can provision your artifacts with Site
 |[PnP provisioning schema](pnp-provisioning-schema.md)| How to use the XML schema to serialize and save your provisioning templates.|
 |[Provisioning console application sample](provisioning-console-application-sample.md)| Learn the fundamentals of using the PnP provisioning engine to create and persist, and then apply provisioning templates to new SharePoint site collections.|
 |[OfficeDevPnP.Core ](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)|The Office 365 Developer PnP Core Component is an extension that encapsulates commonly used remote CSOM/REST operations as reusable extension methods to support CSOM provisioning objects.|
-|[Inside the PnP provisioning schema (video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)|A Microsoft Channel 9 audio/video introduction to the PnP provisioning schema delivered by Paolo Pialorsi.|
 
 ## See also
 
