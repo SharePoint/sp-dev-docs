@@ -13,13 +13,13 @@ SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering meaning
 
 With the standard billing model, all consumption-based charges are directly billed to the tenant who owns or develops the application. The admin in the developer tenant  must establish a valid billing profile when creating a standard container type.
 
-![Standard](../../../images/1bill521.png)
+![Standard](../../images/1bill521.png)
 
 ### Pass-through
 
 With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application. Admins in the developer tenant don't need to set up a billing profile when creating a pass-through SharePoint Embedded container type. Once the container type is registered in the consuming tenant, the consuming tenant admin (SharePoint Admin or Global Admin) needs to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
-![Pass Through](../../../images/2bill521.png)
+![Pass Through](../../images/2bill521.png)
 
 ## Prerequisites to create SharePoint Embedded container type
 
@@ -111,12 +111,12 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
-    ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+    ![Microsoft 365 admin center Files and Content](../../images/DTCBilling1.png)
 
 1. Select **Go to Syntex settings**.
 1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
  
-    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../images/DTCBilling2.png)
 
 1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
 
