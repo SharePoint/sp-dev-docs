@@ -670,13 +670,15 @@
       href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
     - name: Building your first Bot Powered ACE with Microsoft Teams Toolkit and TypeScript
       href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE-TTK-TS.md
+    - name: Extending an existing Teams Bot to become a Bot Powered Adaptive Card Extension
+      href: spfx/viva/bot-powered/Extending-existing-Teams-Bot.md
     - name: Authentication and Authorization in Bot Powered ACEs
       href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
     - name: Building Bot Powered ACEs with Microsoft Entra ID and Single Sign-on (SSO)
       href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs-Entra.md
     - name: Building Bot Powered ACEs with Magic Code authentication
       href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs-Magic-Code.md
-    - name: Bringing Bot Powered ACEs to the market place
+    - name: Bringing Bot Powered ACEs to the marketplace
       href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Tutorials
     items:
