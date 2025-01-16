@@ -167,7 +167,7 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | Parameter            | Value                | Site template type  |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 1 | Team site (with group creation disabled) |
+| WebTemplate  | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
 | WebTemplate    | 69 | Channel site template |
 
