@@ -17,7 +17,7 @@ To set up automatic AI processing with your current SharePoint application upon 
 
 1. Get the delta changes of the container. You're currently able to get the notification whenever there's any change in our container and will now get the files that are added or updated.
 1. Call Azure Cognitive Services’s Document Intelligence service API. You'll need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You might store them as shown in this tutorial or you might process them as you like.
-![document processing schema](../images/Document-Processing.png)
+![document processing schema](../../images/Document-Processing.png)
 
 > [!TIP]
 > To learn more about the Microsoft Graph APIs used in this tutorial, see [Track changes for a Drive](/graph/api/driveitem-delta), [Get a DriveItem resource](/graph/api/driveitem-get), and [Upload or replace the contents of a DriveItem](/graph/api/driveitem-put-content).
