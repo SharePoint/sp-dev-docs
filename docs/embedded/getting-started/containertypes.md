@@ -15,8 +15,8 @@ Container type is represented on each container instance as an immutable propert
 
 - Access authorization. A SharePoint Embedded application must be associated with a container type to get access to container instances of that type. Once associated, the application has access to all container instances of that type. The actual access privilege is determined by the application-ContainerTypeID permission setting. The owning application by default has full access privilege to all container instances of the container type it's strongly coupled with. Learn more about [SharePoint Embedded Authorization](../app-concepts/auth.md).
 - Easy exploration. Container type can be created for trial purposes, allowing developers to explore SharePoint Embedded application development and assess its features for free.
-- Billing. Container types for non-trial purposes are billable and must be created with an Azure Subscription. The usage of containers is metered and charged. Learn more about [metering](../admin-exp/billing/meters.md) and the [SharePoint Embedded billing experience](../admin-exp/billing/billing.md).
-- Configurable behaviors. Container type defines selected behaviors for all container instances of that type. Learn more about setting [Container type configuration](../app-concepts/containertypes.md#configuring-container-types).
+- Billing. Container types for non-trial purposes are billable and must be created with an Azure Subscription. The usage of containers is metered and charged. Learn more about [metering](../administration/billing/meters.md) and the [SharePoint Embedded billing experience](../administration/billing/billing.md).
+- Configurable behaviors. Container type defines selected behaviors for all container instances of that type. Learn more about setting [Container type configuration](../getting-started/containertypes.md#configuring-container-types).
 
 > [!NOTE]
 >
@@ -69,7 +69,7 @@ New-SPOContainerType
 
 Developer Admin can set selected settings on the SharePoint Embedded container types created by using this PowerShell cmdlet.
 
-This cmdlet allows admins to set [Microsoft 365 content discoverability](../content-experiences/user-experiences-overview.md) and [sharing](../app-concepts/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type
+This cmdlet allows admins to set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $False
@@ -97,11 +97,11 @@ Region              : EastUS
 
 ## Registering Container Types
 
-To create and interact with containers, you must [register](../app-concepts/register-api-documentation.md) the container type within the Consuming Tenant. The owning application defines the permissions for the container type by invoking the [registration API](../app-concepts/register-api-documentation.md).
+To create and interact with containers, you must [register](../getting-started/register-api-documentation.md) the container type within the Consuming Tenant. The owning application defines the permissions for the container type by invoking the [registration API](../gettin-started/register-api-documentation.md).
 
 ## Deleting Container Types
 
-Developer Admins can only delete container types in trial status. To delete a container type in trial status, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../admin-exp/consuming-tenant-admin/cta.md). Once all the containers are deleted, Developer Admins can delete the container types using the below PowerShell cmdlet.
+Developer Admins can only delete container types in trial status. To delete a container type in trial status, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md). Once all the containers are deleted, Developer Admins can delete the container types using the below PowerShell cmdlet.
 
 ```powershell
 Remove-SPOContainerType

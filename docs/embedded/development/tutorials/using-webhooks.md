@@ -19,7 +19,7 @@ To set up webhooks with your [current SharePoint Embedded application](/training
 1. Connect to Graph and subscribe to changes. You can expose your application to the internet by either running it locally or deploying it on the cloud. For the purposes of this tutorial, you'll be employing the former by utilizing ngrok and then subscribing to the changes by making a POST call.
 1. Perform any desired action by handling the webhook data. One such use case is covered in [Enabling document processing with Azure Cognitive Services tutorial](./doc-processing-acs.md).
 
-![using webhooks schema](../images/Using-Webhooks.png)
+![using webhooks schema](../../images/Using-Webhooks.png)
 
 > [!TIP]
 > To learn more about the Microsoft Graph APIs used in this tutorial, see [Create subscription](/graph/api/subscription-post-subscriptions).
@@ -83,7 +83,7 @@ ngrok http 3001
 ```
 
 On successful completion, you should get the following output. The public-facing endpoint for the app is highlighted in the red rectangle.
-![ngrok registration](../images/ngrok-registration.png)
+![ngrok registration](../../images/ngrok-registration.png)
 
 Once the tunneling is active, you can subscribe to delta changes in the container by adding the webhook URL. To do that, open Postman and make the following `POST` request with the appropriate graph access token and `notificationUrl` with the `driveId` appended as a query parameter to ensure that you get notifications for changes only in the desired container.
 

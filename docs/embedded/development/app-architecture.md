@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 All files and documents in SharePoint Embedded are stored in containers, with all containers and container content created and stored within a Microsoft 365 Tenant. All containers and container content are created, managed, and interacted via the SharePoint Embedded application using Microsoft Graph.
 
-![SharePoint Embedded Architecture](../../images/SPEArch.png)
+![SharePoint Embedded Architecture](../images/SPEArch.png)
 
 ## SharePoint Embedded application
 
@@ -35,11 +35,11 @@ An application's access to containers and container content is determined by a s
 
 In this illustration, multiple applications are deployed in the tenancy, including two apps developed by ISVs (App 1 and 2) and a LOB app (App 3). Each application can access only to the stack of containers of the container type they own.
 
-![SPE multi app architecture](../../images/SPECTDedicated.png)
+![SPE multi app architecture](../images/SPECTDedicated.png)
 
 In this illustration, both App 1 and App 2 in the tenancy have access to the same container type. Both apps can access the stack of the containers of that type.
 
-![SPE multi app architecture sharing Container Types](../../images/SPECTShared.png)
+![SPE multi app architecture sharing Container Types](../images/SPECTShared.png)
 
 #### Example
 
@@ -47,4 +47,4 @@ Contoso is an ISV and built a human resource management application on SharePoin
 
 In this scenario, both the human resource management application developed by Contoso and the auditing application developed by Fabrikam have their own container type. Contoso is the owning tenant of the human resource management application; and the application is the owning app for its container Type. Likewise, Fabrikam is the owning tenant the auditing application; and the application is the owning app for its container type. In addition, Fabrikam is the consuming tenant for both applications.
 
-![Example](../../images/apparchexample.png)
+![Example](../images/apparchexample.png)
