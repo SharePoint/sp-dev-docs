@@ -1,7 +1,7 @@
 ---
 title: Register File Storage container Type Application Permissions
 description: Register the container type.
-ms.date: 05/21/2024
+ms.date: 01/28/2025
 ms.localizationpriority: high
 ---
 
@@ -124,7 +124,7 @@ Content-Type: application/json
     },
     {
       "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
-      "delegated": [read", "write"],
+      "delegated": ["read", "write"],
       "appOnly": ["none"]
     }
   ]
