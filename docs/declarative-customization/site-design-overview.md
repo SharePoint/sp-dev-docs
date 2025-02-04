@@ -1,7 +1,7 @@
 ---
 title: SharePoint site template and site script overview
 description: Use SharePoint site scripts and site templates to provide custom configurations to apply when new sites are created.
-ms.date: 11/18/2024
+ms.date: 01/22/2025
 ms.localizationpriority: high
 ---
 
@@ -10,12 +10,12 @@ ms.localizationpriority: high
 > [!NOTE]
 > - Site templates and site scripts are currently only supported by SharePoint Online.
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
-> - SharePoint has a new site template experience that will be available to all SharePoint users with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
+> - SharePoint has a new site template experience that will be available to all SharePoint users with permission to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
 > - As of today, the site template experience cannot be disabled.
 > - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
 > - Site template version history is not currently available for the new site template experience but will be included in future iterations.
 
-Use site templates and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations.
+Use site templates and site scripts to automate the provisioning of new or existing modern SharePoint sites that use your own custom configurations.
 
 When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created.
 
@@ -23,11 +23,11 @@ This article describes how you can use site templates and site scripts to provid
 
 ## How site templates work
 
-Site templates can be used each time a new site is created to apply a consistent set of actions. They can also be applied to existing modern sites (group-connected Team and Communication sites). Most actions typically affect the site itself, such as setting the theme or creating lists. But a site template can also include other actions, such as recording the new site URL to a log, or sending a tweet.
+Site templates can be used each time a new site is created to apply a consistent set of actions. They can also be applied to existing modern sites (group-connected Team and Communication sites). Most actions typically affect the site itself, such as setting the theme or creating lists. But a site template can also include other actions, such as recording the new site URL to a log or sending a tweet.
 
 > [!NOTE]
 > - Site templates created using custom site scripts will display in the **From your organization** tab in the site template gallery.
-> - Custom site templates made by your organization will display in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.
+> - Custom site templates made by your organization will be displayed in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.
 
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
@@ -38,14 +38,14 @@ You create site templates and register them in SharePoint to one of the modern t
 
 1. Choose the type of site needed.
 
-    - SharePoint will automatically create a communication site using the **Topic** site template.
-    - Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template.
+    - SharePoint will automatically create a communication site using the **Standard communication** site template.
+    - Had you chosen the default Team site, SharePoint will create a new site using the **Standard team** template.
 
     For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
 1. Navigate to the **Settings** icon, and select **Apply site template** to review Microsoft-provided site templates based on the type of site you chose in step three.
 
-When a site template is selected, SharePoint creates the new site, and runs site scripts for the site template. The site scripts provide the details for the template such as creating new lists or applying a theme. These script actions are run in the background. When the scripts are complete the page will refresh to display the site script details.
+When a site template is selected, SharePoint creates the new site and runs site scripts for the site template. The site scripts provide the details for the template such as creating new lists or applying a theme. These script actions are run in the background. When the scripts are complete the page will refresh to display the site script details.
 
 > [!NOTE]
 > Site templates can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
@@ -112,7 +112,7 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 
 - Creating a new list or library (or modifying the default one created with the site)
 - Creating site columns, content types, and configuring other list settings
-- Set site branding properties like navigation layout, header layout and header background
+- Set site branding properties like navigation layout, header layout, and header background
 - Applying a theme**
 - Setting a site logo
 - Adding links to quick launch or hub navigation**
@@ -129,7 +129,7 @@ For a complete list of available actions and their parameters, see the [JSON sch
 > - Actions marked with ** are automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 > - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list.
 
-Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script.
+Site scripts can be run again on the same site after provisioning. They are non-destructive, so when they are run again, they ensure that the site matches the configuration in the script.
 
 For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
 
@@ -139,7 +139,7 @@ There is also a limit of 100 site scripts and 100 site templates per tenant.
 
 ## Using PowerShell or REST to work with site templates and site scripts
 
-You can create site templates and site scripts by using PowerShell or the REST API. The following example creates a site script and a site template that uses the site script.
+You can create site templates and scripts using PowerShell or the REST API. The following example creates a site script and a site template that uses the script.
 
 <!-- The PowerShell example loads the script from a file, while the REST example has the script inline. -->
 
@@ -167,7 +167,7 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | Parameter            | Value                | Site template type  |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 1 | Team site (with group creation disabled) |
+| WebTemplate  | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
 | WebTemplate    | 69 | Channel site template |
 
