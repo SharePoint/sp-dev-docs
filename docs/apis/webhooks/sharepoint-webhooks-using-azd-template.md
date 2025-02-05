@@ -8,15 +8,12 @@ ms.localizationpriority: low
 
 [Azure Functions](/azure/azure-functions/functions-overview) is a serverless service that executes code based on events, such as HTTP requests.  
 [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
-In this article, we will combine both to deploy a fully functional Azure function app, which connects securely to your SharePoint Online tenant, to create and manage webhooks.
+This article will use [this azd template](https://github.com/Yvand/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
 
 ## Overview
 
-The azd template that will be used is [available here](https://github.com/Yvand/azd-functions-sharepoint-webhooks).  
-It uses the [Flex Consumption plan](https://learn.microsoft.com/en-us/azure/azure-functions/flex-consumption-plan), is written in TypeScript and uses the popular library [PnPjs](https://pnp.github.io/pnpjs/) to communicate with SharePoint.  
-
-Multiple HTTP-triggered functions are created to show, list, register, process and remove webhooks on your SharePoint lists and document libraries.  
-When receiving a notification from SharePoint, the service function adds an item to the list `webhookHistory` (created if it does not exist), and records the event in Application Insights.
+The function app uses the [Flex Consumption plan](https://learn.microsoft.com/azure/azure-functions/flex-consumption-plan), hosts multiple HTTP-triggered functions written in TypeScript, and uses [PnPjs](https://pnp.github.io/pnpjs/) to communicate with SharePoint.  
+When receiving a notification from SharePoint, the function gets all the changes for the past 15 minutes on the list that triggered it, and adds an item to the list `webhookHistory` (created if it does not exist).
 
 ## Security of the Azure resources
 
@@ -65,7 +62,7 @@ The account running `azd` must have at least the following roles to successfully
    }
    ```
 
-1. Review the file `infra/main.parameters.json` to customize the parameters used for provisioning the resources in Azure. Review [this article](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
+1. Review the file `infra/main.parameters.json` to customize the parameters used for provisioning the resources in Azure. Review [this article](https://learn.microsoft.com/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
    Important: Ensure the values for `TenantPrefix` and `SiteRelativePath` are identical between the files `local.settings.json` (used when running the function app locally) and `infra\main.parameters.json` (used to set the environment variables in Azure).
 
@@ -91,7 +88,7 @@ If you never heard about `DefaultAzureCredential`, you should familirize yoursel
 ### When it runs on your local environment
 
 `DefaultAzureCredential` will preferentially use the delegated credentials of `Azure CLI` to authenticate to SharePoint.  
-Use the [Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/) script below to grant the SharePoint delegated permission `AllSites.Manage` to the `Azure CLI`'s service principal:
+Use the [Microsoft Graph PowerShell](https://learn.microsoft.com/powershell/microsoftgraph/) script below to grant the SharePoint delegated permission `AllSites.Manage` to the `Azure CLI`'s service principal:
 
 ```powershell
 Connect-MgGraph -Scope "Application.Read.All", "DelegatedPermissionGrant.ReadWrite.All"
@@ -274,7 +271,7 @@ curl -X POST "http://localhost:7071/api/webhooks/remove?listTitle=${listTitle}&w
 
 ## Known issues
 
-The Flex Consumption plan is currently in preview, be aware about its [current limitations and issues](https://learn.microsoft.com/en-us/azure/azure-functions/flex-consumption-plan#considerations).
+The Flex Consumption plan is currently in preview, be aware about its [current limitations and issues](https://learn.microsoft.com/azure/azure-functions/flex-consumption-plan#considerations).
 
 ## Cleanup the resources in Azure
 
