@@ -165,7 +165,7 @@ The CTA can perform their compliance and storage management tasks better through
 ## Editing sensitivity label of a container on Active containers page
 
 The sensitivity label of a container can be set on the Active container page, on the detailed panel of a container. Under the settings panel, the administrator can set the sensitivity label from a list of available sensitivity label.
-![SPE Container Sensitivity](../../../images/SensitivityLabel.png)
+![SPE Container Sensitivity](../../../images/Sensitivitylabel.png)
 
 
 ## Managing user membership of a container
