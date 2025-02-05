@@ -1,10 +1,10 @@
 ---
 title: Create Azure functions for SharePoint webhooks using an azd template
-description: Use Azure Developer cli (azd) to create an Azure function app for SharePoint webhooks.
-ms.date: 01/31/2025
+description: Use Azure Developer cli (azd) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage webhooks, and process the notifications from SharePoint.
+ms.date: 02/05/2025
 ms.localizationpriority: low
 ---
-# Create Azure functions for SharePoint webhooks using an azd template
+# Azure functions for SharePoint webhooks using azd
 
 [Azure Functions](/azure/azure-functions/functions-overview) is a serverless service that executes code based on events, such as HTTP requests.  
 [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
