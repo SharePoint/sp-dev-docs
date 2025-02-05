@@ -39,7 +39,7 @@ The Active Containers page displays all the active containers within the tenant,
 
 1. **Container name :** Name of the container provided by the container owner.
 1. **Application name :** Name of the SharePoint Embedded application the container belongs to.
-1. **Publisher :** The name of the organization that owns the application.
+1. **Publisher :** The name of the organization that owns the application. For all publishers other than Microsoft, the value is currently stored as "Other"
 2. **Ownership type :** Mentions whether the container is tenant-owned, user-owned or group-owned. 
 3. **Principal owner :** The user whose lifecycle impacts the lifecycle of the container. There is no prinicipal owner for a tenant owned container while it is a user for a user owned container and a group for a group owned containers. 
 1. **Storage :** The total storage of the files stored in the containers.
@@ -68,11 +68,13 @@ The detailed container view provides a deeper dive into container-specific metad
 
 ## Deleted Containers
 
-The deleted containers page lists all containers in the tenants deleted container collection. It lists the following metadata:
+The deleted containers page lists all containers in the tenant's deleted container collection. It lists the following metadata:
 
 1. Container name
 1. Application name
-1. Publisher name
+1. Publisher
+2. Ownership type
+3. Principal owner
 1. Storage
 1. Owners
 1. Sensitivity label
@@ -137,15 +139,34 @@ Upon clicking Delete, the container is permanently deleted and the status of the
 ![SPE Container Deleted](../../../images/ctaux15-n.png)
 
 ## Sorting on Active containers page
+
+The CTA can perform their compliance and storage management tasks better through the use of sorting capabilities on the Active containers page. Currently, sorting is supported on the following columns:
+1. Storage
+2. Created on
+
 ![Restored SPE Container](../../../images/Sorting.png)
+
 ## Filtering on Active containers page
+The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Active containers page. Currently, filtering is supported on the following columns:
+1. Application name : The filter provides the list of all Microsoft SharePoint Embedded applications along with all SharePoint Embedded applications published by other publishers that is registered in the tenant.
+2. Publisher: 
+3. Ownership type: The filter provides the options of Tenant, User and Group irrespective of the type of containers present in the tenant. 
+4. Principal owner: The filtering experience is a people picker experience.
+5. Owner count: This filter provides a set of ranges for the administrator to choose from. 
+6. Created on
+7. 
+> [!Please note]
+> The behaviour of the filtering experience on Active containers page differs from the experience on Active sites page in SharePoint Admin Center. 
+>
+
+
 ![Restored SPE Container](../../../images/Filter.png)
 ## Editing sensitivity label of a container on Active containers page
-![Restored SPE Container](../../../images/Sensitivity_Label.png)
+![Restored SPE Container](../../../images/SensitivityLabel.png)
 ## Managing user membership of a container
-![Restored SPE Container](../../../images/add owners.png)
+![Restored SPE Container](../../../images/addowners-1.png)
 
-![Restored SPE Container](../../../images/add owners.png)
+![Restored SPE Container](../../../images/addowners-2.png)
 
 ![Restored SPE Container](../../../images/add owners.png)
 
