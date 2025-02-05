@@ -1,7 +1,7 @@
 ---
 title: Manage containers in SharePoint Admin Center
 description: This article describes how administrator can manage containers in SPAC.
-ms.date: 12/11/2024
+ms.date: 02/05/2025
 ms.localizationpriority: high
 ---
 # Manage SharePoint Embedded containers in SharePoint Admin Center
@@ -154,8 +154,8 @@ The CTA can perform their compliance and storage management tasks better through
 4. Principal owner: The filtering experience is a people picker experience.
 5. Owner count: This filter provides a set of ranges for the administrator to choose from. 
 6. Created on
-7. 
-> [!Please note]
+   
+> [!IMPORTANT]
 > The behaviour of the filtering experience on Active containers page differs from the experience on Active sites page in SharePoint Admin Center. 
 >
 
