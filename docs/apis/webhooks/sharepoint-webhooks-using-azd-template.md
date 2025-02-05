@@ -8,7 +8,7 @@ ms.localizationpriority: low
 
 [Azure Functions](/azure/azure-functions/functions-overview) is a serverless service that executes code based on events, such as HTTP requests.  
 [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
-This article will use [this azd template](https://github.com/Yvand/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
+This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
 
 ## Overview
 
@@ -42,7 +42,7 @@ The account running `azd` must have at least the following roles to successfully
 1. Run `azd init` from an empty local (root) folder:
 
     ```shell
-    azd init --template Yvand/azd-functions-sharepoint-webhooks
+    azd init --template azd-functions-sharepoint-webhooks
     ```
 
     Supply an environment name, such as `spofuncs-quickstart` when prompted. In `azd`, the environment is used to maintain a unique deployment context for your app.
