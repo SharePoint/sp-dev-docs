@@ -144,7 +144,7 @@ The CTA can perform their compliance and storage management tasks better through
 1. Storage
 2. Created on
 
-![Restored SPE Container](../../../images/Sorting.png)
+![ SPE Container Sorting](../../../images/Sorting.png)
 
 ## Filtering on Active containers page
 The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Active containers page. Currently, filtering is supported on the following columns:
@@ -160,9 +160,14 @@ The CTA can perform their compliance and storage management tasks better through
 >
 
 
-![Restored SPE Container](../../../images/Filter.png)
+![ SPE Container Filtering](../../../images/Filter.png)
+
 ## Editing sensitivity label of a container on Active containers page
-![Restored SPE Container](../../../images/SensitivityLabel.png)
+
+The sensitivity label of a container can be set on the Active container page, on the detailed panel of a container. Under the settings panel, the administrator can set the sensitivity label from a list of available sensitivity label.
+![SPE Container Sensitivity](../../../images/SensitivityLabel.png)
+
+
 ## Managing user membership of a container
 ![Restored SPE Container](../../../images/addowners-1.png)
 
