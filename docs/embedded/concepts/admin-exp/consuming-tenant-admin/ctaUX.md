@@ -1,5 +1,5 @@
 ---
-title: Manage Containers in SharePoint Admin Center
+title: Manage containers in SharePoint Admin Center
 description: This article describes how administrator can manage containers in SPAC.
 ms.date: 12/11/2024
 ms.localizationpriority: high
@@ -8,8 +8,8 @@ ms.localizationpriority: high
 
 The organizations that use the SharePoint Embedded applications on their Microsoft 365 tenants are the consuming tenants and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator (CTA). Consuming tenant administrators can manage containers through a graphical user interface (GUI) using the [SharePoint Administrator Center](https://go.microsoft.com/fwlink/?linkid=2185219).
 
-To manage SharePoint Embedded containers, CTA need to be assigned the SharePoint Embedded Administrator role.
-For information on SharePoint Embedded admin role, see [SharePoint Embedded Admin](../adminrole.md).
+To manage SharePoint Embedded containers, the CTA needs to be assigned the SharePoint Embedded Administrator role.
+For information on SharePoint Embedded Administrator role, see [SharePoint Embedded Admin](../adminrole.md).
 
 The following actions are supported in SharePoint Admin Center:
 
@@ -29,7 +29,7 @@ The following actions are supported in SharePoint Admin Center:
 
 ![Active Containers global admin](../../../images/ctaux1.png)
 
-**SharePoint Embedded admin** will only see "Active Containers" and "Deleted Containers" page when they sign in to SharePoint Admin Center.
+**SharePoint Embedded Administrator** will only see "Active containers" and "Deleted containers" page when they sign in to SharePoint Admin Center.
 
 ![Active Containers SPE admin](../../../images/ctaux2.png)
 
@@ -37,13 +37,16 @@ The following actions are supported in SharePoint Admin Center:
 
 The Active Containers page displays all the active containers within the tenant, providing a comprehensive overview and management capabilities. This page includes the following metadata for each container:
 
-1. **Container name :** Name of the container provided by the container owner
-1. **Application name :** Name of the SharePoint Embedded application the container belongs to
-1. **Publisher name :** The name of the organization that owns the application
-1. **Storage :** The total storage of the files stored in the containers
-1. **Owners :** Users assigned the owner role on the container
-1. **Sensitivity label :** Name of the label assigned to the container
-1. **Created on :** Date and time when the container was created
+1. **Container name :** Name of the container provided by the container owner.
+1. **Application name :** Name of the SharePoint Embedded application the container belongs to.
+1. **Publisher :** The name of the organization that owns the application.
+2. **Ownership type :** Mentions whether the container is tenant-owned, user-owned or group-owned. 
+3. **Principal owner :** The user whose lifecycle impacts the lifecycle of the container. There is no prinicipal owner for a tenant owned container while it is a user for a user owned container and a group for a group owned containers. 
+1. **Storage :** The total storage of the files stored in the containers.
+1. **Owners :** Users assigned the owner role on the container.
+2. **Owner count :** The count of number of owners of the container.
+1. **Sensitivity label :** Name of the label assigned to the container.
+1. **Created on :** Date and time when the container was created.
 
 ![Active Container Properties](../../../images/ctaux3.png)
 
@@ -55,13 +58,13 @@ The detailed container view provides a deeper dive into container-specific metad
 
     ![Container Details](../../../images/ctaux4.png)
 
-1. **Membership:** This panel shows the user permissions for different users associated with the container.
+1. **Membership:** This panel shows the user permissions for different users associated with the container. The admin can manage the membership on a container through this panel. 
 
 > [!IMPORTANT]
 > The SharePoint Embedded platform supports four distinct [roles](../../app-concepts/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
 >
 
-![SharePoint Embedded Membership Roles](../../../images/ctaux5.png)
+![SharePoint Embedded Membership Roles](../../../images/addowners-1.png)
 
 ## Deleted Containers
 
