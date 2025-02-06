@@ -94,6 +94,13 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
     
    Much of the configuration is done when the solution opens. Two projects are created in the Visual Studio solution: one for the SharePoint Add-in and the other for the ASP.NET web application.
 
+<a name="RegisterAndApplyACSApp"> </a>
+## Register and apply ACS app
+1. Register app, see [To register by using AppRegNew.aspx](register-sharepoint-add-ins.md#to-register-by-using-appregnewaspx)
+2. Open the addin project, right click the AppManifest.xml file, and click `View Code` to see the file.
+3. Update the `ClientId` field to the one generated in step1.
+4. Open the Web.config file, replace the `ClientId` and `ClientSecret` fields to the one generated from step1.
+
 <a name="Code"> </a>
 ## Code your add-in
 
