@@ -20,6 +20,9 @@ The SharePoint Migration API imports contents into SharePoint at scale. It proce
 Use Migration API to migrate content from file shares, SharePoint Server, and other cloud-based services.
 
 ## What's new
+### December 2024
+
+We applied quota on *Share with Me* items per user. Check [Quota](migration-api-shared.md#Best practice) for more detail.
 
 ### November 2024
 
