@@ -159,7 +159,7 @@ You might want the method to check the `expectedShipmentsList` for nullity befor
 if (expectedShipmentsList != null) { ... }
 ```
 
-Instead, you need to use a special CSOM class called **ConditionalScope**. The reasons for this are connected to CSOM's batching system, which was mentioned in the previous article in this series (see [Client-side runtime and batching](get-a-quick-overview-of-the-sharepoint-object-model.md#CSOMBatching)). **ConditionalScope** and the batching system are advanced topics that are outside the scope of this getting started series, but you should see MSDN's documentation about them after you have completed this series of tutorials.
+Instead, you need to use a special CSOM class called **ConditionalScope**. The reasons for this are connected to CSOM's batching system, which was mentioned in the previous article in this series (see [Client-side runtime and batching](get-a-quick-overview-of-the-sharepoint-object-model.md#client-side-runtime-and-batching)). **ConditionalScope** and the batching system are advanced topics that are outside the scope of this getting started series, but you should see MSDN's documentation about them after you have completed this series of tutorials.
 
 An alternative way to check for the existence of a list is as follows: instead of using the **GetByTitle** method to get a reference to the list, you can check to see if a list with the specified name is in the website's "list of lists" with code like the following.
 
