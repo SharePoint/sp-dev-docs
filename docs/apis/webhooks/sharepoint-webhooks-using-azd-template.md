@@ -9,25 +9,12 @@ ms.localizationpriority: low
 [Azure Developer CLI (azd)](https://aka.ms/azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
 This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
 
-## Overview
-
-The function app uses the [Flex Consumption plan](https://learn.microsoft.com/azure/azure-functions/flex-consumption-plan), hosts multiple HTTP-triggered functions written in TypeScript, and uses [PnPjs](https://pnp.github.io/pnpjs/) to communicate with SharePoint.  
-When receiving a notification from SharePoint, the function gets all the changes for the past 15 minutes on the list that triggered it, and adds an item to the list `webhookHistory` (created if it does not exist).
-
-## Security of the Azure resources
-
-The resources are deployed in Azure with a high level of security:
-
-- The function app connects to the storage account using a private endpoint.
-- No public network access is allowed on the storage account.
-- All the permissions are granted to the function app's managed identity (no secret, access key or legacy access policy is used).
-- All the functions require an app key to be called.
-
 ## Prerequisites
 
 + [Node.js 20](https://www.nodejs.org/)
 + [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?pivots=programming-language-typescript#install-the-azure-functions-core-tools)
 + [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
++ An Azure subscription trusting the same Entra ID directory as your SharePoint Online tenant
 
 ## Permissions required to provision the resources in Azure
 
@@ -36,7 +23,7 @@ The account running `azd` must have at least the following roles to successfully
 + Azure role [`Contributor`](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
 + Azure role [`Role Based Access Control Administrator`](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
 
-## Initialize the project
+## Deploy the function app in Azure
 
 1. Run `azd init` from an empty local (root) folder:
 
@@ -46,73 +33,18 @@ The account running `azd` must have at least the following roles to successfully
 
     Supply an environment name, such as `spofuncs-quickstart` when prompted. In `azd`, the environment is used to maintain a unique deployment context for your app.
 
+1. Review the file `infra/main.parameters.json`, and update the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
 
-1. Add a file named `local.settings.json` in the root of your project with the following contents, and replace the placeholders with your own values:
+   Review [this article](https://learn.microsoft.com/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
-   ```json
-   {
-      "IsEncrypted": false,
-      "Values": {
-         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-         "FUNCTIONS_WORKER_RUNTIME": "node",
-         "TenantPrefix": "YOUR_SHAREPOINT_TENANT_PREFIX",
-         "SiteRelativePath": "/sites/YOUR_SHAREPOINT_SITE_NAME"
-      }
-   }
-   ```
-
-1. Review the file `infra/main.parameters.json` to customize the parameters used for provisioning the resources in Azure. Review [this article](https://learn.microsoft.com/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
-
-   Important: Ensure the values for `TenantPrefix` and `SiteRelativePath` are identical between the files `local.settings.json` (used when running the function app locally) and `infra\main.parameters.json` (used to set the environment variables in Azure).
-
-1. Install the dependencies and build the function app:
-
-   ```shell
-   npm install
-   npm run build
-   ```
-
-## Run the function app
-
-It can run either locally or in Azure:
-
-- To run the function app locally: Run `npm run start`.
-- To provision the resources in Azure and deploy the function app: Run `azd up`.
+1. Finally, run the command `azd up` to build the app, provision the resources in Azure and deploy the app package.
 
 ## Grant the function app access to SharePoint Online
 
 The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends if the function app runs locally, or in Azure.  
 If you never heard about `DefaultAzureCredential`, you should familirize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
 
-### When it runs on your local environment
-
-`DefaultAzureCredential` will preferentially use the delegated credentials of `Azure CLI` to authenticate to SharePoint.  
-Use the [Microsoft Graph PowerShell](https://learn.microsoft.com/powershell/microsoftgraph/) script below to grant the SharePoint delegated permission `AllSites.Manage` to the `Azure CLI`'s service principal:
-
-```powershell
-Connect-MgGraph -Scope "Application.Read.All", "DelegatedPermissionGrant.ReadWrite.All"
-$scopeName = "AllSites.Manage"
-$requestorAppPrincipalObj = Get-MgServicePrincipal -Filter "displayName eq 'Microsoft Azure CLI'"
-$resourceAppPrincipalObj = Get-MgServicePrincipal -Filter "displayName eq 'Office 365 SharePoint Online'"
-
-$params = @{
-  clientId = $requestorAppPrincipalObj.Id
-  consentType = "AllPrincipals"
-  resourceId = $resourceAppPrincipalObj.Id
-  scope = $scopeName
-}
-New-MgOauth2PermissionGrant -BodyParameter $params
-```
-
-> [!WARNING]  
-> - The service principal for `Azure CLI` may not exist in your tenant. If so, check [this issue](https://github.com/Azure/azure-cli/issues/28628) to add it.
-> - The scope [`DelegatedPermissionGrant.ReadWrite.All`](https://learn.microsoft.com/graph/permissions-reference#approleassignmentreadwriteall) is necessary to run the script, and requires the admin consent.
-
-> [!NOTE]  
-> `AllSites.Manage` is the minimum permission required to register a webhook.
-> `Sites.Selected` cannot be used because it does not exist as a delegated permission in the SharePoint API.
-
-### When it runs in Azure
+### Using its managed identity
 
 `DefaultAzureCredential` will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service, or a user-assigned managed identity.  
 This tutorial will assume that the system-assigned managed identity is used.
@@ -237,32 +169,6 @@ webhookId=$(curl -s "https://${funchost}.azurewebsites.net/api/webhooks/show?cod
     python3 -c "import sys, json; document = json.load(sys.stdin); document and print(document['id'])")
 # Step 2: Call function /webhooks/remove and pass the webhookId
 curl -X POST "https://${funchost}.azurewebsites.net/api/webhooks/remove?code=${code}&listTitle=${listTitle}&webhookId=${webhookId}"
-```
-
-The same script, which calls the function app when it runs in your local environment:
-
-```bash
-# Edit those variables to fit your app function
-funchost="YOUR_FUNC_APP_NAME"
-code="YOUR_HOST_KEY"
-notificationUrl="https://${funchost}.azurewebsites.net/api/webhooks/service?code=${code}"
-listTitle="YOUR_SHAREPOINT_LIST"
-
-# List all the webhooks registered on a list
-curl "http://localhost:7071/api/webhooks/list?listTitle=${listTitle}"
-
-# Register a webhook
-curl -X POST "http://localhost:7071/api/webhooks/register?listTitle=${listTitle}&notificationUrl=${notificationUrl}"
-
-# Show this webhook registered on a list
-curl "http://localhost:7071/api/webhooks/show?listTitle=${listTitle}&notificationUrl=${notificationUrl}"
-
-# Remove the webhook from the list
-# Step 1: Get the webhook id in the output of the function /webhooks/show
-webhookId=$(curl -s "http://localhost:7071/api/webhooks/show?listTitle=${listTitle}&notificationUrl=${notificationUrl}" | \
-    python3 -c "import sys, json; document = json.load(sys.stdin); document and print(document['id'])")
-# Step 2: Call function /webhooks/remove and pass the webhookId
-curl -X POST "http://localhost:7071/api/webhooks/remove?listTitle=${listTitle}&webhookId=${webhookId}"
 ```
 
 ## Known issues
