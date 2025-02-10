@@ -6,9 +6,8 @@ ms.localizationpriority: low
 ---
 # Azure functions for SharePoint webhooks using azd
 
-[Azure Functions](/azure/azure-functions/functions-overview) is a serverless service that executes code based on events, such as HTTP requests.  
-[Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
-This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
+[Azure Developer CLI (azd)](https://aka.ms/azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
+This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
 
 ## Overview
 
@@ -106,7 +105,8 @@ New-MgOauth2PermissionGrant -BodyParameter $params
 ```
 
 > [!WARNING]  
-> The service principal for `Azure CLI` may not exist in your tenant. If so, check [this issue](https://github.com/Azure/azure-cli/issues/28628) to add it.
+> - The service principal for `Azure CLI` may not exist in your tenant. If so, check [this issue](https://github.com/Azure/azure-cli/issues/28628) to add it.
+> - The scope [`DelegatedPermissionGrant.ReadWrite.All`](https://learn.microsoft.com/graph/permissions-reference#approleassignmentreadwriteall) is necessary to run the script, and requires the admin consent.
 
 > [!NOTE]  
 > `AllSites.Manage` is the minimum permission required to register a webhook.
@@ -122,6 +122,9 @@ This tutorial will assume that the system-assigned managed identity is used.
 Navigate to your function app in [the Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click `Identity` and note the `Object (principal) ID` of the system-assigned managed identity.  
 In this tutorial, it is `d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8`.  
 Then, use one of the scripts below to grant this identity the app-only permission `Sites.Selected` on the SharePoint API:
+
+> [!IMPORTANT]
+> The scripts below require at least the delegated permission [`AppRoleAssignment.ReadWrite.All`](https://learn.microsoft.com/graph/permissions-reference#approleassignmentreadwriteall) (requires admin consent)
 
 <details>
   <summary>Using the Microsoft Graph PowerShell SDK</summary>
@@ -160,16 +163,14 @@ az rest --method POST --uri "https://graph.microsoft.com/v1.0/servicePrincipals/
 
 #### Grant the managed identity effective access to a SharePoint site
 
-Navigate to the [Enterprise applications in the Entra ID portal](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the filter `Application type` to `Managed Identities` > Click on your managed identity and note its `Application ID`.  
+Navigate to the [Enterprise applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the filter `Application type` to `Managed Identities` > Click on your managed identity and note its `Application ID`.  
 In this tutorial, it is `3150363e-afbe-421f-9785-9d5404c5ae34`.  
+Then, use one of the scripts below to grant it the app-only permission `manage` (minimum required to register a webhook) on a specific SharePoint site:
 
-> [!WARNING]  
-> In this step, we will use the `Application ID` of the managed identity, while in the previous step we used its `Object ID`, be mindful about the risk of confusion.
-
-Then, use one of the scripts below to grant it the app-only permission `manage` on a specific SharePoint site:
-
-> [!NOTE]  
-> The managed identity of the function app service is granted SharePoint permission `manage`, because it is the minimum required to register a webhook.
+> [!IMPORTANT]  
+> The app registration used to run those scripts must have at least the following permissions:
+> - Delegated permission `Application.ReadWrite.All` in the Graph API (requires admin consent)
+> - Delegated permission `AllSites.FullControl` in the SharePoint API (requires admin consent)
 
 <details>
   <summary>Using PnP PowerShell</summary>
@@ -195,11 +196,6 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 ```
 
 </details>
-
-> [!IMPORTANT]  
-> The app registration used to run those commands must have at least the following permissions:
-> - Delegated permission `Application.ReadWrite.All` in the Graph API
-> - Delegated permission `AllSites.FullControl` in the SharePoint API
 
 ## Call the function app
 
