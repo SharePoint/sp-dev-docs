@@ -134,46 +134,32 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 For security reasons, when running in Azure, function app requires an app key to pass in query string parameter `code`. The app keys can be found in the function app service > App Keys.  
 Most of the HTTP functions take optional parameters `tenantPrefix` and `siteRelativePath`. If they are not specified, the values set in the app's environment variables will be used.
 
-### Using API debugger Bruno
+### Using Powershell
 
-Review [this README](http-requests-collection/README.md) for more information.
-
-### Using vscode extension RestClient
-
-You can use the Visual Studio Code extension [`REST Client`](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) to execute the requests in the .http file.  
-It takes parameters from a .env file on the same folder. You can create it based on the sample files `azure.env.example` and `local.env.example`.
-
-### Using curl
-
-Below is a sample script in Bash that calls the function app in Azure using `curl`:
+Below is a sample script to call the function app:
 
 ```bash
-# Edit those variables to fit your app function
-funchost="YOUR_FUNC_APP_NAME"
-code="YOUR_HOST_KEY"
-notificationUrl="https://${funchost}.azurewebsites.net/api/webhooks/service?code=${code}"
-listTitle="YOUR_SHAREPOINT_LIST"
+# Edit those variables to match your environment
+$funchost = "YOUR_FUNC_APP_NAME"
+$code = "YOUR_HOST_KEY"
+$listTitle = "YOUR_SHAREPOINT_LIST"
+$notificationUrl = "https://${funchost}.azurewebsites.net/api/webhooks/service?code=${code}"
 
 # List all the webhooks registered on a list
-curl "https://${funchost}.azurewebsites.net/api/webhooks/list?code=${code}&listTitle=${listTitle}"
+Invoke-RestMethod -Method GET -Uri "https://${funchost}.azurewebsites.net/api/webhooks/list?code=${code}&listTitle=${listTitle}"
 
-# Register a webhook
-curl -X POST "https://${funchost}.azurewebsites.net/api/webhooks/register?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}"
+# Register a webhook in a list
+Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/webhooks/register?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}"
 
 # Show this webhook registered on a list
-curl "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}"
+Invoke-RestMethod -Method GET -Uri "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}"
 
-# Remove the webhook from the list
+# Remove the webhook from a list
 # Step 1: Get the webhook id in the output of the function /webhooks/show
-webhookId=$(curl -s "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}" | \
-    python3 -c "import sys, json; document = json.load(sys.stdin); document and print(document['id'])")
+$webhookId = $(Invoke-RestMethod -Method GET -Uri "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}").Id
 # Step 2: Call function /webhooks/remove and pass the webhookId
-curl -X POST "https://${funchost}.azurewebsites.net/api/webhooks/remove?code=${code}&listTitle=${listTitle}&webhookId=${webhookId}"
+Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/webhooks/remove?code=${code}&listTitle=${listTitle}&webhookId=${webhookId}"
 ```
-
-## Known issues
-
-The Flex Consumption plan is currently in preview, be aware about its [current limitations and issues](https://learn.microsoft.com/azure/azure-functions/flex-consumption-plan#considerations).
 
 ## Cleanup the resources in Azure
 
