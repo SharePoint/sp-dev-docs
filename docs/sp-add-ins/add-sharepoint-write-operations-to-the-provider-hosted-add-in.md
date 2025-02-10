@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 [!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
-This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createprovider_nextsteps).
+This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#next-steps).
 
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeSharePointWriteOps.sln file.
@@ -22,8 +22,8 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong S
 > [!NOTE]
 > The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles:
 >
-> 1. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.  
-> 2. Ensure that all three projects are set to **Start** in the **Action** column.
+> 1. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.
+> 1. Ensure that all three projects are set to **Start** in the **Action** column.
 
 1. In **Solution Explorer**, open the EmployeeAdder.aspx.cs file.
 1. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the **SetLocalEmployeeSyncStatus** method.
@@ -36,7 +36,7 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong S
 1. Add the following new method to the `EmployeeAdder` class.
 
     ```csharp
-       private void SetLocalEmployeeSyncStatus()
+    private void SetLocalEmployeeSyncStatus()
      {
          using (var clientContext = spContext.CreateUserClientContextForSPHost())
          {
@@ -49,11 +49,11 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong S
      }
     ```
 
-   Note the following about this code:
-
-   - The internal name for the **Added to Corporate DB** field is odd-looking. Internal field names cannot contain spaces, so when a user creates a field with spaces in its display name, SharePoint substitutes the string "_x0020_" for each space when it sets the internal name. This turns "Added to Employee DB" into "Added_x0020_to_x0020_Corporate_x0020_DB". Internal names cannot be more than 32 characters, so the name is truncated to just "Added_x0020_to_x0020_Corporate_x".
-   - Although the **Added to Corporate DB** column is called a **Yes/No** field in the SharePoint UI, it is really a boolean, so its value is set to **true**, not **Yes**.
-   - The **Update** method of the **ListItem** class must be called to commit the changes to SharePoint's content database. It is a general, but not quite universal, rule that when you change a property value of an object that is stored in the SharePoint databases, you must call the object's **Update** method.
+   > NOTE:
+   >
+   > - The internal name for the **Added to Corporate DB** field is odd-looking. Internal field names cannot contain spaces, so when a user creates a field with spaces in its display name, SharePoint substitutes the string "_x0020_" for each space when it sets the internal name. This turns "Added to Employee DB" into "Added_x0020_to_x0020_Corporate_x0020_DB". Internal names cannot be more than 32 characters, so the name is truncated to just "Added_x0020_to_x0020_Corporate_x".
+   > - Although the **Added to Corporate DB** column is called a **Yes/No** field in the SharePoint UI, it is really a boolean, so its value is set to **true**, not **Yes**.
+   > - The **Update** method of the **ListItem** class must be called to commit the changes to SharePoint's content database. It is a general, but not quite universal, rule that when you change a property value of an object that is stored in the SharePoint databases, you must call the object's **Update** method.
 
 ## Request permission to write to the host web list
 
@@ -65,7 +65,7 @@ Because the add-in is now writing to the list as well as reading it, we need to 
 
 ## Run the add-in and test the button
 
-1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens. 
+1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 1. On the permission form, select **Local Employees** from the list, and then select **Trust it**.
 1. When the add-in's start page opens, click **Back to Site** on the chrome control at the top.
 1. From the website's home page, go to **Site Contents** > **Local Employees**. The list view page opens.
@@ -75,8 +75,8 @@ Because the add-in is now writing to the list as well as reading it, we need to 
 1. Select the **Add to Corporate DB** button. (You must select an item first.)
 1. The page seems to reload because the **Page_Load** method of the EmployeeAdder page redirects back to it. The value of the **Added to Corporate DB** field for the employee changes to **Yes**.
 
-     > [!NOTE]
-     > What prevents a user from manually changing the value **Added to Corporate DB** in a way that makes the list and the corporate database inconsistent? Nothing does at the moment. You'll get the solution to this problem in a later article of this series.
+    > [!NOTE]
+    > What prevents a user from manually changing the value **Added to Corporate DB** in a way that makes the list and the corporate database inconsistent? Nothing does at the moment. You'll get the solution to this problem in a later article of this series.
 
 1.To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time you select F5, Visual Studio retracts the previous version of the add-in and installs the latest one.
 1.Right-click the project in **Solution Explorer** and select **Retract**.
@@ -142,44 +142,46 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
     ```
 
     Note the following about this code:
-    - A  **ListItem** object is not created with a constructor. This is for performance reasons. A **ListItem** object has many properties (with default values). If a constructor is used, the entire object would be included in the XML message that the **ExecuteQuery** method sends to the server. 
+    - A  **ListItem** object is not created with a constructor. This is for performance reasons. A **ListItem** object has many properties (with default values). If a constructor is used, the entire object would be included in the XML message that the **ExecuteQuery** method sends to the server.
     - The **ListItemCreationInformation** object is a lightweight object that only contains the minimal non-default values that the server needs to create a **ListItem** object. It may appear that there is a line that creates a **ListItem** object, but recall that this line only adds some XML markup to a message that is sent to the server. The **ListItem** object is created there on the server.
     - There is no need to bring the **ListItem** object back down to the client, so there is no call to the **ClientContext.Load** method.
     - The code does not need to explicitly set the **Arrived** or **Added to Inventory** fields because they have default values of **No**, which is what we want.
 
 ## Check for deleted components
 
-Anyone with list owner privileges for a SharePoint list can delete the list. And if the list is deployed to the host web by an add-in, the website owner of the host web can delete it. That may happen if the owner decides to do without the functionality provided by the list. (It can be restored from the SharePoint Recycle Bin if the owner changes his mind.) 
+Anyone with list owner privileges for a SharePoint list can delete the list. And if the list is deployed to the host web by an add-in, the website owner of the host web can delete it. That may happen if the owner decides to do without the functionality provided by the list. (It can be restored from the SharePoint Recycle Bin if the owner changes his mind.)
 
 The **CreateExpectedShipment** method depends on the existence of the **Expected Shipments** list. Suppose a website owner decided to delete the list. Later, when an order is added with the add-in's **Order Form**, the **CreateExpectedShipment** method is called and throws an exception whose message says that there's no **Expected Shipments** list on the SharePoint website.
 
 You might want the method to check the `expectedShipmentsList` for nullity before it does anything with it. When you are working with CSOM, you can *not*  make this check with a simple structure like this:
 
-`if (expectedShipmentsList != null) { ... }`
+```
+if (expectedShipmentsList != null) { ... }
+```
 
 Instead, you need to use a special CSOM class called **ConditionalScope**. The reasons for this are connected to CSOM's batching system, which was mentioned in the previous article in this series (see [Client-side runtime and batching](get-a-quick-overview-of-the-sharepoint-object-model.md#CSOMBatching)). **ConditionalScope** and the batching system are advanced topics that are outside the scope of this getting started series, but you should see MSDN's documentation about them after you have completed this series of tutorials.
 
 An alternative way to check for the existence of a list is as follows: instead of using the **GetByTitle** method to get a reference to the list, you can check to see if a list with the specified name is in the website's "list of lists" with code like the following.
 
 ```csharp
-var query = from list in clientContext.Web.Lists 
-             where list.Title == "Expected Shipments" 
-             select list; 
-IEnumerable<List> matchingLists = clientContext.LoadQuery(query); 
-clientContext.ExecuteQuery(); 
-if (matchingLists.Count() != 0) 
-{ 
-  List expectedShipmentsList = matchingLists.Single(); 
-  // Do something with the list. 
+var query = from list in clientContext.Web.Lists
+             where list.Title == "Expected Shipments"
+             select list;
+IEnumerable<List> matchingLists = clientContext.LoadQuery(query);
+clientContext.ExecuteQuery();
+if (matchingLists.Count() != 0)
+{
+  List expectedShipmentsList = matchingLists.Single();
+  // Do something with the list.
 }
-clientContext.ExecuteQuery(); 
+clientContext.ExecuteQuery();
 ```
 
-The preceding code has the advantage of allowing you to avoid the complications of the **ConditionalScope** class, and we use exactly this code elsewhere in this series of articles. But there is a disadvantage too: this code requires an extra call of **ExecuteQuery** solely to get the value you want to check in the **if** statement. 
+The preceding code has the advantage of allowing you to avoid the complications of the **ConditionalScope** class, and we use exactly this code elsewhere in this series of articles. But there is a disadvantage too: this code requires an extra call of **ExecuteQuery** solely to get the value you want to check in the **if** statement.
 
 If we use this technique in the **CreateExpectedShipment** method to check for the existence of the list, that method will have two calls of **ExecuteQuery**, each of which makes an HTTP request from the remote web server to SharePoint. These requests are the most time-consuming part of any CSOM method, so it is generally a good practice to minimize them.
 
-We will leave the **CreateExpectedShipment** method as is, but in a production add-in, you need to think about how your code is going to work if a component that it references is deleted. Programmatically restoring the list from the Recycle Bin is one option, but that would annoy users who intentionally decided to delete the list. 
+We will leave the **CreateExpectedShipment** method as is, but in a production add-in, you need to think about how your code is going to work if a component that it references is deleted. Programmatically restoring the list from the Recycle Bin is one option, but that would annoy users who intentionally decided to delete the list.
 
 You should also consider that doing nothing at all to prevent the exception might be the best choice. An exception from SharePoint would alert users that the deletion of the list has broken part of the add-in, which is something the person who deleted it might not have realized. A user can then decide whether to restore the list from the Recycle Bin or do without the part of the add-in functionality that no longer works.
 
@@ -194,12 +196,12 @@ Recall that when an add-in requests Read or Write permission with the scope of L
 
 ## Run the add-in and test the item creation
 
-1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens. 
+1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 1. When the add-in's start page opens, select the **Order Form** link at the bottom of the page.
 1. Enter some values in the form, and then select **Place Order**.
 1. Use the browser's back button to go back to the start page, and then select **Back to Site** on the chrome control at the top.
 1. From the home page of the Hong Kong SAR store, go to **Site Contents** and open the **Expected Shipments** list. There is now an item on the list corresponding to the order. The following screenshot is an example.
-  
+
    *Figure 2. Expected Shipments list with a single item*
 
    ![The Expected Shipments list with a single item. The Product and Supplier fields have names. The Quantity field has a number. The two Yes/No fields are both set to "No."](../images/e4285084-d31e-4e79-a469-ddebbc7dfb18.PNG)
@@ -208,6 +210,5 @@ Recall that when an add-in requests Read or Write permission with the scope of L
 1. Right-click the project in **Solution Explorer** and select **Retract**.
 
 ## Next steps
-<a name="Nextsteps"> </a>
 
 In the next article, you'll learn how to surface the remote Order Form as a web part on a SharePoint page: [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md).
