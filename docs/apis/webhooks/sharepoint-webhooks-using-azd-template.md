@@ -14,7 +14,7 @@ This article uses [this azd template](https://github.com/Azure-Samples/azd-funct
 + [Node.js 20](https://www.nodejs.org/)
 + [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?pivots=programming-language-typescript#install-the-azure-functions-core-tools)
 + [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
-+ An Azure subscription trusting the same Entra ID directory as your SharePoint Online tenant
++ An Azure subscription trusting the same Entra ID directory as your SharePoint tenant
 
 ## Permissions required to provision the resources in Azure
 
