@@ -114,7 +114,7 @@ Here are some actions you can take next:
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
-1. Grant consent failed with error: Claim is invalid: ... workaround. Follow the steps mentioned in the [GitHub issue #9425](https://github.com/SharePoint/sp-dev-docs/issues/9425) to manage the permissions. Specifically, try granting permissions through the "Enterprise applications" section as suggested by other users. 
+1. Grant consent failed with error: Claim is invalid: ... workaround. Follow the steps mentioned in the comment here [GitHub issue #9425](https://github.com/SharePoint/sp-dev-docs/issues/9425#issuecomment-1904649841) to manage the permissions. Specifically, try granting permissions through the "Enterprise applications" section as suggested by other users. 
 1. [Create a new container type](containertypes.md) on the owning tenant.
 1. [Register a container type](register-api-documentation.md) on the consuming tenant.
 1. [Create a container](/graph/api/filestoragecontainer-post)
