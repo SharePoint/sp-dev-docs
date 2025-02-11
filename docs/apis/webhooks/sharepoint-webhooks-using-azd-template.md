@@ -33,7 +33,7 @@ The account running `azd` must have at least the following roles to successfully
 
     Supply an environment name, such as `spofuncs-quickstart` when prompted. In `azd`, the environment is used to maintain a unique deployment context for your app.
 
-1. Review the file `infra/main.parameters.json`, and update the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
+1. Open the file `infra/main.parameters.json`, and set the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
 
    Review [this article](https://learn.microsoft.com/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
@@ -132,13 +132,10 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 ## Call the function app
 
 For security reasons, when running in Azure, function app requires an app key to pass in query string parameter `code`. The app keys can be found in the function app service > App Keys.  
-Most of the HTTP functions take optional parameters `tenantPrefix` and `siteRelativePath`. If they are not specified, the values set in the app's environment variables will be used.
+Most of the HTTP functions take optional parameters `tenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables ar used.  
+Below is a sample script in Powershell to call the function app:
 
-### Using Powershell
-
-Below is a sample script to call the function app:
-
-```bash
+```powershell
 # Edit those variables to match your environment
 $funchost = "YOUR_FUNC_APP_NAME"
 $code = "YOUR_HOST_KEY"
