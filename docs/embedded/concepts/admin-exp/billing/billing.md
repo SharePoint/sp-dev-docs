@@ -1,7 +1,7 @@
 ---
 title: PAYG billing for SharePoint Embedded
 description: This article explains the billing models and how to set up PAYG billing.
-ms.date: 08/26/2024
+ms.date: 02/12/2025
 ms.localizationpriority: high
 ---
 
@@ -27,13 +27,11 @@ A new container type will be created using **SharePoint Online Management Shell*
 
 1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
 1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
-1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
-1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
 1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation.
 
 ### Roles and Permissions
 
-- The admin who sets up the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on Azure subscription.
+- The admin who sets up the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on the Azure subscription.
 - Admin needs to have a SharePoint Embedded Administrator or Global Admin role to operate billing cmdlets.
 
 ### Azure Subscription
@@ -116,4 +114,4 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 
 ## SharePoint Embedded meters
 
-Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the pay-as-you-go meters supported.
+Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the supported pay-as-you-go meters.
