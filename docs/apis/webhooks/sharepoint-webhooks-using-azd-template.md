@@ -1,7 +1,7 @@
 ---
 title: Create Azure functions for SharePoint webhooks using an azd template
 description: Use Azure Developer cli (azd) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage webhooks, and process the notifications from SharePoint.
-ms.date: 02/05/2025
+ms.date: 14/05/2025
 ms.localizationpriority: low
 ---
 # Azure functions for SharePoint webhooks using azd
@@ -131,9 +131,9 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 
 ## Call the function app
 
-For security reasons, when running in Azure, function app requires an app key to pass in query string parameter `code`. The app keys can be found in the function app service > App Keys.  
+For security reasons, when running in Azure, the function app requires an app key to pass in query string parameter `code`. The app keys can be found in the function app service > App Keys.  
 Most of the HTTP functions take optional parameters `tenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables ar used.  
-Below is a sample script in Powershell to call the function app:
+Below is a sample script in PowerShell to call the function app:
 
 ```powershell
 # Edit those variables to match your environment
@@ -152,9 +152,9 @@ Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/w
 Invoke-RestMethod -Method GET -Uri "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}"
 
 # Remove the webhook from a list
-# Step 1: Get the webhook id in the output of the function /webhooks/show
+# Step 1: Call the function /webhooks/show to get the webhook id
 $webhookId = $(Invoke-RestMethod -Method GET -Uri "https://${funchost}.azurewebsites.net/api/webhooks/show?code=${code}&listTitle=${listTitle}&notificationUrl=${notificationUrl}").Id
-# Step 2: Call function /webhooks/remove and pass the webhookId
+# Step 2: Call the function /webhooks/remove and pass the webhook id
 Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/webhooks/remove?code=${code}&listTitle=${listTitle}&webhookId=${webhookId}"
 ```
 
