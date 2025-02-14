@@ -348,7 +348,7 @@ See [Formatting multi-value fields](column-formatting.md#formatting-multi-value-
         "action": "setValue",
         "actionInput": {
           "FieldInternalName_1": "FieldValue_1",
-          "FieldInternalName_2": "FieldValue_2",
+          "FieldInternalName_2": "FieldValue_2"
         }
       }
     }
