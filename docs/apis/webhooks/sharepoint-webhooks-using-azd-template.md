@@ -7,21 +7,21 @@ ms.localizationpriority: low
 # Azure functions for SharePoint webhooks using azd
 
 [Azure Developer CLI (azd)](https://aka.ms/azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
-This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks), and process the notifications from SharePoint.
+This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](overview-sharepoint-webhooks), and process the notifications from SharePoint.
 
 ## Prerequisites
 
 + [Node.js 20](https://www.nodejs.org/)
-+ [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?pivots=programming-language-typescript#install-the-azure-functions-core-tools)
-+ [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
++ [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?pivots=programming-language-typescript#install-the-azure-functions-core-tools)
++ [Azure Developer CLI (azd)](/azure/developer/azure-developer-cli/install-azd)
 + An Azure subscription trusting the same Entra ID directory as your SharePoint tenant
 
 ## Permissions required to provision the resources in Azure
 
 The account running `azd` must have at least the following roles to successfully provision the resources:
 
-+ Azure role [`Contributor`](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
-+ Azure role [`Role Based Access Control Administrator`](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
++ Azure role [`Contributor`](/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
++ Azure role [`Role Based Access Control Administrator`](/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
 
 ## Deploy the function app in Azure
 
@@ -35,7 +35,7 @@ The account running `azd` must have at least the following roles to successfully
 
 1. Open the file `infra/main.parameters.json`, and set the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
 
-   Review [this article](https://learn.microsoft.com/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
+   Review [this article](/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
 1. Finally, run the command `azd up` to build the app, provision the resources in Azure and deploy the app package.
 
@@ -56,7 +56,7 @@ In this tutorial, it is `d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8`.
 Then, use one of the scripts below to grant this identity the app-only permission `Sites.Selected` on the SharePoint API:
 
 > [!IMPORTANT]
-> The scripts below require at least the delegated permission [`AppRoleAssignment.ReadWrite.All`](https://learn.microsoft.com/graph/permissions-reference#approleassignmentreadwriteall) (requires admin consent)
+> The scripts below require at least the delegated permission [`AppRoleAssignment.ReadWrite.All`](/graph/permissions-reference#approleassignmentreadwriteall) (requires admin consent)
 
 <details>
   <summary>Using the Microsoft Graph PowerShell SDK</summary>
