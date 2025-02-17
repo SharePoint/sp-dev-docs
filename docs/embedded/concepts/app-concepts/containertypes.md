@@ -43,8 +43,7 @@ The following restrictions are applied to container type in the trial status:
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
 
 ## Standard/Non-trial use
-
-A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A standard container type is created using the [New-SPOContainerType](./New-SPOContainerType.md) cmdlet . In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. You need the following to create a container type in the standard status:
+A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A standard container type is created using the [New-SPOContainerType](/powershell/module/sharepoint-online/new-spocontainertype) cmdlet . In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](/powershell/module/sharepoint-online/add-spocontainertypebilling) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. You need the following to create a container type in the standard status:
 
 - An Azure subscription and Resource Group must be present in the Azure portal, in case of regular billed. 
 - An App registration must be created in Microsoft Entra ID
