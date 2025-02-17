@@ -48,19 +48,28 @@ A standard container type, by definition, has a billing profile associated with 
 
 - An Azure subscription and Resource Group must be present in the Azure portal, in case of regular billed. 
 - An App registration must be created in Microsoft Entra ID
-- Each developer tenant can create up to five container types in the standard status. To create one, use the following PowerShell cmdlet:
+- Each developer tenant can create up to five container types in the standard status.
+
+To create a regular billed, standard container type, use the following cmdlets:
 
 ```powershell
-New-SPOContainerType
-[–ContainerTypeName <ContainerTypeName>]
-[-OwningApplicationId <OwningApplicationId>]
-[-AzureSubscriptionId <AzureSubscriptionId>]
-[-ResourceGroup <ResourceGroup>]
-[-Region <Region>]
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
+```
+
+```powershell
+Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
 ```
 
 > [!NOTE]
 > The user or admin who will set up a billing relationship for SharePoint Embedded will need to have owner or contributor permissions on the Azure subscription.
+
+
+To create a direct to customer billed, standard container type, use the following cmdlet:
+
+```powershell
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-IsPassThroughBilling] [<CommonParameters>]
+```
+
 
 ## Configuring Container Types
 
@@ -77,7 +86,7 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 Developer Admin can view all the SharePoint Embedded container types created by them on their tenant using this PowerShell cmdlet. This cmdlet retrieves and returns the list of container types  created for a SharePoint Embedded Application in the tenant.
 
 ```powershell
-Get-SPOContainerType
+Get-SPOContainerType [<CommonParameters>]
 ```
 
 Example output of the `Get-SPOContainerType`  cmdlet
@@ -98,7 +107,7 @@ To create and interact with containers, you must [register](../app-concepts/regi
 
 ## Deleting Container Types
 
-Developer Admins can only delete container types in trial status. To delete a container type in trial status, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../admin-exp/consuming-tenant-admin/cta.md). Once all the containers are deleted, Developer Admins can delete the container types using the below PowerShell cmdlet.
+Developer admins can delete container types of both trial and standard status. To delete a container type, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../admin-exp/consuming-tenant-admin/cta.md). Once all the containers are deleted, Developer admins can delete the container type using the below PowerShell cmdlet.
 
 ```powershell
 Remove-SPOContainerType
