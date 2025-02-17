@@ -21,7 +21,7 @@ Container type is represented on each container instance as an immutable propert
 > [!NOTE]
 >
 > 1. You must specify the purpose of the container type you are creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purpose cannot be converted for production; or vice versa.
-> 1. You must use the latest version of SharePoint Powershell for container type configurations. For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+> 1. You must use the latest version of SharePoint Powershell for container type configurations. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## Trial use
 
