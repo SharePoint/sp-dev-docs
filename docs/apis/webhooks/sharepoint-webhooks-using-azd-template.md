@@ -7,7 +7,7 @@ ms.localizationpriority: low
 # Azure functions for SharePoint webhooks using azd
 
 [Azure Developer CLI (azd)](https://aka.ms/azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
-This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](overview-sharepoint-webhooks), and process the notifications from SharePoint.
+This article uses [this azd template](https://github.com/Azure-Samples/azd-functions-sharepoint-webhooks) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage [webhooks](overview-sharepoint-webhooks.md), and process the notifications from SharePoint.
 
 ## Prerequisites
 
