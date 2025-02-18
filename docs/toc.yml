@@ -571,7 +571,7 @@
     - name: User Experiences
       href: embedded/development/content-experiences/user-experiences-overview.md
     - name: Search Content
-      href: embedded/concepts/content-experiences/search-content.md
+      href: embedded/development/content-experiences/search-content.md
     - name: Launch Experience
       href: embedded/development/tutorials/launch-experience.md
     - name: Using Metadata with SharePoint Embedded Containers
@@ -605,7 +605,7 @@
   - name: Compliance
     items:
     - name: Security and Compliance
-      href: embedded/concepts/security-and-compliance.md
+      href: embedded/compliance/security-and-compliance.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration

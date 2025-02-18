@@ -509,7 +509,7 @@ Content-type: application/json
 ```
 ## Example 7: Search for content with specific content properties in response body and sort the results
 
-This example queries container content by specific words and requires the response to include all specified attributes on the content.  Properties that are [sortable](https://learn.microsoft.com/en-us/sharepoint/technical-reference/crawled-and-managed-properties-overview) can be used to sort the results.
+This example queries container content by specific words and requires the response to include all specified attributes on the content.  Properties that are [sortable](/sharepoint/technical-reference/crawled-and-managed-properties-overview) can be used to sort the results.
 
 ### Request
 
@@ -641,10 +641,10 @@ Content-type: application/json
 - For your application to access the containers or container content in search results, it must have access permissions to the corresponding container types.
 
 
-# Enumerate (filter) SharePoint Embedded content
+## Enumerate (filter) SharePoint Embedded content
 
 
-Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](https://learn.microsoft.com/en-us/graph/filter-query-parameter?tabs=http) reference.
+Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](/graph/filter-query-parameter?tabs=http) reference.
 
 ## Example 1: enumerate content by a specific column property and view the results
 

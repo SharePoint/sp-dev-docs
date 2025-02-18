@@ -55,7 +55,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 ### Creation of container types
 
-The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated to an application ID, a one to one mapping, and an Azure subscription ID. The developer administrator can also create Trial container types that have a validity of 30 days to test out SharePoint Embedded. The following [commands](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/new-spocontainertype?view=sharepoint-ps) can be used to create SharePoint Embedded container types on the developer admin’s tenant:
+The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated to an application ID, a one to one mapping, and an Azure subscription ID. The developer administrator can also create Trial container types that have a validity of 30 days to test out SharePoint Embedded. The following [commands](/powershell/module/sharepoint-online/new-spocontainertype) can be used to create SharePoint Embedded container types on the developer admin’s tenant:
 
 Standard billing container type:
 
