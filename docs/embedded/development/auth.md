@@ -115,5 +115,5 @@ Here are some actions you can take next:
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
 1. [Create a new container type](../getting-started/containertypes.md) on the owning tenant.
-1. [Register a container type](register-api-documentation.md) on the consuming tenant.
+1. [Register a container type](../getting-started/register-api-documentation.md) on the consuming tenant.
 1. [Create a container](/graph/api/filestoragecontainer-post)
