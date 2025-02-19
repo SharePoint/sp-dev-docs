@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Container Types
 description: This article explains how Container Types work.
-ms.date: 07/30/2024
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -9,18 +9,18 @@ ms.localizationpriority: high
 
 A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
 
-Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
+Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer is responsible for creating and managing their container types. SharePoint Embedded mandates a 1:1 relationship between the owning application and container type.
 
 Container type is represented on each container instance as an immutable property (ContainerTypeID) and is used across the entire SharePoint Embedded ecosystem, including:
 
-- Access authorization. A SharePoint Embedded application must be associated with a container type to get access to container instances of that type. Once associated, the application has access to all container instances of that type. The actual access privilege is determined by the application-ContainerTypeID permission setting. The owning application by default has full access privilege to all container instances of the container type it's strongly coupled with. Learn more about [SharePoint Embedded Authorization](../development/auth.md).
-- Easy exploration. Container type can be created for trial purposes, allowing developers to explore SharePoint Embedded application development and assess its features for free.
-- Billing. Container types for non-trial purposes are billable and must be created with an Azure Subscription. The usage of containers is metered and charged. Learn more about [metering](../administration/billing/meters.md) and the [SharePoint Embedded billing experience](../administration/billing/billing.md).
-- Configurable behaviors. Container type defines selected behaviors for all container instances of that type. Learn more about setting [Container type configuration](../getting-started/containertypes.md#configuring-container-types).
+- **Access authorization**: A SharePoint Embedded application must be associated with a container type to get access to container instances of that type. Once associated, the application has access to all container instances of that type. The actual access privilege is determined by the application-ContainerTypeID permission setting. The owning application by default has full access privilege to all container instances of the container type it's strongly coupled with. Learn more about [SharePoint Embedded Authorization](../development/auth.md).
+- **Easy exploration**: Container type can be created for trial purposes, allowing developers to explore SharePoint Embedded application development and assess its features for free.
+- **Billing**: Container types for non-trial purposes are billable and must be created with an Azure Subscription. The usage of containers is metered and charged. Learn more about [metering](../administration/billing/meters.md) and the [SharePoint Embedded billing experience](../administration/billing/billing.md).
+- **Configurable behaviors**: Container type defines selected behaviors for all container instances of that type. Learn more about setting [Container type configuration](../getting-started/containertypes.md#configuring-container-types).
 
 > [!NOTE]
 >
-> 1. You must specify the purpose of the container type you are creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purpose cannot be converted for production; or vice versa.
+> 1. You must specify the purpose of the container type you are creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes cannot be converted for production; or vice versa.
 > 1. You must use the latest version of SharePoint Powershell for container type configurations.
 
 ## Trial use
@@ -32,9 +32,9 @@ A container type can be created for trial/development purposes and isn't linked 
 
 ```powershell
 New-SPOContainerType
-[–TrialContainerType]
-[ -ContainerTypeName <ContainerTypeName>]
-[ -OwningApplicationId <OwningApplicationId>]
+    [-TrialContainerType]
+    [-ContainerTypeName <ContainerTypeName>]
+    [-OwningApplicationId <OwningApplicationId>]
 ```
 
 The following restrictions are applied to container type in the trial status:
@@ -55,11 +55,11 @@ Container type can also be created with an Azure billing profile, which includes
 
 ```powershell
 New-SPOContainerType
-[–ContainerTypeName <ContainerTypeName>]
-[-OwningApplicationId <OwningApplicationId>]
-[-AzureSubscriptionId <AzureSubscriptionId>]
-[-ResourceGroup <ResourceGroup>]
-[-Region <Region>]
+    [–ContainerTypeName <ContainerTypeName>]
+    [-OwningApplicationId <OwningApplicationId>]
+    [-AzureSubscriptionId <AzureSubscriptionId>]
+    [-ResourceGroup <ResourceGroup>]
+    [-Region <Region>]
 ```
 
 > [!NOTE]
@@ -69,7 +69,7 @@ New-SPOContainerType
 
 Developer Admin can set selected settings on the SharePoint Embedded container types created by using this PowerShell cmdlet.
 
-This cmdlet allows admins to set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type
+This cmdlet allows admins to set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type:
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $False
@@ -105,5 +105,5 @@ Developer Admins can only delete container types in trial status. To delete a co
 
 ```powershell
 Remove-SPOContainerType
-[-ContainerTypeId <ContainerTypeId>]
+    [-ContainerTypeId <ContainerTypeId>]
 ```
