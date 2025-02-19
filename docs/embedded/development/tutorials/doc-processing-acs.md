@@ -1,7 +1,7 @@
 ---
 title: Document Processing with Azure Cognitive Services
 description: Enabling document processing with Azure Cognitive Services.
-ms.date: 05/21/2024
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -24,7 +24,7 @@ To set up automatic AI processing with your current SharePoint application upon 
 
 ## Get the delta changes of a container
 
-Open **GraphProvider.ts** and implement the method `getDriveChanges` to get the list of changed items.
+Open **GraphProvider.ts** and implement the method `getDriveChanges` to get the list of changed items:
 
 ```typescript
 public static async getDriveChanges(driveId: string): Promise<any[]> {
@@ -57,7 +57,7 @@ public static async getDriveChanges(driveId: string): Promise<any[]> {
 }
 ```
 
-Implement the method `getDriveItem` to fetch a file from a container.
+Implement the method `getDriveItem` to fetch a file from a container:
 
 ```typescript
 public static async getDriveItem(driveId: string, itemId: string): Promise<any> {
@@ -65,7 +65,7 @@ public static async getDriveItem(driveId: string, itemId: string): Promise<any> 
 }
 ```
 
-Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`.
+Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`:
 
 ```typescript
 export abstract class ReceiptProcessor {
@@ -104,7 +104,7 @@ To use the Azure Cognitive Services Document Intelligence APIs, you need to crea
 
 After this step, you should have an endpoint and a key ready to use.
 
-Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials.
+Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials:
 
 ```typescript
 private static dac = new DocumentAnalysisClient(
@@ -131,7 +131,7 @@ private static async getDriveItemStream(url: string): Promise<Readable> {
 }
 ```
 
-Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we're taking the `prebuilt-invoice` model, but other models can be chosen.
+Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we're taking the `prebuilt-invoice` model, but other models can be chosen:
 
 ```typescript
 private static async analyzeReceiptStream(stream: Readable): Promise<any> {
@@ -151,7 +151,7 @@ private static async analyzeReceiptStream(stream: Readable): Promise<any> {
 }
 ```
 
-Create method `removeUnwantedFields` to remove the undesirable fields in Azure Cognitive Services’s response.
+Create a method `removeUnwantedFields` to remove the undesirable fields in Azure Cognitive Services’s response:
 
 ```typescript
 private static removeUnwantedFields(fields: any) {
