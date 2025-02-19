@@ -1,7 +1,7 @@
 ---
 title: Consuming Tenant Admin PowerShell
 description: This article describes how an admin can manage containers through SPO PowerShell.
-ms.date: 10/08/2024
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -11,14 +11,14 @@ The consuming tenant administrator can manage containers using PowerShell comman
 
 For more information on assigning the SharePoint Embedded admin role, see the [SharePoint Embedded Administrator](../adminrole.md).
 
-The following are some of the container-specific commands actions currently supported on PowerShell:
+The following are some of the container-specific command actions currently supported on PowerShell:
 
 ### Application administration
 
 - Get the details of all SharePoint Embedded applications registered in the tenant
 - Get the details of all SharePoint Embedded applications the tenant sorted basis storage
 - Get the details of a specific SharePoint Embedded application in the tenant
-- Get the permissions of owning applications in the tenant
+- Get the permissions of the owning applications in the tenant
 - Configure the External sharing setting of a container of a SharePoint Embedded application in the tenant
 
 ### Container administration
@@ -44,14 +44,13 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 With PowerShell cmdlets, tenant admin can get a list of SharePoint Embedded applications registered in their Microsoft 365 tenancy. They can also view all the applications that have "read" and/or "write" access and the level of access to these SharePoint Embedded applications.
 
-The following commands can be used to manage SharePoint Embedded applications registered on your Microsoft 365 tenants.
+The following commands can be used to manage SharePoint Embedded applications registered on your Microsoft 365 tenants:
 
 ```powershell
 Get-SPOApplication
 ```
 
 ```powershell
-
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
@@ -59,7 +58,7 @@ For more information, see [Get-SPOApplication cmdlet](/powershell/module/sharepo
 
 ### View guest application permissions
 
-Admins can view the guest application permissions for any SharePoint Embedded application within their tenant using this command.
+Admins can view the guest application permissions for any SharePoint Embedded application within their tenant using this command:
 
 ```powershell
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
@@ -83,25 +82,25 @@ Set-SPOApplication -OwningApplicationId <OwningApplicationId> – SharingCapabil
 
 ### View Containers
 
-Admins can get a list of all the containers for a SharePoint Embedded application using the following commands. This command lists all the active containers within the application.
+Admins can get a list of all the containers for a SharePoint Embedded application using the following commands. This command lists all the active containers within the application:
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> |FT
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> | FT
 ```
 
 The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). 
 
-> [!Note]
+> [!NOTE]
 > To enumerate Microsoft Loop containers, use Owning App ID: **a187e399-0c36-4b98-8f04-1edc167a0996** for all the cmdlets of container administration.
 
 ### View containers sorted by storage
 Consuming tenant admins can also get a list of all the containers of a SharePoint Embedded application sorted by storage using the following commands.
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value> |FT
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value> | FT
 ```
 
-`<value>` can be Ascending; Descending
+`<value>` can be `Ascending` or `Descending`.
 
 ### View details of a Container
 
@@ -113,6 +112,7 @@ Consuming tenant admins can use the following command:
 Get-SPOContainer -Identity <ContainerId>
 Get-SPOContainer -Identity <siteURL>
 ```
+
 Here, the `containerId` is the ID of the container & `siteURL` is the URL of the SharePoint site that is associated with the container.
 
 ### Sensitivity Label of a container
@@ -129,7 +129,7 @@ Consuming tenant admins can remove the sensitivity label of a container of an ap
 Set-SPOContainer -Identity <ContainerID> -RemoveLabel
 ```
 
-The `ContainerId` is the ID of the container whose sensitivity label is being set
+The `ContainerId` is the ID of the container whose sensitivity label is being set.
 
 ### Delete containers
 
@@ -194,4 +194,4 @@ Set-SPOApplicationPermission
  
 ## Security and Compliance Administration
 
-SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work similarly in the SharePoint Embedded platform as they do today in Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../compliance/security-and-compliance.md).
+SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work similarly in the SharePoint Embedded platform as they do today in the Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../compliance/security-and-compliance.md).
