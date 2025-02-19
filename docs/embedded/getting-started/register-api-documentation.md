@@ -1,7 +1,7 @@
 ---
 title: Register File Storage container Type Application Permissions
 description: Register the container type.
-ms.date: 01/28/2025
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -41,7 +41,7 @@ The registration API determines what permissions a SharePoint Embedded applicati
 
 ## HTTP request
 
-``` http
+```http
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
 
