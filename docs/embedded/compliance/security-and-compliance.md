@@ -1,17 +1,17 @@
 ---
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
-ms.date: 05/21/2024
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
 # Security and Compliance
 
-Microsoft's SharePoint Embedded provides a faster way to create secure and compliant documents stored in various applications. SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today on the Microsoft 365 (Microsoft 365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content.
+Microsoft's SharePoint Embedded provides a faster way to create secure and compliant documents stored in various applications. SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work similarly in the SharePoint Embedded platform as they do today on the Microsoft 365 (Microsoft 365) platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content.
 
 In this article, we describe the security and compliance policies that are supported today on content that resides in the SharePoint Embedded platform, and their capabilities and limitations.
 
-Since SharePoint Embedded by design doesn’t have any user interface, some Compliance scenarios necessitating user interaction aren't natively supported. The owning application that governs the container can choose to support these scenarios and provide the optimal experience to end users by using existing Microsoft Graph API.
+Since SharePoint Embedded by design doesn’t have any user interface, some Compliance scenarios necessitating user interaction aren't natively supported. The owning application that governs the container can choose to support these scenarios and provide the optimal experience to end users by using the Microsoft Graph.
 
 ## Compliance Policies using Microsoft Purview
 
@@ -23,13 +23,13 @@ Currently, SharePoint Embedded supports the following Compliance features under 
     Get-SPOApplication
     ```
 
-1. Retrieve a list of containers in a SharePoint Embedded application by providing the ApplicationID returned in Step #1
+1. Retrieve a list of containers in a SharePoint Embedded application by providing the ApplicationID returned in Step #1:
 
     ```powershell
     Get-SPOContainer -OwningApplicationId <OwningApplicationID>
     ```
 
-1. Retrieve the details of a container including the ContainerSiteURL by providing the ContainerID returned in Step #2.
+1. Retrieve the details of a container including the ContainerSiteURL by providing the ContainerID returned in Step #2:
 
     ```powershell
     Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity<ContainerID>
@@ -53,11 +53,11 @@ In addition to existing file properties, Audit events related to SharePoint Embe
 
 Compliance Admins can use eDiscovery tools in Microsoft Purview to search/hold/export content hosted in the SharePoint Embedded platform. For more information on eDiscovery, see [Microsoft Purview eDiscovery solutions](/purview/ediscovery).
 
-To perform an eDiscovery Search on all SharePoint Embedded content, Admins should select on **'All'** SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Sites and all SharePoint Embedded containers.
+To perform an eDiscovery Search on all SharePoint Embedded content, Admins should select **All** SharePoint Sites when configuring the eDiscovery Search in Microsoft Purview. This enables the Search for content stored in all SharePoint Sites and all SharePoint Embedded containers.
 
 ![eDiscovery search](../images/sc2.png)
 
-To limit the eDiscovery Search to one/few SharePoint Embedded containers, Admins can **'Choose sites'** under the **‘SharePoint sites’** workload and provide the desired container URL.
+To limit the eDiscovery Search to one/few SharePoint Embedded containers, Admins can **Choose sites** under the **SharePoint sites** workload and provide the desired container URL.
 
 ![choose sites in eDiscovery search](../images/sc3.png)
 
@@ -65,7 +65,7 @@ To limit the eDiscovery Search to one/few SharePoint Embedded containers, Admins
 
 SharePoint Embedded supports retention and holds policies on content stored in its applications using the Microsoft Purview compliance portal. For more information on DLM, see [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
-The existing retention policy is applied to all SharePoint Embedded containers if the policy is configured for 'All sites'. Similarly, creating a new retention/hold policy on *All* SharePoint Sites workload automatically enforces the policy on all SharePoint Sites and all containers within SharePoint Embedded.
+The existing retention policy is applied to all SharePoint Embedded containers if the policy is configured for **All sites**. Similarly, creating a new retention/hold policy on *all* SharePoint Sites workload automatically enforces the policy on all SharePoint Sites and all containers within SharePoint Embedded.
 
 ![retention policy](../images/sc4.png)
 
@@ -89,7 +89,7 @@ Admins can also restrict the enforcement of a DLP policy to specific SharePoint 
 
 Several scenarios supported by DLP today need user interaction that isn’t natively supported by SharePoint Embedded. For instance, based on its configuration, a DLP policy that prevents external sharing might allow end users to provide a business justification to override the policy. The client app that renders this DLP-flagged file item needs to support such user interactions.
 
-Policy tips are shown today for files hosted in SharePoint so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can choose to provide more support by utilizing the existing Graph APIs for this purpose.
+Policy tips are shown today for files hosted in SharePoint so that users are kept informed about DLP-flagged file items and corresponding restrictions. Similarly, for policy tips to be displayed for files hosted in SharePoint Embedded, the client app can choose to provide more support by utilizing the Microsoft Graph for this purpose.
 
 ## Security features
 
@@ -127,4 +127,4 @@ These settings are available with the following PowerShell cmdlet. The `Authoriz
 Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType>
 ```
 
-To learn more about Conditional Access Policy, see [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices).
+To learn more about conditional access policies, see [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices).
