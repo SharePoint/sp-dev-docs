@@ -51,12 +51,12 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 Currently, there are two types of operations that aren't accessible via Microsoft Graph:
 
-- [Container type management](containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
-- [Container type registration](register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
+- [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
+- [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
 
-To perform [container type management](containertypes.md) operations, you must be a SharePoint Embedded Administrator or Global Administrator.
+To perform [container type management](../getting-started/containertypes.md) operations, you must be a SharePoint Embedded Administrator or Global Administrator.
 
-To [register a container type](register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
+To [register a container type](../getting-started/register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
 
 |      Scope name       |               Scope ID               |    Type     |                                             Operation                                             |
 | :-------------------: | :----------------------------------: | :---------: | :-----------------------------------------------------------------------------------------------: |
@@ -67,7 +67,7 @@ To [register a container type](register-api-documentation.md), you must request 
 
 ### Container type application permissions
 
-SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](./register-api-documentation.md).
+SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md).
 
 |      Permission      |                                                    Description                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -114,6 +114,6 @@ Here are some actions you can take next:
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
 1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
-1. [Create a new container type](containertypes.md) on the owning tenant.
-1. [Register a container type](register-api-documentation.md) on the consuming tenant.
+1. [Create a new container type](../getting-started/containertypes.md) on the owning tenant.
+1. [Register a container type](../getting-started/register-api-documentation.md) on the consuming tenant.
 1. [Create a container](/graph/api/filestoragecontainer-post)

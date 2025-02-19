@@ -19,10 +19,10 @@ Start [building](https://github.com/microsoft/FluidExamples/) in the Fluid [Samp
 
 ### Get started with SharePoint Embedded
 
-Try SharePoint Embedded for free by creating a container type for [trial purposes](./app-concepts/containertypes.md).
+Try SharePoint Embedded for free by creating a container type for [trial purposes](../getting-started/containertypes.md).
 
 1. Set up a free trial [Microsoft 365 tenant](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing). Alternatively, you can use an existing tenant if you have admin credentials.
-1. Sign into the [SharePoint Embedded Visual Studio Code Extension](.././getting-started/spembedded-for-vscode.md) and follow the steps to create an application and container type for trial purposes.
+1. Sign into the [SharePoint Embedded Visual Studio Code Extension](../getting-started/spembedded-for-vscode.md) and follow the steps to create an application and container type for trial purposes.
 
 ## Prerequisites
 

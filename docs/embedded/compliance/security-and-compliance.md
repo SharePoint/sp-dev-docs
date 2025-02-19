@@ -48,6 +48,7 @@ In addition to existing file properties, Audit events related to SharePoint Embe
 
 ![Audit events](../images/sc1.png)
 
+
 ### eDiscovery
 
 Compliance Admins can use eDiscovery tools in Microsoft Purview to search/hold/export content hosted in the SharePoint Embedded platform. For more information on eDiscovery, see [Microsoft Purview eDiscovery solutions](/purview/ediscovery).

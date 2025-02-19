@@ -19,7 +19,7 @@ In SharePoint Embedded, content always inherits permissions from its parent hier
 
 ## Role-based sharing setting
 
-SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model. By default, the sharing setting is configured to the open model, permitting unrestricted content sharing by all users. This sharing setting is part of [container type configuration](containertypes.md#configuring-container-types). This configuration can only be set by application owner's developers. To learn more about container permission roles, refer to [Authentication and Authorization with SharePoint Embedded](auth.md#container-permissions).
+SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles,  offering a choice between restrictive and open sharing model. By default, the sharing setting is configured to the open model, permitting unrestricted content sharing by all users. This sharing setting is part of [container type configuration](../getting-started/containertypes.md#configuring-container-types). This configuration can only be set by application owner's developers. To learn more about container permission roles, refer to [Authentication and Authorization with SharePoint Embedded](auth.md#container-permissions).
 
 ### Restrictive sharing model
 
@@ -29,7 +29,7 @@ Only container members who are either the Owner or Manager roles are permitted t
 
 Any container members and guests with edit permissions can add new permissions to this file.
 
-This can be configured using the PowerShell cmdlet [Set-SPOcontainerTypeConfiguration](../admin-exp/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
+This can be configured using the PowerShell cmdlet [Set-SPOcontainerTypeConfiguration](../administration/developer-admin/dev-admin.md#container-type-configuration-properties) as per this example:
 
 ```powershell
 Set-SPOcontainerTypeConfiguration
@@ -45,7 +45,7 @@ By default, SharePoint Embedded application sharing configuration is the same as
 
 For SharePoint Embedded applications, sharing configurations can be adjusted at the application level. Consuming tenant admin can configure permissions that are different than tenant level sharing settings. For example, if a tenant's sharing setting prohibits sharing with guests, SharePoint Embedded applications can be configured to allow guest sharing. So, all containers within that SharePoint Embedded application would have the ability to include guests or extend another permissions, while other SharePoint Embedded applications and SharePoint maintain restricted sharing permissions.
 
-This setting can only be set by consuming tenant SharePoint Embedded admin, and can be configured using the latest PowerShell cmdlet [Set-SPOApplication](../admin-exp/consuming-tenant-admin/ctapowershell.md#set-sharing-capability-of-applications) as shown in this example:
+This setting can only be set by consuming tenant SharePoint Embedded admin, and can be configured using the latest PowerShell cmdlet [Set-SPOApplication](../administration/consuming-tenant-admin/ctapowershell.md#set-sharing-capability-of-applications) as shown in this example:
 
 ```powershell
 Set-SPOApplication
