@@ -10,7 +10,8 @@ ms.localizationpriority: high
 A container type is a SharePoint Embedded resource that defines the relationship, access privileges, and billing accountability between a SharePoint Embedded application and a set of containers. Also, the container type defines behaviors on the set of containers.
 
 Each container type is strongly coupled with one SharePoint Embedded application, which is referred to as the owning application. The owning application developer is responsible for creating and managing their container types.
-SharePoint Embedded mandates a 1:1 relationship between owning application and container type.
+
+SharePoint Embedded mandates a 1:1 relationship between owning application and a container type.
 
 Container type is represented on each container instance as an immutable property (ContainerTypeID) and is used across the entire SharePoint Embedded ecosystem, including:
 
@@ -21,8 +22,8 @@ Container type is represented on each container instance as an immutable propert
 
 > [!NOTE]
 >
-> 1. You must specify the purpose of the container type you're creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purpose can't be converted for production; or vice versa.
-> 1. You must use the latest version of SharePoint PowerShell for container type configurations. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+> 1. You must specify the purpose of the container type you're creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production; or vice versa.
+> 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## Trial use
 
@@ -48,12 +49,12 @@ The following restrictions are applied to trial container types:
 
 ## Standard/Non-trial use
 
-A standard container type is linked to a billing profile, which can be either regular billing or direct-to-consumer billing. Each developer tenant can create up to five standard container types.
-Standard container types are created using the [New-SPOContainerType](/powershell/module/sharepoint-online/new-spocontainertype) cmdlet. For container types with regular billing, create a billing profile using the [Add-SPOContainerTypeBilling](/powershell/module/sharepoint-online/add-spocontainertypebilling) cmdlet. For container types with direct to customer billing, use the flag `-IsPassThroughBilling`. For a direct to customer billed container type, there's no need to attach a billing profile. 
+A standard container type is linked to a billing profile, which can be regular or direct-to-consumer billing. Each developer tenant can create up to five standard container types.
+Standard container types are created using the [New-SPOContainerType](/powershell/module/sharepoint-online/new-spocontainertype) cmdlet. For container types with regular billing, create a billing profile using the [Add-SPOContainerTypeBilling](/powershell/module/sharepoint-online/add-spocontainertypebilling) cmdlet. For container types with direct to customer billing, use the flag `-IsPassThroughBilling`. For the direct to customer billed container type, there's no need to attach a billing profile. 
 
 You need the following to create a standard container type:
 
-- An Azure subscription and Resource Group must be present in the Azure portal for regular billing. 
+- An Azure subscription and a resource group must be present in the Azure portal for regular billing. 
 - An App registration must be created in Microsoft Entra ID
 
 To create a standard container type with a regular billing profile, use the following cmdlets:
@@ -87,7 +88,7 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 ## Viewing Container Types
 
-The Developer Admin can view all the SharePoint Embedded container types created by them on their tenant using `Get-SPOContainerType`. This cmdlet retrieves and returns the list of container types  created for a SharePoint Embedded Application in the tenant.
+The Developer Admin can view all the SharePoint Embedded container types they created on their tenant using `Get-SPOContainerType`. This cmdlet retrieves and returns the list of container types created for a SharePoint Embedded Application in the tenant.
 
 ```powershell
 Get-SPOContainerType [<CommonParameters>]
@@ -115,6 +116,5 @@ Developer admins can delete both trial and standard container types. To delete a
 Once all the containers are deleted, Developer admins can delete the container type using `Remove-SPOContainerType`.
 
 ```powershell
-Remove-SPOContainerType
-[-ContainerTypeId <ContainerTypeId>]
+Remove-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
 ```
