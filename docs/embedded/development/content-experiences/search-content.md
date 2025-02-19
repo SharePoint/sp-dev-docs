@@ -1,7 +1,7 @@
 ---
 title: Search SharePoint Embedded containers and content
-description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 08/15/2024
+description: Overview of how to search SharePoint Embedded containers and content
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -16,7 +16,7 @@ Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded co
 
 ## Example 1: Search containers by container type
 
-This example queries all containers by the specified container type with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances, `drive`,   of the specified container type in the tenant. 
+This example queries all containers by the specified container type with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances (`drive`) of the specified container type in the tenant:
 
 ### Request
 
@@ -90,7 +90,7 @@ Content-type: application/json
 
 ## Example 2: Search containers by title
 
-This example queries all containers by a specified container display name and the SharePoint Embedded application didn't opt out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria.
+This example queries all containers by a specified container display name and the SharePoint Embedded application didn't opt out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria:
 
 ### Request
 
@@ -163,7 +163,7 @@ Content-type: application/json
 
 ## Example 3: Search containers by container description
 
-This example queries all containers by the specified container type and container description, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria.
+This example queries all containers by the specified container type and container description, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all container instances in the tenant that match the criteria:
 
 ### Request
 
@@ -237,7 +237,7 @@ Content-type: application/json
 
 ## Example 4: Search for content by title in a specific container
 
-This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` in the specific container instance that match the criteria.
+This example queries all the content by a specific title in a specific container instance, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` in the specific container instance that match the criteria:
 
 ### Request
 
@@ -336,7 +336,7 @@ Content-type: application/json
 
 ## Example 5: Search by content
 
-This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` that match the criteria.
+This example queries all the content by the specified words across all containers of a specific container type, with the SharePoint Embedded application opted out from content discoverability on Microsoft 365. The response includes all `driveItems` that match the criteria:
 
 ### Request
 
@@ -433,10 +433,10 @@ Content-type: application/json
 ```
 ## Example 6: Search containers by container custom property
 
-This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded applicatio that has opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria. 
+This example queries all containers by the specified custom property key:value pair, with the SharePoint Embedded application that has opted out from content discoverability on Microsoft 365. The response includes all containers that match the criteria:
 
 > [!NOTE]
-> The custom property name must be appended with the text "OWSTEXT" in the query string.
+> The custom property name must be appended with the text `OWSTEXT` in the query string.
 
 ### Request
 
@@ -507,7 +507,7 @@ Content-type: application/json
   ]
 }
 ```
-## Example 7: Search for content with specific content properties in response body and sort the results
+## Example 7: Search for content with specific content properties in the response body and sort the results
 
 This example queries container content by specific words and requires the response to include all specified attributes on the content.  Properties that are [sortable](/sharepoint/technical-reference/crawled-and-managed-properties-overview) can be used to sort the results.
 
@@ -640,21 +640,18 @@ Content-type: application/json
 - Search requests run in the context of the signed-in user. Search results are only scoped to enforce any access control applied to the items by the user. For example, search results will include all container or container content matching the search criteria and accessible by the user regardless of whether the SharePoint Embedded application is authorized to access. You should specify the desired container type by including the ContainerTypeId as part of your **queryString** when searching for containers or container content to ensure search results are properly scoped.
 - For your application to access the containers or container content in search results, it must have access permissions to the corresponding container types.
 
-
 ## Enumerate (filter) SharePoint Embedded content
 
-
-Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](/graph/filter-query-parameter?tabs=http) reference.
+Content can also be enumerated using URL parameters to return specific content in SharePoint Embedded containers. This does not use the search API to retrieve items.  See the [enumerate query parameter](/graph/filter-query-parameter?tabs=http) for reference.
 
 ## Example 1: enumerate content by a specific column property and view the results
 
-This example enumerates the specified container content by the column property that is on the item.  
+This example enumerates the specified container content by the column property that is on the item:
 
 ### Request
 
 ```HTTP
 GET https://graph.microsoft.com/v1.0/drives/{{ContainerID}}/items?$filter=startswith(listitem/fields/{{ColumnProperty}}, '{{Value}}')&$expand=listitem($expand=fields)
-
 ```
 
 ### Response
@@ -804,7 +801,7 @@ Content-type: application/json
 
 ## Example 2: Enumerate content by a specific column property and Order the results
 
-This example enumerates the specified container content by the column property that is on the item and will order the results by the column specified.  
+This example enumerates the specified container content by the column property that is on the item and will order the results by the column specified:
 
 ### Request
 
@@ -817,20 +814,16 @@ Content-Type: application/json
 Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
 ```
 
-
 > [!NOTE]
 >
 > When a container has more than 5,000 items and you are using the enumerate method with the OrderBy clause, you must include the following in the header of your request.
 > 
->  Content-Type: application/json
->  
->  Prefer: HonorNonIndexedQueriesWarningMayFailRandomly
-
-
+> `Content-Type: application/json`
+> `Prefer: HonorNonIndexedQueriesWarningMayFailRandomly`
 
 ## Example 3: Enumerate content by mulitple column properties and Order the results
 
-This example enumerates the specified container content by the column property you specify and the name of the document (listitem/fields/FileLeafRef) that is on the item and will order the results by the column specified.  
+This example enumerates the specified container content by the column property you specify and the name of the document (listitem/fields/FileLeafRef) that is on the item and will order the results by the column specified:
 
 ### Request
 
