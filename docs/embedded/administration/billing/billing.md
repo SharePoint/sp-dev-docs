@@ -1,7 +1,7 @@
 ---
 title: PAYG billing for SharePoint Embedded
 description: This article explains the billing models and how to set up PAYG billing.
-ms.date: 02/12/2025
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -25,15 +25,17 @@ With pass-through billing, consumption-based charges are billed directly to the 
 
 A new container type will be created using **SharePoint Online Management Shell**:
 
-
 1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
 1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
 1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information on [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice), refer the linked documentation.
 
 ### Tenant requirements
+
 - An active instance of SharePoint is required in your Microsoft 365 tenant.
 - Users who will be authenticating into SharePoint Embedded Container Types and Containers must be in Entra ID (Members and Guests)
--  NOTE:  An Office license is not required to collaborate on Microsoft Office documents stored in a container.
+
+    > [!NOTE]
+    > An Office license is not required to collaborate on Microsoft Office documents stored in a container.
 
 ### Roles and Permissions
 
@@ -50,9 +52,9 @@ For the Standard Billing container type, the developer admin needs to set up:
 
 ## Set up a Standard Billing container type
 
-For standard billed container types, developer admin should set up billing in their tenant. Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
+For standard billed container types, developer admins should set up billing in their tenant. The Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role, which already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Admin role is available in Microsoft Entra and Microsoft 365 Admin Center.
 
-SharePoint Embedded Admin can create container type using `New-SPOContainerType` cmdlet by providing an **Azure subscription**, **resource group** associated with the subscription, and a **region**.
+SharePoint Embedded Admin can create a container type using the `New-SPOContainerType` cmdlet by providing an Azure subscription, the resource group associated with the subscription, and a region.
 
 - If you don't have an Azure subscription, you can create one by following the steps here to [create an Azure subscription in your tenancy](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions),
 - If you don't have a resource group, you can create one by following the steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
@@ -120,4 +122,4 @@ New-SPOContainerType -ContainerTypeName <ContainerTypeName>
 
 ## SharePoint Embedded meters
 
-Refer to the [SharePoint Embedded meters](meters.md) article to learn more about the supported pay-as-you-go meters.
+To learn more about the supported pay-as-you-go meters, refer to the [SharePoint Embedded meters](meters.md) article.
