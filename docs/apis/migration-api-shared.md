@@ -71,3 +71,6 @@ Permissions migration is performed using the DeploymentRoleAssignments object wi
 
 > [!NOTE]
 > The **Migration API** is not available for users of Office 365 operated by 21Vianet in China.
+
+### Quota
+Ensure *Share with Me* items per user is not greater than 1,000. The items beyond the quota will be dropped during migration.
