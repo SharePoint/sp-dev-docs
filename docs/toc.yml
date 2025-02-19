@@ -594,6 +594,8 @@
       href: embedded/concepts/fluid.md
     - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
+    - name: Sharepoint Embedded Declarative Agents Lite
+      href: embedded/concepts/spe-da.md
   - name: Tutorials
     items:
     - name: Launch Experience
