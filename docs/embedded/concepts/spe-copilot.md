@@ -13,13 +13,13 @@ ms.localizationpriority: high
 
 SharePoint Embedded Copilot is a powerful tool designed to enhance the functionality of SharePoint Embedded applications by integrating advanced Microsoft 365 features ( Purview, Protection etc. )
 
-![alt text](../images/speco-apparch.png)
+![Diagram illustrating SPE copilot is AI ready](../images/speco-apparch.png)
 
 Currently, the only way to incorporate this feature into your custom application is through our React SDK library written in TypeScript. Plans to support future runtimes will be announced. The SDK is configured with the containerid instance of your containertype, as well as the authorization and authentication token logic you provdide through a callback. It will embed itself as an iframe into your host application. By default, the iframe is given a frame-ancestors property that prevents it from being embedded by any host until configured. Details are provided below.
 
 ## Key Features
 
-![alt text](../images/speco-aivalue.png)
+![Showcasing how SPE content gets AI from M365 copilot](../images/speco-aivalue.png)
 
 ### BIlling/Licensing
 
@@ -31,7 +31,7 @@ Application scoping in SharePoint Embedded Copilot (SPE Copilot) involves defini
 
 When SPE Copilot users query the LLM, it will only have access to files that the `User+Application` have access to, which would mean a minima of a superset. Typically this will be the application that has been granted access over the container type which will typically be more data then just what the user has access to.
 
-![alt text](../images/speco-appscopingvenn.png)
+![Venn Diagarm with 3P App access on left, SPE copilot in middle and consuming tenant user on right, overlapped area is what copilot can access](../images/speco-appscopingvenn.png)
 
 #### DiscoverabilityDisabled
 
@@ -42,6 +42,10 @@ Here is an [example of setting the flag to false](https://learn.microsoft.com/en
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
 
 ```
+
+Discoverability can also be disabled using the Visual Studio Code Sharepoint Embedded extension
+
+![Using the VS Code extension for SPE to set DiscoverabilityDisabled to false](../images/speco-vscodeextensiondisablediscovery.png)
 
 #### DataSources
 
@@ -81,9 +85,9 @@ At runtime, data is retrieved from the index and is used to augment the prompt s
 The data is used by the LLM to inform and construct the response​
 
 
-![alt text](../images/speco-ragai.png)
-​![alt text](../images/speco-ragquery.png)
-![alt text](../images/speco-ragm365.png)
+![How RAG works in Azure AI](../images/speco-ragai.png)
+​![The flow of a RAG query](../images/speco-ragquery.png)
+![How RAG works in SPE](../images/speco-ragm365.png)
 
 ### Grounding
 
@@ -93,9 +97,11 @@ Grounding in the context of SPE Copilot refers to the process of providing input
 
 ### M365 Boundrary 
 
-Data is kept secure: data never leaves the tenant boundary and storage respects data residency settings​
+Data is kept secure: data never leaves the tenant boundary and storage respects data residency settings​.
 
-![alt text](../images/speco-bound.png)
+Each container instance of a container type in the SPE parition is its own security and complaince boundrary.
+
+![M365 Storage Partitions](../images/speco-bound.png)
 
 ### CSP Policies
 
@@ -141,6 +147,56 @@ Get-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 ### Quick Start
 
+1. Follow this guide up to the [Load Sample App section](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/getting-started/spembedded-for-vscode#load-sample-app) with the Visual Studio Code Extension
+
+2. Within the extension, right click on the owning application, and select `Run sample apps -> Typescript + React + Azure Functions`
+
+![using the spe vs code extension to create a typescript react azurefunctions project](../images/speco-runsampleapp.png)
+
+3. Allow for the extension to copy and create client secrets
+
+![SPE VS Code notification alerting it will copy app secrets in plain text on local machine](../images/speco-createappsecret.png)
+
+If the application does not already have a client secret the extension will ask to create one for you.
+
+![SPE VS Code notification prompting user to allow it to create a secret for the application if it does not exist.](../images/speco-createclientsecret.png)
+
+3. Select a folder to host the application, this will clone the following [repository for Sharepoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/spe-typescript-react-azurefunction) into the folder
+
+![windows File Explorer folder to save project on local machine](../images/speco-cloneproject.png)
+
+Next when prompted open the folder
+
+![VS Code extension with the SPE React Typescript + Azure Functions sample application cloned on local machine and open in VS Code](../images/speco-vscodeclonedproject.png)
+
+4. Navigate to `react-client\src\components\ChideSideBar.tsx` and uncomment this section
+
+![VS Code file explorer with ChatSideBar.tsx in open window with relevant code to uncomment highlighted](../images/speco-uncommentchatsidebar.png)
+
+5. Navigate to `react-client\src\routes\App.tsx` and set the react state of the showSidebar variable to `true`
+
+![VS Code file explorer with App.tsx open with line of showSidebar variable useState function input changed from false to true to enable showing chat side bar](../images/speco-setshowsidebartrue.png)
+
+6. You can follow the instrucitons of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE copilot functionality enabled.
+
+![VS Code terminal in root folder of SPE Typescript project cloned earlier and npm run start command typed in](../images/speco-runnpmrunstart.png)
+
+7. Sign in with a copilot license enabled user
+
+![SPE Typescript App running in Edge with sign in buttons](../images/speco-reacttypescripthomepage.png)
+
+8. Navigate to the `containers` page, create one if you do not have any yet
+
+![SPE Typescript App running in edge in /containers sub page with modal of user c reatign a container called ContosoCompanyContainer](../images/speco-createcontosocontainer2.png)
+
+After it's created you will see it here
+
+![SPE Typescript App running in edge with a created container from above ContosoCompanyContainer](../images/speco-createdcontainer.png)
+
+9. Click the container and upload your files. Once a container has been created and you have navigated inside it, your copilot chat experience will become enabled.   
+
+![SPE Typescript App running in edge inside a created container page of ContosoCompanyContainer](../images/speco-spechatenabled.png)
+
 ### Examples
 
 ### SPE Typescript React Application
@@ -165,11 +221,21 @@ Once consumptive billing is enabled, we will be disabling using this feature wit
 
 ## Bring-Your-Own-Model
 
+## Language/Locale
 
+## Authentication and 3P Cookies
 
 # Support
 
 ## Chat Control Feedback Dialog
+
+If you encounter any issues with the chat control, please use the thumbs up and down feedback buttons to report the problem. This method is preferred for sending feedback because it provides us with telemetry data that helps us diagnose and troubleshoot the issue more effectively.
+
+![alt text](../images/speco-feedbackthumbsdown.png)
+
+When you click the thumbs down button, a feedback dialog will appear. Please include any relevant information in this dialog.
+
+![alt text](../images/speco-feedbackmodal.png)
 
 ## Contact Us
 
