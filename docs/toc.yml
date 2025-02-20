@@ -594,6 +594,8 @@
       href: embedded/concepts/fluid.md
     - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
+    - name: Sharepoint Embedded Copilot
+      href: embedded/concepts/spe-copilot.md
   - name: Tutorials
     items:
     - name: Launch Experience
