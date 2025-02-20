@@ -131,7 +131,24 @@ Get-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 ### Supported Document Types
 
-.docx, .pptx ..etc
+[Reference - File Formats Support By Copilot](https://support.microsoft.com/en-us/topic/file-formats-supported-by-copilot-1afb9a70-2232-4753-85c2-602c422af3a8)
+
+<b>Documents</b>: PDF, DOCX, XLSX, PPTX
+
+<b>Text-based Files</b>: RTF, TXT, CSV, LOG, INI, CONFIG
+
+<b>Audio</b>: WAV
+
+<b>Programming Languages</b>: PY, JS, JSX, JAVA, PHP, CS, C, CPP, CXX, H, HPP, M, COFFEE, DART, LUA, PL, PM, RB, RS, SWIFT, GO, KT, KTS, R, SCALA, T, TS, TSX
+
+<b>Shell Scripts</b>: BASH, SH, ZSH
+
+<b>Markup and Documentation</b>: HTML, CSS, MD, RMD, TEX, LATEX
+
+<b>Database Languages</b>: SQL
+
+<b>Data Serialization Formats</b>: IPYNB, JSON, TOML, YAML, YML
+
 
 ## Getting Started
 
@@ -139,10 +156,13 @@ Get-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 > [!NOTE]
 >
 > 1. You must specify the purpose of the container type you're creating at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production; or vice versa.
-> 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+> 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
+> -  Set the <b>ChatEmbeddedHosts</b> property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](#csp-policies)
+> -  Set the <b>DiscoverabilityDisabled</b> property of your container type configuration to `false` so that Copilot can find the files in your created container refer to the [Discoverability Disabled section above for more information](#discoverabilitydisabled)
 > -  Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >     - A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Copilot for Microsoft 365 license.
+
 
 
 ### Quick Start
