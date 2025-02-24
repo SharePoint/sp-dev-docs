@@ -24,8 +24,7 @@
   ],
   "notification_subscribers": [
     "vesaj@microsoft.com",
-    "bjansen@microsoft.com",
-    "v-licapu@microsoft.com"
+    "bjansen@microsoft.com"
   ],
   "sync_notification_subscribers": null,
   "branches_to_filter": [],
