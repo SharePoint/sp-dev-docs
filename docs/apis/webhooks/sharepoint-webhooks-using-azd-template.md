@@ -4,7 +4,7 @@ description: Use Azure Developer cli (azd) to deploy an Azure function app that 
 ms.date: 02/17/2025
 ms.localizationpriority: low
 ---
-# Azure functions for SharePoint webhooks using azd
+# Azure Functions for SharePoint webhooks using azd
 
 [Azure Developer CLI (azd)](https://aka.ms/azd) is an open-source tool that accelerates provisioning and deploying app resources in Azure.  
 
