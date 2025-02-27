@@ -82,7 +82,6 @@ $appRoleAssignment = @{
 }
 New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $managedIdentityObjectId -BodyParameter $appRoleAssignment | Format-List
 ```
-
 </details>
    
 <details>
@@ -95,7 +94,6 @@ resourceServicePrincipalAppRoleId="$(az ad sp show --id $resourceServicePrincipa
 
 az rest --method POST --uri "https://graph.microsoft.com/v1.0/servicePrincipals/${managedIdentityObjectId}/appRoleAssignments" --headers 'Content-Type=application/json' --body "{ 'principalId': '${managedIdentityObjectId}', 'resourceId': '${resourceServicePrincipalId}', 'appRoleId': '${resourceServicePrincipalAppRoleId}' }"
 ```
-
 </details>
 
 #### Grant the managed identity effective access to a SharePoint site
@@ -121,7 +119,6 @@ Then, use one of the scripts below to grant it the app-only permission **manage*
 Connect-PnPOnline -Url "https://YOUR_SHAREPOINT_TENANT_PREFIX.sharepoint.com/sites/YOUR_SHAREPOINT_SITE_NAME" -Interactive -ClientId "YOUR_PNP_APP_CLIENT_ID"
 Grant-PnPAzureADAppSitePermission -AppId "3150363e-afbe-421f-9785-9d5404c5ae34" -DisplayName "YOUR_FUNC_APP_NAME" -Permissions Manage
 ```
-
 </details>
    
 <details>
@@ -134,7 +131,6 @@ targetapp="3150363e-afbe-421f-9785-9d5404c5ae34"
 siteUrl="https://YOUR_SHAREPOINT_TENANT_PREFIX.sharepoint.com/sites/YOUR_SHAREPOINT_SITE_NAME"
 m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl $siteUrl
 ```
-
 </details>
 
 ## Call the function app
