@@ -34,7 +34,7 @@ The account running **azd** must have at least the following roles to successful
 
     Supply an environment name, such as **spofuncs-quickstart** when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
 
-1. Open the file **infra/main.parameters.json`, and set the variables **TenantPrefix** and **SiteRelativePath** to match your SharePoint tenant.
+1. Open the file **infra/main.parameters.json**, and set the variables `TenantPrefix` and `siteRelativePath` to match your SharePoint tenant.
 
    Review the article on [Manage environment variables](/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
@@ -42,13 +42,13 @@ The account running **azd** must have at least the following roles to successful
 
 ## Grant the function app access to SharePoint Online
 
-The authentication to SharePoint is done using **DefaultAzureCredential**, so the credential used depends if the function app runs locally, or in Azure.  
+The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends if the function app runs locally, or in Azure.  
 
-If you never heard about **DefaultAzureCredential**, you should familiarize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
+If you never heard about `DefaultAzureCredential`, you should familiarize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
 
 ### Using its managed identity
 
-**DefaultAzureCredential** will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service or a user-assigned managed identity.  
+`DefaultAzureCredential` will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service or a user-assigned managed identity.  
 
 This tutorial will assume that the system-assigned managed identity is used.
 
@@ -141,7 +141,7 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 
 For security reasons, when running in Azure, the function app requires an app key to pass in the query string parameter **code**. The app keys can be found in the function app service's **App Keys** keys page.  
 
-Most of the HTTP functions take optional parameters **tenantPrefix** and **siteRelativePath**. If they are not specified, the values in the app's environment variables are used.  
+Most of the HTTP functions take optional parameters `TenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables are used.  
 
 Below is a sample script in PowerShell to call the function app:
 
