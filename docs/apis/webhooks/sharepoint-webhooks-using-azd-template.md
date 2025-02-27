@@ -44,17 +44,17 @@ The account running **azd** must have at least the following roles to successful
 
 The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends if the function app runs locally, or in Azure.  
 
-If you never heard about `DefaultAzureCredential`, you should familiarize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
+If you never heard about `DefaultAzureCredential`, you should familiarize yourself with its concept by referring to the section **Use DefaultAzureCredential for flexibility** in [Credential chains in the Azure Identity client library for JavaScript](/azure/developer/javascript/sdk/authentication/credential-chains).
 
 ### Using its managed identity
 
 `DefaultAzureCredential` will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service or a user-assigned managed identity.  
 
-This tutorial will assume that the system-assigned managed identity is used.
+This tutorial assumes the system-assigned managed identity is used.
 
 #### Grant the SharePoint API permission Sites.Selected to the managed identity
 
-Navigate to your function app in [the Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
+Navigate to your function app in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
 
 In this tutorial, it is **d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8**.  
 
