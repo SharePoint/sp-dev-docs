@@ -32,9 +32,9 @@ The account running **azd** must have at least the following roles to successful
     azd init --template azd-functions-sharepoint-webhooks
     ```
 
-    Supply an environment name, such as `spofuncs-quickstart` when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
+    Supply an environment name, such as **spofuncs-quickstart** when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
 
-1. Open the file `infra/main.parameters.json`, and set the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
+1. Open the file **infra/main.parameters.json`, and set the variables **TenantPrefix** and **SiteRelativePath** to match your SharePoint tenant.
 
    Review the article on [Manage environment variables](/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
@@ -42,23 +42,23 @@ The account running **azd** must have at least the following roles to successful
 
 ## Grant the function app access to SharePoint Online
 
-The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends if the function app runs locally, or in Azure.  
+The authentication to SharePoint is done using **DefaultAzureCredential**, so the credential used depends if the function app runs locally, or in Azure.  
 
-If you never heard about `DefaultAzureCredential`, you should familiarize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
+If you never heard about **DefaultAzureCredential**, you should familiarize yourself with its concept by reading [this article](https://aka.ms/azsdk/js/identity/credential-chains#use-defaultazurecredential-for-flexibility).
 
 ### Using its managed identity
 
-`DefaultAzureCredential` will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service or a user-assigned managed identity.  
+**DefaultAzureCredential** will use a managed identity to authenticate to SharePoint. This may be the existing, system-assigned managed identity of the function app service or a user-assigned managed identity.  
 
 This tutorial will assume that the system-assigned managed identity is used.
 
 #### Grant the SharePoint API permission Sites.Selected to the managed identity
 
-Navigate to your function app in [the Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click `Identity` and note the `Object (principal) ID` of the system-assigned managed identity.  
+Navigate to your function app in [the Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
 
-In this tutorial, it is `d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8`.  
+In this tutorial, it is **d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8**.  
 
-Then, use one of the scripts below to grant this identity the app-only permission `Sites.Selected` on the SharePoint API:
+Then, use one of the scripts below to grant this identity the app-only permission **Sites.Selected** on the SharePoint API:
 
 > [!IMPORTANT]
 > The scripts below require at least the delegated permission [`AppRoleAssignment.ReadWrite.All`](/graph/permissions-reference#approleassignmentreadwriteall) (requires admin consent)
@@ -100,17 +100,17 @@ az rest --method POST --uri "https://graph.microsoft.com/v1.0/servicePrincipals/
 
 #### Grant the managed identity effective access to a SharePoint site
 
-Navigate to the [Enterprise applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the filter `Application type` to `Managed Identities` > Click on your managed identity and note its `Application ID`.  
+Navigate to the [Enterprise applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the filter **Application type** to **Managed Identities** > Click on your managed identity and note its **Application ID**.  
 
-In this tutorial, it is `3150363e-afbe-421f-9785-9d5404c5ae34`.  
+In this tutorial, it is **3150363e-afbe-421f-9785-9d5404c5ae34**.  
 
-Then, use one of the scripts below to grant it the app-only permission `manage` (minimum required to register a webhook) on a specific SharePoint site:
+Then, use one of the scripts below to grant it the app-only permission **manage** (minimum required to register a webhook) on a specific SharePoint site:
 
 > [!IMPORTANT]  
 > The app registration used to run those scripts must have at least the following permissions:
 >
-> - Delegated permission `Application.ReadWrite.All` in the Graph API (requires admin consent)
-> - Delegated permission `AllSites.FullControl` in the SharePoint API (requires admin consent)
+> - Delegated permission **Application.ReadWrite.All** in the Graph API (requires admin consent)
+> - Delegated permission **AllSites.FullControl** in the SharePoint API (requires admin consent)
 
 <details>
   <summary>Using PnP PowerShell</summary>
@@ -139,9 +139,9 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 
 ## Call the function app
 
-For security reasons, when running in Azure, the function app requires an app key to pass in the query string parameter `code`. The app keys can be found in the function app service's **App Keys** keys page.  
+For security reasons, when running in Azure, the function app requires an app key to pass in the query string parameter **code**. The app keys can be found in the function app service's **App Keys** keys page.  
 
-Most of the HTTP functions take optional parameters `tenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables are used.  
+Most of the HTTP functions take optional parameters **tenantPrefix** and **siteRelativePath**. If they are not specified, the values in the app's environment variables are used.  
 
 Below is a sample script in PowerShell to call the function app:
 
