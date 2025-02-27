@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded for Visual Studio Code
 
-The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. 
+The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development.
 
 > [!IMPORTANT]
 > To start building with SharePoint Embedded you will need administrative access to Microsoft 365 tenant.
@@ -32,7 +32,7 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 - Authentication opens a new tab in an external browser to grant permissions
 - Select **Accept** on the pop-up window prompting admin consent
- 
+
 ![consentperms](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
 ## Create a container type with a trial configuration
@@ -71,7 +71,7 @@ After creating your container type, you'll need to register that container type 
 
 ![register](../images/vsx-images/n7aregister-ct.png)
 
-#### Grant permissions
+### Grant permissions
 
 When registering your container type you'll need to grant permissions to access your application
 
