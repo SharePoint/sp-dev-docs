@@ -19,26 +19,26 @@ This article uses the [Azure function app for SharePoint webhooks public templat
 
 ## Permissions required to provision the resources in Azure
 
-The account running `azd` must have at least the following roles to successfully provision the resources:
+The account running **azd** must have at least the following roles to successfully provision the resources:
 
-- Azure role [`Contributor`](/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
-- Azure role [`Role Based Access Control Administrator`](/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
+- Azure role [**Contributor**](/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
+- Azure role [**Role Based Access Control Administrator**](/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
 
 ## Deploy the function app in Azure
 
-1. Run `azd init` from an empty local (root) folder:
+1. Run **azd init** from an empty local (root) folder:
 
-    ```shell
+    ```console
     azd init --template azd-functions-sharepoint-webhooks
     ```
 
-    Supply an environment name, such as `spofuncs-quickstart` when prompted. In `azd`, the environment is used to maintain a unique deployment context for your app.
+    Supply an environment name, such as `spofuncs-quickstart` when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
 
 1. Open the file `infra/main.parameters.json`, and set the variables `TenantPrefix` and `SiteRelativePath` to match your SharePoint tenant.
 
    Review the article on [Manage environment variables](/azure/developer/azure-developer-cli/manage-environment-variables) to manage the azd's environment variables.
 
-1. Finally, run the command `azd up` to build the app, provision the resources in Azure and deploy the app package.
+1. Finally, run the command **azd up** to build the app, provision the resources in Azure and deploy the app package.
 
 ## Grant the function app access to SharePoint Online
 
@@ -170,7 +170,7 @@ Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/w
 
 ## Cleanup the resources in Azure
 
-You can delete all the resources this project created in Azure, by running the command `azd down`.  
+You can delete all the resources this project created in Azure, by running the command **azd down**.  
 
 Alternatively, you can delete the resource group, which has the azd environment's name by default.
 
