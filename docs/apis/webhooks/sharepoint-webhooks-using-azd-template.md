@@ -1,7 +1,7 @@
 ---
 title: Create Azure Functions for SharePoint webhooks using an azd template
 description: Use Azure Developer cli (azd) to deploy an Azure function app that connects to your SharePoint Online tenant, to register and manage webhooks, and process the notifications from SharePoint.
-ms.date: 02/17/2025
+ms.date: 02/27/2025
 ms.localizationpriority: low
 ---
 # Azure Functions for SharePoint webhooks using azd
@@ -21,8 +21,8 @@ This article uses the [Azure function app for SharePoint webhooks public templat
 
 The account running **azd** must have at least the following roles to successfully provision the resources:
 
-- Azure role [**Contributor**](/azure/role-based-access-control/built-in-roles/privileged#contributor): To create all the resources needed
-- Azure role [**Role Based Access Control Administrator**](/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator): To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
+- Azure role **[Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor)**: To create all the resources needed
+- Azure role **[Role Based Access Control Administrator](/azure/role-based-access-control/built-in-roles/privileged#role-based-access-control-administrator)**: To assign roles (to access the storage account and Application Insights) to the managed identity of the function app
 
 ## Deploy the function app in Azure
 
@@ -32,7 +32,7 @@ The account running **azd** must have at least the following roles to successful
     azd init --template azd-functions-sharepoint-webhooks
     ```
 
-    Supply an environment name, such as **spofuncs-quickstart** when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
+    Enter an environment name, such as **spofuncs-quickstart** when prompted. In **azd**, the environment is used to maintain a unique deployment context for your app.
 
 1. Open the file **infra/main.parameters.json**, and set the variables `TenantPrefix` and `siteRelativePath` to match your SharePoint tenant.
 
@@ -42,7 +42,7 @@ The account running **azd** must have at least the following roles to successful
 
 ## Grant the function app access to SharePoint Online
 
-The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends if the function app runs locally, or in Azure.  
+The authentication to SharePoint is done using `DefaultAzureCredential`, so the credential used depends on whether the function app runs locally, or in Azure.  
 
 If you never heard about `DefaultAzureCredential`, you should familiarize yourself with its concept by referring to the section **Use DefaultAzureCredential for flexibility** in [Credential chains in the Azure Identity client library for JavaScript](/azure/developer/javascript/sdk/authentication/credential-chains).
 
@@ -54,7 +54,7 @@ This tutorial assumes the system-assigned managed identity is used.
 
 #### Grant the SharePoint API permission Sites.Selected to the managed identity
 
-Navigate to your function app in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > click **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
+Navigate to your function app in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > select **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
 
 In this tutorial, it is **d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8**.  
 
@@ -98,9 +98,10 @@ az rest --method POST --uri "https://graph.microsoft.com/v1.0/servicePrincipals/
 
 #### Grant the managed identity effective access to a SharePoint site
 
-Navigate to the [Enterprise applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the filter **Application type** to **Managed Identities** > Click on your managed identity and note its **Application ID**.  
+Navigate to the [Enterprise applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/) > Set the **Application type** filter to **Managed Identities** > select your managed identity and note its **Application ID**.  
 
-In this tutorial, it is **3150363e-afbe-421f-9785-9d5404c5ae34**.  
+> [!NOTE]
+> In this tutorial, it is **3150363e-afbe-421f-9785-9d5404c5ae34**.  
 
 Then, use one of the scripts below to grant it the app-only permission **manage** (minimum required to register a webhook) on a specific SharePoint site:
 
@@ -135,9 +136,9 @@ m365 spo site apppermission add --appId $targetapp --permission manage --siteUrl
 
 ## Call the function app
 
-For security reasons, when running in Azure, the function app requires an app key to pass in the query string parameter **code**. The app keys can be found in the function app service's **App Keys** keys page.  
+For security reasons, when running in Azure, the function app requires an app key to pass in the query string parameter **code**. The app keys are found in the function app service's **App Keys** keys page.  
 
-Most of the HTTP functions take optional parameters `TenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables are used.  
+Most HTTP functions take optional parameters `TenantPrefix` and `siteRelativePath`. If they are not specified, the values in the app's environment variables are used.  
 
 Below is a sample script in PowerShell to call the function app:
 
@@ -168,7 +169,7 @@ Invoke-RestMethod -Method POST -Uri "https://${funchost}.azurewebsites.net/api/w
 
 You can delete all the resources this project created in Azure, by running the command **azd down**.  
 
-Alternatively, you can delete the resource group, which has the azd environment's name by default.
+Alternatively, you can delete the resource group, that has the azd environment's name by default.
 
 ## See also
 
