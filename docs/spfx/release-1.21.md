@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
 
-This release focuses primarily on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
+This release has initial configuration updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards. We are also looking to further include other tehcnical updates before this version is generally available.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
