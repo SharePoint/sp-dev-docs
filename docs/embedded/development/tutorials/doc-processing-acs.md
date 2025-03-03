@@ -1,7 +1,7 @@
 ---
 title: Document Processing with Azure Cognitive Services
 description: Enabling document processing with Azure Cognitive Services.
-ms.date: 05/21/2024
+ms.date: 03/03/2025
 ms.localizationpriority: high
 ---
 
@@ -17,14 +17,14 @@ To set up automatic AI processing with your current SharePoint application upon 
 
 1. Get the delta changes of the container. You're currently able to get the notification whenever there's any change in our container and will now get the files that are added or updated.
 1. Call Azure Cognitive Services’s Document Intelligence service API. You'll need to create an Azure AI resource to use the API to extract the fields from an image and get the extracted files. You might store them as shown in this tutorial or you might process them as you like.
-![document processing schema](../images/Document-Processing.png)
+![document processing schema](../../images/Document-Processing.png)
 
 > [!TIP]
 > To learn more about the Microsoft Graph APIs used in this tutorial, see [Track changes for a Drive](/graph/api/driveitem-delta), [Get a DriveItem resource](/graph/api/driveitem-get), and [Upload or replace the contents of a DriveItem](/graph/api/driveitem-put-content).
 
 ## Get the delta changes of a container
 
-Open **GraphProvider.ts** and implement the method `getDriveChanges` to get the list of changed items.
+Open **GraphProvider.ts** and implement the method `getDriveChanges` to get the list of changed items:
 
 ```typescript
 public static async getDriveChanges(driveId: string): Promise<any[]> {
@@ -57,7 +57,7 @@ public static async getDriveChanges(driveId: string): Promise<any[]> {
 }
 ```
 
-Implement the method `getDriveItem` to fetch a file from a container.
+Implement the method `getDriveItem` to fetch a file from a container:
 
 ```typescript
 public static async getDriveItem(driveId: string, itemId: string): Promise<any> {
@@ -65,7 +65,7 @@ public static async getDriveItem(driveId: string, itemId: string): Promise<any> 
 }
 ```
 
-Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`.
+Create a new file **ReceiptProcessor.ts** and implement a method `processDrive`:
 
 ```typescript
 export abstract class ReceiptProcessor {
@@ -104,7 +104,7 @@ To use the Azure Cognitive Services Document Intelligence APIs, you need to crea
 
 After this step, you should have an endpoint and a key ready to use.
 
-Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials.
+Now open **ReceiptProcessor.ts** to create method `dac` to store the Azure Cognitive Services credentials:
 
 ```typescript
 private static dac = new DocumentAnalysisClient(
@@ -131,7 +131,7 @@ private static async getDriveItemStream(url: string): Promise<Readable> {
 }
 ```
 
-Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we're taking the `prebuilt-invoice` model, but other models can be chosen.
+Create method `analyzeReceiptStream` to get the OCR fields through Azure Cognitive Services processing. Here we're taking the `prebuilt-invoice` model, but other models can be chosen:
 
 ```typescript
 private static async analyzeReceiptStream(stream: Readable): Promise<any> {
@@ -151,7 +151,7 @@ private static async analyzeReceiptStream(stream: Readable): Promise<any> {
 }
 ```
 
-Create method `removeUnwantedFields` to remove the undesirable fields in Azure Cognitive Services’s response.
+Create a method `removeUnwantedFields` to remove the undesirable fields in Azure Cognitive Services’s response:
 
 ```typescript
 private static removeUnwantedFields(fields: any) {
