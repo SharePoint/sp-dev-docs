@@ -71,6 +71,8 @@ By default personalization is not allowed for the custom Viva Connections cards.
   ]
 ```
 
+![Flexible layout support](../images/121-release-notes/card-personalization.png)
+
 ### Updating Teams JS SDK
 
 Default [Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js) version for the SPFx powered solutions has been updated to version 2.32.
