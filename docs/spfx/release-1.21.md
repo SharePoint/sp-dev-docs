@@ -71,7 +71,7 @@ By default personalization isn't allowed for the custom Viva Connections cards.
   ]
 ```
 
-![Flexible layout support](../images/121-release-notes/card-personalization.png)
+![Card personalization visible in the dashboard UI](../images/121-release-notes/card-personalization.png)
 
 ### Updating Teams JS SDK
 
