@@ -6,11 +6,11 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
 
-This release has initial configuration updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards. We are also looking to further include other tehcnical updates before this version is generally available.
+This release has initial configuration updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards. We're also looking to further include other technical updates before this version is generally available.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.0 **Released:** Feburary 25, 2025
+beta.0 **Released:** February 25, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -44,7 +44,7 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 
 ### Flexible layout configuration options for web parts
 
-New flexible layout sizing options are introduced for the web part manifest. These cawn be used to adjust the default behaviour for the custom web parts as they are used within flexible layouts.
+New flexible layout sizing options are introduced for the web part manifest. These can be used to adjust the default behavior for the custom web parts as they're used within flexible layouts.
 
 ```json
   "flexibleLayoutSizing": {
@@ -55,15 +55,15 @@ New flexible layout sizing options are introduced for the web part manifest. The
 ```
 
 > [!NOTE]
-> By default all custom web parts are supported in the flexible layout option and do not require any code level changes.
+> By default all custom web parts are supported in the flexible layout option and don't require any code level changes.
 
 ![Flexible layout support](../images/121-release-notes/flex-layout.png)
 
 ### Viva Connections card personalization support
 
-Viva Connections will start supporting end user configuration options for the dashboard. End users can add and remove cards from the dasbhoard based on their preference. Supported cards are explictly enabled for this scenario and also custom cards are supported.
+Viva Connections will start supporting end user configuration options for the dashboard. End users can add and remove cards from the dashboard based on their preference. Supported cards are explicitly enabled for this scenario and also custom cards are supported.
 
-By default personalization is not allowed for the custom Viva Connections cards.
+By default personalization isn't allowed for the custom Viva Connections cards.
 
 ```json
   "personalization": [
