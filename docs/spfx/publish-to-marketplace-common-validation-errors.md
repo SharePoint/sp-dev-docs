@@ -19,7 +19,7 @@ A great Solution description highlights your Solution's benefits and encourages 
 - Contains comparative marketing content or competing offers in the Solution description or other metadata.
 - Contains exaggerated claims about the Solution such as #1, amazing, or the best.
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](./publish-to-marketplace-checklist#solutions-description-must-clearly-describe-the-different-components-included-in-the-package).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist#solutions-description-must-clearly-describe-the-different-components-included-in-the-package).
 
 ## Improper screenshots
 
@@ -41,7 +41,7 @@ If the following fields in the Partner Center and Solution manifest don't match,
 - Privacy Policy URLs
 - Solution name
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](./publish-to-marketplace-checklist#solution-package-must-contain-valid-developer-metadata).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist#solution-package-must-contain-valid-developer-metadata).
 
 ## Missing or incomplete test instructions
 
@@ -52,7 +52,7 @@ Detailed test instructions and credentials help you with a successful review of 
 - Test accounts provided don't support custom upload of .sppkg package.
 - Multiple test accounts aren't included when the Solution supports collaborative functionality in web part, full page, Teams Tab, etc...
 
-For more information, see [Publish SharePoint Framework applications to the marketplace](./publish-to-marketplace-overview).
+For more information, see [Publish SharePoint Framework applications to the marketplace](publish-to-marketplace-overview).
 
 ## Broken solution functionality
 
@@ -65,4 +65,4 @@ Test your solution to verify its correctness, functionality, and usage. Ensure t
 - Have workflows where the user hits a dead end and can't navigate further in the solution.
 - Solution redirects users away from SharePoint and doesn't provide necessary disclaimers about navigation outside solution through links and buttons.
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](./publish-to-marketplace-checklist).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist).
