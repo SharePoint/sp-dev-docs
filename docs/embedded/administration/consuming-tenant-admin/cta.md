@@ -79,7 +79,7 @@ SharePoint Embedded has three billing meters as shown. Refer to the [product pag
 1. Select **Go to Syntex settings**.
 1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
 
-  ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+  ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../images/DTCBilling2.png)
 
 1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
 

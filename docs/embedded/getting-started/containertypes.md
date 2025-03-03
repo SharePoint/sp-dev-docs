@@ -110,7 +110,7 @@ To create and interact with containers, you must [register](../getting-started/r
 
 ## Deleting Container Types
 
-Developer admins can delete both trial and standard container types. To delete a container type, you must first remove all containers of that container type, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../admin-exp/consuming-tenant-admin/cta.md).
+Developer admins can delete both trial and standard container types. To delete a container type, you must first remove all containers of that container type, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
 Once all the containers are deleted, Developer admins can delete the container type using `Remove-SPOContainerType`.
 
 ```powershell
