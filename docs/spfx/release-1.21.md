@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release focuses primarily on the new features within the [Microsoft Viva Connections](./viva/overview-viva-connections.md) side with two key new capabilities: new data visualization options for Card Views and HTML Quick View option for Viva Connections Quick Views.
 
-[!INCLUDE spfx-release-beta]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 beta.0 **Released:** Feburary 25, 2025
 
