@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Using Metadata with SharePoint Embedded Containers
 
-In SharePoint Embedded, columns can be added to [Containers](../concepts/app-concepts/containertypes.md) to address scenarios requiring custom metadata via Microsoft Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata is schematized and can be queried. Note the APIs to create and manage columns are on the container instances level – an application is responsible for defining and managing the columns across its containers. 
+In SharePoint Embedded, columns can be added to [Containers](../../getting-started/containertypes.md) to address scenarios requiring custom metadata via Microsoft Graph APIs. Content in the container can then set desired values for corresponding metadata. Metadata is schematized and can be queried. Note the APIs to create and manage columns are on the container instances level – an application is responsible for defining and managing the columns across its containers. 
 
 ## Authorization and Authentication
 
