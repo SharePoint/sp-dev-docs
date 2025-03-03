@@ -1,7 +1,7 @@
 ---
 title: Consuming Tenant Admin
 description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
-ms.date: 05/21/2024
+ms.date: 03/03/2025
 ms.localizationpriority: high
 ---
 
@@ -23,7 +23,7 @@ For information on [SharePoint Embedded Admin](../adminrole.md)
 
 ## Administration Tools
 
-Consuming tenant admins can manage SharePoint Embedded applications with
+Consuming tenant admins can manage SharePoint Embedded applications with the following options:
 
 ### SharePoint Online Management Shell
 
@@ -35,7 +35,7 @@ On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
 1. Edit the sensitivity label on a container
 1. Set sharing capability configuration on a container
 
-For information on consuming tenant admin in [PowerShell](./ctapowershell.md)
+For information on consuming tenant admin in [PowerShell](../consuming-tenant-admin/ctapowershell.md)
 
 ### SharePoint Administrator Center
 
@@ -50,11 +50,11 @@ For information on consuming tenant admin in SharePoint Admin see [container man
 
 ## Security and Compliance Administration
 
-SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in the Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../security-and-compliance.md).
+SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in the Microsoft 365 platform so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Security and Compliance](../../compliance/security-and-compliance.md).
 
 ## Set Up Billing for Pass-through App
 
-To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin needs to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/). No user can access any Pass-through SharePoint Embedded apps before a valid billing is set up for SharePoint Embedded platform.
+To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin needs to set up Microsoft Syntex billing in [Microsoft 365 admin center](https://admin.microsoft.com/). No user can access any Pass-through SharePoint Embedded apps before a valid billing is set up for the SharePoint Embedded platform.
 
 ### [Meters](../billing/meters.md)
 
@@ -74,11 +74,13 @@ SharePoint Embedded has three billing meters as shown. Refer to the [product pag
 1. A valid Azure resource group is required. You can create one by following the steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
-  ![Microsoft 365 admin center Files and Content](../../../images/DTCBilling1.png)
+  ![Microsoft 365 admin center Files and Content](../../images/DTCBilling1.png)
 
 1. Select **Go to Syntex settings**.
 1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
-![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+
+  ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../../images/DTCBilling2.png)
+
 1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
 
 ### [Billing Management](../billing/billingmanagement.md)
