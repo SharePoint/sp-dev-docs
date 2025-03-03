@@ -263,6 +263,8 @@
       href: spfx/publish-to-marketplace-overview.md
     - name: App validation checklist
       href: spfx/publish-to-marketplace-checklist.md
+    - name: Common Marketplace validation errors to avoid
+      href: spfx/publish-to-marketplace-common-validation-errors.md
     - name: After publishing your app
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
