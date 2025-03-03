@@ -1,7 +1,7 @@
 ---
 title: Register File Storage container Type Application Permissions
 description: Register the container type.
-ms.date: 01/28/2025
+ms.date: 03/03/2025
 ms.localizationpriority: high
 ---
 
@@ -16,7 +16,7 @@ There are no restrictions on how many times the registration API can be invoked.
 > [!NOTE]
 > Only the owning application of the container type can invoke the registration API in the consuming tenant.
 >
-> The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](./auth.md).
+> The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](../development/auth.md).
 
 ## Container type Permissions
 
@@ -41,7 +41,7 @@ The registration API determines what permissions a SharePoint Embedded applicati
 
 ## HTTP request
 
-``` http
+```http
 PUT {RootSiteUrl}/_api/v2.1/storageContainerTypes/{containerTypeId}/applicationPermissions
 ```
 
