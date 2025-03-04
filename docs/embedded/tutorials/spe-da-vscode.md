@@ -1,11 +1,11 @@
 ---
-title: Tutorial for getting started with SharePoint Embedded Declarative Agent Lite
-description: Tutorial for getting started with SharePoint Embedded Declarative Agent Lite with the SDK and the VS Code SharePoint Embedded Extension
+title: Sharepoint Embedded copilot Tutorial
+description: Sharepoint Embedded copilot Tutorial with the SDK and the VS Code SharePoint Embedded Extension
 ms.date: 02/27/2025
 ms.localizationpriority: high
 ---
 
-# Tutorial for getting started with SharePoint Embedded Declarative Agent Lite
+# Tutorial for getting started with SharePoint Embedded copilot
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@ ms.localizationpriority: high
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell)
 >
 > - Set the **ChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](/embedded/concepts/spe-da.md#csp-policies)
-> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that Declarative Agent can find the files in your created container refer to the [Discoverability Disabled section above for more information](/embedded/concepts/spe-da.md#discoverabilitydisabled)
-> - Ensure that Declarative Agent for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Declarative Agent:
+> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that copilot can find the files in your created container refer to the [Discoverability Disabled section above for more information](/embedded/concepts/spe-da.md#discoverabilitydisabled)
+> - Ensure that copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
 
@@ -330,7 +330,7 @@ function App() {
 
     ![VS Code file explorer with App.tsx open with line of showSidebar variable useState function input changed from false to true to enable showing chat side bar](../images/speco-setshowsidebartrue.png)
 
-7. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE DA Lite functionality enabled.
+7. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE copilot functionality enabled.
 
     > [!NOTE]
     > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction`
@@ -349,7 +349,7 @@ function App() {
 
     ![SPE Typescript App running in edge with a created container from above ContosoCompanyContainer](../images/speco-createdcontainer.png)
 
-10. Click the container and upload your files. Once a container has been created and you have navigated inside it, your Declarative Agent chat experience will become enabled.
+10. Click the container and upload your files. Once a container has been created and you have navigated inside it, your copilot chat experience will become enabled.
 
     ![SPE Typescript App running in edge inside a created container page of ContosoCompanyContainer](../images/speco-spechatenabled.png)
 

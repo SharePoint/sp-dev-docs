@@ -594,8 +594,12 @@
       href: embedded/concepts/fluid.md
     - name: Security and Compliance
       href: embedded/concepts/security-and-compliance.md
-    - name: Sharepoint Embedded Declarative Agents Lite
-      href: embedded/concepts/spe-da.md
+    - name: Sharepoint Embedded copilot ( Private Preview )
+      items:
+      - name: Sharepoint Embedded copilot ( Private Preview )
+        href: embedded/concepts/declarative-agent/spe-da-adv.md
+      - name: Sharepoint Embedded copilot Advanced Topics
+        href: embedded/concepts/declarative-agent/spe-da.md
   - name: Tutorials
     items:
     - name: Launch Experience
@@ -610,6 +614,8 @@
       href: embedded/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
       href: embedded/tutorials/migrate-abs-to-spe.md
+    - name: Sharepoint Embedded copilot Tutorial
+      href: embedded/tutorials/spe-da-vscode.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration
