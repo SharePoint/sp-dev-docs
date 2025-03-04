@@ -596,10 +596,10 @@
       href: embedded/concepts/security-and-compliance.md
     - name: Sharepoint Embedded copilot ( Private Preview )
       items:
-      - name: Sharepoint Embedded copilot ( Private Preview )
-        href: embedded/concepts/declarative-agent/spe-da-adv.md
-      - name: Sharepoint Embedded copilot Advanced Topics
+      - name: Sharepoint Embedded copilot Overview
         href: embedded/concepts/declarative-agent/spe-da.md
+      - name: Sharepoint Embedded copilot Advanced Topics
+        href: embedded/concepts/declarative-agent/spe-da-adv.md
   - name: Tutorials
     items:
     - name: Launch Experience

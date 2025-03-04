@@ -5,13 +5,11 @@ ms.date: 3/03/2025
 ms.localizationpriority: high
 ---
 
-# Overview
+# SharePoint Embedded copilot Advanced Topics Overview
 
-Talk about RAG, and Semantic Index here
+This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We’ll explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
 
 ## Advanced Topics
-
-Talk about RAG, Grounding, semantic index
 
 ### Semantic index
 
