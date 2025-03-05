@@ -107,7 +107,7 @@ Discoverability can also be disabled using the Visual Studio Code SharePoint Emb
 
 ##### CSP Policies
 
- The Content-Security-Policy (CSP) for embedded chat hosts, ensures that only specified hosts can load the `chatembedded.aspx` page. This helps in securing the application by restricting which domains can embed the chat component.
+ The Content-Security-Policy (CSP) for embedded chat hosts, ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
 
  It is intended to allow consuming tenant SPE admins to set an allowlist of hosts that they will allow to embed the SPE copilot in an iFrame. Specifically, the value they set here will be used in a Content-Security-Policy header as a frame-ancestors value.
 
