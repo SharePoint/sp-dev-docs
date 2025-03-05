@@ -57,7 +57,7 @@ Currently, we offer a way to incorporate this feature into your custom applicati
 
 #### SPE TypeScript React Application
 
-Follow the [quick start guide](../../tutorials/spe-da-vscode.md) to get started with a prebuilt sample application.
+Follow the [quick start guide](../tutorials/spe-da-vscode.md) to get started with a prebuilt sample application.
 
 ### API Documentation
 
