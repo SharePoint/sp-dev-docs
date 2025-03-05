@@ -61,7 +61,7 @@ Follow the [quick start guide](../tutorials/spe-da-vscode.md) to get started wit
 
 ### API Documentation
 
-The SharePoint Embedded React TypeScript NPM Package, available at [here](https://github.com/microsoft/SharePoint-Embedded-Samples/spe-react-npm-package/api-extractor), provides the SDK for integrating SharePoint Embedded copilots into your client applications.
+The SharePoint Embedded React TypeScript NPM Package, available at [here](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/feature/copilot-react-sdk/sharepointembedded-chatembedded-react/docs), provides the SDK for integrating SharePoint Embedded copilots into your client applications.
 
 ## Frequently Asked Questions
 
