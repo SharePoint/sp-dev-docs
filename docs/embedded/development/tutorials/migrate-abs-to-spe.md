@@ -45,7 +45,7 @@ This tutorial will guide you through migrating content from Azure Blob Storage (
 1. Create a new App Registration in [Microsoft Entra ID portal](https://entra.microsoft.com).
 1. In the App Registration, add a new Mobile & Console application platform in [Microsoft Entra ID App Registration Authenticate portal](https://entra.microsoft.com)
 
-    ![Screenshot of Microsoft Entra ID application configuration](../images/app-registration-console-platform.png)
+    ![Screenshot of Microsoft Entra ID application configuration](../../images/app-registration-console-platform.png)
 
 1. A ContainerType
 1. A Container

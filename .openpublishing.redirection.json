@@ -144,6 +144,131 @@
       "source_path": "docs/embedded/terms-of-service.md",
       "redirect_url": "/sharepoint/dev/embedded/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/adminrole.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/adminrole",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/billing/billing.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/billing/billing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/billing/billingmanagement.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/billing/billingmanagement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/billing/meters.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/billing/meters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/consuming-tenant-admin/cta.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/consuming-tenant-admin/cta",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md",
+      "redirect_url": "/sharepoint/dev/embedded/administration/consuming-tenant-admin/ctaUX",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md ",
+      "redirect_url": "sharepoint/dev/embedded/administration/consuming-tenant-admin/ctapowershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/admin-exp/developer-admin/dev-admin.md",
+      "redirect_url": "sharepoint/dev/embedded/administration/developer-admin/dev-admin",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/security-and-compliance.md",
+      "redirect_url": "sharepoint/dev/embedded/compliance/security-and-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/app-architecture.md",
+      "redirect_url": "sharepoint/dev/embedded/development/app-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/auth.md",
+      "redirect_url": "sharepoint/dev/embedded/development/auth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/content-experiences/office-experience.md",
+      "redirect_url": "sharepoint/dev/embedded/development/content-experiences/office-experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/content-experiences/search-content.md",
+      "redirect_url": "sharepoint/dev/embedded/development/content-experiences/search-content",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/content-experiences/user-experiences-overview.md",
+      "redirect_url": "sharepoint/dev/embedded/development/content-experiences/user-experiences-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/fluid.md",
+      "redirect_url": "sharepoint/dev/embedded/development/fluid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/limits-calling.md",
+      "redirect_url": "sharepoint/dev/embedded/development/limits-calling",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/sharing-and-perm.md",
+      "redirect_url": "sharepoint/dev/embedded/development/sharing-and-perm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/doc-processing-acs.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/doc-processing-acs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/launch-experience.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/launch-experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/metadata.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/metadata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/migrate-abs-to-spe.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/migrate-abs-to-spe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/using-file-preview.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/using-file-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/tutorials/using-webhooks.md",
+      "redirect_url": "sharepoint/dev/embedded/development/tutorials/using-webhooks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/containertypes.md",
+      "redirect_url": "sharepoint/dev/embedded/getting-started/containertypes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/concepts/app-concepts/register-api-documentation.md",
+      "redirect_url": "sharepoint/dev/embedded/getting-started/register-api-documentation",
+      "redirect_document_id": false
     }
   ]
 }
