@@ -16,7 +16,7 @@ The following are some of the container-specific command actions currently suppo
 ### Application administration
 
 - Get the details of all SharePoint Embedded applications registered in the tenant
-- Get the details of all SharePoint Embedded applications the tenant sorted basis storage
+- Get the details of all SharePoint Embedded applications in the tenant sorted by storage
 - Get the details of a specific SharePoint Embedded application in the tenant
 - Get the permissions of the owning applications in the tenant
 - Configure the External sharing setting of a container of a SharePoint Embedded application in the tenant
