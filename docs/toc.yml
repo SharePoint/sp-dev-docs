@@ -621,9 +621,9 @@
   - name: Sharepoint Embedded copilot ( Private Preview )
     items:
     - name: Sharepoint Embedded copilot ( Private Preview )
-      href: embedded/development/declarative-agent/spe-da-adv.md
-    - name: Sharepoint Embedded copilot Advanced Topics
       href: embedded/development/declarative-agent/spe-da.md
+    - name: Sharepoint Embedded copilot Advanced Topics
+      href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
   - name: Overview
