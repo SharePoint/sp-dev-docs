@@ -1,7 +1,7 @@
 ---
 title: Extend Outlook and Office with the SharePoint Framework
 description: Learn how you can use the SharePoint Framework to create apps for Microsoft 365, including Microsoft Teams, Outlook, and Office clients
-ms.date: 11/21/2023
+ms.date: 03/06/2025
 ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
@@ -12,11 +12,11 @@ With this improvement in SPFx v1.16 forward, developers can now use the SPFx to 
 
 ## Create Microsoft Teams apps for Outlook and Office
 
-To create a new Microsoft Teams app with SPFx for Outlook and Office, you start by first creating a new SPFx project using the Yeoman generator for SharePoint v1.16 or later the same way you'd create a new web part. For more information, see [Build your first SharePoint client-side web part](../web-parts/get-started/build-a-hello-world-web-part.md).
+To create a new Microsoft Teams app with SPFx for Outlook and Office, you start by first creating a new SPFx project using the Yeoman generator for SharePoint v1.16 or later, the same way you'd create a new web part. For more information, see [Build your first SharePoint client-side web part](../web-parts/get-started/build-a-hello-world-web-part.md).
 
 The Yeoman SharePoint Generator will prompt you with a series of questions. Follow the same guidance for creating a new SPFx web part when responding to these questions.
 
-Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to the `supportedHosts` property in the **webpart.manifest.json** file under your **src** folder. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
+Once the project has been created, update the web part's `supportedHosts` property to indicate where it can be used. For example, add `TeamsTab` and/or `TeamsPersonalApp` to the `supportedHosts` property in the web part's **\*.manifest.json** file in the **./src/webparts/[webpart-name]/** folder. For more information, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
 
 ## Determine the current runtime host for your app
 
