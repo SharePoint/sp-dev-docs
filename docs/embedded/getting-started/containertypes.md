@@ -52,8 +52,9 @@ Standard container types are created using the [New-SPOContainerType](/powershel
 
 You need the following to create a standard container type:
 
+- Use SharePoint PowerShell. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. If you're a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 - An Azure subscription and a resource group must be present in the Azure portal for regular billing. 
-- An App registration must be created in Microsoft Entra ID
+- An App registration must be created in Microsoft Entra ID.
 
 To create a standard container type with a regular billing profile, use the following cmdlets:
 
