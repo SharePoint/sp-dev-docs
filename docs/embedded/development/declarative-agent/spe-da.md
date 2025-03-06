@@ -1,6 +1,6 @@
 ---
 title: SharePoint Embedded copilots 
-description: Details copilots Integration with SharePoint Embedded Applications
+description: Details copilots integration with SharePoint Embedded applications
 ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
@@ -11,13 +11,13 @@ ms.localizationpriority: high
 >
 > SharePoint Embedded copilots is currently in private preview, the API surface and SDK are expected to change frequently.
 
-SharePoint Embedded copilots is a powerful tool designed to enhance the functionality of SharePoint Embedded applications by integrating advanced Microsoft 365 features (Purview, Protection, etc.)
+SharePoint Embedded copilots is a powerful tool designed to enhance the functionality of SharePoint Embedded (SPE) applications by integrating advanced Microsoft 365 features (Purview, Protection, etc.)
 
 ![Diagram illustrating SPE copilot is AI ready](../../images/speco-apparch.png)
 
 ## Billing/Licensing
 
-Currently, to use SPE copilot , the consuming tenant user of the application is required to have an [Microsfot 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing). In the future, the license-based model will be replaced with a consumption-based model. The usage of SPE copilots will be charged on a pay-as-you-go basis to your SharePoint Embedded application (that is, to the owning tenant). Stay tuned for billing model announcements during the preview period.
+Currently, to use SPE copilot, the consuming tenant user of the application is required to have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing). In the future, the license-based model will be replaced with a consumption-based model. The usage of SPE copilots will be charged on a pay-as-you-go basis to your SharePoint Embedded application (that is, to the owning tenant). Stay tuned for billing model announcements during the preview period.
 
 ## Why use SharePoint Embedded copilots
 
@@ -29,7 +29,7 @@ SharePoint Embedded copilots harness a semantic index to power Retrieval-Augment
 
 Application scoping in SharePoint Embedded copilots (SPE copilot) involves defining the boundaries and context within which the tool operates, ensuring its features and capabilities are tailored to meet the specific needs of different applications. This process helps customize the copilot's functionality, making it more effective and relevant for various use cases.
 
-When SPE copilot users query the LLM, it will only have access to files that the `User+Application` have access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
+When SPE copilot users query the LLM, it will only have access to files that the **User+Application** have access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
 
 ![Venn Diagram with SPE application access on left, SPE copilot in middle and consuming tenant user on right, overlapped area is what copilot can access](../../images/speco-appscopingvenn.png)
 
@@ -39,11 +39,11 @@ Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#sema
 
 ![How RAG works in SPE](../../images/speco-ragm365.png)
 
-With SharPoint Embedded copilots , you can further ground the LLMs reponses on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
+With SharePoint Embedded copilots, you can further ground the large language models (LLM) reponses on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
 
 ### Microsoft 365 Boundary
 
-Data is kept secure: data never leaves the tenant boundary and storage respects data residency settings​.
+Data is kept secure: data never leaves the tenant boundary and storage respects data residency settings.
 
 Each container instance of a container type in the SPE partition is its own security and compliance boundary.
 
@@ -67,13 +67,13 @@ The SharePoint Embedded React TypeScript NPM Package, available at [here](https:
 
 ### Is consumption-based billing available for SPE copilot?
 
-Currently you need a M365 Copilot license enabled for your user to use SharePoint Embedded copilots . When consumption-based billing is enabled you will no longer require a license however, you will be required to use a Standard Container type.
+Currently you need a Microsoft 365 Copilot license enabled for your user to use SharePoint Embedded copilots. When consumption-based billing is enabled, you will no longer require a license, however, you will be required to use a Standard Container type.
 
 ***Trial Container Types expire after 30 days, for this reason we recommend starting off with Standard Container types. Currently there is no upgrade path from Trial to Standard container types.***
 
 ### Should I use a standard or trial container type?
 
-Once consumption-based billing is enabled, we will be disabling using this feature with Trial Container types and it will only be enabled on Standard container types going forward. Please follow this [guide](../../getting-started/containertypes.md) to get started on creating your Standard Container type.
+Once consumption-based billing is enabled, we will be disabling the use of this feature with Trial Container types and it will only be enabled on Standard container types going forward. Please follow this [guide](../../getting-started/containertypes.md) to get started on creating your Standard Container type.
 
 ## SharePoint Embedded copilot  Support
 
@@ -95,7 +95,7 @@ When you click the thumbs down button, a feedback dialog will appear. Please inc
 
 This [flag](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) prevents copilot from discovering [drive items](/graph/api/resources/driveitem) in the specified container type. If you have an existing container type and are setting this value to false, please wait 24 hours to ensure the container type configuration is fully propagated before creating a new container, uploading files there, and trying out copilot on folders/files of that new container.
 
-Here is an example of setting the flag to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
+The following is an example of how to set the flag to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
@@ -107,9 +107,9 @@ Discoverability can also be disabled using the Visual Studio Code SharePoint Emb
 
 ##### CSP Policies
 
- The Content-Security-Policy (CSP) for embedded chat hosts, ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
+The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
 
- It is intended to allow consuming tenant SPE admins to set an allowlist of hosts that they will allow to embed the SPE copilot in an iFrame. Specifically, the value they set here will be used in a Content-Security-Policy header as a frame-ancestors value.
+It is intended to allow consuming tenant SPE admins to set an allowlist of hosts that they will allow to embed the SPE copilot in an iFrame. Specifically, the value they set here will be used in a Content-Security-Policy header as a frame-ancestors value.
 
 > [!NOTE]
 >
