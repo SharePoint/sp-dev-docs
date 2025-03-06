@@ -1,6 +1,6 @@
 ---
 title: SharePoint Embedded copilots Advanced Topics
-description: Details copilots Advanced Topics
+description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilots.
 ms.date: 3/03/2025
 ms.localizationpriority: high
 ---
@@ -15,17 +15,17 @@ This advanced guide covers how the semantic index powers Retrieval-Augmented Gen
 
 [Learn more about semantic index for Microsoft 365 Copilot here](/microsoftsearch/semantic-index-for-copilot)
 
-The semantic index allows for quick and accurate searches based on the similarity of data. This means it can find the most relevant information not just by exact matches, but also by understanding the context and meaning.
+The semantic index allows for quick and accurate searches based on data similarity. This means it can find the most relevant information not just by exact matches, but also by understanding the context and meaning.
 
 ### RAG ( Retrieval-Augmented Generation )
 
-RAG relies on having relevant source materials stored in a repository which can be queried at runtime​, data is retrieved from the index and is used to augment the prompt sent to the LLM​:
+RAG relies on having relevant source materials stored in a repository, which can be queried at runtime​, data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM)​:
 
-- Lets you treat data sources as knowledge without having to train your model​
+- Treat data sources as knowledge without having to train your model​
 - Uses search (retrieval) results as additional context in your prompt​
 - Generates the output using the prompt and the supplied context
 
-The data is used by the LLM to inform and construct the response​
+The LLM uses the data to inform and construct the response.
 
 ​![The flow of a RAG query](../../images/speco-ragquery.png)
 
@@ -35,7 +35,7 @@ Grounding in the context of SPE copilot refers to the process of providing input
 
 ### Scoping your copilot to specific content
 
-SPE copilot has the ability to restrict the datasources it has access to, below are provided types and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) show's how to configure the SDK
+SharePoint Embedded (SPE) copilot has the ability to restrict the data sources it has access to, below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK
 
 ```typescript
 export type IDataSourcesProps =
