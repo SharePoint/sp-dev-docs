@@ -588,8 +588,6 @@
       href: embedded/development/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
       href: embedded/development/tutorials/migrate-abs-to-spe.md
-    - name: Sharepoint Embedded copilot Tutorial
-      href: embedded/development/tutorials/spe-da-vscode.md
   - name: Administration
     items:
     - name: Billing
@@ -620,8 +618,10 @@
         href: /training/modules/sharepoint-embedded-create-app
   - name: Sharepoint Embedded copilot ( Private Preview )
     items:
-    - name: Sharepoint Embedded copilot ( Private Preview )
+    - name: Sharepoint Embedded copilot Overview
       href: embedded/development/declarative-agent/spe-da.md
+    - name: Sharepoint Embedded copilot Tutorial
+      href: embedded/development/tutorials/spe-da-vscode.md
     - name: Sharepoint Embedded copilot Advanced Topics
       href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
