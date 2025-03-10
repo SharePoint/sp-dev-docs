@@ -20,6 +20,8 @@ ms.localizationpriority: high
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
 
+If you already have created a SharePoint Embedded application continue reading, otherwise please continue to [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
+
 ## Getting started using the SharePoint Embedded SDK
 
 ### 1. Install the SDK into your React repo

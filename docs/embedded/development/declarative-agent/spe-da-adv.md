@@ -1,6 +1,6 @@
 ---
-title: SharePoint Embedded copilots Advanced Topics
-description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilots.
+title: SharePoint Embedded copilot Advanced Topics
+description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilot.
 ms.date: 3/03/2025
 ms.localizationpriority: high
 ---
@@ -9,7 +9,88 @@ ms.localizationpriority: high
 
 This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We’ll explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
 
+## Caveats
+
+### Configuration
+
+#### Required ContainerType Configuration
+
+##### DiscoverabilityDisabled
+
+This [flag](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) prevents copilot from discovering [drive items](/graph/api/resources/driveitem) in the specified container type. If you have an existing container type and are setting this value to false, please wait 24 hours to ensure the container type configuration is fully propagated before creating a new container, uploading files there, and trying out copilot on folders/files of that new container.
+
+The following is an example of how to set the flag to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
+```
+
+Discoverability can also be disabled using the Visual Studio Code SharePoint Embedded extension
+
+![Using the VS Code extension for SPE to set DiscoverabilityDisabled to false](../../images/speco-vscodeextensiondisablediscovery.png)
+
+##### CSP Policies
+
+The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
+
+It is intended to allow consuming tenant SPE admins to set an allowlist of hosts that they will allow to embed the SPE copilot in an iFrame. Specifically, the value they set here will be used in a Content-Security-Policy header as a frame-ancestors value.
+
+> [!NOTE]
+>
+> If this configuration is not set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) will default be set to
+> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): ‘none’ which means no one can embed the copilot.
+
+Below are example commands to use the [Connect to SharePoint Online using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
+
+- [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
+- [Get-SPOApplication](/powershell/module/SharePoint-online/get-spoapplication) to get the `CopilotEmbeddedChatHosts` property.
+
+```powershell
+# Note this MUST be run in Windows PowerShell. It will not work in PowerShell.
+Import-Module -Name "Microsoft.Online.SharePoint.PowerShell"
+Connect-SPOService "https://<domain>-admin.sharepoint.com"
+# Login with your admin account.
+...
+
+Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
+
+# This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly. 
+...
+
+Get-SPOApplication -OwningApplicationId <OwningApplicationId> | Select-Object CopilotEmbeddedChatHosts
+
+OwningApplicationId             : <OwningApplicationId>
+OwningApplicationName           : SharePoint Embedded App
+Applications                    : {<OwningApplicationId>}
+SharingCapability               : ExternalUserAndGuestSharing
+OverrideTenantSharingCapability : False
+CopilotEmbeddedChatHosts        : {http://localhost:*}
+
+```
+
+#### Optional Configuration
+
+##### Authentication and 3P Cookies
+
+The iFrame used by SharePoint Embedded copilot attempts to authenticate using third-party cookies. If third-party cookies are disabled in the user's browser, the iFrame will not be able to authenticate automatically. In such cases, a popup will be displayed prompting the end user to log in manually. This ensures that the authentication process can still be completed even when third-party cookies are not available.
+
 ## Advanced Topics
+
+### Application Scoping
+
+Application scoping in SharePoint Embedded copilot (SPE copilot) involves defining the boundaries and context within which the tool operates, ensuring its features and capabilities are tailored to meet the specific needs of different applications. This process helps customize the copilot's functionality, making it more effective and relevant for various use cases.
+
+When SPE copilot users query the LLM, it will only have access to files that the **User+Application** have access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
+
+![Venn Diagram with SPE application access on left, SPE copilot in middle and consuming tenant user on right, overlapped area is what copilot can access](../../images/speco-appscopingvenn.png)
+
+### Information Architecture
+
+Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#semantic-index). This semantic index underpins retrieval augmented generation [(RAG)](spe-da-adv.md#rag--retrieval-augmented-generation-) workflows by providing relevant context from your stored content at query time. In essence, it [grounds](spe-da-adv.md#grounding) the AI responses, ensuring they directly reference accurate information in your containers rather than relying on general knowledge alone.
+
+![How RAG works in SPE](../../images/speco-ragm365.png)
+
+With SharePoint Embedded copilot, you can further ground the large language models (LLM) reponses on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
 
 ### Semantic index
 
