@@ -56,7 +56,8 @@ This tutorial assumes the system-assigned managed identity is used.
 
 Navigate to your function app in the [Azure portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.Web%2Fsites/kind/functionapp) > select **Identity** and note the **Object (principal) ID** of the system-assigned managed identity.  
 
-In this tutorial, it is **d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8**.  
+> [!NOTE]
+> In this tutorial, it is **d3e8dc41-94f2-4b0f-82ff-ed03c363f0f8**.  
 
 Then, use one of the scripts below to grant this identity the app-only permission **Sites.Selected** on the SharePoint API:
 
