@@ -14,8 +14,8 @@ ms.localizationpriority: high
 > 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production; or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
-> - Set the **ChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da.md#csp-policies)
-> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that copilot can find the files in your created container refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da.md#discoverabilitydisabled)
+> - Set the **ChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies)
+> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that copilot can find the files in your created container refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled)
 > - Ensure that copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
@@ -294,7 +294,7 @@ function App() {
 ### Quick Start
 
 > [!NOTE]
-> When using standard container types with the VS Code extension, [DisableDiscoverability](../declarative-agent/spe-da.md#discoverabilitydisabled) and [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) features are currently not supported. This will need to be done using the [SPO Admin Powershell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+> When using standard container types with the VS Code extension, [DisableDiscoverability](../declarative-agent/spe-da-adv.md#discoverabilitydisabled) and [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) features are currently not supported. This will need to be done using the [SPO Admin Powershell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 1. Follow this guide up to the [Load Sample App section](../../getting-started/spembedded-for-vscode.md#load-sample-app) with the Visual Studio Code Extension
 1. Within the extension, right click on the owning application, and select `Run sample apps -> Typescript + React + Azure Functions`
