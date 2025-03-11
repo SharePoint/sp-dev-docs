@@ -616,13 +616,13 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
-  - name: Sharepoint Embedded copilot ( Private Preview )
+  - name: SharePoint Embedded copilot ( Private Preview )
     items:
-    - name: Sharepoint Embedded copilot Overview
+    - name: SharePoint Embedded copilot Overview
       href: embedded/development/declarative-agent/spe-da.md
-    - name: Sharepoint Embedded copilot Tutorial
+    - name: SharePoint Embedded copilot Tutorial
       href: embedded/development/tutorials/spe-da-vscode.md
-    - name: Sharepoint Embedded copilot Advanced Topics
+    - name: SharePoint Embedded copilot Advanced Topics
       href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
