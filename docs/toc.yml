@@ -114,6 +114,8 @@
       href: apis/webhooks/webhooks-reference-implementation.md
     - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: Use Azure Functions through azd
+      href: apis/webhooks/sharepoint-webhooks-using-azd-template.md
     - name: List webhooks
       href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
