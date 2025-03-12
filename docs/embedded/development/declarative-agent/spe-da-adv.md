@@ -65,7 +65,6 @@ Applications                    : {<OwningApplicationId>}
 SharingCapability               : ExternalUserAndGuestSharing
 OverrideTenantSharingCapability : False
 CopilotEmbeddedChatHosts        : {http://localhost:*}
-
 ```
 
 #### Optional Configuration
@@ -98,7 +97,7 @@ With SharePoint Embedded copilot, you can further ground the large language mode
 
 The semantic index allows for quick and accurate searches based on data similarity. This means it can find the most relevant information not just by exact matches, but also by understanding the context and meaning.
 
-### RAG ( Retrieval-Augmented Generation )
+### Retrieval-Augmented Generation (RAG)
 
 RAG relies on having relevant source materials stored in a repository, which can be queried at runtime​, data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM)​:
 
