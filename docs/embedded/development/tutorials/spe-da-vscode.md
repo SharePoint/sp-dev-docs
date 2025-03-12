@@ -11,6 +11,7 @@ ms.localizationpriority: high
 
 > [!NOTE]
 >
+> 1. You will need to create create a SharePoint Embedded application. If you don't have one, you can easily build a sample application using the instructions [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
 > 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production; or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
@@ -19,8 +20,6 @@ ms.localizationpriority: high
 > - Ensure that copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
-
-If you already have created a SharePoint Embedded application continue reading, otherwise please continue to [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
 
 ## Getting started using the SharePoint Embedded SDK
 
