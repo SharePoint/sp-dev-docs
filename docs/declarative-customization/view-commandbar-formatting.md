@@ -86,6 +86,18 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'manageForms'
 ```
 
+## 🚀 Recent updates to `commandBarCustomization` Keys
+
+> Some keys in the commandBarCustomization schema have been updated. To ensure your custom formatter works correctly, update your existing JSON with these new keys.  
+
+```javascript
+'new' (Dropdown) → 'newComposite'
+'upload' -> 'uploadCommand'
+'sync' → 'syncCommand'
+'addShortcut' → 'addShortcutToOneDriveCommand'
+'pinToQuickAccess' → 'PinToQuickAccessCommand'
+```
+
 ## hide
 An optional property that specifies the condition to hide a particular command. The value of this property can either be a boolean, string or an Expression object. `false` is the default behavior (meaning the command is visible). `true` means that the command will be hidden.
 
