@@ -39,7 +39,7 @@ New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-Own
 
 The following restrictions are applied to trial container types:
 
-- Up to five active containers of the container type can be created.
+- Up to five containers of the container type can be created. This includes active containers and those in the recycle bin.
 - Each container has up to 1 GB of storage space.
 - The container type expires after 30 days and access to any existing containers of that container type will be removed.
 - The developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
