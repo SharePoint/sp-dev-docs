@@ -96,11 +96,11 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > 
 > | Original Key | Current Key |
 > |--------------|-------------|
-> | 'new'        | 'newComposite' |
-> | 'upload'     | 'uploadCommand' |
-> | 'sync'       | 'syncCommand' |
-> | 'addShortcut'| 'addShortcutToOneDriveCommand' |
-> | 'pinToQuickAccess' | 'PinToQuickAccessCommand' |
+> | `new`        | `newComposite` |
+> | `upload`     | `uploadCommand` |
+> | `sync`       | `syncCommand` |
+> | `addShortcut`| `addShortcutToOneDriveCommand` |
+> | `pinToQuickAccess` | `PinToQuickAccessCommand` |
 
 ## hide
 
