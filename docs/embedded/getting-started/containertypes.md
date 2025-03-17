@@ -24,10 +24,10 @@ Container type is represented on each container instance as an immutable propert
 > 1. Standard and pass through container types can't be converted once created. If you want to convert a standard container type to pass through billing or vice versa, you must delete and re-create the container type.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
-# Creating Container Types
+## Creating Container Types
 SharePoint Embedded has 2 different Container Types you can create.
 
-1.  [Trial Container Type](#trial-use)
+1.  [Trial Container Type](#trial-container-type)
 2.  [Standard Container Types](#standard-container-types-non-trial)
 
 ## Trial Container Type
@@ -205,4 +205,4 @@ Remove-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
 ```
 ## SharePoint Embedded meters
 
-To learn more about the supported pay-as-you-go meters, refer to the [SharePoint Embedded meters](meters.md) article.
+To learn more about the supported pay-as-you-go meters, refer to the [SharePoint Embedded meters](../administration/billing/meters.md) article.
