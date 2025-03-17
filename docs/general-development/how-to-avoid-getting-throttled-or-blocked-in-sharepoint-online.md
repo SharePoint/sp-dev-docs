@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. 
 
-- [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
+- [What is throttling(429)?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling(429)?)
 - [How to handle throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-handle-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
 - [Scenario specific limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#scenario-specific-limits)
@@ -19,7 +19,7 @@ Find out about throttling in SharePoint Online and learn how to avoid being thro
 
 Does this sound familiar? You're running an application - for example, to scan files in SharePoint Online - but you get throttled. Or even worse, you get blocked. What's going on and what can you do to make it stop?
 
-## What is throttling (HTTP/1.1 429)?
+## What is throttling(429)?
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
 
