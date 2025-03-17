@@ -1,6 +1,6 @@
 ---
-title: SharePoint Embedded Container Types
-description: This article explains how Container Types work.
+title: Create New SharePoint Embedded Container Types
+description: This article explains how Container Types work and the steps to create new Container Types.
 ms.date: 03/03/2025
 ms.localizationpriority: high
 ---
