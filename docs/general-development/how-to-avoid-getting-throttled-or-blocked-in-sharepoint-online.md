@@ -233,6 +233,9 @@ If you have applications or components, that are causing your people search requ
 ### When accessing OneDrive sites
 When a client makes excessive attempts to access many OneDrive site collections that do not exist, we may throttle requests from that client's IP address. The client will receive an HTTP 429 response when accessing any OneDrive site collection during the throttling period.
 
+### Multi-Geo Customers and throttling
+When a customer enables throttling, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
+
 ## What should you do if you get blocked in SharePoint Online?
 
 Blocking is the most extreme form of throttling. We rarely ever block a tenant unless we detect long-term, excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is placed at the app or user level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.
