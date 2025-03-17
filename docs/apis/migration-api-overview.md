@@ -21,6 +21,9 @@ Use Migration API to migrate content from file shares, SharePoint Server, and ot
 
 ## What's new
 
+### October 2024
+We enabled file-level auditing events for migration API. Any file manipulation by migration API such as file uploading and file deleting will be recorded automatically for auditing purpose. 
+
 ### July 2024
 
 We started enforcing HTTPS connection to SharePoint provided Azure Blob Storage Containers by adding a `spr=https` field in SAS tokens. This enforcement is fully effective on July 21, 2024. Check [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for details.
