@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 07/17/2024
+ms.date: 03/03/2025
 ms.localizationpriority: high
 ---
 
@@ -37,7 +37,7 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 ## Create a container type with a trial configuration
 
-Once signed in, you are prompted to create a [container type with trial configuration](../concepts/app-concepts/containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](../concepts/app-concepts/containertypes.md).
+Once signed in, you are prompted to create a [container type with trial configuration](./containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
 
 ![home screen](../images/vsx-images/n4vsx-home-screen.png)
 
@@ -51,9 +51,9 @@ Once signed in, you are prompted to create a [container type with trial configur
 
 ## Create a Microsoft Entra ID App
 
-Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications. Learn more about SharePoint Embedded [app architecture](../concepts/app-concepts/app-architecture.md)
+Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications. Learn more about SharePoint Embedded [app architecture](../development/app-architecture.md)
 
-- Follow the prompts to name your new Entra application or select an existing application ID
+- Follow the prompts to name your new Entra application or select an existing application ID:
 
 ![Create App](../images/vsx-images/n6aname-app.png)
 
@@ -64,9 +64,9 @@ After your container type is created and your application is configured, you'll 
 
 ## Register your container type
 
-After creating your container type, you'll need to register that container type on your local tenant. Learn more about container type [registration](../concepts/app-concepts/register-api-documentation.md).
+After creating your container type, you'll need to register that container type on your local tenant. Learn more about container type [registration](./register-api-documentation.md).
 
-- Follow the prompts and select **'Register on local tenant'** on the lower right corner of the VS Code window
+- Follow the prompts and select **Register on local tenant** on the lower right corner of the VS Code window
 - If you don't see the prompt, you can right-click on your `<container-type-name>` and select **Register** from the menu
 
 ![register](../images/vsx-images/n7aregister-ct.png)

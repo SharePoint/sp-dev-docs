@@ -114,6 +114,8 @@
       href: apis/webhooks/webhooks-reference-implementation.md
     - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: Use Azure Functions through azd
+      href: apis/webhooks/sharepoint-webhooks-using-azd-template.md
     - name: List webhooks
       href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
@@ -263,6 +265,8 @@
       href: spfx/publish-to-marketplace-overview.md
     - name: App validation checklist
       href: spfx/publish-to-marketplace-checklist.md
+    - name: Common Marketplace validation errors to avoid
+      href: spfx/publish-to-marketplace-common-validation-errors.md
     - name: After publishing your app
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
@@ -470,6 +474,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.21 - February 25, 2024
+      href: spfx/release-1.21.md        
     - name: SPFx v1.20 - September 26, 2024
       href: spfx/release-1.20.md
     - name: SPFx v1.19 - April 25, 2024
@@ -544,76 +550,82 @@
   items:
   - name: Overview
     href: embedded/overview.md
-  - name: Getting Started
-    items:
-    - name: SharePoint Embedded for Visual Studio Code
-      href: embedded/getting-started/spembedded-for-vscode.md
   - name: Scenarios and Use Cases
     href: embedded/scenarios-and-use-cases.md
-  - name: Concepts
+  - name: Getting Started
+    items:
+    - name: SharePoint Embedded Visual Studio Code Extension
+      href: embedded/getting-started/spembedded-for-vscode.md
+    - name: Container Types
+      href: embedded/getting-started/containertypes.md
+    - name: Register Container Type API
+      href: embedded/getting-started/register-api-documentation.md
+  - name: Development
     items:
     - name: Application Architecture
-      href: embedded/concepts/app-concepts/app-architecture.md
-    - name: Container Types
-      href: embedded/concepts/app-concepts/containertypes.md
-    - name: Register Container Type API
-      href: embedded/concepts/app-concepts/register-api-documentation.md
+      href: embedded/development/app-architecture.md
     - name: Authentication
-      href: embedded/concepts/app-concepts/auth.md
+      href: embedded/development/auth.md
     - name: Sharing and Permissions
-      href: embedded/concepts/app-concepts/sharing-and-perm.md
+      href: embedded/development/sharing-and-perm.md
     - name: Limits and Calling Patterns
-      href: embedded/concepts/app-concepts/limits-calling.md
-    - name: Content Experiences
-      items:
-      - name: Office Experiences
-        href: embedded/concepts/content-experiences/office-experience.md
-      - name: User Experiences
-        href: embedded/concepts/content-experiences/user-experiences-overview.md
-      - name: Search Content
-        href: embedded/concepts/content-experiences/search-content.md
-    - name: Admin Experiences
-      items:
-      - name: Billing
-        href: embedded/concepts/admin-exp/billing/billing.md
-      - name: Billing Management
-        href: embedded/concepts/admin-exp/billing/billingmanagement.md
-      - name: SharePoint Embedded Billing Meters
-        href: embedded/concepts/admin-exp/billing/meters.md
-      - name: Consuming Tenant Admin
-        href: embedded/concepts/admin-exp/consuming-tenant-admin/cta.md
-      - name: Container Management in PowerShell
-        href: embedded/concepts/admin-exp/consuming-tenant-admin/ctapowershell.md
-      - name: Consuming Tenant Admin UX
-        href: embedded/concepts/admin-exp/consuming-tenant-admin/ctaUX.md
-      - name: Developer Admin
-        href: embedded/concepts/admin-exp/developer-admin/dev-admin.md
-      - name: SharePoint Embedded Admin
-        href: embedded/concepts/admin-exp/adminrole.md
+      href: embedded/development/limits-calling.md
     - name: Fluid Framework
-      href: embedded/concepts/fluid.md
-    - name: Security and Compliance
-      href: embedded/concepts/security-and-compliance.md
-  - name: Tutorials
-    items:
+      href: embedded/development/fluid.md
+    - name: Office Experiences
+      href: embedded/development/content-experiences/office-experience.md
+    - name: User Experiences
+      href: embedded/development/content-experiences/user-experiences-overview.md
+    - name: Search Content
+      href: embedded/development/content-experiences/search-content.md
     - name: Launch Experience
-      href: embedded/tutorials/launch-experience.md
+      href: embedded/development/tutorials/launch-experience.md
     - name: Using Metadata with SharePoint Embedded Containers
-      href: embedded/tutorials/metadata.md
+      href: embedded/development/tutorials/metadata.md
     - name: Using File Preview
-      href: embedded/tutorials/using-file-preview.md
+      href: embedded/development/tutorials/using-file-preview.md
     - name: Using Document Processing with Azure Cognitive Services
-      href: embedded/tutorials/doc-processing-acs.md
+      href: embedded/development/tutorials/doc-processing-acs.md
     - name: Using Webhooks
-      href: embedded/tutorials/using-webhooks.md
+      href: embedded/development/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
-      href: embedded/tutorials/migrate-abs-to-spe.md
+      href: embedded/development/tutorials/migrate-abs-to-spe.md
+  - name: Administration
+    items:
+    - name: Billing
+      href: embedded/administration/billing/billing.md
+    - name: Billing Management
+      href: embedded/administration/billing/billingmanagement.md
+    - name: SharePoint Embedded Billing Meters
+      href: embedded/administration/billing/meters.md
+    - name: Consuming Tenant Admin
+      href: embedded/administration/consuming-tenant-admin/cta.md
+    - name: Container Management in PowerShell
+      href: embedded/administration/consuming-tenant-admin/ctapowershell.md
+    - name: Consuming Tenant Admin UX
+      href: embedded/administration/consuming-tenant-admin/ctaUX.md
+    - name: Developer Admin
+      href: embedded/administration/developer-admin/dev-admin.md
+    - name: SharePoint Embedded Admin
+      href: embedded/administration/adminrole.md
+  - name: Compliance
+    items:
+    - name: Security and Compliance
+      href: embedded/compliance/security-and-compliance.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
+  - name: SharePoint Embedded copilot ( Private Preview )
+    items:
+    - name: SharePoint Embedded copilot Overview
+      href: embedded/development/declarative-agent/spe-da.md
+    - name: SharePoint Embedded copilot Tutorial
+      href: embedded/development/tutorials/spe-da-vscode.md
+    - name: SharePoint Embedded copilot Advanced Topics
+      href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
   - name: Overview

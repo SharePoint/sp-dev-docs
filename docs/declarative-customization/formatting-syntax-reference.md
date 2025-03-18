@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 08/28/2024
+ms.date: 02/19/2025
 ms.localizationpriority: high
 ---
 
@@ -348,7 +348,7 @@ See [Formatting multi-value fields](column-formatting.md#formatting-multi-value-
         "action": "setValue",
         "actionInput": {
           "FieldInternalName_1": "FieldValue_1",
-          "FieldInternalName_2": "FieldValue_2",
+          "FieldInternalName_2": "FieldValue_2"
         }
       }
     }
