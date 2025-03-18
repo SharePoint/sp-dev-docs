@@ -1,7 +1,8 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 03/17/2025
+ms.date: 03/17/2025
+
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -10,7 +11,7 @@ ms.localizationpriority: high
 
 Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. 
 
-- [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling?)
+- [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
 - [How to handle throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-handle-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
 - [Scenario specific limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#scenario-specific-limits)
@@ -38,14 +39,14 @@ In both cases, a `Retry-After` header is included in the response indicating how
 
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
-### Ressources units
+### Resource units
 Some limits are measured in in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
-| Resource units per request | Operations                                              |
-| -------------------------- | ------------------------------------------------------- |
-| 1	                         | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item |
-| 2	                         | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
-| 5	                         | <li>All permission resource operations, including $expand=permissions |
+| Resource units per request | Operations                                                                                                |
+| -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item         |
+| 2                          | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
+| 5                          | <li>All permission resource operations, including $expand=permissions                                     |
 
 > [!NOTE]
 > We reserve the right to change the API resource unit cost.
@@ -69,22 +70,22 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 ### Tenant Throttling
 
-Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse ressources.
+Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse resources.
 When a customer enables Multi-Geo, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
 
-| **Category** | **Type of throttling**    | **Time interval** | **Tenant license count** | **Limit** |
-|--------------|---------------------------|-------------------|--------------------------|-----------|
-| Tenant       | Resources Units           | 5 min             | 0 - 1,000                | 18,750    |
-| Tenant       | Resources Units           | 5 min             | 1,001 - 5,000            | 37,500    |
-| Tenant       | Resources Units           | 5 min             | 5,001 - 15,000           | 56,250    |
-| Tenant       | Resources Units           | 5 min             | 15,001 - 50,000          | 75,000    |
-| Tenant       | Resources Units           | 5 min             | 50,000+                  | 93,750    |
-| Tenant       | Assign Sensitivity Label  | 5 min             | no license bound         | 100       |
-| Tenant       | PeopleManagerAPIs         | 5 min             | 0 - 1,000                | 3,000     |
-| Tenant       | PeopleManagerAPIs         | 5 min             | 1,001 - 5,000            | 6,000     |
-| Tenant       | PeopleManagerAPIs         | 5 min             | 5,001 - 15,000           | 9,000     |
-| Tenant       | PeopleManagerAPIs         | 5 min             | 15,001 - 50,000          | 12,000    |
-| Tenant       | PeopleManagerAPIs         | 5 min             | 50,000+                  | 15,000    |
+| **Category** | **Type of throttling**               | **Time interval** | **Tenant license count** | **Limit** |
+|--------------|--------------------------------------|-------------------|--------------------------|-----------|
+| Tenant       | [Resources Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
+| Tenant       | [Resources Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
+| Tenant       | [Resources Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
+| Tenant       | [Resources Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
+| Tenant       | [Resources Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
+| Tenant       | Assign Sensitivity Label             | 5 min             | no license bound         | 100       |
+| Tenant       | PeopleManagerAPIs                    | 5 min             | 0 - 1,000                | 3,000     |
+| Tenant       | PeopleManagerAPIs                    | 5 min             | 1,001 - 5,000            | 6,000     |
+| Tenant       | PeopleManagerAPIs                    | 5 min             | 5,001 - 15,000           | 9,000     |
+| Tenant       | PeopleManagerAPIs                    | 5 min             | 15,001 - 50,000          | 12,000    |
+| Tenant       | PeopleManagerAPIs                    | 5 min             | 50,000+                  | 15,000    |
 
 >[!NOTE] 
 >Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
@@ -104,33 +105,33 @@ For multitenant applications:
 1. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
 
 
-| **Category**       | **Type of throttling**  | **Time interval** | **Tenant license count** | **Limit**  |
-|--------------------|-------------------------|-------------------|--------------------------|------------|
-| Per APP Per Tenant | Resources Units         | 24 H              | 0 - 1,000                | 1,200,000  |
-| Per APP Per Tenant | Resources Units         | 24 H              | 1,001 - 5,000            | 2,400,000  |
-| Per APP Per Tenant | Resources Units         | 24 H              | 5,001 - 15,000           | 3,600,000  |
-| Per APP Per Tenant | Resources Units         | 24 H              | 15,001 - 50,000          | 4,800,000  |
-| Per APP Per Tenant | Resources Units         | 24 H              | 50,000+                  | 6,000,000  |
-| Per APP Per Tenant | Resources Units         | 1 min             | 0 - 1,000                | 1,250      |
-| Per APP Per Tenant | Resources Units         | 1 min             | 1,001 - 5,000            | 2,500      |
-| Per APP Per Tenant | Resources Units         | 1 min             | 5,001 - 15,000           | 3,750      |
-| Per APP Per Tenant | Resources Units         | 1 min             | 15,001 - 50,000          | 5,000      |
-| Per APP Per Tenant | Resources Units         | 1 min             | 50,000+                  | 6,250      |
-| Per APP Per Tenant | Ingress                 | 1 H               | no license bound         | 400 GB     |
-| Per APP Per Tenant | Egress                  | 1 H               | no license bound         | 400 GB     |
-| Per APP Per Tenant | Specific Sharing APIs   | 5 min             | no license bound         | 300        |
+| **Category**       | **Type of throttling**               | **Time interval** | **Tenant license count** | **Limit**  |
+|--------------------|--------------------------------------|-------------------|--------------------------|------------|
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
+| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
+| Per APP Per Tenant | Ingress                              | 1 H               | no license bound         | 400 GB     |
+| Per APP Per Tenant | Egress                               | 1 H               | no license bound         | 400 GB     |
+| Per APP Per Tenant | Specific Sharing APIs                | 5 min             | no license bound         | 300        |
 
 >[!NOTE] 
 >Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
 
 ### Other Limits
 
-| **Category**  | **Type of throttling**      | **Time interval** | **Limit** |
-|---------------|-----------------------------|--------------------|-----------|
-| RaaSContainer | Resources Units             | 1 min              | 3,000     |
-| Per Site      | Anonymous Link              | 5 min              | 3,000     |
-| Per Site      | Anonymous Egress (Download) | 2 H                | 100 GB    |
-| Per Site      | External sharing emails     | 1 H                | 200       |
+| **Category**  | **Type of throttling**               | **Time interval** | **Limit** |
+|---------------|--------------------------------------|-------------------|-----------|
+| RaaSContainer | [Resources Units](#resource-units)   | 1 min             | 3,000     |
+| Per Site      | Anonymous Link                       | 5 min             | 3,000     |
+| Per Site      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
+| Per Site      | External sharing emails              | 1 H               | 200       |
 
 >[!NOTE] 
 >Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
@@ -183,7 +184,7 @@ The `RateLimit` headers are returned on a **best-efforts** basis, so application
 Below is the list of limits that we support the `RateLimit` headers for. The policies and values are subject to change:
 
 | limit                      | Condition                 | limit value   | Description                                                                                                      |
-| -------------------------- | ------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------- |
+|----------------------------|---------------------------|---------------|------------------------------------------------------------------------------------------------------------------|
 | App 1-minute resource unit | Usage >= 80% of the limit | Resource unit | When an application consumes 80% or more of its app 1-minute limit, the limit, remaining, and reset are returned.| 
 
 Below are some examples to help you understand the `RateLimit` headers:
@@ -230,8 +231,8 @@ What are the recommendations?
 - Make sure to include the User-Agent string in your API call to SharePoint with the following naming convention
 
 |          Type          |                  User Agent                  |                                                                     Description                                                                     |
-| ---------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ISV Application        | ISV&#124;CompanyName&#124;AppName/Version    | Identify as ISV and include Company Name, App Name separated by a pipe character and then add Version number separated with a slash character    |
+|------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| ISV Application        | ISV&#124;CompanyName&#124;AppName/Version    | Identify as ISV and include Company Name, App Name separated by a pipe character and then add Version number separated with a slash character       |
 | Enterprise application | NONISV&#124;CompanyName&#124;AppName/Version | Identify as NONISV and include Company Name, App Name separated by a pipe character and then adding Version number separated with a slash character |
 
 - If you're building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User-Agent information to your HTTP request and potentially register your web application also as an Application, where suitable.
