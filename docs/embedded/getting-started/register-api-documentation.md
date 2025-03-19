@@ -9,6 +9,7 @@ ms.localizationpriority: high
 
 In order for a SharePoint Embedded application to interact with containers in a consuming tenant, the container type must first be registered in the consuming tenant. Container type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its container type. The registration API also grants access to other Guest Apps to interact with the owning application's containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its containers.
 
+
 Since the registration API controls the permissions that a SharePoint Embedded application can perform against the container in the consuming tenant, this call should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against the container and/or the content in the containers.
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it's invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API determines the settings used in the consuming tenant.
@@ -68,6 +69,16 @@ If successful, this method returns a `200 OK` response code and the container ty
 ## Examples
 
 ### Register the container type in a consuming tenant
+
+To interact with containers in a consuming tenant, the owning tenant must first be granted permissions by the consuming tenant admin.  This step is crucial as it controls permissions and prevents access denied errors when invoking other APIs.
+
+The following URL should be executed by the consuming tenant administrator.  This will grant permission to the owning tenant App Registration.
+
+```powershell
+https://login.microsoftonline.com/<ConsumingTenantID>/adminconsent?client_id=<OwningTenantClientID>
+```
+
+You will then need to create an app only [authentication token](https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps).  To register an owning app on a consuming tenant, an App Only certificate based token will need to created on the consuming tenant.
 
 Register the container type in the consuming tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
