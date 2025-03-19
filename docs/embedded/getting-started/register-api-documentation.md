@@ -70,7 +70,7 @@ If successful, this method returns a `200 OK` response code and the container ty
 
 
 ## Examples
-The container type registration API requires the Container.Selected app-only permission for SharePoint (see [Exceptional access patterns](../development/auth)). You will need to use the [client credentials](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-client-creds-grant-flow) grant flow and [request a token](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) using a certificate.
+The container type registration API requires the Container.Selected app-only permission for SharePoint (see [Exceptional access patterns](../development/auth.md)). You will need to use the [client credentials](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow) grant flow and [request a token](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) using a certificate.
 
 
 Register the container type in the consuming tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
