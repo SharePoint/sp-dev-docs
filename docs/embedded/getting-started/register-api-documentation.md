@@ -67,7 +67,15 @@ If successful, this method returns a `200 OK` response code and the container ty
 | 403 | Provided authentication credentials are valid but insufficient to perform the requested operation. Examples: the calling app isn't the owning app of the container type. |
 | 404 | Container type doesn't exist. |
 
+### Register the container type in a consuming tenant
 
+To interact with containers in a consuming tenant, the owning tenant must first be granted permissions by the consuming tenant admin.  This step is crucial as it controls permissions and prevents access denied errors when invoking other APIs.
+
+The following URL should be executed by the consuming tenant administrator.  This will grant permission to the owning tenant App Registration.
+
+```powershell
+https://login.microsoftonline.com/<ConsumingTenantID>/adminconsent?client_id=<OwningTenantClientID>
+```
 
 ## Examples
 The container type registration API requires the Container.Selected app-only permission for SharePoint (see [Exceptional access patterns](../development/auth.md)). You will need to use the [client credentials](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow) grant flow and [request a token](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) using a certificate.
