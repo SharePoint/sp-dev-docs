@@ -39,6 +39,7 @@ In both cases, a `Retry-After` header is included in the response indicating how
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
 ### Resource units
+
 Some limits are measured in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
 | Resource units per request | Operations                                                                                                |
