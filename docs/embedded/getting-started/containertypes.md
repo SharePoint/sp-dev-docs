@@ -125,7 +125,7 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 >
 >If the cmdlet above fails with a SubscriptionNotRegistered error, it is because Microsoft.Syntex is not registered as a resource provider in the subscription. The cmdlet will send a resource provider registration request on your behalf but it will take a few minutes to be completed. Please wait 5-10 minutes and try again until the cmdlet succeeds.
 
-## Standard Container Type - pass-through billing
+### Standard Container Type - pass-through billing
 With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application (consuming tenant). Admins in the developer tenant don't need to set up an Azure billing profile when creating a pass-through SharePoint Embedded container type. 
 
 ![Pass Through](../images/2bill521.png)
