@@ -42,11 +42,11 @@ If the offending application continues to exceed usage limits, SharePoint Online
 ### Resource units
 Some limits are measured in in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
-| Resource units per request | Operations                                                                                                |
-| -------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item         |
+| Resource units per request | Operations                                                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item             |
 | 2                          | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
-| 5                          | <li>All permission resource operations, including $expand=permissions                                     |
+| 5                          | <li>All permission resource operations, including $expand=permissions                                        |
 
 > [!NOTE]
 > We reserve the right to change the API resource unit cost.
@@ -57,7 +57,7 @@ Throttling limits the number of calls and operations collectively made by applic
 
 That said, it's rare for a user to get throttled in SharePoint Online. The service is robust, and it's designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code, such as custom web parts, complex list view and queries, or custom apps users run. That doesn’t mean that there aren’t other ways to get throttled, just that they’re less common. For example, one user syncing a large amount of data across 10 machines at the same time could trigger throttling.
 
-| **Category** | **Type of throttling**       | **Time interval** | **Limit** |
+| Category     | Type of throttling           | Time interval     | Limit     |
 |--------------|------------------------------|-------------------|-----------|
 | User         | RPS                          | 5 min             | 3,000     |
 | User         | Ingress                      | 1 H               | 50 GB     |
@@ -73,7 +73,7 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse resources.
 When a customer enables Multi-Geo, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
 
-| **Category** | **Type of throttling**               | **Time interval** | **Tenant license count** | **Limit** |
+| Category     | Type of throttling                   | Time interval     | Tenant license count     | Limit     |
 |--------------|--------------------------------------|-------------------|--------------------------|-----------|
 | Tenant       | [Resources Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
 | Tenant       | [Resources Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
@@ -105,7 +105,7 @@ For multitenant applications:
 1. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
 
 
-| **Category**       | **Type of throttling**               | **Time interval** | **Tenant license count** | **Limit**  |
+| Category           | Type of throttling                   | Time interval     | Tenant license count     | Limit      |
 |--------------------|--------------------------------------|-------------------|--------------------------|------------|
 | Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
 | Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
@@ -126,12 +126,12 @@ For multitenant applications:
 
 ### Other Limits
 
-| **Category**  | **Type of throttling**               | **Time interval** | **Limit** |
-|---------------|--------------------------------------|-------------------|-----------|
-| RaaSContainer | [Resources Units](#resource-units)   | 1 min             | 3,000     |
-| Per Site      | Anonymous Link                       | 5 min             | 3,000     |
-| Per Site      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
-| Per Site      | External sharing emails              | 1 H               | 200       |
+| Category                      | Type of throttling                   | Time interval     | Limit     |
+|-------------------------------|--------------------------------------|-------------------|-----------|
+| SharePoint Embedded containers| [Resources Units](#resource-units)   | 1 min             | 3,000     |
+| Per Site                      | Anonymous Link                       | 5 min             | 3,000     |
+| Per Site                      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
+| Per Site                      | External sharing emails              | 1 H               | 200       |
 
 >[!NOTE] 
 >Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
