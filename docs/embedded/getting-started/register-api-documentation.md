@@ -9,16 +9,35 @@ ms.localizationpriority: high
 
 In order for a SharePoint Embedded application to interact with containers in a consuming tenant, the container type must first be registered in the consuming tenant. Container type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its container type. The registration API also grants access to other Guest Apps to interact with the owning application's containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its containers.
 
-
-
 Since the registration API controls the permissions that a SharePoint Embedded application can perform against the container in the consuming tenant, this call should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against the container and/or the content in the containers.
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it's invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API determines the settings used in the consuming tenant.
 
+## Authentication and authorization requirements
+
+For the container type's owning application to act on a consuming tenant, some pre-requisites must be completed:
+
+- the owning app must have a service principal installed on the consuming tenant; and
+- the owning app must be granted admin consent to perform container type registration in the consuming tenant.
+
 > [!NOTE]
 > Only the owning application of the container type can invoke the registration API in the consuming tenant.
->
-> The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](../development/auth.md).
+
+Both requirements can be satisfied by having a tenant administrator of the consuming tenant [grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to the container type's owning application.
+
+The container type registration API requires the `Container.Selected` app-only permission for SharePoint (see [Exceptional access patterns](../development/auth.md#exceptional-access-patterns)). You will need to use the [client credentials grant flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow) and [request a token with a certificate](/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) to use the registration API.
+
+> [!NOTE]
+> The registration API is **NOT** a Microsoft Graph API but a SharePoint API. This API will be ported to Microsoft Graph in the future.
+
+To request admin consent from a tenant administrator in the consuming tenant, you may direct them to the [admin consent endpoint](/entra/identity-platform/v2-admin-consent). For the right endpoints on national clouds, see [Microsoft identity platform endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints):
+
+```http
+https://login.microsoftonline.com/<ConsumingTenantID>/adminconsent?client_id=<OwningTenantClientID>
+```
+
+You may configure the admin consent endpoint to fit your needs, including handling errors and successful grants. For more information, see [Admin consent URI](/entra/identity-platform/v2-admin-consent).
+
 
 ## Container type Permissions
 
@@ -67,19 +86,9 @@ If successful, this method returns a `200 OK` response code and the container ty
 | 403 | Provided authentication credentials are valid but insufficient to perform the requested operation. Examples: the calling app isn't the owning app of the container type. |
 | 404 | Container type doesn't exist. |
 
-### Register the container type in a consuming tenant
-
-To interact with containers in a consuming tenant, the owning tenant must first be granted permissions by the consuming tenant admin.  This step is crucial as it controls permissions and prevents access denied errors when invoking other APIs.
-
-The following URL should be executed by the consuming tenant administrator.  This will grant permission to the owning tenant App Registration.
-
-```powershell
-https://login.microsoftonline.com/<ConsumingTenantID>/adminconsent?client_id=<OwningTenantClientID>
-```
-
 ## Examples
-The container type registration API requires the Container.Selected app-only permission for SharePoint (see [Exceptional access patterns](../development/auth.md)). You will need to use the [client credentials](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow) grant flow and [request a token](https://learn.microsoft.com/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) using a certificate.
 
+### Register the container type in a consuming tenant with permissions only for the Owning App
 
 Register the container type in the consuming tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
