@@ -2,9 +2,9 @@
 title: "SPO Migration API: Migrating shared files and folders"
 description: "Migrating shared files and folders using item references."
 ms.date: 06/28/2022
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: jihongzuo
+author: shiongzuo
+manager: Dan.Podeanu
 ms.topic: article
 ms.subservice: migration-tool
 ---
@@ -73,4 +73,4 @@ Permissions migration is performed using the DeploymentRoleAssignments object wi
 > The **Migration API** is not available for users of Office 365 operated by 21Vianet in China.
 
 ### Quota
-Do not migrate more than 1,000 *Share with Me* events for any user on a single day. If a user already has 1,000 *Share with Me* events being imported on a specific day, they will NOT receive any additional *Share with Me* events on that day. And Import API will send back warning messages indicating some *Share with Me* events have been throttled.
+Do not migrate more than 1,000 *Share with Me* events for any receiver within 24 hours. If a receiver already has 1,000 *Share with Me* events being imported within 24 hours, they will NOT receive any additional *Share with Me* events during the time window. And Import API will send back warning messages indicating some *Share with Me* events have been throttled.
