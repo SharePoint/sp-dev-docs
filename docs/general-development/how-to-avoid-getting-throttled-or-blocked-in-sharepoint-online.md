@@ -2,7 +2,6 @@
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
 ms.date: 03/17/2025
-
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -40,13 +39,13 @@ In both cases, a `Retry-After` header is included in the response indicating how
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
 ### Resource units
-Some limits are measured in in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
+Some limits are measured in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
 | Resource units per request | Operations                                                                                                |
 | -------------------------- | --------------------------------------------------------------------------------------------------------- |
 | 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item         |
 | 2                          | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
-| 5                          | <li>All permission resource operations, including $expand=permissions                                     |
+| 5                          | <li>All permission resource operations, including `$expand=permissions`                                     |
 
 > [!NOTE]
 > We reserve the right to change the API resource unit cost.
@@ -65,13 +64,14 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 | User         | Delegation Token Request     | 5 min             | 50        |
 | User         | External sharing emails      | 1 H               | 200       |
 
->[!NOTE] 
->Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> [!NOTE] 
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
 
 ### Tenant Throttling
 
 Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse resources.
-When a customer enables Multi-Geo, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
+
+When a customer enables Multi-Geo, each geo gets its own limits (usage measurement not shared across geos). For the limits that are dependent on license count, the total tenant user license counts is used (total users across all geos).
 
 | **Category** | **Type of throttling**               | **Time interval** | **Tenant license count** | **Limit** |
 |--------------|--------------------------------------|-------------------|--------------------------|-----------|
@@ -87,8 +87,8 @@ When a customer enables Multi-Geo, each geos gets their own limits (usage measur
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 15,001 - 50,000          | 12,000    |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 50,000+                  | 15,000    |
 
->[!NOTE] 
->Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> [!NOTE] 
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
 
 ### Application Throttling
 
@@ -121,8 +121,8 @@ For multitenant applications:
 | Per APP Per Tenant | Egress                               | 1 H               | no license bound         | 400 GB     |
 | Per APP Per Tenant | Specific Sharing APIs                | 5 min             | no license bound         | 300        |
 
->[!NOTE] 
->Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> [!NOTE] 
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
 
 ### Other Limits
 
@@ -133,8 +133,8 @@ For multitenant applications:
 | Per Site      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
 | Per Site      | External sharing emails              | 1 H               | 200       |
 
->[!NOTE] 
->Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> [!NOTE] 
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
 
 ## How to handle throttling?
 
@@ -190,27 +190,31 @@ Below is the list of limits that we support the `RateLimit` headers for. The pol
 Below are some examples to help you understand the `RateLimit` headers:
 
 - An application has consumed 90% of its resource unit quota (1,080 out of 1,200), and its consumption is within all the limits that apply to it. The request succeeds and the `RateLimit` headers are returned.
-```
-HTTP/1.1 200 Ok
-RateLimit-Limit: 1200
-RateLimit-Remaining: 120
-RateLimit-Reset: 5
-```
+
+    ```
+    HTTP/1.1 200 Ok
+    RateLimit-Limit: 1200
+    RateLimit-Remaining: 120
+    RateLimit-Reset: 5
+    ```
 
 - An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`.
-```
-HTTP/1.1 429 Too Many Requests
-Retry-After: 31
-RateLimit-Limit: 1200
-RateLimit-Remaining: 0
-RateLimit-Reset: 31
-```
+
+    ```
+    HTTP/1.1 429 Too Many Requests
+    Retry-After: 31
+    RateLimit-Limit: 1200
+    RateLimit-Remaining: 0
+    RateLimit-Reset: 31
+    ```
 
 - An application has consumed 90% of its resource unit quota but its consumption has already reached other limits that the `RateLimit` headers don't support. In this case, the request is throttled and the `RateLimit` headers aren't returned to avoid confusion although the condition to return the headers is satisfied.
-```
-HTTP/1.1 429 Too Many Requests
-Retry-After: 9
-```
+
+    ```
+    HTTP/1.1 429 Too Many Requests
+    Retry-After: 9
+    ```
+
 Additional information can be found in [Prevent throttling in your application by using RateLimit headers in SharePoint Online](https://devblogs.microsoft.com/microsoft365dev/prevent-throttling-in-your-application-by-using-ratelimit-headers-in-sharepoint-online/)
     
 ### How to decorate your HTTP traffic?
@@ -225,6 +229,7 @@ What is the definition of undecorated traffic?
 What are the recommendations?
 
 - If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in the following step.
+
     > [!NOTE]
     > Refer to the [Microsoft identity documentation](/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
 
@@ -291,9 +296,11 @@ If you have applications or components, that are causing your people search requ
 1. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
 ### When accessing OneDrive sites
+
 When a client makes excessive attempts to access many OneDrive site collections that do not exist, we may throttle requests from that client's IP address. The client will receive an HTTP 429 response when accessing any OneDrive site collection during the throttling period.
 
 ### Multi-Geo Customers and throttling
+
 When a customer enables throttling, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
 
 ## What should you do if you get blocked in SharePoint Online?
