@@ -37,7 +37,7 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 
 ## Create a container type with a trial configuration
 
-Once signed in, you are prompted to create a [container type with trial configuration](./containertypes.md#trial-use). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
+Once signed in, you are prompted to create a [container type with trial configuration](./containertypes.md#trial-container-type). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
 
 ![home screen](../images/vsx-images/n4vsx-home-screen.png)
 
