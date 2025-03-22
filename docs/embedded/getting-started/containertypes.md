@@ -25,10 +25,12 @@ Container type is represented on each container instance as an immutable propert
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## Creating Container Types
+
 SharePoint Embedded has 2 different Container Types you can create.
 
 1.  [Trial Container Type](#trial-container-type)
-2.  [Standard Container Type](#standard-container-types-non-trial)
+1.  [Standard Container Type](#standard-container-types-non-trial)
+
 ### Prerequisites to create SharePoint Embedded container type
 
 A new container type will be created using **SharePoint Online Management Shell**:
@@ -66,11 +68,11 @@ Each developer can have only one container type in the trial status in their ten
 To create a container type for trial purposes, you can:
 
 - Use SharePoint Embedded Visual Studio Code Extension to create the container type in just a few steps. The Visual Studio Code extension registers your container type and creates containers for you.
-- Use SharePoint PowerShell. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. If you're a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
+- Use SharePoint PowerShell. You must be a SharePoint Embedded Administrator or Global Administrator to run the following cmdlet. If you're a SharePoint Administrator, grant yourself the SharePoint Embedded Admin role as well to execute these cmdlets.
 
-```powershell
-New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
-```
+    ```powershell
+    New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
+    ```
 
 The following restrictions are applied to trial container types:
 
@@ -81,14 +83,15 @@ The following restrictions are applied to trial container types:
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
 
 ## Standard Container Types (non-trial)
+
 A standard container type in SharePoint Embedded defines the relationship, access privileges, and billing profile between an application and its containers. It establishes how the application interacts with the containers, including access permissions, and is associated with a billing profile for non-trial purposes. Each tenant can have 5 container types at a time.
 
 ### Billing profile
+
 SharePoint Embedded is a consumption-based Pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models that the tenant developing the SharePoint Embedded application can select for respective container types, tailoring it to their unique business requirements. The two billing models are Standard and Pass-through billing.
 
-
-
 ### Standard Container Type - with billing profile
+
 With the standard billing profile, all consumption-based charges are directly billed to the tenant who owns or develops the application. The admin in the developer tenant  must establish a valid billing profile when creating a standard container type.
 
 ![Standard](../images/1bill521.png)
@@ -123,9 +126,10 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 >
 > An Azure subscription can be attached to any number of container types.
 >
->If the cmdlet above fails with a SubscriptionNotRegistered error, it is because Microsoft.Syntex is not registered as a resource provider in the subscription. The cmdlet will send a resource provider registration request on your behalf but it will take a few minutes to be completed. Please wait 5-10 minutes and try again until the cmdlet succeeds.
+> If the cmdlet above fails with a SubscriptionNotRegistered error, it is because **Microsoft.Syntex** is not registered as a resource provider in the subscription. The cmdlet will send a resource provider registration request on your behalf but it will take a few minutes to be completed. Please wait 5-10 minutes and try again until the cmdlet succeeds.
 
 ### Standard Container Type - pass-through billing
+
 With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application (consuming tenant). Admins in the developer tenant don't need to set up an Azure billing profile when creating a pass-through SharePoint Embedded container type. 
 
 ![Pass Through](../images/2bill521.png)
@@ -141,20 +145,20 @@ New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <Strin
 Once the container type is [registered](../getting-started/register-api-documentation.md) in the consuming tenant, the consuming tenant admin (SharePoint Admin or Global Admin) needs to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
 #### Set Up Billing Profile in Consuming Tenant
+
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Billing and licenses** section. Select **Activate pay-as-you-go services.**
 
     ![Microsoft 365 admin center Files and Content](../images/SyntexActivatePAYGSetup.png)
 
-2. Select **Go to Pay as you go services**.
-3. Select **Apps** under **Syntex services for**, select **Apps** and **SharePoint Embedded**
+1. Select **Go to Pay as you go services**.
+1. Select **Apps** under **Syntex services for**, select **Apps** and **SharePoint Embedded**
  
     ![Microsoft 365 admin center SharePoint Embedded Billing setting](../images/SyntexPAYGActivateSPE.png)
 
     > [NOTE]
     The subscription configured in the Syntex services will reflect the consuming charges in the Azure billing portal.
 
-
-6.  [Register the container type](#registering-container-types) using the App only authentication token.
+1.  [Register the container type](#registering-container-types) using the App only authentication token.
 
 ## Configuring Container Types
 
@@ -165,8 +169,6 @@ This cmdlet allows admins to set [Microsoft 365 content discoverability](../deve
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $False
 ```
-
-
 
 ## Viewing Container Types
 
