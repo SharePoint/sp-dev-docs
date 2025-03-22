@@ -105,7 +105,6 @@ For multitenant applications:
 1. The consumption of resource units by the application is to be measured on a per-tenant, per-application basis. This ensures that each tenant-application pair remains within the permissible resource limits specified for that particular tenant.
 1. Should the application reach its resource limit within one tenant, this occurrence will not affect other instances of the application operating in different tenants. Each tenant's resource utilization is isolated, preventing cross-tenant impact.
 
-
 | Category           | Type of throttling                   | Time interval     | Tenant license count     | Limit      |
 |--------------------|--------------------------------------|-------------------|--------------------------|------------|
 | Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
@@ -148,7 +147,7 @@ Below is a quick summary of the best practices to handle throttling:
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
 - Consider using [Graph Data Connect for Sharepoint](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/links-about-microsoft-graph-data-connect-for-sharepoint/4069045) for broad sites analytics 
 
-As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes less resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
+As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes fewer resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
 
 If you do run into throttling, we require using the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits and you can proactively reduce requests to avoid hitting the throttle.
 
@@ -259,10 +258,10 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
     A single process dramatically exceeds throttling limits, continually, over a long period.
 
-  - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
-  - You're running a load-testing script on SharePoint Online and you get throttled. Load testing isn't allowed on SharePoint Online.
-  - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
-  - Running the OneDrive Sync client while also running migration applications or applications that crawl sites and write back data can result in high request volumes that may trigger throttling. 
+    - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
+    - You're running a load-testing script on SharePoint Online and you get throttled. Load testing isn't allowed on SharePoint Online.
+    - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
+    - Running the OneDrive Sync client while also running migration applications or applications that crawl sites and write back data can result in high request volumes that may trigger throttling. 
 
 - **Unsupported use cases**
 
@@ -276,11 +275,12 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 ### When using app-only authentication with Sites.Read.All permission
 
-When you're using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including the user’s private OneDrive for Business content).
+When you're using SharePoint Online search APIs with app-only authentication and the app having **Sites.Read.All** permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including the user’s private OneDrive for Business content).
 
 To ensure the service remains fast and reliable, queries using such permission are throttled at 25 requests per second. The search query will return an HTTP 429 response. When waiting for throttling recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making more calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
 ### When searching using delegated user permissions
+
 Searching with delegated user permissions occurs when an application submits a search query request with the signed-in user's permissions. Examples of delegated requests are as follows: the search box on a SharePoint page, a search-based web part or custom application embedded on a SharePoint page, and a Power Automate workflow querying for item information.  
 
 To ensure service stability, the service will throttle delegated user requests that exceed 10 requests per second per user. This per-user limit aggregates across all requests from all apps. If a single user sends more than 10 search query requests per second, an HTTP 429 is returned. The requesting application should wait the duration of the timeout specified in the response header before sending subsequent requests. When designing search-based applications, SharePoint pages, and workflows, implementors should make sure the page and application do not exceed 10 requests per second in aggregate and handle 429 throttling responses. For more information and guidance on page design and search optimization, see [Optimize search requests in SharePoint Online modern site pages](/microsoft-365/enterprise/modern-search-optimization) and [Use the Page Diagnostics tool for SharePoint Online](/microsoft-365/enterprise/page-diagnostics-for-spo).
@@ -291,7 +291,7 @@ When searching using a result source that requests people results, we may thrott
 
 If you have applications or components, that are causing your people search requests to get throttled, we recommend that you:
 
-1. Consider if the requests are necessary for your application. For example, if you're using a custom search site, that makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](https://sharepoint.com/) start page. People search in Microsoft Search has been optimized for better performance and more relevant results.
+1. Consider if the requests are necessary for your application. For example, if you're using a custom search site, that makes many simultaneous queries, check whether some of those requests can be removed without any significant impact on your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](https://sharepoint.com/) start page. People search in Microsoft Search has been optimized for better performance and more relevant results.
 1. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has been completed. You may need to consider caching these results if you need them quickly, for example of a page load.
 1. Try consolidating the requests into a single query. For example, instead of making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
 1. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
@@ -302,7 +302,7 @@ When a client makes excessive attempts to access many OneDrive site collections 
 
 ### Multi-Geo Customers and throttling
 
-When a customer enables throttling, each geos gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses counts is used (total users across all geos).
+When a customer enables throttling, each gets their own limits (usage measurement not shared across geos). For the limits that are dependant on licenses count, the total tenant user licenses count is used (total users across all geos).
 
 ## What should you do if you get blocked in SharePoint Online?
 
