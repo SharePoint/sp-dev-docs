@@ -76,11 +76,11 @@ When a customer enables Multi-Geo, each geo gets its own limits (usage measureme
 
 | Category     | Type of throttling                   | Time interval     | Tenant license count     | Limit     |
 |--------------|--------------------------------------|-------------------|--------------------------|-----------|
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
 | Tenant       | Assign Sensitivity Label             | 5 min             | no license bound         | 100       |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 0 - 1,000                | 3,000     |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 1,001 - 5,000            | 6,000     |
@@ -107,16 +107,16 @@ For multitenant applications:
 
 | Category           | Type of throttling                   | Time interval     | Tenant license count     | Limit      |
 |--------------------|--------------------------------------|-------------------|--------------------------|------------|
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
 | Per APP Per Tenant | Ingress                              | 1 H               | no license bound         | 400 GB     |
 | Per APP Per Tenant | Egress                               | 1 H               | no license bound         | 400 GB     |
 | Per APP Per Tenant | Specific Sharing APIs                | 5 min             | no license bound         | 300        |
@@ -128,7 +128,7 @@ For multitenant applications:
 
 | Category                      | Type of throttling                   | Time interval     | Limit     |
 |-------------------------------|--------------------------------------|-------------------|-----------|
-| SharePoint Embedded containers| [Resources Units](#resource-units)   | 1 min             | 3,000     |
+| SharePoint Embedded containers| [Resource Units](#resource-units)   | 1 min             | 3,000     |
 | Per Site                      | Anonymous Link                       | 5 min             | 3,000     |
 | Per Site                      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
 | Per Site                      | External sharing emails              | 1 H               | 200       |
