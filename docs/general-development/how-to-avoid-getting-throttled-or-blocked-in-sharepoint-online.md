@@ -22,6 +22,8 @@ Does this sound familiar? You're running an application - for example, to scan f
 ## What is throttling?
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
+> [!NOTE]
+> Recent updates to this article enhance transparency to already existing throttling rules in the system
 
 ### What happens when you get throttled in SharePoint Online?
 
