@@ -263,7 +263,7 @@ The custom formatter introduces a new JSON configuration to mark fields as read-
 ### JSON Structure:
 ```json
 {
-    "sections": [],
+    "sections": [{}],
     "fieldsettings": [
         {
             "name": "fieldName",
