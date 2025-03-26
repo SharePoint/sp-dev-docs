@@ -242,3 +242,56 @@ To configure the form in a list or library:
 1. To preview your changes, click the **Preview** button.
 1. To save your changes, click the **Save** button.
 1. Close and open the form again to view the custom body.
+
+
+## Custom Formatter for Read-Only Fields
+
+### Introduction
+Microsoft Lists offers a powerful way to organize information and collaborate with your team. With the rise of AI-based list item creation, users often need to view but not edit certain fields — like system-generated data or bot-added details. To meet this need, a new custom formatter feature is proposed to allow fields to appear as read-only in list forms.
+
+### Why Read-Only Fields Matter
+Currently, read-only fields are hidden from New Item and Edit forms. This creates challenges when AI bots or automated processes create items containing critical data that users need to see but not modify. For example:
+
+- A bot creates a customer service ticket with Issue details Issue Title, Issue Description. 
+- Users should see this information to take actions (e.g., send an email), but not be able to change it.
+
+The new custom formatter solves this by allowing these fields to display as read-only.
+
+### How the Custom Formatter Works
+The custom formatter introduces a new JSON configuration to mark fields as read-only in the form views.
+
+### JSON Structure:
+```json
+{
+    "sections": [],
+    "fieldsettings": [
+        {
+            "name": "fieldName",
+            "readonly": true
+        }
+    ]
+}
+```
+
+- name: The internal name of the field.
+- readonly: When set to true, the field is displayed as read-only.
+### Behavior in Different Form Views
+The custom formatter ensures a consistent user experience:
+
+- New Item form: The read-only field will not be shown.
+
+- Edit form: The field is displayed without an editable textbox, similar to a Calculated Column.
+
+- Edit all mode: The field remains visible and uneditable.
+
+✅ The Save button works as expected — no accidental modifications to the read-only fields.
+
+### Example Use Case
+Imagine a CRM bot creating tickets with pre-filled Issue details. Using this formatter:
+- Issue Title (read-only): Users can see and copy the Issue Title but can't modify it.
+- Issue Description (read-only): Users can see and copy the Issue Description but can't modify it.
+- Issue Source (read-only): Users can click on the Issue source link but can't modify it.
+
+![image](https://github.com/user-attachments/assets/74c21844-a966-4930-93bb-cce10d69fa0e)
+
+  
