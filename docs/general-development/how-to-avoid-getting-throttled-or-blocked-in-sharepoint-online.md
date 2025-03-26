@@ -22,6 +22,8 @@ Does this sound familiar? You're running an application - for example, to scan f
 ## What is throttling?
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
+> [!NOTE]
+> Recent updates to this article enhance transparency to already existing throttling rules in the system
 
 ### What happens when you get throttled in SharePoint Online?
 
@@ -76,11 +78,11 @@ When a customer enables Multi-Geo, each geo gets its own limits (usage measureme
 
 | Category     | Type of throttling                   | Time interval     | Tenant license count     | Limit     |
 |--------------|--------------------------------------|-------------------|--------------------------|-----------|
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
+| Tenant       | [Resource Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
 | Tenant       | Assign Sensitivity Label             | 5 min             | no license bound         | 100       |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 0 - 1,000                | 3,000     |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 1,001 - 5,000            | 6,000     |
@@ -107,16 +109,16 @@ For multitenant applications:
 
 | Category           | Type of throttling                   | Time interval     | Tenant license count     | Limit      |
 |--------------------|--------------------------------------|-------------------|--------------------------|------------|
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
 | Per APP Per Tenant | Ingress                              | 1 H               | no license bound         | 400 GB     |
 | Per APP Per Tenant | Egress                               | 1 H               | no license bound         | 400 GB     |
 | Per APP Per Tenant | Specific Sharing APIs                | 5 min             | no license bound         | 300        |
@@ -128,7 +130,7 @@ For multitenant applications:
 
 | Category                      | Type of throttling                   | Time interval     | Limit     |
 |-------------------------------|--------------------------------------|-------------------|-----------|
-| SharePoint Embedded containers| [Resources Units](#resource-units)   | 1 min             | 3,000     |
+| SharePoint Embedded containers| [Resource Units](#resource-units)   | 1 min             | 3,000     |
 | Per Site                      | Anonymous Link                       | 5 min             | 3,000     |
 | Per Site                      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
 | Per Site                      | External sharing emails              | 1 H               | 200       |
@@ -146,6 +148,7 @@ Below is a quick summary of the best practices to handle throttling:
 - Use the `Retry-After` and `RateLimit` HTTP headers
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
 - Consider using [Graph Data Connect for Sharepoint](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/links-about-microsoft-graph-data-connect-for-sharepoint/4069045) for broad sites analytics 
+- Understand if [SharePoint prioritization](https://aka.ms/SharePointPrioritization) feature is the right fit for your scenario
 
 As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes fewer resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
 
@@ -312,6 +315,7 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 
 ## See also
 
+- [SharePoint prioritization](https://aka.ms/SharePointPrioritization)
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
 - [Microsoft Graph dev center](/graph)
