@@ -1,16 +1,17 @@
 ---
 title: Search SharePoint Embedded containers and content
 description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 03/03/2025
+ms.date: 03/28/2025
 ms.localizationpriority: high
 ---
 
 # Search SharePoint Embedded content
 
-Use the Microsoft Search API in Microsoft Graph to search SharePoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This article describes some examples.
+Use the [Microsoft Search](/microsoftsearch/overview-microsoft-search) API in Microsoft Graph to search SharePoint Embedded containers and content. The Search API lets you scope the container type and file type for your queries by specifying the corresponding parameter in the request body. This article describes some examples.
 
 > [!NOTE]
 >
+> 1. Searching SharePoint Embedded content is in Preview stage and is subject to change. Please refer to the [exceptional access pattern](../auth.md#operations-involving-searching-sharepoint-embedded-content) that describes its current permission requirements.
 > 1. Search API only supports Delegated permissions.
 > 1. Your search requests must specify and set the `includeHiddenContent` parameter if your application has opted out of content discoverability in Microsoft 365. Learn more about [SharePoint Embedded content discoverability](./user-experiences-overview.md).
 

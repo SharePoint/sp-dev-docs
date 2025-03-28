@@ -564,7 +564,7 @@
     items:
     - name: Application Architecture
       href: embedded/development/app-architecture.md
-    - name: Authentication
+    - name: Authentication and Authorization
       href: embedded/development/auth.md
     - name: Sharing and Permissions
       href: embedded/development/sharing-and-perm.md
