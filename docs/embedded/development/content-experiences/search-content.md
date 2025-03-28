@@ -1,7 +1,7 @@
 ---
 title: Search SharePoint Embedded containers and content
 description: Overview on how to search SharePoint Embedded containers and content
-ms.date: 03/03/2025
+ms.date: 03/28/2025
 ms.localizationpriority: high
 ---
 
