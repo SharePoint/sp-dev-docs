@@ -49,12 +49,22 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 ### Exceptional access patterns
 
-Currently, there are two types of operations that aren't accessible via Microsoft Graph:
+Currently, there are two types of operations with exceptional access patterns:
+
+- Operations not exposed via Microsoft Graph
+- Operations involving searching SharePoint Embedded content
+
+> [!NOTE]
+> It is important to understand and consider these exceptional access patterns as they may have repercussions on how the SharePoint Embedded content for your application is accessed.
+
+#### Operations not exposed via Microsoft Graph
+
+There are two types of operations that aren't accessible via Microsoft Graph today:
 
 - [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
 - [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
 
-To perform [container type management](../getting-started/containertypes.md) operations, you must be a SharePoint Embedded Administrator or Global Administrator.
+To perform [container type management](../getting-started/containertypes.md) operations, you must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 To [register a container type](../getting-started/register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
 
@@ -64,6 +74,15 @@ To [register a container type](../getting-started/register-api-documentation.md)
 
 > [!NOTE]
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
+
+#### Operations involving searching SharePoint Embedded content
+
+This refers only to the search scenarios in [Search Content](./content-experiences/search-content.md), and not the enumeration scenarios.
+
+To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) to search on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission. During the Preview stage of this feature, this application permission will grant applications access to search capabilities on SharePoint Embedded content.
+
+> [!NOTE]
+> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align to the SharePoint Embedded authorization model in the future. Stay tuned.
 
 ### Container type application permissions
 
