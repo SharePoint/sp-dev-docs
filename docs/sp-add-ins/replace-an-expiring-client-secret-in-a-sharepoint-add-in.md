@@ -94,6 +94,10 @@ Ensure the following before you begin:
     > }
     > ```
 
+> [!IMPORTANT]
+> Wait at least 24 hours for the propagation of the new ClientSecret to SharePoint.
+
+
 ## Update the remote web application in Visual Studio to use the new secret
 
 > [!IMPORTANT]
