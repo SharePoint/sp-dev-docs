@@ -23,7 +23,7 @@ Use Migration API to migrate content from file shares, SharePoint Server, and ot
 
 ### December 2024
 
-We applied quota on *Share with Me* items per user. Check [*Share with Me* event quota](/sharepoint/dev/apis/migration-api-shared#quota) for more detail.
+We applied quota on *Share with Me* items per user. Check [ShareWithMe event quota](/sharepoint/dev/apis/migration-api-shared#quota) for more detail.
 
 ### November 2024
 
