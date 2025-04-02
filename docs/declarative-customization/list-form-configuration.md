@@ -7,9 +7,9 @@ ms.localizationpriority: high
 
 # Configure the list form
 
-You can configure the list form in a list or library with a custom header, footer and the form body with one or more sections with fields in each of those sections. The form configuration does not change the data in the list item or file; it only changes how the form is displayed to users who browse the list or library. Anyone who can create and manage views in a list can use form configuration to configure the form with header, footer and body with sections.
+You can configure the list form in a list or library with a custom header, footer and the form body with one or more sections with fields in each of those sections. The form configuration does not change the data in the list item or file; it only changes how the form is displayed to users who browse the list or library. Anyone who can create and manage views in a list can use form configuration to configure the form with header, footer, and body with sections.
 
-To configure a form, you will use JSON formatters that you are already familiar with when formatting a [column](column-formatting.md) or a [view](view-formatting.md) in a list or library. Form configuration allows for certain predefined elements and attributes to build the custom header, footer and body with one or more sections.
+To configure a form, you will use JSON formatters that you are already familiar with when formatting a [column](column-formatting.md) or a [view](view-formatting.md) in a list or library. Form configuration allows for certain predefined elements and attributes to build the custom header, footer, and body with one or more sections.
 
 ## Get started
 
@@ -18,23 +18,24 @@ To configure the form in a list or library:
 1. Go to the list or library for which you want to configure the form.
 1. If you are in a list:
 
-   - Open an item to view the item details in the display form.
+    - Open an item to view the item details in the display form.
 
 1. If you are in a document library:
 
-   - Select a file.
-   - Select ...
-   - Select More
-   - Select Properties
+    - Select a file.
+    - Select ...
+    - Select More
+    - Select Properties
 
 1. At the top of the form, expand **Edit Form** icon and then select **Configure layout**
 
    ![Configure list form](images/list-form-configuration-menu.png)
 
 1. In the **Format** pane, you can choose to apply formatting to the following form sections:
-   - Header
-   - Body
-   - Footer
+
+    - Header
+    - Body
+    - Footer
 
 ## Configure custom header
 
@@ -173,7 +174,7 @@ To configure the form in a list or library:
     - One or more sections can be defined for a body.
     - Each section can reference one or more columns in the list or library.
     - A column can be referenced only in one section.
-    - If a column is referenced in multiple sections, the first section where the column is referenced will take the precedence.
+    - If a column is referenced in multiple sections, the first section where the column is referenced will take precedence.
     - A column not referenced in any of the sections will be automatically referenced in the last section.
     - New columns added will be automatically referenced in the last section.
 
@@ -247,9 +248,11 @@ To configure the form in a list or library:
 ## Custom Formatter for Read-Only Fields
 
 ### Introduction
+
 Microsoft Lists offers a powerful way to organize information and collaborate with your team. With the rise of AI-based list item creation, users often need to view but not edit certain fields — like system-generated data or bot-added details. To meet this need, a new custom formatter feature is proposed to allow fields to appear as read-only in list forms.
 
 ### Why Read-Only Fields Matter
+
 Currently, read-only fields are hidden from New Item and Edit forms. This creates challenges when AI bots or automated processes create items containing critical data that users need to see but not modify. For example:
 
 - A bot creates a customer service ticket with Issue details Issue Title, Issue Description. 
@@ -258,9 +261,11 @@ Currently, read-only fields are hidden from New Item and Edit forms. This create
 The new custom formatter solves this by allowing these fields to display as read-only.
 
 ### How the Custom Formatter Works
+
 The custom formatter introduces a new JSON configuration to mark fields as read-only in the form views.
 
-### JSON Structure:
+### JSON Structure
+
 ```json
 {
     "sections": [{}],
@@ -275,23 +280,23 @@ The custom formatter introduces a new JSON configuration to mark fields as read-
 
 - name: The internal name of the field.
 - readonly: When set to true, the field is displayed as read-only.
+
 ### Behavior in Different Form Views
+
 The custom formatter ensures a consistent user experience:
 
 - New Item form: The read-only field will not be shown.
-
 - Edit form: The field is displayed without an editable textbox, similar to a Calculated Column.
-
 - Edit all mode: The field remains visible and uneditable.
 
-✅ The Save button works as expected — no accidental modifications to the read-only fields.
+The Save button works as expected — no accidental modifications to the read-only fields.
 
 ### Example Use Case
-Imagine a CRM bot creating tickets with pre-filled Issue details. Using this formatter:
+
+Imagine a CRM bot creating tickets with pre-filled Issue details. Using this formatted:
+
 - Issue Title (read-only): Users can see and copy the Issue Title but can't modify it.
 - Issue Description (read-only): Users can see and copy the Issue Description but can't modify it.
 - Issue Source (read-only): Users can click on the Issue source link but can't modify it.
 
 ![image](https://github.com/user-attachments/assets/74c21844-a966-4930-93bb-cce10d69fa0e)
-
-  
