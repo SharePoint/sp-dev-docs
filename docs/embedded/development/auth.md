@@ -97,9 +97,9 @@ Any user accessing a container must be a member of the container. Membership to 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
 
-| Permission |                                                                                 Description                                                                                 |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reader     | This role allows the user to read the properties and the contents of the container.                                                                                         |
+| Permission |                                                                                 Description                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reader     | This role grants the user read-only access to the container, allowing them to view its properties and contents, as well as comment on Office documents within the container.    |
 | Writer     | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
 | Manager    | This role has all the permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
 | Owner      | This role has all the permissions a Manager has, plus the permission to delete containers.                                                                                      |
