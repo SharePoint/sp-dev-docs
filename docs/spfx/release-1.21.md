@@ -13,8 +13,8 @@ This release has initial configuration updates for web parts in the context of f
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.2 **Released:** April 3, 2025
-beta.0 **Released:** February 25, 2025
+* beta.2 **Released:** April 3, 2025
+* beta.0 **Released:** February 25, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
