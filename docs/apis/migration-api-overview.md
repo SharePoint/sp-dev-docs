@@ -21,13 +21,21 @@ Use Migration API to migrate content from file shares, SharePoint Server, and ot
 
 ## What's new
 
+### December 2024
+
+We applied quota on *Share with Me* items per user. Check [ShareWithMe event quota](/sharepoint/dev/apis/migration-api-shared#quota) for more detail.
+
+### November 2024
+
+Migration API supports generating logs of all file-level events during migration to support auditing.
+
 ### July 2024
 
-We started enforcing HTTPS connection to SharePoint provided Azure Blob Storage Containers by adding a `spr=https` field in SAS tokens. This enforcement is fully effective on July 21, 2024. Check [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for details.
+We started enforcing HTTPS connections to SharePoint-provided Azure Blob Storage Containers by adding a `spr=https` field in SAS tokens. This enforcement will be fully effective on July 21, 2024. Check [Use Azure Blob Storage Containers and Azure Queues with SharePoint Migration API](migration-azure.md) for details.
 
 ### April 2024
 
-We added new fields in ``JobEnd`` events to indicate the count and bytes imported for files. Check [Migration events in Azure Queue](migration-events.md#jobend-import) for details.
+We added new fields in `JobEnd` events to indicate the count and bytes imported for files. Check [Migration events in Azure Queue](migration-events.md#jobend-import) for details.
 
 ### January 2024
 
@@ -39,7 +47,7 @@ Start a migration job with three steps. Check the guidance in each of the steps 
 
 ### Provision the destination containers and the queue
 
-Use `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
+Use the `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Prepare the content
 
@@ -55,11 +63,13 @@ Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
 ### Use Migration API to start the migration and get status
 
-`CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
+The `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use the `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
-Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with `GetMigrationJobStatus` method if needed, with the Azure Queue supplied.
+Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with the `GetMigrationJobStatus` method if needed, with the Azure Queue supplied.
 
 Migration API generates logs in the manifest container. Check the log entries for migration results.
+
+Migration API also generates logs of file-level activities performed by migration. The supported file-level activities include FileUploaded, FileDeleted, FileRenamed, FileMoved. Check M365 Admin Center for activity details when needed.
 
 ## Best Practice
 

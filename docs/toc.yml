@@ -114,6 +114,8 @@
       href: apis/webhooks/webhooks-reference-implementation.md
     - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: Use Azure Functions through azd
+      href: apis/webhooks/sharepoint-webhooks-using-azd-template.md
     - name: List webhooks
       href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
@@ -472,7 +474,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.21 - February 25, 2024
+    - name: SPFx v1.21 - April 3, 2024
       href: spfx/release-1.21.md        
     - name: SPFx v1.20 - September 26, 2024
       href: spfx/release-1.20.md
@@ -562,7 +564,7 @@
     items:
     - name: Application Architecture
       href: embedded/development/app-architecture.md
-    - name: Authentication
+    - name: Authentication and Authorization
       href: embedded/development/auth.md
     - name: Sharing and Permissions
       href: embedded/development/sharing-and-perm.md
@@ -616,6 +618,14 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
+  - name: SharePoint Embedded copilot ( Private Preview )
+    items:
+    - name: SharePoint Embedded copilot Overview
+      href: embedded/development/declarative-agent/spe-da.md
+    - name: SharePoint Embedded copilot Tutorial
+      href: embedded/development/tutorials/spe-da-vscode.md
+    - name: SharePoint Embedded copilot Advanced Topics
+      href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
   - name: Overview

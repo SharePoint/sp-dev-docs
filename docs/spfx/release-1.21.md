@@ -1,16 +1,20 @@
 ---
 title: SharePoint Framework v1.21 release notes
 description: Release notes for the SharePoint Framework v1.21 release.
-ms.date: 03/03/2025
+ms.date: 04/03/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
 
 This release has initial configuration updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards. We're also looking to further include other technical updates before this version is generally available.
 
+> [!NOTE]
+> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) was also updated to match the latest 1.21 version as part of the beta 2 release.
+
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.0 **Released:** February 25, 2025
+* beta.2 **Released:** April 3, 2025
+* beta.0 **Released:** February 25, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -41,6 +45,12 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
+
+### Node.js v22 support
+
+Node.js support will be updated to the version 22 with the 1.21 release. This beta build is the first version to include version 22 support.
+
+Notice that when SPFx 1.21 is generally available, Node.js version 22 is the only supported version with it. Currently SPFx supports Node.js version 18, which will fall out of the support in end of April 2025. We are planning to have SPFx 1.21 generally available before that date.
 
 ### Flexible layout configuration options for web parts
 

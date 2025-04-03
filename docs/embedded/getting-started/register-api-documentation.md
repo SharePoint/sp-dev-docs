@@ -13,10 +13,31 @@ Since the registration API controls the permissions that a SharePoint Embedded a
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it's invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API determines the settings used in the consuming tenant.
 
+## Authentication and authorization requirements
+
+For the container type's owning application to act on a consuming tenant, some pre-requisites must be completed:
+
+- the owning app must have a service principal installed on the consuming tenant; and
+- the owning app must be granted admin consent to perform container type registration in the consuming tenant.
+
 > [!NOTE]
 > Only the owning application of the container type can invoke the registration API in the consuming tenant.
->
-> The registration API is **NOT** a Graph API and can only be invoked using an AppOnly and a cert-based access token. Learn more about [authentication](../development/auth.md).
+
+Both requirements can be satisfied by having a tenant administrator of the consuming tenant [grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to the container type's owning application.
+
+The container type registration API requires the `Container.Selected` app-only permission for SharePoint (see [Exceptional access patterns](../development/auth.md#exceptional-access-patterns)). You will need to use the [client credentials grant flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow) and [request a token with a certificate](/entra/identity-platform/v2-oauth2-client-creds-grant-flow#second-case-access-token-request-with-a-certificate) to use the registration API.
+
+> [!NOTE]
+> The registration API is **NOT** a Microsoft Graph API but a SharePoint API. This API will be ported to Microsoft Graph in the future.
+
+To request admin consent from a tenant administrator in the consuming tenant, you may direct them to the [admin consent endpoint](/entra/identity-platform/v2-admin-consent). For the right endpoints on national clouds, see [Microsoft identity platform endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints):
+
+```http
+https://login.microsoftonline.com/<ConsumingTenantID>/adminconsent?client_id=<OwningTenantClientID>
+```
+
+You may configure the admin consent endpoint to fit your needs, including handling errors and successful grants. For more information, see [Admin consent URI](/entra/identity-platform/v2-admin-consent).
+
 
 ## Container type Permissions
 
@@ -67,7 +88,7 @@ If successful, this method returns a `200 OK` response code and the container ty
 
 ## Examples
 
-### Register the container type in a consuming tenant
+### Register the container type in a consuming tenant with permissions only for the Owning App
 
 Register the container type in the consuming tenant and grant full permissions to the Owning Application (AppId 71392b2f-1765-406e-86af-5907d9bdb2ab) for Delegated and AppOnly calls.
 
