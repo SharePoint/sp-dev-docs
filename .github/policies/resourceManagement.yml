@@ -1,0 +1,115 @@
+id: bot-issue-management
+name: Issue Management
+description: Enable tracking & monitoring of issues
+resource: repository
+disabled: false
+configuration:
+  resourceManagementConfiguration:
+    scheduledSearches:
+      - description: Close answered issues after 3 days of inactivity
+        frequencies:
+          - hourly: { hour: 0 }
+        filters:
+          - isIssue
+          - isOpen
+          - hasLabel: { label: status:answered }
+          - noActivitySince: { days: 3 }
+        actions:
+          - addReply:
+              reply: >
+                Closing this issue as "answered". If you encounter a similar issue(s), please open up a new issue. See our wiki for more details: [Issue-List: Our approach to closed issues](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#our-approach-to-closed-issues)
+          - closeIssue
+          - lockIssue:
+              reason: resolved
+
+      - description: Close stale issues with no recent author activity after 7 days
+        frequencies:
+          - hourly: { hour: 6 }
+        filters:
+          - isIssue
+          - isOpen
+          - hasLabel: { label: 'Needs: Author Feedback' }
+          - hasLabel: { label: no-recent-activity }
+          - noActivitySince: { days: 7 }
+        actions:
+          - addReply:
+              reply: >
+                Closing issue due to no response from the original author. Please refer to our wiki for more details, including how to remediate this action if you feel this was done prematurely or in error: [No response from the original issue author](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#no-response-from-the-original-issue-author)
+          - closeIssue
+          - lockIssue
+
+      - description: Mark issues as no recent activity after 7 days
+        frequencies:
+          - hourly: { hour: 6 }
+        filters:
+          - isIssue
+          - isOpen
+          - hasLabel: { label: 'Needs: Author Feedback' }
+          - noActivitySince: { days: 7 }
+        actions:
+          - addLabel: { label: no-recent-activity }
+          - addReply:
+              reply: >
+                This issue has been automatically marked as stale because it has marked as requiring author feedback but has not had any activity for **7 days**. It will be closed if no further activity occurs **within the next 7 days of this comment**. Please see our wiki for more information: [Issue List Labels: Needs Author Feedback](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List-Labels#needs-author-feedback) & [Issue List: No response from the original issue author](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#no-response-from-the-original-issue-author)
+
+      - description: Lock issues inactive 7 days after closing
+        frequencies:
+          - hourly: { hour: 6 }
+        filters:
+          - isIssue
+          - isClosed
+          - noActivitySince: { days: 7 }
+          - isUnlocked
+        actions:
+          - addReply:
+              reply: >
+                Issues that have been closed & had no follow-up activity for at least 7 days are automatically locked. Please refer to our wiki for more details, including how to remediate this action if you feel this was done prematurely or in error: [Issue List: Our approach to locked issues](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#our-approach-to-locked-issues)
+          - lockIssue:
+              reason: resolved
+
+    eventResponderTasks:
+      - if:
+          - payloadType: Issues
+          - isAction: { action: opened }
+          - not:
+              isAssignedToSomeone: true
+        then:
+          - addReply:
+              reply: >
+                Thank you for reporting this issue. We will be triaging your incoming issue as soon as possible.
+          - addLabel:
+              label: 'Needs: Triage :mag:'
+
+      - if:
+          - payloadType: Issue_Comment
+          - isActivitySender: { issueAuthor: true }
+          - hasLabel: { label: 'Needs: Author Feedback' }
+          - isOpen
+        then:
+          - addLabel:
+              label: 'Needs: Attention :wave:'
+
+      - if:
+          - payloadType: Issues
+          - isActivitySender: { issueAuthor: true }
+          - not:
+              isAction: { action: closed }
+          - hasLabel: { label: 'Needs: Author Feedback' }
+        then:
+          - removeLabel: { label: 'Needs: Author Feedback' }
+
+      - if:
+          - payloadType: Issues
+          - not:
+              isActivitySender: { user: microsoft-github-policy-service }
+          - not:
+              isAction: { action: closed }
+          - hasLabel: { label: no-recent-activity }
+        then:
+          - removeLabel: { label: no-recent-activity }
+
+      - if:
+          - payloadType: Issue_Comment
+          - hasLabel: { label: no-recent-activity }
+        then:
+          - removeLabel: { label: no-recent-activity }
