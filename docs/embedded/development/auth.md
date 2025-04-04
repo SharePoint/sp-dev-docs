@@ -54,8 +54,8 @@ Currently, there are two types of operations with exceptional access patterns:
 - Operations not exposed via Microsoft Graph
 - Operations involving searching SharePoint Embedded content
 
-> [!NOTE]
-> It is important to understand and consider these exceptional access patterns as they may have repercussions on how the SharePoint Embedded content for your application is accessed.
+> [!IMPORTANT]
+> Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and by other applications.
 
 #### Operations not exposed via Microsoft Graph
 
@@ -79,7 +79,7 @@ To [register a container type](../getting-started/register-api-documentation.md)
 
 This refers only to the search scenarios in [Search Content](./content-experiences/search-content.md), and not the enumeration scenarios.
 
-To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) to search on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission. During the Preview stage of this feature, this application permission will grant applications access to search capabilities on SharePoint Embedded content.
+To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission on top of `FileStorageContainer.Selected` normally used for SharePoint Embedded access. During the Preview stage of this feature, the `Files.Read.All` application permission will grant applications access to search capabilities on all SharePoint Embedded content.
 
 > [!NOTE]
 > Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align to the SharePoint Embedded authorization model in the future. Stay tuned.
