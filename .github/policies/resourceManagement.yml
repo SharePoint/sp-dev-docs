@@ -1,5 +1,5 @@
 id: bot-issue-management
-name: GitOps.PullRequestIssueManagement
+name: Issue Management
 description: Enable tracking & monitoring of issues
 resource: repository
 disabled: false
