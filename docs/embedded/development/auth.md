@@ -54,8 +54,8 @@ Currently, there are two types of operations with exceptional access patterns:
 - Operations not exposed via Microsoft Graph
 - Operations involving searching SharePoint Embedded content
 
-> [!NOTE]
-> It is important to understand and consider these exceptional access patterns as they may have repercussions on how the SharePoint Embedded content for your application is accessed.
+> [!IMPORTANT]
+> Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and by other applications.
 
 #### Operations not exposed via Microsoft Graph
 
