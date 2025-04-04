@@ -79,7 +79,7 @@ To [register a container type](../getting-started/register-api-documentation.md)
 
 This refers only to the search scenarios in [Search Content](./content-experiences/search-content.md), and not the enumeration scenarios.
 
-To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) to search on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission. During the Preview stage of this feature, this application permission will grant applications access to search capabilities on SharePoint Embedded content.
+To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) to search on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission on top of `FileStorageContainer.Selected`. During the Preview stage of this feature, this application permission will grant applications access to search capabilities on SharePoint Embedded content.
 
 > [!NOTE]
 > Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align to the SharePoint Embedded authorization model in the future. Stay tuned.
