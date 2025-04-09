@@ -53,6 +53,9 @@ An optional property that specifies the text content of the element specified by
 
 An optional property that specifies style attributes to apply to the element specified by `elmType`. This is an object with name-value pairs that correspond to CSS names and values. The values of each property in the style object can either be a string (including special strings) or an Expression object. The following style attributes are allowed.
 
+> [!CAUTION]
+> Certain CSS properties, such as float, may no longer be supported in Microsoft Lists custom formatting. Users are encouraged to use Gallery View as a more stable alternative.
+
 ```javascript
 'background-color'
 'fill'
@@ -163,7 +166,7 @@ An optional property that specifies style attributes to apply to the element spe
 'clear'
 'clip'
 'display'
-'float'
+'float' (Deprecated)
 'left'
 'overflow'
 'position'
