@@ -27,7 +27,7 @@ To show or hide a column in a list or library form:
 1. In the **Edit columns** pane, check (to show) or uncheck (to hide) the checkbox for the column or columns as needed.
 
     > [!NOTE]
-    > If you want to re-arrange the order of the columns, either drag-and-drop the column name, or first select the far right hand edge of the column name to display the options menu **(...)** and then select Move Up or Move Down as preferred.
+    > If you want to re-arrange the order of the columns, either drag-and-drop the column name or first select the far right-hand edge of the column name to display the options menu **(...)** and then select Move Up or Move Down as preferred.
 
 1. When you're finished, select **Save**.
 
