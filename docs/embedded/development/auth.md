@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 03/28/2025
+ms.date: 04/09/2025
 ms.localizationpriority: high
 ---
 
@@ -76,7 +76,7 @@ To [register a container type](../getting-started/register-api-documentation.md)
 > [!NOTE]
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
 
-To use the [SharePoint Embedded copilot](./declarative-agent/spe-da.md) experience (in Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
+To use the [SharePoint Embedded copilot](./declarative-agent/spe-da.md) experience (in the Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
 
 #### Operations involving searching SharePoint Embedded content
 
@@ -85,7 +85,7 @@ This refers only to the search scenarios in [Search Content](./content-experienc
 To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) to search on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission. During the Preview stage of this feature, this application permission will grant applications access to search capabilities on SharePoint Embedded content.
 
 > [!NOTE]
-> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align to the SharePoint Embedded authorization model in the future. Stay tuned.
+> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
 
 ### Container type application permissions
 
@@ -114,7 +114,7 @@ SharePoint Embedded applications need to be granted container type application p
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not to access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
