@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 03/28/2025
+ms.date: 04/09/2025
 ms.localizationpriority: high
 ---
 
@@ -55,7 +55,7 @@ Currently, there are two types of operations with exceptional access patterns:
 - Operations involving searching SharePoint Embedded content
 
 > [!IMPORTANT]
-> Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and by other applications.
+> Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and other applications.
 
 #### Operations not exposed via Microsoft Graph
 
@@ -82,7 +82,7 @@ This refers only to the search scenarios in [Search Content](./content-experienc
 To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission on top of `FileStorageContainer.Selected` normally used for SharePoint Embedded access. During the Preview stage of this feature, the `Files.Read.All` application permission will grant applications access to search capabilities on all SharePoint Embedded content.
 
 > [!NOTE]
-> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align to the SharePoint Embedded authorization model in the future. Stay tuned.
+> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
 
 ### Container type application permissions
 
@@ -111,7 +111,7 @@ SharePoint Embedded applications need to be granted container type application p
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not to access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
