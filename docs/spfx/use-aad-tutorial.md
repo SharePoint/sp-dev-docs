@@ -14,7 +14,7 @@ Introduced in v1.4.1, you can use the SharePoint Framework to consume Microsoft 
 In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions. For a conceptual overview of this technology, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 > [!IMPORTANT]
-> You can consume the Microsoft Graph API with versions of SharePoint Framework earlier than v1.4.1, either via the native **GraphHttpClient**, or by directly using [Microsoft identity platfomr authentication libraries](/azure/active-directory/develop/reference-v2-libraries) implicit OAuth flow. However, the former approach is bound to a predefined set of permissions, which presents some limitations, and the latter is complex from a development perspective.
+> Consume the Microsoft Graph API with SharePoint Framework earlier than v1.4.1, can be achieved by directly using [Microsoft Authentication Library for JavaScript library](/javascript/api/overview/msal-overview?view=msal-js-latest). This approach is not supported in versions 1.4.1 and beyond.
 
 ## Solution overview
 
