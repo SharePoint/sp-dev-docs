@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.21 release notes
 description: Release notes for the SharePoint Framework v1.21 release.
-ms.date: 04/03/2025
+ms.date: 04/10/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
@@ -13,6 +13,7 @@ This release has initial configuration updates for web parts in the context of f
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+* rc.0 **Released:** April 10, 2025
 * beta.2 **Released:** April 3, 2025
 * beta.0 **Released:** February 25, 2025
 
@@ -26,7 +27,7 @@ Install the latest generally available release of the SharePoint Framework (SPFx
 npm install @microsoft/generator-sharepoint@next --global
 ```
 
-## Upgrading projects from the SPFx v1.20 to v1.21 preview version
+## Upgrading projects from the SPFx v1.20 to v1.21 release candiate version
 
 In the project's **package.json** file, identify all SPFx v1.20 packages. For each SPFx package:
 
@@ -51,6 +52,10 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 Node.js support will be updated to the version 22 with the 1.21 release. This beta build is the first version to include version 22 support.
 
 Notice that when SPFx 1.21 is generally available, Node.js version 22 is the only supported version with it. Currently SPFx supports Node.js version 18, which will fall out of the support in end of April 2025. We are planning to have SPFx 1.21 generally available before that date.
+
+### TypeScript 5.x support
+
+Starting with this first release candidate for the 1.21 release, we have also updated the support for the TypeScript 5.x. Default scaffolded projects are using currently specifically 5.3.3 version by default.
 
 ### Flexible layout configuration options for web parts
 
