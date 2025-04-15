@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-Ins and Azure ACS retirement FAQ
 description: Answers frequently asked questions related to the retirements of SharePoint Add-In and Azure ACS in Microsoft 365.
-ms.date: 10/05/2024
+ms.date: 04/15/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -74,6 +74,10 @@ When you're using the classic "Site Contents" page (`_layouts/15/viewlsts.aspx`)
 ## Are SharePoint CSOM or SharePoint JSOM part of this retirement?
 
 No, both CSOM (client-side object model) and JSOM (JavaScript object model) will continue working after Add-Ins and Azure ACS have been fully retired. However, for new applications, and updates to existing applications, we recommend using the Microsoft Graph and SharePoint REST APIs for client-side code. For server-side code the recommendation is to use Microsoft Graph as a first choice. If the functionality you need is not yet available in the Microsoft Graph, then SharePoint REST or SharePoint CSOM can be used.
+
+## When I use appregnew.aspx the created ACS principals show up in Entra
+
+As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. These app principals are detected by the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), however you need version 1.10.0 to ensure the principal validity is correctly reported.
 
 ## Do I need to delete Azure ACS principals that are not needed anymore?
 
