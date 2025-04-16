@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 03/17/2025
+ms.date: 04/11/2025
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -148,7 +148,7 @@ Below is a quick summary of the best practices to handle throttling:
 - Use the `Retry-After` and `RateLimit` HTTP headers
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
 - Consider using [Graph Data Connect for SharePoint](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/links-about-microsoft-graph-data-connect-for-sharepoint/4069045) for broad sites analytics 
-- Understand if [SharePoint prioritization](https://aka.ms/SharePointPrioritization) feature is the right fit for your scenario
+- Understand if [service prioritization in SharePoint](https://aka.ms/SharePointPrioritization) is the right fit for your scenario
 
 As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes fewer resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
 
@@ -315,7 +315,7 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 
 ## See also
 
-- [SharePoint prioritization](https://aka.ms/SharePointPrioritization)
+- [service prioritization in SharePoint](https://aka.ms/SharePointPrioritization)
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
 - [Microsoft Graph dev center](/graph)
