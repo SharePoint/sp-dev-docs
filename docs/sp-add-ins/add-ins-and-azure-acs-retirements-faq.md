@@ -77,7 +77,7 @@ No, both CSOM (client-side object model) and JSOM (JavaScript object model) will
 
 ## When I use appregnew.aspx the created ACS principals show up in Entra
 
-As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. These app principals are detected by the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), however you need version 1.10.0 to ensure the principal validity is correctly reported.
+As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. These app principals are detected by the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), however you need version 1.10.0 to ensure the principal validity is correctly reported. Note, if you want to renew the secret of these principals ensure you're using the right approach as described in [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
 
 ## Do I need to delete Azure ACS principals that are not needed anymore?
 
