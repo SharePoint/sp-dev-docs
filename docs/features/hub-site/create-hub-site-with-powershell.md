@@ -28,10 +28,10 @@ The samples below can be performed using [PnP PowerShell](https://www.powershell
 
 First, we will create the marketing site that will serve as a hub site that other sites can associate with. The intent is that any sites that are marketing-oriented will be part of the hub site. This applies common navigation and branding across the associated sites, enables team members to search across all the sites associated with the single hub site, and takes advantage of other hub site features.
 
-1. Connect to the SharePoint Online Admin center using:
+1. Connect to the SharePoint Online Admin center using interactive login and [registered Azure AD (Entra ID)](https://pnp.github.io/powershell/articles/registerapplication.html) application:
 
     ```powershell
-    Connect-PnPOnline -Url https://contoso-admin.sharepoint.com -UseWebLogin
+    Connect-PnPOnline -Url https://contoso-admin.sharepoint.com -Interactive -ClientId <your-client-id>
     ```
 
 1. Create the site to be used as a hub site using the [New-PnPSite](https://pnp.github.io/powershell/cmdlets/New-PnPSite.html) cmdlet:
