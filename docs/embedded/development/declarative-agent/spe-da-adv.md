@@ -52,7 +52,7 @@ Connect-SPOService "https://<domain>-admin.sharepoint.com"
 # Login with your admin account.
 ...
 
-Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
+Set-SPOApplication -OwningApplicationId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
 
 # This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly. 
 ...
