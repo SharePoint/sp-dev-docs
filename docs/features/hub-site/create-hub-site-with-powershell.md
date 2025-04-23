@@ -1,13 +1,14 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site by using PowerShell.
-ms.date: 08/24/2022
+ms.date: 04/23/2025
 ms.localizationpriority: high
 ---
 
 # Create SharePoint hub sites by using PowerShell
 
 If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site by using Microsoft PowerShell. In this example, you'll learn how to create a SharePoint hub site and to associate another site with it. In this scenario, you are setting up sites for the Contoso marketing department:
+
 - You will create a hub site that all other marketing sites will be associated with.
 - You will then specify settings and permissions for the hub site.
 - Finally, you will create a second site and associate it with the hub site.
