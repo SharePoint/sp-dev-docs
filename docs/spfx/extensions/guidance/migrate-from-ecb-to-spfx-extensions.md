@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
 description: Migrate from old "classic" customizations (ECB) to the new model based on SharePoint Framework extensions.
-ms.date: 06/13/2022
+ms.date: 04/26/2025
 ms.localizationpriority: medium
 ---
 
@@ -198,8 +198,13 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 1. Open your favorite browser and go to a "modern" library of any "modern" team site. Append the following query string parameters to the **AllItems.aspx** page URL.
 
     ```html
-    ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6c5b8ee9-43ba-4cdf-a106-04857c8307be":{"location":"ClientSideExtension.ListViewCommandSet.ContextMenu","properties":{"targetUrl":"ShowDetail.aspx"}}}
+    ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js&customActions={"6c5b8ee9-43ba-4cdf-a106-04857c8307be":{"location":"ClientSideExtension.ListViewCommandSet.ContextMenu","properties":{"targetUrl":"ShowDetail.aspx"}}}
     ```
+
+
+> [!NOTE]
+> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+
 
     In the previous query string, replace the GUID with the `id` value you saved from the **CustomEcbCommandSet.manifest.json** file.
 

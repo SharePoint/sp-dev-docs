@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 12/14/2023
+ms.date: 04/26/2025
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions on modern SharePoint pages
@@ -96,7 +96,7 @@ To debug an Application Customizer, add the following to the URL of your modern 
 
 ```json
 ?loadSPFX=true
-&debugManifestsFile=https://localhost:4321/temp/manifests.js
+&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 &customActions={"<extensionId>":{
     "location":"<extensionType>",
     "properties":<propertiesJSON>
@@ -108,7 +108,7 @@ For example:
 ```text
 https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
     ?loadSPFX=true
-    &debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={
+    &debugManifestsFile=https://localhost:4321/temp/build/manifests.js&customActions={
         "e5625e23-5c5a-4007-a335-e6c2c3afa485":{
           "location":"ClientSideExtension.ApplicationCustomizer",
           "properties":{
@@ -117,6 +117,10 @@ https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
         }
     }
 ```
+
+> [!NOTE]
+> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+
 
 Following are the query string parameters that you need to add:
 
@@ -149,7 +153,7 @@ To debug a field customizer, add the following to the URL of your modern page:
 
 ```json
 ?loadSPFX=true
-&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={
+&debugManifestsFile=https://localhost:4321/temp/build/manifests.js&fieldCustomizers={
     "<fieldName>":{
       "id":"<fieldCustomizerId>",
       "properties":<propertiesJSON>
@@ -162,7 +166,7 @@ For example:
 ```text
 https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
   ?loadSPFX=true
-  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+  &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
   &fieldCustomizers={
     "Percent":{
       "id":"45a1d299-990d-4917-ba62-7cb67158be16",
@@ -172,6 +176,11 @@ https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
     }
   }
 ```
+
+
+> [!NOTE]
+> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+
 
 Following are the query string parameters that you need to add:
 
@@ -204,7 +213,7 @@ To debug a list view command set, add the following to the URL of your modern pa
 
 ```json
 ?loadSPFX=true
-&debugManifestsFile=https://localhost:4321/temp/manifests.js
+&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 &customActions={"<extensionId>":{
   "location":"<extensionType>",
   "properties":<propertiesJSON>
@@ -216,7 +225,7 @@ For example:
 ```text
 https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
   ?loadSPFX=true
-  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+  &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
   &customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{
     "location":"ClientSideExtension.ListViewCommandSet.CommandBar",
     "properties":{
@@ -225,6 +234,11 @@ https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
     }
   }}
 ```
+
+
+> [!NOTE]
+> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+
 
 Following are the query string parameters that you need to add:
 
@@ -259,7 +273,7 @@ gulp serve --nobrowser
 Next, in the web browser, navigate to the modern page, on which you want to test the web parts. After the page loaded, add the following to the URL:
 
 ```text
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 ```
 
 For example:
@@ -270,8 +284,13 @@ For example:
 ```text
 https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
   ?loadSPFX=true
-  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+  &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 ```
+
+
+> [!NOTE]
+> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+
 
 The page will reload and show a popup asking you to confirm that you now will be loading debug scripts.
 

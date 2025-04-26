@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 07/15/2022
+ms.date: 04/26/2025
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions in Visual Studio Code
@@ -116,7 +116,7 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
     ```json
     ?loadSPFX=true
-    &debugManifestsFile=https://localhost:4321/temp/manifests.js
+    &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
     &customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{
         "location":"ClientSideExtension.ApplicationCustomizer",
         "properties":{
@@ -124,6 +124,9 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
         }
     }}
     ```
+
+    > [!NOTE]
+    > Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
 
     More detail about the URL parameters:
 
@@ -142,7 +145,7 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
     ```json
     https://contoso.sharepoint.com/Lists/Contoso/AllItems.aspx
         ?loadSPFX=true
-        &debugManifestsFile=https://localhost:4321/temp/manifests.js
+        &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
         &customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{
             "location":"ClientSideExtension.ApplicationCustomizer",
             "properties":{
@@ -150,6 +153,9 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
             }
         }}
     ```
+
+    > [!NOTE]
+    > Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
 
 1. Select **Load debug scripts** to continue loading scripts from your local host.
 
