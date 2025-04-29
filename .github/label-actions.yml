@@ -1,0 +1,14 @@
+# Configuration for Label Actions - https://github.com/dessant/label-actions
+
+# Actions taken when the `type:archive-old-issue` label is added to issues that are being archived.
+type:archive-old-issue:
+  # Post a comment
+  comment: |+
+    Thank you for taking the time to file an issue. We periodically **archive** older or inactive issues as part of our issue management process, which automatically closes them once they are archived.  
+
+    If you’d like to understand more about why and how we handle archived (closed) issues, please see [Our approach to closed issues](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#our-approach-to-closed-issues).  
+
+    We appreciate your contribution and encourage you to check our active repositories or ask questions in the SharePoint developer community forums if you need further assistance.  
+
+  # Close the issue
+  close: true
