@@ -84,7 +84,7 @@ The following restrictions are applied to trial container types:
 
 ## Standard Container Types (non-trial)
 
-A standard container type in SharePoint Embedded defines the relationship, access privileges, and billing profile between an application and its containers. It establishes how the application interacts with the containers, including access permissions, and is associated with a billing profile for non-trial purposes. Each tenant can have 5 container types at a time.
+A standard container type in SharePoint Embedded defines the relationship, access privileges, and billing profile between an application and its containers. It establishes how the application interacts with the containers, including access permissions, and is associated with a billing profile for non-trial purposes. Each tenant can have 25 container types at a time.
 
 ### Billing profile
 
