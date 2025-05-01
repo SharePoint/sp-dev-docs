@@ -1,7 +1,7 @@
 ---
 title: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
 description: The context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
-ms.date: 09/26/2023
+ms.date: 05/01/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -24,7 +24,7 @@ There are different flows depending on the design of the add-in, but all of them
 
 Depending on which OAuth flow the add-in is using, one or the other of the following is also part of the process:
 
-- **Context token**. Used, in the Context Token flow, to provide the remote component with a refresh token and with information that it needs to request an access token from Azure ACS.
+- **Context token**. Used in the Context Token flow, to provide the remote component with a refresh token and with information that it needs to request an access token from Azure ACS.
 - **Authorization code**. Not a token, but an authorization code, unique to each pair of user and application. It's used in the Authorization Code flow to obtain a first access token and a refresh token.
 
 ## Access tokens
@@ -50,7 +50,7 @@ Depending on your SharePoint Add-in's architecture and the hosting platform, the
 - In a [memcached](http://www.memcached.org/) system
 
 > [!NOTE]
-> In most scenarios, you won't be able to use terms as simple as "AccessToken" as the caching key because your add-in must keep the tokens for different users and SharePoint farms/tenancies distinct. If your add-in uses the [Context Token flow](context-token-oauth-flow-for-sharepoint-add-ins.md), there's special **CacheKey** provided by SharePoint that can be used to distinguish cached tokens. This section explains what the issues are and what to do when your application isn't using the Context Token flow.
+> In most scenarios, you won't be able to use terms as simple as "AccessToken" as the caching key because your add-in must keep the tokens for different users and SharePoint farms/tenancies distinct. If your add-in uses the [Context Token flow](context-token-oauth-flow-for-sharepoint-add-ins.md), there's a special **CacheKey** provided by SharePoint that can be used to distinguish cached tokens. This section explains what the issues are and what to do when your application isn't using the Context Token flow.
 
 Caching the access token in **session state** is fine for most scenarios. If the remote web application is accessing other services that use OAuth (in addition to SharePoint) and its caching the various access tokens in session state, be sure to use distinct cache keys for the tokens; for example, instead of "AccessToken", use "SharePoint\_AccessToken", "Facebook\_AccessToken", "SAP\_Gateway\_AccessToken", and so on. (If you're not using session state or some other caching that automatically separates each user's cache, you need to relativize your keys for users.)
 
