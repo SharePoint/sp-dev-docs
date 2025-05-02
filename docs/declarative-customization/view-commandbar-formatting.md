@@ -87,6 +87,8 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'pinToQuickAccess'
 'unpinFromQuickAccess'
 'manageForms'
+'favoriteCommand'
+'createCopilot'
 ```
 
 ## 🚀 Recent updates to `commandBarCustomization` Keys
@@ -96,11 +98,13 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > 
 > | Original Key | Current Key |
 > |--------------|-------------|
-> | `new`        | `newComposite` |
+> | `new`        | `newComposite` (Document Library)|
 > | `upload`     | `uploadCommand` |
 > | `sync`       | `syncCommand` |
 > | `addShortcut`| `addShortcutToOneDriveCommand` |
 > | `pinToQuickAccess` | `PinToQuickAccessCommand` |
+> | `pinItem` | `pinItemCommand` |
+> | `properties` | `propertiesCommand` |
 
 ## hide
 
