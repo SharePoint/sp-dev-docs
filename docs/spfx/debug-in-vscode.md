@@ -154,9 +154,6 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
         }}
     ```
 
-    > [!NOTE]
-    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
-
 1. Select **Load debug scripts** to continue loading scripts from your local host.
 
     ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
