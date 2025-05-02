@@ -8,7 +8,7 @@ type:archive-old-issue:
 
     If you’d like to understand more about why and how we handle archived (closed) issues, please see [Our approach to closed issues](https://github.com/SharePoint/sp-dev-docs/wiki/Issue-List#our-approach-to-closed-issues).  
 
-    We appreciate your contribution and encourage you to check our active repositories or ask questions in the SharePoint developer community forums if you need further assistance.  
+    We appreciate your contribution and if this is still an active issue with the latest SPFx versions, please do resubmit the details. We needed to perform a cleanup, so that we can start with a **clean table** with a new process. We apologize for the inconvenience this might cause.
 
   # Close the issue
   close: true
