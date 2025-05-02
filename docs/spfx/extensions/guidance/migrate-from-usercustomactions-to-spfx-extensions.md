@@ -330,8 +330,8 @@ The UI elements of the custom footer are rendered using React and a custom React
     ```
 
 
-> [!NOTE]
-> The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
+    > [!NOTE]
+    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
 
 
     In this query string, replace the GUID with the `id` value you saved from the **CustomFooterApplicationCustomizer.manifest.json** file.
