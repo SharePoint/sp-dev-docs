@@ -8,13 +8,13 @@ ms.localizationpriority: high
 
 Visual Studio Code is a popular code editor frequently used for building SharePoint Framework solutions. By setting up debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors.
 
-You can also see the required steps to enable debugging in Visual Studio Code in this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also see the required steps to enable debugging in Visual Studio Code in this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
 
 ## Prerequisites
 
-The easiest way to configure Visual Studio Code (VS Code) to debug SharePoint Framework solutions is by using the [JavaScript Debugger](https://github.com/microsoft/vscode-js-debug) included in VS Code to debug Chrome & Edge.
+The easiest way to configure Visual Studio Code (VS Code) to debug SharePoint Framework solutions is to use the [JavaScript Debugger](https://github.com/microsoft/vscode-js-debug) included in VS Code to debug Chrome & Edge.
 
 You also need **Google Chrome** or **Microsoft Edge**.
 
@@ -29,13 +29,13 @@ You can locate the debug configurations in the **./vscode/launch.json** file und
     ![Breakpoint configured in a SharePoint Framework client-side web part in Visual Studio Code](../images/vscode-debugging-breakpoint-configured.png)
 
 1. In Visual Studio Code, on the **View** menu, select the **Integrated Terminal** option or select <kbd>ctrl</kbd>+<kbd>`</kbd> on the keyboard.
-1. In the terminal run the following command:
+1. In the terminal, run the following command:
 
     ```console
     gulp serve --nobrowser
     ```
 
-    Running this command builds your SharePoint Framework solution and starts the local webserver to serve the output files. Because the debugger starts its own instance of the browser, you use the **--nobrowser** argument to prevent the **serve** task from opening a browser window.
+    Running this command builds your SharePoint Framework solution and starts the local web server to serve the output files. Because the debugger starts an instance of the browser, you use the **--nobrowser** argument to prevent the **serve** task from opening a browser window.
 
     ![The gulp serve command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
 
@@ -46,7 +46,7 @@ After the gulp task is finished, move the focus to the code area of Visual Studi
 The debug mode in Visual Studio Code starts, changing the color of the status bar to orange and opening a new window of Google Chrome showing the SharePoint Workbench.
 
 > [!NOTE]
-> At this point the breakpoint is disabled because the web part's code hasn't been loaded yet. SharePoint Framework loads web parts on demand only after they have been added to the page.
+> At this point, the breakpoint is disabled because the web part's code hasn't been loaded yet. SharePoint Framework loads web parts on demand only after they have been added to the page.
 
 ![Visual Studio Code in debug mode displayed next to Google Chrome showing the SharePoint workbench](../images/vscode-debugging-chrome-started.png)
 
@@ -104,11 +104,11 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
     ![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../images/vscode-debugging-debugging-hosted-workbench.png)
 
-1. After initiating the gulp serve in the Terminal start debugging either by selecting <kbd>F5</kbd> or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Microsoft 365 sign-in page.
+1. After initiating the gulp serve in the Terminal, start debugging either by selecting <kbd>F5</kbd> or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Microsoft 365 sign-in page.
 
     ![Microsoft 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
 
-1. In the workbench tab that was opened in your browser navigate to a SharePoint Online page that you wish to test your extension.
+1. In the workbench tab that was opened in your browser, navigate to a SharePoint Online page that you wish to test your extension.
 1. Append the following query string parameters to the URL. Notice that you need to update the ID to match your own extension identifier. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
 
     > [!CAUTION]
@@ -126,16 +126,16 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
     ```
 
     > [!NOTE]
-    > Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
 
-    More detail about the URL parameters:
+    Additional details about the URL parameters:
 
     - **loadSPFX=true**: Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
     - **debugManifestsFile**: Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
     - **customActions**: Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it.
         - **Key**: Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.
         - **Location**: The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.
-        - **Properties**: An optional JSON object that contains properties that are available via the `this.properties` member. In this HelloWorld example, it defined a `testMessage` property.
+        - **Properties**: An optional JSON object that contains properties that are available via the `this.properties` member. In this HelloWorld example, it defines a `testMessage` property.
 
     The full URL should look similar to the following:
 
@@ -155,13 +155,13 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
     ```
 
     > [!NOTE]
-    > Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
 
 1. Select **Load debug scripts** to continue loading scripts from your local host.
 
     ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
 
-    When the page loads, you should now be able to see the Extension on your page (in this case a list view command extension):
+    When the page loads, you should now be able to see the Extension on your page (in this case, a list view command extension):
 
     ![SPFx extension loaded in the page](../images/debug-Extension-Loaded.png)
 
@@ -171,10 +171,10 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
 ## Debugging with Microsoft Edge or older projects
 
-If you're using an older version of SharePoint Framework Yeoman generator or want to debug with Microsoft Edge, follow these steps to create the launch.json file manually.
+If you're using an older version of the SharePoint Framework Yeoman generator or want to debug with Microsoft Edge, follow these steps to create the launch.json file manually.
 
 > [!NOTE]
-> In order for you to debug with Microsoft Edge, you'll have to install the **Windows 10 April 2018 Update** which includes the Microsoft Edge DevTools Protocol.
+> In order for you to debug with Microsoft Edge, you'll have to install the **Windows 10 April 2018 Update**, which includes the Microsoft Edge DevTools Protocol.
 
 ### Create debug configuration for hosted workbench
 
