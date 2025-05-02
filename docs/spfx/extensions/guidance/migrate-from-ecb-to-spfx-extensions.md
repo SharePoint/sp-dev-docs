@@ -203,7 +203,7 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 
 
 > [!NOTE]
-> Debug query string was changed starting from the SPFx verson 1.21 from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`
+> The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
 
 
     In the previous query string, replace the GUID with the `id` value you saved from the **CustomEcbCommandSet.manifest.json** file.
