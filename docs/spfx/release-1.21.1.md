@@ -9,7 +9,7 @@ ms.localizationpriority: high
 This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides a fix on a regression related on the CSS handling with the previous [released 1.21 version](release-1.21.md).
 
 > [!TIP]
-> It's safe to keep on using SharePoint Framework 1.21 version (if you don't have CSS issues with it), but we do recommend using always the latest version in the production, which in this case would be the 1.17.1, which has fixes on the reported GitHub issues as listed below.
+> It's safe to keep on using SharePoint Framework 1.21 version (if you don't have CSS issues with it), but we do recommend using always the latest version in the production, which in this case would be the 1.21.1, which has fixes on the reported GitHub issues as listed below.
 
 **Released:** May 3, 2025
 
