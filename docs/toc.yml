@@ -319,6 +319,8 @@
       href: spfx/web-parts/basics/add-an-external-library.md
     - name: JavaScript libraries
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: SharePoint Online Support for Content Security Policy (CSP)
+      href: /spfx/content-securty-policy-trusted-script-sources.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
   - name: Connect to APIs
@@ -719,7 +721,7 @@
     - name: Create a Data Visualization Adaptive Card Extension
       href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
     - name: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
-      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md      
+      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
