@@ -28,7 +28,7 @@ ms.localizationpriority: high
 ```console
 # Install the SDK with npm
 
-npm install "https://download.microsoft.com/download/e2d6b1ec-7168-4787-b8de-4a9862f10744/microsoft-sharepointembedded-copilotchat-react-1.0.8.tgz"
+npm install "https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"
 ```
 
 #### If you want to verify checksums
@@ -36,11 +36,11 @@ npm install "https://download.microsoft.com/download/e2d6b1ec-7168-4787-b8de-4a9
 In MacOS/Linux
 
 ```console
-version="1.0.8";
+version="1.0.9";
 
-url="https://download.microsoft.com/download/e2d6b1ec-7168-4787-b8de-4a9862f10744/microsoft-sharepointembedded-copilotchat-react-1.0.8.tgz"; 
+url="https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"; 
 
-expected_checksum="16E652BBD2A1990D488060EE4E3C02917D782DE013568A6FC5C37C170D307F99"; 
+expected_checksum="3bdf19830ffc098b253cc809f969f50fba236ad95fe85123e7b15c7cf58ecf6b"; 
 
 package_path="microsoft-sharepointembedded-copilotchat-react-$version.tgz"; 
 
@@ -50,9 +50,9 @@ curl -o $package_path $url && [ "$(sha256sum $package_path | awk '{ print $1 }')
 In Windows:
 
 ```powershell
-$version = "1.0.8"
-$url = "https://download.microsoft.com/download/e2d6b1ec-7168-4787-b8de-4a9862f10744/microsoft-sharepointembedded-copilotchat-react-1.0.8.tgz"
-$expected_checksum = "16E652BBD2A1990D488060EE4E3C02917D782DE013568A6FC5C37C170D307F99"
+$version = "1.0.9"
+$url = "https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"
+$expected_checksum = "3BDF19830FFC098B253CC809F969F50FBA236AD95FE85123E7B15C7CF58ECF6B"
 $package_path = "microsoft-sharepointembedded-copilotchat-react-$version.tgz"
 
 Invoke-WebRequest -Uri $url -OutFile $package_path
