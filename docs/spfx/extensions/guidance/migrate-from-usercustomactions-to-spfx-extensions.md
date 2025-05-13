@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (CustomAction) to the new model based on SharePoint Framework extensions.
-ms.date: 06/13/2022
+ms.date: 04/26/2025
 ms.localizationpriority: medium
 ---
 
@@ -326,8 +326,13 @@ The UI elements of the custom footer are rendered using React and a custom React
 1. Now open your favorite browser and go to a "modern" page of any "modern" team site. Now, append the following query string parameters to the page's URL.
 
     ```html
-    ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"82242bbb-f951-4c71-a978-80eb8f35e4c1":{"location":"ClientSideExtension.ApplicationCustomizer"}}
+    ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js&customActions={"82242bbb-f951-4c71-a978-80eb8f35e4c1":{"location":"ClientSideExtension.ApplicationCustomizer"}}
     ```
+
+
+    > [!NOTE]
+    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
+
 
     In this query string, replace the GUID with the `id` value you saved from the **CustomFooterApplicationCustomizer.manifest.json** file.
 

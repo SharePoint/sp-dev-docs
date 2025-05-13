@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 02/16/2023
+ms.date: 04/23/2025
 ms.localizationpriority: high
 ---
 
@@ -80,7 +80,7 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
     [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
-1. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
+1. Enter `Connect-PnPOnline -Url <SiteUrl> -Interactive -ClientId <your-client-id>` (replacing `<SiteUrl>` with the URL of the site you wish to connect to, and `<your-client-id>` with the Client ID of your [registered Entra ID (Azure AD)](https://pnp.github.io/powershell/articles/registerapplication.html) application).
 1. Enter your credentials when prompted.
 1. To opt out of the site, you need to enable a feature:
 

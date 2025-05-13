@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 10/01/2024
+ms.date: 04/23/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -21,7 +21,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 ## Install Node.js
 
-Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v18**.
+Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v22**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
@@ -42,7 +42,7 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-SharePoint Framework v1.20.* is supported on Node.js v18 LTS (*aka Hydrogen*).
+SharePoint Framework v1.21.* is supported on Node.js v22 LTS (*aka Jod*).
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
@@ -86,8 +86,10 @@ Enter the following command to install Yeoman:
 ```console
 npm install yo --global
 ```
+
 > [!IMPORTANT]
 > SharePoint Framework [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you use a previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx v1.13 until v1.18.1. You can install the latest Yeoman v4 version with the following command:
+
 >
 > ```console
 > npm install yo@4.3.1 --global

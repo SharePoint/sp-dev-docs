@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Billing Meters
 description: This article describes the meters in SharePoint Embedded.
-ms.date: 03/03/2025
+ms.date: 04/30/2025
 ms.localizationpriority: high
 ---
 
@@ -33,3 +33,7 @@ However, certain types of data transfers are exempt from egress charges. These e
 
 1. File downloads from the SharePoint Embedded application server to the customer's Office Desktop client aren't charged.
 1. File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC) aren't charged.
+
+## Pay as you go message (private preview)
+
+SharePoint Embedded agents use the Copilot Studio meter for $0.01/message (messages are the unit that measures agent usage). Each interaction with SharePoint Embedded agent will use twelve (12) messages - 2 messages for the generative answer feature and 10 messages for the tenant graph grounding feature - so customers are billed at $0.12 per interaction with SharePoint Embedded agents.

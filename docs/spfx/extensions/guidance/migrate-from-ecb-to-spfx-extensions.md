@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
 description: Migrate from old "classic" customizations (ECB) to the new model based on SharePoint Framework extensions.
-ms.date: 06/13/2022
+ms.date: 04/26/2025
 ms.localizationpriority: medium
 ---
 
@@ -198,12 +198,17 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 1. Open your favorite browser and go to a "modern" library of any "modern" team site. Append the following query string parameters to the **AllItems.aspx** page URL.
 
     ```html
-    ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6c5b8ee9-43ba-4cdf-a106-04857c8307be":{"location":"ClientSideExtension.ListViewCommandSet.ContextMenu","properties":{"targetUrl":"ShowDetail.aspx"}}}
+    ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js&customActions={"6c5b8ee9-43ba-4cdf-a106-04857c8307be":{"location":"ClientSideExtension.ListViewCommandSet.ContextMenu","properties":{"targetUrl":"ShowDetail.aspx"}}}
     ```
+
+
+    > [!NOTE]
+    > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
+
 
     In the previous query string, replace the GUID with the `id` value you saved from the **CustomEcbCommandSet.manifest.json** file.
 
-    Moreover, there's a `location` property that assumes the value of **ClientSideExtension.ListViewCommandSet.ContextMenu**, which instructs SPFx to render the Command Set as an ECB menu item. Following are all the options for the `location` property:
+    Moreover, there's a `location` property that assumes the value of **ClientSideExtension.ListViewCommandSet.ContextMenu**, which instructs SPFx to render the Command Set as an ECB menu item. The following are all the options for the `location` property:
 
     - **ClientSideExtension.ListViewCommandSet.ContextMenu**: The context menu of the item(s).
     - **ClientSideExtension.ListViewCommandSet.CommandBar**: The top command set menu in a list or library.
@@ -211,10 +216,10 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 
     Still in the query string, there's a property called `properties` that represents the JSON serialization of an object of type `ICustomEcbCommandSetProperties` that is the type of the custom properties requested by the custom Command Set for rendering.
 
-    Notice that when executing the page request, you're prompted with a warning message box with the title "Allow debug scripts?", which asks your consent to run code from localhost for security reasons. If you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
+    Notice that when executing the page request, you're prompted with a warning message box with the title "Allow debug scripts?", which asks for your consent to run code from localhost for security reasons. If you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
 
     > [!NOTE]
-    > Alternatively, you can create serve configuration entries in the **config/serve.json** file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
+    > Alternatively, you can create **serve** configuration entries in the **config/serve.json** file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
 
 ## Package and host the solution
 
