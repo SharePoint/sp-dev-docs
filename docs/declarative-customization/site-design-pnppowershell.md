@@ -24,7 +24,7 @@ To run the PnP PowerShell cmdlets, you'll need to do the following:
 1. Connect to the SharePoint Online Admin Center of your tenant:
 
     ```PowerShell
-    Connect-PnPOnline -Url https://tenant-admin.sharepoint.com -Interactive
+    Connect-PnPOnline -Url https://tenant-admin.sharepoint.com -UseWebLogin
     ```
 
 To verify your setup and connection, try using the `Get-PnPSiteScript` cmdlet to read the current list of site scripts. If the cmdlet runs and returns with no errors, you're ready to proceed.
