@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 04/09/2025
+ms.date: 05/14/2025
 ms.localizationpriority: high
 ---
 
@@ -135,7 +135,13 @@ Here are some actions you can take next:
      - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
-1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
+1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on both owning and consuming tenants (which can be the same tenant).
+   > [!NOTE]
+   > The `Container.Selected` application permission is hidden. This may cause issues with granting admin consent using the Enterprise apps pane in the Azure Portal. Instead, [construct the admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin) and provide it to your Entra directory administrator. For example:
+   >
+   > `https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}`
+   >
+   > Make sure the Entra directory administrator [confirms a successful response](/entra/identity-platform/v2-admin-consent#successful-response).
 1. [Create a new container type](../getting-started/containertypes.md) on the owning tenant.
 1. [Register a container type](../getting-started/register-api-documentation.md) on the consuming tenant.
 1. [Create a container](/graph/api/filestoragecontainer-post)
