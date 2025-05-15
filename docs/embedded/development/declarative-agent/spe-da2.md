@@ -1,6 +1,6 @@
 ---
 title: SharePoint Embedded agent 
-description: Details copilot integration with SharePoint Embedded applications
+description: Details usage and billing for SharePoint Embedded agents
 ms.date: 05/12/2025
 ms.localizationpriority: high
 ---
@@ -11,11 +11,11 @@ ms.localizationpriority: high
 >
 > SharePoint Embedded agent is currently in private preview. Stay tuned for latest API and SDK changes on this page.
 >
-> SPE agent consumption-based model will be available in May 2025! Starting May 1st, standard billing model will be available to all private preview customers and this rollout is expected to complete by May 15th. This means that starting May 15th, to use SPE agent within an SPE application, you will need to use standard Container Type. Copilot interactions, including those from Copilot license users, will be billed to the Azure subscription associated with your Container Type. Learn more about [SharePoint Embedded billing management](/sharepoint/dev/embedded/administration/billing/billingmanagement).
+> SPE agent consumption-based model will be available in May 2025! Starting May 1st, standard billing model will be available to all private preview customers and this rollout is expected to complete by May 15th. This means that starting May 15th, to use SPE agent within an SPE application, you will need to use standard Container Type. SPE Agent interactions, including those from Microsoft 365 Copilot license users, will be billed to the Azure subscription associated with your Container Type. Learn more about [SharePoint Embedded billing management](/sharepoint/dev/embedded/administration/billing/billingmanagement).
 >
 > We are actively working on enabling Direct-to-Customer billing model for SPE agent. Stay tuned for more announcements.
 
-SharePoint Embedded agent enables you to build Microsoft 365 Copilot functionality into your application through a simple SDK. This copilot chat control offers the following features:
+SharePoint Embedded agent enables you to add AI capabilities into your application through a simple SDK. This chat control offers the following features:
 
 - Reason over documents in SharePoint Embedded containers using RAG.
 - Developers can configure the application code to limit the search scope to files, folders, and containers.
@@ -49,19 +49,19 @@ The SharePoint Embedded React TypeScript NPM Package, available at [here](https:
 
 ### Is consumption-based billing available for SPE agent?
 
-Yes, starting May 15th you will need to use standard Container Type to use SPE agent within an SPE application. Copilot interactions, including those from Copilot license users, will be billed to the Azure subscription associated with your Container Type. Learn more about [SharePoint Embedded billing management](/sharepoint/dev/embedded/administration/billing/billingmanagement)
+Yes, starting May 15th you will need to use standard Container Type to use SPE agent within an SPE application. SharePoint Embedded agent interactions, including those from Microsoft 365 Copilot license users, will be billed to the Azure subscription associated with your Container Type. Learn more about [SharePoint Embedded billing management](/sharepoint/dev/embedded/administration/billing/billingmanagement)
 
-***Trial Container Types expire after 30 days, for this reason we recommend starting off with Standard Container types. Currently there is no upgrade path from Trial to Standard container types.***
+***Trial Container Types expire after 30 days, for this reason we recommend starting off with Standard Container types. There is no upgrade path from Trial to Standard container types.***
 
-### Should I use a standard or trial container type?
+### Should I use a standard or trial Container Type?
 
-Once consumption-based billing is enabled, we will be disabling the use of this feature with Trial Container types and it will only be enabled on Standard container types going forward. Please follow this [guide](../../getting-started/containertypes.md) to get started on creating your Standard Container type.
+Once consumption-based billing is enabled, we will be disabling the use of this feature with Trial Container Types and it will only be enabled on Standard Container Types going forward. Please follow this [guide](../../getting-started/containertypes.md) to get started on creating your Standard Container Type.
 
 ## SharePoint Embedded agent Support
 
 ### Chat Control Feedback Dialog
 
-If you encounter any issues with the chat control, please use the thumbs up and down feedback buttons to report the problem. This method is preferred for sending feedback because it provides us with telemetry data that helps us diagnose and troubleshoot the issue more effectively.
+If you encounter any issues with the chat control, please use the thumbs up or down feedback buttons to report the problem. This method is preferred for sending feedback because it provides us with telemetry data that helps us diagnose and troubleshoot the issue more effectively.
 
 When you click the thumbs down button, a feedback dialog will appear. Please include any relevant information in this dialog.
 
@@ -69,4 +69,4 @@ When you click the thumbs down button, a feedback dialog will appear. Please inc
 
 ## Advanced Topics Overview
 
-The [advanced topics](spe-da-adv.md) delve into how SharePoint Embedded agent use a semantic index to facilitate Retrieval-Augmented Generation (RAG), ensuring responses are accurately grounded in your stored content. You’ll also learn how to scope your copilot to specific data sources, set up various file formats, and configure locale options to tailor the copilot experience. By exploring concepts like grounding, semantic indexing, and RAG workflows, you can optimize your copilot’s effectiveness and maintain security within the Microsoft 365 boundary.
+The [advanced topics](spe-da-adv.md) delve into how SharePoint Embedded agent use a semantic index to facilitate Retrieval-Augmented Generation (RAG), ensuring responses are accurately grounded in your stored content. You’ll also learn how to scope your agent to specific data sources, set up various file formats, and configure locale options to tailor the agent experience. By exploring concepts like grounding, semantic indexing, and RAG workflows, you can optimize your agent’s effectiveness and maintain security within the Microsoft 365 boundary.
