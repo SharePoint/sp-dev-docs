@@ -1,5 +1,18 @@
 [
     {
+        "spfx": "1.21.1",
+        "url": "https://learn.microsoft.com/sharepoint/dev/spfx/release-1.21.1",
+        "node": [
+            "v22"
+        ],
+        "typescript": [
+            "v5.3"
+        ],
+        "react": [
+            "v17.0.1"
+        ]
+    },
+    {
         "spfx": "1.21.0",
         "url": "https://learn.microsoft.com/sharepoint/dev/spfx/release-1.21",
         "node": [
