@@ -53,6 +53,7 @@ Currently, there are two types of operations with exceptional access patterns:
 
 - Operations not exposed via Microsoft Graph
 - Operations involving searching SharePoint Embedded content
+- Operations that require a user license
 
 > [!IMPORTANT]
 > Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and other applications.
@@ -86,6 +87,14 @@ To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePo
 
 > [!NOTE]
 > Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
+
+#### Operations that require a user license
+
+SharePoint Embedded is designed to work without the need for end-users to have any kind of Microsoft 365 product licenses assigned to them. However, there are certain operations that still require the end-user to have a SharePoint product license assigned to them.
+
+##### List containers
+
+The [List containers](/graph/api/filestorage-list-containers?view=graph-rest-1.0&tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a SharePoint license assigned to them. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
 
 ### Container type application permissions
 
