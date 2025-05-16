@@ -99,7 +99,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > | Original Key | Current Key |
 > |--------------|-------------|
 > | `new`        | `newComposite` (Document Library)|
-> | `upload`     | `uploadCommand` |
+> | `upload`     | `UploadCommand` |
 > | `sync`       | `syncCommand` |
 > | `addShortcut`| `addShortcutToOneDriveCommand` |
 > | `pinToQuickAccess` | `PinToQuickAccessCommand` |
