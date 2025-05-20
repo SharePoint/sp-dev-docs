@@ -1,25 +1,33 @@
 ---
 title: SharePoint Embedded copilot Advanced Topics
 description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilot.
-ms.date: 3/03/2025
+ms.date: 5/20/2025
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded copilot Advanced Topics Overview
 
-This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We’ll explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
+This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
 
 ## Caveats
 
 ### Configuration
 
-#### Required ContainerType Configuration
+#### Required Container Type Configuration
 
 ##### DiscoverabilityDisabled
 
-This [flag](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) prevents copilot from discovering [drive items](/graph/api/resources/driveitem) in the specified container type. If you have an existing container type and are setting this value to false, please wait 24 hours to ensure the container type configuration is fully propagated before creating a new container, uploading files there, and trying out copilot on folders/files of that new container.
+The [`discoverabilityDisabled`](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) property controls whether [copilot](https://learn.microsoft.com/en-us/microsoft-365-copilot/) can discover [drive items](/graph/api/resources/driveitem) within a specific container type.
 
-The following is an example of how to set the flag to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
+If you’re updating an existing container type to set this property to `false`, allow up to **24 hours** for the configuration change to fully propagate before:
+
+- Creating new containers,  
+- Uploading files to containers, or  
+- Using copilot to interact with folders or files.
+
+This ensures copilot can correctly access and surface the content.
+
+Here is an example of how to set `discoverabilityDisabled` to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
@@ -33,14 +41,14 @@ Discoverability can also be disabled using the Visual Studio Code SharePoint Emb
 
 The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
 
-It is intended to allow consuming tenant SPE admins to set an allowlist of hosts that they will allow to embed the SPE copilot in an iFrame. Specifically, the value they set here will be used in a Content-Security-Policy header as a frame-ancestors value.
+It's intended to allow consuming tenant SPE admins to set an allowlist of hosts that are permitted to embed the SPE copilot in an iFrame. Specifically, the value they set here is used in a Content-Security-Policy header as a frame-ancestors value.
 
 > [!NOTE]
 >
-> If this configuration is not set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) will default be set to
-> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): ‘none’ which means no one can embed the copilot.
+> If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is default set to
+> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none" which means no one can embed the copilot.
 
-Below are example commands to use the [Connect to SharePoint Online using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
+Here are example commands to use the [Connect to SharePoint using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
 
 - [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
 - [Get-SPOApplication](/powershell/module/SharePoint-online/get-spoapplication) to get the `CopilotEmbeddedChatHosts` property.
@@ -52,7 +60,7 @@ Connect-SPOService "https://<domain>-admin.sharepoint.com"
 # Login with your admin account.
 ...
 
-Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
+Set-SPOApplication -OwningApplicationId  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("http://localhost:3000", "https://contoso.sharepoint.com", "https://fabrikam.com") 
 
 # This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly. 
 ...
@@ -71,7 +79,7 @@ CopilotEmbeddedChatHosts        : {http://localhost:*}
 
 ##### Authentication and 3P Cookies
 
-The iFrame used by SharePoint Embedded copilot attempts to authenticate using third-party cookies. If third-party cookies are disabled in the user's browser, the iFrame will not be able to authenticate automatically. In such cases, a popup will be displayed prompting the end user to log in manually. This ensures that the authentication process can still be completed even when third-party cookies are not available.
+The iFrame used by SharePoint Embedded Copilot authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iFrame can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
 
 ## Advanced Topics
 
@@ -89,7 +97,7 @@ Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#sema
 
 ![How RAG works in SPE](../../images/speco-ragm365.png)
 
-With SharePoint Embedded copilot, you can further ground the large language models (LLM) reponses on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
+With SharePoint Embedded copilot, you can further ground the large language models (LLM) response on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
 
 ### Semantic index
 
@@ -111,7 +119,7 @@ The LLM uses the data to inform and construct the response.
 
 ### Grounding
 
-Grounding in the context of SPE copilot refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the copilot is grounded on will be on the contents of the container type in the copilot application. Behind the scenes SPE copilot  uses M365 Copilot, [learn more about it's architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
+Grounding in the context of SPE copilot refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the copilot is grounded on will be on the contents of the container type in the copilot application. Behind the scenes SPE copilot  uses Microsoft 365 Copilot, [learn more about it's architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
 
 ### Scoping your copilot to specific content
 
@@ -162,9 +170,9 @@ The copilot iframe dynamically loads localization settings to ensure that the ch
 
 When the copilot iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows copilot to provide a consistent an
 
-You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/en-us/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7) note, if your M365 setting is different from your Sharepoint account langauge settings it will take precedence, you can change your M365 language settings here: [Change your display language in Microsoft 365](https://support.microsoft.com/en-us/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b)
+You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/en-us/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7) note, if your M365 setting is different from your Sharepoint account langauge settings it takes precedence, you can change your M365 language settings here: [Change your display language in Microsoft 365](https://support.microsoft.com/en-us/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b)
 
-An additional locale option can be passed in through the `ChatLaunchConfig` to further set the language the copilot will respond in:
+An additional locale option can be passed in through the `ChatLaunchConfig` to further set the language the copilot responds in:
 
 ```typescript
  const [chatConfig] = React.useState<ChatLaunchConfig>({
