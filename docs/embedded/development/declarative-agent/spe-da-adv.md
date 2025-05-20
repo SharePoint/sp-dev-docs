@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded copilot Advanced Topics
 description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilot.
-ms.date: 3/03/2025
+ms.date: 5/20/2025
 ms.localizationpriority: high
 ---
 
