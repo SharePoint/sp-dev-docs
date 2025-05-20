@@ -1,13 +1,13 @@
 ---
-title: SharePoint Embedded copilot Advanced Topics
-description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded copilot.
+title: SharePoint Embedded agent Advanced Topics
+description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded agent.
 ms.date: 5/20/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded copilot Advanced Topics Overview
+# SharePoint Embedded agent Advanced Topics Overview
 
-This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
+This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We explore how these concepts work together to ensure your agent retrieves relevant information from your data and returns grounded answers.
 
 ## Caveats
 
@@ -17,15 +17,15 @@ This advanced guide covers how the semantic index powers Retrieval-Augmented Gen
 
 ##### DiscoverabilityDisabled
 
-The [`discoverabilityDisabled`](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) property controls whether [copilot](https://learn.microsoft.com/en-us/microsoft-365-copilot/) can discover [drive items](/graph/api/resources/driveitem) within a specific container type.
+The [`discoverabilityDisabled`](../../administration/developer-admin/dev-admin.md#container-type-configuration-properties) property controls whether Microsoft 365 can discover [drive items](/graph/api/resources/driveitem) within a specific container type.
 
 If you’re updating an existing container type to set this property to `false`, allow up to **24 hours** for the configuration change to fully propagate before:
 
 - Creating new containers,  
 - Uploading files to containers, or  
-- Using copilot to interact with folders or files.
+- Using SPE agent to interact with folders or files.
 
-This ensures copilot can correctly access and surface the content.
+This ensures the agent can correctly access and surface the content.
 
 Here is an example of how to set `discoverabilityDisabled` to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
 
@@ -41,12 +41,12 @@ Discoverability can also be disabled using the Visual Studio Code SharePoint Emb
 
 The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
 
-It's intended to allow consuming tenant SPE admins to set an allowlist of hosts that are permitted to embed the SPE copilot in an iFrame. Specifically, the value they set here is used in a Content-Security-Policy header as a frame-ancestors value.
+It's intended to allow consuming tenant SPE admins to set an allowlist of hosts that are permitted to embed the SPE agent in an iframe. Specifically, the value they set here is used in a Content-Security-Policy header as a frame-ancestors value.
 
 > [!NOTE]
 >
 > If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is default set to
-> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none" which means no one can embed the copilot.
+> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none" which means no one can embed the agent.
 
 Here are example commands to use the [Connect to SharePoint using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
 
@@ -79,17 +79,17 @@ CopilotEmbeddedChatHosts        : {http://localhost:*}
 
 ##### Authentication and 3P Cookies
 
-The iFrame used by SharePoint Embedded Copilot authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iFrame can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
+The iframe used by SharePoint Embedded agent authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iframe can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
 
 ## Advanced Topics
 
 ### Application Scoping
 
-Application scoping in SharePoint Embedded copilot (SPE copilot) involves defining the boundaries and context within which the tool operates, ensuring its features and capabilities are tailored to meet the specific needs of different applications. This process helps customize the copilot's functionality, making it more effective and relevant for various use cases.
+Application scoping in SharePoint Embedded agent (SPE agent) involves defining the boundaries and context within which the tool operates, ensuring its features and capabilities are tailored to meet the specific needs of different applications. This process helps customize the agent's functionality, making it more effective and relevant for various use cases.
 
-When SPE copilot users query the LLM, it will only have access to files that the **User+Application** have access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
+When SPE agent users query the LLM, it will only have access to files that the **User+Application** have access to. The effective permissions for the agent session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
 
-![Venn Diagram with SPE application access on left, SPE copilot in middle and consuming tenant user on right, overlapped area is what copilot can access](../../images/speco-appscopingvenn.png)
+![Venn Diagram with SPE application access on left, SPE agent in middle and consuming tenant user on right, overlapped area is what agent can access](../../images/speco-appscopingvenn.png)
 
 ### Information Architecture
 
@@ -97,7 +97,7 @@ Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#sema
 
 ![How RAG works in SPE](../../images/speco-ragm365.png)
 
-With SharePoint Embedded copilot, you can further ground the large language models (LLM) response on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
+With SharePoint Embedded agent, you can further ground the large language models (LLM) response on [specific files or drive items.](spe-da-adv.md#scoping-your-agent-to-specific-content).
 
 ### Semantic index
 
@@ -119,11 +119,11 @@ The LLM uses the data to inform and construct the response.
 
 ### Grounding
 
-Grounding in the context of SPE copilot refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the copilot is grounded on will be on the contents of the container type in the copilot application. Behind the scenes SPE copilot  uses Microsoft 365 Copilot, [learn more about it's architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
+Grounding in the context of SPE agent refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the agent is grounded on will be on the contents of the container type in the agent application. Behind the scenes SPE agent uses Microsoft 365 Copilot, [learn more about its architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
 
-### Scoping your copilot to specific content
+### Scoping your agent to specific content
 
-SharePoint Embedded (SPE) copilot has the ability to restrict the data sources it has access to, below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK
+SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to, below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK
 
 ```typescript
 export type IDataSourcesProps =
@@ -166,13 +166,13 @@ export enum DataSourceType {
 
 ##### Language/Locale
 
-The copilot iframe dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
+The agent iframe dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
 
-When the copilot iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows copilot to provide a consistent an
+When the agent iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows the agent to provide a consistent an
 
-You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/en-us/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7) note, if your M365 setting is different from your Sharepoint account langauge settings it takes precedence, you can change your M365 language settings here: [Change your display language in Microsoft 365](https://support.microsoft.com/en-us/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b)
+You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/en-us/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7) note, if your M365 setting is different from your Sharepoint account language settings it takes precedence, you can change your M365 language settings here: [Change your display language in Microsoft 365](https://support.microsoft.com/en-us/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b)
 
-An additional locale option can be passed in through the `ChatLaunchConfig` to further set the language the copilot responds in:
+An additional locale option can be passed in through the `ChatLaunchConfig` to further set the language the agent responds in:
 
 ```typescript
  const [chatConfig] = React.useState<ChatLaunchConfig>({
