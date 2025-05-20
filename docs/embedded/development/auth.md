@@ -90,11 +90,11 @@ To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePo
 
 #### Operations that require a user license
 
-SharePoint Embedded is designed to work without the need for end-users to have any kind of Microsoft 365 product licenses assigned to them. However, there are certain operations that still require the end-user to have a SharePoint product license assigned to them.
+SharePoint Embedded is designed to work without the need for end-users to have any kind of Microsoft 365 product licenses assigned to them. However, there are certain operations that do not abide by this principle yet.
 
 ##### List containers
 
-The [List containers](/graph/api/filestorage-list-containers?view=graph-rest-1.0&tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a SharePoint license assigned to them. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
+The [List containers](/graph/api/filestorage-list-containers?view=graph-rest-1.0&tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a OneDrive for Business site. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
 
 ### Container type application permissions
 
