@@ -5,7 +5,7 @@ ms.date: 5/20/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded copilot Advanced Topics Overview
+# SharePoint Embedded Copilot Advanced Topics Overview
 
 This advanced guide covers how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses. We explore how these concepts work together to ensure your copilot retrieves relevant information from your data and returns grounded answers.
 
@@ -47,7 +47,7 @@ It's intended to allow consuming tenant SPE admins to set an allowlist of hosts 
 >
 > If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is default set to
 > [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none" which means no one can embed the copilot.
-
+ 
 Here are example commands to use the [Connect to SharePoint using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
 
 - [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
@@ -87,27 +87,29 @@ The iFrame used by SharePoint Embedded Copilot authenticates users using third-p
 
 Application scoping in SharePoint Embedded copilot (SPE copilot) involves defining the boundaries and context within which the tool operates, ensuring its features and capabilities are tailored to meet the specific needs of different applications. This process helps customize the copilot's functionality, making it more effective and relevant for various use cases.
 
-When SPE copilot users query the LLM, it will only have access to files that the **User+Application** have access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
+When SPE copilot users query the LLM, it will only have access to files that the **User+Application** has access to. The effective permissions for the copilot session will be the intersection of your SharePoint Embedded application's permissions and the user's permissions.
 
 ![Venn Diagram with SPE application access on left, SPE copilot in middle and consuming tenant user on right, overlapped area is what copilot can access](../../images/speco-appscopingvenn.png)
 
 ### Information Architecture
 
-Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#semantic-index). This semantic index underpins retrieval augmented generation [(RAG)](spe-da-adv.md#rag--retrieval-augmented-generation-) workflows by providing relevant context from your stored content at query time. In essence, it [grounds](spe-da-adv.md#grounding) the AI responses, ensuring they directly reference accurate information in your containers rather than relying on general knowledge alone.
+Files in SharePoint Embedded are naturally [semantically indexed](spe-da-adv.md#semantic-index). This semantic index underpins retrieval augmented generation [(RAG)](spe-da-adv.md#rag--retrieval-augmented-generation-) workflows by providing relevant context from your stored content at query time. In essence, it [grounds](spe-da-adv.md#grounding) the AI responses, ensuring they directly reference accurate information in your containers rather than relying on general knowledge alone.
 
 ![How RAG works in SPE](../../images/speco-ragm365.png)
 
+
 With SharePoint Embedded copilot, you can further ground the large language models (LLM) response on [specific files or drive items.](spe-da-adv.md#scoping-your-copilot-to-specific-content).
+
 
 ### Semantic index
 
-[Learn more about semantic index for Microsoft 365 Copilot here](/microsoftsearch/semantic-index-for-copilot)
+[Learn more about the semantic index for Microsoft 365 Copilot here](/microsoftsearch/semantic-index-for-copilot)
 
 The semantic index allows for quick and accurate searches based on data similarity. This means it can find the most relevant information not just by exact matches, but also by understanding the context and meaning.
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG relies on having relevant source materials stored in a repository, which can be queried at runtime​, data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM)​:
+RAG relies on having relevant source materials stored in a repository, which can be queried at runtime. Data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM)​:
 
 - Treat data sources as knowledge without having to train your model​
 - Uses search (retrieval) results as additional context in your prompt​
@@ -121,9 +123,10 @@ The LLM uses the data to inform and construct the response.
 
 Grounding in the context of SPE copilot refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the copilot is grounded on will be on the contents of the container type in the copilot application. Behind the scenes SPE copilot  uses Microsoft 365 Copilot, [learn more about it's architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
 
+
 ### Scoping your copilot to specific content
 
-SharePoint Embedded (SPE) copilot has the ability to restrict the data sources it has access to, below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK
+SharePoint Embedded (SPE) copilot can restrict the data sources it has access to. Below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK:
 
 ```typescript
 export type IDataSourcesProps =
@@ -166,9 +169,9 @@ export enum DataSourceType {
 
 ##### Language/Locale
 
-The copilot iframe dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
+The copilot `iframe` dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
 
-When the copilot iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows copilot to provide a consistent an
+When the copilot `iframe` is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows copilot to provide a consistent an
 
 You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/en-us/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7) note, if your M365 setting is different from your Sharepoint account langauge settings it takes precedence, you can change your M365 language settings here: [Change your display language in Microsoft 365](https://support.microsoft.com/en-us/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b)
 

@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 11/02/2023
+ms.date: 04/23/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -98,7 +98,7 @@ Build target: DEBUG
 [12:13:24] Starting 'serve'...
 [12:13:24] Starting gulp
 [12:13:24] Starting subtask 'spfx-serve'...
-[12:13:24] [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/manifests.js
+[12:13:24] [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 [12:13:25] Starting server...
 [12:13:25] Finished subtask 'spfx-serve' after 1.24 s
 [12:13:25] Starting subtask 'pre-copy'...

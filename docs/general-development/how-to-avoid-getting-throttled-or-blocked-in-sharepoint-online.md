@@ -315,7 +315,7 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 
 ## See also
 
-- [service prioritization in SharePoint](https://aka.ms/SharePointPrioritization)
+- [Service Prioritization in SharePoint](https://aka.ms/SharePointPrioritization)
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
 - [Microsoft Graph dev center](/graph)
