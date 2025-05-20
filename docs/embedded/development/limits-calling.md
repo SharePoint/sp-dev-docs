@@ -18,7 +18,7 @@ The following table defines the size limits of containers"
 
 |                         Resource                          |                         Limit                          |
 | --------------------------------------------------------- | ------------------------------------------------------ |
-| Container types that a partner tenant can create          | 5*                                                     |
+| Container types that a partner tenant can create          | 25*                                                    |
 | Container types that an app can own                       | 1                                                      |
 | Containers of a container type per consuming tenant       | 100k*                                                  |
 | Storage per container type per consuming tenant           | 100 TB*                                                |
