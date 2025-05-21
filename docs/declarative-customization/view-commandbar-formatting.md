@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 05/15/2025
+ms.date: 05/21/2025
 ms.localizationpriority: high
 ---
 
@@ -91,12 +91,11 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'createCopilot'
 ```
 
-## 🚀 Recent updates to `commandBarCustomization` Keys
+## ⚠️ Recent updates to `commandBarCustomization` Keys
 
-> [NOTE!]
-> Some keys in the `commandBarCustomization` schema have been updated. To ensure your custom formatter works correctly, could you update your existing JSON with these new keys?  
+> Some keys in the commandBarCustomization schema have been updated. To ensure your custom formatter functions correctly, please update your existing JSON to reflect these new keys.
 > 
-> | Original Key | Current Key |
+> | Original Key | New Key |
 > |--------------|-------------|
 > | `new`        | `newComposite` (Document Library)|
 > | `upload`     | `UploadCommand` |
@@ -105,6 +104,22 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > | `pinToQuickAccess` | `PinToQuickAccessCommand` |
 > | `pinItem` | `pinItemCommand` |
 > | `properties` | `propertiesCommand` |
+> | `versionHistory` | `versionHistoryCommand` (currently not working) |
+>
+> Additionally, the following new command keys are now available:
+> >
+> - `stasherContextMenuCommand` (Add shortcut)
+> - `stasherCommand.myFiles` (Add shortcut --> my Files)
+> - `stasherCommand.otherLocations` (Add shortcut --> Other locations)
+> - `PublishCommand`
+> - `complianceDetails` (right click context menu --> More --> Compliance details)
+> - `more` (right click context menu --> More)
+> - `previewFileCommand` (right click context menu --> Preview)
+>
+> Please note that the JSON schema at https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json has not yet been updated to reflect these new command keys.
+
+> [!IMPORTANT]
+> Command bar customizations also affect the item context menu (right-click menu). If a command is hidden in the command bar, it will also be hidden in the context menu.
 
 ## hide
 
