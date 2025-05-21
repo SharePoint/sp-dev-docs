@@ -46,7 +46,7 @@ It's intended to allow consuming tenant SPE admins to set an allowlist of hosts 
 > [!NOTE]
 >
 > If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is default set to
-> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none" which means no one can embed the agent.
+> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none", which means no one can embed the agent.
 
 Here are example commands to use the [Connect to SharePoint using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
 
@@ -79,7 +79,7 @@ CopilotEmbeddedChatHosts        : {http://localhost:*}
 
 ##### Authentication and 3P Cookies
 
-The iframe used by SharePoint Embedded agent authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iframe can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
+The `iframe` used by SharePoint Embedded agent authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iframe can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
 
 ## Advanced Topics
 
@@ -166,7 +166,7 @@ export enum DataSourceType {
 
 ##### Language/Locale
 
-The agent iframe dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
+The agent `iframe` dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
 
 When the agent iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows the agent to provide a consistent an
 
