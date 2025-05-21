@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 05/14/2025
+ms.date: 05/21/2025
 ms.localizationpriority: high
 ---
 
@@ -53,6 +53,7 @@ Currently, there are two types of operations with exceptional access patterns:
 
 - Operations not exposed via Microsoft Graph
 - Operations involving searching SharePoint Embedded content
+- Operations that require a user license
 
 > [!IMPORTANT]
 > Make sure you understand and consider these exceptional access patterns as they may have repercussions on how SharePoint Embedded content for your application may be accessed, both by your application and other applications.
@@ -63,7 +64,7 @@ There are two types of operations that aren't accessible via Microsoft Graph tod
 
 - [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
 - [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
-- [SharePoint Embedded copilot](./declarative-agent/spe-da.md) exposed via SharePoint REST API v2 permissions.
+- [SharePoint Embedded copilot](./declarative-agent/spe-da2.md) exposed via SharePoint REST API v2 permissions.
 
 To perform [container type management](../getting-started/containertypes.md) operations, you must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
@@ -76,7 +77,7 @@ To [register a container type](../getting-started/register-api-documentation.md)
 > [!NOTE]
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon, and this step will no longer be needed. Stay tuned.
 
-To use the [SharePoint Embedded copilot](./declarative-agent/spe-da.md) experience (in the Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
+To use the [SharePoint Embedded copilot](./declarative-agent/spe-da2.md) experience (in the Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
 
 #### Operations involving searching SharePoint Embedded content
 
@@ -86,6 +87,14 @@ To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePo
 
 > [!NOTE]
 > Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
+
+#### Operations that require a user license
+
+SharePoint Embedded is designed to work without the need for end-users to have any kind of Microsoft 365 product licenses assigned to them. However, there are certain operations     that do not abide by this principle yet.
+
+##### List containers
+
+The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a OneDrive for Business site. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
 
 ### Container type application permissions
 
