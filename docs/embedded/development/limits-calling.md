@@ -10,11 +10,11 @@ ms.localizationpriority: high
 This document explains the limits of SharePoint Embedded during public preview.
 
 > [!NOTE]
-> These are preview limits which are subject to change.
+> These are preview limits that are subject to change.
 
 ## Size limits
 
-The following table defines the size limits of containers"
+The following table defines the size limits of containers:
 
 |                         Resource                          |                         Limit                          |
 | --------------------------------------------------------- | ------------------------------------------------------ |
@@ -44,7 +44,7 @@ In general, the following are the best practices to handle throttling:
 - Avoid request spikes.
 - Honor the `Retry-After` HTTP header.
 
-In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` might result in more throttling.
+In both cases, a `Retry-After` header is included in the response, indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` might result in more throttling.
 
 ## API rate limits
 
@@ -53,7 +53,7 @@ SharePoint Embedded provides various APIs. Different APIs have different costs d
 | Resource units per request |                                 Operations                                 |
 | -------------------------- | -------------------------------------------------------------------------- |
 | 1                          | Single item query, such as get item                                        |
-| 2                          | Multi-item query, such as list children  Create, update, delete, and upload |
+| 2                          | Multi-item query, such as list children, create, update, delete, and upload |
 | 5                          | All permission resource operations, including $expand=permissions          |
 
 > [!NOTE]
