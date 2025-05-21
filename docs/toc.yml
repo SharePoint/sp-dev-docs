@@ -554,6 +554,8 @@
   items:
   - name: Overview
     href: embedded/overview.md
+  - name: What's New
+    href: embedded/whats-new.md
   - name: Scenarios and Use Cases
     href: embedded/scenarios-and-use-cases.md
   - name: Getting Started
