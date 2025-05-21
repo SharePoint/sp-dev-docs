@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 05/18/2025
+ms.date: 05/21/2025
 ms.localizationpriority: high
 ---
 
@@ -107,6 +107,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > | `versionHistory` | `versionHistoryCommand` (currently not working) |
 >
 > Additionally, the following new command keys are now available:
+> >
 > - `stasherContextMenuCommand` (Add shortcut)
 > - `stasherCommand.myFiles` (Add shortcut --> my Files)
 > - `stasherCommand.otherLocations` (Add shortcut --> Other locations)
@@ -115,9 +116,10 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 > - `more` (right click context menu --> More)
 > - `previewFileCommand` (right click context menu --> Preview)
 >
-> **Important**: Command bar customizations also affect the item context menu (right-click menu). If a command is hidden in the command bar, it will also be hidden in the context menu.
->
 > Please note that the JSON schema at https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json has not yet been updated to reflect these new command keys.
+
+> [!IMPORTANT]
+> Command bar customizations also affect the item context menu (right-click menu). If a command is hidden in the command bar, it will also be hidden in the context menu.
 
 ## hide
 
