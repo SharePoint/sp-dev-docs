@@ -61,7 +61,7 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 | Category     | Type of throttling           | Time interval     | Limit     |
 |--------------|------------------------------|-------------------|-----------|
-| User         | RPS                          | 5 min             | 3,000     |
+| User         | Requests                     | 5 min             | 3,000     |
 | User         | Ingress                      | 1 H               | 50 GB     |
 | User         | Egress                       | 1 H               | 100 GB    |
 | User         | Delegation Token Request     | 5 min             | 50        |
