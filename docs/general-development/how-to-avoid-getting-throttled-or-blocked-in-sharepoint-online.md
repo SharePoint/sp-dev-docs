@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 04/11/2025
+ms.date: 05/28/2025
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -61,7 +61,7 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 | Category     | Type of throttling           | Time interval     | Limit     |
 |--------------|------------------------------|-------------------|-----------|
-| User         | RPS                          | 5 min             | 3,000     |
+| User         | Requests                     | 5 min             | 3,000     |
 | User         | Ingress                      | 1 H               | 50 GB     |
 | User         | Egress                       | 1 H               | 100 GB    |
 | User         | Delegation Token Request     | 5 min             | 50        |
