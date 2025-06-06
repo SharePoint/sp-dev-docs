@@ -320,7 +320,7 @@
     - name: JavaScript libraries
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
     - name: SharePoint Online Support for Content Security Policy (CSP)
-      href: /spfx/content-securty-policy-trusted-script-sources.md
+      href: spfx/content-securty-policy-trusted-script-sources.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
   - name: Connect to APIs
