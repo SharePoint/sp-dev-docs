@@ -27,7 +27,7 @@ If you’re updating an existing container type to set this property to `false`,
 
 This ensures the agent can correctly access and surface the content.
 
-Here is an example of how to set `discoverabilityDisabled` to false with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
+Here is an example of how to set `discoverabilityDisabled` to `false` with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
@@ -39,40 +39,75 @@ Discoverability can also be disabled using the Visual Studio Code SharePoint Emb
 
 ##### CSP Policies
 
-The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. This helps in securing the application by restricting which domains can embed the chat component.
+The Content-Security-Policy (CSP) for embedded chat hosts ensures that only specified hosts can load the chat component. Specifically, the `CopilotEmbeddedChatHosts` setting is used in a [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) header as a `frame-ancestors` value. This helps in securing the application by restricting which domains can embed the chat component.
 
-It's intended to allow consuming tenant SPE admins to set an allowlist of hosts that are permitted to embed the SPE agent in an iframe. Specifically, the value they set here is used in a Content-Security-Policy header as a frame-ancestors value.
-
-> [!NOTE]
->
-> If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is default set to
-> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none", which means no one can embed the agent.
-
-Here are example commands to use the [Connect to SharePoint using PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) commands:
-
-- [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
-- [Get-SPOApplication](/powershell/module/SharePoint-online/get-spoapplication) to get the `CopilotEmbeddedChatHosts` property.
+The SPE Administrator on the owning tenant can set this setting by using the `Set-SPOContainerTypeConfiguration` cmdlet:
 
 ```powershell
 # Note this MUST be run in Windows PowerShell. It will not work in PowerShell.
 Import-Module -Name "Microsoft.Online.SharePoint.PowerShell"
 Connect-SPOService "https://<domain>-admin.sharepoint.com"
 # Login with your admin account.
-...
+# ...
 
-Set-SPOApplication -OwningApplicationId  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("http://localhost:3000", "https://contoso.sharepoint.com", "https://fabrikam.com") 
+Set-SPOContainerTypeConfiguration -ContainerTypeId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("http://localhost:3000", "https://contoso.sharepoint.com", "https://fabrikam.com")
 
 # This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly. 
-...
+# Replication of this configuration on consuming tenants can take up to 24 hours
+# ...
+
+# Confirm setting value
+Get-SPOContainerTypeConfiguration -ContainerTypeId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+
+# On a consuming tenant, you may confirm the setting value as follows
+Get-SPOApplication -OwningApplicationId <OwningApplicationId> | Select-Object CopilotEmbeddedChatHosts
+
+OwningApplicationId             : <OwningApplicationId>
+OwningApplicationName           : SharePoint Embedded App
+Applications                    : {<OwningApplicationId>}
+CopilotEmbeddedChatHosts        : {http://localhost:3000, https://contoso.sharepoint.com, https://fabrikam.com}
+```
+
+> [!NOTE]
+>
+> If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is by default set to
+> [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none", which means no one can embed the agent.
+
+A SharePoint Embedded Administrator on a consuming tenant may override the values specified by the owning application, by using
+the consuming tenant cmdlets:
+
+- [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
+- [Get-SPOApplication](/powershell/module/SharePoint-online/get-spoapplication) to get the `CopilotEmbeddedChatHosts` property.
+
+> [!NOTE]
+>
+> A consuming tenant override must be a subset of what the owning tenant configured for `CopilotEmbeddedChatHosts`. An administrator
+> in a consuming tenant cannot set values that the application owner has not specified for the container type. The override capabilities
+> is intended for consuming tenant administrators to enable the agent in only a subset of hosts that the owning application has defined.
+
+Here's an example of how a consuming tenant can override the setting:
+
+```powershell
+# Note this MUST be run in Windows PowerShell. It will not work in PowerShell.
+Import-Module -Name "Microsoft.Online.SharePoint.PowerShell"
+Connect-SPOService "https://<domain>-admin.sharepoint.com"
+# Login with your admin account.
+# ...
+
+Set-SPOApplication -OwningApplicationId  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("https://contoso.sharepoint.com", "https://fabrikam.com") 
+
+# This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly
+# Note that @("https://contoso.sharepoint.com", "https://fabrikam.com") is a subset of what we defined in the owning tenant
+# Those values were @("http://localhost:3000", "https://contoso.sharepoint.com", "https://fabrikam.com")
+
+# Confirm the configuration
 
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> | Select-Object CopilotEmbeddedChatHosts
 
 OwningApplicationId             : <OwningApplicationId>
 OwningApplicationName           : SharePoint Embedded App
 Applications                    : {<OwningApplicationId>}
-SharingCapability               : ExternalUserAndGuestSharing
-OverrideTenantSharingCapability : False
-CopilotEmbeddedChatHosts        : {http://localhost:*}
+CopilotEmbeddedChatHosts        : {https://contoso.sharepoint.com, https://fabrikam.com}
 ```
 
 #### Optional Configuration
@@ -93,7 +128,7 @@ When SPE agent users query the LLM, it will only have access to files that the *
 
 ### Information Architecture
 
-Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#semantic-index). This semantic index underpins retrieval augmented generation [(RAG)](spe-da-adv.md#rag--retrieval-augmented-generation-) workflows by providing relevant context from your stored content at query time. In essence, it [grounds](spe-da-adv.md#grounding) the AI responses, ensuring they directly reference accurate information in your containers rather than relying on general knowledge alone.
+Files in SharePoint Embedded are naturally [semantic indexed](spe-da-adv.md#semantic-index). This semantic index underpins retrieval augmented generation [(RAG)](spe-da-adv.md#retrieval-augmented-generation-rag) workflows by providing relevant context from your stored content at query time. In essence, it [grounds](spe-da-adv.md#grounding) the AI responses, ensuring they directly reference accurate information in your containers rather than relying on general knowledge alone.
 
 ![How RAG works in SPE](../../images/speco-ragm365.png)
 
@@ -107,7 +142,7 @@ The semantic index allows for quick and accurate searches based on data similari
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG relies on having relevant source materials stored in a repository, which can be queried at runtime​, data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM)​:
+RAG enables you to reference relevant source materials stored in a repository at runtime. The data is retrieved from the index and is used to augment the prompt sent to the large language model (LLM). Some benefits of RAG​:
 
 - Treat data sources as knowledge without having to train your model​
 - Uses search (retrieval) results as additional context in your prompt​
@@ -119,11 +154,11 @@ The LLM uses the data to inform and construct the response.
 
 ### Grounding
 
-Grounding in the context of SPE agent refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the agent is grounded on will be on the contents of the container type in the agent application. Behind the scenes SPE agent uses Microsoft 365 Copilot, [learn more about its architecture here](/copilot/microsoft-365/microsoft-365-copilot-architecture)
+Grounding in the context of SPE agent refers to the process of providing input sources to the large language model (LLM) related to the user's prompt. This helps improve the specificity of the prompt and ensures that the responses are relevant and actionable to the user's specific task. The data the agent is grounded on will be the contents of the container type in the agent application. Behind the scenes, SPE agent uses Microsoft 365 Copilot. [Learn more about Microsoft 365 Copilot architecture](/copilot/microsoft-365/microsoft-365-copilot-architecture).
 
 ### Scoping your agent to specific content
 
-SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to, below are provided types, and this [example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK
+SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to. The sample code below shows the available data source types. [This example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK.
 
 ```typescript
 export type IDataSourcesProps =
