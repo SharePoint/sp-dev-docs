@@ -201,7 +201,7 @@ Below are some examples to help you understand the `RateLimit` headers:
     RateLimit-Reset: 5
     ```
 
-- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`.
+- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`. There are instances, where the retryAfter returns a smaller value. In such cases, the general rule of thumb is to honor the greater of the two values.
 
     ```
     HTTP/1.1 429 Too Many Requests
