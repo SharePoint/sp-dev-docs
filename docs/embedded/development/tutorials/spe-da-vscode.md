@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded agent Tutorial
 description: Sharepoint Embedded agent tutorial with the SDK and the VS Code SharePoint Embedded Extension
-ms.date: 05/15/2025
+ms.date: 06/10/2025
 ms.localizationpriority: high
 ---
 

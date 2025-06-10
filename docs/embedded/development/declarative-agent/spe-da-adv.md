@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded agent Advanced Topics
 description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded agent.
-ms.date: 5/20/2025
+ms.date: 06/10/2025
 ms.localizationpriority: high
 ---
 
