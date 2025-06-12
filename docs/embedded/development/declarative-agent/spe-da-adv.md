@@ -73,8 +73,7 @@ CopilotEmbeddedChatHosts        : {http://localhost:3000, https://contoso.sharep
 > If this configuration isn't set, the [Content-Security-Policy](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy) is by default set to
 > [frame-ancestors](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors): "none", which means no one can embed the agent.
 
-A SharePoint Embedded Administrator on a consuming tenant may override the values specified by the owning application, by using
-the consuming tenant cmdlets:
+A SharePoint Embedded Administrator on a consuming tenant may override the values specified by the owning application, by using the consuming tenant cmdlets:
 
 - [Set-SPOApplication](/powershell/module/SharePoint-online/set-spoapplication) to set the `CopilotEmbeddedChatHosts` property.
 - [Get-SPOApplication](/powershell/module/SharePoint-online/get-spoapplication) to get the `CopilotEmbeddedChatHosts` property.
@@ -203,7 +202,7 @@ export enum DataSourceType {
 
 The agent `iframe` dynamically loads localization settings to ensure that the chat interface is displayed in the appropriate language. These settings are derived from SharePoint, which provides a comprehensive set of localization options.
 
-When the agent iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language. This seamless integration with SharePoint's localization framework allows the agent to provide a consistent an
+When the agent iframe is initialized, it retrieves the current localization settings from SharePoint. These settings dictate the language and regional preferences for the chat interface, ensuring that all UI elements, messages, and interactions are presented in the user's preferred language.
 
 You can have this localized by setting your language options in the SharePoint account settings: [Change your personal language and region settings - Microsoft Support](https://support.microsoft.com/office/change-your-personal-language-and-region-settings-caa1fccc-bcdb-42f3-9e5b-45957647ffd7).
 
