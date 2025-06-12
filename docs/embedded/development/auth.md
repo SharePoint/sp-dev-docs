@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 05/21/2025
+ms.date: 06/10/2025
 ms.localizationpriority: high
 ---
 
@@ -64,7 +64,7 @@ There are two types of operations that aren't accessible via Microsoft Graph tod
 
 - [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
 - [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
-- [SharePoint Embedded copilot](./declarative-agent/spe-da2.md) exposed via SharePoint REST API v2 permissions.
+- [SharePoint Embedded agent](./declarative-agent/spe-da2.md) exposed via SharePoint REST API v2 permissions.
 
 To perform [container type management](../getting-started/containertypes.md) operations, you must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
@@ -77,7 +77,7 @@ To [register a container type](../getting-started/register-api-documentation.md)
 > [!NOTE]
 > Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon, and this step will no longer be needed. Stay tuned.
 
-To use the [SharePoint Embedded copilot](./declarative-agent/spe-da2.md) experience (in the Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
+To use the [SharePoint Embedded agent](./declarative-agent/spe-da2.md) experience (in the Preview stage) in your application, you will also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource. Please note that, as mentioned above, this permission is also required to register a container type today, which means that your application must have been granted consent to it interact with SharePoint Embedded in consuming tenants.
 
 #### Operations involving searching SharePoint Embedded content
 

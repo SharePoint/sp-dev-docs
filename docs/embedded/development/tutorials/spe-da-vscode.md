@@ -1,11 +1,11 @@
 ---
-title: SharePoint Embedded Copilot Tutorial
-description: Sharepoint Embedded copilot Tutorial with the SDK and the VS Code SharePoint Embedded Extension
-ms.date: 05/15/2025
+title: SharePoint Embedded agent Tutorial
+description: Sharepoint Embedded agent tutorial with the SDK and the VS Code SharePoint Embedded Extension
+ms.date: 06/10/2025
 ms.localizationpriority: high
 ---
 
-# Tutorial for getting started with SharePoint Embedded copilot
+# Tutorial for getting started with SharePoint Embedded agent
 
 ## Prerequisites
 
@@ -15,9 +15,9 @@ ms.localizationpriority: high
 > 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production, or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
-> - Set the **ChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies)
-> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that copilot can find the files in your created container. Refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled).
-> - Ensure that copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for copilot:
+> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies).
+> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that the agent can find the files in your created container. Refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled).
+> - Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
 
@@ -327,7 +327,7 @@ function App() {
 
     ![VS Code file explorer with App.tsx open with line of showSidebar variable useState function input changed from false to true to enable showing chat side bar](../../images/speco-setshowsidebartrue.png)
 
-1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE copilot functionality enabled.
+1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE agent functionality enabled.
 
     > [!NOTE]
     > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction`
@@ -346,7 +346,7 @@ function App() {
 
     ![SPE Typescript App running in edge with a created container from above ContosoCompanyContainer](../../images/speco-createdcontainer.png)
 
-1. Click the container and upload your files. Once a container has been created and you have navigated inside it, your copilot chat experience will become enabled.
+1. Click the container and upload your files. Once a container has been created and you have navigated inside it, your agent chat experience will become enabled.
 
     ![SPE Typescript App running in edge inside a created container page of ContosoCompanyContainer](../../images/speco-spechatenabled.png)
 
