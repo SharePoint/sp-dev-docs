@@ -15,7 +15,7 @@ ms.localizationpriority: high
 > 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production, or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
-> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies)
+> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies).
 > - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that the agent can find the files in your created container. Refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled).
 > - Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
