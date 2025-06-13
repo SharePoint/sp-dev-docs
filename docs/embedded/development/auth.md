@@ -96,6 +96,10 @@ SharePoint Embedded is designed to work without the need for end-users to have a
 
 The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a OneDrive for Business site. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
 
+##### Mention users in Office documents
+
+The common [Office experience](./content-experiences/office-experience.md) includes reviewing documents and adding comments to those documents. For users to show up in the @mentions people picker, those users will need to have an M365 license assigned to them.
+
 ### Container type application permissions
 
 SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md).
