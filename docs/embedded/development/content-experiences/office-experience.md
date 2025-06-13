@@ -21,6 +21,11 @@ Versioning is automatically enabled on each Word, Excel and PowerPoint file stor
 
 It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an email invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
 
+> [!NOTE]
+> Mentions require target users to [have an M365 license assigned to them](../auth.md#mention-users-in-office-documents).
+>
+> Mentions are restricted to people inside the consuming tenant's organization. Mentions excludes Guests and users from other tenants in a Multi-Tenant setting.
+
 ### Share your documents
 
 #### Send an email invite
@@ -45,7 +50,7 @@ If you want others to edit with you, you can easily share files and collaborate 
 - A presence indicator shows where someone is making changes. See any changes right as they're being made.
 - See changes made by others and see what's happened while you were away.
 
-### Levels of sharing access
+#### Levels of sharing access
 
 There are different options for sharing SharePoint Embedded Application Office Documents from:
 
