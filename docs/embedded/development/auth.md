@@ -98,7 +98,7 @@ The [List containers](/graph/api/filestorage-list-containers?tabs=http) operatio
 
 ##### Mention users in Office documents
 
-The common [Office experience](./content-experiences/office-experience.md) includes reviewing documents and adding comments to those documents. For users to show up in the @mentions people picker, those users will need to have an M365 license assigned to them.
+The common [Office experience](./content-experiences/office-experience.md) includes reviewing documents and adding comments to those documents. For users to show up in the @mentions people picker, they will need to have an M365 license assigned to them.
 
 ### Container type application permissions
 
