@@ -6,14 +6,14 @@ ms.custom: scenarios:getting-started
 ---
 
 > [!NOTE]
-> On June 13th 2025 Microsoft [announced that field customizers will be retired](https://support.microsoft.com/en-gb/office/support-update-for-sharepoint-framework-field-customizers-in-lists-and-document-libraries-0eccc64e-4512-47df-9da0-d855be22fb0a#), and stop working by June 30th 2026, you should instead consider putting your investments in [ListView Command Set extensions](./building-simple-cmdset-with-dialog-api.md) or [use column formatting to customize SharePoint](../../../declarative-customization/column-formatting.md)
+> Microsoft [announced field customizers are deprecated](https://support.microsoft.com/en-gb/office/support-update-for-sharepoint-framework-field-customizers-in-lists-and-document-libraries-0eccc64e-4512-47df-9da0-d855be22fb0a#) on June 13, 2025, and will be retired on June 30, 2026. Consider [ListView Command Set extensions](./building-simple-cmdset-with-dialog-api.md) or [use column formatting to customize SharePoint](../../../declarative-customization/column-formatting.md) instead of field customizers.
 
 
 # Build your first Field Customizer extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can follow these steps by watching the video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
 
