@@ -5,7 +5,7 @@ ms.date: 06/18/2025
 ms.custom: scenarios:getting-started
 ---
 
-> [!NOTE]
+> [!WARNING]
 > Microsoft [announced field customizers are deprecated](https://support.microsoft.com/en-gb/office/support-update-for-sharepoint-framework-field-customizers-in-lists-and-document-libraries-0eccc64e-4512-47df-9da0-d855be22fb0a#) on June 13, 2025, and will be retired on June 30, 2026. Consider [ListView Command Set extensions](./building-simple-cmdset-with-dialog-api.md) or [use column formatting to customize SharePoint](../../../declarative-customization/column-formatting.md) instead of field customizers.
 
 
