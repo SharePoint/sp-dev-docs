@@ -144,9 +144,9 @@ Response body:
 ## Best Practice
 Begin with nextToken=0, store the returned token, and poll at certain intervals. This method is well-suited for long-running jobs and helps ensure no updates are missed.
 
-Since migration jobs typically take several minutes or more, polling every minute is advised—while adhering to the [guideline](https://learn.microsoft.com/en-us/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) to avoid throttling.
+Since migration jobs typically take several minutes or more, polling every minute is advised—while adhering to the [guideline](https://aka.ms/spo429) to avoid throttling.
 
 ## See Also
-[SharePoint Migration API](https://learn.microsoft.com/en-us/sharepoint/dev/apis/migration-api-overview)
+[SharePoint Migration API](migration-api-overview.md)
 
-[Migration Events](https://learn.microsoft.com/en-us/sharepoint/dev/apis/migration-events)
+[Migration Events](migration-events.md)
