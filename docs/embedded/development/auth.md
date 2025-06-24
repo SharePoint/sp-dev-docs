@@ -94,7 +94,7 @@ SharePoint Embedded is designed to work without the need for end users to have a
 
 ##### List containers
 
-The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation will return a `401 Unauthorized` response code if called on behalf of a user that does not have a OneDrive for Business site. There are plans to remove this dependency in the near future. This does not apply to the List containers operation when called without a user context (app-only mode).
+The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation will return a `403 Forbidden` response code if called on behalf of a user that doesn't have a OneDrive. There are plans to remove this dependency soon. This dependency does not apply to the List containers operation when called without a user context (app-only mode).
 
 ##### Mention users in Office documents
 
