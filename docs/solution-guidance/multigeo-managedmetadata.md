@@ -23,7 +23,7 @@ The following are important points to know about managed metadata in Multi-Geo t
 - Create term groups, term sets, and terms in the default geo location. This ensures that they are consistently available across all the geo-locations in your tenant. 
 - When term groups, term sets, and terms are replicated across geo-locations, they retain their ID. This allows you to reference term groups, term sets, and terms based on ID, regardless of the geo-location your code is running in.
 - For term sets and terms to be replicated across geo-locations, they need to be set as Available for Tagging.
-- The incremental replication process runs hourly. The full replication job runs every three days. 
+- The incremental replication process runs hourly. The full replication job runs every 7 days. 
 - When you programmatically create a term set in the default geo location, that term set is automatically replicated. You don't have to make any changes to the APIs. 
 - In some cases, you might want a term group, term set, or terms to be available only in a satellite location, for example, a term that relates to a confidential project that applies to a specific geolocation. In that case, you can choose to create the relevant terms in the applicable geo-location. 
 - If you want the term group to be available only in the default location, use the `Set-SPOTenantTaxonomyReplicationParameters` PowerShell cmdlet to explicitly specify which term groups from the default location are replicated. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588).
