@@ -627,7 +627,7 @@
   - name: SharePoint Embedded agent ( Private Preview )
     items:
     - name: SharePoint Embedded agent Overview
-      href: embedded/development/declarative-agent/spe-da2.md
+      href: embedded/development/declarative-agent/spe-da.md
     - name: SharePoint Embedded agent Tutorial
       href: embedded/development/tutorials/spe-da-vscode.md
     - name: SharePoint Embedded agent Advanced Topics
