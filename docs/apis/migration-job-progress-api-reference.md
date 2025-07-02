@@ -20,18 +20,22 @@ After submitting a migration job—whether an import job or an Asynchronous Meta
 It returns a sequence of job status events, including: JobQueued, JobStart, JobProgress, JobError, and JobEnd.
 
 ## Permissions
-Use application-based authentication when submitting a migration job. Ensure the application is granted with Sites.Read.All permission or higher.
+
+Use application-based authentication when submitting a migration job. Ensure the application is granted the Sites.Read.All permission or higher.
 
 ## GetMigrationJobProgress Method (SDK)
+
 ### Syntax
+
 ```csharp
 public ClientResult Site.GetMigrationJobProgress(
-Guid jobId, 
-String nextToken
+  Guid jobId, 
+  String nextToken
 )
 ```
 
 ### Method Parameters
+
 |    Name    |   Type   | Required |                     Description                        |
 | :--------- | :------- | :------- | :----------------------------------------------------- |
 |   jobId    |   Guid   |   Yes    | Unique identifier of the migration job                 |
@@ -40,12 +44,14 @@ String nextToken
 For a completed job, requests using nextToken are idempotent—repeating the same request will consistently return the same result.
 
 ### Return Values
+
 |    Name    |   Type   |                                                      Description                                                                      |
 | :--------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------ |
 |    Logs    |   IList  | Returns a collection of job status events when new progress is available, or an empty collection if there are no updates.             |
 | NextToken  |  String  | Returns an updated string value when new progress is available, or the same value as the nextToken parameter if there are no updates. |
 
 ### Method Usage Example
+
 ```csharp
 ClientResult result = context.Site.GetMigrationJobProgress(jobId, nextToken ?? "0");
 context.ExecuteQuery();
@@ -54,32 +60,38 @@ string newNextToken = result.Value.NextToken;
 ```
 
 ## GetMigrationJobProgress REST API
+
 ### HTTP Request
-```rest
+
+```http
 GET https://{site_url}/_api/site/GetMigrationJobProgress(jobId='{jobId}',nextToken=0)
 ```
 
 ### URI Parameters
+
 |    Name    |   Type   | Required |                     Description                        |
 | :--------- | :------- | :------- | :----------------------------------------------------- |
 |   jobId    |   Guid   |   Yes    | Unique identifier of the migration job                 |
 | nextToken  |  String  |   Yes    | Token for paging position. Use "0" for initial request |
 
 ### Request Headers
+
 |                 Header                 | Required |
 | :------------------------------------- | :------- |
 | Authorization: Bearer {token}          |    Yes   |
 | Accept: application/json;odata=verbose |    Yes   |
 
 ### Response
-A JSON object when HTTP status code is 200. 
 
-An empty JSON object when HTTP status code is other than 200.
+A JSON object when the HTTP status code is 200. 
+
+An empty JSON object when the HTTP status code is other than 200.
 
 ### Error Handling
+
 | Status Code |    Meaning     |                      Action                                             |
 | :---------- | :------------- | :---------------------------------------------------------------------- |
-|     403     | Unauthorized   | Ensure the app/user has at least Sites.Read.All permission.             |
+|     403     | Unauthorized   | Ensure the app/user has at least Sites.Read.All permissions.             |
 |     429     | Too Many Requests  | Parse Retry-After header and retry after the specified delay.       |
 |     500     | Internal Server Error | Parse error responses to identify internal errors. Do Not Retry. |
 |     503     | Service Unavailable   | Parse Retry-After header and retry after the specified delay.    |
@@ -90,15 +102,19 @@ An empty JSON object when HTTP status code is other than 200.
 |     -2147213146     | Job status expired (valid for less than 5 days) |
 
 ### API Usage Example
+
 #### Request Sample
-```rest
+
+```http
 GET https://contoso.sharepoint.com/_api/site/GetMigrationJobProgress(jobId=' 3e280efa-78a3-4ba1-bac6-e447aa538ca5', nextToken=0)
 ```
 
 #### Successful Response Sample
+
 Status code: 200
 Response body:
-```rest
+
+```json
 {
   "d": {
     "GetMigrationJobProgress": {
@@ -123,9 +139,11 @@ Response body:
 ```
 
 #### Error Response Sample
+
 Status code: 500
 Response body:
-```rest
+
+```json
 {
   "error": {
     "code": "-2147213145, Microsoft.SharePoint.SPException",
@@ -142,11 +160,12 @@ Response body:
 ```
 
 ## Best Practice
-Begin with nextToken=0, store the returned token, and poll at certain intervals. This method is well-suited for long-running jobs and helps ensure no updates are missed.
 
-Since migration jobs typically take several minutes or more, polling every minute is advised—while adhering to the [guideline](https://aka.ms/spo429) to avoid throttling.
+Begin with `nextToken=0`, store the returned token, and poll at certain intervals. This method is well-suited for long-running jobs and helps ensure no updates are missed.
+
+Since migration jobs typically take several minutes or more, polling every minute is advised, while adhering to the [guideline](https://aka.ms/spo429) to avoid throttling.
 
 ## See Also
-[SharePoint Migration API](migration-api-overview.md)
 
-[Migration Events](migration-events.md)
+- [SharePoint Migration API](migration-api-overview.md)
+- [Migration Events](migration-events.md)
