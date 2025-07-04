@@ -30,9 +30,12 @@ To obtain the ID of a flow that is solution-aware:
 
 To obtain the ID of a flow that isn't solution-aware:
 
-1. Select **Flow > See your flows** in the SharePoint list where the Flow is configured.
+1. Switch to the environment in which the Flow is hosted.
+
 1. Select the Flow you want to run.
-1. Copy the ID from the end of the URL.
+1. Select Export > Get flow identifier.
+
+1. Copy the ID.
 
 ```JSON
 {
