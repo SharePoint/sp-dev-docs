@@ -26,8 +26,6 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 
 To use the extension, you must sign into a Microsoft 365 tenant with an administrator account.
 
-If you don't already have a tenant, you can get a tenant through the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/en-us/microsoft-365/enterprise/microsoft365-plans-and-pricing).
-
 ![Install](../images/vsx-images/n2vsx-signin.png)
 
 - Authentication opens a new tab in an external browser to grant permissions
