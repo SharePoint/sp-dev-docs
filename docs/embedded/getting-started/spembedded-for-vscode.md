@@ -80,7 +80,7 @@ After creating your container type, you'll need to register that container type 
 
 ![register](../images/vsx-images/n7aregister-ct.png)
 
-#### Grant permissions
+### Grant permissions
 
 Review permissions and follow the prompt to grant admin consent
 
@@ -121,6 +121,9 @@ When loading the sample application you will be notified that it will create pla
 If no client secret is found on your application, it will ask if you would like to create one. Press OK to proceed.
 
 ![sample app creating client secret](../images/vsx-images/sample-app-create-client-secret.png)
+
+> [!IMPORTANT]
+> This is not intended for production environments. [Find out more on how to setup Application Registration for production environments here.](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
 
 ## Using Sample App
 
