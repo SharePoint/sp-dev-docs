@@ -30,15 +30,15 @@ To use the extension, you must sign into a Microsoft 365 tenant with an administ
 
 - Authentication opens a new tab in an external browser to grant permissions
 
-![auth allow extension to open uri](../images/vsx-images/auth-allow-extension-uri.png)
+![authorize and authenticate the extension to your M365 Entra tenant](../images/vsx-images/auth-allow-extension-uri.png)
 
-- Select **Accept** on the pop-up window prompting admin consent
+- Review the requested permissions carefully, then select **Accept** on the pop-up window prompting admin consent
  
-![consentperms](../images/vsx-images/n3vsx-grant-admin-consent.png)
+![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
 
 After successful authentication, select open on the dialog to be redirected to VSCode.
-![auth redirect website](../images/vsx-images/auth-redirect.png)
+![authorization completed in browser now redirecting to visual studio code](../images/vsx-images/auth-redirect.png)
 
 ## Create a container type with a trial configuration
 
