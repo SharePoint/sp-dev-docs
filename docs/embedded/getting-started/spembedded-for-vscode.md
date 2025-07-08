@@ -81,7 +81,7 @@ After creating your container type, you'll need to register that container type 
 
 #### Grant permissions
 
-When registering your container type you'll need to grant permissions to access your application
+Review permissions and follow the prompt to grant admin consent
 
 ![grant admin consent popup](../images/vsx-images/auth-grant-admin-consent-popup.png)
 
