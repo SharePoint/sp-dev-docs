@@ -10,8 +10,8 @@ ms.localizationpriority: high
 The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. 
 
 > [!IMPORTANT]
-> To start building with SharePoint Embedded you will need administrative access to Microsoft 365 tenant.
-> If you do not already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
+> To start building with SharePoint Embedded, you'll need administrative access to Microsoft 365 tenant.
+> If you don't already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
 ## Install SharePoint Embedded for Visual Studio Code
 
@@ -43,7 +43,7 @@ After successful authorization, select open on the dialog to be redirected to VS
 
 ## Create a container type with a trial configuration
 
-Once signed in, you are prompted to create a [container type with trial configuration](./containertypes.md#trial-container-type). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
+Once signed in, you're prompted to create a [container type with trial configuration](./containertypes.md#trial-container-type). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
 
 ![home screen](../images/vsx-images/n4vsx-home-screen.png)
 
@@ -114,7 +114,7 @@ With your free trial container type created, you can use the extension to load o
 
 ![Load Sample App](../images/vsx-images/n15vsxsa-c.png)
 
-When loading the sample application you will be notified that it will create plain text secrets to authenticate on your local machine.
+When loading the sample application you'll be notified that it will create plain text secrets to authenticate on your local machine.
 
 ![sample app plain text secrets notice](../images/vsx-images/sample-app-app-secrets-notice.png)
 
@@ -123,7 +123,7 @@ If no client secret is found on your application, it will ask if you would like 
 ![sample app creating client secret](../images/vsx-images/sample-app-create-client-secret.png)
 
 > [!IMPORTANT]
-> This is not intended for production environments. [Find out more on how to setup Application Registration for production environments here.](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+> This isn't intended for production environments. [Find out more on how to setup Application Registration for production environments here.](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
 
 ## Using Sample App
 
@@ -143,7 +143,7 @@ npm run start
 > [!NOTE]
 > The initial startup may take a few minutes as dependencies are installed and both applications are built. Wait for both console outputs to appear before navigating to the application.
 
-This will install the dependencies and run the server and client application, once running you will see the following in the terminal after which you can navigate to http://localhost:8080 to access the application.
+This will install the dependencies and run the server and client application, once running you'll see the following in the terminal after which you can navigate to http://localhost:8080 to access the application.
 
 ![function api console logs](../images/vsx-images/fn-api-logs.png)
 
@@ -171,6 +171,6 @@ If you encounter issues:
 
 ## Export Postman Environment
 
-The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
+The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postal worker and immediately call the SharePoint Embedded APIs.
 
 ![Export Postman Environment](../images/vsx-images/n14postman-c.png)
