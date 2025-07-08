@@ -65,7 +65,7 @@ Every container type is owned by a Microsoft Entra ID application. The first ste
 > [!NOTE]
 > If you choose an existing application, the extension will update that app's configuration settings for it to work with both SharePoint Embedded and this extension. Doing this is NOT recommended on production applications.
 
-After your container type is created and your application is configured, you'll be able to view your Local tenant registration as a tree in the left nav-bar.
+After your container type is created and your application is configured, you'll be able to view your local tenant registration as a tree in the left nav-bar.
 
 ## Register your container type
 
