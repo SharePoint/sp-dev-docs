@@ -31,9 +31,16 @@ If you don't already have a tenant, you can get a tenant through the [Microsoft 
 ![Install](../images/vsx-images/n2vsx-signin.png)
 
 - Authentication opens a new tab in an external browser to grant permissions
+
+![auth allow extension to open uri](../images/vsx-images/auth-allow-extension-uri.png)
+
 - Select **Accept** on the pop-up window prompting admin consent
  
 ![consentperms](../images/vsx-images/n3vsx-grant-admin-consent.png)
+
+
+After successful authentication, select open on the dialog to be redirected to VSCode.
+![auth redirect website](../images/vsx-images/auth-redirect.png)
 
 ## Create a container type with a trial configuration
 
@@ -67,6 +74,9 @@ After your container type is created and your application is configured, you'll 
 After creating your container type, you'll need to register that container type on your local tenant. Learn more about container type [registration](./register-api-documentation.md).
 
 - Follow the prompts and select **Register on local tenant** on the lower right corner of the VS Code window
+
+![local tenant registration popup](../images/vsx-images/local-tenant-registration-popup.png)
+
 - If you don't see the prompt, you can right-click on your `<container-type-name>` and select **Register** from the menu
 
 ![register](../images/vsx-images/n7aregister-ct.png)
@@ -74,6 +84,8 @@ After creating your container type, you'll need to register that container type 
 #### Grant permissions
 
 When registering your container type you'll need to grant permissions to access your application
+
+![grant admin consent popup](../images/vsx-images/auth-grant-admin-consent-popup.png)
 
 An external browser window will pop open for you to sign-in and grant admin consent
 
@@ -102,6 +114,58 @@ You can also recycle and recover containers within the extension.
 With your free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type.
 
 ![Load Sample App](../images/vsx-images/n15vsxsa-c.png)
+
+When loading the sample application you will be notified that it will create plain text secrets to authenticate on your local machine.
+
+![sample app plain text secrets notice](../images/vsx-images/sample-app-app-secrets-notice.png)
+
+If no client secret is found on your application, it will ask if you would like to create one. Press OK to proceed.
+
+![sample app creating client secret](../images/vsx-images/sample-app-create-client-secret.png)
+
+## Using Sample App
+
+In your terminal, run the following command, this will start the sample application which consists of 2 parts:
+
+1. **React Client Application** - The frontend user interface running on port 8080
+1. **Azure Function Application Server** - The backend API server that handles SharePoint Embedded operations
+
+```bash
+# Navigate to your sample application directory
+cd [your-path]\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction
+
+# Install dependencies and start the application
+npm run start
+```
+
+> [!NOTE]
+> The initial startup may take a few minutes as dependencies are installed and both applications are built. Wait for both console outputs to appear before navigating to the application.
+
+This will install the dependencies and run the server and client application, once running you will see the following in the terminal after which you can navigate to http://localhost:8080 to access the application.
+
+![function api console logs](../images/vsx-images/fn-api-logs.png)
+
+![client app console logs](../images/vsx-images/client-app-logs.png)
+
+Once both applications are running successfully:
+
+1. Open your web browser and navigate to **http://localhost:8080**
+2. Sign in using your Microsoft 365 administrator account (the same account used in the VS Code extension)
+3. On the home page, select **"Containers"** to begin creating containers and uploading files
+4. Follow the on-screen prompts to interact with your SharePoint Embedded containers
+
+![home-page-for-spe-sample-app](../images/vsx-images/spe-sample-app-home.png)
+
+> [!IMPORTANT]
+> This sample application stores authentication secrets in plain text for development purposes only. Never use this configuration in a production environment.
+
+### Troubleshooting
+
+If you encounter issues:
+
+- **Port already in use**: If port 8080 is already in use, the application will automatically try the next available port
+- **Dependencies not installing**: Try running `npm install` manually before `npm run start`
+- **Authentication errors**: Ensure your Microsoft Entra ID app is properly configured with the correct redirect URIs
 
 ## Export Postman Environment
 
