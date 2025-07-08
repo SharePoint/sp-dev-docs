@@ -37,7 +37,7 @@ To use the extension, you must sign into a Microsoft 365 tenant with an administ
 ![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
 
-After successful authentication, select open on the dialog to be redirected to VSCode.
+After successful authorization, select open on the dialog to be redirected to VSCode.
 ![authorization completed in browser now redirecting to visual studio code](../images/vsx-images/auth-redirect.png)
 
 ## Create a container type with a trial configuration
