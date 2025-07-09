@@ -172,6 +172,9 @@ See Return value in `CreateMigrationJob` method.
 
 ## GetMigrationJobStatus method
 
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. Deprecation of GetMigrationJobStatus API is planned for the second half of 2026. Until then, it will remain available for status retrieval.
+
 Retrieves the processing status for a designated migration job.
 
 Migration API removes completed migration jobs from the timer job queue. Check the notification queue and/or log outputs for import results.
