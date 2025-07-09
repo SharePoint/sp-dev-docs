@@ -164,7 +164,7 @@ The CTA can perform their compliance and storage management tasks better through
 ## Searching on Active Containers Page
 
 The search bar on the Active Containers Page can be used to search containers in the active state by their "container name".
-![SPE Container Sensitivity](../../../images/Search.png)
+![SPE Container Search](../../../images/Search.png)
 
 ## Editing sensitivity label of a container on Active containers page
 
@@ -198,7 +198,7 @@ Similar to the sorting experience on Active containers page, the CTA can use of 
 2. Created on
 3. Deleted on
 
-![ SPE Container Sorting](../../../images/sortingondeleted.png)
+![ SPE Container Sorting_on_Delete](../../../images/sortingondeleted.png)
 
 ## Filtering on Deleted containers page
 The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Deleted containers page, on the following columns:
@@ -210,7 +210,7 @@ The CTA can perform their compliance and storage management tasks better through
 6. Created on: This filter provides a range of dates for the administrator to choose from.
 7. Deleted on: This filter provides a range of dates for the administrator to choose from.
 
-![ SPE Container Sorting](../../../images/Filterondelete.png)
+![ SPE Container Filter_on_Delete](../../../images/FilteronDelete.png)
 
 ## Upcoming features
 1) Search on Deleted containers page
