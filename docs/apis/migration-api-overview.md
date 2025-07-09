@@ -47,6 +47,10 @@ Start a migration job with three steps. Check the guidance in each of the steps 
 
 ### Provision the destination containers and the queue
 
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. 
+> Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
+
 Use the `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Prepare the content
@@ -65,7 +69,10 @@ Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
 The `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use the `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
-Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with the `GetMigrationJobStatus` method if needed, with the Azure Queue supplied.
+> [!IMPORTANT]
+> Use GetMigrationJobProgress API to track migration job status.
+
+Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with [GetMigrationJobProgress API](migration-job-progress-api-reference.md).
 
 Migration API generates logs in the manifest container. Check the log entries for migration results.
 
