@@ -1,7 +1,7 @@
 ---
 title: Manage containers in SharePoint Admin Center
 description: This article describes how administrator can manage containers in SPAC.
-ms.date: 02/05/2025
+ms.date: 07/09/2025
 ms.localizationpriority: high
 ---
 # Manage SharePoint Embedded containers in SharePoint Admin Center
