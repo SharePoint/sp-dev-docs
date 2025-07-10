@@ -143,7 +143,7 @@ The CTA can perform their compliance and storage management tasks better through
 1. Storage
 2. Created on
 
-![ SPE Container Sorting](../../../images/Sorting.png)
+![ SPE Container Sorting](../../images/Sorting.png)
 
 ## Filtering on Active containers page
 The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Active containers page. Currently, filtering is supported on the following columns:
@@ -159,17 +159,17 @@ The CTA can perform their compliance and storage management tasks better through
 >
 
 
-![ SPE Container Filtering](../../../images/Filter.png)
+![ SPE Container Filtering](../../images/Filter.png)
 
 ## Searching on Active Containers Page
 
 The search bar on the Active Containers Page can be used to search containers in the active state by their "container name".
-![SPE Container Search](../../../images/Search.png)
+![SPE Container Search](../../images/Search.png)
 
 ## Editing sensitivity label of a container on Active containers page
 
 The sensitivity label of a container can be set on the Active container page, on the detailed panel of a container. Under the settings panel, the administrator can set the sensitivity label from a list of available sensitivity label.
-![SPE Container Sensitivity](../../../images/Sensitivitylabel.png)
+![SPE Container Sensitivity](../../images/Sensitivitylabel.png)
 
 
 ## Managing user membership of a container
@@ -178,17 +178,17 @@ The administrator can manage the membership of users of a container on the Activ
 
 **Add a user to a role:** The administrator can navigate to the desired role using the left panel and click on the Add option. This opens up a picker, using which the administrator can select a user from the tenant and assign the role. In case the selected user is already assigned to a different role, the role is displayed when the role is selected and the operation changes from Add to Reassign. 
 
-![SPE Container owner-1](../../../images/addowners-1.png)
+![SPE Container owner-1](../../images/addowners-1.png)
 
-![SPE Container owner-2](../../../images/addowners-2.png)
+![SPE Container owner-2](../../images/addowners-2.png)
 
 **Reassign user to another role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Reassign option appears. On selecting the option, a drop-dowm menu appears and the administrator can select the role to which the user needs to be reassigned to. 
 
-![ SPE Container reassingn](../../../images/Reassignuser.png)
+![ SPE Container reassingn](../../images/Reassignuser.png)
 
 **Remove user from a role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Remove option appears. On selecting the option, a pop-up screen appears and the administrator can confirm the removal of the user from the role. 
 
-![SPE Container remove](../../../images/Removeuser.png)
+![SPE Container remove](../../images/Removeuser.png)
 
 
 ## Sorting on the Deleted Containers Page
@@ -198,7 +198,7 @@ Similar to the sorting experience on Active containers page, the CTA can use of 
 2. Created on
 3. Deleted on
 
-![ SPE Container Sorting_on_Delete](../../../images/sortingondeleted.png)
+![ SPE Container Sorting_on_Delete](../../images/sortingondeleted.png)
 
 ## Filtering on Deleted containers page
 The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Deleted containers page, on the following columns:
@@ -210,7 +210,7 @@ The CTA can perform their compliance and storage management tasks better through
 6. Created on: This filter provides a range of dates for the administrator to choose from.
 7. Deleted on: This filter provides a range of dates for the administrator to choose from.
 
-![ SPE Container Filter_on_Delete](../../../images/FilteronDelete.png)
+![ SPE Container Filter_on_Delete](../../images/FilteronDelete.png)
 
 ## Upcoming features
 1) Search on Deleted containers page
