@@ -159,7 +159,7 @@ The CTA can perform their compliance and storage management tasks better through
 >
 
 
-![ SPE Container Filtering](../../images/Filter.png)
+![ SPE Container Filtering](../../images/filter.png)
 
 ## Searching on Active Containers Page
 
@@ -184,11 +184,11 @@ The administrator can manage the membership of users of a container on the Activ
 
 **Reassign user to another role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Reassign option appears. On selecting the option, a drop-dowm menu appears and the administrator can select the role to which the user needs to be reassigned to. 
 
-![ SPE Container reassingn](../../images/Reassignuser.png)
+![ SPE Container reassingn](../../images/reassignuser.png)
 
 **Remove user from a role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Remove option appears. On selecting the option, a pop-up screen appears and the administrator can confirm the removal of the user from the role. 
 
-![SPE Container remove](../../images/Removeuser.png)
+![SPE Container remove](../../images/removeuser.png)
 
 
 ## Sorting on the Deleted Containers Page
@@ -210,7 +210,7 @@ The CTA can perform their compliance and storage management tasks better through
 6. Created on: This filter provides a range of dates for the administrator to choose from.
 7. Deleted on: This filter provides a range of dates for the administrator to choose from.
 
-![ SPE Container Filter_on_Delete](../../images/FilteronDelete.png)
+![ SPE Container Filter_on_Delete](../../images/filterondelete.png)
 
 ## Upcoming features
 1) Search on Deleted containers page
