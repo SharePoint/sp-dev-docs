@@ -143,7 +143,7 @@ The CTA can perform their compliance and storage management tasks better through
 1. Storage
 2. Created on
 
-![ SPE Container Sorting](../../images/Sorting.png)
+![ SPE Container Sorting](../../images/sorting.png)
 
 ## Filtering on Active containers page
 The CTA can perform their compliance and storage management tasks better through the use of filtering capabilities on the Active containers page. Currently, filtering is supported on the following columns:
@@ -164,12 +164,12 @@ The CTA can perform their compliance and storage management tasks better through
 ## Searching on Active Containers Page
 
 The search bar on the Active Containers Page can be used to search containers in the active state by their "container name".
-![SPE Container Search](../../images/Search.png)
+![SPE Container Search](../../images/search.png)
 
 ## Editing sensitivity label of a container on Active containers page
 
 The sensitivity label of a container can be set on the Active container page, on the detailed panel of a container. Under the settings panel, the administrator can set the sensitivity label from a list of available sensitivity label.
-![SPE Container Sensitivity](../../images/Sensitivitylabel.png)
+![SPE Container Sensitivity](../../images/sensitivitylabel.png)
 
 
 ## Managing user membership of a container
