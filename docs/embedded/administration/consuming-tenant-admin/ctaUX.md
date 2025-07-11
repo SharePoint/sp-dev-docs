@@ -178,9 +178,9 @@ The administrator can manage the membership of users of a container on the Activ
 
 **Add a user to a role:** The administrator can navigate to the desired role using the left panel and click on the Add option. This opens up a picker, using which the administrator can select a user from the tenant and assign the role. In case the selected user is already assigned to a different role, the role is displayed when the role is selected and the operation changes from Add to Reassign. 
 
-![SPE Container owner-1](../../images/addowners-1.png)
+![SPE Container owner-1](../../images/addowners1.png)
 
-![SPE Container owner-2](../../images/addowners-2.png)
+![SPE Container owner-2](../../images/addowners2.png)
 
 **Reassign user to another role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Reassign option appears. On selecting the option, a drop-dowm menu appears and the administrator can select the role to which the user needs to be reassigned to. 
 
