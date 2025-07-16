@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Migration API Reference Guide"
 description: "This article provides in-depth information on how to use the SharePoint Migration API."
-ms.date: 04/28/2024
+ms.date: 07/16/2025
 ms.author: ranren
 author: underreview
 manager: dapodean
