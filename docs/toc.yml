@@ -627,7 +627,7 @@
   - name: SharePoint Embedded agent ( Private Preview )
     items:
     - name: SharePoint Embedded agent Overview
-      href: embedded/development/declarative-agent/spe-da2.md
+      href: embedded/development/declarative-agent/spe-da.md
     - name: SharePoint Embedded agent Tutorial
       href: embedded/development/tutorials/spe-da-vscode.md
     - name: SharePoint Embedded agent Advanced Topics
@@ -2297,6 +2297,8 @@
         href: apis/amr-api-reference.md
     - name: Azure container and queue
       href: apis/migration-azure.md
+    - name: Migration Job Progress API
+      href: apis/migration-job-progress-api-reference.md
     - name: Migration Content Package
       href: apis/migration-content-package.md
     - name: Manifest Files
