@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 03/03/2025
+ms.date: 07/16/2025
 ms.localizationpriority: high
 ---
 
@@ -10,8 +10,8 @@ ms.localizationpriority: high
 The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. 
 
 > [!IMPORTANT]
-> To start building with SharePoint Embedded, you'll need administrative access to Microsoft 365 tenant.
-> If you don't already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of an [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
+> To start building with SharePoint Embedded, you'll need administrative access to a Microsoft 365 tenant.
+> If you don't already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of a [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
 ## Install SharePoint Embedded for Visual Studio Code
 
@@ -25,20 +25,20 @@ The SharePoint Embedded Visual Studio Code extension helps developers get starte
 
 ### Sign in with admin credentials
 
-To use the extension, you must sign into a Microsoft 365 tenant with an administrator account.
+To use the extension, you must sign in to a Microsoft 365 tenant with an administrator account.
 
 ![Install](../images/vsx-images/n2vsx-signin.png)
 
 - Authentication opens a new tab in an external browser to grant permissions
 
-![authorize and authenticate the extension to your M365 Entra tenant](../images/vsx-images/auth-allow-extension-uri.png)
+  ![authorize and authenticate the extension to your M365 Entra tenant](../images/vsx-images/auth-allow-extension-uri.png)
 
 - Review the requested permissions carefully, then select **Accept** on the pop-up window prompting admin consent
  
-![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
+  ![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
+After successful authorization, select open on the dialog to be redirected to VSCode:
 
-After successful authorization, select open on the dialog to be redirected to VSCode.
 ![authorization completed in browser now redirecting to visual studio code](../images/vsx-images/auth-redirect.png)
 
 ## Create a container type with a trial configuration
@@ -74,11 +74,11 @@ After creating your container type, you'll need to register that container type 
 
 - Follow the prompts and select **Register on local tenant** on the lower right corner of the VS Code window
 
-![local tenant registration popup](../images/vsx-images/local-tenant-registration-popup.png)
+  ![local tenant registration popup](../images/vsx-images/local-tenant-registration-popup.png)
 
 - If you don't see the prompt, you can right-click on your `<container-type-name>` and select **Register** from the menu
 
-![register](../images/vsx-images/n7aregister-ct.png)
+  ![register](../images/vsx-images/n7aregister-ct.png)
 
 ### Grant permissions
 
@@ -114,7 +114,7 @@ With your free trial container type created, you can use the extension to load o
 
 ![Load Sample App](../images/vsx-images/n15vsxsa-c.png)
 
-When loading the sample application you'll be notified that it will create plain text secrets to authenticate on your local machine.
+When loading the sample application, you'll be notified that it will create plain text secrets to authenticate on your local machine.
 
 ![sample app plain text secrets notice](../images/vsx-images/sample-app-app-secrets-notice.png)
 
@@ -127,12 +127,12 @@ If no client secret is found on your application, it will ask if you would like 
 
 ## Using Sample App
 
-In your terminal, run the following command, this will start the sample application which consists of 2 parts:
+In your terminal, run the following command, this will start the sample application, which consists of 2 parts:
 
 1. **React Client Application** - The frontend user interface running on port 8080
 1. **Azure Function Application Server** - The backend API server that handles SharePoint Embedded operations
 
-```bash
+```console
 # Navigate to your sample application directory
 cd [your-path]\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction
 
@@ -143,7 +143,7 @@ npm run start
 > [!NOTE]
 > The initial startup may take a few minutes as dependencies are installed and both applications are built. Wait for both console outputs to appear before navigating to the application.
 
-This will install the dependencies and run the server and client application, once running you'll see the following in the terminal after which you can navigate to http://localhost:8080 to access the application.
+This will install the dependencies and run the server and client application, once running, you'll see the following in the terminal, after which you can navigate to http://localhost:8080 to access the application.
 
 ![function api console logs](../images/vsx-images/fn-api-logs.png)
 
@@ -152,9 +152,9 @@ This will install the dependencies and run the server and client application, on
 Once both applications are running successfully:
 
 1. Open your web browser and navigate to **http://localhost:8080**
-2. Sign in using your Microsoft 365 administrator account (the same account used in the VS Code extension)
-3. On the home page, select **"Containers"** to begin creating containers and uploading files
-4. Follow the on-screen prompts to interact with your SharePoint Embedded containers
+1. Sign in using your Microsoft 365 administrator account (the same account used in the VS Code extension)
+1. On the home page, select **"Containers"** to begin creating containers and uploading files
+1. Follow the on-screen prompts to interact with your SharePoint Embedded containers
 
 ![home-page-for-spe-sample-app](../images/vsx-images/spe-sample-app-home.png)
 
