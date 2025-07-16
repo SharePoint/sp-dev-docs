@@ -1,11 +1,15 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 05/20/2025
+ms.date: 06/23/2025
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## June 2025
+
+- The `CopilotEmbeddedChatHosts` container type setting is now required to use [SharePoint Embedded agent](./development/declarative-agent/spe-da-adv.md#csp-policies). It must be set by the application owner via [`Set-SPOContainerTypeConfiguration`](/powershell/module/sharepoint-online/set-spocontainertypeconfiguration) and can optionally be overridden by consuming tenant administrators via [`Set-SPOApplication`](/powershell/module/SharePoint-online/set-spoapplication).
 
 ## May 2025
 
