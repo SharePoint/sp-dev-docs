@@ -123,7 +123,7 @@ If no client secret is found on your application, it will ask if you would like 
 ![sample app creating client secret](../images/vsx-images/sample-app-create-client-secret.png)
 
 > [!IMPORTANT]
-> This isn't intended for production environments. [Find out more on how to setup Application Registration for production environments here.](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app)
+> This isn't intended for production environments. [Find out more on how to setup Application Registration for production environments here.](/entra/identity-platform/quickstart-register-app)
 
 ## Using Sample App
 
