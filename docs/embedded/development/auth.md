@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 10/08/2025
+ms.date: 01/20/2026
 ms.localizationpriority: high
 ---
 
@@ -51,6 +51,7 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 Currently, there are two types of operations with exceptional access patterns:
 
+- [Hidden permissions in Microsoft Graph](#hidden-microsoft-graph-permissions)
 - [Operations not exposed via Microsoft Graph](#operations-not-exposed-via-microsoft-graph)
 - [Operations involving searching SharePoint Embedded content](#operations-involving-searching-sharepoint-embedded-content)
 - [Operations that require a user license](#operations-that-require-a-user-license)
@@ -58,26 +59,38 @@ Currently, there are two types of operations with exceptional access patterns:
 > [!IMPORTANT]
 > Consider the repercussions of these exceptional access patterns on how your application and other applications can access SharePoint Embedded content in your container type.
 
+### Hidden Microsoft Graph permissions
+
+The following operations require permissions that are currently hidden in Microsoft Graph:
+
+- [Container type management](../getting-started/containertypes.md) on owning tenants.
+- [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants.
+
+The Microsoft Graph permissions are rolling out to all tenants in the near future and will be visible once the rollout completes.
+
+#### Granting admin consent for hidden permissions
+
+[Granting admin consent](/entra/identity-platform/v2-admin-consent) for applications requesting hidden permission MUST be done by using the [admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin). Provide the consent URL to the Microsoft Entra directory administrator and ensure they [confirm a successful response](/entra/identity-platform/v2-admin-consent#successful-response). The consent URL may look like this:
+
+```http
+https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&scope=https://graph.microsoft.com/.default
+```
+
+> [!IMPORTANT]
+> Do not use the App registrations pane in the Azure portal to grant admin consent for applications that request hidden permissions. The App registrations pane will fail to validate the requested hidden permissions and will remove them from the manifest.
+
 #### Operations not exposed via Microsoft Graph
 
-There are two types of operations that aren't accessible via Microsoft Graph today:
+There is one scenario that isn't accessible via Microsoft Graph today:
 
-- [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
-- [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
 - [SharePoint Embedded agent](./declarative-agent/spe-da.md) exposed via SharePoint REST API v2 permissions.
 
-To perform [container type management](../getting-started/containertypes.md) operations, you must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-To [register a container type](../getting-started/register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
+To use the [SharePoint Embedded agent](./declarative-agent/spe-da.md) experience (in Preview stage) in your application, you need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource:
 
 |      Scope name       |               Scope ID               |    Type     |                                             Operation                                             |
 | :-------------------: | :----------------------------------: | :---------: | :-----------------------------------------------------------------------------------------------: |
 | Container.Selected   | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SharePoint Embedded, enables container type registration on a consuming tenant. |
 
-> [!NOTE]
-> Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon, and this permission will no longer be needed. Stay tuned.
-
-To use the [SharePoint Embedded agent](./declarative-agent/spe-da.md) experience (in the Preview stage) in your application, you also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
 
 #### Operations involving searching SharePoint Embedded content
 
@@ -143,22 +156,22 @@ Any user accessing a container must be a member of the container. Membership to 
 
 Here are some actions you can take next:
 
-1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions:
-
-   - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
-     - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
-   - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
-     - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
-
-1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on both owning and consuming tenants (which can be the same tenant).
-
-   > [!NOTE]
-   > The `Container.Selected` application permission is hidden, which can cause issues with granting admin consent using the Enterprise apps pane in the Azure portal. Instead, [construct the admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin) and provide it to your Microsoft Entra directory administrator. For example:
-   >
-   > `https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&redirect_uri={redirect_uri}`
-   >
-   > Make sure the Microsoft Entra directory administrator [confirms a successful response](/entra/identity-platform/v2-admin-consent#successful-response).
-
-1. [Create a new container type](../getting-started/containertypes.md) on the owning tenant.
-1. [Register a container type](../getting-started/register-api-documentation.md) on the consuming tenant.
-1. [Create a container](/graph/api/filestoragecontainer-post)
+1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions on your _owning_ tenant:
+    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
+      - Add: `FileStorageContainerType.Manage.All` (type: `Role`, ID: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`) to create container types on the _owning_ tenant
+1. [Grant admin consent](#granting-admin-consent-for-hidden-permissions) to your application on your _owning_ tenant
+1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
+1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
+    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
+      - Remove: `FileStorageContainerType.Manage.All` (type: `Role`, ID: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`) as this is only needed to create the container type on the _owning_ tenant
+        > [!NOTE]
+        > After creating the container type on the _owning_ tenant, you should remove the `FileStorageContainerType.Manage.All` permission from your application's manifest.
+        > Your application DOES NOT need this on _consuming_ tenants, only on the _owning_ tenant to create the container type. Failure to remove this permission from the application's manifest will lead to your customers being concerned about the excessive permissions requested by your application.
+      - Add: `FileStorageContainerTypeReg.Selected` (type: `Role`, ID: `2dcc6599-bd30-442b-8f11-90f88ad441dc`) to register the container type on _consuming_ tenants
+      - Add: `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on _consuming_ tenants on behalf of users
+      - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access container on _consuming_ tenants without a user
+    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
+      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to use SharePoint Embedded Agent
+1. [Grant admin consent](#granting-admin-consent-for-hidden-permissions) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
+1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
+1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
