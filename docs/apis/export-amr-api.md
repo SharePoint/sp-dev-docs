@@ -33,6 +33,10 @@ Export metadata from SharePoint in three steps:
 
 ### Provision the destination containers and the queue
 
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. 
+> Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation of Azure Queues is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
+
 Use `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Use `CreateSPAsyncReadJob` method to start the export
@@ -46,6 +50,10 @@ Both methods return the Job ID, which can be used to track the export status.
 Check [AMR API Reference](amr-api-reference.md) for details.
 
 ### Checking status
+
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. 
+> Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation of Azure Queues is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
 
 Check Azure Queue supplied for export status. Monitor events as listed in [Events](migration-events.md) for details.
 
