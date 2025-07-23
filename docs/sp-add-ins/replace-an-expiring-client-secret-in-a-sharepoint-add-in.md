@@ -1,7 +1,7 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 09/09/2024
+ms.date: 04/16/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -30,7 +30,17 @@ Ensure the following before you begin:
 - You have installed Microsoft Graph Powershell SDK: [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
 - You're a tenant administrator (or having **Application.ReadWrite.All** permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
 
-## Generate a new secret
+> [!Important]
+> Microsoft Graph PowerShell versions 2.26 and up resulted in issues, if you've problems please downgrade to version 2.25 or lower.
+
+## Understand the type of your ACS principal before renewing the secret
+
+Historically ACS principals were created as Microsoft Entra service principals having the `servicePrincipalType` set to `Legacy`. As of December 2024 the Microsoft Entra principal creation has been streamlined and ACS principals are now created as application principals in Microsoft Entra. If you browse the Microsoft Entra applications you'll now be able to see the ACS principal you've created as of December 2024. ACS principal creation typically is done using `appregnew.aspx`.
+
+> [!Important]
+> Due to this alternate creation the renewal of ACS principals also differs, below two chapters show both approaches, for the ACS service principals and for the ACS application principals. Ensure you use the correct approach.
+
+## Generate a new secret - for ACS service principals, created before December 2024
 
 1. Create a client ID variable with the following line, using the client ID of the SharePoint Add-in as the parameter:
 
@@ -93,6 +103,51 @@ Ensure the following before you begin:
     >     }
     > }
     > ```
+
+> [!IMPORTANT]
+> Wait at least 24 hours for the propagation of the new ClientSecret to SharePoint.
+
+## Generate a new secret - for ACS application principals, created from December 2024 onwards
+
+```PowerShell
+Connect-Graph -Scopes "Application.ReadWrite.All,Directory.ReadWrite.All"
+$applicationId = '<your client id>' # replace with your app id
+$appPrincipal = Get-MgApplication -Filter "AppId eq '$applicationId'"
+$params = @{
+    PasswordCredential = @{
+        DisplayName = "NewSecret" # Replace with a friendly name.
+    }
+}
+$result = Add-MgApplicationPassword -ApplicationId $appPrincipal.Id -BodyParameter $params
+$base64Secret = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($result.SecretText))
+$dtStart = $result.StartDateTime
+$dtEnd = $result.EndDateTime
+$keyCredentials = @(
+    @{
+        Type = "Symmetric"
+        Usage = "Verify"
+        Key = [System.Text.Encoding]::UTF8.GetBytes($result.SecretText)
+        StartDateTime = $dtStart
+        EndDateTime = $dtEnd
+    },
+    @{
+        Type = "Symmetric"
+        Usage = "Sign"
+        Key = [System.Text.Encoding]::UTF8.GetBytes($result.SecretText)
+        StartDateTime = $dtStart
+        EndDateTime = $dtEnd
+    }
+)
+# Add existing valid key credentials to the $keyCredentials
+$appPrincipal.KeyCredentials |%{if ($_.EndDateTime -gt [DateTime]::UtcNow) {$keyCredentials += @($_)}}
+Update-MgApplication -ApplicationId $appPrincipal.Id -KeyCredentials $keyCredentials # Update keys
+$result.SecretText # Print secret text
+$base64Secret # Print base64 secret
+$result.EndDateTime # Print the end date.
+```
+
+> [!IMPORTANT]
+> Wait at least 24 hours for the propagation of the new ClientSecret to SharePoint.
 
 ## Update the remote web application in Visual Studio to use the new secret
 

@@ -1,23 +1,23 @@
 ---
-title: Sharepoint Embedded copilot Tutorial
-description: Sharepoint Embedded copilot Tutorial with the SDK and the VS Code SharePoint Embedded Extension
-ms.date: 02/27/2025
+title: SharePoint Embedded agent Tutorial
+description: Sharepoint Embedded agent tutorial with the SDK and the VS Code SharePoint Embedded Extension
+ms.date: 06/10/2025
 ms.localizationpriority: high
 ---
 
-# Tutorial for getting started with SharePoint Embedded copilot
+# Tutorial for getting started with SharePoint Embedded agent
 
 ## Prerequisites
 
 > [!NOTE]
 >
-> 1. You will need to create create a SharePoint Embedded application. If you don't have one, you can easily build a sample application using the instructions [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
-> 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production; or vice versa.
+> 1. You will need to create a SharePoint Embedded application. If you don't have one, you can easily build a sample application using the instructions [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
+> 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production, or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
-> - Set the **ChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies)
-> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that copilot can find the files in your created container refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled)
-> - Ensure that copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for copilot:
+> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies).
+> - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that the agent can find the files in your created container. Refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled).
+> - Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
 
@@ -28,7 +28,7 @@ ms.localizationpriority: high
 ```console
 # Install the SDK with npm
 
-npm install "https://download.microsoft.com/download/27d10531-b158-40c9-a146-af376c0e7f2a/microsoft-sharepointembedded-copilotchat-react-1.0.7.tgz"
+npm install "https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"
 ```
 
 #### If you want to verify checksums
@@ -36,11 +36,11 @@ npm install "https://download.microsoft.com/download/27d10531-b158-40c9-a146-af3
 In MacOS/Linux
 
 ```console
-version="1.0.7";
+version="1.0.9";
 
-url="https://download.microsoft.com/download/27d10531-b158-40c9-a146-af376c0e7f2a/microsoft-sharepointembedded-copilotchat-react-1.0.7.tgz"; 
+url="https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"; 
 
-expected_checksum="A87FF410E8684A3C16456B2092564422BF80DA9FAFF3A684821DACEAEEA23D22"; 
+expected_checksum="3bdf19830ffc098b253cc809f969f50fba236ad95fe85123e7b15c7cf58ecf6b"; 
 
 package_path="microsoft-sharepointembedded-copilotchat-react-$version.tgz"; 
 
@@ -50,9 +50,9 @@ curl -o $package_path $url && [ "$(sha256sum $package_path | awk '{ print $1 }')
 In Windows:
 
 ```powershell
-$version = "1.0.7"
-$url = "https://download.microsoft.com/download/27d10531-b158-40c9-a146-af376c0e7f2a/microsoft-sharepointembedded-copilotchat-react-1.0.7.tgz"
-$expected_checksum = "A87FF410E8684A3C16456B2092564422BF80DA9FAFF3A684821DACEAEEA23D22"
+$version = "1.0.9"
+$url = "https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"
+$expected_checksum = "3BDF19830FFC098B253CC809F969F50FBA236AD95FE85123E7B15C7CF58ECF6B"
 $package_path = "microsoft-sharepointembedded-copilotchat-react-$version.tgz"
 
 Invoke-WebRequest -Uri $url -OutFile $package_path
@@ -323,18 +323,18 @@ function App() {
 
     ![VS Code file explorer with ChatSideBar.tsx in open window with relevant code to uncomment highlighted](../../images/speco-uncommentchatsidebar.png)
 
-1. Navigate to `react-client\src\routes\App.tsx` and set the react state of the showSidebar variable to `true`
+1. Navigate to `react-client\src\routes\App.tsx` and set the React state of the `showSidebar` variable to `true`
 
     ![VS Code file explorer with App.tsx open with line of showSidebar variable useState function input changed from false to true to enable showing chat side bar](../../images/speco-setshowsidebartrue.png)
 
-1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE copilot functionality enabled.
+1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE agent functionality enabled.
 
     > [!NOTE]
     > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction`
 
     ![VS Code terminal in root folder of SPE Typescript project cloned earlier and npm run start command typed in](../../images/speco-runnpmrunstart.png)
 
-1. Sign in with a user who has an M365 Copilot license enabled.
+1. Sign in with a user who has a Microsoft 365 Copilot license enabled.
 
     ![SPE Typescript App running in Edge with sign in buttons](../../images/speco-reacttypescripthomepage.png)
 
@@ -346,7 +346,7 @@ function App() {
 
     ![SPE Typescript App running in edge with a created container from above ContosoCompanyContainer](../../images/speco-createdcontainer.png)
 
-1. Click the container and upload your files. Once a container has been created and you have navigated inside it, your copilot chat experience will become enabled.
+1. Click the container and upload your files. Once a container has been created and you have navigated inside it, your agent chat experience will become enabled.
 
     ![SPE Typescript App running in edge inside a created container page of ContosoCompanyContainer](../../images/speco-spechatenabled.png)
 

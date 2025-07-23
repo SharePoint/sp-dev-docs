@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 03/17/2025
+ms.date: 06/12/2025
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -23,29 +23,32 @@ Does this sound familiar? You're running an application - for example, to scan f
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
 
+> [!NOTE]
+> Recent updates to this article enhance transparency to already existing throttling rules in the system
+
 ### What happens when you get throttled in SharePoint Online?
 
 When usage limits are exceeded, SharePoint Online throttles any further requests from that client for a short period.
 
 For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
 
-For requests that an application makes, including [Microsoft Graph](/graph), CSOM, or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
+For requests that an application makes, including [Microsoft Graph](/graph), CSOM, or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy"), and the requests will fail.
 
 - HTTP 429 indicates the calling application sent too many requests in a time window and exceeded a predetermined limit.
 - HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing more temporary load spikes.
 
-In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
+In both cases, a `Retry-After` header is included in the response, indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
 
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
 ### Resource units
 
-Some limits are measured in terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
+Some limits are measured in terms of API costs. [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
-| Resource units per request | Operations                                                                                                   |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item             |
-| 2                          | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
+| Resource units per request | Operations                                                                                                     |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 1                          | <li>Single item query, such as get item <li>Delta with a token <li>Download file from drive item               |
+| 2                          | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete, and upload  |
 | 5                          | <li>All permission resource operations, including `$expand=permissions`                                        |
 
 > [!NOTE]
@@ -55,11 +58,11 @@ Some limits are measured in terms of API costs, [Microsoft Graph APIs](/graph) h
 
 Throttling limits the number of calls and operations collectively made by applications on behalf of a user to prevent the overuse of resources.
 
-That said, it's rare for a user to get throttled in SharePoint Online. The service is robust, and it's designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code, such as custom web parts, complex list view and queries, or custom apps users run. That doesn’t mean that there aren’t other ways to get throttled, just that they’re less common. For example, one user syncing a large amount of data across 10 machines at the same time could trigger throttling.
+That said, it's rare for a user to get throttled in SharePoint Online. The service is robust, and it's designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code, such as custom web parts, complex list views and queries, or custom apps users run. That doesn’t mean that there aren’t other ways to get throttled, just that they’re less common. For example, one user syncing a large amount of data across 10 machines at the same time could trigger throttling.
 
 | Category     | Type of throttling           | Time interval     | Limit     |
 |--------------|------------------------------|-------------------|-----------|
-| User         | RPS                          | 5 min             | 3,000     |
+| User         | Requests                     | 5 min             | 3,000     |
 | User         | Ingress                      | 1 H               | 50 GB     |
 | User         | Egress                       | 1 H               | 100 GB    |
 | User         | Delegation Token Request     | 5 min             | 50        |
@@ -72,15 +75,15 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse resources.
 
-When a customer enables Multi-Geo, each geo gets its own limits (usage measurement not shared across geos). For the limits that are dependent on license count, the total tenant user license counts is used (total users across all geos).
+When a customer enables Multi-Geo, each geo gets its own limits (usage measurement not shared across geos). For the limits that are dependent on license count, the total tenant user license count is used (total users across all geos).
 
 | Category     | Type of throttling                   | Time interval     | Tenant license count     | Limit     |
 |--------------|--------------------------------------|-------------------|--------------------------|-----------|
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 0 - 1,000                | 18,750    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 1,001 - 5,000            | 37,500    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 5,001 - 15,000           | 56,250    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 15,001 - 50,000          | 75,000    |
-| Tenant       | [Resources Units](#resource-units)   | 5 min             | 50,000+                  | 93,750    |
+| Tenant       | [Resource Units](#resource-units)    | 5 min             | 0 - 1,000                | 18,750    |
+| Tenant       | [Resource Units](#resource-units)    | 5 min             | 1,001 - 5,000            | 37,500    |
+| Tenant       | [Resource Units](#resource-units)    | 5 min             | 5,001 - 15,000           | 56,250    |
+| Tenant       | [Resource Units](#resource-units)    | 5 min             | 15,001 - 50,000          | 75,000    |
+| Tenant       | [Resource Units](#resource-units)    | 5 min             | 50,000+                  | 93,750    |
 | Tenant       | Assign Sensitivity Label             | 5 min             | no license bound         | 100       |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 0 - 1,000                | 3,000     |
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 1,001 - 5,000            | 6,000     |
@@ -107,19 +110,19 @@ For multitenant applications:
 
 | Category           | Type of throttling                   | Time interval     | Tenant license count     | Limit      |
 |--------------------|--------------------------------------|-------------------|--------------------------|------------|
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
-| Per APP Per Tenant | [Resources Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
-| Per APP Per Tenant | Ingress                              | 1 H               | no license bound         | 400 GB     |
-| Per APP Per Tenant | Egress                               | 1 H               | no license bound         | 400 GB     |
-| Per APP Per Tenant | Specific Sharing APIs                | 5 min             | no license bound         | 300        |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 0 - 1,000                | 1,200,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 1,001 - 5,000            | 2,400,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 5,001 - 15,000           | 3,600,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 15,001 - 50,000          | 4,800,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 24 H              | 50,000+                  | 6,000,000  |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 0 - 1,000                | 1,250      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 1,001 - 5,000            | 2,500      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 5,001 - 15,000           | 3,750      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 15,001 - 50,000          | 5,000      |
+| Per APP Per Tenant | [Resource Units](#resource-units)   | 1 min             | 50,000+                  | 6,250      |
+| Per APP Per Tenant | Ingress                             | 1 H               | no license bound         | 400 GB     |
+| Per APP Per Tenant | Egress                              | 1 H               | no license bound         | 400 GB     |
+| Per APP Per Tenant | Specific Sharing APIs               | 5 min             | no license bound         | 300        |
 
 > [!NOTE] 
 > Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
@@ -128,7 +131,7 @@ For multitenant applications:
 
 | Category                      | Type of throttling                   | Time interval     | Limit     |
 |-------------------------------|--------------------------------------|-------------------|-----------|
-| SharePoint Embedded containers| [Resources Units](#resource-units)   | 1 min             | 3,000     |
+| SharePoint Embedded containers| [Resource Units](#resource-units)    | 1 min             | 3,000     |
 | Per Site                      | Anonymous Link                       | 5 min             | 3,000     |
 | Per Site                      | Anonymous Egress (Download)          | 2 H               | 100 GB    |
 | Per Site                      | External sharing emails              | 1 H               | 200       |
@@ -144,22 +147,23 @@ Below is a quick summary of the best practices to handle throttling:
 - Avoid request spikes
 - Choose [Microsoft Graph APIs](/graph) over CSOM and REST APIs when possible
 - Use the `Retry-After` and `RateLimit` HTTP headers
-- Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
-- Consider using [Graph Data Connect for Sharepoint](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/links-about-microsoft-graph-data-connect-for-sharepoint/4069045) for broad sites analytics 
+- Decorate your traffic so we know who you are (see section on traffic decoration best practice, more on that below)
+- Consider using [Graph Data Connect for SharePoint](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/links-about-microsoft-graph-data-connect-for-sharepoint/4069045) for broad site analytics 
+- Understand if [service prioritization in SharePoint](https://aka.ms/SharePointPrioritization) is the right fit for your scenario
 
 As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes fewer resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
 
-If you do run into throttling, we require using the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits and you can proactively reduce requests to avoid hitting the throttle.
+If you do run into throttling, we require using the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits, and you can proactively reduce requests to avoid hitting the throttle.
 
 Delta with a token is the most efficient way to scan content in SharePoint, and we talk more in detail at the [best practices for scanning applications](https://aka.ms/ScanGuidance). To help applications that follow the guidance, we lower the resource unit cost of delta requests with a token to 1 resource unit, although it's a multi-item query. The delta request without a token is considered a multi-item query and costs 2 resource units per request.
 
 In [batching](/graph/json-batching), requests in a batch are evaluated individually by resource units. 
 
-CSOM and REST don't have a predetermined resource unit cost and they usually consume more resource units than [Microsoft Graph APIs](/graph) to achieve the same functionality. In addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose [Microsoft Graph APIs](/graph) over CSOM and REST APIs when possible.
+CSOM and REST don't have a predetermined resource unit cost, and they usually consume more resource units than [Microsoft Graph APIs](/graph) to achieve the same functionality. In addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose [Microsoft Graph APIs](/graph) over CSOM and REST APIs when possible.
 
-Since application limits are in resource units, the actual request rate, such as requests per minute, depends on the application’s API choice and the corresponding API resource unit cost. In general, you can estimate the request rate using an average of 2 resource units per request and divide resource unit limits by 2 to get the estimated request rate.
+Since application limits are in resource units, the actual request rate, such as requests per minute, depends on the application’s API choice and the corresponding API resource unit cost. In general, you can estimate the request rate using an average of 2 resource units per request, and divide resource unit limits by 2 to get the estimated request rate.
 
-Although each application has its limits within a tenant and we allow tenants to run more than one application, multiple applications running against the same tenant share the same resource bucket, and in rare occurrences can cause rate limiting when too many applications send requests at the time. 
+Although each application has its limits within a tenant, and we allow tenants to run more than one application, multiple applications running against the same tenant share the same resource bucket, and in rare occurrences can cause rate limiting when too many applications send requests at the time. 
 
 ### Retry-after header
 
@@ -171,7 +175,7 @@ Throttled requests count towards usage limits, so failure to honor `Retry-After`
 
 ### RateLimit headers - preview
 
-In addition to the `Retry-After` header in the response to throttled requests, SharePoint Online also returns the [IETF RateLimit headers](https://github.com/ietf-wg-httpapi/ratelimit-headers) for selected limits in certain conditions to help applications manage rate limiting. We recommend applications to take advantage of these headers to avoid hitting throttle. 
+In addition to the `Retry-After` header in the response to throttled requests, SharePoint Online also returns the [IETF RateLimit headers](https://github.com/ietf-wg-httpapi/ratelimit-headers) for selected limits in certain conditions to help applications manage rate limiting. We recommend applications to take advantage of these headers to avoid hitting the throttle. 
 
 - `RateLimit-Limit` contains the limit in the current time window.
 - `RateLimit-Remaining` indicates the remaining quota in the current window.
@@ -198,7 +202,7 @@ Below are some examples to help you understand the `RateLimit` headers:
     RateLimit-Reset: 5
     ```
 
-- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`.
+- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled, and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`. There are instances where the `Retry-After` returns a smaller value. In such cases, the general rule of thumb is to honor the greater of the two values.
 
     ```
     HTTP/1.1 429 Too Many Requests
@@ -208,7 +212,7 @@ Below are some examples to help you understand the `RateLimit` headers:
     RateLimit-Reset: 31
     ```
 
-- An application has consumed 90% of its resource unit quota but its consumption has already reached other limits that the `RateLimit` headers don't support. In this case, the request is throttled and the `RateLimit` headers aren't returned to avoid confusion although the condition to return the headers is satisfied.
+- An application has consumed 90% of its resource unit quota, but its consumption has already reached other limits that the `RateLimit` headers don't support. In this case, the request is throttled and the `RateLimit` headers aren't returned to avoid confusion, although the condition to return the headers is satisfied.
 
     ```
     HTTP/1.1 429 Too Many Requests
@@ -265,19 +269,19 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 - **Unsupported use cases**
 
-    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+    Unsupported use of SharePoint Online may result in throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
 
 - **Creating multiple AppIDs for the same application**
 
-    Don't create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource as the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
+    Don't create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resources as the tenant. Historically, some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
 
 ## Scenario specific limits
 
 ### When using app-only authentication with Sites.Read.All permission
 
-When you're using SharePoint Online search APIs with app-only authentication and the app having **Sites.Read.All** permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including the user’s private OneDrive for Business content).
+When you're using SharePoint Online search APIs with app-only authentication and the app has **Sites.Read.All** permission (or stronger), the app will be registered with full permissions, and is allowed to query all your SharePoint Online content (including the user’s private OneDrive for Business content).
 
-To ensure the service remains fast and reliable, queries using such permission are throttled at 25 requests per second. The search query will return an HTTP 429 response. When waiting for throttling recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making more calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
+To ensure the service remains fast and reliable, queries using such permission are throttled at 25 requests per second. The search query will return an HTTP 429 response. When waiting for throttling recovery, you should ensure to pause all search query requests you may be making to the service using a similar app-only permission. Making more calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
 ### When searching using delegated user permissions
 
@@ -289,7 +293,7 @@ To ensure service stability, the service will throttle delegated user requests t
 
 When searching using a result source that requests people results, we may throttle any requests exceeding an organization-wide limit of 25 requests per second. This limit applies to all SharePoint search CSOM and REST requests using either the out-of-the-box "Local People Results" result source or a custom people search result source.
 
-If you have applications or components, that are causing your people search requests to get throttled, we recommend that you:
+If you have applications or components that are causing your people search requests to get throttled, we recommend that you:
 
 1. Consider if the requests are necessary for your application. For example, if you're using a custom search site, that makes many simultaneous queries, check whether some of those requests can be removed without any significant impact on your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](https://sharepoint.com/) start page. People search in Microsoft Search has been optimized for better performance and more relevant results.
 1. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has been completed. You may need to consider caching these results if you need them quickly, for example of a page load.
@@ -312,6 +316,7 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 
 ## See also
 
+- [Service Prioritization in SharePoint](https://aka.ms/SharePointPrioritization)
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
 - [Microsoft Graph dev center](/graph)

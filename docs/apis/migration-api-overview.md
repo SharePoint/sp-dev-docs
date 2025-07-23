@@ -23,7 +23,7 @@ Use Migration API to migrate content from file shares, SharePoint Server, and ot
 
 ### December 2024
 
-We applied quota on *Share with Me* items per user. Check [Quota](migration-api-shared.md#Best practice) for more details.
+We applied quota on *Share with Me* items per user. Check [ShareWithMe event quota](/sharepoint/dev/apis/migration-api-shared#quota) for more detail.
 
 ### November 2024
 
@@ -76,6 +76,8 @@ The `CreateMigrationJob` method creates a migration job, which is queued up for 
 Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with [GetMigrationJobProgress API](migration-job-progress-api-reference.md).
 
 Migration API generates logs in the manifest container. Check the log entries for migration results.
+
+Migration API also generates logs of file-level activities performed by migration. The supported file-level activities include FileUploaded, FileDeleted, FileRenamed, FileMoved. Check M365 Admin Center for activity details when needed.
 
 ## Best Practice
 

@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (JSLink) to the new model based on SharePoint Framework extensions.
-ms.date: 06/13/2022
+ms.date: 04/26/2025
 ms.localizationpriority: high
 ---
 # Migrating from JSLink to SharePoint Framework extensions
@@ -244,7 +244,7 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
 1. Open your favorite browser, and go to a "modern" list, which has a custom field with the name **Color** and the type **Choice** with the same value options as before (Red, Green, Blue, Yellow). You can eventually use the list you created in the "classic" site, just viewing it with the new "modern" experience. Now, append the following query string parameters to the **AllItems.aspx** page URL.
 
     ```http
-    ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Color":{"id":"c3070978-d85e-4298-8758-70b5b5933076"}}
+    ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js&fieldCustomizers={"Color":{"id":"c3070978-d85e-4298-8758-70b5b5933076"}}
     ```
 
     In this query string, replace the GUID with the `id` value you saved from the **CustomColorFieldFieldCustomizer.manifest.json** file, and the **Color** property name refers to the name of the field to customize. If you like, you can also provide a custom configuration object, serialized in JSON format, as an additional parameter for the field customizer construction.

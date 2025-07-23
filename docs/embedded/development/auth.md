@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 09/23/2024
+ms.date: 06/24/2025
 ms.localizationpriority: high
 ---
 
@@ -11,13 +11,13 @@ To use SharePoint Embedded, your application needs to use Microsoft Graph. Learn
 
 ## Overview
 
-Here are some key principles with SharePoint Embedded authentication and authorization:
+Here are some key principles of SharePoint Embedded authentication and authorization:
 
 - Applications interact with SharePoint Embedded via Microsoft Graph.
 - Applications need container type application permissions to access containers of that container type.
-- When using access on behalf of a user,  applications can only access containers that the user is a member of.
-- When using access without a user,  applications can access containers enabled by the container type application permissions they have been granted.
-- Applications use access on behalf of users whenever possible to enhance security and audibility
+- Applications can only access containers that the user is a member of when using access on behalf of a user.
+- Applications can access all containers enabled by their container type application permissions when using access without a user.
+- Applications use access on behalf of users whenever possible to enhance security and accountability
 
 ## Pre-Requisites
 
@@ -49,12 +49,24 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 ### Exceptional access patterns
 
-Currently, there are two types of operations that aren't accessible via Microsoft Graph:
+Currently, there are two types of operations with exceptional access patterns:
+
+- [Operations not exposed via Microsoft Graph](#operations-not-exposed-via-microsoft-graph)
+- [Operations involving searching SharePoint Embedded content](#operations-involving-searching-sharepoint-embedded-content)
+- [Operations that require a user license](#operations-that-require-a-user-license)
+
+> [!IMPORTANT]
+> Consider the repercussions of these exceptional access patterns on how your application and other applications can access SharePoint Embedded content in your container type.
+
+#### Operations not exposed via Microsoft Graph
+
+There are two types of operations that aren't accessible via Microsoft Graph today:
 
 - [Container type management](../getting-started/containertypes.md) on owning tenants, which are performed via PowerShell cmdlets.
 - [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants, exposed via SharePoint REST API v2.
+- [SharePoint Embedded agent](./declarative-agent/spe-da.md) exposed via SharePoint REST API v2 permissions.
 
-To perform [container type management](../getting-started/containertypes.md) operations, you must be a SharePoint Embedded Administrator or Global Administrator.
+To perform [container type management](../getting-started/containertypes.md) operations, you must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 To [register a container type](../getting-started/register-api-documentation.md), you must request the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
 
@@ -63,7 +75,30 @@ To [register a container type](../getting-started/register-api-documentation.md)
 | Container.Selected   | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SharePoint Embedded, enables container type registration on a consuming tenant. |
 
 > [!NOTE]
-> Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon and this step will no longer be needed. Stay tuned.
+> Container type management on owning tenants and registration on consuming tenants will become Microsoft Graph operations soon, and this permission will no longer be needed. Stay tuned.
+
+To use the [SharePoint Embedded agent](./declarative-agent/spe-da.md) experience (in the Preview stage) in your application, you also need the `Container.Selected` permission on the `Office 365 SharePoint Online` resource.
+
+#### Operations involving searching SharePoint Embedded content
+
+This section refers only to the search scenarios in [Search Content](./content-experiences/search-content.md), and not the enumeration scenarios.
+
+To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission on top of `FileStorageContainer.Selected`, normally used for SharePoint Embedded access. During the Preview stage of this feature, the `Files.Read.All` application permission grants applications access to search capabilities on all SharePoint Embedded content.
+
+> [!NOTE]
+> Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
+
+#### Operations that require a user license
+
+SharePoint Embedded is designed to work without the need for end users to have any kind of Microsoft 365 product licenses assigned to them. However, there are certain operations     that don't abide by this principle yet.
+
+##### List containers
+
+The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation returns a `403 Forbidden` response code if called on behalf of a user that doesn't have a OneDrive. There are plans to remove this dependency soon. This dependency doesn't apply to the List containers operation when called without a user context (app-only mode).
+
+##### Mention users in Office documents
+
+The common [Office experience](./content-experiences/office-experience.md) includes reviewing documents and adding comments to those documents. For users to show up in the @mentions people picker, they need to have a Microsoft 365 license assigned to them.
 
 ### Container type application permissions
 
@@ -88,11 +123,11 @@ SharePoint Embedded applications need to be granted container type application p
 | Full                 | Has all permissions for containers of this container type.                                                         |
 
 > [!NOTE]
-> The combination of Microsoft Graph permissions and container type application permissions encompass the client authorization for applications.
+> The combination of Microsoft Graph permissions and container type application permissions encompasses the client authorization for applications.
 
 ### Container permissions
 
-Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not for access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not to access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
 
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
@@ -108,12 +143,22 @@ Any user accessing a container must be a member of the container. Membership to 
 
 Here are some actions you can take next:
 
-1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you may use [Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions:
+1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions:
+
    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
      - `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on consuming tenants
    - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
      - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to register a container on consuming tenants
-1. [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to your application on both owning and consuming tenants (which can be the same tenant).
+
+1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on both owning and consuming tenants (which can be the same tenant).
+
+   > [!NOTE]
+   > The `Container.Selected` application permission is hidden, which can cause issues with granting admin consent using the Enterprise apps pane in the Azure portal. Instead, [construct the admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin) and provide it to your Microsoft Entra directory administrator. For example:
+   >
+   > `https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}`
+   >
+   > Make sure the Microsoft Entra directory administrator [confirms a successful response](/entra/identity-platform/v2-admin-consent#successful-response).
+
 1. [Create a new container type](../getting-started/containertypes.md) on the owning tenant.
 1. [Register a container type](../getting-started/register-api-documentation.md) on the consuming tenant.
 1. [Create a container](/graph/api/filestoragecontainer-post)

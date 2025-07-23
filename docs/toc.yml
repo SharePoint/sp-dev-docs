@@ -319,6 +319,8 @@
       href: spfx/web-parts/basics/add-an-external-library.md
     - name: JavaScript libraries
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: SharePoint Online Support for Content Security Policy (CSP)
+      href: spfx/content-securty-policy-trusted-script-sources.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
   - name: Connect to APIs
@@ -474,8 +476,10 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.21 - February 25, 2024
-      href: spfx/release-1.21.md        
+    - name: SPFx v1.21.1 - May 3, 2025
+      href: spfx/release-1.21.1.md
+    - name: SPFx v1.21 - April 23, 2025
+      href: spfx/release-1.21.md
     - name: SPFx v1.20 - September 26, 2024
       href: spfx/release-1.20.md
     - name: SPFx v1.19 - April 25, 2024
@@ -550,6 +554,8 @@
   items:
   - name: Overview
     href: embedded/overview.md
+  - name: What's New
+    href: embedded/whats-new.md
   - name: Scenarios and Use Cases
     href: embedded/scenarios-and-use-cases.md
   - name: Getting Started
@@ -564,7 +570,7 @@
     items:
     - name: Application Architecture
       href: embedded/development/app-architecture.md
-    - name: Authentication
+    - name: Authentication and Authorization
       href: embedded/development/auth.md
     - name: Sharing and Permissions
       href: embedded/development/sharing-and-perm.md
@@ -618,13 +624,13 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
-  - name: SharePoint Embedded copilot ( Private Preview )
+  - name: SharePoint Embedded agent ( Private Preview )
     items:
-    - name: SharePoint Embedded copilot Overview
+    - name: SharePoint Embedded agent Overview
       href: embedded/development/declarative-agent/spe-da.md
-    - name: SharePoint Embedded copilot Tutorial
+    - name: SharePoint Embedded agent Tutorial
       href: embedded/development/tutorials/spe-da-vscode.md
-    - name: SharePoint Embedded copilot Advanced Topics
+    - name: SharePoint Embedded agent Advanced Topics
       href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
@@ -674,26 +680,6 @@
       href: spfx/viva/design/quick-view-samples.md
     - name: Adaptive Card Extensions Iconography Limitations
       href: spfx/viva/get-started/fluent-icons-limitations.md
-  - name: Bot Powered Adaptive Card Extensions
-    items:
-    - name: Overview of Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
-    - name: Understanding Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
-    - name: Building your first Bot Powered ACE with .NET
-      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
-    - name: Building your first Bot Powered ACE with Microsoft Teams Toolkit and TypeScript
-      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE-TTK-TS.md
-    - name: Extending an existing Teams Bot to become a Bot Powered Adaptive Card Extension
-      href: spfx/viva/bot-powered/Extending-existing-Teams-Bot.md
-    - name: Authentication and Authorization in Bot Powered ACEs
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
-    - name: Building Bot Powered ACEs with Microsoft Entra ID and Single Sign-on (SSO)
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs-Entra.md
-    - name: Building Bot Powered ACEs with Magic Code authentication
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs-Magic-Code.md
-    - name: Bringing Bot Powered ACEs to the marketplace
-      href: spfx/viva/bot-powered/publish-to-marketplace-overview.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -717,7 +703,7 @@
     - name: Create a Data Visualization Adaptive Card Extension
       href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
     - name: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
-      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md      
+      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
@@ -2311,13 +2297,15 @@
         href: apis/amr-api-reference.md
     - name: Azure container and queue
       href: apis/migration-azure.md
+    - name: Migration Job Progress API
+      href: apis/migration-job-progress-api-reference.md
     - name: Migration Content Package
       href: apis/migration-content-package.md
     - name: Manifest Files
       href: apis/migration-manifest.md
     - name: Events
       href: apis/migration-events.md
-  - name: Microsoft Syntex REST API
+  - name: Document processing REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md
