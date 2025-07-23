@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Asynchronous Metadata Read (AMR) API Introduction"
-description: This document is an overview on how to read metadata from SharePoint, targeted to SharePoint migration tool developers.
-ms.date: 04/18/2024
+description: Overview how to read metadata from SharePoint, targeted to SharePoint migration tool developers.
+ms.date: 07/23/2025
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -15,9 +15,9 @@ ms.collection:
 ---
 # SharePoint Asynchronous Metadata Read (AMR) API Introduction
 
-The SharePoint Asynchronous Metadata Read (AMR) API asynchronously exports metadata from SharePoint and OneDrive.
+The SharePoint Asynchronous Metadata Read (AMR) API enables the asynchronous export of metadata from SharePoint and OneDrive.
 
-Use AMR API to export metadata from SharePoint, for incremental migration, and post-migration validation.
+Use AMR API to export metadata from SharePoint for incremental migration and post-migration validation.
 
 AMR is designed exclusively for import scenarios. It exhibits poor scalability when handling requests for metadata, permissions, or versions. We can't provide performance assurances for AMR usage in data export scenarios, such as cross-tenant migrations.
 
@@ -34,7 +34,8 @@ Export metadata from SharePoint in three steps:
 ### Provision the destination containers and the queue
 
 > [!IMPORTANT]
-> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. 
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status.
+>
 > Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation of Azure Queues is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
 
 Use `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
@@ -52,14 +53,15 @@ Check [AMR API Reference](amr-api-reference.md) for details.
 ### Checking status
 
 > [!IMPORTANT]
-> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. 
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status.
+> 
 > Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation of Azure Queues is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
 
 Check Azure Queue supplied for export status. Monitor events as listed in [Events](migration-events.md) for details.
 
-AMR API exports metadata in the manifest container supplied, under folder named by `JobID`. Check [Manifest files](migration-manifest.md) for the format and validation of the metadata.
+AMR API exports metadata in the manifest container supplied, under a folder named by `JobID`. Check [Manifest files](migration-manifest.md) for the format and validation of the metadata.
 
-AMR API splits manifest package larger than 25 MB into multiple manifest files per request.
+AMR API splits manifest packages larger than 25 MB into multiple manifest files per request.
 
 ## Best practice
 
@@ -67,7 +69,7 @@ AMR API is powerful. Ensure good performance to achieve the scale for large migr
 
 ### Export security and permissions on top level if possible
 
-Exporting security with `IncludeSecurity` consumes more resources and slows down the export. It's faster to export these metadata at upper-level folder first, then export the children without them.
+Exporting security with `IncludeSecurity` consumes more resources and slows down the export. It's faster to export this metadata at the upper-level folder first, then export the children without them.
 
 ### Metadata export on a single item
 
@@ -98,9 +100,9 @@ AMR API processes jobs through a queue mechanism with preconfigured workload man
 
 ### Lab-tested performance baseline
 
-We tested the performance in lab setting. AMR API exported about 400 items per second for every 250-K objects, in the average case. The peak performance reached 700 items per second.
+We tested the performance in a lab setting. AMR API exported about 400 items per second for every 250-K objects, in the average case. The peak performance reached 700 items per second.
 
-There are multiple factors that affect the real-life performance. These factors include:
+Multiple factors affect real-life performance. These factors include:
 
 - The number of items that are being exported
 - The way AMR API is implemented
@@ -116,6 +118,6 @@ To ensure good user experiences for all Microsoft 365 customers, SharePoint uses
 
 ### Tenant-to-Tenant migrations
 
-AMR isn't intended for scenario where contents from a SharePoint tenant are moved to another. This type of migration requires the use of many resource-heavy read options. The long processing time of these read options slows down the overall migration significantly.
+AMR isn't intended for scenarios where contents from a SharePoint tenant are moved to another. This type of migration requires the use of many resource-heavy read options. The long processing time of these read options slows down the overall migration significantly.
 
 Microsoft provides no performance guarantee in this scenario. Use Graph or CSOM as needed.
