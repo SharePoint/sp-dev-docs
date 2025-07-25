@@ -1,15 +1,15 @@
 ---
 title: Register File Storage container Type Application Permissions
 description: Register the container type.
-ms.date: 03/03/2025
+ms.date: 07/18/2025
 ms.localizationpriority: high
 ---
 
 # Register file storage container type application permissions
 
-In order for a SharePoint Embedded application to interact with containers in a consuming tenant, the container type must first be registered in the consuming tenant. Container type registration happens when the owning application invokes the registration API to specify what permissions can be performed against its container type. The registration API also grants access to other Guest Apps to interact with the owning application's containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its containers.
+In order for a SharePoint Embedded application to interact with containers in a consuming tenant, the container type must first be registered in the consuming tenant. Container type registration happens when the owning application invokes the registration API to specify how applications can access its container type. The registration API also grants access to other Guest Apps to interact with the owning application's containers. For example, a SharePoint Embedded application can grant permissions to another application--a Guest App so that the Guest App can perform backup operations against its containers.
 
-Since the registration API controls the permissions that a SharePoint Embedded application can perform against the container in the consuming tenant, this call should be one of the first APIs invoked. Failure to do so results in access denied errors when invoking other APIs against the container and/or the content in the containers.
+Since the container type registration API controls the access to a container type in the consuming tenant, this is the first endpoint invoked by a SharePoint Embedded application on a consuming tenant. Failure to do so results in access denied errors when invoking other APIs against containers and/or content in the containers.
 
 There are no restrictions on how many times the registration API can be invoked. How often the registration API is invoked and when it's invoked is dependent on the SharePoint Embedded application. However, the last successful call to the registration API determines the settings used in the consuming tenant.
 
