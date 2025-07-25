@@ -2305,7 +2305,7 @@
       href: apis/migration-manifest.md
     - name: Events
       href: apis/migration-events.md
-  - name: Microsoft Syntex REST API
+  - name: Document processing REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md
