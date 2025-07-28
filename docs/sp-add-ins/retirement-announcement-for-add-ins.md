@@ -8,24 +8,24 @@ ms.service: sharepoint
 
 # SharePoint Add-In retirement in Microsoft 365
 
-Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the SharePoint Add-In extensibility model and believe Microsoft 365 customers will be better served by modern SharePoint extensibility models.
+Microsoft strives to deliver value to our customers through modern, optimized, secure solutions. As part of this evolution of Microsoft 365 solutions, we are retiring the SharePoint Add-In extensibility model and believe Microsoft 365 customers will be better served by modern SharePoint extensibility models.
 
 > [!IMPORTANT]
-> The SharePoint add-in model deprecation in SharePoint Online does not impact [SharePoint Framework (SPFx)](https://aka.ms/spfx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported also in future.
+> The SharePoint add-in model deprecation in SharePoint Online does not impact [SharePoint Framework (SPFx)](https://aka.ms/spfx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported.
 
-SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024 and they will stop working for existing tenants and will be fully retired as of April 2nd, 2026. This applies to all environments including Government Clouds and Department of Defense.
+SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024; they will stop working for all tenants as of April 2nd, 2026. This applies to all environments including Government Clouds and the U.S. Department of Defense.
 
-In parallel with the SharePoint Add-In retirement, adding, updating and acquiring SharePoint Add-Ins via the public marketplace (a.k.a. store) will also be retiring. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace, from July 1st, 2024 SharePoint Add-Ins cannot be acquired anymore from the public marketplace. Using a tenant app catalog will stay supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
+In parallel with the SharePoint Add-In retirement, the ability to add, update, and acquire SharePoint Add-Ins from the public marketplace will also be discontinued. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace; as of July 1st, 2024, SharePoint Add-Ins cannot be acquired from the public marketplace. Using a tenant app catalog is supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
 
-If you are using custom developed SharePoint Add-Ins, we recommend migrating them to SharePoint Framework based solutions. If you’ve acquired SharePoint Add-Ins from the public marketplace or from a 3rd party then you should inquire for an updated version that does not depend on the SharePoint Add-In extensibility model. There will not be an option to extend SharePoint Add-Ins beyond April 2nd, 2026.
+If you are using custom developed SharePoint Add-Ins, we recommend migrating them to SharePoint Framework based solutions. If you’ve acquired SharePoint Add-Ins from the public marketplace or from a 3rd party,  contact the provider for an updated version that does not depend on the SharePoint Add-In extensibility model. 
 
-To learn more about how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
+To learn how to migrate SharePoint Add-Ins to alternative solutions, see these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
 
 ## Overview
 
 ### SharePoint Add-Ins
 
-SharePoint Add-Ins come in two flavors: SharePoint hosted Add-Ins and provider hosted Add-Ins, both of which are effected by this retirement.
+SharePoint Add-Ins come in two flavors: SharePoint hosted Add-Ins and provider hosted Add-Ins, both of which are impacted.
 
 [SharePoint hosted Add-Ins primarily bring UX elements](sharepoint-add-ins.md#sharepoint-hosted-sharepoint-add-ins) to the site the Add-In was installed into and the app web that was created for the Add-In. A common use case is showing SharePoint Add-In web parts on pages of the host web, using [SharePoint Framework](https://aka.ms/spfx) based web parts is the recommended alternative here. These applications use JavaScript for writing business logic using the logged in user context to authenticate.
 
