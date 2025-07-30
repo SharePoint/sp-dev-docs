@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-In retirement in Microsoft 365
 description: Describes the details around the retirement of SharePoint Add-In in Microsoft 365.
-ms.date: 11/13/2023
+ms.date: 07/30/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -53,13 +53,13 @@ Using the [SharePoint Add-In Report](https://aka.ms/assessment/addinsacsreport) 
 
 ### Migrate business relevant SharePoint Add-Ins by using newer SharePoint development models
 
-SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.ms/spfx) web parts, for the provider hosted Add-Ins any software as a service application platform (e.g. Microsoft Azure) in combination with [Microsoft Entra ID](https://learn.microsoft.com/azure/active-directory/develop/) for auth can be used as alternative development model.
+SharePoint hosted Add-Ins can be replaced by [SharePoint Framework](https://aka.ms/spfx) web parts, for the provider hosted Add-Ins any software as a service application platform (e.g. Microsoft Azure) in combination with [Microsoft Entra ID](/azure/active-directory/develop/) for auth can be used as alternative development model.
 
 To learn more about how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
 
 ### Disable Add-In usage for your tenant
 
-Admins can disable SharePoint Add-Ins with the [Set-SPOTenant SharePoint Management Shell PowerShell command](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps).
+Admins can disable SharePoint Add-Ins with the [Set-SPOTenant SharePoint Management Shell PowerShell command](/powershell/module/sharepoint-online/set-spotenant).
 
 ```PowerShell
 Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
