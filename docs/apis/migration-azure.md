@@ -98,6 +98,11 @@ You can also provide your own Azure Blob Storage Containers. Provide the URI wit
 
 ## Azure Queues
 
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status.
+> 
+> Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
+
 SharePoint-provided Azure Queues have no extra cost to the customer. Provision the queue with `ProvisionMigrationQueue` method, without the need to manually set up in Azure admin console.
 
 Migration API provisions Azure Queues in the same datacenter of the SharePoint instance.
