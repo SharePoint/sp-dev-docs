@@ -1201,4 +1201,4 @@ You can find additional information about this topic reading the following docum
 * [Get started with SharePoint webhooks](../apis/webhooks/get-started-webhooks.md)
 * [SharePoint webhooks sample reference implementation](../apis/webhooks/webhooks-reference-implementation.md)
 * [SharePoint list webhooks](../apis/webhooks/lists/overview-sharepoint-list-webhooks)
-* [Use the Microsoft Graph API to get change notifications](/graph/api/resources/webhooks)
+* [Use the Microsoft Graph API to get change notifications](/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0)
