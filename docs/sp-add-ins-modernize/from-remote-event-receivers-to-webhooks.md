@@ -1,7 +1,7 @@
 ---
 title: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks
 description: Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks.
-ms.date: 03/15/2024
+ms.date: 08/06/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -1031,7 +1031,7 @@ In the body of the request you need to specify the information about the resourc
 ```
 
 > [!NOTE]
-> In order to register a subscription, you will need permissions specific for the target of the subscription. You can find the list of permissions required for every supported target entity by reading the document [Create subscription - Permissions](https://learn.microsoft.com/en-us/graph/api/subscription-post-subscriptions?view=graph-rest-1.0&tabs=http#permissions).
+> In order to register a subscription, you will need permissions specific for the target of the subscription. You can find the list of permissions required for every supported target entity by reading the document [Create subscription - Permissions](/graph/api/subscription-post-subscriptions?view=graph-rest-1.0&tabs=http#permissions&preserve-view=true).
 
 The JSON body of the request specifies the *changeType*, which can be any of the following values:
 
@@ -1043,7 +1043,7 @@ For SharePoint Online lists, the value *updated* is the only supported for the *
 
 Then, it specifies the *notificationUrl* that is the URL of the endpoint that will receive the change notifications. It must be an endpoint published over HTTPS. The *resource* property defines the target resource to monitor for notifications. 
 
-In the above sample you can see a resource of type SharePoint Online list, where you need to specify the Microsoft Graph *{site-id}* and *{list-id}*. The *expirationDateTime* defines how long the subscription will last, and needs to adhere to the supported expiration limites defined in the table [Maximum length of subscription per resource type](https://learn.microsoft.com/en-us/graph/api/resources/subscription?view=graph-rest-1.0#maximum-length-of-subscription-per-resource-type). For a SharePoint Online list the expiration time can be up to 30 days.
+In the above sample you can see a resource of type SharePoint Online list, where you need to specify the Microsoft Graph *{site-id}* and *{list-id}*. The *expirationDateTime* defines how long the subscription will last, and needs to adhere to the supported expiration limites defined in the table [Maximum length of subscription per resource type](/graph/api/resources/subscription?view=graph-rest-1.0#maximum-length-of-subscription-per-resource-type&preserve-view=true). For a SharePoint Online list the expiration time can be up to 30 days.
 
 The *clientState* is a required string that allows your notification endpoint to validate the requests coming from Microsoft Graph. It can be a string no longer than 128 characters.
 
@@ -1200,5 +1200,5 @@ You can find additional information about this topic reading the following docum
 * [Overview of SharePoint webhooks](../apis/webhooks/overview-sharepoint-webhooks.md)
 * [Get started with SharePoint webhooks](../apis/webhooks/get-started-webhooks.md)
 * [SharePoint webhooks sample reference implementation](../apis/webhooks/webhooks-reference-implementation.md)
-* [SharePoint list webhooks](../apis/webhooks/lists/overview-sharepoint-list-webhooks)
-* [Use the Microsoft Graph API to get change notifications](/graph/api/resources/change-notifications-api-overview?view=graph-rest-1.0)
+* [SharePoint list webhooks](../apis/webhooks/lists/overview-sharepoint-list-webhooks.md)
+* [Use the Microsoft Graph API to get change notifications](/graph/api/resources/change-notifications-api-overview)
