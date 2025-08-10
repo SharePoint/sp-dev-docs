@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools, and libraries.
-ms.date: 04/16/2025
+ms.date: 05/15/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries compatibility
 
-As the SharePoint Framework (SPFx) evolves, so do the various development tools and libraries that it uses.
+As the SharePoint Framework (SPFx) evolves, so do the various development tools and libraries it uses.
 
 ## SharePoint Framework version compatibility
 
@@ -28,12 +28,13 @@ For more information about SharePoint Framework development with SharePoint 2016
 
 ## SPFx development environment compatibility
 
-As each new version of the SharePoint Framework is released, support for newer library versions is constantly added to ensure that the toolset remains current.
+As each new version of the SharePoint Framework is released, support for newer library versions is constantly added to ensure the toolset remains current.
 
 The following table lists SharePoint Framework and compatible versions of common tools and libraries:
 
 |              SPFx               |   Node.js (LTS) |   TypeScript   |    React    |
 | ------------------------------- | --------------- | -------------- | ----------- |
+| [1.21.1](release-1.21.1.md)     | v22             | v5.3           | v17.0.1     |
 | [1.21.0](release-1.21.md)       | v22             | v5.3           | v17.0.1     |
 | [1.20.0](release-1.20.md)       | v18             | v4.5, v4.7     | v17.0.1     |
 | [1.19.0](release-1.19.md)       | v18             | v4.5, v4.7     | v17.0.1     |

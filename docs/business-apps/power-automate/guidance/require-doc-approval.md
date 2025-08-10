@@ -84,10 +84,10 @@ You must ensure you enter the correct site and library name. However, you can ge
     - Using the *Id* property from the *trigger output*
 - Comments
     - Using the *comments* property from the *approval response*
-    - ETAG
-- Using the *ETag* property from the *Get file metadata* action output
+- ETAG
+    - Using the *ETag* property from the *Get file metadata* action output
 
-You can now use the content approval status action to approve and reject the document based on the approval response.
+You can now use the content approval status action to approve or reject the document based on the approval response.
 
 The end result is that:
 

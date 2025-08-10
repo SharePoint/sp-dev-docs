@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Migration API Reference Guide"
 description: "This article provides in-depth information on how to use the SharePoint Migration API."
-ms.date: 04/28/2024
+ms.date: 07/16/2025
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -171,6 +171,9 @@ See `[EncryptionOption](https://learn.microsoft.com/en-us/dotnet/api/microsoft.s
 See Return value in `CreateMigrationJob` method.
 
 ## GetMigrationJobStatus method
+
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status. Deprecation of GetMigrationJobStatus API is planned for the second half of 2026. Until then, it will remain available for status retrieval.
 
 Retrieves the processing status for a designated migration job.
 

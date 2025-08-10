@@ -1,13 +1,13 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 03/14/2025
+ms.date: 05/21/2025
 ms.localizationpriority: high
 ---
 
 # Command bar customization syntax reference
 
-Command bar customization helps personalize a list to suit specific requirements. The JSON based feature allows basic changes to the command bar, including modification of icon and/or text, hiding existing options or repositioning commands.
+Command bar customization helps personalize a list to suit specific requirements. The JSON-based feature allows basic changes to the command bar, including modification of icon and/or text, hiding existing options, or repositioning commands.
 
 ## commandBarProps
 
@@ -87,20 +87,39 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'pinToQuickAccess'
 'unpinFromQuickAccess'
 'manageForms'
+'favoriteCommand'
+'createCopilot'
 ```
 
-## 🚀 Recent updates to `commandBarCustomization` Keys
+## ⚠️ Recent updates to `commandBarCustomization` Keys
 
-> [NOTE!]
-> Some keys in the `commandBarCustomization` schema have been updated. To ensure your custom formatter works correctly, update your existing JSON with these new keys.  
+> Some keys in the commandBarCustomization schema have been updated. To ensure your custom formatter functions correctly, please update your existing JSON to reflect these new keys.
 > 
-> | Original Key | Current Key |
+> | Original Key | New Key |
 > |--------------|-------------|
-> | `new`        | `newComposite` |
-> | `upload`     | `uploadCommand` |
+> | `new`        | `newComposite` (Document Library)|
+> | `upload`     | `UploadCommand` |
 > | `sync`       | `syncCommand` |
 > | `addShortcut`| `addShortcutToOneDriveCommand` |
 > | `pinToQuickAccess` | `PinToQuickAccessCommand` |
+> | `pinItem` | `pinItemCommand` |
+> | `properties` | `propertiesCommand` |
+> | `versionHistory` | `versionHistoryCommand` (currently not working) |
+>
+> Additionally, the following new command keys are now available:
+> >
+> - `stasherContextMenuCommand` (Add shortcut)
+> - `stasherCommand.myFiles` (Add shortcut --> my Files)
+> - `stasherCommand.otherLocations` (Add shortcut --> Other locations)
+> - `PublishCommand`
+> - `complianceDetails` (right click context menu --> More --> Compliance details)
+> - `more` (right click context menu --> More)
+> - `previewFileCommand` (right click context menu --> Preview)
+>
+> Please note that the JSON schema at https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json has not yet been updated to reflect these new command keys.
+
+> [!IMPORTANT]
+> Command bar customizations also affect the item context menu (right-click menu). If a command is hidden in the command bar, it will also be hidden in the context menu.
 
 ## hide
 
@@ -154,7 +173,7 @@ The following example shows a sample Command bar formatting JSON to do the follo
 
 ## position
 
-An optional property that specifies the position where the command will be placed in the command bar. The value of this property can either be a number, string or an Expression object. If the value is not provided then the command will be placed in it's default position. This property follows zero-based indexing.
+An optional property that specifies the position where the command will be placed in the command bar. The value of this property can either be a number, a string, or an Expression object. If the value is not provided then the command will be placed in it's default position. This property follows zero-based indexing.
 
 ## sectionType
 
@@ -164,8 +183,9 @@ An optional property that specifies the section where the customized command wil
 - Overflow
 
 The following example shows a sample Command bar formatting JSON to do the following:
+
 - Puts the 'New' command at the third position in the primary section of the Command bar.
-- Puts the 'Share' command at the second position in the overflow menu of the Command bar.
+- Puts the 'Share' command in the second position in the overflow menu of the Command bar.
 - Puts the 'Alert me' command at the fourth position in the primary section of the Command bar.
 
 ```JSON
@@ -193,7 +213,7 @@ The following example shows a sample Command bar formatting JSON to do the follo
 
 ## selectionModes
 
-An optional property that specifies the selection modes in which the command customization will be applied. If the value is not provided then the customization will be applied in all the selection modes in which the command is available. The value of this property can be array of strings where the following strings are allowed:
+An optional property that specifies the selection modes in which the command customization will be applied. If the value is not provided, then the customization will be applied in all the selection modes in which the command is available. The value of this property can be an array of strings where the following strings are allowed:
 
 - NoSelection
 - SingleSelection

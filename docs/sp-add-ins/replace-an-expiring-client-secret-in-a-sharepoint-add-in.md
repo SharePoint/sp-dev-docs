@@ -30,6 +30,9 @@ Ensure the following before you begin:
 - You have installed Microsoft Graph Powershell SDK: [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
 - You're a tenant administrator (or having **Application.ReadWrite.All** permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
 
+> [!Important]
+> Microsoft Graph PowerShell versions 2.26 and up resulted in issues, if you've problems please downgrade to version 2.25 or lower.
+
 ## Understand the type of your ACS principal before renewing the secret
 
 Historically ACS principals were created as Microsoft Entra service principals having the `servicePrincipalType` set to `Legacy`. As of December 2024 the Microsoft Entra principal creation has been streamlined and ACS principals are now created as application principals in Microsoft Entra. If you browse the Microsoft Entra applications you'll now be able to see the ACS principal you've created as of December 2024. ACS principal creation typically is done using `appregnew.aspx`.
