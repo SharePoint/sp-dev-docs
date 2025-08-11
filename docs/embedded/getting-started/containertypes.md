@@ -167,7 +167,7 @@ The Developer Admin may apply configuration when calling the [Create fileStorage
 > [!IMPORTANT]
 > Updating settings on a container type may take up to **24 hours** for the new values to be replicated on all consuming tenants. If a consuming tenant applied overrides on container type settings, the new values aren't applied and the overrides remain in place. Some settings only apply to new content and not to existing content for the container type (for example, storage size, discoverability enabled, and others).
 
-For information on all the settings supported by container types, see [fileStorageContainerTypeSettings resource type](/graph/resources/filestoragecontainertypesettings).
+For information on all the settings supported by container types, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings).
 
 ## Viewing container types
 
