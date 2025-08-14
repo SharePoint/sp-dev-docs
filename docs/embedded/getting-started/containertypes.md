@@ -21,13 +21,13 @@ A container type is represented on each container instance as an immutable prope
 > [!NOTE]
 >
 > 1. You must specify the purpose of the container type you're creating at creation time. A container type set for trial purposes can't be converted for production; or vice versa.
-> 1. Standard and pass-through container types can't be converted once created. If you want to convert a standard container type to pass-through billing or vice versa, you must delete and re-create the container type.
+> 1. Standard and passthrough container types can't be converted once created. If you want to convert a standard container type to passthrough billing or vice versa, you must delete and re-create the container type.
 
 ## Tenant requirements
 
 - An active instance of SharePoint is required in your Microsoft 365 tenant.
-- Users who authenticate into SharePoint Embedded container types and containers must be in Entra ID (Members and Guests)
-- An Entra ID app registration needs to be configured for container type management. For more information, see [SharePoint Embedded authentication and authorization](../development/auth.md).
+- Users who authenticate into SharePoint Embedded container types and containers must be in Microsoft Entra ID (Members and Guests)
+- A Microsoft Entra ID app registration needs to be configured for container type management. For more information, see [SharePoint Embedded authentication and authorization](../development/auth.md).
 
 > [!NOTE]
 > An Office license isn't required to collaborate on Microsoft Office documents stored in a container.
@@ -39,7 +39,7 @@ SharePoint Embedded has two different container types you can create.
 1. [Trial container type](#trial-container-type). Uses the `trial` billing classification.
 1. [Standard container type](#standard-container-types-non-trial). Uses the `standard` or `directToCustomer` billing classification.
 
-To create a container type, your Entra ID application needs to have the `FileStorageContainerType.Manage.All` application permission on the owning tenant. Your Entra ID application needs to call the [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) endpoint on behalf of a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator):
+To create a container type, your Microsoft Entra ID application needs to have the `FileStorageContainerType.Manage.All` application permission on the owning tenant. Your Microsoft Entra ID application needs to call the [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) endpoint on behalf of a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator):
 
 ```http
 POST https://graph.microsoft.com/beta/storage/fileStorage/containerTypes
@@ -79,7 +79,7 @@ The following restrictions are applied to trial container types:
 - The developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
 
-## Standard container types (non-trial)
+## Standard container types (nontrial)
 
 A standard container type can be used in production environments. Each tenant can have 25 container types at a time. Standard container types don't have the same restrictions as trial container types, but they still have limits. For more information, see [SharePoint Embedded Limits](../development/limits-calling.md).
 
@@ -87,7 +87,7 @@ To learn more about the supported pay-as-you-go meters, refer to the [SharePoint
 
 ### Billing profile
 
-SharePoint Embedded is a consumption-based, pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models that the tenant developing the SharePoint Embedded application can select for respective container types, tailoring it to their unique business requirements. The two billing models are Standard and Pass-through billing.
+SharePoint Embedded is a consumption-based, pay-as-you-go (PAYG) offering meaning you pay only for what you use. SharePoint Embedded provides two billing models that the tenant developing the SharePoint Embedded application can select for respective container types, tailoring it to their unique business requirements. The two billing models are Standard and Passthrough billing.
 
 ### Standard container type - with billing profile
 
@@ -104,10 +104,10 @@ There are limits around the number of container types that each tenant can have.
 
 ### Azure Subscription
 
-For the standard billing container type, the global administrator or SharePoint Embedded Administrator needs to set up:
+For the standard billing container type, the Global Administrator needs to:
 
-- An Azure subscription in the tenancy
-- A resource group attached to the Azure subscription
+- [Create an Azure subscription in your tenancy](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
+- [Create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal) attached to the Azure subscription
 
 After [creating the container type](#creating-container-types) with `standard` billing classification, you need to attach a billing profile to the container type.
 
@@ -136,13 +136,22 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 >
 > If the cmdlet above fails with a SubscriptionNotRegistered error, it is because **Microsoft.Syntex** isn't registered as a resource provider in the subscription. The cmdlet sends a resource provider registration request on your behalf but it takes a few minutes to be completed. Wait 5-10 minutes and try again until the cmdlet succeeds.
 
-### Standard container type - pass-through billing
+To update the billing profile for a standard container type, use the following cmdlet:
 
-With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application (consuming tenant). Admins in the developer tenant don't need to set up an Azure billing profile when creating a pass-through SharePoint Embedded container type.
+```powershell
+Set-SPOContainerType -ContainerTypeId <ContainerTypeId> [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>]
+```
+
+> [!NOTE]
+> Billing setup for standard container types is done via the SharePoint Online Management Shell. In the future, this operation will be available as a Microsoft Graph operation.
+
+### Standard container type - passthrough billing
+
+With passthrough billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application (consuming tenant). Admins in the developer tenant don't need to set up an Azure billing profile when creating a passthrough SharePoint Embedded container type.
 
 ![Pass Through](../images/2bill521.png)
 
-For container types intended to be directly billed to a customer use the `directToCustomer` billing classification during [container type creation](#creating-container-types). For the direct to customer billed container type, there's no need to attach a billing profile.
+For container types intended to be directly billed to a customer use the `directToCustomer` billing classification during [container type creation](#creating-container-types). For the passthrough billing container types, there's no need to attach a billing profile.
 
 Once the container type is [registered](../getting-started/register-api-documentation.md) in the consuming tenant, the consuming tenant admin (SharePoint Administrator or Global Administrator) needs to set up the billing profile in the consuming tenant to use the SharePoint Embedded application.
 
@@ -154,7 +163,7 @@ Once the container type is [registered](../getting-started/register-api-document
 
 1. Select **Go to Pay as you go services**.
 1. Select **Apps** under **Syntex services for**, then select **SharePoint Embedded** in the Apps panel
- 
+
     ![Microsoft 365 admin center SharePoint Embedded Billing setting](../images/SyntexPAYGActivateSPE.png)
 
     > [!NOTE]

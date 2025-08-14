@@ -5,18 +5,17 @@ ms.date: 04/30/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Embedded Billing Meters
+# SharePoint Embedded billing meters
 
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/). Both Standard Billing container type and Pass-through Billing container type will use the same meters.
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/). Both standard billing container type and passthrough billing container type will use the same meters.
 
 SharePoint Embedded has three billing meters as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details.
-
 
 ## Storage
 
 Storage consumption meters in SharePoint Embedded apply to the storage used by files and documents along with their metadata and versions. Storage consumption also includes all content in the recycle bin and deleted container collection within SharePoint Embedded.
 
-## API Transactions
+## API transactions
 
 Each Microsoft Graph call made explicitly by the SharePoint Embedded application is counted as one transaction and customers are billed based on the transaction count. See the [examples](/graph/api/resources/filestoragecontainer) of Microsoft Graph calls that can be made by a SharePoint Embedded application.
 
