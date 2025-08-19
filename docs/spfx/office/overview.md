@@ -10,6 +10,9 @@ The SharePoint Framework (SPFx) v1.16 release added support for the [Microsoft T
 
 With this improvement in SPFx v1.16 forward, developers can now use the SPFx to create apps for Outlook and Office using the [existing support for creating apps for Microsoft Teams](/sharepoint/dev/spfx/build-for-teams-overview).
 
+> [!NOTE]
+> Creating traditional [Office add-in solutions](https://learn.microsoft.com/en-us/office/dev/add-ins/) with SPFx is not supported. This pattern focuses on the model where Teams apps can run also in Outlook or within other Microsoft 365 products.
+
 ## Create Microsoft Teams apps for Outlook and Office
 
 To create a new Microsoft Teams app with SPFx for Outlook and Office, you start by first creating a new SPFx project using the Yeoman generator for SharePoint v1.16 or later, the same way you'd create a new web part. For more information, see [Build your first SharePoint client-side web part](../web-parts/get-started/build-a-hello-world-web-part.md).
