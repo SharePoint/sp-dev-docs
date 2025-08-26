@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 02/19/2025
+ms.date: 08/26/2025
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 ## elmType
 
-Specifies the type of element to create. Valid elements include:
+Specifies the type of element to create. Valid elements include: 
 
 - `div`
 - `span`
