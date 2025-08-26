@@ -494,7 +494,7 @@ This simple conditional expression evaluates to `none` if `@me` isn't equal to `
 ```json
 =if(@me != [$Author.email], 'none', '')
 ```
-
+ 
 More complex if/else statements can be written like the following:
 
 ```json
