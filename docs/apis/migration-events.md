@@ -1,6 +1,6 @@
 ---
-title: "Migration events in Azure Queue"
-description: "This article provides in-depth information on how to use Azure Queue events in migration."
+title: "Migration events"
+description: "This article provides detailed information on migration job events."
 ms.date: 04/18/2024
 ms.author: ranren
 author: underreview
@@ -13,9 +13,9 @@ ms.collection:
   - SPMigration
   - m365-collaboration
 ---
-# Migration events in Azure Queue
+# Migration events
 
-This document lists all types of events Migration API and AMR API written to the Azure Queue. Use these events to get status updates on migration jobs.
+This document outlines all types of migration job events. These events provide detailed insights into the status and progress of migration jobs.
 
 ## JobQueued
 
@@ -45,6 +45,9 @@ CorrelationId:d5d97e9f-702c-0000-ceb9-354fefa5e9f6
 ```
 
 ## JobLogFileCreate
+
+> [!IMPORTANT]
+> JobLogFileCreate event is deprecated.
 
 ```log
 JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecdTime:09/29/2020 19:56:29053
@@ -187,7 +190,7 @@ Time:09/29/2020 19:56:29.053
 CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
 ```
 
-### JobCancelled
+## JobCancelled
 
 ```log
 JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
