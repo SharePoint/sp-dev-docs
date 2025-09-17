@@ -1,11 +1,20 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 06/23/2025
+ms.date: 09/16/2025
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## August 2025
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) APIs are now available in the beta Microsoft Graph endpoint.
+- [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) APIs are now available in the beta Microsoft Graph endpoint.
+
+## July 2025
+
+- [driveItem: copy](/graph/api/driveitem-copy) now supports the `childrenOnly` and `includeAllVersionHistory` request parameters in the v1.0 Microsoft Graph endpoint.
 
 ## June 2025
 
