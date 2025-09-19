@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
-description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
-ms.date: 6/27/2024
+description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft 365.
+ms.date: 9/19/2025
 ms.localizationpriority: high
 ---
 
@@ -12,6 +12,15 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 [!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
 
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
+
+You can build SharePoint Framework powered solutions by using [SharePoint Framework Yeoman Generator](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment), [Microsoft Agents Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/agents-toolkit-fundamentals?pivots=visual-studio-code), or with the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/). Key advantage is the flexibility of automatic hosting with the option to use the exact same component across the different hosts without any code level changes. This is designed to maximize the value of your development investments, regardless of which primary host you are targeting.
+
+Key capabilities of the SharePoint Framework for Microsoft 365 are the following:
+
+- **Content Driven Applications** – SharePoint Framework can be used to build content driven applications for surfacing information easily from Microsoft 365 with Microsoft Graph or to integrate with externally hosted content.
+- **Automatic Single Sign On** – SharePoint Framework components have automatic and seamless SSO included for all platforms they are hosted on. No specific consents needed from Microsoft 365 end users.
+- **Automatic hosting** – SharePoint Framework components can be securely and automatically hosted in SharePoint without additional maintenance or operational costs.
+- **Industry standard tooling** – SharePoint Framework is using standard web stack tooling with node, npm, TypeScript and any JavaScript framework of your preference. You just need standard web skills to succeed without needing any proprietary tooling.
 
 Write once and surface exactly the same code across [multiple applications](./office/overview.md). Below picture shows example case with a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/) available from GitHub.
 
@@ -24,6 +33,8 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
 To learn more about where developers can use SPFx, see [Supported extensibility platforms](supported-extensibility-platforms-overview.md).
+
+
 
 ## Key features of the SharePoint Framework
 
