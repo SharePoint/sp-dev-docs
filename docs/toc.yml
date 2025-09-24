@@ -596,6 +596,8 @@
       href: embedded/development/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
       href: embedded/development/tutorials/migrate-abs-to-spe.md
+    - name: Install Your SPE App in a Consuming Tenant
+      href: embedded/development/tutorials/vendor-install-app-customer.md
   - name: Administration
     items:
     - name: Billing
