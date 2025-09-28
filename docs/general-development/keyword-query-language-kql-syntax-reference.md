@@ -1,4 +1,4 @@
-## ---
+---
 title: Keyword Query Language (KeyQL) syntax reference
 description: Describes how to construct KeyQLqueries for Search in SharePoint and steps on how to use property restrictions and operators in KeyQLqueries.
 ms.date: 04/16/2023
