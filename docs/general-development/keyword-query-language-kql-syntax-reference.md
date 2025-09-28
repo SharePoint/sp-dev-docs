@@ -1,22 +1,21 @@
-﻿---
-title: Keyword Query Language (KQL) syntax reference
-description: Describes how to construct KQL queries for Search in SharePoint and steps on how to use property restrictions and operators in KQL queries.
+## ---
+title: Keyword Query Language (KeyQL) syntax reference
+description: Describes how to construct KeyQLqueries for Search in SharePoint and steps on how to use property restrictions and operators in KeyQLqueries.
 ms.date: 04/16/2023
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ms.localizationpriority: high
----
 
 
 
-# Keyword Query Language (KQL) syntax reference
-Learn to construct KQL queries for Search in SharePoint. This syntax reference describes KQL query elements and how to use property restrictions and operators in KQL queries.
-## Elements of a KQL query
+# Keyword Query Language (KeyQL) syntax reference
+
+Learn to construct KeyQL queries for Search in SharePoint. This syntax reference describes KeyQL query elements and how to use property restrictions and operators in KeyQL queries.
+
+## Elements of a KeyQL query
+
 <a name="SP15KQL_elements"> </a>
 
-A KQL query consists of one or more of the following elements: 
-  
-    
-    
+A KeyQL query consists of one or more of the following elements: 
 
 - Free text-keywords—words or phrases 
     
@@ -24,30 +23,23 @@ A KQL query consists of one or more of the following elements:
 - Property restrictions 
     
   
-You can combine KQL query elements with one or more of the available operators.
-  
-    
-    
-If the KQL query contains only operators or is empty, it isn't valid. KQL queries are case-insensitive but the operators are case-sensitive (uppercase).
-  
+You can combine KeyQL query elements with one or more of the available operators.
+
+If the KeyQL query contains only operators or is empty, it isn't valid. KeyQL queries are case-insensitive but the operators are case-sensitive (uppercase).
+
 > [!NOTE]
-> The length limit of a KQL query varies depending on how you create it. If you create the KQL query by using the default SharePoint search front end, the length limit is 2,048 characters. However, KQL queries you create programmatically by using the Query object model have a default length limit of 4,096 characters. You can increase this limit up to 20,480 characters by using the  [MaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.MaxKeywordQueryTextLength.aspx) property or the [DiscoveryMaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.DiscoveryMaxKeywordQueryTextLength.aspx) property (for eDiscovery).
-  
-    
-    
+> The length limit of a KeyQL query varies depending on how you create it. If you create the KeyQL query by using the default SharePoint search front end, the length limit is 2,048 characters. However, KeyQL queries you create programmatically by using the Query object model have a default length limit of 4,096 characters. You can increase this limit up to 20,480 characters by using the  [MaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.MaxKeywordQueryTextLength.aspx) property or the [DiscoveryMaxKeywordQueryTextLength](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.SearchServiceApplication.DiscoveryMaxKeywordQueryTextLength.aspx) property (for eDiscovery).
 
 
-## Constructing free-text queries using KQL
+
+
+## Constructing free-text queries using KeyQL
+
 <a name="SP15KQL_constructing_freetext_queries"> </a>
 
-When you construct your KQL query by using free-text expressions, Search in SharePoint matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to **true**.
-  
-    
-    
-Free text KQL queries are case-insensitive but the operators must be in uppercase. You can construct KQL queries by using one or more of the following as free-text expressions:
-  
-    
-    
+When you construct your KeyQL query by using free-text expressions, Search in SharePoint matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to **true**.
+
+Free text KeyQL queries are case-insensitive but the operators must be in uppercase. You can construct KeyQL queries by using one or more of the following as free-text expressions:
 
 - A **word** (includes one or more characters without spaces or punctuation)
     
@@ -55,21 +47,14 @@ Free text KQL queries are case-insensitive but the operators must be in uppercas
 - A **phrase** (includes two or more words together, separated by spaces; however, the words must be enclosed in double quotation marks)
     
   
-To construct complex queries, you can combine multiple free-text expressions with KQL query operators. If there are multiple free-text expressions without any operators in between them, the query behavior is the same as using the **AND** operator.
-  
-    
-    
+To construct complex queries, you can combine multiple free-text expressions with KeyQL query operators. If there are multiple free-text expressions without any operators in between them, the query behavior is the same as using the **AND** operator.
 
-### Using words in the free-text KQL query
+### Using words in the free-text KeyQL query
 
-When you use words in a free-text KQL query, Search in SharePoint returns results based on exact matches of your words with the terms stored in the full-text index. You can use just a part of a word, from the beginning of the word, by using the wildcard operator (*) to enable prefix matching. In prefix matching, Search in SharePoint matches results with terms that contain the word followed by zero or more characters.
-  
-    
-    
-For example, the following KQL queries return content items that contain the terms "federated" and "search": 
-  
-    
-    
+When you use words in a free-text KeyQL query, Search in SharePoint returns results based on exact matches of your words with the terms stored in the full-text index. You can use just a part of a word, from the beginning of the word, by using the wildcard operator (*) to enable prefix matching. In prefix matching, Search in SharePoint matches results with terms that contain the word followed by zero or more characters.
+
+For example, the following KeyQL queries return content items that contain the terms "federated" and "search": 
+
  `federated search`
   
     
@@ -82,29 +67,19 @@ For example, the following KQL queries return content items that contain the ter
   
     
     
-KQL queries don't support prefix matching with the wildcard * as prefix.
-  
-    
-    
+KeyQL queries don't support prefix matching with the wildcard * as prefix.
 
-### Using phrases in the free-text KQL query
+### Using phrases in the free-text KeyQL query
 
-When you use phrases in a free-text KQL query, Search in SharePoint returns only the items in which the words in your phrase are located next to each other. To specify a phrase in a KQL query, you must use double quotation marks. 
-  
-    
-    
-KQL queries don't support prefix matching with the wildcard * as prefix, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
-  
-    
-    
+When you use phrases in a free-text KeyQL query, Search in SharePoint returns only the items in which the words in your phrase are located next to each other. To specify a phrase in a KeyQL query, you must use double quotation marks. 
 
-## Property restriction queries in KQL
+KeyQL queries don't support prefix matching with the wildcard * as prefix, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
+
+## Property restriction queries in KeyQL
+
 <a name="kql_property_restriction_queries"> </a>
 
-Using KQL, you can construct queries that use property restrictions to narrow the focus of the query to match only results based on a specified condition.
-  
-    
-    
+Using KeyQL, you can construct queries that use property restrictions to narrow the focus of the query to match only results based on a specified condition.
 
 ### Specifying property restrictions
 
@@ -116,10 +91,7 @@ A basic property restriction consists of the following:
   
     
     
-Table 1 lists some examples of valid property restrictions syntax in KQL queries.
-  
-    
-    
+Table 1 lists some examples of valid property restrictions syntax in KeyQL queries.
 
 **Table 1. Valid property restriction syntax**
 
@@ -229,10 +201,8 @@ Property values are stored in the full-text index when the **FullTextQueriable**
   
     
     
-For example, if you're searching for a content item authored by Paul Shakespear, the following KQL query returns matching results:
-  
-    
-    
+For example, if you're searching for a content item authored by Paul Shakespear, the following KeyQL query returns matching results:
+
  `author:Shakespear`
   
     
@@ -241,10 +211,8 @@ For example, if you're searching for a content item authored by Paul Shakespear,
   
     
     
-Prefix matching is also supported. You can use the wildcard operator (*), but isn't required when you specify individual words. Continuing with the previous example, the following KQL query returns content items authored by Paul Shakespear as matches: 
-  
-    
-    
+Prefix matching is also supported. You can use the wildcard operator (*), but isn't required when you specify individual words. Continuing with the previous example, the following KeyQL query returns content items authored by Paul Shakespear as matches: 
+
  `author:Shakesp*`
   
     
@@ -287,10 +255,7 @@ For numerical property values, which include the **Integer**, **Double**, and **
 
 ### Date or time values for properties
 
-KQL provides the **datetime** data type for date and time.The following ISO 8601-compatible datetime formats are supported in queries:
-  
-    
-    
+KeyQL provides the **datetime** data type for date and time.The following ISO 8601-compatible datetime formats are supported in queries:
 
 - YYYY-MM-DD
     
@@ -340,9 +305,9 @@ All date/time values must be specified according to the UTC (Coordinated Univers
     
     
 
-#### Relevant date intervals supported by KQL
+#### Relevant date intervals supported by KeyQL
 
-KQL enables you to build search queries that support relative "day" range query, with reserved keywords as shown in Table 4. Use double quotation marks ("") for date intervals with a space between their names.
+KeyQL enables you to build search queries that support relative "day" range query, with reserved keywords as shown in Table 4. Use double quotation marks ("") for date intervals with a space between their names.
 
 Matches would include items modified today:
 
@@ -369,20 +334,20 @@ Matches would include items from January 1st of 2019 until April 26th of 2019:
 |last year  <br/> |Represents the entire year that precedes the current year.  <br/> |
    
 
-### Using multiple property restrictions within a KQL query
+### Using multiple property restrictions within a KeyQL query
 
-Search in SharePoint supports the use of multiple property restrictions within the same KQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
-    
-When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:    
-    
+Search in SharePoint supports the use of multiple property restrictions within the same KeyQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
+
+When you use multiple instances of the same property restriction, matches are based on the union of the property restrictions in the KeyQL query. Matches would include content items authored by John Smith or Jane Smith, as follows:    
+
  `author:"John Smith" author:"Jane Smith"`
     
 This functionally is the same as using the **OR** Boolean operator, as follows:    
     
  `author:"John Smith" OR author:"Jane Smith"`
     
-When you use different property restrictions, matches are based on an intersection of the property restrictions in the KQL query, as follows:
-    
+When you use different property restrictions, matches are based on an intersection of the property restrictions in the KeyQL query, as follows:
+
  `author:"John Smith" filetype:docx`
     
 Matches would include Microsoft Word documents authored by John Smith. This is the same as using the **AND** Boolean operator, as follows:
@@ -390,7 +355,8 @@ Matches would include Microsoft Word documents authored by John Smith. This is t
  `author:"John Smith" AND filetype:docx`
 
 
-### Grouping property restrictions within a KQL query
+### Grouping property restrictions within a KeyQL query
+
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2019_
 
 You may use parenthesis `()` to group multiple property restrictions related to a specific property of type *Text* with the following format:
@@ -447,22 +413,17 @@ The following example will return sites which are associated to a hub site, excl
 `(DepartmentId:* OR RelatedHubSites:*) AND contentclass:sts_site NOT IsHubSite:true`
 
 
-## KQL operators for complex queries
+## KeyQL operators for complex queries
+
 <a name="kql_operators"> </a>
 
-KQL syntax includes several operators that you can use to construct complex queries. 
-  
-
+KeyQL syntax includes several operators that you can use to construct complex queries. 
 
 ### Boolean operators
 
-You use Boolean operators to broaden or narrow your search. You can use Boolean operators with free text expressions and property restrictions in KQL queries. Table 5 lists the supported Boolean operators.
-  
-    
-    
+You use Boolean operators to broaden or narrow your search. You can use Boolean operators with free text expressions and property restrictions in KeyQL queries. Table 5 lists the supported Boolean operators.
 
-**Table 5. Boolean operators supported in KQL**
-
+**Table 5. Boolean operators supported in** **KeyQL**
 
 |**Operator**|**Description**|
 |:-----|:-----|
@@ -477,7 +438,7 @@ You use Boolean operators to broaden or narrow your search. You can use Boolean 
 
 ### Proximity operators
 
-You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KQL queries. There are two proximity operators: **NEAR** and **ONEAR**.
+You use proximity operators to match the results where the specified search terms are within close proximity to each other. Proximity operators can be used with free-text expressions only; they are not supported with property restrictions in KeyQL queries. There are two proximity operators: **NEAR** and **ONEAR**.
 
 
 
@@ -558,9 +519,7 @@ If you require a smaller distance between the terms, you can specify it as follo
 
 ### Synonym operators
 
-You use the **WORDS** operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the **WORDS** operator with free text expressions only; it is not supported with property restrictions in KQL queries.
-
-
+You use the **WORDS** operator to specify that the terms in the query are synonyms, and that results returned should match either of the specified terms. You can use the **WORDS** operator with free text expressions only; it is not supported with property restrictions in KeyQL queries.
 
 The following query example matches results that contain either the term "TV" or the term "television". This matching behavior is the same as if you had used the following query:
   
@@ -613,13 +572,13 @@ You use the **XRANK** operator to boost the dynamic rank of items based on certa
 > [!NOTE]
 > Query latency (and probability of timeout) increases when using complex queries and especially when using xrank operators. The increase in query latency depends on the number of **XRANK** operators and the number of hits in the _match expression_ and _rank expression_ components in the query tree.   
     
- _Match expressions_ may be any valid KQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KQL expression without **XRANK** expressions. If your KQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
-  
+ _Match expressions_ may be any valid KeyQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid KeyQL expression without **XRANK** expressions. If your KeyQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
+
 > [!NOTE]
-> Use parenthesis to explicitly indicate the order of computation for KQL queries that have more than one **XRANK** operator at the same level.
-  
-    
-    
+> Use parenthesis to explicitly indicate the order of computation for KeyQL queries that have more than one **XRANK** operator at the same level.
+
+
+
 
 You can use the **XRANK** operator in the following syntax:
   
