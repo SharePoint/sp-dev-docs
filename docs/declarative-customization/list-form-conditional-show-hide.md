@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 04/03/2025
+ms.date: 07/28/2025
 ms.localizationpriority: high
 ---
 
@@ -58,7 +58,7 @@ For example, the following formula checks if the value for the *Category* column
 
 Returning _true_ shows the column on the form while returning _false_ hides the column.
 
-The column is represented by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "ProductName", use `[$ProductName]`.
+The column is represented by specifying the **internal name** of the field preceded by a dollar sign and surrounded by square brackets: `[$InternalName]`. For example, to get the value of a field with an internal name of "ProductName", use `[$ProductName]`.
 
 #### Unsupported column types in conditional formulas
 

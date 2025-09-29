@@ -1,15 +1,14 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 12/14/2023
+ms.date: 09/18/2025
 ms.custom: scenarios:getting-started
 ---
-
 # Build your first Field Customizer extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can follow these steps by watching the video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
 
@@ -373,3 +372,4 @@ The process for publishing your app is identical among the different extension t
 
 - [Build your first ListView Command Set extension](building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)
+

@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Import Migration API"
-description: "This article provides overview information on how to use the SharePoint Migration API."
-ms.date: 07/03/2024
+description: "This article provides an overview of how to use the SharePoint Migration API."
+ms.date: 07/16/2025
 ms.author: ranren
 author: underreview
 manager: dapodean
@@ -15,7 +15,7 @@ ms.collection:
 ---
 # SharePoint Migration API Introduction
 
-The SharePoint Migration API imports contents into SharePoint at scale. It processes content and manifest packages as jobs in a queue. The API provides process status and logs, making it easy to monitor the progress of each migration job.
+The SharePoint Migration API imports content into SharePoint at scale. It processes content and manifest packages as jobs in a queue. The API provides process status and logs, making it easy to monitor the progress of each migration job.
 
 Use Migration API to migrate content from file shares, SharePoint Server, and other cloud-based services.
 
@@ -27,7 +27,7 @@ We applied quota on *Share with Me* items per user. Check [ShareWithMe event quo
 
 ### November 2024
 
-Migration API supports generating logs of all file-level events during migration to support auditing.
+We enabled logging all file-level events during migration, such as file deletion, to support auditing.
 
 ### July 2024
 
@@ -47,6 +47,11 @@ Start a migration job with three steps. Check the guidance in each of the steps 
 
 ### Provision the destination containers and the queue
 
+> [!IMPORTANT]
+> Use [GetMigrationJobProgress API](migration-job-progress-api-reference.md) to retrieve migration job status.
+> 
+> Provisioning Azure Queues for migration job status tracking is no longer required. Deprecation is planned for the second half of 2026. Until then, Azure Queues will remain available for status retrieval.
+
 Use the `ProvisionMigrationContainers` method to provision the containers. Check [Use Azure Blob Storage Containers and Azure Queues with Migration API](migration-azure.md) for details. You can also use your own containers and queues if needed.
 
 ### Prepare the content
@@ -65,7 +70,10 @@ Check [Manifest files](migration-manifest.md) to see the detailed requirements.
 
 The `CreateMigrationJob` method creates a migration job, which is queued up for processing. Migration API manages the queue and returns status and logs. Use the `CreateMigrationEncrypted` method to migrate encrypted contents. Check [SharePoint Migration API Reference](migration-api-reference.md) for details.
 
-Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with the `GetMigrationJobStatus` method if needed, with the Azure Queue supplied.
+> [!IMPORTANT]
+> Use GetMigrationJobProgress API to track migration job status.
+
+Upon creation of a new migration job, Migration API returns the Job ID. Track the status of the import with [GetMigrationJobProgress API](migration-job-progress-api-reference.md).
 
 Migration API generates logs in the manifest container. Check the log entries for migration results.
 
@@ -79,7 +87,7 @@ Migration generates workload to the SharePoint backend differently from end user
 
 Don't use user mode in your migration solution. Running migration in user mode triggers increased throttling, resulting in poor performance.
 
-To learn more on how to register an app ID and how to implement app-based authentication, check [How to register an app ID](/azure/active-directory/develop/active-directory-v2-registration-portal) and [Microsoft Graph Auth guidance](/graph/auth).
+To learn more about how to register an app ID and how to implement app-based authentication, check [How to register an app ID](/azure/active-directory/develop/active-directory-v2-registration-portal) and [Microsoft Graph Auth guidance](/graph/auth).
 
 ### Microsoft Entra ID Permissions
 
@@ -88,17 +96,17 @@ Permissions and consent in the Azure Active Directory v1.0 endpoint](/azure/acti
 
 For SharePoint and OneDrive migration scenarios, follow the Microsoft Entra ID permission specification.
 
-For migration tools that rely on end-user signed in and presence, use Delegated permission.
+For migration tools that rely on end-user sign-in and presence, use Delegated permission.
 
 For service-based migration tools that run without a signed-in user present, such as applications that run as background services, use Application permission.
 
 ### App IDs
 
-You can choose to share a single App ID to cover multiple migration solutions created or create individual App ID for each of the products. Make sure to register App IDs. Sharing App IDs doesn't affect performance or throttling.
+You can choose to share a single App ID to cover multiple migration solutions created or create an individual App ID for each of the products. Make sure to register App IDs. Sharing App IDs doesn't affect performance or throttling.
 
 ### Keep destination SharePoint Site unactivated
 
-To avoid migration issues, deactivate the target site for users until the migration completion. The source could remain active, allowing read and write to keep productivity. Switch users to the new SharePoint destination sites after migration completion.
+To avoid migration issues, deactivate the target site for users until migration completion. The source could remain active, allowing read and write access to keep productivity. Switch users to the new SharePoint destination sites after migration completion.
 
 ## Performance
 

@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 02/19/2025
+ms.date: 08/26/2025
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 ## elmType
 
-Specifies the type of element to create. Valid elements include:
+Specifies the type of element to create. Valid elements include: 
 
 - `div`
 - `span`
@@ -494,7 +494,7 @@ This simple conditional expression evaluates to `none` if `@me` isn't equal to `
 ```json
 =if(@me != [$Author.email], 'none', '')
 ```
-
+ 
 More complex if/else statements can be written like the following:
 
 ```json
@@ -633,7 +633,7 @@ Operators specify the type of operation to perform. Valid operator values includ
 - `Number()`: returns the numeric value, if the operand isn't a number, NaN is returned
   - `"txtContent": "=Number('365')"` results in _365_
   - `"txtContent": "=Number('Wowee')"` results in _NaN_
-  - `"txtContent": "=Number(Date('12/26/1981'))"` results in _378190800000_
+  - `"txtContent": "=Number(Date('12/26/1981'))"` results in _378190800000_ milliseconds since Jan 1, 1970
 - `Date()`: returns a datetime object from the parameter (converts strings or numbers to dates, sensitive to locale)
   - `"txtContent": "=Date('12/26/1981')"` results in _12/26/1981, 12:00:00 AM_
 - `cos`: returns the cosine of the specified angle that should be specified in radians
