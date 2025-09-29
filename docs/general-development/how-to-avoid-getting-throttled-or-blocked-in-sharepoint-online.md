@@ -23,8 +23,6 @@ Does this sound familiar? You're running an application - for example, to scan f
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
 
-> [!NOTE]
-> Recent updates to this article enhance transparency to already existing throttling rules in the system
 
 ### What happens when you get throttled in SharePoint Online?
 
@@ -54,6 +52,7 @@ Some limits are measured in terms of API costs. [Microsoft Graph APIs](/graph) h
 > [!NOTE]
 > We reserve the right to change the API resource unit cost.
 
+
 ### User Throttling
 
 Throttling limits the number of calls and operations collectively made by applications on behalf of a user to prevent the overuse of resources.
@@ -70,6 +69,7 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 > [!NOTE] 
 > Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Microsoft Reserves the rights to lower limits on Unpaid/Unlicensed usage.
 
 ### Tenant Throttling
 
@@ -93,6 +93,7 @@ When a customer enables Multi-Geo, each geo gets its own limits (usage measureme
 
 > [!NOTE] 
 > Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Microsoft Reserves the rights to lower limits on Unpaid/Unlicensed usage.
 
 ### Application Throttling
 
@@ -126,6 +127,7 @@ For multitenant applications:
 
 > [!NOTE] 
 > Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Microsoft Reserves the rights to lower limits on Unpaid/Unlicensed usage.
 
 ### Other Limits
 
