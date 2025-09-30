@@ -40,8 +40,6 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 > - The Gulp team introduced a separate package, [gulp-cli](https://www.npmjs.com/package/gulp-cli), that should be installed globally. It can be used by projects that use either Gulp v3 & Gulp v4.
 > - Learn more about the gulp-cli here: [gulpjs/gulp/#2324](https://github.com/gulpjs/gulp/issues/2324).
 
-Microsoft recommends using the most recent version of the Yeoman generator for the SharePoint Framework [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint) that supports creating on-premises projects: SPFx v1.10.0.
-
 > [!IMPORTANT]
 > The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.4.1 is  supported on Node.js v6 and Node.js v8 by default. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework that works on the same version of Node.js (v6 or v8) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages as long as you select the environment target properly in the Yeoman generator flow.
 
@@ -49,28 +47,38 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
 
 1. Install [Node.js v8.17.0](https://nodejs.org/download/release/v8.17.0/).
 
-   SPFx v1.4.1 is also supported on Node.js v12, v14 and v16 (v12.18.1, v14.17.1 and v16.15.0 to be specific), though there are incompatible issues ([gulp v3 is incompatible with Node v12+](https://github.com/gulpjs/gulp/issues/2324), and **node-sass** v4 requires Node.js v14 or below). The workaround to resolve them is to specify the version of the **graceful-fs** component as v4+, and to replace **node-sass** with **sass**. You can manually modify **package-lock.json** or **npm-shrinkwrap.json** and then re-run `npm install`. Or you can create a new **\*.js** file located in the root folder of your project, copy the following code into that file, run `node your_new_js_file` and re-run `npm install`.
-
+   Although the article https://learn.microsoft.com/en-us/sharepoint/dev/spfx/compatibility states that SPFx v1.4.1 is only supported on Node.js v6 and v8, it can also be made to work with Node.js v12, v14 and v16—specifically v12.18.1, v14.17.1 and v16.15.0—by applying a few workarounds. Please note the following compatibility issues:
+   
+   1. [gulp v3 is incompatible with Node v12+](https://github.com/gulpjs/gulp/issues/2324).
+   
+   1. **node-sass** v4 only supports Node.js v14 and below.
+   
+   To resolve these issues:  
+    a. Set the version of the **graceful-fs** component to v4+.  
+    b. Replace **node-sass** with **sass.**
+   
+   You can either manually update **package-lock.json** or **npm-shrinkwrap.json** and then re-run `npm install` or create a new **.js** file in your project's root folder using the script provided below, run `node your_new_js_file` and re-run `npm install`.
+   
     ```JavaScript
-    const fs = require('fs');
-    const lockedVersionFile = 'package-lock.json';
-    // const lockedVersionFile = 'npm-shrinkwrap.json';
-    const lockedVersionJson = JSON.parse(fs.readFileSync(lockedVersionFile));
-    if (lockedVersionJson.packages) {
-        const vinylFSJson = lockedVersionJson.packages["node_modules/vinyl-fs"];
-        if (vinylFSJson && vinylFSJson["dependencies"] && vinylFSJson["dependencies"]["graceful-fs"]) {
-            vinylFSJson["dependencies"]["graceful-fs"] = "npm:graceful-fs@4.2.11";
-        }
- 
-        const gulpSassJson = lockedVersionJson.packages["node_modules/gulp-sass"];
-        console.log(gulpSassJson);
-        if (gulpSassJson && gulpSassJson["dependencies"] && gulpSassJson["dependencies"]["node-sass"]) {
-            gulpSassJson["dependencies"]["node-sass"] = "npm:sass@1.32.0";
-        }
-    }
-    fs.writeFileSync(lockedVersionFile, JSON.stringify(lockedVersionJson, undefined, 2));
+   const fs = require('fs');
+   const lockedVersionFile = 'package-lock.json';
+   // const lockedVersionFile = 'npm-shrinkwrap.json';
+   const lockedVersionJson = JSON.parse(fs.readFileSync(lockedVersionFile));
+   if (lockedVersionJson.packages) {
+   const vinylFSJson = lockedVersionJson.packages["node_modules/vinyl-fs"];
+   if (vinylFSJson && vinylFSJson["dependencies"] && vinylFSJson["dependencies"]["graceful-fs"]) {
+   vinylFSJson["dependencies"]["graceful-fs"] = "npm:graceful-fs@4.2.11";
+   }
+   
+   const gulpSassJson = lockedVersionJson.packages["node_modules/gulp-sass"];
+   console.log(gulpSassJson);
+   if (gulpSassJson && gulpSassJson["dependencies"] && gulpSassJson["dependencies"]["node-sass"]) {
+   gulpSassJson["dependencies"]["node-sass"] = "npm:sass@1.32.0";
+   }
+   }
+   fs.writeFileSync(lockedVersionFile, JSON.stringify(lockedVersionJson, undefined, 2));
     ```
-
+    
 1. Install global dependencies
 
     ```console
