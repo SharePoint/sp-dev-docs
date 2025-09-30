@@ -47,15 +47,13 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 
 1. Install [Node.js v8.17.0](https://nodejs.org/download/release/v8.17.0/).
 
-   Although the article https://learn.microsoft.com/en-us/sharepoint/dev/spfx/compatibility states that SPFx v1.4.1 is only supported on Node.js v6 and v8, it can also be made to work with Node.js v12, v14 and v16—specifically v12.18.1, v14.17.1 and v16.15.0—by applying a few workarounds. Please note the following compatibility issues:
+   Although [the article](../spfx/compatibility.md) states that SPFx v1.4.1 is only supported on Node.js v6 and v8, it can also be made to work with Node.js v12, v14 and v16—specifically v12.18.1, v14.17.1 and v16.15.0—by applying a few workarounds. Please note the following compatibility issues:<br>
+    a. [gulp v3 is incompatible with Node v12+](https://github.com/gulpjs/gulp/issues/2324).<br>
+    b. **node-sass** v4 only supports Node.js v14 and below.<br>
    
-   1. [gulp v3 is incompatible with Node v12+](https://github.com/gulpjs/gulp/issues/2324).
-   
-   1. **node-sass** v4 only supports Node.js v14 and below.
-   
-   To resolve these issues:  
-    a. Set the version of the **graceful-fs** component to v4+.  
-    b. Replace **node-sass** with **sass.**
+   To resolve these issues:<br> 
+    a. Set the version of the **graceful-fs** component to v4+.<br>
+    b. Replace **node-sass** with **sass.**<br>
    
    You can either manually update **package-lock.json** or **npm-shrinkwrap.json** and then re-run `npm install` or create a new **.js** file in your project's root folder using the script provided below, run `node your_new_js_file` and re-run `npm install`.
    
