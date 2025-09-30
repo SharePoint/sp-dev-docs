@@ -1,6 +1,6 @@
 ---
 title: "Keyword Query Language (KeyQL) syntax reference"
-description: "Describes how to construct KeyQLqueries for Search in SharePoint and steps on how to use property restrictions and operators in KeyQLqueries."
+description: "Describes how to construct KeyQL queries for Search in SharePoint and steps on how to use property restrictions and operators in KeyQL queries."
 ms.date: 09/27/2025
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ms.localizationpriority: high
