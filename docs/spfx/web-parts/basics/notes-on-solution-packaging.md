@@ -1,7 +1,7 @@
 ---
 title: SharePoint solution packaging
 description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
-ms.date: 10/26/2020
+ms.date: 10/01/2025
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging
@@ -127,4 +127,5 @@ Essentially, it assumes that each **.xml.rels** file is related to a **feature.x
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+
 
