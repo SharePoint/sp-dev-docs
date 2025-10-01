@@ -438,7 +438,9 @@
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
-    - name: Toolchain
+    - name: Toolchain (Gulp & Webpack)
+      href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Toolchain (Rush Stack, Heft, & Webpack)
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
