@@ -24,9 +24,9 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ## Upgrading projects from the SPFx v1.21 to v1.22 version
 
-In the project's **package.json** file, identify all SPFx v1.20 packages. For each SPFx package:
+In the project's **package.json** file, identify all SPFx v1.21 packages. For each SPFx package:
 
-1. Uninstall the existing v1.20 package:
+1. Uninstall the existing v1.21 package:
 
     ```console
     npm uninstall @microsoft/{spfx-package-name}@1.21
