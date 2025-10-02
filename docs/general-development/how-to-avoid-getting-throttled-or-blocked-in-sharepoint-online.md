@@ -39,6 +39,10 @@ In both cases, a `Retry-After` header is included in the response, indicating ho
 
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
+### Peak vs. Off-Peak usage
+
+Throttling and / or performance slowdowns have a higher tendency to occur during peak hours than off-peak hours for large amounts of calls and / or bandwidth utilization. This is to help protect the service and ensure reliability for end users. Off peak hours are typically nights and weekends in your region’s time zone. Where your SharePoint tenant is set up determines your region’s time zone.
+
 ### Resource units
 
 Some limits are measured in terms of API costs. [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
