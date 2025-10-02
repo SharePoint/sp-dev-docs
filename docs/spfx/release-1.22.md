@@ -6,9 +6,9 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 preview release notes
 
-This release has updates on the Nodejs version and on other technical dependencies. It also contains updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards.
+This release focuses on two main updates around the build toolchain changes and to address known 'npm audit' report issues.
 
-[!INCLUDE spfx-release-beta]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 beta.2 **Released:** October 01, 2025
 
