@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 09/29/2025
+ms.date: 10/02/2025
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -38,6 +38,10 @@ For requests that an application makes, including [Microsoft Graph](/graph), CSO
 In both cases, a `Retry-After` header is included in the response, indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
 
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
+
+### Peak vs. Off-Peak usage
+
+Throttling and / or performance slowdowns have a higher tendency to occur during peak hours than off-peak hours for large amounts of calls and / or bandwidth utilization. This is to help protect the service and ensure reliability for end users. Off peak hours are typically nights and weekends in your region’s time zone. Where your SharePoint tenant is set up determines your region’s time zone.
 
 ### Resource units
 
