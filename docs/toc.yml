@@ -441,7 +441,7 @@
     - name: Toolchain (Gulp & Webpack)
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Toolchain (Rush Stack, Heft, & Webpack)
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
+      href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Configure SASS processing during builds
