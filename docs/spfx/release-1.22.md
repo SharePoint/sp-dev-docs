@@ -4,12 +4,9 @@ description: Release notes for the SharePoint Framework v1.22 preview release.
 ms.date: 10/02/2025
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.21 preview release notes
+# SharePoint Framework v1.22 preview release notes
 
 This release has updates on the Nodejs version and on other technical dependencies. It also contains updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards.
-
-> [!NOTE]
-> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.21 version.
 
 [!INCLUDE spfx-release-beta]
 
@@ -68,7 +65,5 @@ No new updates.
 ## Feedback and issues
 
 We're interested in your feedback about the release. Do let us know any findings or other feedback using the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
-
-We will be doing some cleaning in the issue list after the 1.21 release to better focus on the latest issues and are more focused on helping you with any of your findings.
 
 Happy coding! Sharing is caring! 🧡
