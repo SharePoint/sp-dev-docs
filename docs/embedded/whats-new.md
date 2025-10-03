@@ -1,11 +1,17 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 09/16/2025
+ms.date: 10/06/2025
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## September 2025
+
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the beta Microsoft Graph endpoint.
+- [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, as well as inviting _new_ guests via app-only access.
+- [driveItem: copy](/graph/api/driveitem-copy) has clearer documentation on behaviors around metadata, versions, cross-geo operations, and known issues.
 
 ## August 2025
 
