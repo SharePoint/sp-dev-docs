@@ -1,7 +1,7 @@
 ---
 title: SharePoint solution packaging
 description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
-ms.date: 10/26/2020
+ms.date: 10/01/2025
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging
@@ -50,7 +50,7 @@ Each solution file must have a `name` that identifies the package in the SharePo
 The solution definition also optionally contains a list of SharePoint Feature definitions.
 
 > [!NOTE]
-> If this is omitted or empty, the task creates a single Feature for every component (a 1:1 mapping).
+> If this property is omitted, the task creates a single Feature for every component (a 1:1 mapping). An empty array will produce no features, and the webparts will not be added.
 
 ## Feature definition (IFeature)
 
@@ -127,3 +127,5 @@ Essentially, it assumes that each **.xml.rels** file is related to a **feature.x
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+
+
