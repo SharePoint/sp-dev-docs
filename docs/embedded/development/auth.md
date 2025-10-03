@@ -155,7 +155,7 @@ Here are some actions you can take next:
    > [!NOTE]
    > The `Container.Selected` application permission is hidden, which can cause issues with granting admin consent using the Enterprise apps pane in the Azure portal. Instead, [construct the admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin) and provide it to your Microsoft Entra directory administrator. For example:
    >
-   > `https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}`
+   > `https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&redirect_uri={redirect_uri}`
    >
    > Make sure the Microsoft Entra directory administrator [confirms a successful response](/entra/identity-platform/v2-admin-consent#successful-response).
 
