@@ -12,6 +12,7 @@ ms.localizationpriority: medium
 - [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the beta Microsoft Graph endpoint.
 - [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, as well as inviting _new_ guests via app-only access.
 - [driveItem: copy](/graph/api/driveitem-copy) has clearer documentation on behaviors around metadata, versions, cross-geo operations, and known issues.
+- New cmdlets for consuming tenant administrators to [add](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [remove](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser), or [change](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser) container membership were added to the [SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## August 2025
 
