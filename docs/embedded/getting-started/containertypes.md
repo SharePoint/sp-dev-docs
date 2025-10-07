@@ -1,7 +1,7 @@
 ---
 title: Create New SharePoint Embedded Container Types
 description: This article explains how Container Types work and the steps to create new Container Types.
-ms.date: 03/03/2025
+ms.date: 10/07/2025
 ms.localizationpriority: high
 ---
 
@@ -162,17 +162,43 @@ Once the container type is [registered](../getting-started/register-api-document
 
 ## Configuring Container Types
 
-The Developer Admin can set selected settings on the SharePoint Embedded container types created by using this PowerShell cmdlet.
+Developer admins can configure selected settings for SharePoint Embedded container types that have been created. The following table lists the available settings.
 
-This cmdlet allows admins to set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type:
+| Settings | Description | 
+|----------|----------|
+| **ApplicationRedirectUrl** | Specifies the URL to which the application’s files are redirected.  | 
+| **CopilotEmbeddedChatHosts** | Adds host URLs that are permitted to use the SharePoint Embedded application’s declarative agent experience. | 
+| **DiscoverabilityDisabled**  | Determines whether content from a SharePoint Embedded application is visible across Microsoft 365 experiences. | 
+| **SharingRestricted** | Configures sharing permissions for SharePoint Embedded containers by using role-based access. Supports both open and restrictive sharing models. When restrictive sharing is set to true, only managers and owners can share files in the container.| 
+
+The [Set-SPOContainerType](/powershell/module/sharepoint-online/Set-SPOContainerType.md) cmdlet allows admins to update the Application Redirect URL. The [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/Set-SPOContainerTypeConfiguration.md) cmdlet allows admins to add host URLs, set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type.
+
+### Example 1
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $False
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
 ```
+
+Example 1 turns on discoverability for this container type. All content created within this container type will be discoverable in the Microsoft 365 experience, including on office.com, onedrive.com, recommended files, and other intelligent discovery experiences.
+
+### Example 2
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -SharingRestricted $false
+```
+
+Example 2 turns on an open sharing model for this container type. Any container members and guest users with edit permissions can share files created within the container type.
+
+### Example 3
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
+```
+This example sets the host URLs for the container type with Id 4f0af585-8dcc-0000-223d-661eb2c604e4.
 
 ## Viewing Container Types
 
-The Developer Admin can view all the SharePoint Embedded container types they created on their tenant using `Get-SPOContainerType`. This cmdlet retrieves and returns the list of container types created for a SharePoint Embedded Application in the tenant.
+The Developer Admin can view all the SharePoint Embedded container types they created on their tenant using [Get-SPOContainerType](/powershell/module/sharepoint-online/Get-SPOContainerType.md). This cmdlet retrieves and returns the list of container types created for a SharePoint Embedded Application in the tenant.
 
 ```powershell
 Get-SPOContainerType [<CommonParameters>]
@@ -189,6 +215,31 @@ AzureSubscriptionId : 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755
 ResourceGroup       : prod-resources
 Region              : EastUS
 ```
+## Updating Container Types
+
+Developer admins can update a SharePoint Embedded container type in their tenant by using the [Set-SPOContainerType](/powershell/module/sharepoint-online/Set-SPOContainerType.md). This cmdlet changes one or more property values for trial, standard, or direct-to-customer billed container types. You can use it to update basic information, such as the container type name, or billing details.
+
+To update basic information, you must be a SharePoint Embedded Administrator. To change billing information, you need owner or contributor access to both the existing billing subscription and the new billing subscription associated with the container type.
+
+The following properties cannot be updated: container type ID and owning application ID.
+
+
+### Example 1
+
+```powershell
+Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f -OwningApplicationId 12a9d93c-18d7-46a0-b43e-28d20addd56a - ContainerTypeName 'Red Container Type'
+```
+
+Example 1 sets the container type name as 'Red Container Type'
+
+### Example 2
+
+```powershell
+Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f –Azure Subscription 12a9d93c-18d7-46a0-b43e-28d20addd56a -ResourceGroup RG200
+```
+
+In Example 2, the billing profile of the container type is updated.
+
 
 ## Registering Container Types
 
