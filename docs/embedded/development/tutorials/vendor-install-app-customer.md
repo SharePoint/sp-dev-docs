@@ -1,7 +1,7 @@
 ---
 title: Install your SharePoint Embedded application for customers.
-description: Install your SharePoint Embedded application on your customers' tenant seamlessly.
-ms.date: 09/25/2025
+description: Seamlessly install your SharePoint Embedded application on your customers' tenant.
+ms.date: 10/08/2025
 ms.localizationpriority: medium
 ---
 
