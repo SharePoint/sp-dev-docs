@@ -45,12 +45,12 @@ interface ISolution {
 Each solution file must have a `name` that identifies the package in the SharePoint UI. Additionally, each package must contain a globally unique identifier (`id`), which is used internally by SharePoint. Optionally, you may also specify a `version` number in the format "X.X.X.X", which is used to identify various versions of the package when upgrading.
 
 > [!NOTE]
-> The versioning system only applies to Feature Framework and SharePoint Feature definitions included in the package. Code and assets from the new version of the package are available as soon as new version of the package is added to App Catalog with no need to update the app on sites.
+> The versioning system only applies to Feature Framework and SharePoint Feature definitions included in the package. Code and assets from the new version of the package are available as soon as the new version of the package is added to App Catalog, with no need to update the app on sites.
 
 The solution definition also optionally contains a list of SharePoint Feature definitions.
 
 > [!NOTE]
-> If this property is omitted, the task creates a single Feature for every component (a 1:1 mapping). An empty array will produce no features, and the webparts will not be added.
+> If the `features` property is omitted, the task creates a single Feature for every component (a 1:1 mapping). An empty array will produce no features, and the web parts will not be added.
 
 ## Feature definition (IFeature)
 
@@ -68,7 +68,7 @@ interface IFeature {
 
 It's important to note that this is a definition for creating a SharePoint feature, and that some of these options are exposed in the UI. Similarly to the solution, each feature has a mandatory `title`, `description`, `id`, and `version` number (in the X.X.X.X format). The feature `id` should also be a globally unique identifier.
 
-Each feature can also contain any number of components that are activated when the feature is activated. This is defined via a list of `componentIds`, that are globally unique identifiers that *must* match the **ID** in the component's manifest file. If this list is undefined or empty, the packager includes *every* component in the feature.
+Each feature can also contain any number of components that are activated when the feature is activated. This is defined via a list of `componentIds`, which are globally unique identifiers that *must* match the **ID** in the component's manifest file. If this list is undefined or empty, the packager includes *every* component in the feature.
 
 ## File paths
 
@@ -127,5 +127,3 @@ Essentially, it assumes that each **.xml.rels** file is related to a **feature.x
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
-
-
