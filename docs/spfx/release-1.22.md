@@ -10,8 +10,8 @@ This release focuses on two main updates around the build toolchain changes and 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.3 **Released:** October 15, 2025
-beta.2 **Released:** October 01, 2025
+* beta.3 **Released:** October 15, 2025
+* beta.2 **Released:** October 01, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
