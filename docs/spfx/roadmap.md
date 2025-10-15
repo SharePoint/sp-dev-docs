@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 09/25/2025
+ms.date: 10/15/2025
 ms.localizationpriority: high
 ---
 
@@ -13,7 +13,7 @@ The first release of the SharePoint Framework in February 2017 only contained su
 
 Here's the current roadmap on the upcoming release:
 
-**Version 1.22 – October 2025**
+**Version 1.22 – November 2025**
 
 - Addressing npm audit reported security issues on the dependency tree.
 - Transitioning from Gulp to an open webpack based toolchain orchestrated by Heft.
