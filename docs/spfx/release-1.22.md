@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.22 preview release notes
 description: Release notes for the SharePoint Framework v1.22 preview release.
-ms.date: 10/02/2025
+ms.date: 10/15/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 preview release notes
@@ -10,6 +10,7 @@ This release focuses on two main updates around the build toolchain changes and 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+beta.3 **Released:** October 15, 2025
 beta.2 **Released:** October 01, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
@@ -54,13 +55,23 @@ See more details on this upcoming change from the following documentation:
 
 This preview version still has some issues when on `npm audit` report, but we are working on addressing all known issues by the time of the General Availability of the 1.22 version.
 
+This is a challenging topic to keep clean, but we are committed on then potential minor updates to address known issues between the major versions.
+
 ## Deprecations
 
 No new updates.
 
-## Fixed Issues
+## Updates on the heft toolchain transition since previous beta
 
-No new updates.
+Beta 3 is addressing mostly reported issues on the new toolchain side, including specifically at least items:
+
+* Updates the eject webpack step from a script to a Heft plugin
+* Adds various hardening & error handling measures to eject webpack plugin based on ecosystem feedback
+* Streamlines the SPFx heft rig definition - reduces extraneous config files in generated project
+* Fixes 2 issues where, when using pnpm, various dependencies would be missing (phantom dependencies) and cause builds to fail.
+* Fixes an issue where various SPFx packages have ESM declarations in their package.json, but do not ship ESM files.
+* Fixes an issue where npm run test caused builds to be run twice
+* Fixes various SPO strings that mention gulp to also mention heft
 
 ## Feedback and issues
 
