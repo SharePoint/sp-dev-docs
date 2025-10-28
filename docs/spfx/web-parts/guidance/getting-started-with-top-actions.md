@@ -32,7 +32,7 @@ Top Actions capability is packged to it's own NPM package and you'll need to inc
 In the console, execute the following to install the Top Actions NPM package:
 
 ```console
-@microsoft/sp-top-actions
+npm install @microsoft/sp-top-actions
 ```
 
 ## Define a Top Action configuration
