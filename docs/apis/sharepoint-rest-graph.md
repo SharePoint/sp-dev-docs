@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 If you are looking for the legacy SharePoint REST API documentation, see [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md).
 
-For SharePoint Online, innovation using a REST API against SharePoint is driven via the Microsoft Graph REST API's. In scenarios where solutions already have access tokens available to access SharePoint content, it's possible to access the REST API natively within SharePoint instead of calling via the Microsoft Graph API.
+For SharePoint Online, innovation using a REST API against SharePoint is driven via the Microsoft Graph REST APIs. In scenarios where solutions already have access tokens available to access SharePoint content, it's possible to access the REST API natively within SharePoint instead of calling via the Microsoft Graph API.
 
 Below is a table outlining a set of the Microsoft Graph endpoints being backed by SharePoint Online.
 
