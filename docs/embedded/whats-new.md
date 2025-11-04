@@ -1,11 +1,16 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 10/06/2025
+ms.date: 11/12/2025
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## October 2025
+
+- [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a **recycleBinItem** if the ID of the original **driveItem** is known.
+- [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) is previewing support for [SharePoint Embedded](./overview.md) to a limited number of customers. You can [sign up for the private preview](https://forms.office.com/r/98Z4iqSKya) today.
 
 ## September 2025
 
