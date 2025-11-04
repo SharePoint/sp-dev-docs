@@ -11,7 +11,9 @@ ms.localizationpriority: high
 This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins | Next steps](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#next-steps).
 
 > [!NOTE]
-> It's recommended that Microsoft Power Automate be used for apps and process automation. Starting with Visual Studio 2022, Workflow templates have been removed from SharePoint Add-in Projects. For more information please see [Guidance: Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md)
+> Beginning with Visual Studio 2026, SharePoint Workflow development in Visual Studio is deprecated and will be removed in a future release.
+>
+> For more information about Microsoft Power Automate, please see: [Guidance: Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md)
 
 > [!TIP]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeWorkflow.sln file.
