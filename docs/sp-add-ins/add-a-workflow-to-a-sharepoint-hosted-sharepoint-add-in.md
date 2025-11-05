@@ -1,7 +1,7 @@
 ---
 title: Add a workflow to a SharePoint-hosted SharePoint Add-in
 description: Add a workflow to an add-in, design the workflow, and run and test the add-in.
-ms.date: 09/26/2023
+ms.date: 11/05/2025
 ms.localizationpriority: high
 ---
 # Add a workflow to a SharePoint-hosted SharePoint Add-in
@@ -131,3 +131,4 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 <a name="Nextsteps"> </a>
 
 In the next article in this series, you'll [add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md).
+
