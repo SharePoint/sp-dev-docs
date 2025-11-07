@@ -18,7 +18,7 @@ In this article, you'll learn how CSP works with custom SharePoint Framework (SP
 > [!IMPORTANT]
 > Content Security Policy (CSP) is currently rolling out in SharePoint Online in reporting mode and thus not impacting solutions,the **enforcement of Content Security Policy (CSP) will start from March 1, 2026**.
 
-If the enforcement on March 1, 2026 is too soon as you need more time to updated your existing SPFx solutions you can delay the enforcement by 90 days, so until June 1, 2026, using SPO Management Shell:
+If the enforcement on March 1, 2026 is too soon because you need more time to review and update your existing SPFx solutions, you can delay the enforcement by 90 days, so until June 1, 2026, using SPO Management Shell:
 
 ```powershell
 Set-SPOTenant --DelayContentSecurityPolicyEnforcement $true
@@ -122,8 +122,8 @@ Of the options mentioned above, if you implement [Option 1: Deploy SPFx Scripts 
 
 ![Automatically adding trusted script sources](../images/content-securty-policy-trusted-script-sources/add-app-with-tss.png)
 
-> [!Important]
-> If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions uses inline script then the recommended approach is to move the inline script into a script file as inline script will be blocked by the Content Security Policy (CSP) in SharePoint Online.
+> [!IMPORTANT]
+> If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as inline script will be blocked by the Content Security Policy (CSP) in SharePoint Online.
 
 ## Managing the Content Security Policy rules in SharePoint Online
 
@@ -140,9 +140,9 @@ Add a new entry by selecting **Add source**, or select and edit an existing entr
 > [!NOTE]
 >
 > - CSP expressions that are too permissive such as `*`, `*.domain`, `'unsafe-inline'`, `'wasm-unsafe-eval'` and `'strict-dynamic'` are not allowed.
-> - The maximum numbers of entries in the Trusted Script Sources is 300. If you need to go beyond the recommendation is to use wildcards to consolidate entries.
+> - The maximum numbers of entries in the Trusted Script Sources is 300. If you need to go beyond, the recommendation is to use wildcards to consolidate entries.
 
-The **Status** column on the **Trusted Script Sources** indicates how the entry was added to the list. If it was automatically is added from a SPFx solution that implements [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn), the column states **Imported from app catalog**.
+The **Status** column on the **Trusted Script Sources** indicates how the entry was added to the list. If it was automatically added from a SPFx solution that implements [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn), the column states **Imported from app catalog**.
 
 If the entry was manually added or edited, the column states **Added from script sources**.
 
@@ -228,6 +228,6 @@ Selecting a search result opens the side panel with the audit details. Take note
 
 ![Microsoft Purview Audit Record](../images/content-securty-policy-trusted-script-sources/purview-audit-record.png)
 
-## Testing with CSP enforced
+## Testing with CSP Enforced
 
 The enforcement of Content Security Policy (CSP) for SharePoint Online will start from March 1, 2026, but you can already now verify your application's behavior by adding the `csp=enforce` URL parameter to the page containing the SPFx solution you want to test. To enforce CSP in reporting mode use `csp=report`.
