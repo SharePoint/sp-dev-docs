@@ -18,7 +18,7 @@ Client-side applications that are incapable of storing a secret, such as SharePo
 Developers building client-side solutions are responsible for implementing authorization by using the OAuth implicit flow in their application. In SharePoint Framework solutions, that's already done as part of the framework through **MSGraphClient** and **AadHttpClient**, both of which are introduced in SharePoint Framework v1.4.1.
 
 > [!NOTE]
-> Using the `AADHttpClient` with SharePoint Framework directly using [Microsoft Authentication Library for JavaScript](https://learn.microsoft.com/javascript/api/overview/msal-overview) is not supported with SPFx v1.4.1 and beyond. `AADHttpClient` is the recommended approach to authenticate for using Entra ID secured resources.
+> Directly using [Microsoft Authentication Library for JavaScript](https://learn.microsoft.com/javascript/api/overview/msal-overview) with SPFx is not supported with SPFx v1.4.1 and beyond. `AADHttpClient` is the recommended approach to authenticate for using Entra ID secured resources.
 
 As part of the SharePoint Framework, a specific process is defined for how developers can request permissions and administrators can manage permissions to resources secured with Entra ID. The following schema illustrates this process.
 
@@ -378,3 +378,4 @@ The service principal can be re-enabled by using the **Enable-SPOTenantServicePr
 
 > [!NOTE]
 > The **SharePoint Online Client Extensibility** principal is fully controlled by SharePoint via the API access page in the SharePoint admin center. Making any changes directly to the principal in the Microsoft Entra admin center can result in unpredictable behaviors and is not supported.  
+

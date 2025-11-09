@@ -25,6 +25,16 @@ Both of these steps are accomplished by providing a configuration object of type
 > [!TIP]
 > These instructions assume you know [how to create a hello world web part](../get-started/build-a-hello-world-web-part.md).
 
+## Install Top Actions npm package
+
+Top Actions capability is packged to it's own NPM package and you'll need to include that to the SPFx project:
+
+In the console, execute the following to install the Top Actions NPM package:
+
+```console
+npm install @microsoft/sp-top-actions
+```
+
 ## Define a Top Action configuration
 
 Adding Top Actions to a web part follows a similar pattern to configuring the web part property pane.

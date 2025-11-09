@@ -438,8 +438,10 @@
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
-    - name: Toolchain
+    - name: Toolchain (Gulp & Webpack)
       href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Toolchain (Rush Stack, Heft, & Webpack)
+      href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Configure SASS processing during builds
@@ -476,6 +478,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.22 - October 23, 2025
+      href: spfx/release-1.22.md
     - name: SPFx v1.21.1 - May 3, 2025
       href: spfx/release-1.21.1.md
     - name: SPFx v1.21 - April 23, 2025
@@ -596,6 +600,8 @@
       href: embedded/development/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
       href: embedded/development/tutorials/migrate-abs-to-spe.md
+    - name: Install Your SPE App in a Consuming Tenant
+      href: embedded/development/tutorials/vendor-install-app-customer.md
   - name: Administration
     items:
     - name: Billing
@@ -1379,7 +1385,7 @@
       - name: Build search queries
         href: general-development/building-search-queries-in-sharepoint.md
         items:
-        - name: Keyword Query Language (KQL) syntax reference
+        - name: Keyword Query Language (KeyQL) syntax reference
           href: general-development/keyword-query-language-kql-syntax-reference.md
         - name: FAST Query Language (FQL) syntax reference
           href: general-development/fast-query-language-fql-syntax-reference.md
