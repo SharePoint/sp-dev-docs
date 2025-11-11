@@ -56,7 +56,7 @@ Form customizers are SharePoint Framework components giving you an option to ove
 
 1. Open the **./src/extensions/helloWorld/HelloWorldFormCustomizer.manifest.json** file.
 
-    This file defines your extension type and a unique identifier `id` for your extension which can be used to set to be used in content type level for enabling a custom rendering with this component.
+    This file defines your extension type and a unique identifier (id) for your extension. The id is used to associate the form customizer with a content type, enabling custom form rendering for that content type.
 
 ## Code your Form Customizer
 
