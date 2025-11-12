@@ -1,5 +1,5 @@
 ---
-title: Configuring SharePoint Embedded as a knowledge source in Azure AI Foundry 
+title: Setting up SharePoint Embedded as a knowledge source in Azure AI Foundry 
 description: Details usage and billing for SharePoint Embedded agents
 ms.date: 05/12/2025
 ms.localizationpriority: high
@@ -11,7 +11,7 @@ ms.localizationpriority: high
 >
 > This functionality is currently in preview.
 
-You can now ground your Foundry agent with documents in SharePoint Embedded without building a separate RAG infrastructure and access control. Here's a step-by-step guidance:
+Here's step-by-step guidance to ensure your Foundry agent is ready to interact with SharePoint Embedded.
 
 ## Prerequisites
 
@@ -22,8 +22,10 @@ You can now ground your Foundry agent with documents in SharePoint Embedded with
 
 Use the [Microsoft Graph API to register application permission grants](https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta&tabs=http):
 
-1. Replace `{appId}` URL parameter with the Azure Cognitive Search appid: `880da380-985e-4198-81b9-e05b1cc53158`
+1. Replace `{appId}` URL parameter with the Azure Cognitive Search app ID: `880da380-985e-4198-81b9-e05b1cc53158`
+
 2. Give it `"readContent"` delegatedPermissions and `"none"` applicationPermissions
+
 3. Replace `{fileStorageContainerTypeId}` with your container type ID. The container type's owning application must call this API on a consuming tenant
 
 ### Example API call
