@@ -5,7 +5,7 @@ ms.date: 05/12/2025
 ms.localizationpriority: high
 ---
 
-# How to configure SharePoint Embedded as a knowledge source in Azure AI Foundry (Preview)
+# Setting up SharePoint Embedded as a knowledge source in Azure AI Foundry (Preview)
 
 > [!NOTE]
 >
