@@ -59,7 +59,7 @@ We are working on updated documentation which is planned to get published togeth
 
 When you are installing SharePoint Framework Yeoman generator, there are no more any `npm audit` issues.
 
-All scaffolded projects from the SharePoint Framework Yeomand generator have been now also cleaned and there are not reported vulnarabilities in them when you run `npm audit` after the scaffolding.
+All scaffolded projects from the SharePoint Framework Yeoman generator have been now also cleaned and there are not reported vulnerabilities in them when you run `npm audit` after the scaffolding.
 
 This is a challenging topic to keep up to date, but we are committed to keep the known issues addressed and will be releasing potentially new minor versions as needed to address these.
 
