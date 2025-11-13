@@ -15,10 +15,10 @@ Here's step-by-step guidance to ensure your Foundry agent is ready to interact w
 
 ## Prerequisites
 
-- You have an SPE app with at least one container with one or more Office files or PDFs. [Start here to learn more](https://aka.ms/start-spe)
-- You have at least one Copilot license on your tenant
+- You have set up an SPE app with at least one container. To get started, learn more at [https://aka.ms/start-spe](https://aka.ms/start-spe)
+- You have at least one Copilot license on your tenant. This requirement is for the preview period only. We will switch to metered billing once we transition out of preview. 
 
-## Register Foundry's app ID with your container type
+## Grant Foundry access to your container type
 
 Run the following Microsoft Graph API to register application permission grants:
 
