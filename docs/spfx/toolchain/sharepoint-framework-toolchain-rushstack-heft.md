@@ -1,7 +1,7 @@
 ---
-title: "SPFx Toolchain: Rush Stack, Heft, & Webpack"
+title: "SPFx Toolchain: Rush Stack, Heft, and Webpack"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. Microsoft has adopted Rush Stack, Heft, and webpack starting with SPFx v1.22
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 
@@ -167,5 +167,7 @@ When upgrading an existing project to SPFx v1.22:
 
 ## Additional resources
 
-- [Rush Stack documentation](https://rushstack.io/)
+- [Migrate from the Gulp Toolchain to Heft Toolchain](migrate-gulptoolchain-hefttoolchain.md)
+- [Customize the Heft-based SPFx Toolchain](./customize-heft-toolchain-overview.md)
 - [Heft documentation](https://heft.rushstack.io/)
+- [Rush Stack documentation](https://rushstack.io/)
