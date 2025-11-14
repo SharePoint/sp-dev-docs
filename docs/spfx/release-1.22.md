@@ -1,15 +1,16 @@
 ---
 title: SharePoint Framework v1.22 preview release notes
 description: Release notes for the SharePoint Framework v1.22 preview release.
-ms.date: 10/23/2025
+ms.date: 11/13/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 preview release notes
 
-This release focuses on two main updates around the build toolchain changes and to address known 'npm audit' report issues.
+This release focuses updating and modernizing the build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+* beta.5 **Released:** November 13, 2025
 * beta.4 **Released:** October 23, 2025
 * beta.3 **Released:** October 15, 2025
 * beta.2 **Released:** October 01, 2025
@@ -52,13 +53,19 @@ See more details on this upcoming change from the following documentation:
 
 * [SPFx Toolchain: Rush Stack, Heft, & Webpack](./toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
 
+We are working on updated documentation which is planned to get published together with the upcoming Release Candidate (RC).
+
 ### Addressing npm audit issues
 
-When you are installing SharePoint Framework Yeoman generator, there are no more any ` npm audit` issues.
+When you are installing SharePoint Framework Yeoman generator, there are no more any `npm audit` issues.
 
-When you are creating new projects, we still have few known issues which are planned to get addressed before the upcoming Release Candidate (RC) release.
+All scaffolded projects from the SharePoint Framework Yeoman generator have been now also cleaned and there are not reported vulnerabilities in them when you run `npm audit` after the scaffolding.
 
 This is a challenging topic to keep up to date, but we are committed to keep the known issues addressed and will be releasing potentially new minor versions as needed to address these.
+
+### Default TypeScript version updated
+
+Scaffolded projects are now using TypeScript v5.8 by default. Previously, for example SPFx 1.21 was by default using TypeScript v5.3.3.
 
 ## Deprecations
 
@@ -66,7 +73,7 @@ No new updates.
 
 ## Updates on the heft toolchain transition since previous beta
 
-Beta 4 has significant updates on the toolchain to finetune the experience. We are not looking to make any other significant changes there before upcoming Release Candidate (RC) release, unless there are new findings or feedback which should be addressed.
+Beta 5 has quite significant updates on the toolchain to finetune the experience since previous beta version. We are not looking to make any other significant changes there before upcoming Release Candidate (RC) release, unless there are new findings or feedback which should be addressed.
 
 ## Feedback and issues
 
