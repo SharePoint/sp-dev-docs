@@ -75,55 +75,67 @@ async SPComponentLoader.loadScript('https://some-external-site/script.js');
 
 ### Option 4: Use Inline Script
 
-While script in the majority of cases is included via script files there's also the option to use inline script. Below sample shows loading a script file from a CDN by appending as script tag:
+While script in the majority of cases is included via script files there's also the option to use inline script. Inline script use cases are:
 
-```ts
-const script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-script.crossOrigin = 'anonymous';
-script.integrity = 'sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=';
+- Any `<script>` block directly in HTML:
 
-document.head.appendChild(script);
+```html
+<script>console.log('Hello');</script>
 ```
 
-Another use case of adding a script tag is embedding the actual script on the page:
+- Inline Event Handlers (JavaScript embedded in HTML attributes):
 
-```ts
-const script = document.createElement('script');
-script.type = 'text/javascript';
-script.innerHTML = `
-(function() {
-    const timestamp = new Date().toLocaleTimeString();
-    const outputEl = document.querySelector('#inline-script-output');
-    if (outputEl) {
-    outputEl.innerHTML = 'Inline script executed successfully at ' + timestamp + '<br>Math.random(): ' + Math.random();
-    }
-})();
-`;
-
-document.head.appendChild(script);
+```html
+<button onclick="alert('Hi')">Click</button>
+<body onload="init()">...</body>
 ```
 
-Also adding event handlers, like the `onClick` in below example, can also result in inline script being added:
-
-```ts
+```javascript
 const testDiv = document.createElement('div');
-testDiv.setAttribute('onclick', 'window.inlineEventTest = true; console.log("Inline event via setAttribute worked");');
+testDiv.setAttribute('onclick', "alert('Hi')");
 testDiv.click();
+```
+
+- JavaScript embedded in href or src attributes:
+
+```html
+<a href="javascript:alert('Hi')">Click</a>
+```
+
+- Document.write() with Inline Scripts:
+
+```javascript
+document.write("<script>alert('Hi')</script>");
+```
+
+- Dynamically Created Inline Scripts:
+
+```javascript
+const s = document.createElement('script');
+s.textContent = "alert('Hi')";
+document.head.appendChild(s);
+```
+
+- InnerHTML or insertAdjacentHTML with `<script>`:
+
+```javascript
+element.innerHTML = "<script>alert('Hi')</script>";
 ```
 
 ## Content Security Policy Impact on SPFx Solutions
 
 As stated above, the CSP settings in SharePoint Online are configured to load scripts hosted in SharePoint Online. This means that if you include the resources in your SPFx package, *the default configuration for new SPFx solutions*, the CSP settings in SharePoint Online will have no impact on your custom solution.
 
-However, if your solution implements any of the three (3) options previously listed, or another option such as dynamically adding a `<script>` element to the component's HTML, the default CSP settings in SharePoint Online will impact your solution.
+However, if your solution implements option 3 or 4 the default CSP settings in SharePoint Online will impact your solution.
 
 Of the options mentioned above, if you implement [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn) or [Option 2: Pull Script Dependencies from a CDN](#option-2-pull-script-dependencies-from-a-cdn), SharePoint Online will take care of this for you. When the SPFx solution is installed in a site, SharePoint Online will add the value set in the project's `cdnBasePath` and `externals` to the new **Trusted script sources** in the SharePoint Online Admin Center. Notice the new message that appears when adding an app from the SharePoint Store that implements [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn) or [Option 2: Pull Script Dependencies from a CDN](#option-2-pull-script-dependencies-from-a-cdn):
 
 ![Automatically adding trusted script sources](../images/content-securty-policy-trusted-script-sources/add-app-with-tss.png)
 
 > [!IMPORTANT]
-> If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as inline script will be blocked by the Content Security Policy (CSP) in SharePoint Online.
+>
+> - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as inline script will be blocked by the Content Security Policy (CSP) in SharePoint Online.
+> - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and it's variations also use inline script whenever the user adds script on a page via the web part. Added script will not execute, added HTML will stay working.
 
 ## Managing the Content Security Policy rules in SharePoint Online
 
