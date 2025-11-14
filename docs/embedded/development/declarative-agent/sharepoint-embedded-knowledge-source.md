@@ -24,7 +24,7 @@ Run the following Microsoft Graph API to register application permission grants:
 
 Replace `{fileStorageContainerTypeId}` with your container type ID. The container type's owning application must call this API on a consuming tenant
 
-[Learn more about Container Type Registration API](https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta&tabs=http)
+[Learn more about Container Type Registration API](/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants)
 
 ### API call
 
@@ -40,4 +40,4 @@ Content-Type: application/json
 
 
 > [!TIP]
-> This may also be done during initial container type registration using the [filestorage-post-containertyperegistrations API](https://learn.microsoft.com/graph/api/filestorage-post-containertyperegistrations?view=graph-rest-beta&tabs=http).
+> This may also be done during initial container type registration using the [filestorage-post-containertyperegistrations API](/graph/api/filestorage-post-containertyperegistrations).
