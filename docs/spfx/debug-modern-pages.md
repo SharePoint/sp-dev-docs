@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 04/26/2025
+ms.date: 11/14/2025
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions on modern SharePoint pages
@@ -120,6 +120,16 @@ https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
 
 > [!NOTE]
 > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
+
+
+> [!NOTE]
+> Starting with **Chromium 141**, browsers such as **Microsoft Edge** and **Google Chrome** enforce a new security model called **Local Network Access**.  
+> When debugging SPFx solutions, SharePoint Online must load resources from your local development environment  
+> (such as `https://localhost:4321`).  
+>
+> When prompted with **“Allow this site to access devices on your local network?”**, you must select **Allow** in Edge or Chrome.  
+> If permission is denied, SPFx debug manifests and bundles cannot load, and the web part will fail during debugging.
+
 
 The following are the query string parameters that you need to add:
 
