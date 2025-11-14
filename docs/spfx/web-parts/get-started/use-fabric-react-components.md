@@ -6,17 +6,13 @@ ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 
-# Use Office UI Fabric React components in your SharePoint client-side web part
+# Use Fluent UI React components in your SharePoint client-side web part
 
-Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language.
+Fluent UI is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language.
 
-This article describes how to build a web part like in the following image, that uses the DocumentCard component of Office UI Fabric React.
+This article describes how to build a web part like in the following image, that uses the DocumentCard component of Fluent UI React.
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
-
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
-
-> [!Video https://www.youtube.com/embed/kNrYd8nYaZY]
 
 ## Office UI Fabric React & Fluent UI React
 
@@ -25,11 +21,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 The transition from Office UI Fabric to Fluent UI, and the respective React components, is currently in a state of transition. To learn more about the current state and their roadmap, see the FAQ provided by the Fluent UI team: [FAQ Fabric and Stardust to Fluent UI](https://github.com/microsoft/fluentui/wiki/FAQ---Fabric-and-Stardust-to-Fluent-UI).
 
-SharePoint Framework (SPFx) packages currently reference the original Office UI Fabric NPM Packages. These packages are currently supported & will continue to work.
-
-The primary Fluent UI React package, **\@fluentui/react**, simply exports components from the **office-ui-fabric-react** package used in SharePoint Framework projects. At this time, you should continue to use the **office-ui-fabric-react** package in your SharePoint Framework projects.
-
-This page will continue to refer to the Office UI Fabric packages until Microsoft recommends switching to the Fluent UI packages. The documentation links on this page may point to the Fluent UI documentation but it applies to the Office UI Fabric as well.
+SharePoint Framework (SPFx) packages now reference the new Fluent UI React NPM Packages.
 
 - [Fluent UI website](https://developer.microsoft.com/fluentui#/controls/web) - detailed API documentation along with implementation code examples for each control.
 - [API reference](/javascript/api/office-ui-fabric-react) - detailed API reference documentation.
@@ -91,7 +83,11 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
       const element: React.ReactElement<IDocumentCardExampleProps> = React.createElement(
         DocumentCardExample,
         {
-          description: this.properties.description
+          description: this.properties.description,
+          isDarkTheme: this._isDarkTheme,
+          environmentMessage: this._environmentMessage,
+          hasTeamsContext: !!this.context.sdks.microsoftTeams,
+          userDisplayName: this.context.pageContext.user.displayName
         }
       );
 
@@ -104,23 +100,41 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
     This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
     ```tsx
-    export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps, {}> {
+    export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps> {
       public render(): React.ReactElement<IDocumentCardExampleProps> {
+        const {
+          description,
+          isDarkTheme,
+          environmentMessage,
+          hasTeamsContext,
+          userDisplayName
+        } = this.props;
+
         return (
-          <div className={ styles.documentCardExample }>
-            <div className={ styles.container }>
-              <div className={ styles.row }>
-                <div className={ styles.column }>
-                  <span className={ styles.title }>Welcome to SharePoint!</span>
-                  <p className={ styles.subTitle }>Customize SharePoint experiences using web parts.</p>
-                  <p className={ styles.description }>{escape(this.props.description)}</p>
-                  <a href="https://aka.ms/spfx" className={ styles.button }>
-                    <span className={ styles.label }>Learn more</span>
-                  </a>
-                </div>
-              </div>
+          <section className={`${styles.documentCardExample} ${hasTeamsContext ? styles.teams : ''}`}>
+            <div className={styles.welcome}>
+              <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
+              <h2>Well done, {escape(userDisplayName)}!</h2>
+              <div>{environmentMessage}</div>
+              <div>Web part property value: <strong>{escape(description)}</strong></div>
             </div>
-          </div>
+            <div>
+              <h3>Welcome to SharePoint Framework!!!</h3>
+              <p>
+                The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It&#39;s the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+              </p>
+              <h4>Learn more about SPFx development:</h4>
+              <ul className={styles.links}>
+                <li><a href="https://aka.ms/spfx" target="_blank" rel="noreferrer">SharePoint Framework Overview</a></li>
+                <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank" rel="noreferrer">Use Microsoft Graph in your solution</a></li>
+                <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank" rel="noreferrer">Build for Microsoft Teams using SharePoint Framework</a></li>
+                <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank" rel="noreferrer">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
+                <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank" rel="noreferrer">Publish SharePoint Framework applications to the marketplace</a></li>
+                <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank" rel="noreferrer">SharePoint Framework API reference</a></li>
+                <li><a href="https://aka.ms/m365pnp" target="_blank" rel="noreferrer">Microsoft 365 Developer Community</a></li>
+              </ul>
+            </div>
+          </section>
         );
       }
     }
@@ -141,45 +155,65 @@ Because we chose React as our framework when creating the solution, the generato
     ```typescript
     import {
       DocumentCard,
+      DocumentCardActivity,
       DocumentCardPreview,
       DocumentCardTitle,
-      DocumentCardActivity,
-      IDocumentCardPreviewProps
-    } from 'office-ui-fabric-react/lib/DocumentCard';
+      IDocumentCardPreviewProps,
+    } from '@fluentui/react/lib/DocumentCard';
+    import { ImageFit } from '@fluentui/react/lib/Image';
     ```
 
 1. Replace the existing `render()` method with the following:
 
     ```typescript
-    public render(): JSX.Element {
+    public render(): React.ReactElement<IDocumentCardExampleProps> {
+    
       const previewProps: IDocumentCardPreviewProps = {
         previewImages: [
           {
-            previewImageSrc: String(require('./document-preview.png')),
-            iconSrc: String(require('./icon-ppt.png')),
+            name: 'Revenue stream proposal fiscal year 2016 version02.pptx',
+            linkProps: {
+              href: 'http://bing.com',
+              target: '_blank',
+            },
+            previewImageSrc: require('./document-preview.png'),
+            iconSrc: require('./icon-ppt.png'),
+            imageFit: ImageFit.cover,
             width: 318,
             height: 196,
-            accentColor: '#ce4b1f'
-          }
+          },
         ],
       };
 
+      const documentCardActivityPeople = [{ name: 'Kat Larrson', profileImageSrc: require('./avatar-kat.png') }];
+
       return (
-        <DocumentCard onClickHref='http://bing.com'>
-          <DocumentCardPreview { ...previewProps } />
-          <DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx' />
-          <DocumentCardActivity
-            activity='Created Feb 23, 2016'
-            people={
-              [
-                { name: 'Kat Larrson', profileImageSrc: String(require('./avatar-kat.png')) }
-              ]
+        <DocumentCard
+          aria-label="Default Document Card with large file name. Created by Kat Larrson a few minutes ago."
+          onClickHref="http://bing.com"
+        >
+          <DocumentCardPreview {...previewProps} />
+          <DocumentCardTitle
+            title={
+              'Large_file_name_with_underscores_used_to_separate_all_of_the_words_and_there_are_so_many_words_' +
+              'it_needs_truncating.pptx'
             }
+            shouldTruncate
           />
+          <DocumentCardActivity activity="Created a few minutes ago" people={documentCardActivityPeople} />
         </DocumentCard>
       );
     }
     ```
+
+1. Remove unused imports
+
+   Delete the following imports as they are no longer used.
+
+   ```
+   import styles from './MyFluentWebPart1.module.scss';
+   import { escape } from '@microsoft/sp-lodash-subset';
+   ```
 
 1. Save the file.
 
@@ -229,3 +263,4 @@ Office UI Fabric React v5 depends on TypeScript v2.x. SPFx v1.8 and prior projec
 Office UI Fabric React v6 require TypeScript v3.x. All SPFx v1.9 and later projects are configured to use TypeScript v3 or higher that matches the same dependency of Office UI Fabric React v6.
 
 In the case where you want to upgrade an SPFx v1.8 project to Office UI Fabric React v6, you'll also need to upgrade the version of TypeScript on the project. See the SPFx v1.8 release notes for details: [SharePoint Framework v1.8 release notes: Support for TypeScript 2.7, 2.9 and 3.x](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes#support-for-typescript-27-29-and-3x).
+
