@@ -16,13 +16,13 @@ ms.localizationpriority: high
 > TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
 > Dangerous certain consequences of an action
 
-## Eject the Webpack configuration:
+## Eject Webpack configuration
 
 ```console
 heft eject-webpack
 ```
 
-## Add the Webpack Bundle Analyzer to the ejected configuration
+## Add Webpack Bundle Analyzer
 
 <!-- TODO: locate existing `require()`'s ... search for `LocalizationPlugin` -->
 

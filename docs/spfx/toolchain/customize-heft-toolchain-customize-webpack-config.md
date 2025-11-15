@@ -14,7 +14,14 @@ ms.localizationpriority: high
 npm install webpack-bundle-analyzer -DE
 ```
 
-## Add Webpack patch file
+## Customize the SPFx Heft rig
+
+<!--TODO: brief summary how heft.json = build config containing phases, tasks, & task config -->
+<!--TODO: ... refer to overview how it works -->
+<!--TODO: ... look at existing spfx rig -->
+<!--TODO: ... reference OOTB plugins -->
+
+### Add Webpack patch file
 
 <!--TODO: ./.build/webpack-patch/webpack-bundle-analyzer.js -->
 
@@ -51,7 +58,7 @@ module.exports = function(webpackConfig) {
 };
 ```
 
-## Add Webpack Patch Plugin configuration
+### Add Webpack Patch Plugin configuration
 
 <!--TODO: ./config/webpack-patch.json -->
 

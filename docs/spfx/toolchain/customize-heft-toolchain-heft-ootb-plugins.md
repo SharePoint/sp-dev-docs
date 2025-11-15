@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 <!-- TODO: overview -->
 
-## Add face licensing file
+## Add fake licensing file
 
 <!--TODO: ./assets/LICENSE.md -->
 
@@ -26,14 +26,14 @@ Tongue beef ribs sausage, pork chop turducken chuck turkey flank picanha frankfu
 Does your lorem ipsum text long for something a little meatier? Give our generator a try… it’s tasty!
 ```
 
-## Customize the SPFx Heft rig
+## Customize SPFx Heft rig
 
 <!--TODO: brief summary how heft.json = build config containing phases, tasks, & task config -->
 <!--TODO: ... refer to overview how it works -->
+<!--TODO: ... look at existing spfx rig -->
+<!--TODO: ... reference OOTB plugins -->
 
 ### Add heft.json
-
-<!--TODO: add ./config/heft.json -->
 
 <!--TODO: add ./config/heft.json -->
 
@@ -44,11 +44,84 @@ Does your lorem ipsum text long for something a little meatier? Give our generat
 }
 ```
 
-<!-->
+### Customize the SPFx package-solution phase
+
+<!--TODO: modify the `package-solution -->
+
+```json
+"phasesByName": {
+  "package-solution": {
+  }
+}
+```
+
+### Add new task to package-solution phase
+
+```json
+"tasksByName": {
+  "copy-license": {
+    "taskPlugin": {
+      "pluginPackage": "@rushstack/heft",
+      "pluginName": "copy-files-plugin",
+      "options": {
+        "copyOperations": [
+          {
+            "sourcePath": "./assets",
+            "destinationFolders": ["./sharepoint/solution"],
+            "includeGlobs": ["LICENSE.md"]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### Configure the task execution order
+
+<!--TODO: explain: if no dep, runs parallel with others -->
+
+```json
+"taskDependencies": ["package-solution"]
+```
+
+<!--TODO: explain another task needs to run before this one, need to replace it here -->
 
 ## Test
 
+<!--TODO: recap -->
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft.schema.json",
+  "extends": "@microsoft/spfx-web-build-rig/profiles/default/config/heft.json",
+  "phasesByName": {
+    "package-solution": {
+      "tasksByName": {
+        "copy-license": {
+          "taskDependencies": ["package-solution"],
+          "taskPlugin": {
+            "pluginPackage": "@rushstack/heft",
+            "pluginName": "copy-files-plugin",
+            "options": {
+              "copyOperations": [
+                {
+                  "sourcePath": "./assets",
+                  "destinationFolders": ["./sharepoint/solution"],
+                  "includeGlobs": ["LICENSE.md"]
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 <!--TODO: -->
+
 
 ## See also
 

@@ -18,6 +18,12 @@ ms.localizationpriority: high
 
 <!--TODO: high level list of scenarios with links to other pages in this PR -->
 
+<!--TODO: list all commands (phases) avail -->
+
+```console
+heft -h
+```
+
 ## See also
 
 - [SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
