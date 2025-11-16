@@ -271,7 +271,7 @@
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
       href: spfx/publish-to-marketplace-faq.yml
-  - name: Migrate existing customizations
+  - name: Migrate pre-SPFx & classic mode customizations
     items:
     - name: Script Editor web part
       href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
@@ -311,8 +311,6 @@
       href: spfx/hyperlinking.md
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
-    - name: Tools and libraries compatibility
-      href: spfx/compatibility.md
   - name: External libraries
     items:
     - name: Add external libraries
@@ -357,10 +355,6 @@
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
       href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
-    - name: Custom build tasks
-      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-    - name: Extend Webpack
-      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Tenant-scoped solution deployment
       href: spfx/tenant-scoped-deployment.md
     - name: Optimize builds for production
@@ -436,17 +430,39 @@
       href: spfx/image-helper-api.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
-  - name: Tools & libraries
+  - name: Build Toolchain & Dependencies
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
-    - name: Toolchain (Gulp & Webpack)
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Toolchain (Rush Stack, Heft, & Webpack)
-      href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
+    - name: Heft-based toolchain (SPFx v1.22.0+)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
+        - name: Understanding how the Heft toolchain works
+          href: spfx/toolchain/customize-heft-toolchain-overview.md
+        - name: Customize the build toolchain with Heft plugins
+          href: spfx/toolchain/customize-heft-toolchain-heft-ootb-plugins.md
+        - name: Customize the build with the Heft Run script plugin
+          href: spfx/toolchain/customize-heft-toolchain-heft-script-plugin.md
+        - name: Customize webpack with the Heft webpack-patch plugin
+          href: spfx/toolchain/customize-heft-toolchain-customize-webpack-config.md
+        - name: Ejecting the webpack configuration
+          href: spfx/toolchain/customize-heft-toolchain-eject-webpack.md
+        - name: Migrate from the Gulp-based to the Heft-based toolchain
+          href: spfx/toolchain/migrate-gulptoolchain-hefttoolchain.md
+    - name: Gulp-based Toolchain (legacy)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain.md
+        - name: Customize the build toolchain with Gulp tasks
+          href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+        - name: Extending Webpack in the Gulp-based toolchain
+          href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
-    - name: Configure SASS processing during builds
+    - name: Platform & platform dependency compatibility reference
+      href: spfx/compatibility.md
+    - name: How to configure SASS processing
       href: spfx/toolchain/configure-sass.md
   - name: Debugging
     items:
