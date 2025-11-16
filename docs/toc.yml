@@ -434,6 +434,8 @@
       href: spfx/office-ui-fabric-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
+    - name: Microsoft Graph Toolkit
+      href: spfx/use-microsoft-graph-toolkit.md
   - name: Tools & libraries
     items:
     - name: Overview
@@ -446,8 +448,6 @@
       href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Configure SASS processing during builds
       href: spfx/toolchain/configure-sass.md
-    - name: Microsoft Graph Toolkit
-      href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
