@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework development tools and libraries
 description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
-ms.date: 02/10/2022
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries
 
-The SharePoint Framework includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
+The SharePoint Framework (SPFx) includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
 
 ## TypeScript
 
@@ -19,18 +19,23 @@ To get started with TypeScript, see the following resources:
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
 - [TypeScript community on Stack Overflow](https://stackoverflow.com/questions/tagged/typescript)
 
-## JavaScript frameworks
+## Web frameworks
 
-You can choose any one of a number of JavaScript frameworks to develop client-side web parts. The following are some of the most popular:
+You can choose any one of a number of web frameworks frameworks to develop client-side web parts. The following are some of the most popular:
 
-- [React](https://facebook.github.io/react/)
+- [React](https://react.dev)
 - [Angular](https://angular.io)
-- [Vue.js](https://vuejs.org/)
-- [Handlebars](http://handlebarsjs.com/)
+- [Vue.js](https://vuejs.org)
+- [Handlebars](http://handlebarsjs.com)
 
 Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts.
 
-We also recommend that you look at the [SharePoint PnP JavaScript Core library](https://github.com/pnp/pnpjs), which is a community driven effort targeted for providing easy access on SharePoint REST APIs.
+> [!IMPORTANT]
+> While the SPFx is unopinionated in the web framework you use, Microsoft recommends using React in SPFx solutions. In addition, most tools and packages from both Microsoft and the community use React, such as:
+>
+> - [Fluent UI React](hhttps://developer.microsoft.com/fluentui#/get-started/web)
+> - [PnP React Reusable Controls](https://pnp.github.io/sp-dev-fx-controls-react/)
+> - [PnP React Reusable Property Pane Controls](https://pnp.github.io/sp-dev-fx-property-controls/)
 
 ## Node Package Manager (npm)
 
@@ -46,72 +51,62 @@ For more information about Node.js, see the following:
 
 - [About Node.js](https://nodejs.org/about/)
 - [Node.js API reference documentation](https://nodejs.org/api/)
-- [Node.js Usage and Example](https://nodejs.org/api/synopsis.html)
 
-## Gulp task runner
+## Build toolchain
 
-SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
+The SPFx used a gulp-based build toolchain from the original release through the SPFx v1.21.1 release. Microsoft transitioned to a more modern toolchain based on the Heft configuration-driven toolchain in SPFx v1.22. Learn more about the two toolchains in the following articles:
 
-- Bundle and minify JavaScript and CSS files.
-- Run tools to call the bundling and minification tasks before each build.
-- Compile LESS or Sass files to CSS.
-- Compile TypeScript files to JavaScript.
-
-For more information about gulp, see the following:
-
-- [Gulp Quick Start](https://gulpjs.com/docs/en/getting-started/quick-start)
-- [TypeScript and Gulp](https://www.typescriptlang.org/docs/handbook/gulp.html)
+- [Heft-based toolchain (SPFx v1.22.0+)](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+- [Gulp-based toolchain (legacy)](toolchain/sharepoint-framework-toolchain.md)
 
 ## Webpack
 
 Webpack is a module bundler that takes your web part files and dependencies and generates one or more JavaScript bundles so that you can load different bundles for different scenarios.
 
-The development tool chain uses [Webpack](https://webpack.js.org/) for bundling. This enables you to define modules and where you want to use them. The tool chain also uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
+The development tool chain uses [webpack](https://webpack.js.org/) for bundling. This enables you to define modules and where you want to use them. The tool chain also uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader, to load your modules. This helps you to scope your SPFx components by making sure that each web part is executed in its own namespace.
 
 For more information about webpack, see the following:
 
 - [Webpack documentation](https://webpack.js.org/)
 - [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
-## Yeoman generators
+## Create new project with Yeoman
 
 [Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. The Yeoman SharePoint generator is available as part of the framework to kickstart new client-side web part projects.
 
 For more information about Yeoman, see the following:
 
 - [Scaffold a web app with Yeoman](http://yeoman.io/codelab/index.html)
-- [List of available Yeoman generators](http://yeoman.io/generators/)
-- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
-
-The following are some common Yeoman generators that you can try, depending on your choice of framework:
-
-- [generator-react-webpack](https://github.com/react-webpack-generators/generator-react-webpack)
-- [generator-angular](https://www.npmjs.com/package/generator-angular)
+- [Yeoman generator for the SPFx](yeoman-generator-for-spfx-intro.md)
 
 ## Source code editors
 
-SharePoint Framework is client-side driven and thus you can use your choice of HTML/JavaScript code editors, such as:
+The SPFx is client-side driven and thus you can use your choice of HTML/JavaScript code editors, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
-SharePoint Framework documentation uses Visual Studio Code in the docs and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
+The SPFx documentation uses Visual Studio Code in the docs and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
 
 ## SharePoint REST APIs
 
-The SharePoint Framework provides key integrations with SharePoint experiences and targets web development. The SharePoint REST APIs enable you to interact with  SharePoint and other workloads that shape your web part functionality.
+The SPFx provides key integrations with SharePoint experiences and targets web development. The SharePoint REST APIs enable you to interact with  SharePoint and other workloads that shape your web part functionality.
 
 We recommend that you become familiar with the following set of REST APIs:
 
 - [SharePoint List REST APIs](../sp-add-ins/working-with-lists-and-list-items-with-rest.md)
 
+> [!TIP]
+> In addition to the SharePoint REST APIs, the [SharePoint PnP JavaScript Core library (PnPjs)](https://github.com/pnp/pnpjs) is a popular community-driven effort targeted for providing easy access on SharePoint and Microsoft Graph REST APIs.
+
 ## Patterns and Practices
 
-The [Office Dev Patterns and Practices / SharePoint Patterns and Practices (PnP)](https://aka.ms/sppnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SharePoint Framework. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
+The [Office Dev Patterns and Practices / SharePoint Patterns and Practices (PnP)](https://aka.ms/sppnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SPFx. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
 
 ## See also
 
-- [SharePoint Framework toolchain](toolchain/sharepoint-framework-toolchain.md)
+- [SPFx Overview](sharepoint-framework-overview.md)
+- [Heft-based toolchain (SPFx v1.22.0+)](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+- [Gulp-based toolchain (legacy)](toolchain/sharepoint-framework-toolchain.md)
 - [Build a Hello World client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)
-- [SharePoint Framework Overview](sharepoint-framework-overview.md)

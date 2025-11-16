@@ -1,7 +1,7 @@
 ---
-title: Integrate gulp tasks in SharePoint Framework toolchain
+title: Customize the build toolchain with Gulp tasks
 description: Integrate your custom gulp tasks in the build pipeline.
-ms.date: 06/13/2022
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 # Integrate gulp tasks in SharePoint Framework toolchain
@@ -14,6 +14,8 @@ SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the b
 - Compile TypeScript files to JavaScript.
 
 One common task you can add to the SharePoint Framework toolchain is to integrate your custom gulp tasks in the build pipeline.
+
+[!INCLUDE [spfx-gulp-toolchain-legacy](../../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
 ## Gulp tasks
 
