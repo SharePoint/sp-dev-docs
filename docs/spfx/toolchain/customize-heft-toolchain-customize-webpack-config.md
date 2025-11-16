@@ -1,10 +1,10 @@
 ---
-title: TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+title: Customize webpack with the Heft webpack-patch plugin
 description: In this article, you'll learn TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
 ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
-# TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+# Customize webpack with the Heft webpack-patch plugin
 
 <!-- TODO: overview -->
 
@@ -74,6 +74,8 @@ module.exports = function(webpackConfig) {
 ## Test
 
 <!--TODO: -->
+
+<!--TODO: THINK - add steps for each type of customization in the existing 'extending-webpack-in-build-pipeline.md`? as new section(s) below -->
 
 ## See also
 

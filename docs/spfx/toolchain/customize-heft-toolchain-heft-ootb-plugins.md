@@ -1,10 +1,10 @@
 ---
-title: TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+title: Customize the build toolchain with Heft plugins
 description: In this article, you'll learn TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
 ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
-# TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+# Customize the build toolchain with Heft plugins
 
 <!-- TODO: overview -->
 
@@ -64,13 +64,11 @@ Does your lorem ipsum text long for something a little meatier? Give our generat
       "pluginPackage": "@rushstack/heft",
       "pluginName": "copy-files-plugin",
       "options": {
-        "copyOperations": [
-          {
-            "sourcePath": "./assets",
-            "destinationFolders": ["./sharepoint/solution"],
-            "includeGlobs": ["LICENSE.md"]
-          }
-        ]
+        "copyOperations": [{
+          "sourcePath": "./assets",
+          "destinationFolders": ["./sharepoint/solution"],
+          "includeGlobs": ["LICENSE.md"]
+        }]
       }
     }
   }
@@ -104,13 +102,11 @@ Does your lorem ipsum text long for something a little meatier? Give our generat
             "pluginPackage": "@rushstack/heft",
             "pluginName": "copy-files-plugin",
             "options": {
-              "copyOperations": [
-                {
-                  "sourcePath": "./assets",
-                  "destinationFolders": ["./sharepoint/solution"],
-                  "includeGlobs": ["LICENSE.md"]
-                }
-              ]
+              "copyOperations": [{
+                "sourcePath": "./assets",
+                "destinationFolders": ["./sharepoint/solution"],
+                "includeGlobs": ["LICENSE.md"]
+              }]
             }
           }
         }

@@ -1,10 +1,10 @@
 ---
-title: TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+title: Understanding the Heft-based toolchain (how it works)
 description: In this article, you'll learn TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
 ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
-# TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+# Understanding the Heft-based toolchain (how it works)
 
 <!--TODO: overview -->
 
@@ -13,6 +13,8 @@ ms.localizationpriority: high
 <!--TODO: how it works -->
 
 <!--TODO: phase, tasks, task config, rig, rig plugins -->
+
+<!--TODO: comparison table of gulp & heft commands -->
 
 <!--TODO: what can you do with heft -->
 

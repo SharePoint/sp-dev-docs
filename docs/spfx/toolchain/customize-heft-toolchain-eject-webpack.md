@@ -1,5 +1,5 @@
 ---
-title: TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
+title: Ejecting the webpack configuration
 description: In this article, you'll learn TODO_TODO_TODO_TODO_TODO_TODO_TODO_TODO
 ms.date: 11/18/2025
 ms.localizationpriority: high
