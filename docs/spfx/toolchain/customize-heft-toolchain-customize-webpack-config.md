@@ -6,11 +6,18 @@ ms.localizationpriority: high
 ---
 # Customize webpack with the Heft Webpack Patch plugin
 
+[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
+
 Developers commonly need to customize the build toolchain by modifying the webpack configuration in SharePoint Framework (SPFx) projects. This typically involves adjusting existing webpack plugins used in the configuration, such as the [Define Plugin](https://webpack.js.org/plugins/define-plugin/), or adding new plugins for various purposes.
 
 The SPFx team has simplified this process in the Heft-based toolchain by including the Webpack Patch Plugin in the build phase.
 
 In this article, you'll learn how to use the Webpack Patch Plugin to add a popular webpack plugin to your SPFx project: the Webpack Bundle Analyzer.
+
+> [!IMPORTANT]
+> This article assumes you understand how the Heft build toolchain works, basic architectural concepts, and a high-level understanding of the toolchain customization options.
+>
+> Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
 ## Install Webpack Bundle Analyzer
 
@@ -29,31 +36,29 @@ To customize the webpack configuration, you'll use the Webpack Patch Plugin that
 
 This process involves creating two files:
 
-1. the script to modify the webpack configuration
-1. a file to register the webpack patch scripts that the Webpack Patch Plugin will look for
+1. The script to modify the webpack configuration
+1. A file to register the webpack patch scripts that the Webpack Patch Plugin will look for
 
 ### Add Webpack patch file
 
-Create a new JavaScript file in your project, **./config/webpack-patch/webpack-bundle-analyzer.js** for the webpack patch script and add the following code to it:
+Create a new JavaScript file in your project, **./config/webpack-patch/webpack-bundle-analyzer.js** for the webpack patch script and add the following code:
 
-This will do the following:
+This code does the following:
 
-1. exports a function that accepts the webpack configuration object
-1. locates the `plugins` collection within the configuration
-1. adds the Webpack Bundle Analyzer plugin with the desired settings
-1. returns the modified webpack configuration
+1. Exports a function that accepts the webpack configuration object
+1. Locates the `plugins` collection within the configuration
+1. Adds the Webpack Bundle Analyzer plugin with the desired settings
+1. Returns the modified webpack configuration
 
 ```javascript
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = function(webpackConfig) {
-  // location of plugin output
   const lastDirName = path.basename(__dirname);
   const projectPath = path.join(__dirname, './../..');
   const webpackStats = path.join(projectPath, 'temp', 'webpack');
 
-  // ensure plugins collection present
   if (!webpackConfig.plugins) { webpackConfig.plugins = []; }
 
   // add plugin
@@ -66,7 +71,6 @@ module.exports = function(webpackConfig) {
     logLevel: 'error'
     }));
 
-  // return mutated webpack config to build toolchain
   return webpackConfig;
 };
 ```

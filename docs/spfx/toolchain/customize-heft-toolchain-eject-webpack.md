@@ -6,6 +6,8 @@ ms.localizationpriority: high
 ---
 # Ejecting the webpack configuration
 
+[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
+
 The SharePoint Framework (SPFx) uses Heft as the task orchestrator to implement the build toolchain. These tasks, their configurations, and their dependencies, are managed by Microsoft to simplify the various Heft commands and actions developers need to perform.
 
 Some tasks involved in the toolchain, such as the process of creating the configuration for webpack prior to creating the component bundles and manifest files, have customization points enabling developers to control parts of the build toolchain. For example, the SPFx Heft Webpack Patch Plugin enables developers to provide a script file that can mutate the configuration before it's executed by webpack.
@@ -13,6 +15,11 @@ Some tasks involved in the toolchain, such as the process of creating the config
 In specific scenarios, you may wish to eject the webpack configuration from the build toolchain for more granular control. Developers can eject the webpack configuration from the toolchain for more control. This process copies all the hidden configuration files and dependencies into your project giving you full control over this part of the build toolchain.
 
 This article will explain how to eject the webpack configuration from the toolchain, what is added and updated to a project, the implications of ejecting, and cover a simple scenario.
+
+> [!IMPORTANT]
+> This article assumes you understand how the Heft build toolchain works, basic architectural concepts, and a high-level understanding of the toolchain customization options.
+>
+> Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
 > [!CAUTION]
 > **Ejecting the webpack configuration from the toolchain is not recommended by Microsoft.** Ensure you are familiar with the implications of ejecting the webpack configuration, covered in this article, before doing so. Many modern tools, including Heft, support a plugin model and configuration files or other override mechanisms that let you customize the toolchain without taking full responsibility of the toolchain. Most toolchain customizations can be achieved using existing or custom Heft plugins such as the **Webpack Patch Plugin** or the **Run Script Plugin**.
