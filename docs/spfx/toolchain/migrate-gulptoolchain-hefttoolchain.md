@@ -6,28 +6,39 @@ ms.localizationpriority: high
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
 
-<!--TODO: assumes spfx v1.21.1 web part react project -->
+The migration steps in moving from a Gulp-based toolchain SharePoint Framework (SPFx) project to a Heft-based toolchain are more involved than a typical SPFx project upgrade from one version to another version.
 
-## Overview
+In this article, you'll walk through in detail all of the steps required for removing the Gulp toolchain from a SPFx version 1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22 project.
 
-<!--TODO: -->
+> [!IMPORTANT]
+> **This article assumes that you are upgrading an existing SPFx v1.21.1 React web part project.**
+>
+> The steps for upgrading other types of projects, such as those not using React, using SPFx extensions, or SPFx Adaptive Card Extensions instead of web parts are similar to the steps in this article.
 
 > [!TIP]
 > The steps in this page involve making numerous and significant changes to to your project. Before proceeding, strongly consider making a copy of your project or, if it's in source control, to start with a clean state (ie: no unstaged files).
 
 ## Uninstall Gulp toolchain dependencies
 
+Start by first uninstalling the gulp-based toolchain packages from your project.
+
 ```console
 npm uninstall @microsoft/sp-build-web ajv gulp
 ```
 
-<!--TODO: unintall whatever version you have installed, in SPFx v1.21.1, it's `5.3` -->
+Next, uninstall the **@microsoft/rush-stack-compiler-\*** which maps to the current version of TypeScript that your project currently uses.
+
+For instance, the default SPFx v1.21.1 project uses TypeScript v5.3, so you would uninstall the **@microsoft/rush-stack-compiler-5.3** package:
 
 ```console
 npm uninstall @microsoft/rush-stack-compiler-5.3
 ```
 
+If you're using a different version of TypeScript, make sure that you uninstall the **@microsoft/rush-stack-compiler-\*** package with the TypeScript version in the name of the **@microsoft/rush-stack-compiler-\*** package.
+
 ## Install Heft toolchain dependencies
+
+The next step is to install all of the dependencies the Heft-based toolchain requires:
 
 ```console
 npm install @microsoft/spfx-web-build-rig@1.22.0-beta.5
@@ -38,26 +49,8 @@ npm install @microsoft/spfx-web-build-rig@1.22.0-beta.5
             @rushstack/eslint-config@4.5.2
             @rushstack/heft@1.1.2
             @types/heft-jest@1.0.2
-            @types/heft-jest@1.0.2
-            @typescript-eslint/parser
-            css-loader@~7.1.2
+            @typescript-eslint/parser@8.31.1
             --force
-```
-
-### Override version of Heft in all dependencies
-
-https://docs.npmjs.com/cli/v9/configuring-npm/package-json#overrides
-
-In **package.json**, add the following top-level `overrides` property to force all dependencies and peer dependencies to use a specific version of Heft:
-
-```json
-{
-  ..
-  "dependencies": {},
-  "devDependencies": {},
-  ..
-  "overrides": { "@rushstack/heft": "1.1.2"}
-}
 ```
 
 ## Optionally upgrade TypeScript
@@ -72,7 +65,7 @@ npm install typescript@~5.8.0 -DE
 ```
 
 > [!WARNING]
-> Prior to the SPFx v1.22.0 GA release, some have experienced issues installing TypeScript v5.8 when migrating existing projects to SPFx v1.22.
+> Prior to the SPFx v1.22.0 GA release, some have experienced issues installing TypeScript v5.8 when migrating existing projects to SPFx v1.22. Upgrading to TypeScript v5.8 is not required.
 
 ## Update NPM scripts in package.json
 
@@ -115,7 +108,7 @@ The project templates created for SPFx v1.22 include additional scripts to the *
 
 ## Add the SPFx Heft rig to the project
 
-<!--TODO explain + add link to where this is explained -->
+With the Heft toolchain now installed after removing the Gulp toolchain, the next step is to add a reference to the SPFx build rig. This is done by adding a new file to your project's configuration folder. That will reference the rig that the project will use.
 
 Add a new file, **./config/rig.json**, to your project with the following contents:
 
@@ -128,7 +121,7 @@ Add a new file, **./config/rig.json**, to your project with the following conten
 
 ## Replace the Sass configuration file
 
-Replace the entire contents of the existing **./config/sass.json** file with the following to use the Heft Sass configuration in the SPFx Heft rig. This is where you can can modify the default settings on the [Heft Sass Plugin](https://heft.rushstack.io/pages/plugins/sass/):
+Replace the entire contents of the existing **./config/sass.json** file with the following to use the Heft Sass configuration in the SPFx Heft rig. This is where you can modify the default settings on the [Heft Sass Plugin](https://heft.rushstack.io/pages/plugins/sass/):
 
 ```json
 {
@@ -166,7 +159,7 @@ Replace the contents of the existing **./tsconfig.json** file with the following
 Delete the **./gulpfile.js** file from your project as it is no longer used.
 
 > [!TIP]
-> If you've made changes to your **gulpfile.js**, you may want to keep it until you've migrated those changes to the equivalent Heft extensibility options. Learn more [TODO](todo.md)
+> If you've made changes to your **gulpfile.js**, you may want to keep it until you've migrated those changes to the equivalent Heft extensibility options. Learn more about customizing the Heft-based toolchain: [Customizing the Heft-based build toolchain](customize-heft-toolchain-overview.md#customizing-the-heft-based-build-toolchain).
 
 ## Upgrade production dependencies
 
@@ -185,9 +178,20 @@ npm install @microsoft/sp-component-base@1.22.0-beta.5 \
 > [!TIP]
 > After making so many changes to the packages, consider deleting the **node_modules** and **./package-lock.json** (*or the equivalent lock file for the package manager you use*) and then re-running `npm install`. This ensures you will have a clean dependency tree.
 
-## Test
+## Test the project migration to the Heft-based toolchain
 
-<!--TODO: -->
+Test your changes by running the **build** command in the console from the root of your project.
+
+```console
+# if you have heft installed globally...
+heft build --production
+
+# ... or run heft globally without installing it...
+npx heft build
+
+# ... or you can run the NPM helper script
+npm run build
+```
 
 ## See also
 
