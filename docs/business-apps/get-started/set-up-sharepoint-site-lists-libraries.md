@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint site with lists and libraries
 description: Set up your SharePoint site with lists and libraries
-ms.date: 6/23/2020
+ms.date: 11/17/2025
 ms.localizationpriority: high
 ---
 
@@ -29,7 +29,10 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
     > You can use either a modern Teams site or a Communications site.
 
 1. In the command bar, select **New** > **List**.
-1. In the **Create list** panel, enter the following:
+
+1. A "How would you like to start?" dialog appears. Under **Create from blank**, select **List**.
+
+1. In the **Blank list** setup window, enter the following:
 
     * **Name**: Projects
 
