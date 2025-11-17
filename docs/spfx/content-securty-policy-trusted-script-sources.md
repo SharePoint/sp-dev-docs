@@ -136,6 +136,7 @@ However, if your solution implements [Option 3](#option-3-dynamically-load-a-scr
 >
 > - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
 > - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and it's variations also use inline script whenever the user adds script on a page via the web part. Added script will not execute, added HTML will stay working.
+> - CSP is only enforced for script on non classic pages, for example a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
 
 ## Managing the Content Security Policy rules in SharePoint Online
 
