@@ -6,8 +6,15 @@ ms.localizationpriority: high
 ---
 # Customize the build with the Heft Run script plugin
 
+[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
+
 <!-- TODO: overview -->
 <!-- TODO: draw comparison to gulp-toolchain scenarios -->
+
+> [!IMPORTANT]
+> This article assumes you understand how the Heft build toolchain works, basic architectural concepts, and a high-level understanding of the toolchain customization options.
+>
+> Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
 ## Add Stylelint to project
 
