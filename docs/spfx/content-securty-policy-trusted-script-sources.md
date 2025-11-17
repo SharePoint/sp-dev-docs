@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 11/06/2025
+ms.date: 11/17/2025
 author: andrewconnell-msft2
 ms.author: v-jconnell
 ---
@@ -16,12 +16,12 @@ Learn more about CSP on MDN: [Content Security Policy (CSP)](https://developer.m
 In this article, you'll learn how CSP works with custom SharePoint Framework (SPFx) solutions, how to identify and find CSP violations, and how to configure trusted sources in SharePoint Online.
 
 > [!IMPORTANT]
-> Content Security Policy (CSP) is currently rolling out in SharePoint Online in reporting mode and thus not impacting solutions,the **enforcement of Content Security Policy (CSP) will start from March 1, 2026**.
+> Content Security Policy (CSP) is currently rolled out in SharePoint Online in reporting mode and thus not impacting solutions,the **enforcement of Content Security Policy (CSP) will start from March 1, 2026**.
 
 If the enforcement on March 1, 2026 is too soon because you need more time to review and update your existing SPFx solutions, you can delay the enforcement by 90 days, so until June 1, 2026, using SPO Management Shell:
 
 ```powershell
-Set-SPOTenant --DelayContentSecurityPolicyEnforcement $true
+Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
 ```
 
 > [!NOTE]
@@ -37,7 +37,7 @@ By default, SharePoint Online is configured to allow the browser to load scripts
 
 The default setting for new SPFx solutions is to include the JavaScript bundles that implement SPFx components in the package. When an SPFx app is installed, the assets included in the package are deployed to the site's **ClientSideAssets** folder.
 
-SPFx developers have multiple options they can implement to load scripts in their solutions for various scenarios. These include:
+SPFx developers have multiple options they can implement to load and use scripts in their solutions for various scenarios. These include:
 
 ### Option 1: Deploy SPFx Scripts to an External CDN
 
@@ -126,15 +126,15 @@ element.innerHTML = "<script>alert('Hi')</script>";
 
 As stated above, the CSP settings in SharePoint Online are configured to load scripts hosted in SharePoint Online. This means that if you include the resources in your SPFx package, *the default configuration for new SPFx solutions*, the CSP settings in SharePoint Online will have no impact on your custom solution.
 
-However, if your solution implements option 3 or 4 the default CSP settings in SharePoint Online will impact your solution.
-
 Of the options mentioned above, if you implement [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn) or [Option 2: Pull Script Dependencies from a CDN](#option-2-pull-script-dependencies-from-a-cdn), SharePoint Online will take care of this for you. When the SPFx solution is installed in a site, SharePoint Online will add the value set in the project's `cdnBasePath` and `externals` to the new **Trusted script sources** in the SharePoint Online Admin Center. Notice the new message that appears when adding an app from the SharePoint Store that implements [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn) or [Option 2: Pull Script Dependencies from a CDN](#option-2-pull-script-dependencies-from-a-cdn):
 
 ![Automatically adding trusted script sources](../images/content-securty-policy-trusted-script-sources/add-app-with-tss.png)
 
+However, if your solution implements [Option 3](#option-3-dynamically-load-a-script-with-the-spcomponent-loader) or [Option 4](#option-4-use-inline-script) the default CSP settings in SharePoint Online will impact your solution.
+
 > [!IMPORTANT]
 >
-> - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as inline script will be blocked by the Content Security Policy (CSP) in SharePoint Online.
+> - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
 > - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and it's variations also use inline script whenever the user adds script on a page via the web part. Added script will not execute, added HTML will stay working.
 
 ## Managing the Content Security Policy rules in SharePoint Online
