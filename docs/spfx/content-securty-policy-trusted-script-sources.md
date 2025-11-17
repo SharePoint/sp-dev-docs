@@ -236,7 +236,7 @@ From the **Search** page, search for the **Activity - friendly names** value **V
 Selecting a search result opens the side panel with the audit details. Take note of the following properties:
 
 - **DocumentUrl**: This indicates the page in the SharePoint Online site where the CSP violation occurred.
-- **BlockedUrl**: This indicates the URL of the script that violated the CSP configuration.
+- **BlockedUrl**: This indicates the URL of the script that violated the CSP configuration or contains “inline” when the violation came from loading inline script.
 
 ![Microsoft Purview Audit Record](../images/content-securty-policy-trusted-script-sources/purview-audit-record.png)
 
