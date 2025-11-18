@@ -174,11 +174,11 @@ heft package-solution --production
 
 Notice the custom task appear in the console logging...
 
-![Heft custom task logging](../../images/spfx-heftplugin-included-console.png)
+![Heft custom task logging](../../images/heft-plugin-included-console.png)
 
 ... and the file is in the **./sharepoint/solution** folder:
 
-![Result of the copy-file Heft plugin](../../images/spfx-heftplugin-included-file.png)
+![Result of the copy-file Heft plugin](../../images/heft-plugin-included-file.png)
 
 ## See also
 

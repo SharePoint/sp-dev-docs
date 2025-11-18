@@ -331,11 +331,11 @@ heft stylelint
 
 The output of the **build** command includes the phase and task in the prefix of the log message:
 
-![Run the Heft build command displaying the Stylelint version number](../../images/spfx-heftplugins-runscript-build-01.png)
+![Run the Heft build command displaying the Stylelint version number](../../images/heft-plugins-runscript-build-01.png)
 
 The output of the **stylelint** command also includes the phase and task in the log prefix, but in this case, they have the same name:
 
-![Run the Heft stylelint command displaying the Stylelint version number](../../images/spfx-heftplugins-runscript-stylelint-01.png)
+![Run the Heft stylelint command displaying the Stylelint version number](../../images/heft-plugins-runscript-stylelint-01.png)
 
 ## Execute Stylelint with config settings
 
@@ -385,15 +385,15 @@ node ./config/run-script/stylelint.mjs
 
 The output of the **build** command now reports the warning in the **build** phase...
 
-![Run the Heft build command displaying the Stylelint warnings](../../images/spfx-heftplugins-runscript-build-02.png)
+![Run the Heft build command displaying the Stylelint warnings](../../images/heft-plugins-runscript-build-02.png)
 
 ... just as the **stylelint** command does...
 
-![Run the Heft stylelint command displaying the Stylelint warnings](../../images/spfx-heftplugins-runscript-stylelint-02.png)
+![Run the Heft stylelint command displaying the Stylelint warnings](../../images/heft-plugins-runscript-stylelint-02.png)
 
 ... and when we run the script using Node!
 
-![Run the script with Node displaying the Stylelint warnings](../../images/spfx-heftplugins-runscript-node.png)
+![Run the script with Node displaying the Stylelint warnings](../../images/heft-plugins-runscript-node.png)
 
 ## See also
 
