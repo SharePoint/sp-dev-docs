@@ -401,5 +401,5 @@ The output of the **build** command now reports the warning in the **build** pha
 - [Migrate from the Gulp Toolchain to Heft Toolchain](migrate-gulptoolchain-hefttoolchain.md)
 - [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md)
 - [Customize webpack with the Heft Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md)
-- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)
+- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)
 - [Ejecting the webpack configuration](customize-heft-toolchain-eject-webpack.md)

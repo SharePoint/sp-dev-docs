@@ -105,6 +105,6 @@ heft build --production
 - [SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Migrate from the Gulp Toolchain to Heft Toolchain](migrate-gulptoolchain-hefttoolchain.md)
 - [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md)
-- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)
+- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)
 - [Customize the build with the Heft Run script plugin](customize-heft-toolchain-heft-script-plugin.md)
 - [Ejecting the webpack configuration](customize-heft-toolchain-eject-webpack.md)

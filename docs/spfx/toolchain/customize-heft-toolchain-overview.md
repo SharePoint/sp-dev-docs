@@ -140,7 +140,7 @@ You can use any of the included Heft plugins which are listed in the Heft docume
 
 In addition, you can find other Heft plugins by searching the [npm registry](https://www.npmjs.com/search?q=heft-) for packages that have the naming convention `heft-{name}-plugin[s]`.
 
-Learn more about customizing Heft through some of the out-of-the-box plugins: **[Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)**.
+Learn more about customizing Heft through some of the out-of-the-box plugins: **[Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)**.
 
 **What if a plugin doesn't exist for your scenario?**
 
@@ -168,7 +168,7 @@ Learn more about ejecting: **[Ejecting the webpack configuration](customize-heft
 
 - [SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Customize webpack with the Heft Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md)
-- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)
+- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)
 - [Customize the build with the Heft Run script plugin](customize-heft-toolchain-heft-script-plugin.md)
 - [Ejecting the webpack configuration](customize-heft-toolchain-eject-webpack.md)
 - [Migrate from the Gulp Toolchain to Heft Toolchain](migrate-gulptoolchain-hefttoolchain.md)

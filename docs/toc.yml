@@ -441,7 +441,7 @@
         - name: Understanding how the Heft toolchain works
           href: spfx/toolchain/customize-heft-toolchain-overview.md
         - name: Customize the build toolchain with Heft plugins
-          href: spfx/toolchain/customize-heft-toolchain-heft-ootb-plugins.md
+          href: spfx/toolchain/customize-heft-toolchain-heft-included-plugins.md
         - name: Customize the build with the Heft Run script plugin
           href: spfx/toolchain/customize-heft-toolchain-heft-script-plugin.md
         - name: Customize webpack with the Heft webpack-patch plugin

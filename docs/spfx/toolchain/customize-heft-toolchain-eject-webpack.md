@@ -26,7 +26,7 @@ This article will explain how to eject the webpack configuration from the toolch
 >
 > Due to the implications of ejecting, we **strongly recommend** to consider all other options before ejecting. Refer to these articles for some of your other options:
 >
-> - [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)
+> - [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)
 > - [Customize the build with the Heft Run script plugin](customize-heft-toolchain-heft-script-plugin.md)
 > - [Customize webpack with the Heft Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md)
 
@@ -180,5 +180,5 @@ heft build --production
 - [SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md)
 - [Customize webpack with the Heft Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md)
-- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-ootb-plugins.md)
+- [Customize the build toolchain with Heft plugins](customize-heft-toolchain-heft-included-plugins.md)
 - [Customize the build with the Heft Run script plugin](customize-heft-toolchain-heft-script-plugin.md)
