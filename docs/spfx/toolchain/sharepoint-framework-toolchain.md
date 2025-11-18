@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Framework Toolchain: Gulp and Webpack"
+title: "SharePoint Framework Toolchain: Gulp-Based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the legacy gulp-based toolchain.
 ms.date: 11/18/2025
 ms.localizationpriority: high

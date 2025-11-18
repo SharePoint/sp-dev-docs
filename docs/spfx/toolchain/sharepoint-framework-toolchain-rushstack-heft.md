@@ -1,16 +1,15 @@
 ---
-title: "SharePoint Framework Toolchain: Rush Stack, Heft, and Webpack"
-description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the modern Heft-based toolchain.
+title: "SharePoint Framework Toolchain: Heft-based"
+description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the Heft-based toolchain introduced in SPFx v1.22.
 ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
-
 # SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack
 
 The SharePoint Framework (SPFx) v1.22 introduced a significant change to the build toolchain used to develop and package SPFx solutions. This article explains the changes, the reasons behind them, and how they affect both new and existing projects.
 
 > [!NOTE]
-> Prior to SPFx v1.22, Microsoft used a gulp & webpack based toolchain. Learn more: [SPFx Toolchain: Gulp & Webpack](sharepoint-framework-toolchain.md)
+> Prior to SPFx v1.22, Microsoft used a gulp and webpack based toolchain. Learn more: [SPFx Toolchain: Gulp & Webpack](sharepoint-framework-toolchain.md).
 
 ## Overview
 
@@ -18,11 +17,11 @@ Starting with SPFx v1.22, new projects use **Heft** as the build task orchestrat
 
 ## Why the toolchain is changing
 
-The decision to transition from gulp-core-build to Heft addresses several long-standing challenges in the SPFx development experience:
+The decision to transition from gulp-based toolchain to the Heft-based toolchain addresses several long-standing challenges in the SPFx development experience:
 
 ### Technical debt and maintenance
 
-The current gulp-core-build toolchain is a custom solution built specifically for SPFx. Over time, this has created several issues.
+The current gulp-based toolchain is a custom solution built specifically for SPFx. Over time, this has created several issues.
 
 The current toolchain has received minimal maintenance over the years, resulting in significant technical debt. This has led to numerous npm audit warnings due to outdated dependencies in the unmaintained gulp-core-build stack. Additionally, Microsoft internally moved away from this toolchain several years ago, which created a problematic split between internal and external development ecosystems.
 
@@ -38,25 +37,28 @@ Moving to Heft provides several significant benefits to the SPFx ecosystem. By a
 
 ### Core toolchain replacement
 
-The build process undergoes several fundamental changes in SPFx v1.22. First, **gulp-core-build** has been replaced with **[Heft](https://heft.rushstack.io/)** as the primary task orchestrator for building SPFx projects. Despite this significant change, **webpack** continues to serve as the underlying bundling technology, though it's now orchestrated through Heft rather than gulp. Additionally, the **npm scripts** in your `package.json` file have been updated to call Heft commands instead of gulp tasks, reflecting the new toolchain architecture.
+The build process undergoes several fundamental changes in SPFx v1.22. First, the gulp-based toolchain (aka: **gulp-core-build**) has been replaced with **[Heft](https://heft.rushstack.io/)** as the primary task orchestrator for building SPFx projects. Despite this significant change, **webpack** continues to serve as the underlying bundling technology, though it's now orchestrated through Heft rather than gulp. Additionally, the **npm scripts** in your **package.json** file have been updated to call Heft commands instead of gulp tasks, reflecting the new toolchain architecture.
 
 > [!NOTE]
 > **What is Rush Stack?**
 >
 > Rush Stack is a mission-driven initiative that provides reusable technology for running large-scale monorepos for web development. It's an open collaboration among community partners with serious tooling requirements who got tired of tackling these challenges alone. If you're familiar with monorepo tools like **Turborepo**, **Nx**, or **Lerna**, Rush Stack operates in the same space but with a different philosophy.
->
-> At its core is Rush, a scalable monorepo build orchestrator that ensures deterministic package installations and builds projects in the correct order as quickly as possible. But Rush Stack goes beyond just orchestration—it provides a complete family of integrated tools including Heft (an extensible build system), API Extractor, and specialized ESLint configurations, all working together with popular technologies like Node.js, TypeScript, Webpack, and Jest.
->
-> The key trade-off is that Rush Stack exchanges some flexibility for an opinionated, battle-tested approach. Rather than choosing and integrating your own compiler, linter, bundler, and test runner—which becomes a significant project itself—Rush Stack provides a pre-configured toolkit backed by experts running huge monorepos.
+
+Learn more about Rush Stack from the official site: [Rush Stack documentation](https://rushstack.io/).
 
 > [!NOTE]
 > **What is Heft?**
 >
-> Heft is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like "npm run build" or "npm run test". If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
+> Heft is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like **npm run build** or **npm run test**. If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
 >
-> The key philosophy is replacing special-purpose scripts with a reusable, config-driven engine that minimizes duplication across projects. Heft encourages defining a small set of stereotypical project types called "rigs" that projects can inherit from, ensuring consistency so any developer can easily contribute to any project. Think of it like having standardized build configurations that all your projects share, rather than each project maintaining its own custom build setup.
+> The key philosophy is replacing special-purpose scripts with a reusable, config-driven engine that minimizes duplication across projects. Heft encourages defining a small set of stereotypical project types called *rigs* that projects can inherit from, ensuring consistency so any developer can easily contribute to any project. Think of it like having standardized build configurations that all your projects share, rather than each project maintaining its own custom build setup.
 >
-> What makes Heft unique is its focus on optimization and completeness—it tracks fine-grained performance metrics, implements sophisticated optimizations like incremental compilation and filesystem caching, and provides a unified compiler pass for Jest, Webpack, and ESLint. Rather than being unopinionated like Gulp or Grunt, Heft takes an opinionated approach to establish a fully worked-out solution for building TypeScript projects, investing heavily in making that specific approach as polished as possible.
+> What makes Heft unique is its focus on optimization and completeness—it tracks fine-grained performance metrics, implements sophisticated optimizations like incremental compilation and filesystem caching, and provides a unified compiler pass for Jest, Webpack, and ESLint. Rather than being unopinionated like gulp or Grunt, Heft takes an opinionated approach to establish a fully worked-out solution for building TypeScript projects, investing heavily in making that specific approach as polished as possible.
+
+Learn more how Heft works and is used to implement the SPFx build toolchain in the following articles:
+
+- [Understanding the Heft-based SPFx toolchain (how it works)](customize-heft-toolchain-overview.md)
+- Heft documentation from the [Heft site](https://heft.rushstack.io/).
 
 ### New configuration files
 
@@ -71,7 +73,7 @@ When creating new SPFx projects with the SharePoint Framework Yeoman Generator v
 
 ### Developer workflow changes
 
-The transition to Heft fundamentally changes how developers customize their build process. In the new toolchain, existing **gulpfile.js** customizations are no longer compatible and will need to be migrated. For webpack configuration modifications, developers must now use either Heft plugins or eject to gain direct access to the webpack configuration. Additionally, the config.json file has been eliminated, with external library configurations now handled through webpack-native configuration patterns instead.
+The transition to Heft fundamentally changes how developers customize their build process. In the new toolchain, existing **gulpfile.js** customizations are no longer compatible and will need to be migrated. For webpack configuration modifications, developers must now use either Heft plugins or eject to gain direct access to the webpack configuration. Additionally, the **config.json** file has been eliminated, with external library configurations now handled through webpack-native configuration patterns instead.
 
 ## When - support timeline and migration path
 
@@ -79,7 +81,7 @@ Microsoft has established a phased transition timeline to minimize disruption:
 
 ### SPFx version v1.22 (Initial Release)
 
-Starting with SPFx v1.22, all new projects generated with the SharePoint Framework Yeoman generator will default to using Heft as the build tool. However, for developers who need to continue using the previous system, the generator provides a command-line option to use the legacy gulp toolchain instead. Importantly, existing projects that upgrade to v1.22 can continue using their current gulp-based builds without modification. During this transitional period, Microsoft will support both toolchains, though it's worth noting that only critical breaking fixes will be applied to the gulp toolchain as development resources shift toward improving the new Heft-based system.
+Starting with SPFx v1.22, all new projects generated with the SharePoint Framework Yeoman generator will default to using Heft as the build tool. However, for developers who need to continue using the previous system, the generator provides a command-line option to use the legacy gulp toolchain instead. Importantly, existing projects that upgrade to SPFx v1.22 can continue using their current gulp-based builds without modification. During this transitional period, Microsoft will support both toolchains, though it's worth noting that only critical breaking fixes will be applied to the gulp toolchain as development resources shift toward improving the new Heft-based system.
 
 ### SPFx version v1.23
 
@@ -118,12 +120,13 @@ For most scenarios, developers can make standard customizations by modifying Hef
 
 For scenarios requiring webpack modifications, developers can use Heft's plugin API to programmatically access and modify webpack configurations. This approach allows for creating custom plugins that hook directly into the webpack build process while maintaining compatibility with the broader webpack plugin ecosystem that SPFx developers are already familiar with. This flexibility ensures that advanced customization scenarios remain possible within the new toolchain architecture.
 
+Learn more about the different customization options with the Heft-based toolchain, [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
+
 ### Full control through ejection
 
 For developers requiring complete control, the new toolchain offers an "eject" option that provides a standalone **webpack.config.js** file. This allows direct modification of the webpack configuration using standard webpack patterns while still leveraging Heft for task orchestration. Developers gain full webpack control while maintaining compatibility with the SPFx ecosystem.
 
-> [!WARNING]
-> Ejecting is a one-way operation. Once ejected, Microsoft does not support custom toolchain modifications, though the core SPFx webpack plugins remain supported.
+Learn more about ejecting webpack from the Heft-based toolchain in [Ejecting the webpack configuration](customize-heft-toolchain-eject-webpack.md).
 
 ## Who will this impact & impact on existing customizations
 
@@ -135,13 +138,17 @@ Many developers have customized their SPFx builds using **gulpfile.js**. The new
 
 The most common customization involves modifying the webpack configuration to add plugins or adjust settings. In the new toolchain, developers can achieve this in two ways. First, they can use Heft plugins that programmatically modify the webpack configuration, allowing for controlled adjustments while maintaining compatibility with the rest of the toolchain. Alternatively, for those requiring complete control, ejecting provides direct access to the webpack configuration file, enabling more extensive customizations though with less future compatibility guarantees.
 
+Learn more how to extend the webpack configuration in the Heft-based toolchain in [Customize webpack with the Heft Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md).
+
 ### External library configuration
 
-The `config.json` file previously controlled both webpack externals and the SPFx runtime manifest. In the new toolchain, external libraries are now configured directly in the webpack configuration, providing more native control over external dependencies. Additionally, the manifest generation process has been restructured and is now handled by dedicated SPFx webpack plugins, maintaining compatibility while aligning with the new architecture.
+The **config.json** file previously controlled both webpack externals and the SPFx runtime manifest. In the new toolchain, external libraries are now configured directly in the webpack configuration, providing more native control over external dependencies. Additionally, the manifest generation process has been restructured and is now handled by dedicated SPFx webpack plugins, maintaining compatibility while aligning with the new architecture.
 
 ### Custom build tasks
 
 Custom gulp tasks can be migrated to Heft plugins. Heft offers a structured plugin system with clearly defined lifecycle hooks that developers can leverage when creating custom build logic. This architecture provides access to the same build information that was previously available in gulp, ensuring that existing functionality can be maintained while transitioning to the new toolchain.
+
+Learn more how to run arbitrary script in your build toolchain in [Customize the build with the Heft Run script plugin](customize-heft-toolchain-heft-script-plugin.md).
 
 ### Migration principles
 
@@ -164,7 +171,7 @@ When upgrading an existing project to SPFx v1.22:
 
 ## Additional resources
 
-- [Understanding how the Heft toolchain works](customize-heft-toolchain-overview.md)
 - [Migrate from the Gulp-based to the Heft-based toolchain](migrate-gulptoolchain-hefttoolchain.md)
+- [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md)
 - [Heft documentation](https://heft.rushstack.io/)
 - [Rush Stack documentation](https://rushstack.io/)
