@@ -205,7 +205,7 @@ In SHIP mode, the build tasks copy all of the web part assets, including the web
 ## See also
 
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
-- [Heft-based toolchain (SPFx v1.22.0+)](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+- [Heft-based toolchain (SPFx v1.22.0+)](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Yeoman generator for the SharePoint Framework](../yeoman-generator-for-spfx-intro.md)
 - [Customize the build with Gulp tasks](integrate-gulp-tasks-in-build-pipeline.md)
 - [Extending Webpack in the Gulp-based toolchain](extending-webpack-in-build-pipeline.md)

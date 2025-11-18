@@ -27,7 +27,8 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ## Upgrading projects from the SPFx v1.21.1 to v1.22 version
 
-The upgrade steps required to convert a [gulp-based toolchain](sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](migrate-gulptoolchain-hefttoolchain.md).
+The upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
+
 
 ## New features and capabilities
 

@@ -52,7 +52,7 @@ Notice, how Microsoft Graph Toolkit uses the current context from SharePoint Fra
 
 Microsoft Graph Toolkit connects to Microsoft Graph to retrieve data stored in Microsoft 365. To access the data, the service principal, that facilitates the communication with APIs, will require the necessary API permissions for Microsoft Graph. The necessary permissions for your project depend on which toolkit components you use. For more information about the Microsoft Graph permissions required by components, see [their documentation](/graph/toolkit/overview?WT.mc_id=m365-29707-wmastyka).
 
-After you have determined the list of API permissions needed for your SharePoint Framework project, [add them to the project's configuration](./use-aadhttpclient.md#request-permissions-to-an-azure-ad-application).
+After you have determined the list of API permissions needed for your SharePoint Framework project, [add them to the project's configuration](./use-aadhttpclient.md#request-permissions-to-an-entra-id-application).
 
 The next step is to add Microsoft Graph Toolkit to your project. For the exact steps, see the [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka) documentation.
 
