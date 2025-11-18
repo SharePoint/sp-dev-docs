@@ -7,13 +7,13 @@ ms.localizationpriority: high
 
 # Set up your SharePoint site with lists and libraries
 
-To successfully complete the *Getting Started* tutorials, set up your SharePoint site with the following items.
+To complete the *Getting Started* tutorials, configure your SharePoint site with the following items.
 
 ## Microsoft 365 tenant
 
 To use Power Automate and build flows, you need a Microsoft 365 tenant.
 
-If you already have an Office 365 tenant, see section **Create Projects list** below.
+If you already have an Office 365 tenant, refer to the section **Create Projects list** below.
 
 For step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription, see the [Office 365 Developer Program documentation](/office/developer-program/office-365-developer-program).
 
@@ -29,12 +29,10 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
     > You can use either a modern Teams site or a Communications site.
 
 1. In the command bar, select **New** > **List**.
-
 1. A "How would you like to start?" dialog appears. Under **Create from blank**, select **List**.
-
 1. In the **Create list** panel, enter the following:
 
-    * **Name**: Projects
+    - **Name**: Projects
 
 1. To create the list, select **Create**.
 
@@ -43,8 +41,8 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
 1. Select **+ Add column**, and to add an **Owner** column to the list, and then select the **Person** column type.
 1. In the **Create a column** panel, enter the following:
 
-    * **Name**: Owner
-    * **Description**: Project owner
+    - **Name**: Owner
+    - **Description**: Project owner
 
 1. To add the column to the Projects list, select **Save**. The new **Owner** column becomes available in the **Projects** list.
 
@@ -52,17 +50,15 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
 
 In the List command bar, select **New**, and add the following list items:
 
-* Item 1
-  * **Title**: Project 1
-  * **Owner**: Select a user from people picker
-
-* Item 2
-  * **Title**: Project 2
-  * **Owner**: Select a user from people picker
-
-* Item 3
-  * **Title**: Project 3
-  * **Owner**: pick a user from people picker
+- Item 1
+  - **Title**: Project 1
+  - **Owner**: Select a user from the people picker
+- Item 2
+  - **Title**: Project 2
+  - **Owner**: Select a user from the people picker
+- Item 3
+  - **Title**: Project 3
+  - **Owner**: pick a user from the people picker
 
 ## Next steps
 
