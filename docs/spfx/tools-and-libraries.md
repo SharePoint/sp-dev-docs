@@ -33,7 +33,7 @@ Because client-side web parts are components that are dropped into a SharePoint 
 > [!IMPORTANT]
 > While the SPFx is unopinionated in the web framework you use, Microsoft recommends using React in SPFx solutions. In addition, most tools and packages from both Microsoft and the community use React, such as:
 >
-> - [Fluent UI React](hhttps://developer.microsoft.com/fluentui#/get-started/web)
+> - [Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web)
 > - [PnP React Reusable Controls](https://pnp.github.io/sp-dev-fx-controls-react/)
 > - [PnP React Reusable Property Pane Controls](https://pnp.github.io/sp-dev-fx-property-controls/)
 
