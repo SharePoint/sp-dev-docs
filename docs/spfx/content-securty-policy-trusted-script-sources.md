@@ -7,29 +7,29 @@ ms.author: bjansen
 ---
 # Support for Content Security Policy (CSP) in SharePoint Online
 
-In web development, Content Security Policy (CSP) is a security feature that help prevent against various attack vectors including [cross-site scripting](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) (XSS), [clickjacking](https://developer.mozilla.org/docs/Web/Security/Attacks/Clickjacking), and other code injection attacks.
+In web development, Content Security Policy (CSP) is a security feature that helps prevent against various attack vectors, including [cross-site scripting](https://developer.mozilla.org/docs/Glossary/Cross-site_scripting) (XSS), [clickjacking](https://developer.mozilla.org/docs/Web/Security/Attacks/Clickjacking), and other code injection attacks.
 
-CSP enables a site to control which resources a page is allowed to load. It works though a series of instructions to the browser from the website that instruct the browser what the page is allowed to load.
+CSP enables a site to control which resources a page is allowed to load. It works through a series of instructions to the browser from the website, which instruct the browser what the page is allowed to load.
 
 Learn more about CSP on MDN: [Content Security Policy (CSP)](https://developer.mozilla.org/docs/Web/HTTP/Guides/CSP).
 
 In this article, you'll learn how CSP works with custom SharePoint Framework (SPFx) solutions, how to identify and find CSP violations, and how to configure trusted sources in SharePoint Online.
 
 > [!IMPORTANT]
-> Content Security Policy (CSP) is currently rolled out in SharePoint Online in reporting mode and thus not impacting solutions,the **enforcement of Content Security Policy (CSP) will start from March 1, 2026**.
+> Content Security Policy (CSP) is currently rolled out in SharePoint Online in reporting mode and thus not impacting solutions; the **enforcement of Content Security Policy (CSP) will start from March 1, 2026**.
 
-If the enforcement on March 1, 2026 is too soon because you need more time to review and update your existing SPFx solutions, you can delay the enforcement by 90 days, so until June 1, 2026, using SPO Management Shell:
+If the enforcement on March 1, 2026, is too soon because you need more time to review and update your existing SPFx solutions, you can delay the enforcement by 90 days, until June 1, 2026, using SPO Management Shell:
 
 ```powershell
 Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
 ```
 
 > [!NOTE]
-> This option will be available in the SPO Management Shell version that will be released by end of November 2025.
+> This option will be available in the SPO Management Shell version that will be released by the end of November 2025.
 
 ## How Content Security Policy Works in SharePoint Online
 
-When a browser requests a script, if CSP is enabled on the site, the browser checks the script location against the CSP rules. If the CSP restrictions allow the location of the script to be loaded by the browser, the browser proceeds with the request. However if CSP rules to not allow the location, the browser doesn't load the script and logs the error in the browser's Console.
+When a browser requests a script, if CSP is enabled on the site, the browser checks the script location against the CSP rules. If the CSP restrictions allow the location of the script to be loaded by the browser, the browser proceeds with the request. However, if CSP rules to not allow the location, the browser doesn't load the script and logs the error in the browser's Console.
 
 ## Content Security Policy and SPFx Solutions
 
@@ -48,7 +48,7 @@ When implementing this scenario, the SPFx package is configured to load scripts 
 This is done by setting the `cdnBasePath` property in the **./config/write-manifests.json** file.
 
 > [!NOTE]
-> Learn more how to configure SPFx solutions so the JavaScript bundles and other scripts are deployed to a location other than SharePoint Online in the following articles:
+> Learn more about how to configure SPFx solutions so the JavaScript bundles and other scripts are deployed to a location other than SharePoint Online in the following articles:
 >
 > - [Deploy your SharePoint client-side web part to Azure CDN](web-parts/get-started/deploy-web-part-to-cdn.md)
 > - [Host your client-side web part from Microsoft 365 CDN (Hello World part 4)](web-parts/get-started/hosting-webpart-from-office-365-cdn.md)
@@ -61,7 +61,7 @@ Another common scenario is when a SPFx solution takes a dependency on a popular 
 This is done by adding the external script reference to the `externals` property in the **./config/config.json** file.
 
 > [!NOTE]
-> Learn more how to configure the SPFx bundling process to exclude the library from the bundle and instruct the SPFx runtime to load the library from the remote CDN prior to loading the SPFx component's bundle in the following article:
+> Learn more about how to configure the SPFx bundling process to exclude the library from the bundle and instruct the SPFx runtime to load the library from the remote CDN prior to loading the SPFx component's bundle in the following article:
 >
 > - [Add an external library to your SharePoint client-side web part](web-parts/basics/add-an-external-library.md)
 
@@ -69,58 +69,58 @@ This is done by adding the external script reference to the `externals` property
 
 Another option SPFx developers can implement is to conditionally load a script through code. This is done using the [SPComponentLoader](/javascript/api/sp-loader/spcomponentloader).
 
-```ts
+```typescript
 async SPComponentLoader.loadScript('https://some-external-site/script.js');
 ```
 
 ### Option 4: Use Inline Script
 
-While script in the majority of cases is included via script files there's also the option to use inline script. Inline script use cases are:
+While script in the majority of cases is included via script files, there's also the option to use inline script. Inline script use cases are:
 
 - Any `<script>` block directly in HTML:
 
-```html
-<script>console.log('Hello');</script>
-```
+    ```html
+    <script>console.log('Hello');</script>
+    ```
 
 - Inline Event Handlers (JavaScript embedded in HTML attributes):
 
-```html
-<button onclick="alert('Hi')">Click</button>
-<body onload="init()">...</body>
-```
+    ```html
+    <button onclick="alert('Hi')">Click</button>
+    <body onload="init()">...</body>
+    ```
 
-```javascript
-const testDiv = document.createElement('div');
-testDiv.setAttribute('onclick', "alert('Hi')");
-testDiv.click();
-```
+    ```javascript
+    const testDiv = document.createElement('div');
+    testDiv.setAttribute('onclick', "alert('Hi')");
+    testDiv.click();
+    ```
 
 - JavaScript embedded in href or src attributes:
 
-```html
-<a href="javascript:alert('Hi')">Click</a>
-```
+    ```html
+    <a href="javascript:alert('Hi')">Click</a>
+    ```
 
 - Document.write() with Inline Scripts:
 
-```javascript
-document.write("<script>alert('Hi')</script>");
-```
+    ```javascript
+    document.write("<script>alert('Hi')</script>");
+    ```
 
 - Dynamically Created Inline Scripts:
 
-```javascript
-const s = document.createElement('script');
-s.textContent = "alert('Hi')";
-document.head.appendChild(s);
-```
+    ```javascript
+    const s = document.createElement('script');
+    s.textContent = "alert('Hi')";
+    document.head.appendChild(s);
+    ```
 
 - InnerHTML or insertAdjacentHTML with `<script>`:
 
-```javascript
-element.innerHTML = "<script>alert('Hi')</script>";
-```
+    ```javascript
+    element.innerHTML = "<script>alert('Hi')</script>";
+    ```
 
 ## Content Security Policy Impact on SPFx Solutions
 
@@ -130,13 +130,13 @@ Of the options mentioned above, if you implement [Option 1: Deploy SPFx Scripts 
 
 ![Automatically adding trusted script sources](../images/content-securty-policy-trusted-script-sources/add-app-with-tss.png)
 
-However, if your solution implements [Option 3](#option-3-dynamically-load-a-script-with-the-spcomponent-loader) or [Option 4](#option-4-use-inline-script) the default CSP settings in SharePoint Online will impact your solution.
+However, if your solution implements [Option 3](#option-3-dynamically-load-a-script-with-the-spcomponent-loader) or [Option 4](#option-4-use-inline-script), the default CSP settings in SharePoint Online will impact your solution.
 
 > [!IMPORTANT]
 >
-> - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**, if your SPFx solutions use inline script then the recommended approach is to move the inline script into a script file as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
-> - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and it's variations also use inline script whenever the user adds script on a page via the web part. Added script will not execute, added HTML will stay working.
-> - CSP is only enforced for script on non classic pages, for example a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
+> - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**. If your SPFx solutions use inline script, then the recommended approach is to move the inline script into a script file, as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
+> - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and its variations also use an inline script whenever the user adds a script on a page via the web part. Added script will not execute, added HTML will still work.
+> - CSP is only enforced for scripts on non-classic pages; for example, a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
 
 ## Managing the Content Security Policy rules in SharePoint Online
 
@@ -153,7 +153,7 @@ Add a new entry by selecting **Add source**, or select and edit an existing entr
 > [!NOTE]
 >
 > - CSP expressions that are too permissive such as `*`, `*.domain`, `'unsafe-inline'`, `'wasm-unsafe-eval'` and `'strict-dynamic'` are not allowed.
-> - The maximum numbers of entries in the Trusted Script Sources is 300. If you need to go beyond, the recommendation is to use wildcards to consolidate entries.
+> - The maximum number of entries in the Trusted Script Sources is 300. If you need to go beyond, the recommendation is to use wildcards to consolidate entries.
 
 The **Status** column on the **Trusted Script Sources** indicates how the entry was added to the list. If it was automatically added from a SPFx solution that implements [Option 1: Deploy SPFx Scripts to an External CDN](#option-1-deploy-spfx-scripts-to-an-external-cdn), the column states **Imported from app catalog**.
 
@@ -166,7 +166,7 @@ If the entry was manually added or edited, the column states **Added from script
 When the browser requests a script that violates the SharePoint Online CSP settings, it will display a message in the browser's console and log it to Microsoft Purview.
 
 > [!IMPORTANT]
-> Content Security Policy (CSP) is currently rolling out in SharePoint Online, **no scripts are currently being blocked. CSP violations are only being logged at this time.**
+> Content Security Policy (CSP) is currently rolling out in SharePoint Online; no scripts are currently being blocked. CSP violations are only being logged at this time.**
 
 ### View CSP Violations in the Browser's Console
 
@@ -237,10 +237,10 @@ From the **Search** page, search for the **Activity - friendly names** value **V
 Selecting a search result opens the side panel with the audit details. Take note of the following properties:
 
 - **DocumentUrl**: This indicates the page in the SharePoint Online site where the CSP violation occurred.
-- **BlockedUrl**: This indicates the URL of the script that violated the CSP configuration or contains “inline” when the violation came from loading inline script.
+- **BlockedUrl**: This indicates the URL of the script that violated the CSP configuration or contains “inline” when the violation came from loading an inline script.
 
 ![Microsoft Purview Audit Record](../images/content-securty-policy-trusted-script-sources/purview-audit-record.png)
 
 ## Testing with CSP Enforced
 
-The enforcement of Content Security Policy (CSP) for SharePoint Online will start from March 1, 2026, but you can already now verify your application's behavior by adding the `csp=enforce` URL parameter to the page containing the SPFx solution you want to test. To enforce CSP in reporting mode use `csp=report`.
+The enforcement of Content Security Policy (CSP) for SharePoint Online will start from March 1, 2026, but you can already now verify your application's behavior by adding the `csp=enforce` URL parameter to the page containing the SPFx solution you want to test. To enforce CSP in reporting mode, use `csp=report`.
