@@ -24,8 +24,22 @@ For example, the SPFx Heft implementation uses tasks related to compiling TypeSc
 To see a list of all available actions, or phases, run the following command:
 
 ```console
+# if installed globally...
 heft --help
+
+# ... or run using npx without installing
+npx heft --help
 ```
+
+> [!TIP]
+> Similar to Gulp, Heft is installed locally within your project. However, [unlike Gulp that requires installing the Gulp CLI globally](https://www.voitanos.io/blog/mea-culpa-always-install-gulp-cli-globally-not-gulp/), you can install the same Heft npm package globally to simplify running Heft commands.
+>
+> ```console
+> npm install heft --global
+> ```
+
+> [!TIP]
+> Learn more about the Heft CLI from the Heft documentation: [Heft command line](https://heft.rushstack.io/pages/intro/cli/).
 
 The SPFx implementation includes phases such as **build**, **test**, and **package-solution** among others.
 
