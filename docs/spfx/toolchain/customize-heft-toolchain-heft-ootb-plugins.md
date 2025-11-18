@@ -13,7 +13,7 @@ Developers commonly need to customize the build toolchain for various reasons su
 In this article, you'll learn how to use one of the plugins included in Heft to modify one of the Heft commands used in an SPFx project: **package-solution**.
 
 > [!IMPORTANT]
-> This article assumes you understand how Heft and the build toolchain works, as well as some basic architectural concepts like tasks, task configurations, plugins, phases, and rigs.
+> This article assumes you understand how Heft and the build toolchain work, as well as some basic architectural concepts like tasks, task configurations, plugins, phases, and rigs.
 >
 > Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
@@ -106,7 +106,7 @@ Within the task, we then specify the plugin that we want to use for our task. To
 }
 ```
 
-The `options` property on the `taskPlugin` object enables you to configure the plugin. This is optional. Options can be defined here where the task is used, or they could exist in a separate JSON file in the **./config** folder, like **./config/sass.json** and **./config/typescript.json** files in the **config** folder set the configurations of the [Saas](https://heft.rushstack.io/pages/plugins/sass/) and [TypeScript](https://heft.rushstack.io/pages/plugins/typescript/) Heft plugins.
+The `options` property on the `taskPlugin` object enables you to configure the plugin. This is optional. Options can be defined here where the task is used, or they could exist in a separate JSON file in the **./config** folder, like **./config/sass.json** and **./config/typescript.json** files in the **config** folder set the configurations of the [Sass](https://heft.rushstack.io/pages/plugins/sass/) and [TypeScript](https://heft.rushstack.io/pages/plugins/typescript/) Heft plugins.
 
 The final **heft.json** file should look like the following:
 
@@ -140,7 +140,7 @@ The final **heft.json** file should look like the following:
 
 ### Configure the task execution order
 
-The heft.json file also enables you to control the order of how tasks are run. In our case, we want the new copy license task to run after the package solution task has completed. To do this, add a taskDependencies array with a list of all of the tasks that must complete before our task completes to our copy license task.
+The **heft.json** file also enables you to control the order of how tasks are run. In our case, we want the new `copy-license` task to run after the `package-solution` task has completed. To do this, add a `taskDependencies` array with a list of all of the tasks that must complete before our task completes to our `copy-license` task.
 
 ```json
 {
@@ -164,7 +164,7 @@ If you want the `copy-license` task to run first, you'll need to replace the ent
 
 ## Test your customizations
 
-Save your changes run the **build** command followed by the **package-solution** command.
+Save your changes and then run the **build** command followed by the **package-solution** command.
 
 ```console
 heft build

@@ -15,7 +15,7 @@ The SPFx team has simplified this process in the Heft-based toolchain by includi
 In this article, you'll learn how to use the Webpack Patch Plugin to add a popular webpack plugin to your SPFx project: the Webpack Bundle Analyzer.
 
 > [!IMPORTANT]
-> This article assumes you understand how the Heft build toolchain works, basic architectural concepts, and a high-level understanding of the toolchain customization options.
+> This article assumes you understand how Heft and the build toolchain work, basic architectural concepts, and a high-level understanding of the toolchain customization options.
 >
 > Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
@@ -24,7 +24,7 @@ In this article, you'll learn how to use the Webpack Patch Plugin to add a popul
 Start by installing the [Webpack Bundle Analyzer Plugin](https://www.npmjs.com/package/webpack-bundle-analyzer) as a dev dependency in your project:
 
 ```console
-npm install webpack-bundle-analyzer -DE
+npm install webpack-bundle-analyzer --save-dev
 ```
 
 ## Customize the SPFx Heft rig

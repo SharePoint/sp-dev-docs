@@ -17,7 +17,7 @@ In specific scenarios, you may wish to eject the webpack configuration from the 
 This article will explain how to eject the webpack configuration from the toolchain, what is added and updated to a project, the implications of ejecting, and cover a simple scenario.
 
 > [!IMPORTANT]
-> This article assumes you understand how the Heft build toolchain works, basic architectural concepts, and a high-level understanding of the toolchain customization options.
+> This article assumes you understand how Heft and the build toolchain work, basic architectural concepts, and a high-level understanding of the toolchain customization options.
 >
 > Learn more in this overview: [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md).
 
