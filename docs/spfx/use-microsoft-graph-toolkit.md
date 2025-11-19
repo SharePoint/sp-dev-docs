@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
 description: Use Microsoft Graph Toolkit to easily connect your SharePoint Framework web parts and extensions to Microsoft Graph.
-ms.date: 10/22/2023
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 
@@ -13,11 +13,7 @@ When building SharePoint Framework solutions, the easiest way to show data from 
 
 Microsoft Graph Toolkit is a collection of reusable, framework-agnostic components and authentication providers for accessing and working with Microsoft Graph. The components are fully functional right out of the box, with built-in providers that authenticate with and fetch data from Microsoft Graph.
 
-Microsoft Graph Toolkit makes it easy to use Microsoft Graph in your application. The following example shows the calendar events of the signed-in user with just one line of code using the [Agenda](/graph/toolkit/components/agenda?WT.mc_id=m365-29707-wmastyka) component.
-
-> [!VIDEO https://mgt.dev/iframe.html?id=components-mgt-agenda--simple&source=docs]
-
-[Open this example in mgt.dev](https://mgt.dev/?path=/story/components-mgt-agenda--simple&source=docs)
+Microsoft Graph Toolkit makes it easy to use Microsoft Graph in your application. The following example shows the calendar events of the signed-in user with just one line of code using the [Agenda](/graph/toolkit/components/agenda) component.
 
 ## Why use Microsoft Graph Toolkit in SharePoint Framework?
 
@@ -56,7 +52,7 @@ Notice, how Microsoft Graph Toolkit uses the current context from SharePoint Fra
 
 Microsoft Graph Toolkit connects to Microsoft Graph to retrieve data stored in Microsoft 365. To access the data, the service principal, that facilitates the communication with APIs, will require the necessary API permissions for Microsoft Graph. The necessary permissions for your project depend on which toolkit components you use. For more information about the Microsoft Graph permissions required by components, see [their documentation](/graph/toolkit/overview?WT.mc_id=m365-29707-wmastyka).
 
-After you have determined the list of API permissions needed for your SharePoint Framework project, [add them to the project's configuration](./use-aadhttpclient.md#request-permissions-to-an-azure-ad-application).
+After you have determined the list of API permissions needed for your SharePoint Framework project, [add them to the project's configuration](./use-aadhttpclient.md#request-permissions-to-an-entra-id-application).
 
 The next step is to add Microsoft Graph Toolkit to your project. For the exact steps, see the [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka) documentation.
 

@@ -1,16 +1,18 @@
 ---
-title: Extending Webpack in the SharePoint Framework toolchain
+title: Extending Webpack in the Gulp-based toolchain
 description: Extend the Webpack configuration with custom loaders and plug-ins. Webpack is a JavaScript module bundler.
-ms.date: 10/26/2020
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
-# Extending Webpack in the SharePoint Framework toolchain
+# Extending Webpack in the Gulp-based toolchain
 
 [Webpack](https://Webpack.js.org/) is a JavaScript module bundler that takes your JavaScript files and their dependencies and generates one or more JavaScript files, so you can load different pieces of code for different scenarios.
 
 The framework toolchain uses CommonJS for bundling. This enables you to define modules and where you want to use them. The toolchain also uses SystemJS, a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
 
 One common task you can add to the SharePoint Framework toolchain is to extend the Webpack configuration with custom loaders and plug-ins.
+
+[!INCLUDE [spfx-gulp-toolchain-legacy](../../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
 ## Using Webpack loaders
 

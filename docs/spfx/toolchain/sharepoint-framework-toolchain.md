@@ -1,7 +1,7 @@
 ---
-title: "SPFx Toolchain: Gulp & Webpack"
-description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. The SPFx toolchain  prior to v1.22 is based on Gulp and webpack.
-ms.date: 02/10/2022
+title: "SharePoint Framework Toolchain: Gulp-Based"
+description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the legacy gulp-based toolchain.
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 
@@ -9,8 +9,7 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects.
 
-> [!NOTE]
-> This page details the toolchain used by the SPFx from v1.0 to v1.21.1. Starting with SPFx v1.22, Microsoft has migrated away from gulp to a Rush Stack, Heft, and Webpack based toolchain. Learn more: [SPFx Toolchain: Rush Stack, Heft, & Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
+[!INCLUDE [spfx-gulp-toolchain-legacy](../../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
 The toolchain:
 
@@ -206,6 +205,7 @@ In SHIP mode, the build tasks copy all of the web part assets, including the web
 ## See also
 
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
+- [Heft-based toolchain (SPFx v1.22.0+)](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Yeoman generator for the SharePoint Framework](../yeoman-generator-for-spfx-intro.md)
-- [Custom build tasks](integrate-gulp-tasks-in-build-pipeline.md)
-- [Extend Webpack](extending-webpack-in-build-pipeline.md)
+- [Customize the build with Gulp tasks](integrate-gulp-tasks-in-build-pipeline.md)
+- [Extending Webpack in the Gulp-based toolchain](extending-webpack-in-build-pipeline.md)
