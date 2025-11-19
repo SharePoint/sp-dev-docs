@@ -62,6 +62,6 @@ Release Candidate release has relatively small updates compared to the beta 5 re
 
 ## Feedback and issues
 
-We're interested in your feedback about the release. Do let us know any findings or other feedback using the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+We're interested in your feedback about the release. Do let us know any findings or other feedback using the [SPFx 1.22.0-rc.0 - Community Feedback discussion](https://github.com/SharePoint/sp-dev-docs/discussions/10490). Thank you for your input advance.
 
 Happy coding! Sharing is caring! 🧡
