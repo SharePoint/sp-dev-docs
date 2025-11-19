@@ -1,13 +1,16 @@
 ---
 title: Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
 description: Use Microsoft Graph Toolkit to easily connect your SharePoint Framework web parts and extensions to Microsoft Graph.
-ms.date: 11/18/2025
+ms.date: 11/19/2025
 ms.localizationpriority: high
 ---
 
 # Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
 
-When building SharePoint Framework solutions, the easiest way to show data from Microsoft 365 is by using Microsoft Graph Toolkit.
+When building SharePoint Framework solutions, on option to show data from Microsoft 365 is by using Microsoft Graph Toolkit.
+
+> [!WARNING]
+> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
 ## What is Microsoft Graph Toolkit
 

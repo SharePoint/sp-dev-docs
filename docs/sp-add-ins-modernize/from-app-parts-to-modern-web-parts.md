@@ -183,6 +183,9 @@ npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 > [!NOTE]
 > The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx).
 
+> [!WARNING]
+> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
+
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, run the following command:
 
 ```PowerShell

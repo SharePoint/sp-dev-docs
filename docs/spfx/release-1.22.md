@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.22 preview release notes
 description: Release notes for the SharePoint Framework v1.22 preview release.
-ms.date: 11/18/2025
+ms.date: 11/19/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 preview release notes
@@ -10,6 +10,7 @@ This release focuses updating and modernizing the SharePoint Framework (SPFx) bu
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+* rc.0 **Released:** November 19, 2025
 * beta.5 **Released:** November 13, 2025
 * beta.4 **Released:** October 23, 2025
 * beta.3 **Released:** October 15, 2025
@@ -29,7 +30,6 @@ npm install @microsoft/generator-sharepoint@next --global
 
 The upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
 
-
 ## New features and capabilities
 
 ### Transitioning from Gulp-based toolchain to the Heft-based toolchain
@@ -44,9 +44,9 @@ See more details on this upcoming change from the following documentation:
 
 When you are installing SharePoint Framework Yeoman generator, there are no more any `npm audit` issues.
 
-All scaffolded projects from the SharePoint Framework Yeoman generator have been now also cleaned and there are not reported vulnerabilities in them when you run `npm audit` after the scaffolding.
+All scaffolded projects from the SharePoint Framework Yeoman generator have been cleaned and there are not reported vulnerabilities in them when you run `npm audit` after the scaffolding.
 
-This is a challenging topic to keep up to date, but we are committed to keep the known issues addressed and will be releasing potentially new minor versions as needed to address these.
+We are also looking into addressing deprecated packages in the following releases of SharePoint Framework.
 
 ### Default TypeScript version updated
 
@@ -58,7 +58,7 @@ No new updates.
 
 ## Updates on the heft toolchain transition since previous beta
 
-Beta 5 has quite significant updates on the toolchain to fine tune the experience since previous beta version. We are not looking to make any other significant changes there before upcoming Release Candidate (RC) release, unless there are new findings or feedback which should be addressed.
+Release Candidate release has relatively small updates compared to the beta 5 release. We are not planning to introduce any further changes before General Availability (GA), unless there are new findings or feedback which should be addressed.
 
 ## Feedback and issues
 
