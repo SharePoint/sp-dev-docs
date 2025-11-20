@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 05/30/2023
+ms.date: 11/20/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -31,7 +31,7 @@ Since SharePoint Online continuously evolves and more and more modern capabiliti
 
 ## Step 2: Preparing for a scan
 
-Since a typical scan needs to be able to scan all site collections, it's recommended to use an app-only principal with tenant scoped permissions for the scan. This approach will ensure the scanner always has access, if you use an account (for example, your SharePoint tenant admin account) then the scanner can only access the sites where this user also has access. You can either use an Azure AD application or a SharePoint app principal for app-only access and below links describe the manual approach to setting up things. As the recommended approach is Azure AD App-Only, you can easy the setup of your Azure AD application by using the [PnP PowerShell](https://aka.ms/pnppowershell) `Initialize-PnPPowerShellAuthentication` cmdlet. See the **Using Initialize-PnPPowerShellAuthentication to setup Azure AD App-Only** chapter for more details.
+Since a typical scan needs to be able to scan all site collections, it's recommended to use an app-only principal with tenant scoped permissions for the scan. This approach will ensure the scanner always has access, if you use an account (for example, your SharePoint tenant admin account) then the scanner can only access the sites where this user also has access. You can either use an Azure AD application or a SharePoint app principal for app-only access and below links describe the manual approach to setting up things. As the recommended approach is Azure AD App-Only, you can easy the setup of your Azure AD application by using the [PnP PowerShell](https://aka.ms/pnppowershell) `Register-PnPAzureADApp` cmdlet. See the **Using Register-PnPAzureADApp to setup Azure AD App-Only** chapter for more details.
 
 - [Granting access via Azure AD App-Only (recommended)](../solution-guidance/security-apponly-azuread.md)
 - [Granting access via SharePoint App-Only](../solution-guidance/security-apponly-azureacs.md)
@@ -43,15 +43,15 @@ Since a typical scan needs to be able to scan all site collections, it's recomme
 
 Once the preparation work is done, let's continue with doing a scan.
 
-### Using Initialize-PnPPowerShellAuthentication to setup Azure AD App-Only
+### Using Register-PnPAzureADApp to setup Azure AD App-Only
 
 To configure Azure AD App-Only using PnP PowerShell follow these steps:
 
 1. Install [PnP PowerShell](https://aka.ms/pnppowershell) or update it to the April 2020 or a more recent version
-2. Use the `Initialize-PnPPowerShellAuthentication` cmdet to setup an Azure AD app:
+2. Use the `Register-PnPAzureADApp` cmdet to setup an Azure AD app:
 
 ```PowerShell
-Initialize-PnPPowerShellAuthentication -ApplicationName ModernizationScannerApp -Tenant contoso.onmicrosoft.com -Scopes "SPO.Sites.FullControl.All","MSGraph.Group.Read.All"  -OutPath c:\temp -CertificatePassword (ConvertTo-SecureString -String "password" -AsPlainText -Force)
+Register-PnPAzureADApp -ApplicationName "ModernizationScannerApp" -Tenant "contoso.onmicrosoft.com" -OutPath "C:\temp" -CertificatePassword (ConvertTo-SecureString -String "password" -AsPlainText -Force) -SharePointApplicationPermissions "Sites.FullControl.All" -GraphApplicationPermissions "Group.Read.All"
 ```
 
 3. You'll be asked to authenticate, ensure you authenticate with a user that is a tenant administrator
