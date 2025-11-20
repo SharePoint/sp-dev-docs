@@ -1,7 +1,7 @@
 ---
 title: Migrate from the Gulp-based to the Heft-based Toolchain
 description: In this article, you'll learn how to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.
-ms.date: 11/19/2025
+ms.date: 11/20/2025
 ms.localizationpriority: high
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
@@ -50,6 +50,7 @@ npm install @microsoft/spfx-web-build-rig@1.22.0-rc.0
             @rushstack/heft@1.1.2
             @types/heft-jest@1.0.2
             @typescript-eslint/parser@8.46.2
+            --save-dev --save-exact
             --force
 ```
 
@@ -61,7 +62,7 @@ The Heft-based SPFx toolchain supports any version of TypeScript supported by th
 > The **[loadTypeScriptTool.ts](https://github.com/microsoft/rushstack/blob/main/heft-plugins/heft-typescript-plugin/src/loadTypeScriptTool.ts)** file defines the TypeScript supported versions by the plugin. Ensure you are looking at the correct version of the plugin when considering the version of TypeScript to install.
 
 ```console
-npm install typescript@~5.8.0 -DE
+npm install typescript@~5.8.0 --save-dev
 ```
 
 > [!WARNING]
@@ -172,7 +173,7 @@ npm install @microsoft/sp-component-base@1.22.0-rc.0 \
             @microsoft/sp-office-ui-fabric-core@1.22.0-rc.0 \
             @microsoft/sp-property-pane@1.22.0-rc.0 \
             @microsoft/sp-webpart-base@1.22.0-rc.0 \
-            -SE
+            --save-exact
 ```
 
 > [!TIP]
@@ -185,9 +186,6 @@ Test your changes by running the **build** command in the console from the root 
 ```console
 # if you have heft installed globally...
 heft build --production
-
-# ... or run heft globally without installing it...
-npx heft build
 
 # ... or you can run the NPM helper script
 npm run build
