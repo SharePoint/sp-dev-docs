@@ -28,14 +28,14 @@ To see a list of all available actions, or phases, run the following command:
 heft --help
 
 # ... or run using npx without installing
-npx heft --help
+npx @rushstack/heft --help
 ```
 
 > [!TIP]
 > Similar to Gulp, Heft is installed locally within your project. However, [unlike Gulp that requires installing the Gulp CLI globally](https://www.voitanos.io/blog/mea-culpa-always-install-gulp-cli-globally-not-gulp/), you can install the same Heft npm package globally to simplify running Heft commands.
 >
 > ```console
-> npm install heft --global
+> npm install @rushstsack/heft --global
 > ```
 
 > [!TIP]
