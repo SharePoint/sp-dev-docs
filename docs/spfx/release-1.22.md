@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.22 preview release notes
 description: Release notes for the SharePoint Framework v1.22 preview release.
-ms.date: 11/19/2025
+ms.date: 11/25/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 preview release notes
@@ -42,7 +42,7 @@ See more details on this upcoming change from the following documentation:
 
 ### Addressing npm audit issues
 
-When you are installing SharePoint Framework Yeoman generator, there are no more any `npm audit` issues.
+When installing the SharePoint Framework Yeoman generator, there are no longer any `npm audit` issues.
 
 All scaffolded projects from the SharePoint Framework Yeoman generator have been cleaned and there are not reported vulnerabilities in them when you run `npm audit` after the scaffolding.
 
