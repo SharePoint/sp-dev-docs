@@ -8,7 +8,7 @@ ms.topic: article
 ms.localizationpriority: medium
 ---
 
-# Granting access using SharePoint Azure ACS App-Only
+# (Retired!) Granting access using SharePoint Azure ACS App-Only 
 
 SharePoint App-Only is the older, but still very relevant, model of setting up app-principals. This model works for both SharePoint Online and SharePoint on-premises (2013/2016/2019/subscription edition) and is ideal to prepare your applications for migration from SharePoint on-premises to SharePoint Online. Below steps show how to setup an app principal with tenant full control permissions, but you could also grant just read permissions using this approach.
 
