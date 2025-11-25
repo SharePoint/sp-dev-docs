@@ -2,9 +2,9 @@
 title: Granting access via Entra ID App-Only
 description: Granting access via Entra ID App-Only
 ms.date: 11/25/2025
-author: Bert Jansen
+author: jansenbe
 ms.author: bjansen
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ---
 # Granting access via Entra ID Application Permissions
