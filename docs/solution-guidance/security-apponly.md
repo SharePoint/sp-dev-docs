@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 There are two approaches for doing app-only for SharePoint: 
 
- - Using an **Entra ID application**: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) + you’ve a user interface (Azure portal) to maintain your app principals.
+ - Using an **Entra ID application**: this is the **preferred** method when using SharePoint Online because you can also grant permissions to other Microsoft 365 services (if needed).
  - Using a **SharePoint Azure ACS App-Only principal**: this method is retired and **will stop working from April 2nd 2026**.
 
 Both methods are detailed in following articles: 
