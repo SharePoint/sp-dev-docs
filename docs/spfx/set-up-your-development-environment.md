@@ -77,6 +77,9 @@ Enter the following command to install the Gulp CLI:
 npm install gulp-cli --global
 ```
 
+> [!NOTE]
+> [SharePoint Framework 1.22](release-1.22.md) will be moving from **Gulp** to **Heft** on the task management. If you are testing the v1.22 Release Candidate, you should install Heft to your environment. Easiest way to do this would be to install it globally with following command: `npm install @rushstack/heft --global`. You can see mapping of the Gulp and Heft commands in from the Heft specific documentation: [Understanding the Heft-based toolchain (how it works)](./toolchain//customize-heft-toolchain-overview).
+
 ### Install Yeoman
 
 [Yeoman](https://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
