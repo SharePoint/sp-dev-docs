@@ -1,16 +1,16 @@
 ---
-title: Understanding Azure Active Directory and OAuth 2.0 in the context of SharePoint Online modern development
-description: Master Azure Active Directory and OAuth 2.0 for SharePoint Online modern development. Learn about authentication, authorization, and access tokens in this comprehensive guide.
-ms.date: 12/05/2023
+title: Understanding Microsoft Entra ID (formerly Azure Active Directory) and OAuth 2.0 in the context of SharePoint Online modern development
+description: Master Microsoft Entra ID (formerly Azure Active Directory) and OAuth 2.0 for SharePoint Online modern development. Learn about authentication, authorization, and access tokens in this comprehensive guide.
+ms.date: 11/26/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Understanding Azure Active Directory and OAuth 2.0 in the context of SharePoint Online modern development
+# Understanding Microsoft Entra ID and OAuth 2.0 in the context of SharePoint Online modern development
 
-Authentication and Authorization play a key role in any development platform. In the fields of SharePoint Online modern development Azure Active Directory (AzureAD) and the Open Authorization 2.0 (OAuth 2.0) protocol are key elements of the security infrastructure.
+Authentication and Authorization play a key role in any development platform. In the fields of SharePoint Online modern development Microsoft Entra ID (formerly Azure Active Directory) and the Open Authorization 2.0 (OAuth 2.0) protocol are key elements of the security infrastructure.
 
-In fact, Azure Active Directory sits under the cover of every Microsoft 365 tenant and handles authentication and authorization requirements when accessing native services, as well as custom developed applications. OAuth 2.0 is the industry protocol used to authorize access to native workloads and custom developed applications.
+In fact, Microsoft Entra ID sits under the cover of every Microsoft 365 tenant and handles authentication and authorization requirements when accessing native services, as well as custom developed applications. OAuth 2.0 is the industry protocol used to authorize access to native workloads and custom developed applications.
 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
@@ -19,9 +19,9 @@ If you prefer, you can watch the following video, instead of reading the whole a
 
 [![IMAGE_ALT](https://img.youtube.com/vi/3u1ei8hcGG8/0.jpg)](https://youtu.be/3u1ei8hcGG8)
 
-## Understanding the role of AzureAD and OAuth 2.0 in SharePoint Framework
+## Understanding the role of Microsoft Entra ID and OAuth 2.0 in SharePoint Framework
 
-In Microsoft SharePoint Online, when developing SharePoint Framework (SPFx) solutions, you can consume Microsoft Graph, as well as any other third-party APIs relying on OAuth 2.0 and Azure Active Directory. Specifically, and by default, in SharePoint Framework any external API can be consumed either via _MSGraphClient_ or _AadHttpClient_ and leveraging a pre-defined Azure Active Directory application with name "SharePoint Online Client Extensibility Web Application Principal". 
+In Microsoft SharePoint Online, when developing SharePoint Framework (SPFx) solutions, you can consume Microsoft Graph, as well as any other third-party APIs relying on OAuth 2.0 and Microsoft Entra ID. Specifically, and by default, in SharePoint Framework any external API can be consumed either via _MSGraphClient_ or _AadHttpClient_ and leveraging a pre-defined Microsoft Entra ID application with name "SharePoint Online Client Extensibility Web Application Principal". 
 
 > [!NOTE]
 > For further details about consuming Microsoft Graph from within a SharePoint Framework solution you can read the article [Use the MSGraphClientV3 to connect to Microsoft Graph](../spfx/use-msgraph.md). For further details about consuming any other third-party APIs from within SharePoint Framework you can read the article [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../spfx/use-aadhttpclient.md).
@@ -29,16 +29,16 @@ In Microsoft SharePoint Online, when developing SharePoint Framework (SPFx) solu
 > [!IMPORTANT]
 > There are scenarios where you need to have a dedicated and isolated access to a target API. In such scenario, you can rely on the Domain Isolated configuration for your SharePoint Framework solution. You can find additional details about the Domain Isolated scenario reading the article [Isolated web parts](../spfx/web-parts/isolated-web-parts.md).
 
-The "SharePoint Online Client Extensibility Web Application Principal" application is pre-registered by Microsoft SharePoint Online in any Microsoft 365 tenant and allows all the SharePoint Framework solutions to share a unique application to access both Microsoft Graph and any other third-party APIs. In this article, you will understand what the role of Azure Active Directory and OAuth 2.0 in the SharePoint Framework context is.
+The "SharePoint Online Client Extensibility Web Application Principal" application is pre-registered by Microsoft SharePoint Online in any Microsoft 365 tenant and allows all the SharePoint Framework solutions to share a unique application to access both Microsoft Graph and any other third-party APIs. In this article, you will understand what the role of Microsoft Entra ID and OAuth 2.0 in the SharePoint Framework context is.
 
 ## Understanding Access Tokens
 
-In order to consume any API registered in Azure Active Directory and secured with OAuth 2.0 you need to provide an Access Token, which by definition is an opaque string used to protect a resource. With Azure Active Directory, as well as with many other vendor-specific identity platforms, the Access Token is a JSON Web Token (JWT) that contains a set of claims. Claims are assertions about a subject described by the Access Token and where the assertions are guaranteed to be true because the token is digitally signed by the issuer (Azure Active Directory in this context) and the recipient of the token trusts the issuer.
+In order to consume any API registered in Microsoft Entra ID and secured with OAuth 2.0 you need to provide an Access Token, which by definition is an opaque string used to protect a resource. With Microsoft Entra ID, as well as with many other vendor-specific identity platforms, the Access Token is a JSON Web Token (JWT) that contains a set of claims. Claims are assertions about a subject described by the Access Token and where the assertions are guaranteed to be true because the token is digitally signed by the issuer (Microsoft Entra ID in this context) and the recipient of the token trusts the issuer.
 
 > [!NOTE]
 > You can find additional information about the Open Authorization 2.0 protocol reading its specification [The OAuth 2.0 Authorization Framework](https://datatracker.ietf.org/doc/html/rfc6749). You can also find additional information about the JWT token format for Access Tokens reading the document [JSON Web Token (JWT) profile for OAuth 2.0 Acccess Tokens](https://www.rfc-editor.org/rfc/rfc9068).
 
-An Access Token is provided to the target API/service through a HTTP Authorization header and specifically, in the fields of Azure Active Directory, it is an Authorization token of type _Bearer_.
+An Access Token is provided to the target API/service through a HTTP Authorization header and specifically, in the fields of Microsoft Entra ID, it is an Authorization token of type _Bearer_.
 
 > [!NOTE]
 > In case you are wondering what "Bearer" means and why you need to specify the Bearer type before the actual Access Token value in the Authorization header, you can read the specification [The OAuth 2.0 Authorization Framework: Bearer Token Usage](https://www.rfc-editor.org/rfc/rfc6750).
@@ -52,7 +52,7 @@ There are two main flavors of permissions in Access Tokens:
 - **Delegated**: are tokens that allow consuming a target API/service acting as the signed-in user.
 - **Application**: are tokens that allow consuming a target API/service with an application identity, without a signed-in user. Typical scenarios are background tasks, daemons, etc.
 
-When using Delegated permissions in Access Tokens, the permissions scopes associate with the token will be the result of the intersection of the permission of the signed-in user and the permissions of the application consuming the API/service. It means that, even if potentially the user can have high-level permissions (Read and Write email messages for example), if the application is registered in Azure Active Directory with low-level permissions (Read only for email messages for example), the resulting permissions granted to the application will be the intersection of both user and application permissions (i.e. Read only for email messages in the current example).
+When using Delegated permissions in Access Tokens, the permissions scopes associate with the token will be the result of the intersection of the permission of the signed-in user and the permissions of the application consuming the API/service. It means that, even if potentially the user can have high-level permissions (Read and Write email messages for example), if the application is registered in Microsoft Entra ID with low-level permissions (Read only for email messages for example), the resulting permissions granted to the application will be the intersection of both user and application permissions (i.e. Read only for email messages in the current example).
 
 In order for the tokens to be issued and fully effective, there must be either an explicit user's consent, for those permissions related to personal resources of the current user, or a tenant admin's consent, for those permissions related to tenant-wide resources.
 
@@ -75,7 +75,7 @@ Running the sample web part in the SharePoint Framework Workbench and pressing t
 Inside every JWT Access Token there are claims, and here you can find a list of the most important ones for an Access Token issued to a SharePoint Framework client with Delegated permission scopes:
 
 - aud: the target audience for the token, meaning the API/service that the token has been issued for.
-- iss: the issuer of the token, which is the Azure Active Directory tenant that issued it.
+- iss: the issuer of the token, which is the Microsoft Entra ID tenant that issued it.
 - iat: stands for "issued at time" and represents the point in time when the token was issued.
 - nbf: stands for "not before time" and represents the point in time before when the token must not be accepted by the target audience.
 - exp: stands for "expiration time" and represents the point in time after when the token must not be accepted by the target audience.
@@ -87,11 +87,11 @@ Inside every JWT Access Token there are claims, and here you can find a list of 
 If you are consuming the Microsoft Graph, like in the above sample, the _aud_ claim will describe the Microsoft Graph (https://graph.microsoft.com). If you are consuming a third-party API/service the _aud_ claim will describe that target API. Notice that the *app_displayname* claim, for a SharePoint Framework solution, is "SharePoint Online Client Extensibility Web Application Principal", which is precisely the application that this article was referring to in the introduction. 
 
 > [!NOTE]
-> For a Domain Isolated solution, the *app_displayname* claim will be the one of a dedicated application registered for you in Azure Active Directory by the SharePoint Online services.
+> For a Domain Isolated solution, the *app_displayname* claim will be the one of a dedicated application registered for you in Microsoft Entra ID by the SharePoint Online services.
 
 On the client side, meaning in SharePoint Framework, you should never rely on the actual content of the Access Token. The provided sample is just for the sake of understanding how the security model works. However, in a common scenario, you can simply take advantage of the out of the box capabilities of SharePoint Framework, which hides all the plumbing of consuming external APIs from your code.
 
-On the service side, if you are consuming Microsoft Graph, it will be the responsibility of Microsoft to evaluate the provided Access Token and to authorize (or deny) access to the requeste API endpoint. In case you are consuming a third-party API/service that you implemented, you can either rely on the configuration options of Microsoft Azure, if you are hosting the service on Microsoft Azure, or you can rely, for example, on the Microsoft Authentication Library (MSAL) and the Microsoft.Identity.Web library to validate and authorize the tokens.
+On the service side, if you are consuming Microsoft Graph, it will be the responsibility of Microsoft to evaluate the provided Access Token and to authorize (or deny) access to the requested API endpoint. In case you are consuming a third-party API/service that you implemented, you can either rely on the configuration options of Microsoft Azure, if you are hosting the service on Microsoft Azure, or you can rely, for example, on the Microsoft Authentication Library (MSAL) and the Microsoft.Identity.Web library to validate and authorize the tokens.
 
 > [!NOTE]
 > You can find additional information about the Microsoft Authentication Library by reading [Overview of the Microsoft Authentication Library (MSAL)](/entra/identity-platform/msal-overview). You can find further details about the Microsoft.Identity.Web library by reading the article [Microsoft Identity Web authentication library](/entra/msal/dotnet/microsoft-identity-web).
