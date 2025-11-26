@@ -122,7 +122,7 @@ https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
 > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
 
 > [!NOTE]
-> Starting with **Chromium 142**, browsers such as **Microsoft Edge** and **Google Chrome** enforce a new security model called **Local Network Access**.
+> Starting with **Chromium 142**, browsers such as **Microsoft Edge** and **Google Chrome** enforce a new security model called **Local Network Access**. Learn more in the Chromium release notes: [Chrome 142 | Release notes: Security - Local network access restrictions](https://developer.chrome.com/release-notes/142#local_network_access_restrictions).
 > 
 > When debugging SPFx solutions, SharePoint Online must load resources from your local development environment (such as `https://localhost:4321`).  
 >
@@ -335,4 +335,5 @@ This approach should only be used when you're in development mode. If you deploy
 - [Testing and debugging your SPFx solutions in production without causing any impact (Elio Struyf)](https://www.eliostruyf.com/testing-and-debugging-your-spfx-solutions-in-production-without-causing-any-impact/)
 - [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
+
 
