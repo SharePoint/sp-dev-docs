@@ -430,7 +430,7 @@
       href: spfx/image-helper-api.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
-  - name: Build Toolchain & Dependencies
+  - name: Build toolchain & dependencies
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
