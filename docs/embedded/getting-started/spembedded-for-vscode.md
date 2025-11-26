@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 07/16/2025
+ms.date: 11/26/2025
 ms.localizationpriority: high
 ---
 
