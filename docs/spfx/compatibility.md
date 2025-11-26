@@ -40,15 +40,6 @@ As each new version of the SPFx is released, support for newer library versions 
 > ```bash
 > npm install react@17.0.1 react-dom@17.0.1 --save-exact
 > ```
->
-> **Troubleshooting React version issues:**
-> 
-> If you encounter errors like "Failed to create application customizer" or components failing to load with no clear error message, verify your React version matches the compatibility table. To fix version mismatches:
->
-> 1. Remove existing packages: `rm -rf node_modules package-lock.json`
-> 2. Install the correct version with exact flag: `npm install react@17.0.1 react-dom@17.0.1 --save-exact`
-> 3. Clean the build: `gulp clean`
-> 4. Rebuild your solution: `gulp serve` or `gulp bundle`
 
 The following table lists the SPFx and compatible versions of common tools and libraries:
 
