@@ -430,7 +430,7 @@
       href: spfx/image-helper-api.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
-  - name: Build Toolchain & Dependencies
+  - name: Build toolchain & dependencies
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
@@ -2056,7 +2056,7 @@
       items:
       - name: Grant access using Azure AD app-only
         href: solution-guidance/security-apponly-azuread.md
-      - name: Grant access using SharePoint app-only
+      - name: Grant access using SharePoint app-only (retired!)
         href: solution-guidance/security-apponly-azureacs.md
     - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
