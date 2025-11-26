@@ -1,6 +1,6 @@
 ---
-title: Understanding Microsoft Entra ID (formerly Azure Active Directory) and OAuth 2.0 in the context of SharePoint Online modern development
-description: Master Microsoft Entra ID (formerly Azure Active Directory) and OAuth 2.0 for SharePoint Online modern development. Learn about authentication, authorization, and access tokens in this comprehensive guide.
+title: Understanding Microsoft Entra ID and OAuth 2.0 in the context of SharePoint Online modern development
+description: Master Microsoft Entra ID and OAuth 2.0 for SharePoint Online modern development. Learn about authentication, authorization, and access tokens in this comprehensive guide.
 ms.date: 11/26/2025
 ms.localizationpriority: high
 ms.service: sharepoint
