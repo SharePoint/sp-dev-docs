@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework Platform & Toolchain Compatibility Reference
 description: Find which versions of the SharePoint Framework are compatible with SharePoint platform versions and dependencies including the build toolchain.
-ms.date: 11/18/2025
+ms.date: 11/24/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework Platform & Toolchain Compatibility Reference
@@ -29,6 +29,17 @@ Learn more about SPFx development with SharePoint Server 2016 with Feature Pack 
 ## SPFx development environment compatibility
 
 As each new version of the SPFx is released, support for newer library versions is updated to ensure the toolset remains current.
+
+> [!IMPORTANT]
+> **React Version Compatibility**
+> 
+> Using incompatible React versions can cause silent runtime failures without clear error messages during the build process. Always use the exact React version specified in the compatibility table below for your SPFx version.
+>
+> When installing React packages, use the `--save-exact` flag to prevent npm from installing newer patch versions:
+>
+> ```console
+> npm install react@17.0.1 react-dom@17.0.1 --save-exact
+> ```
 
 The following table lists the SPFx and compatible versions of common tools and libraries:
 
