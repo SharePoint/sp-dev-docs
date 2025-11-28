@@ -1,7 +1,7 @@
 ---
 title: Granting access via Entra ID App-Only
 description: Granting access via Entra ID App-Only
-ms.date: 11/25/2025
+ms.date: 11/28/2025
 author: jansenbe
 ms.author: bjansen
 ms.topic: article
@@ -163,7 +163,7 @@ namespace YourNamespace
 }
 ```
 
-## Using this principal in your application using the SharePoint PnP Framework library
+## Using this principal in your CSOM application using the SharePoint PnP Framework library
 
 In a first step, you add the PnP Framework library NuGet package: https://www.nuget.org/packages/PnP.Framework.
 
@@ -192,6 +192,100 @@ namespace AzureADCertAuth
 ```
 
 [!INCLUDE [pnp-framework](../../includes/snippets/open-source/pnp-framework.md)]
+
+## Using this principal in your PowerShell scripts while not depending on PnP PowerShell
+
+### Via a PFX file and password
+
+```PowerShell
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "<Full Path to the Microsoft.Identity.Client.dll file>"
+Add-Type -Path "<Full Path to the Microsoft.IdentityModel.Abstractions.dll file>"
+
+#Declare the Variables
+$tenantId = "<Tenant_Id>"
+$clientId = "<Client_Id>"
+$certPath = "<Full Path to the PFX file>"
+$certPassword = "<Password of the .pfx certificate>"
+$siteUrl = "https://<Domain>.sharepoint.com/sites/<SiteName>"
+
+# Load the certificate
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import($certPath, $certPassword, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
+
+# Get the access token using MSAL
+$authority = "https://login.microsoftonline.com/$tenantId"
+$scope = New-Object System.Collections.Generic.List[string]
+$scope.Add("https://<Domain>.sharepoint.com/.default")
+$msalApp = [Microsoft.Identity.Client.ConfidentialClientApplicationBuilder]::Create($clientId).WithAuthority($authority).WithCertificate($cert).Build()
+$authResult = $msalApp.AcquireTokenForClient($scope).ExecuteAsync().Result
+$accessToken = $authResult.AccessToken
+
+$context = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+
+# Attach event handler for Authorization header
+$context.add_ExecutingWebRequest({
+    param($sender, $e)
+    $e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer $accessToken"
+})
+
+# Example: Load Web Title
+$web = $context.Web
+$context.Load($web)
+$context.ExecuteQuery()
+ 
+Write-Host "Site Title:" $web.Title -ForegroundColor Green
+```
+
+### Via a thumbprint to load the certificate from the user's certificate store
+
+```csharp
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "<Full Path to the Microsoft.Identity.Client.dll file>"
+Add-Type -Path "<Full Path to the Microsoft.IdentityModel.Abstractions.dll file>"
+
+$tenantId = "<Tenant_Id>"
+$clientId = "<Client_Id>"
+$thumbprint = "<Thumbprint value>"
+$siteUrl = "https://<Domain>.sharepoint.com/sites/<SiteName>"
+
+# Load the certificate from the CurrentUser\My store
+$store = New-Object System.Security.Cryptography.X509Certificates.X509Store("My", "CurrentUser")
+$store.Open("ReadOnly")
+$cert = $store.Certificates | Where-Object { $_.Thumbprint -eq $thumbprint }
+$store.Close()
+
+if (-not $cert) {
+    Write-Error "Certificate with thumbprint $thumbprint not found."
+    return
+}
+
+# Get the access token using MSAL
+$authority = "https://login.microsoftonline.com/$tenantId"
+$scope = New-Object System.Collections.Generic.List[string]
+$scope.Add("https://<Domain>.sharepoint.com/.default")
+$msalApp = [Microsoft.Identity.Client.ConfidentialClientApplicationBuilder]::Create($clientId).WithAuthority($authority).WithCertificate($cert).Build()
+$authResult = $msalApp.AcquireTokenForClient($scope).ExecuteAsync().Result
+$accessToken = $authResult.AccessToken
+
+# Output the token
+$context = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+
+# Attach event handler for Authorization header
+$context.add_ExecutingWebRequest({
+    param($sender, $e)
+    $e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer $accessToken"
+})
+
+# Example: Load Web Title
+$web = $context.Web
+$context.Load($web)
+$context.ExecuteQuery()
+
+Write-Host "Site Title:" $web.Title -ForegroundColor Green
+```
 
 ## FAQ
 
