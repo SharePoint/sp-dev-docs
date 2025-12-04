@@ -35,7 +35,7 @@ npx @rushstack/heft --help
 > Similar to Gulp, Heft is installed locally within your project. However, [unlike Gulp that requires installing the Gulp CLI globally](https://www.voitanos.io/blog/mea-culpa-always-install-gulp-cli-globally-not-gulp/), you can install the same Heft npm package globally to simplify running Heft commands.
 >
 > ```console
-> npm install @rushstsack/heft --global
+> npm install @rushstack/heft --global
 > ```
 
 > [!TIP]
