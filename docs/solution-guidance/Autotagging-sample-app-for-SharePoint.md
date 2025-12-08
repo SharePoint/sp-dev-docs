@@ -25,7 +25,7 @@ Use this solution if you want to:
 ## Before you begin
 
 To get started, download the [ECM.AutoTagging](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.AutoTagging) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
-
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
@@ -351,3 +351,4 @@ public static void RemoveEventReceiver(ClientContext ctx, List list, string rece
 
 - [OfficeDevPnP.Core sample](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)  
 - [Enterprise Content Management solutions for SharePoint](enterprise-content-management-solutions-for-sharepoint.md)
+
