@@ -1,12 +1,10 @@
 ---
 title: Customize the build with the Heft Run script plugin
 description: Learn how to customize the SharePoint Framework build toolchain using the Heft Run Script Plugin to execute arbitrary JavaScript code during build phases.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Customize the build with the Heft Run script plugin
-
-[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
 
 Developers commonly need to customize the build toolchain for various reasons such as copying or deleting files, running scripts, or setting environment variables in SharePoint Framework (SPFx) projects. The Heft-based toolchain supports customization scenarios through the use of plugins, tasks, and task configurations.
 

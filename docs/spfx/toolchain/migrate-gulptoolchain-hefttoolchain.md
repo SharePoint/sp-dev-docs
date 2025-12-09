@@ -1,7 +1,7 @@
 ---
 title: Migrate from the Gulp-based to the Heft-based Toolchain
 description: In this article, you'll learn how to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.
-ms.date: 11/20/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
@@ -41,11 +41,11 @@ If you're using a different version of TypeScript, make sure that you uninstall 
 The next step is to install all of the dependencies the Heft-based toolchain requires:
 
 ```console
-npm install @microsoft/spfx-web-build-rig@1.22.0-rc.0
-            @microsoft/spfx-heft-plugins@1.22.0-rc.0
-            @microsoft/eslint-config-spfx@1.22.0-rc.0
-            @microsoft/eslint-plugin-spfx@1.22.0-rc.0
-            @microsoft/sp-module-interfaces@1.22.0-rc.0
+npm install @microsoft/spfx-web-build-rig@1.22.0
+            @microsoft/spfx-heft-plugins@1.22.0
+            @microsoft/eslint-config-spfx@1.22.0
+            @microsoft/eslint-plugin-spfx@1.22.0
+            @microsoft/sp-module-interfaces@1.22.0
             @rushstack/eslint-config@4.5.2
             @rushstack/heft@1.1.2
             @types/heft-jest@1.0.2
@@ -64,9 +64,6 @@ The Heft-based SPFx toolchain supports any version of TypeScript supported by th
 ```console
 npm install typescript@~5.8.0 --save-dev
 ```
-
-> [!WARNING]
-> Prior to the SPFx v1.22.0 GA release, some have experienced issues installing TypeScript v5.8 when migrating existing projects to SPFx v1.22. Upgrading to TypeScript v5.8 is not required.
 
 ## Update NPM scripts in package.json
 
@@ -167,12 +164,12 @@ Delete the **./gulpfile.js** file from your project as it is no longer used.
 Finally, upgrade the production dependencies in the project to SPFx v1.22 rc 0:
 
 ```console
-npm install @microsoft/sp-component-base@1.22.0-rc.0 \
-            @microsoft/sp-core-library@1.22.0-rc.0 \
-            @microsoft/sp-lodash-subset@1.22.0-rc.0 \
-            @microsoft/sp-office-ui-fabric-core@1.22.0-rc.0 \
-            @microsoft/sp-property-pane@1.22.0-rc.0 \
-            @microsoft/sp-webpart-base@1.22.0-rc.0 \
+npm install @microsoft/sp-component-base@1.22.0 \
+            @microsoft/sp-core-library@1.22.0 \
+            @microsoft/sp-lodash-subset@1.22.0 \
+            @microsoft/sp-office-ui-fabric-core@1.22.0 \
+            @microsoft/sp-property-pane@1.22.0 \
+            @microsoft/sp-webpart-base@1.22.0 \
             --save-exact
 ```
 

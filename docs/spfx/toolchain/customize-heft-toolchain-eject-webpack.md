@@ -1,12 +1,10 @@
 ---
 title: Ejecting the webpack configuration
 description: Learn how to eject the webpack configuration from the SharePoint Framework build toolchain for complete control over webpack settings, understand the implications of this irreversible process, and explore a practical example of customizing the ejected configuration.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Ejecting the webpack configuration
-
-[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
 
 The SharePoint Framework (SPFx) uses Heft as the task orchestrator to implement the build toolchain. These tasks, their configurations, and their dependencies, are managed by Microsoft to simplify the various Heft commands and actions developers need to perform.
 
