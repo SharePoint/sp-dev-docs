@@ -1,14 +1,14 @@
 ---
 title: Migrate from the Gulp-based to the Heft-based Toolchain
 description: In this article, you'll learn how to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.
-ms.date: 11/20/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
 
 The migration steps in moving from a Gulp-based toolchain SharePoint Framework (SPFx) project to a Heft-based toolchain are more involved than a typical SPFx project upgrade from one version to another version.
 
-In this article, you'll walk through in detail all of the steps required for removing the Gulp toolchain from a SPFx version 1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22 project.
+In this article, you'll walk through in detail all of the steps required for removing the Gulp toolchain from a SPFx version v1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22 project.
 
 > [!IMPORTANT]
 > **This article assumes that you are upgrading an existing SPFx v1.21.1 React web part project.**
@@ -41,17 +41,16 @@ If you're using a different version of TypeScript, make sure that you uninstall 
 The next step is to install all of the dependencies the Heft-based toolchain requires:
 
 ```console
-npm install @microsoft/spfx-web-build-rig@1.22.0-rc.0
-            @microsoft/spfx-heft-plugins@1.22.0-rc.0
-            @microsoft/eslint-config-spfx@1.22.0-rc.0
-            @microsoft/eslint-plugin-spfx@1.22.0-rc.0
-            @microsoft/sp-module-interfaces@1.22.0-rc.0
-            @rushstack/eslint-config@4.5.2
-            @rushstack/heft@1.1.2
-            @types/heft-jest@1.0.2
-            @typescript-eslint/parser@8.46.2
-            --save-dev --save-exact
-            --force
+npm install @microsoft/spfx-web-build-rig@1.22.0 \
+            @microsoft/spfx-heft-plugins@1.22.0 \
+            @microsoft/eslint-config-spfx@1.22.0 \
+            @microsoft/eslint-plugin-spfx@1.22.0 \
+            @microsoft/sp-module-interfaces@1.22.0 \
+            @rushstack/eslint-config@4.5.2 \
+            @rushstack/heft@1.1.2 \
+            @types/heft-jest@1.0.2 \
+            @typescript-eslint/parser@8.46.2 \
+            --save-dev --save-exact --force
 ```
 
 ## Optionally upgrade TypeScript
@@ -65,10 +64,7 @@ The Heft-based SPFx toolchain supports any version of TypeScript supported by th
 npm install typescript@~5.8.0 --save-dev
 ```
 
-> [!WARNING]
-> Prior to the SPFx v1.22.0 GA release, some have experienced issues installing TypeScript v5.8 when migrating existing projects to SPFx v1.22. Upgrading to TypeScript v5.8 is not required.
-
-## Update NPM scripts in package.json
+## Update npm scripts in package.json
 
 Replace the existing `build`, `test`, and `clean` scripts in the **package.json** file with the following to use Heft instead of Gulp.
 
@@ -106,6 +102,15 @@ The project templates created for SPFx v1.22 include additional scripts to the *
   ..
 }
 ```
+
+> [!TIP]
+> While not required, consider installing the Heft CLI globally:
+>
+> ```console
+> npm install @rushstack/heft --global
+> ```
+>
+> Once the Heft CLI is installed globally, you can run Heft commands without using the npm scripts.
 
 ## Add the SPFx Heft rig to the project
 
@@ -164,15 +169,15 @@ Delete the **./gulpfile.js** file from your project as it is no longer used.
 
 ## Upgrade production dependencies
 
-Finally, upgrade the production dependencies in the project to SPFx v1.22 rc 0:
+Finally, upgrade the production dependencies in the project to SPFx v1.22:
 
 ```console
-npm install @microsoft/sp-component-base@1.22.0-rc.0 \
-            @microsoft/sp-core-library@1.22.0-rc.0 \
-            @microsoft/sp-lodash-subset@1.22.0-rc.0 \
-            @microsoft/sp-office-ui-fabric-core@1.22.0-rc.0 \
-            @microsoft/sp-property-pane@1.22.0-rc.0 \
-            @microsoft/sp-webpart-base@1.22.0-rc.0 \
+npm install @microsoft/sp-component-base@1.22.0 \
+            @microsoft/sp-core-library@1.22.0 \
+            @microsoft/sp-lodash-subset@1.22.0 \
+            @microsoft/sp-office-ui-fabric-core@1.22.0 \
+            @microsoft/sp-property-pane@1.22.0 \
+            @microsoft/sp-webpart-base@1.22.0 \
             --save-exact
 ```
 
@@ -187,7 +192,7 @@ Test your changes by running the **build** command in the console from the root 
 # if you have heft installed globally...
 heft build --production
 
-# ... or you can run the NPM helper script
+# ... or you can run the npm helper script
 npm run build
 ```
 
