@@ -13,7 +13,7 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
 
-You can build SharePoint Framework powered solutions by using [SharePoint Framework Yeoman Generator](set-up-your-development-environment), [Microsoft Agents Toolkit](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals?pivots=visual-studio-code), or with the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/). Key advantage is the flexibility of automatic hosting with the option to use the exact same component across the different hosts without any code level changes. This is designed to maximize the value of your development investments, regardless of which primary host you are targeting.
+You can build SharePoint Framework powered solutions by using [SharePoint Framework Yeoman Generator](set-up-your-development-environment.md), [Microsoft Agents Toolkit](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals?pivots=visual-studio-code), or with the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/). Key advantage is the flexibility of automatic hosting with the option to use the exact same component across the different hosts without any code level changes. This is designed to maximize the value of your development investments, regardless of which primary host you are targeting.
 
 Key capabilities of the SharePoint Framework for Microsoft 365 are the following:
 
@@ -24,11 +24,11 @@ Key capabilities of the SharePoint Framework for Microsoft 365 are the following
 
 Write once and surface exactly the same code across [multiple applications](./office/overview.md). Below picture shows example case with a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/) available from GitHub.
 
-![Text Input in body](../images/overview/spfx-across-apps.png)
+![Use SharePoint Framework solutions across multiple Microsoft 365 apps.](../images/overview/spfx-across-apps.png)
 
 Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections.md) by building custom Adaptive Card Extensions.
 
-![Text Input in body](../images/overview/viva-spfx-extensibility.png)
+![Use SharePoint Framework solutions to extend Viva Connections](../images/overview/viva-spfx-extensibility.png)
 
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 

@@ -1,6 +1,6 @@
 ---
 title: Set up your SharePoint Framework Gulp-Based development environment
-description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
+description: Learn how set up your development environment for the SharePoint Framework legacy gulp-based toolchain.
 ms.date: 12/10/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
