@@ -1,11 +1,11 @@
 ---
-title: "SharePoint Framework Toolchain: Gulp-Based"
+title: "SharePoint Framework Legacy Toolchain: Gulp-Based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the legacy gulp-based toolchain.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Framework Toolchain: Gulp & Webpack
+# SharePoint Framework Legacy Toolchain: Gulp & Webpack
 
 The SharePoint Framework (SPFx) toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects.
 
@@ -17,9 +17,6 @@ The toolchain:
 - Helps you test client-side components in your local development environment by using tools such as the SharePoint Workbench.
 - Enables you to package and deploy to SharePoint.
 - Provides you with a set of build commands that help you complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package, and more.
-
-> [!IMPORTANT]
-> The local workbench does not support Internet Explorer 11.
 
 ## Use npm packages
 
