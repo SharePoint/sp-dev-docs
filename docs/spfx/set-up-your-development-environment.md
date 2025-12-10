@@ -26,7 +26,7 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 
 Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v22**.
 
-This version is the recommended version of Node.js to use with the SPFx v1.21.1. If you are using a different version of SPFx, verify you install a version of Node.js that's supported by that version of SPFx.
+This version is the recommended version of Node.js to use with the SPFx v1.22.*. If you are using a different version of SPFx, verify you install a version of Node.js that's supported by that version of SPFx.
 
 > [!IMPORTANT]
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
