@@ -17,7 +17,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/FkFg32NSTM0]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Package the HelloWorld web part
 

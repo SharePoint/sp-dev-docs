@@ -12,7 +12,7 @@ You can follow these steps by watching the video on the Microsoft 365 Platform C
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 

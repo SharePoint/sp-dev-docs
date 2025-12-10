@@ -12,7 +12,7 @@ Adaptive Card Extensions can be used as supplemental pieces to a larger Teams Ap
 
 In this tutorial, you'll use an ACE within a Microsoft Teams app.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold a SPFx Teams Personal App
 

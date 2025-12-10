@@ -17,7 +17,7 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 > [!Video https://www.youtube.com/embed/Wm1PG8U5bSw]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Get access to page placeholders
 

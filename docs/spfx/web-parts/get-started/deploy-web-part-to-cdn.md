@@ -10,7 +10,7 @@ Create a new sample web part and deploy its assets to an Azure Content Delivery 
 > [!NOTE]
 > There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Azure CDN option, but you could also use the [Office 365 CDN](./hosting-webpart-from-office-365-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location that end users can access by using HTTP would be technically suitable for hosting the assets for end users.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Configure an Azure storage account
 

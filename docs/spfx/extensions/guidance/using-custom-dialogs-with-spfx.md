@@ -16,7 +16,7 @@ You can access the sample code that this article is based on in the [sp-dev-fx-e
 > [!IMPORTANT]
 > This tutorial assumes you've setup your development environment as explain in [Set up your development environment](../../set-up-your-development-environment.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new project
 

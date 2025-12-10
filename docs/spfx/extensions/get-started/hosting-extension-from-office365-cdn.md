@@ -20,7 +20,7 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Enable the CDN in your Microsoft 365 tenant
 

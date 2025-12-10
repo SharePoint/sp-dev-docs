@@ -15,7 +15,7 @@ In this tutorial, you learn how to migrate from the old "classic" customizations
 > [!NOTE]
 > For more information about how to build SharePoint Framework extensions, see [Overview of SharePoint Framework extensions](../overview-extensions.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 

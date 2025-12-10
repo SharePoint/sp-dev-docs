@@ -14,7 +14,7 @@ The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Vi
 > [!IMPORTANT]
 > Line chart data visualization type was released as part of the [SPFx 1.19 release](../../release-1.19.md). Other data visualization types, such as the bar chart, donut chart, and pie charts, were introduced in the [SPFx 1.20 release](../../release-1.20.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 

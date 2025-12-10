@@ -11,7 +11,7 @@ During the last few years, most of the enterprise solutions built on top of Micr
 
 In this tutorial, you learn how to migrate a legacy "classic" customizations to the current model: SharePoint Framework extensions.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 

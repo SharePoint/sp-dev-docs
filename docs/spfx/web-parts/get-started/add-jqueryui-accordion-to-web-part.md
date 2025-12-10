@@ -12,7 +12,7 @@ Adding the jQueryUI Accordion to your web part project involves creating a new w
 
 ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 Ensure that you've completed the following steps before you start:
 

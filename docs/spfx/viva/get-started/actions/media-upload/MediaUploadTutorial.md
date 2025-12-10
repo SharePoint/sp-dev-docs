@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 

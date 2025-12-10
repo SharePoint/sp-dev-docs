@@ -15,7 +15,7 @@ Form customizers are SharePoint Framework components that give you an option to 
 > [!TIP]
 > You can find the output from this tutorial from [GitHub](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/spfx-formcustomizer-basics).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 

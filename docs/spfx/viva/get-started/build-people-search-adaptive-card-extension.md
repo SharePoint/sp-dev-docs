@@ -20,7 +20,7 @@ Before you start, complete the procedures in the following articles to ensure th
 - [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 - [Use Microsoft Graph in your solution](../../web-parts/get-started/using-microsoft-graph-apis.md)
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 

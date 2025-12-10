@@ -11,7 +11,7 @@ Many enterprise solutions built on top of Microsoft 365 and SharePoint Online le
 
 In this tutorial, you learn how to migrate from the old "classic" customizations to the new model based on SharePoint Framework extensions.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 

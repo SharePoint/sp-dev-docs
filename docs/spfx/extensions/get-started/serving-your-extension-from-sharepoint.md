@@ -19,7 +19,7 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 > [!Video https://www.youtube.com/embed/tReoZGtAYB4]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 There are few different ways on getting your SPFx extensions deployed and activated in SharePoint sites. The correct option depends on your business requirements and objectives. The primary options are as follows:
 

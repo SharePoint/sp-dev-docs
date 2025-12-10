@@ -11,7 +11,7 @@ ms.localizationpriority: high
 >
 > For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 

@@ -14,7 +14,7 @@ More complex SharePoint Framework client-side web parts likely have many propert
 > [!WARNING]
 > SPFx solutions targeting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Web part preconfigured entries
 

@@ -23,7 +23,7 @@ Getting started involves the following steps:
 1. Build and deploy your web part.
 1. Test your web part.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Set up your SharePoint Framework development environment and create a new web part
 
