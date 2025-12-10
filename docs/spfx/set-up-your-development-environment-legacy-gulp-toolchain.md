@@ -160,7 +160,7 @@ While not required for SPFx development, you may also find the following tools u
 - [Cmder for Windows](https://cmder.app/)
 - [Oh My Zsh](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
-- [Teams Toolkit VS Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+- [Microsoft 365 Agents Toolkit VS Code extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 - [SharePoint Framework Toolkit VS Code extension](https://marketplace.visualstudio.com/items?itemName=m365pnp.viva-connections-toolkit)
 
 ## Next steps
@@ -183,13 +183,14 @@ Depending on your scenario, you may need to maintain different development envir
 
 - virtual machines
 - Docker
-- Node Version Manager (NVM)
+- Node version managers
 
 > [!TIP]
-> For more information on NVM, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
+> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
 >
-> - [NVM](https://github.com/creationix/nvm) for macOS
-> - [nvm-windows](https://github.com/coreybutler/nvm-windows) for Windows
+> - [Node Version Manager (NVM)](https://github.com/creationix/nvm): for macOS
+> - [Node Version Switcher (NVS)](https://github.com/jasongin/nvs): cross-platform (Windows and MacOS)
+> - [Fast Node Manager (FNM)](https://github.com/Schniz/fnm): cross-platform (Windows and MacOS)
 
 ## Troubleshooting
 
@@ -198,7 +199,7 @@ Depending on your scenario, you may need to maintain different development envir
 To get a list of all globally installed packages, run the following command:
 
 ```console
-npm list --global --depth=0️
+npm list --global
 ```
 
 ### Unable to Trust the Self-signed Development Certificate
@@ -211,13 +212,15 @@ Locate & delete the folder **{{homedir}}/.gcb-serve-data** for SPFx version earl
 
 In case the certificate is not added to the Trusted Root Certification Authority despite running **gulp trust-dev-cert** because of some policies blocking the action, the **rushstack-serve.pem** file from **{{homedir}}/.rushstack** folder can be imported manually into the Certificate Manager under Trusted Root Certification Authority with a local admin account.
 
-### Unable to Install Packages with NPM - Corporate Proxies
+### Unable to Install Packages with npm - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure NPM for a corporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
+If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
 
 ## See also
 
+- [SharePoint Framework Toolchain: Heft & Webpack](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+- [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
+- [Set up your SharePoint Framework development environment](set-up-your-development-environment.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
 - [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md)
 - [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md)
-- [SharePoint Framework Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
