@@ -4,7 +4,7 @@ description: The toolchain is the set of build tools, framework packages, and ot
 ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
-# SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack
+# SharePoint Framework Toolchain: Heft & Webpack
 
 The SharePoint Framework (SPFx) v1.22 introduced a significant change to the build toolchain used to develop and package SPFx solutions. This article explains the changes, the reasons behind them, and how they affect both new and existing projects.
 
