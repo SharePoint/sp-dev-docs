@@ -1,16 +1,16 @@
 ---
 title: Build a SharePoint web part with the Microsoft Graph Toolkit
 description: Get started using the Microsoft Graph Toolkit to build a SharePoint web part.
-ms.date: 06/01/2021
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 
 # Build a SharePoint web part with the Microsoft Graph Toolkit
 
-This topic covers how to use Microsoft Graph Toolkit components in a [SharePoint client-side web part](/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts). 
+This topic covers how to use Microsoft Graph Toolkit components in a [SharePoint client-side web part](/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts).
 
 > [!WARNING]
-> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
+> Microsoft Graph Toolkit is deprecated Learn more about the [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
 Getting started involves the following steps:
 
@@ -22,6 +22,8 @@ Getting started involves the following steps:
 1. Deploy the Microsoft Graph Toolkit SharePoint Framework package.
 1. Build and deploy your web part.
 1. Test your web part.
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Set up your SharePoint Framework development environment and create a new web part
 

@@ -13,9 +13,11 @@ Ensure that you've completed the procedures in the following articles before you
 - [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md)
 - [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/FkFg32NSTM0]
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Package the HelloWorld web part
 

@@ -16,6 +16,8 @@ In this article, you'll learn how to create a SharePoint Framework solution that
 > [!IMPORTANT]
 > Using the Microsoft Graph API with SharePoint Framework directly using [Microsoft Authentication Library for JavaScript](https://learn.microsoft.com/en-us/javascript/api/overview/msal-overview) is not supported with SPFx version 1.4.1 and beyond. Please use the SharePoint Framework provided native [MSGraphClientV3](use-msgraph.md) for the Microsoft Graph API operations.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Solution overview
 
 The steps in this article show you how to build a client-side web part that enables searching for users in the current tenant, as shown in the following screenshot. The search is based on Microsoft Graph and requires at least the **User.ReadBasic.All** permission.

@@ -22,6 +22,8 @@ There are two ways to reference SharePoint JSOM in the SharePoint Framework:
 
 Each of these approaches has advantages and disadvantages, and it's important for you to understand each of them.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a new project
 
 1. From the console, create a new folder for your project:

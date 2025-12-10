@@ -8,16 +8,18 @@ ms.service: sharepoint
 
 # Understanding modern provisioning of artifacts in Microsoft 365
 
-In classic SharePoint and with the SharePoint Add-in model you were used to provision artifacts in SharePoint using the SharePoint Feature Framework. In modern SharePoint, you can still rely on the SharePoint Feature Framework, inside a SharePoint Framework solution, saving your investments. However, you can also rely on other options like for example using PnP PowerShell and the PnP Provisioning Engine. 
+In classic SharePoint and with the SharePoint Add-in model you were used to provision artifacts in SharePoint using the SharePoint Feature Framework. In modern SharePoint, you can still rely on the SharePoint Feature Framework, inside a SharePoint Framework solution, saving your investments. However, you can also rely on other options like for example using PnP PowerShell and the PnP Provisioning Engine.
 
 In this article you can find detailed information about how to transform the provisioning of an already existing SharePoint Add-in Model based solution into a SharePoint Framework solution as well as how you can replace the SharePoint Feature Framework provisioning with the new and more powerfull PnP Provisioning Engine.
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider as a much more detailed reference.
 
-[![IMAGE_ALT](https://img.youtube.com/vi/Y8-YSuSKjZA/0.jpg)](https://youtu.be/Y8-YSuSKjZA)
+[![Provisioning artifacts to SharePoint Sites - Different options and capabilities](https://img.youtube.com/vi/Y8-YSuSKjZA/0.jpg)](https://youtu.be/Y8-YSuSKjZA)
 
 > [!NOTE]
 > You can find further details about the SharePoint Feature Framework by reading the document [SharePoint Features schemas](https://learn.microsoft.com/en-us/sharepoint/dev/schema/sharepoint-features-schemas).
@@ -34,7 +36,7 @@ In the following code excerpt you can see the definition of the custom columns a
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Field
        ID="{ac7f1666-9943-4cc4-81cf-90589dcdc26e}"
        Name="CustomerCode"
@@ -108,7 +110,7 @@ Lastly, in the following code excerpt you can see the definition of a list insta
 </Elements>
 ```
 
-Inside Visual Studio, you also have a graphical designer that allows you to define the structure of the content type and of the list, as well as of the custom feature. 
+Inside Visual Studio, you also have a graphical designer that allows you to define the structure of the content type and of the list, as well as of the custom feature.
 Once you will deploy the SharePoint Add-in solution onto a target SharePoint site collection, you will find the artifacts provisioned in the SharePoint-hosted site of the SharePoint Add-in.
 
 The main limitations of the just described technique are the following ones:
@@ -199,13 +201,13 @@ Under the root folder of the scaffolded solution create a folder with name *shar
     </FieldRefs>
   </ContentType>
 
-  <ListInstance 
+  <ListInstance
     CustomSchema="schema.xml"
     FeatureId="00bfea71-de22-43b2-a848-c05709900100"
-    Title="Customers" 
+    Title="Customers"
     Description="List of Customers"
-    TemplateType="100" 
-    OnQuickLaunch="TRUE" 
+    TemplateType="100"
+    OnQuickLaunch="TRUE"
     Url="Lists/Customers">
   </ListInstance>
 
@@ -217,8 +219,8 @@ The only difference, compared with the SharePoint Add-in solution, is that the *
 In the following code excerpt, you can see the content of the sample *schema.xml* file.
 
 ```XML
-<List xmlns:ows="Microsoft SharePoint" Title="Customers" EnableContentTypes="TRUE" 
-    FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Customers" 
+<List xmlns:ows="Microsoft SharePoint" Title="Customers" EnableContentTypes="TRUE"
+    FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Customers"
     BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
     <MetaData>
       <ContentTypes>
@@ -226,8 +228,8 @@ In the following code excerpt, you can see the content of the sample *schema.xml
       </ContentTypes>
       <Fields></Fields>
       <Views>
-        <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" 
-            DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" 
+        <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;"
+            DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx"
             ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
           <XslLink Default="TRUE">main.xsl</XslLink>
           <JSLink>clienttemplates.js</JSLink>
@@ -311,7 +313,7 @@ There is a *features* property, which is an array of feature objects. You can ex
     "description": "The feature that activates elements of the spo-sp-fx-provisioning solution.",
     "id": "4e275c1d-519f-4560-8883-11418c83ea6a",
     "version": "1.0.0.0",
-    "assets": {        
+    "assets": {
       "elementManifests": [
         "elements.xml"
       ],
@@ -328,7 +330,7 @@ The *assets* property references both the *elements.xml* and the *schema.xml* fi
 > [!NOTE]
 > You can learn more about the *skipFeatureDeployment* attribute by reading the document [Tenant-scoped solution deployment for SharePoint Framework solutions](../spfx/tenant-scoped-deployment.md).
 
-Now build and package the SharePoint Framework solution running the following command in the terminal window from within the solution folder. 
+Now build and package the SharePoint Framework solution running the following command in the terminal window from within the solution folder.
 
 ```PowerShell
 gulp bundle --ship && gulp package-solution --ship
@@ -341,7 +343,7 @@ The above command builds, bundles, and packages the solution into an .SPPKG file
 
 Open or create a new Site Collection and browse to the *"Site Contents"* page. Click on the *"New -> App"* command and select the application package that you just deployed in the App Catalog. Go back to the *"Site Contents"* page and you will find a new list with name *Customers*, which will be created accordingly to the artifacts defined in the *elements.xml* and *schema.xml* files.
 
-It is interesting and important to notice that the artifacts provisioned by the SharePoint Framework solution are now defined in the actual site that you extended and not in an app-related site. Moreover, if you will remove the custom solution from the site, your data structure and content will stay alive and you will not loose any important data. 
+It is interesting and important to notice that the artifacts provisioned by the SharePoint Framework solution are now defined in the actual site that you extended and not in an app-related site. Moreover, if you will remove the custom solution from the site, your data structure and content will stay alive and you will not loose any important data.
 
 However, as like as it was with the SharePoint Add-in Model provisioning, in case you will need to maintain the artifacts, every now and then during the lifecycle of your project, you will have to struggle a bit.
 
@@ -432,7 +434,7 @@ Connect-PnPOnline https://<tenant-name>.sharepoint.com/sites/<TargetSite>
 Invoke-PnPSiteTemplate -Path .\template.xml
 ```
 
-The *Connect-PnPOnline* cmdlet opens a connection with the target site, while the *Invoke-PnPSiteTemplate* cmdlet does the actual provisioning and internally relies on the PnP Framework library, which implements the PnP Provisioning Engine. 
+The *Connect-PnPOnline* cmdlet opens a connection with the target site, while the *Invoke-PnPSiteTemplate* cmdlet does the actual provisioning and internally relies on the PnP Framework library, which implements the PnP Provisioning Engine.
 
 > [!NOTE]
 > You can find further information about the PnP Framework library in the document [PnP Framework documentation](https://pnp.github.io/pnpframework/) or by reading the article [Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries](./From-CSOM-to-PnP-Libraries.md).
@@ -455,7 +457,7 @@ Get-PnPSiteTemplate -Out .\template.xml -ListsToExtract "Customers" -Handlers Fi
 
 Now you have plenty of options to automate and synchronize the provisioning of artifacts using the PnP Provisioning Engine and PnP PowerShell.
 
-## Recommended content 
+## Recommended content
 
 You can find additional information about this topic reading the following documents:
 

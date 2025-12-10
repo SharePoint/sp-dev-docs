@@ -22,6 +22,8 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/6WTtjXP5yW4]
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a new web part project
 
 Create a new project directory for your project and change your current folder to that directory.

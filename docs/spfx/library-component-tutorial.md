@@ -9,6 +9,8 @@ ms.localizationpriority: high
 
 In this tutorial, you'll create a SharePoint Framework (SPFx) library component and use it within a client-side web part.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## How to create a third-party SPFx library
 
 1. Create a new project directory in your favorite location

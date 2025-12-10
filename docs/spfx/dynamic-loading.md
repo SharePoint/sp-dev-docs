@@ -9,6 +9,8 @@ ms.localizationpriority: high
 
 When building SharePoint Framework components, it's common to reference third-party libraries such as [Office UI Fabric React](https://www.npmjs.com/package/office-ui-fabric-react) for user interface controls or [Moment.js](https://momentjs.com/) for time handling. Each of these libraries will add size of the bundled JavaScript file for the component. As an example, Moment.js adds ~250 KB to the resulting bundle!
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 > [!NOTE]
 > A JavaScript *bundle* is a JavaScript file that combines one or more JavaScript files or style sheets. When you package an SPFx solution, by default all your code, and the libraries you import into your project, are bundled into one **\*.js** file. Splitting up a bundle is the operation of generating multiple **\*.js** files instead of one, so that they can be loaded individually.
 

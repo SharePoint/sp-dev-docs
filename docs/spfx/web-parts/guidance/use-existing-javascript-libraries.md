@@ -9,6 +9,8 @@ ms.localizationpriority: high
 
 When building client-side web parts on the SharePoint Framework, you can benefit from using existing JavaScript libraries to build powerful solutions. There are, however, some considerations that you should take into account to ensure that your web parts won't negatively impact the performance of SharePoint pages that they're being used on.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Reference existing libraries as packages
 
 The most common way of referencing existing JavaScript libraries in SharePoint Framework client-side web parts is by installing them as a package in the project.

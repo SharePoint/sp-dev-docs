@@ -13,6 +13,8 @@ You can start using this option by updating your Quick View implementation to be
 > [!IMPORTANT]
 > This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Scaffold an Adaptive Card Extension project
 
 Create a new project directory for your project and change your current folder to that directory.

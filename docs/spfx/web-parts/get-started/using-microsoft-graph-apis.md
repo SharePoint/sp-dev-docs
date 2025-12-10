@@ -15,10 +15,11 @@ Before you start, complete the procedures in the following articles to ensure th
 - [Connect your web part to SharePoint](connect-to-sharepoint.md)
 - [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
-
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/tHzbh5JoC-A]
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a SharePoint Framework project for Microsoft Graph usage
 

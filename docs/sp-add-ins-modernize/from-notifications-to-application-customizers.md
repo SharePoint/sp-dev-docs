@@ -30,6 +30,8 @@ If you prefer, you can watch the following video, instead of reading the whole a
 > [!NOTE]
 > You can find further details about creating a SharePoint Framework Application Customizer by reading the documents [Build your first SharePoint Framework Extension (Hello World part 1)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) and [Use page placeholders from Application Customizer (Hello World part 2)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Setting the context
 
 Imagine that you need to provide to your users a notification about the result of a running process. In order to achieve this result, you can create an Application Customizer, which is a SharePoint Framework extension that allows you to add a custom header and/or footer to a modern page, as well as it eventually allows you to embed custom client-side code in the modern pages of SharePoint Online.
@@ -207,7 +209,7 @@ import {
 
 export class Notification extends
     React.Component<INotificationProperties, INotificationState> {
-    
+
     constructor(props: INotificationProperties) {
         super(props);
 
@@ -215,7 +217,7 @@ export class Notification extends
             showMessage: props.showMessage
         };
     }
-    
+
     public render(): JSX.Element {
 
         return (<div>
@@ -272,9 +274,9 @@ export interface INotificationHeaderApplicationCustomizerProperties {
 /** A Custom Action which can be run during execution of a Client Side Application */
 export default class NotificationHeaderApplicationCustomizer
   extends BaseApplicationCustomizer<INotificationHeaderApplicationCustomizerProperties> {
-  
+
   private _topPlaceholder?: PlaceholderContent;
-  
+
   public async onInit(): Promise<void> {
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 

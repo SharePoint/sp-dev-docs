@@ -5,19 +5,15 @@ ms.date: 02/02/2018
 ms.localizationpriority: high
 ---
 
-
 # Provision SharePoint assets with your solution package
 
 At times, you may need to provision a SharePoint list or a document library along with your client-side solution package so that the list or library is available for your client-side components, such as web parts. SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site.
 
-You can also find details on the provisioning options in this SharePoint PnP webcast available on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
-
-<br/>
+You can also find details on the provisioning options in this SharePoint PnP webcast available on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/r-UdJhhHlEQ]
 
-<br/>
-
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Provision items using JavaScript code
 

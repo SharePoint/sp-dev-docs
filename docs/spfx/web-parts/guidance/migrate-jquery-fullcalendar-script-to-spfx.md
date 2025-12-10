@@ -8,6 +8,8 @@ ms.localizationpriority: high
 
 When building SharePoint solutions, SharePoint developers often use the [FullCalendar](https://fullcalendar.io) jQuery plug-in to display data in calendar view. FullCalendar is a great alternative to the standard SharePoint calendar view, as it allows you to render as calendar data from multiple calendar lists, data from non-calendar lists, or even data from outside SharePoint. This article illustrates how you would migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## List of tasks displayed as a calendar built using the Script Editor web part
 
 To illustrate the process of migrating a SharePoint customization using FullCalendar to the SharePoint Framework, you'll use the following solution that shows a calendar view of tasks retrieved from a SharePoint list.
