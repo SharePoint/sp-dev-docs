@@ -69,7 +69,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 
 ### Install Heft
 
-[Heft](https://heft.rushstack.com) is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like **npm run build** or **npm run test**. If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
+[Heft](https://heft.rushstack.io) is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like **npm run build** or **npm run test**. If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
 
 Learn more about the Heft-based toolchain in [SharePoint Framework Toolchain: Heft & Webpack](toolchain/sharepoint-framework-toolchain-rushstack-heft.md).
 
@@ -202,7 +202,7 @@ If your development environment is behind a corporate proxy, you need to configu
 
 - [SharePoint Framework Toolchain: Heft & Webpack](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
 - [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
-- [Set up your SharePoint Framework development environment (legacy gulp-toolchain)](set-up-your-development-environment-legacy-gulp-toolchain.md)
+- [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
 - [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md)
 - [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md)
