@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 
 When deploying SharePoint Framework solutions to production, you should always use a release build of your project that is optimized for performance. This article illustrates the main differences between debug and release builds and shows how you can optimize your bundle for use in production environments.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Use release builds in production
 

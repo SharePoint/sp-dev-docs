@@ -13,7 +13,7 @@ You can also find details on the provisioning options in this SharePoint PnP web
 
 > [!Video https://www.youtube.com/embed/r-UdJhhHlEQ]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Provision items using JavaScript code
 

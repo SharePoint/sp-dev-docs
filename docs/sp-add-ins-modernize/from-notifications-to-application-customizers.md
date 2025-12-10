@@ -28,7 +28,7 @@ If you prefer, you can watch the following video, instead of reading the whole a
 [![Transforming classic SharePoint add-in notifications to SPFx Application Customizers](https://img.youtube.com/vi/-pivUEMMZVg/0.jpg)](https://youtu.be/-pivUEMMZVg)
 
 > [!NOTE]
-> You can find further details about creating a SharePoint Framework Application Customizer by reading the documents [Build your first SharePoint Framework Extension (Hello World part 1)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) and [Use page placeholders from Application Customizer (Hello World part 2)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions).
+> You can find further details about creating a SharePoint Framework Application Customizer by reading the documents [Build your first SharePoint Framework Extension (Hello World part 1)](../spfx/extensions/get-started/build-a-hello-world-extension.md) and [Use page placeholders from Application Customizer (Hello World part 2)](../spfx/extensions/get-started/using-page-placeholder-with-extensions.md).
 
 [!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
@@ -47,7 +47,7 @@ In order to achieve the above result, let's start by creating a new SharePoint F
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md).
 
 
 ```PowerShell
@@ -341,5 +341,5 @@ A web browser session will start, you will have to accept to execute debug code 
 
 You can find additional information about this topic reading the following documents:
 
-* [Build your first SharePoint Framework Extension (Hello World part 1)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
-* [Use page placeholders from Application Customizer (Hello World part 2)](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/using-page-placeholder-with-extensions)
+- [Build your first SharePoint Framework Extension (Hello World part 1)](../spfx/extensions/get-started/build-a-hello-world-extension.md)
+- [Use page placeholders from Application Customizer (Hello World part 2)](../spfx/extensions/get-started/using-page-placeholder-with-extensions.md)

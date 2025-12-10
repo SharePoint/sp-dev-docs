@@ -10,7 +10,7 @@ ms.service: sharepoint
 
 In classic SharePoint and with the SharePoint Add-in model you were used to provision artifacts in SharePoint using the SharePoint Feature Framework. In modern SharePoint, you can still rely on the SharePoint Feature Framework, inside a SharePoint Framework solution, saving your investments. However, you can also rely on other options like for example using PnP PowerShell and the PnP Provisioning Engine.
 
-In this article you can find detailed information about how to transform the provisioning of an already existing SharePoint Add-in Model based solution into a SharePoint Framework solution as well as how you can replace the SharePoint Feature Framework provisioning with the new and more powerfull PnP Provisioning Engine.
+In this article you can find detailed information about how to transform the provisioning of an already existing SharePoint Add-in Model based solution into a SharePoint Framework solution as well as how you can replace the SharePoint Feature Framework provisioning with the new and more powerful PnP Provisioning Engine.
 
 [!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
@@ -22,7 +22,7 @@ If you prefer, you can watch the following video, instead of reading the whole a
 [![Provisioning artifacts to SharePoint Sites - Different options and capabilities](https://img.youtube.com/vi/Y8-YSuSKjZA/0.jpg)](https://youtu.be/Y8-YSuSKjZA)
 
 > [!NOTE]
-> You can find further details about the SharePoint Feature Framework by reading the document [SharePoint Features schemas](https://learn.microsoft.com/en-us/sharepoint/dev/schema/sharepoint-features-schemas).
+> You can find further details about the SharePoint Feature Framework by reading the document [SharePoint Features schemas](../schema/sharepoint-features-schemas.md).
 
 ## The SharePoint Add-in model solution to migrate from
 
