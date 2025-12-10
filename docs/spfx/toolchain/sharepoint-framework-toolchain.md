@@ -1,11 +1,11 @@
 ---
-title: "SharePoint Framework Toolchain: Gulp-Based"
+title: "SharePoint Framework Legacy Toolchain: Gulp-Based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the legacy gulp-based toolchain.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Framework Toolchain: Gulp & Webpack
+# SharePoint Framework Legacy Toolchain: Gulp & Webpack
 
 The SharePoint Framework (SPFx) toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects.
 
@@ -18,40 +18,37 @@ The toolchain:
 - Enables you to package and deploy to SharePoint.
 - Provides you with a set of build commands that help you complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package, and more.
 
-> [!IMPORTANT]
-> The local workbench does not support Internet Explorer 11.
-
 ## Use npm packages
 
-Before diving into the various toolchain components, it’s important to understand how the SharePoint Framework uses [npm](https://www.npmjs.com/) to manage different modules in the project. npm is one of the preferred open-source package managers for JavaScript client-side development.
+Before diving into the various toolchain components, it’s important to understand how the SPFx uses [npm](https://www.npmjs.com/) to manage different modules in the project. npm is one of the preferred open-source package managers for JavaScript client-side development.
 
 A typical npm package consists of one or more reusable JavaScript code files, called modules, along with a list of dependency packages. When you install the package, npm also installs those dependencies.
 
-The official [npm registry](https://www.npmjs.com/) consists of hundreds of packages that you can download to build your application. You can also [publish your own packages](https://docs.npmjs.com/getting-started/what-is-npm) to npm and share them with other developers. The SharePoint Framework uses some of the npm packages in the toolchain and also publishes its [own packages to the npm registry](https://www.npmjs.com/search?q=%40microsoft%2Fsp-).
+The official [npm registry](https://www.npmjs.com/) consists of hundreds of packages that you can download to build your application. You can also [publish your own packages](https://docs.npmjs.com/getting-started/what-is-npm) to npm and share them with other developers. The SPFx uses some of the npm packages in the toolchain and also publishes its [own packages to the npm registry](https://www.npmjs.com/search?q=%40microsoft%2Fsp-).
 
 ### SharePoint Framework packages
 
-The SharePoint Framework consists of several npm packages that work together to help you build client-side experiences in SharePoint.
+The SPFx consists of several npm packages that work together to help you build client-side experiences in SharePoint.
 
-The following npm packages are in the SharePoint Framework:
+The following npm packages are in the SPFx:
 
-- [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint). A [Yeoman](http://yeoman.io/) plug-in for use with the SharePoint Framework. Using this generator, developers can quickly set up a new client-side web part project with sensible defaults and best practices.
-- [@microsoft/sp-client-base](https://www.npmjs.com/package/@microsoft/sp-client-base). Defines the core libraries for client-side applications built using the SharePoint Framework.
+- [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint). A [Yeoman](http://yeoman.io/) plug-in for use with the SPFx. Using this generator, developers can quickly set up a new client-side web part project with sensible defaults and best practices.
+- [@microsoft/sp-client-base](https://www.npmjs.com/package/@microsoft/sp-client-base). Defines the core libraries for client-side applications built using the SPFx.
 - [@microsoft/sp-webpart-workbench](https://www.npmjs.com/package/@microsoft/sp-webpart-workbench). The SharePoint Workbench is a standalone environment for testing and debugging client-side web parts.
-- [@microsoft/sp-module-loader](https://www.npmjs.com/package/@microsoft/sp-module-loader). A module loader that manages versioning and loading of client-side components, web parts, and other assets. It also provides basic diagnostic services. It is built on familiar standards such as SystemJS and webpack, and is the first part of the SharePoint Framework to load on a page.
-- [@microsoft/sp-module-interfaces](https://www.npmjs.com/package/@microsoft/sp-module-interfaces). Defines several module interfaces that are shared by the SharePoint Framework module loader and also the build system.
-- [@microsoft/sp-lodash-subset](https://www.npmjs.com/package/@microsoft/sp-lodash-subset). Provides a custom bundle of [lodash](https://lodash.com/) for use with the SharePoint Framework's module loader. To improve runtime performance, it only includes a subset of the most essential lodash functions.
+- [@microsoft/sp-module-loader](https://www.npmjs.com/package/@microsoft/sp-module-loader). A module loader that manages versioning and loading of client-side components, web parts, and other assets. It also provides basic diagnostic services. It is built on familiar standards such as SystemJS and webpack, and is the first part of the SPFx to load on a page.
+- [@microsoft/sp-module-interfaces](https://www.npmjs.com/package/@microsoft/sp-module-interfaces). Defines several module interfaces that are shared by the SPFx module loader and also the build system.
+- [@microsoft/sp-lodash-subset](https://www.npmjs.com/package/@microsoft/sp-lodash-subset). Provides a custom bundle of [lodash](https://lodash.com/) for use with the SPFx's module loader. To improve runtime performance, it only includes a subset of the most essential lodash functions.
 - [@microsoft/sp-tslint-rules](https://www.npmjs.com/package/@microsoft/sp-tslint-rules). Defines custom tslint rules for usage with SharePoint client-side projects.
-- [@microsoft/office-ui-fabric-react-bundle](https://www.npmjs.com/package/@microsoft/office-ui-fabric-react-bundle). Provides a custom bundle of [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) that is optimized for use with the SharePoint Framework's module loader.
+- [@microsoft/office-ui-fabric-react-bundle](https://www.npmjs.com/package/@microsoft/office-ui-fabric-react-bundle). Provides a custom bundle of [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) that is optimized for use with the SPFx's module loader.
 
 ### Common build tool packages
 
-Along with the SharePoint Framework packages, a common set of build tools is also used to perform build tasks such as compiling TypeScript code to JavaScript and converting SCSS to CSS.
+Along with the SPFx packages, a common set of build tools is also used to perform build tasks such as compiling TypeScript code to JavaScript and converting SCSS to CSS.
 
-The following common npm build tools packages are in the SharePoint Framework:
+The following common npm build tools packages are in the SPFx:
 
-- [@microsoft/sp-build-core-tasks](https://www.npmjs.com/package/@microsoft/sp-build-core-tasks). A collection of tasks for the SharePoint Framework build system, which is based on gulp. The **sp-build-core-tasks** package implements operations specific to SharePoint, such as packaging solutions and writing manifests.
-- [@microsoft/sp-build-web](https://www.npmjs.com/package/@microsoft/sp-build-web). Imports and configures a set of build tasks that are appropriate for a build target that runs in a web browser (as opposed to a Node.js environment). This package is intended to be imported directly by a gulp file that uses the SharePoint Framework build system.
+- [@microsoft/sp-build-core-tasks](https://www.npmjs.com/package/@microsoft/sp-build-core-tasks). A collection of tasks for the SPFx build system, which is based on gulp. The **sp-build-core-tasks** package implements operations specific to SharePoint, such as packaging solutions and writing manifests.
+- [@microsoft/sp-build-web](https://www.npmjs.com/package/@microsoft/sp-build-web). Imports and configures a set of build tasks that are appropriate for a build target that runs in a web browser (as opposed to a Node.js environment). This package is intended to be imported directly by a gulp file that uses the SPFx build system.
 - [@microsoft/gulp-core-build](https://www.npmjs.com/package/@microsoft/gulp-core-build). The core gulp build tasks for building TypeScript, HTML, less, and other build formats. This package depends on several other npm packages that contain the following tasks:
   - [@microsoft/gulp-core-build-typescript](https://www.npmjs.com/package/@microsoft/gulp-core-build-typescript)
   - [@microsoft/gulp-core-build-sass](https://www.npmjs.com/package/@microsoft/gulp-core-build-sass)
@@ -72,9 +69,9 @@ The SharePoint generator scaffolds a client-side project with a web part. The ge
 
 The generator installs required npm packages locally in the project folder. npm allows you to install a package either locally to your project or globally. There are benefits to both, but the [general guidance](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/) is to install the npm packages locally if your code depends on those package modules. In the case of a web part project, your web part code depends on the various SharePoint and common build packages, and thus requires those packages to be installed locally.
 
-As the packages are installed locally, npm also installs the dependencies associated with each package. You can find the packages installed under the **node_modules** folder in your project folder. This folder contains the packages along with all their dependencies. It is ideal that this folder contains dozens to hundreds of folders, because npm packages are always broken down to smaller modules, which result in dozens to hundreds of packages being installed. The key SharePoint Framework packages are located under the **node_modules\@microsoft** folder. The **\@microsoft** is an npm scope that collectively represents [packages published by Microsoft](https://www.npmjs.com/~microsoft).
+As the packages are installed locally, npm also installs the dependencies associated with each package. You can find the packages installed under the **node_modules** folder in your project folder. This folder contains the packages along with all their dependencies. It is ideal that this folder contains dozens to hundreds of folders, because npm packages are always broken down to smaller modules, which result in dozens to hundreds of packages being installed. The key SPFx packages are located under the **node_modules\@microsoft** folder. The **\@microsoft** is an npm scope that collectively represents [packages published by Microsoft](https://www.npmjs.com/~microsoft).
 
-Every time you create a new project using the generator, the generator installs the SharePoint Framework packages along with its dependencies for that specific project locally. In this way, npm makes it easier to manage your web part projects without affecting other projects in the local dev environment.
+Every time you create a new project using the generator, the generator installs the SPFx packages along with its dependencies for that specific project locally. In this way, npm makes it easier to manage your web part projects without affecting other projects in the local dev environment.
 
 ### Specify dependencies with package.json
 
@@ -136,7 +133,7 @@ Starting from version 1.11, the solution manifest defined in the **package-solut
 > If you choose to expose your web parts in Microsoft Teams, users will see the information from the `developer` section when installing your app in Teams.
 
 > [!IMPORTANT]
-> Developer section is required to contain valid information for any SharePoint Framework solution which will be available from the Office store or from AppSource.
+> Developer section is required to contain valid information for any SPFx solution which will be available from the Office store or from AppSource.
 
 Following properties are available as a part of the `developer` section:
 
@@ -150,7 +147,7 @@ Following properties are available as a part of the `developer` section:
 
 ## Build tasks
 
-The SharePoint Framework uses [gulp](http://gulpjs.com/) as its task runner to handle processes like the following:
+The SPFx uses [gulp](http://gulpjs.com/) as its task runner to handle processes like the following:
 
 - Bundle and minify JavaScript and CSS files.
 - Run tools to call the bundling and minification tasks before each build.
