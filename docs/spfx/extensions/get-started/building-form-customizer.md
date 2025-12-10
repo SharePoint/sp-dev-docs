@@ -9,11 +9,13 @@ ms.custom: scenarios:getting-started
 
 Form customizers are SharePoint Framework components that give you an option to override the form experience at a list or library level by associating the component with the used content type. Form customizer components can be used in SharePoint Online, and you build them using  modern JavaScript tools and libraries.
 
->[!Important]
+> [!IMPORTANT]
 > Form customizers were released as part of the SharePoint Framework v1.15, so ensure that you are using the right version in your environment. See [v1.15 release notes](../../release-1.15.md) for details.
 
 > [!TIP]
 > You can find the output from this tutorial from [GitHub](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/spfx-formcustomizer-basics).
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 

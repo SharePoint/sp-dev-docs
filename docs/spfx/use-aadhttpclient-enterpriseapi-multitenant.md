@@ -9,6 +9,8 @@ ms.localizationpriority: medium
 
 This article illustrates how you would connect to a multi-tenant enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well building the SharePoint Framework solution.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a multi-tenant enterprise API secured with Azure AD
 
 Start with creating a multi-tenant enterprise API secured with Azure Active Directory. While there are no restrictions how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you'll build the API using Azure Functions and secure it using Azure App Service Authentication.

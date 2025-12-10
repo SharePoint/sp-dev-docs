@@ -12,6 +12,8 @@ In this tutorial, you'll implement advanced Card View functionality. You'll buil
 
 [!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a test list
 
 Prepare this tutorial by creating a new list in a SharePoint site with some sample data:

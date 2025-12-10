@@ -18,9 +18,11 @@ Before you start, complete the procedures in the following articles to ensure th
 - [Build your first web part](build-a-hello-world-web-part.md)
 - [Connect your web part to SharePoint](connect-to-sharepoint.md)
 
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/09uoG6Voeew]
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new web part project
 

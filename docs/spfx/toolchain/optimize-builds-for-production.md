@@ -8,6 +8,8 @@ ms.localizationpriority: medium
 
 When deploying SharePoint Framework solutions to production, you should always use a release build of your project that is optimized for performance. This article illustrates the main differences between debug and release builds and shows how you can optimize your bundle for use in production environments.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Use release builds in production
 
 When building a SharePoint Framework project, you can choose whether you want to build it in a debug or release mode. By default, SharePoint Framework projects are built in debug mode, which makes it easier for you to debug code. But when your code is finished and is working as expected, you should build it in release mode to optimize it for running in the production environment.

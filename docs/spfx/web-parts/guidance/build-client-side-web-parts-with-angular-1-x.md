@@ -21,6 +21,8 @@ The source of the working web part is available on GitHub at [samples/angular-to
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a new project
 
 1. Create a new folder for your project

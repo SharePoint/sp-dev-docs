@@ -15,6 +15,8 @@ Developers can use the fonts defined in Brand center in their SharePoint Framewo
 
 In this article, learn how you can modify your SPFx components to use the same fonts set in the
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Use SharePoint brand center fonts in SPFx components
 
 Start by creating a new SharePoint Framework component, such as a web part.

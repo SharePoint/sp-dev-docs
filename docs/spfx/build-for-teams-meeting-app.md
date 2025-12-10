@@ -16,6 +16,8 @@ Microsoft Teams meeting apps must support configurable tabs in the **[groupchat]
 > [!IMPORTANT]
 > This tutorial requires SPFx v1.11 or higher.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create a Microsoft Teams tab project
 
 1. Create a new project directory in your favorite location:

@@ -11,6 +11,8 @@ The **SharePoint Online SPFx Yeoman Generator** helps you quickly create a Share
 > [!IMPORTANT]
 > This page assumes you've already installed all the necessary prerequisites for developing SharePoint Framework solutions. Verify the updated instructions outlined in the page [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 The SharePoint Online SPFx Yeoman Generator (*the "SPFx generator"*), uses the responses to the questions the developer is prompted with to create a new SharePoint Framework (SPFx) project. Depending on some prompt responses, other questions are presented.
 
 For example, if you select the **WebPart** component type, you'll only see questions for the web part name and template type. However, if you select the **Extension** component type, you'll also be prompted for the type of extension such as application customizer, field customizer, or ListView command set.

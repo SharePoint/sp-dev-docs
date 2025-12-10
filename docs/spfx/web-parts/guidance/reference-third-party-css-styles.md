@@ -14,6 +14,8 @@ To build rich SharePoint Framework client-side web parts, you can leverage many 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Prepare the project
 
 ### Create a new project

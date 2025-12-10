@@ -15,7 +15,11 @@ The benefits of using the SharePoint Framework as the platform for your Microsof
 - Development model is similar to SharePoint Framework web parts
 - Any web part can be exposed as a tab or personal app in Microsoft Teams
 - The different scoping options to expose a custom tab as a web part and tab in your tenant
-- Your tab will be executed in the context of the underlying SharePoint site behind the specific team. This means that you can take advantage of any SharePoint-specific APIs or functionalities in your web part.
+- Your tab will be executed in the context of the underlying SharePoint site behind the specific team.
+
+This means that you can take advantage of any SharePoint-specific APIs or functionalities in your web part.
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Development process
 

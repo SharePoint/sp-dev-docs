@@ -16,6 +16,8 @@ SharePoint Online supports two options for deploying SPFx solutions to the Micro
 1. **[Automatically create the Microsoft Teams app manifest and package](#automatically-create-the-microsoft-teams-app-manifest-and-package)**
 1. **[Use the developer-provided Microsoft Teams app manifest & package](#developer-provided-microsoft-teams-app-manifest--package)**
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Automatically create the Microsoft Teams app manifest and package
 
 This capability is ideal when you have a simple implementation to expose automatically in Microsoft Teams.

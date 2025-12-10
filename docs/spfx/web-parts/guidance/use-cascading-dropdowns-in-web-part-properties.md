@@ -15,6 +15,8 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Create new project
 
 1. Start by creating a new folder for your project:
@@ -206,9 +208,6 @@ You'll build a web part that displays list items from a selected SharePoint list
     gulp serve
     ```
 
-    > [!NOTE]
-    > If this is your first time running the `gulp serve` command on your  workstation, you may need to run the `gulp trust-dev-cert` command first.
-
 1. In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
     ![Web part showing the value of the listName property](../../../images/react-cascading-dropdowns-web-part-first-run.png)
@@ -266,7 +265,7 @@ At this point, a user specifies which list the web part should use by manually e
 
       protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
         return {
-          showLoadingIndicator: this.loadingIndicator,   
+          showLoadingIndicator: this.loadingIndicator,
           pages: [
             {
               header: {
@@ -553,7 +552,7 @@ Similar to how users can select a list by using a dropdown, they can select the 
     ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
       return {
-        showLoadingIndicator: this.loadingIndicator,   
+        showLoadingIndicator: this.loadingIndicator,
         pages: [
           {
             header: {
