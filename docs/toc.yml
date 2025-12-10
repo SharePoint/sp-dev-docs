@@ -153,6 +153,8 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
+    - name: Set up development environment (Gulp)
+      href: spfx/set-up-your-development-environment-gulp-toolchain.md      
   - name: Web parts
     items:
     - name: Overview
@@ -494,7 +496,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.22 - November 19, 2025
+    - name: SPFx v1.22 - December 10, 2025
       href: spfx/release-1.22.md
     - name: SPFx v1.21.1 - May 3, 2025
       href: spfx/release-1.21.1.md

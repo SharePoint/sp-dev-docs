@@ -1,29 +1,26 @@
 ---
-title: SharePoint Framework v1.22 preview release notes
-description: Release notes for the SharePoint Framework v1.22 preview release.
-ms.date: 11/25/2025
+title: SharePoint Framework v1.22 release notes
+description: Release notes for the SharePoint Framework v1.22 release.
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.22 preview release notes
+# SharePoint Framework v1.22 release notes
 
-This release focuses updating and modernizing the SharePoint Framework (SPFx) build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
+This release focused on updating and modernizing the SharePoint Framework (SPFx) build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
+> [!NOTE]
+> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.21 version.
 
-* rc.0 **Released:** November 19, 2025
-* beta.5 **Released:** November 13, 2025
-* beta.4 **Released:** October 23, 2025
-* beta.3 **Released:** October 15, 2025
-* beta.2 **Released:** October 01, 2025
+**Released:** December 10, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the latest preview version
+## Install the latest version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag
+Install the latest release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from the SPFx v1.21.1 to v1.22 version
@@ -56,12 +53,8 @@ Scaffolded projects are now using TypeScript v5.8 by default.
 
 No new updates.
 
-## Updates on the heft toolchain transition since previous beta
-
-Release Candidate release has relatively small updates compared to the beta 5 release. We are not planning to introduce any further changes before General Availability (GA), unless there are new findings or feedback which should be addressed.
-
 ## Feedback and issues
 
-We're interested in your feedback about the release. Do let us know any findings or other feedback using the [SPFx 1.22.0-rc.0 - Community Feedback discussion](https://github.com/SharePoint/sp-dev-docs/discussions/10490). Thank you for your input advance.
+We're interested in your feedback about the release and if you find any issues, please share them using the [sp-dev-docs repository issue list](https://aka.ms/spfx/issues). We are also tracking any other [discussions](https://github.com/SharePoint/sp-dev-docs/discussions) if you simply want to have a discussion with the engineering team on this release. Thank you for your input advance.
 
 Happy coding! Sharing is caring! 🧡
