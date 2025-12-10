@@ -1,14 +1,14 @@
 ---
 title: SharePoint Framework development with SharePoint 2016 Feature Pack 2
 description: SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
-ms.date: 04/25/2022
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework development with SharePoint Server 2016 Feature Pack 2
 
 SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
 
-An introduction to SharePoint Framework development in SharePoint Server 2016 using Feature Pack 2 is also covered in the following video on the [Microsoft 365 Platform Communtiy (PnP) YouTube Channel](https://www.youtube.com/watch?v=LGLMxnmHk6U&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG).
+An introduction to SharePoint Framework (SPFx) development in SharePoint Server 2016 using Feature Pack 2 is also covered in the following video on the [Microsoft 365 Platform Community (PnP) YouTube Channel](https://www.youtube.com/watch?v=LGLMxnmHk6U&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG).
 
 > [!VIDEO https://www.youtube.com/embed/LGLMxnmHk6U?list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG]
 
@@ -18,12 +18,17 @@ Because SharePoint Online and SharePoint Server 2016 have different release cycl
 
 **SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted on classic SharePoint pages built by using the SharePoint Framework v1.1.0.** This means that when you're targeting the SharePoint Server 2016 platform, you need to use the SharePoint Framework v1.1.0 due to the server-side version dependencies.
 
+> [!IMPORTANT]
+> The SPFx v1.1.0 uses the legacy gulp-based toolchain. When setting up your development environment, pay special attention in following the instructions in this document. If there is a conflict in this article related to packages, versions, or other instructions and the [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md), the instructions in this guide should take priority.
+>
+> Learn more: [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
+
 If you're planning to use the same client-side web parts in both SharePoint Server 2016 and in SharePoint Online, you need to use the SharePoint Framework v1.1.0 as your baseline version to ensure that the web part works in both environments.
 
-Starting from version 1.3, the SharePoint Framework Yeoman generator supports scaffolding solutions that use both the latest version of the SharePoint Framework meant for use with SharePoint Online, and solutions that can be used with SharePoint on-premises based on the v1.1.0 of the SharePoint Framework. You don't need to install a separate version of the SharePoint Framework Yeoman generator to scaffold solutions meant for use with SharePoint on-premises.
+Starting with the SPFx v1.3, the Yeoman generator supports scaffolding solutions that use both the latest version of the SharePoint Framework meant for use with SharePoint Online, and solutions that can be used with SharePoint on-premises based on the v1.1.0 of the SharePoint Framework. You don't need to install a separate version of the SharePoint Framework Yeoman generator to scaffold solutions meant for use with SharePoint on-premises.
 
 > [!IMPORTANT]
-> Starting from version 1.4, the SharePoint Framework Yeoman generator supports a new attribute of `includeClientSideAssets`, which can be used to indicate that assets should be included in the **sppkg** package. This capability is, however, isn't supported by SharePoint Server 2016. When a solution is targeted to SharePoint Server 2016, this attribute in **./config/package-solution.json** should be updated as `false`.
+> Starting the SPFx v1.4, the Yeoman generator supports a new attribute of `includeClientSideAssets`, which can be used to indicate that assets should be included in the **sppkg** package. This capability is, however, isn't supported by SharePoint Server 2016. When a solution is targeted to SharePoint Server 2016, this attribute in **./config/package-solution.json** should be updated as `false`.
 
 ## Hosting your solution for on-premises deployment
 
@@ -48,7 +53,7 @@ If Internet access isn't available for the development machines, you can set up 
 
 The [Team-based development on the SharePoint Framework](team-based-development-on-sharepoint-framework.md) guidance document includes different options for development environment setup including when you might need to support multiple SharePoint Framework versions.
 
-### Node.js, Gulp & Yeoman versions
+### Node.js, Gulp, & Yeoman versions
 
 The dependencies for SPFx v1.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SPFx. In these cases, you may need to install specific versions of the tools.
 
@@ -99,5 +104,7 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 ## See also
 
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
+- [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
+- [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
 - [Definitive guide for developers: SharePoint Framework for SharePoint Server 2016](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2016/)
