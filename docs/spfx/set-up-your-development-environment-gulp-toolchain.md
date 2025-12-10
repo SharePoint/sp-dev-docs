@@ -1,16 +1,16 @@
 ---
-title: Set up your SharePoint Framework development environment
-description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
+title: Set up your SharePoint Framework Gulp-Based development environment
+description: Learn how set up your development environment for the SharePoint Framework legacy gulp-based toolchain.
 ms.date: 12/10/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
-# Set up your SharePoint Framework development environment
+# Set up your SharePoint Framework Gulp-Based development environment
 
 > [!NOTE]
-> This article focuses on the modern Heft-based toolchain that applies to all versions of the SharePoint Framework v1.22+.
+> This article focuses on the legacy gulp-based toolchain that applies to all versions of the SharePoint Framework from v1.0 through v1.21.1. This includes all on-premises versions of SharePoint Server where the SharePoint Framework is supported.
 >
-> If you are working with the SharePoint Framework v1.0 - v1.21.1, including any version for SharePoint Server on-premises deployments, you should refer to the legacy gulp-based toolchain set up guide: [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md).
+> If you are working with the SharePoint Framework v1.22+, you should refer to the modern Heft-based toolchain set up guide: [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
 
 [!INCLUDE [spfx-gulp-toolchain-legacy](../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
@@ -19,8 +19,14 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
 
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
+
+> [!Video https://www.youtube.com/embed/Cxx9MdjEiEw]
+
 > [!IMPORTANT]
-> The following steps assume you're building solutions for SharePoint Online using the latest version of the SharePoint Framework.
+> The following steps assume you're building solutions for SharePoint Online using the SPFx v1.21.1.
+>
+> If you're building solutions for SharePoint Server 2016, or SharePoint Server 2019, or SharePoint Server Subscription Edition, refer to the additional documentation referenced in the [See also](#see-also) section below.
 
 ## Install Node.js
 
@@ -45,7 +51,10 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-The SharePoint Framework v1.22.* is supported on Node.js v22 LTS (*aka Jod*).
+SPFx v1.21.* is supported on Node.js v22 LTS (*aka Jod*).
+
+> [!CAUTION]
+> If you're building SPFx components for SharePoint on-premises deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
 
 ## Install a code editor
 
@@ -58,29 +67,24 @@ The steps and examples in this documentation use [Visual Studio Code](https://co
 
 ## Install development toolchain prerequisites
 
-The SharePoint Framework development and build toolchain leverages various popular open-source tools. While most dependencies are included in each project, you need to install a few dependencies globally on your workstation.
+The SPFx development and build toolchain leverages various popular open-source tools. While most dependencies are included in each project, you need to install a few dependencies globally on your workstation.
 
 > [!TIP]
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install @rushstack/heft yo @microsoft/generator-sharepoint --global
+> npm install gulp-cli yo @microsoft/generator-sharepoint --global
 > ```
 
-### Install Heft
+### Install Gulp
 
-[Heft](https://heft.rushstack.io) is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like **npm run build** or **npm run test**. If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
+[Gulp](https://gulpjs.com) is a JavaScript-based task runner used to automate repetitive tasks. The SPFx build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
 
-Learn more about the Heft-based toolchain in [SharePoint Framework Toolchain: Heft & Webpack](toolchain/sharepoint-framework-toolchain-rushstack-heft.md).
-
-Enter the following command to install the Heft CLI globally:
+Enter the following command to install the Gulp CLI:
 
 ```console
-npm install @rushstack/heft --global
+npm install gulp-cli --global
 ```
-
-> [!NOTE]
-> Technically you don't need to install the Heft CLI globally, but it will greatly simplify running Heft commands when it's installed globally which is why it's recommended here.
 
 ### Install Yeoman
 
@@ -92,17 +96,25 @@ Enter the following command to install Yeoman:
 npm install yo --global
 ```
 
+> [!IMPORTANT]
+> SPFx [v1.18.2 release](./release-1.18.2.md) included the support for Yeoman v5. If you use a previous SPFx version, you might need to install an older version. Yeoman v4.x is required by the SPFx v1.13 until v1.18.1. You can install the latest Yeoman v4 version with the following command:
+
+>
+> ```console
+> npm install yo@4.3.1 --global
+> ```
+
 ### Install Yeoman SharePoint generator
 
 The Yeoman SharePoint web part generator helps you quickly create a SharePoint client-side solution project with the right toolchain and project structure.
 
-To install the SharePoint Framework Yeoman generator globally, enter the following command:
+To install the SPFx Yeoman generator globally, enter the following command:
 
 ```console
 npm install @microsoft/generator-sharepoint --global
 ```
 
-For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md).
+For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SPFx](yeoman-generator-for-spfx-intro.md).
 
 ## Install a modern web browser
 
@@ -110,18 +122,18 @@ You should be using a modern web browser like [Microsoft Edge](https://www.micro
 
 ## Trusting the self-signed developer certificate
 
-The SharePoint Framework's local web server, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
+The SPFx's local web server, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
 
-A utility command is included in every SharePoint Framework project in the form of a Heft command. You can elect to do this now, or wait until you create your first project as covered in the [Build your first SharePoint client-side web part (Hello World part 1)](web-parts/get-started/build-a-hello-world-web-part.md) tutorial.
+A utility task is included in every SPFx project in the form of a gulp task. You can elect to do this now, or wait until you create your first project as covered in the [Build your first SharePoint client-side web part (Hello World part 1)](web-parts/get-started/build-a-hello-world-web-part.md) tutorial.
 
-Once a project has been created with the Yeoman generator for the SharePoint Framework, execute the following command from within the root folder of the project.
+Once a project has been created with the Yeoman generator for the SPFx, execute the following command from within the root folder of the project.
 
 ```console
-heft trust-dev-cert
+gulp trust-dev-cert
 ```
 
 > [!NOTE]
-> This assumes you have installed all dependencies with **npm install** after creating the project. This step will install all Heft commands as part of a project.
+> This assumes you have installed all dependencies with `npm install` after creating the project. This step will install all gulp tasks as part of a project.
 
 ## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
 
@@ -159,7 +171,17 @@ While not required for SPFx development, you may also find the following tools u
 
 You're now ready to [build your first client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)!
 
-## Managing multiple development environments
+## SPFx & SharePoint Server (on-prem)
+
+The SPFx is available on SharePoint Online (SPO), SharePoint Server Subscription Edition (SE), SharePoint Server 2019, and SharePoint Server 2016. The configuration instructions on this page assume you're creating solutions using the latest version of the SPFx for SharePoint Online.
+
+SharePoint Online contains all versions of the SPFx, including all previous and the latest version. Each SPFx solution contains information to tell SPO which SPFx runtime it depends on.
+
+If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
+
+- **SharePoint Server 2016 uses the SPFx (SPFx) v1.1.0.** *For more information, see [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md).*
+- **SharePoint Server 2019 uses the SPFx (SPFx) v1.4.1.** *For more information, see [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).*
+- **SharePoint Server Subscription Edition uses the SPFx (SPFx) v1.5.1.** *For more information, see [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).*
 
 Depending on your scenario, you may need to maintain different development environments. Developers have used the following approaches to address these challenges:
 
@@ -168,7 +190,7 @@ Depending on your scenario, you may need to maintain different development envir
 - Node version managers
 
 > [!TIP]
-> For more information on node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
+> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
 >
 > - [Node Version Manager (NVM)](https://github.com/creationix/nvm): for macOS
 > - [Fast Node Manager (FNM)](https://github.com/Schniz/fnm): cross-platform (Windows and MacOS)
@@ -186,13 +208,13 @@ npm list --global
 
 ### Unable to Trust the Self-signed Development Certificate
 
-If you're having trouble trusting your self-signed certificate when you run **heft trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
+If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
 
-In some cases, executing the command **heft trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder.
+In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder.
 
-Locate and delete folder **{{homedir}}/.rushstack** then try to trust the self-signed development certificate again. Otherwise running **heft untrust-dev-cert** will have same effect to remove the certificate files from the profile folder.
+Locate & delete the folder **{{homedir}}/.gcb-serve-data** for SPFx version earlier than v1.12.1. For later versions delete folder **{{homedir}}/.rushstack** then try to trust the self-signed development certificate again. Otherwise running **gulp untrust-dev-cert** will have same effect to remove the certificate files from the profile folder.
 
-In case the certificate is not added to the Trusted Root Certification Authority despite running **heft trust-dev-cert** because of some policies blocking the action, the **rushstack-serve.pem** file from **{{homedir}}/.rushstack** folder can be imported manually into the **Certificate Manager** under **Trusted Root Certification Authority** with a local admin account.
+In case the certificate is not added to the Trusted Root Certification Authority despite running **gulp trust-dev-cert** because of some policies blocking the action, the **rushstack-serve.pem** file from **{{homedir}}/.rushstack** folder can be imported manually into the Certificate Manager under Trusted Root Certification Authority with a local admin account.
 
 ### Unable to Install Packages with npm - Corporate Proxies
 
@@ -202,7 +224,7 @@ If your development environment is behind a corporate proxy, you need to configu
 
 - [SharePoint Framework Toolchain: Heft & Webpack](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
 - [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
-- [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
+- [Set up your SharePoint Framework development environment](set-up-your-development-environment.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
 - [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md)
 - [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md)

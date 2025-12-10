@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint Server 2019 and Subscription Edition
 description: SharePoint Server 2019 & Subscription Edition (SE) supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
-ms.date: 09/30/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 
@@ -18,6 +18,11 @@ Because SharePoint Online and SharePoint Server 2019 have different release cycl
 
 > [!IMPORTANT]
 > SharePoint Server 2019 supports SharePoint Framework client-side web parts hosted on classic or modern SharePoint pages built using the SharePoint Framework v1.4.1.
+
+> [!IMPORTANT]
+> The SPFx v1.4.1 uses the legacy gulp-based toolchain. When setting up your development environment, pay special attention in following the instructions in this document. If there is a conflict in this article related to packages, versions, or other instructions and the [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md), the instructions in this guide should take priority.
+>
+> Learn more: [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
 
 SharePoint Server 2019 also supports SharePoint Framework extensions hosted on modern SharePoint pages built using SharePoint Framework v1.4.1. This means that when you're targeting the SharePoint Server 2019 platform, you need to use the SharePoint Framework v1.4.1 because of the server-side version dependencies.
 
@@ -48,17 +53,17 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 1. Install [Node.js v8.17.0](https://nodejs.org/download/release/v8.17.0/).
 
    Although [the article](compatibility.md) states that SPFx v1.4.1 is only supported on Node.js v6 and v8, it can also be made to work with Node.js v12, v14, and v16—specifically v12.18.1, v14.17.1, and v16.15.0—by applying a few workarounds. Please note the following compatibility issues:
-   
+
      1. [gulp v3 is incompatible with Node v12+](https://github.com/gulpjs/gulp/issues/2324).
      1. **node-sass** v4 only supports Node.js v14 and below.
-   
+
    To resolve these issues:
-   
+
      1. Set the version of the **graceful-fs** component to v4+.<br>
      1. Replace **node-sass** with **sass.**<br>
-   
+
    You can either manually update **package-lock.json** or **npm-shrinkwrap.json** and then re-run `npm install` or create a new **.js** file in your project's root folder using the script provided below, run `node your_new_js_file` and re-run `npm install`.
-   
+
     ```JavaScript
    const fs = require('fs');
    const lockedVersionFile = 'package-lock.json';
@@ -69,7 +74,7 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
    if (vinylFSJson && vinylFSJson["dependencies"] && vinylFSJson["dependencies"]["graceful-fs"]) {
    vinylFSJson["dependencies"]["graceful-fs"] = "npm:graceful-fs@4.2.11";
    }
-   
+
    const gulpSassJson = lockedVersionJson.packages["node_modules/gulp-sass"];
    console.log(gulpSassJson);
    if (gulpSassJson && gulpSassJson["dependencies"] && gulpSassJson["dependencies"]["node-sass"]) {
@@ -78,7 +83,7 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
    }
    fs.writeFileSync(lockedVersionFile, JSON.stringify(lockedVersionJson, undefined, 2));
     ```
-    
+
 1. Install global dependencies
 
     ```console
@@ -124,5 +129,7 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 
 - [SharePoint Framework Overview](sharepoint-framework-overview.md).
 - [SharePoint Server 2019 development platform](../general-development/sharepoint-2019-development-platform.md).
+- [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
+- [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
 - [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/).
 - [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-subscription-edition/).

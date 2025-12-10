@@ -1,7 +1,7 @@
 ---
 title: Understanding the Heft-based toolchain (how it works)
 description: Understand how the SharePoint Framework uses Heft as a pluggable build system, learn about key Heft architectural concepts like actions, phases, tasks, and rig packages, and explore common customization scenarios for the SPFx toolchain.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Understanding the Heft-based toolchain (how it works)
@@ -71,7 +71,6 @@ The following table shows the equivalent Gulp tasks and Heft commands:
 
 |      Gulp task       |         Heft command         |
 | -------------------- | ---------------------------- |
-| gulp                 | heft                         |
 | build                | build                        |
 | bundle<sup>1</sup>   |                              |
 | clean                | clean                        |

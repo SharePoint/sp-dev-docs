@@ -1,12 +1,10 @@
 ---
 title: Customize webpack with the Heft Webpack Patch plugin
 description: Learn how to customize the webpack configuration in SharePoint Framework projects using the Heft Webpack Patch Plugin, and explore a practical example of adding the Webpack Bundle Analyzer plugin to your SPFx project.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Customize webpack with the Heft Webpack Patch plugin
-
-[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
 
 Developers commonly need to customize the build toolchain by modifying the webpack configuration in SharePoint Framework (SPFx) projects. This typically involves adjusting existing webpack plugins used in the configuration, such as the [Define Plugin](https://webpack.js.org/plugins/define-plugin/), or adding new plugins for various purposes.
 

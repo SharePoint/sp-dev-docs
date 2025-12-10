@@ -1,12 +1,11 @@
 ---
 title: Customize the build toolchain with Heft plugins
 description: This article explains how to customize the SharePoint Framework build toolchain by using Heft plugins to extend existing build phases, demonstrated through a practical example of adding a task to copy a licensing file to the SharePoint package folder after the package-solution command executes.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Customize the build toolchain with Heft plugins
 
-[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
 
 Developers commonly need to customize the build toolchain for various reasons such as copying or deleting files, running scripts, or setting environment variables in SharePoint Framework (SPFx) projects. The Heft-based toolchain supports customization scenarios through the use of plugins, tasks, and task configurations.
 
