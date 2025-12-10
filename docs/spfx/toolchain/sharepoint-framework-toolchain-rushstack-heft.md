@@ -1,10 +1,10 @@
 ---
 title: "SharePoint Framework Toolchain: Heft-based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the Heft-based toolchain introduced in SPFx v1.22.
-ms.date: 11/18/2025
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
-# SharePoint Framework Toolchain: Rush Stack, Heft, & Webpack
+# SharePoint Framework Toolchain: Heft & Webpack
 
 The SharePoint Framework (SPFx) v1.22 introduced a significant change to the build toolchain used to develop and package SPFx solutions. This article explains the changes, the reasons behind them, and how they affect both new and existing projects.
 
@@ -38,13 +38,6 @@ Moving to Heft provides several significant benefits to the SPFx ecosystem. By a
 ### Core toolchain replacement
 
 The build process undergoes several fundamental changes in SPFx v1.22. First, the gulp-based toolchain (aka: **gulp-core-build**) has been replaced with **[Heft](https://heft.rushstack.io/)** as the primary task orchestrator for building SPFx projects. Despite this significant change, **webpack** continues to serve as the underlying bundling technology, though it's now orchestrated through Heft rather than gulp. Additionally, the **npm scripts** in your **package.json** file have been updated to call Heft commands instead of gulp tasks, reflecting the new toolchain architecture.
-
-> [!NOTE]
-> **What is Rush Stack?**
->
-> Rush Stack is a mission-driven initiative that provides reusable technology for running large-scale monorepos for web development. It's an open collaboration among community partners with serious tooling requirements who got tired of tackling these challenges alone. If you're familiar with monorepo tools like **Turborepo**, **Nx**, or **Lerna**, Rush Stack operates in the same space but with a different philosophy.
-
-Learn more about Rush Stack from the official site: [Rush Stack documentation](https://rushstack.io/).
 
 > [!NOTE]
 > **What is Heft?**
@@ -92,7 +85,7 @@ Starting with SPFx v1.23, new projects will exclusively support Heft, contingent
 Starting with SPFx v1.24, while existing projects may still technically continue using gulp-based builds, the gulp toolchain will become officially unsupported. At this point, all new development efforts and fixes will focus exclusively on the Heft toolchain, as Microsoft fully transitions to the new build system.
 
 > [!IMPORTANT]
-> Projects that upgrade their **package.json** to reference SPFx v1.22 or later can continue using gulp and existing customizations without breaking changes. The new toolchain primarily affects newly generated projects and those that choose to migrate.
+> Projects that upgrade their **package.json** to reference SPFx v1.22 or later can continue using gulp and existing customizations without breaking changes. The new toolchain only affects newly generated projects and those that choose to migrate projects to SPFx v1.22 or later.
 
 ## How the new toolchain works
 
@@ -174,4 +167,3 @@ When upgrading an existing project to SPFx v1.22:
 - [Migrate from the Gulp-based to the Heft-based toolchain](migrate-gulptoolchain-hefttoolchain.md)
 - [Understanding the Heft-based toolchain (how it works)](customize-heft-toolchain-overview.md)
 - [Heft documentation](https://heft.rushstack.io/)
-- [Rush Stack documentation](https://rushstack.io/)
