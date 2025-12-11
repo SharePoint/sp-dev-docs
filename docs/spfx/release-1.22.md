@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.22 release notes
 description: Release notes for the SharePoint Framework v1.22 release.
-ms.date: 12/10/2025
+ms.date: 12/11/2025
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.22 release notes
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 This release focused on updating and modernizing the SharePoint Framework (SPFx) build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
 > [!NOTE]
-> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.21 version.
+> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.22 version.
 
 **Released:** December 10, 2025
 
