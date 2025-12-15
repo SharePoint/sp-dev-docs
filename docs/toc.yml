@@ -153,6 +153,8 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
+    - name: Set up development environment (Gulp)
+      href: spfx/set-up-your-development-environment-gulp-toolchain.md      
   - name: Web parts
     items:
     - name: Overview
@@ -271,7 +273,7 @@
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
       href: spfx/publish-to-marketplace-faq.yml
-  - name: Migrate existing customizations
+  - name: Migrate pre-SPFx & classic mode customizations
     items:
     - name: Script Editor web part
       href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
@@ -311,8 +313,6 @@
       href: spfx/hyperlinking.md
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
-    - name: Tools and libraries compatibility
-      href: spfx/compatibility.md
   - name: External libraries
     items:
     - name: Add external libraries
@@ -357,10 +357,6 @@
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
       href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
-    - name: Custom build tasks
-      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-    - name: Extend Webpack
-      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Tenant-scoped solution deployment
       href: spfx/tenant-scoped-deployment.md
     - name: Optimize builds for production
@@ -434,18 +430,42 @@
       href: spfx/office-ui-fabric-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
-  - name: Tools & libraries
+    - name: Microsoft Graph Toolkit
+      href: spfx/use-microsoft-graph-toolkit.md
+  - name: Build toolchain & dependencies
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
-    - name: Toolchain
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Heft-based toolchain (SPFx v1.22.0+)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
+        - name: Understanding how the Heft toolchain works
+          href: spfx/toolchain/customize-heft-toolchain-overview.md
+        - name: Customize the build toolchain with Heft plugins
+          href: spfx/toolchain/customize-heft-toolchain-heft-included-plugins.md
+        - name: Customize the build with the Heft Run script plugin
+          href: spfx/toolchain/customize-heft-toolchain-heft-script-plugin.md
+        - name: Customize webpack with the Heft webpack-patch plugin
+          href: spfx/toolchain/customize-heft-toolchain-customize-webpack-config.md
+        - name: Ejecting the webpack configuration
+          href: spfx/toolchain/customize-heft-toolchain-eject-webpack.md
+        - name: Migrate from the Gulp-based to the Heft-based toolchain
+          href: spfx/toolchain/migrate-gulptoolchain-hefttoolchain.md
+    - name: Gulp-based Toolchain (legacy)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain.md
+        - name: Customize the build toolchain with Gulp tasks
+          href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+        - name: Extending Webpack in the Gulp-based toolchain
+          href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
-    - name: Configure SASS processing during builds
+    - name: Platform & platform dependency compatibility reference
+      href: spfx/compatibility.md
+    - name: How to configure SASS processing
       href: spfx/toolchain/configure-sass.md
-    - name: Microsoft Graph Toolkit
-      href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
@@ -476,6 +496,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.22 - December 10, 2025
+      href: spfx/release-1.22.md
     - name: SPFx v1.21.1 - May 3, 2025
       href: spfx/release-1.21.1.md
     - name: SPFx v1.21 - April 23, 2025
@@ -596,6 +618,8 @@
       href: embedded/development/tutorials/using-webhooks.md
     - name: Migrate ABS to SPE
       href: embedded/development/tutorials/migrate-abs-to-spe.md
+    - name: Install Your SPE App in a Consuming Tenant
+      href: embedded/development/tutorials/vendor-install-app-customer.md
   - name: Administration
     items:
     - name: Billing
@@ -1379,7 +1403,7 @@
       - name: Build search queries
         href: general-development/building-search-queries-in-sharepoint.md
         items:
-        - name: Keyword Query Language (KQL) syntax reference
+        - name: Keyword Query Language (KeyQL) syntax reference
           href: general-development/keyword-query-language-kql-syntax-reference.md
         - name: FAST Query Language (FQL) syntax reference
           href: general-development/fast-query-language-fql-syntax-reference.md
@@ -2034,7 +2058,7 @@
       items:
       - name: Grant access using Azure AD app-only
         href: solution-guidance/security-apponly-azuread.md
-      - name: Grant access using SharePoint app-only
+      - name: Grant access using SharePoint app-only (retired!)
         href: solution-guidance/security-apponly-azureacs.md
     - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md

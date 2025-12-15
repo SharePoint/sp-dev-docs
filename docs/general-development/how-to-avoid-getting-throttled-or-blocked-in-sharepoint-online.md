@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Learn about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 06/12/2025
+ms.date: 10/02/2025
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -23,8 +23,6 @@ Does this sound familiar? You're running an application - for example, to scan f
 
 SharePoint Online uses throttling to maintain the optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent the overuse of resources.
 
-> [!NOTE]
-> Recent updates to this article enhance transparency to already existing throttling rules in the system
 
 ### What happens when you get throttled in SharePoint Online?
 
@@ -41,6 +39,10 @@ In both cases, a `Retry-After` header is included in the response, indicating ho
 
 If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
 
+### Peak vs. Off-Peak usage
+
+Throttling and / or performance slowdowns have a higher tendency to occur during peak hours than off-peak hours for large amounts of calls and / or bandwidth utilization. This is to help protect the service and ensure reliability for end users. Off peak hours are typically nights and weekends in your region’s time zone. Where your SharePoint tenant is set up determines your region’s time zone.
+
 ### Resource units
 
 Some limits are measured in terms of API costs. [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
@@ -53,6 +55,7 @@ Some limits are measured in terms of API costs. [Microsoft Graph APIs](/graph) h
 
 > [!NOTE]
 > We reserve the right to change the API resource unit cost.
+
 
 ### User Throttling
 
@@ -69,11 +72,13 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 | User         | External sharing emails      | 1 H               | 200       |
 
 > [!NOTE] 
-> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary.
+>
+> Microsoft Reserves the right to lower limits on Unpaid/Unlicensed usage.
 
 ### Tenant Throttling
 
-Some throttling limits are applied at the Tenant level to ensure the operations collectively made do not overuse resources.
+Some throttling limits are applied at the Tenant level to ensure the operations collectively do not overuse resources.
 
 When a customer enables Multi-Geo, each geo gets its own limits (usage measurement not shared across geos). For the limits that are dependent on license count, the total tenant user license count is used (total users across all geos).
 
@@ -92,7 +97,9 @@ When a customer enables Multi-Geo, each geo gets its own limits (usage measureme
 | Tenant       | PeopleManagerAPIs                    | 5 min             | 50,000+                  | 15,000    |
 
 > [!NOTE] 
-> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary.
+>
+> Microsoft Reserves the right to lower limits on Unpaid/Unlicensed usage.
 
 ### Application Throttling
 
@@ -125,7 +132,9 @@ For multitenant applications:
 | Per APP Per Tenant | Specific Sharing APIs               | 5 min             | no license bound         | 300        |
 
 > [!NOTE] 
-> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary
+> Displayed limits are default values. Microsoft may change these limits at any time. Your experience may vary.
+>
+Microsoft Reserves the right to lower limits on Unpaid/Unlicensed usage.
 
 ### Other Limits
 
@@ -153,7 +162,7 @@ Below is a quick summary of the best practices to handle throttling:
 
 As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes fewer resources than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve the application's performance and reduce throttling.
 
-If you do run into throttling, we require using the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits, and you can proactively reduce requests to avoid hitting the throttle.
+If you do run into throttling, we require using the `Retry-After` HTTP header to ensure a minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits, and you can proactively reduce requests to avoid hitting the throttle.
 
 Delta with a token is the most efficient way to scan content in SharePoint, and we talk more in detail at the [best practices for scanning applications](https://aka.ms/ScanGuidance). To help applications that follow the guidance, we lower the resource unit cost of delta requests with a token to 1 resource unit, although it's a multi-item query. The delta request without a token is considered a multi-item query and costs 2 resource units per request.
 
@@ -185,7 +194,7 @@ In addition to the `Retry-After` header in the response to throttled requests, S
 > These headers are currently in **beta** and subject to change. At the time when the headers were adopted, the IETF specification was in draft. The current implementation is based on the [draft-03](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-03) of the IETF specification. There is the potential for changes when the specification is final, and we will adapt to those changes in the future.  
 
 The `RateLimit` headers are returned on a **best-efforts** basis, so applications may not receive the headers under all conditions. Additionally, there are other limits that aren't presented in the `RateLimit` headers, so applications can get throttled even before reaching the limit described in the `RateLimit` headers. 
-Below is the list of limits that we support the `RateLimit` headers for. The policies and values are subject to change:
+Below is the list of limits which we support the `RateLimit` headers for. The policies and values are subject to change:
 
 | limit                      | Condition                 | limit value   | Description                                                                                                      |
 |----------------------------|---------------------------|---------------|------------------------------------------------------------------------------------------------------------------|
@@ -323,3 +332,4 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 - [Microsoft Graph throttling guidance](/graph/throttling)
 - [Prevent throttling in your application by using RateLimit headers in SharePoint Online](https://devblogs.microsoft.com/microsoft365dev/prevent-throttling-in-your-application-by-using-ratelimit-headers-in-sharepoint-online/)
 - [Four options for site analytics](https://techcommunity.microsoft.com/blog/microsoft_graph_data_connect_for_sharepo/four-options-for-sharepoint-site-analytics/4076416)
+

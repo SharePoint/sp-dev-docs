@@ -1,15 +1,17 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 04/26/2025
+ms.date: 11/21/2025
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions on modern SharePoint pages
 
-When building SharePoint Framework solutions, you can test them on modern SharePoint pages. For building SharePoint Framework extensions, testing on modern pages is the only option, since at this moment the SharePoint Workbench doesn't support loading extensions. Testing on modern pages can however be also used for debugging web parts, where it offers developers additional value.
+When building SharePoint Framework solutions, you can test them on modern SharePoint pages. For building SharePoint Framework extensions, testing on modern pages is the only option, since at this moment the SharePoint Workbench doesn't support loading extensions. Testing on modern pages can be used for debugging web parts, where it offers developers additional value.
 
 > [!IMPORTANT]
-> While there are no technical restrictions for debugging local SharePoint Framework solutions on modern SharePoint pages, you should be careful when using it in your production tenant. This capability allows you to execute code that hasn't been tested and verified against your organization's policies and could be harmful to your production data.
+> While there are no technical restrictions for debugging local SharePoint Framework solutions on modern SharePoint pages, you should be careful when using them in your production tenant. This capability allows you to execute code that hasn't been tested and verified against your organization's policies and could be harmful to your production data.
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Debug SharePoint Framework extensions on modern SharePoint pages
 
@@ -55,7 +57,7 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 }
 ```
 
-Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded and for each extension, the list of properties that should be set on them. To use the particular **serve** configuration, execute in the command line:
+Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded, and for each extension, the list of properties that should be set on them. To use the particular **serve** configuration, execute in the command line:
 
 ```console
 gulp serve --config=<name>
@@ -67,7 +69,7 @@ For example:
 gulp serve --config=helloWorld
 ```
 
-After running this command, gulp will start your web browser with the modern page specified in your configuration. The page will show a pop-up asking you to confirm that you now will be loading debug scripts.
+After running this command, gulp will start your web browser with the modern page specified in your configuration. The page will show a pop-up asking you to confirm that you will now be loading debug scripts.
 
 ![Popup to confirm loading debug scripts on a modern page in SharePoint Online](../images/ext-com-accept-debug-scripts.png)
 
@@ -120,6 +122,15 @@ https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
 
 > [!NOTE]
 > The development URL was changed in the SPFx v1.21 release from `https://localhost:4321/temp/manifests.js` to `https://localhost:4321/temp/build/manifests.js`.
+
+> [!NOTE]
+> Starting with **Chromium 142**, browsers such as **Microsoft Edge** and **Google Chrome** enforce a new security model called **Local Network Access**. Learn more in the Chromium release notes: [Chrome 142 | Release notes: Security - Local network access restrictions](https://developer.chrome.com/release-notes/142#local_network_access_restrictions).
+>
+> When debugging SPFx solutions, SharePoint Online must load resources from your local development environment (such as `https://localhost:4321`).
+>
+> When prompted with **“Allow this site to access devices on your local network?”**, you must select **Allow** in Edge or Chrome.
+>
+> If permission is denied, SPFx debug manifests and bundles cannot load, and the web part will fail during debugging.
 
 The following are the query string parameters that you need to add:
 

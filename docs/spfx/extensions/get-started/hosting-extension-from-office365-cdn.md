@@ -20,6 +20,8 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Enable the CDN in your Microsoft 365 tenant
 
 Microsoft 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.

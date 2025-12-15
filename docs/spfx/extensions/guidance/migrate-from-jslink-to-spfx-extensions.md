@@ -15,6 +15,8 @@ In this tutorial, you learn how to migrate from the old "classic" customizations
 > [!NOTE]
 > For more information about how to build SharePoint Framework extensions, see [Overview of SharePoint Framework extensions](../overview-extensions.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 First, let's introduce the available options when developing SharePoint Framework extensions:
 
 - **Application Customizer**: Extend the native "modern" UI of SharePoint by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. For more information on application customizers, see [Build your first SharePoint Framework Extension (Hello World part 1)](../get-started/build-a-hello-world-extension.md).

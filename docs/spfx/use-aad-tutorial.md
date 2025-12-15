@@ -14,7 +14,10 @@ Introduced in v1.4.1, you can use the SharePoint Framework to consume Microsoft 
 In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions. For a conceptual overview of this technology, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 > [!IMPORTANT]
-> Using the Microsoft Graph API with SharePoint Framework directly using [Microsoft Authentication Library for JavaScript](https://learn.microsoft.com/en-us/javascript/api/overview/msal-overview) is not supported with SPFx version 1.4.1 and beyond. Please use the SharePoint Framework provided native [MSGraphClientV3](use-msgraph.md) for the Microsoft Graph API operations.
+> Using the Microsoft Graph API with SharePoint Framework directly using [Microsoft Authentication Library for JavaScript](/javascript/api/overview/msal-overview) is not supported with SPFx version 1.4.1 and beyond. Please use the SharePoint Framework provided native [MSGraphClientV3](use-msgraph.md) for the Microsoft Graph API operations.
+
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Solution overview
 

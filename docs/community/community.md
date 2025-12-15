@@ -1,12 +1,12 @@
 ---
 title:  SharePoint Developer Community (SharePoint PnP) resources
 description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
-ms.date: 06/09/2022
+ms.date: 11/19/2025
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Microsoft 365 Platform Community (PnP) resources around SharePoint Framework
+# Microsoft 365 & Power Platform Community resources around SharePoint Framework
 
 The Microsoft 365 Platform Community (also known as M365 PnP community) is an open-source initiative coordinated by Microsoft 365 engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
 
@@ -14,10 +14,9 @@ The Microsoft 365 Platform Community (also known as M365 PnP community) is an op
 
 - [SharePoint Developer Blog](https://developer.microsoft.com/office/blogs/) - Latest developer news around SharePoint and Office 365
 - [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
-- [Microsoft 365 Dev Twitter](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
-- [Microsoft 365 PnP Twitter](https://twitter.com/m365pnp) - Community account for Microsoft 365 and SharePoint topics
+- [Microsoft 365 Dev X](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
+- [Microsoft 365 PnP X](https://twitter.com/m365pnp) - Community account for Microsoft 365 and SharePoint topics
 - [Microsoft 365 Dev Facebook](https://www.facebook.com/Microsoft365Developer) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
-- [Microsoft 365 PnP Facebook](https://www.facebook.com/Microsoft365/community) - Community account for SharePoint and Office 365 developer topics
 
 ## GitHub
 
@@ -44,12 +43,11 @@ There are numerous community calls for SharePoint development, and you can choos
 |                                         Community call                                          |                           When                           |                                                                                    Description                                                                                    |                                Microsoft Teams Link                                |
 | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | [Microsoft 365 & Power Platform Call (Microsoft Speakers)](https://aka.ms/community/ms-speakers-call-invite)                                             | Weekly on Tuesdays at 8:00 AM PT / 3:00 PM GMT | Community call with Microsoft speakers covering the latest news from  Microsoft engineerung on the Microsoft 365 & Power Platform topics including news, UserVoice updates, and demos | [Direct MS Teams link to meeting](https://aka.ms/community/ms-speakers-call-join)      |
-| [Viva Connections and SharePoint Framework community call](https://aka.ms/spdev-spfx-call)          | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, SharePoint Framework, PnPJS, CLI for Microsoft 365, and reusable SPFx controls                  | [Direct MS Teams link to meeting](https://aka.ms/spdev-spfx-call-join)|
-| [Microsoft 365 & Power Platform Development Community call](https://aka.ms/community/m365-powerplat-dev-call-invite) | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT | Latest on Latest on PnP Framework and Core SDK extension, PnP PowerShell, yo Teams, Microsoft Graph Toolkit, Independent Publisher Connector Updates plus community demos | [Direct MS Teams link to meeting](https://aka.ms/community/m365-powerplat-dev-call-join)  |
+| [Microsoft 365 & Power Platform Development Community call](https://aka.ms/community/m365-powerplat-dev-call-invite) | Weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT | Latest on Latest on open-source and community efforts plus community demos | [Direct MS Teams link to meeting](https://aka.ms/community/m365-powerplat-dev-call-join)  |
 
-## What’s the supportability statement around PnP open-source components and solutions?
+## What’s the supportability statement around open-source components and solutions?
 
-Following statements apply across all of the SharePoint PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
+Following statements apply across all of the PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
 
 - PnP assets are created by Microsoft & the community
 - PnP assets are maintained by Microsoft & the community
@@ -63,4 +61,4 @@ Following statements apply across all of the SharePoint PnP assets, including sa
 - [SharePoint developer portal](https://aka.ms/spdev)
 - [SharePoint developer samples](https://aka.ms/spdev-samples)
 - [SharePoint PnP open-source projects](open-source-projects.md)
-- [SharePoint glossary](../general-development/sharepoint-glossary.md) 
+- [SharePoint glossary](../general-development/sharepoint-glossary.md)

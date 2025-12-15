@@ -1,21 +1,18 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 06/19/2025
+ms.date: 09/18/2025
 ms.custom: scenarios:getting-started
 ---
 # Build your first Field Customizer extension
-
-> [!WARNING]
-> Microsoft [announced the deprecation of SharePoint Framework field customizers](https://admin.microsoft.com/AdminPortal/home#/MessageCenter/:/messages/MC1094051) on June 13, 2025.
->
-> While the original announcement included a retirement date, that has been revised and there is no set timeline. Refer to the Microsoft 365 Message Center post [MC1094051](https://admin.microsoft.com/AdminPortal/home#/MessageCenter/:/messages/MC1094051) for further information.
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
 You can follow these steps by watching the video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 

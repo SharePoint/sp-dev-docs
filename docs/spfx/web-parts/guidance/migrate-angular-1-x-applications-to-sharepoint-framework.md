@@ -18,6 +18,8 @@ The source of the AngularJS application migrated to SharePoint Framework is avai
 > [!NOTE]
 > This article references old, outdated & projects no longer maintained such as AngularJS v1.x & ngOfficeUIFabric.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Set up project
 
 Before you start migrating your AngularJS application, create and set up a new SharePoint Framework project to host the AngularJS application.

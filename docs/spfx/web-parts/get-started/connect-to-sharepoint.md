@@ -16,6 +16,8 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 > [!NOTE]
 > This article continues building the Hello World web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Run gulp serve
 
 Ensure that you have the **gulp serve** command running. If it isn't already running, go to the **helloworld-webpart** project directory and run it by using the following commands.

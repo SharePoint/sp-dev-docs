@@ -12,6 +12,8 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 > [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Prerequisites
 
 The easiest way to configure Visual Studio Code (VS Code) to debug SharePoint Framework solutions is to use the [JavaScript Debugger](https://github.com/microsoft/vscode-js-debug) included in VS Code to debug Chrome & Edge.

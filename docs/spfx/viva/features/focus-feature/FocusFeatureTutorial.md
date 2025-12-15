@@ -6,6 +6,8 @@ ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with focus feature
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Scaffold an Adaptive Card Extension project
 
 Create a new project directory for your project and change your current folder to that directory.

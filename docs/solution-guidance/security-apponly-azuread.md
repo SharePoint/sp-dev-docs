@@ -1,240 +1,169 @@
 ---
-title: Granting access via Azure AD App-Only
-description: Granting access via Azure AD App-Only
-ms.date: 02/26/2022
-author: vesajuvonen
-ms.author: vesaj
-ms.topic: conceptual
+title: Granting access via Entra ID App-Only
+description: Granting access via Entra ID App-Only
+ms.date: 11/28/2025
+author: jansenbe
+ms.author: bjansen
+ms.topic: article
 ms.localizationpriority: medium
 ---
-# Granting access via Azure AD App-Only
+# Granting access via Entra ID Application Permissions
 
-When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you're using SharePoint Online, if you're using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
+When using SharePoint Online you can define applications in Entra ID and these applications can be granted permissions to SharePoint, but also to all the other services in Microsoft 365. This model is the preferred model in case you're using SharePoint Online, if you're using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
 
-[!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
+## Setting up an Entra ID app for app-only access
 
-## Setting up an Azure AD app for app-only access
+In Entra ID when doing app-only you must use a certificate to request access to SharePoint CSOM/REST API's: anyone having the certificate and its private key can use the app and the permissions granted to the app. Below steps walk you through the setup of this model.
 
-In Azure AD when doing app-only you typically use a certificate to request access: anyone having the certificate and its private key can use the app and the permissions granted to the app. Below steps walk you through the setup of this model.
+### Creating an Entra application using the Entra Portal
 
-You are now ready to configure the Azure AD Application for invoking SharePoint Online with an App Only access token. To do that, you have to create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the App Only access token. First you must create the self-signed X.509 Certificate, which can be created using the makecert.exe tool that is available in the Windows SDK, through a provided PowerShell script which does not have a dependency to makecert or with a PnP PowerShell command. Using the PowerShell script is the preferred method and is explained in this chapter.
+If you want to manually create the Entra application follow below steps to create and configure your Entra application:
 
-> [!IMPORTANT]
-> It's important that you run the below scripts with Administrator privileges.
+1. Navigate to [Entra Portal](https://entra.microsoft.com) and click on **Applications**, followed by **App registrations** from the left navigation
+2. Click on **New registration** page
+3. Provide a **Name** for your Entra application (e.g. Microsoft365AssessmentToolForWorkflow)
+4. Select **Public client/native (mobile & desktop)** and enter **http://localhost** as redirect URI
+5. Click on **Register** and the Entra application gets created and opened
+6. Ensure you've defined the needed application permissions via the **API permissions** link the left navigation
+7. Go to **Certificates & secrets**, click on **Certificates** and **Upload certificate**, pick the .cer file of your certificate and add it.
+7. Click on **Grant admin consent for...** to consent the added permissions
 
-To create a self signed certificate with this script:
+> [!Note]
+> - If you don't have a certificate available then you can use Windows PowerShell to create one: https://docs.microsoft.com/azure/active-directory/develop/howto-create-self-signed-certificate.
+> - You can [learn more about creating an Entra application from the Entra docs](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app).
 
-```powershell
-.\Create-SelfSignedCertificate.ps1 -CommonName "MyCompanyName" -StartDate 2017-10-01 -EndDate 2019-10-01
+### Creating an Entra application using PnP PowerShell
+
+ Using [PnP PowerShell](https://pnp.github.io/powershell/) creating an Entra application becomes really simple. The [Register-PnPAzureADApp](https://pnp.github.io/powershell/cmdlets/Register-PnPAzureADApp.html) cmdlet will create a new Entra application, will create a new self-signed certificate inside the **Personal** node (= **My**) of the **CurrentUser** certificate store, and will hookup that cert with the created Entra application. Finally the right permissions are configured and you're prompted to consent these permissions.
+
+> [!Important]
+> If you encounter errors during below steps it's likely that you do not have the needed permissions. Please contact your tenant / Entra admins for help.
+
+```PowerShell
+# Before you use this!! 
+#  - Remove/update the application/delegated permissions depending on your needs
+#  - Also update the Tenant and Username properties to match your environment.
+#
+# If you prefer to have a password set to secure the created PFX file then add below parameter
+# -CertificatePassword (ConvertTo-SecureString -String "password" -AsPlainText -Force)
+#
+# See https://pnp.github.io/powershell/cmdlets/Register-PnPAzureADApp.html for more options
+#
+Register-PnPAzureADApp -ApplicationName Microsoft365AssessmentToolForAlerts `
+                       -Tenant contoso.onmicrosoft.com `
+                       -Store CurrentUser `
+                       -GraphApplicationPermissions "Sites.Read.All" `
+                       -SharePointApplicationPermissions "Sites.FullControl.All" `
+                       -GraphDelegatePermissions "Sites.Read.All", "User.Read" `
+                       -SharePointDelegatePermissions "AllSites.FullControl" `
+                       -Username "joe@contoso.onmicrosoft.com" `
+                       -Interactive
 ```
 
-> [!NOTE]
-> The dates are provided in ISO date format: YYYY-MM-dd
-> 
-> The certificate key algoritm must be RSA, this is the only supported algorithm currently
+> [!Note]
+> Replace `contoso.onmicrosoft.com` with your Entra tenant name and ensure you replace `joe@contoso.onmicrosoft.com` with the user id that's an Entra admin (or global admin). If you're unsure what your Entra tenant name is then go to https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView and check for the value of **Primary domain**.
 
-The actual script can be copied from here:
+Once you've pressed enter on above command, you'll be prompted to sign-in and you should sign-in using the user you've specified for the `Username` parameter. After that's done the Entra application will be created and configured, followed by a wait of 60 seconds to ensure the creation has been propagated across all systems. The final step is the admin consent flow: you'll again be prompted to sign-in with the specified admin user, followed by a consent dialog showing the permissions that are being granted to the application. Press **Accept** to finalize the consent flow. In the resulting output you'll get some key information:
 
-```powershell
-#Requires -RunAsAdministrator
-<#
-.SYNOPSIS
-Creates a Self Signed Certificate for use in server to server authentication
-.DESCRIPTION
-.EXAMPLE
-PS C:\> .\Create-SelfSignedCertificate.ps1 -CommonName "MyCert" -StartDate 2015-11-21 -EndDate 2017-11-21
-This will create a new self signed certificate with the common name "CN=MyCert". During creation you will be asked to provide a password to protect the private key.
-.EXAMPLE
-PS C:\> .\Create-SelfSignedCertificate.ps1 -CommonName "MyCert" -StartDate 2015-11-21 -EndDate 2017-11-21 -Password (ConvertTo-SecureString -String "MyPassword" -AsPlainText -Force)
-This will create a new self signed certificate with the common name "CN=MyCert". The password as specified in the Password parameter will be used to protect the private key
-.EXAMPLE
-PS C:\> .\Create-SelfSignedCertificate.ps1 -CommonName "MyCert" -StartDate 2015-11-21 -EndDate 2017-11-21 -Force
-This will create a new self signed certificate with the common name "CN=MyCert". During creation you will be asked to provide a password to protect the private key. If there is already a certificate with the common name you specified, it will be removed first.
-#>
-Param(
-
-   [Parameter(Mandatory=$true)]
-   [string]$CommonName,
-
-   [Parameter(Mandatory=$true)]
-   [DateTime]$StartDate,
-
-   [Parameter(Mandatory=$true)]
-   [DateTime]$EndDate,
-
-   [Parameter(Mandatory=$false, HelpMessage="Will overwrite existing certificates")]
-   [Switch]$Force,
-
-   [Parameter(Mandatory=$false)]
-   [SecureString]$Password
-)
-
-# DO NOT MODIFY BELOW
-
-function CreateSelfSignedCertificate(){
-
-    #Remove and existing certificates with the same common name from personal and root stores
-    #Need to be very wary of this as could break something
-    if($CommonName.ToLower().StartsWith("cn="))
-    {
-        # Remove CN from common name
-        $CommonName = $CommonName.Substring(3)
-    }
-    $certs = Get-ChildItem -Path Cert:\LocalMachine\my | Where-Object{$_.Subject -eq "CN=$CommonName"}
-    if($certs -ne $null -and $certs.Length -gt 0)
-    {
-        if($Force)
-        {
-
-            foreach($c in $certs)
-            {
-                remove-item $c.PSPath
-            }
-        } else {
-            Write-Host -ForegroundColor Red "One or more certificates with the same common name (CN=$CommonName) are already located in the local certificate store. Use -Force to remove them";
-            return $false
-        }
-    }
-
-    $name = new-object -com "X509Enrollment.CX500DistinguishedName.1"
-    $name.Encode("CN=$CommonName", 0)
-
-    $key = new-object -com "X509Enrollment.CX509PrivateKey.1"
-    $key.ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
-    $key.KeySpec = 1
-    $key.Length = 2048
-    $key.SecurityDescriptor = "D:PAI(A;;0xd01f01ff;;;SY)(A;;0xd01f01ff;;;BA)(A;;0x80120089;;;NS)"
-    $key.MachineContext = 1
-    $key.ExportPolicy = 1 # This is required to allow the private key to be exported
-    $key.Create()
-
-    $serverauthoid = new-object -com "X509Enrollment.CObjectId.1"
-    $serverauthoid.InitializeFromValue("1.3.6.1.5.5.7.3.1") # Server Authentication
-    $ekuoids = new-object -com "X509Enrollment.CObjectIds.1"
-    $ekuoids.add($serverauthoid)
-    $ekuext = new-object -com "X509Enrollment.CX509ExtensionEnhancedKeyUsage.1"
-    $ekuext.InitializeEncode($ekuoids)
-
-    $cert = new-object -com "X509Enrollment.CX509CertificateRequestCertificate.1"
-    $cert.InitializeFromPrivateKey(2, $key, "")
-    $cert.Subject = $name
-    $cert.Issuer = $cert.Subject
-    $cert.NotBefore = $StartDate
-    $cert.NotAfter = $EndDate
-    $cert.X509Extensions.Add($ekuext)
-    $cert.Encode()
-
-    $enrollment = new-object -com "X509Enrollment.CX509Enrollment.1"
-    $enrollment.InitializeFromRequest($cert)
-    $certdata = $enrollment.CreateRequest(0)
-    $enrollment.InstallResponse(2, $certdata, 0, "")
-    return $true
-}
-
-function ExportPFXFile()
-{
-    if($CommonName.ToLower().StartsWith("cn="))
-    {
-        # Remove CN from common name
-        $CommonName = $CommonName.Substring(3)
-    }
-    if($Password -eq $null)
-    {
-        $Password = Read-Host -Prompt "Enter Password to protect private key" -AsSecureString
-    }
-    $cert = Get-ChildItem -Path Cert:\LocalMachine\my | where-object{$_.Subject -eq "CN=$CommonName"}
-
-    Export-PfxCertificate -Cert $cert -Password $Password -FilePath "$($CommonName).pfx"
-    Export-Certificate -Cert $cert -Type CERT -FilePath "$CommonName.cer"
-}
-
-function RemoveCertsFromStore()
-{
-    # Once the certificates have been been exported we can safely remove them from the store
-    if($CommonName.ToLower().StartsWith("cn="))
-    {
-        # Remove CN from common name
-        $CommonName = $CommonName.Substring(3)
-    }
-    $certs = Get-ChildItem -Path Cert:\LocalMachine\my | Where-Object{$_.Subject -eq "CN=$CommonName"}
-    foreach($c in $certs)
-    {
-        remove-item $c.PSPath
-    }
-}
-
-if(CreateSelfSignedCertificate)
-{
-    ExportPFXFile
-    RemoveCertsFromStore
-}
+```text
+Pfx file               : D:\assessment\Microsoft365AssessmentTool.pfx
+Cer file               : D:\assessment\Microsoft365AssessmentTool.cer
+AzureAppId/ClientId    : 95610f5d-729a-4cd1-9ad7-1fa9052e50dd
+Certificate Thumbprint : 165CCE93E08FD3CD85B7B25D5E91C05B1D1E49FE
 ```
 
-You will be asked to give a password to encrypt your private key, and both the .PFX file and .CER file will be exported to the current folder.
+Running the `Register-PnPAzureADApp` did not only create and configure the Entra application, it also did create a certificate for the application permission flow. This certificate has been added to the current user's certificate store, under the personal node. You can use `certmgr` on the command line to open up the local user's certificate store.
 
-> [!NOTE]
-> The self-signed certificate can also be generate through the [New-PnPAzureCertificate](https://pnp.github.io/powershell/cmdlets/New-PnPAzureCertificate.html) command.
-
-Next step is registering an Azure AD application in the Azure Active Directory tenant that is linked to your Office 365 tenant. To do that, open the Office 365 Admin Center (https://admin.microsoft.com) using the account of a user member of the Tenant Global Admins group. Click on the "Azure Active Directory" link that is available under the "Admin centers" group in the left-side treeview of the Office 365 Admin Center. In the new browser's tab that will be opened you will find the [Microsoft Azure portal](https://portal.azure.com). If it is the first time that you access the Azure portal with your account, you will have to register a new Azure subscription, providing some information and a credit card for any payment need. But don't worry, in order to play with Azure AD and to register an Office 365 Application you will not pay anything. In fact, those are free capabilities. Once having access to the Azure portal, select the "Azure Active Directory" section and choose the option "App registrations". See the next figure for further details.
-
-![shows azure ad portal](media/apponly/azureadapponly1.png)
-
-In the "App registrations" tab you will find the list of Azure AD applications registered in your tenant. Click the "New registration" button in the upper left part of the blade. Next, provide a name for your application and click on "Register" at the bottom of the blade.
-
-![creates a new azure ad application](media/apponly/azureadapponly2.png)
-
-> [!IMPORTANT]
-> Once the application has been created copy the "Application (client) ID" as you'll need it later.
-
-Now click on "API permissions" in the left menu bar, and click on the "Add a permission" button. A new blade will appear. Here you choose the permissions that you will grant to this application. Choose i.e.:
-
-- SharePoint
-	- Application permissions
-		- Sites
-			- Sites.FullControl.All
-
-Click on the blue "Add permissions" button at the bottom to add the permissions to your application. The "Application permissions" are those granted to the application when running as App Only.
-
-![granting permissions to azure ad application](media/apponly/azureadapponly4.png)
-
-Final step is "connecting" the certificate we created earlier to the application. Click on "Certificates & secrets" in the left menu bar. Click on the "Upload certificate" button, select the .CER file you generated earlier and click on "Add" to upload it.
-
-To confirm that the certificate was successfully registered, click on "Manifest" in the left menu bar. Search for the **keyCredentials** property. It should look like:
-
-```JSON
-  "keyCredentials": [
-    {
-      "customKeyIdentifier": "<$base64CertHash>",
-      "endDate": "2021-05-01T00:00:00Z",
-      "keyId": "<$guid>",
-      "startDate": "2019-05-01T00:00:00Z",
-      "type": "AsymmetricX509Cert",
-      "usage": "Verify",
-      "value": "<$base64Cert>",
-      "displayName": "CN=<$name of your cert>"
-     }
-  ],
-```
-
-If you see a section looking somewhat similar to this, the certificate has been added successfully.
-
-In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grant consent". Click on the "Grant admin consent for {{organization name}}" button and confirm the action by clicking on the "Yes" button that appears at the top.
-
-![granting API permissions to azure ad application](media/apponly/azureadapponly5.png)
+> [!Note]
+> The certificate is also exported as PFX file and cer file on the file system, feel free to delete these exported files as it's easier to use the certificate from the certificate store.
 
 ## Using this principal with PnP PowerShell
 
-If you want to use this AAD App Only principal with [PnP PowerShell](https://github.com/pnp/PowerShell), after you have installed the PnP PowerShell module, you can connect to your SharePoint Online environment using:
+If you want to use this Entra ID App Only principal with [PnP PowerShell](https://github.com/pnp/PowerShell), after you have installed the PnP PowerShell module, you can connect to your SharePoint Online environment using the [non interactive authentication](https://pnp.github.io/powershell/articles/authentication.html#non-interactive-authentication) supported by PnP PowerShell.
 
 ```powershell
-Connect-PnPOnline -ClientId <$application client id as copied over from the AAD app registration above> -CertificatePath '<$path to the PFX file generated by the PowerShell script above>' -CertificatePassword (ConvertTo-SecureString -AsPlainText "<$password assigned to the generated certificate pair above>" -Force) -Url https://<$yourtenant>.sharepoint.com -Tenant "<$tenantname>.onmicrosoft.com"
+Connect-PnPOnline [yourtenant].sharepoint.com -ClientId <client id of your Entra ID Application Registration> -Tenant <tenant>.onmicrosoft.com -CertificatePath <path to your .pfx certificate> 
+
+# or
+
+Connect-PnPOnline [yourtenant].sharepoint.com -ClientId <client id of your Entra ID Application Registration> -Tenant <tenant>.onmicrosoft.com -Thumbprint <thumbprint that can be found in the certificate> 
 ```
 
 You can now perform operations through PnP PowerShell against your SharePoint Online environment using this certificate App Only trust.
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-## Using this principal in your application using the SharePoint PnP Framework library
+## Using this principal in your CSOM application
+
+Follow these steps to build a C# Console application that uses CSOM and authenticates using Entra ID with application permissons:
+- Create a new console-based solution for c# .net
+- Install the MSAL.NET NuGet package by running the following command in the Package Manager Console: `Install-Package Microsoft.Identity.Client`
+- Add the following code to your application to configure MSAL and acquire an access token using a certificate
+
+```csharp
+using System;
+using System.Threading.Tasks;
+using Microsoft.SharePoint.Client;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.Identity.Client;
+
+namespace YourNamespace
+{
+    class Program
+    {
+        static async Task Main(string[] args)
+        {
+            //Generate Access Token using MSAL
+            #region Access Token
+            string tenantId = "{Tenant_Id}";
+            string clientId = "{Client_Id}";
+            string certificatePath = @"{Full Path to the certificate .Pfx file}";
+            string certificatePassword = "{Password of the .Pfx file}";
+            var siteUrl = new Uri("{SPO Site URL}");
+
+            X509Certificate2 certificate = new X509Certificate2(certificatePath, certificatePassword);
+
+            IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create(clientId)
+                .WithCertificate(certificate)
+                .WithAuthority(new Uri($"https://login.microsoftonline.com/{tenantId}"))
+                .Build();
+
+            string[] scopes = new string[] { "https://domain.sharepoint.com/.default" };
+
+            AuthenticationResult result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+
+            var accessToken = result.AccessToken;
+
+            Console.WriteLine($"Access Token: {accessToken}");
+            Console.WriteLine();
+            Console.WriteLine();
+            #endregion
+
+            //Generate SPO Context using the Access token
+            #region SPO Context
+            using (var context = new ClientContext(siteUrl))
+            {
+                context.ExecutingWebRequest += async (sender, e) =>
+                {
+                    // Insert the access token in the request
+                    e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer " + accessToken;
+                };
+
+                // Read web properties
+                var web = context.Web;
+                context.Load(web, w => w.Id, w => w.Title);
+                await context.ExecuteQueryAsync();
+
+                Console.WriteLine($"{web.Id} - {web.Title}");
+                Console.ReadKey();
+            }
+            #endregion
+        }
+    }
+}
+```
+
+## Using this principal in your CSOM application using the SharePoint PnP Framework library
 
 In a first step, you add the PnP Framework library NuGet package: https://www.nuget.org/packages/PnP.Framework.
 
@@ -264,101 +193,99 @@ namespace AzureADCertAuth
 
 [!INCLUDE [pnp-framework](../../includes/snippets/open-source/pnp-framework.md)]
 
-## Using this principal in your Powershell script using the PnP Framework library
+## Using this principal in your PowerShell scripts while not depending on PnP PowerShell
 
-When making use of Azure Automation Runbooks, first add the certificate (.pfx) using the Certificates option (under Shared Resources), then use the Get-AutomationCertificate cmdlet to retrieve the certificate to be used in the script.
+### Via a PFX file and password
 
-> [!NOTE]
-> You need to add the PnP.Framework module to your Automation Account first. This module contains everything needed to make the authentication call.
+```PowerShell
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "<Full Path to the Microsoft.Identity.Client.dll file>"
+Add-Type -Path "<Full Path to the Microsoft.IdentityModel.Abstractions.dll file>"
 
-```powershell
-# path to installed modules
-$path = "C:\Modules\User\SharePointPnPPowerShellOnline"
+#Declare the Variables
+$tenantId = "<Tenant_Id>"
+$clientId = "<Client_Id>"
+$certPath = "<Full Path to the PFX file>"
+$certPassword = "<Password of the .pfx certificate>"
+$siteUrl = "https://<Domain>.sharepoint.com/sites/<SiteName>"
 
-# reference to needed assemblies
-Add-Type -Path "$path\Microsoft.SharePoint.Client.dll"
-Add-Type -Path "$path\Microsoft.SharePoint.Client.Runtime.dll"
-Add-Type -Path "$path\PnP.Framework.dll"
-Add-Type -Path "$path\PnP.Core.dll"
-Add-Type -Path "$path\Microsoft.Identity.Client.dll"
+# Load the certificate
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import($certPath, $certPassword, [System.Security.Cryptography.X509Certificates.X509KeyStorageFlags]::Exportable)
 
-# reference to the certificate
-$cert = Get-AutomationCertificate -Name 'NameOfCertificate'
+# Get the access token using MSAL
+$authority = "https://login.microsoftonline.com/$tenantId"
+$scope = New-Object System.Collections.Generic.List[string]
+$scope.Add("https://<Domain>.sharepoint.com/.default")
+$msalApp = [Microsoft.Identity.Client.ConfidentialClientApplicationBuilder]::Create($clientId).WithAuthority($authority).WithCertificate($cert).Build()
+$authResult = $msalApp.AcquireTokenForClient($scope).ExecuteAsync().Result
+$accessToken = $authResult.AccessToken
 
-# set the variables
-$siteUrl = "https://<tenant>.sharepoint.com"
-$appId = "<guid of the App>"
-$domain = "<tenant>.onmicrosoft.com"
-$azureEnv = [PnP.Framework.AzureEnvironment]::Production
+$context = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
 
-try {
-    # instantiate the object
-    $clientContext = $null
-    $authManager = new-object PnP.Framework.AuthenticationManager($appId, $cert, $domain, $null, $azureEnv)
+# Attach event handler for Authorization header
+$context.add_ExecutingWebRequest({
+    param($sender, $e)
+    $e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer $accessToken"
+})
 
-    # configure the object
-    $clientContext = $authManager.GetContext($siteUrl)
-
-    # do some stuff
-    $clientContext.Load($clientContext.Web)
-    $clientContext.ExecuteQuery()
-    $clientContext.Web.Title
-}
-catch {
-    # catch error if needed
-}
-finally {
-    $clientContext.Dispose()
-}
+# Example: Load Web Title
+$web = $context.Web
+$context.Load($web)
+$context.ExecuteQuery()
+ 
+Write-Host "Site Title:" $web.Title -ForegroundColor Green
 ```
 
-## Using this principal in your application and make use of the Azure KeyVault to store the certificate and retrieve it using an Azure Function
-
-Add a [Managed Identity](/azure/app-service/overview-managed-identity) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](/azure/app-service/app-service-key-vault-references).
-
-Below there is a slightly different call to the same AuthenticationManager method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the DefaultAzureCredential.
-
-This sample uses two libraries to access the Key Vault:
-
-- [Azure.Identity](/dotnet/api/azure.identity) for authenticating to the Key Vault
-- [Azure.Security.KeyVault.Secrets](/dotnet/api/azure.security.keyvault.secrets) for getting the certificate
+### Via a thumbprint to load the certificate from the user's certificate store
 
 ```csharp
-using Azure.Identity;
-using Azure.Security.KeyVault.Secrets;
-using Microsoft.SharePoint.Client;
-using System.Security.Cryptography.X509Certificates;
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+Add-Type -Path "<Full Path to the Microsoft.Identity.Client.dll file>"
+Add-Type -Path "<Full Path to the Microsoft.IdentityModel.Abstractions.dll file>"
 
-using (var cc = new PnP.Framework.AuthenticationManager(
-    "<application id>",
-    GetKeyVaultCertificate("kv-spo", "AzureAutomationSPOAccess"),
-    "contoso.onmicrosoft.com").GetContext("https://contoso.sharepoint.com/sites/demo"))
-{
-    cc.Load(cc.Web, p => p.Title);
-    cc.ExecuteQuery();
-    log.Info("Via PnP, we have site: " + cc.Web.Title);
-};
+$tenantId = "<Tenant_Id>"
+$clientId = "<Client_Id>"
+$thumbprint = "<Thumbprint value>"
+$siteUrl = "https://<Domain>.sharepoint.com/sites/<SiteName>"
 
-static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, string name)
-{
-    // Some steps need to be taken to make this work
-    // 1. Create a KeyVault and upload the certificate
-    // 2. Give the Function App the permission to GET certificates via Access Policies in the KeyVault
-    // 3. Call an explicit access token request to the management resource to https://vault.azure.net and use the URL of our Keyvault in the GetSecret method
-    Uri keyVaultUri = new Uri($"https://{keyvaultName}.vault.azure.net/");
+# Load the certificate from the CurrentUser\My store
+$store = New-Object System.Security.Cryptography.X509Certificates.X509Store("My", "CurrentUser")
+$store.Open("ReadOnly")
+$cert = $store.Certificates | Where-Object { $_.Thumbprint -eq $thumbprint }
+$store.Close()
 
-    var client = new SecretClient(keyVaultUri, new DefaultAzureCredential());
-    KeyVaultSecret secret = client.GetSecret(name);
-
-    return new X509Certificate2(Convert.FromBase64String(secret.Value), string.Empty, X509KeyStorageFlags.MachineKeySet);
+if (-not $cert) {
+    Write-Error "Certificate with thumbprint $thumbprint not found."
+    return
 }
 
+# Get the access token using MSAL
+$authority = "https://login.microsoftonline.com/$tenantId"
+$scope = New-Object System.Collections.Generic.List[string]
+$scope.Add("https://<Domain>.sharepoint.com/.default")
+$msalApp = [Microsoft.Identity.Client.ConfidentialClientApplicationBuilder]::Create($clientId).WithAuthority($authority).WithCertificate($cert).Build()
+$authResult = $msalApp.AcquireTokenForClient($scope).ExecuteAsync().Result
+$accessToken = $authResult.AccessToken
 
+# Output the token
+$context = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+
+# Attach event handler for Authorization header
+$context.add_ExecutingWebRequest({
+    param($sender, $e)
+    $e.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer $accessToken"
+})
+
+# Example: Load Web Title
+$web = $context.Web
+$context.Load($web)
+$context.ExecuteQuery()
+
+Write-Host "Site Title:" $web.Title -ForegroundColor Green
 ```
-
-## Using this principal with the Pnp Modernization Scanner
-
-Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](../transform/modernize-scanner.md) to use this principal with the tool.
 
 ## FAQ
 

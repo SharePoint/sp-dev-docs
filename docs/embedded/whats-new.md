@@ -1,11 +1,32 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 06/23/2025
+ms.date: 11/12/2025
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## October 2025
+
+- [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a **recycleBinItem** if the ID of the original **driveItem** is known.
+- [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) is previewing support for [SharePoint Embedded](./overview.md) to a limited number of customers. You can [sign up for the private preview](https://forms.office.com/r/98Z4iqSKya) today.
+
+## September 2025
+
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the beta Microsoft Graph endpoint.
+- [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, as well as inviting _new_ guests via app-only access.
+- [driveItem: copy](/graph/api/driveitem-copy) has clearer documentation on behaviors around metadata, versions, cross-geo operations, and known issues.
+- New cmdlets for consuming tenant administrators to [add](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [remove](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser), or [change](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser) container membership were added to the [SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
+## August 2025
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) APIs are now available in the beta Microsoft Graph endpoint.
+- [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) APIs are now available in the beta Microsoft Graph endpoint.
+
+## July 2025
+
+- [driveItem: copy](/graph/api/driveitem-copy) now supports the `childrenOnly` and `includeAllVersionHistory` request parameters in the v1.0 Microsoft Graph endpoint.
 
 ## June 2025
 

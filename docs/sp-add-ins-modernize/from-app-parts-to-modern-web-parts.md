@@ -19,6 +19,8 @@ If you prefer, you can watch the following video, instead of reading the whole a
 > [!NOTE]
 > You can find further details about creating SharePoint Framework web parts by reading the document [Build your first SharePoint client-side web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Transforming an App Part into a client-side web part
 
 Imagine that you have an App Part to render the list of documents in the "Shared Documents" library of a site. The App Part is configurable, and allows to define a search filter on items. In the following screenshot, you can see the UI of the App Part.
@@ -182,6 +184,9 @@ npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 
 > [!NOTE]
 > The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx).
+
+> [!WARNING]
+> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, run the following command:
 

@@ -10,6 +10,8 @@ This tutorial builds off the following tutorial: [Advanced Card View Functionali
 
 Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Functionality](advanced-card-view-functionality.md). The HelloWorld ACE displays either the count of total steps or one individual step at a time. Using the Quick View, the ACE can show a list of all the steps. Additionally, the ACE can show more details about a particular step if it's selected.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Show all items in Quick View
 
 1. Locate and open the following file in your project: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.

@@ -9,6 +9,8 @@ ms.localizationpriority: high
 
 When building client-side web parts on the SharePoint Framework, you can benefit from using existing JavaScript libraries to build powerful solutions. There are, however, some considerations that you should take into account to ensure that your web parts won't negatively impact the performance of SharePoint pages that they're being used on.
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Reference existing libraries as packages
 
 The most common way of referencing existing JavaScript libraries in SharePoint Framework client-side web parts is by installing them as a package in the project.
@@ -265,8 +267,6 @@ This way you specify that the **simpleWeather** script should be loaded after jQ
 
 > [!NOTE]
 > Notice how the entry for registering jQuery uses **jquery** for the external resource name, but **jQuery** as the global variable name. The name of the external resource is the name that you use in the `import` statements in your code. This is also the name that must match TypeScript type declarations. The global variable name, specified by using the `globalName` property, is the name known to other scripts such as plug-ins built on top of the library. While for some libraries these names might be the same, it's not required, and you should carefully check that you're using correct names to avoid any problems.
-
-It's difficult to determine manually whether the script that you're trying to load is a module or a non-module script. This is especially the case if the script that you're trying to load is minified. If your script is hosted on a publicly accessible URL, you can use the free [Rencore SharePoint Framework Script Check](https://rencore.com/sharepoint-framework/script-check/) tool to determine the type of script for you. Additionally, this tool lets you know whether the hosting location from which you're loading the script is properly configured.
 
 ## Non-module scripts considerations
 
