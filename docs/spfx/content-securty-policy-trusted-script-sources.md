@@ -310,7 +310,11 @@ No, when an SPFx web part is hosted on a classic page CSP will not be enforced
 
 No, CSP does not apply to Add-Ins. Add-Ins will stop working from April 2, 2026.
 
+### Auto populating trusted script sources is not working when an solution is uploaded to the classic tenant app catalog?
+
+Auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog using the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx), we're evaluating bringing this option to the classic tenant app catalog.
+
 ### Auto populating trusted script sources is not working when an solution is uploaded to a site collection app catalog?
 
-Correct, auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog. Currently this only applies to uploading via the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx), we're evaluating bringing this option to the classic app catalog.
+Correct, auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog (see above). If site collection app catalog is used then the required script sources need to be added independantly using either script/code or manual.
 
