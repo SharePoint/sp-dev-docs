@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 12/16/2025
+ms.date: 12/17/2025
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -244,12 +244,12 @@ The enforcement of Content Security Policy (CSP) for SharePoint Online will star
 
 ## Frequently Asked Questions
 
-### I need to load the script https://code.jquery.com/jquery-3.6.0.min.js, in what ways can I define this as trusted source?
+### I need to load the script `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`, in what ways can I define this as trusted source?
 
-- The most secure way is qualifying the exact script you want load as then only the specific version of the script can be loaded: `https://code.jquery.com/jquery-3.6.0.min.js`
-- If you want to allow all scripts in a specific domain (code.jquery.com) then use `https://code.jquery.com`. Note that `https://code.jquery.com/*` is not working.
-- If you want to allow all script sources in specific domain + folder (root folder of code.jquery.com) then use `https://code.jquery.com/`. Note that `https://code.jquery.com/*` is not working.
-- If you want to allow all subdomains inside a domain use `*.jquery.com`, this will allow loading anything under `jquery.com`
+- The most secure way is qualifying the exact script you want load as then only the specific version of the script can be loaded: `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`
+- If you want to allow all script in specific domain + folder (so all scripts that are hosted under https://cdn.jsdelivr.net/npm) then use `https://cdn.jsdelivr.net/npm/`. **Note the trailing slash!** Also note that `https://cdn.jsdelivr.net/npm/*` is not working.
+- If you want to allow all scripts in a specific domain (cdn.jsdelivr.net) then use `https://cdn.jsdelivr.net`, `https://cdn.jsdelivr.net/` or `cdn.jsdelivr.net`. Note that `https://cdn.jsdelivr.net/*` is not working.
+- If you want to allow all subdomains inside a domain use `*.jsdelivr.net`, this will allow loading anything under `jsdelivr.net`
 
 ### I'm hitting the 300 max sources limit, what should I do?
 
