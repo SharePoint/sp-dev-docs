@@ -131,6 +131,7 @@ However, if your solution implements [Option 3](#option-3-dynamically-load-a-scr
 
 > [!IMPORTANT]
 >
+> - When you've configured the `cdnBasePath` without a trailing slash then added entry in **Trusted script sources** needs to be updated by adding the trailing slash. In future this will happen automatically, but for already added solutions this update needs to be done manually.
 > - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**. If your SPFx solutions use inline script, then the recommended approach is to move the inline script into a script file, as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
 > - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and its variations also use an inline script whenever the user adds a script on a page via the web part. Added script will not execute, added HTML will still work.
 > - CSP is only enforced for scripts on non-classic pages; for example, a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
