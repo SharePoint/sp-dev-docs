@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 04/23/2025
+ms.date: 12/18/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -22,7 +22,6 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/6WTtjXP5yW4]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new web part project
 
@@ -46,11 +45,11 @@ When the project scaffolding and dependency install process are complete, Yeoman
 
 ```console
 _=+#####!
-###########|       .-----------------------------------.
-###/    (##|(@)    |          Congratulations!         |
-###  ######|   \   |   Solution webpart-1 is created.  |
-###/   /###|   (@) |  Run gulp serve to play with it!  |
-#######  ##|   /   '-----------------------------------'
+###########|       .------------------------------------------.
+###/    (##|(@)    |             Congratulations!             |
+###  ######|   \   |  Solution helloworldwebpart is created.  |
+###/   /###|   (@) |    Run npm run start to play with it!    |
+#######  ##|   /   '------------------------------------------'
 ###     /##|(@)
 ###########|
 **=+####!
@@ -74,7 +73,7 @@ The SharePoint Framework documentation uses Visual Studio Code in the steps and 
 
 ## Preview the web part
 
-You can preview and test your client-side web part in the SharePoint hosted workbench without deploying your solution to SharePoint. This is done by starting a local web server the hosted workbench can load files from using the gulp task **serve**.
+You can preview and test your client-side web part in the SharePoint hosted workbench without deploying your solution to SharePoint. This is done by starting a local web server the hosted workbench can load files by using the **Heft start** command.
 
 The client-side toolchain uses HTTPS endpoints by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
 
@@ -88,38 +87,36 @@ The client-side toolchain uses HTTPS endpoints by default. Part of the [Set up y
 Assuming you've installed & trusted developer certificate, execute the following command in the console to build and preview your web part:
 
 ```console
-gulp serve
+heft start
 ```
 
-This command executes a series of gulp tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment.
+This command runs a series of Heft tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment.
 
 ```console
-gulp serve
-Build target: DEBUG
-[12:13:24] Using gulpfile d:\pnp\helloworld-webpart\gulpfile.js
-[12:13:24] Starting 'serve'...
-[12:13:24] Starting gulp
-[12:13:24] Starting subtask 'spfx-serve'...
-[12:13:24] [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
-[12:13:25] Starting server...
-[12:13:25] Finished subtask 'spfx-serve' after 1.24 s
-[12:13:25] Starting subtask 'pre-copy'...
-[12:13:26] Finished subtask 'pre-copy' after 533 ms
-[12:13:26] Starting subtask 'copy-static-assets'...
-[12:13:26] Starting subtask 'sass'...
-[12:13:26] Server started https://localhost:4321
-[12:13:26] LiveReload started on port 35729
-[12:13:26] Running server
-[12:13:26] Opening https://sppnp.sharepoint.com/_layouts/workbench.aspx using the default OS app
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: https://localhost:4321/, https://[::1]:4321/
+[build:webpack] Started Webpack Dev Server at https://[::1]:4321/
+[build:webpack] Running incremental Webpack compilation
+[build:configure-webpack-serve]  Request: /temp/build/manifests.js
+<i> [webpack-dev-middleware] wait until bundle finished: /temp/build/manifests.js
+New run requested by typescript
+Cancelling incremental build...
+[build:configure-webpack-serve]
+[build:configure-webpack-serve]  ══════════════════════════════════════════════════════════════════
+[build:configure-webpack-serve]  To load your scripts, use this query string:
+[build:configure-webpack-serve]  ?debugManifestsFile=https%3A%2F%2Flocalhost%3A4321%2Ftemp%2Fbuild%2Fmanifests.js&debug=true&noredir=true
+[build:configure-webpack-serve]  ══════════════════════════════════════════════════════════════════
+[build:configure-webpack-serve]
+webpack 5.95.0 compiled successfully in 41820 ms
 ```
 
-SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
+SharePoint client-side development tools use [heft](https://heft.rushstack.io/) as the task runner to handle build process tasks such as:
 
 - Transpile TypeScript files to JavaScript.
 - Compile SASS files to CSS.
 - Bundle and minify JavaScript and CSS files.
 
-VS Code provides built-in support for gulp and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
+VS Code provides built-in support for heft and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
 
 The SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
 
@@ -390,11 +387,11 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 Now that we have introduced new properties, ensure that you're again hosting the web part from the local development environment by executing the following command. This also ensures that the previous changes were correctly applied.
 
 ```console
-gulp serve
+heft start
 ```
 
 ## Next steps
 
 Congratulations on getting your first Hello World web part running!
 
-Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **gulp serve** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
+Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **heft start** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
