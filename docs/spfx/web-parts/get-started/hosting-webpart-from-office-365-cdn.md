@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 11/02/2023
+ms.date: 12/24/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -27,7 +27,6 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/N-KowN-UwTM]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Enable CDN in your Microsoft 365 tenant
 
@@ -36,7 +35,7 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
 ## Finalize solution for deployment
 
 1. Switch to the console and make sure you're still in the project directory that you used to set up your web part project.
-1. If you are still running the local webserver by executing **gulp serve** in the previous tutorial, press <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate it.
+1. If you are still running the local webserver by executing **heft start** in the previous tutorial, press <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate it.
 1. Ensure you're in your project directory:
 
     ```console
@@ -105,13 +104,13 @@ If Microsoft 365 CDN *is enabled*, it's used automatically with default settings
 1. Execute the following task to bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This creates an updated **helloworld-webpart.sppkg** package on the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
     > [!NOTE]
