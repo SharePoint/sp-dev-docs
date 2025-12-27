@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design REST API
 description: Work with SharePoint site designs through the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations.
-ms.date: 06/28/2022
+ms.date: 12/27/2025
 ms.localizationpriority: high
 ---
 
@@ -774,4 +774,5 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 ## See also
 
 - [SharePoint site design and site script overview](site-design-overview.md)
+
 
