@@ -431,7 +431,6 @@ Creates a new site design available to users when they create a new site from th
 
 |Parameter  | Description  |
 |-----------|--------------|
-| id         | The ID of the site design to apply. |
 |Title                 | The display name of the site design. |
 |WebTemplate           | Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
 |SiteScriptIds           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
@@ -775,3 +774,4 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 ## See also
 
 - [SharePoint site design and site script overview](site-design-overview.md)
+
