@@ -211,7 +211,7 @@ In the web part manifest, add web part properties so that users can configure th
     import styles from './Gallery.module.scss';
     import { IGalleryProps } from './IGalleryProps';
 
-    export default class Gallery extends React.Component<IGalleryProps, void> {
+    export default class Gallery extends React.Component<IGalleryProps, {}> {
       public render(): JSX.Element {
         if (this.needsConfiguration()) {
           return <div className="ms-Grid" style={{ color: "#666", backgroundColor: "#f4f4f4", padding: "80px 0", alignItems: "center", boxAlign: "center" }}>
@@ -270,7 +270,49 @@ In the web part manifest, add web part properties so that users can configure th
       }
     }
     ```
+1. The Gallery component uses several CSS classes that need to be defined in the stylesheet. In the code editor, open the **./src/webparts/gallery/components/Gallery.module.scss** file, and add the following styles after the existing `.gallery` class:
 
+    ```scss
+    .container {
+      max-width: 700px;
+      margin: 0px auto;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .row {
+      padding: 20px;
+    }
+
+    .button {
+      text-decoration: none;
+      height: 32px;
+      min-width: 80px;
+      background-color: #0078d4;
+      border-color: #0078d4;
+      color: #ffffff;
+      outline: transparent;
+      position: relative;
+      font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      font-weight: 400;
+      border-width: 0;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 16px;
+
+      .label {
+        font-weight: 600;
+        font-size: 14px;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 4px;
+        vertical-align: top;
+        display: inline-block;
+      }
+    }
+    ```
 1. Update the main React component interface to match the web part property interface, because we're bypassing all the web part properties to this component. In the code editor, open the **./src/webparts/gallery/components/IGalleryProps.ts** file, and change its code to:
 
     ```typescript
@@ -382,7 +424,7 @@ In a real-life scenario, you would retrieve the list of lists from the current S
       StyleFieldListOptionLabel: string;
     }
 
-    declare module 'galleryStrings' {
+    declare module 'GalleryWebPartStrings' {
       const strings: IGalleryStrings;
       export = strings;
     }
