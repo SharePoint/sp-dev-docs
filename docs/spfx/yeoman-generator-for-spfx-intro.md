@@ -1,7 +1,7 @@
 ---
 title: Yeoman generator for the SharePoint Framework
 description: On this page, learn how to use the Yeoman generator for the SharePoint Framework to create SPFx projects.
-ms.date: 03/08/2023
+ms.date: 12/30/2025
 ms.localizationpriority: high
 ---
 # Yeoman generator for the SharePoint Framework
@@ -10,8 +10,6 @@ The **SharePoint Online SPFx Yeoman Generator** helps you quickly create a Share
 
 > [!IMPORTANT]
 > This page assumes you've already installed all the necessary prerequisites for developing SharePoint Framework solutions. Verify the updated instructions outlined in the page [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 The SharePoint Online SPFx Yeoman Generator (*the "SPFx generator"*), uses the responses to the questions the developer is prompted with to create a new SharePoint Framework (SPFx) project. Depending on some prompt responses, other questions are presented.
 
@@ -23,19 +21,20 @@ The following demonstrates the creation of a new solution named **sfpxplay-01** 
 yo @microsoft/sharepoint --skip-install
 
      _-----_     ╭──────────────────────────╮
-    |       |    │      Welcome to the      │
-    |--(o)--|    │  SharePoint Online SPFx  │
-   `---------´   │          Yeoman          │
-    ( _´U`_ )    │     Generator@1.14.0     │
-    /___A___\   /╰──────────────────────────╯
+    |       |    │ Welcome to the Microsoft │
+    |--(o)--|    │      365 SPFx Yeoman     │
+   `---------´   │     Generator@1.22.1     │
+    ( _´U`_ )    ╰──────────────────────────╯
+    /___A___\   /
      |  ~  |
    __'.___.'__
  ´   `  |° ´ Y `
 
-Let's create a new SharePoint solution.
-? What is your solution name? spfxplay-01
+See https://aka.ms/spfx-yeoman-info for more information on how to use this generator.
+Let's create a new Microsoft 365 solution.
+? What is your solution name? sfpxplay-01
 ? Which type of client-side component to create? WebPart
-Add new Web part to solution spfxplay-01.
+Add new Web part to solution sfpxplay-01.
 ? What is your Web part name? HelloWorld
 ? Which template would you like to use? Minimal
 
@@ -44,34 +43,36 @@ Add new Web part to solution spfxplay-01.
    create config/package-solution.json
    create config/config.json
    create config/serve.json
-   create tsconfig.json
-   create .vscode/launch.json
-   create .vscode/settings.json
+    force .vscode/settings.json
    create config/deploy-azure-storage.json
    create config/write-manifests.json
-   create src/index.ts
-   create README.md
-   create .gitignore
+    force .gitignore
+   create .vscode/launch.json
+   create config/rig.json
+   create config/sass.json
+   create config/typescript.json
+    force README.md
    create .npmignore
-   create gulpfile.js
-   create tslint.json
+   create tsconfig.json
+   create .eslintrc.js
    create src/webparts/helloWorld/loc/en-us.js
    create src/webparts/helloWorld/loc/mystrings.d.ts
    create src/webparts/helloWorld/HelloWorldWebPart.module.scss
    create src/webparts/helloWorld/HelloWorldWebPart.ts
    create src/webparts/helloWorld/HelloWorldWebPart.manifest.json
-   create teams/55564fc2-179d-4bc1-bd63-9ede8183dadc_outline.png
-   create teams/55564fc2-179d-4bc1-bd63-9ede8183dadc_color.png
+   create teams/dc72706f-d2d2-4bd6-ba48-a05d65ba5fc6_outline.png
+   create teams/dc72706f-d2d2-4bd6-ba48-a05d65ba5fc6_color.png
+
 
 Changes to package.json were detected.
 Skipping package manager install.
 
       _=+#####!
-   ###########|       .------------------------------------.
-   ###/    (##|(@)    |          Congratulations!          |
-   ###  ######|   \   |  Solution spfxplay-01 is created.  |
-   ###/   /###|   (@) |   Run gulp serve to play with it!  |
-   #######  ##|   /   '------------------------------------'
+   ###########|       .--------------------------------------.
+   ###/    (##|(@)    |           Congratulations!           |
+   ###  ######|   \   |   Solution sfpxplay-01 is created.   |
+   ###/   /###|   (@) |  Run npm run start to play with it!  |
+   #######  ##|   /   '--------------------------------------'
    ###     /##|(@)
    ###########|
       **=+####!
@@ -94,59 +95,6 @@ You can also install a specific version of the generator by specifying the versi
 npm install @microsoft/generator-sharepoint@1.10 -g
 ```
 
-## Project template options
-
-Prior to SPFx v1.14, the generator provided developers with two project templates:
-
-- **No JavaScript Framework**:
-- **React**
-
-> [!NOTE]
-> A third option, **Knockout**, was available in all SPFx releases through SPFx v1.10. Knockout was retired as an option in SPFx v1.11.
-
-These templates included the minimal code a project needed to get started creating solutions. The **No JavaScript Framework** template used HTML and CSS to style a basic component while the **React** template used HTML, React, and CSS to do the same thing.
-
-### Project templates updated in SPFx v1.14 with theme-support
-
-In the SPFx v1.14 release, the SPFx generator introduced new & updated project templates. The goal of these templates is to include the code necessary to support the theme in the current environment where the component is running (SharePoint or Microsoft Teams).
-
-The code included in these templates simplifies the initial work developers must do in order to add support for themes to their components. For example, using these templates, all the code necessary to determine the colors and font used in the current SharePoint site are available within the web part and the web part will be notified when the theme changes to pick up the new theme settings.
-
-For SPFx components used in the context of Microsoft Teams, they'll receive the theme details for the current Microsoft Teams client such as default (light), dark, and high contrast.
-
-Furthermore, these templates include the code to determine if the component is currently running in a SharePoint context, or a Microsoft Teams context.
-
-For example, the following methods are included in both templates. The `_getEnvironmentMessage()` method returns a string indicating if the component is currently running in SharePoint or Microsoft Teams and if it's deployed to production or in development (served from localhost). The `onThemeChanged()` determines if the current theme is in dark mode and applies some changes to properties based on the current theme colors:
-
-```typescript
-private _getEnvironmentMessage(): string {
-  if (!!this.context.sdks.microsoftTeams) { // running in Teams
-    return this.context.isServedFromLocalhost
-        ? strings.AppLocalEnvironmentTeams
-        : strings.AppTeamsTabEnvironment;
-  }
-
-  return this.context.isServedFromLocalhost
-        ? strings.AppLocalEnvironmentSharePoint
-        : strings.AppSharePointEnvironment;
-}
-
-protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
-  if (!currentTheme) {
-    return;
-  }
-
-  this._isDarkTheme = !!currentTheme.isInverted;
-  const {
-    semanticColors
-  } = currentTheme;
-  this.domElement.style.setProperty('--bodyText', semanticColors.bodyText);
-  this.domElement.style.setProperty('--link', semanticColors.link);
-  this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered);
-
-}
-```
-
 ### Minimal project template
 
 A new project template option, **Minimal**, was added to the SPFx generator in SPFx v1.14. This project template option includes no theme or host environment code in new projects.
@@ -154,15 +102,15 @@ A new project template option, **Minimal**, was added to the SPFx generator in S
 For example, a new web part project starts with the following code, representing the minimal code necessary to run the web part:
 
 ```typescript
-export default class HelloWorldMinimalWebPart
-          extends BaseClientSideWebPart<IHelloWorldMinimalWebPartProps> {
+export default class HelloWorldWebPart
+  extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+
+  public render(): void {
+    this.domElement.innerHTML = `<div class="${ styles.helloWorld }"></div>`;
+  }
 
   protected onInit(): Promise<void> {
     return super.onInit();
-  }
-
-  public render(): void {
-    this.domElement.innerHTML = `<div class="${ styles.helloWorldMinimal }"></div>`;
   }
 
   protected get dataVersion(): Version {

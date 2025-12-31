@@ -1,14 +1,14 @@
 ---
 title: Migrate from the Gulp-based to the Heft-based Toolchain
-description: In this article, you'll learn how to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.
-ms.date: 12/10/2025
+description: In this article, you'll learn how to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.\*.
+ms.date: 12/30/2025
 ms.localizationpriority: high
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
 
 The migration steps in moving from a Gulp-based toolchain SharePoint Framework (SPFx) project to a Heft-based toolchain are more involved than a typical SPFx project upgrade from one version to another version.
 
-In this article, you'll walk through in detail all of the steps required for removing the Gulp toolchain from a SPFx version v1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22 project.
+In this article, you'll walk through in detail all of the steps required for removing the Gulp toolchain from a SPFx version v1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22.\* project.
 
 > [!IMPORTANT]
 > **This article assumes that you are upgrading an existing SPFx v1.21.1 React web part project.**
@@ -41,11 +41,11 @@ If you're using a different version of TypeScript, make sure that you uninstall 
 The next step is to install all of the dependencies the Heft-based toolchain requires:
 
 ```console
-npm install @microsoft/spfx-web-build-rig@1.22.0 \
-            @microsoft/spfx-heft-plugins@1.22.0 \
-            @microsoft/eslint-config-spfx@1.22.0 \
-            @microsoft/eslint-plugin-spfx@1.22.0 \
-            @microsoft/sp-module-interfaces@1.22.0 \
+npm install @microsoft/spfx-web-build-rig@1.22.1 \
+            @microsoft/spfx-heft-plugins@1.22.1 \
+            @microsoft/eslint-config-spfx@1.22.1 \
+            @microsoft/eslint-plugin-spfx@1.22.1 \
+            @microsoft/sp-module-interfaces@1.22.1 \
             @rushstack/eslint-config@4.5.2 \
             @rushstack/heft@1.1.2 \
             @types/heft-jest@1.0.2 \
@@ -62,6 +62,33 @@ The Heft-based SPFx toolchain supports any version of TypeScript supported by th
 
 ```console
 npm install typescript@~5.8.0 --save-dev
+```
+
+## Update the ESLint configuration
+
+Next, modify the default ESLint configuration for your project.
+
+Open the **./eslintrc.js** file and locate the following line:
+
+```javascript
+'@rushstack/hoist-jest-mock': 1,
+```
+
+Add the following immediately after that line:
+
+```javascript
+// Require chunk names for dynamic imports in SPFx projects. https://www.npmjs.com/package/@rushstack/eslint-plugin
+'@rushstack/import-requires-chunk-name': 1,
+// Ensure that React components rendered with ReactDOM.render() are unmounted with ReactDOM.unmountComponentAtNode(). https://www.npmjs.com/package/@rushstack/eslint-plugin
+'@rushstack/pair-react-dom-render-unmount': 1,
+```
+
+Then locate the following two rules and delete them:
+
+```javascript
+'@microsoft/spfx/import-requires-chunk-name': 1,
+
+'@microsoft/spfx/pair-react-dom-render-unmount': 1
 ```
 
 ## Update npm scripts in package.json
@@ -172,12 +199,12 @@ Delete the **./gulpfile.js** file from your project as it is no longer used.
 Finally, upgrade the production dependencies in the project to SPFx v1.22:
 
 ```console
-npm install @microsoft/sp-component-base@1.22.0 \
-            @microsoft/sp-core-library@1.22.0 \
-            @microsoft/sp-lodash-subset@1.22.0 \
-            @microsoft/sp-office-ui-fabric-core@1.22.0 \
-            @microsoft/sp-property-pane@1.22.0 \
-            @microsoft/sp-webpart-base@1.22.0 \
+npm install @microsoft/sp-component-base@1.22.1 \
+            @microsoft/sp-core-library@1.22.1 \
+            @microsoft/sp-lodash-subset@1.22.1 \
+            @microsoft/sp-office-ui-fabric-core@1.22.1 \
+            @microsoft/sp-property-pane@1.22.1 \
+            @microsoft/sp-webpart-base@1.22.1 \
             --save-exact
 ```
 
