@@ -26,7 +26,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
     cd helloworld-webpart
     ```
 
-1. If **heft start** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
+1. If **Heft start** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
   Unlike in the Workbench, to use client-side web parts on modern SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
 
@@ -92,7 +92,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 ### Package contents
 
-The package uses SharePoint Feature to package your web part. By default, the heft task creates a feature for your web part.
+The package uses SharePoint Feature to package your web part. By default, the Heft task creates a feature for your web part.
 
 You can view the raw package contents in the **./sharepoint/solution/debug** folder.
 
@@ -159,7 +159,7 @@ Now that you've deployed and installed the client-side solution, add the web par
     ```
 
 1. *Before* adding the web part to a SharePoint server-side page, run the local server.
-1. In the console window that has the **helloworld-webpart** project directory, run the heft task to start serving from localhost:
+1. In the console window that has the **helloworld-webpart** project directory, run the Heft task to start serving from localhost:
 
     ```json
     heft start

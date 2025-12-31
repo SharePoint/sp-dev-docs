@@ -69,7 +69,7 @@ this.context.pageContext
     - builds and bundles the updated code automatically
 
     > [!NOTE]
-    > Keep the console window and Visual Studio Code side-by-side to see heft automatically compile as you save changes in Visual Studio Code.
+    > Keep the console window and Visual Studio Code side-by-side to see Heft automatically compile as you save changes in Visual Studio Code.
 
 1. Navigate to your SharePoint site's hosted workbench. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Refresh the hosted workbench to pick up the changes from the rebuilt code bundle.
 
@@ -130,7 +130,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
     The method uses the `spHttpClient` helper class and issues an HTTP **GET** request. It uses the `ISPLists` interface and also applies a filter to not retrieve hidden lists.
 
 1. Save the file.
-1. Switch to the console window that is running **heft start** and check if there are any errors. If there are errors, heft reports them in the console, and you need to fix them before proceeding.
+1. Switch to the console window that is running **heft start** and check if there are any errors. If there are errors, Heft reports them in the console, and you need to fix them before proceeding.
 
 ## Add new styles
 
@@ -265,7 +265,7 @@ Open the `HelloWorldWebPart` class.
 
     ![Render lists data from localhost](../../../images/sp-lists-render-online-workbench.png)
 
-1. Now you can stop the server from running. Switch to the console and stop **heft start**. Select <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the heft task.
+1. Now you can stop the server from running. Switch to the console and stop **heft start**. Select <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the Heft task.
 
 ## Next steps
 

@@ -110,13 +110,13 @@ Cancelling incremental build...
 webpack 5.95.0 compiled successfully in 41820 ms
 ```
 
-SharePoint client-side development tools use [heft](https://heft.rushstack.io/) as the task runner to handle build process tasks such as:
+SharePoint client-side development tools use [Heft](https://heft.rushstack.io/) as the task runner to handle build process tasks such as:
 
 - Transpile TypeScript files to JavaScript.
 - Compile SASS files to CSS.
 - Bundle and minify JavaScript and CSS files.
 
-VS Code provides built-in support for heft and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
+VS Code provides built-in support for Heft and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
 
 The SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
 
@@ -394,4 +394,4 @@ heft start
 
 Congratulations on getting your first Hello World web part running!
 
-Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **heft start** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
+Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **Heft start** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
