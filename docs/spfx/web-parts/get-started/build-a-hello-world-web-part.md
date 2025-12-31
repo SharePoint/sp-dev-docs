@@ -73,7 +73,7 @@ The SharePoint Framework documentation uses Visual Studio Code in the steps and 
 
 ## Preview the web part
 
-You can preview and test your client-side web part in the SharePoint hosted workbench without deploying your solution to SharePoint. This is done by starting a local web server the hosted workbench can load files by using the **Heft start** command.
+You can preview and test your client-side web part in the SharePoint hosted workbench without deploying your solution to SharePoint. This is done by starting a local web server the hosted workbench can load files by using the **heft start** command.
 
 The client-side toolchain uses HTTPS endpoints by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
 
@@ -395,3 +395,4 @@ heft start
 Congratulations on getting your first Hello World web part running!
 
 Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **Heft start** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
+
