@@ -19,8 +19,6 @@ The benefits of using the SharePoint Framework as the platform for your Microsof
 
 This means that you can take advantage of any SharePoint-specific APIs or functionalities in your web part.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
-
 ## Development process
 
 You can start developing Microsoft Teams tabs simply by using the SharePoint Framework 1.8 or later packages. The high-level steps to get started are as follows:
@@ -61,8 +59,8 @@ There's an alternative way to deploy your solution, which will for instance allo
 1. Build your SharePoint Framework solution the normal way:
 
     ```console
-    gulp bundle --ship
-    gulp package-solution --ship
+    heft build --production
+    heft package-solution --production
     ```
 
 1. Locate the **./teams** folder in your project folder:
