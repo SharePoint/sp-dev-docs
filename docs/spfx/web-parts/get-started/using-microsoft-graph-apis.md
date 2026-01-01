@@ -19,8 +19,6 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/tHzbh5JoC-A]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
-
 ## Create a SharePoint Framework project for Microsoft Graph usage
 
 1. Create a new project directory in your favorite location:
@@ -111,30 +109,34 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
     ```typescript
     public render(): void {
       this.context.msGraphClientFactory
-      .getClient('3')
-      .then((client: MSGraphClientV3): void => {
-        // get information about the current user from the Microsoft Graph
-        client
-        .api('/me/messages')
-        .top(5)
-        .orderby("receivedDateTime desc")
-        .get((error, messages: any, rawResponse?: any) => {
+        .getClient('3')
+        .then((client: MSGraphClientV3): Promise<void> => {
+          // get information about the current user from the Microsoft Graph
+          return client
+            .api('/me/messages')
+            .top(5)
+            .orderby("receivedDateTime desc")
+            .get()
+            .then((messages: {value: MicrosoftGraph.Message[]}) => {
 
-          this.domElement.innerHTML = `
-          <div class="${styles.myFirstGraphWebPart}">
-            <div>
-                <h3>Welcome to SharePoint Framework!</h3>
-                <p>
-                    The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-                </p>
-            </div>
-            <div id="spListContainer" />
-          </div>`;
+              this.domElement.innerHTML = `
+                <div class="${styles.myFirstGraphWebPart}">
+                  <div>
+                    <h3>Welcome to SharePoint Framework!</h3>
+                    <p>
+                      The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+                    </p>
+                  </div>
+                  <div id="spListContainer" />
+                </div>`;
 
-          // List the latest emails based on what we got from the Graph
-          this._renderEmailList(messages.value);
+              // List the latest emails based on what we got from the Graph
+              this._renderEmailList(messages.value);
+            });
+        })
+        .catch((error) => {
+          console.error('Error fetching messages:', error);
         });
-      });
     }
     ```
 
@@ -144,12 +146,14 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
     private _renderEmailList(messages: MicrosoftGraph.Message[]): void {
       let html: string = '';
       for (let index = 0; index < messages.length; index++) {
-        html += `<p class="${styles.welcome}">Email ${index + 1} - ${escape(messages[index].subject)}</p>`;
+        html += `<p class="${styles.welcome}">Email ${index + 1} - ${escape(messages[index].subject ?? '')}</p>`;
       }
 
       // Add the emails to the placeholder
-      const listContainer: Element = this.domElement.querySelector('#spListContainer');
-      listContainer.innerHTML = html;
+      const listContainer: Element | null = this.domElement.querySelector('#spListContainer');
+      if (listContainer) {
+        listContainer.innerHTML = html;
+      }
     }
     ```
 
@@ -158,13 +162,13 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
 1. Execute the following commands to build bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This creates an updated **graph-apis.sppkg** package on the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 Next, you need to deploy the package that was generated to the tenant App Catalog.
