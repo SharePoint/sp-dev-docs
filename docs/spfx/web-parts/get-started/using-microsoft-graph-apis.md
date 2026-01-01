@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 11/24/2022
+ms.date: 01/01/2026
 ms.localizationpriority: high
 ---
 
@@ -97,7 +97,7 @@ In this case, we'll include the solution-specific permissions in the package.
 In this case, we'll modify the code to use Microsoft Graph to get access on the current user's last five emails.
 
 1. Open **./src/webparts/helloWorld/MyFirstGraphWebPartWebPart.ts**.
-1. Add the following `import` statements after the existing `import` statements at the top fo the file:
+1. Add the following `import` statements after the existing `import` statements at the top of the file:
 
     ```typescript
     import { MSGraphClientV3 } from '@microsoft/sp-http';
