@@ -1,7 +1,7 @@
 ---
 title: Build a SharePoint web part with the Microsoft Graph Toolkit
 description: Get started using the Microsoft Graph Toolkit to build a SharePoint web part.
-ms.date: 12/10/2025
+ms.date: 01/05/2025
 ms.localizationpriority: high
 ---
 
@@ -22,8 +22,6 @@ Getting started involves the following steps:
 1. Deploy the Microsoft Graph Toolkit SharePoint Framework package.
 1. Build and deploy your web part.
 1. Test your web part.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Set up your SharePoint Framework development environment and create a new web part
 
@@ -121,8 +119,8 @@ After downloading the Microsoft Graph Toolkit SharePoint Framework .sppkg packag
 Now, you will build your application and deploy it to SharePoint. Build your application by running the following commands:
 
 ```bash
-gulp bundle
-gulp package-solution
+heft build --production
+heft package-solution --production
 ```
 
 In the `sharepoint/solution` folder, there will be a new `.sppkg` file. You will need to upload this file to your SharePoint Online App Catalog. Go to the [More features page of your SharePoint admin center](https://admin.microsoft.com/sharepoint?page=classicfeatures&modern=true). Select **Open** under **Apps**, then click **App Catalog**, and **Distribute apps for SharePoint**. Upload your `.sppkg` file, and click **Deploy**.
@@ -144,10 +142,10 @@ Open the `config\serve.json` file in your project and replace the  value of `ini
 Save the file and then run the following command in the console to build and preview your web part:
 
 ```bash
-gulp serve
+heft start
 ```
 
-Your hosted workbench will automatically open in your browser. Add your web part to the page and you should see your web part with the Microsoft Graph Toolkit components in action! As long as the gulp serve command is still running in your console, you can continue to make edits to your code and then just refresh your browser to see your changes.
+Your hosted workbench will automatically open in your browser. Add your web part to the page and you should see your web part with the Microsoft Graph Toolkit components in action! As long as the heft start command is still running in your console, you can continue to make edits to your code and then just refresh your browser to see your changes.
 
 ## Next Steps
 
