@@ -340,7 +340,7 @@ Now that we have created the baseline component and tested that it works properl
           break;
         case FormDisplayMode.Edit:
           request = this._updateItem(title);
-          break
+          break;
         default:
           return;
       }
