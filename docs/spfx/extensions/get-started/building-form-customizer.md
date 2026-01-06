@@ -1,7 +1,7 @@
 ---
 title: Build your first Form customizer extension
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience at a list or library level by associating the component with the used content type.
-ms.date: 11/14/2025
+ms.date: 01/06/2025
 ms.custom: scenarios:getting-started
 ---
 
@@ -14,8 +14,6 @@ Form customizers are SharePoint Framework components that give you an option to 
 
 > [!TIP]
 > You can find the output from this tutorial from [GitHub](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/spfx-formcustomizer-basics).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 
@@ -144,7 +142,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     Let's call out a few specific topics from the **serve.json** file
 
-    - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your gulp serve command, for example, as `gulp serve --config=helloWorld_EditForm`
+    - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your heft start command, for example, as `heft start --serve-config helloWorld_EditForm`
     - componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
     - To simplify the debugging, you do not need to define the target content type `id` to which the component is associated, but in the runtime, the association is performed in the content type level by updating at least one of the following properties in the content type:
       - ContentType.**NewFormClientSideComponentId** - component id for new form
@@ -157,7 +155,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
@@ -187,6 +185,11 @@ Now that we have created the baseline component and tested that it works properl
       Close: string;
       Title: string;
     }
+
+    declare module 'HelloWorldFormCustomizerStrings' {
+      const strings: IHelloWorldFormCustomizerStrings;
+      export = strings;
+    }
     ```
 
 1. Open the **./src/extensions/helloWorld/loc/en-us.js** file, and add new **Title** string to the file. File content should be as follows after your edits.
@@ -205,7 +208,7 @@ Now that we have created the baseline component and tested that it works properl
 1. Open the **./src/extensions/helloWorld/HelloWorldFormCustomizer.module.scss** file, and update the styling definition as follows. We are adding error styling for the component.
 
     ```scss
-    .helloWorld {
+    .basics {
       background-color: "[theme:white, default:#ffffff]";
       color: "[theme:themePrimary, default:#0078d4]";
       padding: 0.5rem;
@@ -225,6 +228,7 @@ Now that we have created the baseline component and tested that it works properl
       SPHttpClient,
       SPHttpClientResponse
     } from '@microsoft/sp-http';
+    import * as strings from 'HelloWorldFormCustomizerStrings';
     ```
 
 1. Include **_item** and **_etag** private types inside of the **HelloWorldFormCustomizer** class as shown in this code snippet. Notice that the class definition already exists in your code.
@@ -237,7 +241,7 @@ Now that we have created the baseline component and tested that it works properl
     // Added for the item to show in the form; use with edit and view form
     private _item: {
       Title?: string;
-    };
+    } = {};
     // Added for item's etag to ensure integrity of the update; used with edit form
     private _etag?: string;
     ```
@@ -261,7 +265,7 @@ Now that we have created the baseline component and tested that it works properl
         .then(res => {
           if (res.ok) {
             // store etag in case we'll need to update the item
-            this._etag = res.headers.get('ETag');
+            this._etag = res.headers.get('ETag') || undefined;
             return res.json();
           }
           else {
@@ -292,7 +296,7 @@ Now that we have created the baseline component and tested that it works properl
                           <input type="button" id="cancel" value="${strings.Close}" />
                         </div>`;
 
-          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+          document.getElementById('cancel')?.addEventListener('click', this._onClose.bind(this));
         }
         // render new/edit form
         else {
@@ -309,8 +313,8 @@ Now that we have created the baseline component and tested that it works properl
                         <div class="${styles.error}"></div>
                       </div>`;
 
-          document.getElementById('save').addEventListener('click', this._onSave.bind(this));
-          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+          document.getElementById('save')?.addEventListener('click', this._onSave.bind(this));
+          document.getElementById('cancel')?.addEventListener('click', this._onClose.bind(this));
         }
       }
     ```
@@ -322,17 +326,23 @@ Now that we have created the baseline component and tested that it works properl
       // disable all input elements while we're saving the item
       this.domElement.querySelectorAll('input').forEach(el => el.setAttribute('disabled', 'disabled'));
       // reset previous error message if any
-      this.domElement.querySelector(`.${styles.error}`).innerHTML = '';
+      const errorElement = this.domElement.querySelector(`.${styles.error}`);
+      if (errorElement) {
+        errorElement.innerHTML = '';
+      }
 
-      let request: Promise<SPHttpClientResponse>;
       const title: string = (document.getElementById('title') as HTMLInputElement).value;
-
+      
+      let request: Promise<SPHttpClientResponse>;
       switch (this.displayMode) {
         case FormDisplayMode.New:
           request = this._createItem(title);
           break;
         case FormDisplayMode.Edit:
           request = this._updateItem(title);
+          break
+        default:
+          return;
       }
 
       const res: SPHttpClientResponse = await request;
@@ -344,7 +354,10 @@ Now that we have created the baseline component and tested that it works properl
       else {
         const error: { error: { message: string } } = await res.json();
 
-        this.domElement.querySelector(`.${styles.error}`).innerHTML = `An error has occurred while saving the item. Please try again. Error: ${error.error.message}`;
+        const errorElement = this.domElement.querySelector(`.${styles.error}`);
+        if (errorElement) {
+          errorElement.innerHTML = `An error has occurred while saving the item. Please try again. Error: ${error.error.message}`;
+        }
         this.domElement.querySelectorAll('input').forEach(el => el.removeAttribute('disabled'));
       }
     }
@@ -374,7 +387,7 @@ Now that we have created the baseline component and tested that it works properl
         .post(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${this.context.list.title}')/items(${this.context.itemId})`, SPHttpClient.configurations.v1, {
           headers: {
             'content-type': 'application/json;odata.metadata=none',
-            'if-match': this._etag,
+            'if-match': this._etag || '*',
             'x-http-method': 'MERGE'
           },
           body: JSON.stringify({
