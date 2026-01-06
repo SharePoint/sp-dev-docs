@@ -91,7 +91,9 @@ For the standard billing container type, the global administrator or SharePoint 
 
 - An existing SharePoint tenancy
 - An Azure subscription in the tenancy
-- A resource group attached to the Azure subscription### Tenant requirements
+- A resource group attached to the Azure subscription
+
+### Tenant requirements
 
 - An active instance of SharePoint is required in your Microsoft 365 tenant.
 - Users who will be authenticating into SharePoint Embedded Container Types and Containers must be in Entra ID (Members and Guests)
