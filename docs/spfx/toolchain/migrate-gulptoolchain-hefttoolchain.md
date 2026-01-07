@@ -116,22 +116,17 @@ The project templates created for SPFx v1.22 include additional scripts to the *
   ..
   "scripts": {
     ..
-    "test-only": "heft run --only test --",
-    "deploy": "heft dev-deploy",
+    "build": "heft test --clean --production && heft package-solution --production",
     "start": "heft start --clean",
-    "build-watch": "heft build --lite",
-    "package-solution": "heft package-solution",
-    "deploy-azure-storage": "heft deploy-azure-storage",
-    "eject-webpack": "heft eject-webpack",
-    "trust-dev-cert": "heft trust-dev-cert",
-    "untrust-dev-cert": "heft untrust-dev-cert"
+    "clean": "heft clean",
+    "eject-webpack": "heft eject-webpack"
   }
   ..
 }
 ```
 
 > [!TIP]
-> While not required, consider installing the Heft CLI globally:
+> While not required, we recommend installing the Heft CLI globally:
 >
 > ```console
 > npm install @rushstack/heft --global
