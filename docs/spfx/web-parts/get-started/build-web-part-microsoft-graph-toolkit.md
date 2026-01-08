@@ -145,7 +145,7 @@ Save the file and then run the following command in the console to build and pre
 heft start
 ```
 
-Your hosted workbench will automatically open in your browser. Add your web part to the page and you should see your web part with the Microsoft Graph Toolkit components in action! As long as the heft start command is still running in your console, you can continue to make edits to your code and then just refresh your browser to see your changes.
+Your hosted workbench will automatically open in your browser. Add your web part to the page and you should see your web part with the Microsoft Graph Toolkit components in action! As long as the **heft start** command is still running in your console, you can continue to make edits to your code and then just refresh your browser to see your changes.
 
 ## Next Steps
 
