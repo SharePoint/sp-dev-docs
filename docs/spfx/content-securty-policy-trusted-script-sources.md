@@ -24,6 +24,9 @@ If the enforcement on March 1, 2026, is too soon because you need more time to r
 Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
 ```
 
+> [!NOTE]
+> Above `DelayContentSecurityPolicyEnforcement` option can be set as of February 9, 2026. If you do this before, the setting is not persisted.
+
 ## How Content Security Policy Works in SharePoint Online
 
 When a browser requests a script, if CSP is enabled on the site, the browser checks the script location against the CSP rules. If the CSP restrictions allow the location of the script to be loaded by the browser, the browser proceeds with the request. However, if CSP rules to not allow the location, the browser doesn't load the script and logs the error in the browser's Console.
