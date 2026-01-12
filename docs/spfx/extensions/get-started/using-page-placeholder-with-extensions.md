@@ -1,7 +1,7 @@
 ---
 title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions.
-ms.date: 12/14/2023
+ms.date: 01/12/2026
 ms.custom: scenarios:getting-started
 ---
 
@@ -16,8 +16,6 @@ This article describes how to extend your [Hello World extension](./build-a-hell
 You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/Wm1PG8U5bSw]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Get access to page placeholders
 
@@ -287,10 +285,10 @@ You're now ready to test your code in SharePoint Online.
     > [!NOTE]
     > The GUID in the above JSON excerpt is the unique ID of the SPFx extension component. This is defined in the component's manifest. The GUID in your solution will be different as every component ID is unique.
 
-1. Switch to the console window that is running **gulp serve** and check for errors. Gulp reports any errors in the console; you'll need to fix them before you continue. If you have the solution already running, restart it, so that we get the updated settings applied from the **serve.json** file.
+1. Switch to the console window that is running **heft start** and check for errors. Heft reports any errors in the console; you'll need to fix them before you continue. If you have the solution already running, restart it, so that we get the updated settings applied from the **serve.json** file.
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. Select **Load debug scripts** to continue loading scripts from your local host.
