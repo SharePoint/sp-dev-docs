@@ -319,7 +319,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 1. In your console, ensure that you're still in the **jquery-webpart** folder, and execute the following to build and preview your web part:
 
     ```console
-    heft start
+    heft start --nobrowser
     ```
 
     Once the web server starts, open a browser and navigate to a SharePoint site's hosted workbench to test your project. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
@@ -329,3 +329,4 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
     ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 1. In the console where you have **heft start** running, select <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate the task.
+
