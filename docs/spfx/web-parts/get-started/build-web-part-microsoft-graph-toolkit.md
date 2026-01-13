@@ -119,8 +119,8 @@ After downloading the Microsoft Graph Toolkit SharePoint Framework .sppkg packag
 Now, you will build your application and deploy it to SharePoint. Build your application by running the following commands:
 
 ```bash
-heft build --production
-heft package-solution --production
+heft build 
+heft package-solution 
 ```
 
 In the `sharepoint/solution` folder, there will be a new `.sppkg` file. You will need to upload this file to your SharePoint Online App Catalog. Go to the [More features page of your SharePoint admin center](https://admin.microsoft.com/sharepoint?page=classicfeatures&modern=true). Select **Open** under **Apps**, then click **App Catalog**, and **Distribute apps for SharePoint**. Upload your `.sppkg` file, and click **Deploy**.
