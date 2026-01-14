@@ -25,7 +25,7 @@ The steps in this article show you how to build a client-side web part that enab
 The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to select how to access Microsoft Graph. In versions of the SharePoint Framework starting with v1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD-secured REST API (**AadHttpClient**).
 
 > [!NOTE]
-> To get the source code for this solution, see the [api-scopes](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
+> To get the source code for this solution, see the [api-scopes](s://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
 
 If you're already familiar with how to create SharePoint Framework solutions, you can continue to [Configure the API permissions requests](#configure-the-api-permissions-requests).
 
@@ -283,7 +283,7 @@ Now you can update the **GraphConsumer** React component under the **./src/webpa
    import { DetailsList, DetailsListLayoutMode, CheckboxVisibility, SelectionMode } from '@fluentui/react/lib/DetailsList';
    import * as React from "react";
 
-   import { AadHttpClient, httpClientResponse, MSGraphClientV3  } from "@microsoft/sp-http";
+   import { AadHttpClient, HttpClientResponse, MSGraphClientV3  } from "@microsoft/sp-http";
    import { escape } from "@microsoft/sp-lodash-subset";
 
    import { ClientMode } from "./ClientMode";
@@ -680,3 +680,4 @@ And that's it! Now you can build enterprise-level solutions that use Azure AD-se
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md)
 - [Use the MSGraphClient to connect to Microsoft Graph](use-msgraph.md)
 - [Complete source code from this tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes)
+
