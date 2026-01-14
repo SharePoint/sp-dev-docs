@@ -584,6 +584,8 @@
     href: embedded/scenarios-and-use-cases.md
   - name: Getting Started
     items:
+    - name: Archiving SharePoint Embedded containers
+      href: ./embedded/getting-started/m365-archive-support-for-containers.md
     - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
     - name: Container Types
