@@ -1,7 +1,7 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and deployed to SharePoint sites when the solution is installed on it.
-ms.date: 05/03/2023
+ms.date: 01/05/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -21,8 +21,6 @@ Before you start, complete the procedures in the following articles to ensure th
 You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/09uoG6Voeew]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new web part project
 
@@ -253,13 +251,13 @@ Now you're ready to deploy the solution to SharePoint. Because we're provisionin
 1. In the console, execute the following command to package your client-side solution that contains the web part to get the basic structure ready for packaging:
 
     ```console
-    gulp bundle
+    heft build
     ```
 
 1. Execute the following command to create the solution package:
 
     ```console
-    gulp package-solution
+    heft package-solution
     ```
 
     The command creates the **asset-deployment-webpart.sppkg** package in the **sharepoint/solution** folder.
@@ -389,13 +387,13 @@ Next, we need to update both the solution version and the feature version respon
 1. In the console window, execute the following command to repackage your client-side solution that contains the web part so that we get the basic structure ready for packaging:
 
     ```console
-    gulp bundle
+    heft build 
     ```
 
 1. Execute the following command to create the solution package:
 
     ```console
-    gulp package-solution
+    heft package-solution
     ```
 
     The command creates a new version of the solution package in the **sharepoint/solution** folder. Notice that you can easily confirm from the **sharepoint/solution/debug** folder that the updated XML files are included in the solution package.
@@ -447,3 +445,4 @@ With the package been updated in the app catalog, we can move to the SharePoint 
 
 - [Provision SharePoint assets with your solution package](../../toolchain/provision-sharepoint-assets.md)
 - [Sample solution - Deployment of SharePoint assets as part of SPFx package](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-feature-framework)
+
