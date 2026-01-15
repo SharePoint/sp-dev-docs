@@ -92,7 +92,7 @@ The Archived containers page lists all containers in the tenant's archived conta
 1. Principal owner
 ![User's image](media/ctaux/image.png)
 
-## Deleted Containers
+## Archive a container
 
 A container can be archived when it’s no longer actively used but must be retained for legal, compliance, or business purposes. From the Active containers page, the CTA can select a container and choose Archive option to start the archival process.
 
