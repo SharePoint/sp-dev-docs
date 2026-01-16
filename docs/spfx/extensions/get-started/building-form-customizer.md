@@ -142,7 +142,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     Let's call out a few specific topics from the **serve.json** file
 
-    - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your **heft start** command, for example, as `heft start --serve-config helloWorld_EditForm`
+    - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your **heft start** command, for example, as **heft start --serve-config helloWorld_EditForm**.
     - componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
     - To simplify the debugging, you do not need to define the target content type `id` to which the component is associated, but in the runtime, the association is performed in the content type level by updating at least one of the following properties in the content type:
       - ContentType.**NewFormClientSideComponentId** - component id for new form
