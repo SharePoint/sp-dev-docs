@@ -71,3 +71,7 @@ The following table lists the API rate limits for applications and containers.
 > \* Limit can be increased per request.
 
 Application limits are defined in resource units, and the actual request rate, such as requests per minute, varies based on the chosen API and its corresponding resource unit cost. As a general rule, you can estimate the request rate by averaging about two resource units per request and dividing application resource unit limits by 2. Reducing the usage of permission operations can notably improve the call rate since these operations have the most significant impact on overall resource consumption.
+
+### Container creation rate limiting
+
+Per consuming tenant, and during the tenant's peak hours, container creation is limited to 5 new containers per second. Requests beyond this limit will be rate limited. Outside of peak hours, containers may be created at a faster rate.
