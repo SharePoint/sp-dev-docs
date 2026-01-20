@@ -37,7 +37,7 @@ A container type is represented on each container instance as an immutable prope
 SharePoint Embedded has two different container types you can create.
 
 1. [Trial container type](#trial-container-type). Uses the `trial` billing classification.
-1. [Standard container type](#standard-container-types-non-trial). Uses the `standard` or `directToCustomer` billing classification.
+1. [Standard container type](#standard-container-types-nontrial). Uses the `standard` or `directToCustomer` billing classification.
 
 To create a container type, your Microsoft Entra ID application needs to have the `FileStorageContainerType.Manage.All` application permission on the owning tenant. Your Microsoft Entra ID application needs to call the [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) endpoint on behalf of a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator):
 

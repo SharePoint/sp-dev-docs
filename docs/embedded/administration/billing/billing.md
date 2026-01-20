@@ -39,7 +39,7 @@ To update the billing properties on a container type with standard billing, see 
 
 ## Set up billing for passthrough container types in consuming tenant
 
-To set up billing for a passthrough container type in the consuming tenant, see the [setup guide in the consuming tenant Admin Center](../consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-app).
+To set up billing for a passthrough container type in the consuming tenant, see the [setup guide in the consuming tenant Admin Center](../consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type).
 
 ## SharePoint Embedded meters
 

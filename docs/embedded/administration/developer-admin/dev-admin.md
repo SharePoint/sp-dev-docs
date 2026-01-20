@@ -42,7 +42,7 @@ The developer admin is responsible for the billing of SharePoint Embedded applic
 
 #### Passthrough billing
 
-In this model, the customer, or the consuming tenant admin, is responsible for billing. For this reason, this billing model is also known as "direct-to-customer billing." To ensure the passthrough billing model is in place, the developer admin must set the `billingClassification` on the container type to `directToCustomer`. To learn more about how to set up passthrough billing in the container type, read about [creating container types](../../getting-started/containertypes.md#creating-container-types). To learn more about how to configure billing for SharePoint Embedded applications with passthrough billing in a consuming tenant, see [setup guide in the consuming tenant Admin Center](../consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-app).
+In this model, the customer, or the consuming tenant admin, is responsible for billing. For this reason, this billing model is also known as "direct-to-customer billing." To ensure the passthrough billing model is in place, the developer admin must set the `billingClassification` on the container type to `directToCustomer`. To learn more about how to set up passthrough billing in the container type, read about [creating container types](../../getting-started/containertypes.md#creating-container-types). To learn more about how to configure billing for SharePoint Embedded applications with passthrough billing in a consuming tenant, see [setup guide in the consuming tenant Admin Center](../consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type).
 
 ## Administration Tools
 
