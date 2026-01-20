@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Billing Meters
 description: This article describes the meters in SharePoint Embedded.
-ms.date: 04/30/2025
+ms.date: 01/20/2026
 ms.localizationpriority: high
 ---
 
@@ -26,13 +26,13 @@ However, calls made by internal services to the containers, which the applicatio
 
 ## Egress
 
-Egress refers to the data downloaded from the SharePoint Embedded platform to the customer's client device such as a desktop or mobile device.
+Egress refers to the data that exits the SharePoint Embedded platform. For example, this can refer to a document downloaded into the customer's client device such as a desktop or mobile device, or data transferred to a server operated by the customer. Egress charges are based on the total volume of data transferred out of SharePoint Embedded, measured in gigabytes (GB).
 
 However, certain types of data transfers are exempt from egress charges. These exemptions ensure that customers aren't billed for data transfers occurring within integrated Microsoft services, promoting seamless usage without extra costs for these specific internal operations. Some examples of these exemptions include:
 
 1. File downloads from the SharePoint Embedded application server to the customer's Office Desktop client aren't charged.
 1. File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC) aren't charged.
 
-## Pay as you go message (private preview)
+## Pay-as-you-go message (private preview)
 
-SharePoint Embedded agents use the Copilot Studio meter for $0.01/message (messages are the unit that measures agent usage). Each interaction with SharePoint Embedded agent will use twelve (12) messages - 2 messages for the generative answer feature and 10 messages for the tenant graph grounding feature - so customers are billed at $0.12 per interaction with SharePoint Embedded agents.
+SharePoint Embedded agents use the Copilot Studio meter for $0.01/message (messages are the unit that measures agent usage). Each interaction with SharePoint Embedded agent will use twelve (12) messages (2 messages for the generative answer feature and 10 messages for the tenant graph grounding feature) so customers are billed at $0.12 per interaction with SharePoint Embedded agents.
