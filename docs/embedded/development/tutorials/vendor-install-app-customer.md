@@ -21,7 +21,7 @@ Developers looking to get their SharePoint Embedded app installed on a tenant ha
 
 - Get the required admin permission grants for your app on the consuming tenant
 - Register your app's container type on the consuming tenant
-- Ensure your customer’s tenant completed [SharePoint Embedded pay-as-you-go billing setup](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type) if your container type is [configured for pass-through billing](../../administration/billing/billing.md#pass-through)
+- Ensure your customer’s tenant completed [SharePoint Embedded pay-as-you-go billing setup](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type) if your container type is [configured for pass-through billing](../../administration/billing/billing.md#passthrough-billing)
 
 ### Application permissions to request
 
