@@ -51,33 +51,12 @@ SharePoint Embedded operations [without a user](/graph/auth-v2-service) require 
 
 Currently, there are two types of operations with exceptional access patterns:
 
-- [Hidden permissions in Microsoft Graph](#hidden-microsoft-graph-permissions)
 - [Operations not exposed via Microsoft Graph](#operations-not-exposed-via-microsoft-graph)
 - [Operations involving searching SharePoint Embedded content](#operations-involving-searching-sharepoint-embedded-content)
 - [Operations that require a user license](#operations-that-require-a-user-license)
 
 > [!IMPORTANT]
 > Consider the repercussions of these exceptional access patterns on how your application and other applications can access SharePoint Embedded content in your container type.
-
-### Hidden Microsoft Graph permissions
-
-The following operations require permissions that are currently hidden in Microsoft Graph:
-
-- [Container type management](../getting-started/containertypes.md) on owning tenants.
-- [Container type registration](../getting-started/register-api-documentation.md) on consuming tenants.
-
-The Microsoft Graph permissions are rolling out to all tenants in the near future and will be visible once the rollout completes.
-
-#### Granting admin consent for hidden permissions
-
-[Granting admin consent](/entra/identity-platform/v2-admin-consent) for applications requesting hidden permission MUST be done by using the [admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin). Provide the consent URL to the Microsoft Entra directory administrator and ensure they [confirm a successful response](/entra/identity-platform/v2-admin-consent#successful-response). The consent URL may look like this:
-
-```http
-https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&scope=https://graph.microsoft.com/.default
-```
-
-> [!IMPORTANT]
-> Do not use the App registrations pane in the Azure portal to grant admin consent for applications that request hidden permissions. The App registrations pane will fail to validate the requested hidden permissions and will remove them from the manifest.
 
 #### Operations not exposed via Microsoft Graph
 
@@ -91,6 +70,19 @@ To use the [SharePoint Embedded agent](./declarative-agent/spe-da.md) experience
 | :-------------------: | :----------------------------------: | :---------: | :-----------------------------------------------------------------------------------------------: |
 | Container.Selected   | 19766c1b-905b-43af-8756-06526ab42875 | Application | In the context of SharePoint Embedded, enables container type registration on a consuming tenant. |
 
+> [!NOTE]
+> The `Container.Selected` permission is a hidden permission and won't show up in the Microsoft Entra admin consent experience. See [Granting admin consent for hidden permissions](#granting-admin-consent-for-hidden-permissions) for more details.
+
+##### Granting admin consent for hidden permissions
+
+[Granting admin consent](/entra/identity-platform/v2-admin-consent) for applications requesting hidden permission MUST be done by using the [admin consent URL](/entra/identity-platform/v2-admin-consent#request-the-permissions-from-a-directory-admin). Provide the consent URL to the Microsoft Entra directory administrator and ensure they [confirm a successful response](/entra/identity-platform/v2-admin-consent#successful-response). The consent URL may look like this:
+
+```http
+https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&redirect_uri={redirect_uri}&scope={tenant_root_site_url}/.default
+```
+
+> [!IMPORTANT]
+> Do not use the App registrations pane in the Azure portal to grant admin consent for applications that request hidden permissions. The App registrations pane will fail to validate the requested hidden permissions and will remove them from the manifest. You may use the Enterprise Applications pane in the Azure portal to view the granted hidden permissions after admin consent has been granted via the admin consent URL.
 
 #### Operations involving searching SharePoint Embedded content
 
