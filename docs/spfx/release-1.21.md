@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.21 release notes
 description: Release notes for the SharePoint Framework v1.21 release.
-ms.date: 04/23/2025
+ms.date: 01/20/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
@@ -78,9 +78,7 @@ Viva Connections will start supporting end user configuration options for the da
 By default, personalization isn't allowed for the custom Viva Connections cards.
 
 ```json
-  "personalization": [
-    "Disallow"
-  ]
+  "personalization": "Disallow"
 ```
 
 ![Card personalization visible in the dashboard UI](../images/121-release-notes/card-personalization.png)
