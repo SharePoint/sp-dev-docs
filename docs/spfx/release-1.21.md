@@ -6,10 +6,10 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.21 release notes
 
-This release has updates on the Nodejs version and on other technical dependencies. It also contains updates for web parts in the context of flexible layouts in SharePoint and personalization option for cards.
+This release has updates on the Node.js version and on other technical dependencies. It also contains updates for web parts in the context of flexible layouts in SharePoint and a personalization option for cards.
 
 > [!NOTE]
-> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.21 version.
+> [SharePoint Framework API Reference](/javascript/api/overview/sharepoint) has also been updated to match the latest 1.21 version.
 
 **Released:** April 23, 2025
 
@@ -45,14 +45,14 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 
 ### Node.js v22 support
 
-Node.js support has been updated to version 22 with the 1.21 release.
+Node.js support has been updated to v22 with the v1.21 release.
 
 > [!NOTE]
-> Notice that Node.js version 22 is the only supported version with version 1.21.
+> Notice that Node.js v22 is the only supported version, with v1.21.
 
 ### TypeScript 5.x support
 
-TypeScript has been updated to TypeScript 5.x. Default scaffolded projects are using currently specifically 5.3.3 version by default.
+TypeScript has been updated to TypeScript v5.x. Default scaffolded projects are using currently specifically v5.3.3 version by default.
 
 ### Flexible layout configuration options for web parts
 
@@ -67,13 +67,13 @@ New flexible layout sizing options are introduced for the web part manifest. The
 ```
 
 > [!NOTE]
-> By default, all custom web parts are supported in the flexible layout option and don't require any code level changes.
+> By default, all custom web parts are supported in the flexible layout option and don't require any code-level changes.
 
 ![Flexible layout support](../images/121-release-notes/flex-layout.png)
 
 ### Viva Connections card personalization support
 
-Viva Connections will start supporting end user configuration options for the dashboard. End users can add and remove cards from the dashboard based on their preference. Supported cards are explicitly enabled for this scenario and custom cards are supported.
+Viva Connections will start supporting end user configuration options for the dashboard. End users can add and remove cards from the dashboard based on their preference. Supported cards are explicitly enabled for this scenario, and custom cards are supported.
 
 By default, personalization isn't allowed for the custom Viva Connections cards.
 
@@ -85,11 +85,11 @@ By default, personalization isn't allowed for the custom Viva Connections cards.
 
 ### Updating Teams JS SDK
 
-Default [Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js) version for the SPFx powered solutions has been updated to version 2.32.
+Default [Teams JavaScript SDK](https://github.com/OfficeDev/microsoft-teams-library-js) version for the SPFx-powered solutions has been updated to version 2.32.
 
 ## Changes
 
-Default debugging URL location was changed as part of the release. `debugManifestsFile` is updated as `https://localhost:4321/temp/build/manifests.js`. This might have impact on any tooling or scripts which have previously taken a dependency on this URL. Please update your those accordingly with this change.
+The default debugging URL location was changed as part of the release. `debugManifestsFile` is updated as `https://localhost:4321/temp/build/manifests.js`. This might have an impact on any tooling or scripts that have previously taken a dependency on this URL. Please update those accordingly with this change.
 
 *Previous versions*
 ```
