@@ -32,6 +32,8 @@ On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
 1. Enumerate applications in a tenant
 1. Enumerate containers of an application in a tenant
 1. Enumerate containers of an application sorted basis storage
+1. Enumerate archived containers of an application
+
 1. Edit the sensitivity label on a container
 1. Set sharing capability configuration on a container
 
@@ -39,12 +41,14 @@ For information on consuming tenant admin in [PowerShell](../consuming-tenant-ad
 
 ### SharePoint Administrator Center
 
-The SharePoint Embedded Admin can access the Active and Deleted containers page on SPAC and perform SharePoint Embedded application level and container level actions. This includes the following:
+The SharePoint Embedded Admin can access the Active, Archived and Deleted containers pages on SPAC and perform SharePoint Embedded application level and container level actions. This includes the following:
 
 1. View the Active container page
+1. View the Archived container page
+
 1. View the Deleted container page
 1. View the detailed information of a container
-1. Soft delete, restore, and purge deleted containers
+1. Archive, soft delete, reactivate, restore, and purge deleted containers
 
 For information on consuming tenant admin in SharePoint Admin see [container management](ctaUX.md)
 
@@ -58,13 +62,14 @@ To use Pass-through SharePoint Embedded App, SharePoint Embedded Admin needs to 
 
 ### [Meters](../billing/meters.md)
 
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
 
-SharePoint Embedded has three billing meters as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details 
+SharePoint Embedded has four billing meters as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details 
 
 | SharePoint Embedded Service Meters |   Meter Unit   |
 | :--------------------------------: | :------------: |
 |              Storage               |      $/GB      |
+|          Archived Storage          |      $/GB      |
 |          API Transactions          | $/Transactions |
 |               Egress               |      $/GB      |
 

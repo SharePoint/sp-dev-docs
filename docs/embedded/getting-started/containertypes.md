@@ -170,6 +170,7 @@ Developer admins can configure selected settings for SharePoint Embedded contain
 | **CopilotEmbeddedChatHosts** | Adds host URLs that are permitted to use the SharePoint Embedded application’s declarative agent experience. | 
 | **DiscoverabilityDisabled**  | Determines whether content from a SharePoint Embedded application is visible across Microsoft 365 experiences. | 
 | **SharingRestricted** | Configures sharing permissions for SharePoint Embedded containers by using role-based access. Supports both open and restrictive sharing models. When restrictive sharing is set to true, only managers and owners can share files in the container.| 
+| **IsArchiveEnabled** | When set to True, the owning application of the container type can support archival of containers. Archive helps in saving cost of storage by moving inactively used content to cold tier. |
 
 The [Set-SPOContainerType](/powershell/module/sharepoint-online/Set-SPOContainerType) cmdlet allows admins to update the Application Redirect URL. The [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/Set-SPOContainerTypeConfiguration) cmdlet allows admins to add host URLs, set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type.
 
@@ -247,7 +248,7 @@ To create and interact with containers, you must [register](register-api-documen
 
 ## Deleting Container Types
 
-Developer admins can delete both trial and standard container types. To delete a container type, you must first remove all containers of that container type, including those from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
+Developer admins can delete both trial and standard container types. To delete a container type, you must first remove all containers of that container type, including those from the archived as well as deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
 Once all the containers are deleted, Developer admins can delete the container type using `Remove-SPOContainerType`.
 
 ```powershell
