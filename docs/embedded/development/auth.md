@@ -31,6 +31,14 @@ SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embed
 > [!IMPORTANT]
 > Microsoft Graph permissions granted to your application allow it to call SharePoint Embedded endpoints. However, your application must be granted [permission to a container type](#container-type-application-permissions) before it gets access to containers of that type.
 
+### Application permissions
+
+SharePoint Embedded applications need to request the following Microsoft Graph permissions in their application manifest to work with SharePoint Embedded:
+
+- [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall) to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
+- [FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected) to allow an application to register the container type on consuming tenants.
+- [FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected) to allow an application to access containers of the given container type on consuming tenants.
+
 ### Access on behalf of a user
 
 SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
