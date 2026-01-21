@@ -188,5 +188,5 @@ To create and interact with containers, you must [register](../getting-started/r
 
 ## Deleting container types
 
-The Developer Admin can delete both trial and standard container types in their tenant. To delete a container type, you must first remove all containers of that container type, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
+The Developer Admin can only delete trial container types in their tenant. Deletion of standard container types is not yet supported. To delete a container type, you must first remove all containers of that container type, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
 Once all the containers are deleted, Developer admins can delete the container type using the [Delete fileStorageContainerType](/graph/api/filestorage-delete-containertypes) endpoint.
