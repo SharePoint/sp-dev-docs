@@ -16,7 +16,7 @@ Before you get started, make sure that you're familiar with the following:
 - [Using the Client Object Model](https://msdn.microsoft.com/library/ff798388.aspx)
 - [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/library/ee537013.aspx)
 
-You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later).
+You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.26712.12000 or later).
 
 ## CSOM code example
 
@@ -46,7 +46,7 @@ ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
 
 ## Theme definition example
 
-For methods that take a theme argument, the following code defines an __SPOTheme__ class that you can use to create custom themes.
+For methods that take a theme argument, the following code defines an __SPOTheme__ class that you can use to create custom themes. For the new theme format, only the `Name` and `ColorPairs` properties are required. For the legacy theme format, include the `Name`, `Palette`, and `IsInverted` properties.
 
 ```csharp
 /// <summary> 
@@ -68,6 +68,13 @@ public class SPOTheme 
     { 
         get; private set; 
     } 
+    /// <summary> 
+    /// Specifies the color pairs setting of the theme.
+    /// </summary> 
+    public IDictionary<string, IList<Dictionary<string, string>>> ColorPairs
+    { 
+        get; private set; 
+    } 
     /// <summary> 
     /// Specifies whether the theme is inverted, with a dark background and a light foreground. 
     /// </summary> 
@@ -86,14 +93,39 @@ There's currently no supported CSOM API to programmatically apply a theme to a s
 
 Use the following methods to customize the set of available themes for a SharePoint tenant administration site. You can add a new custom theme, update an existing theme, or delete a theme, and you can retrieve a specific theme or all themes. You can also hide or restore the default themes that come with SharePoint.
 
+### AddTenantThemeAdvanced public method
+
+Add a theme to the organization.
+
+In multi-geo environments, themes added by an administrator in the primary geography are automatically propagated and available across the organization. This method is not supported for administrators in satellite geographies.
+
+__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
+__Parameters:__ string name, string themeJson, bool shouldParseColorPair<br/>
+__Return type:__ ClientResult\<bool\>
+
+### UpdateTenantThemeAdvanced public method
+
+Update the settings for an existing theme.
+
+__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
+__Parameters:__ string name, string themeJson, bool shouldParseColorPair<br/>
+__Return type:__ ClientResult\<bool\>
+
 ### AddTenantTheme public method
 
-Add a theme to the tenant.
+Add a theme to the organization. This method is not supported for administrators in satellite geographies.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
 __Return type:__ ClientResult\<bool\>
 
+### UpdateTenantTheme public method
+
+Update the settings for an existing theme.
+
+__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
+__Parameters:__ string name, string themeJson<br/>
+__Return type:__ ClientResult\<bool\>
 ### DeleteTenantTheme public method
 
 Delete a theme from the tenant.
@@ -104,7 +136,11 @@ __Return type:__ void
 
 ### GetAllTenantThemes public method
 
-Retrieve all the themes that are currently available in the tenant, including any custom themes that have been added. Default themes are only included if the __HideDefaultThemes__ property is __false__ (the default value).
+Retrieves the complete set of custom themes defined at the tenant level, including themes created through command-based tools and those created in the Brand Center UI. 
+> [!NOTE]
+> To support consistent branding and simplify governance, theme management is transitioning to a centralized model.
+> - The **primary geo** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
+> - The satellite **Geo Administrators** will be able to view themes from the primary geo to their own sites by using `GetAllTenantThemes` method. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ none<br/>
@@ -125,13 +161,6 @@ This property indicates whether the default themes are available in the theme pi
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Type:__ Boolean
 
-### UpdateTenantTheme public method
-
-Update the settings for an existing theme.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
-__Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult\<bool\>
 
 ## Methods of the Microsoft.Online.SharePoint.TenantManagement.Tenant class
 
