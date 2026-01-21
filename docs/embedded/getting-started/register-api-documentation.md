@@ -17,7 +17,7 @@ There are no restrictions on how many times the registration API can be invoked.
 
 For the container type's owning application to act on a consuming tenant, some prerequisites must be completed:
 
-- the owning app must have a service principal installed on the consuming tenant; and
+- the owning app must have a [service principal](/entra/identity-platform/app-objects-and-service-principals) installed on the consuming tenant; and
 - the owning app must be granted admin consent to perform container type registration in the consuming tenant.
 
 You can satisfy these requirements by having the consuming tenant's Global Administrator [grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) to the container type's owning application.
