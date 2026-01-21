@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - CSOM development
 description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
-ms.date: 06/28/2022
+ms.date: 01/21/2026
 ms.localizationpriority: high
 ---
 

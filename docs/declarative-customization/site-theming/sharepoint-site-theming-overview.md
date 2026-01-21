@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 04/23/2025
+ms.date: 01/21/2026
 ms.localizationpriority: high
 ---
 
@@ -12,10 +12,9 @@ SharePoint site owners have new options for applying custom styles and colors to
 These new features include:
 
 * The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](sharepoint-site-theming-json-schema.md) that stores color settings and related metadata for each theme.
-* An online [Theme Generator tool](https://aka.ms/themedesigner) that you can use to define new custom themes.
-* A simplified set of default themes, with six light themes and two dark themes presently available.
-* An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
+* A simplified set of default themes, with eight light themes and two dark themes presently available.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
+* Support for up to 16 accent‑and‑background color pairs per theme, enabling multiple brand colors that reflect your organization’s identity.
 
 These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](../site-design-overview.md).
 
@@ -31,17 +30,12 @@ The following predefined themes are available by default:
 * __Red__
 * __Purple__
 * __Green__
-* __Gray__
 * __Periwinkle__
-* __Dark Yellow__ (inverted theme)
+* __Cobalt__
+* __Dark Teal__ (inverted theme)
 * __Dark Blue__ (inverted theme)
 
 These themes have been designed for readability, so you might find them to be useful starting points for creating custom themes. For more information about default themes, see [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md).
-
-In addition to the default themes, you can select from supplementary themes. The following customizations are available:
-
-* __Light themes__: Gold, Teal, Dark Blue, Indigo, Plum, Warm Gray
-* __Dark themes__: Red, Green, Purple, Gray
 
 ## Select a modern theme
 
@@ -51,7 +45,7 @@ To select from the available themes for a SharePoint site, choose the __gear ico
 
 The following image shows how the default themes are presented in the theme picker dialog box.
 
-![Image showing list of default and dark (inverted) themes](../../images/theme-defaults.png)
+![Image showing list of default and dark (inverted) themes](../images/default-themes.png)
 
 When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like.
 
