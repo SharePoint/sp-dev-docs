@@ -94,11 +94,10 @@ Here is an example of secondaryColors, it is the set of combination of themePrim
 - **themeSchemaVersion**: The theme schema version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
 - **version**: The theme version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
 
-The following is an example of a JSON object that defines a theme.
+The following is an example of a JSON object that defines a theme in new theme format.
 
 ```json
 {
-  "name": "Teal theme",
   "isInverted": true,
   "palette": {    
     "themeDarker": "#014446",
@@ -121,9 +120,9 @@ The following is an example of a JSON object that defines a theme.
     "neutralLighterAlt": "#F8F8F8",
     "neutralQuaternaryAlt": "#DADADA",
     "neutralQuaternary": "#D0D0D0",
-    "backgroundColor": "#FFFFFF",
     "black": "#000000",
-    "white": "#FFFFFF"
+    "white": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
   },
   "secondaryColors": {
     "light": [
@@ -149,6 +148,40 @@ The following is an example of a JSON object that defines a theme.
 }
 ```
 
+
+The following is an example of a JSON object that defines a theme in legacy theme format.
+
+```json
+{
+  "isInverted": true,
+  "palette": {    
+    "themeDarker": "#014446",
+    "themeDark": "#025C5F",
+    "themeDarkAlt": "#026D70",
+    "themePrimary": "#03787C",
+    "themeSecondary": "#13898D",
+    "themeTertiary": "#49AEB1",
+    "themeLight": "#98D6D8",
+    "themeLighter": "#C5E9EA",
+    "themeLighterAlt": "#F0F9FA",
+    "neutralDark": "#201F1E",
+    "neutralPrimary": "#323130",
+    "neutralPrimaryAlt": "#3B3A39",
+    "neutralSecondary": "#605E5C",
+    "neutralTertiary": "#A19F9D",
+    "neutralTertiaryAlt": "#C8C8C8",
+    "neutralLight": "#EAEAEA",
+    "neutralLighter": "#F4F4F4",
+    "neutralLighterAlt": "#F8F8F8",
+    "neutralQuaternaryAlt": "#DADADA",
+    "neutralQuaternary": "#D0D0D0",
+    "black": "#000000",
+    "white": "#FFFFFF"
+  },
+  "themeSchemaVersion": "1.0.0",
+  "version": "1.0.0"
+}
+```
 
 
 Besides the theme store schema, we also offer a simplified format for creating themes.
