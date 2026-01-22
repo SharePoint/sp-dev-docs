@@ -67,8 +67,7 @@ The colors in the `palette` element are specified as 6-digit or 3-digit hexadeci
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
 - **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light theme is supported. 
-Here is an example of secondaryColors, it is the set of combination of themePrimary and backgroundColor.The colors in the `secondaryColors` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
-
+Here is an example of secondaryColors, it is the set of combination of themePrimary and backgroundColor. The colors in the `secondaryColors` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
 
 ```json
   "secondaryColors": {
