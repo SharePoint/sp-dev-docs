@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint site theming: JSON schema
 
-The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Legacy theme formats do not support the secondaryColors and displayMode fields. Theme settings are stored in a JSON object that contains the following keys:
+The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Only the new theme format supports the secondaryColor and displayMode fields.  Theme settings are stored in a JSON object that contains the following keys:
 
 - **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
 - **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
