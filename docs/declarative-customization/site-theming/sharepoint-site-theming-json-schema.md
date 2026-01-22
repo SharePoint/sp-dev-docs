@@ -7,37 +7,127 @@ ms.localizationpriority: high
 
 # SharePoint site theming: JSON schema
 
-The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to define color settings and other information about each theme. Each theme includes the following keys:
+The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to define color settings and other information about each theme. Legacy theme formats do not support the secondaryColors and displayMode fields. Theme settings are stored in a JSON object that contains the following keys:
 
-- **name**: The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
-- **colorPairs**: Color pairs are the foundation of your theme, enabling multiple brand colors to reflect your organization’s brand identity and personality. Each theme supports up to 16 color pairs, with each pair consisting of an accent color and a background color. To ensure readability, the text color is automatically set to black or white based on the contrast ratio of the background color.
-The colors in the colorPairs element are specified as 6-digit or 3-digit hexadecimal RGB string values.
+- **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
+- **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
+- **palette**: A nested JSON object that stores the RGB color values for the theme.
+When using the new theme format, the values of themePrimary and backgroundColor are used as the first color pair in the palette:
+  - themePrimary
+  - themeLighterAlt
+  - themeLighter
+  - themeLight
+  - themeTertiary
+  - themeSecondary
+  - themeDarkAlt
+  - themeDark
+  - themeDarker
+  - neutralLighterAlt
+  - neutralLighter
+  - neutralLight
+  - neutralQuaternaryAlt
+  - neutralQuaternary
+  - neutralTertiaryAlt
+  - neutralTertiary
+  - neutralSecondaryAlt
+  - neutralSecondary
+  - neutralPrimaryAlt
+  - neutralPrimary
+  - neutralDark
+  - black
+  - white
+  - primaryBackground
+  - primaryText
+  - bodyBackground
+  - bodyText
+  - disabledBackground
+  - disabledText
+  - error
+  - accent
+  - backgroundColor
 
-The following is an example of a JSON object that defines a colorPairs.
+  Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner) to build a custom theme palette. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme.
+
+> [!NOTE]
+> The theme generator definitions do not currently include the following color slots and key/value pairs:
+> 
+> - "primaryBackground"
+> - "primaryText"
+> - "bodyBackground"
+> - "bodyText"
+> - "disabledBackground"
+> - "disabledText"
+> - "error"
+> - "accent"
+> - "backgroundColor"
+> 
+> These can be manually added to your generated definition before uploading to the tenant.
+
+![Theme Generator tool](../../images/theme-generator-tool.png)
+- **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light theme is supported.
+- **displayMode**: The visual mode that the theme palette corresponds to. Currently, only `light` mode is supported.
+- **themeSchemaVersion**: The theme schema version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
+- **version**: The theme version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
+
+The following is an example of a JSON object that defines a theme.
 
 ```json
 {
-  "light": [
-    { "accentColor": "#03787C", "backgroundColor": "#FFFFFF" },
-    { "accentColor": "#FFFFFF", "backgroundColor": "#03787C" },
-    { "accentColor": "#E3FFFD", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#E3FFFD" },
-    { "accentColor": "#FFF9E3", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#FFF9E3" },
-    { "accentColor": "#03787C", "backgroundColor": "#F5F5F5" },
-    { "accentColor": "#242424", "backgroundColor": "#F5F5F5" },
-    { "accentColor": "#155473", "backgroundColor": "#FFFFFF" },
-    { "accentColor": "#FFFFFF", "backgroundColor": "#155473" },
-    { "accentColor": "#155473", "backgroundColor": "#E3FFFD" },
-    { "accentColor": "#E3FFFD", "backgroundColor": "#155473" },
-    { "accentColor": "#FFF9E3", "backgroundColor": "#155473" },
-    { "accentColor": "#155473", "backgroundColor": "#FFF9E3" }
-  ]
+  "name": "Teal theme",
+  "isInverted": true,
+  "palette": {    
+    "themeDarker": "#014446",
+    "themeDark": "#025C5F",
+    "themeDarkAlt": "#026D70",
+    "themePrimary": "#03787C",
+    "themeSecondary": "#13898D",
+    "themeTertiary": "#49AEB1",
+    "themeLight": "#98D6D8",
+    "themeLighter": "#C5E9EA",
+    "themeLighterAlt": "#F0F9FA",
+    "neutralDark": "#201F1E",
+    "neutralPrimary": "#323130",
+    "neutralPrimaryAlt": "#3B3A39",
+    "neutralSecondary": "#605E5C",
+    "neutralTertiary": "#A19F9D",
+    "neutralTertiaryAlt": "#C8C8C8",
+    "neutralLight": "#EAEAEA",
+    "neutralLighter": "#F4F4F4",
+    "neutralLighterAlt": "#F8F8F8",
+    "neutralQuaternaryAlt": "#DADADA",
+    "neutralQuaternary": "#D0D0D0",
+    "backgroundColor": "#FFFFFF",
+    "black": "#000000",
+    "white": "#FFFFFF"
+  },
+  "secondaryColors": {
+    "light": [
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#03787C" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#03787C" },
+      { "themePrimary": "#03787C", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#03787C" },
+      { "themePrimary": "#03787C", "backgroundColor": "#FFF9E3" },
+      { "themePrimary": "#03787C", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#242424", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#155473", "backgroundColor": "#FFFFFF" },
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#155473" },
+      { "themePrimary": "#155473", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#155473" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#155473" },
+      { "themePrimary": "#155473", "backgroundColor": "#FFF9E3" }
+    ],
+    "dark": []
+  },
+  "displayMode": "light",
+  "themeSchemaVersion": "2.0.0",
+  "version": "2.0.0"
 }
 ```
 
 
-The SharePoint Framework includes ten built-in themes: eight on light backgrounds, and two on dark backgrounds. You might find it useful to create a custom theme by starting from one of the built-in themes and adjusting it to suit your needs.
+
+Besides the theme store schema, we also offer a simplified format for creating themes.
+SharePoint Framework provides ten built‑in themes—eight for light backgrounds, and two for dark backgrounds. If you want to build a custom theme, a good starting point is to pick one of these built‑in themes and adjust the values as needed. You can then use the [Add‑SPOTheme](/powershell/module/microsoft.online.sharepoint.powershell/add-spotheme) PowerShell cmdlet to create your custom theme with this simplified structure.
 
 ## Teal theme
 
