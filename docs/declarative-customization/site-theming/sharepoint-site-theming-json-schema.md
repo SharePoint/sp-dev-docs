@@ -7,12 +7,12 @@ ms.localizationpriority: high
 
 # SharePoint site theming: JSON schema
 
-The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to define color settings and other information about each theme. Legacy theme formats do not support the secondaryColors and displayMode fields. Theme settings are stored in a JSON object that contains the following keys:
+The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Legacy theme formats do not support the secondaryColors and displayMode fields. Theme settings are stored in a JSON object that contains the following keys:
 
 - **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
 - **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
 - **palette**: A nested JSON object that stores the RGB color values for the theme.
-When using the new theme format, the values of themePrimary and backgroundColor are used as the first color pair in the palette:
+When using the new theme format, the values of `themePrimary` and `backgroundColor` are used as the first color pair in the palette. The `backgroundColor` setting is only used in the new theme format. The palette object includes the following keys:
   - themePrimary
   - themeLighterAlt
   - themeLighter
@@ -46,6 +46,8 @@ When using the new theme format, the values of themePrimary and backgroundColor 
   - accent
   - backgroundColor
 
+The colors in the `palette` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
+
   Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner) to build a custom theme palette. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme.
 
 > [!NOTE]
@@ -64,7 +66,31 @@ When using the new theme format, the values of themePrimary and backgroundColor 
 > These can be manually added to your generated definition before uploading to the tenant.
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
-- **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light theme is supported.
+- **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light theme is supported. 
+Here is an example of secondaryColors, it is the set of combination of themePrimary and backgroundColor.The colors in the `secondaryColors` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
+
+
+```json
+  "secondaryColors": {
+    "light": [
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#03787C" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#03787C" },
+      { "themePrimary": "#03787C", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#03787C" },
+      { "themePrimary": "#03787C", "backgroundColor": "#FFF9E3" },
+      { "themePrimary": "#03787C", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#242424", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#155473", "backgroundColor": "#FFFFFF" },
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#155473" },
+      { "themePrimary": "#155473", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#155473" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#155473" },
+      { "themePrimary": "#155473", "backgroundColor": "#FFF9E3" }
+    ],
+    "dark": []
+  }
+```
+
 - **displayMode**: The visual mode that the theme palette corresponds to. Currently, only `light` mode is supported.
 - **themeSchemaVersion**: The theme schema version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
 - **version**: The theme version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
