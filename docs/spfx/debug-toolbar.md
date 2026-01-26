@@ -5,7 +5,7 @@ ms.date: 01/26/2026
 ms.localizationpriority: high
 ---
 
-# Configure Sass processing during builds
+# SharePoint Framework Debug Toolbar
 
 In this article, you'll learn about the debug toolbar available to SharePoint Framework (SPFx) developers when debugging SPFx solutions.
 
