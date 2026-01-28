@@ -169,7 +169,7 @@ Here are some actions you can take next:
         > Your application DOES NOT need this on _consuming_ tenants, only on the _owning_ tenant to create the container type. Failure to remove this permission from the application's manifest will lead to your customers being concerned about the excessive permissions requested by your application.
       - Add: `FileStorageContainerTypeReg.Selected` (type: `Role`, ID: `2dcc6599-bd30-442b-8f11-90f88ad441dc`) to register the container type on _consuming_ tenants
       - Add: `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on _consuming_ tenants on behalf of users
-      - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access container on _consuming_ tenants without a user
+      - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access the container on _consuming_ tenants without a user
     - Office 365 SharePoint Online (resourceAppId: `00000003-0000-0ff1-ce00-000000000000`)
       - `Container.Selected` (type: `Role`, ID: `19766c1b-905b-43af-8756-06526ab42875`) to use SharePoint Embedded Agent
 1. [Grant admin consent](#granting-admin-consent-for-hidden-permissions) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
