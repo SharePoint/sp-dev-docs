@@ -474,6 +474,8 @@
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the debug toolbar
+      href: spfx/debug-toolbar.md
     - name: Use the developer dashboard
       href: spfx/use-developer-dashboard.md
     - name: Maintenance mode for client-side web parts
