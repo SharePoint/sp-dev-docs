@@ -594,6 +594,8 @@
       href: embedded/getting-started/register-api-documentation.md
   - name: Development
     items:
+    - name: Archive and Reactivate content
+      href: ./embedded/development/support-archival-of-containers.md
     - name: Application Architecture
       href: embedded/development/app-architecture.md
     - name: Authentication and Authorization
