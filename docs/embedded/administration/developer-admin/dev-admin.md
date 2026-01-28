@@ -17,14 +17,14 @@ Organizations that use SharePoint Embedded for file management are included in t
 >
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 
-A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center. For information on [SharePoint Embedded Administrator](../adminrole.md) role.
+A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center. For information on the [SharePoint Embedded Administrator](../adminrole.md) role.
 
 The following are some of the SharePoint Embedded actions currently supported on PowerShell:
 
 - Creation of container types
-  - Creation of standard container type with standard billing
-  - Creation of standard container type with passthrough billing
-  - Creation of trial container type
+  - Creation of a standard container type with standard billing
+  - Creation of a standard container type with passthrough billing
+  - Creation of a trial container type
 - Container type management
   - Viewing of container types in the tenant
   - Editing properties of a container type in the tenant
@@ -62,7 +62,7 @@ To get started using PowerShell to manage SharePoint Embedded, you have to insta
 
 ### Creation of container types
 
-The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated to an application ID, a one to one mapping, and an Azure subscription ID. The developer administrator can also create trial container types that have a validity of 30 days to test out SharePoint Embedded. The following [commands](/powershell/module/sharepoint-online/new-spocontainertype) can be used to create SharePoint Embedded container types on the developer admin’s tenant:
+The developer administrator can create a container type using PowerShell cmdlets. Each container type is associated with an application ID, a one-to-one mapping, and an Azure subscription ID. The developer administrator can also create trial container types that have a validity of 30 days to test out SharePoint Embedded. The following [commands](/powershell/module/sharepoint-online/new-spocontainertype) can be used to create SharePoint Embedded container types on the developer admin’s tenant:
 
 Standard billing container type:
 
@@ -96,7 +96,7 @@ Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 
 ### Manage properties of container types
 
-The developer administrator can change the properties of container types, both standard and trial. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
+The developer administrator can change the properties of container types, both standard and trial. The following commands can be used to change the properties of SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
@@ -110,7 +110,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
 The developer administrator can change container type configuration settings using PowerShell commandlets. The following container type properties can be set:
 
 1. Discoverability Disabled: Controls if file items inside the container surface in other Microsoft 365 properties (MRU, etc.).
-1. Sharing Restricted: Only manager and owner can share files in the container if restricted sharing is true.
+1. Sharing Restricted: Only the manager and owner can share files in the container if restricted sharing is true.
 
 The following commands can be used to change the configuration settings of SharePoint Embedded applications created on the developer admin’s tenant:
 
@@ -140,7 +140,7 @@ Get-SPOContainertypeConfiguration -ContainerTypeId < ContainerTypeId >
 
 ## Manage billing profile of container types
 
-The developer administrator can change the billing profile of container types using PowerShell cmdlets. The following commands can be used to change the properties SharePoint Embedded applications created on the developer admin’s tenant:
+The developer administrator can change the billing profile of container types using PowerShell cmdlets. The following commands can be used to change the properties of SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
@@ -155,4 +155,4 @@ For more information about billing, see [Billing](../billing/billing.md).
 
 The user or admin who creates the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on an Azure subscription.
 
-If you don't have an Azure subscription, follow steps here to [create a subscription.](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions)
+If you don't have an Azure subscription, follow the steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
