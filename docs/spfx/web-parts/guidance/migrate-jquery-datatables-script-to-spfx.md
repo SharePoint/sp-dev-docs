@@ -1,11 +1,11 @@
 ---
-title: Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
+title: Migrate a jQuery and DataTables solution built using Script Editor web part to the SharePoint Framework
 description: Migrate a SharePoint customization using DataTables to build powerful data overviews of data coming from SharePoint and external APIs.
-ms.date: 01/22/2026
+ms.date: 01/28/2026
 ms.localizationpriority: high
 ---
 
-# Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
+# Migrate a jQuery and DataTables solution built using Script Editor web part to the SharePoint Framework
 
 One of the frequently used jQuery plug-ins is [DataTables](https://datatables.net/). With DataTables, you can easily build powerful data overviews of data coming from both SharePoint and external APIs.
 
@@ -137,9 +137,16 @@ Transforming this customization to the SharePoint Framework offers a number of b
 
 Before You Begin:
 
-Create a SharePoint list named "IT Requests"
-Add these columns with exact internal names: BusinessUnit (Text), Category (Text), Status (Choice), DueDate (Date), AssignedTo (Person)
-Add sample data to test the solution
+1. Create a list with columns and sample data:
+
+    1. Create a SharePoint list named "IT Requests"
+    1. Add these columns with exact internal names:
+        - BusinessUnit (Text)
+        - Category (Text)
+        - Status (Choice)
+        - DueDate (Date)
+        - AssignedTo (Person)
+    1. Add sample data to test the solution
 
 1. Start by creating a new folder for your project:
 
@@ -171,7 +178,7 @@ Add sample data to test the solution
 
 ### Load JavaScript libraries
 
-Similar to the original solution built using the Script Editor web part, first you need to load the JavaScript libraries required by the solution. In SharePoint Framework this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
+Similar to the original solution built using the Script Editor web part, first you need to load the JavaScript libraries required by the solution. In the SharePoint Framework, this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
 
 1. Specify the URLs from which libraries should be loaded. In the code editor, open the **./config/config.json** file, and change the `externals` section to:
 
@@ -204,7 +211,7 @@ Similar to the original solution built using the Script Editor web part, first y
     > [!NOTE]
     > For more information on referencing external libraries in SharePoint Framework projects, see [Add an external library to your SharePoint client-side web part](../basics/add-an-external-library.md).
 
-1. Open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement add:
+1. Open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement, add:
 
     ```typescript
     import 'jquery';
@@ -302,7 +309,7 @@ The next step is to define the Moment.js plug-in for DataTables so that dates in
     );
     ```
 
-1. For the web part to load the plug-in, it has to reference the newly created **moment-plugin.js** file. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement add:
+1. For the web part to load the plug-in, it has to reference the newly created **moment-plugin.js** file. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement, add:
 
     ```typescript
     import './moment-plugin';
@@ -342,7 +349,7 @@ The last step is to include the code that initializes the data table and loads t
     ```
 
 > [!NOTE]
-> Make sure to use internal name (or static name) of columns in `$select` and `$expend` parameters.
+> Make sure to use the internal name (or static name) of columns in `$select` and `$expend` parameters.
 
 1. To reference this file in the web part, in the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and add `require('./script');` to the end of the `render()` method. The `render()` method should look like the following:
 
@@ -514,7 +521,7 @@ Initially, the name of the list from which the data should be loaded was embedde
     }
     ```
 
-1. Instead of referencing the code from the **script.js** file, all of its contents are a part of the web part's `render` method. In the REST query, you can now replace the fixed name of the list with the value of the `listName` property that holds the name of the list as configured by the user. Before using the value, it's being escaped by using the lodash's `escape` function to disallow script injection.
+1. Instead of referencing the code from the **script.js** file, all of its contents are a part of the web part's `render` method. In the REST query, you can now replace the fixed name of the list with the value of the `listName` property that holds the name of the list as configured by the user. Before using the value, it's being escaped by using the lodash `escape` function to disallow script injection.
 
     At this point, the bulk of the code is still written using plain JavaScript. To avoid build issues with the `$` jQuery variable, you had to define it as `any` type before the class definition. Later, when transforming the code to TypeScript, you replace it with a proper type definition.
 
@@ -534,7 +541,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 ## Transform the plain JavaScript code to TypeScript
 
-Using TypeScript over plain JavaScript offers a number of benefits. Not only is TypeScript easier to maintain and refactor, but it also allows you to catch errors earlier. The following steps describe how you would transform the original JavaScript code to TypeScript.
+Using TypeScript over plain JavaScript offers several benefits. Not only is TypeScript easier to maintain and refactor, but it also allows you to catch errors earlier. The following steps describe how you would transform the original JavaScript code to TypeScript.
 
 ### Add type definitions for used libraries
 
@@ -547,7 +554,7 @@ To function properly, TypeScript requires type definitions for the different lib
     ```
 
     > [!TIP]
-    > In this example, we are specifying the exact version of the NPM package we want to install. This will ensure that NPM installs a type declaration package that matches the version of jQuery and the datatables library we are using in our project.
+    > In this example, we are specifying the exact version of the NPM package we want to install. This will ensure that NPM installs a type declaration package that matches the version of jQuery and the DataTables library we are using in our project.
     >
     > The `--save-dev` argument tells NPM to save the references to these two packages in the `devDependencies` collection in the **package.json** file. TypeScript declarations are only needed in development, which is why we don't want them in the `dependencies` collection.
     >
@@ -642,7 +649,7 @@ Now that you have type definitions for all libraries installed in the project, y
     }
     ```
 
-1. Notice how the AJAX request, to retrieve the data from the SharePoint list, is now typed and helps you ensure you're referring to correct properties when passing them into an array to DataTables. The data structure used by DataTables to represent a row in the table is an array of mixed types, so for simplicity it was defined as `any[]`. Using the `any` type in this context isn't bad, because the data returned inside the `dataSrc` property is used internally by DataTables.
+1. Notice how the AJAX request, to retrieve the data from the SharePoint list, is now typed and helps you ensure you're referring to the correct properties when passing them into an array to DataTables. The data structure used by DataTables to represent a row in the table is an array of mixed types, so for simplicity it was defined as `any[]`. Using the `any` type in this context isn't bad because the data returned inside the `dataSrc` property is used internally by DataTables.
 
     As you're updating the `render()` method, you have also added two more changes. First, you removed the `id` attribute from the table. This allows you to place multiple instances of the same web part on the page. Also, you removed the reference to the `$(document).ready()` function, which isn't necessary because the DOM of the element where the data table is rendered is set before the DataTables initiation code.
 
@@ -679,7 +686,7 @@ The last piece of the solution that needs to be transformed to TypeScript is the
     };
     ```
 
-1. You start with loading references to jQuery and Moment.js to let TypeScript know what the corresponding variables refer to. Next, you define the plug-in function. Usually in TypeScript you use the arrow notation for functions (`=>`). In this case, however, because you need access to the `arguments` property, you have to use the regular function definition. To prevent tslint from reporting a warning about not using the arrow notation, you can explicitly disable the `no-function-expression` rule around the function definition.
+1. You start by loading references to jQuery and Moment.js to let TypeScript know what the corresponding variables refer to. Next, you define the plug-in function. Usually, in TypeScript, you use the arrow notation for functions (`=>`). In this case, however, because you need access to the `arguments` property, you have to use the regular function definition. To prevent tslint from reporting a warning about not using the arrow notation, you can explicitly disable the `no-function-expression` rule around the function definition.
 1. To confirm that everything is working as expected, in the command line, execute:
 
     ```console
@@ -687,3 +694,4 @@ The last piece of the solution that needs to be transformed to TypeScript is the
     ```
 
 1. Navigate to the hosted Workbench and add the web part to the canvas. Although visually nothing has changed, the new code base uses TypeScript and its type definitions to help you maintain the solution.
+
