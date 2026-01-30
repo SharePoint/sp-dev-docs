@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (CustomAction) to the new model based on SharePoint Framework extensions.
-ms.date: 04/26/2025
+ms.date: 01/30/2026
 ms.localizationpriority: medium
 ---
 
@@ -10,8 +10,6 @@ ms.localizationpriority: medium
 Many enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the site *CustomAction* capability of the SharePoint Feature Framework to extend the UI of pages. In the current "modern" UI of SharePoint Server 2019 and SharePoint Online, most of those customizations are no longer available. Fortunately, with SharePoint Framework extensions, you can provide similar functionality in the "modern" UI.
 
 In this tutorial, you learn how to migrate from the old "classic" customizations to the new model based on SharePoint Framework extensions.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 
@@ -162,10 +160,9 @@ To migrate the previous solution to the "modern" UI, see the following steps.
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: spfx-react-custom-footer
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Application Customizer
-    - **What is your Field Customizer name?** CustomFooter
+    - **What is your Application Customizer name?** CustomFooter
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files and folders along with the **CustomFooter** extension. This might take a few minutes.
 
@@ -177,7 +174,7 @@ To migrate the previous solution to the "modern" UI, see the following steps.
 
 ## Define the new UI elements
 
-The UI elements of the custom footer are rendered using React and a custom React component. You can create the UI elements of the sample footer with whatever technology you like. In this tutorial, we use React to leverage the Office UI Fabric components for React.
+The UI elements of the custom footer are rendered using React and a custom React component. You can create the UI elements of the sample footer with whatever technology you like. In this tutorial, we use React to leverage the Fluent UI components for React.
 
 1. Open the file **./src/extensions/customFooter/CustomFooterApplicationCustomizer.manifest.json** folder. Copy the value of the `id` property and store it in a safe place because you need it later.
 1. Open the file **./src/extensions/customFooter/CustomFooterApplicationCustomizer.ts**, and import the types `PlaceholderContent` and `PlaceholderName` from the package **\@microsoft/sp-application-base**.
@@ -202,6 +199,13 @@ The UI elements of the custom footer are rendered using React and a custom React
     import * as strings from 'CustomFooterApplicationCustomizerStrings';
     import CustomFooter from './components/CustomFooter';
     ```
+
+    > [!IMPORTANT]
+    > **Install React Dependencies First**
+    > Before starting, ensure React dependencies are installed:
+    > ```bash
+    > npm install react react-dom @types/react @types/react-dom
+    > ```
 
 1. Locate the definition of the class `CustomFooterApplicationCustomizer` and declare a new private member called `bottomPlaceholder` of type `PlaceholderContent | undefined`.
 1. Within the override of the `onInit()` method, invoke a custom function called `renderPlaceHolders`, and define that function.
@@ -229,6 +233,14 @@ The UI elements of the custom footer are rendered using React and a custom React
         this._renderPlaceHolders();
 
         return Promise.resolve();
+      }
+
+      @override
+      public onDispose(): void {
+        // Clean up the rendered React component to avoid memory leaks
+        if (this._bottomPlaceholder && this._bottomPlaceholder.domElement) {
+          ReactDom.unmountComponentAtNode(this._bottomPlaceholder.domElement);
+        }
       }
 
       private _renderPlaceHolders(): void {
@@ -264,39 +276,87 @@ The UI elements of the custom footer are rendered using React and a custom React
 
     ```TypeScript
     import * as React from 'react';
-    import { CommandButton } from 'office-ui-fabric-react/lib/Button';
+    import { CommandButton } from '@fluentui/react';
 
     export default class CustomFooter extends React.Component<{}, {}> {
       public render(): React.ReactElement<{}> {
         return (
-          <div className={`ms-bgColor-neutralLighter ms-fontColor-white`}>
-            <div className={`ms-bgColor-neutralLighter ms-fontColor-white`}>
-              <div className={`ms-Grid`}>
-                <div className="ms-Grid-row">
-                  <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton
-                        data-automation="CopyRight"
-                        href={`CRM.aspx`}>&copy; 2017, Contoso Inc.</CommandButton>
-                  </div>
-                  <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton
-                            data-automation="CRM"
-                            iconProps={ { iconName: 'People' } }
-                            href={`CRM.aspx`}>CRM</CommandButton>
-                  </div>
-                  <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton
-                            data-automation="SearchCenter"
-                            iconProps={ { iconName: 'Search' } }
-                            href={`SearchCenter.aspx`}>Search Center</CommandButton>
-                  </div>
-                  <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton
-                        data-automation="Privacy"
-                        iconProps={ { iconName: 'Lock' } }
-                        href={`Privacy.aspx`}>Privacy Policy</CommandButton>
-                  </div>
-                  <div className="ms-Grid-col ms-sm4 ms-md4 ms-lg4"></div>
+          <div className="ms-bgColor-neutralLighter ms-fontColor-white" style={{
+            padding: '8px 20px',
+            borderTop: '1px solid #c8c6c4'
+          }}>
+            <div className="ms-Grid">
+              <div className="ms-Grid-row" style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                flexWrap: 'wrap'
+              }}>
+                <div style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>
+                  <CommandButton
+                    data-automation="CopyRight"
+                    href="CRM.aspx"
+                    styles={{
+                      root: {
+                        minHeight: '32px',
+                        padding: '6px 12px',
+                        border: 'none',
+                        backgroundColor: 'transparent'
+                      }
+                    }}
+                  >
+                    © 2017, Contoso Inc.
+                  </CommandButton>
+                  
+                  <CommandButton
+                    data-automation="CRM"
+                    iconProps={{ iconName: 'People' }}
+                    href="CRM.aspx"
+                    styles={{
+                      root: {
+                        minHeight: '32px',
+                        padding: '6px 12px',
+                        border: 'none',
+                        backgroundColor: 'transparent'
+                      }
+                    }}
+                  >
+                    CRM
+                  </CommandButton>
+                  
+                  <CommandButton
+                    data-automation="SearchCenter"
+                    iconProps={{ iconName: 'Search' }}
+                    href="SearchCenter.aspx"
+                    styles={{
+                      root: {
+                        minHeight: '32px',
+                        padding: '6px 12px',
+                        border: 'none',
+                        backgroundColor: 'transparent'
+                      }
+                    }}
+                  >
+                    Search Center
+                  </CommandButton>
+                </div>
+                
+                <div style={{ marginLeft: 'auto', paddingRight: '120px' }}>
+                  <CommandButton
+                    data-automation="Privacy"
+                    iconProps={{ iconName: 'Lock' }}
+                    href="Privacy.aspx"
+                    styles={{
+                      root: {
+                        minHeight: '32px',
+                        padding: '6px 12px',
+                        border: 'none',
+                        backgroundColor: 'transparent'
+                      }
+                    }}
+                  >
+                    Privacy Policy
+                  </CommandButton>
                 </div>
               </div>
             </div>
@@ -306,12 +366,12 @@ The UI elements of the custom footer are rendered using React and a custom React
     }
     ```
 
-    Teaching you how to write a React component is out of scope for this document. Notice the `import` statements at the beginning, where the component imports React, and the `CommandButton` React component from the Office UI Fabric components library.
+    Teaching you how to write a React component is out of scope for this document. Notice the `import` statements at the beginning, where the component imports React, and the `CommandButton` React component from the Fluent UI Fabric components library.
 
-    In the `render()` method of the component, it defined the output of the `CustomFooter` with few instances of the `CommandButton` component for the links in the footer. All the HTML output is wrapped within a Grid layout of Office UI Fabric.
+    In the `render()` method of the component, it defined the output of the `CustomFooter` with few instances of the `CommandButton` component for the links in the footer. All the HTML output is wrapped within a Grid layout of Fluent UI Fabric.
 
     > [!NOTE]
-    > For more information about the grid layout of Office UI Fabric, see [Responsive Layout](https://developer.microsoft.com/fabric#/styles/layout).
+    > For more information about the grid layout of Fluent UI, see [Responsive Layout](https://fluent2.microsoft.design/layout).
 
     In the following figure, you can see the resulting output.
 
@@ -322,7 +382,7 @@ The UI elements of the custom footer are rendered using React and a custom React
 1. Go back to the console window and run the following command to build the solution and run the local Node.js server to host it.
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Now open your favorite browser and go to a "modern" page of any "modern" team site. Now, append the following query string parameters to the page's URL.
@@ -403,13 +463,13 @@ Prepare and deploy the solution for SharePoint Online tenant:
 1. Execute the following task to bundle your solution. This creates a release build of your project:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This command creates an **\*.sppkg** package in the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button.
