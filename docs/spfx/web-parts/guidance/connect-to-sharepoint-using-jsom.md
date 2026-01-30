@@ -1,14 +1,14 @@
 ---
 title: Connect to SharePoint using the JavaScript Object Model (JSOM)
 description: How to use SharePoint JSOM when building solutions on the SharePoint Framework.
-ms.date: 01/29/2026
+ms.date: 12/19/2022
 ms.localizationpriority: high
 ---
 
 # Connect to SharePoint using the JavaScript Object Model (JSOM)
 
 > [!IMPORTANT]
-> JSOM is considered a legacy option to operate the data in SharePoint Online. You should be looking into using the SharePoint REST API or Microsoft Graph APIs either directly or through the [Microsoft Graph SDKs](/graph/sdks/sdk-installation) or with the [PnPjs JavaScript Library](https://github.com/pnp/pnpjs).
+> JSOM is considered as a legacy option to operate the data in the SharePoint Online. You should be looking into using the SharePoint REST API or Microsoft Graph APIs either directly or through the [Microsoft Graph SDKs](/graph/sdks/sdk-installation) or with the [PnPjs JavaScript Library](https://github.com/pnp/pnpjs).
 
 When building SharePoint customizations, you might have used the SharePoint [JavaScript Object Model (JSOM)](../../../sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md) to communicate with SharePoint. This is no longer the recommended path (see [Considerations](#considerations) later in this article). However, there are still valid use cases for using the JSOM API such as code migration.
 
@@ -20,6 +20,8 @@ There are two ways to reference SharePoint JSOM in the SharePoint Framework:
 - **Imperative**: through code
 
 Each of these approaches has advantages and disadvantages, and it's important for you to understand each of them.
+
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new project
 
@@ -100,10 +102,6 @@ When referencing JSOM declaratively, the first step is to register the SharePoin
 
     Each of the entries points to different script files that together allow you to use SharePoint JSOM in your SPFx component. All of these scripts are distributed as non-module scripts. This is why each registration entry requires a URL (specified using the `path` property) and the name used by the script (provided in the `globalName` property). To ensure that these scripts load in the right order, the dependencies between these scripts are specified by using the `globalDependencies` property.
 
-    > [!IMPORTANT]
-    > Replace `contoso.sharepoint.com` with your actual SharePoint tenant URL. For example, if your SharePoint site is `https://yourtenant.sharepoint.com`, update all the path URLs accordingly:
-    > `"path": "https://yourtenant.sharepoint.com/_layouts/15/init.js"`
-
     Additional scripts may need to be added depending on the JSOM functionality that you're using (for example: **sp.taxonomy.js**).
 
 ### Install TypeScript typings for SharePoint JSOM
@@ -125,6 +123,8 @@ The next step is to install and configure TypeScript type declarations for Share
       "compilerOptions": {
         // ...
         "types": [
+          "es6-promise",
+          "es6-collections",
           "webpack-env",
           "microsoft-ajax",
           "sharepoint"
@@ -219,13 +219,13 @@ Having defined the interface describing the shape of the component's state, the 
 
     ```typescript
     export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
-      constructor(props: ISharePointListsProps, context?: any) {
-        super(props);
+      constructor(props?: ISharePointListsProps, context?: any) {
+        super();
 
         this.state = {
           listTitles: [],
           loadingLists: false,
-          error: ''
+          error: null
         };
       }
 
@@ -243,13 +243,13 @@ The sample client-side web part used in this article loads information about Sha
 
     ```typescript
     export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
-      constructor(props: ISharePointListsProps, context?: any) {
-        super(props);
+      constructor(props?: ISharePointListsProps, context?: any) {
+        super();
 
         this.state = {
           listTitles: [],
           loadingLists: false,
-          error: ''
+          error: null
         };
 
         this.getListsTitles = this.getListsTitles.bind(this);
@@ -269,7 +269,7 @@ The sample client-side web part used in this article loads information about Sha
         this.setState({
           loadingLists: true,
           listTitles: [],
-          error: ''
+          error: null
         });
 
         const context: SP.ClientContext = new SP.ClientContext(this.props.siteUrl);
@@ -320,20 +320,20 @@ Having loaded the titles of SharePoint lists in the current site, the final step
 
         return (
           <div className={styles.sharePointLists}>
-            <div className={styles.welcome}>
-              <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.blueBackground}`}>
+            <div className={styles.container}>
+              <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
                 <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
                   <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
                   <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
                   <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
-                  <a className={styles.getListsButton} onClick={this.getListsTitles} role="button">
-                    <span>Get lists titles</span>
+                  <a className={styles.button} onClick={this.getListsTitles} role="button">
+                    <span className={styles.label}>Get lists titles</span>
                   </a><br />
                   {this.state.loadingLists &&
                     <span>Loading lists...</span>}
                   {this.state.error &&
                     <span>An error has occurred while loading lists: {this.state.error}</span>}
-                  {this.state.error === '' && titles &&
+                  {this.state.error === null && titles &&
                     <ul>
                       {titles}
                     </ul>}
@@ -350,7 +350,7 @@ Having loaded the titles of SharePoint lists in the current site, the final step
 1. At this point, you can add your web part to the page and see the titles of SharePoint lists in the current site. To verify that the project is working correctly, run the following command from the console:
 
     ```console
-    heft start --nobrowser
+    gulp serve --nobrowser
     ```
 
 1. As you're using SharePoint JSOM to communicate with SharePoint, you have to test the web part by using the hosted version of the SharePoint Workbench (which is why the `--nobrowser` parameter is specified to prevent the automatic loading of the local Workbench).
@@ -433,7 +433,7 @@ To support this, extend the React component's state with an additional property 
         this.state = {
           listTitles: [],
           loadingLists: false,
-          error: '',
+          error: null,
           loadingScripts: true
         };
 
@@ -452,7 +452,7 @@ To support this, extend the React component's state with an additional property 
         this.setState({
           loadingLists: true,
           listTitles: [],
-          error: '',
+          error: null,
           loadingScripts: false
         });
 
@@ -497,7 +497,7 @@ To support this, extend the React component's state with an additional property 
 
         return (
           <div className={styles.sharePointLists}>
-            <div className={styles.welcome}>
+            <div className={styles.container}>
               {this.state.loadingScripts &&
                 <div className="ms-Grid" style={{ color: "#666", backgroundColor: "#f4f4f4", padding: "80px 0", alignItems: "center", boxAlign: "center" }}>
                   <div className="ms-Grid-row" style={{ color: "#333" }}>
@@ -525,7 +525,7 @@ To support this, extend the React component's state with an additional property 
                       <span>Loading lists...</span>}
                     {this.state.error &&
                       <span>An error has occurred while loading lists: {this.state.error}</span>}
-                    {this.state.error === '' && titles &&
+                    {this.state.error === null && titles &&
                       <ul>
                         {titles}
                       </ul>}
@@ -587,7 +587,7 @@ SPFx components should load SharePoint JSOM scripts only once. In this example, 
 1. Confirm that the web part is working as expected by running the following command from the console:
 
     ```console
-    heft start --nobrowser
+    gulp serve --nobrowser
     ```
 
     As before, the web part should show the titles of SharePoint lists in the current site.
