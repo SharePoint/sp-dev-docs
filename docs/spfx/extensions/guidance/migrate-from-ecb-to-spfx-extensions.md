@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
 description: Migrate from old "classic" customizations (ECB) to the new model based on SharePoint Framework extensions.
-ms.date: 04/26/2025
+ms.date: 01/30/2026
 ms.localizationpriority: medium
 ---
 
@@ -10,8 +10,6 @@ ms.localizationpriority: medium
 During the last few years, most of the enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the site `CustomAction` capability of the SharePoint Feature Framework to extend the UI of pages. With the "modern" UI of SharePoint, most of those customizations are no longer available. With SharePoint Framework extensions, you can provide similar functionality in the "modern" UI.
 
 In this tutorial, you learn how to migrate a legacy "classic" customizations to the current model: SharePoint Framework extensions.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 
@@ -130,9 +128,6 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
       IListViewCommandSetListViewUpdatedParameters,
       IListViewCommandSetExecuteEventParameters
     } from '@microsoft/sp-listview-extensibility';
-    import { Dialog } from '@microsoft/sp-dialog';
-
-    import * as strings from 'CustomEcbCommandSetStrings';
 
     export interface ICustomEcbCommandSetProperties {
       targetUrl: string;
@@ -157,14 +152,16 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
       @override
       public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
         switch (event.itemId) {
-          case 'ShowDetails':
+          case 'ShowDetails': {
+            const itemId: number = event.selectedRows[0].getValueByName('ID');
 
-            const itemId: number = event.selectedRows[0].getValueByName("ID");
-            const listId: Guid = this.context.pageContext.list.id;
-
-            window.location.replace(`${this.properties.targetUrl}?ID=${itemId}&List=${listId}`);
+            if (this.context.pageContext.list?.id) {
+              const listId: Guid = this.context.pageContext.list.id;
+              window.location.replace(`${this.properties.targetUrl}?ID=${itemId}&List=${listId}`);
+            }
 
             break;
+          }
           default:
             throw new Error('Unknown command');
         }
@@ -194,7 +191,7 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 1. Go back to the console window and run the following command to build the solution and run the local Node.js server to host it.
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Open your favorite browser and go to a "modern" library of any "modern" team site. Append the following query string parameters to the **AllItems.aspx** page URL.
@@ -285,13 +282,13 @@ Prepare and deploy the solution for SharePoint Online tenant:
 1. Execute the following task to bundle your solution. This creates a release build of your project:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This command creates an **\*.sppkg** package in the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button.
