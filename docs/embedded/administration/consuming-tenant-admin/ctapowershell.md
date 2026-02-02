@@ -24,10 +24,8 @@ The following are some of the container-specific command actions currently suppo
 ### Container administration
 
 - Get details of all active containers of a particular SharePoint Embedded application in the tenant
-
 - Get details of a specific container
 - Get details of all archived containers of a particular SharePoint Embedded application in the tenant
-
 - Set the Sensitivity label of a specific container
 - Soft delete a container
 - Get details of all soft deleted containers
