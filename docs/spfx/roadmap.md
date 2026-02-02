@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 01/28/2026
+ms.date: 02/02/2026
 ms.localizationpriority: high
 ---
 
@@ -18,6 +18,10 @@ Here's the current roadmap on the upcoming release:
 **Version 1.22.2 – January 2026**
 
 - Addressing npm audit reported security issues on the dependency tree.
+
+**Debug Toolbar – February 2026**
+
+- New [debugging toolbar](./debug-toolbar.md) improving the in-page development experience when workbench is not used with direct feedback option to the feature crew. This will be rolling out as a server side update, so no changes are required for the client-side packages.
 
 **Version 1.23 – March 2026**
 
