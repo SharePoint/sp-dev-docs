@@ -88,7 +88,7 @@ When a SharePoint Framework solution is packaged, the build toolchain uses [webp
 
 ### Normal import
 
-In the following code, the .js library will be included solution's JavaScript bundle. This code will always be loaded on the page even if the method `GetTime()` is never called.
+In the following code, the Moment.js library will be included solution's JavaScript bundle. This code will always be loaded on the page even if the method `GetTime()` is never called.
 
 ```typescript
 import * as moment from 'moment';
@@ -180,4 +180,5 @@ protected loadPropertyPaneResources(): Promise<void> {
 ## Summary
 
 When building SPFx solutions consisting of several components or if you're using third-party libraries, consider dynamic imports. First analyze the resulting bundle size, and use the strategies outlined in this page to split the code into multiple bundles where each one is loaded only when needed. This will reduce the time it takes for an end user to load and execute the page.
+
 
