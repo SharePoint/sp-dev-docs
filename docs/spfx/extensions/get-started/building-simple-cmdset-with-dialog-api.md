@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 12/14/2023
+ms.date: 01/06/2025
 ms.custom: scenarios:getting-started
 ---
 # Build your first ListView Command Set extension
@@ -11,8 +11,6 @@ Extensions are client-side components that run inside the context of a SharePoin
 You can follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/uaUGtLrNbRA]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 
@@ -186,7 +184,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
@@ -248,7 +246,7 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 1. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
@@ -363,13 +361,13 @@ Since solutions will by default use the **asset packaging** capability, your Jav
 1. In the console window, enter the following command to package your client-side solution that contains the extension so that we get the basic structure ready for packaging:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following command so that the solution package is created:
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
     The command creates the following package: **./sharepoint/solution/command-extension.sppkg** folder:

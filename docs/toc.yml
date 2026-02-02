@@ -154,7 +154,7 @@
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
     - name: Set up development environment (Gulp)
-      href: spfx/set-up-your-development-environment-gulp-toolchain.md      
+      href: spfx/set-up-your-development-environment-gulp-toolchain.md
   - name: Web parts
     items:
     - name: Overview
@@ -466,12 +466,16 @@
       href: spfx/compatibility.md
     - name: How to configure SASS processing
       href: spfx/toolchain/configure-sass.md
+    - name: Understanding npm audit vulnerabilities in SPFx projects
+      href: spfx/npm-vulnerabilities.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the debug toolbar
+      href: spfx/debug-toolbar.md
     - name: Use the developer dashboard
       href: spfx/use-developer-dashboard.md
     - name: Maintenance mode for client-side web parts
@@ -496,8 +500,10 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.22.2 - January 28, 2025
+      href: spfx/release-1.22.2.md
     - name: SPFx v1.22.1 - December 15, 2025
-      href: spfx/release-1.22.1.md      
+      href: spfx/release-1.22.1.md
     - name: SPFx v1.22 - December 10, 2025
       href: spfx/release-1.22.md
     - name: SPFx v1.21.1 - May 3, 2025
