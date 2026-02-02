@@ -181,4 +181,3 @@ protected loadPropertyPaneResources(): Promise<void> {
 
 When building SPFx solutions consisting of several components or if you're using third-party libraries, consider dynamic imports. First analyze the resulting bundle size, and use the strategies outlined in this page to split the code into multiple bundles where each one is loaded only when needed. This will reduce the time it takes for an end user to load and execute the page.
 
-
