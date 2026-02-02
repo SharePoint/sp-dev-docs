@@ -33,7 +33,6 @@ On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
 1. Enumerate containers of an application in a tenant
 1. Enumerate containers of an application sorted basis storage
 1. Enumerate archived containers of an application
-
 1. Edit the sensitivity label on a container
 1. Set sharing capability configuration on a container
 
@@ -45,7 +44,6 @@ The SharePoint Embedded Admin can access the Active, Archived and Deleted contai
 
 1. View the Active container page
 1. View the Archived container page
-
 1. View the Deleted container page
 1. View the detailed information of a container
 1. Archive, soft delete, reactivate, restore, and purge deleted containers
