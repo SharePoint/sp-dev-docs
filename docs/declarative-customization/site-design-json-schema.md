@@ -477,7 +477,7 @@ Associates a ListViewCommandSet to the list
 Renames the list. To create a new list with a specific name, instead of using setTitle use the `listName` parameter in the `CreateSPList` action.
 
 > [!NOTE]
-> Using `setTitle` will rename the list, preventing the list from updating if the site template is reapplied.
+> Using `setTitle` will rename the list, preventing the list from updating if the site template is reapplied. Avoid using `setTitle` in the `CreateSPList` as it will conflict with  the `listName` parameter, use another site script applied separately for the rename.
 
 #### JSON value
 
