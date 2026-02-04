@@ -35,7 +35,7 @@ The Microsoft Graph Toolkit SharePoint Framework package contains a SharePoint F
 
 Install the Microsoft Graph Toolkit SharePoint Framework npm package using the following command:
 
-```bash
+```console
 npm install @microsoft/mgt-spfx
 ```
 
@@ -118,9 +118,9 @@ After downloading the Microsoft Graph Toolkit SharePoint Framework .sppkg packag
 
 Now, you will build your application and deploy it to SharePoint. Build your application by running the following commands:
 
-```bash
-heft build 
-heft package-solution 
+```console
+heft build
+heft package-solution
 ```
 
 In the `sharepoint/solution` folder, there will be a new `.sppkg` file. You will need to upload this file to your SharePoint Online App Catalog. Go to the [More features page of your SharePoint admin center](https://admin.microsoft.com/sharepoint?page=classicfeatures&modern=true). Select **Open** under **Apps**, then click **App Catalog**, and **Distribute apps for SharePoint**. Upload your `.sppkg` file, and click **Deploy**.
@@ -141,7 +141,7 @@ Open the `config\serve.json` file in your project and replace the  value of `ini
 
 Save the file and then run the following command in the console to build and preview your web part:
 
-```bash
+```console
 heft start
 ```
 

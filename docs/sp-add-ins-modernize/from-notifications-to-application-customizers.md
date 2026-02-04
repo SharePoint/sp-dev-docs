@@ -50,7 +50,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -67,7 +67,7 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-ap
 
 Now you have the SharePoint Framework solution ready to be customized. When it's done you can simply open the current folder using your favorite code editor. However, before opening the solution you will need to add a package to have an easy and better looking rendering of the UI of your extension. In fact, you are going to reference the React framework by running the following commands:
 
-```PowerShell
+```console
 npm install react@17.0.1 react-dom@17.0.1 --save
 npm install @types/react@17.0.45 @types/react-dom@17.0.17 --save-dev
 ```
@@ -76,7 +76,7 @@ In fact, by default the scaffolded solution for a SharePoint Framework extension
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -331,7 +331,7 @@ At the time of this writing, the placeholders in a modern page are:
 In order to test the solution, open the file with name *serve.json* under the *config* folder of the solution and replace the value of the *pageUrl* attribute targeting an hypothetical contoso.sharepoint.com tenant with the actual URL of the SharePoint Online site where you want to test the solution.
 Once you have updated and saved the *serve.json* file, you will simply need to run the following command from the console winodow:
 
-```PowerShell
+```console
 gulp serve
 ```
 
