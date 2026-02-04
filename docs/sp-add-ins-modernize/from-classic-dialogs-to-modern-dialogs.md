@@ -24,7 +24,7 @@ function dialogCloseCallback(result, returnValue) {
     window.alert('You clicked OK! And selected a status of: ' + returnValue);
   } else if (result == SP.UI.DialogResult.cancel) {
     window.alert('You clicked Cancel!');
-  } 
+  }
 
   SP.UI.ModalDialog.RefreshPage(result);
 }
@@ -43,7 +43,7 @@ If you prefer, you can watch the following video, instead of reading the whole a
 
 ## Setting the context
 
-Imagine that you have a custom web part with a "Create Task" button and, whenever a user selects on that button, you want to open a modal dialog to collect some information about a hypothetical task that is created. 
+Imagine that you have a custom web part with a "Create Task" button and, whenever a user selects on that button, you want to open a modal dialog to collect some information about a hypothetical task that is created.
 
 In the following screenshot, you can see how this solution should look like.
 
@@ -59,7 +59,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -74,13 +74,13 @@ Follow the prompts to scaffold a solution for a modern Application Customizer. S
 
 With the above answers, you decided to create a solution with name *spo-sp-fx-dialog*, in which there will be a custom web part with name *ShowDialog*. When the scaffolding is done, you can simply open the current folder using your favorite code editor. However, before opening the solution you need to add a package to have support for the SharePoint Framework Dialog Framework. You can do that by running the following commands:
 
-```PowerShell
+```console
 npm i @microsoft/sp-dialog --save
 ```
 
 In fact, by default the scaffolded solution for a SharePoint Framework web part doesn't include the Dialog Framework package. Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -94,7 +94,7 @@ As you can see, under the *src/webparts* folder there's a subfolder with name *s
 
 Add a new subfolder with name *sampleDialog* under the *components* subfolder and create three files in it:
 
-* *ITaskDialogProps.tsx*: defines the configuration properties for the custom dialog window. 
+* *ITaskDialogProps.tsx*: defines the configuration properties for the custom dialog window.
 * *ITaskDialogState.tsx*: defines the state for the custom dialog window.
 * *TaskDialog.tsx*: represents the actual implementation of the dialog window.
 
@@ -139,7 +139,7 @@ import {
 
 class TaskDialogContent extends
     React.Component<ITaskDialogProps, ITaskDialogState> {
-    
+
     constructor(props: ITaskDialogProps) {
         super(props);
 
@@ -148,7 +148,7 @@ class TaskDialogContent extends
             dueDate: new Date()
         };
     }
-    
+
     public render(): JSX.Element {
         return (<div>
             <DialogContent
@@ -200,7 +200,7 @@ export default class TaskDialog extends BaseDialog {
         public onClose: () => Promise<void>) {
         super({isBlocking: true});
     }
-  
+
     public render(): void {
         ReactDOM.render(<TaskDialogContent
                 onSave={this._save}
@@ -208,7 +208,7 @@ export default class TaskDialog extends BaseDialog {
             />,
             this.domElement);
     }
-  
+
     public getConfig(): IDialogConfiguration {
       return {
         isBlocking: true
@@ -223,7 +223,7 @@ export default class TaskDialog extends BaseDialog {
         await this.close();
         await this.onSave(description, dueDate);
     }
-  
+
     private _close = async (): Promise<void> => {
         await this.close();
         await this.onClose();
@@ -278,7 +278,7 @@ export default class ShowDialog extends React.Component<IShowDialogProps, {}> {
         alert(`You asked to create the task '${description}' with due date on: ${dueDate}`); },
       async () => alert('You closed the dialog!')
     );
-    
+
     await taskDialog.show();
   }
 }

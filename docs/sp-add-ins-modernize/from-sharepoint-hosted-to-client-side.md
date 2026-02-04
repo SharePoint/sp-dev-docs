@@ -29,7 +29,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -46,7 +46,7 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-cl
 
 The scaffolding tool will generate for you a new SharePoint Framework solution. When it's done you can simply open the current folder using your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -214,7 +214,7 @@ export default class ConsumeSpoClientSideWebPart extends BaseClientSideWebPart<I
 
 In the *onInit* method of the web part class, you get a referenc to an instance of the `SPHttpClient` type, so that you can provide it to the React component within the *render* method. Notice that in SharePoint Framework there is a *context* property available in any component and that you can use to get access to common infrastructural objects and services, like the SharePoint Online REST client object (*this.context.spHttpClient*).
 
-Moreover, in the *render* method there is also the logic to retrieve the absolute URL of the current web still from the SharePoint Framework *context* using the *this.context.pageContext.web.absoluteUrl* syntax. 
+Moreover, in the *render* method there is also the logic to retrieve the absolute URL of the current web still from the SharePoint Framework *context* using the *this.context.pageContext.web.absoluteUrl* syntax.
 
 Now, let's focus on the React component. First of all, and for the sake of completeness, the React component should rely on a custom state object, which you should define creating a file with name *src\webparts\consumeSPOClientSide\components\IConsumeSpoClientSideState.ts* and with the following content.
 
@@ -246,7 +246,7 @@ export default class ConsumeSpoClientSide extends React.Component<IConsumeSpoCli
 
   constructor(props: IConsumeSpoClientSideProps) {
     super(props);
-    
+
     this.state = {
       documents: []
     };
@@ -312,7 +312,7 @@ The *_loadDocuments* function simply uses the *spHttpClient* object instance pro
 
 If you like, instead of using low level REST APIs to consume SharePoint Online data, you can also rely on the [PnPjs](https://pnp.github.io/pnpjs/) open source library, which is also documented in the article [Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs](./from-jsom-to-client-side.md).
 
-## Recommended content 
+## Recommended content
 
 You can find additional information about this topic reading the following documents:
 

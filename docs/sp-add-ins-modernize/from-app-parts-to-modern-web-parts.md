@@ -161,7 +161,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > [!IMPORTANT]
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md).
 
-```powershell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -178,7 +178,7 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-we
 
 The scaffolding tool generates for you a new SharePoint Framework solution. When it's done, you can open the current folder using your favorite code editor. However, before opening the solution you need to add a package to have an easy and better looking rendering of the list of files in the target library. In fact, you're going to reference the Microsoft Graph Toolkit (MGT) library of components by running the following command:
 
-```PowerShell
+```console
 npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 ```
 
@@ -190,7 +190,7 @@ npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -472,7 +472,7 @@ Replace the value of the *initialPage* property with the URL of your target site
 
 Then, you can run the following command in the terminal window:
 
-```PowerShell
+```console
 gulp serve
 ```
 

@@ -113,8 +113,8 @@ export default class ConsumeSpoViaClientCodeWebPart extends BaseClientSideWebPar
   // Get list items using spHttpClient
   private _getDocuments = async (): Promise<ISPListItems> => {
     // Get the REST response of the SharePoint REST API and return as collection of items
-    return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + 
-        `/_api/web/lists/GetByTitle('Documents')/items`, 
+    return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl +
+        `/_api/web/lists/GetByTitle('Documents')/items`,
         SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => {
         return response.json();
@@ -134,7 +134,7 @@ Nevertheless, using the above technique you can basically do whatever you need, 
 
 ### Consuming SharePoint Online Data via *MSGraphClient*
 
-Another option that you have is to consume the SharePoint Online data using the Microsoft Graph API. Here you can find a sample code excerpt of a Web Part consuming the same list of documents but using Microsoft Graph and the *MSGraphClientV3* object. 
+Another option that you have is to consume the SharePoint Online data using the Microsoft Graph API. Here you can find a sample code excerpt of a Web Part consuming the same list of documents but using Microsoft Graph and the *MSGraphClientV3* object.
 
 ```TypeScript
 import { Version } from '@microsoft/sp-core-library';
@@ -211,7 +211,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -228,7 +228,7 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-pn
 
 The scaffolding tool will generate for you a new SharePoint Framework solution. When it's done you can simply open the current folder using your favorite code editor. However, before opening the solution you will need to add the PnPjs packages by running the following command:
 
-```PowerShell
+```console
 npm install @pnp/sp @pnp/graph @pnp/logging --save
 ```
 
@@ -248,7 +248,7 @@ The above command installs the *@pnp/sp* and the *@pnp/graph* packages in the cu
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -270,7 +270,7 @@ private _getDocuments = async (): Promise<IListItem[]> => {
   // Initialized PnPjs
   const sp = spfi().using(SPFx(this.context));
   const items: IListItem[] = await sp.web.lists.getByTitle('Documents').items();
-  
+
   return items;
 }
 ```
@@ -326,7 +326,7 @@ export default class UsePnPjsMinimalWebPart extends BaseClientSideWebPart<IUsePn
     // Initialized PnPjs
     const sp = spfi().using(SPFx(this.context));
     const items: IListItem[] = await sp.web.lists.getByTitle('Documents').items();
-    
+
     return items;
   }
 }
@@ -340,7 +340,7 @@ Now that you have seen how to read SharePoint data in basic JavaScript code, let
 
 Open a command prompt and go to the same folder of the previous SPFx solution, then run again the SPFx scaffolding tool running the following command.
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -424,7 +424,7 @@ export default class UsePnPjsReact extends React.Component<IUsePnPjsReactProps, 
 
   constructor(props: IUsePnPjsReactProps) {
     super(props);
-    
+
     this.state = {
       documents: []
     }
@@ -582,7 +582,7 @@ export default class UsePnPjsReactBetter extends React.Component<IUsePnPjsReactB
     this.state = {
       documents: []
     }
-    
+
     this._sp = getSP();
   }
 
@@ -628,7 +628,7 @@ Notice the syntax in the constructor, where the *getSP* function is invoked.
 this._sp = getSP();
 ```
 
-Moreover, notice the usage of the retrieved *SPFI* instance, for example in the *componentDidMount* method. 
+Moreover, notice the usage of the retrieved *SPFI* instance, for example in the *componentDidMount* method.
 
 ```TypeScript
 const docs = await this._sp.web.lists.getByTitle("Documents").items<{Id: number; Title: string;}[]>();
@@ -639,7 +639,7 @@ The one you have just seen is a very common pattern when using PnPjs in React ba
 > [!IMPORTANT]
 > There are scenarios where you need to use PnPjs in a service class that supports your business logic. In such scenarios, you do not necessarily have a React component and you cannot necessarily rely on the SPFx context object, unless you provide it to the service class as an input argument, for example in the constructor of the service class. However and generally speaking, passing the SPFx context as a constructor parameter or as a React component property is not a good design pattern. If you need to create a service class that relies on PnPjs in SPFx you can refer to the [Use a service class](https://pnp.github.io/pnpjs/concepts/project-preset/#use-a-service-class) design pattern.
 
-## Recommended content 
+## Recommended content
 
 You can find additional information about this topic reading the following documents:
 

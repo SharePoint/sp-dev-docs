@@ -74,7 +74,7 @@ function execCrossDomainRequest() {
 
     var executor = new SP.RequestExecutor(appweburl);
 
-    // First request, to retrieve the form digest 
+    // First request, to retrieve the form digest
     executor.executeAsync({
         url: itemUri,
         method: "GET",
@@ -138,7 +138,7 @@ The UI Extension to render the ECB menu item is then defined in an XML element f
                 Location="EditControlBlock"
                 Sequence="10001"
                 Title="Document Details">
-    <!-- 
+    <!--
     Update the Url below to the page you want the custom action to use.
     Start the URL with the token ~remoteAppUrl if the page is in the
     associated web project, use ~appWebUrl if page is in the app project.
@@ -162,7 +162,7 @@ Likewise, the custom ribbon command is defined with another XML element file, st
                 Sequence="10001"
                 Title="Invoke &apos;ShowDocumentDetailsCommand&apos; action">
     <CommandUIExtension>
-      <!-- 
+      <!--
       Update the UI definitions below with the controls and the command actions
       that you want to enable for the custom action.
       -->
@@ -203,7 +203,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -220,7 +220,7 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-li
 
 The scaffolding tool will generate for you a new SharePoint Framework solution. When it's done you can simply open the current folder using your favorite code editor. However, before opening the solution you will need to add a package to have an easy and better looking rendering of the UI of your extension. In fact, you are going to reference the MGT (Microsoft Graph Toolkit) library of components and the React framework by running the following commands:
 
-```PowerShell
+```console
 npm install @microsoft/mgt-spfx @microsoft/mgt-react react@17.0.1 react-dom@17.0.1 --save
 npm install @types/react@17.0.45 @types/react-dom@17.0.17 --save-dev
 ```
@@ -232,7 +232,7 @@ In fact, by default the scaffolded solution for a SharePoint Framework ListView 
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -372,7 +372,7 @@ Lastly, the source code defines an *onExecute* method that provides the actual i
   }
 ```
 
-When the *onExecute* method is invoked, the *event.itemId* property defines the unique name of the command that got invoked by the user and you can implement your extension business logic accordingly. The auto-generated code simply show a dialog alert in the browser. 
+When the *onExecute* method is invoked, the *event.itemId* property defines the unique name of the command that got invoked by the user and you can implement your extension business logic accordingly. The auto-generated code simply show a dialog alert in the browser.
 
 You might be wondering where the *COMMAND_1* is declared in the extension code. It is actually defined in a manifest file called *DocumentDetailsCommandSet.manifest.json*, which is available in the same folder of the extension. In the following code excerpt, you can see the scaffolded manifest.
 
@@ -427,7 +427,7 @@ The last important file of the solution is the *elements.xml* file, defined unde
 </Elements>
 ```
 
-Interestingly, it is still a file based on the SharePoint Feature Framework, like it was with the UI Extension built with the SharePoint Add-in model. However, the custom action settings are now slightly different. There are still attributes like *RegistrationId* and *RegistrationType* to define the targe of the extension. There is also the *Location* attribute with a new value that targets the *ClientSideExtension.ListViewCommandSet.CommandBar*, meaning that the extension will be rendered in the command bar of the target view. 
+Interestingly, it is still a file based on the SharePoint Feature Framework, like it was with the UI Extension built with the SharePoint Add-in model. However, the custom action settings are now slightly different. There are still attributes like *RegistrationId* and *RegistrationType* to define the targe of the extension. There is also the *Location* attribute with a new value that targets the *ClientSideExtension.ListViewCommandSet.CommandBar*, meaning that the extension will be rendered in the command bar of the target view.
 
 The available options for this attribute in a SharePoint Framework ListView Command Set are:
 
@@ -566,7 +566,7 @@ export default class DocumentDetailsDialog extends BaseDialog {
         public driveId: string, public itemId: string) {
         super({isBlocking: true});
     }
-  
+
     public render(): void {
         ReactDOM.render(<DocumentDetailsDialogContent
                 tenantName={this.tenantName}
@@ -578,13 +578,13 @@ export default class DocumentDetailsDialog extends BaseDialog {
             />,
             this.domElement);
     }
-  
+
     public getConfig(): IDialogConfiguration {
       return {
         isBlocking: true
       };
     }
-  
+
     private _close = async (): Promise<void> => {
         ReactDOM.unmountComponentAtNode(this.domElement);
         await this.close();
@@ -596,7 +596,7 @@ The main type is the *DocumentDetailsDialog* class, which is also the default ex
 
 The public constructor of the dialog class accepts all the properties needed to target the selected file via Microsoft Graph. The *render* method simply creates an instance of a React component called *DocumentDetailsDialogContent* that is defined just before the dialog class. Within the dialog class, you can also find the definition of the *_close* method, which is used to close the dialog and unmount the resources allocated by React.
 
-The *DocumentDetailsDialogContent* component is a really trivial React component that renders the `File` component of MGT and provides a "Close" button to close the dialog. 
+The *DocumentDetailsDialogContent* component is a really trivial React component that renders the `File` component of MGT and provides a "Close" button to close the dialog.
 
 The *DocumentDetailsDialog* component is instantiated in the *onExecute* method of the ListView Command Set. Moreover, the MGT library is initialized in the *onInit* method of the class by registering its global provider, relying on the types imported from `@microsoft/mgt-spfx`. In the following code excerpt you can see the updated *DocumentDetailsCommandSet.ts* file.
 
