@@ -1,15 +1,13 @@
 ---
-title: Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
+title: Migrate a jQuery and DataTables solution built using Script Editor web part to the SharePoint Framework
 description: Migrate a SharePoint customization using DataTables to build powerful data overviews of data coming from SharePoint and external APIs.
-ms.date: 08/19/2020
+ms.date: 01/28/2026
 ms.localizationpriority: high
 ---
 
-# Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
+# Migrate a jQuery and DataTables solution built using Script Editor web part to the SharePoint Framework
 
 One of the frequently used jQuery plug-ins is [DataTables](https://datatables.net/). With DataTables, you can easily build powerful data overviews of data coming from both SharePoint and external APIs.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## List of IT requests built using the Script Editor web part
 
@@ -92,17 +90,17 @@ The solution is built by using the standard SharePoint Script Editor web part. F
 $(document).ready(function() {
   $('#requests').DataTable({
     'ajax': {
-      'url': "../_api/web/lists/getbytitle('IT Requests')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title",
+      'url': "https://yourtenant.sharepoint.com/sites/yoursite/_api/web/lists/getbytitle('IT Requests')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title",
       'headers': { 'Accept': 'application/json;odata=nometadata' },
-      'dataSrc': function(data) {
-        return data.value.map(function(item) {
+      'dataSrc': function(data: any) {
+        return data.value.map(function(item: any) {
           return [
             item.ID,
-            item.BusinessUnit,
-            item.Category,
-            item.Status,
-            new Date(item.DueDate),
-            item.AssignedTo.Title
+            item.BusinessUnit || '',
+            item.Category || '',
+            item.Status || '',
+            item.DueDate ? new Date(item.DueDate) : '',
+            item.AssignedTo ? item.AssignedTo.Title : ''
           ];
         });
       }
@@ -137,6 +135,19 @@ Transforming this customization to the SharePoint Framework offers a number of b
 
 ### Create new SharePoint Framework project
 
+Before You Begin:
+
+1. Create a list with columns and sample data:
+
+    1. Create a SharePoint list named "IT Requests"
+    1. Add these columns with exact internal names:
+        - BusinessUnit (Text)
+        - Category (Text)
+        - Status (Choice)
+        - DueDate (Date)
+        - AssignedTo (Person)
+    1. Add sample data to test the solution
+
 1. Start by creating a new folder for your project:
 
     ```console
@@ -167,7 +178,7 @@ Transforming this customization to the SharePoint Framework offers a number of b
 
 ### Load JavaScript libraries
 
-Similar to the original solution built using the Script Editor web part, first you need to load the JavaScript libraries required by the solution. In SharePoint Framework this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
+Similar to the original solution built using the Script Editor web part, first you need to load the JavaScript libraries required by the solution. In the SharePoint Framework, this usually consists of two steps: specifying the URL from which the library should be loaded, and referencing the library in the code.
 
 1. Specify the URLs from which libraries should be loaded. In the code editor, open the **./config/config.json** file, and change the `externals` section to:
 
@@ -200,7 +211,7 @@ Similar to the original solution built using the Script Editor web part, first y
     > [!NOTE]
     > For more information on referencing external libraries in SharePoint Framework projects, see [Add an external library to your SharePoint client-side web part](../basics/add-an-external-library.md).
 
-1. Open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement add:
+1. Open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement, add:
 
     ```typescript
     import 'jquery';
@@ -298,7 +309,7 @@ The next step is to define the Moment.js plug-in for DataTables so that dates in
     );
     ```
 
-1. For the web part to load the plug-in, it has to reference the newly created **moment-plugin.js** file. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement add:
+1. For the web part to load the plug-in, it has to reference the newly created **moment-plugin.js** file. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last `import` statement, add:
 
     ```typescript
     import './moment-plugin';
@@ -314,17 +325,17 @@ The last step is to include the code that initializes the data table and loads t
     $(document).ready(function () {
       $('#requests').DataTable({
         'ajax': {
-          'url': "../../_api/web/lists/getbytitle('IT Requests')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title",
+          'url': "https://yourtenant.sharepoint.com/sites/yoursite/_api/web/lists/getbytitle('IT Requests')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title",
           'headers': { 'Accept': 'application/json;odata=nometadata' },
-          'dataSrc': function (data) {
-            return data.value.map(function (item) {
+          'dataSrc': function (data: any) {
+            return data.value.map(function (item: any) {
               return [
                 item.ID,
-                item.BusinessUnit,
-                item.Category,
-                item.Status,
-                new Date(item.DueDate),
-                item.AssignedTo.Title
+                item.BusinessUnit || '',
+                item.Category || '',
+                item.Status || '',
+                item.DueDate ? new Date(item.DueDate) : '',
+                item.AssignedTo ? item.AssignedTo.Title : ''
               ];
             });
           }
@@ -338,7 +349,7 @@ The last step is to include the code that initializes the data table and loads t
     ```
 
 > [!NOTE]
-> Make sure to use internal name (or static name) of columns in `$select` and `$expend` parameters.
+> Make sure to use the internal name (or static name) of columns in `$select` and `$expend` parameters.
 
 1. To reference this file in the web part, in the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and add `require('./script');` to the end of the `render()` method. The `render()` method should look like the following:
 
@@ -369,10 +380,10 @@ The last step is to include the code that initializes the data table and loads t
 1. Verify that the web part is working as expected in the command line by executing:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
-Because the web part loads its data from SharePoint, you've to test the web part by using the hosted SharePoint Framework Workbench. Navigate to **https://{your-tenant-name}.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the IT requests displayed by using the DataTables jQuery plug-in.
+Because the web part loads its data from SharePoint, you have to test the web part by using the hosted SharePoint Framework Workbench. Navigate to **https://{your-tenant-name}.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the IT requests displayed by using the DataTables jQuery plug-in.
 
 ![IT requests displayed in a SharePoint Framework client-side web part](../../../images/datatables-spfx.png)
 
@@ -483,17 +494,17 @@ Initially, the name of the list from which the data should be loaded was embedde
         $(document).ready(() => {
           $('table', this.domElement).DataTable({
             'ajax': {
-              'url': `../../_api/web/lists/getbytitle('${escape(this.properties.listName)}')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title`,
+              'url': `https://yourtenant.sharepoint.com/sites/yoursite/_api/web/lists/getbytitle('${escape(this.properties.listName)}')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title`,
               'headers': { 'Accept': 'application/json;odata=nometadata' },
-              'dataSrc': function (data) {
-                return data.value.map(function (item) {
+              'dataSrc': function (data: any) {
+                return data.value.map(function (item: any) {
                   return [
                     item.ID,
-                    item.BusinessUnit,
-                    item.Category,
-                    item.Status,
-                    new Date(item.DueDate),
-                    item.AssignedTo.Title
+                    item.BusinessUnit || '',
+                    item.Category || '',
+                    item.Status || '',
+                    item.DueDate ? new Date(item.DueDate) : '',
+                    item.AssignedTo ? item.AssignedTo.Title : ''
                   ];
                 });
               }
@@ -510,16 +521,16 @@ Initially, the name of the list from which the data should be loaded was embedde
     }
     ```
 
-1. Instead of referencing the code from the **script.js** file, all of its contents are a part of the web part's `render` method. In the REST query, you can now replace the fixed name of the list with the value of the `listName` property that holds the name of the list as configured by the user. Before using the value, it's being escaped by using the lodash's `escape` function to disallow script injection.
+1. Instead of referencing the code from the **script.js** file, all of its contents are a part of the web part's `render` method. In the REST query, you can now replace the fixed name of the list with the value of the `listName` property that holds the name of the list as configured by the user. Before using the value, it's being escaped by using the lodash `escape` function to disallow script injection.
 
     At this point, the bulk of the code is still written using plain JavaScript. To avoid build issues with the `$` jQuery variable, you had to define it as `any` type before the class definition. Later, when transforming the code to TypeScript, you replace it with a proper type definition.
 
-    As you've moved the contents of the **script.js** file into the main web part file, the **script.js** is no longer necessary, and you can delete it from the project.
+    As you have moved the contents of the **script.js** file into the main web part file, the **script.js** is no longer necessary, and you can delete it from the project.
 
 1. To verify that the web part is working as expected, run the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Navigate to the hosted Workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with IT requests, and select the **Apply** button to confirm the changes.
@@ -530,7 +541,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 ## Transform the plain JavaScript code to TypeScript
 
-Using TypeScript over plain JavaScript offers a number of benefits. Not only is TypeScript easier to maintain and refactor, but it also allows you to catch errors earlier. The following steps describe how you would transform the original JavaScript code to TypeScript.
+Using TypeScript over plain JavaScript offers several benefits. Not only is TypeScript easier to maintain and refactor, but it also allows you to catch errors earlier. The following steps describe how you would transform the original JavaScript code to TypeScript.
 
 ### Add type definitions for used libraries
 
@@ -543,7 +554,7 @@ To function properly, TypeScript requires type definitions for the different lib
     ```
 
     > [!TIP]
-    > In this example, we are specifying the exact version of the NPM package we want to install. This will ensure that NPM installs a type declaration package that matches the version of jQuery and the datatables library we are using in our project.
+    > In this example, we are specifying the exact version of the NPM package we want to install. This will ensure that NPM installs a type declaration package that matches the version of jQuery and the DataTables library we are using in our project.
     >
     > The `--save-dev` argument tells NPM to save the references to these two packages in the `devDependencies` collection in the **package.json** file. TypeScript declarations are only needed in development, which is why we don't want them in the `dependencies` collection.
     >
@@ -559,7 +570,7 @@ To function properly, TypeScript requires type definitions for the different lib
 
 ### Update package references
 
-To use types from the installed type definitions, you've to change how you reference libraries.
+To use types from the installed type definitions, you have to change how you reference libraries.
 
 1. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the `import 'jquery';` statement to:
 
@@ -575,7 +586,7 @@ To use types from the installed type definitions, you've to change how you refer
 
 ### Update main web part files to TypeScript
 
-Now that you've type definitions for all libraries installed in the project, you can start transforming the plain JavaScript code to TypeScript.
+Now that you have type definitions for all libraries installed in the project, you can start transforming the plain JavaScript code to TypeScript.
 
 1. Define an interface for the IT request information that you retrieve from the SharePoint list. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and just above the web part class, add the following code snippet:
 
@@ -612,7 +623,7 @@ Now that you've type definitions for all libraries installed in the project, you
 
           $('table', this.domElement).DataTable({
             'ajax': {
-              'url': `../../_api/web/lists/getbytitle('${escape(this.properties.listName)}')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title`,
+              'url': `https://yourtenant.sharepoint.com/sites/yoursite/_api/web/lists/getbytitle('${escape(this.properties.listName)}')/items?$select=ID,BusinessUnit,Category,Status,DueDate,AssignedTo/Title&$expand=AssignedTo/Title`,
               'headers': { 'Accept': 'application/json;odata=nometadata' },
               'dataSrc': (data: { value: IRequestItem[] }): any[][] => {
                 return data.value.map((item: IRequestItem): any[] => {
@@ -638,9 +649,9 @@ Now that you've type definitions for all libraries installed in the project, you
     }
     ```
 
-1. Notice how the AJAX request, to retrieve the data from the SharePoint list, is now typed and helps you ensure you're referring to correct properties when passing them into an array to DataTables. The data structure used by DataTables to represent a row in the table is an array of mixed types, so for simplicity it was defined as `any[]`. Using the `any` type in this context isn't bad, because the data returned inside the `dataSrc` property is used internally by DataTables.
+1. Notice how the AJAX request, to retrieve the data from the SharePoint list, is now typed and helps you ensure you're referring to the correct properties when passing them into an array to DataTables. The data structure used by DataTables to represent a row in the table is an array of mixed types, so for simplicity it was defined as `any[]`. Using the `any` type in this context isn't bad because the data returned inside the `dataSrc` property is used internally by DataTables.
 
-    As you're updating the `render()` method, you've also added two more changes. First, you removed the `id` attribute from the table. This allows you to place multiple instances of the same web part on the page. Also, you removed the reference to the `$(document).ready()` function, which isn't necessary because the DOM of the element where the data table is rendered is set before the DataTables initiation code.
+    As you're updating the `render()` method, you have also added two more changes. First, you removed the `id` attribute from the table. This allows you to place multiple instances of the same web part on the page. Also, you removed the reference to the `$(document).ready()` function, which isn't necessary because the DOM of the element where the data table is rendered is set before the DataTables initiation code.
 
 ### Update the Moment.js DataTables plugin to TypeScript
 
@@ -651,7 +662,7 @@ The last piece of the solution that needs to be transformed to TypeScript is the
 
     ```typescript
     import * as $ from 'jquery';
-    import * as moment from 'moment';
+    import moment from 'moment';
 
     /* tslint:disable:no-function-expression */
     ($.fn.dataTable.render as any).moment = function (from: string, to: string, locale: string): (d: any, type: string, row: any) => string {
@@ -675,11 +686,12 @@ The last piece of the solution that needs to be transformed to TypeScript is the
     };
     ```
 
-1. You start with loading references to jQuery and Moment.js to let TypeScript know what the corresponding variables refer to. Next, you define the plug-in function. Usually in TypeScript you use the arrow notation for functions (`=>`). In this case, however, because you need access to the `arguments` property, you've to use the regular function definition. To prevent tslint from reporting a warning about not using the arrow notation, you can explicitly disable the `no-function-expression` rule around the function definition.
+1. You start by loading references to jQuery and Moment.js to let TypeScript know what the corresponding variables refer to. Next, you define the plug-in function. Usually, in TypeScript, you use the arrow notation for functions (`=>`). In this case, however, because you need access to the `arguments` property, you have to use the regular function definition. To prevent tslint from reporting a warning about not using the arrow notation, you can explicitly disable the `no-function-expression` rule around the function definition.
 1. To confirm that everything is working as expected, in the command line, execute:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Navigate to the hosted Workbench and add the web part to the canvas. Although visually nothing has changed, the new code base uses TypeScript and its type definitions to help you maintain the solution.
+
