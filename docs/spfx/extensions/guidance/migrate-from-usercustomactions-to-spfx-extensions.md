@@ -202,8 +202,10 @@ The UI elements of the custom footer are rendered using React and a custom React
 
     > [!IMPORTANT]
     > **Install React Dependencies First**
+    > 
     > Before starting, ensure React dependencies are installed:
-    > ```bash
+    > 
+    > ```console
     > npm install react react-dom @types/react @types/react-dom
     > ```
 
@@ -398,10 +400,10 @@ The UI elements of the custom footer are rendered using React and a custom React
 
     In this query string, replace the GUID with the `id` value you saved from the **CustomFooterApplicationCustomizer.manifest.json** file.
 
-    Notice that when executing the page request, you're prompted with a warning message box with the title "Allow debug scripts?", which asks your consent to run code from localhost for security reasons. If you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
+    Notice that when executing the page request, you're prompted with a warning message box with the title "Allow debug scripts?", which asks for your consent to run code from localhost for security reasons. If you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
 
     > [!NOTE]
-    > Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
+    > Alternatively, you can create serve configuration entries in the **config/serve.json** file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
 
 ## Package and host the solution
 
@@ -424,7 +426,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
     </Elements>
     ```
 
-    As you can see, it reminds us of the SharePoint Feature Framework file that we saw in the "classic" model, but it uses the `ClientSideComponentId` attribute to reference the `id` of the custom extension. You can also add a `ClientSideComponentProperties` attribute, if you need to provide custom settings to the extension, which isn't the case in this tutorial.
+    As you can see, it reminds us of the SharePoint Feature Framework file that we saw in the "classic" model, but it uses the `ClientSideComponentId` attribute to reference the `id` of the custom extension. You can also add a `ClientSideComponentProperties` attribute if you need to provide custom settings to the extension, which isn't the case in this tutorial.
 
 1. Open the file **./config/package-solution.json** folder of the solution. Within the file, you can see that there's a reference to the **elements.xml** file within the `assets` section.
 
@@ -456,7 +458,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
 ### Bundle, package, and deploy the solution
 
-Next, you need to bundle and package solution bundle to the app catalog. To accomplish this task, follow these steps.
+Next, you need to create the bundle, package the solution, and deploy it to the app catalog. To accomplish this task, follow these steps.
 
 Prepare and deploy the solution for SharePoint Online tenant:
 
@@ -485,8 +487,9 @@ Prepare and deploy the solution for SharePoint Online tenant:
 
 1. After the application installation is completed, refresh the page or go to the home page of the site. You should see the custom footer in action.
 
-Enjoy your new custom footer built by using the SharePoint Framework extensions!
+Enjoy your new custom footer built using the SharePoint Framework extensions!
 
 ## See also
 
 - [Overview of SharePoint Framework extensions](../overview-extensions.md)
+
