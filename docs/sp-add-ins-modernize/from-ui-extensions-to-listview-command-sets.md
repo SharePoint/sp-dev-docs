@@ -17,7 +17,7 @@ If you prefer, you can watch the following video, instead of reading the whole a
 [![IMAGE_ALT](https://img.youtube.com/vi/qbQ5QkzQOgQ/0.jpg)](https://youtu.be/qbQ5QkzQOgQ)
 
 > [!NOTE]
-> You can find further details about creating a SharePoint Framework ListView Command Set by reading the document [Build your first ListView Command Set extension](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-cmdset-with-dialog-api).
+> You can find further details about creating a SharePoint Framework ListView Command Set by reading the document [Build your first ListView Command Set extension](/sharepoint/dev/spfx/extensions/get-started/building-simple-cmdset-with-dialog-api).
 
 ## Transforming a UI Extension into a ListView Command Set
 
@@ -200,7 +200,7 @@ Now let's create a new SharePoint Framework solution that you will use to transf
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
 ```console
@@ -228,7 +228,7 @@ npm install @types/react@17.0.45 @types/react-dom@17.0.17 --save-dev
 In fact, by default the scaffolded solution for a SharePoint Framework ListView Command Set does not include the React packages, and it is up to you to choose to add them to the solution.
 
 > [!NOTE]
-> The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](https://learn.microsoft.com/en-us/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](https://learn.microsoft.com/en-us/graph/toolkit/get-started/mgt-spfx).
+> The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx).
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
@@ -500,7 +500,7 @@ In the new SharePoint Framework implementation of the extension you will rely on
 > You can find further details about leveraging the SharePoint Framework Dialog Framework by reading the document [Use custom dialog boxes with SharePoint Framework Extensions](../spfx/extensions/guidance/using-custom-dialogs-with-spfx.md).
 
 > [!NOTE]
-> You can learn more about the *File* component of MGT by reading the document [File component in Microsoft Graph Toolkit](https://learn.microsoft.com/en-us/graph/toolkit/components/file).
+> You can learn more about the *File* component of MGT by reading the document [File component in Microsoft Graph Toolkit](/graph/toolkit/components/file).
 
 Now, create a new folder structure *src\documentDetails\components\documentDetailsDialog* that you will use to contain a new React component file called *DocumentDetailsDialog.tsx*. Within the same new folder, create also another file called *IDocumentDetailsDialogProps.ts* that you will use to define the configuration properties for the dialog window.
 In the following code excerpt you can see the definition of the interface defining the properties for the dialog.

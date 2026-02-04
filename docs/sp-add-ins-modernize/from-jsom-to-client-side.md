@@ -13,14 +13,14 @@ While developing solutions with the SharePoint Add-in model you used to rely on 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.
 
-```JavaScript
+```javascript
 var context = SP.ClientContext.get_current();
 var user = context.get_web().get_currentUser();
 ```
 
 Or you used to get the items of a library in a target SharePoint Online host site using the following syntax.
 
-```JavaScript
+```javascript
 // Get a reference to the current host web
 var clientContext = SP.ClientContext.get_current();
 var hostWebContext = new SP.AppContextSite(clientContext, hostweburl);
@@ -66,7 +66,7 @@ In the modern development model for SharePoint Online, the JSOM library is not a
 
 For example, in the following code excerpt you can see how to consume the same list of documents of the above sample, while in SPFx via *SPHttpClient*.
 
-```TypeScript
+```typescript
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -125,18 +125,18 @@ export default class ConsumeSpoViaClientCodeWebPart extends BaseClientSideWebPar
 
 The code is taken from a SharePoint Framework Web Part that shows the list of files in the "Documents" library of the current site.
 
-Notice that you don't have to rely on any querystring tokens or paramenters and you can simply query the *this.context.spHttpClient* to make an HTTP GET request to the SharePoint REST API for accessing the items of the "Documents" document library. You can also use the same *this.context.spHttpClient* object to make a POST HTTP request or any other HTTP request via the *fetch* method. However, despite the code is quite simple and trivial, you need to be aware of the SharePoint REST API URL to invoke and about the JSON structure of the response, which in some scenarios could be a challenge.
+Notice that you don't have to rely on any querystring tokens or parameters and you can simply query the *this.context.spHttpClient* to make an HTTP GET request to the SharePoint REST API for accessing the items of the "Documents" document library. You can also use the same *this.context.spHttpClient* object to make a POST HTTP request or any other HTTP request via the *fetch* method. However, despite the code is quite simple and trivial, you need to be aware of the SharePoint REST API URL to invoke and about the JSON structure of the response, which in some scenarios could be a challenge.
 
 Nevertheless, using the above technique you can basically do whatever you need, simply consuming SharePoint Online via REST.
 
 > [!NOTE]
-> You can dig into consuming SharePoint Online REST API in SharePoint Framework by reading the article [Connect to SharePoint APIs](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/connect-to-sharepoint).
+> You can dig into consuming SharePoint Online REST API in SharePoint Framework by reading the article [Connect to SharePoint APIs](/sharepoint/dev/spfx/connect-to-sharepoint).
 
 ### Consuming SharePoint Online Data via *MSGraphClient*
 
 Another option that you have is to consume the SharePoint Online data using the Microsoft Graph API. Here you can find a sample code excerpt of a Web Part consuming the same list of documents but using Microsoft Graph and the *MSGraphClientV3* object.
 
-```TypeScript
+```typescript
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -194,7 +194,7 @@ export default class ConsumeSpoViaGraphWebPart extends BaseClientSideWebPart<ICo
 As like as with *SPHttpClient* the syntax is not too complex, and by knowning what the Microsoft Graph API endpoints that you need are and the structure of the JSON responses, you can easily consume any data in SharePoint Online or any other service in the Microsoft 365 ecosystem, as long as you will have proper permissions granted to your SharePoint Framework solution.
 
 > [!NOTE]
-> You can dig into consuming Microsoft Graph API in SharePoint Framework by reading the article [Use the MSGraphClientV3 to connect to Microsoft Graph](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph).
+> You can dig into consuming Microsoft Graph API in SharePoint Framework by reading the article [Use the MSGraphClientV3 to connect to Microsoft Graph](/sharepoint/dev/spfx/use-msgraph).
 
 ## Introducing the PnPjs Library
 
@@ -208,14 +208,14 @@ In order to consume SharePoint Online data with PnPjs in a SharePoint Framework 
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
 ```console
 yo @microsoft/sharepoint
 ```
 
-![The UI of the scaffolding tool in a PowerShell window, while creating a new project for a SharePoint Framework modern web part.](./assets/From-JSOM-to-Client-Side/From-JSOM-to-Client-Side-yo-console.png)
+![The UI of the scaffolding tool in a PowerShell window, while creating a new project for a SharePoint Framework modern web part.](../images/add-in-transform/from-jsom-to-client-side/from-jsom-to-client-side-yo-console.png)
 
 Follow the prompts to scaffold a solution for a modern web part. Specifically, make the following choices, when prompted by the tool:
 
@@ -234,17 +234,16 @@ npm install @pnp/sp @pnp/graph @pnp/logging --save
 
 The above command installs the *@pnp/sp* and the *@pnp/graph* packages in the current solution, together with @pnp/logging for logging purposes. Overall, the available packages of PnPjs are:
 
-|     ||  |
-| ---| -------------|-------------|
-| @pnp/| | |
-|| [core](./packages#core)  | Provides shared functionality across all pnp libraries |
-|| [graph](./packages#graph) | Provides a fluent api for working with Microsoft Graph |
-|| [logging](./packages#logging) | Light-weight, subscribable logging framework |
-|| [msaljsclient](./concepts/authentication.md#MSAL-in-Browser)  | Provides an msal wrapper suitable for use with PnPjs |
-|| [nodejs](./packages#nodejs) | Provides functionality enabling the @pnp libraries within nodejs |
-|| [queryable](./packages#queryable) | Provides shared query functionality and base classes |
-|| [sp](./packages#sp) | Provides a fluent api for working with SharePoint REST |
-|| [sp-admin](./packages#sp-admin) | Provides a fluent api for working with M365 Tenant admin methods |
+|      Package      |                           Description                            |
+| ----------------- | ---------------------------------------------------------------- |
+| @pnp/core         | Provides shared functionality across all pnp libraries           |
+| @pnp/graph        | Provides a fluent api for working with Microsoft Graph           |
+| @pnp/logging      | Light-weight, subscribable logging framework                     |
+| @pnp/msaljsclient | Provides an msal wrapper suitable for use with PnPjs             |
+| @pnp/nodejs       | Provides functionality enabling the @pnp libraries within nodejs |
+| @pnp/queryable    | Provides shared query functionality and base classes             |
+| @pnp/sp           | Provides a fluent api for working with SharePoint REST           |
+| @pnp/sp-admin     | Provides a fluent api for working with M365 Tenant admin methods |
 
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
@@ -254,7 +253,7 @@ code .
 
 First of all, you need to import the PnPjs types that you need to consume SharePoint Online data. So, open the web part source file and add the following *import* statements.
 
-```TypeScript
+```typescript
 import { spfi, SPFx } from "@pnp/sp";
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";
@@ -263,7 +262,7 @@ import "@pnp/sp/items";
 
 The very first import statement imports the initialization types for PnPjs, while the subsequent import statements simply import the types needed to work with web objects, list objects, and list item objects. Once you have done that, you can implement a method like the one in the following code excerpt, to load the documents in the "Documents" library.
 
-```TypeScript
+```typescript
 // Get list items using PnPjs
 private _getDocuments = async (): Promise<IListItem[]> => {
 
@@ -279,7 +278,7 @@ As you can see, the syntax is really simple and straightforward. In fact, the co
 
 In the following code excerpt you can see the whole code of the web part.
 
-```TypeScript
+```typescript
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
@@ -346,7 +345,7 @@ yo @microsoft/sharepoint
 
 When you execute the scaffolding tool multiple times against the same solution, it will allow you to add additional artifacts or components to the already existing solution.
 
-![The UI of the scaffolding tool in a PowerShell window, while creating a new project for a SharePoint Framework modern web part.](../images/add-in-transform/from-jsom-to-client-side/from-jsom-to-client-side-yo-console-react.png)
+![The UI of the scaffolding tool in a PowerShell window, while creating a new project for a SharePoint Framework modern web part with React.](../images/add-in-transform/from-jsom-to-client-side/from-jsom-to-client-side-yo-console-react.png)
 
 Follow the prompts to scaffold a solution for a modern web part. Specifically, make the following choices, when prompted by the tool:
 
@@ -358,7 +357,7 @@ With the above answers, you decided to add another web part to the solution. The
 
 Now, you could potentially initialize the PnPjs SPFI object like in the previous example and pass it to the React component rendering the web part as a custom property. For example, the interface defining the properties for the React component could be like in the following code.
 
-```TypeScript
+```typescript
 import { SPFI } from "@pnp/sp";
 
 export interface IUsePnPjsReactProps {
@@ -373,7 +372,7 @@ export interface IUsePnPjsReactProps {
 
 And the web part could initialize the React component like in the following code excerpt.
 
-```TypeScript
+```typescript
 export default class UsePnPjsReactWebPart extends BaseClientSideWebPart<IUsePnPjsReactWebPartProps> {
 
   private _isDarkTheme: boolean = false;
@@ -410,7 +409,7 @@ export default class UsePnPjsReactWebPart extends BaseClientSideWebPart<IUsePnPj
 
 And lastly, in the React component, you could rely on the *sp* property available in the component properties to use the PnPjs fluent syntax and retrieve the items in the target library. Here follows an uber-simplified example of this logic.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import styles from './UsePnPjsReact.module.scss';
 import { IUsePnPjsReactProps } from './IUsePnPjsReactProps';
@@ -470,7 +469,7 @@ However, it might be that in your solutions you need to use PnPjs from multiple 
 
 To improve your code quality, you should create a file in your solution, for example call it *pnpjsConfig.ts*, with the following content.
 
-```TypeScript
+```typescript
 import { WebPartContext } from "@microsoft/sp-webpart-base";
 
 // import pnp and pnp logging system
@@ -501,7 +500,7 @@ The file exports a function that builds a new instance of SPFI, based on a provi
 
 Once you have defined the *pnpjsConfig.ts* file, you can import it in the web part class and invoke the *getSP* method from within the *onInit* method of the web part, like it is illustrated in the following code excerpt.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -559,7 +558,7 @@ export default class UsePnPjsReactBetterWebPart extends BaseClientSideWebPart<IU
 
 Now, wherever you will need to access PnPjs, you can simply import the *getSP* function and invoke it without providing any argument to get back the already initialized *SPFI* object instance. For example, in any React component of your solution, you can write syntax like the following one.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import styles from './UsePnPjsReactBetter.module.scss';
 import { IUsePnPjsReactBetterProps } from './IUsePnPjsReactBetterProps';
@@ -624,13 +623,13 @@ export default class UsePnPjsReactBetter extends React.Component<IUsePnPjsReactB
 
 Notice the syntax in the constructor, where the *getSP* function is invoked.
 
-```TypeScript
+```typescript
 this._sp = getSP();
 ```
 
 Moreover, notice the usage of the retrieved *SPFI* instance, for example in the *componentDidMount* method.
 
-```TypeScript
+```typescript
 const docs = await this._sp.web.lists.getByTitle("Documents").items<{Id: number; Title: string;}[]>();
 ```
 

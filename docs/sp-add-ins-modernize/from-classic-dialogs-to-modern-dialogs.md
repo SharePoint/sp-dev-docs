@@ -10,7 +10,7 @@ ms.service: sharepoint
 
 In the SharePoint Add-in model, you were used to rely on the JavaScript Object Model for SharePoint to show dialog windows, using syntax like as follows:
 
-```JavaScript
+```javascript
 // Sample syntax to show a dialog window
 var options = SP.UI.$create_DialogOptions();
 options.url = '{SiteUrl}/_layouts/MyAddin/' + 'MyAddinDialog.aspx';
@@ -56,7 +56,7 @@ In order to achieve the above result, let's start by creating a new SharePoint F
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
 ```console
@@ -100,7 +100,7 @@ Add a new subfolder with name *sampleDialog* under the *components* subfolder an
 
 In the following code excerpt, you can see the definition of the *ITaskDialogProps.tsx* interface.
 
-```TypeScript
+```typescript
 export interface ITaskDialogProps {
     onSave: (description: string, dueDate: Date) => Promise<void>;
     onClose: () => Promise<void>;
@@ -111,7 +111,7 @@ The interface simply defines a couple of methods that handle the events when the
 
 Moreover, in the next code excerpt you can find the definition of the interface to hold the state of the dialog component.
 
-```TypeScript
+```typescript
 export interface ITaskDialogState {
     description?: string;
     dueDate?: Date;
@@ -120,7 +120,7 @@ export interface ITaskDialogState {
 
 It defines the state to keep track of the task description and due date. Lastly, in the next code excerpt, you can see the actual implementation of the dialog component.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { ITaskDialogProps } from './ITaskDialogProps';
@@ -240,7 +240,7 @@ The dialog component itself is then defined by the *TaskDialog* class, which inh
 
 Last but not least, the *ShowDialog.tsx* React component scaffolded in the *components* subfolder of the web part needs to be updated accordingly to the following implementation.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import styles from './ShowDialog.module.scss';
 import { IShowDialogProps } from './IShowDialogProps';
