@@ -316,6 +316,6 @@ If you like, instead of using low level REST APIs to consume SharePoint Online d
 
 You can find additional information about this topic reading the following documents:
 
-- [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment/md)
+- [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md)
 - [Build your first SharePoint client-side web part (Hello World part 1)](../spfx/web-parts/get-started/build-a-hello-world-web-part.md)
 - [PnPjs](https://pnp.github.io/pnpjs/)

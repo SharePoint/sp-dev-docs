@@ -2,7 +2,6 @@
 title: "Exporting video transcripts when using the SharePoint Import Migration API"
 description: "Learn how to export videos that contains a transcript as an alternate content stream."
 ms.date: 06/30/2023
-ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
 search.appverid: MET150
