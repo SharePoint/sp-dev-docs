@@ -40,9 +40,7 @@ The following are some of the container-specific commands actions currently supp
 
 - Container administration
   - Get details of all active containers of an application in the tenant
-    
   - Get details of all archived containers of an application in the tenant
-    
   - Get details of all containers of an application in the tenant sorted by storage
   - Get details of a specific container of an application in the tenant
   - Set Sensitivity label of a specific container of an application in the tenant
@@ -55,13 +53,10 @@ The following are some of the actions currently supported on SharePoint Admin Ce
 
 - View Active container page
 - View Archived containers page
-
 - View Deleted container page
 - View the detailed information of a container
 - Archive an active container
-
 - Reactivate an archived container
-
 - Soft delete a container
 - Restore a deleted container
 - Purge a deleted container
