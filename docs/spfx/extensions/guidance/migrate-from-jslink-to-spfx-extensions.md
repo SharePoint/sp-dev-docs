@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (JSLink) to the new model based on SharePoint Framework extensions.
-ms.date: 04/26/2025
+ms.date: 02/03/2026
 ms.localizationpriority: high
 ---
 # Migrating from JSLink to SharePoint Framework extensions
@@ -14,8 +14,6 @@ In this tutorial, you learn how to migrate from the old "classic" customizations
 
 > [!NOTE]
 > For more information about how to build SharePoint Framework extensions, see [Overview of SharePoint Framework extensions](../overview-extensions.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 First, let's introduce the available options when developing SharePoint Framework extensions:
 
@@ -158,10 +156,10 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
     import styles from './CustomColorFieldFieldCustomizer.module.scss';
 
     /**
-    * If your field customizer uses the ClientSideComponentProperties JSON input,
-    * it will be deserialized into the BaseExtension.properties object.
-    * You can define an interface to describe it.
-    */
+     * If your field customizer uses the ClientSideComponentProperties JSON input,
+     * it will be deserialized into the BaseExtension.properties object.
+     * You can define an interface to describe it.
+     */
     export interface ICustomColorFieldFieldCustomizerProperties {
       // This is an example; replace with your own property
       sampleText?: string;
@@ -170,7 +168,7 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
     const LOG_SOURCE: string = 'CustomColorFieldFieldCustomizer';
 
     export default class CustomColorFieldFieldCustomizer
-    extends BaseFieldCustomizer<ICustomColorFieldFieldCustomizerProperties> {
+      extends BaseFieldCustomizer<ICustomColorFieldFieldCustomizerProperties> {
 
       @override
       public onInit(): Promise<void> {
@@ -184,34 +182,41 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
 
       @override
       public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
+        // Read the current field value
+        const colorField: string = event.fieldValue;
 
-        var colorField = event.fieldValue;
+        // Create the colored div element
+        const colorDiv = document.createElement('div');
+        
+        // Add the main style to the field container element
+        event.domElement.classList.add(styles.CustomColorField);
 
-        // Declare a local variable to hold the output color
-        var color = '';
+        // Add the standard cell style
+        colorDiv.classList.add(styles.cell);
 
-        // Evaluate the values of the 'Color' field and render it accordingly
-        switch (colorField)
+        // Add the colored style based on the field value
+        switch(colorField)
         {
-          case 'Red':
-            color = 'red';
+          case "Red":
+            colorDiv.classList.add(styles.cellRed);
             break;
-          case 'Green':
-            color = 'green';
+          case "Green":
+            colorDiv.classList.add(styles.cellGreen);
             break;
-          case 'Blue':
-            color = 'blue';
+          case "Blue":
+            colorDiv.classList.add(styles.cellBlue);
             break;
-          case 'Yellow':
-            color = 'yellow';
+          case "Yellow":
+            colorDiv.classList.add(styles.cellYellow);
             break;
           default:
-            color = 'white';
+            colorDiv.classList.add(styles.cellWhite);
             break;
         }
 
-        // Render the output for the 'Color' field
-        event.domElement.innerHTML = "<div style='float: left; width: 20px; height: 20px; margin: 5px; border: 1px solid rgba(0,0,0,.2);background:" + color + "' />";
+        // Clear any existing content and add the color div
+        event.domElement.innerHTML = '';
+        event.domElement.appendChild(colorDiv);
       }
 
       @override
@@ -240,7 +245,7 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
 1. Go back to the console window and run the following command to build the solution and run the local Node.js server to host it.
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Open your favorite browser, and go to a "modern" list, which has a custom field with the name **Color** and the type **Choice** with the same value options as before (Red, Green, Blue, Yellow). You can eventually use the list you created in the "classic" site, just viewing it with the new "modern" experience. Now, append the following query string parameters to the **AllItems.aspx** page URL.
@@ -300,34 +305,34 @@ You're now ready to replace the JavaScript code with TypeScript to benefit from 
     @override
     public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
       // Read the current field value
-      let colorField: String = event.fieldValue;
+      const colorField: string = event.fieldValue;
 
+      // Create the colored div element
+      const colorDiv = document.createElement('div');
+      
       // Add the main style to the field container element
       event.domElement.classList.add(styles.CustomColorField);
 
-      // Get a reference to the output HTML
-      let fieldHtml: HTMLDivElement = event.domElement.firstChild as HTMLDivElement;
+      // Add the standard cell style
+      colorDiv.classList.add(styles.cell);
 
-      // Add the standard style
-      fieldHtml.classList.add(styles.cell);
-
-      // Add the colored style
+      // Add the colored style based on the field value
       switch(colorField)
       {
         case "Red":
-          fieldHtml.classList.add(styles.cellRed);
+          colorDiv.classList.add(styles.cellRed);
           break;
         case "Green":
-          fieldHtml.classList.add(styles.cellGreen);
+          colorDiv.classList.add(styles.cellGreen);
           break;
         case "Blue":
-          fieldHtml.classList.add(styles.cellBlue);
+          colorDiv.classList.add(styles.cellBlue);
           break;
         case "Yellow":
-          fieldHtml.classList.add(styles.cellYellow);
+          colorDiv.classList.add(styles.cellYellow);
           break;
         default:
-          fieldHtml.classList.add(styles.cellWhite);
+          colorDiv.classList.add(styles.cellWhite);
           break;
       }
     }
@@ -357,6 +362,12 @@ Before building the bundle and the package, you need to declare an XML Feature F
                Required="FALSE"
                Group="SPFx Columns"
                ClientSideComponentId="c3070978-d85e-4298-8758-70b5b5933076">
+          <CHOICES>
+            <CHOICE>Red</CHOICE>
+            <CHOICE>Green</CHOICE>
+            <CHOICE>Blue</CHOICE>
+            <CHOICE>Yellow</CHOICE>
+          </CHOICES>
         </Field>
     </Elements>
     ```
@@ -399,13 +410,13 @@ Prepare and deploy the solution for SharePoint Online tenant:
 1. Execute the following task to bundle your solution. This creates a release build of your project:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This command creates an **\*.sppkg** package in the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button.

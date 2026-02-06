@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 11/17/2025
+ms.date: 12/17/2025
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -25,7 +25,7 @@ Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
 ```
 
 > [!NOTE]
-> This option will be available in the SPO Management Shell version that will be released by the end of November 2025.
+> Above `DelayContentSecurityPolicyEnforcement` option can be set as of February 9, 2026. If you do this before, the setting is not persisted.
 
 ## How Content Security Policy Works in SharePoint Online
 
@@ -134,6 +134,7 @@ However, if your solution implements [Option 3](#option-3-dynamically-load-a-scr
 
 > [!IMPORTANT]
 >
+> - When you've configured the `cdnBasePath` without a trailing slash then added entry in **Trusted script sources** needs to be updated by adding the trailing slash. In future this will happen automatically, but for already added solutions this update needs to be done manually.
 > - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**. If your SPFx solutions use inline script, then the recommended approach is to move the inline script into a script file, as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
 > - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and its variations also use an inline script whenever the user adds a script on a page via the web part. Added script will not execute, added HTML will still work.
 > - CSP is only enforced for scripts on non-classic pages; for example, a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
@@ -244,3 +245,80 @@ Selecting a search result opens the side panel with the audit details. Take note
 ## Testing with CSP Enforced
 
 The enforcement of Content Security Policy (CSP) for SharePoint Online will start from March 1, 2026, but you can already now verify your application's behavior by adding the `csp=enforce` URL parameter to the page containing the SPFx solution you want to test. To enforce CSP in reporting mode, use `csp=report`.
+
+## Frequently Asked Questions
+
+### I need to load the script `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`, in what ways can I define this as trusted source?
+
+- The most secure way is qualifying the exact script you want load as then only the specific version of the script can be loaded: `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`
+- If you want to allow all script in specific domain + folder (so all scripts that are hosted under https://cdn.jsdelivr.net/npm) then use `https://cdn.jsdelivr.net/npm/`. **Note the trailing slash!** Also note that `https://cdn.jsdelivr.net/npm/*` is not working.
+- If you want to allow all scripts in a specific domain (cdn.jsdelivr.net) then use `https://cdn.jsdelivr.net`, `https://cdn.jsdelivr.net/` or `cdn.jsdelivr.net`. Note that `https://cdn.jsdelivr.net/*` is not working.
+- If you want to allow all subdomains inside a domain use `*.jsdelivr.net`, this will allow loading anything under `jsdelivr.net`
+
+### I'm hitting the 300 max sources limit, what should I do?
+
+When you hit this limit then the recommendation is to consolidate sources using the model described in the FAQ question above. Note that when the 300 limit is reached uploading new solutions to your app catalog can be impacted. If you're using an automated deployment system with unique script sources per build then the 300 limit can be reached soon, recommended workarounds are:
+- Adding script sources in way that cover all versions (see above)
+- Automatically removing the auto added scripts sources using the model described below
+
+Currently the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
+
+### Can I update the trusted script sources list using script or code?
+
+Yes, you can update the trusted script sources using SPO Management shell:
+
+```PowerShell
+# List current sources
+Get-SPOContentSecurityPolicy
+
+# Remove a source
+Remove-SPOContentSecurityPolicy -Source "https://cdn.host.com/source/"
+
+# Add a source
+Add-SPOContentSecurityPolicy -Source "https://cdn.host.com/source/"
+```
+
+Same is also possible using CSOM:
+
+```C#
+// cc is the CSOM ClientContext instance you've created for your tenant admin url
+Tenant tenant = new Tenant(cc);
+
+// Get trusted sources
+var cspTrustedSources = tenant.GetContentSecurityPolicy();
+cc.Load(cspTrustedSources);
+cc.ExecuteQuery();
+
+// Add trusted source
+cspTrustedSources.Add("https://cdn.host.com/source/");
+cc.ExecuteQuery();
+
+// Remove trusted source
+cspTrustedSources.Remove("https://cdn.host.com/source/");
+cc.ExecuteQuery();
+```
+
+### Can I still use eval()?
+
+Yes, using `eval()` will stay possible because the 'unsafe-eval' directive is part of the standard CSP header
+
+### Can I get the nonce value to 'allow' my inline script snippets?
+
+No, the nonce value is avaiable for use. Recommendation is to move inline script to script files.
+
+### Does CSP apply to SPFx components hosted on 'classic' pages?
+
+No, when an SPFx web part is hosted on a classic page CSP will not be enforced
+
+### Does CSP apply to the retired SharePoint Add-Ins?
+
+No, CSP does not apply to Add-Ins. Add-Ins will stop working from April 2, 2026.
+
+### Auto populating trusted script sources is not working when an solution is uploaded to the classic tenant app catalog?
+
+Auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog using the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx), we're evaluating bringing this option to the classic tenant app catalog.
+
+### Auto populating trusted script sources is not working when an solution is uploaded to a site collection app catalog?
+
+Correct, auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog (see above). If site collection app catalog is used then the required script sources need to be added independantly using either script/code or manual.
+

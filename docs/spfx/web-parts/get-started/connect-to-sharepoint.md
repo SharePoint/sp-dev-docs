@@ -1,7 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 11/22/2022
+ms.date: 12/19/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -16,15 +16,14 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 > [!NOTE]
 > This article continues building the Hello World web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
-## Run gulp serve
+## Run heft start
 
-Ensure that you have the **gulp serve** command running. If it isn't already running, go to the **helloworld-webpart** project directory and run it by using the following commands.
+Ensure that you have the **heft start** command running. If it isn't already running, go to the **helloworld-webpart** project directory and run it by using the following commands.
 
 ```console
 cd helloworld-webpart
-gulp serve
+heft start
 ```
 
 ## Get access to page context
@@ -65,14 +64,14 @@ this.context.pageContext
     ```
 
 1. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `div` is used to display `this.context.pageContext.web.title`.
-1. Save the file. The **gulp serve** running in your console detects this save operation and:
+1. Save the file. The **heft start** running in your console detects this save operation and:
 
     - builds and bundles the updated code automatically
 
     > [!NOTE]
-    > Keep the console window and Visual Studio Code side-by-side to see gulp automatically compile as you save changes in Visual Studio Code.
+    > Keep the console window and Visual Studio Code side-by-side to see Heft automatically compile as you save changes in Visual Studio Code.
 
-1. Navigate to your SharePoint site's hosted workbench hosted. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Refresh the hosted workbench to pick up the changes from the rebuilt code bundle.
+1. Navigate to your SharePoint site's hosted workbench. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Refresh the hosted workbench to pick up the changes from the rebuilt code bundle.
 
     You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
@@ -131,7 +130,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
     The method uses the `spHttpClient` helper class and issues an HTTP **GET** request. It uses the `ISPLists` interface and also applies a filter to not retrieve hidden lists.
 
 1. Save the file.
-1. Switch to the console window that is running **gulp serve** and check if there are any errors. If there are errors, gulp reports them in the console, and you need to fix them before proceeding.
+1. Switch to the console window that is running **heft start** and check if there are any errors. If there are errors, Heft reports them in the console, and you need to fix them before proceeding.
 
 ## Add new styles
 
@@ -177,7 +176,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
 1. Save the file.
 
-    Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
+    Heft rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
 
     > [!TIP]
     > This file is dynamically generated when the project is built. It's hidden from VS Code's Explorer view using the **.vscode/settings.json** file.
@@ -209,7 +208,7 @@ Open the `HelloWorldWebPart` class.
       </ul>`;
       });
 
-      if(this.domElement.querySelector('#spListContainer') != null) {
+      if(this.domElement.querySelector('#spListContainer') !== null) {
         this.domElement.querySelector('#spListContainer')!.innerHTML = html;
       }
     }
@@ -258,7 +257,7 @@ Open the `HelloWorldWebPart` class.
 
 1. Save the file.
 
-    Notice in the **gulp serve** console window that it rebuilds the code. Make sure you don't see any errors.
+    Notice in the **heft start** console window that it rebuilds the code. Make sure you don't see any errors.
 
 1. If you're using the SharePoint Framework v1.12.1 or earlier, for instance if you're on SharePoint Server on-premises, switch to your local workbench and add the HelloWorld web part.
 
@@ -266,7 +265,7 @@ Open the `HelloWorldWebPart` class.
 
     ![Render lists data from localhost](../../../images/sp-lists-render-online-workbench.png)
 
-1. Now you can stop the server from running. Switch to the console and stop **gulp serve**. Select <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the gulp task.
+1. Now you can stop the server from running. Switch to the console and stop **heft start**. Select <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the Heft task.
 
 ## Next steps
 

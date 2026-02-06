@@ -78,7 +78,7 @@ Follow the [documentation](https://ngrok.com/docs/getting-started/) to create a 
 
 After starting the app, run the following command in a terminal:
 
-```powershell
+```console
 ngrok http 3001
 ```
 
