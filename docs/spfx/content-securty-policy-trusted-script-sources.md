@@ -267,6 +267,14 @@ When you hit this limit then the recommendation is to consolidate sources using 
 
 Currently the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
 
+### I want to already enforce CSP today, is this possible?
+
+This is possible via using the [ContentSecurityPolicyEnforcement option](https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-contentsecuritypolicyenforcement) in SPO Management Shell: 
+
+```powershell
+Set-SPOTenant -ContentSecurityPolicyEnforcement $true
+```
+
 ### Can I update the trusted script sources list using script or code?
 
 Yes, you can update the trusted script sources using SPO Management shell:
