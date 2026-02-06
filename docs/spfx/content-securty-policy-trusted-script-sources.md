@@ -255,6 +255,10 @@ The enforcement of Content Security Policy (CSP) for SharePoint Online will star
 - If you want to allow all scripts in a specific domain (cdn.jsdelivr.net) then use `https://cdn.jsdelivr.net`, `https://cdn.jsdelivr.net/` or `cdn.jsdelivr.net`. Note that `https://cdn.jsdelivr.net/*` is not working.
 - If you want to allow all subdomains inside a domain use `*.jsdelivr.net`, this will allow loading anything under `jsdelivr.net`
 
+### I've added a trusted source but on list view pages (e.g. allItems.aspx) this does not seem to work?
+
+Lists and libraries are performance optimized and heavily depend on local cache which can result in new CSP headers not getting applied without a cache refresh. Eventually the cache will be refreshed and the new CSP header will get applied, if you want to "force" the reload [refresh the page using SHIFT-F5 or CTRL-F5](https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad).
+
 ### I'm hitting the 300 max sources limit, what should I do?
 
 When you hit this limit then the recommendation is to consolidate sources using the model described in the FAQ question above. Note that when the 300 limit is reached uploading new solutions to your app catalog can be impacted. If you're using an automated deployment system with unique script sources per build then the 300 limit can be reached soon, recommended workarounds are:
