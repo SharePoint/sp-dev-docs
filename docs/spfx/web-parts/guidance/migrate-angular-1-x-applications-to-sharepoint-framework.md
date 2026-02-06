@@ -1,7 +1,7 @@
 ---
 title: Migrate AngularJS applications to SharePoint Framework
 description: Migrate an existing AngularJS application styled using ngOfficeUIFabric to a SharePoint Framework client-side web part.
-ms.date: 03/08/2023
+ms.date: 02/06/2026
 ms.localizationpriority: high
 ---
 
@@ -17,8 +17,6 @@ The source of the AngularJS application migrated to SharePoint Framework is avai
 
 > [!NOTE]
 > This article references old, outdated & projects no longer maintained such as AngularJS v1.x & ngOfficeUIFabric.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Set up project
 
@@ -179,7 +177,7 @@ You also need to implement CSS styles that you're using the template. In the cod
 1. In the command line, execute:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. To the URL of your SharePoint site, add **/_layouts/workbench.aspx**, for example, **https://contoso.sharepoint.com/_layouts/workbench.aspx**, and navigate to it in the web browser.
@@ -656,7 +654,7 @@ Now that the AngularJS application is built using TypeScript, and its different 
 1. To verify that the upgrade to TypeScript has been successful, in the command line, run:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. In the web browser, refresh the SharePoint Workbench, which should display your web part as previously.
@@ -1211,7 +1209,7 @@ export default class DataService implements IDataService {
 1. Verify that the web part is working correctly by executing the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. In your web browser, go to the SharePoint Workbench and add the web part to canvas. If you toggle the **Hide finished tasks** option, you should see completed tasks being displayed or hidden accordingly.
