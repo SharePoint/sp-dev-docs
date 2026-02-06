@@ -37,8 +37,8 @@ To enable Entra ID-based access to customer-managed containers, follow these ste
 Migration jobs require **read** permission to access containers that store content and the blobs inside.
 
 You can either:
--	Use the built-in [Storage Blob Data Reader role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-reader) for role assignment.
--	Or [create a custom role](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role) for more granular permission control. 
+-	Use the built-in [Storage Blob Data Reader role](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-reader) for role assignment.
+-	Or [create a custom role](https://learn.microsoft.com/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role) for more granular permission control. 
 
 When creating a custom role, ensure the following permissions are set on content containers:
 
@@ -53,7 +53,7 @@ Migration jobs require both **read** and **write** permissions to access contain
 
 You can either:
 
--	Use the built-in [Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) for role assignment.
+-	Use the built-in [Storage Blob Data Contributor role](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) for role assignment.
 -	Or create a custom role for more granular permission control.
 
 When creating a custom role, ensure the following permissions are included:
@@ -71,7 +71,7 @@ An example below demonstrates a custom role configured with these permissions.
 
 To grant access to both content and manifest containers, assign roles to Office 365 SharePoint Online service principal (Application ID: 00000003-0000-0ff1-ce00-000000000000).
 
-In the Azure portal, navigate to each container (content and manifest), open the Access Control (IAM) page, and [add the appropriate role assignments](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal).
+In the Azure portal, navigate to each container (content and manifest), open the Access Control (IAM) page, and [add the appropriate role assignments](https://learn.microsoft.com/azure/role-based-access-control/role-assignments-portal).
 
 ## Use customer-managed Azure blob storage
 
@@ -100,7 +100,7 @@ OneDrive and SharePoint support both SAS tokens and Entra ID-based authenticatio
 
 1. Will migration be affected if customer-managed keys are enabled for account encryption?
 
-No. Migration supports customer-managed keys. You can [enable them on the storage account](https://learn.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview).
+No. Migration supports customer-managed keys. You can [enable them on the storage account](https://learn.microsoft.com/azure/storage/common/customer-managed-keys-overview).
 
 2. What is the data retention policy for content stored in a customer-managed storage account?
 
