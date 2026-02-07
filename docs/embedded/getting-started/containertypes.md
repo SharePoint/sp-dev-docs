@@ -136,6 +136,43 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 >
 > If the cmdlet above fails with a SubscriptionNotRegistered error, it is because **Microsoft.Syntex** isn't registered as a resource provider in the subscription. The cmdlet sends a resource provider registration request on your behalf but it takes a few minutes to be completed. Wait 5-10 minutes and try again until the cmdlet succeeds.
 
+1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Billing and licenses** section. Select **Activate pay-as-you-go services.**
+
+    ![Microsoft 365 admin center Files and Content](../images/SyntexActivatePAYGSetup.png)
+
+1. Select **Go to Pay as you go services**.
+1. Select **Apps** under **Syntex services for**, select **Apps** and **SharePoint Embedded**
+ 
+    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../images/SyntexPAYGActivateSPE.png)
+
+    > [NOTE]
+    The subscription configured in the Syntex services will reflect the consumption charges in the Azure billing portal.
+
+1.  [Register the container type](#registering-container-types) using the App only authentication token.
+
+## Configuring Container Types
+
+Developer admins can configure selected settings for SharePoint Embedded container types that have been created. The following table lists the available settings.
+
+| Settings | Description | 
+|----------|----------|
+| **ApplicationRedirectUrl** | Specifies the URL to which the application’s files are redirected.  | 
+| **CopilotEmbeddedChatHosts** | Adds host URLs that are permitted to use the SharePoint Embedded application’s declarative agent experience. | 
+| **DiscoverabilityDisabled**  | Determines whether content from a SharePoint Embedded application is visible across Microsoft 365 experiences. | 
+| **SharingRestricted** | Configures sharing permissions for SharePoint Embedded containers by using role-based access. Supports both open and restrictive sharing models. When restrictive sharing is set to true, only managers and owners can share files in the container.| 
+| **IsArchiveEnabled** | When set to True, the owning application of the container type can support archival of containers. Archive helps in saving cost of storage by moving inactively used content to cold tier. |
+
+The [Set-SPOContainerType](/powershell/module/sharepoint-online/Set-SPOContainerType) cmdlet allows admins to update the Application Redirect URL. The [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/Set-SPOContainerTypeConfiguration) cmdlet allows admins to add host URLs, set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type.
+
+### Example 1
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
+```
+
+Example 1 turns on discoverability for this container type. All content created within this container type will be discoverable in the Microsoft 365 experience, including on office.com, onedrive.com, recommended files, and other intelligent discovery experiences.
+
+### Example 2
 To update the billing profile for a standard container type, use the following cmdlet:
 
 ```powershell
