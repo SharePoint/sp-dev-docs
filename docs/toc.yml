@@ -2329,6 +2329,8 @@
         href: apis/amr-api-reference.md
     - name: Azure container and queue
       href: apis/migration-azure.md
+    - name: Entra-ID access to Azure containers
+      href: apis/migration-entra-id-access.md
     - name: Migration Job Progress API
       href: apis/migration-job-progress-api-reference.md
     - name: Migration Content Package
