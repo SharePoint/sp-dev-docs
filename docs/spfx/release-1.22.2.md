@@ -11,7 +11,7 @@ This is a _minor bump_ that addresses known npm vulnerabilities which were repor
 > [!TIP]
 > It's safe to keep on using SharePoint Framework 1.22.x version, but we do recommend using always the latest version in the production, which in this case would be the 1.22.1, which has fix on the reported GitHub issues as listed below.
 
-**Released:** January 28, 2025
+**Released:** January 28, 2026
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
