@@ -199,6 +199,8 @@
         href: spfx/web-parts/basics/determine-web-part-width.md
       - name: Support section backgrounds
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md
+      - name: SharePoint Theme Framework
+        href: spfx/web-parts/guidance/neutral-theme-principles.md
       - name: Web part top actions
         href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
