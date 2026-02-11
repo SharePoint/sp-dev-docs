@@ -16,9 +16,9 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 
 ## Theming and Design Principles
 
-When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes adhering to the **SharePoint Theme Framework**, which ensures controls integrate seamlessly with the property pane's internal styling.
+When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls integrate seamlessly with the property pane's internal styling.
 
-For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [SharePoint Theme Framework & Design Rules](./neutral-theme-principles.md).
+For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [Propertypane control theme and design rules](./propertypane-theme-principles.md).
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
@@ -220,6 +220,9 @@ The SharePoint Framework offers you a standard dropdown control that allows user
 When creating a custom property pane control that uses React in the SharePoint Framework, the control consists of a class that registers the control with the web part, and a React component that renders the dropdown and manages its data.
 
 ### Add asynchronous dropdown property pane control React component
+
+> [!NOTE]
+> The example in this section uses Fluent UI v8 components. For new projects, we recommend using Fluent UI v9 components with design tokens. See [Propertypane control theme and design rules](./propertypane-theme-principles.md) for examples using Fluent UI v9.
 
 1. Create the components folder. In the project **src** folder, create a hierarchy of three new folders so that your folder structure appears as **src/controls/PropertyPaneAsyncDropdown/components**.
 
