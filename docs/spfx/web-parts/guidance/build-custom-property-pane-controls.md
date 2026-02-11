@@ -19,9 +19,9 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 
 ## Theming and Design Principles
 
-When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls integrate seamlessly with the property pane's internal styling.
+When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls follow the SharePoint property pane framework theme.
 
-For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [Propertypane control theme and design rules](./propertypane-theme-principles.md).
+For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [Property pane control theming implementation](./property-pane-theme-principles.md).
 
 
 ## Create new project
@@ -222,7 +222,7 @@ When creating a custom property pane control that uses React in the SharePoint F
 ### Add asynchronous dropdown property pane control React component
 
 > [!NOTE]
-> The example in this section uses Fluent UI v8 components. For new projects, we recommend using Fluent UI v9 components with design tokens. See [Propertypane control theme and design rules](./propertypane-theme-principles.md) for examples using Fluent UI v9.
+> The example in this section uses Fluent UI v8 components. For new projects, we recommend using Fluent UI v9 components with design tokens. See [Property pane control theming implementation](./property-pane-theme-principles.md) for examples using Fluent UI v9.
 
 1. Create the components folder. In the project **src** folder, create a hierarchy of three new folders so that your folder structure appears as **src/controls/PropertyPaneAsyncDropdown/components**.
 
