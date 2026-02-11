@@ -14,14 +14,14 @@ In this article, you'll build a custom dropdown control that loads its data asyn
 
 The source of the working web part is available on GitHub at [sp-dev-fx-webparts/samples/react-custompropertypanecontrols/](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols).
 
+> [!NOTE]
+> Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
+
 ## Theming and Design Principles
 
 When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls integrate seamlessly with the property pane's internal styling.
 
 For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [Propertypane control theme and design rules](./propertypane-theme-principles.md).
-
-> [!NOTE]
-> Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 
 ## Create new project
