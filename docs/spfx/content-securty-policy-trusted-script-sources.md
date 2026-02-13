@@ -316,7 +316,7 @@ Yes, using `eval()` will stay possible because the 'unsafe-eval' directive is pa
 
 ### Can I get the nonce value to 'allow' my inline script snippets?
 
-No, the nonce value is avaiable for use. Recommendation is to move inline script to script files.
+No, the nonce value is not available for use. Recommendation is to move inline script to script files.
 
 ### Does CSP apply to SPFx components hosted on 'classic' pages?
 
