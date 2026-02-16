@@ -25,7 +25,7 @@ Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
 ```
 
 > [!NOTE]
-> Above `DelayContentSecurityPolicyEnforcement` option can be set as of February 9, 2026. If you do this before, the setting is not persisted.
+> The `DelayContentSecurityPolicyEnforcement` option can be set as of February 9, 2026. If you do this before, the setting is not persisted.
 
 ## How Content Security Policy Works in SharePoint Online
 
@@ -75,7 +75,7 @@ async SPComponentLoader.loadScript('https://some-external-site/script.js');
 
 ### Option 4: Use Inline Script
 
-While script in the majority of cases is included via script files, there's also the option to use inline script. Inline script use cases are:
+While the script in the majority of cases is included via script files, there's also the option to use an inline script. Inline script use cases are:
 
 - Any `<script>` block directly in HTML:
 
@@ -134,7 +134,7 @@ However, if your solution implements [Option 3](#option-3-dynamically-load-a-scr
 
 > [!IMPORTANT]
 >
-> - When you've configured the `cdnBasePath` without a trailing slash then added entry in **Trusted script sources** needs to be updated by adding the trailing slash. In future this will happen automatically, but for already added solutions this update needs to be done manually.
+> - When you've configured the `cdnBasePath` without a trailing slash, then the added entry in **Trusted script sources** needs to be updated by adding the trailing slash. In the future, this will happen automatically, but for already added solutions, this update needs to be done manually.
 > - If your SPFx solution loads scripts any other way, you'll need to manually add an entry to the **Trusted script sources**. If your SPFx solutions use inline script, then the recommended approach is to move the inline script into a script file, as **inline script will be blocked by the Content Security Policy (CSP)** in SharePoint Online.
 > - The community [Script Editor web part](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-script-editor) and its variations also use an inline script whenever the user adds a script on a page via the web part. Added script will not execute, added HTML will still work.
 > - CSP is only enforced for scripts on non-classic pages; for example, a SharePoint SPFx web part hosted on a classic wiki page will not have policies applied.
@@ -248,24 +248,25 @@ The enforcement of Content Security Policy (CSP) for SharePoint Online will star
 
 ## Frequently Asked Questions
 
-### I need to load the script `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`, in what ways can I define this as trusted source?
+### I need to load the script `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`, in what ways can I define this as a trusted source?
 
-- The most secure way is qualifying the exact script you want load as then only the specific version of the script can be loaded: `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`
-- If you want to allow all script in specific domain + folder (so all scripts that are hosted under https://cdn.jsdelivr.net/npm) then use `https://cdn.jsdelivr.net/npm/`. **Note the trailing slash!** Also note that `https://cdn.jsdelivr.net/npm/*` is not working.
-- If you want to allow all scripts in a specific domain (cdn.jsdelivr.net) then use `https://cdn.jsdelivr.net`, `https://cdn.jsdelivr.net/` or `cdn.jsdelivr.net`. Note that `https://cdn.jsdelivr.net/*` is not working.
-- If you want to allow all subdomains inside a domain use `*.jsdelivr.net`, this will allow loading anything under `jsdelivr.net`
+- The most secure way is to qualify the exact script you want load, as then only the specific version of the script can be loaded: `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js`
+- If you want to allow all scripts in a specific domain + folder (so all scripts that are hosted under https://cdn.jsdelivr.net/npm), then use `https://cdn.jsdelivr.net/npm/`. **Note the trailing slash!** Also note that `https://cdn.jsdelivr.net/npm/*` is not working.
+- If you want to allow all scripts in a specific domain (cdn.jsdelivr.net), then use `https://cdn.jsdelivr.net`, `https://cdn.jsdelivr.net/` or `cdn.jsdelivr.net`. Note that `https://cdn.jsdelivr.net/*` is not working.
+- If you want to allow all subdomains inside a domain, use `*.jsdelivr.net`, which will allow loading anything under `jsdelivr.net`
 
-### I've added a trusted source but on list view pages (e.g. allItems.aspx) this does not seem to work?
+### I've added a trusted source, but on list view pages (e.g. allItems.aspx) this does not seem to work?
 
-Lists and libraries are performance optimized and heavily depend on local cache which can result in new CSP headers not getting applied without a cache refresh. Eventually the cache will be refreshed and the new CSP header will get applied, if you want to "force" the reload [refresh the page using SHIFT-F5 or CTRL-F5](https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad).
+Lists and libraries are performance optimized and heavily depend on local cach,e which can result in new CSP headers not getting applied without a cache refresh. Eventually, the cache will be refreshed, and the new CSP header will get applied, if you want to "force" the reload [refresh the page using SHIFT-F5 or CTRL-F5](https://support.microsoft.com/en-us/microsoft-edge/keyboard-shortcuts-in-microsoft-edge-50d3edab-30d9-c7e4-21ce-37fe2713cfad).
 
-### I'm hitting the 300 max sources limit, what should I do?
+### I'm hitting the 300 max sources limit. What should I do?
 
-When you hit this limit then the recommendation is to consolidate sources using the model described in the FAQ question above. Note that when the 300 limit is reached uploading new solutions to your app catalog can be impacted. If you're using an automated deployment system with unique script sources per build then the 300 limit can be reached soon, recommended workarounds are:
-- Adding script sources in way that cover all versions (see above)
+When you hit this limit, then the recommendation is to consolidate sources using the model described in the FAQ question above. Note that when the 300 limit is reached, uploading new solutions to your app catalog can be impacted. If you're using an automated deployment system with unique script sources per build, then the 300 limit can be reached soon. Recommended workarounds are:
+
+- Adding script sources in a way that covers all versions (see above)
 - Automatically removing the auto added scripts sources using the model described below
 
-Currently the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
+Current,ly the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
 
 ### I want to already enforce CSP today, is this possible?
 
@@ -277,7 +278,7 @@ Set-SPOTenant -ContentSecurityPolicyEnforcement $true
 
 ### Can I update the trusted script sources list using script or code?
 
-Yes, you can update the trusted script sources using SPO Management shell:
+Yes, you can update the trusted script sources using the SharePoint Online (SPO) Management shell:
 
 ```PowerShell
 # List current sources
@@ -290,7 +291,7 @@ Remove-SPOContentSecurityPolicy -Source "https://cdn.host.com/source/"
 Add-SPOContentSecurityPolicy -Source "https://cdn.host.com/source/"
 ```
 
-Same is also possible using CSOM:
+The same is also possible using CSOM:
 
 ```C#
 // cc is the CSOM ClientContext instance you've created for your tenant admin url
@@ -314,23 +315,23 @@ cc.ExecuteQuery();
 
 Yes, using `eval()` will stay possible because the 'unsafe-eval' directive is part of the standard CSP header
 
-### Can I get the nonce value to 'allow' my inline script snippets?
+### Can I get the `nonce` value to 'allow' my inline script snippets?
 
-No, the nonce value is avaiable for use. Recommendation is to move inline script to script files.
+No, the `nonce` value is not available for use. Recommendation is to move the inline script to script files.
 
 ### Does CSP apply to SPFx components hosted on 'classic' pages?
 
-No, when an SPFx web part is hosted on a classic page CSP will not be enforced
+No, when an SPFx web part is hosted on a classic page, CSP will not be enforced
 
 ### Does CSP apply to the retired SharePoint Add-Ins?
 
 No, CSP does not apply to Add-Ins. Add-Ins will stop working from April 2, 2026.
 
-### Auto populating trusted script sources is not working when an solution is uploaded to the classic tenant app catalog?
+### Auto-populating trusted script sources is not working when a solution is uploaded to the classic tenant app catalog?
 
-Auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog using the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx), we're evaluating bringing this option to the classic tenant app catalog.
+Auto-populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog using the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx). We're evaluating bringing this option to the classic tenant app catalog.
 
-### Auto populating trusted script sources is not working when an solution is uploaded to a site collection app catalog?
+### Auto-populating trusted script sources is not working when a solution is uploaded to a site collection app catalog?
 
-Correct, auto populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog (see above). If site collection app catalog is used then the required script sources need to be added independantly using either script/code or manual.
+Correct, auto-populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog (see above). If the site collection app catalog is used, the required script sources need to be added independently, either via script/code or manually.
 
