@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Extensions and Teams Apps
 description: "This tutorial builds off the tutorial 'Advanced Quick View Functionality'."
-ms.date: 03/08/2023
+ms.date: 02/16/2026
 ms.localizationpriority: high
 ---
 # Adaptive Card Extensions and Teams Apps
@@ -11,8 +11,6 @@ This tutorial builds off the following tutorial: [Advanced Quick View Functional
 Adaptive Card Extensions can be used as supplemental pieces to a larger Teams App story. An ACE on the Viva Connections Dashboard can link directly to a Teams Personal Tab or Bot.
 
 In this tutorial, you'll use an ACE within a Microsoft Teams app.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold a SPFx Teams Personal App
 
@@ -27,7 +25,7 @@ When prompted, accept the default option for all prompts by the generator.
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes.
 
 > [!IMPORTANT]
-> There's a known issue where installation of all dependencies will fail after when the generator executes the **npm install** command.
+> There's a known issue where installation of all dependencies may fail when the generator executes the **npm install** command.
 >
 > To work around this error, locate and open the following file in the project: **./package.json**.
 >
@@ -56,13 +54,13 @@ Now package and deploy the solution to your SharePoint Online Tenant App Catalog
 Start by building the solution in production mode:
 
 ```console
-gulp bundle --ship
+heft build --production
 ```
 
 Next, package the solution using the **package-solution** task:
 
 ```console
-gulp package-solution --ship
+heft package-solution --production
 ```
 
 Add your solutions package file (**\*.sppkg** located in the **./sharepoint/solution** folder) and upload it to Tenant
@@ -82,7 +80,7 @@ Now, deploy the solution to the Microsoft Teams app store for your tenant by sel
 
 With the solution deployed, let's test it within the Microsoft Teams client.
 
-Navigate to the to [Microsoft Teams web client](https://teams.microsoft.com), sign in, and select on the `...` icon in the left-most navigation.
+Navigate to the [Microsoft Teams web client](https://teams.microsoft.com), sign in, and select on the `...` icon in the left-most navigation.
 
 Select the **More apps** link:
 
