@@ -1,17 +1,15 @@
 ---
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
-ms.date: 12/15/2023
+ms.date: 02/16/2026
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
 
 > [!NOTE]
-> This tutorial assumes that you have installed the SPFx v1.18
+> This tutorial assumes that you have installed SharePoint Framework (SPFx) v1.18 or later.
 >
 > For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -30,15 +28,15 @@ When prompted, enter the following values (select the default option for all pro
 - **Which template do you want to use?** Generic Card Template
 - **What is your Adaptive Card Extension name?** GeoLocation
 
-At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
+At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take a few minutes.
 
-Next, run **gulp serve** from the command line in the root of the project. When the hosted workbench loads, you'll see the **GeoLocation** card:
+Next, run **heft start** from the command line in the root of the project. When the hosted workbench loads, you'll see the **GeoLocation** card:
 
 ![See the GeoLocation card icon in the webpart toolbox](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
 
 ## Add geolocation actions to your Adaptive Card Extension
 
-At this point we have got the out of the box scaffolded code. Now, let us try adding geolocation actions to the Card View and Quick View experiences.
+At this point, we have got the out-of-the-box scaffolded code. Now, let us try adding geolocation actions to the Card View and Quick View experiences.
 
 We will create a card which will have a Card View and a Quick View. On the Card View, we will provide a button, which will show the user their current location and clicking the Card View itself will open a Quick View.
 
@@ -90,7 +88,7 @@ Here, replace the definition of `footer` in `cardViewParameters` getter with the
 
 ```typescript
 public get cardViewParameters(): ComponentsCardViewParameters {
-  return return PrimaryTextCardView({
+  return PrimaryTextCardView({
     // ...
     footer: {
       componentName: 'cardButton',
@@ -187,7 +185,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a **gulp serve** at this point, then you will be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a **heft start** at this point, then you will be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 
@@ -245,7 +243,7 @@ Finally, introduce the following `onAction()` function in the QuickView class:
 
 ```typescript
 public onAction(action: IGetLocationActionArguments): void {
-  if (action.type === 'VivaAction.GetLocation') {
+  if (action.type === 'VivaAction.GetLocation' && action.location) {
     this.setState({
       latitude: action.location.latitude.toString(),
       longitude: action.location.longitude.toString()
@@ -260,9 +258,9 @@ After clicking on the `Get my location` button, the `onAction` function will be 
 
 So now, whenever the `VivaAction.GetLocation` action is triggered from your Quick View, then depending on the parameters that were passed, the Adaptive Card Extension framework will either pass user's current coordinates or user's chosen coordinates to the `onAction` callback. In the implementation shared above, we check if the `action` type is of type `VivaAction.GetLocation`, and if it is, then we re-render the Quick View by doing a `setState`, in which we update the `latitude` and `longitude` text-blocks.
 
-At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
+At this point, you can run **heft start** again and see how all the changes you made so far came together.
 
-This is it! Congratulations on successfully creating you Adaptive Card Extension with geolocation actions.
+This is it! Congratulations on successfully creating your Adaptive Card Extension with geolocation actions.
 
 ## See Also
 
