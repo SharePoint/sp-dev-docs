@@ -1,7 +1,7 @@
 ---
 title: Create a Data Visualization Adaptive Card Extension
 description: Step-by-step guide on creating Data Visualization Adaptive Card Extension.
-ms.date: 08/28/2024
+ms.date: 02/18/2026
 ms.localizationpriority: high
 ---
 # Create a Data Visualization Adaptive Card Extension
@@ -13,8 +13,6 @@ The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Vi
 
 > [!IMPORTANT]
 > Line chart data visualization type was released as part of the [SPFx 1.19 release](../../release-1.19.md). Other data visualization types, such as the bar chart, donut chart, and pie charts, were introduced in the [SPFx 1.20 release](../../release-1.20.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -35,7 +33,7 @@ When prompted, enter the following values (select the default option for all oth
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Next, run **gulp serve** from the command line in the root of the project. Select the **add** icon in the hosted workbench to open the toolbox, you see the **Data Visualization** card:
+Next, run **heft start** from the command line in the root of the project. Select the **add** icon in the hosted workbench to open the toolbox, you see the **Data Visualization** card:
 
 ![See the Data Visualization card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/data-visualization/toolbox.png)
 
