@@ -1,12 +1,10 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 12/14/2023
+ms.date: 02/18/2026
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -27,7 +25,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Next, run **gulp serve** from the command line in the root of the project. When the hosted workbench loads, you'll see the **MediaUpload** card:
+Next, run **heft start** from the command line in the root of the project. When the hosted workbench loads, you'll see the **MediaUpload** card:
 
 ![See the MediaUpload card icon in the webpart toolbox](./img/mediaUploadTutorialACE.PNG)
 
@@ -79,7 +77,7 @@ Here, replace the definition of `footer` in `cardViewParameters` getter with the
 
 ```typescript
 public get cardViewParameters(): ComponentsCardViewParameters {
-  return return PrimaryTextCardView({
+  return PrimaryTextCardView({
     // ...
     footer: {
       componentName: 'cardButton',
@@ -94,7 +92,7 @@ public get cardViewParameters(): ComponentsCardViewParameters {
   });
 }
 ```
-You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extensions-base`:
+You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extension-base`:
 
 With this change, we have configured a button with label **Upload PNG file** and on click action is `VivaAction.SelectMedia`, which load the file uploader modal.
 
@@ -178,7 +176,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a **gulp serve** at this point, then you'll be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a **heft start** at this point, then you'll be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 
@@ -241,7 +239,7 @@ public onAction(action: ISelectMediaActionArguments): void {
 
 So now, whenever the `VivaAction.SelectMedia` action is triggered from your Quick View, depending on the parameters that were passed, the Adaptive Card Extension framework will pass a media attachment to the `onAction` callback. In the implementation shared above, we check if the `action` type is of type `VivaAction.SelectMedia`, and if it is, then we re-render the Quick View by doing a `setState`, in which we update the `filesUploaded` text-block.
 
-At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
+At this point, you can run **heft start** again and see how all the changes you made so far came together.
 
 This is it! Congratulations on successfully creating you Adaptive Card Extension with media upload action.
 

@@ -1,7 +1,7 @@
 ---
 title: Create a People Search Adaptive Card Extension
 description: Step by step guide on creating People Search Adaptive Card Extension.
-ms.date: 12/14/2023
+ms.date: 02/18/2026
 ms.localizationpriority: high
 ---
 # Create a People Search Adaptive Card Extension
@@ -11,7 +11,7 @@ SharePoint Framework (SPFx) v1.18 introduces a new Search Card Template that can
 This tutorial provides step-by-step guidance on implementing People Search with ACEs and Microsoft Graph.
 
 > [!NOTE]
-> This tutorial assumes that you have installed the SPFx v1.18 preview version.
+> This tutorial assumes that you have installed the SPFx v1.18 or later.
 >
 > For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
 
@@ -19,8 +19,6 @@ Before you start, complete the procedures in the following articles to ensure th
 
 - [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 - [Use Microsoft Graph in your solution](../../web-parts/get-started/using-microsoft-graph-apis.md)
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -41,7 +39,7 @@ When prompted, enter the following values (select the default option for all que
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Next, run **gulp serve** from the command line in the root of the project. Once the hosted workbench loads, you'll see the **People Search** card:
+Next, run **heft start** from the command line in the root of the project. Once the hosted workbench loads, you'll see the **People Search** card:
 
 ![See the People Search card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/people-search/toolbox.png)
 
@@ -294,7 +292,7 @@ const convertGraphPersonToPerson = (graphPerson: IGraphPerson): IPerson => {
     displayName,
     jobTitle: jobTitle || '',
     officeLocation: officeLocation || '',
-    picture: `/_layouts/15/userphoto.aspx?size=S&accountname=${imAddress.replace('sip:', '')}`,
+    picture: imAddress ?  `/_layouts/15/userphoto.aspx?size=S&accountname=${imAddress.replace('sip:', '')}` : '',
     emailAddress: scoredEmailAddresses?.length ? scoredEmailAddresses[0].address : '',
     phone: phones?.length ? phones[0].number : ''
   };
@@ -329,12 +327,12 @@ export class PeopleSearchService implements IPeopleSearchService {
   // Create a ServiceKey to register in the Service Scope
   public static readonly serviceKey: ServiceKey<IPeopleSearchService> = ServiceKey.create<IPeopleSearchService>('PeopleSearchTutorial:PeopleSearchService', PeopleSearchService);
 
-  private _msGraphClientFactory: MSGraphClientFactory;
+  private _msGraphClientFactory!: MSGraphClientFactory;
 
   public constructor(serviceScope: ServiceScope) {
     serviceScope.whenFinished(() => {
       // Get the MSGraphClientFactory service instance from the service scope
-      this._msGraphClientFactory = serviceScope.consume(MSGraphClientFactory.serviceKey);
+      this._msGraphClientFactory = serviceScope.consume(MSGraphClientFactory.serviceKey as any);
     });
   }
 
@@ -579,7 +577,7 @@ export class PeopleSearchService implements IPeopleSearchService {
     }
     ```
 
-- Run **gulp serve** to test the extension. Enter some text in the search box and select search icon button. You should see the following results.
+- Run **heft start** to test the extension. Enter some text in the search box and select search icon button. You should see the following results.
 
 ![Search Results Quick View](../../../../docs/images/viva-extensibility/people-search/search-results.png)
 
@@ -706,7 +704,6 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
               ],
               "bleed": true,
               "spacing": "none",
-              // added select action
               "selectAction": {
                 "type": "Action.Submit",
                 "data": {
@@ -760,8 +757,8 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
 
     ```json
     {
-      "type": "AdaptiveCard",
       "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
       "version": "1.5",
       "$data": "${$root.person}",
       "body": [
@@ -783,7 +780,7 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
                       "height": "48px",
                       "width": "48px"
                     }
-                  ],
+                ],
                   "width": "auto"
                 },
                 {
@@ -816,114 +813,29 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
           "type": "TextBlock",
           "size": "Medium",
           "weight": "Bolder",
-          "text": "Contact"
+          "text": "Contact",
+          "separator": true,
+          "spacing": "Medium"
         },
         {
-          "type": "Table",
-          "gridStyle": "default",
-          "firstRowAsHeader": false,
-          "showGridLines": false,
-          "verticalCellContentAlignment": "center",
-          "columns": [
+          "type": "FactSet",
+          "facts": [
             {
-              "width": "20px",
-              "horizontalCellContentAlignment": "center",
-              "verticalCellContentAlignment": "center"
+              "title": "Email",
+              "value": "${emailAddress}"
             },
             {
-              "width": 1
-            }
-          ],
-          "rows": [
-            {
-              "type": "TableRow",
-              "cells": [
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "Image",
-                      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIGNsYXNzPSJzdmdfZGQ3OTBlZTMiIGZvY3VzYWJsZT0iZmFsc2UiPjxwYXRoIGQ9Ik0yMDQ4IDM4NHYxMjgwSDBWMzg0aDIwNDh6TTE0MyA1MTJsODgxIDQ0MSA4ODEtNDQxSDE0M3ptMTc3NyAxMDI0VjY0OGwtODk2IDQ0Ny04OTYtNDQ3djg4OGgxNzkyeiI+PC9wYXRoPjwvc3ZnPg==",
-                      "size": "Small",
-                      "width": "16px",
-                      "height": "16px"
-                    }
-                  ]
-                },
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "TextBlock",
-                      "text": "${emailAddress}",
-                      "weight": "default",
-                      "wrap": false
-                    }
-                  ]
-                }
-              ],
-              "style": "default"
+              "title": "Phone",
+              "value": "${phone}"
             },
             {
-              "type": "TableRow",
-              "cells": [
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "Image",
-                      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIGNsYXNzPSJzdmdfZGQ3OTBlZTMiIGZvY3VzYWJsZT0iZmFsc2UiPjxwYXRoIGQ9Ik0xNjA3IDEyMTNxNDQgMCA4NCAxNnQ3MiA0OGwyMjAgMjIwcTMxIDMxIDQ3IDcxdDE3IDg1cTAgNDQtMTYgODR0LTQ4IDcybC0xNCAxNHEtNTQgNTQtOTkgOTZ0LTk0IDcwLTEwOSA0NC0xNDMgMTVxLTEyNSAwLTI1Ny0zOXQtMjYyLTEwOC0yNTYtMTY0LTIzNy0yMDctMjA2LTIzOC0xNjItMjU2VDM4IDc3NSAwIDUyM3EwLTgzIDE0LTE0MnQ0My0xMDggNzAtOTMgOTYtOTlsMTYtMTZxMzEtMzEgNzEtNDh0ODUtMTdxNDQgMCA4NCAxN3Q3MiA0OGwyMjAgMjIwcTMxIDMxIDQ3IDcxdDE3IDg1cTAgNDQtMTUgNzh0LTM3IDYzLTQ4IDUxLTQ5IDQ1LTM3IDQ0LTE1IDQ5cTAgMzggMjcgNjVsNTUxIDU1MXEyNyAyNyA2NSAyNyAyNiAwIDQ4LTE1dDQ1LTM3IDQ1LTQ4IDUxLTQ5IDYyLTM3IDc5LTE1em0tODMgNzA3cTcyIDAgMTIwLTEzdDg4LTM5IDc2LTY0IDg1LTg2cTI3LTI3IDI3LTY1IDAtMTgtMTQtNDJ0LTM4LTUyLTUxLTU1LTU2LTU0LTUxLTQ3LTM3LTM1cS0yNy0yNy02Ni0yNy0yNiAwLTQ4IDE1dC00NCAzNy00NSA0OC01MiA0OS02MiAzNy03OSAxNXEtNDQgMC04NC0xNnQtNzItNDhMNTcwIDkyN3EtMzEtMzEtNDctNzF0LTE3LTg1cTAtNDQgMTUtNzh0MzctNjMgNDgtNTEgNDktNDYgMzctNDQgMTUtNDhxMC0zOS0yNy02Ni0xMy0xMy0zNC0zNnQtNDctNTEtNTQtNTYtNTYtNTItNTEtMzctNDMtMTVxLTM4IDAtNjUgMjdsLTg1IDg1cS0zNyAzNy02NCA3NnQtNDAgODctMTQgMTIwcTAgMTEyIDM2IDIzMXQxMDEgMjM4IDE1MyAyMzQgMTkyIDIxOSAyMTkgMTkwIDIzNCAxNTAgMjM2IDk5IDIyNiAzNnoiPjwvcGF0aD48L3N2Zz4=",
-                      "size": "Small",
-                      "width": "16px",
-                      "height": "16px"
-                    }
-                  ]
-                },
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "TextBlock",
-                      "text": "${phone}",
-                      "wrap": false
-                    }
-                  ]
-                }
-              ],
-              "style": "default"
-            },
-            {
-              "type": "TableRow",
-              "cells": [
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "Image",
-                      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIGNsYXNzPSJzdmdfZGQ3OTBlZTMiIGZvY3VzYWJsZT0iZmFsc2UiPjxwYXRoIGQ9Ik0xMDI0IDBxODggMCAxNzAgMjN0MTUzIDY0IDEyOSAxMDAgMTAwIDEzMCA2NSAxNTMgMjMgMTcwcTAgNjktMTYgMTMxdC00OCAxMjVsLTU3NiAxMTUyTDQ0OCA4OTZxLTMxLTYyLTQ3LTEyNHQtMTctMTMycTAtODggMjMtMTcwdDY0LTE1MyAxMDAtMTI5VDcwMSA4OHQxNTMtNjUgMTcwLTIzem00NzYgODQ2di0xbDEtMXEyNS00NyAzOC05OXQxMy0xMDVxMC0xMDktNDEtMjA1dC0xMTQtMTY4LTE2OC0xMTMtMjA1LTQycS0xMDkgMC0yMDUgNDFUNjUxIDI2NyA1MzggNDM1dC00MiAyMDVxMCA1MyAxMyAxMDV0MzggOTl2MWwxIDEgNDc2IDk1MiA0NzYtOTUyem0tNDc2LTU4MnE3OCAwIDE0NiAyOXQxMjAgODEgODAgMTE5IDMwIDE0N3EwIDc4LTI5IDE0NnQtODEgMTIwLTExOSA4MC0xNDcgMzBxLTc4IDAtMTQ2LTI5dC0xMjAtODEtODAtMTE5LTMwLTE0N3EwLTc4IDI5LTE0NnQ4MS0xMjAgMTE5LTgwIDE0Ny0zMHptMCA2NDBxNTUgMCAxMDMtMjB0ODQtNTcgNTYtODQgMjEtMTAzcTAtNTUtMjAtMTAzdC01Ny04NC04NC01Ni0xMDMtMjFxLTU1IDAtMTAzIDIwdC04NCA1Ny01NiA4NC0yMSAxMDNxMCA1NSAyMCAxMDN0NTcgODQgODQgNTYgMTAzIDIxeiI+PC9wYXRoPjwvc3ZnPg==",
-                      "size": "Small",
-                      "width": "16px",
-                      "height": "16px"
-                    }
-                  ]
-                },
-                {
-                  "type": "TableCell",
-                  "items": [
-                    {
-                      "type": "TextBlock",
-                      "text": "${officeLocation}",
-                      "wrap": false
-                    }
-                  ]
-                }
-              ],
-              "style": "default"
+              "title": "Office",
+              "value": "${officeLocation}"
             }
           ]
         }
-      ]
-    }
+       ]
+      }
     ```
 
 - Locate and open **./src/adaptiveCards/peopleSearch/quickView/ItemQuickView.ts**
@@ -931,7 +843,7 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
 
     ```typescript
     export interface IItemQuickViewData {
-      person: IPerson;
+      person: IPerson | undefined;
     }
     ```
 
@@ -940,7 +852,7 @@ The next step is to open the Person card (`ItemQuickView`) when selecting a sear
     ```typescript
       public get data(): IItemQuickViewData {
         return {
-          person: this.state.selectedPerson || this.state.suggested // we can open either selected Person or suggested Person
+          person: this.state.selectedPerson ?? this.state.suggested // we can open either selected Person or suggested Person
         };
       }
     ```
