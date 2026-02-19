@@ -1,7 +1,7 @@
 ---
 title: Provision SharePoint assets with your solution package
 description: SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site.
-ms.date: 02/02/2018
+ms.date: 02/19/2026
 ms.localizationpriority: high
 ---
 
@@ -12,8 +12,6 @@ At times, you may need to provision a SharePoint list or a document library alon
 You can also find details on the provisioning options in this SharePoint PnP webcast available on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/r-UdJhhHlEQ]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Provision items using JavaScript code
 
@@ -211,7 +209,7 @@ Following is an example of an upgrade actions file that applies an element manif
 
 ## Configure the SharePoint feature
 
-To include the XML files, you must first define the feature configuration in the *package-solution.json* configuration file under the *config* folder in your project. The *package-solution.json* contains the key metadata information about your client-side solution package and is referenced when you run the `package-solution` gulp task that packages your solution into an `.sppkg` file.
+To include the XML files, you must first define the feature configuration in the *package-solution.json* configuration file under the *config* folder in your project. The *package-solution.json* contains the key metadata information about your client-side solution package and is used by Heft when building and packaging your solution into a .sppkg file.
 
 ```json
 {
@@ -263,14 +261,15 @@ The toolchain looks for the XML files as defined in the configuration under a sp
 
 ![Feature XML files in client-side solution project](../../images/feature-provision-project-items.png)
 
-The configurations defined in the `package-solution.json` is what maps the XML files here to its appropriate feature XML file when the `package-solution` gulp task is executed.
+The configurations defined in the `package-solution.json` is what maps the XML files here to its appropriate feature XML file when the `package-solution` heft task is executed.
 
 ## Package SharePoint items
 
-After you have defined your feature in the `package-solution.json` and created the respective feature XML files, you can use the following gulp task to package the SharePoint items along with your `.sppkg` package.
+After you have defined your feature in the `package-solution.json` and created the respective feature XML files, you can use Heft to build and package your client-side solution into a .sppkg file for deployment.
 
-```javascript
-gulp package-solution
+```sh
+heft build --production
+heft package-solution --production
 ```
 
 This command packages one or more client-side component manifests, such as web parts, along with the feature XML files referenced in the `package-solution.json` configuration file.
