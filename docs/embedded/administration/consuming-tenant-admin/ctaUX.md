@@ -15,11 +15,19 @@ For information on the SharePoint Embedded Administrator role, see [SharePoint E
 The following actions are supported in SharePoint Admin Center:
 
 1. View active containers in the tenant
+1. View archived containers in the tenant
+
 1. View deleted containers in the tenant
 1. View detailed information about a container
-1. Delete a container
+1. Archive an active container
+
+1. Reactivate an archived container
+
+1. Delete an active or archived container
+
 1. Restore a deleted container
-1. Permanently deleted a container
+1. Permanently delete a container
+
 2. Sort active containers in the tenant
 3. Filter active containers in the tenant
 4. Set sensitivity label on active containers
@@ -57,13 +65,73 @@ The detailed container view provides a deeper dive into container-specific metad
 1. **General:** This panel displays all the general metadata about a container, usage, and configuration settings.
 
     ![Container Details](../../images/ctaux4.png)
-
+   
 1. **Membership:** This panel shows the user permissions for different users associated with the container. The admin can manage the membership on a container through this panel. 
 
 > [!IMPORTANT]
 > The SharePoint Embedded platform supports four distinct [roles](../../development/sharing-and-perm.md): Owner, Manager, Writer, and Reader. The SharePoint Embedded application on your tenant may not utilize all four roles and might refer to these roles using different names.
 
 ![SharePoint Embedded Membership Roles](../../images/ctaux5.png)
+
+## Archived Containers
+
+The Archived containers page lists all containers in the tenant's archived container collection. It lists the following metadata:
+
+1. Container name
+1. Application name
+1. Publisher
+1. Status
+
+1. Time archived
+
+1. Archived by
+
+1. Storage (GB)
+
+1. Ownership type
+1. Principal owner
+![User's image](media/ctaux/image.png)
+
+## Archive a container
+
+A container can be archived when it’s no longer actively used but must be retained for legal, compliance, or business purposes. From the Active containers page, the CTA can select a container and choose Archive option to start the archival process.
+
+![Screenshot (154)](media/ctaux/screenshot-(154).png)
+This opens the side panel that educates admin about the implication of archival action and ways of getting back the archived content. The CTA can at this stage either cancel the panel and go back to the active containers page or proceed further with the archival by clicking on “Archive”.
+
+![User's image](media/ctaux/image2.png)
+
+The selected container is successfully archived and moved into the Archived containers page. ![User's image](media/ctaux/image3.png)
+
+## Reactivate Archived Containers
+
+Archived containers aren’t accessible to users or applications until they’re reactivated. The time required to reactivate a container depends on how long it has been archived. Containers archived within the last seven days are in the Recently archived state. After this period, containers transition to the Fully archived state.
+
+### Reactivate Recently Archived Containers
+
+From the Archived containers page, the CTA can select a Recently archived container and choose Reactivate option to start the reactivation process.
+
+![Screenshot (155)](media/ctaux/screenshot-(155).png)
+
+This opens a side panel that informs admin about the reactivation time. The CTA can at this stage either cancel the panel and go back to the Archived containers page or proceed further with the reactivation by clicking on “Reactivate”.
+
+![User's image](media/ctaux/image4.png)
+
+The selected container is successfully reactivated and moved into the Active containers page. ![User's image](media/ctaux/image5.png)
+
+### Reactivate Fully Archived Containers
+
+From the Archived containers page, the CTA can select a Fully archived container and choose Reactivate option to start the reactivation process.
+
+![Screenshot (156)](media/ctaux/screenshot-(156).png)
+
+This opens a side panel that informs admin about the reactivation time of __24 hours__. The CTA can at this stage either cancel the panel and go back to the Archived containers page or proceed further with the reactivation by clicking on “Reactivate”.
+
+![User's image](media/ctaux/image6.png)
+
+Reactivation request gets submitted for the selected container and it is displayed on the Archived containers page in the "Reactivating" state. Once the reactivation completes after 24 hours, the container is moved to the Active containers page.
+
+![User's image](media/ctaux/image7.png)
 
 ## Deleted Containers
 
@@ -106,13 +174,15 @@ The selected container is successfully deleted and moved into the deleted contai
 
 **Deleted containers are permanently purged after 93 days unless there is a retention policy applied to the containers.**
 
+Archived containers page also provides the same delete experience for selecting archived containers and deleting.
+
 ## Restore a container
 
 A container in the deleted container collection can be restored on the Deleted containers page by selecting the corresponding containers by selecting the "Restore" link
 
 ![Restore Button SPE Container](../../images/ctaux10.png)
 
-Restoration of the container happens in the background and the status of the same is displayed on the top-right corner of the page. Upon successful restoration, the container will be available in the Active Containers page.
+Restoration of the container happens in the background and the status of the same is displayed on the top-right corner of the page. Upon successful restoration, the container will be available in the Active Containers page. If the container was in archived state at the time of deletion, then the container will be restored back to archived state.
 
 ![Restored SPE Container](../../images/ctaux11.png)
 
@@ -141,7 +211,7 @@ The CTA can perform their compliance and storage management tasks better through
 1. Storage
 1. Created on
 
-![ SPE Container Sorting](../../images/sorting.png)
+![ SPE Container Sorting](../../images/reassign-user.png)
 
 ## Filtering on Active containers page
 
@@ -157,7 +227,7 @@ The CTA can perform their compliance and storage management tasks better through
 > [!IMPORTANT]
 > The behaviour of the filtering experience on the Active containers page differs from the experience on the Active sites page in SharePoint Admin Center. 
 
-![ SPE Container Filtering](../../images/filter.png)
+![ SPE Container Filtering](../../images/reassign-user.png)
 
 ## Searching on Active Containers Page
 
@@ -168,7 +238,7 @@ The search bar on the Active Containers Page can be used to search containers in
 
 The sensitivity label of a container can be set on the Active container page, on the detailed panel of a container. Under the settings panel, the administrator can set the sensitivity label from a list of available sensitivity label.
 
-![SPE Container Sensitivity](../../images/sensitivity-label.png)
+![SPE Container Sensitivity](../../images/reassign-user.png)
 
 ## Managing user membership of a container
 
@@ -176,9 +246,9 @@ The administrator can manage the membership of users of a container on the Activ
 
 **Add a user to a role:** The administrator can navigate to the desired role using the left panel and click on the Add option. This opens up a picker, using which the administrator can select a user from the tenant and assign the role. In case the selected user is already assigned to a different role, the role is displayed when the role is selected and the operation changes from Add to Reassign. 
 
-![SPE Container owner-one](../../images/add-owners-one.png)
+![SPE Container owner-one](../../images/reassign-user.png)
 
-![SPE Container owner-two](../../images/add-owners-two.png)
+![SPE Container owner-two](../../images/reassign-user.png)
 
 **Reassign user to another role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Reassign option appears. On selecting the option, a drop-dowm menu appears and the administrator can select the role to which the user needs to be reassigned to. 
 
@@ -186,7 +256,7 @@ The administrator can manage the membership of users of a container on the Activ
 
 **Remove user from a role:** The administrator can navigate to the desired user under a role using the left panel. On selecting the user, the Remove option appears. On selecting the option, a pop-up screen appears, and the administrator can confirm the removal of the user from the role. 
 
-![SPE Container remove](../../images/remove-user.png)
+![SPE Container remove](../../images/reassign-user.png)
 
 ## Sorting on the Deleted Containers Page
 

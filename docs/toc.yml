@@ -590,6 +590,8 @@
     href: embedded/scenarios-and-use-cases.md
   - name: Getting Started
     items:
+    - name: Archiving SharePoint Embedded containers
+      href: ./embedded/getting-started/m365-archive-support-for-containers.md
     - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
     - name: Container Types
@@ -598,6 +600,8 @@
       href: embedded/getting-started/register-api-documentation.md
   - name: Development
     items:
+    - name: Archive and Reactivate content
+      href: ./embedded/development/support-archival-of-containers.md
     - name: Application Architecture
       href: embedded/development/app-architecture.md
     - name: Authentication and Authorization

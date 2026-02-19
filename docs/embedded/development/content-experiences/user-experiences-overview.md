@@ -56,6 +56,12 @@ Content-Type: application/json
 }
 ```
 
+## Archived containers
+
+You can use Microsoft Graph to archive containers, which moves the container’s data to the cold storage tier and helps reduce storage costs.
+
+While a container is archived, it can’t be accessed by any user or application. To access the container again, it must be reactivated. If the data is no longer required, archived containers can be deleted without first reactivating them.
+
 ## Recycle bin
 
 You can use Microsoft Graph to either delete or permanently delete items in containers. Deleted items are moved to the container’s recycle bin and retained for 93 days. During this period, the items can be restored or permanently deleted using Microsoft Graph. An item in the recycle bin is permanently deleted when it exceeds the 93-day retention period. Permanently deleted items can't be restored.
