@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 12/17/2025
+ms.date: 02/19/2025
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -266,7 +266,7 @@ When you hit this limit, then the recommendation is to consolidate sources using
 - Adding script sources in a way that covers all versions (see above)
 - Automatically removing the auto added scripts sources using the model described below
 
-Current,ly the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
+Currently, the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
 
 ### I want to already enforce CSP today, is this possible?
 
@@ -327,11 +327,14 @@ No, when an SPFx web part is hosted on a classic page, CSP will not be enforced
 
 No, CSP does not apply to Add-Ins. Add-Ins will stop working from April 2, 2026.
 
-### Auto-populating trusted script sources is not working when a solution is uploaded to the classic tenant app catalog?
+### Is auto-populating trusted script sources working when a solution is uploaded to the classic tenant app catalog?
 
-Auto-populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog using the modern app catalog (https://contoso-admin.sharepoint.com/_layouts/15/tenantAppCatalog.aspx). We're evaluating bringing this option to the classic tenant app catalog.
+Auto-populating of trusted script sources does also work when the solutions are uploaded via the classic tenant app catalog.
 
-### Auto-populating trusted script sources is not working when a solution is uploaded to a site collection app catalog?
+### Is auto-populating trusted script sources working when a solution is uploaded to the classic tenant app catalog?
 
-Correct, auto-populating of trusted script sources will only apply to solutions uploaded in the tenant app catalog (see above). If the site collection app catalog is used, the required script sources need to be added independently, either via script/code or manually.
+Auto-populating of trusted script sources does also work when the solutions are uploaded via the classic site collection app catalog.
 
+### I see the script URLs for solutions in the tenant catalog being pre-populated, but not the script URLs for solutions in the site collection app catalogs?
+
+Correct, only solutions in the tenant app catalog were scanned and their script URL's where prepopulated. Solutions in site collection app catalogs were not processed for prepopulating script URL's. When users deploy new/updated solutions to the site collection app catalogs then those URLs will get pre-added (if there where in the solution).
