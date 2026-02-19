@@ -112,6 +112,8 @@ The developer administrator can change container type configuration settings usi
 1. Discoverability Disabled: Controls if file items inside the container surface in other Microsoft 365 properties (MRU, etc.).
 1. Sharing Restricted: Only the manager and owner can share files in the container if restricted sharing is true.
 
+1. Is Archive Enabled: If set to true, the application can support archival of containers. Default value is false.
+
 The following commands can be used to change the configuration settings of SharePoint Embedded applications created on the developer admin’s tenant:
 
 ```powershell

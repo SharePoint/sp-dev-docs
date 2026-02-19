@@ -13,6 +13,8 @@ Office file experiences for SharePoint Embedded platform will work in a similar 
 
 Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web or in the Office application for a richer viewing and editing experience. AutoSave feature saves your files automatically as your user's work and is enabled for each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Application Apps.
 
+Documents stored in an archived container can’t be viewed or accessed. Applications must handle the archived state of the container by displaying an appropriate error message and guiding end users on the next steps to regain access, such as reactivating the container.
+
 ## View or restore a previous version of an Office document from SharePoint Embedded
 
 Versioning is automatically enabled on each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Apps, that helps your users to see what changes have been made in a file, compare different versions, or restore the version you want. This is incredibly important to your users if a mistake was made, a previous version is preferred, or in multi-user coauthoring scenarios when your users are collaborating with others and someone makes changes your users didn't want in a file.
