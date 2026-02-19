@@ -340,4 +340,9 @@ Specifies a version range to which specified upgrade actions apply.
 ## See also
 
 - [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](../web-parts/get-started/provision-sp-assets-from-package.md)
+<<<<<<< HEAD
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+=======
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+
+>>>>>>> 9f08dcc5d7daf8969b653b894c2babbbd4b372ff
