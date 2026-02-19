@@ -337,4 +337,4 @@ Auto-populating of trusted script sources does also work when the solutions are 
 
 ### I see the script URLs for solutions in the tenant catalog being pre-populated, but not the script URLs for solutions in the site collection app catalogs?
 
-Correct, only solutions in the tenant app catalog were scanned and their script URL's where prepopulated. Solutions in site collection app catalogs were not processed for prepopulating script URL's. When users deploy new/updated solutions to the site collection app catalogs then those URLs will get pre-added (if there where in the solution).
+Correct, only solutions in the tenant app catalog were scanned and their script URL's where pre-populated. Solutions in site collection app catalogs were not processed for pre-populating script URL's. When users deploy new/updated solutions to the site collection app catalogs then those URLs will get pre-added (if there where in the solution).
