@@ -1,7 +1,7 @@
 ---
 title: Localize SharePoint Framework client-side web parts
 description: Broaden the appeal of your web part by localizing it for different languages spoken by SharePoint users all over the world.
-ms.date: 12/05/2023
+ms.date: 02/19/2026
 ms.localizationpriority: high
 ---
 
@@ -11,8 +11,6 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Prepare the project
 
@@ -200,7 +198,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 1. Verify that you've applied all changes correctly by running the following command:
 
     ```sh
-    gulp serve
+    heft start
     ```
 
 1. In the SharePoint Workbench, add the web part to the page, and open its configuration.
@@ -244,7 +242,7 @@ Properties that support localization are of type **ILocalizedString**. Each loca
 1. Run the following command to verify that the project is working:
 
     ```sh
-    gulp serve
+    heft start
     ```
 
 > [!NOTE]
@@ -303,12 +301,12 @@ When testing web parts by using the local SharePoint Workbench, the SharePoint F
 
 #### Specify the locale to be tested by using the command-line argument
 
-Another way to specify the locale to be used by the local SharePoint Workbench is to specify it as an argument for the gulp task.
+Another way to specify the locale used by the local SharePoint Workbench is to pass it as an argument to Heft.
 
 - Start the SharePoint Workbench by running the following command:
 
   ```sh
-  gulp serve --locale=nl-nl
+  heft start --locales nl-nl
   ```
 
   When you open your web part's configuration, you'll see that all property pane strings are displayed in Dutch (Netherlands) rather than the default US English.
@@ -416,7 +414,7 @@ The last step is to provide localized versions for the new string in all locales
 1. Confirm that the translated string is correctly displayed by running the following command:
 
     ```sh
-    gulp serve --locale=nl-nl
+    heft start --locales nl-nl
     ```
 
     ![The label of the learn more button displayed in Dutch Netherlands instead of the default US English](../../../images/localization-learn-more-nl-nl.png)
@@ -455,7 +453,7 @@ Finding out about all these issues late in the project will likely lead to delay
 1. Test the project using the base pseudo-locale by running the following command:
 
     ```sh
-    gulp serve --locale=qps-ploc
+    heft start --locales qps-ploc
     ```
 
     After adding the web part to the page, you can quickly see that there are two strings in the web part body that haven't been internationalized and are still displayed in US English rather than in the base pseudo-locale.
@@ -960,3 +958,4 @@ By keeping the resource files separate, the SharePoint Framework minimizes the a
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+
