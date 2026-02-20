@@ -1,14 +1,12 @@
 ---
 title: Optimize SharePoint Framework builds for production
 description: The differences between debug and release builds and how you can optimize your bundle for use in production environments.
-ms.date: 10/26/2020
+ms.date: 02/20/2026
 ms.localizationpriority: medium
 ---
 # Optimize SharePoint Framework builds for production
 
 When deploying SharePoint Framework solutions to production, you should always use a release build of your project that is optimized for performance. This article illustrates the main differences between debug and release builds and shows how you can optimize your bundle for use in production environments.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Use release builds in production
 
@@ -36,53 +34,41 @@ Additionally, if the hosting location from which you're loading the library is o
 
 ## Verify the contents of your bundle
 
-To better understand the size of the generated bundles, you can extend the Webpack configuration in your project and have the SharePoint Framework generate bundle statistics.
+To better understand the size of the generated bundles, you can use the built-in `--emit-stats` parameter in the Heft build toolchain to generate webpack bundle statistics.
 
-First, install the **webpack-bundle-analyzer** package in your project by executing the following in the command line:
+Run the following command to build your project and generate stats:
+
+```console
+heft build --clean --emit-stats
+```
+
+This generates a webpack stats JSON file at **./release/webpack-stats/[solution-name].stats.json**.
+
+You can also generate stats for a production build:
+
+```console
+heft build --clean --production --emit-stats
+```
+
+To visualize the bundle contents as an interactive treemap, you can optionally install the **webpack-bundle-analyzer** package in your project:
 
 ```console
 npm install webpack-bundle-analyzer --save-dev
 ```
 
-Next, change the contents of the **gulpfile.js** file in your project to:
+Then generate the HTML visualization from the stats JSON file:
 
-```javascript
-'use strict';
-
-const gulp = require('gulp');
-const path = require('path');
-const build = require('@microsoft/sp-build-web');
-const bundleAnalyzer = require('webpack-bundle-analyzer');
-
-build.configureWebpack.mergeConfig({
-  additionalConfiguration: (generatedConfiguration) => {
-    const lastDirName = path.basename(__dirname);
-    const dropPath = path.join(__dirname, 'temp', 'stats');
-    generatedConfiguration.plugins.push(new bundleAnalyzer.BundleAnalyzerPlugin({
-      openAnalyzer: false,
-      analyzerMode: 'static',
-      reportFilename: path.join(dropPath, `${lastDirName}.stats.html`),
-      generateStatsFile: true,
-      statsFilename: path.join(dropPath, `${lastDirName}.stats.json`),
-      logLevel: 'error'
-    }));
-
-    return generatedConfiguration;
-  }
-});
-
-build.initialize(gulp);
+```console
+npx webpack-bundle-analyzer ./release/webpack-stats/[solution-name].stats.json --mode static --report ./release/webpack-stats/[solution-name].stats.html --no-open
 ```
 
-<br/>
-
-The next time you bundle your project by using the **gulp bundle** task, you'll see the bundle stats files generated in the **temp/stats** folder in your project. One of the generated stats files is a treemap showing the different scripts included in the generated bundle. You can find this visualization in the **./temp/stats/[solution-name].stats.html** file.
+Open the generated `.stats.html` file in your browser to see the treemap showing the different scripts included in the generated bundle.
 
 ![Webpack bundle analyzer treemap illustrating the contents of a sample SharePoint Framework bundle](../../images/guidance-productionbuilds-webpack-bundlestats-chart-angular.png)
 
 Using the Webpack bundle analyzer treemap is a convenient way for you to verify that the generated bundle doesn't contain any unnecessary scripts and understand how the included scripts affect the total bundle size. Keep in mind that the displayed size reflects the debug build and is smaller for a release build.
 
-More detailed information used to generate the visualization is included in the **./dist/[solution-name].stats.json** file. By using this file, you can find out why a specific script has been included in the bundle or if a particular script is used in multiple bundles. With this information, you can optimize your bundles, improving the loading time of your solution.
+More detailed information used to generate the visualization is included in the **./release/webpack-stats/[solution-name].stats.json** file. By using this file, you can find out why a specific script has been included in the bundle or if a particular script is used in multiple bundles. With this information, you can optimize your bundles, improving the loading time of your solution.
 
 ## Choose your primary client-side library
 
@@ -98,7 +84,7 @@ Sometimes when working with external libraries, you might not need the whole lib
 
 To illustrate this, take the [Lodash](https://lodash.com) library as an example. Lodash is a collection of utilities helping you to do certain operations in your code. The odds are high that when working with Lodash, you only need a few specific methods rather than the complete library.
 
-However, if you referenced the whole library by using the following code, it adds 527 KB to your unoptimized bundle:
+However, if you referenced the whole library by using the following code, it adds 432 KB to your unoptimized bundle:
 
 ```typescript
 import * as _ from 'lodash';
@@ -106,9 +92,10 @@ import * as _ from 'lodash';
 
 ![The complete Lodash library included in a bundle, highlighted in the Webpack bundle analyzer treemap](../../images/guidance-productionbuilds-import-lodash.png)
 
-Instead, if you referenced only the specific Lodash method by using the following code, it adds 45 KB to your unoptimized bundle:
+Instead, if you referenced only the specific Lodash method by using the following code, it adds 41 KB to your unoptimized bundle:
 
 ```typescript
+// eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-explicit-any
 const at: any = require('lodash/at');
 ```
 
@@ -116,7 +103,7 @@ const at: any = require('lodash/at');
 
 Specifically with regards to Lodash, but that could also be the case with other libraries, referencing specific methods instead of the whole library comes with a price.
 
-Currently, Lodash doesn't support loading specific methods inside SharePoint Framework projects by using the `import` notation. Instead, you have to use a `require` statement, which doesn't offer you the type safety capabilities that using the `import` statement does. Eventually, it's up to you to decide if loading more code into your bundles is worth preserving the type safety capabilities.
+Currently, Lodash doesn't support loading specific methods inside SharePoint Framework projects by using the `import` notation. Instead, you have to use a `require` statement, which doesn't offer you the type safety capabilities that using the `import` statement does. Note that using the `require` statement triggers ESLint rules (`@typescript-eslint/no-var-requires`), which is why the ESLint disable comment is needed. Eventually, it's up to you to decide if loading more code into your bundles is worth preserving the type safety capabilities.
 
 > [!NOTE]
 > Some of the Lodash methods are provided with the SharePoint Framework in the **\@microsoft/sp-lodash-subset** library. Before using Lodash, verify if the method that you want to use isn't already available in the **\@microsoft/sp-lodash-subset** library, which is already available as a part of the SharePoint Framework and does not need to be included in your bundle. This package is automatically loaded on each SharePoint page.
