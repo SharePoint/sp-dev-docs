@@ -1,7 +1,7 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 01/13/2022
+ms.date: 02/20/2026
 ms.localizationpriority: high
 ---
 # Deployment options for SharePoint Framework solutions for Microsoft Teams
@@ -15,8 +15,6 @@ SharePoint Online supports two options for deploying SPFx solutions to the Micro
 
 1. **[Automatically create the Microsoft Teams app manifest and package](#automatically-create-the-microsoft-teams-app-manifest-and-package)**
 1. **[Use the developer-provided Microsoft Teams app manifest & package](#developer-provided-microsoft-teams-app-manifest--package)**
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Automatically create the Microsoft Teams app manifest and package
 
@@ -51,13 +49,13 @@ When SharePoint creates the app manifest, it will use values from the SPFx solut
 If a SPFx solution contains multiple web parts designated for use in Microsoft Teams, SharePoint Online will repeat the above process for each of them.
 
 > [!NOTE]
-> If you are curious on the generated package structure, you can use use the following REST API to download the package for specific solutions:
+> If you are curious on the generated package structure, you can use the following REST API to download the package for specific solutions:
 >
 > `_api/web/tenantappcatalog/downloadteamssolution(id)/$value`
 >
 > id is the numeric identifier of the solution in the app catalog library.
 >
-> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(12)/$value`. API call will start download process of the generated manifest package.
+> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(12)/$value`. API call will start download process of the generated manifest package.
 
 
 ## Developer-provided Microsoft Teams app manifest & package
@@ -92,10 +90,10 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
 1. Create the Microsoft Teams app package named **TeamsSPFxApp.zip** by compressing the contents of the **./teams** folder.
 
     > [!IMPORTANT]
-    > Don't compress the folder, instead compress the contents of the folder. If you ZIP the folder, it will a top-level subfolder to the resulting ZIP file which isn't a valid app package in Microsoft Teams.
+    > Don't compress the folder, instead compress the contents of the folder. If you ZIP the folder, it will add a top-level subfolder to the resulting ZIP file which isn't a valid app package in Microsoft Teams.
 
 1. Save the **TeamsSPFxApp.zip** in the SPFx solution's **./teams** folder.
-1. Create the SPFx package the same way you would with a regular SPFx solution, using **gulp package-solution**. It will include the custom Microsoft Teams app package in the **\*.sppkg**.
+1. Create the SPFx package the same way you would with a regular SPFx solution, using **heft package-solution**. It will include the custom Microsoft Teams app package in the **\*.sppkg**.
 
 ### Dynamically reference the underlying SharePoint site URLs
 
