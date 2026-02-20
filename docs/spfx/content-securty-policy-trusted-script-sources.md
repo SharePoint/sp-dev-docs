@@ -266,7 +266,7 @@ When you hit this limit, then the recommendation is to consolidate sources using
 - Adding script sources in a way that covers all versions (see above)
 - Automatically removing the auto added scripts sources using the model described below
 
-Currently, the logic to auto add script sources will always add the source, even though there's already a source listed that qualifies. This is somthing we're evaluating for fixing.
+New trusted sources will only be added whenever none of the existing trusted sources cover the to be added script source, so if you've already added `*.jsdelivr.net` then a solution adding `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js` will result in nothing getting added given that URL is already covered by an existing script source. 
 
 ### I want to already enforce CSP today, is this possible?
 
@@ -337,4 +337,4 @@ Auto-populating of trusted script sources does also work when the solutions are 
 
 ### I see the script URLs for solutions in the tenant catalog being pre-populated, but not the script URLs for solutions in the site collection app catalogs?
 
-Correct, only solutions in the tenant app catalog were scanned and their script URL's where pre-populated. Solutions in site collection app catalogs were not processed for pre-populating script URL's. When users deploy new/updated solutions to the site collection app catalogs then those URLs will get pre-added (if there where in the solution).
+Correct, only solutions in the tenant app catalog were scanned and their script URL's where pre-populated. Solutions in site collection app catalogs were not processed for pre-populating script URL's. When users deploy new/updated solutions to the site collection app catalogs then those URLs will get pre-added (if there where in the solution and if there was not yet a valid trusted source covering this URL).
