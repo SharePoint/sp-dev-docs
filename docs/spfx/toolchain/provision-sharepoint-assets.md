@@ -76,7 +76,7 @@ Following is an example of a content type:
 
 Lists are a key, underlying feature of a SharePoint site. They enable teams to gather, track, and share information. Many applications rely on lists created at the site for data storage to implement their behaviors. A list instance is a predefined SharePoint list that has a well-known identifier. You can customize and add items to these lists, create additional lists from the list templates that are already available, and create custom lists with just the settings and columns that you choose.
 
-SharePoint provides several list templates such as contact list, calendar, task list, and more. You can use these templates to create new list instances for your web parts or other components. For example, you can define a list instance Finance Documents based on the Document Library template to store associated documents with your web part.
+SharePoint provides several list templates, such as contact list, calendar, task list, and more. You can use these templates to create new list instances for your web parts or other components. For example, you can define a list instance **Finance Documents** based on the Document Library template to store associated documents with your web part.
 
 You can refer to the schema and attributes in the [ListInstance Element (List Instance)](https://msdn.microsoft.com/library/office/ms476062.aspx) documentation to define a list instance in your solution.
 
@@ -110,8 +110,6 @@ Following is an example of a list instance definition that uses a custom schema:
     Url="Lists/CostCenters">
 </ListInstance>
 ```
-
-<br/>
 
 This is the custom schema definition that defines a content type for the list instance defined previously:
 
@@ -161,7 +159,7 @@ A feature is primarily constructed by using the following XML files.
 
 The element manifest file contains the SharePoint item definitions and is executed when the feature is activated. For example, the XML definitions to create a new field, content type, or list instance is in the element manifest.
 
-Following is an example of an element manifest file that defines a new DateTime field.
+The following element manifest file demonstrates how to define a new DateTime field:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -182,7 +180,7 @@ Following is an example of an element manifest file that defines a new DateTime 
 
 Any supported files that accompany the element manifest are element files. For example, the list instance schema is an element file that is associated with a list instance that is defined in an element manifest.
 
-Following is an example of a custom list instance schema:
+The following element demonstrates how to define a custom list instance schema:
 
 ```xml
 <List xmlns:ows="Microsoft SharePoint" Title="Basic List" EnableContentTypes="TRUE" FolderCreation="FALSE"
@@ -197,9 +195,9 @@ Following is an example of a custom list instance schema:
 
 ### Upgrade actions file
 
-As its name suggests, this is the file that includes any upgrade actions when the solution is updated on the site. As part of the upgrade actions, the action could specify to include one or more element manifests as well. For example, if the upgrade requires a new field to be added, the field definition is available as an element manifest and is associated in the upgrade actions file.
+As its name suggests, this is the file that includes any upgrade actions when the solution is updated on the site. As part of the upgrade actions, the action could specify to include one or more element manifests as well. For example, if the upgrade requires a new field to be added, the field definition is available as an element manifest and is associated with the upgrade actions file.
 
-Following is an example of an upgrade actions file that applies an element manifest file during the upgrade:
+The following demonstrates an upgrade actions file that applies an element manifest file during the upgrade:
 
 ```xml
 <ApplyElementManifests>
@@ -209,7 +207,7 @@ Following is an example of an upgrade actions file that applies an element manif
 
 ## Configure the SharePoint feature
 
-To include the XML files, you must first define the feature configuration in the *package-solution.json* configuration file under the *config* folder in your project. The *package-solution.json* contains the key metadata information about your client-side solution package and is used by Heft when building and packaging your solution into a .sppkg file.
+To include the XML files, you must first define the feature configuration in the *package-solution.json* configuration file under the *config* folder in your project. The *package-solution.json* contains the key metadata information about your client-side solution package and is used by Heft when building and packaging your solution into a **\*.sppkg** file.
 
 ```json
 {
@@ -241,8 +239,6 @@ To include the XML files, you must first define the feature configuration in the
 }
 ```
 
-<br/>
-
 The `features` JSON object contains the metadata about the feature, as shown in the following table.
 
 Property | Description
@@ -265,9 +261,9 @@ The configurations defined in the `package-solution.json` is what maps the XML f
 
 ## Package SharePoint items
 
-After you have defined your feature in the `package-solution.json` and created the respective feature XML files, you can use Heft to build and package your client-side solution into a .sppkg file for deployment.
+After you have defined your feature in the `package-solution.json` and created the respective feature XML files, you can use Heft to build and package your client-side solution into a **\*.sppkg** file for deployment.
 
-```sh
+```console
 heft build --production
 heft package-solution --production
 ```
@@ -281,7 +277,7 @@ This command packages one or more client-side component manifests, such as web p
 
 You may include new SharePoint items or update existing SharePoint items when you upgrade your client-side solution. Because provisioning SharePoint items uses features, you are using the feature [UpgradeActions](https://msdn.microsoft.com/library/office/ee537575(v=office.14).aspx) XML file to define a list of upgrade actions.
 
-The `upgradeActions` JSON object array in the `package-solution.json` references the feature XML file(s) associated with the upgrade actions for your feature. At the least, an upgrade action file defines the element manifest XML file that is executed when upgrading the feature.
+The `upgradeActions` JSON object array in the `package-solution.json` references the feature XML file(s) associated with the upgrade actions for your feature. At minimum, an upgrade action file defines the element manifest XML file that is executed when upgrading the feature.
 
 When you are upgrading a SharePoint Framework solution, you must also update version attributes for both the solution and the feature where the upgrade actions have been included. A solution version increase indicates to SharePoint end users that there is a new version of the package available. A feature element version increase ensures that the tasks defined in the upgrade actions are being processed as part of the solution upgrade.
 
@@ -292,8 +288,6 @@ Following is an example of an upgrade action file that applies an element manife
       <ElementManifest Location="9c0be970-a4d7-41bb-be21-4a683586db18\elements-v2.xml" />
 </ApplyElementManifests>
 ```
-
-<br/>
 
 This is the corresponding `element-v2.xml` that defines a new Currency field to be provisioned during the upgrade:
 
@@ -310,8 +304,6 @@ This is the corresponding `element-v2.xml` that defines a new Currency field to 
             Group="Financial Columns" />
 </Elements>
 ```
-
-<br/>
 
 ### Sub-elements
 
@@ -334,10 +326,11 @@ Adds a new element to an existing feature. When a feature is upgraded, provision
 
 #### VersionRange
 
-Specifies a version range to which specified upgrade actions apply.
+Specifies a version range to which specifies the upgrade actions apply.
 
 
 ## See also
 
 - [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](../web-parts/get-started/provision-sp-assets-from-package.md)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+
