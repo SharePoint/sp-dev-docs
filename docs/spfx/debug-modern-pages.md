@@ -55,7 +55,7 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 }
 ```
 
-Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded, and for each extension, the list of properties that should be set on them. To use the particular **serve** configuration, execute in the command line:
+Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded, and, for each extension, the list of properties that should be set on them. To use the particular **serve** configuration, execute in the command line:
 
 ```console
 heft start --serve-config=<name>
@@ -201,7 +201,7 @@ The `fieldCustomizers` parameter has the following tokens that should be replace
 | `<fieldCustomizerId>` | The GUID of the Field Customizer extension associated with this field.                                              |
 | `<propertiesJSON>`    | The property values defined in the extension. In this example, `sampleText` is a property defined by the extension. |
 
-With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
+With the parameters added to the URL, reload the page in the web browser. The page will show a pop-up asking you to confirm that you now will be loading debug scripts.
 
 ![Popup to confirm loading debug scripts on a modern page in SharePoint Online](../images/ext-com-accept-debug-scripts.png)
 
@@ -254,7 +254,7 @@ The `customActions` parameter has the following tokens that should be replaced:
 | `<extensionType>`  | Where the commands are displayed. The possible values are:<br/> `ClientSideExtension.ListViewCommandSet.ContextMenu`: The context menu of the item(s),<br/> `ClientSideExtension.ListViewCommandSet.CommandBar`: The top command set menu in a list or library.<br/> `ClientSideExtension.ListViewCommandSet`: Both the context menu and the command bar (corresponds to `SPUserCustomAction.Location="CommandUI.Ribbon"`). |
 | `<propertiesJSON>` | An optional JSON object containing properties that are available via the `this.properties` member.                                                                                                                                                                                                                                                                                                                            |
 
-With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
+With the parameters added to the URL, reload the page in the web browser. The page will show a pop-up asking you to confirm that you now will be loading debug scripts.
 
 ![Popup to confirm loading debug scripts on a modern page in SharePoint Online](../images/ext-com-accept-debug-scripts.png)
 
@@ -262,7 +262,7 @@ Once you confirm, the page will load with the extensions you specified in your *
 
 ## Debug SharePoint Framework web parts on modern SharePoint pages
 
-To test the local versions of your SharePoint Framework client-side web parts on modern SharePoint pages in your tenant, first, start the local web server, by changing the working directory to your project folder and executing in the command line:
+To test the local versions of your SharePoint Framework client-side web parts on modern SharePoint pages in your tenant, first, start the local web server by changing the working directory to your project folder and executing in the command line:
 
 ```console
 heft start --nobrowser
@@ -285,7 +285,7 @@ https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
   &debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 ```
 
-The page will reload and show a pop-up asking you to confirm that you now will be loading debug scripts.
+The page will reload and show a pop-up asking you to confirm that you will now be loading debug scripts.
 
 ![Popup to confirm loading debug scripts on a modern page in SharePoint Online](../images/ext-com-accept-debug-scripts.png)
 
@@ -309,14 +309,14 @@ Using the SharePoint workbench, you can only test web parts from your solution. 
 
 ## Debug SharePoint Framework web parts - an alternative approach
 
-If you build your web part solution without the **--production** argument as follows:
+If you build your web part solution without the `--production` argument as follows:
 
 ```console
 heft build
 heft package-solution
 ```
 
-The packages generated will reference the code from your local computer (https://localhost:4321). You can deploy the solution to the app catalog as you normally would.
+The generated packages will reference the code on your local computer (`https://localhost:4321`). You can deploy the solution to the app catalog as you normally would.
 
 You can then start your local server  by running:
 
@@ -326,7 +326,7 @@ heft start --nobrowser
 
 Now you can go back to a SharePoint site where the solution has been deployed and add the web parts to any page, modern or classic, and the web part code will be loaded from your local development environment. You can debug your web parts just as you would if you ran **heft start** and added your web part to the workbench.
 
-This approach should only be used when you're in development mode. If you deploy an app to the app catalog that points to your local host, it will fail to run if your development environment isn't running.
+This approach should only be used when you're in development mode. If you deploy an app to the app catalog that points to localhost, it will fail to run if your development environment isn't running.
 
 ## See also
 
@@ -335,4 +335,5 @@ This approach should only be used when you're in development mode. If you deploy
 - [Testing and debugging your SPFx solutions in production without causing any impact (Elio Struyf)](https://www.eliostruyf.com/testing-and-debugging-your-spfx-solutions-in-production-without-causing-any-impact/)
 - [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
+
 
