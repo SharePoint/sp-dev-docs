@@ -7,9 +7,9 @@ ms.localizationpriority: high
 
 # SharePoint site theming
 
-SharePoint site owners have new options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
+SharePoint site owners have options for applying custom styles and colors to sites, making it easier to define and manage themes across site collections.
 
-These new features include:
+These features include:
 
 * The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](sharepoint-site-theming-json-schema.md) that stores color settings and related metadata for each theme.
 * A simplified set of default themes, with eight light themes and two dark themes presently available.

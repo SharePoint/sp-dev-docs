@@ -161,59 +161,6 @@ This property indicates whether the default themes are available in the theme pi
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Type:__ Boolean
 
-
-## Methods of the Microsoft.Online.SharePoint.TenantManagement.Tenant class
-
-These are alternative APIs to manage your themes at the tenant level.
-
-### AddTenantTheme public method
-
-Add a theme to the tenant.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult\<bool\>
-
-### GetAllTenantThemes public method
-
-Retrieve all the themes that are currently available in the tenant, including any custom themes that have been added. Default themes are only included if the __HideDefaultThemes__ property is __false__ (the default value).
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ none<br/>
-__Return type:__ ClientObjectList\<ThemeProperties\>
-
-### GetHideDefaultThemes public method
-
-Read the current setting for whether to hide default themes in the theme picker UI.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ none<br/>
-__Return type:__ ClientResult\<bool\>
-
-### GetTenantTheme public method
-
-Retrieve a theme by name.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ string name<br/>
-__Return type:__ ThemeProperties
-
-### SetHideDefaultThemes public method
-
-Specify whether to hide default themes in the theme picker UI.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ Boolean<br/>
-__Return type:__ void
-
-### UpdateTenantTheme public method
-
-Update the settings for an existing theme.
-
-__Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
-__Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult\<bool\>
-
 ## See also
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)

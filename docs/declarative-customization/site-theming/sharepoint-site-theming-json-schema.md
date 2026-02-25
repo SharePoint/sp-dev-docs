@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint site theming: JSON schema
 
-The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Only the new theme format supports the secondaryColor and displayMode fields.  Theme settings are stored in a JSON object that contains the following keys:
+The [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Theme settings are stored in a JSON object that contains the following keys, only the new theme format supports the secondaryColor and displayMode fields:
 
 - **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
 - **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
@@ -66,7 +66,8 @@ The colors in the `palette` element are specified as 6-digit or 3-digit hexadeci
 > These can be manually added to your generated definition before uploading to the tenant.
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
-- **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light theme is supported. 
+- **secondaryColors**: An optional section available only in the new theme format of the SharePoint site theme schema. It defines additional accent and background color pairs that complement the main theme palette. The first color pair comes from the palette. Currently, only the light mode theme is supported. 
+
 Here is an example of secondaryColors, it is the set of combination of themePrimary and backgroundColor. The colors in the `secondaryColors` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
 
 ```json
@@ -94,7 +95,7 @@ Here is an example of secondaryColors, it is the set of combination of themePrim
 - **themeSchemaVersion**: The theme schema version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
 - **version**: The theme version. Use `2.0.0` for the latest theme format. Use `1.0.0` for legacy theme format.
 
-The following is an example of a JSON object that defines a theme in new theme format.
+The following is an example of a JSON object that defines a theme in new theme format for the Teal theme.
 
 ```json
 {
