@@ -1,12 +1,10 @@
 ---
 title: Create an Adaptive Card Extension with the focus feature
 description: Step by step guide on how to create an Adaptive Card Extension with the focus feature.
-ms.date: 12/14/2023
+ms.date: 02/19/2026
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with focus feature
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -22,7 +20,7 @@ When prompted, enter the following values (select the default option for all pro
 
 - **What is your solution name?** focus-feature
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Geneic Card Template
+- **Which template do you want to use?** Generic Card Template
 - **What is your Adaptive Card Extension name?** HelloWorld
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -59,7 +57,7 @@ Before moving forward, update the `title` and `description` fields of your ACE t
 }
 ```
 
-Next, run **gulp serve** from the command line in the root of the project to start the build and debugging process. In the hosted workbench, you'll see the **FocusFeature** card:
+Next, run **heft start** from the command line in the root of the project to start the build and debugging process. In the hosted workbench, you'll see the **FocusFeature** card:
 
 ![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 
@@ -72,7 +70,7 @@ In the Quick View, we'll introduce buttons for two actions:
 - Move to the next Quick View
 - Move to the previous Quick View
 
-We'll first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate.json**
+We'll first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**
 
 Replace the content of this file as below:
 
@@ -137,139 +135,253 @@ Replace the content of this file as below:
 
 Next let's implement the logic that will allow us to navigate to the next Quick View. We'll use the QuickViewNavigator to manipulate the view stack.
 
+Open the file **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts** and replace the content with the following:
+
 ```typescript
-public onAction(action: IActionArguments): void {
-  if (action.type === 'Submit') {
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import {
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState,
+  QUICK_VIEW_REGISTRY_ID_2
+} from '../HelloWorldAdaptiveCardExtension';
+
+export interface IQuickViewData {
+  subTitle: string;
+  title: string;
+}
+
+export class QuickView extends BaseAdaptiveCardQuickView<
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState,
+  IQuickViewData
+> {
+  public get data(): IQuickViewData {
+    return {
+      subTitle: 'Quick view',
+      title: 'Adaptive Card Extension'
+    };
+  }
+
+  public get template(): ISPFxAdaptiveCard {
+    return require('./template/QuickViewTemplate.json');
+  }
+
+  public onAction(action: IActionArguments): void {
+    if (action.type === 'Submit') {
       const { id } = action.data;
       if (id === 'back') {
-          this.quickViewNavigator.pop();
+        this.quickViewNavigator.pop();
       } else if (id === 'forward-skip') {
-          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, true);
+        this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, true);
       } else {
-          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, false);
+        this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, false);
       }
+    }
   }
 }
 ```
 
-Create a new template file for the second Quick View: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate2.json**
+Create a new template file for the second Quick View: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate2.json**
 
 ```json
 {
-   "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-   "type":"AdaptiveCard",
-   "version":"1.5",
-   "body":[
-      {
-         "type":"TextBlock",
-         "weight":"Bolder",
-         "text":"${title}",
-         "id": "quick-view-title"
-      },
-      {
-         "type":"TextBlock",
-         "text":"${subTitle}",
-         "id": "quick-view-sub-title",
-         "wrap":true
-      },
-      {
-         "type":"ActionSet",
-         "actions":[
-            {
-               "type":"Action.Submit",
-               "title":"Forward skip update",
-               "data":{
-                  "id":"forward-skip"
-               }
-            },
-            {
-               "type":"Action.Submit",
-               "title":"Forward",
-               "data":{
-                  "id":"forward"
-               }
-            },
-            {
-               "type":"Action.Submit",
-               "title":"Back",
-               "data":{
-                  "id":"back"
-               }
-            }
-         ]
-      }
-   ]
-}
-```
-
-Create a new file for the second Quick View: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView2.ts**
-
-We'll add the following **onAction** function.
-
-```typescript
-public onAction(action: IActionArguments): void {
-  if (action.type === 'Submit') {
-      const { id } = action.data;
-      if (id === 'back') {
-          this.quickViewNavigator.pop();
-      } else if (id === 'forward-skip') {
-          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, true);
-      } else {
-          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, false);
-      }
-  }
-}
-```
-
-Create a new template file for the third Quick View: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate3.json**
-
-```json
-{
-  "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-  "type":"AdaptiveCard",
-  "version":"1.5",
-  "body":[
-     {
-        "type":"TextBlock",
-        "weight":"Bolder",
-        "text":"${title}",
-        "id":"quick-view-title"
-     },
-     {
-        "type":"TextBlock",
-        "text":"${subTitle}",
-        "id":"quick-view-sub-title",
-        "wrap":true
-     },
-     {
-        "type":"ActionSet",
-        "actions":[
-           {
-              "type":"Action.Submit",
-              "title":"Back",
-              "data":{
-                 "id":"back"
-              }
-           }
-        ]
-     }
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}",
+      "id": "quick-view-title"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${subTitle}",
+      "id": "quick-view-sub-title",
+      "wrap": true
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Forward skip update",
+          "data": {
+            "id": "forward-skip"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Forward",
+          "data": {
+            "id": "forward"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Back",
+          "data": {
+            "id": "back"
+          }
+        }
+      ]
+    }
   ]
 }
 ```
 
-Create a new file for the third Quick View: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView3.ts**
+Create a new file for the second Quick View: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView2.ts**
 
-We'll add the following **onAction** function.
+Add the following content:
 
 ```typescript
-public onAction(action: IActionArguments): void {
-  if (action.type === 'Submit') {
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import {
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState,
+  QUICK_VIEW_REGISTRY_ID_3
+} from '../HelloWorldAdaptiveCardExtension';
+
+export interface IQuickViewData {
+  subTitle: string;
+  title: string;
+}
+
+export class QuickView2 extends BaseAdaptiveCardQuickView<
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState,
+  IQuickViewData
+> {
+  public get data(): IQuickViewData {
+    return {
+      subTitle: 'SECOND QUICK VIEW',
+      title: 'SECOND QUICK VIEW'
+    };
+  }
+
+  public get template(): ISPFxAdaptiveCard {
+    return require('./template/QuickViewTemplate2.json');
+  }
+
+  public onAction(action: IActionArguments): void {
+    if (action.type === 'Submit') {
       const { id } = action.data;
       if (id === 'back') {
-          this.quickViewNavigator.pop();
+        this.quickViewNavigator.pop();
+      } else if (id === 'forward-skip') {
+        this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, true);
+      } else {
+        this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, false);
       }
+    }
   }
 }
+```
+
+Create a new template file for the third Quick View: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate3.json**
+
+```json
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}",
+      "id": "quick-view-title"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${subTitle}",
+      "id": "quick-view-sub-title",
+      "wrap": true
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Back",
+          "data": {
+            "id": "back"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+Create a new file for the third Quick View: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView3.ts**
+
+Add the following content:
+
+```typescript
+import { ISPFxAdaptiveCard, BaseAdaptiveCardQuickView, IActionArguments } from '@microsoft/sp-adaptive-card-extension-base';
+import {
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState
+} from '../HelloWorldAdaptiveCardExtension';
+
+export interface IQuickViewData {
+  subTitle: string;
+  title: string;
+}
+
+export class QuickView3 extends BaseAdaptiveCardQuickView<
+  IHelloWorldAdaptiveCardExtensionProps,
+  IHelloWorldAdaptiveCardExtensionState,
+  IQuickViewData
+> {
+  public get data(): IQuickViewData {
+    return {
+      subTitle: 'THIRD QUICK VIEW',
+      title: 'THIRD QUICK VIEW'
+    };
+  }
+
+  public get template(): ISPFxAdaptiveCard {
+    return require('./template/QuickViewTemplate3.json');
+  }
+
+  public onAction(action: IActionArguments): void {
+    if (action.type === 'Submit') {
+      const { id } = action.data;
+      if (id === 'back') {
+        this.quickViewNavigator.pop();
+      }
+    }
+  }
+}
+```
+
+### Register all Quick Views in the main ACE file
+
+Now we need to register all three Quick Views in the main Adaptive Card Extension file. Open **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts** and update it as follows:
+
+```typescript
+import type { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
+import { BaseAdaptiveCardExtension } from '@microsoft/sp-adaptive-card-extension-base';
+import { CardView } from './cardView/CardView';
+import { QuickView } from './quickView/QuickView';
+import { QuickView2 } from './quickView/QuickView2';
+import { QuickView3 } from './quickView/QuickView3';
+import { HelloWorldPropertyPane } from './HelloWorldPropertyPane';
+
+export interface IHelloWorldAdaptiveCardExtensionProps {
+  title: string;
+}
+
+export interface IHelloWorldAdaptiveCardExtensionState {
+}
+
+const CARD_VIEW_REGISTRY_ID: string = 'HelloWorld_CARD_VIEW';
+export const QUICK_VIEW_REGISTRY_ID: string = 'HelloWorld_QUICK_VIEW';
+export const QUICK_VIEW_REGISTRY_ID_2: string = 'HelloWorld_QUICK_VIEW_2';
+export const QUICK_VIEW_REGISTRY_ID_3: string = 'HelloWorld_QUICK_VIEW_3';
 ```
 
 After adding these changes, your Quick Views will look like:
@@ -286,9 +398,9 @@ Third Quick View as
 
 ### Implement the focusParameters function
 
-So far we'e modified our Quick Views to have a simple title, subtitle, and respective buttons to navigate to other Quick Views. Now we can finally implement the `focusParameters` function, which gives the ability to the third-party developer to decide what they wish to set focus on in the Quick View.
+So far we've modified our Quick Views to have a simple title, subtitle, and respective buttons to navigate to other Quick Views. Now we can finally implement the `focusParameters` function, which gives the ability to the third-party developer to decide what they wish to set focus on in the Quick View.
 
-For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
+For this, open each respective QuickView file (**./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
 ```typescript
 import { IFocusParameters } from '@microsoft/sp-adaptive-card-extension-base';
@@ -305,15 +417,15 @@ public get focusParameters(): IFocusParameters {
 }
 ```
 
-At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
+At this point, you can run **heft start** again and see how all the changes you made so far came together.
 
-This is it! Congratulations on successfully creating you Adaptive Card Extension with the focus feature.
+This is it! Congratulations on successfully creating your Adaptive Card Extension with the focus feature.
 
 ![Aria Polite added](./img/focusFeatureTutorialQuickViewAriaSet.PNG)
 
 ## Notes with screen readers
 
-When loading your card for the first time, you'll notice that the contents of the first Quick View are read in their entirety. This is the default behavior when a screen reader sees a dialog as it treats it as navigation. Subsequent loads of the Quick View stack won't run into this. As you navigate back and forth threw Quick Views, you'll notice that the element target is focused and will be the only thing to be read.
+When loading your card for the first time, you'll notice that the contents of the first Quick View are read in their entirety. This is the default behavior when a screen reader sees a dialog as it treats it as navigation. Subsequent loads of the Quick View stack won't run into this. As you navigate back and forth through Quick Views, you'll notice that the element target is focused and will be the only thing to be read.
 
 ## See Also
 
