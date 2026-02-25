@@ -1,7 +1,7 @@
 ---
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 09/12/2023
+ms.date: 02/13/2026
 ms.localizationpriority: high
 ---
 # Advanced Card View Functionality
@@ -11,8 +11,6 @@ This tutorial builds off the following tutorial: [Build your first SharePoint Ad
 In this tutorial, you'll implement advanced Card View functionality. You'll build off the the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
 [!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a test list
 
@@ -174,7 +172,7 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
         return this.context.spHttpClient.get(
           `${this.context.pageContext.web.absoluteUrl}` +
             `/_api/web/lists/GetById(id='${this.properties.listId}')/items`,
-          SPHttpClient.configurations.v1
+          SPHttpClient.configurations.v1 as any
         )
           .then((response) => response.json())
           .then((jsonResponse) => jsonResponse.value.map(
@@ -271,7 +269,7 @@ With the ACE updated to fetch items from a SharePoint list, let's update the car
 Now you can test the ACE. Build and launch the ACE in the hosted workbench:
 
 ```console
-gulp serve
+heft start
 ```
 
 Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`

@@ -20,7 +20,7 @@ This is a _minor bump_ that fixes an issue where the a full screen error overlay
 Install the latest release of the SharePoint Framework (SPFx) by including the **@latest** tag:
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from v1.22 to v1.22.1

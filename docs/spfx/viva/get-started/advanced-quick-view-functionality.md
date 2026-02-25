@@ -1,7 +1,7 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 08/28/2024
+ms.date: 02/13/2026
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
@@ -9,8 +9,6 @@ ms.localizationpriority: high
 This tutorial builds off the following tutorial: [Advanced Card View Functionality](advanced-card-view-functionality.md).
 
 Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Functionality](advanced-card-view-functionality.md). The HelloWorld ACE displays either the count of total steps or one individual step at a time. Using the Quick View, the ACE can show a list of all the steps. Additionally, the ACE can show more details about a particular step if it's selected.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Show all items in Quick View
 
@@ -118,7 +116,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
 Build and launch the ACE in the hosted workbench:
 
 ```console
-gulp serve
+heft start
 ```
 
 Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`

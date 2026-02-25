@@ -1,22 +1,27 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 11/12/2025
+ms.date: 02/02/2026
 ms.localizationpriority: high
 ---
 
 # SharePoint Framework roadmap
 
-The first release of the SharePoint Framework in February 2017 only contained support for client-side web parts. This was just a start on the journey to provide additional modern customization capabilities to SharePoint which we have provided since.
+The first release of the SharePoint Framework in February 2017 only contained support for client-side web parts. This was just a start on the journey to provide additional modern customization capabilities to SharePoint which we have provided since and we have an exciting upcoming roadmap with features across Microsoft 365.
+
+We will be updating this roadmap page and the new feature set schedule will be confirmed.
 
 [!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
 
 Here's the current roadmap on the upcoming release:
 
-**Version 1.22 – December 2025**
+**Version 1.22.2 – January 2026**
 
 - Addressing npm audit reported security issues on the dependency tree.
-- Transitioning from Gulp to an open webpack based toolchain orchestrated by Heft.
+
+**Debug Toolbar – February 2026**
+
+- New [debugging toolbar](./debug-toolbar.md) improving the in-page development experience when workbench is not used with direct feedback option to the feature crew. This will be rolling out as a server side update, so no changes are required for the client-side packages.
 
 **Version 1.23 – March 2026**
 
@@ -39,4 +44,4 @@ Refer to the table of contents menu for details on each of the SharePoint Framew
 
 ## Feedback
 
-Please keep on providing us feedback and input on the preferred investments areas using the in-tool feedback features which is enabled in the online workbench and soon in the debug toolbar (starting from 1.23 release).
+Please keep on providing us feedback and input on the preferred investments areas using the in-tool feedback features which is enabled in the online workbench and in the [debug toolbar](debug-toolbar.md).

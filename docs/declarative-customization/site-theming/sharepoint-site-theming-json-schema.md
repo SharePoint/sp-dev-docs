@@ -52,7 +52,7 @@ The colors in the `palette` element are specified as 6-digit or 3-digit hexadeci
 
 > [!NOTE]
 > The theme generator definitions do not currently include the following color slots and key/value pairs:
-> 
+>
 > - "primaryBackground"
 > - "primaryText"
 > - "bodyBackground"
@@ -62,7 +62,7 @@ The colors in the `palette` element are specified as 6-digit or 3-digit hexadeci
 > - "error"
 > - "accent"
 > - "backgroundColor"
-> 
+>
 > These can be manually added to your generated definition before uploading to the tenant.
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
