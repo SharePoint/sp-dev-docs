@@ -30,13 +30,15 @@ The following REST commands are available for working with site themes:
 
 The URL for theme management REST commands is based on _api/thememanager. For example, the following are the endpoints for the commands:
 
+* `http://<site url>/_api/thememanager/AddTenantThemeAdvanced`
 * `http://<site url>/_api/thememanager/AddTenantTheme`
 * `http://<site url>/_api/thememanager/DeleteTenantTheme`
 * `http://<site url>/_api/thememanager/GetTenantThemingOptions`
 * `http://<site url>/_api/thememanager/ApplyTheme`
+* `http://<site url>/_api/thememanager/UpdateTenantThemeAdvanced`
 * `http://<site url>/_api/thememanager/UpdateTenantTheme`
 
-## AddTenantTheme
+## AddTenantThemeAdvanced
 
 The following JavaScript sample code shows how to add a new format theme to a tenant.
 
@@ -59,9 +61,6 @@ function RestRequest(url,params) {
   req.send(params ? JSON.stringify(params) : void 0);
 }
 
-
-RestRequest("/_api/thememanager/AddTenantTheme");
-
 var colorPairs = {
   "light": [
     { "accentColor": "#03787C", "backgroundColor": "#FFFFFF" },
@@ -81,8 +80,10 @@ var colorPairs = {
   ]
 }
 
-RestRequest("/_api/thememanager/AddTenantTheme", {name:"Teal Theme", themeJson: JSON.stringify(colorPairs), shouldParseColorPair: true});
+RestRequest("/_api/thememanager/AddTenantThemeAdvanced", {name:"Teal Theme", themeJson: JSON.stringify(colorPairs), shouldParseColorPair: true});
 ```
+
+## AddTenantTheme
 
 The following JavaScript sample code shows how to add a legacy format theme to a tenant.
 
@@ -105,17 +106,15 @@ function RestRequest(url,params) {
   req.send(params ? JSON.stringify(params) : void 0);
 }
 
-
-RestRequest("/_api/thememanager/AddTenantTheme");
-
 var pal = {
+    "isInverted": false,
     "palette" : {
         "themePrimary": "#1BF242",
         "themeLighterAlt": "#0d0b00",
         "themeLighter": "#0b35bc",
         "themeLight": "#322d00",
         "themeTertiary": "#6a5f00",
-       "themeSecondary": "#1B22F2",
+        "themeSecondary": "#1B22F2",
         "themeDarkAlt": "#ffe817",
         "themeDark": "#ffed4b",
         "themeDarker": "#fff171",
@@ -253,7 +252,7 @@ var themeJson = {
 RestRequest("/_api/thememanager/ApplyTheme", {name:"Sounders Rave Green", themeJson: JSON.stringify(themeJson)});
 ```
 
-## UpdateTenantTheme
+## UpdateTenantThemeAdvanced
 
 The following JavaScript example shows how to update a tenant theme in the new format.
 
@@ -276,9 +275,6 @@ function RestRequest(url,params) {
   req.send(params ? JSON.stringify(params) : void 0);
 }
 
-
-RestRequest("/_api/thememanager/AddTenantTheme");
-
 var colorPairs = {
   "light": [
     { "accentColor": "#03787C", "backgroundColor": "#FFFFFF" },
@@ -298,8 +294,10 @@ var colorPairs = {
   ]
 }
 
-RestRequest("/_api/thememanager/UpdateTenantTheme", {name:"Teal Theme", themeJson: JSON.stringify(colorPairs), shouldParseColorPair: true});
+RestRequest("/_api/thememanager/UpdateTenantThemeAdvanced", {name:"Teal Theme", themeJson: JSON.stringify(colorPairs), shouldParseColorPair: true});
 ```
+
+## UpdateTenantTheme
 
 The following JavaScript example shows how to update a tenant theme in the legacy format.
 
@@ -322,8 +320,8 @@ function RestRequest(url,params) {
   req.send(params ? JSON.stringify(params) : void 0);
 }
 
-
 var pal = {
+    "isInverted": false,
     "palette" : {
 			"themePrimary": "#008cff",
 			"themeLighterAlt": "#f5faff",

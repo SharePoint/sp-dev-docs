@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - CSOM development
 description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
-ms.date: 01/21/2026
+ms.date: 02/25/2026
 ms.localizationpriority: high
 ---
 
@@ -46,7 +46,7 @@ ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
 
 ## Theme definition example
 
-For methods that take a theme argument, the following code defines an __SPOTheme__ class that you can use to create custom themes. For the new theme format, only the `Name` and `ColorPairs` properties are required. For the legacy theme format, include the `Name`, `Palette`, and `IsInverted` properties.
+For methods that take a theme argument, the following code defines an __SPOTheme__ class that you can use to create custom themes. For the new theme format, only the `Name` and `ColorPairs` properties are required. For the legacy theme format, the `Name`, `Palette`, and `IsInverted` properties are required.
 
 ```csharp
 /// <summary> 

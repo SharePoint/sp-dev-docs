@@ -1,18 +1,20 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 01/21/2026
+ms.date: 02/25/2026
 ms.localizationpriority: high
 ---
 
 # SharePoint site theming: JSON schema
+
+## Understand the site theming store structure
 
 The [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Theme settings are stored in a JSON object that contains the following keys, only the new theme format supports the secondaryColor and displayMode fields:
 
 - **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
 - **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
 - **palette**: A nested JSON object that stores the RGB color values for the theme.
-When using the new theme format, the values of `themePrimary` and `backgroundColor` are used as the first color pair in the palette. The `backgroundColor` setting is only used in the new theme format. The palette object includes the following keys:
+When using the new theme format, the values of `themePrimary` and `backgroundColor` are used as the first color pair in the palette. The palette object includes the following keys:
   - themePrimary
   - themeLighterAlt
   - themeLighter
@@ -45,6 +47,9 @@ When using the new theme format, the values of `themePrimary` and `backgroundCol
   - error
   - accent
   - backgroundColor
+
+> [!NOTE]
+> `backgroundColor` is only available in the new theme format.
 
 The colors in the `palette` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
 
@@ -184,9 +189,11 @@ The following is an example of a JSON object that defines a theme in legacy them
 }
 ```
 
+## Add or update a theme
 
-Besides the theme store schema, we also offer a simplified format for creating themes.
-SharePoint Framework provides ten built‑in themes—eight for light backgrounds, and two for dark backgrounds. If you want to build a custom theme, a good starting point is to pick one of these built‑in themes and adjust the values as needed. You can then use the [Add‑SPOTheme](/powershell/module/microsoft.online.sharepoint.powershell/add-spotheme) PowerShell cmdlet to create your custom theme with this simplified structure.
+To create or update a theme, use a simplified JSON format rather than the full theme store schema. This format is designed for authoring and is supported by the SharePoint Framework.
+
+SharePoint Framework provides ten built‑in themes—eight for light backgrounds, and two for dark backgrounds. To build a custom theme, start by selecting one of these built‑in themes and adjusting the values as needed. Then use the [Add‑SPOTheme](/powershell/module/microsoft.online.sharepoint.powershell/add-spotheme) PowerShell cmdlet to create or update your custom theme by using this simplified format.
 
 ## Teal theme
 
