@@ -20,7 +20,7 @@ You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nug
 
 ## CSOM code example
 
-The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes.
+The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllGlobalThemes__ method to return a list of themes.
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix because **TenantAdministration** methods work with the admin site.
@@ -41,7 +41,7 @@ var passWord = new SecureString();
 foreach (char c in pwd.ToCharArray()) passWord.AppendChar(c);
 ctx.Credentials = new SharePointOnlineCredentials("admin@mydomain.com", passWord);
 Tenant tenant = new Tenant(ctx);
-ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
+ClientObjectList<ThemeProperties> themes = tenant.GetAllGlobalThemes();
 ```
 
 ## Theme definition example

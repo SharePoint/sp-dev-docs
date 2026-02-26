@@ -191,7 +191,7 @@ The following is an example of a JSON object that defines a theme in legacy them
 
 ## Add or update a theme
 
-To create or update a theme, use a simplified JSON format rather than the full theme store schema. This format is designed for authoring and is supported by the SharePoint Framework.
+To create or update a theme, use a simplified JSON format rather than the full theme store schema.
 
 SharePoint Framework provides ten built‑in themes—eight for light backgrounds, and two for dark backgrounds. To build a custom theme, start by selecting one of these built‑in themes and adjusting the values as needed. Then use the [Add‑SPOTheme](/powershell/module/microsoft.online.sharepoint.powershell/add-spotheme) PowerShell cmdlet to create or update your custom theme by using this simplified format.
 

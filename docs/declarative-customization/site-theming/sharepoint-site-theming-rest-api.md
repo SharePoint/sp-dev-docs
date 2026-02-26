@@ -22,10 +22,12 @@ Before you get started, make sure that you're familiar with the following:
 
 The following REST commands are available for working with site themes:
 
+* __AddTenantThemeAdvanced__ &ndash; create a new theme; supports new theme format; similar to the Add-SPOTheme SharePoint cmdlet
 * __AddTenantTheme__ &ndash; create a new theme; similar to the Add-SPOTheme SharePoint cmdlet
 * __DeleteTenantTheme__ &ndash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell cmdlet
 * __GetTenantThemingOptions__ &ndash; read theme settings
 * __ApplyTheme__ &ndash; apply tenant theme to site
+* __UpdateTenantThemeAdvanced__ &ndash; updates tenant theme definition; supports new theme format
 * __UpdateTenantTheme__ &ndash; updates tenant theme definition
 
 The URL for theme management REST commands is based on _api/thememanager. For example, the following are the endpoints for the commands:
