@@ -156,8 +156,6 @@ Query extensions only work when the site collection is associated to use a custo
     * Leave the **Search Center URL** field empty.
     * Click **OK**.
 
-    ![Search Query Settings](../../../images/query-extension-search-settings.png)
-
 > [!NOTE]
 > Search settings changes can take up to 30 minutes to take effect. Use an InPrivate/Incognito browser window to avoid cache issues.
 
