@@ -134,17 +134,33 @@ __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ string name<br/>
 __Return type:__ void
 
-### GetAllTenantThemes public method
+### GetAllGlobalThemes public method
 
-Retrieves the complete set of custom themes defined at the tenant level, including themes created through command-based tools and those created in the Brand Center UI. 
+Retrieve the complete set of custom themes defined at the tenant level, including themes created through command-based tools and those created in the Brand Center UI. 
 > [!NOTE]
 > To support consistent branding and simplify governance, theme management is transitioning to a centralized model.
 > - The **primary geo** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
-> - The satellite **Geo Administrators** will be able to view themes from the primary geo to their own sites by using `GetAllTenantThemes` method. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
+> - The satellite **Geo Administrators** will be able to view themes from the primary geo to their own sites by using `GetAllGlobalThemes` method. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ none<br/>
 __Return type:__ ClientObjectList\<ThemeProperties\>
+
+### GetAllTenantThemes public method
+
+Retrieve all the custom themes that are created on current tenant through command-based tools.
+
+__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
+__Parameters:__ none<br/>
+__Return type:__ ClientObjectList\<ThemeProperties\>
+
+### GetGlobalTheme public method
+
+Retrieve a theme by name, including themes created through command-based tools and those created in the Brand Center UI. 
+
+__Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
+__Parameters:__ string name<br/>
+__Return type:__ ThemeProperties
 
 ### GetTenantTheme public method
 
