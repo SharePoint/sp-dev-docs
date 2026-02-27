@@ -1,7 +1,7 @@
 ---
 title: Migrating JSLink customizations to SharePoint Framework Field Customizers
 description: Describes how migrating JSLink customizations to SharePoint Framework field customizers and outlines benefits of migrating existing JSLink customizations.
-ms.date: 06/13/2022
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ---
 
@@ -32,7 +32,7 @@ One of the main benefits of migrating legacy JSLink customizations to the ShareP
 
 ### Easier access to information in SharePoint and Microsoft 365
 
-Another fundamental topic to consider is that in the legacy JSLink customizations it wasn't easy to consume SharePoint content and data. The only way of doing that was by using JavaScript client-side object model (JSOM) or low-level REST APIs. It was almost impossible to consume the full set of services of Microsoft 365 unless you used ADAL.JS (Azure Active Directory Authentication Library for JavaScript) and custom JavaScript code.
+Another fundamental topic to consider is that in the legacy JSLink customizations it wasn't easy to consume SharePoint content and data. The only way of doing that was by using JavaScript client-side object model (JSOM) or low-level REST APIs. It was almost impossible to consume the full set of services of Microsoft 365 unless you autonomously leveraged authentication libraries like MSAL.js (Microsoft Authentication Library for JavaScript) and custom JavaScript code.
 
 Now, with the SharePoint Framework and the SharePoint Framework extensions, it's easy and straightforward to consume both the SharePoint REST API and Microsoft Graph. You can now create more powerful solutions, which can consume and interact with the full ecosystem of services provided by Microsoft 365.
 
@@ -48,7 +48,7 @@ Both SharePoint Framework extensions and user custom actions or the ECB menu ite
 
 Similar to user custom actions and ECB of SharePoint Feature Framework, SharePoint Framework extensions are a part of the page. This gives these solutions access to the page's DOM and allows them to communicate with other components on the same page. Also, it allows developers to more easily make their solutions responsive to adapt to the different form factors on which a SharePoint page could be displayed, including the SharePoint mobile app.
 
-Because SharePoint Framework extensions run as part of the page, whatever resources the customization have access to, other elements on the page can access as well. This is important to keep in mind when building solutions that rely on OAuth implicit flow with bearer access tokens or use cookies or browser storage for storing sensitive information. Because SharePoint Framework extensions run as a part of the page, other elements on that page can access all these resources as well.
+Because SharePoint Framework extensions run as part of the page, whatever resources the customization have access to, other elements on the page can access as well. This is important to keep in mind when building solutions that use authentication tokens or store sensitive information in cookies or browser storage. Modern authentication patterns like the authorization code flow with PKCE are recommended over the OAuth implicit flow for enhanced security. Because SharePoint Framework extensions run as a part of the page, other elements on that page can access all these resources as well.
 
 ### Use any library to build your extensions
 
@@ -64,7 +64,7 @@ The same mechanism applies to customizations built on the SharePoint Framework t
 
 ### Use only client-side code
 
-Both SharePoint Framework extensions and JSLink customizations run in the browser and can contain only client-side JavaScript code. Client-side solutions have several limitations, such as not being able to elevate permissions in SharePoint, or reach out to external APIs that don't support cross-origin communication (CORS), or authentication using OAuth implicit flow. In such cases, the client-side solution could leverage a remote server-side API to do the necessary operation and return the results to the client.
+Both SharePoint Framework extensions and JSLink customizations run in the browser and can contain only client-side JavaScript code. Client-side solutions have several limitations, such as not being able to elevate permissions in SharePoint, or reach out to external APIs that don't support cross-origin communication (CORS), or authentication using modern OAuth flows. In such cases, the client-side solution could leverage a remote server-side API to do the necessary operation and return the results to the client.
 
 ### Hosting model self-consistent and based on Microsoft 365
 
@@ -98,9 +98,9 @@ SharePoint Framework allows developers to benefit from the TypeScript type syste
 
 When building client-side customizations for the classic SharePoint user experience, many developers used the JSOM to communicate with SharePoint. The JSOM offered them IntelliSense and easy access to the SharePoint API in a way similar to the Client-Side Object Model (CSOM). In classic SharePoint pages, the core piece of the JSOM was by default present on the page, and developers could load additional pieces to communicate with SharePoint Search, for example.
 
-The modern SharePoint user experience doesn't include SharePoint JSOM by default. While developers can load it themselves, the recommendation is to use the REST API instead, or the SharePoint Patterns and Practices JavaScript Core Library (PnPJS), which internally uses the SharePoint REST API. Using REST is more universal and interchangeable between the different client-side libraries such as jQuery, Angular, or React.
+The modern SharePoint user experience doesn't include SharePoint JSOM by default. While developers can load it themselves, the recommendation is to use the REST API instead, or PnPjs (the evolution of the SharePoint Patterns and Practices JavaScript Core Library), which internally uses the SharePoint REST API. Using REST is more universal and interchangeable between the different client-side libraries such as jQuery, Angular, or React.
 
-Microsoft isn't actively investing in the JSOM. If you prefer working with an API, you can use the PnP JS Library, which offers you a fluent API and TypeScript type declarations.
+Microsoft isn't actively investing in the JSOM. If you prefer working with an API, you can use PnPjs, which offers you a fluent API and TypeScript type declarations.
 
 ## Migrate existing customization to the SharePoint Framework extensions
 
@@ -116,7 +116,7 @@ Reusing existing scripts in a SharePoint Framework solution isn't always possibl
 
 If you need to support your solution for a longer period or would like to make better use of the SharePoint Framework, or if it turns out that your existing scripts can't be reused with the SharePoint Framework, you might need to completely rewrite your customization. While it's costlier than reusing existing scripts, it offers you better results over a longer period: a solution that is better performing and easier to maintain and to use.
 
-When rewriting an existing customization to a SharePoint Framework solution, you should start with the wanted functionality in mind. For implementing the user experience, you should consider using the Office UI Fabric so that your solution looks like an integral part of SharePoint.
+When rewriting an existing customization to a SharePoint Framework solution, you should start with the wanted functionality in mind. For implementing the user experience, you should consider using Fluent UI (formerly Office UI Fabric) so that your solution looks like an integral part of SharePoint.
 
 ## See also
 
