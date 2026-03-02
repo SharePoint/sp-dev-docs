@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 06/06/2024
+ms.date: 01/01/2026
 ms.localizationpriority: high
 ---
 # Simplify adding web parts with preconfigured entries
@@ -13,8 +13,6 @@ More complex SharePoint Framework client-side web parts likely have many propert
 
 > [!WARNING]
 > SPFx solutions targeting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Web part preconfigured entries
 
@@ -452,7 +450,7 @@ In a real-life scenario, you would retrieve the list of lists from the current S
 1. Confirm that the project is building by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. In the web browser, add the web part to the canvas and open its property pane. You should see all the properties available for users to configure.
@@ -489,7 +487,7 @@ Imagine that users often use the gallery web part to show the five most recently
 1. Start debugging the project by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     > [!NOTE]
@@ -545,7 +543,7 @@ Imagine that another group of users often uses your gallery web part to show doc
 1. To see the result, start debugging the project by running the following command:
 
     ```console
-    gulp serve
+    heft start 
     ```
 
 1. When you open the web part toolbox to add the web part to the canvas, you see that there are two web parts for you to choose from.
@@ -613,7 +611,7 @@ Depending on how you build your web part, it could be possible that the web part
 1. To see the result, start debugging the project by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. When you open the web part toolbox to add the web part to the canvas, you see that there are now three web parts that users can choose from.

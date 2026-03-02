@@ -1,7 +1,7 @@
 ---
 title: Use SharePoint brand center fonts in SharePoint Framework solutions
 description: Developers can use the fonts defined in Brand center in their SharePoint Framework (SPFx) components. This article demonstrates how you can use the fonts defined in the SharePoint brand center in your SPFx components.
-ms.date: 04/23/2025
+ms.date: 02/12/2026
 ms.localizationpriority: high
 ---
 
@@ -14,8 +14,6 @@ Developers can use the fonts defined in Brand center in their SharePoint Framewo
 ![Screenshot of the SharePoint brand center](../images/brand-center-spfx-01.png)
 
 In this article, learn how you can modify your SPFx components to use the same fonts set in the
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Use SharePoint brand center fonts in SPFx components
 
@@ -99,16 +97,16 @@ Next, repeat this step for any other classes in our style where you want to appl
 
 To test the web part, start the local web browser, but don't launch a browser to the hosted workbench.
 
-1. Run the command **gulp serve** from the root of the project and include the **--nobrowser** argument:
+1. Run the command **heft start** from the root of the project and include the **--nobrowser** argument:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
     > [!IMPORTANT]
     > The SharePoint hosted workbench does not support custom fonts defined in the SharePoint brand center. To test your web parts, you'll need to test them on a page in a SharePoint site.
 
-1. In the console, the **gulp serve** command will output a line that looks similar to the following:
+1. In the console, the **heft start** command will output a line that looks similar to the following:
 
     ```text
     [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true#debugManifestsFile=https://localhost:4321/temp/build/manifests.js

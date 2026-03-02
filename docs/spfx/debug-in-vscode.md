@@ -1,18 +1,16 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 04/26/2025
+ms.date: 02/24/2026
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions in Visual Studio Code
 
-Visual Studio Code is a popular code editor frequently used for building SharePoint Framework solutions. By setting up debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors.
+Visual Studio Code is a popular code editor used to build SharePoint Framework solutions. By configuring debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors.
 
 You can also see the required steps to enable debugging in Visual Studio Code in this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Prerequisites
 
@@ -34,16 +32,13 @@ You can locate the debug configurations in the **./vscode/launch.json** file und
 1. In the terminal, run the following command:
 
     ```console
-    gulp serve --nobrowser
+    heft start
     ```
-
-    Running this command builds your SharePoint Framework solution and starts the local web server to serve the output files. Because the debugger starts an instance of the browser, you use the **--nobrowser** argument to prevent the **serve** task from opening a browser window.
-
     ![The gulp serve command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
 
 ### Start debugging in Visual Studio Code
 
-After the gulp task is finished, move the focus to the code area of Visual Studio Code and select <kbd>F5</kbd> (or on the **Debug** menu, select the **Start Debugging** option).
+After the Heft task finishes, move the focus to the code area of Visual Studio Code and select <kbd>F5</kbd> (or on the **Debug** menu, select the **Start Debugging** option).
 
 The debug mode in Visual Studio Code starts, changing the color of the status bar to orange and opening a new window of Google Chrome showing the SharePoint Workbench.
 
@@ -56,9 +51,12 @@ The debug mode in Visual Studio Code starts, changing the color of the status ba
 
 To verify that debugging is working, in the workbench, add your web part to the canvas.
 
+> [!IMPORTANT]
+> The local workbench (`https://localhost:4321/temp/workbench.html`) was **removed in SPFx v1.13** and will not work. Use the hosted workbench (`/_layouts/workbench.aspx`) or debug directly on a modern SharePoint page instead.
+
 ![Web part toolbox open in SharePoint workbench](../images/vscode-debugging-adding-web-part-to-canvas.png)
 
-Notice that with the code loaded on the page, the breakpoint indicator changed to active.
+Notice that once the code is loaded on the page, the breakpoint indicator becomes active.
 
 ![Breakpoint active after adding web part to the canvas](../images/vscode-debugging-breakpoint-active.png)
 
@@ -68,7 +66,7 @@ If you now reload the page, your breakpoint in Visual Studio Code is hit, and yo
 
 ## Debug solution using hosted workbench
 
-When building SharePoint Framework solutions that communicate with SharePoint, you might want to verify the interaction between your solution in SharePoint. To do this easily, you can use the hosted version of the SharePoint Workbench, which is available on every Microsoft 365 tenant at **https://yourtenant.sharepoint.com/_layouts/workbench.aspx**.
+When building SharePoint Framework solutions that communicate with SharePoint, you may want to verify how your solution interacts with SharePoint. To do this easily, you can use the hosted version of the SharePoint Workbench, which is available on every Microsoft 365 tenant at **https://yourtenant.sharepoint.com/_layouts/workbench.aspx**.
 
 When building SharePoint Framework solutions, you'll be doing such tests regularly, and it is a good idea to create a separate debug configuration for the hosted version of the SharePoint Workbench.
 
@@ -106,7 +104,7 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
     ![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../images/vscode-debugging-debugging-hosted-workbench.png)
 
-1. After initiating the gulp serve in the Terminal, start debugging either by selecting <kbd>F5</kbd> or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Microsoft 365 sign-in page.
+1. After running **heft start** in the Terminal, start debugging either by selecting <kbd>F5</kbd> or by selecting the **Start Debugging** option on the **Debug** menu. Visual Studio Code switches into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension opens a new instance of Google Chrome with the Microsoft 365 sign-in page.
 
     ![Microsoft 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
 
@@ -173,7 +171,7 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 If you're using an older version of the SharePoint Framework Yeoman generator or want to debug with Microsoft Edge, follow these steps to create the launch.json file manually.
 
 > [!NOTE]
-> In order for you to debug with Microsoft Edge, you'll have to install the **Windows 10 April 2018 Update**, which includes the Microsoft Edge DevTools Protocol.
+> To debug with Microsoft Edge, you must install the **Windows 10 April 2018 Update**, which includes the Microsoft Edge DevTools Protocol.
 
 ### Create debug configuration for hosted workbench
 

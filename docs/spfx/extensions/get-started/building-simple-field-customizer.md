@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 09/18/2025
+ms.date: 01/09/2026
 ms.custom: scenarios:getting-started
 ---
 # Build your first Field Customizer extension
@@ -11,8 +11,6 @@ Extensions are client-side components that run inside the context of a SharePoin
 You can follow these steps by watching the video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an extension project
 
@@ -165,7 +163,7 @@ You can't use the local Workbench to test SharePoint Framework Extensions. You n
 1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
@@ -220,10 +218,10 @@ Now that we've successfully tested the out-of-the-box starting point of the Fiel
 1. In the console window, ensure that you don't have any errors. If the solution isn't running, execute the following task:
 
     ```console
-    gulp serve
+    heft start
     ```
 
-1. In your previously created list, refresh the browser window with the debugging query parameters or restart the browser with **gulp serve**.
+1. In your previously created list, refresh the browser window with the debugging query parameters or restart the browser with **heft start**.
 1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
@@ -320,13 +318,13 @@ Now you're ready to deploy the solution to a SharePoint site and get the field a
 1. In the console window, enter the following command to package your client-side solution that contains the extension so that we get the basic structure ready for packaging:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following command so that the solution package is created:
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
     The command creates the package: **./sharepoint/solution/field-extension.sppkg**:
@@ -374,3 +372,4 @@ The process for publishing your app is identical among the different extension t
 
 - [Build your first ListView Command Set extension](building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)
+

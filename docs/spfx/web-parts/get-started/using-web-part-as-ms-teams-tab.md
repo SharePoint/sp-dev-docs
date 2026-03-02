@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 10/21/2021
+ms.date: 01/02/2026
 ms.localizationpriority: high
 ---
 
@@ -21,8 +21,6 @@ Before you start, complete the procedures in the following articles to ensure th
 You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/JoTAC2i-XeU]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a Microsoft Teams tab project
 
@@ -138,9 +136,14 @@ Locate the **./src/webparts/\*\*/manifest.json** file for the web part you want 
         </div>`;
     }
     ```
-
     > [!NOTE]
     > For a full description of the information available through Microsoft Teams context for Microsoft Teams tabs, see: [Microsoft Teams developer documentation](/microsoftteams/platform/concepts/tabs/tabs-context).
+1. Update the **MyFirstTeamsTabWebPart.module.scss** file to define the CSS classes used in the render method.
+
+    Ensure your SCSS file includes the required CSS classes (`.container`, `.row`, `.column`, `.title`, `.subTitle`, `.description`, `.button`, `.label`). 
+    
+    > [!TIP]
+    > To avoid Sass deprecation warnings from Office UI Fabric Core mixins, use plain CSS properties instead of SCSS mixins like `@include ms-Grid-row` or `@include ms-fontColor-white`. Define your styles with standard CSS properties for better compatibility with newer Sass versions.
 
 ## Package and deploy your web part to SharePoint
 
@@ -149,13 +152,13 @@ Ensure that your console is activated in the root folder of the solution where w
 1. Execute the following commands to build bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This creates an updated **teams-tab-webpart.sppkg** package on the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Next, you need to deploy the package that was generated to the tenant App Catalog.

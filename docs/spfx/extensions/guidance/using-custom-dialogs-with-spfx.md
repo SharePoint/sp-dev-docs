@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Use custom dialog boxes with SharePoint Framework Extensions
 description: Create a custom dialog box and use it within the context of a ListView Command Set extension.
-ms.date: 10/10/2024
+ms.date: 02/12/2026
 ms.localizationpriority: high
 ---
 
@@ -16,8 +16,6 @@ You can access the sample code that this article is based on in the [sp-dev-fx-e
 > [!IMPORTANT]
 > This tutorial assumes you've setup your development environment as explain in [Set up your development environment](../../set-up-your-development-environment.md).
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
-
 ## Create a new project
 
 1. Create a new project directory for your project and change your current folder to that directory.
@@ -30,22 +28,23 @@ You can access the sample code that this article is based on in the [sp-dev-fx-e
 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
+    - **What is your solution name?** dialog-demo
     - **Which type of client-side component to create?** Extension
     - **Which type of client-side extension to create?** ListView Command Set
     - **What is your Command Set name?** DialogDemo
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-1. When initial scaffolding is completed, enter the following to install Office UI Fabric to your solution:
+1. When initial scaffolding is completed, enter the following to install Fluent UI to your solution:
 
     ```console
-    npm install office-ui-fabric-react  --save
+    npm install @fluentui/react@8 --save
     ```
 
 1. Install the correct version of React and React-dom indicated in [SPFx development environment compatibility](../../compatibility.md#spfx-development-environment-compatibility).
 
     ```console
-    npm instal react@17.0.1 react-dom@17.0.1 --save-exact
+    npm install react@17.0.1 react-dom@17.0.1 --save-exact
     ```
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer. To open the folder in Visual Studio Code, use the following command in the console:
@@ -75,16 +74,16 @@ In the extension manifest, configure the extension to have only one button. In t
 
 1. Create a new file called **ColorPickerDialog.tsx** in the **./src/extensions/dialogDemo/** folder.
 
-1. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/fabric#/components), so the implementation is in React.
+1. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Fluent UI React components](https://storybooks.fluentui.dev/react/?path=/docs/concepts-introduction--docs), so the implementation is in React.
 
     ```typescript
     import * as React from 'react';
     import * as ReactDOM from 'react-dom';
     import { BaseDialog, IDialogConfiguration } from '@microsoft/sp-dialog';
-    import { PrimaryButton, DefaultButton } from 'office-ui-fabric-react/lib/Button';
-    import { ColorPicker } from 'office-ui-fabric-react/lib/ColorPicker';
-    import { DialogFooter, DialogContent } from 'office-ui-fabric-react/lib/Dialog';
-    import { IColor } from 'office-ui-fabric-react/lib/Color';
+    import { PrimaryButton, DefaultButton } from '@fluentui/react/lib/Button';
+    import { ColorPicker } from '@fluentui/react/lib/ColorPicker';
+    import { DialogFooter, DialogContent } from '@fluentui/react/lib/Dialog';
+    import { IColor } from '@fluentui/react/lib/Color';
     ```
 
 1. Add the following interface definition just under the import statements. This is used to pass information and functions between your ListView Command Set extension and your custom dialog box.
@@ -98,34 +97,43 @@ In the extension manifest, configure the extension to have only one button. In t
     }
     ```
 
-1. Add the following class just under the interface definition. This React class is responsible for rendering the UI experiences inside the custom dialog box. Notice that you use the Office UI Fabric React components for actual rendering and just pass the needed properties.
+1. Add the following class just under the interface definition. This React class is responsible for rendering the UI experiences inside the custom dialog box. Notice that you use the FLuent UI React components for actual rendering and just pass the needed properties.
 
     ```typescript
     class ColorPickerDialogContent extends React.Component<IColorPickerDialogContentProps, {}> {
       private _pickedColor: IColor;
 
-      constructor(props) {
+      constructor(props: IColorPickerDialogContentProps) {
         super(props);
         // Default Color
-        this._pickedColor = props.defaultColor || { hex: 'FFFFFF', str: '', r: null, g: null, b: null, h: null, s: null, v: null };
+        this._pickedColor = props.defaultColor || {
+          hex: 'FFFFFF',
+          str: '',
+          r: null,
+          g: null,
+          b: null,
+          h: null,
+          s: null,
+          v: null
+        } as unknown as IColor;
       }
 
       public render(): JSX.Element {
         return <DialogContent
-        title='Color Picker'
-        subText={this.props.message}
-        onDismiss={this.props.close}
-        showCloseButton={true}
+          title='Color Picker'
+          subText={this.props.message}
+          onDismiss={this.props.close}
+          showCloseButton={true}
         >
-        <ColorPicker color={this._pickedColor} onChange={this._onColorChange} />
-        <DialogFooter>
+          <ColorPicker color={this._pickedColor} onChange={this._onColorChange} />
+          <DialogFooter>
             <DefaultButton text='Cancel' title='Cancel' onClick={this.props.close} />
             <PrimaryButton text='OK' title='OK' onClick={() => { this.props.submit(this._pickedColor); }} />
-        </DialogFooter>
+          </DialogFooter>
         </DialogContent>;
       }
 
-      private _onColorChange = (ev: React.SyntheticEvent<HTMLElement, Event>, color: IColor) => {
+      private _onColorChange = (ev: React.SyntheticEvent<HTMLElement, Event>, color: IColor): void => {
         this._pickedColor = color;
       }
     }
@@ -135,8 +143,8 @@ In the extension manifest, configure the extension to have only one button. In t
 
     ```typescript
     export default class ColorPickerDialog extends BaseDialog {
-      public message: string;
-      public colorCode: IColor;
+      public message!: string;
+      public colorCode!: IColor;
 
       public render(): void {
         ReactDOM.render(<ColorPickerDialogContent
@@ -174,13 +182,13 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 
     ```typescript
     import ColorPickerDialog from './ColorPickerDialog';
-    import { IColor } from 'office-ui-fabric-react/lib/Color';
+    import { IColor } from '@fluentui/react/lib/Color';
     ```
 
 1. Add the following `_colorCode` variable definition above the `onInit` function in the `DialogDemoCommandSet` class. This is used to store the color picker dialog box result.
 
     ```typescript
-    private _colorCode: IColor;
+    private _colorCode!: IColor;
     ```
 
 1. Update the `onExecute` function as follows. This code does the following:
@@ -197,12 +205,20 @@ To associate the custom dialog box with your custom ListView Command Set, add th
     public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
       switch (event.itemId) {
         case 'COMMAND_1':
-          Dialog.alert(`${this.properties.sampleTextOne}`);
           const dialog: ColorPickerDialog = new ColorPickerDialog();
           dialog.message = 'Pick a color:';
           // Use 'FFFFFF' as the default color for first usage
-          let defaultColor : IColor = { hex: 'FFFFFF', str: '', r: null, g: null, b: null, h: null, s: null, v: null };
-          dialog.colorCode = this._colorCode|| defaultColor;
+          const defaultColor: IColor = {
+            hex: 'FFFFFF',
+            str: '',
+            r: null,
+            g: null,
+            b: null,
+            h: null,
+            s: null,
+            v: null
+          } as unknown as IColor;
+          dialog.colorCode = this._colorCode || defaultColor;
           dialog.show().then(() => {
             this._colorCode = dialog.colorCode;
             Dialog.alert(`Picked color: ${dialog.colorCode.hex}`);
@@ -242,7 +258,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 1. Return to the console and run the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
   This starts the bundling of your solution and serves the resulting manifest from the `localhost` address. Due to the configuration in the **serve.json** file, it also opens up a browser in the specific URL and automatically sets the query parameters based on the solution configuration.

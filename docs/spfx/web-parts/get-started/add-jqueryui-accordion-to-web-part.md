@@ -1,7 +1,7 @@
 ---
 title: Add the jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
-ms.date: 10/21/2021
+ms.date: 12/31/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -11,8 +11,6 @@ ms.custom: scenarios:getting-started
 Adding the jQueryUI Accordion to your web part project involves creating a new web part, as shown in the following image.
 
 ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 Ensure that you've completed the following steps before you start:
 
@@ -150,7 +148,7 @@ By default, all dependencies referenced in your project's code are included in t
 
 ## Build the Accordion
 
-At this point, the project is configured to depend on jQuery and jQueryUI, but to not include the in the resulting solution's bundle. The next step is to implement the web part by adding the Accordion to the web part.
+At this point, the project is configured to depend on jQuery and jQueryUI, but to not include them in the resulting solution's bundle. The next step is to implement the web part by adding the Accordion to the web part.
 
 ### Add the Accordion HTML
 
@@ -158,7 +156,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 1. Add class `MyAccordionTemplate` that contains the HTML for the accordion. Add the following code to the **MyAccordionTemplate.ts** file:
 
     ```typescript
-    export default class MyAccordionTemplate {
+    class MyAccordionTemplate {
       public static templateHtml: string =  `
         <div class="accordion">
           <h3>Section 1</h3>
@@ -209,6 +207,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
           </div>
       </div>`;
     }
+    export default MyAccordionTemplate;
     ```
 
 1. Save the file.
@@ -289,7 +288,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 1. Finally, initialize the accordion:
 
     ```typescript
-    jQuery('.accordion', this.domElement).accordion(accordionOptions);
+    (jQuery as any)('.accordion', this.domElement).accordion(accordionOptions);
     ```
 
     As you can see, you use the variable `jQuery` that you used to import the `jquery` module. You then initialize the accordion.
@@ -309,7 +308,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
         }
       };
 
-      jQuery('.accordion', this.domElement).accordion(accordionOptions);
+      (jQuery as any)('.accordion', this.domElement).accordion(accordionOptions);
     }
     ```
 
@@ -320,7 +319,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 1. In your console, ensure that you're still in the **jquery-webpart** folder, and execute the following to build and preview your web part:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
     Once the web server starts, open a browser and navigate to a SharePoint site's hosted workbench to test your project. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
@@ -329,4 +328,5 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 
     ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
-1. In the console where you have **gulp serve** running, select <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate the task.
+1. In the console where you have **heft start** running, select <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate the task.
+
