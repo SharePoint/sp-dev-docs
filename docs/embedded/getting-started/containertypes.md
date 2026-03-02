@@ -169,7 +169,8 @@ Developer admins can configure selected settings for SharePoint Embedded contain
 | **ApplicationRedirectUrl** | Specifies the URL to which the application’s files are redirected.  | 
 | **CopilotEmbeddedChatHosts** | Adds host URLs that are permitted to use the SharePoint Embedded application’s declarative agent experience. | 
 | **DiscoverabilityDisabled**  | Determines whether content from a SharePoint Embedded application is visible across Microsoft 365 experiences. | 
-| **SharingRestricted** | Configures sharing permissions for SharePoint Embedded containers by using role-based access. Supports both open and restrictive sharing models. When restrictive sharing is set to true, only managers and owners can share files in the container.| 
+| **SharingRestricted** | Configures sharing permissions for SharePoint Embedded containers by using role-based access. Supports both open and restrictive sharing models. When restrictive sharing is set to true, only managers and owners can share files in the container.|
+| **IsArchiveEnabled** | Configures archive capability for the SharePoint Embedded application. If set to True, the application can support archival of containers.|
 
 The [Set-SPOContainerType](/powershell/module/sharepoint-online/Set-SPOContainerType) cmdlet allows admins to update the Application Redirect URL. The [Set-SPOContainerTypeConfiguration](/powershell/module/sharepoint-online/Set-SPOContainerTypeConfiguration) cmdlet allows admins to add host URLs, set [Microsoft 365 content discoverability](../development/content-experiences/user-experiences-overview.md) and [sharing](../development/sharing-and-perm.md) settings on container types. The setting applies to all container instances of the container type.
 
@@ -195,6 +196,13 @@ Example 2 turns on an open sharing model for this container type. Any container 
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
 ```
 This example sets the host URLs for the container type with ID `4f0af585-8dcc-0000-223d-661eb2c604e4`.
+
+### Example 4
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -IsArchiveEnabled $true
+```
+This example enables support for archive and reactivate actions on all the containers of ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4.
 
 ## Viewing Container Types
 
