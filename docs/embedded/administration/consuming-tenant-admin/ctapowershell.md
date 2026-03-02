@@ -18,6 +18,7 @@ The following are some of the container-specific command actions currently suppo
 - Get the details of all SharePoint Embedded applications registered in the tenant
 - Get the details of all SharePoint Embedded applications in the tenant sorted by storage
 - Get the details of a specific SharePoint Embedded application in the tenant
+- Get details of all archived containers of a particular SharePoint Embedded application in the tenant
 - Get the permissions of the owning applications in the tenant
 - Configure the External sharing setting of a container of a SharePoint Embedded application in the tenant
 
@@ -90,6 +91,12 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> | FT
 ```
 
 The `OwningApplicationId` is the ID of the SharePoint Embedded application. For more information about using this command, see [Get-SPOContainer cmdlet](/powershell/module/sharepoint-online/get-spocontainer). 
+
+Similarly, this command lists all the archived containers within the application with Id OwningApplicationId:
+
+```powershell
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -ArchiveStatus Archived | FT
+```
 
 > [!NOTE]
 > To enumerate Microsoft Loop containers, use Owning App ID: **a187e399-0c36-4b98-8f04-1edc167a0996** for all the cmdlets of container administration.
@@ -172,6 +179,7 @@ Admins can restore a deleted container from the deleted container collection usi
 ```powershell
 Restore-SPODeletedContainer -Identity <ContainerId>
 ```
+If the container was in archived state at the time of deletion, it gets restored to archived state again.
 
 ### Permanently delete containers
 
