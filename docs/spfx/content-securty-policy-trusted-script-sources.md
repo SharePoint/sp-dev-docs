@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 02/19/2025
+ms.date: 03/03/2026
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -22,6 +22,8 @@ If the enforcement on March 1, 2026, is too soon because you need more time to r
 
 ```powershell
 Set-SPOTenant -DelayContentSecurityPolicyEnforcement $true
+# IMPORTANT: List the applied setting again as mandatory step to correctly persist the setting (will be fixed)
+(Get-SPOTenant).DelayContentSecurityPolicyEnforcement
 ```
 
 > [!NOTE]
