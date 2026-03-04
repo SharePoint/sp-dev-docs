@@ -71,10 +71,10 @@ The following table shows the equivalent Gulp tasks and Heft commands:
 
 |      Gulp task       |         Heft command         |
 | -------------------- | ---------------------------- |
-| build                | build                        |
+| build                | build<sup>3</sup>            |
 | bundle<sup>1</sup>   |                              |
 | clean                | clean                        |
-| test                 | test                         |
+| test                 | test<sup>3</sup>             |
 | serve                | start                        |
 |                      | dev-deploy<sup>2</sup>       |
 | package-solution     | package-solution<sup>3</sup> |

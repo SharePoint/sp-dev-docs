@@ -1,15 +1,13 @@
 ---
 title: Build solutions with the library component type in SharePoint Framework
 description: Build solutions with the library component type in SharePoint Framework
-ms.date: 12/13/2021
+ms.date: 02/03/2026
 ms.localizationpriority: high
 ---
 
 # Build solutions with the library component type in SharePoint Framework
 
 In this tutorial, you'll create a SharePoint Framework (SPFx) library component and use it within a client-side web part.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## How to create a third-party SPFx library
 
@@ -48,13 +46,13 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
     }
     ```
 
-1. Run `gulp` on the command prompt to see everything builds fine.
+1. Run `heft` on the command prompt to see everything builds fine.
 
 ## How to consume a third-party SPFx library (for local testing)
 
-1. Run `gulp bundle --ship` from the root directory of library solution. a simple `gulp build` not work.
+1. Run `heft build --production` from the root directory of library solution. a simple `heft build` does not work.
 1. Run `npm link` from the root directory of library solution. In this case, it would be from the **corporate-library** folder.
-1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `gulp build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, so that location needs to exist before any **import** attempt.
+1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `heft build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, so that location needs to exist before any **import** attempt.
 1. This will create a local npm link to the library with the name, which is provided in the **package.json**.
 1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part **CorporateWebPart**.
 1. From the root of the new web part folder, run the command `npm link corporate-library`
@@ -95,7 +93,7 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 1. Test your web part by launching the local workbench and add the web part to the page:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 ## How to deploy and consume a third-party SPFx library from tenant App Catalog
@@ -103,8 +101,8 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 1. Navigate to the **corporate-library** root folder to bundle and package the solution:
 
     ```console
-    gulp bundle --ship
-    gulp package-solution --ship
+    heft build --production
+    heft package-solution --production
     ```
 
     This will build any local changes made and package the solution into an **\*.sppkg** file in the **sharepoint/solution** folder.
@@ -116,7 +114,7 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
     ```json
     "dependencies": {
       "corporate-library": "0.0.1", // here we added the reference to the library
-      "@microsoft/sp-core-library": "1.9.0",
+      "@microsoft/sp-core-library": "1.22.1",
       "@types/webpack-env": "1.13.1",
       "@types/es6-promise": "0.0.33"
     },
@@ -128,8 +126,8 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 1. Build the web part:
 
     ```console
-    gulp bundle --ship
-    gulp package-solution --ship
+    heft build --production
+    heft package-solution --production
     ```
 
 1. Deploy the web part solution to the tenant App Catalog.

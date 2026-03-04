@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 12/14/2023
+ms.date: 12/31/2025
 ms.localizationpriority: high
 ---
 
@@ -15,8 +15,6 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new project
 
@@ -219,8 +217,8 @@ import { Caching } from "@pnp/queryable";
 import { getSP } from "../pnpjsConfig";
 import { SPFI, spfi } from "@pnp/sp";
 import { Logger, LogLevel } from "@pnp/logging";
-import { IItemUpdateResult } from "@pnp/sp/items";
-import { Label, PrimaryButton } from '@microsoft/office-ui-fabric-react-bundle';
+import "@pnp/sp/items";
+import { Label, PrimaryButton } from '@fluentui/react';
 
 export interface IAsyncAwaitPnPJsProps {
   description: string;
@@ -333,7 +331,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
       //Clone items from the state
       const items = JSON.parse(JSON.stringify(this.state.items));
 
-      let res: IItemUpdateResult[] = [];
+      const res: any[] = [];
 
       for (let i = 0; i < items.length; i++) {
         // you need to use .then syntax here as otherwise the application will stop and await the result
@@ -370,7 +368,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
 Start the sample, and add the web part to your SharePoint-hosted Workbench (**/_layouts/15/workbench.aspx**) to see it in action.
 
 ```console
-gulp serve --nobrowser
+heft start
 ```
 
 You can delete existing items by selecting the trashcan icon, or you can add new items by putting values in both fields and selecting **Add**.

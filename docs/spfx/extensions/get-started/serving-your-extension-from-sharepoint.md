@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 11/22/2022
+ms.date: 01/12/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -19,8 +19,6 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 > [!Video https://www.youtube.com/embed/tReoZGtAYB4]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
-
 There are few different ways on getting your SPFx extensions deployed and activated in SharePoint sites. The correct option depends on your business requirements and objectives. The primary options are as follows:
 
 - Activate the extension on specific site(s) using the Feature Framework-based activation option once the solution is installed. This is the only model that supports [site level assets getting created or deployed](/sharepoint/dev/spfx/toolchain/provision-sharepoint-assets) as part of the solution activation.
@@ -37,7 +35,7 @@ In this example, we'll activate the extension in a single site. This means that 
     cd app-extension
     ```
 
-1. If gulp serve is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
+1. If **heft start** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
     Unlike in **Debug** mode, to use an extension on modern SharePoint pages, you need to deploy and register the extension with SharePoint in **Site collection**, **Site**, or **List** scope. The scope defines where and how the Application Customizer is active. In this particular scenario, we'll register the Application Customizer by using the **Site collection** scope.
 
@@ -165,13 +163,13 @@ Now you're ready to deploy the solution to a SharePoint site and have the `Custo
 1. In the console window, enter the following command to package your client-side solution that contains the extension so that we get the basic structure ready for packaging:
 
    ```console
-   gulp bundle
+   heft build
    ```
 
 1. Execute the following command so that the solution package is created:
 
    ```console
-   gulp package-solution
+   heft package-solution
    ```
 
    This command creates the following package: **./sharepoint/solution/app-extension.sppkg**.
@@ -187,7 +185,7 @@ Now you're ready to deploy the solution to a SharePoint site and have the `Custo
 1. Go back to your console and ensure that the solution is running. If it's not running, execute the following command in the solution folder:
 
    ```console
-   gulp serve --nobrowser
+   heft start --nobrowser
    ```
 
 1. Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
@@ -207,3 +205,4 @@ Now you're ready to deploy the solution to a SharePoint site and have the `Custo
 Congratulations, you've deployed an extension to a modern SharePoint page from the app catalog!
 
 You can continue building out your Hello World extension in the next topic, [Host extension from Office 365 CDN (Hello World part 4)](./hosting-extension-from-office365-cdn.md), where you learn how to deploy and load the extension assets from a CDN instead of from localhost.
+

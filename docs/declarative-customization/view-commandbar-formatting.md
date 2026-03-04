@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 05/21/2025
+ms.date: 12/22/2025
 ms.localizationpriority: high
 ---
 
@@ -120,6 +120,12 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 
 > [!IMPORTANT]
 > Command bar customizations also affect the item context menu (right-click menu). If a command is hidden in the command bar, it will also be hidden in the context menu.
+
+## Reference keys for commands brough by SPFx ListView Command Set extensions
+
+Above key references cover the out-of-the-box commands, but it's also common to have custom commands brought via [SharePoint Framework (SPFx) ListView Command Set extensions](../spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md). These commands have also have a static key that uses following naming convention: `SpfxCustomActionNavigationCommand_` + id of command set extension + name of command. The latter two can be fetched from the commandset manifest json file. In below example the key for the custom command would be `SpfxCustomActionNavigationCommand_2c5694dc-fdd0-444c-bb1e-8b0741af5a11COMMAND_2`:
+
+![shows how to build the command key for a custom command created via an SPFx ListView Commmand Set extension ](images/spfxcommandsetkeynaming.png)
 
 ## hide
 

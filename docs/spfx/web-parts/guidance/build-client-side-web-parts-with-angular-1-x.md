@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Build SharePoint Framework client-side web parts with AngularJS
-description: Use AngularJS to build a client-side web part to manage To Do items and style it using Office UI Fabric.
-ms.date: 05/18/2021
+description: Use AngularJS to build a client-side web part to manage To Do items.
+ms.date: 01/28/2026
 ms.localizationpriority: high
 ---
 
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This page has been retired as AngularJS v1 is very old and no longer supported by Angular maintainers.
 
-If you're familiar with AngularJS, you can also use this popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part and have it styled using [Office UI Fabric](https://developer.microsoft.com/fabric).
+If you're familiar with AngularJS, you can also use this popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part.
 
 During this tutorial, you build a simple web part that manages To Do items.
 
@@ -20,8 +20,6 @@ The source of the working web part is available on GitHub at [samples/angular-to
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a new project
 
@@ -46,10 +44,9 @@ The source of the working web part is available on GitHub at [samples/angular-to
 1. When prompted, define values as follows:
 
     - **angular-todo** as your solution name
-    - **Use the current folder** for the location to place the files
-    - **No JavaScript framework** as the starting point to build the web part
-    - **To do** as your web part name
-    - **Simple management of to do tasks** as your web part description
+    - **WebPart** Which type of client-side component to create?
+    - **To do** What is your Web part name?
+    - **No framework** Which template would you like to use?
 
   ![SharePoint Framework Yeoman generator with the default choices](../../../images/ng-intro-yeoman-generator.png)
 
@@ -228,7 +225,7 @@ import { IDataService, ITodo } from './DataService';
 
 export default class HomeController {
   public isLoading: boolean = false;
-  public newItem: string = null;
+  public newItem: string = '';
   public newToDoActive: boolean = false;
   public todoCollection: any[] = [];
   private hideFinishedTasks: boolean = false;
@@ -241,7 +238,7 @@ export default class HomeController {
   }
 
   private init(hideFinishedTasks?: boolean): void {
-    this.hideFinishedTasks = hideFinishedTasks;
+    this.hideFinishedTasks = hideFinishedTasks || false;;
     this.loadTodos();
   }
 
@@ -266,7 +263,7 @@ export default class HomeController {
 
       this.dataService.addTodo(this.newItem)
         .then((): void => {
-          this.newItem = null;
+          this.newItem = '';
           this.dataService.getTodos(vm.hideFinishedTasks)
             .then((todos: any[]): void => {
               this.todoCollection = todos;
@@ -432,7 +429,7 @@ The next step is to add the AngularJS application to the web part.
 1. Using the `renderedOnce` web part property, ensure that your AngularJS application is bootstrapped only once. Without it, if you changed one of the web part's properties, the `render()` function is invoked again, bootstrapping the AngularJS application again, which leads to an error.
 1. Implement CSS styles that you're using in the template. In the code editor, open the **ToDo.module.scss** file, and replace its contents with:
 
-    ```css
+    ```scss
     .toDo {
       .loading {
         margin: 0 auto;
@@ -444,22 +441,23 @@ The next step is to add the AngularJS application to the web part.
 
           @-webkit-keyframes spinnerSpin {
             0% {
-              -webkit-transform:rotate(0);
-              transform:rotate(0);
+              -webkit-transform: rotate(0);
+              transform: rotate(0);
             }
             100% {
-              -webkit-transform:rotate(360deg);
-              transform:rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
             }
           }
+
           @keyframes spinnerSpin {
             0% {
-              -webkit-transform:rotate(0);
-              transform:rotate(0);
+              -webkit-transform: rotate(0);
+              transform: rotate(0);
             }
             100% {
-              -webkit-transform:rotate(360deg);
-              transform:rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
             }
           }
 
@@ -489,28 +487,20 @@ The next step is to add the AngularJS application to the web part.
       }
 
       .label {
-        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          Roboto, "Helvetica Neue", sans-serif;
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
         font-weight: 400;
-        box-sizing: border-box;
         margin: 0;
-        padding: 0;
-        box-shadow: none;
+        padding: 5px 0;
         color: #333333;
-        box-sizing: border-box;
         display: block;
-        padding: 5px 0
       }
 
       .textField {
-        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
-        color: #333333;
+        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          Roboto, "Helvetica Neue", sans-serif;
         font-size: 14px;
         font-weight: 400;
         margin-bottom: 8px;
@@ -524,7 +514,8 @@ The next step is to add the AngularJS application to the web part.
             border-color: #767676;
           }
 
-          &.isActive, &:active {
+          &.isActive,
+          &:active {
             border-color: #0078d7;
           }
 
@@ -532,111 +523,74 @@ The next step is to add the AngularJS application to the web part.
             border: 0;
             display: table-cell;
             padding-top: 8px;
-            padding-bottom: 3px
+            padding-bottom: 3px;
           }
         }
 
         .label {
-          padding-right: 0;
           padding-left: 12px;
           margin-right: 8px;
-          font-size: 14px;
           display: table-cell;
           vertical-align: top;
           padding-top: 9px;
           height: 32px;
-          width: 1%;
           white-space: nowrap;
-          font-weight: 400;
         }
 
         .field {
-          text-align: left;
-          float: left;
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-          box-shadow: none;
-          font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-          -webkit-font-smoothing: antialiased;
           border: 1px solid #c8c8c8;
-          border-radius: 0;
-          font-weight: 400;
-          font-size: 14px;
-          color: #333333;
           height: 32px;
-          padding: 0 12px 0 12px;
+          padding: 0 12px;
           width: 100%;
           outline: 0;
-          text-overflow: ellipsis;
-        }
 
-        .field:hover {
-          border-color: #767676;
+          &:hover {
+            border-color: #767676;
+          }
         }
       }
 
       .listItem {
-        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        font-weight: 400;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        box-shadow: none;
+        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont,
+          Roboto, "Helvetica Neue", sans-serif;
         padding: 9px 28px 3px;
         position: relative;
-        display: block;
-
-        &::before {
-          display: table;
-          content: "";
-          line-height: 0;
-        }
 
         &::after {
-          display: table;
           content: "";
-          line-height: 0;
+          display: table;
           clear: both;
         }
 
         .listItemPrimaryText {
-          font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-          -webkit-font-smoothing: antialiased;
           font-size: 21px;
           font-weight: 100;
           padding-right: 80px;
-          position: relative;
-          top: -4px;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          display: block;
         }
 
         .listItemActions {
           max-width: 80px;
           position: absolute;
           right: 30px;
-          text-align: right;
           top: 10px;
 
           .listItemAction {
-            color: #a6a6a6;
+            color: #666666;
             display: inline-block;
-            font-size: 15px;
-            position: relative;
-            text-align: center;
-            top: 3px;
             cursor: pointer;
-            height: 16px;
-            width: 16px;
+            height: 20px;
+            width: 20px;
+            margin-left: 8px;
+            padding: 2px;
+            border-radius: 2px;
+            text-align: center;
 
             &:hover {
-              color: #666666;
-              outline: 1px solid transparent;
+              color: #333333;
+              background-color: #f4f4f4;
             }
 
             .icon {
@@ -647,31 +601,44 @@ The next step is to add the AngularJS application to the web part.
       }
 
       .done {
-        text-decoration: line-through;
+        .listItemPrimaryText {
+          text-decoration: line-through;
+          text-decoration-color: #666666;
+          text-decoration-thickness: 1px;
+          color: #999999;
+          opacity: 0.7;
+        }
       }
 
       .icon {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
         display: inline-block;
-        font-family: FabricMDL2Icons;
+        font-family: 'Segoe UI', Arial, sans-serif;
         font-style: normal;
         font-weight: 400;
-        speak: none;
+        font-size: 14px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        cursor: pointer;
 
         &.iconCheckMark::before {
-          content: "\E73E";
+          content: "✓";
+          color: #0078d7;
         }
 
         &.iconUndo::before {
-          content: "\E7A7";
+          content: "↶";
+          color: #0078d7;
         }
 
         &.iconRecycleBin::before {
-          content: "\EF87";
+          content: "✕";
+          color: #d13438;
         }
       }
     }
+
     ```
 
     ![The ToDo.module.scss file open in Visual Studio Code](../../../images/ng-intro-web-part-css.png)
@@ -679,7 +646,7 @@ The next step is to add the AngularJS application to the web part.
 1. Run the following command to confirm that everything is working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. In the browser, you should see your To Do web part showing To Do items.
@@ -724,11 +691,10 @@ To allow users to configure the value of your newly added property, you have to 
 1. In the first `import` statement, replace  `PropertyPaneTextField` with `PropertyPaneToggle`:
 
     ```typescript
-    import {
-      BaseClientSideWebPart,
-      IPropertyPaneConfiguration,
+    import { 
+      type IPropertyPaneConfiguration,
       PropertyPaneToggle
-    } from '@microsoft/sp-webpart-base';
+      } from '@microsoft/sp-property-pane';
     ```
 
     ![PropertyPaneToggle import statement highlighted in Visual Studio Code](../../../images/ng-intro-property-pane-toggle.png)
@@ -793,7 +759,7 @@ To allow users to configure the value of your newly added property, you have to 
 1. Run the following command to confirm that everything is working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. In the web part property pane, you should see a toggle button for your newly defined property.
@@ -892,7 +858,7 @@ In the previous code sample, every time the web part property is changed, it bro
 1. Verify that the AngularJS application is working as expected and correctly responding to the changed property by running the following in the command line:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. If you toggle the value of the **Hide finished tasks** property, the web part should show or hide finished tasks correctly.

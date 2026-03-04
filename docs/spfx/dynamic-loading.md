@@ -1,15 +1,13 @@
 ---
 title: SharePoint Framework guidance on dynamic loading of packages
 description: Techniques to optimize the run-time size and execution speed of your SharePoint Framework component.
-ms.date: 09/16/2020
+ms.date: 02/02/2026
 ms.localizationpriority: high
 ---
 
 # Dynamic loading of packages in SharePoint Framework
 
-When building SharePoint Framework components, it's common to reference third-party libraries such as [Office UI Fabric React](https://www.npmjs.com/package/office-ui-fabric-react) for user interface controls or [Moment.js](https://momentjs.com/) for time handling. Each of these libraries will add size of the bundled JavaScript file for the component. As an example, Moment.js adds ~250 KB to the resulting bundle!
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+When building SharePoint Framework components, it's common to reference third-party libraries such as [Fluent UI React](https://developer.microsoft.com/fluentui) for user interface controls or [Moment.js](https://momentjs.com/) for time handling. Each of these libraries will add size of the bundled JavaScript file for the component. As an example, Moment.js adds ~250 KB to the resulting bundle!
 
 > [!NOTE]
 > A JavaScript *bundle* is a JavaScript file that combines one or more JavaScript files or style sheets. When you package an SPFx solution, by default all your code, and the libraries you import into your project, are bundled into one **\*.js** file. Splitting up a bundle is the operation of generating multiple **\*.js** files instead of one, so that they can be loaded individually.
@@ -93,7 +91,7 @@ When a SharePoint Framework solution is packaged, the build toolchain uses [webp
 In the following code, the Moment.js library will be included solution's JavaScript bundle. This code will always be loaded on the page even if the method `GetTime()` is never called.
 
 ```typescript
-import * as moment from moment
+import * as moment from 'moment';
 
 export default class MyClass {
   public GetTime(dateString:string){
@@ -104,7 +102,7 @@ export default class MyClass {
 
 ### Dynamic import
 
-However, in the following code, the Moment.js library is asynchronously loaded when the `GetTime()` method is called, which will reduce the initial load and execution time. Notice the additional `webpackChuckName` code comment
+However, in the following code, the Moment.js library is asynchronously loaded when the `GetTime()` method is called, which will reduce the initial load and execution time. Notice the additional `webpackChunkName` code comment
 
 ```typescript
 export default class MyClass {
@@ -137,7 +135,7 @@ export default class MyClass {
 
 ### Verify code splitting and dynamic import
 
-To verify that dynamic import is happening, open the **./dist** folder after executing the **gulp bundle** task and look for the dynamically loaded library as a separate JavaScript file. In the following image, the Moment.js library is split into its own file.
+To verify that dynamic import is happening, open the **./dist** folder after executing the **heft build --production** task and look for the dynamically loaded library as a separate JavaScript file. In the following image, the Moment.js library is split into its own file.
 
 ![Multiple bundles](../images/dynamic-bundling.png)
 
@@ -182,3 +180,4 @@ protected loadPropertyPaneResources(): Promise<void> {
 ## Summary
 
 When building SPFx solutions consisting of several components or if you're using third-party libraries, consider dynamic imports. First analyze the resulting bundle size, and use the strategies outlined in this page to split the code into multiple bundles where each one is loaded only when needed. This will reduce the time it takes for an end user to load and execute the page.
+

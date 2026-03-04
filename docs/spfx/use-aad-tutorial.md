@@ -1,7 +1,7 @@
 ---
 title: Consume the Microsoft Graph in the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
-ms.date: 04/09/2025
+ms.date: 01/14/2026
 ms.localizationpriority: high
 ---
 
@@ -16,9 +16,6 @@ In this article, you'll learn how to create a SharePoint Framework solution that
 > [!IMPORTANT]
 > Using the Microsoft Graph API with SharePoint Framework directly using [Microsoft Authentication Library for JavaScript](/javascript/api/overview/msal-overview) is not supported with SPFx version 1.4.1 and beyond. Please use the SharePoint Framework provided native [MSGraphClientV3](use-msgraph.md) for the Microsoft Graph API operations.
 
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
-
 ## Solution overview
 
 The steps in this article show you how to build a client-side web part that enables searching for users in the current tenant, as shown in the following screenshot. The search is based on Microsoft Graph and requires at least the **User.ReadBasic.All** permission.
@@ -28,7 +25,7 @@ The steps in this article show you how to build a client-side web part that enab
 The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to select how to access Microsoft Graph. In versions of the SharePoint Framework starting with v1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD-secured REST API (**AadHttpClient**).
 
 > [!NOTE]
-> To get the source code for this solution, see the [api-scopes](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
+> To get the source code for this solution, see the [api-scopes](s://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
 
 If you're already familiar with how to create SharePoint Framework solutions, you can continue to [Configure the API permissions requests](#configure-the-api-permissions-requests).
 
@@ -128,6 +125,11 @@ Next, configure the initial elements of the client-side web part.
       const element: React.ReactElement<IGraphConsumerProps > = React.createElement(
         GraphConsumer,
         {
+          description: this.properties.description,
+          isDarkTheme: this._isDarkTheme,
+          environmentMessage: this._environmentMessage,
+          hasTeamsContext: !!this.context.sdks.microsoftTeams,
+          userDisplayName: this.context.pageContext.user.displayName,
           clientMode: this.properties.clientMode,
           context: this.context,
         }
@@ -200,6 +202,34 @@ Open the **GraphConsumer.module.scss** under the **./src/webparts/graphConsumer/
 label {
   @include ms-fontColor-white;
 }
+.container {
+  max-width: 700px;
+  margin: 0px auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  @include ms-Grid-row;
+  @include ms-fontColor-white;
+  
+  & {
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+}
+
+.column {
+  @include ms-Grid-col;
+  @include ms-lg10;
+  @include ms-xl8;
+  @include ms-xlPush2;
+  @include ms-lgPush1;
+}
+
+.title {
+  @include ms-font-xl;
+  @include ms-fontColor-white;
+}
 ```
 
 ### Update the React component rendering the web part
@@ -213,8 +243,13 @@ Now you can update the **GraphConsumer** React component under the **./src/webpa
    import { ClientMode } from "./ClientMode";
 
    export interface IGraphConsumerProps {
-     clientMode: ClientMode;
-     context: WebPartContext;
+      description: string;
+      isDarkTheme: boolean;
+      environmentMessage: string;
+      hasTeamsContext: boolean;
+      userDisplayName: string;
+      clientMode: ClientMode;
+      context: WebPartContext;
    }
    ```
 
@@ -243,19 +278,12 @@ Now you can update the **GraphConsumer** React component under the **./src/webpa
 
    ```typescript
    import * as strings from "GraphConsumerWebPartStrings";
-   import {
-     BaseButton,
-     Button,
-     CheckboxVisibility,
-     DetailsList,
-     DetailsListLayoutMode,
-     PrimaryButton,
-     SelectionMode,
-     TextField,
-   } from "office-ui-fabric-react";
+   import { BaseButton, Button, PrimaryButton } from '@fluentui/react/lib/Button';
+   import { TextField } from '@fluentui/react/lib/TextField';
+   import { DetailsList, DetailsListLayoutMode, CheckboxVisibility, SelectionMode } from '@fluentui/react/lib/DetailsList';
    import * as React from "react";
 
-   import { AadHttpClient, MSGraphClientV3  } from "@microsoft/sp-http";
+   import { AadHttpClient, HttpClientResponse, MSGraphClientV3  } from "@microsoft/sp-http";
    import { escape } from "@microsoft/sp-lodash-subset";
 
    import { ClientMode } from "./ClientMode";
@@ -492,10 +520,10 @@ private _searchWithAad = (): void => {
           AadHttpClient.configurations.v1
         );
     })
-    .then(response => {
-      return response.json();
-    })
-    .then(json => {
+    .then((response: HttpClientResponse) => {
+        return response.json();
+      })
+      .then((json: { value: Array<{ displayName: string; mail: string; userPrincipalName: string; }> }) => {
 
       // Prepare the output array
       var users: Array<IUserItem> = new Array<IUserItem>();
@@ -591,17 +619,16 @@ The result is a JSON response that you have to decode and map to the typed resul
 
 You're now ready to build, bundle, package, and deploy the solution.
 
-1. Run the gulp commands to verify that the solution builds correctly.
+1. Run the Heft commands to verify that the solution builds correctly.
 
     ```console
-    gulp build
+    heft build
     ```
 
-1. Use the following command to bundle and package the solution.
+1. Use the following command to package the solution.
 
     ```console
-    gulp bundle
-    gulp package-solution
+    heft package-solution
     ```
 
 1. Browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the **sharepoint/solution** folder of your solution. It's the .sppkg file. After you upload the solution package, the app catalog prompts you with a dialog box, similar to the one shown in the following screenshot.
@@ -628,10 +655,10 @@ You're now ready to build, bundle, package, and deploy the solution.
 
 ## Test the solution
 
-1. Run your solution by using the following gulp command.
+1. Run your solution by using the following Heft command.
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Open the browser and go to the following URL to go to the SharePoint Framework Workbench page:
@@ -653,3 +680,4 @@ And that's it! Now you can build enterprise-level solutions that use Azure AD-se
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md)
 - [Use the MSGraphClient to connect to Microsoft Graph](use-msgraph.md)
 - [Complete source code from this tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes)
+

@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 02/14/2022
+ms.date: 12/31/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -17,8 +17,6 @@ This article describes how to build a web part like in the following image, that
 You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/kNrYd8nYaZY]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Office UI Fabric React & Fluent UI React
 
@@ -147,7 +145,7 @@ Because we chose React as our framework when creating the solution, the generato
       DocumentCardTitle,
       DocumentCardActivity,
       IDocumentCardPreviewProps
-    } from 'office-ui-fabric-react/lib/DocumentCard';
+    } from '@fluentui/react';
     ```
 
 1. Replace the existing `render()` method with the following:
@@ -209,7 +207,7 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 1. In the console, enter the following to preview your web part in the SharePoint hosted workbench:
 
     ```console
-    gulp serve --nobrowser
+    heft start
     ```
 
 1. Open a browser and navigate to your SharePoint site's hosted workbench: `https://enter-your-SharePoint-site/_layouts/workbench.aspx`.

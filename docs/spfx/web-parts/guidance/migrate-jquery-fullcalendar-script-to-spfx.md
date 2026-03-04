@@ -1,14 +1,12 @@
 ---
 title: Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework
 description: Migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
-ms.date: 08/19/2020
+ms.date: 01/27/2026
 ms.localizationpriority: high
 ---
 # Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework
 
 When building SharePoint solutions, SharePoint developers often use the [FullCalendar](https://fullcalendar.io) jQuery plug-in to display data in calendar view. FullCalendar is a great alternative to the standard SharePoint calendar view, as it allows you to render as calendar data from multiple calendar lists, data from non-calendar lists, or even data from outside SharePoint. This article illustrates how you would migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## List of tasks displayed as a calendar built using the Script Editor web part
 
@@ -196,11 +194,9 @@ First, you migrate the solution to the SharePoint Framework with as few changes 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: fullcalendar-taskscalendar
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: Tasks calendar
-    - **What is your Web part description?**: Shows tasks in the calendar view
-    - **Which framework would you like to use?**: No JavaScript framework
+    - **Which framework would you like to use?**: No framework
 
 1. Open your project folder in your code editor. In this tutorial, you'll use Visual Studio Code.
 
@@ -418,7 +414,7 @@ The last step is to include the code that initializes the FullCalendar jQuery pl
 1. Verify that the web part is working as expected by executing the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
     Because the web part loads its data from SharePoint, you have to test the web part by using the hosted SharePoint Framework workbench.
@@ -691,7 +687,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 1. To verify that the web part is working as expected, run the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Navigate to the hosted Workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with tasks, and select the **Apply** button to confirm the changes. You should now see tasks displayed in a calendar view in the web part.
@@ -911,7 +907,7 @@ Now that you have type declarations for all libraries installed in the project, 
 1. To confirm that everything is working as expected, execute the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Go to the hosted Workbench and add the web part to the canvas. Although visually nothing has changed, the new code base uses TypeScript and its type declarations to help you maintain the solution.
@@ -1095,7 +1091,8 @@ this.context.spHttpClient.post(`${this.context.pageContext.web.absoluteUrl}\
 1. To confirm that everything is working as expected, execute the following in the command line:
 
     ```console
-    gulp serve --nobrowser
+    heft start --nobrowser
     ```
 
 1. Go to the hosted Workbench and add the web part to the canvas. Although there are still no visual changes, the new code uses the SharePoint Framework SPHttpClient, which simplifies your code and maintains your solution.
+

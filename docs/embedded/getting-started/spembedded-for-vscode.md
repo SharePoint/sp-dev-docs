@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded for Visual Studio Code
 
-The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development. 
+The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development.
 
 > [!IMPORTANT]
 > To start building with SharePoint Embedded, you'll need administrative access to a Microsoft 365 tenant.
@@ -34,7 +34,7 @@ To use the extension, you must sign in to a Microsoft 365 tenant with an adminis
   ![authorize and authenticate the extension to your M365 Entra tenant](../images/vsx-images/auth-allow-extension-uri.png)
 
 - Review the requested permissions carefully, then select **Accept** on the pop-up window prompting admin consent
- 
+
   ![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
 After successful authorization, select open on the dialog to be redirected to VSCode:
@@ -53,7 +53,7 @@ Once signed in, you're prompted to create a [container type with trial configura
 ![create container type](../images/vsx-images/n5a-name-ct.png)
 
 > [!NOTE]
-> SharePoint Embedded for Visual Studio Code only supports container types with trial configuration at this time. Other container types with standard or pass-through billing configurations must be created using the SharePoint Online PowerShell Module.
+> SharePoint Embedded for Visual Studio Code only supports container types with trial configuration at this time. Other container types with standard or passthrough billing configurations must be created using the SharePoint Online PowerShell Module.
 
 ## Create a Microsoft Entra ID App
 

@@ -1,7 +1,7 @@
 ---
 title: Host extension from Microsoft 365 CDN (Hello World part 4)
 description: Deploy your SharePoint Framework Application Customizer to be hosted from a Microsoft 365 CDN and deploy that to SharePoint for end users.
-ms.date: 06/07/2022
+ms.date: 01/12/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -19,8 +19,6 @@ Be sure you've completed the procedures in the following articles before you beg
 You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Enable the CDN in your Microsoft 365 tenant
 
@@ -58,13 +56,13 @@ Follow the steps outlined in the following document to ensure the Microsoft 365 
 1. Execute the following tasks to bundle your solution. This executes a release build of your project.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This command creates the **./sharepoint/solution/app-extension.sppkg** package:
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted, select the **Only enable this app** radio button and then select the **Enable app** button. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
@@ -82,3 +80,4 @@ Congratulations, you've enabled a public CDN in your Microsoft 365 tenant and ta
 - [Build your first ListView Command Set extension](./building-simple-cmdset-with-dialog-api.md)
 - [Build your first Field Customizer extension](./building-simple-field-customizer.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)
+

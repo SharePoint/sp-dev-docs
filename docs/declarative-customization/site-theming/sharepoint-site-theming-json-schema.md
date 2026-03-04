@@ -96,7 +96,7 @@ Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner
 
 > [!NOTE]
 > The theme generator definitions do not currently include the following color slots and key/value pairs:
-> 
+>
 > - "primaryBackground"
 > - "primaryText"
 > - "bodyBackground"
@@ -105,7 +105,7 @@ Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner
 > - "disabledText"
 > - "error"
 > - "accent"
-> 
+>
 > These can be manually added to your generated definition before uploading to the tenant.
 
 ![Theme Generator tool](../../images/theme-generator-tool.png)
@@ -132,7 +132,7 @@ The following table shows the color palette used by the Teal theme.
 
 The following code shows how to define a dictionary in PowerShell for the Teal theme's color palette.
 
-```powershell
+```json
 { 
   themeDarker: '#014446', 
   themeDark: '#025c5f', 
@@ -183,7 +183,7 @@ The following table shows the color palette used by the Red theme.
 
 The following code shows how to define a dictionary in PowerShell for the Red theme's color palette.
 
-```powershell
+```json
 { 
   themeDarker: '#751b1e', 
   themeDark: '#952226', 
@@ -234,7 +234,7 @@ The following table shows the color palette used by the Orange theme.
 
 The following code shows how to define a dictionary in PowerShell for the Orange theme's color palette.
 
-```powershell
+```json
 { 
   themeDarker: '#6f2d09', 
   themeDark: '#8d390b', 
@@ -285,7 +285,7 @@ The following table shows the color palette used by the Green theme.
 
 The following code shows how to define a dictionary in PowerShell for the Green theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#498205', 
   themeLighterAlt: '#f6faf0', 
@@ -336,7 +336,7 @@ The following table shows the color palette used by the Blue theme.
 
 The following code shows how to define a dictionary in PowerShell for the Blue theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#0078d7', 
   themeLighterAlt: '#eff6fc', 
@@ -387,7 +387,7 @@ The following table shows the color palette used by the Purple theme.
 
 The following code shows how to define a dictionary in PowerShell for the Purple theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#6b69d6', 
   themeLighterAlt: '#f8f7fd', 
@@ -438,7 +438,7 @@ The following table shows the color palette used by the Gray theme.
 
 The following code shows how to define a dictionary in PowerShell for the Gray theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#5d5a58', 
   themeLighterAlt: '#f7f7f7', 
@@ -489,7 +489,7 @@ The following table shows the color palette used by the Periwinkle theme.
 
 The following code shows how to define a dictionary in PowerShell for the Periwinkle theme's color palette.
 
-```powershell
+```json
 { 
   themeDarker: '#383966', 
   themeDark: '#3D3E78', 
@@ -541,7 +541,7 @@ The following table shows the color palette used by the Dark Yellow theme.
 
 The following code shows how to define a dictionary in PowerShell for the Dark Yellow theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#fce100', 
   themeLighterAlt: '#0d0b00', 
@@ -593,7 +593,7 @@ The following table shows the color palette used by the Dark Blue theme.
 
 The following code shows how to define a dictionary in PowerShell for the Dark Blue theme's color palette.
 
-```powershell
+```json
 { 
   themePrimary: '#00bcf2', 
   themeLighterAlt: '#00090c', 

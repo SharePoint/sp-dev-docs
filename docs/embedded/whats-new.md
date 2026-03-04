@@ -7,6 +7,16 @@ ms.localizationpriority: medium
 
 # What's new in SharePoint Embedded
 
+## December 2025
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) APIs are now available in the v1.0 Microsoft Graph endpoint.
+- [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) APIs are now available in the v1.0 Microsoft Graph endpoint.
+
+## November 2025
+
+- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (not yet GCC High or DoD) for US Government customers. See [Microsoft Graph national cloud deployments](/graph/deployments).
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the v1.0 Microsoft Graph endpoint.
+
 ## October 2025
 
 - [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a **recycleBinItem** if the ID of the original **driveItem** is known.

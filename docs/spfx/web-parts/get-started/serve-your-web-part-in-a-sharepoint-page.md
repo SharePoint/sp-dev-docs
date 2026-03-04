@@ -1,7 +1,7 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page.
-ms.date: 11/02/2023
+ms.date: 12/24/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -17,7 +17,6 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 > [!Video https://www.youtube.com/embed/FkFg32NSTM0]
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Package the HelloWorld web part
 
@@ -27,7 +26,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
     cd helloworld-webpart
     ```
 
-1. If **gulp serve** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
+1. If **Heft start** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
   Unlike in the Workbench, to use client-side web parts on modern SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
 
@@ -78,28 +77,28 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
         }
     }
     ```
-1. In the console window, enter the following command to bundle your client-side solution:
+1. In the console window, enter the following command to build your client-side solution:
 
     ```console
-    gulp bundle
+    heft build --production
     ```
 1. In the console window, enter the following command to package your client-side solution that contains the web part:
 
     ```console
-    gulp package-solution
+    heft package-solution --production
     ```
 
     The command creates the following package: **./sharepoint/solution/helloworld-webpart.sppkg**.
 
 ### Package contents
 
-The package uses SharePoint Feature to package your web part. By default, the gulp task creates a feature for your web part.
+The package uses SharePoint Feature to package your web part. By default, the Heft task creates a feature for your web part.
 
 You can view the raw package contents in the **./sharepoint/solution/debug** folder.
 
 The contents are then packaged into an **.sppkg** file. The package format is similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution.
 
-The JavaScript files, CSS, and other assets are packaged in the package when the `--ship` option is used. In this tutorial, however, we'll first test deployment and capabilities by hosting JavaScript files from localhost. Automated packaging and hosting option is explained in the next tutorial.
+The JavaScript files, CSS, and other assets are packaged in the package when the `--production` option is used. In this tutorial, however, we'll first test deployment and capabilities by hosting JavaScript files from localhost. Automated packaging and hosting option is explained in the next tutorial.
 
 > [!NOTE]
 > Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the app catalog, the assets are automatically hosted either from Office 365 CDN (if enabled) or from an app catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the **package-solution.json** file.
@@ -160,14 +159,11 @@ Now that you've deployed and installed the client-side solution, add the web par
     ```
 
 1. *Before* adding the web part to a SharePoint server-side page, run the local server.
-1. In the console window that has the **helloworld-webpart** project directory, run the gulp task to start serving from localhost:
+1. In the console window that has the **helloworld-webpart** project directory, run the Heft task to start serving from localhost:
 
     ```json
-    gulp serve --nobrowser
+    heft start
     ```
-
-    > [!NOTE]
-    > `--nobrowser` will not automatically launch the SharePoint workbench as that's not needed in this case as we will host the web part in SharePoint page.
 
 ## Add the HelloWorld web part to modern page
 

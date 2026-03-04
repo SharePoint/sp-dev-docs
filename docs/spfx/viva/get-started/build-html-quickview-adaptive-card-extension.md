@@ -1,7 +1,7 @@
 ---
 title: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll learn how to use HTML to implement a QuickView.
-ms.date: 09/13/2024
+ms.date: 02/18/2026
 ms.localizationpriority: high
 ---
 # Build an HTML Quick View SharePoint Framework Adaptive Card Extension
@@ -12,8 +12,6 @@ You can start using this option by updating your Quick View implementation to be
 
 > [!IMPORTANT]
 > This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.md).
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -40,7 +38,7 @@ Before digging into the code, run the scaffolded output and see what an Adaptive
 The inner development loop with ACEs is similar to SPFx Web Parts. We can serve locally and run the code on the SharePoint Online hosted workbench.
 
 ```console
-gulp serve
+heft start
 ```
 
 Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`

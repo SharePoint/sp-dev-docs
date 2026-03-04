@@ -21,7 +21,7 @@ Developers looking to get their SharePoint Embedded app installed on a tenant ha
 
 - Get the required admin permission grants for your app on the consuming tenant
 - Register your app's container type on the consuming tenant
-- Ensure your customer’s tenant completed [SharePoint Embedded pay-as-you-go billing setup](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-pass-through-app) if your container type is [configured for pass-through billing](../../administration/billing/billing.md#pass-through)
+- Ensure your customer’s tenant completed [SharePoint Embedded pay-as-you-go billing setup](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type) if your container type is [configured for pass-through billing](../../administration/billing/billing.md#passthrough-billing)
 
 ### Application permissions to request
 
@@ -59,5 +59,5 @@ You can facilitate the installation of your SharePoint Embedded app within your 
    1. Ensure your app's redirect URI can handle this redirection appropriately so you can proceed with the next steps within the app experience.
 1. Once admin consent is granted, request a Microsoft Graph access token with `FileStorageContainerTypeReg.Selected` application permission
 1. [Create your container type registration](/graph/api/filestorage-post-containertyperegistrations) on the consuming tenant
-1. If your container type is [configured for pass-through billing](../../administration/billing/billing.md#pass-through), you should make a billable API call to confirm that billing is set up. For example, [create a container](/graph/api/filestoragecontainer-post).
-   1. If the call fails with a billing error, point the user to [set up SharePoint Embedded pay-as-you-go billing](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-pass-through-app).
+1. If your container type is [configured for pass-through billing](../../administration/billing/billing.md#passthrough-billing), you should make a billable API call to confirm that billing is set up. For example, [create a container](/graph/api/filestoragecontainer-post).
+   1. If the call fails with a billing error, point the user to [set up SharePoint Embedded pay-as-you-go billing](../../administration/consuming-tenant-admin/cta.md#set-up-billing-for-passthrough-container-type).

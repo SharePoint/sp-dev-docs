@@ -1,7 +1,7 @@
 ---
 title: Build custom controls for the property pane
 description: Build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the SharePoint client-side web part.
-ms.date: 02/11/2022
+ms.date: 12/29/2025
 ms.localizationpriority: high
 ---
 # Build custom controls for the property pane
@@ -17,7 +17,6 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create new project
 
@@ -201,7 +200,7 @@ The web part you're building shows list items from the selected SharePoint list.
 1. Run the following command to verify that the project is running:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
@@ -223,7 +222,7 @@ When creating a custom property pane control that uses React in the SharePoint F
 1. Define asynchronous dropdown React component properties. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **IAsyncDropdownProps.ts**, and enter the following code:
 
     ```typescript
-    import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+    import { IDropdownOption } from '@fluentui/react/lib/Dropdown';
 
     export interface IAsyncDropdownProps {
       label: string;
@@ -247,12 +246,12 @@ When creating a custom property pane control that uses React in the SharePoint F
 1. Define asynchronous dropdown React component interface. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **IAsyncDropdownState.ts**, and enter the following code:
 
     ```typescript
-    import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+    import { IDropdownOption } from '@fluentui/react/lib/Dropdown';
 
     export interface IAsyncDropdownState {
       loading: boolean;
-      options: IDropdownOption[];
-      error: string;
+      options: IDropdownOption[] | undefined;
+      error: string | undefined;
     }
     ```
 
@@ -265,8 +264,8 @@ When creating a custom property pane control that uses React in the SharePoint F
 
     ```typescript
     import * as React from 'react';
-    import { Dropdown, IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
-    import { Spinner } from 'office-ui-fabric-react/lib/components/Spinner';
+    import { Dropdown, IDropdownOption } from '@fluentui/react/lib/Dropdown';
+    import { Spinner } from '@fluentui/react/lib/Spinner';
     import { IAsyncDropdownProps } from './IAsyncDropdownProps';
     import { IAsyncDropdownState } from './IAsyncDropdownState';
 
@@ -328,7 +327,7 @@ When creating a custom property pane control that uses React in the SharePoint F
               disabled={this.props.disabled || this.state.loading || this.state.error !== undefined}
               onChanged={this.onChanged.bind(this)}
               selectedKey={this.selectedKey}
-              options={this.state.options} />
+              options={this.state.options || []} />
             {loading}
             {error}
           </div>
@@ -338,7 +337,7 @@ When creating a custom property pane control that uses React in the SharePoint F
       private onChanged(option: IDropdownOption, index?: number): void {
         this.selectedKey = option.key;
         // reset previously selected options
-        const options: IDropdownOption[] = this.state.options;
+        const options: IDropdownOption[] = this.state.options || [];
         options.forEach((o: IDropdownOption): void => {
           if (o.key !== option.key) {
             o.selected = false;
@@ -375,7 +374,7 @@ The next step is to define the custom property pane control. This control is use
 1. Define the public properties for the asynchronous dropdown property pane control. In the **src/controls/PropertyPaneAsyncDropdown** folder, create a new file named **IPropertyPaneAsyncDropdownProps.ts**, and enter the following code:
 
     ```typescript
-    import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+    import { IDropdownOption } from '@fluentui/react/lib/Dropdown';
 
     export interface IPropertyPaneAsyncDropdownProps {
       label: string;
@@ -414,7 +413,7 @@ The next step is to define the custom property pane control. This control is use
       IPropertyPaneField,
       PropertyPaneFieldType
     } from '@microsoft/sp-property-pane';
-    import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+    import { IDropdownOption } from '@fluentui/react/lib/Dropdown';
     import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
     import { IPropertyPaneAsyncDropdownInternalProps } from './IPropertyPaneAsyncDropdownInternalProps';
     import AsyncDropdown from './components/AsyncDropdown';
@@ -424,12 +423,12 @@ The next step is to define the custom property pane control. This control is use
       public type: PropertyPaneFieldType = PropertyPaneFieldType.Custom;
       public targetProperty: string;
       public properties: IPropertyPaneAsyncDropdownInternalProps;
-      private elem: HTMLElement;
+      private elem: HTMLElement | undefined;
 
       constructor(targetProperty: string, properties: IPropertyPaneAsyncDropdownProps) {
         this.targetProperty = targetProperty;
         this.properties = {
-          key: properties.label,
+          key: targetProperty,
           label: properties.label,
           loadOptions: properties.loadOptions,
           onPropertyChange: properties.onPropertyChange,
@@ -462,7 +461,7 @@ The next step is to define the custom property pane control. This control is use
           loadOptions: this.properties.loadOptions,
           onChanged: this.onChanged.bind(this),
           selectedKey: this.properties.selectedKey,
-          disabled: this.properties.disabled,
+          disabled: this.properties.disabled || false,
           // required to allow the component to be re-rendered by calling this.render() externally
           stateKey: new Date().toString()
         });
@@ -511,7 +510,7 @@ export interface IListInfo {
 1. After that code, add a reference to the `IDropdownOption` interface and two helpers functions required to work with web part properties.
 
     ```typescript
-    import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+    import { IDropdownOption } from '@fluentui/react/lib/Dropdown';
     import { update, get } from '@microsoft/sp-lodash-subset';
     ```
 
@@ -586,7 +585,7 @@ export interface IListInfo {
 1. At this point, you can select a list by using the newly created asynchronous dropdown property pane control. To verify that the control is working as expected, open the console and run:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     ![Asynchronous dropdown property pane control loading its options without blocking the web part user interface](../../../images/custom-property-pane-control-loading-options.png)
@@ -728,7 +727,7 @@ private loadItems(): Promise<IDropdownOption[]> {
 
   return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
     setTimeout(() => {
-      const items = {
+      const items: { [key: string]: IDropdownOption[] } = {
         sharedDocuments: [
           {
             key: 'spfx_presentation.pptx',
@@ -776,7 +775,7 @@ private onListItemChange(propertyPath: string, newValue: any): void {
 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      private itemsDropDown: PropertyPaneAsyncDropdown;
+      private itemsDropDown: PropertyPaneAsyncDropdown | undefined;
       // ...
     }
     ```
@@ -840,17 +839,19 @@ Initially when no list is selected, the items dropdown is disabled and becomes e
       // store new value in web part properties
       update(this.properties, propertyPath, (): any => { return newValue; });
       // reset selected item
-      this.properties.item = undefined;
+      this.properties.item = '';
       // store new value in web part properties
       update(this.properties, 'item', (): any => { return this.properties.item; });
       // refresh web part
       this.render();
       // reset selected values in item dropdown
-      this.itemsDropDown.properties.selectedKey = this.properties.item;
-      // allow to load items
-      this.itemsDropDown.properties.disabled = false;
-      // load items and re-render items dropdown
-      this.itemsDropDown.render();
+      if (this.itemsDropDown) {
+        this.itemsDropDown.properties.selectedKey = this.properties.item;
+        // allow to load items
+        this.itemsDropDown.properties.disabled = false;
+        // load items and re-render items dropdown
+        this.itemsDropDown.render();
+      }
     }
     ```
 
@@ -859,7 +860,7 @@ Initially when no list is selected, the items dropdown is disabled and becomes e
 1. To verify that everything is working as expected, in the console run:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     After adding the web part to the page for the first time and opening its property pane, you should see both dropdowns disabled and loading their options.
