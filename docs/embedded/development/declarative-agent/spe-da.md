@@ -1,21 +1,24 @@
 ---
-title: SharePoint Embedded agent 
+title: SharePoint Embedded agent (Deprecated)
 description: Details usage and billing for SharePoint Embedded agents
-ms.date: 05/12/2025
+ms.date: 03/03/2026
 ms.localizationpriority: high
 ---
 
 # Overview
 
+> [!CAUTION]
+> SharePoint Embedded agent has been deprecated in its current form and replaced with [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (Preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote?pivots=python) configured for SharePoint Embedded using the `container_type_id` [source-specific property](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote?pivots=python#source-specific-properties). Learn how to [set up SharePoint Embedded as a knowledge source in Microsoft Foundry](sharepoint-embedded-knowledge-source.md).
+
+This article will remain in place for a limited time for historical reference.
+
 > [!NOTE]
 >
-> SharePoint Embedded agent is currently in private preview. Stay tuned for latest API and SDK changes on this page.
+> The SharePoint Embedded agent SDK is not suitable for production use cases. Stay tuned for the next iteration of SharePoint Embedded agent.
 >
 > SPE agent consumption-based model will be available in May 2025! Starting May 1st, standard billing model will be available to all private preview customers and this rollout is expected to complete by May 15th. This means that starting May 15th, to use SPE agent within an SPE application, you will need to use standard Container Type. SPE Agent interactions, including those from Microsoft 365 Copilot license users, will be billed to the Azure subscription associated with your Container Type. Learn more about [SharePoint Embedded billing management](/sharepoint/dev/embedded/administration/billing/billingmanagement).
->
-> We are actively working on enabling Direct-to-Customer billing model for SPE agent. Stay tuned for more announcements.
 
-SharePoint Embedded agent enables you to add AI capabilities into your application through a simple SDK. This chat control offers the following features:
+SharePoint Embedded agent enables you to quickly demo AI capabilities into your application through a simple SDK, though it is not intended for production use. This chat control offers the following features:
 
 - Reason over documents in SharePoint Embedded containers using RAG.
 - Developers can configure the application code to limit the search scope to files, folders, and containers.

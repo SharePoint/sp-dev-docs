@@ -656,13 +656,13 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
-  - name: SharePoint Embedded agent ( Private Preview )
+  - name: SharePoint Embedded agent ( Deprecated )
     items:
-    - name: SharePoint Embedded agent Overview
+    - name: SharePoint Embedded agent SDK ( Deprecated )
       href: embedded/development/declarative-agent/spe-da.md
-    - name: SharePoint Embedded agent Tutorial
+    - name: SharePoint Embedded agent Tutorial ( Deprecated )
       href: embedded/development/tutorials/spe-da-vscode.md
-    - name: SharePoint Embedded agent Advanced Topics
+    - name: SharePoint Embedded agent Advanced Topics ( Deprecated )
       href: embedded/development/declarative-agent/spe-da-adv.md
 - name: Microsoft Teams
   items:
