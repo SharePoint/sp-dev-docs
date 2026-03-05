@@ -1,15 +1,13 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 06/13/2022
+ms.date: 03/05/2026
 ms.localizationpriority: medium
 ---
 
 # Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 
 This article illustrates how you would connect to a multi-tenant enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well building the SharePoint Framework solution.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create a multi-tenant enterprise API secured with Azure AD
 
@@ -423,7 +421,7 @@ After completing the implementation of the SharePoint Framework solution, the ne
 First, build, and package the project, by executing in the command line:
 
 ```console
-gulp bundle --ship && gulp package-solution --ship
+heft build --production && heft package-solution --production
 ```
 
 Next, in the explorer, open the project folder and navigate to the **sharepoint/solution** folder.
@@ -489,3 +487,4 @@ Select the **+** option to open the toolbox. In the search box type `Orders` to 
 Select the **Orders** web part to add it to the page. You should see the list of orders retrieved from the enterprise API.
 
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
+
