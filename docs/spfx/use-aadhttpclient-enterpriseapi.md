@@ -1,15 +1,13 @@
 ---
 title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 12/21/2020
+ms.date: 03/05/2026
 ms.localizationpriority: high
 ---
 
 # Consume enterprise APIs secured with Azure AD in SharePoint Framework
 
 This article illustrates how you would connect to an enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well as building the SharePoint Framework solution.
-
-[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
 
 ## Create an enterprise API secured with Azure AD
 
@@ -388,7 +386,7 @@ After completing the implementation of the SharePoint Framework solution, the ne
 First, build, and package the project using the command line:
 
 ```console
-gulp bundle --ship && gulp package-solution --ship
+heft build --production && heft package-solution --production
 ```
 
 Next, in file explorer, open the project folder and navigate to the **sharepoint/solution** folder:
@@ -459,3 +457,4 @@ Select the **Orders** web part to add it to the page. You should see the list of
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
 
 > If you receive an error with the technical details of "Failed to open pop-up window", you have a pop-up blocker enabled. You will need to disable the browser's pop-up blocker for your site in order to show the page correctly.
+
