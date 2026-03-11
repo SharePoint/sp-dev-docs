@@ -1,7 +1,7 @@
 ---
 title: Connect to anonymous APIs
-description: Different approaches of connecting to anonymous APIs from your SharePoint Framework solutions
-ms.date: 12/04/2020
+description: Different approaches for connecting to anonymous APIs from your SharePoint Framework solutions
+ms.date: 03/11/2026
 ms.localizationpriority: high
 ---
 
@@ -10,11 +10,11 @@ ms.localizationpriority: high
 When building SharePoint Framework solutions, you might want to consume public APIs, such as stock or weather information. This article outlines how to connect to public APIs in SharePoint Framework solutions.
 
 > [!NOTE]
-> In this article, public and anonymous APIs are used interchangeably. This article is about connecting to APIs, that don't require authentication at all or are secured with a function/API key that can be passed via query string parameters. See other pages in this section of the documentation for more information about connecting to the [SharePoint APIs](connect-to-sharepoint.md) or [APIs secured with Azure AD](use-aadhttpclient.md).
+> In this article, public and anonymous APIs are used interchangeably. This article is about connecting to APIs that don't require authentication at all or are secured with a function/API key that can be passed via query string parameters. See other pages in this section of the documentation for more information about connecting to the [SharePoint APIs](connect-to-sharepoint.md) or [APIs secured with Microsoft Entra ID](use-aadhttpclient.md).
 
 ## Connect to anonymous APIs using the HttpClient
 
-The easiest way, to connect to anonymous APIs in your SharePoint Framework solutions, is by using the HttpClient provided as a part of the SharePoint Framework. For example, to get dummy information from the Typicode service, you would execute:
+The easiest way to connect to anonymous APIs in your SharePoint Framework solutions is by using the HttpClient provided as a part of the SharePoint Framework. For example, to get dummy information from the Typicode service, you would execute:
 
 ```typescript
 this.context.httpClient
@@ -27,7 +27,7 @@ this.context.httpClient
   });
 ```
 
-Similarly to the **SPHttpClient** you use for connecting to SharePoint APIs, the **HttpClient** offers you similar capabilities for running the most common web requests. If necessary, you can use its options, to configure requests.
+Similarly to the **SPHttpClient** you use for connecting to SharePoint APIs, the **HttpClient** offers you similar capabilities for running the most common web requests. If necessary, you can use its options to configure requests.
 
 For example, to specify request headers, you would use the following code:
 
@@ -57,4 +57,5 @@ While the **HttpClient** is similar to the **SPHttpClient**, it doesn't include 
 
 #### Part of the SharePoint Framework
 
-The **HttpClient** is part of the SharePoint Framework and you don't need any additional dependencies to start using it. It is already available on the page that is why using it doesn't cause additional performance overhead on runtime.
+The **HttpClient** is part of the SharePoint Framework and you don't need any additional dependencies to start using it. It is already available on the page, which is why using it doesn't cause additional performance overhead on runtime.
+
