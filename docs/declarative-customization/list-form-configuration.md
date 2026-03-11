@@ -1,7 +1,7 @@
 ---
 title: Configure the list form
 description: Configure list form with a custom header, footer and body with one or more sections.
-ms.date: 06/28/2022
+ms.date: 03/03/2026
 ms.localizationpriority: high
 ---
 
@@ -10,6 +10,9 @@ ms.localizationpriority: high
 You can configure the list form in a list or library with a custom header, footer and the form body with one or more sections with fields in each of those sections. The form configuration does not change the data in the list item or file; it only changes how the form is displayed to users who browse the list or library. Anyone who can create and manage views in a list can use form configuration to configure the form with header, footer, and body with sections.
 
 To configure a form, you will use JSON formatters that you are already familiar with when formatting a [column](column-formatting.md) or a [view](view-formatting.md) in a list or library. Form configuration allows for certain predefined elements and attributes to build the custom header, footer, and body with one or more sections.
+
+> [!IMPORTANT]
+> **Content Type Hub Considerations**: Custom form formatting JSON is stored on the list content type. Be sure that the content type you are customizing is set to allow edits at the site or list content type level before applying custom form formatting. This is highly likely to impact you if you are working with content types consumed from the content type hub, as these are read-only by default. You may need to temporarily set the content type to "Edit mode," apply your formatting, then return it to "Read mode."
 
 ## Get started
 
