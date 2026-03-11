@@ -1,13 +1,13 @@
 ---
 title: Expose SharePoint Framework web parts in Microsoft Teams
 description: You can expose web parts built using SharePoint Framework in Microsoft Teams.
-ms.date: 03/15/2021
+ms.date: 03/06/2026
 ms.localizationpriority: medium
 ---
 
 # Expose SharePoint Framework web parts in Microsoft Teams
 
-Using SharePoint Framework, you can build [web parts](web-parts/overview-client-side-web-parts.md) and [extensions](extensions/overview-extensions.md). When building web parts, you can enable them to be exposed as a [Microsoft Teams tab](/microsoftteams/platform/tabs/what-are-tabs), a [personal app](/microsoftteams/platform/concepts/design/personal-apps) or a [messaging extension](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
+Using SharePoint Framework, you can build [web parts](web-parts/overview-client-side-web-parts.md) and [extensions](extensions/overview-extensions.md). When building web parts, you can enable them to be exposed as a [Microsoft Teams tab](/microsoftteams/platform/tabs/what-are-tabs), a [personal app](/microsoftteams/platform/concepts/design/personal-apps), or a [messaging extension](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
 
 > [!TIP]
 > To see how to use the different concepts described in this article, see the sample [Leads application](https://github.com/pnp/sp-dev-solutions/tree/master/solutions/LeadsLOBSolution) on GitHub.
@@ -30,10 +30,9 @@ To expose the web part as a Microsoft Teams personal app, in the web part’s ma
 ## Expose web part as Microsoft Teams messaging extension
 
 > [!IMPORTANT]
-> Exposing web parts as Microsoft Teams messaging extension is supported with SharePoint Framework v1.11 and newer.
+> Exposing web parts as Microsoft Teams messaging extensions is supported with SharePoint Framework v1.11 and later.
 
-
-To expose your SharePoint Framework web part as a messaging extension, you don't need to use a specific host in the `supportedHosts` property. Instead, all you need to do, is to extend the teams manifest in your SharePoint Framework solution with a `composeExtension`, for example:
+To expose your SharePoint Framework web part as a message extension, you don't need to use a specific host in the `supportedHosts` property. Instead, all you need to do is extend the Teams manifest in your SharePoint Framework solution with a `composeExtension`, for example:
 
 ```json
 {
@@ -70,13 +69,13 @@ To expose your SharePoint Framework web part as a messaging extension, you don't
 }
 ```
 
-The key piece of information is the URL in the `taskInfo` property, which must match the URL specified in the example and which should have the `componentId` query string parameter set to the ID of the SharePoint Framework web part that should be exposed in the messaging extension.
+The key piece of information is the URL in the `taskInfo` property, which must match the URL specified in the example and have the `componentId` query string parameter set to the ID of the SharePoint Framework web part that should be exposed in the messaging extension.
 
-![SharePoint Framework webp part exposed as a messaging extension](../images/build-for-teams/build-for-teams-messaging-extension.gif)
+![SharePoint Framework web part exposed as a messaging extension](../images/build-for-teams/build-for-teams-messaging-extension.gif)
 
 ### Responding to user interaction
 
-When your web part is exposed in Microsoft Teams as a messaging extension, you might want to respond to user interaction, for example by posting an adaptive card to the conversation. This requires using a [task module](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules) and a [bot](/microsoftteams/platform/bots/what-are-bots). The task module notifies the bot of the event that the user triggered, and the bot will post data back to the conversation. First however, you need to check if the web part is used as a messaging extension.
+When your web part is exposed in Microsoft Teams as a messaging extension, you might want to respond to user interaction, for example, by posting an Adaptive Card to the conversation. This requires using a [task module](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules) and a [bot](/microsoftteams/platform/bots/what-are-bots). The task module notifies the bot of the event that the user triggered, and the bot posts data back to the conversation. First, however, you need to check if the web part is used as a messaging extension.
 
 To check if your web part is being used as a messaging extension, check if the `context._host._teamsManager._appContext.applicationName` property is set to `TeamsTaskModuleApplication`:
 
@@ -93,7 +92,7 @@ private leadClicked = (ev?: React.SyntheticEvent<HTMLElement>): void => {
 
 [see full code](https://github.com/pnp/sp-dev-solutions/blob/cd3757ac071e2fb9f90a3f64b43ede8b1de39a0c/solutions/LeadsLOBSolution/webpart/src/webparts/leads/components/Leads/Leads.tsx#L111-L114)
 
-Once you verified that the web part is used as a messaging extension, you use a task module, to pass the data from the web part to the bot:
+Once you verify that the web part is used as a messaging extension, use a task module to pass the data from the web part to the bot:
 
 ```typescript
 private leadClicked = (ev?: React.SyntheticEvent<HTMLElement>): void => {
@@ -145,4 +144,11 @@ When you choose to expose your SharePoint Framework web parts in Microsoft Teams
 
 Developers have multiple options when deploying SharePoint Framework (SPFx) solutions for use within Microsoft Teams.
 
-Refer to [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for deployment options.
+For more information, see [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md).
+
+## See also
+
+- [Deployment of SharePoint Framework Teams solutions](deployment-spfx-teams-solutions.md)
+- [Building Microsoft Teams "me"-experience using SharePoint Framework](build-for-teams-me-experience.md)
+- [Configure SharePoint Framework web parts in Microsoft Teams](build-for-teams-configure-in-teams.md)
+- [Considerations for building for Microsoft Teams using SharePoint Framework](build-for-teams-considerations.md)
