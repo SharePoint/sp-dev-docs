@@ -16,7 +16,7 @@ Before you get started, make sure that you're familiar with the following:
 - [Using the Client Object Model](https://msdn.microsoft.com/library/ff798388.aspx)
 - [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/library/ee537013.aspx)
 
-You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.26712.12000 or later).
+You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.0.27011.12008 or later).
 
 ## CSOM code example
 
