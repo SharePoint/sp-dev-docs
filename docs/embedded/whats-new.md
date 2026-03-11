@@ -1,11 +1,21 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 11/12/2025
+ms.date: 03/03/2026
 ms.localizationpriority: medium
 ---
 
 # What's new in SharePoint Embedded
+
+## February 2026
+
+- [SharePoint Embedded connector](/connectors/sharepointembedded/) for [Power Platform](/power-platform/) is now generally available.
+- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet) for customers in China. See [Microsoft Graph national cloud deployments](/graph/deployments).
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs now support migrating file version history.
+
+## January 2026
+
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) APIs to [list columns](/graph/api/filestoragecontainer-list-columns), [create column](/graph/api/filestoragecontainer-post-columns), [update column](/graph/api/filestoragecontainer-update-column), and [delete column](/graph/api/filestoragecontainer-delete-column) are now available in the v1.0 Microsoft Graph endpoint.
 
 ## December 2025
 
