@@ -1,12 +1,12 @@
 ---
 title: SharePoint solution packaging
 description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
-ms.date: 10/01/2025
+ms.date: 03/11/2026
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging
 
-The **package-solution** gulp task looks at **./config/package-solution.json** for various configuration details, including some generic filepaths, and defining the relationship between components (*WebParts* and *Applications*) in a package.
+The **package-solution** gulp task looks at **./config/package-solution.json** for various configuration details, including some generic filepaths, and defines the relationship between components (*WebParts* and *Applications*) in a package.
 
 The schema for the configuration file is as follows:
 
@@ -25,7 +25,7 @@ interface IPackageSolutionTaskConfig {
 }
 ```
 
-Each package configuration file has some optional settings to override the places where the task looks for various source files and manifests, and defining the location to write the package. Additionally, it has a required solution definition, which instructs the packager on the relationships of various components.
+Each package configuration file has some optional settings to override the places where the task looks for various source files and manifests, and define the location to write the package. Additionally, it has a required solution definition, which instructs the packager on the relationships of various components.
 
 ## Solution definition (ISolution)
 
@@ -42,7 +42,7 @@ interface ISolution {
 }
 ```
 
-Each solution file must have a `name` that identifies the package in the SharePoint UI. Additionally, each package must contain a globally unique identifier (`id`), which is used internally by SharePoint. Optionally, you may also specify a `version` number in the format "X.X.X.X", which is used to identify various versions of the package when upgrading.
+Each solution file must have a `name` that identifies the package in the SharePoint UI. Additionally, each package must include a globally unique identifier (`id`) used internally by SharePoint. Optionally, you may specify a `version` in the format "X.X.X.X" to identify package versions during upgrades.
 
 > [!NOTE]
 > The versioning system only applies to Feature Framework and SharePoint Feature definitions included in the package. Code and assets from the new version of the package are available as soon as the new version of the package is added to App Catalog, with no need to update the app on sites.
@@ -50,7 +50,7 @@ Each solution file must have a `name` that identifies the package in the SharePo
 The solution definition also optionally contains a list of SharePoint Feature definitions.
 
 > [!NOTE]
-> If the `features` property is omitted, the task creates a single Feature for every component (a 1:1 mapping). An empty array will produce no features, and the web parts will not be added.
+> If the `features` property is omitted, the task creates a single Feature for every component (a 1:1 mapping). An empty array produces no features, and the web parts are not added.
 
 ## Feature definition (IFeature)
 
@@ -66,9 +66,9 @@ interface IFeature {
 }
 ```
 
-It's important to note that this is a definition for creating a SharePoint feature, and that some of these options are exposed in the UI. Similarly to the solution, each feature has a mandatory `title`, `description`, `id`, and `version` number (in the X.X.X.X format). The feature `id` should also be a globally unique identifier.
+It's important to note that this is a definition for creating a SharePoint feature, and that some of these options are exposed in the UI. As with the solution, each feature has a mandatory `title`, `description`, `id`, and `version` (in the X.X.X.X format). The feature `id` should also be a globally unique identifier.
 
-Each feature can also contain any number of components that are activated when the feature is activated. This is defined via a list of `componentIds`, which are globally unique identifiers that *must* match the **ID** in the component's manifest file. If this list is undefined or empty, the packager includes *every* component in the feature. Any given componentId may only belong to one feature.
+Each feature can also contain any number of components that are activated when the feature is activated. This is defined via a list of `componentIds`, which are globally unique identifiers that *must* match the `ID` in the component's manifest file. If this list is undefined or empty, the packager includes *every* component in the feature. Any given `componentId` may only belong to one feature.
 
 ## File paths
 
@@ -118,7 +118,7 @@ interface IPackageSolutionTaskConfig {
 
 ## Custom feature XML
 
-To support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom feature XML may also be injected into the package. This is used to provision resources necessary for applications, but may also be used for web parts. The documentation for Feature XML is located at [Feature.xml Files](https://msdn.microsoft.com/library/office/ms475601.aspx?f=255&MSPPError=-2147217396).
+To support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom feature XML may also be injected into the package. This is used to provision resources necessary for applications, but may also be used for web parts. The documentation for Feature XML is located at [Feature.xml Files](../../../schema/feature-xml-files.md).
 
 The packaging task looks for the custom feature XML in **./sharepoint/feature\_xml**. Every file in this folder is included in the final application package. However, the task relies on the contents of the **\_rels/** folder to determine which custom features are defined.
 
@@ -127,4 +127,3 @@ Essentially, it assumes that each **.xml.rels** file is related to a **feature.x
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
-
