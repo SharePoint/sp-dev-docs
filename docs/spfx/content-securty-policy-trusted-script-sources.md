@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 03/03/2026
+ms.date: 03/12/2026
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -266,9 +266,29 @@ Lists and libraries are performance optimized and heavily depend on local cach,e
 When you hit this limit, then the recommendation is to consolidate sources using the model described in the FAQ question above. Note that when the 300 limit is reached, uploading new solutions to your app catalog can be impacted. If you're using an automated deployment system with unique script sources per build, then the 300 limit can be reached soon. Recommended workarounds are:
 
 - Adding script sources in a way that covers all versions (see above)
-- Automatically removing the auto added scripts sources using the model described below
+- Resync the automatically added scripts source from the tenant app catalog (see below)
+- Automatically removing the auto added scripts sources (see below)
 
 New trusted sources will only be added whenever none of the existing trusted sources cover the to be added script source, so if you've already added `*.jsdelivr.net` then a solution adding `https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js` will result in nothing getting added given that URL is already covered by an existing script source. 
+
+### Resync script sources for solutions in the tenant app catalog
+
+When rolling out CSP, all scripts sources for solutions in the tenant app catalog were added as trusted source, which could have led to too many or redundant script sources. If you want to consolidate the automatically added script sources you can resync them. This will remove the previously automatically added sources, and add them again taking in account redundancy: if there already is a trusted sources that works for the next script source to add, we'll not add that script source anymore. For example, if `https://cdn.jsdelivr.net/npm/` was added for solution 1 and solution 2 wants to add `https://cdn.jsdelivr.net/npm/solution2/` then we'll not add that URL as it was already covered by `https://cdn.jsdelivr.net/npm/`.
+
+To trigger the resync use the [ResyncContentSecurityPolicyConfigurationEntries option](https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant?view=sharepoint-ps#-resynccontentsecuritypolicyconfigurationentries) in SPO Management Shell:
+
+```powershell
+Set-SPOTenant -ResyncContentSecurityPolicyConfigurationEntries $true
+# IMPORTANT: List the applied setting again as mandatory step to correctly persist the setting (will be fixed)
+(Get-SPOTenant).ResyncContentSecurityPolicyConfigurationEntries
+```
+
+> [!NOTE]
+>
+> - The sync can take up to 24 hours to complete
+> - Trusted sources for solutions in the **tenant app catalog** will be automatically removed and added again by the sync job, taking in account previously added trusted source to avoid too many entries
+> - Trusted sources which were automatically added via **site collection app catalogs** will never be deleted by the sync job, but also not re-added if they were removed from trusted sources
+> - Manually added trusted sources will never be deleted by the sync job
 
 ### I want to already enforce CSP today, is this possible?
 
@@ -276,6 +296,8 @@ This is possible via using the [ContentSecurityPolicyEnforcement option](https:/
 
 ```powershell
 Set-SPOTenant -ContentSecurityPolicyEnforcement $true
+# IMPORTANT: List the applied setting again as mandatory step to correctly persist the setting (will be fixed)
+(Get-SPOTenant).ContentSecurityPolicyEnforcement
 ```
 
 ### Can I update the trusted script sources list using script or code?
