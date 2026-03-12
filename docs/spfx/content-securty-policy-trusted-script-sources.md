@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 03/12/2026
+ms.date: 03/11/2026
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
