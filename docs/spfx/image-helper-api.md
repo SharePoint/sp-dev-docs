@@ -1,7 +1,7 @@
 ---
 title: Image Helper API
 description: Learn how to use the Image Helper API in the SharePoint Framework to provide web-friendly optimized image links.
-ms.date: 07/25/2022
+ms.date: 03/16/2026
 ms.localizationpriority: high
 ---
 # Image Helper API
@@ -64,19 +64,17 @@ const originalImageUrl = '/sites/dev002/Shared%20Documents/ignite2021-m365-keyno
 Use the Image Helper API to resize the image and use the new link to display the resized & optimized image:
 
 ```typescript
-const resizedImage = ImageHelper.convertToImageUrl(
-  <IImageHelperRequest>{
-    sourceUrl: originalImageUrl,
-    width: 400
-  }
-);
+const resizedImage = ImageHelper.convertToImageUrl({
+  sourceUrl: originalImageUrl,
+  width: 400
+} as IImageHelperRequest);
 
 this.domElement.innerHTML = `
   <div class="${ styles.helloWorld }">New Image</div>
   <div><img src="${ resizedImage }" /></div>
   <div>
-    <div>Original image URL: <a href="${originalImageUrl}">${originalImageUrl}</a>
-    <div>Resized image URL: <a href="${resizedImage}">${resizedImage}</a>
+    <div>Original image URL: <a href="${originalImageUrl}">${originalImageUrl}</a></div>
+    <div>Resized image URL: <a href="${resizedImage}">${resizedImage}</a></div>
   </div>
 `;
 ```
@@ -104,7 +102,7 @@ To make SharePoint's server-side processing aware of the image property, list th
   "imageLinkPropertyNames": [ "defaultBannerImage" ],
   "preconfiguredEntries": [{
     "title": { "default": "HelloWorld" },
-    "properties: {
+    "properties" : {
       "defaultBannerImage": "..."
     }
   }]

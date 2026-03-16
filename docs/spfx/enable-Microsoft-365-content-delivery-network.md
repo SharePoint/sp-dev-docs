@@ -1,7 +1,7 @@
 ---
 title: Enable the Microsoft 365 CDN
 description: Enable the Microsoft 365 CDN on your Microsoft 365 Tenant
-ms.date: 02/08/2021
+ms.date: 03/16/2026
 ms.localizationpriority: medium
 ---
 # Enable the Microsoft 365 CDN
@@ -15,15 +15,15 @@ In this article, you'll learn how to enable the Microsoft 365 CDN on your ShareP
 
 ## Options for managing the Microsoft 365 CDN
 
-The Microsoft 365 CDN is managed using the command line and you can use PowerShell cmdlets or the cross-platform CLI for Microsoft 365 available through SharePoint PnP Community channels.
+The Microsoft 365 CDN is managed using the command line, and you can use PowerShell cmdlets or the cross-platform CLI for Microsoft 365 available through SharePoint PnP Community channels.
 
 ### Microsoft SharePoint Online Management Shell
 
-The Microsoft 365 CDN is managed by tenant administrators by using the **Microsoft SharePoint Online Management Shell**, a PowerShell module from Microsoft used to manage your SharePoint Online subscription in Office 365.
+The Microsoft 365 CDN is managed by tenant administrators by using the **Microsoft SharePoint Online Management Shell**, a PowerShell module from Microsoft used to manage your SharePoint Online subscription in Microsoft 365.
 
 Before using any of the cmdlets in the Microsoft SharePoint Online Management Shell module, you must first connect to SharePoint Online using the **Connect-SPOService** cmdlet. All CDN settings are managed using the ***-SPOTenantCdn** cmdlets.
 
-Learn more here: [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
+Learn more here: [Microsoft SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 ### CLI for Microsoft 365
 
@@ -93,7 +93,7 @@ In this tutorial, we create a specific document library named **CDN** to act as 
 
 ### Add a new CDN origin
 
-In this case, we're setting the origin as **\*/cdn**, which means that any relative folder with the name of **cdn** acts as a CDN origin.
+In this case, we're setting the origin as **\*/cdn**, which means that any relative folder named **cdn** acts as a CDN origin.
 
 # [Microsoft SPO Management Shell](#tab/msposh)
 
