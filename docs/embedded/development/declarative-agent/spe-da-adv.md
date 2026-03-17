@@ -1,14 +1,14 @@
 ---
 title: SharePoint Embedded agent Advanced Topics
 description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded agent.
-ms.date: 06/10/2025
+ms.date: 03/17/2026
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded agent Advanced Topics Overview
 
 > [!CAUTION]
-> SharePoint Embedded agent has been deprecated in its current form and replaced with [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (Preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote?pivots=python) configured for SharePoint Embedded using the `container_type_id` [source-specific property](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote?pivots=python#source-specific-properties). Learn how to [set up SharePoint Embedded as a knowledge source in Microsoft Foundry](sharepoint-embedded-knowledge-source.md).
+> SharePoint Embedded agent has been deprecated in its current form and replaced with [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (Preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote) configured for SharePoint Embedded. Learn how to [set up SharePoint Embedded as a knowledge source in Microsoft Foundry](sharepoint-embedded-knowledge-source.md).
 
 This article will remain in place for a limited time for historical reference.
 
