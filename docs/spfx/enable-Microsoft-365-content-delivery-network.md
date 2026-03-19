@@ -23,13 +23,13 @@ The Microsoft 365 CDN is managed by tenant administrators by using the **Microso
 
 Before using any of the cmdlets in the Microsoft SharePoint Online Management Shell module, you must first connect to SharePoint Online using the **Connect-SPOService** cmdlet. All CDN settings are managed using the ***-SPOTenantCdn** cmdlets.
 
-Learn more here: [Microsoft SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+Learn more here: [Microsoft SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 ### CLI for Microsoft 365
 
 The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the same calls made by the SharePoint Online Management Shell without using PowerShell.
 
-Before using any of the commands in the CLI for Microsoft 365, you must first connect to Microsoft 365 tenant using the **m365 login** command.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect to the Microsoft 365 tenant using the **m365 login** command.
 
 Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
@@ -37,7 +37,7 @@ Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?
 
 ## Get the Microsoft 365 CDN status
 
-Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one:
+Get the current status of public CDN settings from the tenant level by executing the following commands one by one:
 
 # [Microsoft SPO Management Shell](#tab/msposh)
 
