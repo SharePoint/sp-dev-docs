@@ -5,7 +5,7 @@ ms.date: 03/20/2026
 ms.localizationpriority: high
 ---
 
-## Onboard your application to support archival functionality
+# Onboard your application to support archival functionality
 
 Archival of containers helps customers in reducing the cost of storing infrequently used data. Support archival in your application by enabling the -IsArchiveEnabled flag using the following PowerShell cmdlet. This cmdlet is supported only by the SharePoint Embedded administrator of your organization.
 
@@ -25,7 +25,7 @@ APIs for supporting the archive and reactivate actions on the containers:
 
 |Action|API Documentation link|Example|
 |--------|--------|-------|
-|Archive an active container|[Archive](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-archive?view=graph-rest-beta)|POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{ContainerId}/archive|
-|Reactivate an archived container|[Unarchive](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta)|POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/unarchive|
-|Retrieve an archived container using ID|[Get](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-get?view=graph-rest-beta&tabs=http)|GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}|
-|Retrieve all archived container collection|[Get](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-get?view=graph-rest-beta&tabs=http)|GET https://graph.microsoft.com/beta/storage/fileStorage/containers?$filter=containerTypeId eq {containerTypeId} and archivalDetails ne null|
+|Archive an active container|[Archive](https://learn.microsoft.com/graph/api/filestoragecontainer-archive)|POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{ContainerId}/archive|
+|Reactivate an archived container|[Unarchive](https://learn.microsoft.com/graph/api/filestoragecontainer-unarchive)|POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/unarchive|
+|Retrieve an archived container using ID|[Get](https://learn.microsoft.com/graph/api/filestoragecontainer-get)|GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}|
+|Retrieve all archived container collection|[Get](https://learn.microsoft.com/graph/api/filestoragecontainer-get)|GET https://graph.microsoft.com/beta/storage/fileStorage/containers?$filter=containerTypeId eq {containerTypeId} and archivalDetails ne null|
