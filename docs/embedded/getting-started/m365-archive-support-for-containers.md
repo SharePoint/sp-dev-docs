@@ -5,7 +5,7 @@ ms.date: 03/20/2026
 ms.localizationpriority: high
 ---
 
-## Microsoft 365 Archive for SharePoint Embedded Containers (Preview)
+# Microsoft 365 Archive for SharePoint Embedded Containers (Preview)
 
 Microsoft 365 Archive provides a cost-effective storage option for inactive or aging content stored in SharePoint Embedded containers.
 
@@ -17,7 +17,7 @@ Once a container is archived, it becomes inaccessible. To access it again, the c
 
 Archival and reactivation actions are supported for users with the Owner or Principal Owner roles on the container. Global Administrators and SharePoint Embedded Administrators can perform these actions on all containers. In addition, the application must have write permission on the container.
 
-Microsoft 365 Archive is available for SharePoint sites. Detailed documentation is available here: [Microsoft 365 Archive Overview](https://learn.microsoft.com/en-us/microsoft-365/archive/archive-overview?view=o365-worldwide)
+Microsoft 365 Archive is available for SharePoint sites. Detailed documentation is available here: [Microsoft 365 Archive Overview](https://learn.microsoft.com/microsoft-365/archive/archive-overview)
 
 ### SharePoint Embedded container archival guide
 
