@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 07/31/2020
+ms.date: 03/16/2026
 ms.localizationpriority: high
 ---
 
@@ -16,9 +16,9 @@ You can connect two or more SharePoint Framework components together and exchang
 
 ## Expose data using dynamic data source
 
-Dynamic data in the SharePoint Framework is based on the source-notification model. Components named as a dynamic data source, provide data and notify the SharePoint Framework when the data changes.
+Dynamic data in the SharePoint Framework is based on the source-notification model. Components acting as a dynamic data source provide data and notify the SharePoint Framework when the data changes.
 
-Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified its data has changed. The consumer component then requests the data from the source component.
+Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source data has changed. The consumer component then requests the data from the source component.
 
 Every dynamic data source implements the `IDynamicDataCallables` interface.
 
@@ -34,7 +34,7 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
   /**
    * Currently selected event
    */
-  private _selectedEvent: IEvent;
+  private _selectedEvent: IEvent | undefined;
 
   /**
    * Event handler for selecting an event in the list
@@ -71,7 +71,7 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
    * Return the current value of the specified dynamic data set
    * @param propertyId ID of the dynamic data set to retrieve the value for
    */
-  public getPropertyValue(propertyId: string): IEvent | ILocation {
+  public getPropertyValue(propertyId: string): IEvent | ILocation | undefined {
     switch (propertyId) {
       case 'event':
         return this._selectedEvent;
@@ -155,7 +155,7 @@ The `getPropertyValue()` method returns the value for the particular type of dat
 
 To register a component as a dynamic data source, call the `this.context.dynamicDataSourceManager.initializeSource()` method and pass the instance of the dynamic data source as a parameter. In the previous example, the web part itself implements the `IDynamicDataCallables` interface, which is why the `initializeSource()` method is called with `this` as its argument.
 
-In the example code, the web part displays upcoming events in a list. Each time, the user selects an event from the list, the web part calls the `_eventSelected()` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
+In the example code, the web part displays upcoming events in a list. Each time the user selects an event from the list, the web part calls the `_eventSelected()` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
 
 ## Consume dynamic data in web parts
 
@@ -164,10 +164,14 @@ Web parts can consume data exposed by dynamic data sources present on the page. 
 ```typescript
 import { DynamicProperty } from '@microsoft/sp-component-base';
 import {
-  DynamicDataSharedDepth,
-  IWebPartPropertiesMetadata,
+  type IPropertyPaneConfiguration,
+  PropertyPaneTextField,
   PropertyPaneDynamicFieldSet,
   PropertyPaneDynamicField
+} from '@microsoft/sp-property-pane';
+import {
+  BaseClientSideWebPart,
+  IWebPartPropertiesMetadata
 } from '@microsoft/sp-webpart-base';
 
 /**
@@ -347,7 +351,7 @@ export interface IMapWebPartProps {
 }
 ```
 
-In this example, the address is a string, but other types of data such as boolean, numbers or objects are supported as well. Web part properties defined as `DynamicProperty` can retrieve their data from dynamic data sources or values provided directly in the web part properties. Because the same web part property can be used for both dynamic data sources and static values configured in web part properties, you don't need to define multiple web part properties what simplifies building versatile web parts.
+In this example, the address is a string, but other types of data such as boolean, numbers or objects are supported as well. Web part properties defined as `DynamicProperty` can retrieve their data from dynamic data sources or values provided directly in the web part properties. Because the same web part property can be used for both dynamic data sources and static values configured in web part properties, you don't need to define multiple web part properties, which simplifies building versatile web parts.
 
 ### Define the type of data stored in dynamic properties
 
