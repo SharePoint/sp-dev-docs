@@ -41,9 +41,9 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 
 #### Access on behalf of a user
 
-SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
+SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission.
 
-In addition to your application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it's acting on behalf of is required to have [container permissions](#container-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
+In addition to your application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
 
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
@@ -53,11 +53,11 @@ In addition to your application receiving consent for `FileStorageContainer.Sele
 SharePoint Embedded operations [without a user](/graph/auth-v2-service) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE]
-> An administrator on the consuming tenant must consent to your application's request for permissions. Learn more [here](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+> An administrator on the consuming tenant must consent to your application's request for permissions. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 ### Container type application permissions
 
-SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md) in a consuming tenant.
+SharePoint Embedded applications need to be granted container type application permissions by the owning application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md) in a consuming tenant.
 
 |      Permission      |                                                    Description                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------ |
