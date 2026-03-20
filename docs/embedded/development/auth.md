@@ -39,7 +39,7 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 - [FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected) to allow an application to register the container type on consuming tenants.
 - [FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected) to allow an application to access containers of the given container type on consuming tenants.
 
-### Access on behalf of a user
+#### Access on behalf of a user
 
 SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission. This permission requires admin consent on the consuming tenant before any user from the tenant can consent to it.
 
@@ -48,12 +48,84 @@ In addition to your application receiving consent for `FileStorageContainer.Sele
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
 
-### Access without a user
+#### Access without a user
 
 SharePoint Embedded operations [without a user](/graph/auth-v2-service) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE]
 > An administrator on the consuming tenant must consent to your application's request for permissions. Learn more [here](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+
+### Container type application permissions
+
+SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md) in a consuming tenant.
+
+|      Permission      |                                                    Description                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| None                 | Has no permissions to any containers or content of this container type.                                            |
+| ReadContent          | Can read the content of containers of this container type.                                                         |
+| WriteContent         | Can write content to containers for this container type. This can't be granted without the ReadContent permission. |
+| Create               | Can create containers of this container type.                                                                      |
+| Delete               | Can delete containers of this container type.                                                                      |
+| Read                 | Can read the metadata of containers of this container type.                                                        |
+| Write                | Can update the metadata of containers of this container type.                                                      |
+| EnumeratePermissions | Can enumerate the members of a container and their roles for containers of this container type.                    |
+| AddPermissions       | Can add members to the container for containers of this container type.                                            |
+| UpdatePermissions    | Can update (change roles of) existing memberships in the container for containers of this container type.          |
+| DeletePermissions    | Can delete other members (but not self) from the container for containers of this container type.                  |
+| DeleteOwnPermissions | Can remove own membership from the container for containers of this container type.                                |
+| ManagePermissions    | Can add, remove (including self), or update members in the container roles for containers of this container type.  |
+| ManageContent        | Can manage the content of the container                                                                            |
+| Full                 | Has all permissions for containers of this container type.                                                         |
+
+> [!NOTE]
+> The combination of Microsoft Graph permissions and container type application permissions encompasses the client authorization for applications.
+
+### User permissions
+
+Users are granted different access levels to SharePoint Embedded based on the scenario:
+
+- [Accessing content in containers](#accessing-content-in-containers)
+- [Managing SharePoint Embedded applications installed in the consuming tenant](#managing-sharepoint-embedded-applications-installed-in-the-consuming-tenant)
+- [Managing SharePoint Embedded applications created in the owning tenant](#managing-sharepoint-embedded-applications-created-in-the-owning-tenant)
+
+#### Accessing content in containers
+
+There are two ways in which users can gain access to content in containers:
+
+- [Container permissions](#container-permissions)
+- [Access to specific items in a container](#access-to-specific-items-in-a-container)
+
+##### Container permissions
+
+Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not to access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
+
+> [!IMPORTANT]
+> The calling user creating a new container via delegated calls is automatically assigned the Owner role.
+
+| Permission |                                                                                 Description                                                                                 |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reader     | This role allows the user to read the properties and the contents of the container.                                                                                         |
+| Writer     | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
+| Manager    | This role has all the permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
+| Owner      | This role has all the permissions a Manager has, plus the permission to delete containers.                                                                                      |
+
+##### Access to specific items in a container
+
+Specific items in a container can be shared with users via the [driveItem invite](/graph/api/driveitem-invite) or the [permission create](/graph/api/driveitem-post-permissions) endpoints. Sharing grants users access to the specific items, but it doesn't grant them access to the container itself or any other item in the container. For information on the access levels supported, see [permission roles](/graph/api/resources/permission#roles-property-values).
+
+> [!NOTE]
+> For more information about sharing, see [Sharing and permissions in SharePoint Embedded](./sharing-and-perm.md).
+
+#### Managing SharePoint Embedded applications installed in the consuming tenant
+
+[SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) can manage all SharePoint Embedded applications installed in the **consuming** tenant. To learn more about managing installed applications in the consuming tenant, see [Manage SharePoint Embedded applications installed in the consuming tenant](../administration/consuming-tenant-admin/cta.md).
+
+> [!NOTE]
+> [Global Administrators](/entra/identity/role-based-access-control/permissions-reference#global-administrator) have all the permissions that SharePoint Embedded Administrators have and more, so they can also manage SharePoint Embedded applications installed in the consuming tenant. However, you should assign the least privileged role necessary to perform administrative tasks, so using the SharePoint Embedded Administrator role is recommended for managing SharePoint Embedded applications.
+
+#### Managing SharePoint Embedded applications created in the owning tenant
+
+[SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) can manage all SharePoint Embedded applications created in the **owning** tenant. Additionally, any Microsoft Entra user that isn't an external identity can be assigned as an owner of a [container type](/graph/api/resources/filestoragecontainertype). Container type owners can manage that specific container type. To learn more about managing applications created in the owning tenant, see [SharePoint Embedded developer administrator](../administration/developer-admin/dev-admin.md).
 
 ### Exceptional access patterns
 
@@ -85,45 +157,6 @@ The [List containers](/graph/api/filestorage-list-containers?tabs=http) operatio
 ##### Mention users in Office documents
 
 The common [Office experience](./content-experiences/office-experience.md) includes reviewing documents and adding comments to those documents. For users to show up in the @mentions people picker, they need to have a Microsoft 365 license assigned to them.
-
-### Container type application permissions
-
-SharePoint Embedded applications need to be granted container type application permissions by the owner application before they can access containers of the given container type. Container type application permissions are granted to applications via [container type registration](../getting-started/register-api-documentation.md).
-
-|      Permission      |                                                    Description                                                     |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| None                 | Has no permissions to any containers or content of this container type.                                            |
-| ReadContent          | Can read the content of containers of this container type.                                                         |
-| WriteContent         | Can write content to containers for this container type. This can't be granted without the ReadContent permission. |
-| Create               | Can create containers of this container type.                                                                      |
-| Delete               | Can delete containers of this container type.                                                                      |
-| Read                 | Can read the metadata of containers of this container type.                                                        |
-| Write                | Can update the metadata of containers of this container type.                                                      |
-| EnumeratePermissions | Can enumerate the members of a container and their roles for containers of this container type.                    |
-| AddPermissions       | Can add members to the container for containers of this container type.                                            |
-| UpdatePermissions    | Can update (change roles of) existing memberships in the container for containers of this container type.          |
-| DeletePermissions    | Can delete other members (but not self) from the container for containers of this container type.                  |
-| DeleteOwnPermissions | Can remove own membership from the container for containers of this container type.                                |
-| ManagePermissions    | Can add, remove (including self), or update members in the container roles for containers of this container type.  |
-| ManageContent        | Can manage the content of the container                                                                            |
-| Full                 | Has all permissions for containers of this container type.                                                         |
-
-> [!NOTE]
-> The combination of Microsoft Graph permissions and container type application permissions encompasses the client authorization for applications.
-
-### Container permissions
-
-Any user accessing a container must be a member of the container. Membership to a container [grants users container permissions](/graph/api/filestoragecontainer-post-permissions). These permissions define the access level that users have on a given container. Container permissions only apply to access on behalf of a user and not to access without a user. A SharePoint Embedded application accessing containers without a user gets the full access defined in its [container type application permissions](#container-type-application-permissions) instead.
-
-> [!IMPORTANT]
-> The calling user creating a new container via delegated calls is automatically assigned the Owner role.
-
-| Permission |                                                                                 Description                                                                                 |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reader     | This role allows the user to read the properties and the contents of the container.                                                                                         |
-| Writer     | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
-| Manager    | This role has all the permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
-| Owner      | This role has all the permissions a Manager has, plus the permission to delete containers.                                                                                      |
 
 ## What's next
 
