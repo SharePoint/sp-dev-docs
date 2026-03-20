@@ -107,12 +107,12 @@ Membership to a container [grants users container permissions](/graph/api/filest
 > [!IMPORTANT]
 > The calling user creating a new container via delegated calls is automatically assigned the Owner role.
 
-| Permission |                                                                                 Description                                                                                 |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Reader     | This role allows the user to read the properties and the contents of the container.                                                                                         |
-| Writer     | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
-| Manager    | This role has all the permissions a Writer has, plus the permission to manage membership of the container.                                                                      |
-| Owner      | This role has all the permissions a Manager has, plus the permission to delete containers.                                                                                      |
+| Permission | Description |
+| --- | ---- |
+| Reader | This role allows the user to read the properties and the contents of the container. |
+| Writer | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
+| Manager | This role has all the permissions a Writer has, plus the permission to manage membership of the container. |
+| Owner | This role has all the permissions a Manager has, plus the permission to delete containers. |
 
 ##### Access to specific items in a container
 
