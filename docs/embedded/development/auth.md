@@ -112,7 +112,7 @@ Membership to a container [grants users container permissions](/graph/api/filest
 | Reader | This role allows the user to read the properties and the contents of the container. |
 | Writer | This role has all the permissions a Reader has, plus the permission to create, update, and delete content inside the container, and to update applicable  container properties. |
 | Manager | This role has all the permissions a Writer has, plus the permission to manage membership of the container. |
-| Owner | This role has all the permissions a Manager has, plus the permission to delete containers. |
+| Owner | This role has all the permissions a Manager has, plus the permission to delete containers and restore deleted containers. |
 
 ##### Access to specific items in a container
 
