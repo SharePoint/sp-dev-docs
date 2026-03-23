@@ -426,8 +426,8 @@
       href: design/themes-colors.md
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
-    - name: Office UI Fabric integration
-      href: spfx/office-ui-fabric-integration.md
+    - name: Fluent UI integration
+      href: spfx/fluent-ui-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
     - name: Microsoft Graph Toolkit

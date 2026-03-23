@@ -1,7 +1,7 @@
 ---
 title: Recommendations for working with CSS in SharePoint Framework solutions
 description: Use CSS to define how your SharePoint Framework customization should look and behave.
-ms.date: 03/08/2023
+ms.date: 03/23/2026
 ms.localizationpriority: high
 ---
 
@@ -301,11 +301,11 @@ The resulting CSS in the package is converted to the following code.
 
 For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use__?](https://caniuse.com).
 
-## Integrate Office UI Fabric
+## Integrate Fluent UI
 
-By making your customizations look and behave like the standard functionality of SharePoint and Office 365, you make it easier for end-users to work with them. Office UI Fabric offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience.
+By making your customizations look and behave like the standard functionality of SharePoint and Microsoft 365, you make it easier for end-users to work with them. Fluent UI (formerly Office UI Fabric) offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience.
 
-For more information about using Office UI Fabric in SharePoint Framework, see [Using Office UI Fabric Core and Fabric React in SharePoint Framework](./office-ui-fabric-integration.md).
+For more information about using Fluent UI in SharePoint Framework, see [Using Fluent UI in SharePoint Framework](./fluent-ui-integration.md).
 
 ## Use theme colors
 

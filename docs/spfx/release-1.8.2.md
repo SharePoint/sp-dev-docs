@@ -41,7 +41,7 @@ In the project's **package.json** file, identify all SPFx v1.8.1 packages. For e
 - For the React-scaffolded projects, we now explicitly add **office-ui-fabric-react** (OUIFR) v6 to **package.json**.  We were finding a common pattern where people weren't adding OUIFR to **package.json**, but were using it.
   - OUIFR would end up in the **node_modules** folder because of downstream dependencies. While the solution would compile, it could cause issues in the future such as when the solution was upgraded to use a different version of the framework. In this case, a different version of OUIFR would get used.
   - In general, using packages in this pattern (*via shadow dependencies*) is a bad thing.  You're more than welcome to remove the reference in **package.json** if you aren't using OUIFR in your solution, or change the version if needed.  We also updated the type declarations for the React packages to match the versions of React / React DOM referenced in the release.
-- Added `.ms-SPLegacyFabricBlock` CSS class to SPFx solutions that load the Office UI Fabric core stylesheets on demand (*see [Safely use legacy Office UI Fabric Styles (after SPFx v1.8.2)](office-ui-fabric-integration.md#safely-use-legacy-office-ui-fabric-styles-after-spfx-v182) for more detail*)
+- Added `.ms-SPLegacyFabricBlock` CSS class to SPFx solutions that load the Office UI Fabric core stylesheets on demand (*see [Safely use legacy Office UI Fabric Styles (after SPFx v1.8.2)](fluent-ui-integration.md#safely-use-legacy-office-ui-fabric-styles-after-spfx-v182) for more detail*)
 - Support for [Node.js 10](https://nodejs.org/). Node.js v8 is still supported, but will be removed in a future release.
 
 ### Updates added to SharePoint Online
