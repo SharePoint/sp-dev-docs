@@ -1,16 +1,15 @@
 ---
 title: SharePoint Framework v1.23 preview notes
 description: Release notes for the SharePoint Framework v1.23 preview release.
-ms.date: 03/25/2026
+ms.date: 03/23/2026
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.23 release notes
+# SharePoint Framework v1.23 preview release notes
 
-This is an early baseline version for the upcoming SharePoint 1.23 version with initial updates. We are introducing new capabilities as part of the following updates before the general availability of 1.23 version.
-
+This is an early baseline version for the upcoming SharePoint 1.23 version with initial updates. We are introducing new capabilities as part of the following updates before the general availability of 1.23 
 [!INCLUDE spfx-release-beta]
 
-beta.0 Released: March 25, 2025
+beta.0 Released: March 23, 2025
 
 [!INCLUDE spfx-release-notes-common]
 
