@@ -50,6 +50,23 @@ SPFx CLI and templates are available in [GitHub](https://github.com/SharePoint/s
 
 We are in progress of publishing first version of the CLI to NPMjs in upcoming days and we will share more documentation on the usage at this time. Current schedule for General Availability of SPFx CLI is June 2026.
 
+Install the preview version of the SPFx CLI using following command.
+
+```console
+npm install @microsoft/spfx-cli --global
+```
+
+and you can scaffold your first solution with following command.
+
+```console
+spfx create \
+  --template webpart-react \
+  --library-name my-spfx-library \
+  --component-name "Hello World"
+```
+
+See more details and other options from the CLI [documentation](https://github.com/SharePoint/spfx/blob/main/apps/spfx-cli/README.md).
+
 Your feedback is welcome. Let us know your first impressions and provide suggestions.
 
 ### Addressing npm audit issues
