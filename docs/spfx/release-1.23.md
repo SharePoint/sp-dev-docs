@@ -6,12 +6,13 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.23 preview release notes
 
-This is an early baseline version for the upcoming SharePoint 1.23 version with initial updates. We are introducing new capabilities as part of the following updates before the general availability of 1.23 
-[!INCLUDE spfx-release-beta]
+This is an early baseline version for the upcoming SharePoint 1.23 version with initial updates. We are introducing new capabilities as part of the following updates before the general availability of 1.23.
+
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 beta.0 Released: March 23, 2025
 
-[!INCLUDE spfx-release-notes-common]
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Install the latest version
 
