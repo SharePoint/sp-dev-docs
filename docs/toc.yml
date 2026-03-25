@@ -658,14 +658,10 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
-  - name: SharePoint Embedded agent ( Private Preview )
+  - name: SharePoint Embedded agent
     items:
-    - name: SharePoint Embedded agent Overview
-      href: embedded/development/declarative-agent/spe-da.md
-    - name: SharePoint Embedded agent Tutorial
-      href: embedded/development/tutorials/spe-da-vscode.md
-    - name: SharePoint Embedded agent Advanced Topics
-      href: embedded/development/declarative-agent/spe-da-adv.md
+    - name: SharePoint Embedded knowledge source in Microsoft Foundry (Preview)
+      href: embedded/development/declarative-agent/sharepoint-embedded-knowledge-source.md
 - name: Microsoft Teams
   items:
   - name: Overview
