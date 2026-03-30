@@ -1,6 +1,6 @@
 ---
 title: Subscribe to list notifications
-description: Get notified and respond to changes to files in SharePoint Document Libraries
+description: Get notified and respond to changes to files in SharePoint Document Libraries.
 ms.date: 03/25/2026
 ms.localizationpriority: medium
 ---
@@ -16,8 +16,9 @@ To use the SharePoint Framework list subscription capability, you first need to 
 ```console
 npm install @microsoft/sp-list-subscription --save --save-exact
 ```
+
 > [!IMPORTANT]
-> The SharePoint Framework list subscription capability (`@microsoft/sp-list-subscription`) has limited usage and is not commonly used in modern solutions. For production scenarios, consider using Microsoft Graph change notifications or SharePoint webhooks to track changes in lists and document libraries.
+> The SharePoint Framework list subscription capability (`@microsoft/sp-list-subscription`) has limited usage and isn't commonly used in modern solutions. For production scenarios, consider using Microsoft Graph change notifications or SharePoint webhooks to track changes in lists and document libraries.
 
 ## Get notified of changes to documents stored in a SharePoint Document Library
 
@@ -51,7 +52,7 @@ export default class LatestDocumentsWebPart extends BaseClientSideWebPart<ILates
 }
 ```
 
-When creating a list subscription, using the `callbacks.notification` property, you have to specify the method that should be called, when a change has been detected. The method doesn't have any arguments, and for security reasons, you are not provided with details about what specifically changed. To get the latest contents of the Document Library, adhering to the configured permissions, you can use either the SharePoint REST APIs or the Microsoft Graph.
+When creating a list subscription, using the `callbacks.notification` property, you have to specify the method that should be called, when a change has been detected. The method doesn't have any arguments, and for security reasons, you aren't provided with details about what specifically changed. To get the latest contents of the Document Library, adhering to the configured permissions, you can use either the SharePoint REST APIs or the Microsoft Graph.
 
 ## Additional configuration
 
