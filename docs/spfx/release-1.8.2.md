@@ -37,7 +37,7 @@ In the project's **package.json** file, identify all SPFx v1.8.1 packages. For e
 - Fixed the issue with out of memory exceptions during the webPack phase of a build.  We've bumped the tools to use the latest version of WebPack 3
   - [#3679](https://github.com/SharePoint/sp-dev-docs/issues/3679)
 - Updated the build tools to use versions that result in a smaller combined size of the **node_modules** folder. Expect a reduction of *50-150 MB* in size.
-- Updated the generator to use the updated tooling, SPFx version 1.8.2, and **rush-stack-compiler-2.9**.  Feel free to use a different version of **rush-stack-compiler** if you need a different typescript version.  The number after the final '-' is the version of typescript that will be used.  Remember to update your **tsconfig.json** file to reference the correct rush-stack-compiler.
+- Updated the generator to use the updated tooling, SPFx version 1.8.2, and **rush-stack-compiler-2.9**.  Feel free to use a different version of **rush-stack-compiler** if you need a different TypeScript version.  The number after the final '-' is the version of TypeScript that will be used.  Remember to update your **tsconfig.json** file to reference the correct rush-stack-compiler.
 - For the React-scaffolded projects, we now explicitly add **office-ui-fabric-react** (OUIFR) v6 to **package.json**.  We were finding a common pattern where people weren't adding OUIFR to **package.json**, but were using it.
   - OUIFR would end up in the **node_modules** folder because of downstream dependencies. While the solution would compile, it could cause issues in the future such as when the solution was upgraded to use a different version of the framework. In this case, a different version of OUIFR would get used.
   - In general, using packages in this pattern (*via shadow dependencies*) is a bad thing.  You're more than welcome to remove the reference in **package.json** if you aren't using OUIFR in your solution, or change the version if needed.  We also updated the type declarations for the React packages to match the versions of React / React DOM referenced in the release.
@@ -48,7 +48,7 @@ In the project's **package.json** file, identify all SPFx v1.8.1 packages. For e
 
 - App pages can be created through the "add a page" user interface
   - [Microsoft 365 & SharePoint Community - PnP: Community demo - Out of the box modern page templates and app pages built with SharePoint Framework](https://www.youtube.com/watch?v=Fj44FjYKpOM)
-- Mobile and native apps will correctly authenticate to external web APIs like Microsoft Graph or third-party APIs registered through Azure Active Directory.
+- Mobile and native apps will correctly authenticate to external web APIs like Microsoft Graph or third-party APIs registered through Entra ID.
 
 ### Updates rolling into SharePoint Online (ongoing)
 

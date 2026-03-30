@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Using library component type in SharePoint Framework
 
-The library component type in the SharePoint Framework (SPFx) enables you to have independently versioned and deployed code served automatically for the SharePoint Framework components with a deployment through an app catalog. Library components provide you an alternative option to create shared code, which can be then used and referenced cross all the components in the tenant.
+The library component type in the SharePoint Framework (SPFx) enables you to have independently versioned and deployed code served automatically for the SharePoint Framework components with a deployment through an app catalog. Library components provide you an alternate option to create shared code, which can be then used and referenced cross all the components in the tenant.
 
 You can create a library component solution by selecting **Library** as the **Component Type** when creating new projects with the SPFx Yeoman generator.
 

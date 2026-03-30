@@ -46,7 +46,7 @@ The following core styles are supported in the package:
 - Themes
 - Localization
 
-The following are not yet supported in the package:
+The following aren't yet supported in the package:
 
 - Animations
 - Icons
@@ -93,7 +93,7 @@ We recommend that you use the version of the Fluent UI React package included in
 - **SPFx v1.17 and earlier**: Projects use the legacy `office-ui-fabric-react` (v7 or earlier) package.
 
 > [!NOTE]
-> Fabric React versions 2.x or older are not supported in SharePoint Framework.
+> Fabric React versions 2.x or older aren't supported in SharePoint Framework.
 
 After the Fluent UI React package is installed, you can import the required components from the package.
 
@@ -151,7 +151,7 @@ For legacy `office-ui-fabric-react`:
 
 ### Understanding this approach and its shortcomings
 
-Fluent UI components in your solution are locked to the specific version that you installed. You need to update the Fluent UI React package to get any new components if they are available in a newer package version. Because the components are included in the component bundle, it may increase the size of your component bundle. However, this approach is the only approach that is officially supported when Fluent UI React is being used in SharePoint Framework solutions.
+Fluent UI components in your solution are locked to the specific version that you installed. You need to update the Fluent UI React package to get any new components if they're available in a newer package version. Because the components are included in the component bundle, it may increase the size of your component bundle. However, this approach is the only approach that is officially supported when Fluent UI React is being used in SharePoint Framework solutions.
 
 ## The CSS challenge with Fluent UI
 
@@ -159,14 +159,14 @@ The following concepts and references provide insights on the challenge with usi
 
 ### Global CSS styles
 
-How to avoid Global CSS styles at all costs is a big problem. Today, both Fabric Core and Fabric React have global styles. A lack of any native solutions from the browser to manage the style scoping makes this a very difficult problem.
+How to avoid Global CSS styles at all costs is a significant problem. Today, both Fabric Core and Fabric React have global styles. A lack of any native solutions from the browser to manage the style scoping makes this a difficult problem.
 
 - [Scope CSS](https://developer.mozilla.org/docs/Web/CSS/:scope) is in early stages of discussion.
-- iframes are not a good option to isolate styles.
+- iframes aren't a good option to isolate styles.
 - [Web Components](https://developer.mozilla.org/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
 - [The React: CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well.
 
-There is plenty of other documentation on the web about the solutions to the global namespace menace.
+There's plenty of other documentation on the web about the solutions to the global namespace menace.
 
 ### CSS specificity
 
@@ -193,11 +193,11 @@ How [CSS specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) ap
 
 ## Other approaches considered and discarded
 
-Following are some additional insights on the other approaches that were considered but discarded because they did not achieve the key objectives to enable third-party developers to safely use the Office UI Fabric styles.
+The Following are extra insights on the other approaches that were considered but discarded because they didn't achieve the key objectives to enable third-party developers to safely use the Office UI Fabric styles.
 
 ### Office UI Fabric Core
 
-The web part developer would not be required to do anything explicitly to get the scoping to work. We planned to solve this problem through CSS specificity and descendant selectors. The Fabric Core team would ship multiple copies of Fabric Core css (for example, `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`).
+The web part developer wouldn't be required to do anything explicitly to get the scoping to work. We planned to solve this problem through CSS specificity and descendant selectors. The Fabric Core team would ship multiple copies of Fabric Core css (for example, `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`).
 
 All the styles in the scoped CSS files would be inside a descendant selector, for example `.ms-Fabric--v6-0-0 .ms-Icon--List`. At compile time, the tooling would collect the version of the Office UI Fabric Core that the web part was built with. This version could be the one that comes with SharePoint Framework. Alternatively, web part developers could specify an explicit dependency on a specific version of Office UI Fabric Core in their **package.json** file.
 
@@ -205,7 +205,7 @@ The web part div would be assigned this scope, that is `<div data-sp-webpart cla
 
 The rest of the page would contain unscoped Office UI Fabric Core styles. This way, as per CSS specificity rules, the scoped CSS would take precedence within the web part div. The web part and its contents would align to the specific version of the Office UI Fabric Core that the developer had chosen.
 
-*Overriding* Fabric Core styles would not be supported.
+*Overriding* Fabric Core styles wouldn't be supported.
 
 ```javascript
 // Sample of how the scoping would work.
@@ -232,11 +232,11 @@ After analyzing this strategy for a while, it was decided that the descendant se
 
 #### Lack of reliable nesting support
 
-This approach only works if the Microsoft user experience (that is, page and first-party web parts) use an unscoped version of the Office UI Fabric Core such as `ms-Icon--List`, while the third-party web parts only use scoped Office UI Fabric Core CSS as explained earlier.
+This approach only works if the Microsoft user experience (that is, page and first-party web parts) uses an unscoped version of the Office UI Fabric Core such as `ms-Icon--List`, while the third-party web parts only use scoped Office UI Fabric Core CSS as explained earlier.
 
 The reason being that the specificity of the scoped CSS applied on the web part overrides the unscoped CSS on the page. Keep in mind, as explained earlier, that if CSS specificity of the two classes is the same, their loading order plays a role in how the CSS classes are applied. The class that loads later takes precedence. Hence, the higher specificity of the scoped CSS is important in getting a consistent experience.
 
-Furthermore, multiple extensions, one contained in the other, cannot use different Fabric Core versions. In the following example, only `ms-Fabric--v6-0-0` would get applied:
+Furthermore, multiple extensions, one contained in the other, can't use different Fabric Core versions. In the following example, only `ms-Fabric--v6-0-0` would get applied:
 
 ```HTML
 <div className="ms-Fabric--v6-0-0">
@@ -306,16 +306,16 @@ Here's a more simplistic sample demonstrating the challenge:
 
 #### Leakage from unscoped classes
 
-There is another problem with descendant selectors. Note in the previous example that the height and the width styles from the unscoped myButton class are applied to all the buttons. This implies that a change in that style could inadvertently break HTML by using scoped markup.
+There's another problem with descendant selectors. Note in the previous example that the height and the width styles from the unscoped myButton class are applied to all the buttons. This implies that a change in that style could inadvertently break HTML by using scoped markup.
 
-Say for example, for some reason at the app level we decide to make height 0 px on the myButton class. That results in all third-party web parts that use the myButton class to have a height of 0 px (that is, a serious regression in the user experience).
+Say, for example, for some reason at the app level we decide to make height 0 px on the myButton class. That results in all third-party web parts that use the myButton class to have a height of 0 px (that is, a serious regression in the user experience).
 
 ## Safely use legacy Office UI Fabric Styles (after SPFx v1.8.2)
 
 > [!IMPORTANT]
 > The following guidance applies to SharePoint Framework >= 1.8.2
 
-Ensure that the webpart manifest demands legacy Fabric core styles be loaded onto the page. This is done by specifying `loadLegacyFabricCss: true` in the solution manifest.
+Ensure that the web part manifest demands legacy Fabric core styles be loaded onto the page. This is done by specifying `loadLegacyFabricCss: true` in the solution manifest.
 
 Prior to the release of SPFx v1.8.2, a host page bug was present where legacy Fabric core styles were loaded unscoped. Therefore, if another solution demanded the styles, then all other solutions on the page were able to use them. This led to solutions working "by chance" when not rendered in isolation.
 
@@ -324,7 +324,7 @@ To address this bug, the styles were scoped to `.ms-SPLegacyFabricBlock` class a
 > [!IMPORTANT]
 > Eventually the explicit reference to `.ms-SPLegacyFabricBlock` **will be removed** from the DOM for solutions that don't declare their dependency. This change will be broadly communicated via existing channels prior to removing this class.
 
-In the event of a solution that is running in DOM elements that are not provided by the SPFx (*which is generally unsupported*), you'll need to apply the `.ms-SPLegacyFabricBlock` class yourself.
+In the event of a solution that's running in DOM elements that aren't provided by the SPFx (*which is unsupported*), you'll need to apply the `.ms-SPLegacyFabricBlock` class yourself.
 
 ## Usage of Fluent UI icons in SPFx components
 

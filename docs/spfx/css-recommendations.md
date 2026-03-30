@@ -4,43 +4,38 @@ description: Use CSS to define how your SharePoint Framework customization shoul
 ms.date: 03/23/2026
 ms.localizationpriority: high
 ---
-
-
 # Recommendations for working with CSS in SharePoint Framework solutions
 
 When building SharePoint Framework solutions, you can use CSS to define how your customization should look and behave. This article describes how you can make the best use of the capabilities provided with the SharePoint Framework and build your CSS styles in a robust way.
 
 ## SharePoint Framework customizations are part of the page
 
-When building SharePoint customizations using the add-in model, the solution is isolated from other elements on the page. Your code can be executed in an `<iframe>` as an add-in part, or as an immersive application that takes control of the whole page. In both cases, your code is not affected by other elements and styles defined on the page.
+When building SharePoint customizations using the add-in model, the solution is isolated from other elements on the page. Your code can be executed in an `iframe` as an add-in part, or as an immersive application that takes control of the whole page. In both cases, your code isn't affected by other elements and styles defined on the page.
 
-SharePoint Framework solutions are a part of the page and integrate fully with the page's DOM. While this removes a number of restrictions that come with the add-in model, it exposes your solution to risk. Because it's a part of the page, unless explicitly isolated, all CSS styles present on the page apply to it, potentially resulting in an experience different from what you intended. To avoid such risks, you should define your CSS styles in such a way so that they won't affect anything else on the page other than your customization.
+SharePoint Framework solutions are a part of the page and integrate fully with the page's DOM. While this removes many restrictions that come with the add-in model, it exposes your solution to risk. Because it's a part of the page, unless explicitly isolated, all CSS styles present on the page apply to it, potentially resulting in an experience different from what you intended. To avoid such risks, you should define your CSS styles in such a way so that they won't affect anything else on the page other than your customization.
 
 ## Organize CSS files in your solution
 
 The UI of your solutions often consists of multiple building blocks. In many JavaScript libraries, these building blocks are called components. A component can be simple and define only the presentation, or it can be more complex and include state and other components. Splitting your solution into multiple components allows you to simplify the development process and makes it easier to test and reuse the components in your solution.
 
-Because components have presentation, they often require CSS styles. Ideally, components should be isolated and be able to be used on their own. With that in mind, it makes perfect sense for you to store CSS styles for the particular component along with all other asset files next to the component. Following is a sample structure of a React application with a number of components, each with its own CSS file.
+Because components have presentation, they often require CSS styles. Ideally, components should be isolated and be able to be used on their own. With that in mind, it makes perfect sense for you to store CSS styles for the particular component along with all other asset files next to the component. Following is a sample structure of a React application with many components, each with its own CSS file.
 
 ```text
-todoWebPart\components
-                      \todoList
-                               \todoList.tsx
+todoWebPart\components\todoList\todoList.tsx
                                \todoList.module.scss
-                      \todoItem
-                               \todoItem.tsx
+                      \todoItem\todoItem.tsx
                                \todoItem.module.scss
 ```
 
 ## Use Sass
 
-In SharePoint Framework, you can use both CSS and Sass. Sass is a superset of CSS and offers you a number of features such as variables, nesting selectors, or mixins, all of which simplify working with and managing CSS styles over the long term.
+In SharePoint Framework, you can use both CSS and Sass. Sass is a superset of CSS and offers you many features such as variables, nesting selectors, or mixins, all of which simplify working with and managing CSS styles over the long term.
 
-For a complete set of features, see the [Sass website](http://sass-lang.com). All valid CSS is also valid Sass, which is very helpful if you haven't worked with Sass before and want to gradually learn its capabilities.
+For a complete set of features, see the [Sass website](http://sass-lang.com). All valid CSS is also valid Sass, which is helpful if you haven't worked with Sass before and want to gradually learn its capabilities.
 
 ## Avoid using IDs in markup
 
-Using SharePoint Framework, you build customizations that end-users add to SharePoint. It's impossible to tell upfront if the particular customization is used only once on a page or if there are multiple instances of it.
+Using SharePoint Framework, you build customizations that end users add to SharePoint. It's impossible to tell upfront if the particular customization is used only once on a page or if there are multiple instances of it.
 
 To avoid issues, you should always assume that there are multiple instances of your customization on the same page. With that in mind, you should avoid using any IDs in your markup. IDs are meant to be unique on a page, and if a user adds your web part to the page twice, it violates this premise, possibly leading to errors.
 
@@ -61,8 +56,6 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   // ...
 }
 ```
-
-<br/>
 
 #### Good practice
 
@@ -90,7 +83,7 @@ To help you avoid styling conflicts, SharePoint Framework uses [CSS modules](htt
 
 Following the previous example, assume that you had the following two Sass files:
 
-#### todoList.module.scss
+### todoList.module.scss
 
 ```scss
 .todoList {
@@ -103,9 +96,7 @@ Following the previous example, assume that you had the following two Sass files
 }
 ```
 
-<br/>
-
-#### todoItem.module.scss
+### todoItem.module.scss
 
 ```scss
 .todoItem {
@@ -117,11 +108,9 @@ Following the previous example, assume that you had the following two Sass files
 }
 ```
 
-<br/>
-
 After building the project, in the **lib** folder you would see the following two CSS files generated (line breaks and indenting added for readability):
 
-#### todoList.module.css
+### todoList.module.css
 
 ```css
 .todoList_3e9d35f0 {
@@ -134,9 +123,7 @@ After building the project, in the **lib** folder you would see the following tw
 }
 ```
 
-<br/>
-
-#### todoItem.module.css
+### todoItem.module.css
 
 ```css
 .todoItem_f7081cc4 {
@@ -148,13 +135,11 @@ After building the project, in the **lib** folder you would see the following tw
 }
 ```
 
-<br/>
-
-Even though there was a **.text** class defined in both Sass files, notice how in the generated CSS files it has two different hashes appended to it, becoming a unique class name specific to each component.
+Even though there was a `.text` class defined in both Sass files, notice how in the generated CSS files it has two different hashes appended to it, becoming a unique class name specific to each component.
 
 The CSS class names in CSS modules are generated dynamically, which makes it impossible for you to refer to them in your code directly. Instead, when processing CSS modules, the SharePoint Framework toolchain generates a JavaScript file with references to the generated class names.
 
-#### todoList.module.scss.js
+### todoList.module.scss.js
 
 ```javascript
 "use strict";
@@ -170,8 +155,6 @@ exports.default = styles;
 
 //# sourceMappingURL=todoList.module.scss.js.map
 ```
-
-<br/>
 
 To use the generated class names in your code, you first import the styles of your component, and then use the property pointing to the particular class:
 
@@ -190,8 +173,6 @@ export default class TodoList extends React.Component<ITodoListProps, void> {
 }
 ```
 
-<br/>
-
 For the CSS modules to work correctly, you have to meet the following conditions:
 
 * Your Sass files must have the **.module.scss** extension. If you use the **.scss** extension without **.module**, you see a warning in the build process. The Sass file is transpiled to an intermediate CSS file, but the class names *will not be made unique*. In cases when you need to override third-party CSS styles, this might be intended.
@@ -206,7 +187,7 @@ By combining CSS modules with Sass support for nesting rule sets, you can simpli
 
 When building CSS styles for a component, wrap them in a class named after the component. In the component, assign that class to the component's root element.
 
-#### todoList.module.scss
+### todoList.module.scss
 
 ```scss
 .todoList {
@@ -216,9 +197,7 @@ When building CSS styles for a component, wrap them in a class named after the c
 }
 ```
 
-<br/>
-
-#### TodoList.tsx
+### TodoList.tsx
 
 ```tsx
 // ...
@@ -233,8 +212,6 @@ export default class TodoList extends React.Component<ITodoListProps, void> {
   }
 }
 ```
-
-<br/>
 
 After transpilation, the generated CSS file looks similar to:
 
@@ -258,8 +235,6 @@ In case a web part should use the new flex box model defined by the `display: fl
 }
 ```
 
-<br/>
-
 The Sass code of the SharePoint Framework artefact does not need to have vendor prefixes included. After the Sass-to-CSS compilation, those were added automatically, resulting in the following CSS declaration.
 
 ```css
@@ -269,8 +244,6 @@ The Sass code of the SharePoint Framework artefact does not need to have vendor 
   display: flex;
 }
 ```
-
-<br/>
 
 Removing already applied prefixes does not only make the code of the artefact cleaner, it also makes it easier to read and future-ready. This process is also configured to support only SharePoint Framework-supported browsers and makes it more error-safe.
 
@@ -289,8 +262,6 @@ The following example makes use of the `border-radius` property, which does not 
 }
 ```
 
-<br/>
-
 The resulting CSS in the package is converted to the following code.
 
 ```css
@@ -299,11 +270,11 @@ The resulting CSS in the package is converted to the following code.
 }
 ```
 
-For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use__?](https://caniuse.com).
+For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use?](https://caniuse.com).
 
 ## Integrate Fluent UI
 
-By making your customizations look and behave like the standard functionality of SharePoint and Microsoft 365, you make it easier for end-users to work with them. Fluent UI (formerly Office UI Fabric) offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience.
+By making your customizations look and behave like the standard functionality of SharePoint and Microsoft 365, you make it easier for end users to work with them. Fluent UI (formerly Office UI Fabric) offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience.
 
 For more information about using Fluent UI in SharePoint Framework, see [Using Fluent UI in SharePoint Framework](./fluent-ui-integration.md).
 
