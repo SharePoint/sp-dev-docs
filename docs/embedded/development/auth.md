@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 03/20/2026
+ms.date: 04/02/2026
 ms.localizationpriority: high
 ---
 
@@ -132,6 +132,30 @@ Specific items in a container can be shared with users via the [driveItem invite
 
 [SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) can manage all SharePoint Embedded applications created in the **owning** tenant. Additionally, any Microsoft Entra user that isn't an external identity can be assigned as an owner of a [container type](/graph/api/resources/filestoragecontainertype). Container type owners can manage that specific container type. To learn more about managing applications created in the owning tenant, see [SharePoint Embedded developer administrator](../administration/developer-admin/dev-admin.md).
 
+#### Container type owner capabilities
+
+Container type owners are managed through the [permissions](/graph/api/filestoragecontainertype-post-permissions) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource. Each permission entry has a role of `owner` and identifies the user via `grantedToV2`. Owners can be managed in the following ways:
+
+- **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
+- **Add owners**: Use [POST /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-post-permissions) to add up to 3 owners per container type.
+- **Remove owners**: Use [DELETE /containerTypes/{id}/permissions/{id}](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
+- **Read owners**: Use [GET /containerTypes/{id}?$expand=permissions](/graph/api/filestoragecontainertype-get) or [GET /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-list-permissions) to retrieve the container type owners.
+
+Container type owners can perform the following operations on the **owning tenant** when using an application with `FileStorageContainerType.Manage.All` in delegated mode:
+
+- **Create, read, update, and delete** the container type they own. Non-admin owners can only manage container types where they appear in the permissions collection and the calling app matches the owning application.
+- **Add and remove** other owners on the container type they own (via the permissions endpoint)
+- **Create containers** of the container type they own, as long as the call is delegated (not app-only)
+
+> [!NOTE]
+> The user who creates a container type is automatically assigned as an owner. External identities (guest users) cannot be assigned as container type owners and cannot perform owner operations.
+
+> [!IMPORTANT]
+> Container type owners exist only in the owning tenant. When a container type is registered in a consuming tenant, the owner information is **not** propagated to that tenant. For example, if Contoso creates a container type with owners and registers it in Fabrikam, those Contoso users do not exist in Fabrikam's tenant and have no owner capabilities there.
+
+> [!IMPORTANT]
+> Container type owner capabilities are user permissions. The effective access is the intersection of the application permissions (Microsoft Graph permissions) and the user permissions (owner role). The application must have sufficient Graph permissions for the intersection to grant the desired access.
+
 ### Exceptional access patterns
 
 Currently, there are two types of operations with exceptional access patterns:
@@ -183,4 +207,7 @@ Here are some actions you can take next:
       - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access the container on _consuming_ tenants without a user
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
 1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
+1. Remove `FileStorageContainerTypeReg.Selected` from your application's manifest after registration is complete.
+    > [!NOTE]
+    > After registering the container type, you should remove the `FileStorageContainerTypeReg.Selected` permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
 1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
