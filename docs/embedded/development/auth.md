@@ -37,6 +37,7 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 
 - [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall) to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
 - [FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected) to allow an application to register the container type on consuming tenants.
+- [FileStorageContainerTypeReg.Manage.All](/graph/permissions-reference#filestoragecontainertyperegmanageall) to allow an application to manage file storage container type registrations on behalf of the signed-in user.
 - [FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected) to allow an application to access containers of the given container type on consuming tenants.
 
 #### Access on behalf of a user
@@ -132,6 +133,29 @@ Specific items in a container can be shared with users via the [driveItem invite
 
 [SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) can manage all SharePoint Embedded applications created in the **owning** tenant. Additionally, any Microsoft Entra user that isn't an external identity can be assigned as an owner of a [container type](/graph/api/resources/filestoragecontainertype). Container type owners can manage that specific container type. To learn more about managing applications created in the owning tenant, see [SharePoint Embedded developer administrator](../administration/developer-admin/dev-admin.md).
 
+##### Container type owner self-service registration
+
+Container type owners can register their container types in tenants where the container type is local (owning tenant equals consuming tenant). This requires:
+
+- The application has `FileStorageContainerTypeReg.Manage.All` delegated permission
+- The calling user is a container type owner (appears in the permissions collection on the container type)
+- The call is delegated (not app-only)
+- The calling user is not a guest user
+- Self-service container type registration is enabled on the tenant. This setting is enabled by default. SharePoint Embedded Administrators or Global Administrators can manage this setting using [SharePoint Online PowerShell](/powershell/module/sharepoint-online/set-spotenant):
+
+  ```powershell
+  # Check current state
+  Get-SPOTenant | Select-Object IsSelfServiceContainerTypeRegistrationEnabled
+
+  # Disable self-service registration
+  Set-SPOTenant -IsSelfServiceContainerTypeRegistrationEnabled $false
+
+  # Re-enable self-service registration
+  Set-SPOTenant -IsSelfServiceContainerTypeRegistrationEnabled $true
+  ```
+
+This enables developers to register their own container types without requiring a SharePoint Embedded Administrator to perform the registration on their behalf.
+
 ### Exceptional access patterns
 
 Currently, there are two types of operations with exceptional access patterns:
@@ -183,4 +207,7 @@ Here are some actions you can take next:
       - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access the container on _consuming_ tenants without a user
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
 1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
+1. Remove `FileStorageContainerTypeReg.Selected` from your application's manifest after registration is complete.
+    > [!NOTE]
+    > After registering the container type, you should remove the `FileStorageContainerTypeReg.Selected` permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
 1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
