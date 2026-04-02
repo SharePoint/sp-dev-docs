@@ -256,7 +256,7 @@
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
       - name: Grouping of ListView Command Set extensions
-        href: spfx/extensions/guidance/grouping-cmdset-extensions.md
+        href: spfx/extensions/guidance/list-view-command-set-grouping.md
   - name: Library components
     items:
     - name: Overview
