@@ -255,6 +255,8 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
+      - name: Grouping of ListView Command Set extensions
+        href: spfx/extensions/guidance/list-view-command-set-grouping.md
   - name: Library components
     items:
     - name: Overview
@@ -426,8 +428,8 @@
       href: design/themes-colors.md
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
-    - name: Office UI Fabric integration
-      href: spfx/office-ui-fabric-integration.md
+    - name: Fluent UI integration
+      href: spfx/fluent-ui-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
     - name: Microsoft Graph Toolkit
@@ -500,6 +502,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.23 - April 2, 2026
+      href: spfx/release-1.23.md
     - name: SPFx v1.22.2 - January 28, 2026
       href: spfx/release-1.22.2.md
     - name: SPFx v1.22.1 - December 15, 2025
@@ -660,14 +664,10 @@
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
-  - name: SharePoint Embedded agent ( Private Preview )
+  - name: SharePoint Embedded agent
     items:
-    - name: SharePoint Embedded agent Overview
-      href: embedded/development/declarative-agent/spe-da.md
-    - name: SharePoint Embedded agent Tutorial
-      href: embedded/development/tutorials/spe-da-vscode.md
-    - name: SharePoint Embedded agent Advanced Topics
-      href: embedded/development/declarative-agent/spe-da-adv.md
+    - name: SharePoint Embedded knowledge source in Microsoft Foundry (Preview)
+      href: embedded/development/declarative-agent/sharepoint-embedded-knowledge-source.md
 - name: Microsoft Teams
   items:
   - name: Overview

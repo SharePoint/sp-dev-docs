@@ -1,7 +1,7 @@
 ---
 title: Subscribe to list notifications
-description: Get notified and respond to changes to files in SharePoint Document Libraries
-ms.date: 04/27/2020
+description: Get notified and respond to changes to files in SharePoint Document Libraries.
+ms.date: 03/25/2026
 ms.localizationpriority: medium
 ---
 
@@ -17,11 +17,14 @@ To use the SharePoint Framework list subscription capability, you first need to 
 npm install @microsoft/sp-list-subscription --save --save-exact
 ```
 
+> [!IMPORTANT]
+> The SharePoint Framework list subscription capability (`@microsoft/sp-list-subscription`) has limited usage and isn't commonly used in modern solutions. For production scenarios, consider using Microsoft Graph change notifications or SharePoint webhooks to track changes in lists and document libraries.
+
 ## Get notified of changes to documents stored in a SharePoint Document Library
 
 To subscribe to changes to files stored in a SharePoint Document Library, create an instance of the `ListSubscriptionFactory` class. Next, call the `createSubscription()` method passing the ID of the Document Library to which you want to subscribe. If the Document Library is located in the current site, it's sufficient to specify just the library ID. If it's located in a different site or site collection, then you need to specify their IDs as well.
 
-Following, is an example of a list subscription for a Document Library located in the current site:
+Following is an example of a list subscription for a Document Library located in the current site:
 
 ```typescript
 import { ListSubscriptionFactory, IListSubscription } from '@microsoft/sp-list-subscription';
@@ -49,7 +52,7 @@ export default class LatestDocumentsWebPart extends BaseClientSideWebPart<ILates
 }
 ```
 
-When creating a list subscription, using the `callbacks.notification` property, you have to specify the method that should be called, when a change has been detected. The method doesn't have any arguments, and for security reasons, you don't get notified what has been changed exactly. To get the latest contents of the Document Library, adhering to the configured permissions, you can use either the SharePoint REST APIs or the Microsoft Graph.
+When creating a list subscription, using the `callbacks.notification` property, you have to specify the method that should be called, when a change has been detected. The method doesn't have any arguments, and for security reasons, you aren't provided with details about what specifically changed. To get the latest contents of the Document Library, adhering to the configured permissions, you can use either the SharePoint REST APIs or the Microsoft Graph.
 
 ## Additional configuration
 
@@ -75,7 +78,7 @@ this._listSubscriptionFactory.createSubscription({
 
 In some cases, you might want to get notified when the component that you're building successfully subscribed to list notifications or if the connection has been broken. This would allow you to communicate the connection to the user through the UI.
 
-The list subscription API, exposes two additional callbacks that you can implement to respond to the subscription status. The following code illustrates the case, where the component will be notified when the subscription has been established and when it was disconnected.
+The list subscription API exposes two additional callbacks that you can implement to respond to the subscription status. The following code illustrates the case, where the component will be notified when the subscription has been established and when it was disconnected.
 
 ```typescript
 private createListSubscription(): void {

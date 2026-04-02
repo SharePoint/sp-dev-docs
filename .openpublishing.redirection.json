@@ -269,6 +269,11 @@
       "source_path": "docs/embedded/concepts/app-concepts/register-api-documentation.md",
       "redirect_url": "/sharepoint/dev/embedded/getting-started/register-api-documentation",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/office-ui-fabric-integration.md",
+      "redirect_url": "/sharepoint/dev/spfx/fluent-ui-integration",
+      "redirect_document_id": false
     }
   ]
 }
