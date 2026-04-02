@@ -10,8 +10,8 @@ This is an early baseline version for the upcoming SharePoint 1.23 version with 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.2 Released: April 2, 2026
-beta.0 Released: March 23, 2026
+* beta.2 Released: April 2, 2026
+* beta.0 Released: March 23, 2026
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
