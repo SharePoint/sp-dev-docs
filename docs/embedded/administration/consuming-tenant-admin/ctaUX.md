@@ -82,21 +82,21 @@ The Archived containers page lists all containers in the tenant's archived conta
 1. Ownership type
 1. Principal owner
    
-![Archived Containers](../../images/ArchivedContainersPage.png)
+![Archived Containers](../../images/archived-containers-page.png)
 
 ## Archive a container
 
 A container can be archived when it’s no longer actively used but must be retained for legal, compliance, or business purposes. From the Active containers page, the CTA can select a container and choose Archive option to start the archival process.
 
-![Active Containers Archive action](../../images/ActiveContainersArchiveAction.png)
+![Active Containers Archive action](../../images/active-containers-archive-action.png)
 
 This opens the side panel that educates admin about the implication of archival action and ways of getting back the archived content. The CTA can at this stage either cancel the panel and go back to the active containers page or proceed further with the archival by clicking on “Archive”.
 
-![Archive Containers Confirmation Panel](../../images/ArchiveContainerConfirmationPanel.png)
+![Archive Containers Confirmation Panel](../../images/archive-container-confirmation-panel.png)
 
 The selected container is successfully archived and moved into the Archived containers page.
 
-![Container Archival confirmed](../../images/ContainerArchivedConfirmation.png)
+![Container Archival confirmed](../../images/container-archived-confirmation.png)
 
 ## Reactivate Archived Containers
 
@@ -106,29 +106,29 @@ Archived containers aren’t accessible to users or applications until they’re
 
 From the Archived containers page, the CTA can select a Recently archived container and choose Reactivate option to start the reactivation process.
 
-![Reactivate Recently Archived Container](../../images/ReactivateRecentlyArchivedContainer.png)
+![Reactivate Recently Archived Container](../../images/reactivate-recently-archived-container.png)
 
 This opens a side panel that informs admin about the reactivation time. The CTA can at this stage either cancel the panel and go back to the Archived containers page or proceed further with the reactivation by clicking on “Reactivate”.
 
-![Reactivate Recently Archived Container Confirmation](../../images/ReactivateRecentlyArchivedContainerConfirmation.png)
+![Reactivate Recently Archived Container Confirmation](../../images/reactivate-recently-archived-container-confirmation.png)
 
 The selected container is successfully reactivated and moved into the Active containers page.
 
-![Container Reactivated Confirmation](../../images/ContainerReactivatedConfirmation.png)
+![Container Reactivated Confirmation](../../images/container-reactivated-confirmation.png)
 
 ### Reactivate Fully Archived Containers
 
 From the Archived containers page, the CTA can select a Fully archived container and choose Reactivate option to start the reactivation process.
 
-![Reactivate Fully Archived Container](../../images/ReactivateFullyArchivedContainer.png)
+![Reactivate Fully Archived Container](../../images/reactivate-fully-archived-container.png)
 
 This opens a side panel that informs admin about the reactivation time of __24 hours__. The CTA can at this stage either cancel the panel and go back to the Archived containers page or proceed further with the reactivation by clicking on “Reactivate”.
 
-![Reactivate Fully Archived Container Confirmation](../../images/ReactivateFullyArchivedContainerConfirmation.png)
+![Reactivate Fully Archived Container Confirmation](../../images/reactivate-fully-archived-container-confirmation.png)
 
 Reactivation request gets submitted for the selected container and it is displayed on the Archived containers page in the "Reactivating" state. Once the reactivation completes after 24 hours, the container is moved to the Active containers page.
 
-![Reactivation Request Submission](../../images/ReactivationRequestSubmission.png)
+![Reactivation Request Submission](../../images/reactivation-request-submission.png)
 
 ## Deleted Containers
 
