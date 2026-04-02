@@ -255,6 +255,8 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
+      - name: Grouping of ListView Command Set extensions
+        href: spfx/extensions/guidance/grouping-cmdset-extensions.md
   - name: Library components
     items:
     - name: Overview
@@ -500,7 +502,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.23 - March 23, 2026
+    - name: SPFx v1.23 - April 2, 2026
       href: spfx/release-1.23.md
     - name: SPFx v1.22.2 - January 28, 2026
       href: spfx/release-1.22.2.md
