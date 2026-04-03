@@ -285,10 +285,7 @@ Removes a view from a list. This action can also be used to remove a view applie
 
 ### addContentType
 
-Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script by using the createContentType action.
-
-> [!NOTE]
-> Currently we do not support adding enterprise content types.
+Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script by using the createContentType action or published enterprise content types added by using the "addContentTypesFromHub" verb.
 
 #### JSON value
 
