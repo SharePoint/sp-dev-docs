@@ -35,22 +35,22 @@ SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embed
 
 SharePoint Embedded applications need to request the following Microsoft Graph permissions in their application manifest to work with SharePoint Embedded:
 
-- [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall) to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
-- [FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected) to allow an application to register the container type on consuming tenants.
-- [FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected) to allow an application to access containers of the given container type on consuming tenants.
+- **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
+- **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** to allow an application to register the container type on consuming tenants.
+- **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to allow an application to access containers of the given container type on consuming tenants.
 
 #### Access on behalf of a user
 
-SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) delegated permission.
+SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) require applications to receive consent for Microsoft Graph **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** delegated permission.
 
-In addition to your application receiving consent for `FileStorageContainer.Selected` on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
+In addition to your application receiving consent for **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
 
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
 
 #### Access without a user
 
-SharePoint Embedded operations [without a user](/graph/auth-v2-service) require applications to receive consent for Microsoft Graph [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) application permission. This permission requires admin consent on the consuming tenant.
+SharePoint Embedded operations [without a user](/graph/auth-v2-service) require applications to receive consent for Microsoft Graph **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** application permission. This permission requires admin consent on the consuming tenant.
 
 > [!NOTE]
 > An administrator on the consuming tenant must consent to your application's request for permissions. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
@@ -137,11 +137,11 @@ Specific items in a container can be shared with users via the [driveItem invite
 Container type owners are managed through the [permissions](/graph/api/filestoragecontainertype-post-permissions) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource. Each permission entry has a role of `owner` and identifies the user via `grantedToV2`. Owners can be managed in the following ways:
 
 - **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
-- **Add owners**: Use [POST /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-post-permissions) to add up to three owners per container type.
-- **Remove owners**: Use [DELETE /containerTypes/{id}/permissions/{id}](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
-- **Read owners**: Use [GET /containerTypes/{id}?$expand=permissions](/graph/api/filestoragecontainertype-get) or [GET /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-list-permissions) to retrieve the container type owners.
+- **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions) to add up to three owners per container type.
+- **Remove owners**: Use [`DELETE /containerTypes/{id}/permissions/{id}`](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
+- **Read owners**: Use [`GET /containerTypes/{id}?$expand=permissions`](/graph/api/filestoragecontainertype-get) or [`GET /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-list-permissions) to retrieve the container type owners.
 
-Container type owners can do the following operations on the **owning tenant** when using an application with `FileStorageContainerType.Manage.All` in delegated mode:
+Container type owners can do the following operations on the **owning tenant** when using an application with **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** in delegated mode:
 
 - **Create, read, update, and delete** the container type they own. Non-admin owners can only manage container types where they appear in the permissions collection and the calling app matches the owning application.
 - **Add and remove** other owners on the container type they own (via the permissions endpoint)
@@ -170,7 +170,7 @@ Currently, there are two types of operations with exceptional access patterns:
 
 This section refers only to the search scenarios in [Search Content](./content-experiences/search-content.md), and not the enumeration scenarios.
 
-To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePoint Embedded content, you must request the Delegated [`Files.Read.All`](/graph/permissions-reference#filesreadall) Microsoft Graph permission on top of `FileStorageContainer.Selected`, normally used for SharePoint Embedded access. During the Preview stage of this feature, the `Files.Read.All` application permission grants applications access to search capabilities on all SharePoint Embedded content.
+To use [Microsoft Search](/microsoftsearch/overview-microsoft-search) on SharePoint Embedded content, you must request the Delegated **[Files.Read.All](/graph/permissions-reference#filesreadall)** Microsoft Graph permission on top of **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)**, normally used for SharePoint Embedded access. During the Preview stage of this feature, the **[Files.Read.All](/graph/permissions-reference#filesreadall)** application permission grants applications access to search capabilities on all SharePoint Embedded content.
 
 > [!NOTE]
 > Microsoft Search support for SharePoint Embedded content is in Preview and is subject to change. The access requirements for Microsoft Search on SharePoint Embedded content will align with the SharePoint Embedded authorization model in the future. Stay tuned.
@@ -181,7 +181,7 @@ SharePoint Embedded is designed to work without the need for end users to have a
 
 ##### List containers
 
-The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation returns a `403 Forbidden` response code if called on behalf of a user who doesn't have a OneDrive. There are plans to remove this dependency soon. This dependency doesn't apply to the List containers operation when called without a user context (app-only mode).
+The [List containers](/graph/api/filestorage-list-containers?tabs=http) operation returns a **403 Forbidden** response code if called on behalf of a user who doesn't have a OneDrive. There are plans to remove this dependency soon. This dependency doesn't apply to the List containers operation when called without a user context (app-only mode).
 
 ##### Mention users in Office documents
 
@@ -192,22 +192,41 @@ The common [Office experience](./content-experiences/office-experience.md) inclu
 Here are some actions you can take next:
 
 1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions on your _owning_ tenant:
-    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
-      - Add: `FileStorageContainerType.Manage.All` (type: `Role`, ID: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`) to create container types on the _owning_ tenant
+    - Add the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to create container types on the _owning_ tenant:
+        - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
+        - **type**: `Role`
+        - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on your _owning_ tenant
 1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
 1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
-    - Microsoft Graph (resourceAppId: `00000003-0000-0000-c000-000000000000`)
-      - Remove: `FileStorageContainerType.Manage.All` (type: `Role`, ID: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`) as this is only needed to create the container type on the _owning_ tenant
-        > [!NOTE]
-        > After creating the container type on the _owning_ tenant, you should remove the `FileStorageContainerType.Manage.All` permission from your application's manifest.
-        > Your application DOES NOT need this on _consuming_ tenants, only on the _owning_ tenant to create the container type. Failure to remove this permission from the application's manifest will lead to your customers being concerned about the excessive permissions requested by your application.
-      - Add: `FileStorageContainerTypeReg.Selected` (type: `Role`, ID: `2dcc6599-bd30-442b-8f11-90f88ad441dc`) to register the container type on _consuming_ tenants
-      - Add: `FileStorageContainer.Selected` (type: `Scope`, ID: `085ca537-6565-41c2-aca7-db852babc212`) to access containers on _consuming_ tenants on behalf of users
-      - Optionally add: `FileStorageContainer.Selected` (type: `Role`, ID: `40dc41bc-0f7e-42ff-89bd-d9516947e474`) to access the container on _consuming_ tenants without a user
+
+    - Remove the Microsoft Graph permission [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** as this is only needed to create the container type on the _owning_ tenant:
+        - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
+        - **type**: `Role`
+        - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
+
+          > [!NOTE]
+          > After creating the container type on the _owning_ tenant, you should remove the **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission from your application's manifest.
+          > Your application DOES NOT need this on _consuming_ tenants, only on the _owning_ tenant to create the container type. Failure to remove this permission from the application's manifest will lead to your customers being concerned about the excessive permissions requested by your application.
+
+    - Add the Microsoft Graph permission **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** to register the container type on _consuming_ tenants:
+        - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
+        - **type**: `Role`
+        - **ID**: `2dcc6599-bd30-442b-8f11-90f88ad441dc`
+    - Add the Microsoft Graph permission **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to access containers on _consuming_ tenants on behalf of users:
+        - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
+        - **type**: `Scope`
+        - **ID**: `085ca537-6565-41c2-aca7-db852babc212`
+    - Optionally add the Microsoft Graph permission **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to access the container on _consuming_ tenants without a user:
+        - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
+        - **type**: `Role`
+        - **ID**: `40dc41bc-0f7e-42ff-89bd-d9516947e474`
+
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
 1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
-1. Remove `FileStorageContainerTypeReg.Selected` from your application's manifest after registration is complete.
+1. Remove **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** from your application's manifest after registration is complete.
+
     > [!NOTE]
-    > After registering the container type, you should remove the `FileStorageContainerTypeReg.Selected` permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
+    > After registering the container type, you should remove the **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
+
 1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
