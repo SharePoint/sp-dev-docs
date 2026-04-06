@@ -600,6 +600,8 @@
       href: embedded/getting-started/containertypes.md
     - name: Register Container Type API
       href: embedded/getting-started/register-api-documentation.md
+    - name: Microsoft 365 Archive support for containers
+      href: embedded/getting-started/microsoft-365-archive-support-for-containers.md
   - name: Development
     items:
     - name: Application Architecture
@@ -612,6 +614,8 @@
       href: embedded/development/limits-calling.md
     - name: Fluid Framework
       href: embedded/development/fluid.md
+    - name: Support archive funcationality in your application
+      href: embedded/development/support-archival-of-containers.md
     - name: Office Experiences
       href: embedded/development/content-experiences/office-experience.md
     - name: User Experiences
