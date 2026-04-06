@@ -601,7 +601,7 @@
     - name: Register Container Type API
       href: embedded/getting-started/register-api-documentation.md
     - name: Microsoft 365 Archive support for containers
-      href: embedded/getting-started/m365-archive-support-for-containers.md
+      href: embedded/getting-started/microsoft-365-archive-support-for-containers.md
   - name: Development
     items:
     - name: Application Architecture
