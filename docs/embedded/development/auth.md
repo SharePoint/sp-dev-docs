@@ -137,21 +137,21 @@ Specific items in a container can be shared with users via the [driveItem invite
 Container type owners are managed through the [permissions](/graph/api/filestoragecontainertype-post-permissions) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource. Each permission entry has a role of `owner` and identifies the user via `grantedToV2`. Owners can be managed in the following ways:
 
 - **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
-- **Add owners**: Use [POST /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-post-permissions) to add up to 3 owners per container type.
+- **Add owners**: Use [POST /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-post-permissions) to add up to three owners per container type.
 - **Remove owners**: Use [DELETE /containerTypes/{id}/permissions/{id}](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
 - **Read owners**: Use [GET /containerTypes/{id}?$expand=permissions](/graph/api/filestoragecontainertype-get) or [GET /containerTypes/{id}/permissions](/graph/api/filestoragecontainertype-list-permissions) to retrieve the container type owners.
 
-Container type owners can perform the following operations on the **owning tenant** when using an application with `FileStorageContainerType.Manage.All` in delegated mode:
+Container type owners can do the following operations on the **owning tenant** when using an application with `FileStorageContainerType.Manage.All` in delegated mode:
 
 - **Create, read, update, and delete** the container type they own. Non-admin owners can only manage container types where they appear in the permissions collection and the calling app matches the owning application.
 - **Add and remove** other owners on the container type they own (via the permissions endpoint)
 - **Create containers** of the container type they own, as long as the call is delegated (not app-only)
 
 > [!NOTE]
-> The user who creates a container type is automatically assigned as an owner. External identities (guest users) cannot be assigned as container type owners and cannot perform owner operations.
+> The user who creates a container type is automatically assigned as an owner. External identities (guest users) can't be assigned as container type owners and can't perform owner operations.
 
 > [!IMPORTANT]
-> Container type owners exist only in the owning tenant. When a container type is registered in a consuming tenant, the owner information is **not** propagated to that tenant. For example, if Contoso creates a container type with owners and registers it in Fabrikam, those Contoso users do not exist in Fabrikam's tenant and have no owner capabilities there.
+> Container type owners exist only in the owning tenant. When a container type is registered in a consuming tenant, the owner information is **not** propagated to that tenant. For example, if Contoso creates a container type with owners and registers it in Fabrikam, those Contoso users don't exist in Fabrikam's tenant and have no owner capabilities there.
 
 > [!IMPORTANT]
 > Container type owner capabilities are user permissions. The effective access is the intersection of the application permissions (Microsoft Graph permissions) and the user permissions (owner role). The application must have sufficient Graph permissions for the intersection to grant the desired access.
