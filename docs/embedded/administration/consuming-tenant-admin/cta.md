@@ -8,7 +8,7 @@ ms.localizationpriority: high
 # Consuming Tenant Admin
 
 > [!IMPORTANT]
-> Assign the SharePoint Embedded Administrator role available in M365 Admin Center or Microsoft Entra ID to execute SharePoint Embedded Container cmdlets mentioned in this article.
+> Assign the SharePoint Embedded Administrator role available in Microsoft 365 Admin Center or Microsoft Entra ID to execute SharePoint Embedded Container cmdlets mentioned in this article.
 >
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 >
@@ -41,6 +41,7 @@ On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
 1. Enumerate applications in a tenant
 1. Enumerate containers of an application in a tenant
 1. Enumerate containers of an application sorted by storage basis storage
+1. Enumerate archived containers of an application
 1. Edit the sensitivity label on a container
 1. Set the sharing capability configuration on a container
 
@@ -51,8 +52,10 @@ For information on consuming tenant admin in [PowerShell](../consuming-tenant-ad
 The SharePoint Embedded Admin can access the Active and Deleted containers page on SPAC and perform SharePoint Embedded application-level and container-level actions. This includes the following:
 
 1. View the Active container page
+1. View the Archived container page
 1. View the Deleted container page
 1. View the detailed information of a container
+1. Archive and reactivate containers
 1. Soft delete, restore, and purge deleted containers
 
 For information on consuming tenant admin in SharePoint Admin, see [container management](ctaUX.md)
@@ -67,15 +70,16 @@ To use passthrough billing SharePoint Embedded app, the SharePoint Embedded Admi
 
 ### [Meters](../billing/meters.md)
 
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Azure Cost Management](https://ms.portal.azure.com/).
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Microsoft Cost Management](https://ms.portal.azure.com/).
 
 SharePoint Embedded has three billing meters, as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details
 
 | SharePoint Embedded Service Meters |   Meter Unit   |
-| :--------------------------------: | :------------: |
-|              Storage               |      $/GB      |
-|          API Transactions          | $/Transactions |
-|               Egress               |      $/GB      |
+| ---------------------------------- | -------------- |
+| Storage                            | $/GB           |
+| Archived Storage                   | $/GB           |
+| API Transactions                   | $/Transactions |
+| Egress                             | $/GB           |
 
 ### Set Up Guide
 
@@ -83,12 +87,12 @@ SharePoint Embedded has three billing meters, as shown. Refer to the [product pa
 1. A valid Azure resource group is required. You can create one by following the steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
 1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
-  ![Microsoft 365 admin center Files and Content](../../images/DTCBilling1.png)
+    ![Microsoft 365 admin center Files and Content](../../images/DTCBilling1.png)
 
 1. Select **Go to Syntex settings**.
 1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
 
-  ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../images/DTCBilling2.png)
+    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../../images/DTCBilling2.png)
 
 1. Follow the instructions on the **SharePoint Embedded** flyer to turn on SharePoint Embedded apps.
 

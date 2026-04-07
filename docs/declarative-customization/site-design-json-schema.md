@@ -285,10 +285,7 @@ Removes a view from a list. This action can also be used to remove a view applie
 
 ### addContentType
 
-Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script by using the createContentType action.
-
-> [!NOTE]
-> Currently we do not support adding enterprise content types.
+Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script by using the `createContentType` action or published enterprise content types added by using the `addContentTypesFromHub` verb.
 
 #### JSON value
 
@@ -331,7 +328,7 @@ Sets column formatting for a field. For more information, see [Use column format
 
 #### Example
 
-In this example, we are formatting a number column as a data bar.
+In this example, we're formatting a number column as a data bar.
 
 ```json
 {
@@ -383,7 +380,7 @@ Registers field extension for a list field. For more information on these client
 #### JSON values
 
 - `internalName`: The internal name of the field to operate on.
-- `clientSiteComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `clientSiteComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the **manifest.json** file or in the **elements.xml** file.
 - `clientSiteComponentProperties`: An optional parameter, which can be used to provide properties for the field customizer extension instance.
 
 #### Example
@@ -431,7 +428,7 @@ Associates a ListViewCommandSet to the list
 
 - `title`: The title of the extension.
 - `location`: A required parameter to specify where the command is displayed. Options are: ClientSideExtension.ListViewCommandSet.ContextMenu or ClientSideExtension.ListViewCommandSet.CommandBar.
-- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the **manifest.json** file or in the **elements.xml** file.
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
 
 #### Example
@@ -474,7 +471,7 @@ Associates a ListViewCommandSet to the list
 
 ### setTitle
 
-Renames the list. To create a new list with a specific name, instead of using setTitle use the `listName` parameter in the `CreateSPList` action.
+Renames the list. To create a new list with a specific name, instead of using `setTitle` use the `listName` parameter in the `createSPList` action.
 
 > [!NOTE]
 > Using `setTitle` will rename the list, preventing the list from updating if the site template is reapplied. Avoid using `setTitle` in the `CreateSPList` as it will conflict with  the `listName` parameter, use another site script applied separately for the rename.
@@ -494,7 +491,7 @@ Renames the list. To create a new list with a specific name, instead of using se
 
 ## Define a new site column
 
-Use the `createSiteColumn` verb to define a new site column that can then be associated to a list directly or by using the addContentType action.
+Use the `createSiteColumn` verb to define a new site column that can then be associated to a list directly or by using the `addContentType` action.
 
 #### JSON value
 
@@ -519,7 +516,7 @@ Use the `createSiteColumn` verb to define a new site column that can then be ass
 }
 ```
 
-Use the `createSiteColumnXml` verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
+Use the `createSiteColumnXml` verb to define a new site column for those complex data types not supported by `createSiteColumn`. These columns can then be associated to a list directly or by using the `addContentType` action. Providing the ID attribute in the field `schemaXml` is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -537,12 +534,12 @@ Use the `createSiteColumnXml` verb to define a new site column for those complex
 
 ## Define a new content type
 
-Use **createContentType** to define a new content type that can then be associated to a list by using the addContentType action.
+Use **createContentType** to define a new content type that can then be associated to a list by using the `addContentType` action.
 
 #### JSON value
 
 > [!NOTE]
-> When referencing the content type ID, only one of the three references are required - ID, parentName, or parentId.
+> When referencing the content type ID, only one of the three references is required - `id`, `parentName`, or `parentId`.
 
 - `name`: The name of the content type to create.
 - `description`: The optional description of the content type.
@@ -626,7 +623,7 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 - `navComponent`: The component where to add the link, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
 - `isWebRelative`: **True** if the link is web relative; otherwise, **False**. The default is **False**.
 - `parentDisplayName`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
-- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this URL. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
+- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this URL. If both this and `parentDisplayName` are provided, it searches for a link that matches both to be the parent.
 - `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default value is **False**.
 
 #### Example
@@ -859,7 +856,7 @@ Use the `installSolution` action to install a deployed add-in or SharePoint Fram
 #### Example
 
 > [!NOTE]
-> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions. For multi-geo tenants, use the Product ID after setting up the solution in each geo location. Obtain the Product ID by uplaoding the solution to the app catalog or in the solution's definition.
+> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions. For multi-geo tenants, use the Product ID after setting up the solution in each geo location. Obtain the Product ID by uploading the solution to the app catalog or in the solution's definition.
 
 ```json
 {
@@ -878,8 +875,8 @@ Use the `associateExtension` action to register a deployed SharePoint Framework 
 #### JSON values
 
 - `title`: The title of the extension in the App Catalog.
-- `location`: Used to specify the extension type. If it's used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
-- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `location`: Used to specify the extension type. If it's used to create commands, then where the command would be displayed; otherwise this should be set to `ClientSideExtension.ApplicationCustomizer`.
+- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the **manifest.json** file or in the **elements.xml** file.
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
 - `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if it's a list extension).
 - `registrationType`: An optional parameter, which should be specified if the extension is associated with a list.
