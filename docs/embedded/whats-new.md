@@ -9,8 +9,8 @@ ms.localizationpriority: medium
 
 ## March 2026
 
-- [SharePoint Embedded agent SDK](/development/declarative-agent/spe-da.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./development/declarative-agent/sharepoint-embedded-knowledge-source.md).
-- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new **permissions** relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. See [Managing SharePoint Embedded applications created in the owning tenant](./development/auth#managing-sharepoint-embedded-applications-created-in-the-owning-tenant) for more information.
+- [SharePoint Embedded agent SDK](./development/declarative-agent/spe-da.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./development/declarative-agent/sharepoint-embedded-knowledge-source.md).
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new **permissions** relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. See [Managing SharePoint Embedded applications created in the owning tenant](./development/auth.md#managing-sharepoint-embedded-applications-created-in-the-owning-tenant) for more information.
 - [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new **informationBarrier** property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. See [Information Barriers](/purview/information-barriers-sharepoint) for more information.
 - The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available via the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
 
