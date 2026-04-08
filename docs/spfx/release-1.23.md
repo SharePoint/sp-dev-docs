@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.23 preview notes
 description: Release notes for the SharePoint Framework v1.23 preview release.
-ms.date: 04/02/2026
+ms.date: 04/08/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.23 preview release notes
@@ -10,6 +10,7 @@ This is an early baseline version for the upcoming SharePoint 1.23 version with 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+* rc.0 Released: April 8, 2026
 * beta.2 Released: April 2, 2026
 * beta.0 Released: March 23, 2026
 
@@ -74,7 +75,7 @@ Your feedback is welcome. Let us know your first impressions and provide suggest
 
 When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked on the reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
 
-We're also looking into addressing deprecated packages in the following releases of SharePoint Framework.
+We have identified issues on the npm audit still for the 1.23 release whcih will be addressed with the upcoming RC1 release before we are ready for General Availability.
 
 ## Deprecations
 
