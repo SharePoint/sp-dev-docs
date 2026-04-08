@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 03/26/2026
+ms.date: 04/08/2026
 ms.localizationpriority: high
 ---
 
@@ -25,11 +25,11 @@ Here's the current roadmap on the upcoming release:
 - New [debugging toolbar](./debug-toolbar.md) improving the in-page development experience when workbench is not used with direct feedback option to the feature crew. This will be rolling out as a server side update, so no changes are required for the client-side packages.
 - Open-sourcing SPFx solution templates via GitHub and opening them for community contributions.
 - Preview of a new open-sourced SPFx CLI for replacing the existing Yeoman generator – You will be able to introduce your company specific templates or adjustments on the scaffolded baseline for the SPFx solutions. We are decoupling the CLI itself from the SPFx release versions.
-- New and edit panel override in lists – support panel level override on the Microsoft Lists and SharePoint lists with SPFx.
 - Addressing npm audit reported security issues on the dependency tree.
 
 **Version 1.23.1 – April 2026**
 
+- New and edit panel override in lists – support panel level override on the Microsoft Lists and SharePoint lists with SPFx.
 - Addressing npm audit reported security issues on the dependency tree.
 
 **Version 1.24 – June 2026**
