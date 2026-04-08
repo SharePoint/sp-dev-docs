@@ -1,7 +1,7 @@
 ---
 title: Customize a form for a SharePoint list
 description: Customize a form for a SharePoint list
-ms.date: 09/27/2022
+ms.date: 04/08/2026
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Using Power Apps, you can easily customize a form for a SharePoint list that works best for your team or organization.
 
-In this tutorial, you will create a custom form with a user profile photo, a read-only field, and a conditionally-visible field.
+In this tutorial, you create a custom form with a user profile photo, a read-only field, and a conditionally-visible field.
 
 ## Required setup
 
@@ -64,6 +64,9 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**. 
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
+
+   > [!NOTE]
+   > The formula `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` uses a placeholder control name. In your form, ensure you reference the actual control bound to the **Owner** field.
 
     When you change the project owner, **Image1** will update to the user photo of the new owner.
 
