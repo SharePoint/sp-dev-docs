@@ -75,7 +75,7 @@ Your feedback is welcome. Let us know your first impressions and provide suggest
 
 When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked on the reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
 
-We have identified issues on the npm audit still for the 1.23 release whcih will be addressed with the upcoming RC1 release before we are ready for General Availability.
+We have identified issues on the npm audit still for the 1.23 release which will be addressed with the upcoming RC1 release before we are ready for General Availability of 1.23.
 
 ## Deprecations
 
