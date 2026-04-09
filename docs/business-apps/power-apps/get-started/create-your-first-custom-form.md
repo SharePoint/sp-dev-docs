@@ -1,7 +1,7 @@
 ---
 title: Customize a form for a SharePoint list
 description: Customize a form for a SharePoint list
-ms.date: 09/27/2022
+ms.date: 06/17/2020
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Using Power Apps, you can easily customize a form for a SharePoint list that works best for your team or organization.
 
-In this tutorial, you will create a custom form with a user profile photo, a read-only field, and a conditionally-visible field.
+In this tutorial, you create a custom form with a user profile photo, a read-only field, and a conditionally visible field.
 
 ## Required setup
 
@@ -38,7 +38,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
     ![Add an image in Power Apps studio](../../../images/gs01-power-apps-studio-add-image.png)
 
 1. To customize the appearance of the image, you can set its properties.
-    
+
     1. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
 
     ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
@@ -48,7 +48,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
     1. With **Image1** selected, in the [formula bar](/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter `Owner_DataCard1.Height` as the formula. **Image1** now has the same height as **Owner_DataCard1**.
 
     ![Set image height](../../../images/gs01-set-image-height.png)
-         
+
 1. Set the width of **Image1** to be the same as its height. In the formula bar, change the property to **Width**, and enter `Self.Height` as the formula.
 
     ![Set image width](../../../images/gs01-set-image-width.png)
@@ -61,9 +61,12 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](/powerapps/maker/canvas-apps/connections/connection-office365-users).
 
-1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**. 
+1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**.
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
+
+   > [!NOTE]
+   > The formula `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` uses a placeholder control name. In your form, ensure you reference the actual control bound to the **Owner** field.
 
     When you change the project owner, **Image1** will update to the user photo of the new owner.
 
@@ -85,9 +88,9 @@ To make the **Title** field view-only, follow these steps.
     ![Select display mode field](../../../images/gs01-title-property-display-mode.png)
 
 1. In the formula bar, enter `DisplayMode.View` as the formula.
-    
+
     ![View-only title](../../../images/gs01-title-data-card-view-only.png)
-    
+
     Alternatively, in the **Properties** pane, set the value of **Display** mode to **View**.
 
     **DataCardValue1** is now a view-only field.
@@ -112,7 +115,7 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 1. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false, true)`
 
     ![Enter conditional formula](../../../images/gs01-attachments-conditional-visibility.png)
-    
+
     If the project owner is Nestor Wilke, then the **Attachments** data card is hidden. Otherwise, it is visible.
 
     You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](/powerapps/maker/canvas-apps/functions/operators).
