@@ -14,7 +14,7 @@ This tutorial builds off the following tutorial: [Build your first SharePoint Ad
 
 In this tutorial, you'll implement advanced Card View functionality. You'll build off the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
-[!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
 
 ## Create a test list
 
