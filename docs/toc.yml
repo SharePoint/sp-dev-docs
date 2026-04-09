@@ -245,6 +245,8 @@
       href: spfx/extensions/get-started/building-simple-field-customizer.md
     - name: ListView Command Set extension
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Grouping of ListView Command Set extensions
+      href: spfx/extensions/guidance/list-view-command-set-grouping.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
     - name: Form customizer
@@ -255,8 +257,6 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
-      - name: Grouping of ListView Command Set extensions
-        href: spfx/extensions/guidance/list-view-command-set-grouping.md
   - name: Library components
     items:
     - name: Overview
@@ -464,6 +464,8 @@
           href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
+    - name: SharePoint Framework CLI (spfx-cli)
+      href: spfx/toolchain/sharepoint-framework-cli.md
     - name: Platform & platform dependency compatibility reference
       href: spfx/compatibility.md
     - name: How to configure SASS processing
