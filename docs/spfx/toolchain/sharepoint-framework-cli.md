@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 The **SharePoint Framework CLI** (`@microsoft/spfx-cli`) is the modern, open-source command-line tool for scaffolding SharePoint Framework (SPFx) projects. It replaces the legacy Yeoman-based generator (`@microsoft/generator-sharepoint`) with a purpose-built CLI and a template system that's versioned independently of the tool itself.
 
-[!INCLUDE [developer-preview-notice](../../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
 
 ## Why a new SPFx CLI?
 
