@@ -1,20 +1,27 @@
 ---
 title: Grouping support with ListView Command Set extension
-description: Using grouping with ListView Command Set extensions.
+description: Use the group element in a ListView Command Set manifest to build a two-level hierarchy of commands in the SPFx list and library toolbar.
 ms.date: 03/19/2026
+author: VesaJuvonen
+ms.author: vesaj
+ms.topic: concept-article
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
-# Build your first ListView Command Set extension
 
-Starting from the [SharePoint Framework v1.23](../../release-1.23.md), ListView Command Sets also support grouping. You can use `group` element and cross item associations in the ListView Command Set manifest to build a hierarchy of commands which are then grouped in the list and library toolbar and context menu.
+# Grouping support with ListView Command Set extension
 
-![Card personalization visible in the dashboard UI](../../../images/123-release/list-view-cmdset-grouping.png)
+Starting from the [SharePoint Framework v1.23](../../release-1.23.md), [ListView Command Sets](../get-started/building-simple-cmdset-with-dialog-api.md) also support grouping. You can use `group` element and cross item associations in the ListView Command Set manifest to build a hierarchy of commands that are then grouped in the list and library toolbar and context menu.
 
-Notice that yo can only have two level of grouping as shown in the picture and in the below sample.
+[!INCLUDE [spfx-prerelease-related](../../../../includes/snippets/spfx-prerelease-related.md)]
 
-Here's an example extension manifest which uses `group` element and type to define the associations and grouping between the commands.
+![ListView Command Set showing two-level grouping in the list toolbar](../../../images/123-release/list-view-cmdset-grouping.png)
 
-``` json
+Notice that you can only have two levels of grouping as shown in the picture and in the following sample.
+
+Here's an example extension manifest that uses `group` element and type to define the associations and grouping between the commands.
+
+```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
 
@@ -75,5 +82,10 @@ Here's an example extension manifest which uses `group` element and type to defi
     }
   }
 }
-
 ```
+
+## See also
+
+- [Build your first ListView Command Set extension](../get-started/building-simple-cmdset-with-dialog-api.md)
+- [Migrate from UI extensions to ListView Command Sets](../../../sp-add-ins-modernize/from-ui-extensions-to-listview-command-sets.md)
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)
