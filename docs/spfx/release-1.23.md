@@ -67,7 +67,7 @@ spfx create \
   --component-name "Hello World"
 ```
 
-See more details and other options from the CLI [documentation](https://github.com/SharePoint/spfx/blob/main/apps/spfx-cli/README.md).
+For more information on the CLI, available templates, and all command options, see [SharePoint Framework CLI (spfx-cli)](./toolchain/sharepoint-framework-cli.md). You can also review the [CLI README on GitHub](https://github.com/SharePoint/spfx/blob/main/apps/spfx-cli/README.md).
 
 Your feedback is welcome. Let us know your first impressions and provide suggestions.
 

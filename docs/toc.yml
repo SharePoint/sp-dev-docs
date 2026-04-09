@@ -464,6 +464,8 @@
           href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
+    - name: SharePoint Framework CLI (spfx-cli)
+      href: spfx/toolchain/sharepoint-framework-cli.md
     - name: Platform & platform dependency compatibility reference
       href: spfx/compatibility.md
     - name: How to configure SASS processing
