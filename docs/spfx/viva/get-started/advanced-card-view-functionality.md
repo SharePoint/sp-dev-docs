@@ -1,14 +1,18 @@
 ---
-title: Advanced Card View Functionality
-description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 02/13/2026
+title: Advanced Card View functionality for SharePoint Adaptive Card Extensions
+description: Build a data-driven Card View for a SharePoint Adaptive Card Extension (ACE) backed by a SharePoint list, with conditional Card Views and caching.
+ms.date: 07/22/2021
+author: andrewconnell
+ms.topic: tutorial
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
+
 # Advanced Card View Functionality
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
 
-In this tutorial, you'll implement advanced Card View functionality. You'll build off the the previous tutorial and create a Card View that's powered by data in a SharePoint list.
+In this tutorial, you'll implement advanced Card View functionality. You'll build off the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
 [!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
 
@@ -84,7 +88,7 @@ Let's modify the properties for our ACE and set the list ID that contains the da
 
 ### Change the extension state
 
-Next, let's update the state of the extension. When the state changes, it will trigger the ACE to rerender. These changes will add a collection of list items to the state as well as the current item displayed, as indicated by the `currentIndex` property you'll add.
+Next, let's update the state of the extension. When the state changes, it will trigger the ACE to rerender. These changes will add a collection of list items to the state and the current item displayed, as indicated by the `currentIndex` property you'll add.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 1. Add a new interface for the List data by adding the following code to the file:
@@ -149,7 +153,7 @@ The next step is to add support to the project and ACE to retrieve items from a 
 First, add a dependency to the SPFx package used to submit HTTP requests to REST endpoints:
 
 1. Locate and open the following file in the project: **./package.json**. Take note of the beta version of the SPFx related beta packages used by the other packages listed as dependencies in the `dependencies` section of the **package.json** file.
-1. Install the following NPM package in your project: **@microsoft/sp-http**:
+1. Install the following npm package in your project: **@microsoft/sp-http**:
 
     ```console
     npm install @microsoft/sp-http -SE
@@ -185,7 +189,7 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
     }
     ```
 
-1. Update the ACE to request the list data during when it's initialized by updating the `onInit()` method.
+1. Update the ACE to request the list data when it's initialized by updating the `onInit()` method.
 
     Replace the last line `return Promise.resolve();` to be `return this._fetchData();` as follows:
 
@@ -291,8 +295,8 @@ Change the HelloWorld ACE to display the total count of List items in the **Medi
 
 Let's create a medium Card View for our ACE:
 
-1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts** folder.
-1. Add the following code to create a new **Medium** sized Card View:
+1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts**.
+1. Add the following code to create a new **Medium-sized Card View:
 
     ```typescript
     import {
@@ -534,6 +538,6 @@ After this lab you should be familiar with:
 - Advanced Card View manipulation
 - Caching Card View and ACE state
 
-## See Also
+## See also
 
 - [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)
