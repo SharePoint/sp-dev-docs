@@ -35,7 +35,7 @@ SharePoint Embedded operations are exposed via Microsoft Graph. SharePoint Embed
 
 SharePoint Embedded applications need to request the following Microsoft Graph permissions in their application manifest to work with SharePoint Embedded:
 
-- **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
+- **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
 - **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** to allow an application to register the container type on consuming tenants.
 - **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to allow an application to access containers of the given container type on consuming tenants.
 
