@@ -44,7 +44,7 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 
 SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) support two Microsoft Graph permissions: **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)**, which allows an application to access containers on behalf of the signed-in user, and **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)**, which allows an application to utilize file storage container administration capabilities on behalf of an administrator.
 
-In addition to your application receiving consent for the required permissions on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
+In addition to your application receiving consent for **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
 
 For APIs that support both **FileStorageContainer.Selected** and **FileStorageContainer.Manage.All** permissions, the effective access depends on the permissions granted to the application and whether the user is an administrator:
 
