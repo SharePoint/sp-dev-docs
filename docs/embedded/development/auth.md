@@ -38,23 +38,24 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 - **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** to allow an application to create and manage container types on the owning tenant. This permission is only needed on the owning tenant where the container type is created.
 - **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** to allow an application to register the container type on consuming tenants.
 - **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to allow an application to access containers of the given container type on consuming tenants.
+- **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to utilize the file storage container administration capabilities against all containers of all governable container types on behalf of an administrator user.
 
 #### Access on behalf of a user
 
 SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) support two Microsoft Graph permissions: **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)**, which allows an application to access containers on behalf of the signed-in user, and **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)**, which allows an application to utilize file storage container administration capabilities on behalf of an administrator.
 
-For APIs that support both **FileStorageContainer.Selected** and **FileStorageContainer.Manage.All** permissions, the effective access depends on the permissions granted to the application and whether the user is an administrator.
+In addition to your application receiving consent for the required permissions on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
+
+For APIs that support both **FileStorageContainer.Selected** and **FileStorageContainer.Manage.All** permissions, the effective access depends on the permissions granted to the application and whether the user is an administrator:
 
 | User   | Permissions granted                                            | Effective access                                                                                                                                                     |
-| :--------------- | :------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Administrator    | FileStorageContainer.Selected                                  | The application can access containers on behalf of the user as a nonadministrator. Administrator capabilities aren't applicable.                                                           |
-| Administrator    | FileStorageContainer.Manage.All                                | The application utilizes file storage container administration capabilities on behalf of the administrator.                                                                 |
-| Administrator    | FileStorageContainer.Selected, FileStorageContainer.Manage.All | The application utilizes file storage container administration capabilities on behalf of the administrator. FileStorageContainer.Selected isn't applicable.                  |
-| Nonadministrator | FileStorageContainer.Selected                                  | The application can access containers on behalf of the nonadministrator user.                                                    |
-| Nonadministrator | FileStorageContainer.Manage.All                                | Access denied.                                                                                                                                                       |
-| Nonadministrator | FileStorageContainer.Selected, FileStorageContainer.Manage.All | The application can access containers on behalf of the nonadministrator user. FileStorageContainer.Manage.All isn't applicable.   |
-
-In addition to your application receiving consent for the required permissions on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
+| :--------------- | :-------------------------------------------------------------  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Administrator    | FileStorageContainer.Selected                                   | The application can access containers on behalf of the user as a non-administrator. Container instance-level [user permissions](#user-permissions) will apply. Administrator capabilities aren't applicable. |
+| Administrator    | FileStorageContainer.Manage.All                                 | The application utilizes file storage container administration capabilities on behalf of the administrator.                                                                 |
+| Administrator    | FileStorageContainer.Selected, FileStorageContainer.Manage.All  | The application utilizes file storage container administration capabilities on behalf of the administrator. FileStorageContainer.Selected isn't applicable.                  |
+| Non-administrator | FileStorageContainer.Selected                                  | The application can access containers on behalf of the non-administrator user. Container instance-level [user permissions](#user-permissions) will apply. |
+| Non-administrator | FileStorageContainer.Manage.All                                | Access denied.                                                                                                                                                       |
+| Non-administrator | FileStorageContainer.Selected, FileStorageContainer.Manage.All | The application can access containers on behalf of the non-administrator user. Container instance-level [user permissions](#user-permissions) will apply. FileStorageContainer.Manage.All isn't applicable.   |
 
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
@@ -152,7 +153,7 @@ Container type owners are managed through the [permissions](/graph/api/filestora
 - **Remove owners**: Use [`DELETE /containerTypes/{id}/permissions/{id}`](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
 - **Read owners**: Use [`GET /containerTypes/{id}?$expand=permissions`](/graph/api/filestoragecontainertype-get) or [`GET /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-list-permissions) to retrieve the container type owners.
 
-Container type owners can do the following operations on the **owning tenant** when using an application with **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** in delegated mode:
+Container type owners can do the following operations on the **owning tenant** when using an application with **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** in delegated mode:
 
 - **Create, read, update, and delete** the container type they own. Non-admin owners can only manage container types where they appear in the permissions collection and the calling app matches the owning application.
 - **Add and remove** other owners on the container type they own (via the permissions endpoint)
@@ -203,7 +204,7 @@ The common [Office experience](./content-experiences/office-experience.md) inclu
 Here are some actions you can take next:
 
 1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions on your _owning_ tenant:
-    - Add the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to create container types on the _owning_ tenant:
+    - Add the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** to create container types on the _owning_ tenant:
         - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
         - **type**: `Role`
         - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
@@ -211,13 +212,13 @@ Here are some actions you can take next:
 1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
 1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
 
-    - Remove the Microsoft Graph permission [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** as this is only needed to create the container type on the _owning_ tenant:
+    - Remove the Microsoft Graph permission [FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** as this is only needed to create the container type on the _owning_ tenant:
         - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
         - **type**: `Role`
         - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
 
           > [!NOTE]
-          > After creating the container type on the _owning_ tenant, you should remove the **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission from your application's manifest.
+          > After creating the container type on the _owning_ tenant, you should remove the **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** permission from your application's manifest.
           > Your application DOES NOT need this on _consuming_ tenants, only on the _owning_ tenant to create the container type. Failure to remove this permission from the application's manifest will lead to your customers being concerned about the excessive permissions requested by your application.
 
     - Add the Microsoft Graph permission **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** to register the container type on _consuming_ tenants:
