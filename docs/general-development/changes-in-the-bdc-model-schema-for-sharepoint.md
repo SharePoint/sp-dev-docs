@@ -1,7 +1,7 @@
 ---
 title: Changes in the BDC model schema for SharePoint
 description: Learn what has changed in SharePoint for the BDC model schema.
-ms.date: 09/25/2017
+ms.date: 04/14/2026
 ms.assetid: 882ea867-9acb-4313-99c9-865a523b72fd
 ms.localizationpriority: medium
 ---
@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Changes in the BDC model schema for SharePoint
 Learn what has changed in SharePoint for the BDC model schema.
+
+> [!IMPORTANT]
+> Business Connectivity Services (BCS) and BDC model schema are considered legacy technologies in modern SharePoint development. For new solutions, we recommend using SharePoint Framework (SPFx), Microsoft Graph, and Power Platform integrations.
+
 The number of changes in the schema (BDCMetadata.xsd) for creating BDC models in SharePoint is relatively small. But these changes have significant impact on the feature set offerings of Business Connectivity Services (BCS).
   
     
