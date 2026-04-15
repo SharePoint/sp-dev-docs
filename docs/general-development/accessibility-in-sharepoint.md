@@ -27,13 +27,13 @@ For more information about accessibility features in SharePoint, see the followi
     
     
 
--  [Accessibility features in SharePoint products](https://support.microsoft.com/en-us/sharepoint)
+-  [Accessibility features in SharePoint products](https://support.microsoft.com/sharepoint)
     
   
 -  [Keyboard shortcuts in SharePoint Online](https://support.office.com/article/keyboard-shortcuts-in-sharepoint-online-466e33ee-613b-4f47-96bb-1c20f20b1015)
     
   
-Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](https://learn.microsoft.com/en-us/SharePoint/accessibility-guidelines).
+Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](https://learn.microsoft.com/SharePoint/accessibility-guidelines).
   
     
     
@@ -49,7 +49,7 @@ As you design and build apps and solutions for SharePoint, you should implement 
   
     
     
-For information about developing accessible applications and websites, see  [Resources for Designing Accessible Applications](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/ide/reference/resources-for-designing-accessible-applications?view=vs-2015) in the Visual Studio documentation.
+For information about developing accessible applications and websites, see  [Resources for Designing Accessible Applications](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2015/ide/reference/resources-for-designing-accessible-applications?view=vs-2015) in the Visual Studio documentation.
   
     
     
@@ -58,23 +58,23 @@ For information about Windows app development and providing accessibility in Win
     
     
 
--  [Accessibility](https://learn.microsoft.com/en-us/windows/apps/develop/accessibility)
+-  [Accessibility](https://learn.microsoft.com/windows/apps/develop/accessibility)
     
   
--  [Design for Accessibility (Windows Store apps)](https://learn.microsoft.com/en-us/windows/apps/design/accessibility/accessibility-overview)
+-  [Design for Accessibility (Windows Store apps)](https://learn.microsoft.com/windows/apps/design/accessibility/accessibility-overview)
     
   
--  [Meeting basic accessibility requirements (Windows Store apps using JavaScript and HTML)](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh700338(v=win.10))
+-  [Meeting basic accessibility requirements (Windows Store apps using JavaScript and HTML)](https://learn.microsoft.com/previous-versions/windows/apps/hh700338(v=win.10))
     
   
--  [Accessibility in Windows Store apps using JavaScript](https://learn.microsoft.com/en-us/previous-versions/windows/hh452702(v=win.10))
+-  [Accessibility in Windows Store apps using JavaScript](https://learn.microsoft.com/previous-versions/windows/hh452702(v=win.10))
     
   
 
 ## Accessibility features in Visual Studio
 <a name="bkmk_AccessVS"> </a>
 
-If you build solutions and apps for SharePoint in Visual Studio, you will find that Visual Studio 2012 provides default shortcut key combinations to help you navigate and code within the IDE. For more information about accessibility features in Visual Studio, see  [Accessibility Features of Visual Studio](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/ide/reference/accessibility-features-of-visual-studio?view=vs-2015). For a list of Visual Studio keyboard shortcuts, see  [Pre-defined Keyboard Shortcuts](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2015).
+If you build solutions and apps for SharePoint in Visual Studio, you will find that Visual Studio 2012 provides default shortcut key combinations to help you navigate and code within the IDE. For more information about accessibility features in Visual Studio, see  [Accessibility Features of Visual Studio](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2015/ide/reference/accessibility-features-of-visual-studio?view=vs-2015). For a list of Visual Studio keyboard shortcuts, see  [Pre-defined Keyboard Shortcuts](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2015/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2015).
   
     
     
@@ -102,16 +102,16 @@ SharePoint administrators and users depend on the accessibility features that we
 <a name="bk_addresources"> </a>
 
 
--  [Accessibility](https://learn.microsoft.com/en-us/windows/apps/develop/accessibility)
+-  [Accessibility](https://learn.microsoft.com/windows/apps/develop/accessibility)
     
   
 -  [Microsoft Accessibility Resource Centers](https://www.microsoft.com/enable/centers/)
     
   
--  [Guidelines and checklist for accessibility](https://learn.microsoft.com/en-us/previous-versions/windows/apps/hh700325(v=win.10))
+-  [Guidelines and checklist for accessibility](https://learn.microsoft.com/previous-versions/windows/apps/hh700325(v=win.10))
     
   
--  [SharePoint Add-ins UX design guidelines](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
+-  [SharePoint Add-ins UX design guidelines](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/sharepoint-add-ins-ux-design-guidelines)
     
   
 -  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md)
@@ -123,4 +123,4 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Accessibility in Microsoft Products](https://www.microsoft.com/enable/products/default.aspx)
     
   
--  [Accessibility for SharePoint](https://learn.microsoft.com/en-us/SharePoint/accessibility-guidelines)
+-  [Accessibility for SharePoint](https://learn.microsoft.com/SharePoint/accessibility-guidelines)
