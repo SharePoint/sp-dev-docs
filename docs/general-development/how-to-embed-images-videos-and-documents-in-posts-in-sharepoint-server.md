@@ -1,7 +1,7 @@
 ---
 title: Embed images, videos, and documents in posts in SharePoint
 description: Learn how to add  SocialAttachment objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds.
-ms.date: 09/25/2017
+ms.date: 04/16/2026
 ms.assetid: 9927b9e7-daea-4261-80fa-4cc25f489e22
 ms.localizationpriority: medium
 ---
@@ -10,6 +10,9 @@ ms.localizationpriority: medium
 # Embed images, videos, and documents in posts in SharePoint
 
 Learn how to add  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds.
+
+> [!IMPORTANT]
+> This article applies to classic SharePoint Server social feed (microblogging) features. These APIs are not used in modern SharePoint experiences and are not available in SharePoint Online modern sites.
 
 In a social feed, the simplest form of post content contains only text, but you can also add embedded pictures, videos, and documents. To do this, you use the  [Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property on the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain one attachment, which is represented by a [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object.
   
@@ -40,7 +43,7 @@ The code examples in this article show how to add image, video, and document att
 - Microsoft.SharePoint.Client.Runtime
     
   
-- Microsoft.SharePoint.Client.UserProfilies
+- Microsoft.SharePoint.Client.UserProfiles
     
   
 To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint](https://technet.microsoft.com/library/ee414275.aspx) and [Configure SharePoint to use Office Online](https://technet.microsoft.com/library/ff431687.aspx).
