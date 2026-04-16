@@ -1,7 +1,7 @@
 ---
 title: BDC model schema reference for SharePoint
 description: Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint.
-ms.date: 09/25/2017
+ms.date: 04/16/2026
 ms.assetid: 979a5ffc-f033-4e72-b2d1-11d8cb1b294a
 ms.localizationpriority: medium
 ---
@@ -20,7 +20,7 @@ Contains reference documentation for the BDC model schema (BDCMetadata.xsd), whi
 
 Contains an access control entry (ACE) that specifies access rights for the parent element.
   
-See  [Business Connectivity Services security overview](https://technet.microsoft.com/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
+See  [Business Connectivity Services security overview](https://learn.microsoft.com/en-us/previous-versions/office/sharepoint-foundation-2010/ee661734(v=office.14)) to learn more about the Business Connectivity Services and security.
   
  **Namespace:** `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
   
@@ -1869,7 +1869,7 @@ The following two cases in a BDC model result in an  [InvalidOperationException]
 
 
 ```XML
-<MethodInstance Type = "Strig" Default = "Boolean" ReturnParameterName = "String" ReturnTypeDescriptorName = "String" ReturnTypeDescriptorLevel = "Integer" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </MethodInstance>
+<MethodInstance Type = "String" Default = "Boolean" ReturnParameterName = "String" ReturnTypeDescriptorName = "String" ReturnTypeDescriptorLevel = "Integer" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </MethodInstance>
 ```
 
 The following sections describe attributes, child elements, and parent elements.
