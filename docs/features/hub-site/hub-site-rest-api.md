@@ -1,52 +1,115 @@
----
-title: Hub site REST API
-description: Overview of hub site REST API for creating hub sites and associating existing sites with hub sites.
-ms.date: 06/28/2022
-ms.localizationpriority: high
----
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Driving Game</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #333;
+    }
+    canvas {
+      display: block;
+      margin: auto;
+      background: #555;
+    }
+  </style>
+</head>
+<body>
 
-# Hub site REST API
+<canvas id="gameCanvas" width="400" height="600"></canvas>
 
-You can use the SharePoint REST interface to register sites as hub sites, associate existing sites with hub sites, and obtain or update information about hub sites.
+<script>
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
 
-The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option.
+// Car properties
+let car = {
+  x: 180,
+  y: 500,
+  width: 40,
+  height: 80,
+  speed: 0,
+  maxSpeed: 5,
+  color: "red"
+};
 
-For details and links to code samples, see [Make batch requests with the REST APIs](../../sp-add-ins/make-batch-requests-with-the-rest-apis.md).
+// Road lines
+let lines = [];
+for (let i = 0; i < 10; i++) {
+  lines.push({ x: 195, y: i * 80 });
+}
 
-## Prerequisites
+// Controls
+let keys = {};
+document.addEventListener("keydown", e => keys[e.key] = true);
+document.addEventListener("keyup", e => keys[e.key] = false);
 
-Before you get started, make sure that you're familiar with the following:
+// Game loop
+function update() {
+  // Acceleration
+  if (keys["ArrowUp"]) {
+    car.speed += 0.2;
+  } else {
+    car.speed -= 0.1;
+  }
 
-- [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
-- [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
+  // Brake
+  if (keys["ArrowDown"]) {
+    car.speed -= 0.3;
+  }
 
-## REST commands
+  // Limit speed
+  if (car.speed > car.maxSpeed) car.speed = car.maxSpeed;
+  if (car.speed < 0) car.speed = 0;
 
-The following REST commands are available for working with hub sites:
+  // Steering
+  if (keys["ArrowLeft"]) {
+    car.x -= 4;
+  }
+  if (keys["ArrowRight"]) {
+    car.x += 4;
+  }
 
-- [SP.HubSites.CanCreate](REST-cancreate-method.md) &ndash; Returns whether the current user can create a hub site. Only tenant admins can create hub sites.
-- [GetById](REST-getbyid-method.md) &ndash; Gets or updates information about a hub site.
-- [HubSiteData](REST-hubsitedata-method.md) &ndash; Gets hub site data for the current web.
-- [HubSites](REST-hubsites-method.md) &ndash; Gets information about all hub sites that the current user can access.
-- [JoinHubSite](REST-joinhubsite-method.md) &ndash; Associates a site with an existing hub site.
-- [RegisterHubSite](REST-registerhubsite.method.md) &ndash; Registers an existing site as a hub site.
-- [SyncHubSiteTheme](REST-synchubsitetheme-method.md) &ndash; Applies any theme updates from the parent hub site.
-- [UnRegisterHubSite](REST-unregisterhubsite-method.md) &ndash; Unregisters a hub site so that it is no longer a hub site.
-- [SPHubSite object type](rest-sphubsite-type.md) &ndash; Contains data describing a SharePoint hub site.
-- [SPHubSiteData object type](rest-sphubsitedata-type.md) &ndash; Contains data describing a SharePoint hub site.
+  // Move road lines
+  lines.forEach(line => {
+    line.y += car.speed * 5;
+    if (line.y > canvas.height) {
+      line.y = -80;
+    }
+  });
+}
 
-## Scenarios
+// Draw everything
+function draw() {
+  // Clear canvas
+  ctx.fillStyle = "#444";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-Some of the following scenario examples are not intuitive from the method name. See each cmdlet article for more details.
+  // Draw road
+  ctx.fillStyle = "#222";
+  ctx.fillRect(100, 0, 200, canvas.height);
 
-### Update a hub site
+  // Draw lane lines
+  ctx.fillStyle = "white";
+  lines.forEach(line => {
+    ctx.fillRect(line.x, line.y, 10, 40);
+  });
 
-Call the [GetById](REST-getbyid-method.md) method to update a hub site.
+  // Draw car
+  ctx.fillStyle = car.color;
+  ctx.fillRect(car.x, car.y, car.width, car.height);
+}
 
-### Disassociate a site from its hub site
+// Main loop
+function gameLoop() {
+  update();
+  draw();
+  requestAnimationFrame(gameLoop);
+}
 
-To remove, or disassociate a site from a hub site, call [JoinHubSite](REST-joinhubsite-method.md) with the value "00000000-0000-0000-0000-000000000000".
+gameLoop();
+</script>
 
-## See also
-
-- [SharePoint hub sites overview](hub-site-overview.md)
+</body>
+</html>
