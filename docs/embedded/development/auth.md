@@ -191,8 +191,9 @@ The common [Office experience](./content-experiences/office-experience.md) inclu
 
 #### Operations that involve administrative actions on containers
 
-The **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission requires the signed-in user to be a SharePoint Embedded Administrator or Global Administrator. If the user is not an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** does not grant the application any permissions:
+The **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission requires the signed-in user to be a SharePoint Embedded Administrator or Global Administrator.
 
+If the user is not an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** does not grant the application any permissions:
 - If only **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** is granted, the application will get an access denied error when trying to access the container on behalf of the non-admin user.
 - If both **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** and **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** are granted, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** will be ignored and the application can access containers on behalf of the non-admin user but won't be able to perform any administrative actions on the container.
 
