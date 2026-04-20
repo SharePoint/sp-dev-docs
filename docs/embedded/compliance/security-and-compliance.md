@@ -1,7 +1,7 @@
 ---
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
-ms.date: 03/03/2025
+ms.date: 04/20/2026
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ Since SharePoint Embedded by design doesn’t have any user interface, some Comp
 
 ## Compliance Policies using Microsoft Purview
 
-Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview.  You can follow the following steps to retrieve the details of a container that the policy needs to be applied to.
+Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview. You can follow the following steps to retrieve the details of a container that the policy needs to be applied to.
 
 1. View a list of registered SharePoint Embedded applications registered in the specified tenant:
 
@@ -32,7 +32,7 @@ Currently, SharePoint Embedded supports the following Compliance features under 
 1. Retrieve the details of a container including the ContainerSiteURL by providing the ContainerID returned in Step #2:
 
     ```powershell
-    Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity<ContainerID>
+    Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity <ContainerID>
     ```
 
 For information on how to retrieve the `ContainerSiteURL` to set the various compliance policies described in this article at a container level, see [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer).

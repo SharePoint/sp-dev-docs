@@ -13,14 +13,14 @@ For general information about searching the audit log, see [Search the audit log
 
 ## Container type activities
 
-The following events are logged when a container type is created, updated, or deleted. Container types define the relationship between a SharePoint Embedded application and its containers. For more information, see [SharePoint Embedded container types](../getting-started/containertypes.md).
+The following events are logged when a container type is created, updated, or deleted. For more information, see [SharePoint Embedded container types](../getting-started/containertypes.md).
 
 These events use `Workload` value `SharePoint` in the unified audit log.
 
 | Friendly name | Operation | Description |
 |:--|:--|:--|
-| Created container type | ContainerTypeCreated | A new SharePoint Embedded container type definition was provisioned. |
-| Deleted container type | ContainerTypeDeleted | A SharePoint Embedded container type was deleted. |
+| Created container type | ContainerTypeCreated | A new SharePoint Embedded container type definition was created. |
+| Deleted container type | ContainerTypeDeleted | A SharePoint Embedded container type owned by the tenant was deleted. |
 | Updated container type | ContainerTypeUpdated | Properties of a SharePoint Embedded container type, such as name or configuration, were changed. |
 | Updated container type owners | ContainerTypeOwnersUpdated | Owners were added to or removed from a SharePoint Embedded container type. |
 
@@ -28,21 +28,15 @@ These events appear in the Microsoft Purview audit log under the **SharePoint Em
 
 ## Searching for SharePoint Embedded audit events
 
-To search for SharePoint Embedded container type audit events:
+To search for these events, use the [Microsoft Purview audit log search](/purview/audit-search). When searching, set the activity category filter to **SharePoint Embedded Container Type activities** to find the relevant events.
 
-1. Go to the [Microsoft Purview portal](https://purview.microsoft.com) and select **Audit**.
-1. On the **Search** page, filter by the **SharePoint Embedded Container Type activities** category.
-1. Set the date range and select **Search**.
-
-You can also use PowerShell to search for these events:
+You can also search using PowerShell:
 
 ```powershell
 Search-UnifiedAuditLog -Operations ContainerTypeCreated,ContainerTypeDeleted,ContainerTypeUpdated,ContainerTypeOwnersUpdated -StartDate (Get-Date).AddDays(-7) -EndDate (Get-Date)
 ```
 
 Container type audit events include the `ContainerTypeId` property to identify the relevant container type. Unlike container-level file events, container type events don't include `ContainerInstanceId` because they apply at the type level, not to individual container instances.
-
-For more information on how to search and filter audit results for SharePoint Embedded content, see the [Audit section](security-and-compliance.md#audit) of the Security and Compliance article.
 
 ## Schema reference
 
