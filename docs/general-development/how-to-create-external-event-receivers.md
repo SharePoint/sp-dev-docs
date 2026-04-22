@@ -1,7 +1,7 @@
 ---
 title: Create external event receivers
 description: Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists.
-ms.date: 09/25/2017
+ms.date: 04/22/2026
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
 ms.localizationpriority: medium
 ---
@@ -11,12 +11,19 @@ ms.localizationpriority: medium
 
 Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists.
 
+> [!IMPORTANT]
+> SharePoint Add-ins are deprecated. This content applies to on-premises SharePoint Server only.
+
 External event receivers are classes that enable SharePoint Add-ins to respond to events that occur to SharePoint items, such as lists or list items. For example, you can respond to list events, such as adding or removing a field; list item events, such as adding or removing a list item or attachment to a list item; or web events, such as adding or deleting a site or site collection. You can add a remote event receiver to an existing Visual Studio solution that contains an SharePoint Add-in.
   
     
     
 
-This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
+This article accompanies the original MSDN code sample for creating a remote event receiver for external data. It shows how to create all the components needed to configure and use external system event notifications.
+
+> [!NOTE]
+> The original MSDN code sample referenced in this article is no longer available. All required steps and code snippets are included here.
+
 In this example, you will do the following:
   
     
@@ -44,10 +51,10 @@ To complete this example, you will need the following prerequisites:
     
     
 
-- Visual Studio 2012
+- Visual Studio 2022
     
   
-- Office Developer Tools for Visual Studio 2013
+- Office Developer Tools for Visual Studio 2022
     
   
 - SQL Server
@@ -56,7 +63,7 @@ To complete this example, you will need the following prerequisites:
 - SharePoint
     
   
-- Internet Information Services 7.0
+- Internet Information Services
     
   
 - Northwind sample database
@@ -98,11 +105,10 @@ The first part of preparing the back-end system is to add the Northwind sample d
   
     
     
-However, if you don't have Northwind installed, see  [Installing the Northwind Sample Database](https://msdn.microsoft.com/library/2f92cfc3-6310-4327-b2f2-8610f7385c86%28Office.15%29.aspx).
+However, if you don't have Northwind installed, see  [Installing the Northwind Sample Database](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ff851969(v=vs.110)).
   
     
     
-The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-095c594c).
   
     
     
@@ -256,7 +262,7 @@ GO
 ```
 
 > [!NOTE]
-> f you are using your own custom stored procedures as defined in your BDC model, you might also want to create the delete and update triggers. The additional triggers are not be covered as part of this scenario. 
+> If you are using your own custom stored procedures as defined in your BDC model, you might also want to create the delete and update triggers. The additional triggers are not be covered as part of this scenario. 
   
     
     
@@ -350,7 +356,7 @@ The following steps create a new ASP.NET WCF data service.
 ### To create the WCF Data Service application
 
 
-1. In Visual Studio 2012, on the **File** menu, choose **New**, **Project**.
+1. In Visual Studio 2022, on the **File** menu, choose **New**, **Project**.
     
   
 2. In the **New Project** dialog box, under the Visual C# node, choose the **Web** template, and then choose **ASP.NET Web Application**.
@@ -381,7 +387,7 @@ Next, using the Visual Studio wizard, you discover the schema of the data source
   
 5. Connect the data model to the database by doing one of the following steps:
     
-1. If you do not have a database connection already configured, choose **New Connection** and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](https://msdn.microsoft.com/library/360c340d-e5a6-4a7e-a569-e95d500be43d%28Office.15%29.aspx). This SQL Server instance must have the Northwind sample database attached. Choose **Next**.
+1. If you do not have a database connection already configured, choose **New Connection** and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](https://learn.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). This SQL Server instance must have the Northwind sample database attached. Choose **Next**.
     
     -or-
     
@@ -510,7 +516,7 @@ Next, you create a new Windows Service project that will be registered on the WC
 ### To create a new project
 
 
-1. Open Visual Studio 2012.
+1. Open Visual Studio 2022.
     
   
 2. Create a new project using the Windows Service template, name the project PollingService, and choose the **OK** button.
@@ -634,7 +640,7 @@ The next step is to build an executable file that can be added to the running se
 1. Press F5 to build your project.
     
   
-2. Open the **Command Prompt for VS2012**.
+2. Open the **Command Prompt for VS2022**.
     
   
 3. At the prompt, navigate to your project output location.
@@ -658,7 +664,7 @@ To complete the whole system, the following components are required on the serve
     
     
 
-- **External content type:** The external content type is basically an XML definition of the external data source. For this scenario, you will use the new autogeneration tools in Visual Studio 2012 to discover the data source and create the external content type automatically.
+- **External content type:** The external content type is basically an XML definition of the external data source. For this scenario, you will use the new autogeneration tools in Visual Studio 2022 to discover the data source and create the external content type automatically.
     
   
 - **External event receiver:** The remote or external event receiver is the thing that makes actions on external data changes possible in SharePoint. You can create event receivers for external lists and for entities.
@@ -680,16 +686,16 @@ Now that you have the external system set up, it's time to move on to creating t
     
     
 
-### To create a new Visual Studio 2012 project
+### To create a new Visual Studio 2022 project
 
 
-1. In Visual Studio 2012, choose **New Project**.
+1. In Visual Studio 2022, choose **New Project**.
     
   
 2. Choose the SharePoint app project template.
     
   
-Office Developer Tools for Visual Studio 2013 added an autogeneration wizard that will discover a data source's schema and then create an external content type from that.
+Office Developer Tools for Visual Studio 2022 added an autogeneration wizard that will discover a data source's schema and then create an external content type from that.
   
     
     
@@ -887,7 +893,7 @@ Add the following HTML to the Default.aspx page, right below the **Subscribe** b
 
 ```HTML
 
-<input type="button" value="EnableEventing" onclick="EnableEventing_Clicked();"" />
+<input type="button" value="EnableEventing" onclick="EnableEventing_Clicked();" />
 ```
 
 Next, for this scenario you must add a notifications list that will show the notifications sent by the external system.
