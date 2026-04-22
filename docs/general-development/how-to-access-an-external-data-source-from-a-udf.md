@@ -1,7 +1,7 @@
 ---
 title: Access an external data source from a UDF
 description: This example shows how to access an external database from a user-defined function (UDF). 
-ms.date: 09/25/2017
+ms.date: 04/22/2026
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 
 
 # Access an external data source from a UDF
+
+> [!IMPORTANT]
+> Excel Services is a SharePoint Server (on-premises) feature. Excel Services is not supported in SharePoint Online. Use [Excel Online in Microsoft 365](https://www.microsoft.com/microsoft-365) instead.
 
 This example shows how to access an external database from a user-defined function (UDF). 
   
@@ -97,7 +100,7 @@ namespace DatabaseAccessUdfTest1
 ```
 
 
-```VB.net
+```vb
 
 Imports System
 Imports System.Collections.Generic
