@@ -1,7 +1,7 @@
 ---
 title: Managed navigation in SharePoint
 description: Learn about the taxonomy-driven managed navigation feature in SharePoint.
-ms.date: 09/25/2017
+ms.date: 04/22/2026
 ms.localizationpriority: medium
 ---
 
@@ -24,6 +24,10 @@ ms.localizationpriority: medium
     
     
 Learn about the taxonomy-driven managed navigation feature in SharePoint.
+
+> [!NOTE]
+> Managed navigation is a feature of **Classic publishing sites**. It is not supported in the Modern SharePoint experience.
+
 ## Introducing managed navigation
 <a name="SP15_ManagedNav_Introducing"> </a>
 
@@ -39,7 +43,7 @@ Managed navigation provides a framework for dynamically generated pages and prov
   
     
     
-Managed navigation APIs are built into the taxonomy and publishing libraries in SharePoint. Managed metadata components like term sets and the term store are used to enable taxonomy-driven navigation for your site. In the .NET server class library, the  [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx) namespace contains term, term set, and other class objects that mirror the **Term** class and **TermSet** class in the [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) navigation namespace, providing methods and properties specifically designed to associate those metadata items with navigation elements. Other classes, like [TaxonomySiteMapNode](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.TaxonomySiteMapNode.aspx) , enable you to provide metadata with various site navigation elements, such as site map nodes and other parts of your site's navigation. Other classes enable caching and context for managed navigation.
+Managed navigation APIs are built into the taxonomy and publishing libraries in SharePoint. Managed metadata components like term sets and the term store are used to enable taxonomy-driven navigation for your site. In the .NET server class library, the  [Microsoft.SharePoint.Publishing.Navigation](https://learn.microsoft.com/previous-versions/office/sharepoint-server/ms570756(v=office.15)) namespace contains term, term set, and other class objects that mirror the **Term** class and **TermSet** class in the [Microsoft.SharePoint.Taxonomy](https://learn.microsoft.com/previous-versions/office/sharepoint-server/ee583437(v=office.15)) navigation namespace, providing methods and properties specifically designed to associate those metadata items with navigation elements. Other classes, like [TaxonomySiteMapNode](https://learn.microsoft.com/previous-versions/office/sharepoint-server/jj254377(v=office.15)) , enable you to provide metadata with various site navigation elements, such as site map nodes and other parts of your site's navigation. Other classes enable caching and context for managed navigation.
   
     
     
@@ -67,7 +71,7 @@ Any page, including your site's Welcome Page, can have a friendly URL. Depending
 ## Managed Navigation APIs
 <a name="SP15_ManagedNav_ManagedNavAPIs"> </a>
 
-The taxonomy API provides several new methods and properties in SharePoint that you can use to customize terms, term sets, and other metadata elements in the term store for use in site navigation scenarios. These APIs are available in the .NET client, .NET server, Silverlight, and JavaScript programming models.
+The taxonomy API provides several new methods and properties in SharePoint that you can use to customize terms, term sets, and other metadata elements in the term store for use in site navigation scenarios. These APIs are available in the .NET client, .NET server and JavaScript programming models.
   
     
     
@@ -172,7 +176,7 @@ public class NavigationTermSetTests
 ## Code Example: Customizing managed navigation with the .NET server object model API
 <a name="SP15_ManagedNav_CustomizingManagedNavNETServerObjectModel"> </a>
 
-You can use the .NET server taxonomy classes and methods in the  [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) and [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx) namespaces to create a new navigation term set.
+You can use the .NET server taxonomy classes and methods in the  [Microsoft.SharePoint.Taxonomy](https://learn.microsoft.com/previous-versions/office/sharepoint-server/ee583437(v=office.15)) and [Microsoft.SharePoint.Publishing.Navigation](https://learn.microsoft.com/previous-versions/office/sharepoint-server/ms570756(v=office.15)) namespaces to create a new navigation term set.
   
     
     
