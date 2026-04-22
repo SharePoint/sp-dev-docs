@@ -104,7 +104,7 @@ async function preview(driveId, itemId) {
 
 ## PDF Preview
 
-SharePoint Embedded includes a PDF previewer that you can enhance with query parameters appended to the driveItem's `webUrl` property. To get `webUrl`, call the [driveItem Graph endpoint](/graph/api/resources/driveitem) and retrieve the `webUrl` field.
+SharePoint Embedded includes a PDF previewer that you can enhance with query parameters appended to the driveItem's `webUrl` property. To get `webUrl`, call the [driveItem GET API](/graph/api/driveitem-get), for example `GET /drives/{drive-id}/items/{item-id}?$select=webUrl`, and retrieve the `webUrl` field.
 
 The parameters are passed as a JSON-encoded `embed` query string:
 
