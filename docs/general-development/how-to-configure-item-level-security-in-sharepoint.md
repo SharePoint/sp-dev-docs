@@ -1,7 +1,7 @@
 ---
 title: Configure item-level security in SharePoint
 description: Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
-ms.date: 09/25/2017
+ms.date: 04/24/2026
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ms.localizationpriority: medium
 ---
@@ -10,6 +10,9 @@ ms.localizationpriority: medium
 # Configure item-level security in SharePoint
 
 Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
+
+> [!IMPORTANT]
+> Business Connectivity Services (BCS) and NTLM-based configurations are primarily supported in SharePoint Server. These approaches are not commonly used in SharePoint Online, where modern authentication and Microsoft Graph-based connectors are preferred.
 
 ## External systems with NTLM authentication
 <a name="ItemLevelSecurity_NTLMAuth"> </a>
@@ -29,7 +32,7 @@ Microsoft SharePoint stores the security descriptor if the field of the external
 
 ```XML
 
-<Method Name="Item SpecificFinder ">
+<Method Name="Item SpecificFinder">
   <Properties>
     <Property Name="RdbCommandType" Type="System.Data.CommandType, System.Data, 
  Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">Text</Property>
@@ -78,7 +81,7 @@ DefaultDisplayName="ReadSecurity">
 ```
 
 > [!NOTE]
-> ems are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
+> Items are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
   
     
     
@@ -196,7 +199,7 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 -  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
--  [Implementing a BinarySecurityDescriptorAccessor](https://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
+-  [Implementing a BinarySecurityDescriptorAccessor](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/ff464369(v=office.14))
     
   
 -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
