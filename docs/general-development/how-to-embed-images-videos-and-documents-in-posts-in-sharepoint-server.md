@@ -18,16 +18,14 @@ In a social feed, the simplest form of post content contains only text, but you 
 > [!NOTE]
 > To add a mention, tag, or link to a post's content, you add a  [SocialDataItem](/previous-versions/office/sharepoint-csom/jj164135(v=office.15)) object to the [SocialPostCreationData.ContentItems](/previous-versions/office/sharepoint-csom/jj164726(v=office.15)) property. For more information, see [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md).
 
-The API described in this article is from the .NET client object model. If you're using another API, such as the JavaScript object model, the object names or corresponding API might be different. See  [Additional resources](#bk_addresources) for links to documentation for related APIs.
+The API described in this article is from the .NET client object model. If you're using another API, such as the JavaScript object model, the object names or corresponding API might be different. [See also](#see-also) for links to documentation for related APIs.
 
 ## Prerequisites for using the code examples to add attachments to a post
 
 The code examples in this article show how to add image, video, and document attachments to microblog posts. These examples are from a console application that uses the following SharePoint assemblies:
 
 - Microsoft.SharePoint.Client
-
 - Microsoft.SharePoint.Client.Runtime
-
 - Microsoft.SharePoint.Client.UserProfiles
 
 To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint](https://technet.microsoft.com/library/ee414275.aspx) and [Configure SharePoint to use Office Online](https://technet.microsoft.com/library/ff431687.aspx).
