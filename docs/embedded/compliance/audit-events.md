@@ -15,7 +15,7 @@ For general information about searching the audit log, see [Search the audit log
 
 The following events are logged when a container type is created, updated, or deleted. For more information, see [SharePoint Embedded container types](../getting-started/containertypes.md).
 
-These events use `Workload` value `SharePoint` in the unified audit log.
+These events use **Workload** value **SharePoint** in the unified audit log.
 
 | Friendly name | Operation | Description |
 |:--|:--|:--|
