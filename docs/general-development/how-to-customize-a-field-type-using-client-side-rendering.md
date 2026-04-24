@@ -1,7 +1,7 @@
 ---
 title: Customize a field type using client-side rendering
 description: Learn how to customize a field type by using the client-side rendering technology in SharePoint.
-ms.date: 09/25/2017
+ms.date: 04/24/2026
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
 ms.localizationpriority: medium
 ---
@@ -15,7 +15,8 @@ Learn how to customize a field type by using the client-side rendering technolog
 Client-side rendering provides a mechanism that you can use to produce your own output for a set of controls that are hosted in a SharePoint page. This mechanism enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of custom field types. In client-side rendering you can specify your own JavaScript resources and host them in the data storage options available to your farm solution, such as the _layouts folder.
 
 > [!IMPORTANT]
-> JSLink based customizations (client-side rendering) are not supported in modern experiences. This includes modern lists and libraries, including JSLink support in the list view web parts of the modern pages. Client-side rendering is supported in the classic experiences in SharePoint Online or in on-premises.
+> Client-Side Rendering (CSR) and JSLink are deprecated and not supported in modern SharePoint experiences.
+> Use SharePoint Framework (SPFx) Field Customizer extensions instead for modern SharePoint Online and supported on-prem environments.
 
 ## Prerequisites for using the examples in this article
 <a name="SP15CustomizeafieldtypeusingCSR_Prereq"> </a>
@@ -52,7 +53,7 @@ The following table lists useful articles that can help you understand the conce
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
-| [Custom Field Types](https://msdn.microsoft.com/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
+| [Custom Field Types](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms446361(v=office.14)) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
    
 
 ## Code example: Customize the rendering process for a custom field type in a view form
@@ -337,13 +338,13 @@ This article demonstrated how to customize the rendering process for a custom fi
     
     
 
--  [How to: Create a Custom Field Type](https://msdn.microsoft.com/library/bb862248.aspx)
+-  [How to: Create a Custom Field Type](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/bb862248(v=office.14))
     
   
--  [Walkthrough: Creating a Custom Field Type](https://msdn.microsoft.com/library/bb861799.aspx)
+-  [Walkthrough: Creating a Custom Field Type](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/bb861799(v=office.14)).
     
   
--  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)
+-  [Customize a list view in SharePoint Add-ins using client-side rendering](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering)
     
   
 
