@@ -660,6 +660,8 @@
     items:
     - name: Security and Compliance
       href: embedded/compliance/security-and-compliance.md
+    - name: Audit log events
+      href: embedded/compliance/audit-events.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration
