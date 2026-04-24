@@ -11,7 +11,7 @@ ms.localizationpriority: high
 Learn how to use Representational State Transfer (REST) to create a SharePoint mobile app for any platform.
 
 > [!IMPORTANT]
-> Building mobile apps using the Windows Phone SDK and the SharePoint Windows Phone SDK is a legacy approach. Windows Phone is discontinued. For new mobile solutions targeting SharePoint, consider using [SharePoint Framework (SPFx)](../spfx/sharepoint-framework-overview.md), [Microsoft Graph](https://learn.microsoft.com/graph/overview), or cross-platform frameworks (React Native, Flutter, etc.) with SharePoint REST or Microsoft Graph APIs.
+> Building mobile apps using the Windows Phone SDK and the SharePoint Windows Phone SDK is a legacy approach. Windows Phone is discontinued. For new mobile solutions targeting SharePoint, consider using [SharePoint Framework (SPFx)](../spfx/sharepoint-framework-overview.md), [Microsoft Graph](/graph/overview), or cross-platform frameworks (React Native, Flutter, etc.) with SharePoint REST or Microsoft Graph APIs.
 
 Mobile devices have become more powerful and easy to use nowadays. Laptops, netbooks, tablet PCs, and mobile phones provide workers access to the information and applications that they need to do their jobs. And developing applications for mobile devices is now easier than ever. As a result, more business scenarios demand integrating client applications together with their business processes. This article describes how to integrate mobile client apps together with SharePoint. You can create a mobile app to browse SharePoint content from any location and connect with SharePoint lists and libraries to access data.
 

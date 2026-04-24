@@ -30,7 +30,7 @@ Users who have devices that support touch can use gestures to complete operation
 
 As you design and build apps and solutions for SharePoint, you should implement markup and code to support key accessibility scenarios, including keyboard accessibility, proper text contrast, and screen reading.
 
-For information about developing accessible applications and websites, see  [Resources for Designing Accessible Applications](/previous-versions/visualstudio/visual-studio-2015/ide/reference/resources-for-designing-accessible-applications?view=vs-2015) in the Visual Studio documentation.
+For information about developing accessible applications and websites, see  [Resources for Designing Accessible Applications](/previous-versions/visualstudio/visual-studio-2015/ide/reference/resources-for-designing-accessible-applications) in the Visual Studio documentation.
 
 For information about Windows app development and providing accessibility in Windows Store apps, see the following sections in the Windows Dev Center:
 
@@ -41,7 +41,7 @@ For information about Windows app development and providing accessibility in Win
 
 ## Accessibility features in Visual Studio
 
-If you build solutions and apps for SharePoint in Visual Studio, you'll find that Visual Studio 2012 provides default shortcut key combinations to help you navigate and code within the IDE. For more information about accessibility features in Visual Studio, see  [Accessibility Features of Visual Studio](/previous-versions/visualstudio/visual-studio-2015/ide/reference/accessibility-features-of-visual-studio?view=vs-2015). For a list of Visual Studio keyboard shortcuts, see  [Pre-defined Keyboard Shortcuts](/previous-versions/visualstudio/visual-studio-2015/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio?view=vs-2015).
+If you build solutions and apps for SharePoint in Visual Studio, you'll find that Visual Studio 2012 provides default shortcut key combinations to help you navigate and code within the IDE. For more information about accessibility features in Visual Studio, see  [Accessibility Features of Visual Studio](/previous-versions/visualstudio/visual-studio-2015/ide/reference/accessibility-features-of-visual-studio). For a list of Visual Studio keyboard shortcuts, see  [Pre-defined Keyboard Shortcuts](/previous-versions/visualstudio/visual-studio-2015/ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio).
 
 ## Accessibility in web browsers
 
@@ -60,7 +60,7 @@ SharePoint administrators and users depend on the accessibility features that we
 
 - [Accessibility](/windows/apps/develop/accessibility)
 - [Microsoft Accessibility Resource Centers](https://www.microsoft.com/enable/centers/)
-- [Guidelines and checklist for accessibility](/previous-versions/windows/apps/hh700325)
+- [Guidelines and checklist for accessibility](/previous-versions/windows/apps/hh700325(v=win.10))
 - [SharePoint Add-ins UX design guidelines](../sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md)
 - [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md)
 - [Programming models in SharePoint](programming-models-in-sharepoint.md)
