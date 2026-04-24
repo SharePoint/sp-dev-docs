@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 04/16/2026
+ms.date: 02/04/2026
 ms.localizationpriority: high
 ---
 
@@ -41,10 +41,11 @@ SharePoint Embedded applications need to request the following Microsoft Graph p
 
 #### Access on behalf of a user
 
-SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) support two Microsoft Graph permissions: 
+SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) support two Microsoft Graph permissions:
+
 - **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** to allow an application to access containers on behalf of the signed-in user.
     - In addition to your application receiving consent for the permission on a consuming tenant, the user that it's acting on behalf of is required to have [user permissions](#user-permissions). The effective permissions that the application has are the intersection of the application permissions and the user permissions when acting on behalf of a user.
-- **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to utilize administration capabilities on all containers of all governable container types within the consuming tenant on behalf of an administrator user. The administration capabilities include the ability to enumerate, delete, restore, purge, and update containers, as well as manage their permissions.
+- **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to utilize administration capabilities on all containers of all governable container types within the consuming tenant on behalf of an administrator user. The administration capabilities include the ability to enumerate, delete, restore, purge, and update containers, and manage their permissions.
 
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
@@ -202,10 +203,12 @@ If the user is not an administrator, **[FileStorageContainer.Manage.All](/graph/
 Here are some actions you can take next:
 
 1. Configure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) (you can use [Microsoft Entra PowerShell](/powershell/entra-powershell/manage-apps#assign-permissions-to-an-app) or the [Azure CLI](/cli/azure/ad/app/permission#az-ad-app-permission-add)) to request the required permissions on your _owning_ tenant:
+
     - Add the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** to create container types on the _owning_ tenant:
         - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
         - **type**: `Role`
         - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
+
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on your _owning_ tenant
 1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
 1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
