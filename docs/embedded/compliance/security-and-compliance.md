@@ -41,6 +41,8 @@ For information on how to retrieve the `ContainerSiteURL` to set the various com
 
 The Audit capabilities provided by SharePoint Embedded mirror the existing Audit functionalities currently supported within SharePoint. All user and admin operations performed in various applications hosted in SharePoint Embedded are captured, recorded, and retained in your organization's unified audit log. For more information on Audit, see [Auditing solutions in Microsoft Purview](/purview/audit-solutions-overview).
 
+For a detailed list of container type and container type registration audit events, see [SharePoint Embedded audit log events](audit-events.md).
+
 In addition to existing file properties, Audit events related to SharePoint Embedded are logged with the following more data to help filter the Audit search results to isolate the relevant SharePoint Embedded content:
 
 - `ContainerInstanceId`
