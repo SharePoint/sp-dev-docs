@@ -7,11 +7,11 @@ ms.localizationpriority: high
 
 # Office file experiences for SharePoint Embedded
 
-Office file experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 platform.
+Office file experiences for the SharePoint Embedded platform work similarly to the Microsoft 365 platform.
 
 ## Opening Office documents from SharePoint Embedded
 
-Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web or in the Office application for a richer viewing and editing experience. AutoSave feature saves your files automatically as your user's work and is enabled for each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Application Apps.
+Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web or in the Office application for a richer viewing and editing experience. The AutoSave feature saves files automatically as your users work and is enabled for each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Application Apps.
 
 Documents stored in an archived container can’t be viewed or accessed. Applications must handle the archived state of the container by displaying an appropriate error message and guiding end users on the next steps to regain access, such as reactivating the container.
 
@@ -21,10 +21,10 @@ Versioning is automatically enabled on each Word, Excel, and PowerPoint file sto
 
 ## Collaborating on Office documents from SharePoint Embedded
 
-It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an email invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
+It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by creating a shareable link to use wherever needed, sending an email invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
 
 > [!NOTE]
-> Mentions require target users to [have an Microsoft 365 license assigned to them](../auth.md#mention-users-in-office-documents).
+> Mentions require target users to [have a Microsoft 365 license assigned to them](../auth.md#mention-users-in-office-documents).
 >
 > Mentions are restricted to people inside the consuming tenant's organization. Mentions exclude guests and users from other tenants in a multitenant setting.
 
@@ -74,6 +74,106 @@ Breadcrumb patterns for SharePoint Embedded Application Apps are constructed fro
 
 ![Screenshot of breadcrumb pattern in SharePoint Embedded Applications](../../images/office2.png)
 
-Here are few examples of SharePoint Embedded Application breadcrumb display within Office client experiences.
+Here are a few examples of SharePoint Embedded Application breadcrumb display within Office client experiences.
 
 ![Screenshot of breadcrumb options in SharePoint Embedded Applications.](../../images/office1.png)
+
+## Controlling where users land when opening SPE files from Microsoft 365 search
+
+When users search for content on Microsoft 365 (for example, on Office.com or OneDrive), search results include files stored in SharePoint Embedded containers. Clicking a search result opens the file in an appropriate viewer. For file types without a built-in Microsoft viewer, the destination depends on whether your container type has a URL template configured.
+
+The `urlTemplate` property on your container type lets you specify a URL pattern in your application that Microsoft 365 uses as the destination when a user clicks on one of your files stored in your containers in search results. Without it, users clicking non-Office, non-PDF files in search results are directed to a generic Microsoft help page rather than your application.
+
+### How file types are handled
+
+The destination URL for a file in search results depends on the file type, regardless of whether `urlTemplate` is set:
+
+| File type | `urlTemplate` set? | Destination when clicked in search |
+|---|---|---|
+| Word, Excel, PowerPoint | Yes or No | Opens in Office Web Apps |
+| PDF and other files supported by the embedded viewer | Yes or No | Opens in the embedded file viewer |
+| All other types (.txt, custom extensions, etc.) | Yes | Redirected to your application via the resolved `urlTemplate` |
+| All other types (.txt, custom extensions, etc.) | No | Redirected to `https://aka.ms/spe-openfilelocation` |
+
+### Configuring `urlTemplate`
+
+Set `urlTemplate` on your container type using the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers at the time a user clicks a search result.
+
+#### URL template syntax
+
+```
+https://app.contoso.com/open?tenant={tenant-id}&drive={drive-id}&item={item-id}
+```
+
+Tokens are enclosed in curly braces and replaced with values for the specific item the user clicked. Any token that cannot be resolved is removed from the URL before the redirect occurs.
+
+#### Supported tokens
+
+| Token | Value your app receives |
+|---|---|
+| `{tenant-id}` | ID of the consuming tenant; use to make tenant-scoped Graph API calls |
+| `{drive-id}` | Drive ID of the container; use with the Graph Files API to reference the container |
+| `{folder-id}` | ID of the item's immediate parent folder; may be absent for root-level files |
+| `{item-id}` | ID of the file; combine with `{drive-id}` and the Graph Files API to open or retrieve the file |
+
+You can also use container custom properties as tokens, as long as the custom property was created with `isPatternToken: true`. The token format is `{propertyName}` where `propertyName` is the key of the custom property.
+
+For more information on custom property tokens, see [Custom properties on fileStorageContainers](/graph/api/filestoragecontainer-post-customproperty).
+
+#### Example
+
+If your container type has `urlTemplate` set to:
+
+```
+https://app.contoso.com/open?t={tenant-id}&d={drive-id}&i={item-id}
+```
+
+Then when a user clicks a `.txt` file in a search result, they are redirected to something like:
+
+```
+https://app.contoso.com/open?t=72f988bf-86f1-41af-91ab-2d7cd011db47&d=b%21abc123...&i=01ABC...
+```
+
+Your application receives the tenant ID, drive ID, and item ID as query parameters and can use them to open the correct file using the Microsoft Graph Files API.
+
+#### Setting `urlTemplate` via the Graph API
+
+Use a PATCH request to update the container type:
+
+```http
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes/{containerTypeId}
+Content-Type: application/json
+
+{
+  "settings": {
+    "urlTemplate": "https://app.contoso.com/open?t={tenant-id}&d={drive-id}&i={item-id}"
+  },
+  "etag": "<etag-value>"
+}
+```
+
+For the full reference, see [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update).
+
+### Fallback behavior when `urlTemplate` is not set
+
+If `urlTemplate` is not configured on your container type, users who click on non-Office, non-PDF files in Microsoft 365 search results are redirected to `https://aka.ms/spe-openfilelocation`. This page explains that the file is stored in a third-party application and that the user should open it there directly.
+
+If your application stores only Word, Excel, PowerPoint, and PDF files, you may not need to set `urlTemplate` at all. For applications that store any other file types, setting `urlTemplate` is strongly recommended to avoid users encountering this help page from search.
+
+### Limitations
+
+#### Search index updates require a re-crawl
+
+The destination URL for each file is stored in the Microsoft 365 search index when the file is crawled. If you configure or update `urlTemplate` after files have already been indexed, existing search results continue to route to the previous destination until those files are re-crawled. Microsoft 365 performs incremental crawls automatically, but there may be a delay before all files reflect the updated URL.
+
+#### `urlTemplate` is scoped to the container type, not individual containers
+
+The template applies to all containers of that type across all consuming tenants. Use the `{tenant-id}` token to route users to the correct tenant context within your application.
+
+#### Custom property tokens require `isPatternToken: true`
+
+Container custom properties are only eligible for use as URL tokens if they were created with `isPatternToken: true`. Properties without this flag cannot be used in the template.
+
+#### `{folder-id}` reflects the item's immediate parent
+
+For files at the root of the container, this token may not resolve and is removed from the final URL. Design your application to handle URLs where `{folder-id}` is absent.
