@@ -1,7 +1,7 @@
 ---
 title: File Previews
 description: Preview SharePoint Embedded content
-ms.date: 05/21/2024
+ms.date: 03/05/2025
 ms.localizationpriority: high
 ---
 
@@ -31,7 +31,9 @@ POST https://graph.microsoft.com/{version}/drives/{driveId}/items/{itemId}/previ
 If you're using the Microsoft Graph C# SDK, the code would be similar to the following:
 
 ```csharp
-ItemPreviewInfo preview = await graphServiceClient.Drives[driveId].Items[itemId]
+ItemPreviewInfo preview = await graphServiceClient
+    .Drives[driveId]
+    .Items[itemId]
     .Preview()
     .Request()
     .PostAsync();
@@ -48,11 +50,11 @@ The JSON response includes the preview URLs for each document. Use the one obtai
 ```
 
 > [!TIP]
-> It is possible to remove the banner at the top by adding the parameter `nb=true` to the obtained URL. E.g.
+> It's possible to remove the banner at the top by adding the parameter `nb=true` to the obtained URL. E.g.,
 > `https://contoso.sharepoint.com/restOfUrl/embed.aspx?param1=value&nb=true`
 
 > [!CAUTION]
-> Currently **getUrl** contains a parameter with an encrypted token that can only be used with your application. However, this may change in the near future and you may be asked to add an auth header as you do with  other requests.
+> Currently **getUrl** contains a parameter with an encrypted token that can only be used with your application. However, this may change soon and you may be asked to add an auth header as you do with  other requests.
 
 ## Use the URL in an `iframe`
 
@@ -95,9 +97,40 @@ The client-side application can then use the browser's `fetch` API to request an
 async function preview(driveId, itemId) {
   const url = `/GetPreviewUrl?driveId=${driveId}&itemId=${itemId}`;
   const response = await fetch(url, {
-      credentials: 'include',
+    credentials: 'include',
   }).then(response => response.text());
 
   document.getElementById('preview').src = response + "&nb=true"; //Use nb=true to suppress banner
 }
+```
+
+## PDF Preview
+
+SharePoint Embedded includes a PDF previewer that you can enhance with query parameters appended to the driveItem's `webUrl` property. To get `webUrl`, call the [driveItem GET API](/graph/api/driveitem-get), for example `GET /drives/{drive-id}/items/{item-id}?$select=webUrl`, and retrieve the `webUrl` field.
+
+The parameters are passed as a JSON-encoded `embed` query string:
+
+```text
+<webUrl>?&embed={"<param1>":<value>,"<param2>":<value>}
+```
+
+You can include one or more parameters in the same object.
+
+> [!NOTE]
+> Additional query parameters will be added to this section as the PDF previewer expands.
+
+### Print (`mpp`)
+
+Enables the print icon and Ctrl+P functionality.
+
+```text
+<webUrl>?&embed={"mpp":true}
+```
+
+### Sticky Notes (`mpsn`)
+
+Shows sticky note content if sticky notes are present in the PDF.
+
+```text
+<webUrl>?&embed={"mpsn":true}
 ```

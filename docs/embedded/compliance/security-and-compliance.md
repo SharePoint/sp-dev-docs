@@ -1,7 +1,7 @@
 ---
 title: Security and Compliance
 description: Details Security and Compliance methods provided by SharePoint Embedded
-ms.date: 03/03/2025
+ms.date: 03/05/2025
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ Since SharePoint Embedded by design doesn’t have any user interface, some Comp
 
 ## Compliance Policies using Microsoft Purview
 
-Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview.  You can follow the following steps to retrieve the details of a container that the policy needs to be applied to.
+Currently, SharePoint Embedded supports the following Compliance features under Microsoft Purview. You can follow the following steps to retrieve the details of a container that the policy needs to be applied to.
 
 1. View a list of registered SharePoint Embedded applications registered in the specified tenant:
 
@@ -32,7 +32,7 @@ Currently, SharePoint Embedded supports the following Compliance features under 
 1. Retrieve the details of a container including the ContainerSiteURL by providing the ContainerID returned in Step #2:
 
     ```powershell
-    Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity<ContainerID>
+    Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity <ContainerID>
     ```
 
 For information on how to retrieve the `ContainerSiteURL` to set the various compliance policies described in this article at a container level, see [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer).
@@ -40,6 +40,8 @@ For information on how to retrieve the `ContainerSiteURL` to set the various com
 ### Audit
 
 The Audit capabilities provided by SharePoint Embedded mirror the existing Audit functionalities currently supported within SharePoint. All user and admin operations performed in various applications hosted in SharePoint Embedded are captured, recorded, and retained in your organization's unified audit log. For more information on Audit, see [Auditing solutions in Microsoft Purview](/purview/audit-solutions-overview).
+
+For a detailed list of container type audit events, see [SharePoint Embedded audit log events](audit-events.md).
 
 In addition to existing file properties, Audit events related to SharePoint Embedded are logged with the following more data to help filter the Audit search results to isolate the relevant SharePoint Embedded content:
 
