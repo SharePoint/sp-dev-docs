@@ -1,7 +1,7 @@
 ---
 title: File Previews
 description: Preview SharePoint Embedded content
-ms.date: 04/22/2026
+ms.date: 05/21/2024
 ms.localizationpriority: high
 ---
 
@@ -100,35 +100,4 @@ async function preview(driveId, itemId) {
 
   document.getElementById('preview').src = response + "&nb=true"; //Use nb=true to suppress banner
 }
-```
-
-## PDF Preview
-
-SharePoint Embedded includes a PDF previewer that you can enhance with query parameters appended to the driveItem's `webUrl` property. To get `webUrl`, call the [driveItem Graph endpoint](/graph/api/resources/driveitem) and retrieve the `webUrl` field.
-
-The parameters are passed as a JSON-encoded `embed` query string:
-
-```text
-<webUrl>&embed={"<param1>":<value>,"<param2>":<value>}
-```
-
-You can include one or more parameters in the same object.
-
-> [!NOTE]
-> Additional query parameters will be added to this section as the PDF previewer expands.
-
-### Print (`mpp`)
-
-Enables the print icon and Ctrl+P functionality.
-
-```text
-<webUrl>&embed={"mpp":true}
-```
-
-### Sticky Notes (`mpsn`)
-
-Shows sticky note content if sticky notes are present in the PDF.
-
-```text
-<webUrl>&embed={"mpsn":true}
 ```
