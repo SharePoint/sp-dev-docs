@@ -1,7 +1,7 @@
 ---
 title: Office Experiences
 description: Overview of Office experiences with SharePoint Embedded content
-ms.date: 06/18/2025
+ms.date: 04/27/2026
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,7 @@ Office file experiences for the SharePoint Embedded platform work similarly to t
 
 ## Opening Office documents from SharePoint Embedded
 
-Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web or in the Office application for a richer viewing and editing experience. The AutoSave feature saves files automatically as your users work and is enabled for each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Application Apps.
+Office documents in SharePoint Embedded apps can be opened and edited in Office for the web or in desktop Office applications for a richer experience. AutoSave is enabled by default, automatically saving changes to Word, Excel, and PowerPoint files.
 
 Documents stored in an archived container can’t be viewed or accessed. Applications must handle the archived state of the container by displaying an appropriate error message and guiding end users on the next steps to regain access, such as reactivating the container.
 
@@ -88,13 +88,13 @@ The `urlTemplate` property on your container type lets you specify a URL pattern
 
 The destination URL for a file in search results depends on the file type, regardless of whether `urlTemplate` is set:
 
-| File type | `urlTemplate` set? | Destination when clicked in search |
-|---|---|---|
-| Word, Excel, PowerPoint | Yes or No | Opens in Office Web Apps |
-| PDF and other files supported by the embedded viewer | Yes or No | Opens in the embedded file viewer |
-| All other types (.txt, custom extensions, etc.) | Yes | Redirected to your application via the resolved `urlTemplate` |
-| All other types (.txt, custom extensions, etc.) | No | Redirected to `https://aka.ms/spe-openfilelocation` |
-
+| File type                                            | `urlTemplate` set? | Destination when clicked in search                 |
+|------------------------------------------------------|--------------------|----------------------------------------------------|
+| Word, Excel, PowerPoint                              | Yes                | Opens in Office Web Apps                           |
+| PDF                                                  | Yes                | Opens in the SharePoint Embedded PDF Previewer     |
+| All other types                                      | Yes                | Redirected to your application via `urlTemplate`   |
+| All other types                                      | No                 | Redirected to `https://aka.ms/spe-openfilelocation`|
+ 
 ### Configuring `urlTemplate`
 
 Set `urlTemplate` on your container type using the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers at the time a user clicks a search result.
@@ -109,14 +109,14 @@ Tokens are enclosed in curly braces and replaced with values for the specific it
 
 #### Supported tokens
 
-| Token | Value your app receives |
-|---|---|
-| `{tenant-id}` | ID of the consuming tenant; use to make tenant-scoped Graph API calls |
-| `{drive-id}` | Drive ID of the container; use with the Graph Files API to reference the container |
-| `{folder-id}` | ID of the item's immediate parent folder; may be absent for root-level files |
-| `{item-id}` | ID of the file; combine with `{drive-id}` and the Graph Files API to open or retrieve the file |
+| Token        | Value your app receives                                                                       |
+|--------------|-----------------------------------------------------------------------------------------------|
+| `{tenant-id}`| ID of the consuming tenant; use to make tenant-scoped Graph API calls                         |
+| `{drive-id}` | Drive ID of the container; use with the Graph Files API to reference the container            |
+| `{folder-id}`| ID of the item's immediate parent folder; may be absent for root-level files                  |
+| `{item-id}`  | ID of the file; combine with `{drive-id}` and the Graph Files API to open or retrieve the file|
 
-You can also use container custom properties as tokens, as long as the custom property was created with `isPatternToken: true`. The token format is `{propertyName}` where `propertyName` is the key of the custom property.
+
 
 For more information on custom property tokens, see [Custom properties on fileStorageContainers](/graph/api/filestoragecontainer-post-customproperty).
 
@@ -170,9 +170,6 @@ The destination URL for each file is stored in the Microsoft 365 search index wh
 
 The template applies to all containers of that type across all consuming tenants. Use the `{tenant-id}` token to route users to the correct tenant context within your application.
 
-#### Custom property tokens require `isPatternToken: true`
-
-Container custom properties are only eligible for use as URL tokens if they were created with `isPatternToken: true`. Properties without this flag cannot be used in the template.
 
 #### `{folder-id}` reflects the item's immediate parent
 
