@@ -36,9 +36,9 @@ Share your SharePoint Embedded documents by sending an email invitation to speci
 
 - Select **Share** and start typing the email addresses or contact names of people you want to share with. You can choose contacts from the list that appears.
 
-#### Create a shareable link
+#### Create a sharing link
 
-Creating a shareable link makes it simple to share your SharePoint Embedded document in an email, document, or instant message.
+Creating a sharing link makes it simple to share your SharePoint Embedded document in an email, document, or instant message.
 
 - Select **Share**, select **Copy Link**, and paste the link wherever you want.
 - Change any link permissions if needed.
@@ -153,13 +153,13 @@ Content-Type: application/json
 
 ### Limitations
 
-#### Search index updates require a re-crawl
+#### Search index updates may be delayed
 
-The destination URL for each file is stored in the Microsoft 365 search index when the file is crawled. If you configure or update `urlTemplate` after files have already been indexed, existing search results continue to route to the previous destination until those files are re-crawled. Microsoft 365 performs incremental crawls automatically, but there may be a delay before all files reflect the updated URL.
+The destination URL for each file is stored in the Microsoft 365 search index when the file is indexed. If you configure or update `urlTemplate` after files have already been indexed, existing search results continue to route to the previous destination until those files are re-indexed. Microsoft 365 performs incremental indexing automatically, but there may be a delay before all files reflect the updated URL.
 
 #### `urlTemplate` is scoped to the container type
 
-The template applies to all containers of that type across all consuming tenants. Use the `{tenant-id}` token to route users to the correct tenant context within your application.
+The template applies to all container instances of the corresponding container type across all consuming tenants. Use the `{tenant-id}` token to route users to the correct tenant within your application.
 
 #### `{folder-id}` reflects the item's immediate parent
 
