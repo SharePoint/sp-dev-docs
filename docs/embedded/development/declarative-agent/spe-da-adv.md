@@ -162,7 +162,7 @@ Grounding in the context of SPE agent refers to the process of providing input s
 
 ### Scoping your agent to specific content
 
-SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to. The sample code below shows the available data source types. [This example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK.
+SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to. The sample code below shows the available data source types. [This example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Custom%20Apps/boilerplate-typescript-react/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK.
 
 ```typescript
 export type IDataSourcesProps =

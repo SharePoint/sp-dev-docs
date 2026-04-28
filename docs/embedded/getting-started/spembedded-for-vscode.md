@@ -134,7 +134,7 @@ In your terminal, run the following command, this will start the sample applicat
 
 ```console
 # Navigate to your sample application directory
-cd [your-path]\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction
+cd [your-path]\SharePoint-Embedded-Samples\Custom Apps\boilerplate-typescript-react
 
 # Install dependencies and start the application
 npm run start
@@ -171,6 +171,6 @@ If you encounter issues:
 
 ## Export Postman Environment
 
-The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
+The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Tools/api-clients) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
 
 ![Export Postman Environment](../images/vsx-images/n14postman-c.png)

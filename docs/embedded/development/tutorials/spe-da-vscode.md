@@ -311,7 +311,7 @@ function App() {
 
     ![SPE VS Code notification prompting user to allow it to create a secret for the application if it does not exist.](../../images/speco-createclientsecret.png)
   
-1. Select a folder to host the application, this will clone the following [repository for SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/spe-typescript-react-azurefunction) into the folder
+1. Select a folder to host the application, this will clone the following [repository for SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Custom%20Apps/boilerplate-typescript-react) into the folder
 
     ![windows File Explorer folder to save project on local machine](../../images/speco-cloneproject.png)
 
@@ -330,7 +330,7 @@ function App() {
 1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE agent functionality enabled.
 
     > [!NOTE]
-    > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction`
+    > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Custom Apps\boilerplate-typescript-react`
 
     ![VS Code terminal in root folder of SPE Typescript project cloned earlier and npm run start command typed in](../../images/speco-runnpmrunstart.png)
 
@@ -352,4 +352,4 @@ function App() {
 
 ### Examples
 
-The [SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/spe-typescript-react-azurefunction) repository has examples for how to use SharePoint Embedded in your custom applications.
+The [SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Custom%20Apps/boilerplate-typescript-react) repository has examples for how to use SharePoint Embedded in your custom applications.

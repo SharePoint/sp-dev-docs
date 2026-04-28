@@ -371,4 +371,4 @@ Happy coding!
 
 ### Code Repository
 
-The sample app can be found in the [SharePoint Embedded Samples repository](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/migrate-abs-to-spe).
+The sample app can be found in the [SharePoint Embedded Samples repository](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Tools/migrate-from-blob-storage).
