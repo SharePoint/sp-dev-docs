@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded agent Advanced Topics
 description: Learn how the semantic index powers Retrieval-Augmented Generation (RAG) to provide accurate, context-aware AI responses in SharePoint Embedded agent.
-ms.date: 03/17/2026
+ms.date: 03/06/2025
 ms.localizationpriority: high
 ---
 
@@ -26,13 +26,13 @@ The [`discoverabilityDisabled`](../../administration/developer-admin/dev-admin.m
 
 If you’re updating an existing container type to set this property to `false`, allow up to **24 hours** for the configuration change to fully propagate before:
 
-- Creating new containers,  
-- Uploading files to containers, or  
+- Creating new containers,
+- Uploading files to containers, or
 - Using SPE agent to interact with folders or files.
 
 This ensures the agent can correctly access and surface the content.
 
-Here is an example of how to set `discoverabilityDisabled` to `false` with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
+Here's an example of how to set `discoverabilityDisabled` to `false` with [Set-SPOContainerTypeConfiguration](/powershell/module/SharePoint-online/set-spocontainertypeconfiguration#examples)
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
@@ -57,7 +57,7 @@ Connect-SPOService "https://<domain>-admin.sharepoint.com"
 
 Set-SPOContainerTypeConfiguration -ContainerTypeId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("http://localhost:3000", "https://contoso.sharepoint.com", "https://fabrikam.com")
 
-# This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly. 
+# This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly.
 # Replication of this configuration on consuming tenants can take up to 24 hours
 # ...
 
@@ -86,8 +86,7 @@ A SharePoint Embedded Administrator on a consuming tenant may override the value
 > [!NOTE]
 >
 > A consuming tenant override must be a subset of what the owning tenant configured for `CopilotEmbeddedChatHosts`. An administrator
-> in a consuming tenant cannot set values that the application owner has not specified for the container type. The override capabilities
-> is intended for consuming tenant administrators to enable the agent in only a subset of hosts that the owning application has defined.
+> in a consuming tenant can't set values that the application owner hasn't specified for the container type. The override capability is intended for consuming tenant administrators to enable the agent in only a subset of hosts that the owning application has defined.
 
 Here's an example of how a consuming tenant can override the setting:
 
@@ -98,7 +97,7 @@ Connect-SPOService "https://<domain>-admin.sharepoint.com"
 # Login with your admin account.
 # ...
 
-Set-SPOApplication -OwningApplicationId  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("https://contoso.sharepoint.com", "https://fabrikam.com") 
+Set-SPOApplication -OwningApplicationId  XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CopilotEmbeddedChatHosts @("https://contoso.sharepoint.com", "https://fabrikam.com")
 
 # This will set the container type configuration “CopilotEmbeddedChatHosts” accordingly
 # Note that @("https://contoso.sharepoint.com", "https://fabrikam.com") is a subset of what we defined in the owning tenant
@@ -116,7 +115,7 @@ CopilotEmbeddedChatHosts        : {https://contoso.sharepoint.com, https://fabri
 
 #### Optional Configuration
 
-##### Authentication and 3P Cookies
+##### Authentication and Third-Party Cookies
 
 The `iframe` used by SharePoint Embedded agent authenticates users using third-party cookies. If third-party cookies are disabled in the user's browser, the iframe can't authenticate automatically. In this case, a popup prompts the user to sign in manually, ensuring that authentication can still be completed.
 
@@ -162,7 +161,7 @@ Grounding in the context of SPE agent refers to the process of providing input s
 
 ### Scoping your agent to specific content
 
-SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to. The sample code below shows the available data source types. [This example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Samples/spe-typescript-react-azurefunction/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK.
+SharePoint Embedded (SPE) agent has the ability to restrict the data sources it has access to. The sample code below shows the available data source types. [This example](https://github.com/microsoft/SharePoint-Embedded-Samples/blob/main/Custom%20Apps/boilerplate-typescript-react/react-client/src/providers/ChatController.ts#L15) shows how to configure the SDK.
 
 ```typescript
 export type IDataSourcesProps =
@@ -213,7 +212,7 @@ You can have this localized by setting your language options in the SharePoint a
 
 > [!NOTE]
 >
-> If your M365 language setting is different from your SharePoint account language setting, your M365 language setting takes precedence. You can change your M365 language setting here: [Change your display language in Microsoft 365](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
+> If your Microsoft 365 language setting is different from your SharePoint account language setting, your Microsoft 365 language setting takes precedence. You can change your Microsoft 365 language setting here: [Change your display language in Microsoft 365](https://support.microsoft.com/topic/change-your-display-language-and-time-zone-in-microsoft-365-for-business-6f238bff-5252-441e-b32b-655d5d85d15b).
 
 An additional locale option can be passed in through the `ChatLaunchConfig` to further set the language the agent responds in:
 
