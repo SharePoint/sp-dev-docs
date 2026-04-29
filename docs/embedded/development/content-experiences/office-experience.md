@@ -1,79 +1,166 @@
 ---
-title: Office Experiences
-description: Overview of Office experiences with SharePoint Embedded content
-ms.date: 06/18/2025
+title: Office file experiences for SharePoint Embedded
+description: Learn how Office file experiences work with SharePoint Embedded, including versioning, collaboration, co-authoring, breadcrumb navigation, and Microsoft 365 search integration.
+ms.date: 04/27/2026
 ms.localizationpriority: high
 ---
 
 # Office file experiences for SharePoint Embedded
 
-Office file experiences for SharePoint Embedded platform will work in a similar manner to Microsoft 365 platform.
+SharePoint Embedded supports the same Office file experiences available in Microsoft 365, including opening and editing documents, co-authoring, versioning, sharing, and breadcrumb navigation. This article describes how these experiences work in SharePoint Embedded applications.
 
 ## Opening Office documents from SharePoint Embedded
 
-Office documents from SharePoint Embedded apps can be opened for viewing and editing in Office web or in the Office application for a richer viewing and editing experience. AutoSave feature saves your files automatically as your user's work and is enabled for each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Application Apps.
+Office documents in SharePoint Embedded apps can be opened and edited in Office for the web or in desktop Office applications for full desktop functionality. AutoSave is enabled by default and automatically saves changes to Word, Excel, and PowerPoint files.
 
-Documents stored in an archived container can’t be viewed or accessed. Applications must handle the archived state of the container by displaying an appropriate error message and guiding end users on the next steps to regain access, such as reactivating the container.
+Documents stored in an archived container can’t be viewed or accessed. Your application must handle the archived state of the container by displaying an appropriate error message and guiding users through the steps to regain access, such as reactivating the container.
 
 ## View or restore a previous version of an Office document from SharePoint Embedded
 
-Versioning is automatically enabled on each Word, Excel, and PowerPoint file stored in your SharePoint Embedded Apps, that helps your users to see what changes have been made in a file, compare different versions, or restore the version you want. This is incredibly important to your users if a mistake was made, a previous version is preferred, or in multi-user coauthoring scenarios when your users are collaborating with others and someone makes changes your users didn't want in a file.
+Office document versioning is controlled by the `isVersioningEnabled` setting in your container type configuration. Users can track changes, compare versions, and restore earlier versions when needed—whether to recover from mistakes, revert to a preferred version, or manage changes in collaborative scenarios.
 
 ## Collaborating on Office documents from SharePoint Embedded
 
-It's simple for your users to collaborate on your SharePoint Embedded Application's Office documents – they can **Share documents** with specific peers or with people outside your organization by Creating a shareable link to use wherever needed, Send an email invitation or @mention in comments to tag someone for feedback and, **Collaborate in real time** by co-authoring in Office with SharePoint Embedded Applications.
+Users can share files with specific individuals or external users via links, email invitations, or @mentions in comments. Office also supports real-time collaboration through co-authoring.
 
 > [!NOTE]
-> Mentions require target users to [have an Microsoft 365 license assigned to them](../auth.md#mention-users-in-office-documents).
+> Users you @mention must [have a Microsoft 365 license assigned to them](../auth.md#mention-users-in-office-documents).
 >
-> Mentions are restricted to people inside the consuming tenant's organization. Mentions exclude guests and users from other tenants in a multitenant setting.
+> The @mentions feature is restricted to people inside the consuming tenant's organization and excludes guests and users from other tenants in a multitenant setting.
 
 ### Share your documents
 
-#### Send an email invite
+#### Send an email invitation
 
 Share your SharePoint Embedded documents by sending an email invitation to specific people:
 
-- Select Share, start typing the email addresses or contact names of people you want to share with. When you begin to enter info in the box, you can also choose a contact from the list that appears.
-- Include a message if you want and hit Send.
+- Select **Share** and start typing the email addresses or contact names of people you want to share with. You can choose contacts from the list that appears.
 
-#### Create a shareable link
+#### Create a sharing link
 
-Creating a shareable link makes it simple to share your SharePoint Embedded document in an email, document, or IM.
+Creating a sharing link makes it simple to share your SharePoint Embedded document in an email, document, or instant message.
 
-- Select Share, Copy Link, and Paste the link wherever you want
-- Change any permissions of the link if needed
+- Select **Share**, select **Copy Link**, and paste the link wherever you want.
+- Change any link permissions if needed.
 
-#### Co-Author
+### Co-author
 
-If you want others to edit with you, you can easily share files and collaborate with trusted peers for a fresh perspective. When you need help with a presentation, you can invite trusted peers to help you get it into shape. This means that when you work on a file, they can as well. You’ll see their changes and they’ll see yours—as you make them! Use @mentions in comments to get someone's attention.
+Users can collaborate on Office files by sharing them with colleagues. Multiple users can edit shared files simultaneously, with changes visible as they happen. @mentions in comments help bring others into the conversation for feedback.
 
 - See who else is in the document and where they're working.
-- A presence indicator shows where someone is making changes. See any changes right as they're being made.
-- See changes made by others and see what's happened while you were away.
+- See a presence indicator where someone is making changes, and view those changes in real time.
+- See changes made by others and review what happened while you were away.
 
-#### Levels of sharing access
+### Levels of sharing access
 
-There are different options for sharing SharePoint Embedded Application Office Documents from:
+The following table describes the sharing options available for SharePoint Embedded application files:
 
-|                                     If you want to …                                     |                                                                                                                                                                Sharing Setting to Set                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Allow Anyone who receives the link access to SharePoint Embedded Application File        | **Anyone**  gives access to anyone who receives this link, whether they receive it directly from you or are forwarded from someone else. This might include people outside of your organization.                                                                                                                                                           |
-| Allow anyone in your organization to access to your SharePoint Embedded Application File | **People in \<Your Organization\>**  gives anyone in your organization who has the link access to the file, whether they receive it directly from you or forwarded from someone else.                                                                                                                                                                |
-| Secure your SharePoint Embedded Application docs only to specific people.                | When you need to prevent recipients from forwarding a shared link, use the **Specific People**  permission. **Specific people**  gives access only to the people you specify, although other people might already have access. If people forward the sharing invitation, only people who already have access to the item will be able to use the link. |
-| Reshare the link with specific people                                                    | **People with existing access**  can be used by people who already have access to the document or folder. It doesn't change the permissions on the item. Use this if you just want to send a link to somebody who already has access.                                                                                                               |
+| If you want to … | Setting |
+| --- | --- |
+| Allow anyone who receives the link access to a SharePoint Embedded application file | **Anyone** gives access to anyone who receives this link, whether they receive it directly from you or it's forwarded from someone else. This might include people outside of your organization. |
+| Allow anyone in your organization to access your SharePoint Embedded application file | **People in \<Your Organization\>** gives anyone in your organization with the link access to the file, whether they receive it directly from you or it's forwarded from someone else. |
+| Restrict your SharePoint Embedded application files to specific people | When you need to prevent recipients from forwarding a shared link, use the **Specific People** permission scope. **Specific People** grants access only to the recipients you designate explicitly. If a recipient forwards the sharing invitation, only people who already have access to the item can use the link. |
+| Reshare the link with specific people | Use **People with existing access** to share a link with someone who already has access to the document or folder. This option doesn't change any existing permissions. |
 
 ## Breadcrumb properties on Office documents from SharePoint Embedded
 
-Breadcrumb properties are used by Office clients to display breadcrumb-style elements within Office client UI that aid your users in associating Office files with your Application.
+Breadcrumb properties enable Office clients to display navigation elements that help users associate Office files with your application.
 
 > [!NOTE]
-> We recommend specifying 'Current Channel' to take advantage of Breadcrumb patterns and future enhancements to Office Apps. Learn more about [specifying update channels for Office Apps](/deployoffice/updates/overview-update-channels).
+> We recommend specifying **Current Channel** to take advantage of breadcrumb patterns and future enhancements to Office apps. Learn more about [specifying update channels for Office apps](/deployoffice/updates/overview-update-channels).
 
-Breadcrumb patterns for SharePoint Embedded Application Apps are constructed from container properties configured for your Apps. The following diagram maps the container properties to breadcrumb presentation in Office clients:
+Container properties configured for your app define the breadcrumb patterns. The following diagram shows how container properties map to the breadcrumb display in Office clients:
 
-![Screenshot of breadcrumb pattern in SharePoint Embedded Applications](../../images/office2.png)
+![Screenshot of breadcrumb pattern in SharePoint Embedded applications](../../images/office2.png)
 
-Here are few examples of SharePoint Embedded Application breadcrumb display within Office client experiences.
+Here are a few examples of SharePoint Embedded application breadcrumb navigation in Office clients.
 
-![Screenshot of breadcrumb options in SharePoint Embedded Applications.](../../images/office1.png)
+![Screenshot of breadcrumb options in SharePoint Embedded applications.](../../images/office1.png)
+
+## Opening files from Microsoft 365 search
+
+When users search for content on Microsoft 365 (for example, on Office.com), search results include files stored in SharePoint Embedded containers. Selecting a search result opens the file in an appropriate viewer. For file types without a built-in Microsoft viewer, the destination depends on the container type's [URL template](/graph/api/resources/filestoragecontainertypesettings#properties).
+
+You can control whether files appear in Microsoft 365 search results using the [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings#properties) container type configuration.
+
+The `urlTemplate` property specifies the URL pattern Microsoft 365 uses when users open files from search results. If no URL template is configured, Microsoft 365 directs file types with no default viewer to a generic Microsoft help page instead of your application.
+
+### How file types are handled
+
+The destination URL for a file in search results depends on the file type and whether `urlTemplate` is set:
+
+| File type | `urlTemplate` set? | Behavior when selected from search |
+|---|---|---|
+| Word, Excel, PowerPoint | Either | Opens in Office for the web |
+| PDF | Either | Opens in the SharePoint Embedded PDF Previewer |
+| All other types | Yes | Redirected to your application via `urlTemplate` |
+| All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
+
+### Configuring `urlTemplate`
+
+Set the `urlTemplate` property on your container type using the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers at the time a user selects a search result.
+
+#### URL template syntax
+
+```text
+https://app.contoso.com/open?tenant={tenant-id}&drive={drive-id}&item={item-id}
+```
+
+Tokens are enclosed in curly braces and replaced with values for the specific item the user selects. Any token that cannot be resolved is removed from the URL before the redirect occurs.
+
+#### Supported tokens
+
+| Token | Value your app receives |
+|---|---|
+| `{tenant-id}` | ID of the consuming tenant; used to make tenant-scoped Graph API calls |
+| `{drive-id}` | Drive ID of the container; use with the Graph APIs to reference the container |
+| `{folder-id}` | ID of the item's immediate parent folder; omitted entirely from the URL for root-level files |
+| `{item-id}` | ID of the driveItem |
+
+For more information on custom properties, see [Custom properties on fileStorageContainers](/graph/api/filestoragecontainer-post-customproperty).
+
+#### Example
+
+If your container type has `urlTemplate` set to:
+
+```text
+https://app.contoso.com/open?t={tenant-id}&d={drive-id}&i={item-id}
+```
+
+Then when a user opens a `.txt` file from a search result, Microsoft 365 redirects them to a URL like:
+
+```text
+https://app.contoso.com/open?t=72f988bf-86f1-41af-91ab-2d7cd011db47&d=b%21abc123...&i=01ABC...
+```
+
+Your application receives the tenant ID, drive ID, and item ID as query parameters and can use them to retrieve and open the file via the Microsoft Graph API.
+
+#### Setting `urlTemplate` via Graph API
+
+Use the PATCH endpoint [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) to update `urlTemplate`:
+
+```http
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes/{containerTypeId}
+Content-Type: application/json
+
+{
+  "settings": {
+    "urlTemplate": "https://app.contoso.com/open?t={tenant-id}&d={drive-id}&i={item-id}"
+  },
+  "etag": "<etag-value>"
+}
+```
+
+### Limitations
+
+#### Search index updates may be delayed
+
+The destination URL for each file is stored in the Microsoft 365 search index when the file is indexed. If you configure or update `urlTemplate` after files have already been indexed, existing search results continue to route to the previous destination until those files are re-indexed. Microsoft 365 performs incremental indexing automatically, but there may be a delay before all files reflect the updated URL.
+
+#### `urlTemplate` is scoped to the container type
+
+The template applies to all container instances of the corresponding container type across all consuming tenants. Use the `{tenant-id}` token to route users to the correct tenant within your application.
+
+#### `{folder-id}` reflects the item's immediate parent
+
+If a file is stored at the root of the container, `{folder-id}` is omitted from the redirect URL rather than passed as an empty value. Make sure your application handles URLs where this parameter is not present.
