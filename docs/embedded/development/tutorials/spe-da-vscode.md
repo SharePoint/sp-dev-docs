@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded agent Tutorial
-description: Sharepoint Embedded agent tutorial with the SDK and the VS Code SharePoint Embedded Extension
-ms.date: 06/10/2025
+description: SharePoint Embedded agent tutorial with the SDK and the VS Code SharePoint Embedded Extension
+ms.date: 03/06/2025
 ms.localizationpriority: high
 ---
 
@@ -11,15 +11,15 @@ ms.localizationpriority: high
 
 > [!NOTE]
 >
-> 1. You will need to create a SharePoint Embedded application. If you don't have one, you can easily build a sample application using the instructions [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
+> 1. You'll need to create a SharePoint Embedded application. If you don't have one, you can easily build a sample application using the instructions [here](#getting-started-using-the-sharepoint-embedded-visual-studio-code-extension).
 > 1. You must specify a standard container type at creation time. Depending on the purpose, you may or may not need to provide your Azure Subscription ID. A container type set for trial purposes can't be converted for production, or vice versa.
 > 1. You must use the latest version of SharePoint PowerShell to configure a container type. For permissions and the most current information about Windows PowerShell for SharePoint Embedded, see the documentation at [Intro to SharePoint Embedded Management Shell](/powershell/SharePoint/SharePoint-online/introduction-SharePoint-online-management-shell).
 >
-> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the quick start below, refer to [the CSP section above for more information](../declarative-agent/spe-da-adv.md#csp-policies).
+> - Set the **CopilotChatEmbeddedHosts** property of your container type configuration to `http://localhost:8080` to be able to work through the following quick start, refer to [the preceding CSP section for more information](../declarative-agent/spe-da-adv.md#csp-policies).
 > - Set the **DiscoverabilityDisabled** property of your container type configuration to `false` so that the agent can find the files in your created container. Refer to the [Discoverability Disabled section above for more information](../declarative-agent/spe-da-adv.md#discoverabilitydisabled).
 > - Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
->   - A sandbox Microsoft 365 tenant with M365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
->     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a M365 Copilot license.
+>   - A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+>     - An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Microsoft 365 Copilot license.
 
 ## Getting started using the SharePoint Embedded SDK
 
@@ -38,11 +38,11 @@ In MacOS/Linux
 ```console
 version="1.0.9";
 
-url="https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz"; 
+url="https://download.microsoft.com/download/970802a5-2a7e-44ed-b17d-ad7dc99be312/microsoft-sharepointembedded-copilotchat-react-1.0.9.tgz";
 
-expected_checksum="3bdf19830ffc098b253cc809f969f50fba236ad95fe85123e7b15c7cf58ecf6b"; 
+expected_checksum="3bdf19830ffc098b253cc809f969f50fba236ad95fe85123e7b15c7cf58ecf6b";
 
-package_path="microsoft-sharepointembedded-copilotchat-react-$version.tgz"; 
+package_path="microsoft-sharepointembedded-copilotchat-react-$version.tgz";
 
 curl -o $package_path $url && [ "$(sha256sum $package_path | awk '{ print $1 }')" == "$expected_checksum" ] && npm install $package_path || { echo "Checksum does not match. Aborting installation."; rm $package_path; }
 ```
@@ -209,7 +209,7 @@ function App() {
 
 ### 5. Use the `chatApi` object in your state to open the chat and run it
 
-In the example above, call it this way to open the chat.
+In the preceding example, call it this way to open the chat.
 
 ```typescript
 await chatApi.openChat();
@@ -293,10 +293,10 @@ function App() {
 ### Quick Start
 
 > [!NOTE]
-> When using standard container types with the VS Code extension, [DisableDiscoverability](../declarative-agent/spe-da-adv.md#discoverabilitydisabled) and [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) features are currently not supported. This will need to be done using the [SPO Admin Powershell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+> When using standard container types with the VS Code extension, [DisableDiscoverability](../declarative-agent/spe-da-adv.md#discoverabilitydisabled) and [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal) features are currently not supported. This will need to be done using the [SPO Admin PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 1. Follow this guide up to the [Load Sample App section](../../getting-started/spembedded-for-vscode.md#load-sample-app) with the Visual Studio Code Extension
-1. Within the extension, right click on the owning application, and select `Run sample apps -> Typescript + React + Azure Functions`
+1. Within the extension, right select on the owning application, and select `Run sample apps -> Typescript + React + Azure Functions`
 
     ![Using the SPE VS Code extension to create a TypeScript React Azure Functions project](../../images/speco-runsampleapp.png)
 
@@ -307,11 +307,11 @@ function App() {
 
     ![SPE VS Code notification alerting it will copy app secrets in plain text on local machine](../../images/speco-createappsecret.png)
 
-    If the application does not already have a client secret, the extension will ask to create one for you.
+    If the application doesn't already have a client secret, the extension will ask to create one for you.
 
     ![SPE VS Code notification prompting user to allow it to create a secret for the application if it does not exist.](../../images/speco-createclientsecret.png)
-  
-1. Select a folder to host the application, this will clone the following [repository for SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/spe-typescript-react-azurefunction) into the folder
+
+1. Select a folder to host the application, this will clone the following [repository for SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Custom%20Apps/boilerplate-typescript-react) into the folder
 
     ![windows File Explorer folder to save project on local machine](../../images/speco-cloneproject.png)
 
@@ -330,7 +330,7 @@ function App() {
 1. You can follow the instructions of the `README.md` file in the root of the project for further npm commands. Run `npm run start` in the root of the project to start your application with the SPE agent functionality enabled.
 
     > [!NOTE]
-    > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Samples\spe-typescript-react-azurefunction`
+    > `npm run start` Should be done in the root folder of the sample project. `\SharePoint-Embedded-Samples\Custom Apps\boilerplate-typescript-react`
 
     ![VS Code terminal in root folder of SPE Typescript project cloned earlier and npm run start command typed in](../../images/speco-runnpmrunstart.png)
 
@@ -338,18 +338,18 @@ function App() {
 
     ![SPE Typescript App running in Edge with sign in buttons](../../images/speco-reacttypescripthomepage.png)
 
-1. Navigate to the `containers` page, create one if you do not have any yet
+1. Navigate to the `containers` page, create one if you don't have any yet
 
     ![SPE Typescript App running in edge in /containers sub page with modal of user c reatign a container called ContosoCompanyContainer](../../images/speco-createcontosocontainer2.png)
 
-    After it has been created, you will see it here:
+    After it has been created, you'll see it here:
 
     ![SPE Typescript App running in edge with a created container from above ContosoCompanyContainer](../../images/speco-createdcontainer.png)
 
-1. Click the container and upload your files. Once a container has been created and you have navigated inside it, your agent chat experience will become enabled.
+1. Select the container and upload your files. Once a container has been created and you have navigated inside it, your agent chat experience will become enabled.
 
     ![SPE Typescript App running in edge inside a created container page of ContosoCompanyContainer](../../images/speco-spechatenabled.png)
 
 ### Examples
 
-The [SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Samples/spe-typescript-react-azurefunction) repository has examples for how to use SharePoint Embedded in your custom applications.
+The [SharePoint Embedded Samples](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Custom%20Apps/boilerplate-typescript-react) repository has examples for how to use SharePoint Embedded in your custom applications.
