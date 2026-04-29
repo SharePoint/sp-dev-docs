@@ -1,7 +1,7 @@
 ---
 title: Common error messages in SharePoint workflow development
 description: A listing of common error messages that you might encounter while developing SharePoint workflows and guidance for solving the underlying problem.
-ms.date: 09/25/2017
+ms.date: 04/29/2026
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
 ms.localizationpriority: high
 ---
@@ -12,6 +12,9 @@ A listing of common error messages that you might encounter while developing Sha
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
+> [!IMPORTANT]
+> Sandboxed solutions and the sandboxed code service are deprecated in SharePoint Online. The errors related to sandboxed code in this article apply to on-premises SharePoint environments only.
 
 ## Common SharePoint workflow errors
 
@@ -89,7 +92,7 @@ To modify the timeout period in your on-premises installation, execute the follo
 
 
 
-```
+```powershell
 
 Add-pssnapin microsoft.sharepoint.powershell
    $userCodeSvc = [Microsoft.SharePoint.Administration.SPUserCodeService]::Local
@@ -102,7 +105,7 @@ Add-pssnapin microsoft.sharepoint.powershell
 ### The worker process handling this request was ended because it exceeded the resource {0}
 <a name="bkmk_error03"> </a>
 
-In the error string, the value of  `{0}` is a placeholder for the specific resource whose threshold has been exceeded. To alleviate this problem, you should modify your code so that it does not exceed the resource threshold. These resource values are documented in [Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](https://msdn.microsoft.com/library/gg615462%28v=office.14%29.aspx).
+In the error string, the value of  `{0}` is a placeholder for the specific resource whose threshold has been exceeded. To alleviate this problem, you should modify your code so that it does not exceed the resource threshold. These resource values are documented in [Resource Usage Limits on Sandboxed Solutions in SharePoint 2010](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)).
   
     
     
@@ -118,7 +121,7 @@ The workflow code threw an unhandled exception. Resolving this error requires de
 ### This workflow could not run because the sandbox failed: Could not get a process from the process pool
 <a name="bkmk_error05"> </a>
 
-There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](https://msdn.microsoft.com/library/ee536577%28v=office.14%29.aspx).
+There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/ee536577(v=office.14)).
   
     
     
@@ -126,7 +129,7 @@ There is an error in your sandbox configuration. For information about configuri
 ### This workflow could not run because the sandbox failed: The sandboxed code worker process exited unexpectedly
 <a name="bkmk_error06"> </a>
 
-There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](https://msdn.microsoft.com/library/ee536577%28v=office.14%29.aspx).
+There is an error in your sandbox configuration. For information about configuring a sandboxed solution, see  [Sandboxed Solutions in SharePoint](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/ee536577(v=office.14)).
   
     
     
@@ -204,7 +207,7 @@ You must check out the item using the **Check Out Item** action before using the
 ### Errors were found when compiling the workflow. The workflow files were saved but cannot be run. Unexpected error on server associating the workflow
 <a name="bkmk_error13"> </a>
 
-See  [Microsoft Support Knowledge Base article ID 2557533](https://support.microsoft.com/kb/2557533) ( `https://support.microsoft.com/kb/2557533`) for more information.
+See [Microsoft Support Knowledge Base article ID 2557533](https://support.microsoft.com/kb/2557533) for more information.
   
     
     
