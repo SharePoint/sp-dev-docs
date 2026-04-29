@@ -1,13 +1,17 @@
 ---
 title: Step 4 Building and Testing the Application
 description: In this step, you will build and test your application. Visual Studio offers several methods to build and run a console application from the IDE.
-ms.date: 09/25/2017
+ms.date: 04/29/2026
 ms.assetid: f2feeecb-1b4c-4049-be4e-11d414f13d9f
 ms.localizationpriority: medium
 ---
 
 
 # Step 4: Building and Testing the Application
+
+> [!IMPORTANT]
+> This example uses SOAP-based XML Web Services (System.Web.Services) and the SoapException class. These technologies are part of the .NET Framework and are considered legacy. For new development, Microsoft recommends using REST APIs or Microsoft Graph.
+
 
 In this step, you will build and test your application. Visual Studio offers several methods to build and run a console application from the IDE, such as:
   
@@ -37,7 +41,6 @@ In this step, you will build and test your application. Visual Studio offers sev
     > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
     ```
-    The Credential is: System.Net.SystemNetworkCredential
     Total rows in range: 18
     Value in range is: 4245.955129
     ```
@@ -80,11 +83,6 @@ SOAP Exception Message: The file you selected could not be found. Check the spel
 1. If you try to get a value from outside the range, you will get a **System.IndexOutOfRangeException** exception. The application prints the following output to the console:
     
 ```
-  
-The Credential is: System.Net.SystemNetworkCredential
-The sessionID is : 64.28e58e90-b757-4658-b1c4-890ad68ef6cbRmqR4IINXfkMeOJRG8Iq0Y
-27tVk=110.33d3R6fqv7tr2jPyYiPwRu|!@en-US|en-US|+0480#0000-10-00-05T02:00:00:0000
-#+0000#0000-04-00-01T02:00:00:0000#-0060
 Total rows in range: 18
 ```
 
