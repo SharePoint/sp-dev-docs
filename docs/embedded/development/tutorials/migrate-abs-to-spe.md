@@ -1,7 +1,7 @@
 ---
 title: Tutorial to Migrate from Azure Blob Storage container to SharePoint Embedded container
 description: Tutorial in how to migrate from Azure Blob Storage container to SharePoint Embedded container Using C#
-ms.date: 07/31/2024
+ms.date: 08/02/2024
 ms.localizationpriority: high
 ---
 
@@ -278,10 +278,10 @@ It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS a
 ### Running The Sample App
 
 1.	Open a terminal or command prompt.
-1.	Navigate to the directory where the Program.cs file is located.
-1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command dotnet --version in the terminal. If the command isn't recognized, you can download and install the .NET Core SDK from the official Microsoft website.
-1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command `dotnet build`. This will compile the code and generate the necessary binaries.
-1.	After the build process is complete, you can run the application by executing the command dotnet run followed by the required arguments. The required arguments are:
+1.	Navigate to the directory where the **Program.cs** file is located.
+1.	Make sure you have the .NET Core SDK installed on your machine. You can check this by running the command **dotnet --version** in the terminal. If the command isn't recognized, you can download and install the .NET Core SDK from the official Microsoft website.
+1.	Once you have confirmed that the .NET Core SDK is installed, you can build the application by running the command **dotnet build**. This will compile the code and generate the necessary binaries.
+1.	After the build process is complete, you can run the application by executing the command **dotnet run** followed by the required arguments. The required arguments are:
 
     - The container-level SAS URL: This is an Azure Blob container level SAS URL. It provides access to the container and its blobs.
     - The SPE tenant ID: This is the tenant you're authenticating against in the SPE.
@@ -292,7 +292,15 @@ It uses Azure.Storage.Blobs and Newtonsoft.Json libraries for working with ABS a
 
 For example, the command to run the application with the required arguments would look like this:
 
-`dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]`
+```console
+# line breaks added for readability
+dotnet run Program.cs -- \
+  --sasurl "<sas url>" \
+  --tenantid "<tenant id>" \
+  --clientid "<client id>" \
+  --containerid "<container id>" \
+  [ --blobfile "<file name>" --outputfile "<file name>" ]
+```
 
 ### Blob and SPE Item Structure
 
@@ -322,17 +330,17 @@ ABS container doesn't adhere to a folder structure, all the blobs are stored in 
 
 1. File already exists in the destination
 
-    - This app checks to see if the file name exists in the destination before it uploads. If there's a file with the exact same name, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it, you can either delete the file from the destination or change the conflictBehavior to replace and not call `CheckIfItemExists` on upload.
+    - This app checks to see if the file name exists in the destination before it uploads. If a file with the exact same name exists, it will not do the upload again. It will print to stdout a message that the file already exists. To fix it, you can either delete the file from the destination or change the `conflictBehavior` to replace and not call `CheckIfItemExists` on upload.
 
 1. The file for the list of blobs isn't found
 1. The format for the list of blobs - one blob per line, without quotes around the blob name
 1. Not giving enough permission to access the ABS container
 
-    - The minimum permissions are Read and List
+    - The minimum permissions are **Read** and **List**
 
 1. Not giving enough permissions to the SPE container
 
-    - The required scope is "User.Read" and "FileStorageContainer.Selected"
+    - The required scope is **User.Read** and **FileStorageContainer.Selected**
     - Remember to grant admin consent
     - Remember to create the mobile & console platform app
 
