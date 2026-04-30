@@ -14,10 +14,10 @@ ms.localizationpriority: medium
 
 Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code. The Excel Web Services then returns the error using properties from the **SoapException** class.
 
-The following examples show how to capture the error codes by using the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode) property of the **SoapException** class.
+> [!IMPORTANT]
+> This article uses the SOAP-based Excel Web Services API and the SoapException class. These technologies are part of the .NET Framework and are considered legacy. For new development, Microsoft recommends using the [Excel REST API via Microsoft Graph](https://learn.microsoft.com/en-us/graph/api/resources/excel?view=graph-rest-1.0).
 
-> [!NOTE] 
-> To be able to use the **SubCode** property, you must use Microsoft Visual Studio 2005. The **SubCode** property does not exist in earlier versions of Visual Studio.
+The following examples show how to capture the error codes by using the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode) property of the **SoapException** class.
 
 For a list of error codes, see [Excel Services Error Codes](excel-services-error-codes.md).
 
