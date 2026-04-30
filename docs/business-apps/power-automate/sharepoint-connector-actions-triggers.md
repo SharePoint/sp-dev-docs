@@ -79,6 +79,16 @@ Allows users of document libraries to trigger a flow after selecting a file.
 > [!NOTE]
 > Only flows within the default environment can be executed manually from a SharePoint library.
 
+### When a form is submitted
+
+Triggers a flow when a form in SharePoint is submitted.
+
+Use this trigger to start a Power Automate flow when a supported form in SharePoint receives a response. Supported form types include list forms, file upload forms, and document generation forms. This enables automation of downstream processes such as approvals, notifications, routing, or document workflows based on submitted responses.
+
+The trigger provides submission-level details, including the form ID, responder information, submission time, and responses to form questions. For forms that support file uploads or document generation, the trigger also includes metadata about uploaded or generated documents, where applicable.
+
+Document generation forms are part of *AI in SharePoint Public Preview*. Access may be limited to customers enrolled in the preview program. List forms and file upload forms are not part of the AI in SharePoint preview.
+
 ### When a site has requested to join a hub site
 
 Triggers a flow upon hub site join approval request.
@@ -156,6 +166,12 @@ Discards the checkout, rather than saves the file, if you check out a file and d
 
 Extracts an archive file into a SharePoint folder (for example, .zip).
 
+### Generate a document from a form
+
+Creates a document using a document generation template associated with a document generation form in SharePoint.  Use this action to generate documents by mapping template fields to corresponding content from supported data sources such as SharePoint lists, Excel, or dynamic values provided within a flow. 
+
+This allows customers to automate document creation scenarios using published document generation forms as part of business processes.  The generated output includes file metadata such as the Name, link, location, and generation status of the created document. This action is supported only for document generation (DocGen) forms.  Document generation forms are part of *AI in SharePoint Public Preview* and are available only to customers enrolled in the preview program.
+
 ### Get all lists and libraries
 
 Gets all lists and libraries.
@@ -214,6 +230,12 @@ Gets info about the folder. Uses a file identifier to select the folder.
 ### Get folder metadata using path
 
 Gets info about the folder. Uses a folder path to select the folder.
+
+### Get form metadata
+
+Gets info about the form. Use this action to obtain the metadata and schema definition of a selected form before executing downstream automation logic in a flow. The returned metadata includes information such as the form identifier, title, link, form type, defined output format, and the questions used to collect responses. This action can be used in automation scenarios where the structure of the form must be evaluated dynamically at runtime before performing additional operations such as validation, transformation, or routing of collected data.  
+
+Document generation forms are part of AI in SharePoint Public Preview. Access to document generation capabilities may be limited to customers enrolled in the preview program. List forms and file upload forms are not part of the AI in SharePoint preview.
 
 ### Get item
 
