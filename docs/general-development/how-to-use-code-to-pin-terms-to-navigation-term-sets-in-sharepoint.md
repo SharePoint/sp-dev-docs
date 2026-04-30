@@ -13,7 +13,7 @@ Learn how to use code to pin terms to navigation term sets.
 
 In taxonomy creation, pinning is the ability to attach a term to a target. SharePoint introduces term pinning. A pinned term is just like a term that is reused, except it is read-only and cannot be changed in the location where the term is used.
 
-In SharePoint managed navigation, the API enables you to pin new or existing terms to a  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.NavigationTermSet.aspx) object. In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified in any location and changes would be seen everywhere the terms were reused.
+In SharePoint managed navigation, the API enables you to pin new or existing terms to a  [NavigationTermSet](/previous-versions/office/sharepoint-server/jj252669(v=office.15)) object. In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified in any location and changes would be seen everywhere the terms were reused.
 
 ## Term pinning essentials
 <a name="SP15_H2UseCodeToPinTerms_TermPinningEssentials"> </a>
@@ -28,14 +28,14 @@ To understand pinning in SharePoint, you may want to learn about managed metadat
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [A Brief Introduction to Enterprise Metadata Management for Microsoft SharePoint Server 2010 Developers](https://msdn.microsoft.com/library/113a5d75-ac4d-498b-8436-725e04fb685d%28Office.15%29.aspx) <br/> |Written for SharePoint Server 2010, this article provides a basic overview of the enterprise managed metadata programming model and core concepts, such as terms and term sets.  <br/> |
+| [A Brief Introduction to Enterprise Metadata Management for Microsoft SharePoint Server 2010 Developers](/previous-versions/office/developer/sharepoint-2010/ee832800(v=office.14)) <br/> |Written for SharePoint Server 2010, this article provides a basic overview of the enterprise managed metadata programming model and core concepts, such as terms and term sets.  <br/> |
 | [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md) <br/> |An introduction to the taxonomy-driven managed navigation feature in SharePoint.  <br/> |
    
 
 ## Use code to complete pinning tasks
 <a name="SP15_H2UseCodeToPinTerms_UseCodeToCompletePinning"> </a>
 
-You can use custom code from the .NET server, .NET client (CSOM), Silverlight, or JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a **Term** object is pinned to a specified **TermSet** object. Then, the test creates **Term** objects, and pins one of them to the specified **NavigationTermSet** object.
+You can use custom code from the .NET server, .NET client (CSOM), JavaScript programming models to complete pinning operations on terms and term sets. The following .NET server code examples include a test for pinning terms to navigation term sets, and a method that you can use to test whether a **Term** object is pinned to a specified **TermSet** object. Then, the test creates **Term** objects, and pins one of them to the specified **NavigationTermSet** object.
   
     
     
@@ -43,7 +43,7 @@ You can use custom code from the .NET server, .NET client (CSOM), Silverlight, o
 ### To pin terms to navigation term sets
 
 
-- The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.NavigationTermSet.aspx) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
+- The following sample tests pinning terms to navigation term sets. It uses the  [NavigationTermSet](/previous-versions/office/sharepoint-server/jj252669(v=office.15)) object, which contains methods and properties that are handy in managed navigation scenarios, such as creating taxonomy-driven site navigation menus.
     
     The sample first checks whether a **NavigationTermSet** object exists. If one doesn't exist, then the code creates a **NavigationTermSet**. (If one already exists, the code deletes the old one before it creates a new one). Then, after the code creates some **Term** objects to pick from, it creates a publishing page (.aspx) file for demonstration purposes, sets it as the custom target page for pinned terms, and then pins some navigation properties to the page.
     
@@ -147,7 +147,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 -  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint.md)
     
   
--  [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx)
+-  [Microsoft.SharePoint.Publishing.Navigation](/previous-versions/office/sharepoint-server/ms570756(v=office.15))
     
   
 

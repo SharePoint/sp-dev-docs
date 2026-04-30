@@ -11,12 +11,16 @@ ms.localizationpriority: medium
 
 Learn how to work with Following People features by using the SharePoint .NET client object model.
 
+> [!NOTE]
+> The classic SharePoint social features (Newsfeed and Following People) are deprecated and not supported in modern SharePoint Online experiences. Microsoft recommends using modern Microsoft 365 services such as Viva Engage for social and community scenarios. The APIs in this article apply primarily to SharePoint Server on-premises environments.
+
+
 ## Why use Following People features in SharePoint?
 
-In SharePoint, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.
+In SharePoint, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](/previous-versions/office/sharepoint-csom/jj164459(v=office.15)) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](/previous-versions/office/sharepoint-csom/jj163489(v=office.15)) object. This article shows how to use the .NET client object model to work with Following People features.
   
 > [!NOTE]
-> We focus on  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) because it consolidates the core functionality for following people and content. However, the [PeopleManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PeopleManager.aspx) object contains additional functionality for following people, such as the [AmIFollowedBy(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.AmIFollowedBy.aspx) method and methods that obtain the following status of other users.
+> We focus on  [SocialFollowingManager](/previous-versions/office/sharepoint-csom/jj163489(v=office.15)) because it consolidates the core functionality for following people and content. However, the [PeopleManager](/previous-versions/office/sharepoint-server/jj264673(v=office.15)) object contains additional functionality for following people, such as the [AmIFollowedBy(String)](/previous-versions/office/sharepoint-csom/jj163440(v=office.15)) method and methods that obtain the following status of other users.
   
     
     
@@ -32,7 +36,7 @@ To create a console application that uses the .NET client object model to work w
 - SharePoint with My Site configured, and with user profiles and personal sites created for the current user and a target user
     
   
-- Visual Studio 2012
+- Visual Studio 
     
   
 - **Full Control** access permissions to the User Profile service application for the logged-on user
@@ -44,14 +48,14 @@ To create a console application that uses the .NET client object model to work w
     
 
 
-## Create a console application in Visual Studio 2012
+## Create a console application in Visual Studio 
 <a name="bkmk_CreateConsoleApp"> </a>
 
 
 1. Open Visual Studio, and choose **File**, **New**, **Project**.
     
   
-2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
+2. In the **New Project** dialog box, choose **.NET Framework 4.5 or later** from the drop-down list at the top of the dialog box.
     
   
 3. In the **Templates** list, choose **Windows**, and then choose the **Console Application** template.
@@ -85,19 +89,19 @@ The following code example makes the current user start following or stop follow
     
     
 
-- Check whether the current user is following a target user by using the  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx) method.
+- Check whether the current user is following a target user by using the  [IsFollowed](/previous-versions/office/sharepoint-csom/jj163393(v=office.15)) method.
     
   
-- Get the count of people who the current user is following by using the  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx) method.
+- Get the count of people who the current user is following by using the  [GetFollowedCount](/previous-versions/office/sharepoint-csom/jj164386(v=office.15)) method.
     
   
-- Start following the target user by using the  [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method.
+- Start following the target user by using the  [Follow](/previous-versions/office/sharepoint-csom/jj163482(v=office.15)) method.
     
   
-- Stop following the target user by using the  [StopFollowing](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.StopFollowing.aspx) method.
+- Stop following the target user by using the  [StopFollowing](/previous-versions/office/sharepoint-csom/jj163940(v=office.15)) method.
     
   
-This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowResult.aspx) object that is returned by the [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method to determine whether to start or stop following the target user.
+This code example uses the  [SocialFollowResult](/previous-versions/office/sharepoint-csom/jj163965(v=office.15)) object that is returned by the [Follow](/previous-versions/office/sharepoint-csom/jj163482(v=office.15)) method to determine whether to start or stop following the target user.
   
 > [!NOTE]
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
@@ -200,16 +204,16 @@ The following code example gets the people who the current user is following, ge
     
     
 
-- Check whether the current user is following a target user by using the  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx) method.
+- Check whether the current user is following a target user by using the  [IsFollowed](/previous-versions/office/sharepoint-csom/jj163393(v=office.15)) method.
     
   
-- Get the count of people who the current user is following by using the  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx) method.
+- Get the count of people who the current user is following by using the  [GetFollowedCount](/previous-versions/office/sharepoint-csom/jj164386(v=office.15)) method.
     
   
-- Get the people who the current user is following by using the  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowed.aspx) method.
+- Get the people who the current user is following by using the  [GetFollowed](/previous-versions/office/sharepoint-csom/jj163811(v=office.15)) method.
     
   
-- Get the people who are following the current user by using the  [GetFollowers](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowers.aspx) method.
+- Get the people who are following the current user by using the  [GetFollowers](/previous-versions/office/sharepoint-csom/jj164167(v=office.15)) method.
     
   
 - Iterate through the groups of people and get each person's display name, personal URI, and picture URI.
