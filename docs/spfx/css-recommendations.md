@@ -270,7 +270,7 @@ The resulting CSS in the package is converted to the following code.
 }
 ```
 
-For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use?](https://caniuse.com).
+For more information about auto-prefixing, see the [Autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use?](https://caniuse.com). If you’re not using a build pipeline, you can also use online autoprefixing tools to automatically apply vendor prefixes and test different PostCSS and Autoprefixer versions, such as [this online autoprefixer tool](https://goonlinetools.com/autoprefixer/).
 
 ## Integrate Fluent UI
 
