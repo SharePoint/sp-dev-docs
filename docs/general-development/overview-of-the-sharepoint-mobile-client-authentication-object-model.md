@@ -8,6 +8,16 @@ ms.localizationpriority: medium
 
 
 # Overview of the SharePoint mobile client authentication object model
+
+> [!IMPORTANT]
+> **LEGACY CONTENT**
+> This article is retained for historical reference only. It describes deprecated SharePoint authentication APIs for Silverlight and Windows Phone applications.
+>
+> These APIs and platforms are no longer supported. For current development guidance, use:
+> - Microsoft Authentication Library (MSAL)
+> - Microsoft Graph API
+> - SharePoint Online REST APIs with OAuth 2.0
+
 Get an overview of development with the authentication APIs of the SharePoint client object model for Silverlight.
 ## Authentication and client context on a Windows Phone
 <a name="SP15Mobileclientauth_auth"> </a>
@@ -15,7 +25,7 @@ Get an overview of development with the authentication APIs of the SharePoint cl
 The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePointclient object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
 > [!NOTE]
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](https://msdn.microsoft.com/library/ee537247.aspx) and [Using the Silverlight Object Model](https://msdn.microsoft.com/library/ee538971.aspx). 
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](/previous-versions/office/developer/sharepoint-2010/ee537247(v=office.14)) and [Using the Silverlight Object Model](/previous-versions/office/developer/sharepoint-2010/ee538971(v=office.14)). 
   
     
     
@@ -29,7 +39,7 @@ The following are the required steps to get an authenticated client context obje
     
     
 
-1. Obtain a  [ClientContext](https://msdn.microsoft.com/library/microsoft.sharepoint.client.clientcontext.aspx) object.
+1. Obtain a  [ClientContext](/previous-versions/office/sharepoint-server/ee538685(v=office.15)) object.
     
   
 2. Construct a new **Authenticator** object and initialize its properties.
@@ -37,7 +47,7 @@ The following are the required steps to get an authenticated client context obje
     > [!NOTE]
     > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
 
-3. The **Authenticator** class implements the [ICredentials](https://msdn.microsoft.com/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](https://msdn.microsoft.com/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
+3. The **Authenticator** class implements the [ICredentials](/dotnet/api/system.net.icredentials?view=net-10.0) interface, so you assign the object to the [Credentials](/previous-versions/office/sharepoint-server/ee537379(v=office.15)) property of the **ClientContext** object.
     
   
 You can then add the rest of your client object model code and call **ExecuteQueryAsync**.
@@ -269,7 +279,7 @@ To authenticate against a SharePoint Online URL, set the **AuthenticationMode** 
 
 #### Federation Authentication
 
- **FederationAuthURI** property is used to pass **ADFS** authentication scheme preference where, **ADFS** is configured to use multiple authentication handlers. **FederationAuthURI** specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](https://msdn.microsoft.com/library/ee895365.aspx).
+ **FederationAuthURI** property is used to pass **ADFS** authentication scheme preference where, **ADFS** is configured to use multiple authentication handlers. **FederationAuthURI** specifies the type of authentication required by Authentication request when, SharePoint Online authentication is used with Federation. This parameter can override the priority established by the order in which authentication handlers are configured. To know more about Authentication handler, see [Authentication Handler Overview](/previous-versions/adfs-2.0/ee895365(v=msdn.10)).
   
     
     
