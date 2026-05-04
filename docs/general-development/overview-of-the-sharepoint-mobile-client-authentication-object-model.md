@@ -47,7 +47,7 @@ The following are the required steps to get an authenticated client context obje
     > [!NOTE]
     > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
 
-3. The **Authenticator** class implements the [ICredentials](/dotnet/api/system.net.icredentials?view=net-10.0) interface, so you assign the object to the [Credentials](/previous-versions/office/sharepoint-server/ee537379(v=office.15)) property of the **ClientContext** object.
+3. The **Authenticator** class implements the [ICredentials](/dotnet/api/system.net.icredentials) interface, so you assign the object to the [Credentials](/previous-versions/office/sharepoint-server/ee537379(v=office.15)) property of the **ClientContext** object.
     
   
 You can then add the rest of your client object model code and call **ExecuteQueryAsync**.
