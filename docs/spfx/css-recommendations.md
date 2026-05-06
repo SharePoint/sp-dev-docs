@@ -1,7 +1,7 @@
 ---
 title: Recommendations for working with CSS in SharePoint Framework solutions
 description: Use CSS to define how your SharePoint Framework customization should look and behave.
-ms.date: 03/23/2026
+ms.date: 08/28/2017
 ms.localizationpriority: high
 ---
 # Recommendations for working with CSS in SharePoint Framework solutions
@@ -175,9 +175,9 @@ export default class TodoList extends React.Component<ITodoListProps, void> {
 
 For the CSS modules to work correctly, you have to meet the following conditions:
 
-* Your Sass files must have the **.module.scss** extension. If you use the **.scss** extension without **.module**, you see a warning in the build process. The Sass file is transpiled to an intermediate CSS file, but the class names *will not be made unique*. In cases when you need to override third-party CSS styles, this might be intended.
+* Your Sass files must have the **.module.scss** extension. If you use the **.scss** extension without **.module**, you see a warning in the build process. The Sass file is transpiled to an intermediate CSS file, but the class names *won't be made unique*. In cases when you need to override third-party CSS styles, this might be intended.
 
-* Your CSS class names must be valid JavaScript variable names. For example, they cannot contain hyphens: `todoList` is correct, but `todo-list` isn't.
+* Your CSS class names must be valid JavaScript variable names. For example, they can't contain hyphens: `todoList` is correct, but `todo-list` isn't.
 
 * We recommend using camelCase naming for classes, but it's not enforced.
 
@@ -235,7 +235,7 @@ In case a web part should use the new flex box model defined by the `display: fl
 }
 ```
 
-The Sass code of the SharePoint Framework artefact does not need to have vendor prefixes included. After the Sass-to-CSS compilation, those were added automatically, resulting in the following CSS declaration.
+The Sass code of the SharePoint Framework artifact doesn't need to have vendor prefixes included. After the Sass-to-CSS compilation, those were added automatically, resulting in the following CSS declaration.
 
 ```css
 .container_7e976ae1 {
@@ -245,11 +245,11 @@ The Sass code of the SharePoint Framework artefact does not need to have vendor 
 }
 ```
 
-Removing already applied prefixes does not only make the code of the artefact cleaner, it also makes it easier to read and future-ready. This process is also configured to support only SharePoint Framework-supported browsers and makes it more error-safe.
+Removing already applied prefixes doesn't only make the code of the artifact cleaner, it also makes it easier to read and future-ready. This process is also configured to support only SharePoint Framework-supported browsers and makes it more error-safe.
 
-In case a web part already has vendor prefixes included in the Sass files that are not needed anymore, the same process removes those declarations automatically.
+In case a web part already has vendor prefixes included in the Sass files that aren't needed anymore, the same process removes those declarations automatically.
 
-The following example makes use of the `border-radius` property, which does not require vendor prefixes on the supported systems.
+The following example makes use of the `border-radius` property, which doesn't require vendor prefixes on the supported systems.
 
 ```css
 .container {
@@ -270,7 +270,7 @@ The resulting CSS in the package is converted to the following code.
 }
 ```
 
-For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use?](https://caniuse.com).
+For more information about auto-prefixing, see the [Autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use?](https://caniuse.com). If you’re not using a build pipeline, you can also use online autoprefixing tools to automatically apply vendor prefixes and test different PostCSS and Autoprefixer versions, such as [this online autoprefixer tool](https://goonlinetools.com/autoprefixer/).
 
 ## Integrate Fluent UI
 
@@ -282,6 +282,6 @@ For more information about using Fluent UI in SharePoint Framework, see [Using F
 
 SharePoint allows users to choose the theme color for their sites. In your SharePoint Framework customizations, you should follow the theme selected by the users to make your customization look like an integral part of the site rather than unnecessarily stand out.
 
-Because the theme is set by users on their site, you cannot tell upfront which colors your customization should use, but SharePoint Framework can dynamically load the currently active color scheme automatically for you.
+Because the theme is set by users on their site, you can't tell upfront that colors your customization should use, but SharePoint Framework can dynamically load the currently active color scheme automatically for you.
 
 For more information about this capability, see [Use theme colors in your SharePoint Framework customizations](./use-theme-colors-in-your-customizations.md).
