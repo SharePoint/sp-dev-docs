@@ -1,7 +1,7 @@
 ---
 title: Support for Content Security Policy (CSP) in SharePoint Online
 description: Learn how SharePoint Online implements Content Security Policy to protect against various attack vectors, and how you can ensure your SharePoint Framework components are valid.
-ms.date: 03/11/2026
+ms.date: 05/08/2026
 author: andrewconnell-msft2
 ms.author: bjansen
 ---
@@ -299,6 +299,10 @@ Set-SPOTenant -ContentSecurityPolicyEnforcement $true
 # IMPORTANT: List the applied setting again as mandatory step to correctly persist the setting (will be fixed)
 (Get-SPOTenant).ContentSecurityPolicyEnforcement
 ```
+
+### I'm getting inline script violations while there's no SPFx solution active on the impacted page
+
+If you've confirmed there are no SharePoint SPFx solutions loaded on the page then a next step is verifying if there are browser extensions used on the page. If a browser extension rewrites the page HTML by adding CSP incompliant script then that will get blocked, leading to an entry in the Audit log and most likely functional issues in the browser extension.
 
 ### Can I update the trusted script sources list using script or code?
 
