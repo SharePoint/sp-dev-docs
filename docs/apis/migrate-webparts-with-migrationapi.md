@@ -7,7 +7,7 @@ manager: pamgreen
 audience: ITPro
 ms.date: 06/28/2022
 ms.subservice: migration-tool
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 search.appverid: MET150
 msCollection:
