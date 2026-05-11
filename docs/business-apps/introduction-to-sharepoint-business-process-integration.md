@@ -1,7 +1,7 @@
 ---
 title: Business apps and business process automation
 description: Business apps and business process automation.
-ms.date: 05/04/2026
+ms.date: 06/28/2022
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
