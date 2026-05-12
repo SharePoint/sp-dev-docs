@@ -4,7 +4,7 @@ description: Responding to changes
 ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ---
 

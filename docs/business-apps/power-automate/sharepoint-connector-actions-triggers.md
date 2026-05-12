@@ -1,7 +1,7 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 10/23/2024
+ms.date: 03/10/2020
 ms.service: power-automate
 search.app:
   - Flow
@@ -32,7 +32,7 @@ For more info about how to use this trigger, see this tutorial video: [Introduci
 
 ### When an item is deleted
 
-Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection admin account.
+Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it's expected to run, using a site collection admin account.
 
 ### For a selected item
 
@@ -55,7 +55,7 @@ Triggers the flow when you create a file in a document library and returns only 
 > [!NOTE]
 > This trigger is deprecated and may not work as expected.
 
-Triggers the flow when you create a file in a SharePoint folder. This trigger does not run if you add or update a file in a subfolder inside the folder this trigger is operating on. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
+Triggers the flow when you create a file in a SharePoint folder. This trigger doesn't run if you add or update a file in a subfolder inside the folder this trigger is operating on. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
 
 ### When a file is created or modified (properties only)
 
@@ -66,7 +66,7 @@ Triggers the flow when you create a file, and each time you modify the file prop
 > [!NOTE]
 > This trigger is deprecated and may not work as expected.
 
-Triggers when a file is created, and also each time it is modified in a SharePoint folder. The trigger does not fire if a file is added/updated in a subfolder. If it is required to trigger on subfolders, multiple triggers should be created.
+Triggers when a file is created, and also each time it's modified in a SharePoint folder. The trigger doesn't fire if a file is added/updated in a subfolder. If it's required to trigger on subfolders, multiple triggers should be created.
 
 ### When a file is deleted
 
@@ -78,6 +78,16 @@ Allows users of document libraries to trigger a flow after selecting a file.
 
 > [!NOTE]
 > Only flows within the default environment can be executed manually from a SharePoint library.
+
+### When a form is submitted
+
+Triggers a flow when a form in SharePoint is submitted.
+
+Use this trigger to start a Power Automate flow when a supported form in SharePoint receives a response. Supported form types include list forms, file upload forms, and document generation forms. This enables automation of downstream processes such as approvals, notifications, routing, or document workflows based on submitted responses.
+
+The trigger provides submission-level details, including the form ID, responder information, submission time, and responses to form questions. For forms that support file uploads or document generation, the trigger also includes metadata about uploaded or generated documents, where applicable.
+
+Document generation forms are part of *AI in SharePoint Public Preview*. Access may be limited to customers enrolled in the preview program. List forms and file upload forms aren't part of the AI in SharePoint preview.
 
 ### When a site has requested to join a hub site
 
@@ -95,7 +105,7 @@ Approves hub site join request. This action returns an approval token to complet
 
 ### Cancel hub site join request
 
-Cancels hub join request. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
+Cancels hub join request. If applicable, specify the same Approval Correlation ID as used in the **Set hub site join status to pending** action.
 
 ### Check in file
 
@@ -156,6 +166,12 @@ Discards the checkout, rather than saves the file, if you check out a file and d
 
 Extracts an archive file into a SharePoint folder (for example, .zip).
 
+### Generate a document from a form
+
+Creates a document using a document generation template associated with a document generation form in SharePoint.  Use this action to generate documents by mapping template fields to corresponding content from supported data sources such as SharePoint lists, Excel, or dynamic values provided within a flow.
+
+This allows customers to automate document creation scenarios using published document generation forms as part of business processes.  The generated output includes file metadata such as the Name, link, location, and generation status of the created document. This action is supported only for document generation (DocGen) forms.  Document generation forms are part of *AI in SharePoint Public Preview* and are available only to customers enrolled in the preview program.
+
 ### Get all lists and libraries
 
 Gets all lists and libraries.
@@ -179,8 +195,8 @@ For more info about how to use this action, see this tutorial video: [Introducin
 > [!NOTE]
 > - The list or library should have versioning configured in order to infer what columns or properties got modified since last change.
 > - Only column changes are supported for lists and libraries.
-> - File content changes are not supported.
-> - Attachment changes are not supported.
+> - File content changes aren't supported.
+> - Attachment changes aren't supported.
 > - _Trigger Window Start Token_ & _Trigger Window End Token_ are only available when you use _when an item or file is modified_ trigger.
 
 ### Get file content
@@ -215,6 +231,12 @@ Gets info about the folder. Uses a file identifier to select the folder.
 
 Gets info about the folder. Uses a folder path to select the folder.
 
+### Get form metadata
+
+Gets info about the form. Use this action to obtain the metadata and schema definition of a selected form before executing downstream automation logic in a flow. The returned metadata includes information such as the form identifier, title, link, form type, defined output format, and the questions used to collect responses. This action can be used in automation scenarios where the structure of the form must be evaluated dynamically at runtime before performing additional operations such as validation, transformation, or routing of collected data.
+
+Document generation forms are part of AI in SharePoint Public Preview. Access to document generation capabilities may be limited to customers enrolled in the preview program. List forms and file upload forms aren't part of the AI in SharePoint preview.
+
 ### Get item
 
 Gets a single item by its ID from a SharePoint list.
@@ -237,7 +259,7 @@ Grants access to an item or a folder in SharePoint to specific people.
 
 ### Join hub site
 
-Joins the requested site to the hub site. An Approval Token is required to complete the join successfully if that hub requires approval. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
+Joins the requested site to the hub site. An Approval Token is required to complete the join successfully if that hub requires approval. If applicable, specify the same Approval Correlation ID as used in the **Set hub site join status to pending** action.
 
 ### List folder
 
@@ -292,7 +314,7 @@ Updates an item in a SharePoint list.
 
 ## Support for SharePoint Server
 
-The following tables list all of the actions and triggers that are supported for SharePoint On-Premises 2013, 2016, or 2019. Any actions or triggers that are not mentioned are unsupported.
+The following tables list all of the actions and triggers that are supported for SharePoint On-Premises 2013, 2016, or 2019. Any actions or triggers that aren't mentioned are unsupported.
 
 ### Supported triggers
 
@@ -310,9 +332,9 @@ The following tables list all of the actions and triggers that are supported for
 | Set content approval status | No | No | Yes |
 
 > [!NOTE]
-> 1. Does not support “Limit Columns by View”.
+> 1. Doesn't support “Limit Columns by View”.
 > 1. While this trigger is supported for SharePoint 2019, flows created using this trigger may encounter the following issues:
->     - If there is no activity on the list for over 60 days or if there is some activity but no items are deleted for over 60 days, then the trigger will fail to activate.
+>     - If there's no activity on the list for over 60 days or if there's some activity but no items are deleted for over 60 days, then the trigger will fail to activate.
 >     - The deletion of list items by the System User will activate the trigger.
 
 
@@ -341,14 +363,14 @@ The following tables list all of the actions and triggers that are supported for
 | Send an HTTP request to SharePoint | Yes | Yes | Yes |
 
 > [!NOTE]
-> 1. Does not support creating a large file by uploading it as a set of chunks.
+> 1. Doesn't support creating a large file by uploading it as a set of chunks.
 > 1. This action includes "[deprecated]" in its display name. The "Copy file" action is different from this action.
 > 1. This action only supports OData parameters, which excludes parameters such as "Limit Entries to Folder", "Include Nested Items", and "Limit Columns by View".
-> 1. Does not support “Limit Columns by View”.
+> 1. Doesn't support “Limit Columns by View”.
 
 ### Deprecated triggers and actions
 
-These triggers are deprecated and are no longer actively maintained. While they are still present in the Microsoft SharePoint Connector, we recommend not utilizing deprecated triggers or actions in any new applications or solutions.
+These triggers are deprecated and are no longer actively maintained. While they're still present in the Microsoft SharePoint Connector, we recommend not utilizing deprecated triggers or actions in any new applications or solutions.
 
 | Name    | Type    | Supported Version    | Suggested Alternative    |
 | :-- | :-- | :-- | :-- |
@@ -360,19 +382,19 @@ These triggers are deprecated and are no longer actively maintained. While they 
 
 ### Supported list and library templates
 
-Power Automate flows for lists are only supported in generic lists (100) and generic document libraries (101). We do not currently support custom list and library templates, including but not limited to, lists such as Announcements, Contacts and Tasks.
+Power Automate flows for lists are only supported in generic lists (100) and generic document libraries (101). We don't currently support custom list and library templates, including but not limited to, lists such as Announcements, Contacts and Tasks.
 
 ### Flow runs
 
-When you build a Power Automate flow to be triggered for an item, or for creating or modifying a file, Power Automate periodically checks for changes in the list or library, configured in the flow's trigger. In most cases, if there is a single change in the list or library, the flow run may occur within minutes after that change. However, expect that the flow may gather more than one change in subsequent flow runs due to the time between the flow interval since its last valid change, or subsequent edits to an item or a file.
+When you build a Power Automate flow to be triggered for an item, or for creating or modifying a file, Power Automate periodically checks for changes in the list or library, configured in the flow's trigger. In most cases, if there's a single change in the list or library, the flow run may occur within minutes after that change. However, expect that the flow may gather more than one change in subsequent flow runs due to the time between the flow interval since its last valid change, or subsequent edits to an item or a file.
 
 ### Move files and flow runs
 
-When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated with the library where it was moved.
+When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file doesn't alter any custom metadata, including when the file was created and modified. Hence, this action doesn't trigger any flows for those file updates associated with the library where it was moved.
 
 ### Syncing files to your OneDrive for Business and SharePoint document libraries
 
-When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file syncs in that library or in your OneDrive for business.
+When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file won't alter any custom metadata including when the file was created and modified. Hence, this action won't trigger any flows for those file syncs in that library or in your OneDrive for business.
 
 ### Supported lookup columns
 
