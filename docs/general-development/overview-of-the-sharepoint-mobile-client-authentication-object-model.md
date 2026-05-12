@@ -29,13 +29,13 @@ The process of authenticating a SharePoint user on a Windows Phone 7.5 is a litt
 
 The following are the required steps to get an authenticated client context object:
 
-1. Obtain a `[ClientContext](/previous-versions/office/sharepoint-server/ee538685(v=office.15))` object.
+1. Obtain a [`ClientContext`](/previous-versions/office/sharepoint-server/ee538685(v=office.15)) object.
 1. Construct a new `Authenticator` object and initialize its properties.
 
     > [!NOTE]
     > One `Authenticator` object can be used with one `ClientContext` object only. You can't share an `Authenticator` object across multiple `ClientContext` objects with different URLs.
 
-1. The `Authenticator` class implements the `[ICredentials](/dotnet/api/system.net.icredentials)` interface, so you assign the object to the `[Credentials](/previous-versions/office/sharepoint-server/ee537379(v=office.15))` property of the `ClientContext` object.
+1. The `Authenticator` class implements the [`ICredentials`](/dotnet/api/system.net.icredentials) interface, so you assign the object to the [`Credentials`](/previous-versions/office/sharepoint-server/ee537379(v=office.15)) property of the `ClientContext` object.
 
 You can then add the rest of your client object model code and call `ExecuteQueryAsync`.
 
