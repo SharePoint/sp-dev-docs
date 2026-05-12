@@ -38,7 +38,8 @@ To create an application page that uses the JavaScript object model to work with
 1. In **Solution Explorer**, open the shortcut menu for the **SocialFeedJSOM** project, and then add a SharePoint "Layouts" mapped folder.
 1. In the **Layouts** folder, open the shortcut menu for **theSocialFeedJSOM** folder, and then add a new SharePoint application page namedSocialFeed.aspx.
 
-    > Note: The code examples in this article define custom code in the page markup but do not use the code-behind class that Visual Studio creates for the page.
+    > [!NOTE]
+    > The code examples in this article define custom code in the page markup but do not use the code-behind class that Visual Studio creates for the page.
 
 1. Open the shortcut menu for the SocialFeed.aspx page, and then choose **Set as Startup Item**.
 1. In the markup for the SocialFeed.aspx page, define controls inside the "Main" **asp:Content** tags, as shown in the following code.
@@ -69,9 +70,9 @@ To create an application page that uses the JavaScript object model to work with
 
 1. To add the logic to work with feeds, replace the comment between the **script** tags with the code example from one of the following scenarios:
 
-  - [Publish posts and replies to the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_PubPosts)
-  - [Retrieve social feeds](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_GetFeeds)
-  - [Delete posts and replies from the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_DeletePosts)
+    - [Publish posts and replies to the social feed](#code-example-publish-posts-and-replies-to-the-social-feed-by-using-the-sharepoint-javascript-object-model)
+    - [Retrieve social feeds](#code-example-retrieve-social-feeds-by-using-the-sharepoint-javascript-object-model)
+    - [Delete posts and replies from the social feed](#code-example-delete-posts-and-replies-from-the-social-feed-by-using-the-sharepoint-javascript-object-model)
 
 1. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you are prompted to modify the web.config file, choose the **OK** button.
 
@@ -86,7 +87,7 @@ The following code example publishes a post and a reply. It shows how to:
 - Reply to a post by using the **createPost** method and passing the thread identifier as the _targetId_ parameter.
 
 > [!NOTE]
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure.
+> Paste the following code between the **script** tags that you added in the [Create the application page](#create-an-application-page-that-works-with-social-feeds-by-using-the-sharepoint-javascript-object-model) procedure.
 
 ```javascript
 // Ensure that the SP.UserProfiles.js file is loaded before the custom code runs.
@@ -149,7 +150,7 @@ The following code example retrieves feeds for the current user and a target use
 For more information about feed types, see [Overview of feed types in the My Site Social API](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
 
 > [!NOTE]
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
+> Paste the following code between the **script** tags that you added in the [Create the application page](#create-an-application-page-that-works-with-social-feeds-by-using-the-sharepoint-javascript-object-model) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
 
 ```javascript
 // Replace the placeholder value with the account name of the target user.
@@ -264,7 +265,7 @@ The following code example deletes a post or a reply. It shows how to:
 - Delete a root post or reply by using the **deletePost** method (deleting a root post deletes the whole thread).
 
 > [!NOTE]
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. This example assumes that the current user's newsfeed contains at least one post.
+> Paste the following code between the **script** tags that you added in the [Create the application page](#create-an-application-page-that-works-with-social-feeds-by-using-the-sharepoint-javascript-object-model) procedure. This example assumes that the current user's newsfeed contains at least one post.
 
 ```javascript
 // Ensure that the SP.UserProfiles.js file is loaded before the custom code runs.
