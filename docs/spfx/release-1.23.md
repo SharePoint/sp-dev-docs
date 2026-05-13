@@ -1,35 +1,28 @@
 ---
-title: SharePoint Framework v1.23 preview notes
-description: Release notes for the SharePoint Framework v1.23 preview release.
+title: SharePoint Framework v1.23 release notes
+description: Release notes for the SharePoint Framework v1.23 release.
 ms.date: 03/23/2026
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.23 preview release notes
+# SharePoint Framework v1.23 release notes
 
-This is an early baseline version for the upcoming SharePoint 1.23 version with initial updates. We are introducing new capabilities as part of the following updates before the general availability of 1.23.
+This release included new capabilities on the list view command sets, preview of CLI for SPFx and addressing all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-* rc.3 Released: May 6, 2026
-* rc.2 Released: April 29, 2026
-* rc.1 Released: April 21, 2026
-* rc.0 Released: April 8, 2026
-* beta.2 Released: April 2, 2026
-* beta.0 Released: March 23, 2026
+**Released:** May 13, 2025
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Install the latest version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by using the **@next** tag
+Install the latest release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
 ```console
 npm install @microsoft/generator-sharepoint@next --global
 ```
 
-## Upgrading projects to v1.23 preview version
+## Upgrading projects to v1.23 version
 
-The upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
+If you are upgrading from older than 1.22 version, please follow the upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
 
 ## New features and capabilities
 
@@ -38,8 +31,6 @@ The upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepo
 Starting with the SPFx 1.23, we will be also supporting grouping of list view command sets in the toolbar and in the context menu. This provides more control on how the list view commands are rendered in lists and libraries.
 
 ![Card personalization visible in the dashboard UI](../images/123-release/list-view-cmdset-grouping.png)
-
-> This feature is currently in progress to rollout in production and will be enable in all tenants by early April.
 
 See more details on this upcoming change from the following documentation:
 
@@ -76,11 +67,13 @@ Your feedback is welcome. Let us know your first impressions and provide suggest
 
 ### Addressing npm audit issues
 
-When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked on the reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
+When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked addressing all reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
 
 ## Deprecations
 
-No new updates.
+- SharePoint Framework Online Workbench will be retired from SharePoint Online on 1st of December 2026
+    - We encourage to use the [debugging toolbar](./debug-toolbar.md) and do testing and validation of your code on normal SharePoint pages.
+- [Geolocation feature](./viva/get-started/actions/geolocation/geolocationdocumentation) is deprecated in the context of Adaptive Card Extensions (ACEs) with full retirement from SharePoint Online on 1st of December 2026
 
 ## Feedback and issues
 
