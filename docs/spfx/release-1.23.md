@@ -28,7 +28,7 @@ If you are upgrading from older than 1.22 version, please follow the upgrade ste
 
 ### Grouping support for list view command sets
 
-Starting with the SPFx 1.23, we will be also supporting grouping of list view command sets in the toolbar and in the context menu. This provides more control on how the list view commands are rendered in lists and libraries.
+Starting with the SPFx v1.23, we will be also supporting grouping of list view command sets in the toolbar and in the context menu. This provides more control on how the list view commands are rendered in lists and libraries.
 
 ![Card personalization visible in the dashboard UI](../images/123-release/list-view-cmdset-grouping.png)
 
@@ -67,12 +67,11 @@ Your feedback is welcome. Let us know your first impressions and provide suggest
 
 ### Addressing npm audit issues
 
-When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked addressing all reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
+When installing the SharePoint Framework Yeoman generator or scaffolding solutions, we have worked on the reported `npm audit` issues. Addressing vulnerabilities is a moving target, which we keep on addressing with all releases.
 
 ## Deprecations
 
-- SharePoint Framework Online Workbench will be retired from SharePoint Online on 1st of December 2026
-    - We encourage to use the [debugging toolbar](./debug-toolbar.md) and do testing and validation of your code on normal SharePoint pages.
+- **Hosted workbench is deprecated** - This is the last release that will include support for the SharePoint Framework online workbench; the hosted workbench will be retired on December 1, 2026. The recommended replacement is to use the [SharePoint Framework Debug Toolbar](../../docs/spfx/debug-toolbar.md)
 - [Geolocation feature](./viva/get-started/actions/geolocation/geolocationdocumentation) is deprecated in the context of Adaptive Card Extensions (ACEs) with full retirement from SharePoint Online on 1st of December 2026
 
 ## Feedback and issues
