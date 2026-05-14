@@ -185,7 +185,7 @@ public NetworkCredential GetCredential(Uri uri, string authType)
 -  _authType_ is the type of authentication requested.
 
 
-This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the **NetworkCredential** class, see [NetworkCredential Class](/dotnet/api/system.net.networkcredential?view=netframework-4.8.1).
+This method is only used for anonymous authentication. If  _authType_ is not "Basic", an empty object is returned. For more information about the **NetworkCredential** class, see [NetworkCredential Class](/dotnet/api/system.net.networkcredential).
  **IsRequestUnauthorized**
 Returns true if the authorization request failed because of an invalid cookie or credentials.
 ```csharp
