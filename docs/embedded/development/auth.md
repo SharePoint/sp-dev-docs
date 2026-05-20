@@ -15,7 +15,7 @@ Here are some key principles of SharePoint Embedded authentication and authoriza
 
 - Applications interact with SharePoint Embedded via Microsoft Graph.
 - Applications need container type application permissions to access containers of that container type.
-- Applications can only access containers that the user is a member of when using access on behalf of a user.
+- Applications can only access content that the user has access to when using access on behalf of a user.
 - Applications can access all containers enabled by their container type application permissions when using access without a user.
 - Applications use access on behalf of users whenever possible to enhance security and accountability.
 
