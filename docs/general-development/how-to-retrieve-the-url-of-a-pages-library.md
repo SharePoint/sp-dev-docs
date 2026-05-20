@@ -12,16 +12,10 @@ ms.localizationpriority: medium
 Learn how to retrieve the URL for the pages list for a publishing web in a site collection that differs from the current context.
 
 ## Core concepts to know for retrieving the URL of a Pages list
-<a name="SP15_Core_Concepts_URL_MP"> </a>
 
-When developing custom applications for publishing sites, you may notice that the  [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx) object model does not expose a way to retrieve the URL for the Pages list of a publishing web in a site collection that differs from the current context. Although the **PublishingWeb** class wraps the [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) class for instances that have the publishing feature activated, the class is not intended to be used to instantiate **SPWeb** objects outside of the current context.
-  
-    
-    
-If you need to retrieve the URL for the Pages list for a different web application, you can query the  [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Properties.aspx) property. Since the [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx) object is the [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object of a publishing site, you can query the [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Properties.aspx) property and write its contents to a console application. If the entry `Key = vti_pageslistname, Value = {the URL to the Pages library}` is returned in the console, *{the URL to the Pages library}*  is the Pages list URL.
-  
-    
-    
+When developing custom applications for publishing sites, you may notice that the [PublishingWeb](/previous-versions/office/sharepoint-server/ms562424(v=office.15)) object model does not expose a way to retrieve the URL for the Pages list of a publishing web in a site collection that differs from the current context. Although the **PublishingWeb** class wraps the [SPWeb](/previous-versions/office/sharepoint-server/ms473942(v=office.15)) class for instances that have the publishing feature activated, the class is not intended to be used to instantiate **SPWeb** objects outside of the current context.
+
+If you need to retrieve the URL for the Pages list for a different web application, you can query the [Properties](/previous-versions/office/sharepoint-server/ms416105(v=office.15)) property. Since the [PublishingWeb](/previous-versions/office/sharepoint-server/ms562424(v=office.15)) object is the [SPWeb](/previous-versions/office/sharepoint-server/ms473942(v=office.15)) object of a publishing site, you can query the [Properties](/previous-versions/office/sharepoint-server/ms416105(v=office.15)) property and write its contents to a console application. If the entry `Key = vti_pageslistname, Value = {the URL to the Pages library}` is returned in the console, *{the URL to the Pages library}* is the Pages list URL.
 
 **Table 1. Core concepts for retrieving the URL of a Pages library**
 
@@ -29,37 +23,26 @@ If you need to retrieve the URL for the Pages list for a different web applicati
 |**Article title**|**Description**|
 |:-----|:-----|
 |Pages Library  <br/> |A document library that contains all the content pages for a publishing site.  <br/> |
-| [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) <br/> |Represents a SharePoint Foundation website.  <br/> |
-| [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Properties.aspx) <br/> |Gets a  [SPPropertyBag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPPropertyBag.aspx) object with metadata for the current website. <br/> |
-| [SPPropertyBag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPPropertyBag.aspx) <br/> |Stores arbitrary key and value pairs that contain custom property settings.  <br/> |
-| [PublishingWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.PublishingWeb.aspx) <br/> |Provides publishing behavior for an instance of **SPWeb** that supports publishing. <br/> |
+| [SPWeb](/previous-versions/office/sharepoint-server/ms473942(v=office.15)) <br/> |Represents a SharePoint Foundation website.  <br/> |
+| [Properties](/previous-versions/office/sharepoint-server/ms416105(v=office.15)) <br/> |Gets a [SPPropertyBag](/previous-versions/office/sharepoint-server/ms413646(v=office.15)) object with metadata for the current website. <br/> |
+| [SPPropertyBag](/previous-versions/office/sharepoint-server/ms413646(v=office.15)) <br/> |Stores arbitrary key and value pairs that contain custom property settings.  <br/> |
+| [PublishingWeb](/previous-versions/office/sharepoint-server/ms562424(v=office.15)) <br/> |Provides publishing behavior for an instance of **SPWeb** that supports publishing. <br/> |
    
 
 ## Retrieve the URL of a Pages list for a publishing web in a site collection that differs from the current context
-<a name="SP15_Code_URL_Pages_List"> </a>
 
-This example console application accesses the  [Properties](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.Properties.aspx) property, iterates through the collection, and writes each key/value pair to the console.
-  
-    
-    
+
+This example console application accesses the [Properties](/previous-versions/office/sharepoint-server/ms416105(v=office.15)) property, iterates through the collection, and writes each key/value pair to the console.
 
 ### To query the SPWeb.Properties property for the URL to the Pages list
 
 
 1. Write the console application.
-    
-  
 2. View the output in the console.
-    
-  
 
 ## Example: Query SPWeb.Properties property for the URL to the Pages list
-<a name="SP15_Example_SPWeb_Properties"> </a>
 
-The application queries the  [SPPropertyBag](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPPropertyBag.aspx) object, iterates through its dictionary entries, and writes those entries to the console.
-  
-    
-    
+The application queries the [SPPropertyBag](/previous-versions/office/sharepoint-server/ms413646(v=office.15)) object, iterates through its dictionary entries, and writes those entries to the console.
 
 ```csharp
 
@@ -93,13 +76,8 @@ namespace Test
 ```
 
 The output that this application prints to the console varies from website to website, but it might look like the following:
-  
-    
-    
 
-
-
-```
+```text
 
 Key = vti_associatemembergroup, Value = 5
 Key = vti_extenderversion, Value = 14.0.0.4016
@@ -115,10 +93,6 @@ Key = vti_pageslistname, Value = {the URL to the Pages list}
 
 
 ## See also
-<a name="bk_addresources"> </a>
 
-
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
-    
-  
+- [Build sites for SharePoint](build-sites-for-sharepoint.md)
 

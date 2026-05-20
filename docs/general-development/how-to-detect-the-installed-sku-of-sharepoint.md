@@ -9,15 +9,14 @@ ms.localizationpriority: medium
 
 # Detect the installed SKU of SharePoint
 
+> [!NOTE]
+> This article applies only to SharePoint Server 2013 and related Office Server products that use the 15.0 registry hive.
+
 If the behavior of your solutions depends on the locally installed SKU of SharePoint or Project Server 2013, use the code example in this article to find the SKU information you need.
 
 ## Detect the installed SKU of SharePoint or Project Server 2013 by using code
-<a name="SP15DetectSKU_detect"> </a>
 
 The following code example demonstrates how to retrieve the registry key of the installed SKU of SharePoint, Microsoft Project Server 2013, and other Office server products, and how to match the SKU with a hash table that stores the names and keys for all of the known SKUs of these products. The console output displays the name of the installed SKU.
-  
-    
-    
 
 ```csharp
 
