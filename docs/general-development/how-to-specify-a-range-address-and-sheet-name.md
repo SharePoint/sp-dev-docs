@@ -76,7 +76,7 @@ If you specify a sheet name, the ranges you reference must exist on the sheet yo
 ## Example
 
 > [!NOTE]
-> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information about this, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](https://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
+> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information about this, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](/previous-versions/office/ms562080(v=office.14)). 
   
     
     
@@ -110,7 +110,7 @@ namespace ExcelWebService
             // Using the workbook path this way will allow 
             // you to call the workbook remotely.
             string targetWorkbookPath = 
-       "http://myserver02/example/Shared%20Documents/MyWorkbook1.xlsx";
+       "https://myserver02/example/Shared%20Documents/MyWorkbook1.xlsx";
 
             // Set Credentials for requests
             xlservice.Credentials = 
@@ -195,7 +195,7 @@ Namespace ExcelWebService
             ' The workbook must be in a trusted location.
             ' Using the workbook path this way will allow 
             ' you to call the workbook remotely.
-            Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/MyWorkbook1.xlsx"
+            Dim targetWorkbookPath As String = "https://myserver02/example/Shared%20Documents/MyWorkbook1.xlsx"
 
             ' Set Credentials for requests
             xlservice.Credentials = System.Net.CredentialCache.DefaultCredentials
@@ -245,42 +245,13 @@ End Namespace
 ## Robust programming
 
 Make sure you add a Web reference to an Excel Web Services site to which you have access. Change the following:
-  
-    
-    
 
-- Change the  `using ExcelWebService.myserver02;` statement to point to the Web service site you are referencing.
-    
-  
-- Change  `string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";` to point to a workbook to which you have access. The workbook must be in a trusted location.
-    
-  
+- Change the `using ExcelWebService.myserver02;` statement to point to the Web service site you are referencing.
+- Change `string targetWorkbookPath = "https://myserver02/example/Shared%20Documents/Book1.xlsx";` to point to a workbook to which you have access. The workbook must be in a trusted location.
 
 ## See also
 
-
-#### Tasks
-
-
-  
-    
-    
- [How to: Get Values from Ranges](how-to-get-values-from-ranges.md)
-  
-    
-    
- [How to: Set Values of Ranges](how-to-set-values-of-ranges.md)
-#### Concepts
-
-
-  
-    
-    
- [Accessing the SOAP API](accessing-the-soap-api.md)
-#### Other resources
-
-
-  
-    
-    
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+- [How to: Get Values from Ranges](how-to-get-values-from-ranges.md)
+- [How to: Set Values of Ranges](how-to-set-values-of-ranges.md)
+- [Accessing the SOAP API](accessing-the-soap-api.md)
+- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

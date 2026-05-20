@@ -87,32 +87,28 @@ context.executeQueryAsync(onQuerySuccess, onQueryFail);
 
 HTTP GET request
 
-```HTML
+```html
 http://mylocalhost/_api/search/query?querytext='SharePoint'
 ```
 
 HTTP POST request
 
-```HTML
+```html
 {
-'__metadata' : {'type' : 'Microsoft.Office.Server.Search.REST.SearchRequest'},
-'Querytext' : 'SharePoint'
+  '__metadata' : {'type' : 'Microsoft.Office.Server.Search.REST.SearchRequest'},
+  'Querytext' : 'SharePoint'
 }
 ```
 
 ## Search add-in permissions
 
-Search add-ins send query requests to the Search service application (SSA), and the add-ins require different types of permissions to function correctly. You can configure these permissions via the add-in manifest file, which is a part of each SharePoint add-in. You can modify the add-in manifest file directly with a text editor, or you can modify it with Visual Studio or Napa, as shown in the following figures.
+Search add-ins send query requests to the Search service application (SSA), and the add-ins require different types of permissions to function correctly. You can configure these permissions via the add-in manifest file, which is a part of each SharePoint add-in. You can modify the add-in manifest file directly with a text editor, or you can modify it with Visual Studio, as shown in the following figure.
 
-**Figure 1: Setting up permissions for search add-ins in Visual Studio 2015**
+**Figure 1: Setting up permissions for search add-ins in Visual Studio 2022**
 
-![Search app permission configuration with VS](../images/SP15_search_apps_permission_Visual_Studio.png)
+![Search app permission configuration with VS](../images/SP15_search_apps_permission_Visual_Studio.PNG)
 
-**Figure 2: Setting up permissions for search add-ins in "Napa" Office 365 Development Tools**
-
-![Search app permission configuration through Napa](../images/SP15_search_app_permission_Napa.gif)
-
-A SharePoint Add-in has its own identity and is associated with a security principal, called an add-in principal. Like users and groups, an add-in principal has certain permissions and rights. The add-in principal has full control rights to the add-in web, so it only needs to request permissions to SharePoint resources in the host web or other locations outside the add-in web, such as site collections. Unlike other SharePoint Add-ins, a search add-in requires only user-level permissions, known as **QueryAsUserIgnoreAppPrincipal**. This permission lets you query the search add-in based on the user's permissions. This means that search results will be returned based on the user's ACLs.
+An SharePoint Add-in has its own identity and is associated with a security principal, called an add-in principal. Like users and groups, an add-in principal has certain permissions and rights. The add-in principal has full control rights to the add-in web, so it only needs to request permissions to SharePoint resources in the host web or other locations outside the add-in web, such as site collections. Unlike other SharePoint Add-ins, a search add-in requires only user-level permissions, known as **QueryAsUserIgnoreAppPrincipal**. This permission lets you query the search add-in based on the user's permissions. This means that search results will be returned based on the user's ACLs.
 
 ### Request permissions in the add-in manifest file
 

@@ -12,84 +12,47 @@ ms.localizationpriority: high
 Learn how to retrieve user properties and user profile properties programmatically by using the SharePoint JavaScript object model.
 
 ## What are user properties and user profile properties in SharePoint?
-<a name="bkmk_WhatIs"> </a>
 
-User properties and user profile properties provide information about SharePoint users, such as display name, email, title, and other business and personal information. In client-side APIs, you access these properties from the  [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object and its [userProfileProperties](https://msdn.microsoft.com/library/56516666-7425-4993-222f-f745cf266e89%28Office.15%29.aspx) property. The [userProfileProperties](https://msdn.microsoft.com/library/56516666-7425-4993-222f-f745cf266e89%28Office.15%29.aspx) property contains all user profile properties, but the [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object contains commonly used properties (such as [accountName](https://msdn.microsoft.com/library/ad1551bf-dad8-d54e-880a-8a4388fad44e%28Office.15%29.aspx),  [displayName](https://msdn.microsoft.com/library/ffc35ed6-5f3e-c86d-6931-97ff9d825a8b%28Office.15%29.aspx), and  [email](https://msdn.microsoft.com/library/74302f73-aaf6-920b-0605-812b0dbf4568%28Office.15%29.aspx)) that are easier to access.
-  
-    
-    
-The  [PeopleManager](https://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-ba2ccb156d00%28Office.15%29.aspx) object includes the following methods that you can use to retrieve user properties and user profile properties by using the JavaScript object model:
-  
-    
-    
+User properties and user profile properties provide information about SharePoint users, such as display name, email, title, and other business and personal information. In client-side APIs, you access these properties from the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object and its [userProfileProperties](/previous-versions/office/sharepoint-visio/jj679700(v=office.15)) property. The [userProfileProperties](/previous-versions/office/sharepoint-visio/jj679700(v=office.15)) property contains all user profile properties, but the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object contains commonly used properties (such as [accountName](/previous-versions/office/sharepoint-visio/jj667852(v=office.15)), [displayName](/previous-versions/office/sharepoint-visio/jj667922(v=office.15)), and [email](/previous-versions/office/sharepoint-visio/jj679810(v=office.15))) that are easier to access.
 
-- The  [getMyProperties](https://msdn.microsoft.com/library/be001abc-a431-8d48-8e6f-161251aa19ac%28Office.15%29.aspx) method and the [getPropertiesFor](https://msdn.microsoft.com/library/097464db-2630-4c7a-fd0c-0f333680b5a4%28Office.15%29.aspx) method return a [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object.
-    
-  
-- The  [getUserProfilePropertiesFor](https://msdn.microsoft.com/library/8674e96f-d320-4a50-1580-9a4568842ee5%28Office.15%29.aspx) method and the [getUserProfilePropertyFor](https://msdn.microsoft.com/library/da048bfa-54c6-8216-e8ef-09bd84f68d8d%28Office.15%29.aspx) method return the values of the user profile properties that you specify.
-    
-  
-User profile properties from client APIs are read-only (except the profile picture, which you can change by using the  [PeopleManager.setMyProfilePicture](https://msdn.microsoft.com/library/a4f8d745-f211-e750-4fd0-047091804683%28Office.15%29.aspx) method). If you want to change other user profile properties, you must use the server object model. For more information about working with user profiles, see [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md).
-  
+The [PeopleManager](/previous-versions/office/sharepoint-visio/jj667813(v=office.15)) object includes the following methods that you can use to retrieve user properties and user profile properties by using the JavaScript object model:
+
+- The [getMyProperties](/previous-versions/office/sharepoint-visio/jj679865(v=office.15)) method and the [getPropertiesFor](/previous-versions/office/sharepoint-visio/jj712745(v=office.15)) method return a [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object.
+- The [getUserProfilePropertiesFor](/previous-versions/office/sharepoint-visio/jj679779(v=office.15)) method and the [getUserProfilePropertyFor](/previous-versions/office/sharepoint-visio/jj667887(v=office.15)) method return the values of the user profile properties that you specify.
+
+User profile properties from client APIs are read-only (except the profile picture, which you can change by using the [PeopleManager.setMyProfilePicture](/previous-versions/office/sharepoint-visio/jj667836(v=office.15)) method). If you want to change other user profile properties, you must use the server object model. For more information about working with user profiles, see [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md).
+
 > [!NOTE]
-> The client-side  [UserProfile](https://msdn.microsoft.com/library/f8c4a219-fbaa-2e50-1bd5-fdc80051b33d%28Office.15%29.aspx) object doesn't contain all of the user properties as the server-side version. However, the client-side version does provide the methods for creating a personal site for the current user. To retrieve it, use the [ProfileLoader.getUserProfile](https://msdn.microsoft.com/library/8e30e811-5da1-b6d0-a8b5-befea9b22496%28Office.15%29.aspx) method.
-  
-    
-    
+> The client-side [UserProfile](/previous-versions/office/sharepoint-visio/jj667833(v=office.15)) object doesn't contain all of the user properties as the server-side version. However, the client-side version does provide the methods for creating a personal site for the current user. To retrieve it, use the [ProfileLoader.getUserProfile](/previous-versions/office/sharepoint-visio/jj679826(v=office.15)) method.
+
 
 
 ## Prerequisites for setting up your development environment to retrieve user properties by using the SharePoint JavaScript object model
-<a name="bk_Prereqs"> </a>
 
 To create an application page that uses the JavaScript object model to retrieve user properties, you'll need:
-  
-    
-    
 
 - SharePoint with profiles created for the current user and a target user
-    
-  
-- Visual Studio 2012
-    
-  
-- Office Developer Tools for Visual Studio 2013
-    
-  
+- Visual Studio 2022
+- Office Developer Tools for Visual Studio 2022
 - **Full Control** connection permissions to access the User Profile service application for the current user
-    
-  
 
-## Create the application page in Visual Studio 2012
-<a name="bk_CreateAppPage"> </a>
+## Create the application page in Visual Studio
 
 
 1. On the server running SharePoint, open Visual Studio and choose **File**, **New**, **Project**.
-    
-  
 2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
-    
-  
 3. In the **Templates** list, expand **Office/SharePoint**, choose the **SharePoint Solutions** category, and then choose the **SharePoint Project** template.
-    
-  
 4. Name the project UserProfilesJSOM, and then choose the **OK** button.
-    
-  
 5. In the **SharePoint Customization Wizard** dialog box, enter the URL to your target SharePoint site, choose **Deploy as a farm solution**, and then choose the **Finish** button.
-    
-  
 6. In **Solution Explorer**, open the shortcut menu for the UserProfilesJSOM project, and then add a SharePoint "Layouts" mapped folder.
-    
-  
 7. In the **Layouts** folder, open the shortcut menu for theUserProfilesJSOM folder, and then add a new SharePoint application page namedUserProfiles.aspx.
-    
-   > Note: The code examples in this article define custom code in the page markup but do not use the code-behind class file that Visual Studio creates for the page. 
+
+   > [!NOTE]
+   > The code examples in this article define custom code in the page markup but do not use the code-behind class file that Visual Studio creates for the page.
 
 8. Open the shortcut menu for the UserProfiles.aspx page, and then choose **Set as Startup Item**.
-    
-  
 9. In the markup for the UserProfiles.aspx page, paste the following code inside the "Main" **asp:Content** tags. This code adds a **span** control that displays the results of the query, **SharePoint:ScriptLink** controls that reference SharePoint JavaScript class library files, and **script** tags to contain your custom logic.
-    
+
 ```HTML
 <span id="results"></span><br />
 <SharePoint:ScriptLink ID="ScriptLink1" name="SP.js" runat="server"
@@ -102,39 +65,23 @@ To create an application page that uses the JavaScript object model to retrieve 
 ```
 
 10. To add logic to retrieve user profile properties, replace the comment between the **script** tags with the code example from one of the following scenarios:
-    
-  -  [Retrieve user profile properties from the PersonProperties object and its userProfileProperties property](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_examplePersonPropsObj)  
-  -  [Retrieve a set of user profile properties by using the getUserProfilePropertiesFor method](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_exampleGetUPMethod)
-    
-  
+   - [Retrieve user profile properties from the PersonProperties object and its userProfileProperties property](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_examplePersonPropsObj)
+   - [Retrieve a set of user profile properties by using the getUserProfilePropertiesFor method](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_exampleGetUPMethod)
+
 11. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you're prompted to modify the web.config file, choose the **OK** button.
-    
-  
 
 ## Code example: Retrieving user profile properties from the PersonProperties object and its userProfileProperties property in the SharePoint JavaScript object model
-<a name="bk_examplePersonPropsObj"> </a>
 
-The following code example shows how to get user profile properties for a target user by querying the  [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object and its [userProfileProperties](https://msdn.microsoft.com/library/56516666-7425-4993-222f-f745cf266e89%28Office.15%29.aspx) property. It shows how to:
-  
-    
-    
+The following code example shows how to get user profile properties for a target user by querying the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object and its [userProfileProperties](/previous-versions/office/sharepoint-visio/jj679700(v=office.15)) property. It shows how to:
 
-- Get the  [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object that represents the target user by using the [getPropertiesFor](https://msdn.microsoft.com/library/097464db-2630-4c7a-fd0c-0f333680b5a4%28Office.15%29.aspx) method. (To get the [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object for the current user, use the [getMyProperties](https://msdn.microsoft.com/library/be001abc-a431-8d48-8e6f-161251aa19ac%28Office.15%29.aspx) method.)
-    
-  
-- Get a property directly from the  [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object. This example gets the [displayName](https://msdn.microsoft.com/library/ffc35ed6-5f3e-c86d-6931-97ff9d825a8b%28Office.15%29.aspx) property.
-    
-  
-- Get a property from the  [userProfileProperties](https://msdn.microsoft.com/library/56516666-7425-4993-222f-f745cf266e89%28Office.15%29.aspx) property of the [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx) object. This example gets the **Department** property.
-    
+- Get the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object that represents the target user by using the [getPropertiesFor](/previous-versions/office/sharepoint-visio/jj712745(v=office.15)) method. (To get the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object for the current user, use the [getMyProperties](/previous-versions/office/sharepoint-visio/jj679865(v=office.15)) method.)
+- Get a property directly from the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object. This example gets the [displayName](/previous-versions/office/sharepoint-visio/jj667922(v=office.15)) property.
+- Get a property from the [userProfileProperties](/previous-versions/office/sharepoint-visio/jj679700(v=office.15)) property of the [PersonProperties](/previous-versions/office/sharepoint-visio/jj712733(v=office.15)) object. This example gets the **Department** property.
+
 > [!NOTE]
 > Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
-  
-    
-    
 
-
-```
+```javascript
 
 var personProperties;
 
@@ -181,29 +128,17 @@ function onRequestFail(sender, args) {
 
 
 ## Code example: Retrieving a set of user profile properties by using the getUserProfilePropertiesFor method in the SharePoint JavaScript object model
-<a name="bk_exampleGetUPMethod"> </a>
 
-The following code example retrieves the values for a specified set of user profile properties for a target user by using the  [getUserProfilePropertiesFor](https://msdn.microsoft.com/library/8674e96f-d320-4a50-1580-9a4568842ee5%28Office.15%29.aspx) method. It shows how to:
-  
-    
-    
+The following code example retrieves the values for a specified set of user profile properties for a target user by using the [getUserProfilePropertiesFor](/previous-versions/office/sharepoint-visio/jj679779(v=office.15)) method. It shows how to:
 
-- Create a  [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/97bc94ec-62c8-dc38-d204-c5ad9ee8faee%28Office.15%29.aspx) object that specifies the target user and the user profile properties to retrieve. This example gets the **PreferredName** property and the **Department** property.
-    
-  
-- Get the values of the specified properties by using the  [getUserProfilePropertiesFor](https://msdn.microsoft.com/library/8674e96f-d320-4a50-1580-9a4568842ee5%28Office.15%29.aspx) method and passing in the [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/97bc94ec-62c8-dc38-d204-c5ad9ee8faee%28Office.15%29.aspx) object. (To retrieve the value for only one user profile property, use the [getUserProfilePropertyFor](https://msdn.microsoft.com/library/da048bfa-54c6-8216-e8ef-09bd84f68d8d%28Office.15%29.aspx) method.)
-    
-  
+- Create a [UserProfilePropertiesForUser](/previous-versions/office/sharepoint-visio/jj679838(v=office.15)) object that specifies the target user and the user profile properties to retrieve. This example gets the **PreferredName** property and the **Department** property.
+- Get the values of the specified properties by using the [getUserProfilePropertiesFor](/previous-versions/office/sharepoint-visio/jj679779(v=office.15)) method and passing in the [UserProfilePropertiesForUser](/previous-versions/office/sharepoint-visio/jj679838(v=office.15)) object. (To retrieve the value for only one user profile property, use the [getUserProfilePropertyFor](/previous-versions/office/sharepoint-visio/jj667887(v=office.15)) method.)
 - Get the values from the returned array of property values.
-    
+
 > [!NOTE]
 > Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
-  
-    
-    
 
-
-```
+```javascript
 
 var userProfileProperties;
 
@@ -256,19 +191,9 @@ function onRequestFail(sender, args) {
 
 
 ## See also
-<a name="bk_addresources"> </a>
 
-
--  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
-    
-  
--  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
-    
-  
--  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)
-    
-  
--  [SP.UserProfiles namespace (sp.userprofiles)](https://msdn.microsoft.com/library/8c1fcceb-cd9a-b25c-32f4-1cfb0578278c%28Office.15%29.aspx)
-    
-  
+- [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
+- [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
+- [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)
+- [SP.UserProfiles namespace (sp.userprofiles)](/previous-versions/office/sharepoint-visio/jj642931(v=office.15))
 
