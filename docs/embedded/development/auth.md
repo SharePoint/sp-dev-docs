@@ -239,9 +239,4 @@ Here are some actions you can take next:
 
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
 1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
-1. Remove **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** from your application's manifest after registration is complete.
-
-    > [!NOTE]
-    > After registering the container type, you should remove the **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
-
 1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
