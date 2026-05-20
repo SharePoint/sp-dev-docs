@@ -59,7 +59,7 @@ We recommend that you use the sample data source provider as a template. The sam
 
     [SetDataSource](/previous-versions/office/sharepoint-server/cc299537(v=office.15)) also retrieves the stock symbols, cache file location, and proxy server address from the [CustomData](/previous-versions/office/sharepoint-server/bb836036(v=office.15)) property of the custom data source object. These values are defined by dashboard authors in the sample data source editor.
 
-12. Override the [GetDataSet()](/previous-versions/office/sharepoint-server/cc299524(v=office.15)) method to create a [DataSet](/dotnet/api/system.data.dataset?view=netframework-4.8.1) object to store the data from the data source. The sample data source provider uses the **FillResultsTable** and **GetLiveQuote** methods to populate a data table with data from a Web service.
+12. Override the [GetDataSet()](/previous-versions/office/sharepoint-server/cc299524(v=office.15)) method to create a [DataSet](/dotnet/api/system.data.dataset) object to store the data from the data source. The sample data source provider uses the **FillResultsTable** and **GetLiveQuote** methods to populate a data table with data from a Web service.
 
 ## Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint
 
