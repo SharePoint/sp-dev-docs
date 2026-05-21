@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.15 release notes
-description: Release notes for the SharePoint Framework v1.15 release
+title: SharePoint Framework v1.15.0 release notes
+description: Release notes for the SharePoint Framework v1.15.0 release
 ms.date: 08/24/2022
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.15 release notes
+# SharePoint Framework v1.15.0 release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams, and SharePoint.
 
@@ -20,7 +20,7 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from v1.14 to v1.15
+## Upgrading projects from v1.14 to v1.15.0
 
 In the project's **package.json** file, identify all SPFx v1.14 packages. For each SPFx package:
 
@@ -30,7 +30,7 @@ In the project's **package.json** file, identify all SPFx v1.14 packages. For ea
     npm uninstall @microsoft/{spfx-package-name}@1.14
     ```
 
-1. Install the new v1.15 package:
+1. Install the new v1.15.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
@@ -47,7 +47,7 @@ The Form Customizer Extension allows developers to customize new, edit and displ
 * [Tutorial on creating your first form customizer](extensions/get-started/building-form-customizer.md)
 
 > [!NOTE]
-> You can see live demo of this feature from the following YouTube video - [Getting started on building custom list form components with SPFx v1.15](https://www.youtube.com/watch?v=LF5eQHBx10o).
+> You can see live demo of this feature from the following YouTube video - [Getting started on building custom list form components with SPFx v1.15.0](https://www.youtube.com/watch?v=LF5eQHBx10o).
 
 
 ### Node.js v16 Support
@@ -60,7 +60,7 @@ SharePoint Framework solutions now support Node.js v16 as the default Node.js ve
 The **MSGraphClientFactory** allows a developer to select the version of the Microsoft Graph JavaScript SDK to use.
 
 > [!NOTE]
-> Starting with SPFx 1.15 only v3 of the Microsoft Graph JavaScript SDK is supported. v1 support is removed for all new and updated solutions. Please update your code accordingly to get the right version.
+> Starting with SPFx 1.15.0 only v3 of the Microsoft Graph JavaScript SDK is supported. v1 support is removed for all new and updated solutions. Please update your code accordingly to get the right version.
 
 ```typescript
 this.context.msGraphClientFactory.getClient('3');
@@ -155,7 +155,7 @@ The Location Action can be used to get your current location, show your current 
 
 ## Preview Features and Capabilities
 
-Following features are still in preview status as part of the 1.15 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.16 release.
+Following features are still in preview status as part of the 1.15.0 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.16 release.
 
 ### Adaptive Card Extensions Card View caching
 

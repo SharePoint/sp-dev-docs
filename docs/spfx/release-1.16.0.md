@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.16 release notes
-description: Release notes for the SharePoint Framework v1.16 release
+title: SharePoint Framework v1.16.0 release notes
+description: Release notes for the SharePoint Framework v1.16.0 release
 ms.date: 4/19/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.16 release notes
+# SharePoint Framework v1.16.0 release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office and SharePoint.
 
@@ -20,7 +20,7 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from v1.15.2 to v1.16
+## Upgrading projects from v1.15.2 to v1.16.0
 
 In the project's **package.json** file, identify all SPFx v1.15.2 packages. For each SPFx package:
 
@@ -30,7 +30,7 @@ In the project's **package.json** file, identify all SPFx v1.15.2 packages. For 
     npm uninstall @microsoft/{spfx-package-name}@1.15.2
     ```
 
-1. Install the new v1.16 package:
+1. Install the new v1.16.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
@@ -68,7 +68,7 @@ if (!!this.context.sdks.microsoftTeams) {
 For more information, see: [Extend Outlook and Office with the SharePoint Framework](office/overview.md).
 
 > [!IMPORTANT]
-> Using the Teams SDK v2 within the SharePoint Framework solutions is generally available starting from the 1.16 version, enabling usage of the Teams SDK v2 immediately.
+> Using the Teams SDK v2 within the SharePoint Framework solutions is generally available starting from the 1.16.0 version, enabling usage of the Teams SDK v2 immediately.
 > Support for publishing Teams apps (including SPFx solutions) within the Outlook and in Office.com (Microsoft 365 app) is however still in preview and is planned to be generally available for both mobile and desktop experiences within the first half of calendar year 2023.
 
 ### Teams JavaScript SDK v2 support
@@ -161,21 +161,21 @@ IFormCustomizerContext.contentType.ClientFormCustomFormatter: string | undefined
 
 ### Remove NodeJS v12 and v14 support
 
-Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16.
+Node.js v12 & v14 are no longer supported. SPFx v1.16.0 requires Node.js v16.
 
 > [!NOTE]
 > Node.js v18 support is scheduled for the first half of the 2023 calendar year.
 
 ## Preview Features and Capabilities
 
-Following features are still in preview status as part of the 1.16 release and shouldn't be used in production. We're looking into releasing them officially as part of the upcoming 1.17 release.
+Following features are still in preview status as part of the 1.16.0 release and shouldn't be used in production. We're looking into releasing them officially as part of the upcoming 1.17 release.
 
 ### Web part Top Actions
 
 Top Actions allow developers to add custom actions to web part's command bar. The feature is similar to property pane controls, but based on cleaner UI approach.
 
 > [!NOTE]
-> Top Actions is released as a preview version as part of the 1.16 release.
+> Top Actions is released as a preview version as part of the 1.16.0 release.
 
 ![Top Actions](../images/webpart-top-actions.png)
 

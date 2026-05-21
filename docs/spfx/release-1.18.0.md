@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.18 release notes
-description: Release notes for the SharePoint Framework v1.18 release
+title: SharePoint Framework v1.18.0 release notes
+description: Release notes for the SharePoint Framework v1.18.0 release
 ms.date: 09/12/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.18 release notes
+# SharePoint Framework v1.18.0 release notes
 
 This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
@@ -20,7 +20,7 @@ Install the latest official release of the SharePoint Framework (SPFx) by using 
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from v1.17 to v1.18
+## Upgrading projects from v1.17 to v1.18.0
 
 In the project's **package.json** file, identify all SPFx v1.17.x packages. For each SPFx package:
 
@@ -30,7 +30,7 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
     npm uninstall @microsoft/{spfx-package-name}@1.17.x
     ```
 
-1. Install the new v1.18 package:
+1. Install the new v1.18.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
@@ -40,10 +40,10 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.18 release:
+Related updated documentation for the 1.18.0 release:
 
 * [Designing Viva Connections custom cards for your dashboard](./viva/design//designing-card.md)
-* [Migrate Adaptive Card Extensions to SharePoint Framework 1.18](./viva/get-started/migrate-to-spfx-1-18.md)
+* [Migrate Adaptive Card Extensions to SharePoint Framework 1.18.0](./viva/get-started/migrate-to-spfx-1-18.md)
 * [Tutorial - Create a People Search Adaptive Card Extension](./viva/get-started//build-people-search-adaptive-card-extension.md)
 
 New samples showcasing the new Viva Connections features:
@@ -54,8 +54,8 @@ New samples showcasing the new Viva Connections features:
 
 Video in YouTube showcasing the new template options for Viva Connections
 
-* [Introduction to new features and capabilities within SPFx 1.18](https://www.youtube.com/watch?v=LJAUVd4leRY)
-* [Introducing new Microsoft Viva Connection card layouts in the SharePoint Framework 1.18](https://www.youtube.com/watch?v=S5KCV3ZiAAI)
+* [Introduction to new features and capabilities within SPFx 1.18.0](https://www.youtube.com/watch?v=LJAUVd4leRY)
+* [Introducing new Microsoft Viva Connection card layouts in the SharePoint Framework 1.18.0](https://www.youtube.com/watch?v=S5KCV3ZiAAI)
 
 ### NodeJS v18 support
 

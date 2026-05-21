@@ -127,7 +127,7 @@ In the following section, you'll find the retired prompts with applicable guidan
 
 ### Target different SharePoint Environments
 
-In the [SPFx v1.13 release](release-1.13.md), the following prompt was retired:
+In the [SPFx v1.13 release](release-1.13.0.md), the following prompt was retired:
 
 > Which baseline packages do you want to target for your component(s)?
 
@@ -141,7 +141,7 @@ Starting with SPFx v1.13, the generator can only create projects for SharePoint 
 
 ### Skip feature deployment - `skipFeatureDeployment`
 
-In the [SPFx v1.14 release](release-1.14.md), the following prompt was retired:
+In the [SPFx v1.14 release](release-1.14.0.md), the following prompt was retired:
 
 > Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?
 
@@ -156,7 +156,7 @@ Starting with SPFx v1.14, the `skipFeatureDeployment` property defaults to `true
 
 ### Domain isolated web parts - `isDomainIsolated`
 
-In the [SPFx v1.14 release](release-1.14.md), the following prompt was retired:
+In the [SPFx v1.14 release](release-1.14.0.md), the following prompt was retired:
 
 > Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?
 
@@ -171,7 +171,7 @@ Starting with SPFx v1.14, the `isDomainIsolated` property defaults to `false`. Y
 
 ### Which framework would you like to use?
 
-In the [SPFx v1.14 release](release-1.14.md), the following prompt was changed:
+In the [SPFx v1.14 release](release-1.14.0.md), the following prompt was changed:
 
 > Which framework would you like to use?
 
@@ -185,7 +185,7 @@ In SPFx v1.14, this prompt was changed to the following and presented the user w
 
 ### Component descriptions
 
-In the [SPFx v1.14 release](release-1.14.md), the following prompts were retired:
+In the [SPFx v1.14 release](release-1.14.0.md), the following prompts were retired:
 
 > What is your Web part description?
 >

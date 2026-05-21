@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Grouping support with ListView Command Set extension
 
-Starting from the [SharePoint Framework v1.23](../../release-1.23.md), [ListView Command Sets](../get-started/building-simple-cmdset-with-dialog-api.md) also support grouping. You can use `group` element and cross item associations in the ListView Command Set manifest to build a hierarchy of commands that are then grouped in the list and library toolbar and context menu.
+Starting from the [SharePoint Framework v1.23](../../release-1.23.0.md), [ListView Command Sets](../get-started/building-simple-cmdset-with-dialog-api.md) also support grouping. You can use `group` element and cross item associations in the ListView Command Set manifest to build a hierarchy of commands that are then grouped in the list and library toolbar and context menu.
 
 [!INCLUDE [spfx-prerelease-related](../../../../includes/snippets/spfx-prerelease-related.md)]
 

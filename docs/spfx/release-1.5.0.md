@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.5 release notes
-description: Release notes for the SharePoint Framework v1.5 release
+title: SharePoint Framework v1.5.0 release notes
+description: Release notes for the SharePoint Framework v1.5.0 release
 ms.date: 02/10/2022
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.5 release notes
+# SharePoint Framework v1.5.0 release notes
 
 Key changes are around the introduction of the new *plusbeta* model and many other improvements and additional capabilities.
 
@@ -12,7 +12,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.4.1 to v1.5
+## Upgrading projects from v1.4.1 to v1.5.0
 
 1. In the project's **package.json** file, identify all SPFx v1.4.1 packages. For each SPFx package:
 
@@ -22,7 +22,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
         npm uninstall @microsoft/{spfx-package-name}@1.4.1
         ```
 
-    1. Install the refreshed v1.5 package:
+    1. Install the refreshed v1.5.0 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@1.5.0 --save --save-exact
