@@ -87,12 +87,12 @@
     },
     {
       "source_path": "docs/spfx/office-addins-create.md",
-      "redirect_url": "/sharepoint/dev/spfx/release-1.14",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.14.0",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/spfx/web-parts/get-started/office-addins-tutorial.md",
-      "redirect_url": "/sharepoint/dev/spfx/release-1.14",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.14.0",
       "redirect_document_id": false
     },
     {
@@ -273,6 +273,91 @@
     {
       "source_path": "docs/spfx/office-ui-fabric-integration.md",
       "redirect_url": "/sharepoint/dev/spfx/fluent-ui-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.1.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.1.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.3.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.3.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.4.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.4.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.5.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.5.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.6.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.6.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.7.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.7.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.13.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.13.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.14.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.14.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.15.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.15.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.16.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.16.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.17.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.17.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.18.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.18.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.19.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.19.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.20.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.20.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.21.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.21.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.22.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.22.0",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/release-1.23.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.23.0",
       "redirect_document_id": false
     }
   ]

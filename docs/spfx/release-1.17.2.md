@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17.2 release notes
 
-This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor adjustments, which were in the previous released [1.17 version](release-1.17.md) and [1.17.1 version](release-1.17.1.md).
+This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor adjustments, which were in the previous released [1.17 version](release-1.17.0.md) and [1.17.1 version](release-1.17.1.md).
 
 We are looking into release more frequent smaller release to be available also in future to address new findings or to address any other known issues which have been fixed.
 

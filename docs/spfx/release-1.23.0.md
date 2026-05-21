@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.23 release notes
-description: Release notes for the SharePoint Framework v1.23 release.
+title: SharePoint Framework v1.23.0 release notes
+description: Release notes for the SharePoint Framework v1.23.0 release.
 ms.date: 03/23/2026
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.23 release notes
+# SharePoint Framework v1.23.0 release notes
 
 This release included new capabilities on the list view command sets, preview of CLI for SPFx and addressing all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
@@ -20,7 +20,7 @@ Install the latest release of the SharePoint Framework (SPFx) by using the **@la
 npm install @microsoft/generator-sharepoint@next --global
 ```
 
-## Upgrading projects to v1.23 version
+## Upgrading projects to v1.23.0 version
 
 If you are upgrading from older than 1.22 version, please follow the upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
 
@@ -28,7 +28,7 @@ If you are upgrading from older than 1.22 version, please follow the upgrade ste
 
 ### Grouping support for list view command sets
 
-Starting with the SPFx v1.23, we will be also supporting grouping of list view command sets in the toolbar and in the context menu. This provides more control on how the list view commands are rendered in lists and libraries.
+Starting with the SPFx v1.23.0, we will be also supporting grouping of list view command sets in the toolbar and in the context menu. This provides more control on how the list view commands are rendered in lists and libraries.
 
 ![Card personalization visible in the dashboard UI](../images/123-release/list-view-cmdset-grouping.png)
 

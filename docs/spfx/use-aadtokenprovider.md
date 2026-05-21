@@ -16,7 +16,7 @@ When the component requests an access token from a browser, SPFx first attempts 
 
 However in the case where a browser blocks third-party cookies, such as Safari when its Intelligent Tracking Protection (ITP) feature is enabled, SPFx will force a full page redirect to prompt the user to sign in to Azure AD and then obtain the access token.
 
-The [SPFx v1.17 release](release-1.17.md) introduced a capability that enables tenant administrators to change this behavior and, instead, allow users to sign in via a popup window experience instead of the full page redirect.
+The [SPFx v1.17 release](release-1.17.0.md) introduced a capability that enables tenant administrators to change this behavior and, instead, allow users to sign in via a popup window experience instead of the full page redirect.
 
 To support this scenario, a new event was added to the **AADTokenProvider** so developers can intercept the popup request and add their own business logic to handle the popup flow.
 

@@ -13,7 +13,7 @@ This tutorial provides step-by-step guidance on implementing People Search with 
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.18 or later.
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
+> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.0.md).
 
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension and using Microsoft Graph in SharePoint Framework solutions:
 
