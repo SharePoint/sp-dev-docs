@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 02/04/2026
+ms.date: 11/21/2023
 ms.localizationpriority: high
 ---
 
@@ -50,7 +50,7 @@ SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) suppor
 > [!IMPORTANT]
 >
 > - Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
-> - Using a confidential client application is the recommended approach to ensure your application remains in control of actions taken on behalf of a user. A pubic client application may expose user tokens to the end-user, which may lead to actions being taken outside of your application's control. See [Public client and confidential client applications](/entra/identity-platform/msal-client-applications) to learn more.
+> - Using a confidential client application is the recommended approach to ensure your application remains in control of actions taken on behalf of a user. A pubic client application may expose user tokens to the end user, which may lead to actions being taken outside of your application's control. See [Public client and confidential client applications](/entra/identity-platform/msal-client-applications) to learn more.
 
 #### Access without a user
 
@@ -196,7 +196,7 @@ The common [Office experience](./content-experiences/office-experience.md) inclu
 
 The **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission requires the signed-in user to be a SharePoint Embedded Administrator or Global Administrator.
 
-If the user is not an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** does not grant the application any permissions:
+If the user isn't an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** doesn't grant the application any permissions:
 - If only **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** is granted, the application will get an access denied error when trying to access the container on behalf of the non-admin user.
 - If both **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** and **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** are granted, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** will be ignored.
 
