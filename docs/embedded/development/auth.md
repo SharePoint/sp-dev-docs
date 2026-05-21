@@ -50,7 +50,7 @@ SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) suppor
 > [!IMPORTANT]
 >
 > - Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
-> - Using a confidential client application is the recommended approach to ensure your application remains in control of actions taken on behalf of a user. A pubic client application may expose user tokens to the end user, which may lead to actions being taken outside of your application's control. See [Public client and confidential client applications](/entra/identity-platform/msal-client-applications) to learn more.
+> - Using a confidential client application is the recommended approach to ensure your application remains in control of actions taken on behalf of a user. A public client application may expose user tokens to the end user, which may lead to actions being taken outside of your application's control. See [Public client and confidential client applications](/entra/identity-platform/msal-client-applications) to learn more.
 
 #### Access without a user
 
