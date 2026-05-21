@@ -11,7 +11,7 @@ Top Actions provide an alternative and more end user friendlier way to expose th
 ![Top Actions Example](../../../images/webpart-top-actions.png)
 
 > [!IMPORTANT]
-> Web part Top Actions were introduced in the [SharePoint Framework (SPFx) v1.17 release](../../release-1.17.md).
+> Web part Top Actions were introduced in the [SharePoint Framework (SPFx) v1.17 release](../../release-1.17.0.md).
 
 ## Getting started
 

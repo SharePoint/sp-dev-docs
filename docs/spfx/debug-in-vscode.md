@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 02/24/2026
+ms.date: 04/21/2017
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions in Visual Studio Code
@@ -52,7 +52,9 @@ The debug mode in Visual Studio Code starts, changing the color of the status ba
 To verify that debugging is working, in the workbench, add your web part to the canvas.
 
 > [!IMPORTANT]
-> The local workbench (`https://localhost:4321/temp/workbench.html`) was **removed in SPFx v1.13** and will not work. Use the hosted workbench (`/_layouts/workbench.aspx`) or debug directly on a modern SharePoint page instead.
+> The local workbench (`https://localhost:4321/temp/workbench.html`) was **removed in SPFx v1.13** and will not work.
+
+[!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
 
 ![Web part toolbox open in SharePoint workbench](../images/vscode-debugging-adding-web-part-to-canvas.png)
 
@@ -154,7 +156,7 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
         }}
     ```
 
-1. Select **Load debug scripts** to continue loading scripts from your local host.
+1. Select **Load debug scripts** to continue loading scripts from your localhost.
 
     ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
 

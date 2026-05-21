@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.1 release notes
-description: Release notes for the SharePoint Framework v1.1 release
+title: SharePoint Framework v1.1.0 release notes
+description: Release notes for the SharePoint Framework v1.1.0 release
 ms.date: 09/08/2021
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.1 release notes
+# SharePoint Framework v1.1.0 release notes
 
 This release introduces the developer preview of extensions.
 
@@ -12,7 +12,7 @@ This release introduces the developer preview of extensions.
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.0 to v1.1
+## Upgrading projects from v1.0 to v1.1.0
 
 In the project's **package.json** file, identify all SPFx v1.0 packages. For each SPFx package:
 
@@ -22,7 +22,7 @@ In the project's **package.json** file, identify all SPFx v1.0 packages. For eac
     npm uninstall @microsoft/{spfx-package-name}@1.0
     ```
 
-1. Install the refreshed v1.1 package:
+1. Install the refreshed v1.1.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@1.1.0 --save --save-exact

@@ -11,7 +11,7 @@ The SharePoint Framework (SPFx) v1.20 release introduced a new option to use HTM
 You can start using this option by updating your Quick View implementation to be inherited from xxx class, which will be automatically detected by the underlying platform.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.md).
+> This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.0.md).
 
 ## Scaffold an Adaptive Card Extension project
 

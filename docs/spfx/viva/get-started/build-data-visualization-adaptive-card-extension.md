@@ -6,13 +6,13 @@ ms.localizationpriority: high
 ---
 # Create a Data Visualization Adaptive Card Extension
 
-The [SharePoint Framework v1.19](../../release-1.19.md) introduces a new Data Visualization Template that can be used to implement charts. This tutorial provides step-by-step guidance on implementing Data Visualization with Adaptive Card Extensions (ACEs).
+The [SharePoint Framework v1.19](../../release-1.19.0.md) introduces a new Data Visualization Template that can be used to implement charts. This tutorial provides step-by-step guidance on implementing Data Visualization with Adaptive Card Extensions (ACEs).
 
 > [!NOTE]
 > Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension: [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 
 > [!IMPORTANT]
-> Line chart data visualization type was released as part of the [SPFx 1.19 release](../../release-1.19.md). Other data visualization types, such as the bar chart, donut chart, and pie charts, were introduced in the [SPFx 1.20 release](../../release-1.20.md).
+> Line chart data visualization type was released as part of the [SPFx 1.19 release](../../release-1.19.0.md). Other data visualization types, such as the bar chart, donut chart, and pie charts, were introduced in the [SPFx 1.20 release](../../release-1.20.0.md).
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -219,7 +219,7 @@ This card when in the large mode generates the following rendering:
 
 ## Support for more chart types
 
-The [SharePoint Framework v1.20](../../release-1.20.md) introduces support for newer chart types, enabling developers to create visually appealing data visualizations like bar, pie, and donut charts.
+The [SharePoint Framework v1.20](../../release-1.20.0.md) introduces support for newer chart types, enabling developers to create visually appealing data visualizations like bar, pie, and donut charts.
 
 ![Screenshot of example ACE's using different data visualization options.](../../../images/viva-extensibility/data-visualization/ace-dataviz-allup.png)
 

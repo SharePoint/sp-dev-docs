@@ -118,7 +118,7 @@ this.context.sdks.microsoftTeams.teamsJs.app.getContext()
 > The process of obtaining the Microsoft Teams context with the SPFx API has changed a few times over time. For example, you may be familiar with the following properties that would return the Microsoft Teams context:
 >
 > - The property `this.context.microsoftTeams` was [deprecated in the SharePoint Framework v1.10 release](release-1.10.0.md).
-> - The property `this.context.sdks.microsoftTeams` was [deprecated in the SharePoint Framework v1.16 release](release-1.16.md).
+> - The property `this.context.sdks.microsoftTeams` was [deprecated in the SharePoint Framework v1.16 release](release-1.16.0.md).
 
 ## What Teams JavaScript client SDK version to use?
 

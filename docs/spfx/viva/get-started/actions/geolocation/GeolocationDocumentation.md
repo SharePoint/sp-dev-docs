@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # Location capabilities in Adaptive Card Extension
 
-Microsoft added support for two geolocation actions, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.15 release](../../../../release-1.15.md).
+Microsoft added support for two geolocation actions, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.15 release](../../../../release-1.15.0.md).
 
 > [!IMPORTANT]
 > This tutorial also assumes that you've already built an SPFx Adaptive Card Extension.

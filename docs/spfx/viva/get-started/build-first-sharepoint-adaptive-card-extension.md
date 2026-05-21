@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enables developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. Since Adaptive Card Extensions use Microsoft's Adaptive Card Framework to generate UI with its declarative JSON schema, you only need to focus on your component's business logic and let the SharePoint Framework (SPFx) handle making your component look good and work across all platforms.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
+> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.0.md).
 
 ## Scaffold an Adaptive Card Extension project
 

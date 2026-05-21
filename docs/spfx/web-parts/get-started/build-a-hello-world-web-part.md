@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 12/18/2025
+ms.date: 08/26/2016
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -90,7 +90,7 @@ Assuming you've installed & trusted developer certificate, execute the following
 heft start
 ```
 
-This command runs a series of Heft tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment.
+This command runs a series of Heft tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment:
 
 ```console
 <i> [webpack-dev-server] Project is running at:
@@ -109,6 +109,8 @@ Cancelling incremental build...
 [build:configure-webpack-serve]
 webpack 5.95.0 compiled successfully in 41820 ms
 ```
+
+[!INCLUDE [spfx-online-workbench-deprecation](../../../../includes/snippets/spfx-online-workbench-deprecation.md)]
 
 SharePoint client-side development tools use [Heft](https://heft.rushstack.io/) as the task runner to handle build process tasks such as:
 
@@ -395,4 +397,3 @@ heft start
 Congratulations on getting your first Hello World web part running!
 
 Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **Heft start** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
-

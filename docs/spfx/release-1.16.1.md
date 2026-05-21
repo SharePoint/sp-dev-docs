@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.16.1 release notes
 
-This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor regressions which were in the previously [released 1.16 version](release-1.16.md).
+This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor regressions which were in the previously [released 1.16 version](release-1.16.0.md).
 
 **Released:** November 30, 2022
 

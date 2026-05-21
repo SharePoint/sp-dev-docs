@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.14 release notes
-description: Release notes for the SharePoint Framework v1.14 release
+title: SharePoint Framework v1.14.0 release notes
+description: Release notes for the SharePoint Framework v1.14.0 release
 ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.14 release notes
+# SharePoint Framework v1.14.0 release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams and SharePoint.
 
@@ -12,7 +12,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.13.1 to v1.14
+## Upgrading projects from v1.13.1 to v1.14.0
 
 In the project's **package.json** file, identify all SPFx v1.13.1 packages. For each SPFx package:
 
@@ -22,7 +22,7 @@ In the project's **package.json** file, identify all SPFx v1.13.1 packages. For 
     npm uninstall @microsoft/{spfx-package-name}@1.13.1
     ```
 
-1. Install the new v1.14 package:
+1. Install the new v1.14.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@1.14.0 --save --save-exact
@@ -157,7 +157,7 @@ This property will be explicitly used to wind up the server, meaning all debug U
 
 ## Preview Features and Capabilities
 
-Following features are still in preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
+Following features are still in preview status as part of the 1.14.0 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
 
 ### Adaptive Card Extensions Card View caching
 

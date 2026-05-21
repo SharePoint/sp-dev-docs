@@ -67,7 +67,7 @@ For example, Gulp v3.* is only supported up to Node.js v10, while Gulp v4.* is s
 Microsoft recommends using the most recent version of the Yeoman generator for the SharePoint Framework ([@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint)) that supports creating on-premises projects: SPFx v1.6.0.
 
 > [!IMPORTANT]
-> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.1.1 only supports up to Node.js v6. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.6.0) that works on the same version of Node.js (v6) that SPFx v1.1.0 is supported on.
+> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.0.md). However, SPFx 1.1.1 only supports up to Node.js v6. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.6.0) that works on the same version of Node.js (v6) that SPFx v1.1.0 is supported on.
 
 1. Install [Node.js v6.17.1](https://nodejs.org/download/release/v6.17.1/)
 1. Install global dependencies

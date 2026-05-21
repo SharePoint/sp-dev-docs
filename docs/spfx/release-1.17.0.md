@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.17 release notes
-description: Release notes for the SharePoint Framework v1.17 release
+title: SharePoint Framework v1.17.0 release notes
+description: Release notes for the SharePoint Framework v1.17.0 release
 ms.date: 05/09/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.17 release notes
+# SharePoint Framework v1.17.0 release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office, and SharePoint.
 
@@ -20,7 +20,7 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from v1.16.1 to v1.17
+## Upgrading projects from v1.16.1 to v1.17.0
 
 In the project's **package.json** file, identify all SPFx v1.16.1 packages. For each SPFx package:
 
@@ -30,7 +30,7 @@ In the project's **package.json** file, identify all SPFx v1.16.1 packages. For 
     npm uninstall @microsoft/{spfx-package-name}@1.16.1
     ```
 
-1. Install the new v1.17 package:
+1. Install the new v1.17.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact

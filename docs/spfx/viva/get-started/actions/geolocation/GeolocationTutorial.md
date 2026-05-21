@@ -9,7 +9,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This tutorial assumes that you have installed SharePoint Framework (SPFx) v1.18 or later.
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
+> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.0.md).
 
 ## Scaffold an Adaptive Card Extension project
 

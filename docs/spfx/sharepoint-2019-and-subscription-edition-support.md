@@ -46,7 +46,7 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 > - Learn more about the gulp-cli here: [gulpjs/gulp/#2324](https://github.com/gulpjs/gulp/issues/2324).
 
 > [!IMPORTANT]
-> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.4.1 is  supported on Node.js v6 and Node.js v8 by default. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework that works on the same version of Node.js (v6 or v8) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages, as long as you select the environment target properly in the Yeoman generator flow.
+> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.0.md). However, SPFx 1.4.1 is  supported on Node.js v6 and Node.js v8 by default. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework that works on the same version of Node.js (v6 or v8) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages, as long as you select the environment target properly in the Yeoman generator flow.
 
 ### Prepare the environment for SharePoint Framework development
 

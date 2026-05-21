@@ -1,15 +1,15 @@
 ---
-title: SharePoint Framework v1.21 release notes
-description: Release notes for the SharePoint Framework v1.21 release.
+title: SharePoint Framework v1.21.0 release notes
+description: Release notes for the SharePoint Framework v1.21.0 release.
 ms.date: 01/20/2026
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.21 release notes
+# SharePoint Framework v1.21.0 release notes
 
 This release has updates on the Node.js version and on other technical dependencies. It also contains updates for web parts in the context of flexible layouts in SharePoint and a personalization option for cards.
 
 > [!NOTE]
-> [SharePoint Framework API Reference](/javascript/api/overview/sharepoint) has also been updated to match the latest 1.21 version.
+> [SharePoint Framework API Reference](/javascript/api/overview/sharepoint) has also been updated to match the latest 1.21.0 version.
 
 **Released:** April 23, 2025
 
@@ -23,7 +23,7 @@ Install the latest generally available release of the SharePoint Framework (SPFx
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from the SPFx v1.20 to v1.21 version
+## Upgrading projects from the SPFx v1.20 to v1.21.0 version
 
 In the project's **package.json** file, identify all SPFx v1.20 packages. For each SPFx package:
 
@@ -33,7 +33,7 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
     npm uninstall @microsoft/{spfx-package-name}@1.20
     ```
 
-1. Install the new v1.21 package:
+1. Install the new v1.21.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
@@ -45,10 +45,10 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 
 ### Node.js v22 support
 
-Node.js support has been updated to v22 with the v1.21 release.
+Node.js support has been updated to v22 with the v1.21.0 release.
 
 > [!NOTE]
-> Notice that Node.js v22 is the only supported version, with v1.21.
+> Notice that Node.js v22 is the only supported version, with v1.21.0.
 
 ### TypeScript 5.x support
 
@@ -96,7 +96,7 @@ The default debugging URL location was changed as part of the release. `debugMan
 [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/manifests.js
 ```
 
-*Updated debugManifestFile URL starting from 1.21 version*
+*Updated debugManifestFile URL starting from 1.21.0 version*
 ```
 [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/build/manifests.js
 ```
@@ -113,6 +113,6 @@ No new updates.
 
 We're interested in your feedback about the release. Do let us know any findings or other feedback using the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
 
-We will be doing some cleaning in the issue list after the 1.21 release to better focus on the latest issues and are more focused on helping you with any of your findings.
+We will be doing some cleaning in the issue list after the 1.21.0 release to better focus on the latest issues and are more focused on helping you with any of your findings.
 
 Happy coding! Sharing is caring! 🧡

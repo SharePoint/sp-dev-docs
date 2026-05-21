@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.13 release notes
-description: Release notes for the SharePoint Framework v1.13 release
+title: SharePoint Framework v1.13.0 release notes
+description: Release notes for the SharePoint Framework v1.13.0 release
 ms.date: 10/25/2021
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.13 release notes
+# SharePoint Framework v1.13.0 release notes
 
 This release introduces a new component type, Adaptive Card Extensions (ACE), that can be used to extend Viva Connections.
 
@@ -12,7 +12,7 @@ This release introduces a new component type, Adaptive Card Extensions (ACE), th
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.12.1 to v1.13
+## Upgrading projects from v1.12.1 to v1.13.0
 
 In the project's **package.json** file, identify all SPFx v1.12.1 packages. For each SPFx package:
 
@@ -22,7 +22,7 @@ In the project's **package.json** file, identify all SPFx v1.12.1 packages. For 
     npm uninstall @microsoft/{spfx-package-name}@1.12.1
     ```
 
-1. Install the refreshed v1.13 {version-release} package:
+1. Install the refreshed v1.13.0 {version-release} package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@1.13.0 --save --save-exact

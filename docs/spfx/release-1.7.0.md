@@ -1,10 +1,10 @@
 ---
-title: SharePoint Framework v1.7 release notes
-description: Release notes for the SharePoint Framework v1.7 release
+title: SharePoint Framework v1.7.0 release notes
+description: Release notes for the SharePoint Framework v1.7.0 release
 ms.date: 09/08/2021
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.7 release notes
+# SharePoint Framework v1.7.0 release notes
 
 This is probably the biggest release for new features we've had since the original preview (or maybe the preview of extensions).
 
@@ -12,7 +12,7 @@ This is probably the biggest release for new features we've had since the origin
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.6 to v1.7
+## Upgrading projects from v1.6 to v1.7.0
 
 In the project's **package.json** file, identify all SPFx v1.6 packages. For each SPFx package:
 
@@ -22,7 +22,7 @@ In the project's **package.json** file, identify all SPFx v1.6 packages. For eac
     npm uninstall @microsoft/{spfx-package-name}@1.6
     ```
 
-1. Install the refreshed v1.7 package:
+1. Install the refreshed v1.7.0 package:
 
     ```console
     npm install @microsoft/{spfx-package-name}@1.7.0 --save --save-exact
@@ -37,7 +37,7 @@ In the project's **package.json** file, identify all SPFx v1.6 packages. For eac
 For the **Dynamic Data** feature, we've made a number of improvements in the GA (general availability) work.
 
 - [Connect SharePoint Framework components using dynamic data](dynamic-data.md)
-- [Sample client-side web part using Dynamic Data in 1.7](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-events-dynamicdata)
+- [Sample client-side web part using Dynamic Data in 1.7.0](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-events-dynamicdata)
 
 #### Author configuration
 
