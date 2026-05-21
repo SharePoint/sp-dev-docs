@@ -72,7 +72,7 @@ When installing the SharePoint Framework Yeoman generator or scaffolding solutio
 ## Deprecations
 
 - **Hosted workbench is deprecated** - This is the last release that will include support for the SharePoint Framework online workbench; the hosted workbench will be retired on December 1, 2026. The recommended replacement is to use the [SharePoint Framework Debug Toolbar](../../docs/spfx/debug-toolbar.md)
-- [Geolocation feature](./viva/get-started/actions/geolocation/geolocationdocumentation) is deprecated in the context of Adaptive Card Extensions (ACEs) with full retirement from SharePoint Online on 1st of December 2026
+- [Geolocation feature](./viva/get-started/actions/geolocation/GeolocationDocumentation.md) is deprecated in the context of Adaptive Card Extensions (ACEs) with full retirement from SharePoint Online on 1st of December 2026
 
 ## Feedback and issues
 

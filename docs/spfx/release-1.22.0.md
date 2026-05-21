@@ -9,7 +9,7 @@ ms.localizationpriority: high
 This release focused on updating and modernizing the SharePoint Framework (SPFx) build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
 > [!NOTE]
-> [SharePoint Framework API Reference](https://learn.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.22.0 version.
+> [SharePoint Framework API Reference](https://learn.microsoft.com/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.22.0 version.
 
 **Released:** December 10, 2025
 
