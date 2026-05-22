@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 02/04/2026
+ms.date: 11/21/2023
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ Here are some key principles of SharePoint Embedded authentication and authoriza
 
 - Applications interact with SharePoint Embedded via Microsoft Graph.
 - Applications need container type application permissions to access containers of that container type.
-- Applications can only access containers that the user is a member of when using access on behalf of a user.
+- Applications can only access content that the user has access to when using access on behalf of a user.
 - Applications can access all containers enabled by their container type application permissions when using access without a user.
 - Applications use access on behalf of users whenever possible to enhance security and accountability.
 
@@ -48,7 +48,9 @@ SharePoint Embedded operations [on behalf of a user](/graph/auth-v2-user) suppor
 - **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** to allow an application to utilize administration capabilities on all containers of all governable container types within the consuming tenant on behalf of an administrator user. The administration capabilities include the ability to enumerate, delete, restore, purge, and update containers, and manage their permissions.
 
 > [!IMPORTANT]
-> Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
+>
+> - Using SharePoint Embedded on behalf of a user is the recommended approach. This type of access enhances the security of your application. It also improves the auditability of actions performed by your application.
+> - Using a confidential client application is the recommended approach to ensure your application remains in control of actions taken on behalf of a user. A public client application may expose user tokens to the end user, which may lead to actions being taken outside of your application's control. See [Public client and confidential client applications](/entra/identity-platform/msal-client-applications) to learn more.
 
 #### Access without a user
 
@@ -194,7 +196,7 @@ The common [Office experience](./content-experiences/office-experience.md) inclu
 
 The **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** permission requires the signed-in user to be a SharePoint Embedded Administrator or Global Administrator.
 
-If the user is not an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** does not grant the application any permissions:
+If the user isn't an administrator, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** doesn't grant the application any permissions:
 - If only **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** is granted, the application will get an access denied error when trying to access the container on behalf of the non-admin user.
 - If both **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** and **[FileStorageContainer.Selected](/graph/permissions-reference#filestoragecontainerselected)** are granted, **[FileStorageContainer.Manage.All](/graph/permissions-reference#filestoragecontainermanageall)** will be ignored.
 
@@ -237,9 +239,4 @@ Here are some actions you can take next:
 
 1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on a _consuming_ tenant (which can be the same as the owning tenant).
 1. [Register the container type](../getting-started/register-api-documentation.md) on the _consuming_ tenant.
-1. Remove **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** from your application's manifest after registration is complete.
-
-    > [!NOTE]
-    > After registering the container type, you should remove the **[FileStorageContainerTypeReg.Selected](/graph/permissions-reference#filestoragecontainertyperegselected)** permission from your application's manifest. This permission is only needed during registration setup. Keeping it after registration unnecessarily increases your application's permission surface.
-
 1. [Create a container](/graph/api/filestoragecontainer-post) on the _consuming_ tenant
