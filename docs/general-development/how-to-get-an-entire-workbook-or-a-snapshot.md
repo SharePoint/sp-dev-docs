@@ -183,7 +183,7 @@ GetSnapshot.exe [workbook_path] > [snapshot_filename]
 For example:
 
 ```
-C:\\>GetSnapshot.exe http://myServer02/reports/reports/OriginalWorkbook.xlsx > SnapshotCopy.xlsx
+C:\\>GetSnapshot.exe https://myServer02/reports/reports/OriginalWorkbook.xlsx > SnapshotCopy.xlsx
 ```
 
 If you use the previous command-line example, the GetSnapshot tool places a new file in the "C:\\" directory.
@@ -193,7 +193,7 @@ If you use the previous command-line example, the GetSnapshot tool places a new 
 
 ## Robust programming
 
-Make sure you add a Web reference to an Excel Web Services site you have access to. Change the `using GetSnapshot.myServer02;` statement to point to the Web service site you are referencing.
+Make sure you add a Web reference to an Excel Web Services site you have access to. Change the C# `using GetSnapshot.myServer02;` statement or the Visual Basic `Imports GetSnapshot.myServer02` statement to point to the Web service site you are referencing.
 
 ## See also
 
