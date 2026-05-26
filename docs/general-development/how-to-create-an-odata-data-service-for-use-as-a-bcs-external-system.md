@@ -1,4 +1,4 @@
-﻿---
+---
 title: Create an OData data service for use as a BCS external system
 description: Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.
 ms.date: 09/25/2017
@@ -52,7 +52,7 @@ The following steps need to be completed:
 - Add capabilities for additional BCS functionality
 
 ## Installing the sample database
-<a name="bkmk_Prerequisites"> </a>
+<a name="bkmk_InstallDatabase"> </a>
 
 An external system is usually a database, and for that reason, this example shows how to use the AdventureWorks 2012 LT sample database to represent a proprietary data source.
 
