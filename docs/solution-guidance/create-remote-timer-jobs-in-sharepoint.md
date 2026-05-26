@@ -16,7 +16,7 @@ Examples of how timer jobs are used include:
 
 ## Before you begin
 
-To get started, download the [Core.TimerJobs.Samples](https://github.com/pnp/PnP/tree/master/Solutions/Core.TimerJobs.Samples) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+To get started, download the [Core.TimerJobs.Samples](https://github.com/pnp/PnP/tree/master/Solutions/Core.TimerJobs.Samples) sample add-in from the Microsoft 365 Developer Patterns and Practices project on GitHub.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
@@ -26,6 +26,9 @@ To start using the Core.TimerJobs.Samples solution, you need to select a startup
 > [!NOTE] 
 > When you create a new project in Visual Studio, to start building your new remote timer job, add the OfficeDevPnP.Core NuGet package to your project. In Visual Studio, choose **TOOLS** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
+> [!NOTE]
+> OfficeDevPnP.Core is deprecated. For new projects, use the PnP Core SDK instead.
+
 ### Schedule your remote timer job
 
 A timer job can be scheduled to run once or can be a recurring job. To schedule your remote timer job in your production environment, you need to compile your code into an .exe file, and then run the .exe file by using Windows Task Scheduler or a Microsoft Azure WebJob. For more information, see [Timer job deployment options](timerjob-framework.md#timer-job-deployment-options).
@@ -34,11 +37,11 @@ A timer job can be scheduled to run once or can be a recurring job. To schedule 
 
 In **Core.TimerJobs.Samples.SimpleJob**, **Main** in Program.cs performs the following steps:
 
-1. Creates a **SimpleJob** object, which inherits from the [OfficeDevPnP.Core.Framework.TimerJobs.TimerJob](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/TimerJobs/TimerJob.cs) base class.
+1. Creates a **SimpleJob** object, which inherits from the [OfficeDevPnP.Core.Framework.TimerJobs.TimerJob](https://github.com/pnp/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/TimerJobs/TimerJob.cs) base class.
     
-2. Sets the Office 365 user credentials to use when running the timer job by using **TimerJob.UseOffice365Authentication**. The user credentials must have appropriate access to the site collections. You can learn more at [Authentication](timerjob-framework.md#authentication).
+2. Sets the Microsoft 365 user credentials to use when running the timer job by using **TimerJob.UseOffice365Authentication**. The user credentials must have appropriate access to the site collections. You can learn more at [Authentication](timerjob-framework.md#authentication).
     
-3. Adds sites that the timer job should perform tasks on by using **TimerJob.AddSite**. Optionally, you can repeat the **TimerJob.AddSite** statement to add more than one site, or add all sites under a particular URL by using the wildcard character `*`. For example, `http://contoso.sharepoint.com/sites/*` runs the timer job on all sites under the **sites** managed path.
+3. Adds sites that the timer job should perform tasks on by using **TimerJob.AddSite**. Optionally, you can repeat the **TimerJob.AddSite** statement to add more than one site, or add all sites under a particular URL by using the wildcard character `*`. For example, `https://contoso.sharepoint.com/sites/*` runs the timer job on all sites under the **sites** managed path.
     
 4. Prints timer job information and runs the timer job by using **PrintJobSettingsAndRunJob**.
 
@@ -234,13 +237,13 @@ The **Core.TimerJobs.Samples.GovernanceJob** project uses timer jobs to ensure t
 
 **SiteGovernanceJob\_TimerJobRun** is set as the event handler for the **TimerJobRun** event. When **TimerJob.Run** is called in Program.cs, **SiteGovernanceJob\_TimerJobRun** performs the following steps on each site collection that was added by using **TimerJob.AddSite** in Program.cs:
 
-1. Gets the number of administrators assigned to the site collection by using the extension method [GetAdministrators](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/SecurityExtensions.cs) which is part of [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core).
+1. Gets the number of administrators assigned to the site collection by using the extension method [GetAdministrators](https://github.com/pnp/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/SecurityExtensions.cs) which is part of [OfficeDevPnP.Core](https://github.com/pnp/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core).
     
-2. Uploads the JavaScript file to the SiteAssets or Style Library list by using [UploadFile](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/FileFolderExtensions.cs), which is part of [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core). 
+2. Uploads the JavaScript file to the SiteAssets or Style Library list by using [UploadFile](https://github.com/pnp/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/FileFolderExtensions.cs), which is part of [OfficeDevPnP.Core](https://github.com/pnp/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core). 
     
-3. If the site has fewer than two administrators, [AddJSLink](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/JavaScriptExtensions.cs) adds a notification message to a site by using JavaScript. You can learn more at [Customize your SharePoint site UI by using JavaScript](customize-your-sharepoint-site-ui-by-using-javascript.md).
+3. If the site has fewer than two administrators, [AddJSLink](https://github.com/pnp/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/JavaScriptExtensions.cs) adds a notification message to a site by using JavaScript. You can learn more at [Customize your SharePoint site UI by using JavaScript](customize-your-sharepoint-site-ui-by-using-javascript.md).
     
-4. If the site has two or more administrators, the notification message is removed by using [DeleteJsLink](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/JavaScriptExtensions.cs).
+4. If the site has two or more administrators, the notification message is removed by using [DeleteJsLink](https://github.com/pnp/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/JavaScriptExtensions.cs).
 
 
 ```csharp
