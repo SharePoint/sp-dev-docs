@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework Platform & Toolchain Compatibility Reference
 description: Find which versions of the SharePoint Framework are compatible with SharePoint platform versions and dependencies including the build toolchain.
-ms.date: 03/04/2026
+ms.date: 05/26/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework Platform & Toolchain Compatibility Reference
@@ -45,6 +45,7 @@ The following table lists the SPFx and compatible versions of common tools and l
 
 |              SPFx               | Node.js (LTS) |   TypeScript   |    React    |
 | ------------------------------- | ------------- | -------------- | ----------- |
+| [1.23.0](release-1.23.0.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
 | [1.22.2](release-1.22.2.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
 | [1.22.1](release-1.22.1.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
 | [1.22.0](release-1.22.0.md)       | v22           | v2.9 - v5.8    | v17.0.1     |
