@@ -11,46 +11,25 @@ ms.localizationpriority: medium
 
 In this step, you will create a project and add a reference to Microsoft.Office.Excel.Server.Udf.dll. 
   
-    
-    
-
 
 ## Creating the Project
 
-The following project uses Microsoft Visual Studio 2005.
+The following project uses Microsoft Visual Studio 2022.
   
 > [!NOTE]
-> Depending on which settings you use in the Visual Studio integrated development environment (IDE), the process to create a project could be slightly different. 
-  
-    
-    
+> Depending on which settings you use in the Visual Studio integrated development environment (IDE), the process to create a project could be slightly different.    
 
 
 ### To create a project
 
 
-1. Start Visual Studio.
-    
-  
-2. On the **File** menu, point to **New**, and then click **Project**. The **New Project** dialog box appears.
-    
-  
-3. In the **Project Type** pane, select **Visual C# Projects**.
-    
-  
-4. In the **Templates** pane, click **Class Library**.
-    
-  
-5. In the **Name** box, type **SampleUdf**.
-    
-  
-6. In the **Location** box, type the path where you want to save your project, or click **Browse** to navigate to the folder.
-    
-  
-7. Click **OK**. Your new project appears in **Solution Explorer**. You also will see that a file with the default name of Class1.cs has been added to your project.
-    
-  
-8. You should see the following code in the Class1.cs file:
+1. Start Visual Studio. 
+2. On the **File** menu, point to **New**, and then click **Project**. The **New Project** dialog box appears. 
+3. In the New Project dialog box, search for Class Library, and select the **C# language** filter.
+4. In the **Name** box, type **SampleUdf**.
+5. In the **Location** box, type the path where you want to save your project, or click **Browse** to navigate to the folder.
+6. Click **OK**. Your new project appears in **Solution Explorer**. You also will see that a file with the default name of Class1.cs has been added to your project.
+7. You should see the following code in the Class1.cs file:
     
 ```csharp
   
@@ -83,16 +62,11 @@ End Namespace
 ## Adding a Reference
 
 The following steps show how to locate Microsoft.Office.Excel.Server.Udf.dll and how to add a reference to it. 
-  
-    
-    
+      
 
 ### To add a reference
-
-
 1. On the **Project** menu, click **Add Reference**.
-    
-  
+
 2. In the **Add Reference** dialog box, on the **.NET** tab, select **Excel Services UDF Framework**.
     
     > [!NOTE]
@@ -101,7 +75,7 @@ The following steps show how to locate Microsoft.Office.Excel.Server.Udf.dll and
 3. Click **OK**.
     
     > [!NOTE]
-    > The previous steps assume that you are building the project on a computer that has Microsoft SharePoint Server 2010 installed. On the computer where you have installed SharePoint Server 2010, you can find a copy of Microsoft.Office.Excel.Server.Udf.dll at: > [drive:]\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\14\\ISAPI 
+    > The previous steps assume that you are building the project on a computer that has Microsoft SharePoint Server 2019 installed. On the computer where you have installed SharePoint Server 2019, you can find a copy of Microsoft.Office.Excel.Server.Udf.dll at: > [drive:]\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\16\\ISAPI 
 
 ## See also
 
