@@ -23,7 +23,7 @@ The term *artifacts* is referred to throughout this article. Artifacts refers to
 
 ## High-level guidelines
 
-As a rule of a thumb, we would like to provide the following high-level guidelines to deploy artifacts to SharePoint environments.
+As a rule of thumb, we would like to provide the following high-level guidelines to deploy artifacts to SharePoint environments.
 
 - Use the remote provisioning pattern (SharePoint Client Side Object Model and SharePoint REST API) to deploy artifacts to SharePoint environments.
 - Do not use declarative code modules or feature framework XML files to deploy artifacts to SharePoint environments.
@@ -34,11 +34,11 @@ A big advantage of using code to deploy artifacts is you are able to debug the d
 
 ### Getting started
 
-The following O365 PnP code samples demonstrate how to create a SharePoint Add-ins that use the remote provisioning pattern to deploy artifacts to a SharePoint environment.
+The following Microsoft 365 PnP code samples demonstrate how to create SharePoint Add-ins that use the remote provisioning pattern to deploy artifacts to a SharePoint environment.
 
   This sample demonstrates how to create a new folders in the Style Library and add JavaScript files and images to the new files.
 
-- [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
+- [Branding.ClientSideRendering (Microsoft 365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
   - See the ***UploadJSFiles*** and the ***UploadFileToFolder*** methods in the [Default.aspx.cs class](https://github.com/SharePoint/PnP/blob/master/Samples/Branding.ClientSideRendering/Branding.ClientSideRenderingWeb/Pages/Default.aspx.cs) for more details.
   - These methods are also displayed below for quick reference.
 
@@ -115,7 +115,7 @@ The following O365 PnP code samples demonstrate how to create a SharePoint Add-i
 
 This sample demonstrates how to upload master pages, set master page meta data and apply the master page to the site by setting the CustomMasterUrl property on the Web object.
 
-- [Branding.ApplyBranding (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
+- [Branding.ApplyBranding (Microsoft 365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
   - See the ***UploadPageLayout***, ***CreatePublishingPage***, and ***SetSupportCaseContent*** methods in the [BrandingHelper.cs class](https://github.com/SharePoint/PnP/blob/master/Samples/Branding.ApplyBranding/Branding.ApplyBranding.Console/BrandingHelper.cs) for more details.
   - In addition to creating new items in SharePoint, this sample demonstrates how to remove items.  The methods which remove items are listed below for reference.
     **Delete a file:**
@@ -199,11 +199,9 @@ This sample demonstrates how to upload master pages, set master page meta data a
       }
       ```
 
-  - Watch the [Applying Branding to SharePoint Sites with an Add-in for SharePoint (Office 365 PnP Video)](https://channel9.msdn.com/Blogs/Office-365-Dev/Applying-Branding-to-SharePoint-Sites-with-an-App-for-SharePoint-Office-365-Developer-Patterns-and-P) for a walk through of this sample.
+This sample has a little of everything in it.  It demonstrates how to activate the publishing features, upload page layouts, create publishing pages, create lists, content types and list items, and creating publishing pages and adding web parts and Add-in Parts to the pages.  It also demonstrates how to deploy list items to both the host web and the Add-in web.
 
-This sample has a little of everything in it.  It demonstrates how to activate the publishing features, upload page layouts, create publishing pages, create lists, content types and list items, and creating pblishing pages and adding web parts and Add-in Parts to the pages.  It also demonstrates how to deploy list items to both the host web and the Add-in web.
-
-- [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
+- [Branding.ClientSideRendering (Microsoft 365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
   - See the methods in the [Utils.cs class](https://github.com/SharePoint/PnP/blob/master/Samples/Core.DataStorageModels/Core.DataStorageModelsWeb/Util/Util.cs) for examples of these operations.
   - These methods are listed below for reference.
 
@@ -541,15 +539,14 @@ This sample has a little of everything in it.  It demonstrates how to activate t
 
 ## PnP samples
 
-- [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
-- [Branding.ApplyBranding (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
-- [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
+- [Branding.ClientSideRendering (Microsoft 365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Samples/Branding.ClientSideRendering)
+- [Branding.ApplyBranding (Microsoft 365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Samples/Branding.ApplyBranding)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
 ## Applies to
 
-- Office 365 Multi Tenant (MT)
-- Office 365 Dedicated (D) *partly*
+- Microsoft 365 Multi Tenant (MT)
+- Microsoft 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*
 
 *Patterns for dedicated and on-premises are identical with SharePoint Add-in model techniques, but there are differences on the possible technologies that can be used.*
