@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework Platform & Toolchain Compatibility Reference
 description: Find which versions of the SharePoint Framework are compatible with SharePoint platform versions and dependencies including the build toolchain.
-ms.date: 05/26/2026
+ms.date: 03/04/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework Platform & Toolchain Compatibility Reference
