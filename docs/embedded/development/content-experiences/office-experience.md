@@ -11,7 +11,7 @@ Office files in SharePoint Embedded containers behave similarly to Office files 
 
 ## Opening Office documents from SharePoint Embedded
 
-Office documents in SharePoint Embedded apps can be opened and edited in Office for the web or in desktop Office applications for a richer experience. AutoSave is enabled by default, automatically saving changes to Word, Excel, and PowerPoint files as users work. Documents in archived containers can’t be accessed or viewed. Applications should handle this state by displaying an appropriate message and guiding users on how to unarchive the container before access attempts.
+Office documents in SharePoint Embedded apps can be opened and edited in Office for the web or in desktop Office applications for a richer experience. AutoSave is enabled by default, automatically saving changes to Word, Excel, and PowerPoint files as users work. Documents in archived containers can't be accessed or viewed. Your application should handle this state by displaying an appropriate message and guiding users to unarchive the container before they try to access these documents.
 
 ## View or restore a previous version of an Office document from SharePoint Embedded
 
@@ -19,7 +19,7 @@ Office document versioning is controlled by the `isItemVersioningEnabled` settin
 
 ## Collaborating on Office documents from SharePoint Embedded
 
-Users can share files with specific individuals or external users via links, email invitations, or @mentions in comments, and collaborate in real time through co-authoring in Office.
+Users can share files with specific individuals or external users through links, email invitations, or @mentions in comments, and collaborate in real time through co-authoring in Office.
 
 > [!NOTE]
 > Users you @mention must [have a Microsoft 365 license assigned to them](../auth.md#mention-users-in-office-documents).
@@ -62,14 +62,14 @@ The following table describes the sharing options available for SharePoint Embed
 
 ## Breadcrumb properties on Office documents from SharePoint Embedded
 
-Breadcrumbs in SharePoint Embedded apps are derived from the corresponding container type configuration. If `urlTemplate` is configured on your container type, breadcrumb links in Office clients direct users to your application using the URL template.
+SharePoint Embedded apps derive breadcrumbs from the corresponding container type configuration. If `urlTemplate` is configured on your container type, breadcrumb links in Office clients direct users to your application by using the URL template.
 
 > [!NOTE]
 > We recommend specifying **Current Channel** to take advantage of breadcrumb patterns and future enhancements to Office apps. Learn more about [specifying update channels for Office apps](/deployoffice/updates/overview-update-channels).
 
 The following diagram shows how these properties map to breadcrumb display in Office clients (Office for the web and desktop Office applications):
 
-![Screenshot of breadcrumb pattern in SharePoint Embedded applications](../../images/office2.png)
+![Screenshot of the breadcrumb pattern in SharePoint Embedded applications.](../../images/office2.png)
 
 Here are a few examples of SharePoint Embedded application breadcrumb navigation in Office clients.
 
@@ -77,11 +77,11 @@ Here are a few examples of SharePoint Embedded application breadcrumb navigation
 
 ## Opening files from Microsoft 365 search
 
-When users search for content on Microsoft 365 (for example, on Office.com), search results include files stored in SharePoint Embedded containers. Selecting a search result opens the file in an appropriate viewer. For file types without a built-in Microsoft viewer, the destination depends on the container type's [URL template](/graph/api/resources/filestoragecontainertypesettings#properties).
+When users search for content on Microsoft 365 (for example, on Office.com), files stored in SharePoint Embedded containers can appear alongside other results. Whether a container's files appear in search results is controlled by the [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings#properties) setting on the container type: files appear in Microsoft 365 search only when `isDiscoverabilityEnabled` is `true` for their container type.
 
-You can control whether files appear in Microsoft 365 search results using the [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings#properties) container type configuration.
+When a user selects a SharePoint Embedded file from search results, the file opens in an appropriate viewer. For file types without a built-in Microsoft 365 viewer, the destination depends on the container type's [`urlTemplate`](/graph/api/resources/filestoragecontainertypesettings#properties) property.
 
-The `urlTemplate` property on a container type specifies the URL pattern used by Microsoft 365 when users open files from search results. If the `urlTemplate` property isn't configured, users who select non-Office or non-PDF files in Microsoft 365 search results are redirected to a generic help page that explains the file is stored in a third-party application and should be opened there.
+The `urlTemplate` property on a container type specifies the URL pattern used by Microsoft 365 when users open files from search results. If `urlTemplate` isn't configured, users who select non-Office or non-PDF files in Microsoft 365 search results are redirected to a generic help page that explains the file is stored in a third-party application and should be opened there.
 
 ### How file types are handled
 
@@ -89,20 +89,20 @@ The destination URL for a file in search results depends on the file type and wh
 
 | File type | `urlTemplate` set? | Behavior when selected from search |
 |---|---|---|
-| Word, Excel, PowerPoint | Either | Opens in Office for the web |
+| Files with a supported Microsoft 365 web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Microsoft 365 web viewer |
 | PDF | Either | Opens in the SharePoint Embedded PDF Previewer |
-| All other types | Yes | Redirected to your application via `urlTemplate` |
+| All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
 ### Configuring `urlTemplate`
 
-Set the `urlTemplate` property on your container type using the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers at the time a user selects a search result.
+Set the `urlTemplate` property on your container type by calling the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers when a user selects a search result.
 
 #### Requirements
 
-The `urlTemplate` value must meet the following requirements:
+The `urlTemplate` value must:
 
-- Use a valid absolute URL with the `https://` scheme. HTTP URLs are not accepted.
+- Be a valid absolute URL that uses the `https://` scheme. HTTP URLs aren't accepted.
 - Not resolve to a loopback address, such as `localhost` or `127.0.0.1`.
 
 > [!IMPORTANT]
@@ -114,16 +114,16 @@ The `urlTemplate` value must meet the following requirements:
 https://app.contoso.com/open?tenant={tenant-id}&drive={drive-id}&item={item-id}
 ```
 
-Tokens are enclosed in curly braces and replaced with values for the specific item the user selects. Most tokens are removed from the URL if they can't be resolved. The exceptions are `{tenant-id}` and `{drive-id}` — if unresolved, these remain as literal text in the URL.
+Tokens are enclosed in curly braces and replaced with values that correspond to the item the user selects. Most tokens are removed from the URL if they can't be resolved. The exceptions are `{tenant-id}` and `{drive-id}`—if unresolved, these tokens remain as literal text in the URL.
 
 #### Supported tokens
 
 | Token | Value your application receives |
 |---|---|
-| `{tenant-id}` | ID of the consuming tenant; used to make tenant-scoped Graph API calls |
-| `{drive-id}` | DriveId of the container; use with the Graph APIs to reference the container |
-| `{folder-id}` | ID of the item's immediate parent folder; omitted entirely from the URL for root-level files |
-| `{item-id}` | ID of the driveItem |
+| `{tenant-id}` | GUID of the consuming tenant. Used to make tenant-scoped Microsoft Graph API calls. |
+| `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
+| `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. Omitted from the URL for root-level files. |
+| `{item-id}` | Item ID of the driveItem. Item IDs aren't GUIDs. |
 | `{site-domain}` | -- |
 | `{list-id}` | -- |
 | `{site-url}` | -- |
@@ -131,7 +131,7 @@ Tokens are enclosed in curly braces and replaced with values for the specific it
 | `{itemname-guid}` | -- |
 | `{folderpath-guids}` | -- |
 
-For more information on custom properties, see [Custom properties on fileStorageContainers](/graph/api/filestoragecontainer-post-customproperty).
+You can also use custom container properties as tokens in `urlTemplate`. To make a custom property available as a token, set its `isPatternToken` value to `true` when you create or update the property. After it's enabled, reference the property in your template by enclosing its name in curly braces (for example, `{myCustomProperty}`). For more information about custom properties, see [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty).
 
 #### Example
 
@@ -141,15 +141,15 @@ If your container type has `urlTemplate` set to:
 https://app.contoso.com/open?t={tenant-id}&d={drive-id}&i={item-id}
 ```
 
-Then when a user opens a `.txt` file from a search result, Microsoft 365 redirects them to a URL like:
+When a user opens a `.txt` file from a search result, Microsoft 365 redirects the user to a URL like the following:
 
 ```text
 https://app.contoso.com/open?t=72f988bf-86f1-41af-91ab-2d7cd011db47&d=b%21abc123...&i=01ABC...
 ```
 
-Your application receives the tenantId, driveId, and itemId as query parameters and can use them to retrieve and open the file via the Microsoft Graph API.
+Your application receives the `tenantId`, `driveId`, and `itemId` as query parameters and can use them to retrieve and open the file through the Microsoft Graph API.
 
-#### Setting `urlTemplate` via Graph API
+#### Setting `urlTemplate` with Microsoft Graph
 
 Use the PATCH endpoint [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) to update `urlTemplate`:
 
@@ -166,9 +166,9 @@ Content-Type: application/json
 
 ### Limitations
 
-#### Updates to the urlTemplate are not instantaneous
+#### Updates to `urlTemplate` aren't instantaneous
 
-The destination URL for each file is stored in the Microsoft 365 search index. If you configure or update `urlTemplate` after files have been indexed, search results will continue to use the previous destination until the index is updated. Microsoft 365 performs incremental index update automatically, but there may be a delay before updates are reflected.
+The destination URL for each file is stored in the Microsoft 365 search index. If you configure or update `urlTemplate` after files are indexed, search results continue to use the previous destination until the index is updated. Microsoft 365 performs incremental index updates automatically, but updates can take time to appear.
 
 #### `urlTemplate` is scoped to the container type
 
@@ -176,4 +176,4 @@ The template applies to all container instances of the corresponding container t
 
 #### `{folder-id}` reflects the item's immediate parent
 
-If a file is stored at the root of the container, `{folder-id}` is omitted from the redirect URL rather than passed as an empty value. Make sure your application handles URLs where this parameter is not present.
+If a file is stored at the root of the container, `{folder-id}` is omitted from the redirect URL rather than passed as an empty value. Make sure your application handles URLs that don't include this parameter.
