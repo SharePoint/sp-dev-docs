@@ -620,6 +620,8 @@
       href: embedded/development/support-archival-of-containers.md
     - name: Office Experiences
       href: embedded/development/content-experiences/office-experience.md
+    - name: Configuring redirect behavior
+      href: embedded/development/content-experiences/configure-redirect-behavior.md
     - name: User Experiences
       href: embedded/development/content-experiences/user-experiences-overview.md
     - name: Search Content
