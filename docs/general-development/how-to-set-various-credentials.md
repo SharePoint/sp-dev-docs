@@ -9,18 +9,23 @@ ms.localizationpriority: medium
 
 # Set various credentials
 
-You must set credentials for your users before they can call Excel Web Services by using your custom application. You must explicitly set credentials even if you intend to use the default credentials. Excel Web Services uses the authentication schemes that Microsoft SharePoint Foundation supports. For more information about SharePoint Foundation authentication schemes, see the SharePoint Foundation documentation in this SDK and  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
-  
-    
-    
+> [!WARNING]
+> This article is based on legacy, deprecated technologies and is not recommended for new development.
+>
+> It uses:
+> - Excel Web Services (SOAP)
+> - SharePoint Foundation authentication
+> - `ExcelService.asmx` and `Authentication.asmx`
+> - Forms-Based Authentication (FBA) via SOAP cookies
+>
+> For new applications, use Microsoft Graph APIs with OAuth 2.0 and Microsoft Entra ID.
+
+You must set credentials for your users before they can call Excel Web Services by using your custom application. You must explicitly set credentials even if you intend to use the default credentials. Excel Web Services uses the authentication schemes that Microsoft SharePoint Foundation supports. For more information about SharePoint Foundation authentication schemes, see the SharePoint Foundation documentation in this SDK and  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).   
 
 The following examples show how to set credentials.
 ## To use the current user's credentials
 
-The following code uses the current user's logon credentials to make a request to the Web service. 
-  
-    
-    
+The following code uses the current user's logon credentials to make a request to the Web service.    
 
 ```csharp
 
@@ -31,7 +36,6 @@ The following code uses the current user's logon credentials to make a request t
 
 ```
 
-
 ```VB.net
 
 'Instantiate the Web service.
@@ -40,19 +44,11 @@ Dim xlService As New ExcelService()
 xlService.Credentials = System.Net.CredentialCache.DefaultCredentials
 ```
 
-
 ## To use various sets of credentials
 
 The following code uses the current user's logon credentials to make a request to the Web service. 
-  
-    
-    
+   
  **Sample code provided by:** Saif Ullah Baig, Microsoft Corporation.
-  
-    
-    
-
-
 
 ```csharp
 
@@ -180,9 +176,6 @@ The following code uses the current user's logon credentials to make a request t
 ## To use a different set of credentials
 
 The following code uses the current user's logon credentials to make a request to the Web service. 
-  
-    
-    
 
 ```csharp
 
@@ -235,44 +228,15 @@ End Sub
 ```
 
 In this example, **LoginNameTextBox**, **LoginPWDTextBox**, and **LoginDomainTextBox** are the **Name** property values of the logon text boxes.
-  
-    
-    
-For more information about how to use the **CredentialCache** class and the **NetworkCredential** class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](https://msdn.microsoft.com/library/60b63419-9606-4fdc-a30f-257ded236f16.aspx).
-  
-    
-    
+   
+For more information about how to use the **CredentialCache** class and the **NetworkCredential** class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](/dotnet/api/system.net.networkcredential).
 
 ## See also
-
-
-#### Concepts
-
-
-  
-    
-    
+#### Concepts  
  [Accessing the SOAP API](accessing-the-soap-api.md)
-#### Other resources
-
-
-  
-    
-    
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
-  
-    
-    
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
-  
-    
-    
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
-  
-    
-    
+#### Other resources  
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)  
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)  
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)  
  [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
-  
-    
-    
  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
