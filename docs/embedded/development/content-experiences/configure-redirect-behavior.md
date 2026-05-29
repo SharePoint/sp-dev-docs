@@ -32,7 +32,7 @@ The destination URL for a file in search results depends on the file type and wh
 | File type | `urlTemplate` set? | Behavior when selected from search |
 |---|---|---|
 | Files with a supported Microsoft 365 web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Microsoft 365 web viewer |
-| PDF | Either | Opens in the SharePoint Embedded PDF Previewer |
+| PDF | Either | Opens in the SharePoint Embedded PDF previewer |
 | All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
@@ -56,7 +56,7 @@ The `urlTemplate` value must:
 https://app.contoso.com/open?tenant={tenant-id}&drive={drive-id}&item={item-id}
 ```
 
-Each placeholder token uses curly braces. When a user selects a search result, Microsoft 365 resolves each token to a value that corresponds to the item, URL-encodes the value, and substitutes it in the template. If Microsoft 365 can't resolve a token, it removes the token from the URL. The exceptions are `{tenant-id}` and `{drive-id}`—if Microsoft 365 can't resolve them, they remain as literal text in the URL.
+Each placeholder token uses curly braces. When a user selects a search result, Microsoft 365 resolves each token to a value that corresponds to the item, URL-encodes the value, and substitutes it in the template. If Microsoft 365 can't resolve a token, it omits that token from the resolved URL. The exceptions are `{tenant-id}` and `{drive-id}`—if Microsoft 365 can't resolve them, they remain as literal text in the URL.
 
 ### Supported tokens
 
@@ -83,7 +83,7 @@ When a user opens a `.txt` file from a search result, Microsoft 365 redirects th
 https://app.contoso.com/open?t=72f988bf-86f1-41af-91ab-2d7cd011db47&d=b%21abc123def456ghi789jkl0&i=01ABC23DEF45GHI67JKL890
 ```
 
-Your application receives the `tenantId`, `driveId`, and `itemId` as query parameters. Use these parameters to retrieve and open the file through the Microsoft Graph API.
+Your application receives the tenant ID, drive ID, and item ID as query parameter values (using the parameter names you defined in the template, such as `t`, `d`, and `i`). Use these values to retrieve and open the file through the Microsoft Graph API.
 
 ### Update `urlTemplate` with Microsoft Graph
 
