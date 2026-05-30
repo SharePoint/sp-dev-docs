@@ -66,8 +66,21 @@ Each placeholder token uses curly braces. When a user selects a search result, M
 | `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
 | `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. If the file is at the root of the container, `{folder-id}` is omitted from the redirect URL rather than passed as an empty value. |
 | `{item-id}` | Item ID of the driveItem. Item IDs aren't GUIDs. |
+| `{site-domain}` | _To be documented._ |
+| `{list-id}` | _To be documented._ |
+| `{site-url}` | _To be documented._ |
 
 To use a custom container property as a token in `urlTemplate`, set the property's `isPatternToken` value to `true` when you create or update the property. Then reference the property in your template by enclosing its name in curly braces (for example, `{myCustomProperty}`). For more information, see [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty).
+
+#### Advanced tokens
+
+The following tokens cover specialized scenarios. Most applications can rely on the [common tokens](#supported-tokens) above.
+
+| Token | Value your application receives |
+|---|---|
+| `{ownershipType}` | _To be documented._ |
+| `{itemname-guid}` | _To be documented._ |
+| `{folderpath-guids}` | _To be documented._ |
 
 ### Example
 
