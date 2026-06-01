@@ -84,7 +84,7 @@ If you are getting values from multiple adjacent cells, you may want to consider
     Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 8, False, outStatus)
     ```
 
-    1. Use the **GetRange** method to get values from a range in the open workbook by using numeric range coordinates.
+1. Use the **GetRange** method to get values from a range in the open workbook by using numeric range coordinates.
 
     ```csharp
     // Instantiate the Web service and make a status array object.
@@ -136,9 +136,9 @@ If you are getting values from multiple adjacent cells, you may want to consider
     Next x
     ```
 
-    ### To get values using the GetCellA1 and GetRangeA1 methods
+### To get values using the GetCellA1 and GetRangeA1 methods
 
-    1. Use the **GetCellA1** method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
+1. Use the **GetCellA1** method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
 
     ```csharp
     // Instantiate the Web service and make a status array object.

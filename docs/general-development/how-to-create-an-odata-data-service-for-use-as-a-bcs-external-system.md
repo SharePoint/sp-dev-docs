@@ -98,7 +98,7 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 
 ### To enable access to data service resources
 
-- In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
+In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
 
 ```csharp
 config.SetEntitySetAccessRule("*", EntitySetRights.All);
