@@ -1,7 +1,7 @@
 ---
 title: "Property pane control theming implementation"
 description: "Learn how to implement property pane controls that follow SharePoint's theme framework and design principles."
-ms.date: 02/10/2026
+ms.date: 06/01/2026
 ms.localizationpriority: high
 ---
 
