@@ -1,7 +1,7 @@
 ---
 title: Get an entire workbook or a snapshot
 description: This example shows how to get an entire workbook, a snapshot of the entire file, or just a snapshot of the viewable sheets or objects in the file by using Excel Web Services.
-ms.date: 09/25/2017
+ms.date: 04/24/2017
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
@@ -67,56 +67,56 @@ using GetSnapshot.myServer02;
 
 namespace GetSnapshot
 {
-    class ExcelServicesSnapshot
+  class ExcelServicesSnapshot
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+      try
+      {
+        if (args.Length < 1)
         {
-            try
-            {
-                if (args.Length < 1)
-                {
-                    Console.Error.WriteLine("Command line arguments should be: GetSnapshot [workbook_path] > [snapshot_filename]");
-                    return;
-                }
-                // Instantiate the Web service and
-                // create a status array object.
-                ExcelService xlService = new ExcelService();
-                Status[] status;
-
-                xlService.Timeout = 600000;
-                // Set credentials for requests.
-                // Use the current user's logon credentials.
-                xlService.Credentials =
-                    System.Net.CredentialCache.DefaultCredentials;
-
-                // Open the workbook, then call GetWorkbook
-                // and close the session.
-                string sessionId = xlService.OpenWorkbook(args[0], "en-US", "en-US", out status);
-                byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.PublishedItemsSnapshot, out status);
-                // byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, out status);
-                // byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, out status);
-
-                // Close the workbook. This also closes the session.
-                status = xlService.CloseWorkbook(sessionId);
-
-                // Write the resulting Excel file to stdout
-                // as a binary stream.
-                BinaryWriter binaryWriter = new BinaryWriter(Console.OpenStandardOutput());
-                binaryWriter.Write(workbook);
-                binaryWriter.Close();
-            }
-
-            catch (SoapException e)
-            {
-                Console.WriteLine("SOAP Exception Message: {0}", e.Message);
-            }
-
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception Message: {0}", e.Message);
-            }
+          Console.Error.WriteLine("Command line arguments should be: GetSnapshot [workbook_path] > [snapshot_filename]");
+          return;
         }
+        // Instantiate the Web service and
+        // create a status array object.
+        ExcelService xlService = new ExcelService();
+        Status[] status;
+
+        xlService.Timeout = 600000;
+        // Set credentials for requests.
+        // Use the current user's logon credentials.
+        xlService.Credentials =
+          System.Net.CredentialCache.DefaultCredentials;
+
+        // Open the workbook, then call GetWorkbook
+        // and close the session.
+        string sessionId = xlService.OpenWorkbook(args[0], "en-US", "en-US", out status);
+        byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.PublishedItemsSnapshot, out status);
+        // byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, out status);
+        // byte[] workbook = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, out status);
+
+        // Close the workbook. This also closes the session.
+        status = xlService.CloseWorkbook(sessionId);
+
+        // Write the resulting Excel file to stdout
+        // as a binary stream.
+        BinaryWriter binaryWriter = new BinaryWriter(Console.OpenStandardOutput());
+        binaryWriter.Write(workbook);
+        binaryWriter.Close();
+      }
+
+      catch (SoapException e)
+      {
+        Console.WriteLine("SOAP Exception Message: {0}", e.Message);
+      }
+
+      catch (Exception e)
+      {
+        Console.WriteLine("Exception Message: {0}", e.Message);
+      }
     }
+  }
 }
 ```
 
@@ -130,59 +130,59 @@ Imports System.Web.Services.Protocols
 Imports GetSnapshot.myServer02
 
 Namespace GetSnapshot
-    Friend Class ExcelServicesSnapshot
-        Shared Sub Main(ByVal args() As String)
-            Try
-                If args.Length < 1 Then
-                    Console.Error.WriteLine("Command line arguments should be: GetSnapshot [workbook_path] > [snapshot_filename]")
-                    Return
-                End If
-                ' Instantiate the Web service and
-                ' create a status array object.
-                Dim xlService As New ExcelService()
-                Dim status() As Status
+  Friend Class ExcelServicesSnapshot
+    Shared Sub Main(ByVal args() As String)
+      Try
+        If args.Length < 1 Then
+          Console.Error.WriteLine("Command line arguments should be: GetSnapshot [workbook_path] > [snapshot_filename]")
+          Return
+        End If
+        ' Instantiate the Web service and
+        ' create a status array object.
+        Dim xlService As New ExcelService()
+        Dim status() As Status
 
-                xlService.Timeout = 600000
-                ' Set credentials for requests.
-                ' Use the current user's logon credentials.
-                xlService.Credentials = System.Net.CredentialCache.DefaultCredentials
+        xlService.Timeout = 600000
+        ' Set credentials for requests.
+        ' Use the current user's logon credentials.
+        xlService.Credentials = System.Net.CredentialCache.DefaultCredentials
 
-                ' Open the workbook, then call GetWorkbook
-                ' and close the session.
-                Dim sessionId As String = xlService.OpenWorkbook(args(0), "en-US", "en-US", status)
-                Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.PublishedItemsSnapshot, status)
-                ' Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, status)
-                ' Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, status)
+        ' Open the workbook, then call GetWorkbook
+        ' and close the session.
+        Dim sessionId As String = xlService.OpenWorkbook(args(0), "en-US", "en-US", status)
+        Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.PublishedItemsSnapshot, status)
+        ' Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullWorkbook, status)
+        ' Dim workbook() As Byte = xlService.GetWorkbook(sessionId, WorkbookType.FullSnapshot, status)
 
-                ' Close the workbook. This also closes the session.
-                status = xlService.CloseWorkbook(sessionId)
+        ' Close the workbook. This also closes the session.
+        status = xlService.CloseWorkbook(sessionId)
 
-                ' Write the resulting Excel file to stdout
-                ' as a binary stream.
-                Dim binaryWriter As New BinaryWriter(Console.OpenStandardOutput())
-                binaryWriter.Write(workbook)
-                binaryWriter.Close()
+        ' Write the resulting Excel file to stdout
+        ' as a binary stream.
+        Dim binaryWriter As New BinaryWriter(Console.OpenStandardOutput())
+        binaryWriter.Write(workbook)
+        binaryWriter.Close()
 
-            Catch e As SoapException
-                Console.WriteLine("SOAP Exception Message: {0}", e.Message)
+      Catch e As SoapException
+        Console.WriteLine("SOAP Exception Message: {0}", e.Message)
 
-            Catch e As Exception
-                Console.WriteLine("Exception Message: {0}", e.Message)
-            End Try
-        End Sub
-    End Class
+      Catch e As Exception
+        Console.WriteLine("Exception Message: {0}", e.Message)
+      End Try
+    End Sub
+  End Class
 End Namespace
 ```
 
 Use the following command line and arguments to run the GetSnapshot application:
 
-```
+```console
 GetSnapshot.exe [workbook_path] > [snapshot_filename]
 ```
 
 For example:
 
-```
+```console
 C:\\>GetSnapshot.exe https://myServer02/reports/reports/OriginalWorkbook.xlsx > SnapshotCopy.xlsx
 ```
 
@@ -197,22 +197,18 @@ Make sure you add a Web reference to an Excel Web Services site you have access 
 
 ## See also
 
-#### Tasks
+### Tasks
 
 [How to: Trust a Location](how-to-trust-a-location.md)
 
-#### Concepts
+### Concepts
 
 [Accessing the SOAP API](accessing-the-soap-api.md)
 
-#### Other resources
+### See Also
 
-[Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
-
-[Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
-
-[Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
-
-[Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
-
-[Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
+- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

@@ -1,7 +1,7 @@
 ---
 title: Create an OData data service for use as a BCS external system
 description: Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.
-ms.date: 09/25/2017
+ms.date: 04/24/2017
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
 ms.localizationpriority: medium
 ---
@@ -13,7 +13,6 @@ Learn how to create an Internet-addressable WCF service that uses OData to send 
 This article describes how to create an ASP.NET Windows Communication Foundation (WCF) Data Service to expose the AdventureWorks 2012 LT sample database. This enables you to access the data through the Open Data protocol (OData). When access is established through OData, you can configure a Business Connectivity Services (BCS) external content type that will enable SharePoint to consume the data from the external database. To further enhance this OData source, you can add service contracts to the WCF service that will enable BCS to subscribe to notifications that indicate that the external data has changed.
 
 ## Prerequisites for creating the OData service
-<a name="bkmk_Prerequisites"> </a>
 
 The following are required to create the OData service in this article:
 
@@ -52,12 +51,10 @@ The following steps need to be completed:
 - Add capabilities for additional BCS functionality
 
 ## Installing the sample database
-<a name="bkmk_InstallDatabase"> </a>
 
 An external system is usually a database, and for that reason, this example shows how to use the AdventureWorks 2012 LT sample database to represent a proprietary data source.
 
 ## How to create the WCF OData service
-<a name="bkmk_CreatingTheService"> </a>
 
 Creating a Windows Communication Foundation (WCF) service that can be accessed through the OData protocol is relatively straightforward. Visual Studio 2022 provides several tools for automatically discovering and modeling the data from various data sources. This allows you to create connections and interfaces to data in SQL Server databases and other types of data stores that can then be worked with programmatically using an extensive object model.
 
@@ -66,32 +63,32 @@ However, for SharePoint to enable BCS to receive notifications from remote syste
 ### To create a new WCF project
 
 1. In Visual Studio, on the **File** menu, choose **New**, **Project**.
-2. In the **New Project** dialog box, choose the **Web** template, and then choose **ASP.NET Web Application**.
-3. Enter **AdventureWorksService** for the project name, and choose **OK**.
-4. In **Solution Explorer**, open the shortcut menu for the ASP.NET project that you just created, and choose **Properties**.
-5. Select the **Web** tab, and set the value of the **Specific port** text box to **8008**.
+1. In the **New Project** dialog box, choose the **Web** template, and then choose **ASP.NET Web Application**.
+1. Enter **AdventureWorksService** for the project name, and choose **OK**.
+1. In **Solution Explorer**, open the shortcut menu for the ASP.NET project that you just created, and choose **Properties**.
+1. Select the **Web** tab, and set the value of the **Specific port** text box to **8008**.
 
 ### To define the data model
 
 1. In **Solution Explorer**, open the shortcut menu for the ASP.NET project, and choose **Add New Item**.
-2. In the **Add New Item** dialog box, choose the Data template, and then choose **ADO.NET Entity Data Model**.
-3. For the name of the data model, enter **AdventureWorks.edmx**.
-4. In the **Entity Data Model Wizard**, choose **Generate from Database**, and then choose **Next**.
-5. Connect the data model to the database by doing one of the following steps, and then choose **Next**.
+1. In the **Add New Item** dialog box, choose the Data template, and then choose **ADO.NET Entity Data Model**.
+1. For the name of the data model, enter **AdventureWorks.edmx**.
+1. In the **Entity Data Model Wizard**, choose **Generate from Database**, and then choose **Next**.
+1. Connect the data model to the database by doing one of the following steps, and then choose **Next**.
    - If you do not have a database connection already configured, choose **New Connection**, and create a new connection.
    - If you have a database connection already configured to connect to the Northwind database, choose that connection in the list of connections.
    - On the final page of the wizard, select the check boxes for all tables in the database, and clear the check boxes for views and stored procedures.
-6. Choose **Finish** to close the wizard.
+1. Choose **Finish** to close the wizard.
 
 ### To create the data service
 
 1. In **Solution Explorer**, open the shortcut menu for your ASP.NET project, and then choose **Add New Item**.
-2. In the **Add New Item** dialog box, choose **WCF Data Service**.
-3. For the name of the service, enter **AdventureWorks**.
+1. In the **Add New Item** dialog box, choose **WCF Data Service**.
+1. For the name of the service, enter **AdventureWorks**.
 
    Visual Studio creates the XML markup and code files for the new service. By default, the code-editor window opens. In **Solution Explorer**, the service will have the name **AdventureWorks**, with the extension .svc.cs or .svc.vb.
 
-4. Replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following:
+1. Replace the comment `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following:
 
 ```csharp
 public class AdventureWorks : DataService<AdventureWorksEntities>
@@ -119,7 +116,7 @@ The last step in creating the service is to add service operations for the **Sub
 
 ### To add service operations for Subscribe and Unsubscribe stereotypes
 
-- In the AdventureWorks.cs page, add the following string variable declaration.
+In the **AdventureWorks.cs** file, add the following string variable declaration:
 
 ```csharp
 public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\SubscriptionStore.xml";
@@ -134,67 +131,64 @@ Then add the following two **WebGet** methods to handle the subscriptions.
 [WebGet]
 public string Subscribe(string deliveryUrl, string eventType)
 {
-    string subscriptionId = Guid.NewGuid().ToString();
+  string subscriptionId = Guid.NewGuid().ToString();
 
-    XmlDocument subscriptionStore = new XmlDocument();
+  XmlDocument subscriptionStore = new XmlDocument();
 
-    subscriptionStore.Load(subscriptionStorePath);
+  subscriptionStore.Load(subscriptionStorePath);
 
-    // Add a new subscription element.
-    XmlNode newSubNode = subscriptionStore.CreateElement("Subscription");
+  // Add a new subscription element.
+  XmlNode newSubNode = subscriptionStore.CreateElement("Subscription");
 
-    // Add subscription ID element to the subscription element.
-    XmlNode subscriptionIdStart = subscriptionStore.CreateElement("SubscriptionID");
-    subscriptionIdStart.InnerText = subscriptionId;
-    newSubNode.AppendChild(subscriptionIdStart);
+  // Add subscription ID element to the subscription element.
+  XmlNode subscriptionIdStart = subscriptionStore.CreateElement("SubscriptionID");
+  subscriptionIdStart.InnerText = subscriptionId;
+  newSubNode.AppendChild(subscriptionIdStart);
 
-    // Add delivery URL element to the subscription element.
-    XmlNode deliveryAddressStart = subscriptionStore.CreateElement("DeliveryAddress");
-    deliveryAddressStart.InnerText = deliveryUrl;
-    newSubNode.AppendChild(deliveryAddressStart);
+  // Add delivery URL element to the subscription element.
+  XmlNode deliveryAddressStart = subscriptionStore.CreateElement("DeliveryAddress");
+  deliveryAddressStart.InnerText = deliveryUrl;
+  newSubNode.AppendChild(deliveryAddressStart);
 
-    // Add event type element to the subscription element.
-    XmlNode eventTypeStart = subscriptionStore.CreateElement("EventType");
-    eventTypeStart.InnerText = eventType;
-    newSubNode.AppendChild(eventTypeStart);
+  // Add event type element to the subscription element.
+  XmlNode eventTypeStart = subscriptionStore.CreateElement("EventType");
+  eventTypeStart.InnerText = eventType;
+  newSubNode.AppendChild(eventTypeStart);
 
-    // Add the subscription element to the root element.
-    subscriptionStore.AppendChild(newSubNode);
+  // Add the subscription element to the root element.
+  subscriptionStore.AppendChild(newSubNode);
 
-    subscriptionStore.Save(subscriptionStorePath);
+  subscriptionStore.Save(subscriptionStorePath);
 
-    return subscriptionId;
+  return subscriptionId;
 }
 
 [WebGet]
 public void Unsubscribe(string subscriptionId)
 {
-    XmlDocument subscriptionStore = new XmlDocument();
-    subscriptionStore.Load(subscriptionStorePath);
+  XmlDocument subscriptionStore = new XmlDocument();
+  subscriptionStore.Load(subscriptionStorePath);
 
-    XmlNodeList subscriptions = subscriptionStore.DocumentElement.ChildNodes;
-    foreach (XmlNode subscription in subscriptions)
+  XmlNodeList subscriptions = subscriptionStore.DocumentElement.ChildNodes;
+  foreach (XmlNode subscription in subscriptions)
+  {
+    XmlNodeList subscriptionList = subscription.ChildNodes;
+    if (subscriptionList.Item(0).InnerText == subscriptionId)
     {
-        XmlNodeList subscriptionList = subscription.ChildNodes;
-        if (subscriptionList.Item(0).InnerText == subscriptionId)
-        {
-            subscriptionStore.DocumentElement.RemoveChild(subscription);
-            break;
-        }
+      subscriptionStore.DocumentElement.RemoveChild(subscription);
+      break;
     }
+  }
 
-    subscriptionStore.Save(subscriptionStorePath);
+  subscriptionStore.Save(subscriptionStorePath);
 }
-
 ```
 
 ## Next steps
-<a name="bkmk_Next"> </a>
 
 To notify SharePoint that changes have been made, you also need to create a service that queries the data source for changes, and then sends notifications to all those subscribed to notifications.
 
 ## See also
-<a name="bkmk_Addresources"> </a>
 
 - [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
 - [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
