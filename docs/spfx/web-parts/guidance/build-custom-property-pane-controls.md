@@ -19,10 +19,9 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 
 ## Theming and Design Principles
 
-When building custom property pane controls, it is important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls follow the SharePoint property pane framework theme.
+When building custom property pane controls, it's important to ensure they align with the broader SharePoint design language. For new controls, this includes following proper theming principles, which ensures controls follow the SharePoint property pane framework theme.
 
 For detailed guidance on implementing proper theming and using Fluent UI v9 design tokens in your custom controls, see [Property pane control theming implementation](./property-pane-theme-principles.md).
-
 
 ## Create new project
 
@@ -603,7 +602,7 @@ export interface IListInfo {
 
 ## Implement cascading dropdowns using the asynchronous dropdown property pane control
 
-When building SharePoint Framework web parts, you might need to implement a configuration where the available options depend on another option chosen previously. A common example is to first let users choose a list and from that list select a list item. The list of available items would depend on the selected list. Here is how to implement such a scenario by using the asynchronous dropdown property pane control implemented in previous steps.
+When building SharePoint Framework web parts, you might need to implement a configuration where the available options depend on another option chosen previously. A common example is to first let users choose a list and from that list select a list item. The list of available items would depend on the selected list. Here's how to implement such a scenario by using the asynchronous dropdown property pane control implemented in previous steps.
 
 ### Add item web part property
 
