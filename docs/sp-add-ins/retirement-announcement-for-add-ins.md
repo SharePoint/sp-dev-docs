@@ -15,7 +15,7 @@ Microsoft strives to deliver value to our customers through modern, optimized, s
 
 SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024; they will stop working for all tenants as of April 2nd, 2026. This applies to all environments including Government Clouds and the U.S. Department of Defense.
 
-In parallel with the SharePoint Add-In retirement, the ability to add, update, and acquire SharePoint Add-Ins from the public marketplace will also be discontinued. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace; as of July 1st, 2024, SharePoint Add-Ins cannot be acquired from the public marketplace. Using a tenant app catalog is supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
+In parallel with the SharePoint Add-In retirement, the ability to add, update, remove, and acquire SharePoint Add-Ins from the public marketplace will also be discontinued. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace; as of July 1st, 2024, SharePoint Add-Ins cannot be acquired from the public marketplace. Using a tenant app catalog is supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
 
 If you are using custom developed SharePoint Add-Ins, we recommend migrating them to SharePoint Framework based solutions. If you’ve acquired SharePoint Add-Ins from the public marketplace or from a 3rd party,  contact the provider for an updated version that does not depend on the SharePoint Add-In extensibility model. 
 
