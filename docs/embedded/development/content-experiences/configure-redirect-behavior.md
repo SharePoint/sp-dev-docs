@@ -7,13 +7,13 @@ ms.localizationpriority: high
 
 # Configuring redirect behavior
 
-When a user selects a SharePoint Embedded file in Microsoft 365 search results, Microsoft 365 chooses a destination based on the file type. For files without a built-in Microsoft 365 web viewer, the destination depends on the `urlTemplate` property on the [container type](/sharepoint/dev/embedded/concepts/app-concepts/containertypes). This article explains how Microsoft 365 chooses a destination and how to configure `urlTemplate` to route users to your application.
+When a user selects a SharePoint Embedded file in Microsoft 365 search results, Microsoft 365 chooses a destination based on the file type. For files without a built-in Microsoft 365 web viewer, the destination depends on the `urlTemplate` property on the [container type](../../getting-started/containertypes.md). This article explains how Microsoft 365 chooses a destination and how to configure `urlTemplate` to route users to your application.
 
 ## Prerequisites
 
 Before you configure `urlTemplate`, ensure you have:
 
-- A SharePoint Embedded [container type](/sharepoint/dev/embedded/concepts/app-concepts/containertypes) that you own.
+- A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own.
 - The Microsoft Graph permission `FileStorageContainerType.Manage.All` (delegated, work or school account). Application permissions aren't supported for [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update).
 - `isDiscoverabilityEnabled` set to `true` on your container type's settings, so files in your containers appear in Microsoft 365 search results.
 
@@ -30,7 +30,7 @@ If `urlTemplate` isn't configured, Microsoft 365 redirects users who select non-
 The destination URL for a file in search results depends on the file type and whether `urlTemplate` is set:
 
 | File type | `urlTemplate` set? | Behavior when selected from search |
-|---|---|---|
+| --- | --- | --- |
 | Files with a supported Microsoft 365 web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Microsoft 365 web viewer |
 | PDF | Either | Opens in the SharePoint Embedded PDF previewer |
 | All other types | Yes | Redirected to your application through `urlTemplate` |
@@ -61,7 +61,7 @@ Each placeholder token uses curly braces. When a user selects a search result, M
 ### Supported tokens
 
 | Token | Value your application receives |
-|---|---|
+| --- | --- |
 | `{tenant-id}` | GUID of the consuming tenant. Used to make tenant-scoped Microsoft Graph API calls. |
 | `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
 | `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. If the file is at the root of the container, `{folder-id}` is omitted from the redirect URL rather than passed as an empty value. |
@@ -77,7 +77,7 @@ To use a custom container property as a token in `urlTemplate`, set the property
 The following tokens cover specialized scenarios. Most applications can rely on the [common tokens](#supported-tokens) above.
 
 | Token | Value your application receives |
-|---|---|
+| --- | --- |
 | `{ownershipType}` | _To be documented._ |
 | `{itemname-guid}` | _To be documented._ |
 | `{folderpath-guids}` | _To be documented._ |
@@ -138,7 +138,7 @@ For information about calling Microsoft Graph against a consuming tenant's conta
 ## Troubleshooting
 
 | Symptom | Possible cause |
-|---|---|
+| --- | --- |
 | Your files don't appear in Microsoft 365 search results. | The container type's `isDiscoverabilityEnabled` setting is `false`, or the registration in the consuming tenant overrides the setting. Search indexing can also take time after enablement. |
 | Users land on the Microsoft help page instead of your application. | `urlTemplate` is `null` (likely because the URL failed validation), or the file type opens in a Microsoft 365 viewer instead of redirecting. |
 | A token appears as literal text (such as `{tenant-id}`) in the redirect URL. | Microsoft 365 couldn't resolve the token for the current item. Verify the token name matches a [supported token](#supported-tokens) or a custom property with `isPatternToken` set to `true`. |
@@ -156,7 +156,7 @@ The template applies to all container instances of the corresponding container t
 
 ## Related content
 
-- [Container types](/sharepoint/dev/embedded/concepts/app-concepts/containertypes)
+- [Container types](../../getting-started/containertypes.md)
 - [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update)
 - [fileStorageContainerTypeSettings](/graph/api/resources/filestoragecontainertypesettings)
 - [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty)
