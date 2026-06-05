@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 11/21/2023
+ms.date: 06/05/2026
 ms.localizationpriority: high
 ---
 
@@ -147,7 +147,7 @@ Container type owners are managed through the [permissions](/graph/api/filestora
 
 Container type owners can do the following operations on the **owning tenant** when using an application with **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** in delegated mode:
 
-- **Create, read, update, and delete** the container type they own. Non-admin owners can only manage container types where they appear in the permissions collection and the calling app matches the owning application.
+- **Create, read, update, and delete** the container type they own. Non-admin owners can manage only container types they have a permission on, and the calling app must match the owning application.
 - **Add and remove** other owners on the container type they own (via the permissions endpoint).
 - **Create containers** of the container type they own, as long as the call is delegated (not app-only).
 

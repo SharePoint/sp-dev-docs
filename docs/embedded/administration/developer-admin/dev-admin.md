@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded developer administrator
 description: This article describes the role and responsibilities of developer tenant admin in SharePoint Embedded.
-ms.date: 01/20/2026
+ms.date: 06/05/2026
 ms.localizationpriority: high
 ---
 # SharePoint Embedded Developer Administrator
@@ -18,6 +18,9 @@ Organizations that use SharePoint Embedded for file management are included in t
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 
 A Microsoft 365 SharePoint Embedded Administrator serves as the developer admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center. For information on the [SharePoint Embedded Administrator](../adminrole.md) role.
+
+> [!NOTE]
+> The PowerShell cmdlets in this article require the [SharePoint Embedded Administrator](../adminrole.md) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. The equivalent Microsoft Graph endpoints don't require an administrator role. Any non-guest user in the owning tenant can [create a container type using Microsoft Graph](../../getting-started/containertypes.md#creating-container-types) and is automatically assigned as an [owner](../../development/auth.md#container-type-owner-capabilities).
 
 The following are some of the SharePoint Embedded actions currently supported on PowerShell:
 

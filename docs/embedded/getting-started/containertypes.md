@@ -1,7 +1,7 @@
 ---
 title: Create new SharePoint Embedded container types
 description: This article explains how container types work and the steps to create new container types.
-ms.date: 01/20/2026
+ms.date: 06/05/2026
 ms.localizationpriority: high
 ---
 
@@ -39,7 +39,9 @@ SharePoint Embedded has two different container types you can create.
 1. [Trial container type](#trial-container-type). Uses the `trial` billing classification.
 1. [Standard container type](#standard-container-types-nontrial). Uses the `standard` or `directToCustomer` billing classification.
 
-To create a container type, your Microsoft Entra ID application needs to have the `FileStorageContainerType.Manage.All` application permission on the owning tenant. Your Microsoft Entra ID application needs to call the [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) endpoint on behalf of a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator):
+To create a container type, your Microsoft Entra ID application needs the [`FileStorageContainerType.Manage.All`](/graph/permissions-reference#filestoragecontainertypemanageall) **delegated** Microsoft Graph permission. Application-only access isn't supported for this endpoint. The calling user must be a non-guest member of the owning tenant. Administrator roles aren't required. The calling user is automatically assigned as an owner of the new container type. For details on owner capabilities and how to manage owners, see [Container type owner capabilities](../development/auth.md#container-type-owner-capabilities).
+
+Call the [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) endpoint:
 
 ```http
 POST https://graph.microsoft.com/beta/storage/fileStorage/containerTypes
@@ -47,7 +49,7 @@ Content-Type: application/json
 
 {
   "name": "{ContainerTypeName}",
-  "owningAppId": "{ApplicationId}",
+  "owningApplicationId": "{ApplicationId}",
   "billingClassification": "{BillingClassification}",
   "settings": {
     ...
@@ -56,13 +58,13 @@ Content-Type: application/json
 ```
 
 > [!NOTE]
-> You need to replace:
+> Replace:
 >
 > - `{ContainerTypeName}` with a user-friendly name for your SharePoint Embedded application.
-> - `{ApplicationId}` with the ID of your properly configured application ID.
-> - `{BillingClassification}` with either `trial`, `standard`, or `directToCustomer`. Keep reading to understand what each means.
+> - `{ApplicationId}` with the ID of your properly configured application.
+> - `{BillingClassification}` with `trial`, `standard`, or `directToCustomer`. Keep reading to understand what each means.
 >
-> Additionally, you may [configure your container type](#configuring-container-types) during creation by using the `settings` field.
+> You can also [configure your container type](#configuring-container-types) during creation by setting the `settings` field.
 
 ## Trial container type
 
@@ -180,7 +182,7 @@ For information on all the settings supported by container types, see [fileStora
 
 ## Viewing container types
 
-The Developer Admin can view all the SharePoint Embedded container types they created on their tenant using the [List fileStorageContainerType](/graph/api/filestorage-list-containertypes) endpoint.
+You can list container types in your tenant by calling the [List fileStorageContainerType](/graph/api/filestorage-list-containertypes) endpoint. Results are filtered by ownership: non-administrator users see only the container types they have a permission on. [SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) and [Global Administrators](/entra/identity/role-based-access-control/permissions-reference#global-administrator) see every container type in the tenant.
 
 ## Registering container types
 
@@ -188,5 +190,6 @@ To create and interact with containers, you must [register](../getting-started/r
 
 ## Deleting container types
 
-The Developer Admin can only delete trial container types in their tenant. Deletion of standard container types is not yet supported. To delete a container type, you must first remove all containers of that container type, including from the deleted container collection. To remove containers, refer to [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
-Once all the containers are deleted, Developer admins can delete the container type using the [Delete fileStorageContainerType](/graph/api/filestorage-delete-containertypes) endpoint.
+You can only delete trial container types. Deletion of standard container types isn't yet supported. Before you delete a container type, you need to remove every container of that type, including from the deleted container collection. To remove containers, see [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
+
+Once every container is deleted, call the [Delete fileStorageContainerType](/graph/api/filestorage-delete-containertypes) endpoint. Non-administrator users can delete only container types they have a permission on. [SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) and [Global Administrators](/entra/identity/role-based-access-control/permissions-reference#global-administrator) can delete any trial container type.
