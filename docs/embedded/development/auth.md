@@ -123,7 +123,7 @@ Membership to a container [grants users container permissions](/graph/api/filest
 Specific items in a container can be shared with users via the [driveItem invite](/graph/api/driveitem-invite) or the [permission create](/graph/api/driveitem-post-permissions) endpoints. Sharing grants users access to the specific items, but it doesn't grant them access to the container itself or any other item in the container. For information on the access levels supported, see [permission roles](/graph/api/resources/permission#roles-property-values).
 
 > [!NOTE]
-> For more information about sharing, see [Sharing and permissions in SharePoint Embedded](./sharing-and-perm.md).
+> For more information about sharing, see [Share content in SharePoint Embedded](./sharing.md).
 
 #### Managing SharePoint Embedded applications installed in the consuming tenant
 

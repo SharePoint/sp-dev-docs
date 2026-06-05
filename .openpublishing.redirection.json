@@ -227,7 +227,12 @@
     },
     {
       "source_path": "docs/embedded/concepts/app-concepts/sharing-and-perm.md",
-      "redirect_url": "/sharepoint/dev/embedded/development/sharing-and-perm",
+      "redirect_url": "/sharepoint/dev/embedded/development/sharing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/embedded/development/sharing-and-perm.md",
+      "redirect_url": "/sharepoint/dev/embedded/development/sharing",
       "redirect_document_id": false
     },
     {
