@@ -13,23 +13,23 @@ ms.localizationpriority: high
 
 In SharePoint Embedded (SPE), you grant access to a container, a folder, or a file. By default, permissions flow down: a folder picks up its container's access, and a file picks up its folder's access. The level you choose sets the reach of the grant:
 
-- Grant on the container, and the user gets that access on every folder and file in it.
-- Grant on a folder, and the user gets that access on that folder and everything under it.
-- Grant on a file, and the user gets that access on the file alone.
+- Grant on the container, and the user receives access to all children folders and files.
+- Grant on a folder, and the user receives access on that folder and all child items.
+- Grant on a file, and the user receives access on the file alone.
 
 A grant is additive. It adds to whatever access the user already has from grants higher up the tree. When the default flow doesn't fit a particular folder or file, you can break inheritance on that item so its permissions are independent of the folder it sits in.
 
 In this article, you learn how to:
 
 - Grant access to a container with one of four built-in roles.
-- Grant access to a folder and everything in it.
+- Grant access to a folder and its children.
 - Grant access to a single file.
 - Break inheritance to give a folder or file independent permissions.
-- Predict what happens to permissions when you copy or move an item.
+- Add permissions when you copy or move an item.
 
-## Granting access to a container and everything in it
+## Granting access to a container
 
-To give a user or group access to everything in a container, assign them one of four built-in container roles:
+To give a user or group access to all content within a container, assign them one of four built-in container roles:
 
 | Role | What the user can do |
 |------|---------------------|
@@ -42,9 +42,9 @@ A container role grants that role's access across the container's content by def
 
 For the full role definitions, see [Authentication and authorization with SharePoint Embedded](./auth.md).
 
-## Granting access to a folder and everything in it
+## Granting access to a folder
 
-To give a user or group access to a single folder and everything under it, call a Microsoft Graph permission API on the folder. The API you use depends on who you're granting to.
+To give a user or group access to a single folder and all its children, call a Microsoft Graph permission API on the folder. The API you use depends on who you're granting to.
 
 ### For a user or guest
 
@@ -64,7 +64,7 @@ SPE rules:
 - Use app-only auth. SPE only supports `createPermission` with app-only.
 - SPE only accepts `sharePointGroup` permissions on this call. Other principal types are rejected.
 
-### What the new permission does
+### How inheritance affects new permissions
 
 The new permission applies to the folder. Subfolders and files inside the folder pick up the permission too, as long as they still inherit. A child folder or file with broken inheritance doesn't pick up the new permission.
 
