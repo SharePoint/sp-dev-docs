@@ -10,7 +10,7 @@ ms.localizationpriority: high
 The `urlTemplate` property on a SharePoint Embedded [container type](../../getting-started/containertypes.md) governs where Microsoft 365 sends users when they open files in your containers. It controls the destination on two surfaces:
 
 - Microsoft 365 search results.
-- The `driveItem.webUrl` property returned by Microsoft Graph, which is the canonical URL apps consume to open an item.
+- The `driveItem.webUrl` property is used to open an item in a browser.
 
 For files without a supported viewer (the Office web viewer or the embed viewer), both surfaces use `urlTemplate` to route users to your application. This article explains how Microsoft 365 chooses a destination and how to configure `urlTemplate`.
 
