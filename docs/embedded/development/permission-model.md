@@ -79,7 +79,7 @@ To give a user or group access to one file, call the same APIs on the file:
 - [`driveItem: invite`](/graph/api/driveitem-invite) for a user or guest.
 - [`driveItem: createPermission`](/graph/api/driveitem-post-permissions) for a SharePoint group.
 
-The same SPE rules apply (see [Granting access to a folder and everything in it](#granting-access-to-a-folder-and-everything-in-it)). The new permission applies to the file alone, on top of whatever access the file already inherits from its parent folder and container.
+The same SPE rules apply (see [Granting access to a folder](#granting-access-to-a-folder)). The new permission applies to the file alone, on top of whatever access the file already inherits from its parent folder and container.
 
 ## Breaking inheritance
 
