@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Authentication and Authorization
 description: This article describes the authentication and authorization model for SharePoint Embedded applications.
-ms.date: 06/05/2026
+ms.date: 06/08/2026
 ms.localizationpriority: high
 ---
 
@@ -147,7 +147,7 @@ Container type owners are managed through the [permissions](/graph/api/filestora
 
 Container type owners can do the following operations on the **owning tenant** when using an application with **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** in delegated mode:
 
-- **Create, read, update, and delete** the container type they own. Non-admin owners can manage only container types they have a permission on, and the calling app must match the owning application.
+- **Create, read, update, and delete** the container type they own. Non-admin owners can manage only container types on which they have a permission, and the calling app must match the owning application.
 - **Add and remove** other owners on the container type they own (via the permissions endpoint).
 - **Create containers** of the container type they own, as long as the call is delegated (not app-only).
 
@@ -208,16 +208,19 @@ Here are some actions you can take next:
 
     - Add the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** to create container types on the _owning_ tenant:
         - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
-        - **type**: `Role`
+        - **type**: `Scope`
         - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
 
-1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on your _owning_ tenant
+      > [!NOTE]
+      > **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** is a delegated permission and doesn't require admin consent. Any non-guest user in the owning tenant can consent to it and use it to create a container type; that user is then automatically added as an [owner of the container type](#container-type-owner-capabilities).
+
+1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on your _owning_ tenant for the application permissions you added (admin consent isn't required for the delegated **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** scope).
 1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
 1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
 
     - Remove the Microsoft Graph permission **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** as this is only needed to create the container type on the _owning_ tenant:
         - **resourceAppId**: `00000003-0000-0000-c000-000000000000`
-        - **type**: `Role`
+        - **type**: `Scope`
         - **ID**: `8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b`
 
           > [!NOTE]
