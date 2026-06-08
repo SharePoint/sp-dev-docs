@@ -86,9 +86,9 @@ If Microsoft 365 can't resolve a token, it drops the entire query parameter that
 | `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
 | `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. If the file is at the root of the container, Microsoft 365 drops the entire query parameter that contains `{folder-id}` from the redirect URL rather than passing it with an empty value. |
 | `{item-id}` | Item ID of the driveItem. Item IDs aren't GUIDs. |
-| `{site-domain}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
-| `{list-id}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
-| `{site-url}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
+| `{site-domain}` | <!-- TODO: provide description for this token. --> |
+| `{list-id}` | <!-- TODO: provide description for this token. --> |
+| `{site-url}` | <!-- TODO: provide description for this token. --> |
 
 To use a custom container property as a token in `urlTemplate`, set the property's `isPatternToken` value to `true` when you create or update the property. Then reference the property in your template by enclosing its name in curly braces (for example, `{myCustomProperty}`). For more information, see [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty).
 
@@ -98,9 +98,9 @@ The following tokens cover specialized scenarios. Most applications can rely on 
 
 | Token | Value your application receives |
 | --- | --- |
-| `{ownershipType}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
-| `{itemname-guid}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
-| `{folderpath-guids}` | <!-- TODO(@Dan Winter): provide description for this token. --> |
+| `{ownershipType}` | The container's ownership type: TenantOwned, UserOwned, GroupOwned, or ApplicationOwned |
+| `{itemname-guid}` | The GUID parsed from the item's filename, if the file is named <GUID>.extension. Empty if the filename is not a GUID. |
+| `{folderpath-guids}` | Comma-separated GUIDs found in the folder path segments leading to the item. Path segments split on / or _ are each checked for a valid GUID |
 
 ### Example
 
