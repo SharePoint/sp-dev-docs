@@ -8,15 +8,15 @@ ms.localizationpriority: medium
 
 The approach you take to create site columns and content types in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you use declarative code to create site columns and content types. In the declarative code approach, you define the site columns and content types in XML and then use  SharePoint's feature framework elements to package and deploy them.
 
-In an SharePoint Add-in model scenario, you use the SharePoint Client Side Object Model (CSOM) or SharePoint REST APIs to create site columns and content types.
+In a SharePoint Add-in model scenario, you use the SharePoint Client Side Object Model (CSOM) or SharePoint REST APIs to create site columns and content types.
 
 ## High-level guidelines
 
-As a rule of a thumb, we recommend the following high-level guidelines for creating site columns and content types.
+As a rule of thumb, we recommend the following high-level guidelines for creating site columns and content types.
 
 - You should use the SharePoint CSOM or REST APIs to create site columns and content types.
 - You should not use Feature framework elements to create site columns and content types.
-  - The only exception to this guideline is when you are using declarative XML-based provisioning to an SharePoint Add-in web in a SharePoint-hosted SharePoint Add-in. This is due to the fact that the CSOM is not available in a SharePoint-hosted SharePoint Add-in.
+  - The only exception to this guideline is when you are using declarative XML-based provisioning to a SharePoint Add-in web in a SharePoint-hosted SharePoint Add-in. This is due to the fact that the CSOM is not available in a SharePoint-hosted SharePoint Add-in.
 - You can automate the creation of site columns and content types as part of the site provisioning process. See the [Site provisioning recipe](site-provisioning-sharepoint-add-in.md) for more details.
 
 ## Challenges creating site columns and content types in SharePoint sites
@@ -42,7 +42,7 @@ When **Creating via a web browser**, consider the following points.
 When **Creating with code** consider the following points.
 
 - Creating site columns and content types with code typically involves using custom utility libraries to execute SharePoint CSOM/REST code.
-  - You'll find these libraries available in many projects in the OfficeDev PnP GitHub Repository.  They are referenced throughout the article and at the end.
+  - You'll find these libraries available in many projects in the PnP GitHub Repository.  They are referenced throughout the article and at the end.
   - These factors make creating site columns and content types with code **prone to success**.
 - You can control the GUIDs for site columns or content types that get created via the SharePoint CSOM/REST.
   - This makes it **easy** to deploy the site columns and content types to different environments and reference them in line-of-business applications consistently.
@@ -78,33 +78,32 @@ There are many different articles and samples you can use to learn how to make s
 
 This option works well when you need to provide your end users with a self-service ability to create SharePoint site collections and sub sites based on custom templates.
 
-- [Core.ContentTypesAndFields (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Core.ContentTypesAndFields (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.ContentTypesAndFields)
   - Demonstrates how to create a new content type in the host web, create a taxonomy field in the host web and wire it up to the taxonomy, create a list and associate it with a content type,  and create content types and fields in particular languages.
 
 ## Use Windows/Java/iOS applications or PowerShell scripts
 
 This option works well in Dev-Ops scenarios. It allows you to create custom applications or scripts that are specifically built to work with your Dev-Ops processes. This option provides the ultimate level of automation because you can build the SharePoint Add-ins and scripts to run without any user interaction.
 
-- [Core.CreateContentTypes (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateContentTypes)
+- [Core.CreateContentTypes (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.CreateContentTypes)
   - This sample shows how you can create site columns, content types and add then add the site columns to the content type. It also explains the new localization features that have been introduced for Office 365 CSOM APIs.
-- [Core.CreateDocumentContentType (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateDocumentContentType)
+- [Core.CreateDocumentContentType (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.CreateDocumentContentType)
   - This sample shows how you can create document content types and add then associate a document template to the content type.
 
 ## Related links
 
 - [Site provisioning in the SharePoint Add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
-- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
+- References and guidance for SharePoint development and Office 365 patterns and practices are available at [Microsoft Learn: Office 365 Development Patterns and Practices Solution Guidance](https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/office-365-development-patterns-and-practices-solution-guidance)
+- Videos and community content are available on the Microsoft 365 & Power Platform Community YouTube channel: https://www.youtube.com/channel/UC_mKdhw-V6CeCM7gTo_Iy7w
 
 ## PnP samples
 
-- [Core.CreateContentTypes (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateContentTypes)
-- [Core.ContentTypesAndFields (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
-- [Core.CreateDocumentContentType (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateDocumentContentType)
-- [Branding.DisplayTemplates (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.DisplayTemplates)
-- [Core.DataStorageModels (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.DataStorageModels)
-- Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
+- [Core.CreateContentTypes (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.CreateContentTypes)
+- [Core.ContentTypesAndFields (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.ContentTypesAndFields)
+- [Core.CreateDocumentContentType (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.CreateDocumentContentType)
+- [Branding.DisplayTemplates (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Branding.DisplayTemplates)
+- [Core.DataStorageModels (O365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.DataStorageModels)
+- Samples and content at [https://github.com/PnP](https://github.com/pnp/PnP)
 
 ## Applies to
 
