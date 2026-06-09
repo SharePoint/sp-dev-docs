@@ -13,11 +13,7 @@ ms.localizationpriority: medium
 # Catch exceptions
 
 You place the sections of code that might throw exceptions in a try block and place code that handles exceptions in a catch block. The order of catch statements is important. When an exception occurs, it is passed up the stack and each catch block is given the opportunity to handle it. The catch block that should handle the exception is determined by matching the type of the exception to the name of the exception specified in the catch block. For example, the following catch block catches Simple Object Access Protocol (SOAP) exceptions:
-  
-    
-    
-
-
+ 
 ```csharp
 
 catch (SoapException e)
@@ -38,7 +34,7 @@ Catch e As SoapException
 End Try
 ```
 
-If no type-specific catch block exists, the exception is caught by a general catch block, if one exists. For example, you can catch general exceptions by adding the following code:
+If no type-specific catch block exists, the exception is caught by a general catch block if one exists. For example, you can catch general exceptions by adding the following code:
 
 
 ```csharp
@@ -59,7 +55,8 @@ Catch e As Exception
 End Try
 ```
 
-You place catch blocks targeted to specific types of exceptions before a general exception. The common language runtime catches exceptions that are not caught by a catch block. Depending on how the runtime is configured, either a debug dialog box appears, or the program stops executing and a dialog box with exception information appears. For information about debugging, see  [Debugging and Profiling Applications](https://go.microsoft.com/fwlink/?LinkId=64641) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpcondebuggingprofiling.asp).For more information about how to handle exceptions, see  [Best Practices for Handling Exceptions](https://go.microsoft.com/fwlink/?LinkId=64480) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconbestpracticesforhandlingexceptions.asp).
+You place catch blocks targeted to specific types of exceptions before a general exception. The common language runtime catches exceptions that are not caught by a catch block. Depending on how the runtime is configured, either a debug dialog box appears, or the program stops executing and a dialog box with exception information appears.
+
 ## Example
 
 
@@ -196,48 +193,18 @@ Namespace ExcelWebService
 End Namespace
 ```
 
-
 ## See also
 
-
-#### Tasks
-
-
-  
-    
-    
- [How to: Trust a Location](how-to-trust-a-location.md)
-  
-    
-    
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
-  
-    
-    
+#### Tasks   
+ [How to: Trust a Location](how-to-trust-a-location.md)  
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)    
  [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
-#### Concepts
-
-
-  
-    
-    
- [Accessing the SOAP API](accessing-the-soap-api.md)
-  
-    
-    
- [Excel Services Alerts](excel-services-alerts.md)
-  
-    
-    
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
-  
-    
-    
+ 
+#### Concepts   
+ [Accessing the SOAP API](accessing-the-soap-api.md) 
+ [Excel Services Alerts](excel-services-alerts.md)   
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md) 
  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
-#### Other resources
-
-
-  
-    
-    
+ 
+#### Other resources 
  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
