@@ -86,11 +86,9 @@ If Microsoft 365 can't resolve a token, it drops the entire query parameter that
 | `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
 | `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. If the file is at the root of the container, Microsoft 365 drops the entire query parameter that contains `{folder-id}` from the redirect URL rather than passing it with an empty value. |
 | `{item-id}` | Item ID of the driveItem. Item IDs aren't GUIDs. |
-| `{site-domain}` | <!-- TODO: provide description for this token. --> |
-| `{list-id}` | <!-- TODO: provide description for this token. --> |
-| `{site-url}` | <!-- TODO: provide description for this token. --> |
-
-To use a custom container property as a token in `urlTemplate`, set the property's `isPatternToken` value to `true` when you create or update the property. Then reference the property in your template by enclosing its name in curly braces (for example, `{myCustomProperty}`). For more information, see [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty).
+| `{site-domain}` | The hostname of the container's site (e.g., contoso.sharepoint.com). Sourced from SPSite.HostName. |
+| `{list-id}` | The GUID identifier of the document library (SPList) that backs the container. |
+| `{site-url}` | The container site's full web URL without the scheme (authority + path + query + fragment). For example: `contoso.sharepoint.com/contentstorage/CSP_6fa4ae51-5276-4437-b4f5-9b42388a9e1c` |
 
 #### Advanced tokens
 
@@ -161,7 +159,7 @@ For information about calling Microsoft Graph against a consuming tenant's conta
 | --- | --- |
 | Your files don't appear in Microsoft 365 search results. | The container type's `isDiscoverabilityEnabled` setting is `false`, or the registration in the consuming tenant overrides the setting. Search indexing can also take time after enablement. |
 | Users land on the Microsoft help page instead of your application. | `urlTemplate` is `null` (likely because the URL failed validation), or the file type opens in a supported viewer (the Office web viewer or the embed viewer) instead of redirecting. |
-| A token appears as literal text (such as `{tenant-id}`) in the redirect URL. | Microsoft 365 couldn't resolve the token for the current item. Verify the token name matches a [supported token](#supported-tokens) or a custom property with `isPatternToken` set to `true`. |
+| A token appears as literal text (such as `{tenant-id}`) in the redirect URL. | Microsoft 365 couldn't resolve the token for the current item. Verify the token name matches a [supported token](#supported-tokens) or a [custom property](/graph/api/filestoragecontainer-post-customproperty). |
 | Updates to `urlTemplate` don't appear in search results. | Search index updates aren't instantaneous. See [Limitations](#limitations). |
 
 ## Limitations
