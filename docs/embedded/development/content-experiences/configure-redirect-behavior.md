@@ -18,9 +18,13 @@ For files without a supported viewer (the Office web viewer or the embed viewer)
 
 Before you configure `urlTemplate`, ensure you have:
 
-- A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own.
-- The Microsoft Graph permission `FileStorageContainerType.Manage.All` (delegated, work or school account). Application permissions aren't supported for [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update).
-- `isDiscoverabilityEnabled` set to `true` on your container type's settings — required only for the search-results scenario, so files in your containers appear in Microsoft 365 search results. The `driveItem.webUrl` redirect behavior doesn't depend on `isDiscoverabilityEnabled`.
+- A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own, if you want to set `urlTemplate` for every tenant that registers the container type. To override `urlTemplate` for a single consuming tenant instead, you need a registration of that container type in the consuming tenant.
+- The Microsoft Graph permission required by the API you call (see [Configure `urlTemplate`](#configure-urltemplate)):
+  - To set `urlTemplate` on the container type with [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update): `FileStorageContainerType.Manage.All` (delegated, work or school account). Application permissions aren't supported.
+  - To override `urlTemplate` on a registration with [Update fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update): `FileStorageContainerTypeReg.Selected` (least privileged; delegated or application) or `FileStorageContainerTypeReg.Manage.All` (delegated only). Delegated calls also require the SharePoint Embedded Administrator or Global Administrator role.
+
+> [!NOTE]
+> Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience — such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
 
 ## How Microsoft 365 chooses a destination
 
@@ -39,8 +43,6 @@ The destination for a file depends on the file type and whether `urlTemplate` is
 | All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
-<!-- TODO(@cindylay): link the embed-viewer doc and mirror its exact list of supported file types here. -->
-
 ### `driveItem.webUrl` behavior
 
 For SharePoint Embedded items, the `driveItem.webUrl` property returned by Microsoft Graph reflects the same redirect behavior described above:
@@ -54,7 +56,12 @@ For SharePoint Embedded items, the `driveItem.webUrl` property returned by Micro
 
 ## Configure `urlTemplate`
 
-Set the `urlTemplate` property on your container type by calling the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API. The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers when a user opens an item.
+You can set `urlTemplate` in two places:
+
+- **On the container type**, which applies to every tenant that registers it. Call the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API (`PATCH /storage/fileStorage/containerTypes/{id}`) and set `settings.urlTemplate`. This requires the `FileStorageContainerType.Manage.All` delegated permission; application permissions aren't supported.
+- **On a container type registration**, which overrides the value for a single consuming tenant. Call the [Update fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update) API (`PATCH /storage/fileStorage/containerTypeRegistrations/{id}`) and set `settings.urlTemplate`. This requires the `FileStorageContainerTypeReg.Selected` permission (least privileged; delegated or application) or `FileStorageContainerTypeReg.Manage.All` (delegated only). A registration can override `urlTemplate` only if the owning container type lists `urlTemplate` in its `consumingTenantOverridables` setting.
+
+The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers when a user opens an item.
 
 The SharePoint Embedded PowerShell cmdlet exposes the same setting as a "redirect URI" parameter. The PowerShell "redirect URI" is the `urlTemplate` value and is unrelated to the app-registration redirect URI used for authentication.
 
@@ -86,19 +93,19 @@ If Microsoft 365 can't resolve a token, it drops the entire query parameter that
 | `{drive-id}` | Drive ID of the container. Use it with Microsoft Graph APIs to reference the container. |
 | `{folder-id}` | Item ID of the file's immediate parent folder. Item IDs aren't GUIDs. If the file is at the root of the container, Microsoft 365 drops the entire query parameter that contains `{folder-id}` from the redirect URL rather than passing it with an empty value. |
 | `{item-id}` | Item ID of the driveItem. Item IDs aren't GUIDs. |
-| `{site-domain}` | The hostname of the container's site (e.g., contoso.sharepoint.com). Sourced from SPSite.HostName. |
-| `{list-id}` | The GUID identifier of the document library (SPList) that backs the container. |
+| `{site-domain}` | The hostname of the container's site (for example, contoso.sharepoint.com). |
+| `{list-id}` | The GUID identifier of the document library that backs the container. |
 | `{site-url}` | The container site's full web URL without the scheme (authority + path + query + fragment). For example: `contoso.sharepoint.com/contentstorage/CSP_6fa4ae51-5276-4437-b4f5-9b42388a9e1c` |
 
 #### Advanced tokens
 
-The following tokens cover specialized scenarios. Most applications can rely on the [common tokens](#supported-tokens) above.
+The following tokens cover specialized scenarios. Most applications can rely on the [supported tokens](#supported-tokens) above.
 
 | Token | Value your application receives |
 | --- | --- |
-| `{ownershipType}` | The container's ownership type: TenantOwned, UserOwned, GroupOwned, or ApplicationOwned |
-| `{itemname-guid}` | The GUID parsed from the item's filename, if the file is named <GUID>.extension. Empty if the filename is not a GUID. |
-| `{folderpath-guids}` | Comma-separated GUIDs found in the folder path segments leading to the item. Path segments split on / or _ are each checked for a valid GUID |
+| `{ownershipType}` | The container's ownership type: TenantOwned, UserOwned, GroupOwned, or ApplicationOwned. |
+| `{itemname-guid}` | The GUID parsed from the item's filename, if the file is named `<GUID>.extension`. Empty if the filename isn't a GUID. |
+| `{folderpath-guids}` | Comma-separated GUIDs found in the folder path segments leading to the item. Path segments split on / or _ are each checked for a valid GUID. |
 
 ### Example
 
