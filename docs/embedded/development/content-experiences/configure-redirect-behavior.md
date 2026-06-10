@@ -12,7 +12,7 @@ The `urlTemplate` property on a SharePoint Embedded [container type](../../getti
 - Microsoft 365 search results.
 - The `driveItem.webUrl` property is used to open an item in a browser.
 
-For files without a supported viewer (the Office web viewer or the embed viewer), both surfaces use `urlTemplate` to route users to your application. This article explains how Microsoft 365 chooses a destination and how to configure `urlTemplate`.
+For files without a supported viewer (the Office web viewer or the embedded viewer), both surfaces use `urlTemplate` to route users to your application. This article explains how Microsoft 365 chooses a destination and how to configure `urlTemplate`.
 
 ## Prerequisites
 
@@ -24,11 +24,11 @@ Before you configure `urlTemplate`, ensure you have:
   - To override `urlTemplate` on a registration with [Update fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update): `FileStorageContainerTypeReg.Selected` (least privileged; delegated or application) or `FileStorageContainerTypeReg.Manage.All` (delegated only). Delegated calls also require the SharePoint Embedded Administrator or Global Administrator role.
 
 > [!NOTE]
-> Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience — such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
+> Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience, such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
 
 ## How Microsoft 365 chooses a destination
 
-Microsoft 365 chooses a destination based on the file type. `urlTemplate` applies only to files without a supported viewer (the Office web viewer or the embed viewer). This file-type scope is the same today and after the `webUrl` rollout described in [driveItem.webUrl behavior](#driveitemweburl-behavior).
+Microsoft 365 chooses a destination based on the file type. `urlTemplate` applies only to files without a supported viewer (the Office web viewer or the embedded viewer). This file-type scope is the same today and after the `webUrl` rollout described in [driveItem.webUrl behavior](#driveitemweburl-behavior).
 
 If `urlTemplate` isn't configured, Microsoft 365 sends users who open files without a supported viewer to a generic [Microsoft help page](https://aka.ms/spe-openfilelocation). The help page explains that the file is stored in a third-party application and directs the user to open it there.
 
@@ -39,7 +39,7 @@ The destination for a file depends on the file type and whether `urlTemplate` is
 | File type | `urlTemplate` set? | Behavior when opened |
 | --- | --- | --- |
 | Files with a supported Office web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Office web viewer |
-| Files supported by the embed viewer | Either | Opens in the embed viewer |
+| Files supported by the embedded viewer | Either | Opens in the embedded viewer |
 | All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
@@ -121,7 +121,7 @@ When a user opens a `.txt` file, Microsoft 365 redirects the user to a URL like 
 https://app.contoso.com/open?t=72f988bf-86f1-41af-91ab-2d7cd011db47&d=b%21abc123def456ghi789jkl0&i=01ABC23DEF45GHI67JKL890
 ```
 
-Your application receives the tenant ID, drive ID, and item ID as the values of whatever query-parameter names you defined in the template. The parameter names — `t`, `d`, and `i` in this example — are arbitrary and developer-defined; Microsoft 365 doesn't require any specific names. Use the parsed values to retrieve and open the file through the Microsoft Graph API.
+Your application receives the tenant ID, drive ID, and item ID as the values of whatever query-parameter names you defined in the template. The parameter names (`t`, `d`, and `i` in this example) are arbitrary and developer-defined; Microsoft 365 doesn't require any specific names. Use the parsed values to retrieve and open the file through the Microsoft Graph API.
 
 ### Update `urlTemplate` with Microsoft Graph
 
@@ -165,7 +165,7 @@ For information about calling Microsoft Graph against a consuming tenant's conta
 | Symptom | Possible cause |
 | --- | --- |
 | Your files don't appear in Microsoft 365 search results. | The container type's `isDiscoverabilityEnabled` setting is `false`, or the registration in the consuming tenant overrides the setting. Search indexing can also take time after enablement. |
-| Users land on the Microsoft help page instead of your application. | `urlTemplate` is `null` (likely because the URL failed validation), or the file type opens in a supported viewer (the Office web viewer or the embed viewer) instead of redirecting. |
+| Users land on the Microsoft help page instead of your application. | `urlTemplate` is `null` (likely because the URL failed validation), or the file type opens in a supported viewer (the Office web viewer or the embedded viewer) instead of redirecting. |
 | A token appears as literal text (such as `{tenant-id}`) in the redirect URL. | Microsoft 365 couldn't resolve the token for the current item. Verify the token name matches a [supported token](#supported-tokens) or a [custom property](/graph/api/filestoragecontainer-post-customproperty). |
 | Updates to `urlTemplate` don't appear in search results. | Search index updates aren't instantaneous. See [Limitations](#limitations). |
 
