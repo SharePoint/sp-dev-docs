@@ -1,7 +1,7 @@
 ---
 title: Create new SharePoint Embedded container types
 description: This article explains how container types work and the steps to create new container types.
-ms.date: 06/05/2026
+ms.date: 06/11/2026
 ms.localizationpriority: high
 ---
 
@@ -49,7 +49,7 @@ Content-Type: application/json
 
 {
   "name": "{ContainerTypeName}",
-  "owningApplicationId": "{ApplicationId}",
+  "owningAppId": "{ApplicationId}",
   "billingClassification": "{BillingClassification}",
   "settings": {
     ...
