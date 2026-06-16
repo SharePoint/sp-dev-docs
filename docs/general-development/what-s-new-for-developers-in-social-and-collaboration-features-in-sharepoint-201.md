@@ -26,10 +26,10 @@ The **Newsfeed** page on SharePoint displays several of these improvements, incl
 
 ### New Social namespace provides APIs for social feeds and following people and content
 
-The **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](https://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
+The **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](/previous-versions/office/sharepoint-csom/jj164417(v=office.15)) for the .NET client object model, [SP.Social](/previous-versions/office/sharepoint-visio/jj628683(v=office.15)) for the JavaScript object model, and [Microsoft.Office.Server.Social](/previous-versions/office/sharepoint-server/jj264549(v=office.15)) for the server object model.
   
 > [!NOTE] 
-> The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
+> The API in the  [Microsoft.Office.Server.ActivityFeed](/previous-versions/office/sharepoint-server/ee584594(v=office.15)) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
   
     
     
@@ -37,11 +37,11 @@ The **Social** namespace contains the primary API for working with feeds and mic
 
 ### New client APIs for social feeds, following people and content, and user properties in SharePoint
 
-SharePoint includes new client APIs that you can use to work with social feeds, follow people and content, and retrieve user properties in online, on-premises, and mobile development. When possible, you should use client APIs for SharePoint development instead of using the server object model or web services. Client APIs include managed client object models, a JavaScript object model, and a Representational State Transfer (REST) service. If you are developing an SharePoint Add-in, you must use a client API.
+SharePoint includes new client APIs that you can use to work with social feeds, follow people and content, and retrieve user properties in online, on-premises, and mobile development. When possible, you should use client APIs for SharePoint development instead of using the server object model or web services. Client APIs include managed client object models, a JavaScript object model, and a Representational State Transfer (REST) service. If you are developing a SharePoint Add-in, you must use a client API.
   
     
     
-Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. For example, there's no client-side access to the API in the  [Microsoft.Office.Server.Audience](https://msdn.microsoft.com/library/Microsoft.Office.Server.Audience.aspx) namespace, the [Microsoft.Office.Server.ReputationModel](https://msdn.microsoft.com/library/Microsoft.Office.Server.ReputationModel.aspx) namespace, or the [Microsoft.Office.Server.SocialData](https://msdn.microsoft.com/library/Microsoft.Office.Server.SocialData.aspx) namespace. To see which APIs are available, see the [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) namespace and the [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) namespace.
+Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. For example, there's no client-side access to the API in the  [Microsoft.Office.Server.Audience](/previous-versions/office/sharepoint-server/ms559937(v=office.15)) namespace, the [Microsoft.Office.Server.ReputationModel](/previous-versions/office/sharepoint-server/jj884389(v=office.15)) namespace, or the [Microsoft.Office.Server.SocialData](/previous-versions/office/sharepoint-server/ee579636(v=office.15)) namespace. To see which APIs are available, see the [Microsoft.SharePoint.Client.Social](/previous-versions/office/sharepoint-csom/jj164417(v=office.15)) namespace and the [Microsoft.SharePoint.Client.UserProfiles](/previous-versions/office/sharepoint-csom/jj163481(v=office.15)) namespace.
   
     
     
@@ -165,18 +165,18 @@ SharePoint includes new objects that represent users and user properties:
     
     
 
-- The  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) object represents users (and other entities) for feed and following activities.
+- The  [SocialActor](/previous-versions/office/sharepoint-csom/jj164459(v=office.15)) object represents users (and other entities) for feed and following activities.
     
   
-- The  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object contains general user properties and user profile properties.
+- The  [PersonProperties](/previous-versions/office/sharepoint-csom/jj164752(v=office.15)) object contains general user properties and user profile properties.
     
 > [!NOTE] 
-> Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
+> Server object model versions are the  [SPSocialActor](/previous-versions/office/sharepoint-server/jj275459(v=office.15)) object and the [PersonProperties](/previous-versions/office/sharepoint-server/jj274629(v=office.15)) object.
   
     
     
 
-SharePoint also includes a new client-side  [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) object that provides methods you can use to create a personal site for the current user. However, it does not contain all the user properties that the server-side [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object contains. To access all user properties from client-side code, use the [PeopleManager.GetMyProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetMyProperties.aspx) method or [PeopleManager.GetPropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetPropertiesFor.aspx) method (user profile properties are stored in the [PersonProperties.UserProfileProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.UserProfileProperties.aspx) property) or use the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method or [PeopleManager.GetUserProfilePropertyFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertyFor.aspx) method.
+SharePoint also includes a new client-side  [UserProfile](/previous-versions/office/sharepoint-csom/jj164616(v=office.15)) object that provides methods you can use to create a personal site for the current user. However, it does not contain all the user properties that the server-side [UserProfile](/previous-versions/office/sharepoint-server/ms566874(v=office.15)) object contains. To access all user properties from client-side code, use the [PeopleManager.GetMyProperties](/previous-versions/office/sharepoint-csom/jj164086(v=office.15)) method or [PeopleManager.GetPropertiesFor](/previous-versions/office/sharepoint-csom/jj163877(v=office.15)) method (user profile properties are stored in the [PersonProperties.UserProfileProperties](/previous-versions/office/sharepoint-csom/jj163311(v=office.15)) property) or use the [PeopleManager.GetUserProfilePropertiesFor](/previous-versions/office/sharepoint-csom/jj164532(v=office.15)) method or [PeopleManager.GetUserProfilePropertyFor](/previous-versions/office/sharepoint-csom/jj164288(v=office.15)) method.
   
     
     
@@ -184,7 +184,7 @@ SharePoint also includes a new client-side  [UserProfile](https://msdn.microsoft
 ### New client-side people picker control
 <a name="bkmk_NewUserObjects"> </a>
 
-The client-side People Picker control is an HTML and JavaScript control that provides cross-browser support for selecting people, groups, and claims. You can configure the picker with the same settings as the server-side version of the control, including control-specific properties (like allowing multiple users or users and groups) and web application-level configuration settings (like Active Directory Domain Services parameters or targeting particular forests). For more information, see  [Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/383f265f-ed44-4d09-b2f6-366f13d52347%28Office.15%29.aspx).
+The client-side People Picker control is an HTML and JavaScript control that provides cross-browser support for selecting people, groups, and claims. You can configure the picker with the same settings as the server-side version of the control, including control-specific properties (like allowing multiple users or users and groups) and web application-level configuration settings (like Active Directory Domain Services parameters or targeting particular forests). For more information, see  [Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in).
   
     
     
@@ -197,7 +197,7 @@ The following My Site Social API and features are deprecated in SharePoint:
     
     
 
-- The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. The **Social** namespace provides the API for programmatically working with social feeds in SharePoint. For backward compatibility, **ActivityEvent** items from SharePoint 2010 are displayed in SharePoint feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
+- The API in the  [Microsoft.Office.Server.ActivityFeed](/previous-versions/office/sharepoint-server/ee584594(v=office.15)) namespace is deprecated. The **Social** namespace provides the API for programmatically working with social feeds in SharePoint. For backward compatibility, **ActivityEvent** items from SharePoint 2010 are displayed in SharePoint feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
     
   
 - The My Site RSS feed (ActivityFeed.aspx) is replaced with new APIs in the REST service, the client object model, and the JavaScript object model. To migrate custom SharePoint 2010 code that uses this API (preferably a client API), replace all requests to ActivityFeed.aspx with calls to the new API and handle feed data that is returned in JavaScript Object Notation (JSON) format.
@@ -214,7 +214,7 @@ The following My Site Social API and features are deprecated in SharePoint:
 - The following activity events no longer automatically inform the feed: profile update, upcoming birthday, upcoming workplace anniversary, new membership, and change of manager. However, you can create custom event receivers for these activities. No new social events have been added.
     
   
-- The following fields in the  [Privacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.Privacy.aspx) enumeration are deprecated: **Contacts**, **Organization**, and **Manager**. SharePoint offers only **Private** ( **Only Me**) and **Public** ( **Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields.
+- The following fields in the  [Privacy](/previous-versions/office/sharepoint-server/ms518310(v=office.15)) enumeration are deprecated: **Contacts**, **Organization**, and **Manager**. SharePoint offers only **Private** ( **Only Me**) and **Public** ( **Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields.
     
   
 - The **Following People** API that is accessed from the **SocialFollowingManager** replaces the **Colleagues** functionality from SharePoint Server 2010. The **Colleagues** page is replaced with the **People I'm following** page. The **Groups** feature that enabled users to organize colleagues into groups is no longer available.
@@ -243,13 +243,13 @@ The following list contains information for developing with Community Site featu
     
     
 
-- Community Sites use the **Community** site template ( [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WebTemplate.Id.aspx) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
+- Community Sites use the **Community** site template ( [Id](/previous-versions/office/sharepoint-server/ee544844(v=office.15)) = **62**). The site template is not available for public websites. The template type of the discussion board list is  [DiscussionBoard](/previous-versions/office/sharepoint-server/ee541191(v=office.15)) (value = **108**).
     
   
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
     
   
-- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](/sharepoint/dev/sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering).
     
   
 - Community Sites use asynchronous events to update objects. If asynchronous events run in the background, you may encounter  *Save*  conflicts when you attempt to update lists or list items, and your handle to the object may become stale.
