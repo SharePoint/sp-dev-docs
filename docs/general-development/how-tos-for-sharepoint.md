@@ -11,6 +11,12 @@ ms.localizationpriority: high
 
 Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, SharePoint Framework and SharePoint Add-ins.
 
+> **Important notice: SharePoint Add-ins are deprecated**
+>
+> SharePoint Add-ins (including provider-hosted and SharePoint-hosted add-ins) are a legacy development model. They are no longer recommended for new development and have been largely superseded by SharePoint Framework (SPFx), Microsoft Graph, and Microsoft 365 development patterns.
+>
+> This page includes both modern SharePoint Framework (SPFx) guidance and legacy SharePoint Add-in content for reference purposes only. For new solutions, use SPFx and Microsoft 365 developer services instead.
+
 ## Getting started how-tos for SharePoint Framework
 
 |Title|Summary|
@@ -65,7 +71,6 @@ Find how-to articles and related code examples that show how to perform basic de
 
 |Title|Summary|
 |:-----|:-----|
-| [Add license checks to your apps for Office](https://msdn.microsoft.com/library/fp161347.aspx) |Learn how to add code to your Office Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code.  |
 | [Add license checks to Office and SharePoint Add-ins](/office/dev/store/add-license-checks-to-office-and-sharepoint-add-ins) |Learn how to add code to your SharePoint Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code.  |
 
 ## Setting up your dev environment how-tos for developing sites and solutions in SharePoint
@@ -106,7 +111,7 @@ Find how-to articles and related code examples that show how to perform basic de
 |Title|Summary|
 |:-----|:-----|
 | [Use code to pin terms to navigation term sets in SharePoint](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md) |Learn how to use code to pin terms to navigation term sets.  |
-| [Create device channels in SharePoint](https://msdn.microsoft.com/library/339c7dba-95ee-46e0-8c76-0fe1adb6f366.aspx) |Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint.  |
+| [Create device channels in SharePoint](/sharepoint/dev/general-development/sharepoint-design-manager-device-channels#create) |Learn how to create a device channel, change a device channel, delete a device channel, and reorder device channels in SharePoint.  |
 | [Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md) |Learn how to map a network drive to the Master Page Gallery so that you can use Design Manager to upload design files in SharePoint.  |
 | [Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md) |With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.  |
 | [Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint.md) |Learn how to map a master page to a SharePoint site.  |
@@ -118,8 +123,8 @@ Find how-to articles and related code examples that show how to perform basic de
 | [Add a web part zone snippet in SharePoint](how-to-add-a-web-part-zone-snippet-in-sharepoint.md) |A web part zone is a snippet that you can add to a page layout so that content authors can add, edit, or delete web parts in that zone.  |
 | [Add a Security Trim snippet in SharePoint](how-to-add-a-security-trim-snippet-in-sharepoint.md) |You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have and whether the users are authenticated or anonymous.  |
 | [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md) |Learn how to create, edit, or delete image renditions. An image rendition defines the dimensions that are used to display images in SharePoint publishing sites.  |
-| [Add an image rendition to a page in SharePoint](https://msdn.microsoft.com/library/fp161347.aspx) |Learn how to use image renditions in a SharePoint publishing site.  |
-| [Crop an image rendition in SharePoint](https://msdn.microsoft.com/library/fp161347.aspx) |Learn how to specify the portion of the image to use in an image rendition.  |
+| [Add an image rendition to a page in SharePoint](/sharepoint/dev/general-development/sharepoint-design-manager-image-renditions#add-an-image-rendition) |Learn how to use image renditions in a SharePoint publishing site.  |
+| [Crop an image rendition in SharePoint](/sharepoint/dev/general-development/sharepoint-design-manager-image-renditions#crop-an-image-rendition) |Learn how to specify the portion of the image to use in an image rendition.  |
 
 ## Workflow how-tos for SharePoint
 
@@ -135,8 +140,8 @@ Find how-to articles and related code examples that show how to perform basic de
 | [Read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md) |Create a SharePoint-hosted app that uses the REST service to publish a post and get the personal feed for the current user.  |
 | [Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md) |Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint .NET client object model.  |
 | [Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md) |Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint JavaScript object model.  |
-| [Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md) |Learn how to add [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to microblog posts, which render as mentions, tags, or links in SharePoint social feeds. |
-| [Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md) |Learn how to add [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds. |
+| [Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md) |Learn how to add [SocialDataItem](/previous-versions/office/sharepoint-csom/jj164135(v=office.15)) objects to microblog posts, which render as mentions, tags, or links in SharePoint social feeds. |
+| [Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md) |Learn how to add [SocialAttachment](/previous-versions/office/sharepoint-csom/jj163900(v=office.15)) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds. |
 | [Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md) |Learn how to work with Following People features by using the SharePoint .NET client object model.  |
 | [Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md) |Learn how to work with Following People features by using the SharePoint JavaScript object model.  |
 | [Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md) |Learn how to work with Following Content features by using the SharePoint .NET client object model.  |
@@ -192,7 +197,7 @@ Find how-to articles and related code examples that show how to perform basic de
 |Title|Summary|
 |:-----|:-----|
 | [Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md) |Learn how to create and implement a SharePoint claims provider that fulfills the requirements for claims augmentation and claims picking.  |
-| [Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md) |Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx). |
+| [Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md) |Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](/previous-versions/office/sharepoint-server/ee559827(v=office.15)). |
 
 ## See also
 
