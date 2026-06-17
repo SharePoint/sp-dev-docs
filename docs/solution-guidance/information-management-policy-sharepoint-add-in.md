@@ -35,7 +35,7 @@ The following O365 PnP Code Sample and video demonstrates how to manage and appl
 
 ## Related links
 
-- [Office 365 development and SharePoint PnP solution guidance](https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/office-365-development-patterns-and-practices-solution-guidance)
+- [Office 365 development and SharePoint PnP solution guidance](/sharepoint/dev/solution-guidance/office-365-development-patterns-and-practices-solution-guidance)
 
 ## PnP samples
 
