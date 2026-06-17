@@ -29,7 +29,7 @@ Before you get started implementing user segmentation in SharePoint, be sure to 
 - SharePoint
 - Visual Studio 2012
 
-This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
+This article assumes that you have experience with developing web parts in SharePoint. For more information on developing web parts, refer to  [Building Block: web parts](/previous-versions/office/developer/sharepoint-2010/ee535520(v=office.14)).
 
 ## Overview on adding user segmentation functionality to your SharePoint site
 <a name="SP15_Overview_User_Segmentation"> </a>
