@@ -11,7 +11,8 @@ ms.localizationpriority: medium
 Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
 Social and collaboration features in SharePoint make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
   
-For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](https://technet.microsoft.com/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+
 ## New and changed My Site features in SharePoint
 <a name="bkmk_Social"> </a>
 
