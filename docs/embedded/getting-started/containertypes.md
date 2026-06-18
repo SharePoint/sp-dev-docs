@@ -190,6 +190,6 @@ To create and interact with containers, you must [register](../getting-started/r
 
 ## Deleting container types
 
-You can only delete trial container types. Deletion of standard container types isn't yet supported. Before you delete a container type, you need to remove every container of that type, including from the deleted container collection. To remove containers, see [Consuming Tenant Admin](../administration/consuming-tenant-admin/cta.md).
+You can only delete trial container types. Deletion of standard container types isn't yet supported. Before you delete a container type, you need to remove every container of that type, including from the deleted container collection. To remove containers, see [Delete fileStorageContainer](/graph/api/filestorage-delete-containers).
 
 Once every container is deleted, call the [Delete fileStorageContainerType](/graph/api/filestorage-delete-containertypes) endpoint. Non-administrator users can delete only container types they have a permission on. [SharePoint Embedded Administrators](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) and [Global Administrators](/entra/identity/role-based-access-control/permissions-reference#global-administrator) can delete any trial container type.

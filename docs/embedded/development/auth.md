@@ -214,7 +214,6 @@ Here are some actions you can take next:
       > [!NOTE]
       > **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** is a delegated permission and doesn't require admin consent. Any non-guest user in the owning tenant can consent to it and use it to create a container type; that user is then automatically added as an [owner of the container type](#container-type-owner-capabilities).
 
-1. [Grant admin consent](/entra/identity-platform/v2-admin-consent) to your application on your _owning_ tenant for the application permissions you added (admin consent isn't required for the delegated **[FileStorageContainerType.Manage.All](/graph/permissions-reference#filestoragecontainertypemanageall)** scope).
 1. [Create a new container type](../getting-started/containertypes.md) on the _owning_ tenant.
 1. Reconfigure your SharePoint Embedded [application manifest](/entra/identity-platform/reference-app-manifest#requiredresourceaccess-attribute) to request only the required permissions on consuming tenants:
 
