@@ -94,8 +94,7 @@ When you need to define a specific view for a given SharePoint field and ensure 
 
 The following articles demonstrate how to set the JSLink property on a SPField.
 
-- [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
-- [Using JSLink with SharePoint 2013 (MSDN Magazine)](/archive/msdn-magazine/2014/june/sharepoint-using-jslink-with-sharepoint-2013)
+- [SharePoint : Using JSLink with SharePoint 2013](/archive/msdn-magazine/2014/june/sharepoint-using-jslink-with-sharepoint-2013)
 
 ## Challenges with implementing client-side rendering with JavaScript files via the JSLink property
 
@@ -128,7 +127,6 @@ As you develop custom client-side rendering components, keep in mind the followi
 ## Related links
 
 - [SPField.JSLink property (MSDN API Docs)](/previous-versions/office/sharepoint-server/jj172063(v=office.15))
-- [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
 - [Using JSLink with SharePoint 2013 (MSDN Magazine)](/archive/msdn-magazine/2014/june/sharepoint-using-jslink-with-sharepoint-2013)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in Microsoft Learn: [Office 365 Development Patterns and Practices (PnP) solution guidance](/sharepoint/dev/solution-guidance/office-365-development-patterns-and-practices-solution-guidance)
