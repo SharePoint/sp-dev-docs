@@ -7,6 +7,16 @@ ms.localizationpriority: medium
 
 # What's new in SharePoint Embedded
 
+## June 2026
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new `urlTemplate` [setting](/graph/api/resources/filestoragecontainertypesettings). For more information on what the `urlTemplate` setting does, see [Configure redirect behavior](./development/content-experiences/configure-redirect-behavior.md).
+
+## May 2026
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) operations now emit audit logs for `ContainerTypeCreated`, `ContainerTypeDeleted`, `ContainerTypeUpdated` and `ContainerTypeOwnersUpdated`. For more information, see [SharePoint Embedded audit log events](./compliance/audit-events.md#container-type-activities).
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) supports bulk creation and update of `permissions` using delta patch. For more information, see [Upsert permissions](/graph/api/filestoragecontainer-patch-permissions).
+- Clarified the authorization model for administrative actions on containers. For more information, see [Operations that involve administrative actions on containers](./development/auth.md#operations-that-involve-administrative-actions-on-containers).
+
 ## March 2026
 
 - [SharePoint Embedded agent SDK](./development/declarative-agent/spe-da.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./development/declarative-agent/sharepoint-embedded-knowledge-source.md).
