@@ -107,4 +107,3 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 - [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
 - [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2016](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2016/)
