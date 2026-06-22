@@ -66,5 +66,4 @@ Refer to the Heft Sass plugin documentation for more information how to configur
 - [SharePoint Framework v1.16.1 release notes](../release-1.16.1.md)
 - [Heft-based toolchain (SPFx v1.22.0+)](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Gulp-based toolchain (legacy)](sharepoint-framework-toolchain.md)
-- [Stefan Bauer: What’s new with SASS in SPFx v1.16.0](https://n8d.at/whats-new-with-sass-in-spfx-1-16-0)\
-- [Andrew Connell: Unboxing the SharePoint Framework (SPFx) v1.16.1 release](https://www.voitanos.io/blog/sharepoint-framework-v1-16-1-whats-in-latest-update-of-spfx/)
+- [Stefan Bauer: What’s new with SASS in SPFx v1.16.0](https://n8d.at/whats-new-with-sass-in-spfx-1-16-0)
