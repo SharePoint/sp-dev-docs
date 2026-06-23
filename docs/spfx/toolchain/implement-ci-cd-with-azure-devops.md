@@ -11,6 +11,9 @@ Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of 
 
 This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
+> [!NOTE]
+> Starting with **SPFx v1.22.0**, the build system uses [Heft](https://rushstack.io/pages/heft/overview/) instead of Gulp. For Heft-based pipelines, see [Azure DevOps Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md). For legacy Gulp-based projects (SPFx v1.0 - v1.21.x), this article applies. To migrate to Heft, see [Migrate from the Gulp Toolchain to Heft Toolchain](./migrate-gulptoolchain-hefttoolchain.md).
+
 ## Choosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
 
 There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.
@@ -48,13 +51,13 @@ The Build Definition, as its name suggests, includes all the definitions and the
 > [!NOTE]
 > Build definitions can be described as a process template. It is a set of configured tasks that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
-### Installing NodeJS version 10
+### Installing NodeJS
 
-Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 10, as SharePoint Framework depends on it.
+Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install a supported version for your SPFx project (Node 18.x or later for SPFx 1.22+).
 ![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE]
-> Make sure you specify `10.x` in the `Version Spec` field. If your project is based on SharePoint Framework 1.7.1 or earlier, use version 8.x.
+> Make sure you specify the appropriate Node version in the `Version Spec` field. For SPFx 1.22+, use `22.x` (LTS). For SPFx 1.20-1.21.x, use `18.x`. For older versions, refer to the [SPFx release notes](../release-notes.md) for the recommended Node version.
 
 ### Restoring dependencies
 
@@ -143,13 +146,29 @@ In order to get code coverage reported with the build status you need to add a t
 
 ### Bundling the solution
 
-You first need to bundle your solution in order to get static assets that can be understood by a web browser.  Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
+You first need to bundle your solution in order to get static assets that can be understood by a web browser.
+
+**For SPFx 1.22+ (Heft-based):** Add a `Command Line` task and run the following command:
+
+```
+npm run build -- --production
+```
+
+**For SPFx 1.0 - 1.21.x (Gulp-based):** Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
 
 ![bundling the assets](../../images/azure-devops-spfx-06.png)
 
 ### Packaging the solution
 
-Now that you have static assets, the next step is to combine the assets into a package SharePoint will be able to deploy. Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to `package-solution` and add `--ship` in the `Arguments`.
+Now that you have static assets, the next step is to combine the assets into a package SharePoint will be able to deploy.
+
+**For SPFx 1.22+ (Heft-based):** Add a `Command Line` task and run the following command:
+
+```
+npm run package-solution -- --production
+```
+
+**For SPFx 1.0 - 1.21.x (Gulp-based):** Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to `package-solution` and add `--ship` in the `Arguments`.
 
 ![packaging the solution](../../images/azure-devops-spfx-07.png)
 
@@ -206,9 +225,9 @@ When you create your continuous deployment environment, you can give a name and 
 
 ### Installing NodeJS
 
-By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
+By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing the appropriate NodeJS version for your project.
 
-Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
+Add a `Node tool installer` task and define the appropriate version in the `Version Spec` field (use `22.X` for SPFx 1.22+).
 
 ![Screenshot of the Node dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
 
@@ -293,4 +312,6 @@ Your DevOps pipeline for your SharePoint Framework solution in Azure DevOps is n
 
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
 - [Sample Project on GitHub](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
-- [Integrate Gulp Tasks in the build pipeline](./integrate-gulp-tasks-in-build-pipeline.md)
+- [Heft-based toolchain (SPFx v1.22.0+)](./sharepoint-framework-toolchain-rushstack-heft.md)
+- [Migrate from the Gulp Toolchain to Heft Toolchain](./migrate-gulptoolchain-hefttoolchain.md)
+- [Integrate Gulp Tasks in the build pipeline](./integrate-gulp-tasks-in-build-pipeline.md) (legacy)

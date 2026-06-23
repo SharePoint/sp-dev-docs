@@ -9,6 +9,9 @@ Azure Pipelines is the newer version of the Azure DevOps build and release featu
 
 This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
+> [!NOTE]
+> Starting with **SPFx v1.22.0**, the build system is based on [Heft](https://rushstack.io/pages/heft/overview/) instead of Gulp. The examples below show the Heft-based approach for SPFx 1.22+. If you're using an older SPFx version, see [Azure DevOps Builds and Releases](./implement-ci-cd-with-azure-devops.md) for Gulp-based guidance or refer to [Migrate from the Gulp Toolchain to Heft Toolchain](./migrate-gulptoolchain-hefttoolchain.md).
+
 ## Choosing between Azure Multi-stage Pipelines and Azure DevOps builds and releases
 
 There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.
@@ -43,9 +46,9 @@ jobs:
       - checkout: self
 
       - task: NodeTool@0
-        displayName: 'Use Node 10.x'
+        displayName: 'Use Node 22.x'
         inputs:
-          versionSpec: 10.x
+          versionSpec: 22.x
           checkLatest: true
 
       - task: CacheBeta@1
@@ -56,11 +59,8 @@ jobs:
       - script: npm ci
         displayName: 'npm ci'
 
-      - task: Gulp@0
-        displayName: 'Bundle project'
-        inputs:
-          targets: bundle
-          arguments: '--ship'
+      - script: npm run build -- --production
+        displayName: 'Build and bundle project'
 
       - script: npm test
         displayName: 'npm test'
@@ -78,11 +78,8 @@ jobs:
           codeCoverageTool: Cobertura
           summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
 
-      - task: Gulp@0
+      - script: npm run package-solution -- --production
         displayName: 'Package Solution'
-        inputs:
-          targets: 'package-solution'
-          arguments: '--ship'
 
       - task: CopyFiles@2
         displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
