@@ -33,6 +33,15 @@ In the project's **package.json** file, identify all SPFx v1.5.1 packages. For e
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.6 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## New features and capabilities
 
 ### Web API (general availability)

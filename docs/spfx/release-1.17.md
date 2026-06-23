@@ -38,6 +38,15 @@ In the project's **package.json** file, identify all SPFx v1.16.1 packages. For 
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.17 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## New features and capabilities
 
 - Updates and improvements on building Microsoft 365 wide experiences with **Microsoft Teams apps build with SharePoint Framework** – This model enables you to build auto-hosted apps in Microsoft 365, which are extended across Microsoft Teams, Outlook and Office 365 app (office.com). Any Microsoft Teams app build with SharePoint Framework is automatically now compliant with the requirements to get the app exposed across Microsoft 365.

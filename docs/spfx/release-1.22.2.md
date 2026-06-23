@@ -41,6 +41,15 @@ In the project's **package.json** file, identify all SPFx v1.22 packages. For ea
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.22.2 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## Fixed Issues
 
 Starting January 2026, we are introducing a monthly minor release cycle focused on keeping the SharePoint Framework developer environment clean from known npm vulnerabilities. The goal is to avoid confusion when npm audit reports issues during solution scaffolding on local development machines.

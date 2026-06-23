@@ -35,6 +35,15 @@ In the project's **package.json** file, identify all SPFx v1.10 packages. For ea
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.11.0 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## New features and capabilities
 
 - Supporting SharePoint Framework solutions in AppSource and in Marketplace

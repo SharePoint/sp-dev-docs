@@ -42,6 +42,15 @@ npm install @microsoft/generator-sharepoint@latest --global
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.17.3 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## Fixed Issues
 
 Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
