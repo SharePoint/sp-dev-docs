@@ -33,7 +33,7 @@ In the project's **package.json** file, identify all SPFx v1.10 packages. For ea
 > [!IMPORTANT]
 > Be sure you update the **package-solution.json** with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
 > To upgrade this project, run:

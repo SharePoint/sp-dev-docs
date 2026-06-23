@@ -28,7 +28,7 @@ In the project's **package.json** file, identify all SPFx v1.8.1 packages. For e
     npm install @microsoft/{spfx-package-name}@1.8.2.0 --save --save-exact
     ```
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
 > To upgrade this project, run:
