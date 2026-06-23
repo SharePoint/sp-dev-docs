@@ -30,6 +30,15 @@ In the project's **package.json** file, identify all SPFx v1.13 packages. For ea
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.13.1 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## Changes in this release
 
 - 1.13.0 for "Create a subfolder with solution name" does not work

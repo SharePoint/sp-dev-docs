@@ -30,6 +30,15 @@ In the project's **package.json** file, identify all SPFx v1.8.0 packages. For e
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.8.1 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## Changes in this release
 
 - Fixed: Not able to set up SharePoint Server 2016 or SharePoint Server 2019 on premises using **\@microsoft/sharepoint** Yeoman generator  (two issues mentioned – incorrect SupportedHosts property and incorrect reference to sp-property-pane)

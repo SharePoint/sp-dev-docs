@@ -30,6 +30,15 @@ In the project's **package.json** file, identify all SPFx v1.11.0 packages. For 
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.12.1 --output md
+> ```
+>
+> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+
 ## New features and capabilities
 
 - The **Sync to Teams** button in the Tenant App Catalog will use the Teams app manifest defined in the solution if present to create and publish a Teams app package to Microsoft Teams. If an app manifest file is not present, SharePoint will dynamically generate one.
