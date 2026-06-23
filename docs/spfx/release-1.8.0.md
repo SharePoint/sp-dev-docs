@@ -51,7 +51,7 @@ We'll release more updated documentation and guidance videos during upcoming day
 
 1. Fix all the new and interesting tslint errors that are now getting raised with a newer compiler. For large projects, this might take a while. The default behavior of the TypeScript compilers is getting stricter, but your code will be the better for it.
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
 > To upgrade this project, run:

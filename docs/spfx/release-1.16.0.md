@@ -36,7 +36,7 @@ In the project's **package.json** file, identify all SPFx v1.15.2 packages. For 
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
 > To upgrade this project, run:

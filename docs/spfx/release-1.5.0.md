@@ -49,7 +49,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
     }
     ```
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
 > To upgrade this project, run:
