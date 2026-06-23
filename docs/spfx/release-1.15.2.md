@@ -61,7 +61,7 @@ Now developers are able to specify **optional** attributes `appId` and `replyUrl
 
 When these attributes are present, administrators are presented standard Azure AD app registration consent as part of the API approval process.
 
-For more information on this feature, see: [Requesting permissions to Azure AD applications in another tenant](use-aadhttpclient.md#requesting-permissions-to-azure-ad-applications-in-another-tenant).
+For more information on this feature, see: [Requesting permissions to Entra ID applications in another tenant](use-aadhttpclient.md#requesting-permissions-to-entra-id-applications-in-another-tenant).
 
 ### New Action types for media - General Availability
 
