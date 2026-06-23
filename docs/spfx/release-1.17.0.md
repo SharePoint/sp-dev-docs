@@ -47,6 +47,8 @@ In the project's **package.json** file, identify all SPFx v1.16.1 packages. For 
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 - Updates and improvements on building Microsoft 365 wide experiences with **Microsoft Teams apps build with SharePoint Framework** – This model enables you to build auto-hosted apps in Microsoft 365, which are extended across Microsoft Teams, Outlook and Office 365 app (office.com). Any Microsoft Teams app build with SharePoint Framework is automatically now compliant with the requirements to get the app exposed across Microsoft 365.

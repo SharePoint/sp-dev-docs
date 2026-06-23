@@ -39,6 +39,8 @@ In the project's **package.json** file, identify all SPFx v1.9.1 packages. For e
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 - Create Search Extensions (dev preview)

@@ -39,6 +39,8 @@ In the project's **package.json** file, identify all SPFx v1.13 packages. For ea
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## Changes in this release
 
 - 1.13.0 for "Create a subfolder with solution name" does not work

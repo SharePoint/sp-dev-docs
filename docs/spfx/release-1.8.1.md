@@ -39,6 +39,8 @@ In the project's **package.json** file, identify all SPFx v1.8.0 packages. For e
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## Changes in this release
 
 - Fixed: Not able to set up SharePoint Server 2016 or SharePoint Server 2019 on premises using **\@microsoft/sharepoint** Yeoman generator  (two issues mentioned – incorrect SupportedHosts property and incorrect reference to sp-property-pane)

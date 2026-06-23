@@ -39,6 +39,8 @@ In the project's **package.json** file, identify all SPFx v1.11.0 packages. For 
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 - The **Sync to Teams** button in the Tenant App Catalog will use the Teams app manifest defined in the solution if present to create and publish a Teams app package to Microsoft Teams. If an app manifest file is not present, SharePoint will dynamically generate one.

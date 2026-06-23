@@ -39,6 +39,8 @@ In the project's **package.json** file, identify all SPFx pre-v1 packages. For e
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 You can get the updated npm packages and use them in the local workbench, and everything should be fine. However, the rollout of the code to the servers will be done in stages over the course of several days. By sometime next week 100% of the farms should have it. We do this to monitor the rollout and make sure we don't have any issues.

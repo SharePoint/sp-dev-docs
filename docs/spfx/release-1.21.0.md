@@ -50,6 +50,8 @@ In the project's **package.json** file, identify all SPFx v1.20 packages. For ea
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 ### Node.js v22 support

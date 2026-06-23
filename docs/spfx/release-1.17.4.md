@@ -51,6 +51,8 @@ npm install @microsoft/generator-sharepoint@latest --global
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 ### Enable Strict Null Check for the generated solutions

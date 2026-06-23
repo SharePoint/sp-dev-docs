@@ -62,6 +62,8 @@ We'll release more updated documentation and guidance videos during upcoming day
 >
 > This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ## New features and capabilities
 
 ### SPFx development for Teams tabs (General Availability)
