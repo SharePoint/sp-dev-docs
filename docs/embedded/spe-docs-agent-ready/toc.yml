@@ -1,0 +1,81 @@
+- name: SharePoint Embedded
+  href: index.md
+  items:
+    - name: New to SharePoint Embedded
+      items:
+        - name: Overview
+          href: overview.md
+        - name: Scenarios and use cases
+          href: scenarios-and-use-cases.md
+        - name: What's new
+          href: whats-new.md
+    - name: Set up your environment
+      items:
+        - name: VS Code extension
+          href: getting-started/spembedded-for-vscode.md
+        - name: Container types
+          href: getting-started/containertypes.md
+        - name: Register container type API
+          href: getting-started/register-api-documentation.md
+    - name: Build your app
+      items:
+        - name: Application architecture
+          href: development/app-architecture.md
+        - name: Authentication and authorization
+          href: development/auth.md
+        - name: Sharing and permissions
+          href: development/sharing-and-perm.md
+        - name: Limits and calling patterns
+          href: development/limits-calling.md
+        - name: Fluid Framework
+          href: development/fluid.md
+        - name: AI knowledge source in Microsoft Foundry
+          href: development/declarative-agent/sharepoint-embedded-knowledge-source.md
+    - name: Content experiences
+      items:
+        - name: Office experiences
+          href: development/content-experiences/office-experience.md
+        - name: User experiences overview
+          href: development/content-experiences/user-experiences-overview.md
+        - name: Search content
+          href: development/content-experiences/search-content.md
+    - name: Tutorials
+      items:
+        - name: Launch experience
+          href: development/tutorials/launch-experience.md
+        - name: Using metadata on containers
+          href: development/tutorials/metadata.md
+        - name: File preview in iFrame
+          href: development/tutorials/using-file-preview.md
+        - name: Document processing with Azure AI
+          href: development/tutorials/doc-processing-acs.md
+        - name: Using webhooks
+          href: development/tutorials/using-webhooks.md
+        - name: Migrate Azure Blob Storage to SPE
+          href: development/tutorials/migrate-abs-to-spe.md
+        - name: Install app in a customer tenant
+          href: development/tutorials/vendor-install-app-customer.md
+    - name: Billing & tenant management
+      items:
+        - name: Billing overview
+          href: administration/billing/billing.md
+        - name: Billing management
+          href: administration/billing/billingmanagement.md
+        - name: Billing meters
+          href: administration/billing/meters.md
+        - name: Developer admin role
+          href: administration/developer-admin/dev-admin.md
+        - name: SharePoint Embedded admin overview
+          href: administration/adminrole.md
+    - name: Consuming Tenant Admin
+      items:
+        - name: Consuming tenant admin overview
+          href: administration/consuming-tenant-admin/cta.md
+        - name: Container management in PowerShell
+          href: administration/consuming-tenant-admin/ctapowershell.md
+        - name: Admin UX (SharePoint Admin Center)
+          href: administration/consuming-tenant-admin/ctaux.md
+    - name: Compliance & Security
+      items:
+        - name: Security and compliance
+          href: compliance/security-and-compliance.md

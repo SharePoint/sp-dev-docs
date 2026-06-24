@@ -1,0 +1,479 @@
+{
+  "$schema": "https://learn.microsoft.com/sharepoint/dev/embedded/api-surface.schema.json",
+  "name": "SharePoint Embedded — Microsoft Graph API surface",
+  "description": "Machine-readable index of every SharePoint Embedded Graph operation an agent may need to plan a workflow. Curated, SPE-scoped subset of Microsoft Graph. Generated artifact: keep in sync with the live $metadata and the per-page agent.api_surface frontmatter.",
+  "version": "0.1-draft",
+  "lastGenerated": "2026-06-16",
+  "author": "Shreyas Saravanan",
+  "hosts": {
+    "v1.0": "https://graph.microsoft.com/v1.0",
+    "beta": "https://graph.microsoft.com/beta"
+  },
+  "sources": {
+    "metadata_v1.0": "https://graph.microsoft.com/v1.0/$metadata",
+    "openapi": "https://github.com/microsoftgraph/msgraph-metadata/blob/master/openapi/v1.0/openapi.yaml",
+    "reference_root": "https://learn.microsoft.com/graph/api/resources/filestoragecontainer"
+  },
+  "notes": [
+    "paths are relative to hosts[version]; prepend the host for the operation's `version`.",
+    "expectedStatus values are indicative and MUST be confirmed by the end-to-end execution harness before a page's last_validated is stamped.",
+    "permissions list Graph permission names; `application` = app-only, `delegated` = on-behalf-of-user.",
+    "the `gaps` array lists operations that SHOULD exist for full agent automation but have no Graph API today (see spe-agent-scenario-flow-analysis.md §5.2)."
+  ],
+  "stabilityLegend": {
+    "ga": "Generally available on the v1.0 endpoint.",
+    "beta": "Available only on the /beta endpoint; shape may change.",
+    "preview": "Public preview; not for production."
+  },
+  "operations": [
+    {
+      "id": "listContainers",
+      "area": "containers",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers?$filter=containerTypeId eq {containerTypeId}",
+      "summary": "List the fileStorageContainer objects of a container type accessible to the caller. A containerTypeId filter is required.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "inputs": [{ "name": "containerTypeId", "type": "uuid", "in": "query" }],
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-list-containers"
+    },
+    {
+      "id": "createContainer",
+      "area": "containers",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers",
+      "summary": "Create a new fileStorageContainer. Containers are created inactive and must be activated.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "inputs": [
+        { "name": "displayName", "type": "string", "in": "body" },
+        { "name": "containerTypeId", "type": "uuid", "in": "body" }
+      ],
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-post"
+    },
+    {
+      "id": "getContainer",
+      "area": "containers",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}",
+      "summary": "Read the properties and relationships of a fileStorageContainer. Use as the Verify call after create/activate.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "inputs": [{ "name": "containerId", "type": "string", "in": "path" }],
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-get"
+    },
+    {
+      "id": "updateContainer",
+      "area": "containers",
+      "method": "PATCH",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}",
+      "summary": "Update displayName, description, customProperties, settings, or assignedSensitivityLabel of a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-update"
+    },
+    {
+      "id": "deleteContainer",
+      "area": "containers",
+      "method": "DELETE",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}",
+      "summary": "Soft-delete a container (moves to the deleted container collection).",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 204,
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-delete-containers"
+    },
+    {
+      "id": "activateContainer",
+      "area": "containers",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/activate",
+      "summary": "Activate an inactive container. Inactive containers are auto-deleted after 24 hours.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-activate"
+    },
+    {
+      "id": "restoreDeletedContainer",
+      "area": "containers",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/deletedContainers/{containerId}/restore",
+      "summary": "Restore a soft-deleted container from the deleted container collection.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-restore"
+    },
+    {
+      "id": "permanentDeleteContainer",
+      "area": "containers",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permanentDelete",
+      "summary": "Permanently delete a container. Irreversible.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 204,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-permanentdelete"
+    },
+    {
+      "id": "lockContainer",
+      "area": "containers-lifecycle",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/lock",
+      "summary": "Lock a container to lockedReadOnly.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 204,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-lock"
+    },
+    {
+      "id": "unlockContainer",
+      "area": "containers-lifecycle",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/unlock",
+      "summary": "Unlock a container back to unlocked.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 204,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-unlock"
+    },
+    {
+      "id": "getContainerDrive",
+      "area": "content",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/drive",
+      "summary": "Get the drive resource of a container. All files/folders are driveItem resources under this drive.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-get-drive"
+    },
+    {
+      "id": "listDriveItems",
+      "area": "content",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/drives/{driveId}/items/{itemId}/children",
+      "summary": "List children of a folder in a container's drive. Use the standard driveItem surface once you have driveId from getContainerDrive.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/driveitem-list-children"
+    },
+    {
+      "id": "uploadFile",
+      "area": "content",
+      "method": "PUT",
+      "version": "v1.0",
+      "path": "/drives/{driveId}/items/{parentId}:/{filename}:/content",
+      "summary": "Upload (small) file content to a container's drive. Use createUploadSession for large files.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/driveitem-put-content"
+    },
+    {
+      "id": "downloadFile",
+      "area": "content",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/drives/{driveId}/items/{itemId}/content",
+      "summary": "Download file content from a container's drive.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/driveitem-get-content"
+    },
+    {
+      "id": "listContainerPermissions",
+      "area": "permissions",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permissions",
+      "summary": "List permissions on a container. Use as the Verify call after granting access.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-list-permissions"
+    },
+    {
+      "id": "addContainerPermission",
+      "area": "permissions",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permissions",
+      "summary": "Add a permission (roles: reader | writer | manager | owner) for a user on a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "inputs": [
+        { "name": "roles", "type": "string[]", "in": "body", "enum": ["reader", "writer", "manager", "owner"] },
+        { "name": "grantedToV2", "type": "object", "in": "body" }
+      ],
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-post-permissions"
+    },
+    {
+      "id": "updateContainerPermission",
+      "area": "permissions",
+      "method": "PATCH",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permissions/{permissionId}",
+      "summary": "Update the role on an existing container permission.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-update-permissions"
+    },
+    {
+      "id": "deleteContainerPermission",
+      "area": "permissions",
+      "method": "DELETE",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permissions/{permissionId}",
+      "summary": "Remove a permission from a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 204,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-delete-permissions"
+    },
+    {
+      "id": "upsertContainerPermissions",
+      "area": "permissions",
+      "method": "PATCH",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/permissions",
+      "summary": "Create or update up to 10 permissions on a container in a single request (batch).",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-patch-permissions"
+    },
+    {
+      "id": "listColumns",
+      "area": "metadata",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/columns",
+      "summary": "List the columnDefinition resources (structured metadata schema) of a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-list-columns"
+    },
+    {
+      "id": "createColumn",
+      "area": "metadata",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/columns",
+      "summary": "Create a column (columnDefinition) so files can carry queryable structured metadata.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-post-columns"
+    },
+    {
+      "id": "listContainerCustomProperties",
+      "area": "metadata",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/customProperties",
+      "summary": "List custom (key/value) properties on a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-list-customproperty"
+    },
+    {
+      "id": "addContainerCustomProperty",
+      "area": "metadata",
+      "method": "PATCH",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/customProperties",
+      "summary": "Add or set custom properties on a container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-post-customproperty"
+    },
+    {
+      "id": "listRecycleBinItems",
+      "area": "recycle-bin",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/recycleBin/items",
+      "summary": "List items in a container's recycle bin.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-list-recyclebinitem"
+    },
+    {
+      "id": "restoreRecycleBinItems",
+      "area": "recycle-bin",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/recycleBin/items/restore",
+      "summary": "Restore items from a container's recycle bin.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-restore-recyclebinitem"
+    },
+    {
+      "id": "createMigrationJob",
+      "area": "migration",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/migrationJobs",
+      "summary": "Create a sharePointMigrationJob to migrate content from intermediary storage into the container.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-post-migrationjobs"
+    },
+    {
+      "id": "provisionMigrationContainers",
+      "area": "migration",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/storage/fileStorage/containers/{containerId}/provisionMigrationContainers",
+      "summary": "Provision SharePoint-managed Azure blob containers as temporary staging for migration content and metadata.",
+      "permissions": { "application": ["FileStorageContainer.Selected"], "delegated": ["FileStorageContainer.Selected"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainer-provisionmigrationcontainers"
+    },
+    {
+      "id": "createContainerType",
+      "area": "container-types",
+      "method": "POST",
+      "version": "beta",
+      "path": "/storage/fileStorage/containerTypes",
+      "summary": "Create a container type on the owning tenant. billingClassification is trial | standard | directToCustomer.",
+      "permissions": { "application": ["FileStorageContainerType.Manage.All"], "delegated": [] },
+      "inputs": [
+        { "name": "name", "type": "string", "in": "body" },
+        { "name": "owningAppId", "type": "uuid", "in": "body" },
+        { "name": "billingClassification", "type": "string", "in": "body", "enum": ["trial", "standard", "directToCustomer"] }
+      ],
+      "expectedStatus": 201,
+      "stabilityNote": "Beta only today. Promote to v1.0 when GA (see gaps.promoteContainerTypeCrudToGa).",
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-post-containertypes"
+    },
+    {
+      "id": "listContainerTypes",
+      "area": "container-types",
+      "method": "GET",
+      "version": "beta",
+      "path": "/storage/fileStorage/containerTypes",
+      "summary": "List all container types the developer admin created on the tenant.",
+      "permissions": { "application": ["FileStorageContainerType.Manage.All"], "delegated": [] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-list-containertypes"
+    },
+    {
+      "id": "updateContainerType",
+      "area": "container-types",
+      "method": "PATCH",
+      "version": "beta",
+      "path": "/storage/fileStorage/containerTypes/{containerTypeId}",
+      "summary": "Reconfigure container type settings. Changes can take up to 24 hours to replicate to consuming tenants.",
+      "permissions": { "application": ["FileStorageContainerType.Manage.All"], "delegated": [] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/filestoragecontainertype-update"
+    },
+    {
+      "id": "deleteContainerType",
+      "area": "container-types",
+      "method": "DELETE",
+      "version": "beta",
+      "path": "/storage/fileStorage/containerTypes/{containerTypeId}",
+      "summary": "Delete a container type. Only trial container types can be deleted today; all containers must be removed first.",
+      "permissions": { "application": ["FileStorageContainerType.Manage.All"], "delegated": [] },
+      "expectedStatus": 204,
+      "stabilityNote": "Deletion of standard container types is not yet supported.",
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-delete-containertypes"
+    },
+    {
+      "id": "createContainerTypeRegistration",
+      "area": "onboarding",
+      "method": "POST",
+      "version": "beta",
+      "path": "/storage/fileStorage/containerTypeRegistrations",
+      "summary": "Register a container type in a consuming tenant and define the app's permissions on it. Prerequisite for creating containers there.",
+      "permissions": { "application": ["FileStorageContainerType.Manage.All"], "delegated": [] },
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/filestorage-post-containertyperegistrations"
+    },
+    {
+      "id": "grantAdminConsentEquivalent",
+      "area": "onboarding",
+      "method": "POST",
+      "version": "v1.0",
+      "path": "/servicePrincipals/{servicePrincipalId}/appRoleAssignedTo",
+      "summary": "API-equivalent of the portal 'Grant admin consent' click — assign an app role to the app's service principal. Use as the agent fallback for consent steps.",
+      "permissions": { "application": ["AppRoleAssignment.ReadWrite.All", "Application.Read.All"], "delegated": ["AppRoleAssignment.ReadWrite.All"] },
+      "expectedStatus": 201,
+      "docs": "https://learn.microsoft.com/graph/api/serviceprincipal-post-approleassignedto"
+    },
+    {
+      "id": "verifyAdminConsent",
+      "area": "onboarding",
+      "method": "GET",
+      "version": "v1.0",
+      "path": "/servicePrincipals/{servicePrincipalId}?$expand=appRoleAssignedTo",
+      "summary": "Verify that consent/app-role assignments are in place for the app. Use as the Verify call after consent.",
+      "permissions": { "application": ["Application.Read.All"], "delegated": ["Application.Read.All"] },
+      "expectedStatus": 200,
+      "docs": "https://learn.microsoft.com/graph/api/serviceprincipal-get"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "setUpContainerTypeBilling",
+      "area": "billing",
+      "wantedBy": ["owning-admin", "isv-developer"],
+      "status": "no-graph-api",
+      "today": "SharePoint Online Management Shell only: Add-SPOContainerTypeBilling / Set-SPOContainerType.",
+      "evidence": "containertypes Learn page: 'Billing setup for standard container types is done via the SharePoint Online Management Shell. In the future, this operation will be available as a Microsoft Graph operation.'",
+      "priority": "P0",
+      "blocksPages": ["administration/billing/billingmanagement", "getting-started/set-up-container-type-billing"]
+    },
+    {
+      "id": "activateConsumingTenantPayg",
+      "area": "billing",
+      "wantedBy": ["consuming-admin"],
+      "status": "ui-only",
+      "today": "Microsoft 365 admin center: Setup → Pay-as-you-go services → SharePoint Embedded.",
+      "priority": "P0",
+      "blocksPages": ["getting-started/containertypes#set-up-billing-profile-in-consuming-tenant"]
+    },
+    {
+      "id": "promoteContainerTypeCrudToGa",
+      "area": "container-types",
+      "status": "beta-only",
+      "today": "containerTypes create/list/update/delete and containerTypeRegistrations are beta.",
+      "priority": "P0"
+    },
+    {
+      "id": "listAllContainersTenantWide",
+      "area": "discovery",
+      "wantedBy": ["m365-admin", "agent-self-orientation"],
+      "status": "missing",
+      "today": "listContainers requires a known containerTypeId; no tenant-wide enumeration across all types.",
+      "priority": "P1"
+    },
+    {
+      "id": "capabilityDiscovery",
+      "area": "discovery",
+      "wantedBy": ["agent-self-orientation"],
+      "status": "missing",
+      "today": "No 'what container types does this app own + their consent/permission state on this tenant' endpoint.",
+      "priority": "P1"
+    },
+    {
+      "id": "uniformAsyncOperationStatus",
+      "area": "operations",
+      "status": "missing",
+      "today": "Activation, migration jobs, and 24h setting replication are eventually-consistent with no uniform pollable operation-status resource.",
+      "priority": "P1"
+    },
+    {
+      "id": "migrationRollback",
+      "area": "migration",
+      "status": "missing",
+      "today": "No documented rollback for a failed migration job.",
+      "priority": "P2"
+    }
+  ]
+}
