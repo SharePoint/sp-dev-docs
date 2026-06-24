@@ -151,7 +151,7 @@ You first need to bundle your solution in order to get static assets that can be
 **For SPFx 1.22+ (Heft-based):** Add a `Command Line` task and run the following command:
 
 ```
-npm run build -- --production
+heft build --clean --production
 ```
 
 **For SPFx 1.0 - 1.21.x (Gulp-based):** Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
@@ -165,7 +165,7 @@ Now that you have static assets, the next step is to combine the assets into a p
 **For SPFx 1.22+ (Heft-based):** Add a `Command Line` task and run the following command:
 
 ```
-npm run package-solution -- --production
+heft package-solution --production
 ```
 
 **For SPFx 1.0 - 1.21.x (Gulp-based):** Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to `package-solution` and add `--ship` in the `Arguments`.

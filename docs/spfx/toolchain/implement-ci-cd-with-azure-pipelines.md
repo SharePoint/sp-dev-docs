@@ -59,7 +59,7 @@ jobs:
       - script: npm ci
         displayName: 'npm ci'
 
-      - script: npm run build -- --production
+      - script: heft build --clean --production
         displayName: 'Build and bundle project'
 
       - script: npm test
@@ -78,7 +78,7 @@ jobs:
           codeCoverageTool: Cobertura
           summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
 
-      - script: npm run package-solution -- --production
+      - script: heft package-solution --production
         displayName: 'Package Solution'
 
       - task: CopyFiles@2
