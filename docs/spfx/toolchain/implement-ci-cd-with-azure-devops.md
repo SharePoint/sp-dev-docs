@@ -57,7 +57,7 @@ Once the Build Definition has been created, the first thing you need to do is in
 ![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE]
-> Make sure you specify the appropriate Node version in the `Version Spec` field. For SPFx 1.22+, use `22.x` (LTS). For SPFx 1.20-1.21.x, use `18.x`. For older versions, refer to the [SPFx release notes](../release-notes.md) for the recommended Node version.
+> Make sure you specify the appropriate Node version in the `Version Spec` field. For SPFx 1.22+, use `22.x` (LTS). For SPFx 1.20-1.21.x, use `18.x`.
 
 ### Restoring dependencies
 
@@ -130,7 +130,7 @@ describe("webPartName", () => {
 ```
 
 > [!NOTE]
-> You can learn more about writing unit tests using Jest [here](https://jestjs.io/docs/en/getting-started.html). You can learn more about testing react applications with Jest and Enzyme [here](https://jestjs.io/docs/en/tutorial-react) (you can ignore the setup part).
+> You can learn more about writing unit tests using Jest [here](https://jestjs.io/docs/en/getting-started.html). You can learn more about testing react applications with Jest and Enzyme [here](https://archive.jestjs.io/docs/en/23.x/tutorial-react) (you can ignore the setup part).
 
 ### Importing test results
 
@@ -247,7 +247,7 @@ Before using the App Catalog in your deployment environment, you first need to a
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
 > [!NOTE]
-> If you are using CLI for Microsoft 365 to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by CLI for Microsoft 365 to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on CLI for Microsoft 365 [User Guide](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/).
+> If you are using CLI for Microsoft 365 to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by CLI for Microsoft 365 to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on CLI for Microsoft 365 [User Guide](https://pnp.github.io/cli-microsoft365/user-guide/connecting-microsoft-365/).
 
 [!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
