@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded developer administrator
 description: This article describes the role and responsibilities of developer tenant admin in SharePoint Embedded.
-ms.date: 06/08/2026
+ms.date: 11/21/2023
 ms.localizationpriority: high
 ---
 # SharePoint Embedded Developer Administrator

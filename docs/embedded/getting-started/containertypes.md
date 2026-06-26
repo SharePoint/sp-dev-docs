@@ -1,7 +1,7 @@
 ---
 title: Create new SharePoint Embedded container types
 description: This article explains how container types work and the steps to create new container types.
-ms.date: 06/11/2026
+ms.date: 11/27/2023
 ms.localizationpriority: high
 ---
 
@@ -120,7 +120,6 @@ The billing profile for your container type is created using **SharePoint Online
 1. Download and install the [latest version of SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588)
 1. Open SharePoint Online Management Shell from **Start** screen, type **sharepoint**, and then select **SharePoint Online Management Shell**.
 1. Connect to SPO service using `Connect-SPOService` cmdlet by providing admin credentials associated with tenancy. For information, see [how to use Connect-SPOService](/powershell/module/sharepoint-online/connect-sposervice).
-.
 To create the standard billing profile for your container type, use the following cmdlet:
 
 ```powershell
@@ -136,7 +135,7 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 >
 > An Azure subscription can be attached to any number of container types.
 >
-> If the cmdlet above fails with a SubscriptionNotRegistered error, it is because **Microsoft.Syntex** isn't registered as a resource provider in the subscription. The cmdlet sends a resource provider registration request on your behalf but it takes a few minutes to be completed. Wait 5-10 minutes and try again until the cmdlet succeeds.
+> If the preceding cmdlet fails with a SubscriptionNotRegistered error, it is because **Microsoft.Syntex** isn't registered as a resource provider in the subscription. The cmdlet sends a resource provider registration request on your behalf but it takes a few minutes to be completed. Wait 5-10 minutes and try again until the cmdlet succeeds.
 
 To update the billing profile for a standard container type, use the following cmdlet:
 
