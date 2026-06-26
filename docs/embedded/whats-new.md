@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # What's new in SharePoint Embedded
 
+## June 2026
+
+- The [`FileStorageContainerType.Manage.All`](/graph/permissions-reference#filestoragecontainertypemanageall) Microsoft Graph permission no longer requires the [SharePoint Embedded Administrator](./administration/adminrole.md) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. Any non-guest user in the owning tenant can [create a container type](./getting-started/containertypes.md#creating-container-types) and is automatically assigned as an [owner of that container type](./development/auth.md#container-type-owner-capabilities).
+
 ## March 2026
 
 - [SharePoint Embedded agent SDK](./development/declarative-agent/spe-da.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./development/declarative-agent/sharepoint-embedded-knowledge-source.md).
