@@ -219,7 +219,7 @@ When implementing user segmentation, you use query rules to define conditions an
 1. Type a rule name in the **Rule Name** field. Then, select to expand **Context**.
 1. Under the **Query is performed by these user segments** section, choose **One of these user segments**, and then select **Add User Segment**.
 1. In the **Title** field, type a name for this user segment query rule. Choose **Add user segment term**.
-1. In the **Import from term store** dialog box, expand the **Managed Metadata Service**. Under **Site Collection**, locate the term set that holds the user segmentation terms that you previously defined in [Create a term set](#SP15_Create_a_term_set). Select the user segment for which you want to apply this query rule. Then, select **Save**.
+1. In the **Import from term store** dialog box, expand the **Managed Metadata Service**. Under **Site Collection**, locate the term set that holds the user segmentation terms that you previously defined in [Create a term set](#create-a-term-set). Select the user segment for which you want to apply this query rule. Then, select **Save**.
 1. Name your user segment n the **Add User Segment** dialog box.
 
     You have now mapped a query rule to a user segment, which in turn is mapped to a user segment term.
