@@ -1,37 +1,40 @@
 ---
 title: Information management policy in the SharePoint Add-in model
-description: The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job.
+description: The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server-Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job.
 ms.date: 11/03/2017
 ms.localizationpriority: medium
 ---
 # Information management policy in the SharePoint Add-in model
 
-> **Important (Modern SharePoint update):**  
-> The SharePoint Add-in (App) model described in this article is **deprecated and no longer recommended for new development** in SharePoint Online.  
+> [!NOTE]
+> **Important (Modern SharePoint update):**
+>
+> The SharePoint Add-in (App) model described in this article is **deprecated and no longer recommended for new development** in SharePoint Online.
+>
 > Modern solutions should use **SharePoint Framework (SPFx), Microsoft Graph, Microsoft Purview, and Microsoft 365 compliance capabilities** instead.
 
-The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job.
+The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server-Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job.
 
-In a SharePoint Add-in model scenario, the SharePoint Client Side Object Model (CSOM) and remote timer jobs are used to manage and apply information management policy.
+In a SharePoint Add-in model scenario, the SharePoint Client-Side Object Model (CSOM) and remote timer jobs are used to manage and apply information management policy.
 
-## High Level Guidelines
+## High-Level Guidelines
 
 As a rule of a thumb, we would like to provide the following high level guidelines to manage and apply information management policies to SharePoint sites.
 
 - Keep in mind, when information management policies are defined at the site collection level then site collection owners may disable them.
-  - When using the remote model and CSOM to set information management policies a site collection owner cannot disable them.  The remote model approach is a more enterprise friendly model that ensures information management policies are always enabled throughout a SharePoint environment.
+  - When using the remote model and CSOM to set information management policies a site collection owner can't disable them. The remote model approach is a more enterprise-friendly model that ensures information management policies are always enabled throughout a SharePoint environment.
 - Use the SharePoint CSOM in a remote timer job to manage and apply information management policies.
-- Ensure you are not violating the Office 365 SharePoint API throttle limits when working with large data sets and recursive crawls as you inspect artifacts in your SharePoint sites and apply information management policies to them accordingly.
-  - The [Core.Throttling (O365 Pnp Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.Throttling) demonstrates how to write intelligent code to handle Office 365 SharePoint API throttling.
+- Ensure you aren't violating the Office 365 SharePoint API throttle limits when working with large data sets and recursive crawls as you inspect artifacts in your SharePoint sites and apply information management policies to them accordingly.
+  - The [Core.Throttling (Microsoft 365 PnP Sample)](https://github.com/pnp/PnP/tree/master/Samples/Core.Throttling) demonstrates how to write intelligent code to handle Office 365 SharePoint API throttling.
 
 > [!NOTE]
-> Currently, the CSOM does not have methods to set retention on content types (only on sites).
+> Currently, the CSOM doesn't have methods to set retention on content types (only on sites).
 
 ## Getting Started
 
-The following O365 PnP Code Sample and video demonstrates how to manage and apply information management policy for SharePoint sites.  In this example, the code iterates through the content types applied to document libraries in SharePoint site collections and applies a retention policy.
+The following Microsoft 365 PnP Code Sample and video demonstrates how to manage and apply information management policy for SharePoint sites. In this example, the code iterates through the content types applied to document libraries in SharePoint site collections and applies a retention policy.
 
-- [Governance.ContentTypeEnforceRetention (O365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
+- [Governance.ContentTypeEnforceRetention (Microsoft 365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
 
 ## Related links
 
@@ -39,12 +42,12 @@ The following O365 PnP Code Sample and video demonstrates how to manage and appl
 
 ## PnP samples
 
-- [Governance.ContentTypeEnforceRetention (O365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
-- Samples and content at https://github.com/pnp/PnP
+- [Governance.ContentTypeEnforceRetention (Microsoft 365 PnP Code Sample)](https://github.com/pnp/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
+- Samples and content at [github.com/pnp/PnP](https://github.com/pnp/PnP)
 
 ## Applies to
 
-- Office 365 Multi Tenant (MT)
+- Office 365 Multitenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*
 
