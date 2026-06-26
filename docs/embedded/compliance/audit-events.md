@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded audit log events
 description: Learn about audit log events for SharePoint Embedded container type and container type registration operations in the Microsoft Purview unified audit log.
-ms.date: 06/19/2026
+ms.date: 04/24/2026
 ms.localizationpriority: medium
 ---
 
@@ -18,7 +18,7 @@ The following events are logged when a container type is created, updated, or de
 These events use **Workload** value **SharePoint** in the unified audit log.
 
 | Friendly name | Operation | Description |
-|:--|:--|:--|
+| :-- | :-- | :-- |
 | Created container type | ContainerTypeCreated | A new SharePoint Embedded container type definition was created. |
 | Deleted container type | ContainerTypeDeleted | A SharePoint Embedded container type owned by the tenant was deleted. |
 | Updated container type | ContainerTypeUpdated | Properties of a SharePoint Embedded container type, such as name or configuration, were changed. |
@@ -33,7 +33,7 @@ The following events are logged when a container type registration is created, u
 These events use **Workload** value **SharePoint** in the unified audit log.
 
 | Friendly name | Operation | Description |
-|:--|:--|:--|
+|:-- | :-- | :-- |
 | Created container type registration | ContainerTypeRegistrationCreated | A SharePoint Embedded container type registration was created in a tenant. |
 | Deleted container type registration | ContainerTypeRegistrationDeleted | A SharePoint Embedded container type registration was deleted from a tenant. |
 | Updated container type registration | ContainerTypeRegistrationUpdated | A SharePoint Embedded container type registration was updated in a tenant. |
