@@ -24,7 +24,6 @@ Both approaches are described for the SharePoint Framework:
 - Azure Build and Release (this article)
 - [Azure Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md)
 
-
 ## Continuous Integration
 
 Continuous Integration (CI) helps developers integrate code into a shared repository by automatically verifying the build using unit tests and packaging the solution each time new code changes are submitted.
@@ -44,7 +43,7 @@ Setting up Azure DevOps for Continuous Integration with a SharePoint Framework s
 
 ### Creating the Build Definition
 
-The Build Definition, as its name suggests, includes all the definitions and their configurations for the build.  Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
+The Build Definition, as its name suggests, includes all the definitions and their configurations for the build. Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
 
 ![linking the build definition to the repository](../../images/azure-devops-spfx-01.png)
 
@@ -53,7 +52,7 @@ The Build Definition, as its name suggests, includes all the definitions and the
 
 ### Installing NodeJS
 
-Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install a supported version for your SPFx project (Node 18.x or later for SPFx 1.22+).
+Once the Build Definition has been created, the first thing you need to do is install NodeJS. Make sure to install a supported version for your SPFx project (Node 18.x or later for SPFx 1.22+).
 ![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE]
@@ -70,7 +69,6 @@ Because third party dependencies are not stored in the source control, you need 
 The SharePoint Framework does not provide a testing framework by default (since 1.8.0), we will leverage Jest with this sample. These modules will be installed in a later step and it is highly recommended at a minimum to test the business logic of your code to get feedback on any potential issues or regressions as soon as possible. To have Azure DevOps execute your unit tests, add a `npm` task. Set the `command` to `custom` and `custom command` field, enter `test`. Then set the `Working Directory` option to `$(Build.SourcesDirectory)`.
 
 ![executing unit tests](../../images/azure-devops-spfx-04.png)
-
 
 #### Configuring Jest
 
@@ -110,8 +108,8 @@ You also need to configure Jest, to do so create a file `config/jest.config.json
 You also need to configure your project to leverage jest when typing commands. To do so edit the `package.json` file and add/replace these two `scripts` with the following values:
 
 ```JSON
-    "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
-    "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
+"test": "./node_modules/.bin/jest --config ./config/jest.config.json",
+"test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
 ```
 
 #### Writing a unit test
@@ -174,7 +172,7 @@ heft package-solution --production
 
 ### Preparing the artifacts
 
-By default, an Azure DevOps build does not retain any files.  To ensure that the required files needed for the release are retained, you need to explicitly indicate which files should be kept.
+By default, an Azure DevOps build does not retain any files. To ensure that the required files needed for the release are retained, you need to explicitly indicate which files should be kept.
 Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint Package created with the previous task) and the target folder to `$(build.artifactstagingdirectory)/drop`.
 
 ![grabbing the artifacts](../../images/azure-devops-spfx-08.png)
@@ -187,7 +185,7 @@ Now that you have collected all the files needed for deployment in a special art
 
 ## Continuous Deployment
 
-Continuous Deployment (CD) takes validated code packages from build process and deploys them into a staging or production environment.  Developers can track which deployments were successful or not and narrow down issues to specific package versions.
+Continuous Deployment (CD) takes validated code packages from build process and deploys them into a staging or production environment. Developers can track which deployments were successful or not and narrow down issues to specific package versions.
 
 Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework solution requires the following steps:
 
@@ -213,7 +211,7 @@ Start by creating a new Release Definition with an empty template. A Release Def
 
 ### Linking the Build Artifact
 
-Click on `Add an artifact` and select the build definition you previously created.  Write down the `Source Alias` name you set, as you will need to use it in subsequent tasks.
+Click on `Add an artifact` and select the build definition you previously created. Write down the `Source Alias` name you set, as you will need to use it in subsequent tasks.
 
 ![linking the artifacts](../../images/azure-devops-spfx-11.png)
 
@@ -225,7 +223,7 @@ When you create your continuous deployment environment, you can give a name and 
 
 ### Installing NodeJS
 
-By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing the appropriate NodeJS version for your project.
+By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment. This includes installing the appropriate NodeJS version for your project.
 
 Add a `Node tool installer` task and define the appropriate version in the `Version Spec` field (use `22.X` for SPFx 1.22+).
 
@@ -233,7 +231,7 @@ Add a `Node tool installer` task and define the appropriate version in the `Vers
 
 ### Installing the CLI for Microsoft 365
 
-The Microsoft 365 Common Language Interface (CLI) is an open source project built by the Microsoft 365 PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/cli-microsoft365` in the `Command and Arguments` field.
+The Microsoft 365 Common Language Interface (CLI) is an open source project built by the Microsoft 365 PnP Community. In order to leverage the CLI as part of your Release Definition, you first need to install it. Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/cli-microsoft365` in the `Command and Arguments` field.
 
 ![installing CLI for Microsoft 365](../../images/azure-devops-spfx-node.png)
 
@@ -242,7 +240,7 @@ The Microsoft 365 Common Language Interface (CLI) is an open source project buil
 
 ### Connecting to SharePoint Online
 
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `m365 login -t password -u $(username) -p $(password)`.
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant. To do so, add a `Command Line` task and paste in the following command into the `script` field `m365 login -t password -u $(username) -p $(password)`.
 
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
