@@ -612,8 +612,10 @@
       href: embedded/development/app-architecture.md
     - name: Authentication and Authorization
       href: embedded/development/auth.md
-    - name: Sharing and Permissions
-      href: embedded/development/sharing-and-perm.md
+    - name: SharePoint Embedded permission model
+      href: embedded/development/permission-model.md
+    - name: Share content in SharePoint Embedded
+      href: embedded/development/sharing.md
     - name: Limits and Calling Patterns
       href: embedded/development/limits-calling.md
     - name: Fluid Framework
