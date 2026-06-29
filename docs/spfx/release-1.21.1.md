@@ -48,7 +48,7 @@ In the project's **package.json** file, identify all SPFx v1.21 packages. For ea
 > npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.21.1 --output md
 > ```
 >
-> This analyzes your project and outputs the exact file changes, package updates, and configuration steps to apply, regardless of your current SPFx version.
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
