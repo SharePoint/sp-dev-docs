@@ -9,7 +9,7 @@ ms.localizationpriority: high
 This release focused on updating and modernizing the SharePoint Framework (SPFx) build toolchain and to address all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
 > [!NOTE]
-> [SharePoint Framework API Reference](https://learn.microsoft.com/javascript/api/overview/sharepoint?view=sp-typescript-latest) has been also updated to match the latest 1.22.0 version.
+> [SharePoint Framework API Reference](/javascript/api/overview/sharepoint) has been also updated to match the latest 1.22.0 version.
 
 **Released:** December 10, 2025
 
@@ -25,17 +25,26 @@ npm install @microsoft/generator-sharepoint@latest --global
 
 ## Upgrading projects from the SPFx v1.21.1 to v1.22.0 version
 
-The upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.22.0 --output md
+> ```
+>
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
+For an overview of what changes during this migration from the [Gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md), see: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
 
 ## New features and capabilities
 
 ### Transitioning from Gulp-based toolchain to the Heft-based toolchain
 
-Starting with SPFx v1.22.0, new projects use Heft as the build task orchestrator instead of a [gulp-based toolchain](./toolchain/sharepoint-framework-toolchain.md) used in SPFx v1.0 - v1.21.1 releases. This change represents a fundamental shift in how SPFx projects are built, configured, and customized, though the underlying bundling technology (webpack) remains the same.
-
-See more details on this upcoming change from the following documentation:
-
-- [Heft-based toolchain (SPFx v1.22.0+)](./toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+Starting with SPFx v1.22.0, new projects use Heft as the build task orchestrator instead of the gulp-based toolchain used in SPFx v1.0 - v1.21.1 releases. This change represents a fundamental shift in how SPFx projects are built, configured, and customized, though the underlying bundling technology (webpack) remains the same.
 
 ### Addressing npm audit issues
 

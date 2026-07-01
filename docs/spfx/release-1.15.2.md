@@ -36,7 +36,18 @@ In the project's **package.json** file, identify all SPFx v1.15.0 packages. For 
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.15.2 --output md
+> ```
+>
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ## New features and capabilities
 
@@ -50,7 +61,7 @@ Now developers are able to specify **optional** attributes `appId` and `replyUrl
 
 When these attributes are present, administrators are presented standard Azure AD app registration consent as part of the API approval process.
 
-For more information on this feature, see: [Requesting permissions to Azure AD applications in another tenant](use-aadhttpclient.md#requesting-permissions-to-azure-ad-applications-in-another-tenant).
+For more information on this feature, see: [Requesting permissions to Entra ID applications in another tenant](use-aadhttpclient.md#requesting-permissions-to-entra-id-applications-in-another-tenant).
 
 ### New Action types for media - General Availability
 
