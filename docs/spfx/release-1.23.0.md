@@ -17,7 +17,7 @@ This release included new capabilities on the list view command sets, preview of
 Install the latest release of the SharePoint Framework (SPFx) by using the **@latest** tag
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects to v1.23.0 version

@@ -183,6 +183,8 @@
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
           href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+        - name: Property pane control theming implementation
+          href: spfx/web-parts/guidance/property-pane-theme-principles.md
     - name: Concepts & scenarios
       items:
       - name: Preconfigure web parts
@@ -504,6 +506,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.23.2 - June 30, 2026
+      href: spfx/release-1.23.2.md      
     - name: SPFx v1.23.0 - May 13, 2026
       href: spfx/release-1.23.0.md
     - name: SPFx v1.22.2 - January 28, 2026
@@ -620,6 +624,8 @@
       href: embedded/development/support-archival-of-containers.md
     - name: Office Experiences
       href: embedded/development/content-experiences/office-experience.md
+    - name: Configuring redirect behavior
+      href: embedded/development/content-experiences/configure-redirect-behavior.md
     - name: User Experiences
       href: embedded/development/content-experiences/user-experiences-overview.md
     - name: Search Content
@@ -2269,6 +2275,8 @@
       href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
     - name: Using CSOM for .NET Standard
       href: sp-add-ins/using-csom-for-dotnet-standard.md
+    - name: MediaServiceMetadata discontinued
+      href: apis/csom/mediaServiceMetadata-field-value-is-no-longer-available.md
   - name: "Complete basic operations: JSOM"
     href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
   - name: SharePoint REST API v1
