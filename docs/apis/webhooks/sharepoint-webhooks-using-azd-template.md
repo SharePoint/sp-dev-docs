@@ -2,7 +2,7 @@
 title: Create Azure Functions for SharePoint webhooks using an azd template
 description: Use Azure Developer cli (azd) to deploy an Azure function app that connects to your SharePoint Online
   tenant, to register and manage webhooks, and process the notifications from SharePoint.
-ms.date: 07/07/2025
+ms.date: 03/05/2025
 ms.localizationpriority: low
 ---
 # Azure Functions for SharePoint webhooks using azd
@@ -78,9 +78,9 @@ $resourceAppPrincipalObj = Get-MgServicePrincipal -Filter "displayName eq 'Offic
 $targetAppPrincipalAppRole = $resourceAppPrincipalObj.AppRoles | ? Value -eq $scopeName
 
 $appRoleAssignment = @{
-    "principalId" = $managedIdentityObjectId
-    "resourceId"  = $resourceAppPrincipalObj.Id
-    "appRoleId"   = $targetAppPrincipalAppRole.Id
+  "principalId" = $managedIdentityObjectId
+  "resourceId"  = $resourceAppPrincipalObj.Id
+  "appRoleId"   = $targetAppPrincipalAppRole.Id
 }
 New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $managedIdentityObjectId -BodyParameter $appRoleAssignment | Format-List
 ```
@@ -125,7 +125,7 @@ Grant-PnPAzureADAppSitePermission -AppId "3150363e-afbe-421f-9785-9d5404c5ae34" 
 </details>
 
 <details>
-  <summary>Using m365 cli in Bash</summary>
+  <summary>Using the m365 CLI in Bash</summary>
 
 [m365 cli](https://pnp.github.io/cli-microsoft365/cmd/spo/site/site-apppermission-add/)
 
