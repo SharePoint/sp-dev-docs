@@ -13,7 +13,7 @@ This article uses the [Azure function app for SharePoint webhooks public templat
 
 ## Prerequisites
 
-- [Node.js 22](https://www.nodejs.org/)
+- [Node.js 24](https://www.nodejs.org/)
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 - [Azure Developer CLI (azd)](/azure/developer/azure-developer-cli/install-azd)
 - An Azure subscription that trusts the same Microsoft Entra ID directory as the SharePoint tenant
