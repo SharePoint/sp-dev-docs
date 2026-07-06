@@ -6,7 +6,9 @@ ms.localizationpriority: high
 ---
 # Using Azure Functions with SharePoint webhooks
 
-[Azure Functions](/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function. This guide shows how to set up and use Azure Functions for your webhooks.
+[Azure Functions](/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function.  
+
+This guide shows how to set up and use Azure Functions for your webhooks using the Azure portal. Alternatively, you can refer to article [Create Azure Functions for SharePoint webhooks using an azd template](sharepoint-webhooks-using-azd-template.md), to automate the whole process using an **azd** template.
 
 ## Create an Azure Function App
 

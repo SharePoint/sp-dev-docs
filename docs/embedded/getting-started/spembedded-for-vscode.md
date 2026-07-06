@@ -1,80 +1,176 @@
 ---
 title: SharePoint Embedded for Visual Studio Code
 description: Installation and getting started with SharePoint Embedded for Visual Studio Code
-ms.date: 1/30/2024
+ms.date: 01/30/2024
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded for Visual Studio Code
 
-The SharePoint Embedded Visual Studio Code extension helps developers get started with SharePoint Embedded application development. With the extension, developers can:
+The SharePoint Embedded Visual Studio Code extension helps developers get started for free with SharePoint Embedded application development.
 
-1. Create and configure Microsoft Entra ID app registrations for use with SharePoint Embedded
-1. Create and manage [free trial container types](../concepts/app-concepts/containertypes.md#trial-container-types)
-1. Create more guest apps on a [free trial container type](../concepts/app-concepts/containertypes.md#trial-container-types)
-1. Load one of the [sample apps](https://github.com/microsoft/SharePoint-Embedded-Samples) and auto-populate its runtime configuration
-1. Export Container Type and Microsoft Entra ID app settings to a Postman Environment file for use with the [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman)
+> [!IMPORTANT]
+> To start building with SharePoint Embedded, you'll need administrative access to a Microsoft 365 tenant.
+> If you don't already have a tenant, you can get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or create a free trial of a [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-## Installing SharePoint Embedded for Visual Studio Code
+## Install SharePoint Embedded for Visual Studio Code
 
-To get started with the SharePoint Embedded Visual Studio Code extension, you need to have [Visual Studio Code](https://code.visualstudio.com/) installed on your machine.
+1. Open a new window in [Visual Studio Code](https://code.visualstudio.com/) and navigate to "**Extensions**" on the activity bar.
+1. Search "SharePoint Embedded" in the Extensions view. You can also view the extension in [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension).
+1. Select **"Install"** and the SharePoint Embedded icon will appear on the activity bar.
+1. If already installed, update to the latest version if one is available.
+1. Select the icon to open the SharePoint Embedded view and create a container type with trial configuration.
 
-Next, you need to install the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) from the Visual Studio Marketplace. You can find the extension by searching for "SharePoint Embedded" in the Visual Studio Code Extensions view, or by visiting the previous link.
+![SharePoint Embedded VS Extensions](../images/vsx-images/n1downloadvsx.png)
 
-![SharePoint Embedded on Visual Studio Code Marketplace](../images/spe-vscode-marketplace.png)
+### Sign in with admin credentials
 
-Once you have installed the extension, you can access it from the Visual Studio Code Activity Bar, where you'll see a new icon for SharePoint Embedded. Clicking on the icon will open the SharePoint Embedded view, where you can perform various tasks related to SharePoint Embedded application development.
+To use the extension, you must sign in to a Microsoft 365 tenant with an administrator account.
 
-## Getting Started
+![Install](../images/vsx-images/n2vsx-signin.png)
 
-### Sign In
+- Authentication opens a new tab in an external browser to grant permissions
 
-To use the extension, you'll need to sign into a Microsoft 365 tenant with an administrator account.
+    ![authorize and authenticate the extension to your M365 Entra tenant](../images/vsx-images/auth-allow-extension-uri.png)
 
-![Sign in](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/636d45f9-5912-4e2c-9a50-8f5efa472638)
+- Review the requested permissions carefully, then select **Accept** on the pop-up window prompting admin consent
 
-If you don't have administrator access to a Microsoft 365 tenant, get your own tenant with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).
+    ![review before consenting to the permissions the extension is asking for](../images/vsx-images/n3vsx-grant-admin-consent.png)
 
-### Create a Free Trial Container Type
+After successful authorization, select open on the dialog to be redirected to VS Code:
 
-Once you've signed in, the first (and only) thing to do next is to create a [free trial container type](../concepts/app-concepts/containertypes.md#trial-container-types). A free trial container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded.
+![authorization completed in browser now redirecting to visual studio code](../images/vsx-images/auth-redirect.png)
 
-![Create Free Trial Container Type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a8186b2b-bdf9-400b-820b-2e6ebe51d393)
+## Create a container type with a trial configuration
+
+Once signed in, you're prompted to create a [container type with trial configuration](./containertypes.md#trial-container-type). A container type lets you get started calling SharePoint Embedded APIs and building a proof-of-concept application using SharePoint Embedded. Learn more about [container types](containertypes.md).
+
+![home screen](../images/vsx-images/n4vsx-home-screen.png)
+
+- Select **Create Trial Container Type**
+- Follow the prompts to name your container type. You can change your container type name later on.
+
+![create container type](../images/vsx-images/n5a-name-ct.png)
 
 > [!NOTE]
-> SharePoint Embedded for Visual Studio Code only supports free trial container types at this time. Paid container types must be made using the SharePoint Online PowerShell Module.
+> SharePoint Embedded for Visual Studio Code only supports container types with trial configuration at this time. Other container types with standard or passthrough billing configurations must be created using the SharePoint Online PowerShell Module.
 
-#### Create a Microsoft Entra ID App
+## Create a Microsoft Entra ID App
 
-Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications.
+Every container type is owned by a Microsoft Entra ID application. The first step when creating a free trial container type is to create a new or select an existing Microsoft Entra ID application as the owning application. You can either specify the name of your new application or pick one of your existing applications. Learn more about SharePoint Embedded [app architecture](../development/app-architecture.md)
 
-![Create App](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/944ecf1b-491c-4e5c-b887-73a5d709e9c5)
+- Follow the prompts to name your new Entra application or select an existing application ID:
+
+    ![Create App](../images/vsx-images/n6aname-app.png)
 
 > [!NOTE]
 > If you choose an existing application, the extension will update that app's configuration settings for it to work with both SharePoint Embedded and this extension. Doing this is NOT recommended on production applications.
 
-#### Name your Free Trial Container Type
+After your container type is created and your application is configured, you'll be able to view your local tenant registration as a tree in the left nav-bar.
 
-Once you have a Microsoft Entra ID application, the last step is to provide a name for your new free trial container type.
+## Register your container type
 
-![Name Container Type](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/f465d36e-57e8-472a-9d10-7374a28b24b1)
+After creating your container type, you'll need to register that container type on your local tenant. Learn more about container type [registration](./register-api-documentation.md).
 
-### Load Sample App
+- Follow the prompts and select **Register on local tenant** on the lower right corner of the VS Code window
 
-With a free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type. This allows you to immediately run the sample app on your local machine.
+    ![local tenant registration popup](../images/vsx-images/local-tenant-registration-popup.png)
+  
+- If you don't see the prompt, you can right-click on your `<container-type-name>` and select **Register** from the menu
 
-![Load Sample App](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/da40cd67-83b3-4da9-b743-159edd2802fa)
+    ![register](../images/vsx-images/n7aregister-ct.png)
 
-### Export Postman Environment
+### Grant permissions
 
-The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Postman) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
+Review permissions and follow the prompt to grant admin consent
 
-![Export Postman Environment](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/a549866d-55e0-4a25-b173-fc532cc7b49e)
+![grant admin consent popup](../images/vsx-images/auth-grant-admin-consent-popup.png)
 
-![Postman Import](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/06884e97-7a4c-41ea-8c19-c0eecfd2e624)
+An external browser window will pop open for you to sign-in and grant admin consent
 
-### Add a Guest App to your Free Trial Container Type
+![login permissions](../images/vsx-images/n9alogin-grant-permissions.png)
 
-You can use the extension to add one or more guest apps to your existing free trial container type. Guest apps can be used to create different applications that have access to the same set of Containers. For example, you might have one app that delivers your Web experiences, another for mobile experiences, and another for background processing. You can specify both the delegated and application permissions on each guest application you create.
+## Create your first container
 
-![Guest App Permissions](https://github.com/microsoft/SharePoint-Embedded-VS-Code-Extension/assets/108372230/d3394cf6-b174-4c07-8cca-fe742cade70b)
+With your container type registered, you can now create your first container. Only five containers of container type can be created to upload and manage content.
+
+- Right-click on the **Containers** drop-down from the tree in the left nav-bar and select **Create container**
+- Enter a name for the container you would like to create
+
+![create container](../images/vsx-images/n10acreate-container.png)
+![name container](../images/vsx-images/n11aname-first-cont.png)
+
+## Recycling Containers
+
+You can also recycle and recover containers within the extension.
+
+![recycle containers](../images/vsx-images/n12arecycle-cont.png)
+
+![final home page](../images/vsx-images/n13a-final-home-page.png)
+
+## Load Sample App
+
+With your free trial container type created, you can use the extension to load one of the SharePoint Embedded sample apps and automatically populate the runtime configuration file with the details of your Microsoft Entra ID app and container type.
+
+![Load Sample App](../images/vsx-images/n15vsxsa-c.png)
+
+When loading the sample application, you'll be notified that it will create plain text secrets to authenticate on your local machine.
+
+![sample app plain text secrets notice](../images/vsx-images/sample-app-app-secrets-notice.png)
+
+If no client secret is found on your application, it will ask if you would like to create one. Press OK to proceed.
+
+![sample app creating client secret](../images/vsx-images/sample-app-create-client-secret.png)
+
+> [!IMPORTANT]
+> This isn't intended for production environments. [Find out more on how to setup Application Registration for production environments here.](/entra/identity-platform/quickstart-register-app)
+
+## Using Sample App
+
+In your terminal, run the following command, this will start the sample application, which consists of two parts:
+
+1. **React Client Application** - The frontend user interface running on port 8080
+1. **Azure Function Application Server** - The backend API server that handles SharePoint Embedded operations
+
+```console
+# Navigate to your sample application directory
+cd [your-path]\SharePoint-Embedded-Samples\Custom Apps\boilerplate-typescript-react
+
+# Install dependencies and start the application
+npm run start
+```
+
+> [!NOTE]
+> The initial startup may take a few minutes as dependencies are installed and both applications are built. Wait for both console outputs to appear before navigating to the application.
+
+This will install the dependencies and run the server and client application, once running, you'll see the following in the terminal, after which you can navigate to `http://localhost:8080` to access the application.
+
+![function api console logs](../images/vsx-images/fn-api-logs.png)
+
+![client app console logs](../images/vsx-images/client-app-logs.png)
+
+Once both applications are running successfully:
+
+1. Open your web browser and navigate to `http://localhost:8080`
+1. Sign in using your Microsoft 365 administrator account (the same account used in the VS Code extension)
+1. On the home page, select **Containers** to begin creating containers and uploading files
+1. Follow the on-screen prompts to interact with your SharePoint Embedded containers
+
+![home-page-for-spe-sample-app](../images/vsx-images/spe-sample-app-home.png)
+
+> [!IMPORTANT]
+> This sample application stores authentication secrets in plain text for development purposes only. Never use this configuration in a production environment.
+
+### Troubleshooting
+
+If you encounter issues:
+
+- **Port already in use**: If port 8080 is already in use, the application will automatically try the next available port
+- **Dependencies not installing**: Try running `npm install` manually before `npm run start`
+- **Authentication errors**: Ensure your Microsoft Entra ID app is properly configured with the correct redirect URIs
+
+## Export Postman Environment
+
+The [SharePoint Embedded Postman Collection](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Tools/api-clients) allows you to explore and call the SharePoint Embedded APIs. The Collection requires an environment file with variables used for authentication and various identifiers. This extension automates the generation of this populated environment file so you can import it into Postman and immediately call the SharePoint Embedded APIs.
+
+![Export Postman Environment](../images/vsx-images/n14postman-c.png)

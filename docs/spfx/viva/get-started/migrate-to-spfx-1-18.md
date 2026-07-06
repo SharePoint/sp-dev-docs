@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 SharePoint Framework (SPFx) v1.18 introduces new base classes and a modified approach for building Adaptive Card Extensions (ACEs) for Microsoft Viva Connections.
 
-The changes allow us to switch from "templates"-based to more granular "components"-based card views. It enables more flexibility for developers and increases the number of supported card views variants, or [permutations](../design/designing-card.md).
+The changes allow us to switch from "templates"-based to more granular "components"-based Card Views. It enables more flexibility for developers and increases the number of supported Card Views variants, or [permutations](../design/designing-card.md).
 
 This article explains how to migrate your existing ACEs to the new approach.
 
@@ -18,10 +18,10 @@ This article explains how to migrate your existing ACEs to the new approach.
 
 ## Migrate Quick Views to the new base class
 
-With SPFx 1.18, we deprecate the `BaseAdaptiveCardView` class and introduce `BaseAdaptiveCardQuickView` as a new base class for all quick views.
+With SPFx 1.18, we deprecate the `BaseAdaptiveCardView` class and introduce `BaseAdaptiveCardQuickView` as a new base class for all Quick Views.
 
 The new base class provides the same functionality as the old one, so the migration is straightforward.
-Update the definition of your quick view class to inherit from the new base class:
+Update the definition of your Quick View class to inherit from the new base class:
 
 ```typescript
 import { BaseAdaptiveCardQuickView } from '@microsoft/sp-adaptive-card-extension-base';
@@ -36,17 +36,17 @@ export class QuickView extends BaseAdaptiveCardQuickView<
 
 ## Migrate Card Views to new base class and configuration model
 
-With SPFx v1.18, we introduce a new base class and configuration model for card views. Instead of having a separate base class for each card view "template", we provide a new single base class `BaseComponentsCardView<TProperties = {}, TState = {}, TParameters extends ComponentsCardViewParameters = ITextCardViewParameters>`.
+With SPFx v1.18, we introduce a new base class and configuration model for Card Views. Instead of having a separate base class for each Card View "template", we provide a new single base class `BaseComponentsCardView<TProperties = {}, TState = {}, TParameters extends ComponentsCardViewParameters = ITextCardViewParameters>`.
 
-Instead of specifying `cardButtons` and `data`, you must override the `cardViewParameters` getter to provide both look and data for the card view.
+Instead of specifying `cardButtons` and `data`, you must override the `cardViewParameters` getter to provide both look and data for the Card View.
 
 As part of the `cardViewParameters` property, you can specify the as follows:
 
-- **image**: Image parameters for the card view.
-- **cardBar**: Card bar component for the card view (title and icon).
-- **header**: Header components for the card view.
-- **body**: Body components for the card view.
-- **footer**: Footer components for the card view.
+- **image**: Image parameters for the Card View.
+- **cardBar**: Card bar component for the Card View (title and icon).
+- **header**: Header components for the Card View.
+- **body**: Body components for the Card View.
+- **footer**: Footer components for the Card View.
 
 We also provide helper functions to simplify the creation of the predefined views:
 
@@ -56,11 +56,11 @@ function PrimaryTextCardView(configuration: IPrimaryTextCardViewConfiguration): 
 function ImageCardView(configuration: IImageCardViewConfiguration): ITextCardViewParameters;
 ```
 
-These helpers can also be used to migrate your existing card views to the new model easily.
+These helpers can also be used to migrate your existing Card Views to the new model easily.
 
 So, the migration steps are:
 
-- Update the definition of your card view class to inherit from the new base class:
+- Update the definition of your Card View class to inherit from the new base class:
 
     ```typescript
     import { BaseComponentsCardView } from '@microsoft/sp-adaptive-card-extension-base';
@@ -74,7 +74,7 @@ So, the migration steps are:
       }
     ```
 
-- Override the `cardViewParameters` getter to provide both look and data for the card view. You can use one of the helper functions to simplify the migration:
+- Override the `cardViewParameters` getter to provide both look and data for the Card View. You can use one of the helper functions to simplify the migration:
 
     ```typescript
     import { BaseComponentsCardView, BasicCardView } from '@microsoft/sp-adaptive-card-extension-base';
@@ -87,7 +87,7 @@ So, the migration steps are:
       }
     ```
 
-- Remove the `cardButtons` and `data` properties from your card view class.
+- Remove the `cardButtons` and `data` properties from your Card View class.
 
 ## Examples
 

@@ -114,6 +114,8 @@
       href: apis/webhooks/webhooks-reference-implementation.md
     - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: Use Azure Functions through azd
+      href: apis/webhooks/sharepoint-webhooks-using-azd-template.md
     - name: List webhooks
       href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
@@ -151,6 +153,8 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
+    - name: Set up development environment (Gulp)
+      href: spfx/set-up-your-development-environment-gulp-toolchain.md
   - name: Web parts
     items:
     - name: Overview
@@ -179,6 +183,8 @@
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
           href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+        - name: Property pane control theming implementation
+          href: spfx/web-parts/guidance/property-pane-theme-principles.md
     - name: Concepts & scenarios
       items:
       - name: Preconfigure web parts
@@ -199,6 +205,8 @@
         href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
         href: spfx/web-parts/isolated-web-parts.md
+      - name: Isolated web parts retirement announcement
+        href: spfx/web-parts/isolated-web-parts-retirement.md
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
       - name: Microsoft Teams and SPFx Web parts
@@ -239,6 +247,8 @@
       href: spfx/extensions/get-started/building-simple-field-customizer.md
     - name: ListView Command Set extension
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Grouping of ListView Command Set extensions
+      href: spfx/extensions/guidance/list-view-command-set-grouping.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
     - name: Form customizer
@@ -261,11 +271,13 @@
       href: spfx/publish-to-marketplace-overview.md
     - name: App validation checklist
       href: spfx/publish-to-marketplace-checklist.md
+    - name: Common Marketplace validation errors to avoid
+      href: spfx/publish-to-marketplace-common-validation-errors.md
     - name: After publishing your app
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
       href: spfx/publish-to-marketplace-faq.yml
-  - name: Migrate existing customizations
+  - name: Migrate pre-SPFx & classic mode customizations
     items:
     - name: Script Editor web part
       href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
@@ -305,14 +317,14 @@
       href: spfx/hyperlinking.md
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
-    - name: Tools and libraries compatibility
-      href: spfx/compatibility.md
   - name: External libraries
     items:
     - name: Add external libraries
       href: spfx/web-parts/basics/add-an-external-library.md
     - name: JavaScript libraries
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: SharePoint Online Support for Content Security Policy (CSP)
+      href: spfx/content-securty-policy-trusted-script-sources.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
   - name: Connect to APIs
@@ -349,10 +361,6 @@
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
       href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
-    - name: Custom build tasks
-      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-    - name: Extend Webpack
-      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Tenant-scoped solution deployment
       href: spfx/tenant-scoped-deployment.md
     - name: Optimize builds for production
@@ -408,6 +416,8 @@
         href: design/designing-a-web-part-icon.md
       - name: Using semantic slots
         href: design/semantic_slots.md
+      - name: Using Brand center fonts
+        href: design/use-brand-center-fonts-in-spfx-components.md
     - name: Authoring pages
       href: design/authoring-pages.md
     - name: Design considerations
@@ -420,28 +430,58 @@
       href: design/themes-colors.md
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
-    - name: Office UI Fabric integration
-      href: spfx/office-ui-fabric-integration.md
+    - name: Fluent UI integration
+      href: spfx/fluent-ui-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
-  - name: Tools & libraries
+    - name: Microsoft Graph Toolkit
+      href: spfx/use-microsoft-graph-toolkit.md
+  - name: Build toolchain & dependencies
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
-    - name: Toolchain
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Heft-based toolchain (SPFx v1.22.0+)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain-rushstack-heft.md
+        - name: Understanding how the Heft toolchain works
+          href: spfx/toolchain/customize-heft-toolchain-overview.md
+        - name: Customize the build toolchain with Heft plugins
+          href: spfx/toolchain/customize-heft-toolchain-heft-included-plugins.md
+        - name: Customize the build with the Heft Run script plugin
+          href: spfx/toolchain/customize-heft-toolchain-heft-script-plugin.md
+        - name: Customize webpack with the Heft webpack-patch plugin
+          href: spfx/toolchain/customize-heft-toolchain-customize-webpack-config.md
+        - name: Ejecting the webpack configuration
+          href: spfx/toolchain/customize-heft-toolchain-eject-webpack.md
+        - name: Migrate from the Gulp-based to the Heft-based toolchain
+          href: spfx/toolchain/migrate-gulptoolchain-hefttoolchain.md
+    - name: Gulp-based Toolchain (legacy)
+      items:
+        - name: Overview
+          href: spfx/toolchain/sharepoint-framework-toolchain.md
+        - name: Customize the build toolchain with Gulp tasks
+          href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+        - name: Extending Webpack in the Gulp-based toolchain
+          href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
-    - name: Configure SASS processing during builds
+    - name: SharePoint Framework CLI (spfx-cli)
+      href: spfx/toolchain/sharepoint-framework-cli.md
+    - name: Platform & platform dependency compatibility reference
+      href: spfx/compatibility.md
+    - name: How to configure SASS processing
       href: spfx/toolchain/configure-sass.md
-    - name: Microsoft Graph Toolkit
-      href: spfx/use-microsoft-graph-toolkit.md
+    - name: Understanding npm audit vulnerabilities in SPFx projects
+      href: spfx/npm-vulnerabilities.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
       href: spfx/debug-in-vscode.md
     - name: Debug on modern pages
       href: spfx/debug-modern-pages.md
+    - name: Use the debug toolbar
+      href: spfx/debug-toolbar.md
     - name: Use the developer dashboard
       href: spfx/use-developer-dashboard.md
     - name: Maintenance mode for client-side web parts
@@ -466,12 +506,30 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.23.2 - June 30, 2026
+      href: spfx/release-1.23.2.md      
+    - name: SPFx v1.23.0 - May 13, 2026
+      href: spfx/release-1.23.0.md
+    - name: SPFx v1.22.2 - January 28, 2026
+      href: spfx/release-1.22.2.md
+    - name: SPFx v1.22.1 - December 15, 2025
+      href: spfx/release-1.22.1.md
+    - name: SPFx v1.22.0 - December 10, 2025
+      href: spfx/release-1.22.0.md
+    - name: SPFx v1.21.1 - May 3, 2025
+      href: spfx/release-1.21.1.md
+    - name: SPFx v1.21.0 - April 23, 2025
+      href: spfx/release-1.21.0.md
+    - name: SPFx v1.20.0 - September 26, 2024
+      href: spfx/release-1.20.0.md
+    - name: SPFx v1.19.0 - April 25, 2024
+      href: spfx/release-1.19.0.md
     - name: SPFx v1.18.2 - November 21, 2023
       href: spfx/release-1.18.2.md
     - name: SPFx v1.18.1 - November 7, 2023
       href: spfx/release-1.18.1.md
-    - name: SPFx v1.18 - September 12, 2023
-      href: spfx/release-1.18.md
+    - name: SPFx v1.18.0 - September 12, 2023
+      href: spfx/release-1.18.0.md
     - name: SPFx v1.17.4 - June 21, 2023
       href: spfx/release-1.17.4.md
     - name: SPFx v1.17.3 - May 31, 2023
@@ -480,22 +538,22 @@
       href: spfx/release-1.17.2.md
     - name: SPFx v1.17.1 - April 12, 2023
       href: spfx/release-1.17.1.md
-    - name: SPFx v1.17 - April 4, 2023
-      href: spfx/release-1.17.md
+    - name: SPFx v1.17.0 - April 4, 2023
+      href: spfx/release-1.17.0.md
     - name: SPFx v1.16.1 - November 30, 2022
       href: spfx/release-1.16.1.md
     - name: SPFx v1.16.0 - November 15, 2022
-      href: spfx/release-1.16.md
+      href: spfx/release-1.16.0.md
     - name: SPFx v1.15.2 - August 2, 2022
       href: spfx/release-1.15.2.md
     - name: SPFx v1.15.0 - June 21, 2022
-      href: spfx/release-1.15.md
+      href: spfx/release-1.15.0.md
     - name: SPFx v1.14.0 - February 17, 2022
-      href: spfx/release-1.14.md
+      href: spfx/release-1.14.0.md
     - name: SPFx v1.13.1 - November 23, 2021
       href: spfx/release-1.13.1.md
     - name: SPFx v1.13.0 - October 21, 2021
-      href: spfx/release-1.13.md
+      href: spfx/release-1.13.0.md
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
     - name: SPFx v1.11.0 - July 16, 2020
@@ -513,21 +571,21 @@
     - name: SPFx v1.7.1 - December 18, 2018
       href: spfx/release-1.7.1.md
     - name: SPFx v1.7.0 - November 8, 2018
-      href: spfx/release-1.7.md
+      href: spfx/release-1.7.0.md
     - name: SPFx v1.6.0 - September 5, 2018
-      href: spfx/release-1.6.md
+      href: spfx/release-1.6.0.md
     - name: SPFx v1.5.1 - June 26, 2018
       href: spfx/release-1.5.1.md
     - name: SPFx v1.5.0 - June 5, 2018
-      href: spfx/release-1.5.md
+      href: spfx/release-1.5.0.md
     - name: SPFx v1.4.1 - February 15, 2018
       href: spfx/release-1.4.1.md
     - name: SPFx v1.4.0 - December 7, 2017
-      href: spfx/release-1.4.md
+      href: spfx/release-1.4.0.md
     - name: SPFx v1.3.0 - September 25, 2017
-      href: spfx/release-1.3.md
+      href: spfx/release-1.3.0.md
     - name: SPFx v1.1.0 - June 6, 2017
-      href: spfx/release-1.1.md
+      href: spfx/release-1.1.0.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
   - name: Extend SharePoint with SPFx - Learning Path
@@ -536,68 +594,90 @@
   items:
   - name: Overview
     href: embedded/overview.md
+  - name: What's New
+    href: embedded/whats-new.md
+  - name: Scenarios and Use Cases
+    href: embedded/scenarios-and-use-cases.md
   - name: Getting Started
     items:
-    - name: Enable SharePoint Embedded
-      href: embedded/getting-started/enable-sharepoint-embedded.md
-    - name: SharePoint Embedded for Visual Studio Code
+    - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
-  - name: Adoptions and Use Case Scenarios
-    href: embedded/adoptions-and-use.md
-  - name: Concepts
+    - name: Container Types
+      href: embedded/getting-started/containertypes.md
+    - name: Register Container Type API
+      href: embedded/getting-started/register-api-documentation.md
+    - name: Microsoft 365 Archive support for containers
+      href: embedded/getting-started/microsoft-365-archive-support-for-containers.md
+  - name: Development
     items:
     - name: Application Architecture
-      href: embedded/concepts/app-concepts/app-architecture.md
-    - name: Container Types
-      href: embedded/concepts/app-concepts/containertypes.md
-    - name: Register Container Type API
-      href: embedded/concepts/app-concepts/register-api-documentation.md
-    - name: Authentication
-      href: embedded/concepts/app-concepts/auth.md
+      href: embedded/development/app-architecture.md
+    - name: Authentication and Authorization
+      href: embedded/development/auth.md
     - name: Sharing and Permissions
-      href: embedded/concepts/app-concepts/sharing-and-perm.md
+      href: embedded/development/sharing-and-perm.md
     - name: Limits and Calling Patterns
-      href: embedded/concepts/app-concepts/limits-calling.md
-    - name: Terms and Definitions
-      href: embedded/concepts/app-concepts/terms-and-def.md
-    - name: Content Experiences
-      items:
-      - name: Office Experiences
-        href: embedded/concepts/content-experiences/office-experience.md
-      - name: User Experiences
-        href: embedded/concepts/content-experiences/user-experiences-overview.md
-      - name: Search Content
-        href: embedded/concepts/content-experiences/search-content.md
-    - name: Admin Experiences
-      items:
-      - name: Consuming Tenant Admin
-        href: embedded/concepts/admin-exp/cta.md
-      - name: Developer Admin
-        href: embedded/concepts/admin-exp/dev-admin.md
-      - name: Billing
-        href: embedded/concepts/admin-exp/billing.md
+      href: embedded/development/limits-calling.md
     - name: Fluid Framework
-      href: embedded/concepts/fluid.md
-    - name: Security and Compliance
-      href: embedded/concepts/security-and-compliance.md
-  - name: Tutorials
-    items:
+      href: embedded/development/fluid.md
+    - name: Support archive funcationality in your application
+      href: embedded/development/support-archival-of-containers.md
+    - name: Office Experiences
+      href: embedded/development/content-experiences/office-experience.md
+    - name: Configuring redirect behavior
+      href: embedded/development/content-experiences/configure-redirect-behavior.md
+    - name: User Experiences
+      href: embedded/development/content-experiences/user-experiences-overview.md
+    - name: Search Content
+      href: embedded/development/content-experiences/search-content.md
     - name: Launch Experience
-      href: embedded/tutorials/launch-experience.md
+      href: embedded/development/tutorials/launch-experience.md
+    - name: Using Metadata with SharePoint Embedded Containers
+      href: embedded/development/tutorials/metadata.md
     - name: Using File Preview
-      href: embedded/tutorials/using-file-preview.md
+      href: embedded/development/tutorials/using-file-preview.md
     - name: Using Document Processing with Azure Cognitive Services
-      href: embedded/tutorials/doc-processing-acs.md
+      href: embedded/development/tutorials/doc-processing-acs.md
     - name: Using Webhooks
-      href: embedded/tutorials/using-webhooks.md
-  - name: Terms of Service
-    href: embedded/terms-of-service.md
+      href: embedded/development/tutorials/using-webhooks.md
+    - name: Migrate ABS to SPE
+      href: embedded/development/tutorials/migrate-abs-to-spe.md
+    - name: Install Your SPE App in a Consuming Tenant
+      href: embedded/development/tutorials/vendor-install-app-customer.md
+  - name: Administration
+    items:
+    - name: Billing
+      href: embedded/administration/billing/billing.md
+    - name: Billing Management
+      href: embedded/administration/billing/billingmanagement.md
+    - name: SharePoint Embedded Billing Meters
+      href: embedded/administration/billing/meters.md
+    - name: Consuming Tenant Admin
+      href: embedded/administration/consuming-tenant-admin/cta.md
+    - name: Container Management in PowerShell
+      href: embedded/administration/consuming-tenant-admin/ctapowershell.md
+    - name: Consuming Tenant Admin UX
+      href: embedded/administration/consuming-tenant-admin/ctaUX.md
+    - name: Developer Admin
+      href: embedded/administration/developer-admin/dev-admin.md
+    - name: SharePoint Embedded Admin
+      href: embedded/administration/adminrole.md
+  - name: Compliance
+    items:
+    - name: Security and Compliance
+      href: embedded/compliance/security-and-compliance.md
+    - name: Audit log events
+      href: embedded/compliance/audit-events.md
   - name: SharePoint Embedded Learning Modules
     items:
       - name: SharePoint Embedded - overview & configuration
         href: /training/modules/sharepoint-embedded-setup
       - name: SharePoint Embedded - building applications
         href: /training/modules/sharepoint-embedded-create-app
+  - name: SharePoint Embedded agent
+    items:
+    - name: SharePoint Embedded knowledge source in Microsoft Foundry (Preview)
+      href: embedded/development/declarative-agent/sharepoint-embedded-knowledge-source.md
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -624,19 +704,21 @@
   items:
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
-  - name: Location capabilities in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
-  - name: Media upload in Adaptive Card Extension
-    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
-  - name: Focus feature in Adaptive Card Extension
-    href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
-  - name: Card Designer advance API features
-    href: spfx/viva/features/card-designer/card-designer-api-support.md
-  - name: Design Guidance
+  - name: Adaptive Card Extension Features
+    items:
+    - name: Location capabilities in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+    - name: Media upload in Adaptive Card Extension
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
+    - name: Focus feature in Adaptive Card Extension
+      href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
+    - name: Card Designer advance API features
+      href: spfx/viva/features/card-designer/card-designer-api-support.md
+  - name: Adaptive Card Extension Design Guidance
     items:
     - name: Introduction
       href: spfx/viva/design/design-intro.md
-    - name: Card Design
+    - name: Card View Design
       href: spfx/viva/design/designing-card.md
     - name: Quick View Design
       href: spfx/viva/design/designing-quick-view.md
@@ -664,22 +746,16 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
     - name: Create a People Search Adaptive Card Extension
       href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
+    - name: Create a Data Visualization Adaptive Card Extension
+      href: spfx/viva/get-started/build-data-visualization-adaptive-card-extension.md
+    - name: Build an HTML Quick View SharePoint Framework Adaptive Card Extension
+      href: spfx/viva/get-started/build-html-quickview-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Making Quick View compatible with dark mode
       href: spfx/viva/get-started/making-quickview-compatable-darkmode-mobile.md
-    - name: Migrate existing ACEs to SharePoint Framework v1.18
+    - name: Migrate existing ACEs to SharePoint Framework v1.18.0
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
-  - name: Bot Powered Adaptive Card Extensions
-    items:
-    - name: Overview of Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Overview-Bot-Powered-ACEs.md
-    - name: Understanding Bot Powered Adaptive Card Extensions
-      href: spfx/viva/bot-powered/Understanding-Bot-Powered-ACEs.md
-    - name: Building your first Bot Powered Adaptive Card Extension
-      href: spfx/viva/bot-powered/Building-Your-First-Bot-Powered-ACE.md
-    - name: Authentication and Authorization in Bot Powered ACEs
-      href: spfx/viva/bot-powered/AuthN-and-AuthZ-in-Bot-Powered-ACEs.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
@@ -956,7 +1032,7 @@
     href: sp-add-ins-modernize/sp-add-in-modernize.md
   - name: Authentication considerations
     href: sp-add-ins-modernize/understanding-aad-and-oauth-for-spo-modern.md
-  - name: Tranform from ACS to Azure AD apps
+  - name: Transform from ACS to Azure AD apps
     href: sp-add-ins-modernize/from-acs-to-aad-apps.md
   - name: Multi-tenant applications for SharePoint Online
     href: sp-add-ins-modernize/multi-tenant-applications.md
@@ -979,7 +1055,7 @@
   - name: Transform from remote event receivers to web hooks
     href: sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md
   - name: Using remote event receivers without having a dependency on Azure ACS
-    href: use-remote-event-receivers-without-azure-acs-dependency.md
+    href: sp-add-ins-modernize/use-remote-event-receivers-without-azure-acs-dependency.md
   - name: Transform from SharePoint hosted add-ins
     href: sp-add-ins-modernize/from-sharepoint-hosted-to-client-side.md
   - name: Transform from provider hosted add-ins to Azure AD apps
@@ -1349,7 +1425,7 @@
       - name: Build search queries
         href: general-development/building-search-queries-in-sharepoint.md
         items:
-        - name: Keyword Query Language (KQL) syntax reference
+        - name: Keyword Query Language (KeyQL) syntax reference
           href: general-development/keyword-query-language-kql-syntax-reference.md
         - name: FAST Query Language (FQL) syntax reference
           href: general-development/fast-query-language-fql-syntax-reference.md
@@ -2004,7 +2080,7 @@
       items:
       - name: Grant access using Azure AD app-only
         href: solution-guidance/security-apponly-azuread.md
-      - name: Grant access using SharePoint app-only
+      - name: Grant access using SharePoint app-only (retired!)
         href: solution-guidance/security-apponly-azureacs.md
     - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
@@ -2165,6 +2241,8 @@
       href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
     - name: Provisioning Tenant Templates
       href: solution-guidance/pnp-provisioning-tenant-templates.md
+    - name: Applying PnP Templates to SharePoint Sites
+      href: solution-guidance/applying-pnp-templates.md
     - name: PnP Open XML File format
       href: solution-guidance/the-pnp-office-open-xml-file-format.md
     - name: PnP provisioning schema
@@ -2189,12 +2267,16 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+  - name: Admin APIs authentication and authorization
+    href: sp-add-ins/sharepoint-admin-apis-authentication-and-authorization.md
   - name: SharePoint CSOM API
     items:
     - name: Complete basic operations
       href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
     - name: Using CSOM for .NET Standard
       href: sp-add-ins/using-csom-for-dotnet-standard.md
+    - name: MediaServiceMetadata discontinued
+      href: apis/csom/mediaServiceMetadata-field-value-is-no-longer-available.md
   - name: "Complete basic operations: JSOM"
     href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
   - name: SharePoint REST API v1
@@ -2235,38 +2317,45 @@
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
-    - name: What's new in the Migration API
-      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
-    - name: Migration permission guidance
-      href: apis/migration-perm-guidance.md
-    - name: Migrating OneNote folders
-      href: apis/onenote-migration-service.md
-    - name: Sensitivity Labels and the SharePoint Migration API
-      href: apis/sp-migration-api-and-sensitivity-labels.md
-    - name: How to export video transcripts using the SharePoint Migration API
-      href: apis/migration-api-video-transcripts.md
-    - name: Migration API
+    - name: Content-Specific Migration Guidance
       items:
-      - name: Import Migration API
-        items:
-        - name: Import Migration API (CreateMigrationJob)
+      - name: OneNote Folders
+        href: apis/onenote-migration-service.md
+      - name: Sensitivity Labels
+        href: apis/sp-migration-api-and-sensitivity-labels.md
+      - name: Video Transcripts
+        href: apis/migration-api-video-transcripts.md
+      - name: Sharing
+        href: apis/migration-api-shared.md
+      - name: Web Parts
+        href: apis/migrate-webparts-with-migrationapi.md
+    - name: SharePoint Migration API
+      items:
+        - name: SharePoint Migration API Overview
           href: apis/migration-api-overview.md
-          items:
-          - name: Sharing
-            href: apis/migration-api-shared.md
-          - name: Migrate web parts using the Migration API
-            href: apis/migrate-webparts-with-migrationapi.md
-      - name: Export Migration API (Asynchronous Metadata Read)
+        - name: SharePoint Migration API Reference
+          href: apis/migration-api-reference.md
+    - name: Asynchronous Metadata Read (AMR) API
+      items:
+      - name: SharePoint Asynchronous Metadata Read (AMR) API Overview
         href: apis/export-amr-api.md
-      - name: Permissions guide for Export Migration API (Asynchronous Metadata Read)
-        href: apis/export-amr-api-permission-guide.md
-      - name: Azure container and queue
-        href: apis/migration-api-azure-container-and-queue.md
-      - name: Encryption
-        href: apis/migration-api-encryption.md
-  - name: Microsoft Syntex REST API
+      - name: SharePoint Asynchronous Metadata Read (AMR) API Reference
+        href: apis/amr-api-reference.md
+    - name: Azure container and queue
+      href: apis/migration-azure.md
+    - name: Entra-ID access to Azure containers
+      href: apis/migration-entra-id-access.md
+    - name: Migration Job Progress API
+      href: apis/migration-job-progress-api-reference.md
+    - name: Migration Content Package
+      href: apis/migration-content-package.md
+    - name: Manifest Files
+      href: apis/migration-manifest.md
+    - name: Events
+      href: apis/migration-events.md
+  - name: Document processing REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md

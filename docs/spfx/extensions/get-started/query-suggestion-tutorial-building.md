@@ -1,7 +1,7 @@
 ---
 title: Building a query suggestion extension using SharePoint Framework
 description: Tutorial on creating a query suggestion extension with SharePoint Framework
-ms.date: 06/13/2022
+ms.date: 02/26/2026
 ms.localizationpriority: medium
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 Starting with the SharePoint Framework v1.10, you can also build a query suggestion extensions with SharePoint Framework.
 
-Be sure you have completed the procedures in the following articles before you begin to understand the overall process of SharePoint Framework extension, as Query Suggestion extension is working in similar ways as Application Customizers:
+Be sure you have completed the procedures in the following articles before you begin to understand the overall process of SharePoint Framework extension, as Query Suggestion extension work similarly to Application Customizers:
 
 * [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 * [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
@@ -38,16 +38,12 @@ Be sure you have completed the procedures in the following articles before you b
 1. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
     ```console
-    yo @microsoft/sharepoint --plusbeta
+    yo @microsoft/sharepoint 
     ```
 
 1. When prompted:
 
     * Accept the default **query-suggestion** as your solution name, and then select Enter.
-    * Select **SharePoint Online only (latest)**, and then select Enter.
-    * Select **Use the current folder** as the location for the files.
-    * Select **N** as we want this extension to be explicitly installed on specific site given the automated configuration which will be applied
-    * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created.
     * Select **Search Query Modifier** as the client-side extension to be created.
 
@@ -57,12 +53,10 @@ Be sure you have completed the procedures in the following articles before you b
 1. The next set of prompts asks for specific information about your web part:
 
     * Enter **MyQueryExtension** for the extension name, and then select Enter.
-    * Enter **My first query extension** as the description of the extension, and then select Enter.
-    * Accept the default **No JavaScript framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/query-extension-yeoman.png)
 
-    At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyQueryExtension** extension, which can be used to modify runtime the provided search queries.
+    At this point, Yeoman installs the required dependencies and scaffolds the solution files. The creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyQueryExtension** extension, which can be used to modify runtime the provided search queries.
 
 1. Next, enter the following to open the web part project in Visual Studio Code:
 
@@ -70,34 +64,120 @@ Be sure you have completed the procedures in the following articles before you b
     code .
     ```
 
-Notice how the structure looks similar as for the other SharePoint Framework solutions. Your extension has been created with the default values under the **extensions\myQueryExtension** folder
+Notice how the structure looks similar to the other SharePoint Framework solutions. Your extension has been created with the default values under the **extensions\myQueryExtension** folder.
 
   ![Solution structure](../../../images/query-extension-solution-structure.png)
 
 
 ## Modifying the query extension code
 
-Open file
+1. Open the file `MyQueryExtensionSearchQueryModifier.ts` in Visual Studio Code.
 
-Modify
+1. The default scaffolded code returns the query unmodified. Modify the `modifySearchQuery` method to add custom query logic. In this example, we scope search results to the current site by appending a `Path:` filter:
 
-Save
+    ```typescript
+    import { Log } from '@microsoft/sp-core-library';
+    import {
+      BaseSearchQueryModifier, IQuery, SearchQueryScenario
+    } from '@microsoft/sp-search-extensibility';
+
+    export interface IMyQueryExtensionSearchQueryModifierProperties {
+      testMessage: string;
+    }
+
+    const LOG_SOURCE: string = 'MyQueryExtensionSearchQueryModifier';
+
+    export default class MyQueryExtensionSearchQueryModifier
+      extends BaseSearchQueryModifier<IMyQueryExtensionSearchQueryModifierProperties> {
+
+      public onInit(): Promise<void> {
+        console.log(`[${LOG_SOURCE}] Initialized MyQueryExtensionSearchQueryModifier`);
+        return Promise.resolve();
+      }
+
+      public modifySearchQuery(query: IQuery, scenario: SearchQueryScenario): Promise<IQuery> {
+        console.log(`[${LOG_SOURCE}] Original query: "${query.queryText}" | Scenario: ${scenario}`);
+
+        if (scenario === SearchQueryScenario.SearchResults) {
+          const enhancedQueryText: string =
+            `${query.queryText} Path:${this.context.pageContext.web.absoluteUrl}`;
+          console.log(`[${LOG_SOURCE}] Enhanced query: "${enhancedQueryText}"`);
+          query.queryText = enhancedQueryText;
+        }
+
+        return Promise.resolve(query);
+      }
+    }
+    ```
+
+1. Save the file.
 
 
-## Installing solution to SharePoint
+## Installing the solution to SharePoint
 
-Build
+1. Build and package the solution for production:
 
-Package
+    ```console
+    heft build --production
+    heft package-solution --production
+    ```
 
-Install to app catalog
+    This creates the file `query-suggestion.sppkg`.
 
-Install to site
+1. Install to the app catalog:
 
-## Installing modern search open-source solution
+    * Navigate to your tenant App Catalog: `https://{tenantDomain}.sharepoint.com/sites/appcatalog/_layouts/15/AppCatalog.aspx`.
+    * Click **Upload** and select the `query-suggestion.sppkg` file.
+    * In the trust dialog, click **Deploy**.
 
-PowerShell execute and test things
+1. Install to the site:
 
-## Activating custom search experience
+    * Navigate to the target site where you want to test.
+    * Go to **Site Contents** → **New** → **App**.
+    * Find `query-suggestion-client-side-solution` and click **Add**.
+    * Wait for the app status to show **Added**.
 
-PowerShell execute and test things
+## Configuring custom search results page
+
+Query extensions only work when the site collection is associated to use a custom search results page. You need to create a search results page and configure it in site settings.
+
+1. Create a search results page:
+
+    * Navigate to **Site Pages** on your target site.
+    * Click **New** → **Site Page**.
+    * Name the page **SearchResults**.
+    * Click **Publish**.
+
+1. Configure custom search experience in Site Settings:
+
+    * Navigate to **Site Settings** → **Search Settings** (or go directly to `https://{tenantDomain}.sharepoint.com/sites/{siteName}/_layouts/15/enhancedSearch.aspx?level=site`).
+    * Under **"Which search results page should queries be sent to?"**, select **"Send queries to a custom results page URL"**.
+    * Enter the Results page URL: `/sites/{siteName}/SitePages/SearchResults.aspx`
+    * Leave the **Search Center URL** field empty.
+    * Click **OK**.
+
+> [!NOTE]
+> Search settings changes can take up to 30 minutes to take effect. Use an InPrivate/Incognito browser window to avoid cache issues.
+
+## Testing the extension
+
+1. Open an InPrivate/Incognito browser window.
+
+1. Navigate to your site: `https://{tenantDomain}.sharepoint.com/sites/{siteName}`
+
+1. Type a search query in the search box (e.g., **page1**) and press **Enter**.
+
+1. The browser should redirect to your custom search results page: `SearchResults.aspx?q=page1&k=page1`
+
+1. Open **F12 Developer Tools** → **Console** tab.
+
+1. You should see the following logs confirming the extension is working:
+
+    ```console
+    [MyQueryExtensionSearchQueryModifier] Initialized MyQueryExtensionSearchQueryModifier
+    [MyQueryExtensionSearchQueryModifier] Original query: "page1" | Scenario: 1
+    [MyQueryExtensionSearchQueryModifier] Enhanced query: "page1 Path:https://{tenantDomain}.sharepoint.com/sites/{siteName}"
+    ```
+
+This confirms the query extension is intercepting and modifying search queries before they are executed.
+

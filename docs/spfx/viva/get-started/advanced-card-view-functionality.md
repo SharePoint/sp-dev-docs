@@ -1,16 +1,20 @@
 ---
-title: Advanced Card View Functionality
-description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 09/12/2023
+title: Advanced Card View functionality for SharePoint Adaptive Card Extensions
+description: Build a data-driven Card View for a SharePoint Adaptive Card Extension (ACE) backed by a SharePoint list, with conditional Card Views and caching.
+ms.date: 07/22/2021
+author: andrewconnell
+ms.topic: tutorial
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
+
 # Advanced Card View Functionality
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
 
-In this tutorial, you'll implement advanced card view functionality. You'll build off the the previous tutorial and create a card view that's powered by data in a SharePoint list.
+In this tutorial, you'll implement advanced Card View functionality. You'll build off the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
-[!INCLUDE [developer-preview-notice](../../../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
 
 ## Create a test list
 
@@ -84,7 +88,7 @@ Let's modify the properties for our ACE and set the list ID that contains the da
 
 ### Change the extension state
 
-Next, let's update the state of the extension. When the state changes, it will trigger the ACE to rerender. These changes will add a collection of list items to the state as well as the current item displayed, as indicated by the `currentIndex` property you'll add.
+Next, let's update the state of the extension. When the state changes, it will trigger the ACE to rerender. These changes will add a collection of list items to the state and the current item displayed, as indicated by the `currentIndex` property you'll add.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 1. Add a new interface for the List data by adding the following code to the file:
@@ -149,7 +153,7 @@ The next step is to add support to the project and ACE to retrieve items from a 
 First, add a dependency to the SPFx package used to submit HTTP requests to REST endpoints:
 
 1. Locate and open the following file in the project: **./package.json**. Take note of the beta version of the SPFx related beta packages used by the other packages listed as dependencies in the `dependencies` section of the **package.json** file.
-1. Install the following NPM package in your project: **@microsoft/sp-http**:
+1. Install the following npm package in your project: **@microsoft/sp-http**:
 
     ```console
     npm install @microsoft/sp-http -SE
@@ -172,7 +176,7 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
         return this.context.spHttpClient.get(
           `${this.context.pageContext.web.absoluteUrl}` +
             `/_api/web/lists/GetById(id='${this.properties.listId}')/items`,
-          SPHttpClient.configurations.v1
+          SPHttpClient.configurations.v1 as any
         )
           .then((response) => response.json())
           .then((jsonResponse) => jsonResponse.value.map(
@@ -185,7 +189,7 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
     }
     ```
 
-1. Update the ACE to request the list data during when it's initialized by updating the `onInit()` method.
+1. Update the ACE to request the list data when it's initialized by updating the `onInit()` method.
 
     Replace the last line `return Promise.resolve();` to be `return this._fetchData();` as follows:
 
@@ -269,7 +273,7 @@ With the ACE updated to fetch items from a SharePoint list, let's update the car
 Now you can test the ACE. Build and launch the ACE in the hosted workbench:
 
 ```console
-gulp serve
+heft start
 ```
 
 Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
@@ -281,18 +285,18 @@ Open the Toolbox and select your ACE:
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-1.png" alt-text="Select the ACE from the Toolbox":::
 
-## Conditional card views
+## Conditional Card Views
 
 By default, Views are automatically responsive to the Card size. However, ACEs can optionally provide different Views for any given Card size.
 
 Change the HelloWorld ACE to display the total count of List items in the **Medium** Card size, and display the List items in the **Large** Card size to maximize the use of available space.
 
-### Medium card view
+### Medium Card View
 
-Let's create a medium card view for our ACE:
+Let's create a medium Card View for our ACE:
 
-1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts** folder.
-1. Add the following code to create a new **Medium** sized card view:
+1. Create a new file **./src/adaptiveCardExtensions/helloWorld/cardView/MediumCardView.ts**.
+1. Add the following code to create a new **Medium-sized Card View:
 
     ```typescript
     import {
@@ -378,7 +382,7 @@ Change the Card size to **Large** and refresh the browser:
 
 ## Large Card interactivity
 
-ACE Card views support user interaction. The buttons can invoke REST APIs or be used to interact with the Card in other ways. In this section, you'll change the Large Card view to iterate through the items in the SharePoint list.
+ACE Card Views support user interaction. The buttons can invoke REST APIs or be used to interact with the Card in other ways. In this section, you'll change the Large Card View to iterate through the items in the SharePoint list.
 
 1. Locate and open the following file in the project: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 1. At the top of the file, add `IActionArguments`, `GenericCardViewFooterConfiguration` and `IAdaptiveCardExtensionCardButtonParameters`  as the references to import from the **@microsoft/sp-adaptive-card-extension-base** package:
@@ -392,7 +396,7 @@ ACE Card views support user interaction. The buttons can invoke REST APIs or be 
     } from '@microsoft/sp-adaptive-card-extension-base';
     ```
 
-1. The buttons on the Card view can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
+1. The buttons on the Card View can be dynamic based on the current state of the ACE. Add the following code to your ACE's **CardView.ts** file:
 
     ```typescript
     public get cardViewParameters(): ComponentsCardViewParameters {
@@ -484,14 +488,14 @@ Select the **Next** button until you get to the last item in the list. The card 
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-6.png" alt-text="Card displaying the last item in the list with only a Previous button":::
 
-## Caching Card view and ACE state
+## Caching Card View and ACE state
 
 Starting in SPFx v1.14, ACEs have a client-side caching layer that can be configured to store:
 
 1. The latest rendered card.
 1. The state of the ACE.
 
-### Rendering from cached Card view
+### Rendering from cached Card View
 
 If the latest rendered card is stored, the Dashboard renders this cached card before the ACE is initialized, improving perceived performance.
 
@@ -502,7 +506,7 @@ protected getCacheSettings(): Partial<ICacheSettings> {
   return {
     isEnabled: true, // can be set to false to disable caching
     expiryTimeInSeconds: 86400, // controls how long until the cached card and state are stale
-    cachedCardView: () => new CardView() // function that returns the custom Card view that will be used to generate the cached card
+    cachedCardView: () => new CardView() // function that returns the custom Card View that will be used to generate the cached card
   };
 }
 ```
@@ -529,11 +533,11 @@ After this lab you should be familiar with:
 
 - Changing the default `properties` of an ACE
 - Changing the ACE `properties`/`state` interfaces
-- Creating and registering Card views
-- Conditionally rendering Card view elements
-- Advanced Card view manipulation
-- Caching Card view and ACE state
+- Creating and registering Card Views
+- Conditionally rendering Card View elements
+- Advanced Card View manipulation
+- Caching Card View and ACE state
 
-## See Also
+## See also
 
 - [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

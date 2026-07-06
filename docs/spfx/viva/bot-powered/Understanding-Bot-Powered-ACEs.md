@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections can be used to build custom experiences for the Microsoft Viva Connections Dashboard using the Bot development model.
 
 > [!TIP]
-> You can also wathc the key areas of this article in video format on the Microsoft 365 & Power Platform Community YouTube Channel.
+> You can also watch the key areas of this article in video format on the Microsoft Community Learning YouTube Channel.
 
 > [!Video https://www.youtube.com/embed/OWPVe3n5UnM]
 

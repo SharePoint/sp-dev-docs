@@ -1,16 +1,16 @@
 ---
 title: Build your first Form customizer extension
-description: Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type.
-ms.date: 12/14/2023
+description: Form customizers are SharePoint Framework components giving you an option to override the form experience at a list or library level by associating the component with the used content type.
+ms.date: 01/06/2025
 ms.custom: scenarios:getting-started
 ---
 
 # Build your first Form Customizer extension
 
-Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type. Form customizer components can be used in SharePoint Online, and you build them using  modern JavaScript tools and libraries.
+Form customizers are SharePoint Framework components that give you an option to override the form experience at a list or library level by associating the component with the used content type. Form customizer components can be used in SharePoint Online, and you build them using  modern JavaScript tools and libraries.
 
->[!Important]
-> Form customizer were released as part of the SharePoint Framework 1.15, so ensure that you are using the right version in your environment. See [v1.15 release notes](../../release-1.15.md) for details.
+> [!IMPORTANT]
+> Form customizers were released as part of the SharePoint Framework v1.15, so ensure that you are using the right version in your environment. See [v1.15 release notes](../../release-1.15.0.md) for details.
 
 > [!TIP]
 > You can find the output from this tutorial from [GitHub](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/spfx-formcustomizer-basics).
@@ -56,7 +56,7 @@ Form customizers are SharePoint Framework components giving you an option to ove
 
 1. Open the **./src/extensions/helloWorld/HelloWorldFormCustomizer.manifest.json** file.
 
-    This file defines your extension type and a unique identifier `id` for your extension which can be used to set to be used in content type level for enabling a custom rendering with this component.
+    This file defines your extension type and a unique identifier (`id`) for your extension. The `id` is used to associate the form customizer with a content type, enabling custom form rendering for that content type.
 
 ## Code your Form Customizer
 
@@ -74,7 +74,7 @@ import {
 The logic for your Form Customizer is contained in the `onInit()`, `render()`, and `onDispose()` methods.
 
 - `onInit()` is where you'll execute the setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations; `render()` isn't called until your promise has resolved. If you don’t need that, simply return `Promise.resolve<void>();`.
-- `render()` occurs when component is rendered. It provides an `event.domElement` HTML element where your code can write its content.
+- `render()` occurs when the component is rendered. It provides an `event.domElement` HTML element where your code can write its content.
 - `onDispose()` occurs immediately before the form host element is deleted. It can be used to free any resources that were allocated during form rendering. For example, if `render()` mounted a React element, `onDispose()` must be used to free it; otherwise, a resource leak would occur.
 
 The following are the contents of `render()` and `onDispose()` in the default solution:
@@ -91,7 +91,7 @@ The following are the contents of `render()` and `onDispose()` in the default so
   }
 ```
 
-As by default the form customzier component does not render any information, let's update the render method as follows.
+By default, the form customizer component does not render any information. Let's update the render method as follows.
 
 ```typescript
   public render(): void {
@@ -105,7 +105,7 @@ As by default the form customzier component does not render any information, let
 
 You can test and debug your Form Customizer within a live SharePoint Online site. You do not need to deploy your customizations to the tenant app catalog to do this, which makes the debugging experience simple and efficient.
 
-1. To test your extension, you'll need to first create list to test the customizer in. So move to the site in your SharePoint Online tenant where you want to test the form customizer.
+1. To test your extension, you'll need to first create a list to test the customizer in. So move to the site in your SharePoint Online tenant where you want to test the form customizer.
 1. On the toolbar, select **New**, and then select **List**.
 
     ![Creating a new list](../../../images/ext-forcustomizer-create-new-list.png)
@@ -120,7 +120,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
 1. Within Visual Studio Code, open the **./config/serve.json** file.
 
-    Update the `pageUrl` attributes to match a URL of the list which we created in the preview steps. After the changes, your **serve.json** should look like the following code:
+    Update the `pageUrl` attributes to match the URL of the list that we created in the preview steps. After the changes, your **serve.json** should look like the following code:
 
     ```json
     {
@@ -140,11 +140,11 @@ You can test and debug your Form Customizer within a live SharePoint Online site
           }
     ```
 
-    Let's call out few specific topics from serve.json file
+    Let's call out a few specific topics from the **serve.json** file
 
-    - You can see multiple different configurations which can be used to debug new, edit and view forms with specific query parameter differences. You can define the used configuration in your gulp serve command, for example as `gulp serve --config=helloWorld_EditForm`
+    - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your **heft start** command, for example, as **heft start --serve-config helloWorld_EditForm**.
     - componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
-    - To simplify the debugging, you do not need to define target content type id to which the component is associated, but in the runtime the association is performed in content type level by updating at least one of the following properties in the content type:
+    - To simplify the debugging, you do not need to define the target content type `id` to which the component is associated, but in the runtime, the association is performed in the content type level by updating at least one of the following properties in the content type:
       - ContentType.**NewFormClientSideComponentId** - component id for new form
       - ContentType.**NewFormClientSideComponentProperties** - optional configuration details
       - ContentType.**DispFormClientSideComponentId** - component id for edit form
@@ -155,7 +155,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
@@ -168,13 +168,13 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     ![Accept loading debug scripts](../../../images/ext-forcustomizer-accept-debug-scripts.png)
 
-    Notice how the the custom component is rendered in the page based on the custom content which we updated to the render method.
+    Notice how the custom component is rendered in the page based on the custom content, which we updated to the render method.
 
     ![List view with from customizer rendered with default outpu](../../../images/ext-forcustomizer-default-output.png)
 
 ## Add form item editing capabilities to the sample
 
-Now that we have created the baseline component and tested that it works properly. We will be creating a separate rendering logic for display, edit and new forms and to support saving new items to the list.
+Now that we have created the baseline component and tested that it works properly. We will be creating a separate rendering logic for display, edit, and new form,s and to support saving new items to the list.
 
 1. Open the **./src/extensions/helloWorld/loc/myStrings.d.ts** file, and add new **Title** to the **IHelloWorldFormCustomizerStrings** interface . Interface should be as follows after your edits..
 
@@ -184,6 +184,11 @@ Now that we have created the baseline component and tested that it works properl
       Cancel: string;
       Close: string;
       Title: string;
+    }
+
+    declare module 'HelloWorldFormCustomizerStrings' {
+      const strings: IHelloWorldFormCustomizerStrings;
+      export = strings;
     }
     ```
 
@@ -203,7 +208,7 @@ Now that we have created the baseline component and tested that it works properl
 1. Open the **./src/extensions/helloWorld/HelloWorldFormCustomizer.module.scss** file, and update the styling definition as follows. We are adding error styling for the component.
 
     ```scss
-    .helloWorld {
+    .basics {
       background-color: "[theme:white, default:#ffffff]";
       color: "[theme:themePrimary, default:#0078d4]";
       padding: 0.5rem;
@@ -223,6 +228,7 @@ Now that we have created the baseline component and tested that it works properl
       SPHttpClient,
       SPHttpClientResponse
     } from '@microsoft/sp-http';
+    import * as strings from 'HelloWorldFormCustomizerStrings';
     ```
 
 1. Include **_item** and **_etag** private types inside of the **HelloWorldFormCustomizer** class as shown in this code snippet. Notice that the class definition already exists in your code.
@@ -235,7 +241,7 @@ Now that we have created the baseline component and tested that it works properl
     // Added for the item to show in the form; use with edit and view form
     private _item: {
       Title?: string;
-    };
+    } = {};
     // Added for item's etag to ensure integrity of the update; used with edit form
     private _etag?: string;
     ```
@@ -259,7 +265,7 @@ Now that we have created the baseline component and tested that it works properl
         .then(res => {
           if (res.ok) {
             // store etag in case we'll need to update the item
-            this._etag = res.headers.get('ETag');
+            this._etag = res.headers.get('ETag') || undefined;
             return res.json();
           }
           else {
@@ -273,7 +279,7 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-1. Update the **render()** method as follows. Render the form either in display only or in the edit mode, depending on the display mode of the form. In this case we use the same renderig for new and edit experience, but you could easily have dedicated option if needed.
+1. Update the **render()** method as follows. Render the form either in display-only or in edit mode, depending on the display mode of the form. In this case, we use the same rendering for new and edit experience, but you could easily have a dedicated option if needed.
 
     ```typescript
       public render(): void {
@@ -290,7 +296,7 @@ Now that we have created the baseline component and tested that it works properl
                           <input type="button" id="cancel" value="${strings.Close}" />
                         </div>`;
 
-          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+          document.getElementById('cancel')?.addEventListener('click', this._onClose.bind(this));
         }
         // render new/edit form
         else {
@@ -307,8 +313,8 @@ Now that we have created the baseline component and tested that it works properl
                         <div class="${styles.error}"></div>
                       </div>`;
 
-          document.getElementById('save').addEventListener('click', this._onSave.bind(this));
-          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+          document.getElementById('save')?.addEventListener('click', this._onSave.bind(this));
+          document.getElementById('cancel')?.addEventListener('click', this._onClose.bind(this));
         }
       }
     ```
@@ -320,17 +326,23 @@ Now that we have created the baseline component and tested that it works properl
       // disable all input elements while we're saving the item
       this.domElement.querySelectorAll('input').forEach(el => el.setAttribute('disabled', 'disabled'));
       // reset previous error message if any
-      this.domElement.querySelector(`.${styles.error}`).innerHTML = '';
+      const errorElement = this.domElement.querySelector(`.${styles.error}`);
+      if (errorElement) {
+        errorElement.innerHTML = '';
+      }
 
-      let request: Promise<SPHttpClientResponse>;
       const title: string = (document.getElementById('title') as HTMLInputElement).value;
-
+      
+      let request: Promise<SPHttpClientResponse>;
       switch (this.displayMode) {
         case FormDisplayMode.New:
           request = this._createItem(title);
           break;
         case FormDisplayMode.Edit:
           request = this._updateItem(title);
+          break;
+        default:
+          return;
       }
 
       const res: SPHttpClientResponse = await request;
@@ -342,7 +354,10 @@ Now that we have created the baseline component and tested that it works properl
       else {
         const error: { error: { message: string } } = await res.json();
 
-        this.domElement.querySelector(`.${styles.error}`).innerHTML = `An error has occurred while saving the item. Please try again. Error: ${error.error.message}`;
+        const errorElement = this.domElement.querySelector(`.${styles.error}`);
+        if (errorElement) {
+          errorElement.innerHTML = `An error has occurred while saving the item. Please try again. Error: ${error.error.message}`;
+        }
         this.domElement.querySelectorAll('input').forEach(el => el.removeAttribute('disabled'));
       }
     }
@@ -372,7 +387,7 @@ Now that we have created the baseline component and tested that it works properl
         .post(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${this.context.list.title}')/items(${this.context.itemId})`, SPHttpClient.configurations.v1, {
           headers: {
             'content-type': 'application/json;odata.metadata=none',
-            'if-match': this._etag,
+            'if-match': this._etag || '*',
             'x-http-method': 'MERGE'
           },
           body: JSON.stringify({
@@ -382,16 +397,16 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-Now the code is complete to support minimal New, Edit and Display experiences and you can test out the different experiences using different configurations for debugging.
+Now the code is complete to support minimal New, Edit, and Display experiences, and you can test out the different experiences using different configurations for debugging.
 
 ![Custom form in the context of SharePoint](../../../images/ext-forcustomizer-custom-form.png)
 
 ## Deployment of your extension
 
-Whenever you are ready to start using your component, there are few steps to consider related on the component association to the content type. Steps for deployment are as follows:
+Whenever you are ready to start using your component, there are a few steps to consider related to the component's association with the content type. Steps for deployment are as follows:
 
 1. Deploy solution to SharePoint App Catalog
-1. Install solution to the site collection where you want to use the extension if you are not using the tenant scoped deployment
-1. Associate the custom component to the content type using the specific properties in ContentType object. There are few options to do this:
+1. Install the solution to the site collection where you want to use the extension if you are not using the tenant-scoped deployment
+1. Associate the custom component to the content type using the specific properties in `ContentType` object. There are a few options to do this:
    1. You can provision the used list and content type from your solution if you are using site scoped deployment option
-   1. You can associate the component to content types using REST or CSOM APIs. Notice that if you associate the component in the site collection or in the content type hub level, it's automatically inherited to all new content type instances
+   1. You can associate the component with content types using REST or CSOM APIs. Notice that if you associate the component in the site collection or in the content type hub level, it's automatically inherited to all new content type instances

@@ -1,0 +1,71 @@
+---
+title: What's new in SharePoint Embedded?
+description: Updates about Microsoft SharePoint Embedded.
+ms.date: 06/04/2025
+ms.localizationpriority: medium
+---
+
+# What's new in SharePoint Embedded
+
+## June 2026
+
+- The [`FileStorageContainerType.Manage.All`](/graph/permissions-reference#filestoragecontainertypemanageall) Microsoft Graph permission no longer requires the [SharePoint Embedded Administrator](./administration/adminrole.md) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. Any non-guest user in the owning tenant can [create a container type](./getting-started/containertypes.md#creating-container-types) and is automatically assigned as an [owner of that container type](./development/auth.md#container-type-owner-capabilities).
+
+## March 2026
+
+- [SharePoint Embedded agent SDK](./development/declarative-agent/spe-da.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./development/declarative-agent/sharepoint-embedded-knowledge-source.md).
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new **permissions** relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. For more information, see [Managing SharePoint Embedded applications created in the owning tenant](./development/auth.md#managing-sharepoint-embedded-applications-created-in-the-owning-tenant).
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new **informationBarrier** property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [Information Barriers](/purview/information-barriers-sharepoint).
+- The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available via the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
+
+## February 2026
+
+- [SharePoint Embedded connector](/connectors/sharepointembedded/) for [Power Platform](/power-platform/) is now generally available.
+- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet) for customers in China. For more information, see [Microsoft Graph national cloud deployments](/graph/deployments).
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs now support migrating file version history.
+
+## January 2026
+
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) APIs to [list columns](/graph/api/filestoragecontainer-list-columns), [create column](/graph/api/filestoragecontainer-post-columns), [update column](/graph/api/filestoragecontainer-update-column), and [delete column](/graph/api/filestoragecontainer-delete-column) are now available in the v1.0 Microsoft Graph endpoint.
+
+## December 2025
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) APIs are now available in the v1.0 Microsoft Graph endpoint.
+- [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) APIs are now available in the v1.0 Microsoft Graph endpoint.
+
+## November 2025
+
+- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (not yet GCC High or DoD) for US Government customers. For more information, see [Microsoft Graph national cloud deployments](/graph/deployments).
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the v1.0 Microsoft Graph endpoint.
+
+## October 2025
+
+- [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a **recycleBinItem** if the ID of the original **driveItem** is known.
+- [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) is previewing support for [SharePoint Embedded](./overview.md) to a limited number of customers. You can [sign up for the private preview](https://forms.office.com/r/98Z4iqSKya) today.
+
+## September 2025
+
+- [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the beta Microsoft Graph endpoint.
+- [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, and inviting _new_ guests via app-only access.
+- [driveItem: copy](/graph/api/driveitem-copy) has clearer documentation on behaviors around metadata, versions, cross-geo operations, and known issues.
+- New cmdlets for consuming tenant administrators to [add](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [remove](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser), or [change](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser) container membership were added to the [SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
+## August 2025
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) APIs are now available in the beta Microsoft Graph endpoint.
+- [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) APIs are now available in the beta Microsoft Graph endpoint.
+
+## July 2025
+
+- [driveItem: copy](/graph/api/driveitem-copy) now supports the `childrenOnly` and `includeAllVersionHistory` request parameters in the v1.0 Microsoft Graph endpoint.
+
+## June 2025
+
+- The `CopilotEmbeddedChatHosts` container type setting is now required to use [SharePoint Embedded agent](./development/declarative-agent/spe-da-adv.md#csp-policies). It must be set by the application owner via [`Set-SPOContainerTypeConfiguration`](/powershell/module/sharepoint-online/set-spocontainertypeconfiguration) and can optionally be overridden by consuming tenant administrators via [`Set-SPOApplication`](/powershell/module/SharePoint-online/set-spoapplication).
+
+## May 2025
+
+- The limit of container types that a partner tenant can create has been increased to 25 by default. For more information, see [Limits and Calling Patterns](./development/limits-calling.md#size-limits).
+- SharePoint Embedded agent switched to a consumption-based model for all users regardless of whether they have a Copilot license or not. For more information, see [SharePoint Embedded agent](./development/declarative-agent/spe-da.md).
+- The guidance on how to grant admin consent to a SharePoint Embedded application has been updated to use URL-based admin consent. For more information, see [Authentication and authorization](./development/auth.md#whats-next).
+- Documented an exceptional access pattern for operations that may require a user license. For more information, see [Authentication and authorization](./development/auth.md#operations-that-require-a-user-license).

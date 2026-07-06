@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-Ins and Azure ACS retirement FAQ
 description: Answers frequently asked questions related to the retirements of SharePoint Add-In and Azure ACS in Microsoft 365.
-ms.date: 01/02/2024
+ms.date: 06/19/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -24,6 +24,9 @@ Absolutely, both tenant and site collection app catalogs are an essential part o
 
 Absolutely. The SharePoint Store and public marketplace are also used to offer SharePoint Framework (SPFx) based solutions, and that will not change. You can still acquire SPFx solutions from the store, now and after Add-Ins have retired. Acquiring SharePoint Add-Ins via the store will not be possible anymore from July 1st, 2024.
 
+> [!Note]
+> If you've acquired an Add-In from the store before July 1st, 2024, and that Add-In was installed by a SharePoint Admin (Add-In was added to the tenant app catalog), then after July 1st this Add-In can still be installed on other sites in that tenant. Installing an Add-In that was never installed before will not be possible anymore, this includes installing all Add-Ins as regular user (non SharePoint Admin).
+
 ## My Add-In uses an app web; what about the data in that web?
 
 If your SharePoint Hosted Add-In is storing data in its app web, then that's something you need to take into account when you're rewriting your Add-In using the SharePoint Framework (SPFx). A common use case is that Add-Ins store list items in a list in the app web. When using a SharePoint Framework (SPFx) solution you can still use a (hidden) list, but now the list will live in the site where you've installed the SharePoint Framework (SPFx) solution. If you want to automatically retain the data, you'll need to use SharePoint APIs to copy the needed data from the app web, and recreate it in the new location using a format that works for your updated application.
@@ -31,9 +34,17 @@ If your SharePoint Hosted Add-In is storing data in its app web, then that's som
 > [!Important]
 > It's important you retrieve the data **before** you uninstall the SharePoint Add-In, because the app web is deleted when you uninstall the Add-In. In case you've accidentally deleted the Add-In, you can restore it from the recycle bin, which will also restore the Add-In's app web.
 
+## Can SharePoint Online users still acquire my Add-In from the public marketplace after July 1st?
+
+Users will still be able to browse your Add-In in the public marketplace (https://appsource.microsoft.com/), but when using the "Get it now" button the SharePoint Online user will see a message stating that Add-Ins are retired with a button that redirects the user to the Add-In vendor's site. Installing an Add-In via the public marketplace will not be possible anymore as of July 1st 2024.
+
 ## Can I still use my Add-In on SharePoint on-premises?
 
 SharePoint Add-Ins in SharePoint on-premises are not retired and will continue to work after April 2026 when deployed using a SharePoint on-premises app catalog. But acquiring them from the SharePoint Store/public marketplace will not be possible after April 2026.
+
+## Can I, as Add-In vendor, still update my Add-In?
+
+Yes, as Add-In vendor you can still submit updated versions of your Add-In via Partner Center as you might need to patch an issue.
 
 ## My Add-In is used for both SharePoint Online and SharePoint on-premises; what do you advise?
 
@@ -45,7 +56,7 @@ Yes, you can still read and update user profiles without Azure ACS. When you con
 
 ## Will remote event receivers also be retired?
 
-Yes, remote event receivers are part of this retirement. Remote event receivers have a dependency on Azure ACS, and will stop working when Azure ACS is turned off. Although remote event receivers can still be programmatically added once Azure ACS has fully retired in April 2026, the events won't fire anymore. The recommended path forward is to use [SharePoint Online Webhooks](../apis/webhooks/overview-sharepoint-webhooks.md). More information on how to replace remote event receivers with webhooks can be found in the [Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks](../sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md) article. The article shows how to use the SharePoint REST API to add the webhooks, but you may prefer to use Microsoft Graph [change notifications](/graph/webhooks) to add a [subscription for a SharePoint List](/graph/api/resources/subscription).
+Yes, remote event receivers are part of this retirement. Remote event receivers have a dependency on Azure ACS, and will be in broken state when Azure ACS is turned off. Although remote event receivers can still be programmatically added once Azure ACS has fully retired in April 2026, they cannot use ACS anymore to make delegated or app-only calls back into SharePoint. The recommended path forward is to use [SharePoint Online Webhooks](../apis/webhooks/overview-sharepoint-webhooks.md). More information on how to replace remote event receivers with webhooks can be found in the [Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks](../sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md) article. The article shows how to use the SharePoint REST API to add the webhooks, but you may prefer to use Microsoft Graph [change notifications](/graph/change-notifications-overview) to add a [subscription for a SharePoint List](/graph/api/resources/subscription).
 
 As webhooks are asynchronous by definition, synchronous events that allow an app to block or cancel a SharePoint action are no longer possible. If event blocking is being used to prevent accidental data updates/deletes by unauthorized users, then possible workarounds are securing the protected files/folders so they cannot be updated/deleted anymore, or by moving this type of data to a hidden library. In general, moving from synchronous to asynchronous events will require updating your application logic.
 
@@ -64,6 +75,10 @@ When you're using the classic "Site Contents" page (`_layouts/15/viewlsts.aspx`)
 
 No, both CSOM (client-side object model) and JSOM (JavaScript object model) will continue working after Add-Ins and Azure ACS have been fully retired. However, for new applications, and updates to existing applications, we recommend using the Microsoft Graph and SharePoint REST APIs for client-side code. For server-side code the recommendation is to use Microsoft Graph as a first choice. If the functionality you need is not yet available in the Microsoft Graph, then SharePoint REST or SharePoint CSOM can be used.
 
+## When I use appregnew.aspx the created ACS principals show up in Entra
+
+As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. These app principals are detected by the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), however you need version 1.10.0 to ensure the principal validity is correctly reported. Note, if you want to renew the secret of these principals ensure you're using the right approach as described in [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
+
 ## Do I need to delete Azure ACS principals that are not needed anymore?
 
 Azure ACS principals will automatically expire (default lifetime is 2 years) so no action is needed; you can just let the principals expire. If you want to delete the principals after remediation, then follow this guidance:
@@ -74,3 +89,7 @@ Azure ACS principals will automatically expire (default lifetime is 2 years) so 
 For principals that have Site, Web or List permissions **and** Tenant permissions, you'll need to follow both procedures described above.
 
 A good practice is for admins to turn off Azure ACS app-only access for the entire tenant, having first ensured there is no remaining business relevant Azure ACS usage, as mentioned in the [Azure ACS retirement announcement](https://aka.ms/retirement/acs/support). Doing this will automatically prevent any remaining un-expired principals from working.
+
+## Can I rely on unpublished offers in Partner Center for managing a multi-tenant Client ID for customers?
+
+No, offers setup in Partner Center must be published on Microsoft stores before using the client IDs in production.

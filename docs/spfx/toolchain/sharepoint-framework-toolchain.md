@@ -1,13 +1,15 @@
 ---
-title: SharePoint Framework toolchain
-description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects.
-ms.date: 02/10/2022
+title: "SharePoint Framework Legacy Toolchain: Gulp-Based"
+description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the legacy gulp-based toolchain.
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 
-# SharePoint Framework toolchain
+# SharePoint Framework Legacy Toolchain: Gulp & Webpack
 
-The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects.
+The SharePoint Framework (SPFx) toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects.
+
+[!INCLUDE [spfx-gulp-toolchain-legacy](../../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
 The toolchain:
 
@@ -15,9 +17,6 @@ The toolchain:
 - Helps you test client-side components in your local development environment by using tools such as the SharePoint Workbench.
 - Enables you to package and deploy to SharePoint.
 - Provides you with a set of build commands that help you complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package, and more.
-
-> [!IMPORTANT]
-> The local workbench does not support Internet Explorer 11.
 
 ## Use npm packages
 
@@ -203,5 +202,7 @@ In SHIP mode, the build tasks copy all of the web part assets, including the web
 ## See also
 
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
+- [Heft-based toolchain (SPFx v1.22.0+)](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Yeoman generator for the SharePoint Framework](../yeoman-generator-for-spfx-intro.md)
-- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+- [Customize the build with Gulp tasks](integrate-gulp-tasks-in-build-pipeline.md)
+- [Extending Webpack in the Gulp-based toolchain](extending-webpack-in-build-pipeline.md)

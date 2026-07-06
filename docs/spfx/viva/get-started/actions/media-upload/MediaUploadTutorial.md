@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 12/14/2023
+ms.date: 02/18/2026
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
@@ -25,35 +25,15 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-At this point, if you do **gulp serve**, then you'll see the **MediaUpload** card:
+Next, run **heft start** from the command line in the root of the project. When the hosted workbench loads, you'll see the **MediaUpload** card:
 
 ![See the MediaUpload card icon in the webpart toolbox](./img/mediaUploadTutorialACE.PNG)
 
 ## Add media upload action to your Adaptive Card Extension
 
-At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick views.
+At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick Views.
 
-In the Card View, we'll provide a button that will perform the following actions:
-
-- Upload an image file
+In the Card View, we'll provide a button that will perform the following actions: **Upload an image file**
 
 ### Update the labels that will show up on the card
 
@@ -97,7 +77,7 @@ Here, replace the definition of `footer` in `cardViewParameters` getter with the
 
 ```typescript
 public get cardViewParameters(): ComponentsCardViewParameters {
-  return return PrimaryTextCardView({
+  return PrimaryTextCardView({
     // ...
     footer: {
       componentName: 'cardButton',
@@ -112,7 +92,7 @@ public get cardViewParameters(): ComponentsCardViewParameters {
   });
 }
 ```
-You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extensions-base`:
+You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extension-base`:
 
 With this change, we have configured a button with label **Upload PNG file** and on click action is `VivaAction.SelectMedia`, which load the file uploader modal.
 
@@ -196,7 +176,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a **gulp serve** at this point, then you'll be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a **heft start** at this point, then you'll be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 
@@ -259,7 +239,7 @@ public onAction(action: ISelectMediaActionArguments): void {
 
 So now, whenever the `VivaAction.SelectMedia` action is triggered from your Quick View, depending on the parameters that were passed, the Adaptive Card Extension framework will pass a media attachment to the `onAction` callback. In the implementation shared above, we check if the `action` type is of type `VivaAction.SelectMedia`, and if it is, then we re-render the Quick View by doing a `setState`, in which we update the `filesUploaded` text-block.
 
-At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
+At this point, you can run **heft start** again and see how all the changes you made so far came together.
 
 This is it! Congratulations on successfully creating you Adaptive Card Extension with media upload action.
 

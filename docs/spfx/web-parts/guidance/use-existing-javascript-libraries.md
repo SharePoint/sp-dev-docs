@@ -1,7 +1,7 @@
 ---
 title: Use existing JavaScript libraries in SharePoint Framework client-side web parts
 description: Ensure that your web parts won't negatively impact the performance of SharePoint pages that they're being used on.
-ms.date: 06/13/2022
+ms.date: 02/05/2026
 ms.localizationpriority: high
 ---
 
@@ -60,7 +60,7 @@ The most common way of referencing existing JavaScript libraries in SharePoint F
 
 ## Bundle web part resources
 
-SharePoint Framework uses a build toolchain based on open-source tooling such as gulp and Webpack. When building SharePoint Framework projects, these build tools automatically combine all referenced resources into a single JavaScript file in a process called bundling.
+SharePoint Framework uses a build toolchain based on open-source tooling such as heft and Webpack. When building SharePoint Framework projects, these build tools automatically combine all referenced resources into a single JavaScript file in a process called bundling.
 
 ![Command window with the gulp bundle task visible next to the SharePoint Framework dist folder containing the output files](../../../images/external-scripts-gulp-bundle.png)
 
@@ -72,11 +72,11 @@ Bundling web parts also has benefits for end-users: generally speaking, it's fas
 
 However, bundling existing JavaScript libraries with SharePoint Framework client-side web parts isn't without drawbacks.
 
-When bundling existing JavaScript frameworks in the SharePoint Framework, all referenced scripts are included in the generated bundle file. Following the Angular example, an optimized web part bundle including Angular is over 170 KB.
+When bundling existing JavaScript frameworks in the SharePoint Framework, all referenced scripts are included in the generated bundle file. Following the Angular example, an optimized web part bundle including Angular is over 1385 KB.
 
 ![Screenshot of the File Explorer screen's deploy folder showing the Hello World bundle JavaScript file being highlighted.](../../../images/external-scripts-bundle-size.png)
 
-If you add another web part to your project that also uses Angular and you build the project, you get two bundle files, one for each web part, each of them being over 170 KB.
+If you add another web part to your project that also uses Angular and you build the project, you get two bundle files, one for each web part, each of them being over 1385 KB.
 
 ![Screenshot of the File Explorer screen's deploy folder showing two Hello World bundle JavaScript files being highlighted.](../../../images/external-scripts-two-bundles-size.png)
 
@@ -159,11 +159,11 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 }
 ```
 
-If you build your project now and take a look at the size of the generated bundle file, you notice that it's only 6 KB.
+If you build your project now and take a look at the size of the generated bundle file, you notice that it's only 40 KB.
 
 ![Screenshot of File Explorer showing the deploy folder with the Hello Word JavaScript file being highlighted.](../../../images/external-scripts-external-angular-bundle-size.png)
 
-If you add another web part to your project that also uses Angular, and you build the project again, both bundles would be 6 KB each.
+If you add another web part to your project that also uses Angular, and you build the project again, both bundles would be 40 KB each.
 
 ![Screenshot of File Explorer showing the deploy folder with two Hello Word JavaScript files being highlighted.](../../../images/external-scripts-external-angular-two-bundles-size.png)
 
@@ -265,8 +265,6 @@ This way you specify that the **simpleWeather** script should be loaded after jQ
 
 > [!NOTE]
 > Notice how the entry for registering jQuery uses **jquery** for the external resource name, but **jQuery** as the global variable name. The name of the external resource is the name that you use in the `import` statements in your code. This is also the name that must match TypeScript type declarations. The global variable name, specified by using the `globalName` property, is the name known to other scripts such as plug-ins built on top of the library. While for some libraries these names might be the same, it's not required, and you should carefully check that you're using correct names to avoid any problems.
-
-It's difficult to determine manually whether the script that you're trying to load is a module or a non-module script. This is especially the case if the script that you're trying to load is minified. If your script is hosted on a publicly accessible URL, you can use the free [Rencore SharePoint Framework Script Check](https://rencore.com/sharepoint-framework/script-check/) tool to determine the type of script for you. Additionally, this tool lets you know whether the hosting location from which you're loading the script is properly configured.
 
 ## Non-module scripts considerations
 

@@ -66,7 +66,7 @@ this.setState({
 See more details on the use cases with code samples from the following updated documentation
 
 * [Making Quick View compatible with dark mode in mobile devices](./viva/get-started/making-quickview-compatable-darkmode-mobile.md)
-* [Quick view design guidance](./viva/design/designing-quick-view.md)
+* [Quick View design guidance](./viva/design/designing-quick-view.md)
 
 ## Summary
 

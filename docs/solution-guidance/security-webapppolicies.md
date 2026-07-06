@@ -4,7 +4,7 @@ description: Web app policies are a concept that allows SharePoint administrator
 ms.date: 8/10/2023
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ---
 

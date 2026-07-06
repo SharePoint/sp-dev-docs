@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 12/14/2023
+ms.date: 01/06/2025
 ms.custom: scenarios:getting-started
 ---
 # Build your first ListView Command Set extension
@@ -92,7 +92,6 @@ Open the file **./src/extensions/helloWorld/HelloWorldCommandSet.ts**.
 Notice the base class for the ListView Command Set is imported from the **\@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.
 
 ```typescript
-import { override } from '@microsoft/decorators';
 import { Log } from '@microsoft/sp-core-library';
 import {
   BaseListViewCommandSet,
@@ -185,7 +184,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
@@ -247,7 +246,7 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 1. In your console window, ensure that you do not have any exceptions. If you do not already have the solution running in localhost, execute the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
@@ -362,13 +361,13 @@ Since solutions will by default use the **asset packaging** capability, your Jav
 1. In the console window, enter the following command to package your client-side solution that contains the extension so that we get the basic structure ready for packaging:
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following command so that the solution package is created:
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
     The command creates the following package: **./sharepoint/solution/command-extension.sppkg** folder:

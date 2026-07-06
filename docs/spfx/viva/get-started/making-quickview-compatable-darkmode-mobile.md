@@ -1,7 +1,7 @@
 ---
 title: Making Quick View compatible with dark mode in mobile devices
 description: Making Adaptive Card Extension Quick View compatible for both dark and light mode by using different resources for both scenarios.
-ms.date: 11/07/2023
+ms.date: 08/28/2024
 ms.localizationpriority: high
 ---
 # Making Quick View compatible with dark mode in mobile devices
@@ -9,9 +9,9 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 > The following tutorial is targeted specifically for Quick View in Mobile for Viva Connections iOS and Android.
 
-An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/sp-adaptive-card-extension-base/ipartialsdks?view=sp-typescript-latest)) is available staring with the SPFx 1.18.1 version, to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
+An API ([`context.sdks.microsoftTeams.teamsJs.app.getContext()`](/javascript/api/sp-adaptive-card-extension-base/ipartialsdks)) is available staring with the SPFx 1.18.1 version, to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
-- Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
+- Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**.
 - Replace the contents of this file with the following JSON:
 
     ```json
@@ -21,7 +21,7 @@ An API ([context.sdks.microsoftTeams.teamsJs.app.getContext()](/javascript/api/s
             {
                 "type": "TextBlock",
                 "weight": "Bolder",
-                "text": "${title}"	
+                "text": "${title}"
             },
             {
                 "type": "ColumnSet",
@@ -74,16 +74,16 @@ export default class helloWorldAdaptiveCardExtension extends BaseAdaptiveCardExt
     this.state = {
       theme: "light"
     }
-    
+
   this.context.sdks?.microsoftTeams?.teamsJs.app.getContext().then((context) => {
     this.setState({
       theme: context.app.appInfo.theme
     });
   });
 
-    // registers the card view to be shown in a dashboard
+    // registers the Card View to be shown in a dashboard
   this.cardNavigator.register(CARD_VIEW_REGISTRY_ID, () => new CardView());
-    // registers the quick view to open via QuickView action
+    // registers the Quick View to open via QuickView action
   this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
   return Promise.resolve();
@@ -126,17 +126,17 @@ export class QuickView extends BaseAdaptiveCardView<
 
 - Quick View in mobile iOS looks like this:
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light.png" alt-text="Screenshot that shows how an image in quick view viewed on mobile appears in light mode.":::
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light.png" alt-text="Screenshot that shows how an image in Quick View viewed on mobile appears in light mode.":::
 
 - When we switch to dark mode, the image conflicts with the background.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_dark.png" alt-text="Screenshot that shows how the same image in quick view viewed on mobile appears in dark mode."::: 
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_dark.png" alt-text="Screenshot that shows how the same image in Quick View viewed on mobile appears in dark mode.":::
 
 - To avoid this issue, we can assign different images for light and dark theme in **QuickView.ts**. Replace the existing code in the **data()** function with this snippet:
 
 ```typescript
 public get data(): IQuickViewData {
-  // only two options are available for theme: 'dark' and 'default' 
+  // only two options are available for theme: 'dark' and 'default'
     const isDarkTheme = this.state.theme === 'dark' ? true : false;
     return {
       subTitle: strings.SubTitle,
@@ -148,7 +148,7 @@ public get data(): IQuickViewData {
 
 - Now when we switch to dark mode, on opening the same Quick View we see for light and dark theme respectively.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light_and_dark.png" alt-text="Screenshot that shows how a card quick view viewed on mobile appears in light mode and dark mode with different images assigned.":::
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light_and_dark.png" alt-text="Screenshot that shows how a card Quick View viewed on mobile appears in light mode and dark mode with different images assigned.":::
 
 Similarly, we can customize our icons, images, and other elements of Quick View to support both light and dark theme.
 

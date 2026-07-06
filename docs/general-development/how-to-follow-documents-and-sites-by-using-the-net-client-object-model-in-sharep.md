@@ -15,71 +15,36 @@ Learn how to work with Following Content features by using the SharePoint .NET c
 <a name="bk_intro"> </a>
 
 SharePoint users can follow documents, sites, and tags can follow documents, sites, and tags to get updates about the items in their newsfeeds and to quickly open followed documents and sites. You can use the .NET client object model in your app or solution to start following content, stop following content, and get followed content on behalf of the current user. This article shows you how to create a console application that uses the .NET client object model to work with Following Content features for documents and sites.
-  
-    
-    
+      
 The following objects are the primary APIs for Following Content tasks:
-  
-    
-    
 
--  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) provides methods for managing a user's list of followed actors.
-    
-  
--  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) represents a document, site, or tag that the server returns in response to a client-side request.
-    
-  
--  [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) specifies a document, site, or tag in client-side requests to the server.
-    
-  
--  [Microsoft.SharePoint.Client.Social.SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) and [Microsoft.SharePoint.Client.Social.SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx) specify content types in client-side requests to the server.
+-  [SocialFollowingManager](/previous-versions/office/sharepoint-csom/jj163489(v=office.15)) provides methods for managing a user's list of followed actors. 
+-  [SocialActor](/previous-versions/office/sharepoint-csom/jj164459(v=office.15)) represents a document, site, or tag that the server returns in response to a client-side request.
+-  [SocialActorInfo](/previous-versions/office/sharepoint-csom/jj164535(v=office.15)) specifies a document, site, or tag in client-side requests to the server.
+-  [Microsoft.SharePoint.Client.Social.SocialActorType](/previous-versions/office/sharepoint-csom/jj164432(v=office.15)) and [Microsoft.SharePoint.Client.Social.SocialActorTypes](/previous-versions/office/sharepoint-csom/jj164274(v=office.15)) specify content types in client-side requests to the server.
     
 > [!NOTE]
-> You also use these APIs for Following People tasks, but the **GetSuggestions** and **GetFollowers** methods available from [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) only support following people, not content. For more information about how you can use [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) , see [Follow content in SharePoint](follow-content-in-sharepoint.md) and [Follow people in SharePoint](follow-people-in-sharepoint.md). For code examples that show how to follow people, see  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md). 
+> You also use these APIs for Following People tasks, but the **GetSuggestions** and **GetFollowers** methods available from [SocialFollowingManager](/previous-versions/office/sharepoint-csom/jj163489(v=office.15)) only support following people, not content. For more information about how you can use [SocialFollowingManager](/previous-versions/office/sharepoint-csom/jj163489(v=office.15)) , see [Follow content in SharePoint](follow-content-in-sharepoint.md) and [Follow people in SharePoint](follow-people-in-sharepoint.md). For code examples that show how to follow people, see  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md). 
   
-    
-    
-
-
 ## Prerequisites for setting up your development environment to work with Following Content features by using the SharePoint .NET client object model
 <a name="bkmk_SetUpDevEnv"> </a>
 
 To create a console application that uses the .NET client object model to work with Following Content features for documents and sites, you'll need the following:
-  
-    
-    
 
 - SharePoint with My Site configured, with the My Site site created for the current user, and with a document uploaded to a SharePoint document library
-    
-  
-- Visual Studio 2012
-    
-  
+- Visual Studio 2022
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
 > [!NOTE]
 > If you are not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](https://www.microsoft.com/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
-  
-    
-    
-
-
+ 
 ## Create a console application to work with Following Content features by using the SharePoint .NET client object model
 <a name="bkmk_CreateConsoleApp"> </a>
 
-
 1. In Visual Studio, choose **File**, **New**, **Project**.
-    
-  
-2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
-    
-  
+2. In the **New Project** dialog box, choose **.NET Framework 4.8** from the drop-down list at the top of the dialog box.
 3. In the **Templates** list, choose **Windows**, and then choose the **Console Application** template.
-    
-  
 4. Name the project FollowContentCSOM, and then choose the **OK** button.
-    
-  
 5. Add references to the following assemblies:
     
   - **Microsoft.SharePoint.Client**   
@@ -92,39 +57,24 @@ To create a console application that uses the .NET client object model to work w
   -  [Get followed content for the current user](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md#bkmk_GetFollowed)
     
 7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**.
-    
-  
 
 ## Code example: Start and stop following content by using the SharePoint .NET client object model
 <a name="bkmk_FollowContent"> </a>
 
 The following code example makes the current user start following or stop following a target item. It shows how to:
   
-    
-    
-
-- Check whether the current user is following a particular document or site by using the  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx) method.
-    
+- Check whether the current user is following a particular document or site by using the  [IsFollowed](/previous-versions/office/sharepoint-csom/jj163393(v=office.15)) method.
   
-- Start following a document or site by using the  [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method.
+- Start following a document or site by using the  [Follow](/previous-versions/office/sharepoint-csom/jj163482(v=office.15)) method.
+   
+- Stop following a document or site by using the  [StopFollowing](/previous-versions/office/sharepoint-csom/jj163940(v=office.15)) method.
+   
+- Get the count of documents or sites that the current user is following by using the  [GetFollowedCount](/previous-versions/office/sharepoint-csom/jj164386(v=office.15)) method.
     
-  
-- Stop following a document or site by using the  [StopFollowing](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.StopFollowing.aspx) method.
-    
-  
-- Get the count of documents or sites that the current user is following by using the  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx) method.
-    
-  
-This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowResult.aspx) object that is returned by the [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method to determine whether to start or stop following the target item.
+This code example uses the  [SocialFollowResult](/previous-versions/office/sharepoint-csom/jj163965(v=office.15)) object that is returned by the [Follow](/previous-versions/office/sharepoint-csom/jj163482(v=office.15)) method to determine whether to start or stop following the target item.
   
 > [!NOTE]
 > Change the placeholder values for the **serverUrl** and **contentUrl** variables before you run the code. To use a site instead of a document, use the variables that are commented out.
-  
-    
-    
-
-
-
 
 ```csharp
 
@@ -223,33 +173,22 @@ namespace FollowContentCSOM
 }
 ```
 
-
 ## Code example: Get followed content by using the SharePoint .NET client object model
 <a name="bkmk_GetFollowed"> </a>
 
 The following code example gets the documents and sites that the current user is following and gets information about the user's Following Content status. It shows how to:
   
+- Check whether the current user is following the target document and site by using the  [IsFollowed](/previous-versions/office/sharepoint-csom/jj163393(v=office.15)) method.
     
+- Get the count of documents and sites that the current user is following by using the  [GetFollowedCount](/previous-versions/office/sharepoint-csom/jj164386(v=office.15)) method.
     
-
-- Check whether the current user is following the target document and site by using the  [IsFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.IsFollowed.aspx) method.
+- Get the documents and sites that the current user is following by using the  [GetFollowed](/previous-versions/office/sharepoint-csom/jj163811(v=office.15)) method.
     
-  
-- Get the count of documents and sites that the current user is following by using the  [GetFollowedCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowedCount.aspx) method.
-    
-  
-- Get the documents and sites that the current user is following by using the  [GetFollowed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.GetFollowed.aspx) method.
-    
-  
 - Iterate through the groups of content and get each item's name, content URI, and URI.
     
 > [!NOTE]
 > Change the placeholder value for the **serverUrl**, **docContentUrl**, and **siteContentUrl** variables before you run the code.
-  
-    
-    
-
-
+ 
 ```csharp
 
 using System;
@@ -335,14 +274,9 @@ namespace FollowContentCSOM
 }
 ```
 
-
 ## See also
 <a name="bkmk_AddtionalResources"> </a>
-
-
 -  [Follow content in SharePoint](follow-content-in-sharepoint.md)
-    
-  
 -  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)
     
   

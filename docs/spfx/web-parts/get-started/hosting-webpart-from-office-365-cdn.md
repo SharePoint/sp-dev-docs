@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 11/02/2023
+ms.date: 12/24/2025
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -14,7 +14,7 @@ Microsoft 365 Content Delivery Network (CDN) provides you an easy solution to ho
 > There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Microsoft 365 CDN option, but you could also use the [Azure CDN](./deploy-web-part-to-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location that end users can access using HTTP(S) would be technically suitable for hosting the assets for end users.
 
 > [!IMPORTANT]
-> This article uses the `includeClientSideAssets` attribute introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
+> This article uses the `includeClientSideAssets` attribute introduced in the [SharePoint Framework (SPFx) v1.4](../../release-1.4.0.md). This version is not supported with **SharePoint 2016 Feature Pack 2**.
 > If you're using an on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from a centralized library in your on-premises SharePoint to which your users have access. Please see additional considerations in the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
 
 Make sure that you've completed the following tasks before you begin:
@@ -23,9 +23,10 @@ Make sure that you've completed the following tasks before you begin:
 - [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 - [Deploy your client-side web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
 
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/N-KowN-UwTM]
+
 
 ## Enable CDN in your Microsoft 365 tenant
 
@@ -34,7 +35,7 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
 ## Finalize solution for deployment
 
 1. Switch to the console and make sure you're still in the project directory that you used to set up your web part project.
-1. If you are still running the local webserver by executing **gulp serve** in the previous tutorial, press <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate it.
+1. If you are still running the local webserver by executing **heft start** in the previous tutorial, press <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate it.
 1. Ensure you're in your project directory:
 
     ```console
@@ -103,13 +104,13 @@ If Microsoft 365 CDN *is enabled*, it's used automatically with default settings
 1. Execute the following task to bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets. This URL is automatically updated based on your tenant CDN settings.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This creates an updated **helloworld-webpart.sppkg** package on the **sharepoint/solution** folder.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
     > [!NOTE]

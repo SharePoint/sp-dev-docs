@@ -2,7 +2,7 @@
 title: Modernizing your SharePoint Add-In model implementations in Microsoft 365
 description: 
 ms.date: 09/25/2023
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

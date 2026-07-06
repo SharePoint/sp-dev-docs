@@ -1,16 +1,16 @@
 ---
 title: Update SharePoint Framework packages
 description: Update the npm packages that you've installed in your project and those you've installed globally.
-ms.date: 10/26/2020
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Update SharePoint Framework packages
 
-SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.
+SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager to manage dependencies and other required JavaScript helpers. npm is included with the Node.js install.
 
 When you create a new client-side solution, the Yeoman generator for SharePoint fetches the latest SharePoint Framework packages required for your client-side project. As you build your project, your existing packages could be outdated because there could be new versions of one or more packages available.
 
-Based on the [release notes](https://github.com/SharePoint/sp-dev-docs/wiki#release-notes) for a particular release or the latest package, you may decide to update your SharePoint Framework packages used in your project. SharePoint Framework packages include both the npm packages you've installed in your project, for example: [@microsoft/sp-core-library](https://www.npmjs.com/package/@microsoft/sp-core-library), and npm packages installed globally, for example: [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint).
+Based on the [release notes](../roadmap.md) for a particular release or the latest package, you may decide to update your SharePoint Framework packages used in your project. SharePoint Framework packages include both the npm packages you've installed in your project, for example: [@microsoft/sp-core-library](https://www.npmjs.com/package/@microsoft/sp-core-library), and npm packages installed globally, for example: [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint).
 
 > [!TIP]
 > While it may not be required, we recommend that you update the SharePoint Framework packages often so that you can get the latest changes and fixes that have been released.
@@ -37,7 +37,7 @@ To identify the SharePoint Framework packages, look for the package names that s
 @microsoft/sp-
 ```
 
-Along with the SharePoint Framework packages, you may also need to update **react** and **office-ui-fabric-react** packages. Make sure you read the [Release Notes & Roadmap](../roadmap.md) for the specific release to infer which packages require updates.
+Along with the SharePoint Framework packages, you may also need to update **react** and other related packages. Make sure you read the [Release Notes & Roadmap](../roadmap.md) for the specific release to infer which packages require updates.
 
 ### Use "npm outdated" with a project
 
@@ -72,10 +72,10 @@ Updating the package by using npm installs the specified version of the package 
 After the packages are installed, execute the following command to clean up any old build artifacts:
 
 ```console
-gulp clean
+heft clean
 ```
 
-It's recommended to delete all old packages by deleting the **node_modules** folder and download (ie: reinstall) all dependencies with the updated **package.json**. Without this step, old versions may conflict with the newer versions the next time you build the project.
+It's recommended to delete all old packages by deleting the **node_modules** folder and **package-lock.json** file, then reinstall all dependencies with the updated **package.json**. Without this step, old versions may conflict with the newer versions the next time you build the project.
 
 ```console
 npm install
@@ -83,12 +83,12 @@ npm install
 
 ## Update your code
 
-Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://github.com/SharePoint/sp-dev-docs/wiki#release-notes) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
+Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](../roadmap.md) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
 
 You can always build the project to see if you've any errors and warnings by running the command in a console in your project directory:
 
 ```console
-gulp build
+heft build
 ```
 
 ## Update Yeoman generator

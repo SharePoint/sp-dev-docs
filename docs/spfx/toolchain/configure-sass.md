@@ -1,7 +1,7 @@
 ---
 title: Configure Sass processing during builds
 description: In this article, you'll learn how to configure the Sass processing during builds of your SharePoint Framework (SPFx) projects.
-ms.date: 01/27/2023
+ms.date: 11/18/2025
 ms.localizationpriority: high
 ---
 
@@ -13,7 +13,7 @@ In this article, you'll learn how to configure the Sass processing during builds
 
 The SPFx v1.15 changed the Sass processor the build toolchain used to transpile CSS files from the NPM package [node-sass](https://www.npmjs.com/package/node-sass) to [sass](https://www.npmjs.com/package/sass). The **sass** package is a pure JavaScript implementation of the now-deprecated **dart-sass** package.
 
-This change was primarily made because the [**node-sass** package was deprecated back in 2018](https://sass-lang.com/blog/libsass-is-deprecated), but the **sass** package is also much faster than the **node-sass** package it replaced.
+This change was primarily made because the [node-sass package was deprecated in 2018](https://sass-lang.com/blog/libsass-is-deprecated), but the **sass** package is also much faster than the **node-sass** package it replaced.
 
 ## Impacts of the change
 
@@ -29,7 +29,7 @@ However, because the **sass** package is added as part of the toolchain, it wasn
 
 ## How to silence deprecation warnings in the Sass processor
 
-To address this, all SPFx projects starting with v1.16.1 now include a new file: **./config/sass.json**.
+To address this, Microsoft introduced a new file, **./config/sass.json**, in SPFx v1.16.1.
 
 If you have deprecation warnings coming from Sass files you don't maintain in your project, and thus, you have no control over, you can add `"quietDeps": true` to this file to configure the **sass** processor to suppress all deprecation warnings.
 
@@ -40,8 +40,31 @@ If you have deprecation warnings coming from Sass files you don't maintain in yo
 }
 ```
 
+> [!IMPORTANT]
+> The configuration setting `quietDeps` only applies to the legacy SPFx gulp-based toolchain.
+
+## Configure the Sass processor in the Heft-based toolchain
+
+Microsoft transitioned SPFx in v1.22 from the [gulp-based toolchain](sharepoint-framework-toolchain.md) to a [Heft-based toolchain](sharepoint-framework-toolchain-rushstack-heft.md). The Heft-based toolchain uses the [Heft Sass plugin](https://heft.rushstack.io/pages/plugins/sass/). The configuration of this plugin is defined in the **./config/sass.json** file within your project.
+
+By default, the configuration inherits the default Sass configuration defined in the core SPFx Heft rig. Developers can customize the Heft Sass plugin configuration using the **./config/sass.json** file.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/v0/heft-sass-plugin.schema.json",
+  "extends": "@microsoft/spfx-web-build-rig/profiles/default/config/sass.json"
+}
+```
+
+Refer to the Heft Sass plugin documentation for more information how to configure the plugin:
+
+- [Heft Sass plugin](https://heft.rushstack.io/pages/plugins/sass/)
+- [Heft Sass plugin configuration options](https://heft.rushstack.io/pages/configs/sass_json/)
+
 ## See also
 
 - [SharePoint Framework v1.16.1 release notes](../release-1.16.1.md)
-- [Stefan Bauer: What’s new with SASS in SPFx 1.16.0](https://n8d.at/whats-new-with-sass-in-spfx-1-16-0)\
+- [Heft-based toolchain (SPFx v1.22.0+)](sharepoint-framework-toolchain-rushstack-heft.md)
+- [Gulp-based toolchain (legacy)](sharepoint-framework-toolchain.md)
+- [Stefan Bauer: What’s new with SASS in SPFx v1.16.0](https://n8d.at/whats-new-with-sass-in-spfx-1-16-0)\
 - [Andrew Connell: Unboxing the SharePoint Framework (SPFx) v1.16.1 release](https://www.voitanos.io/blog/sharepoint-framework-v1-16-1-whats-in-latest-update-of-spfx/)

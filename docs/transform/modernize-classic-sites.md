@@ -8,7 +8,7 @@ ms.service: sharepoint
 
 # Modernize your classic SharePoint sites
 
-SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Microsoft 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. To learn more about modern, checkout the [SharePoint classic and modern experiences](https://support.office.com/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US) article and get inspired by the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/), as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
+SharePoint Online is continuously evolving and improving, which is a great thing for you as a consumer of the service. One of the key improvements is the availability of modern sites, which are modern Microsoft 365 group-connected team sites or communication sites, combined with improved functionality that can be consumed from a beautiful modern user interface. To learn more about modern, checkout the [SharePoint classic and modern experiences](https://support.office.com/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US) article and get inspired by the [SharePoint Look Book](https://adoption.microsoft.com/en-us/sharepoint-look-book/), as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
 All of this is great, but you might ask yourself, "*I have lots of classic (team) sites...how do I bring them into the modern SharePoint world?*" The answer is **in-place modernization**: you can fully transform (or "modernize") a classic site into a modern Microsoft 365 group-connected site by following the guidance in this section. Modernizing your sites involves one or more of the below steps:
 
@@ -73,5 +73,5 @@ For more information about page transformation, see [Transform classic pages to 
 ## See also
 
 - [SharePoint classic and modern experiences](https://support.office.com/article/sharepoint-classic-and-modern-experiences-5725c103-505d-4a6e-9350-300d3ec7d73f?ui=en-US&rs=en-US&ad=US)
-- [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/)
+- [SharePoint Look Book](https://adoption.microsoft.com/en-us/sharepoint-look-book/)
 - [Office 365 development and SharePoint PnP solution guidance](../solution-guidance/office-365-development-patterns-and-practices-solution-guidance.md)

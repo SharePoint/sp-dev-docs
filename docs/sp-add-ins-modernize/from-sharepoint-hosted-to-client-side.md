@@ -26,10 +26,10 @@ Let's create a new SharePoint Framework solution that you will use to consume Sh
 First of all, you need to scaffold the SharePoint Framework solution, so start a command prompt or a terminal window, create a folder, and from within the newly created folder run the following command.
 
 > [!IMPORTANT]
-> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment).
+> In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment).
 
 
-```PowerShell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -46,13 +46,13 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-cl
 
 The scaffolding tool will generate for you a new SharePoint Framework solution. When it's done you can simply open the current folder using your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, simply run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
-The main file, to start from is the *ConsumeSPOClientSideWebPart.ts*, under the *src\webparts\consumeSPOClientSide* folder. The file is based on TypeScript syntax, which is the one used by SharePoint Framework.
+The main file, to start from is the **ConsumeSPOClientSideWebPart.ts**, under the **src\webparts\consumeSPOClientSide** folder. The file is based on TypeScript syntax, which is the one used by SharePoint Framework.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -131,13 +131,13 @@ export default class ConsumeSpoClientSideWebPart extends BaseClientSideWebPart<I
 }
 ```
 
-As you can see, in the *render* method the Web Part creates an instance of a React component, with name *ConsumeSpoClientSide* and providing a bunch of configuration properties to the component itself.
+As you can see, in the `render()` method the Web Part creates an instance of a React component, with name `ConsumeSpoClientSide` and providing a bunch of configuration properties to the component itself.
 
-The properties are defined in the file *src\webparts\consumeSPOClientSide\components\IConsumeSpoClientSideProps.ts*, while the actual React component is defined in the file *src\webparts\consumeSPOClientSide\components\ConsumeSpoClientSide.tsx*.
+The properties are defined in the file **src\webparts\consumeSPOClientSide\components\IConsumeSpoClientSideProps.ts**, while the actual React component is defined in the file **src\webparts\consumeSPOClientSide\components\ConsumeSpoClientSide.tsx**.
 
-Now, let's assume that you want to create a web part to consume the list of documents in the default document library (Shared Documents) of the site where you use the web part. You can update the *IConsumeSpoClientSideProps.ts* to accept a couple of additional settings, like illustrated in the following code excerpt.
+Now, let's assume that you want to create a web part to consume the list of documents in the default document library (Shared Documents) of the site where you use the web part. You can update the **IConsumeSpoClientSideProps.ts** to accept a couple of additional settings, like illustrated in the following code excerpt.
 
-```TypeScript
+```typescript
 import { SPHttpClient } from '@microsoft/sp-http';
 
 export interface IConsumeSpoClientSideProps {
@@ -155,7 +155,7 @@ The *spHttpClient* property of type `SPHttpClient`, imported from `@microsoft/sp
 
 As such, the web part code will have to be updated in order to provide the two additional properties, like illustrated in the following code excerpt.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
@@ -212,13 +212,13 @@ export default class ConsumeSpoClientSideWebPart extends BaseClientSideWebPart<I
 }
 ```
 
-In the *onInit* method of the web part class, you get a referenc to an instance of the `SPHttpClient` type, so that you can provide it to the React component within the *render* method. Notice that in SharePoint Framework there is a *context* property available in any component and that you can use to get access to common infrastructural objects and services, like the SharePoint Online REST client object (*this.context.spHttpClient*).
+In the *onInit* method of the web part class, you get a reference to an instance of the `SPHttpClient` type, so that you can provide it to the React component within the `render()` method. Notice that in SharePoint Framework there is a `context` property available in any component and that you can use to get access to common infrastructural objects and services, like the SharePoint Online REST client object (`this.context.spHttpClient`).
 
-Moreover, in the *render* method there is also the logic to retrieve the absolute URL of the current web still from the SharePoint Framework *context* using the *this.context.pageContext.web.absoluteUrl* syntax. 
+Moreover, in the *render* method there is also the logic to retrieve the absolute URL of the current web still from the SharePoint Framework `context` using the `this.context.pageContext.web.absoluteUrl` syntax.
 
-Now, let's focus on the React component. First of all, and for the sake of completeness, the React component should rely on a custom state object, which you should define creating a file with name *src\webparts\consumeSPOClientSide\components\IConsumeSpoClientSideState.ts* and with the following content.
+Now, let's focus on the React component. First of all, and for the sake of completeness, the React component should rely on a custom state object, which you should define creating a file with name `src\webparts\consumeSPOClientSide\components\IConsumeSpoClientSideState.ts` and with the following content.
 
-```TypeScript
+```typescript
 export interface IConsumeSpoClientSideState {
   documents: IDocument[];
 }
@@ -229,11 +229,11 @@ export interface IDocument {
 }
 ```
 
-The above state allows to hold an array of items of type *IDocument* that will provide the *Id* and the *Title* of every document in the target document library.
+The above state allows to hold an array of items of type `IDocument` that will provide the `Id` and the `Title` of every document in the target document library.
 
 Then, here you can see the code of the React component in order to consume SharePoint Online via REST APIs and to show the list of documents in the web part output.
 
-```TypeScript
+```typescript
 import * as React from 'react';
 import styles from './ConsumeSpoClientSide.module.scss';
 import { IConsumeSpoClientSideProps } from './IConsumeSpoClientSideProps';
@@ -246,7 +246,7 @@ export default class ConsumeSpoClientSide extends React.Component<IConsumeSpoCli
 
   constructor(props: IConsumeSpoClientSideProps) {
     super(props);
-    
+
     this.state = {
       documents: []
     };
@@ -306,16 +306,16 @@ export default class ConsumeSpoClientSide extends React.Component<IConsumeSpoCli
 }
 ```
 
-Notice that the React component declaration relies on the custom state definition (*IConsumeSpoClientSideState*). Then, in the *componentDidMount* method it loads the actual list of documents from SharePoint Online using the *_loadDocuments* asynchronous function.
+Notice that the React component declaration relies on the custom state definition (`IConsumeSpoClientSideState`). Then, in the `componentDidMount()` method it loads the actual list of documents from SharePoint Online using the `_loadDocuments()` asynchronous function.
 
-The *_loadDocuments* function simply uses the *spHttpClient* object instance provided by the web part to make an HTTP GET request to a REST endpoint published by the current site, in order to retrieve the list of documents in the selected document library. The result is converted into an array of objects of type *IDocument* and stored in the *state* of the React component. As such, the *render* method of the component can render the list of retrieved documents.
+The `_loadDocuments()` function simply uses the `spHttpClient` object instance provided by the web part to make an HTTP GET request to a REST endpoint published by the current site, in order to retrieve the list of documents in the selected document library. The result is converted into an array of objects of type `IDocument` and stored in the `state` of the React component. As such, the `render()` method of the component can render the list of retrieved documents.
 
 If you like, instead of using low level REST APIs to consume SharePoint Online data, you can also rely on the [PnPjs](https://pnp.github.io/pnpjs/) open source library, which is also documented in the article [Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs](./from-jsom-to-client-side.md).
 
-## Recommended content 
+## Recommended content
 
 You can find additional information about this topic reading the following documents:
 
-* [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment)
-* [Build your first SharePoint client-side web part (Hello World part 1)](../spfx/web-parts/get-started/build-a-hello-world-web-part)
-* [PnPjs](https://pnp.github.io/pnpjs/)
+- [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md)
+- [Build your first SharePoint client-side web part (Hello World part 1)](../spfx/web-parts/get-started/build-a-hello-world-web-part.md)
+- [PnPjs](https://pnp.github.io/pnpjs/)

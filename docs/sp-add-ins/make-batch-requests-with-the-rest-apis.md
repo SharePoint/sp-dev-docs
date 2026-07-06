@@ -12,7 +12,7 @@ This article describes how you can batch queries and operations against the REST
 
 ## Executive summary of the $batch option
 
-SharePoint Online (and on-premises SharePoint 2016 and later) and the Office 365 APIs implement the OData  `$batch` query option, so you can rely on [the official documentation](https://www.odata.org/documentation/odata-version-3-0/batch-processing) for details about how to use it. (Another option is to see Andrew Connell's blog posts on the subject beginning at [Part 1 - SharePoint REST API Batching](https://www.andrewconnell.com/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests).)
+SharePoint Online (and on-premises SharePoint 2016 and later) and the Office 365 APIs implement the OData  `$batch` query option, so you can rely on [the official documentation](https://www.odata.org/documentation/odata-version-3-0/batch-processing) for details about how to use it. (Another option is to see Andrew Connell's blog posts on the subject beginning at [Part 1 - SharePoint REST API Batching](https://www.voitanos.io/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests).)
 
 The following is a reminder of the major points:
 

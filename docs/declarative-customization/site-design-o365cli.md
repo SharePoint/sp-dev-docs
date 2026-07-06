@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - CLI for Microsoft 365 commands
 description: Use the CLI for Microsoft 365 to create, retrieve, and remove site designs and site scripts.
-ms.date: 06/28/2022
+ms.date: 06/27/2024
 ms.localizationpriority: high
 ---
 
@@ -17,7 +17,7 @@ To run the CLI for Microsoft 365 commands, you'll need to do the following:
 
 1. Download and install [NodeJS LTS version](https://nodejs.org/en/)
 1. Follow the instructions at [Installing the CLI](https://pnp.github.io/cli-microsoft365/user-guide/installing-cli/) to install the CLI for Microsoft 365 on your machine
-1. Follow the instructions at [Logging in to Office 365](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/) to connect to your SharePoint tenant.
+1. Follow the instructions at [Logging in to Office 365](https://pnp.github.io/cli-microsoft365/user-guide/connecting-microsoft-365) to connect to your SharePoint tenant.
 
 To verify your setup and connection, try using the [sitedesign list](https://pnp.github.io/cli-microsoft365/cmd/spo/sitedesign/sitedesign-list) command to read the current list of site designs. If the cmdlet runs and returns with no errors, you're ready to proceed.
 

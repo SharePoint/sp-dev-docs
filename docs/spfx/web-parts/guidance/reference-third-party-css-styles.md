@@ -1,7 +1,7 @@
 ---
 title: Reference third-party CSS styles in SharePoint Framework web parts
 description: Two approaches to including third-party CSS styles in web parts, and how each approach affects the resulting web part bundle.
-ms.date: 12/02/2020
+ms.date: 02/04/2026
 ms.localizationpriority: high
 ---
 
@@ -55,6 +55,12 @@ To build rich SharePoint Framework client-side web parts, you can leverage many 
 In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file, and then change the `render()` method to:
 
 ```typescript
+declare global {
+  interface JQuery {
+    accordion(): JQuery;
+  }
+}
+
 export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
   // ...
   public render(): void {
@@ -105,7 +111,7 @@ export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQuer
         </div>
       </div>`;
 
-      ($('.accordion', this.domElement) as any).accordion();
+      $('.accordion', this.domElement).accordion();
   }
   // ...
 }
@@ -116,6 +122,9 @@ If you build the project now, you get an error stating that `$` is undefined. Th
 ## Approach 1: Include third-party libraries in the bundle
 
 The easiest way to reference a third-party library in SharePoint Framework projects is to include it in the generated bundle. The library is installed as a package and referenced in the project. When bundling the project, Webpack picks up the reference to the library and includes it in the generated bundle.
+
+> [!NOTE]
+> When using the Heft build system, some jQuery UI CSS files(particularly theme.css) may cause build errors due to image path resolution issues. If you encounter CSS loader errors, consider using Approach 2 (loading from URL) instead.
 
 ### Install libraries
 
@@ -138,8 +147,8 @@ After installing libraries, the next step is to reference them in the project.
 1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just under the last `import` statement, add references to jQuery and jQuery UI.
 
     ```typescript
-    import * as $ from 'jquery';
-    require('../../../node_modules/jquery-ui/ui/widgets/accordion');
+    import $ from 'jquery';
+    require('jquery-ui');
     ```
 
     Because you installed the TypeScript type declarations for the jQuery package, you can reference it by using an `import` statement. However, the jQuery UI package is built differently. Unlike how many modules are structured, there's no main entry point with a reference to all components that you can use. Instead, you refer directly to the specific component that you want to use. The entry point of that component contains all references to dependencies that it needs to work correctly.
@@ -147,7 +156,7 @@ After installing libraries, the next step is to reference them in the project.
 1. Confirm that the project is building by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 1. After adding the web part to the canvas, you should see the accordion working.
@@ -173,7 +182,7 @@ Adding references to third-party CSS stylesheets that are a part of the packages
 1. Confirm that the project is building by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 The accordion should be displayed correctly and branded by using the standard jQuery UI theme.
@@ -232,7 +241,7 @@ Having specified the URL that the SharePoint Framework should use to load jQuery
 1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just under the last `import` statement, add the following references to jQuery and jQuery UI:
 
     ```typescript
-    import * as $ from 'jquery';
+    import $ from 'jquery';
     require('jquery-ui');
     ```
 
@@ -245,7 +254,7 @@ Having specified the URL that the SharePoint Framework should use to load jQuery
 1. Confirm that the project is building by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     After adding the web part to the canvas, you should see the accordion working.
@@ -288,7 +297,7 @@ Adding references to third-party CSS stylesheets from a URL is different from re
 1. Confirm that the project is building by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
 The accordion should be displayed correctly and branded by using the standard jQuery UI Theme.

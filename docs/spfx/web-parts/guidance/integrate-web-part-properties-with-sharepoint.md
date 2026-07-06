@@ -40,7 +40,7 @@ import {
 import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
-} from '@microsoft/sp-property-base';
+} from '@microsoft/sp-property-pane';
 
 // ...
 
@@ -82,3 +82,4 @@ If you specify the web part property as `isSearchablePlainText`, it's included i
 When a web part property is defined as `isHtmlString`, SharePoint first of all removes any unsafe HTML, such as `<script>` tags, from the property value. The HTML that remains can be considered safe to render on a page. If the value contains any URLs pointing to files stored in SharePoint, as soon as one of these files is renamed or moved, SharePoint automatically updates the URL stored in the web part property. This significantly simplifies managing URLs across all web parts and pages in your tenant. HTML web part properties are also searchable, so users can look for any keywords included in the property value.
 
 Property value types `isImageSource` and `isLink` are meant to be used for web part properties that include nothing else but a link to an image or a file stored in SharePoint. In both cases, SharePoint Search includes the content in the full-text index and keeps the specified URL up to date in case the referenced file is renamed or moved. Additionally, image sources may get additional processing to help images download faster. If the page has a title image, and the image is among the first five images on the page, or the image is in the first two rows on the page, the image is preloaded.
+

@@ -1,18 +1,18 @@
 ---
-title: Building your first Bot Powered Adaptive Card Extension
+title: Building your first Bot Powered Adaptive Card Extension with .NET
 description: Learn how to build your first Bot Powered Adaptive Card Extension using the Bot Framework for Microsoft .NET.
-ms.date: 02/01/2024
+ms.date: 11/15/2024
 ms.localizationpriority: high
 ---
-# Building your first Bot Powered Adaptive Card Extension
+# Building your first Bot Powered Adaptive Card Extension with .NET
 
-Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections enables extending the Microsoft Viva Connections Dashboard using the Bot development model.
+Bot Powered Adaptive Card Extensions (ACEs) for Microsoft Viva Connections enable extending the Microsoft Viva Connections Dashboard using the Bot development model.
 
-From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework (SPFx). As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial ["Build your first SharePoint Adaptive Card Extension."](../get-started/build-first-sharepoint-adaptive-card-extension.md)
+From a development point of view, a Bot Powered ACE behaves like a regular client-side ACE built with SharePoint Framework (SPFx). As such, you can render Card Views, Quick Views, you can provide properties configurable via a Property Pane, and you can implement specific behaviors to handle actions in the user interface of the ACE. You can learn more about the basics of client-side Adaptive Card Extensions for Microsoft Viva Connections by reading the tutorial [Build your first SharePoint Adaptive Card Extension](../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
-In this tutorial, you learn how to build a basic Bot Powered ACE with a step by step approach. You can build Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js.
+You can build Bot Powered ACEs either using C# and .NET or using TypeScript and Node.js. In this tutorial, you learn how to build a basic Bot Powered ACE using C# with a step-by-step approach.
 
-You can learn more about the architecture of the Bot Powered ACEs by reading the article ["Understanding Bot Powered Adaptive Card Extensions."](./Understanding-Bot-Powered-ACEs.md)
+You can learn more about the architecture of the Bot Powered ACEs by reading the article [Understanding Bot Powered Adaptive Card Extensions](./Understanding-Bot-Powered-ACEs.md).
 
 > [!TIP]
 > You can also follow these steps by watching this video on the Microsoft 365 & Power Platform Community YouTube Channel.
@@ -21,19 +21,19 @@ You can learn more about the architecture of the Bot Powered ACEs by reading the
 
 ## Developing a Bot Powered ACE with Microsoft .NET
 
-In this tutorial, you're going to build a basic Bot Powered ACE to collect user's feedback via a Card View with a textbox and a submission button. In the following picture, you can see how the Adaptive Card Extension looks like in the Viva Connections desktop experience.
+In this tutorial, you're going to build a basic Bot Powered ACE to collect user feedback via a Card View with a textbox and a submission button. In the following picture, you can see how the Adaptive Card Extension looks like in the Viva Connections desktop experience.
 
-![The UI of the sample Bot Powered ACE in the Viva Connections desktop experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot Powered ACEs". Then, there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Desktop.png)
+![The UI of the sample Bot Powered ACE in the Viva Connections desktop experience. There is a Card View to collect user feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot Powered ACEs". Then, there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Desktop.png)
 
-Following picture you can see how the Adaptive Card Extension looks like in the Viva Connections mobile experience.
+In the following picture, you can see how the Adaptive Card Extension looks like in the Viva Connections mobile experience.
 
 ![The UI of the sample Bot Powered ACE in the Viva Connections mobile experience. There is a Card View to collect user's feedback and a submit button. There is also the same Card View with the textbox filled in with a sample value "I like Bot ...". Then, there is a Card View confirming the collection of the feedback. Lastly, there is a Quick View with a generic message for the user.](./images/Bot-Powered-ACE-Collect-Feedback-UI-Mobile.png)
 
-From a developer point of view, you build the ACE once and you benefit of it in both desktop and mobile experiences.
+From a developer point of view, you build the ACE once and you benefit from it in both desktop and mobile experiences.
 
 ### Prerequirements
 
-First of all, in order to develop a Bot Powered ACE with C# and .NET, you need to have the following tools and frameworks installed on your development machine:
+First of all, to develop a Bot Powered ACE with C# and .NET, you need to have the following tools and frameworks installed on your development machine:
 
 * Microsoft .NET 6.0 or higher versions
 * Microsoft Visual Studio 2022
@@ -44,35 +44,35 @@ You also need to have an active and valid Microsoft Azure subscription to host t
 
 Last but not least, for local testing and debugging, you also need a reverse proxy tool like ngrok, Localtunnel, Serveo, YARP, etc. In this tutorial, we're going to use ngrok.
 
-### Creating the Bot solution in Visual Studio 2022
+## Creating the Bot solution in Visual Studio 2022
 
-Once you installed the Bot Builder Extensions for Microsoft Visual Studio 2022, start Visual Studio and choose to create a new project of type "Empty Bot (Bot Framework v4 - .NET Core 3.1)" like illustrated in the following screenshot.
+Once you installed the Bot Builder Extensions for Microsoft Visual Studio 2022, start Visual Studio and choose to create a new project of type **Empty Bot (Bot Framework v4 - .NET Core 3.1)** as illustrated in the following screenshot.
 
 ![The UI of Microsoft Visual Studio 2022 to create a new project of type "Empty Bot (Bot Framework v4 - .NET Core 3.1)"](./images/Visual-Studio-Bot-Builder-Extension-Project.png)
 
-Give a name to your project (for example "CollectFeedbackBotPoweredAce") and choose a folder to store the project files, and the related solution. Despite the name of the project template, the resulting project is a .NET 6.0 one.
+Give a name to your project (for example, "CollectFeedbackBotPoweredAce") and choose a folder to store the project files and the related solution. Despite the name of the project template, the resulting project is a .NET 6.0 one.
 
-Then, the first thing to do is to upgrade the NuGet package with name "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.21.2 or higher. You can do it using the user interface of Visual Studio, right clicking on the project and choosing "Manage NuGet packages ..." like you see in the following image.
+Then, the first thing to do is to upgrade the NuGet package with name **Microsoft.Bot.Builder.Integration.AspNet.Core** to version 4.21.2 or higher. You can do it using the user interface of Visual Studio, right-clicking on the project and choosing "Manage NuGet packages ..." as you see in the following image.
 
 ![The UI of Microsoft Visual Studio 2022 when upgrading the version of the NuGet package "Microsoft.Bot.Builder.Integration.AspNet.Core" to version 4.21.2 or higher.](./images/Visual-Studio-NuGet-Bot-Builder-SDK-Version.png)
 
-Or you can also use the .NET CLI and run the following command in the Package Manager Console, to update the package to the latest release.
+You can also use the .NET CLI and run the following command in the Package Manager Console, to update the package to the latest release.
 
 ```console
 dotnet add package Microsoft.Bot.Builder.Integration.AspNet.Core
 ```
 
-In the automatically scaffolded solution, you find a bunch of autogenerated files. The files that really matter to create a Bot Powered ACE are the following ones:
+In the automatically scaffolded solution, you find a bunch of autogenerated files. The files that matter to create a Bot Powered ACE are the following ones:
 
-* **Startup.cs**: here you can configure services via Dependency Injection.
+* **Startup.cs**: configure services via Dependency Injection.
 * **EmptyBot.cs**: the actual Bot implementation, where you write the real code of your Bot Powered ACE.
-* **appsettings.json**: here you can configure the settings of your Bot Powered ACE, including the parameters about the Azure Bot.
+* **appsettings.json**: here you can configure the settings of your Bot Powered ACE, including the parameters of the Azure Bot.
 
-### Registering the Bot in Azure
+## Registering the Bot in Azure
 
-Before proceeding with the actual implementation of the Bot Powered ACE, you need to register a Bot in Microsoft Azure. 
+Before proceeding with the implementation of the Bot Powered ACE, you need to register a Bot in Microsoft Azure.
 
-Open a web browser and navigate to the [Azure Management Portal](https://portal.azure.com/). From the Azure Management Portal home page, select "Create a resource" and choose to create an "Azure Bot" service.
+Open a web browser and navigate to the [Azure Management Portal](https://portal.azure.com/). From the Azure Management Portal home page, select **Create a resource** and choose to create an **Azure Bot** service.
 
 ![The interface of the Azure Management Portal when creating a new service instance of type Azure Bot.](./images/Azure-Portal-Create-Azure-Bot-01.png)
 
@@ -85,141 +85,74 @@ Provide a handle for your Bot, which must be compliant with the following rules:
 
 The Bot handle becomes the display name of the Bot. However, you can change the display name later, while the Bot Handle is immutable, once registered.
 
-Choose a target subscription and resource group, as well a data residency policy. From a pricing point of view, while you're developing and testing with Bot Powered ACEs, you can select the "F0 - Free" pricing tier. Once you're ready to release your Bot in production, you can upgrade the pricing tier to "S1 - Standard."
+Choose a target subscription and resource group, and a data residency policy. From a pricing point of view, while you're developing and testing with Bot Powered ACEs, you can select the **F0 - Free** pricing tier. Once you're ready to release your Bot in production, you can upgrade the pricing tier to **S1 - Standard**.
 
-A Microsoft App ID is required to register an Azure Bot. Depending on your solution, you can select a different type of application through the "Type of App" option. You can choose any of the following options:
+A Microsoft App ID is required to register an Azure Bot. Depending on your solution, you can select a different type of application through the **Type of App** option. You can choose any of the following options:
 
-* User-Assigned Managed Identity: if your Bot app doesn't need to access resources outside of its home tenant and if your Bot app is hosted on an Azure resource that supports Managed Identities.
-* Single Tenant: if your Bot app doesn't need to access resources outside of its home tenant, but your Bot app isn't hosted on an Azure resource that supports Managed Identities.
-* Multi Tenant: if your Bot app needs to access resources outside of its home tenant or serves multiple tenants.
+* **User-Assigned Managed Identity**: if your Bot app doesn't need to access resources outside of its home tenant and if your Bot app is hosted on an Azure resource that supports Managed Identities.
+* **Single Tenant**: if your Bot app doesn't need to access resources outside of its home tenant, but your Bot app isn't hosted on an Azure resource that supports Managed Identities.
+* **Multi-Tenant**: if your Bot app needs to access resources outside of its home tenant or serves multiple tenants.
 
-Choose "Multi Tenant" in order to follow the steps of this tutorial.
+Choose **Multi-Tenant** to follow the steps of this tutorial.
 
-You can also choose whether to create a new Microsoft Entra ID app or to reuse an already existing one.
+You can also choose whether to create a new Microsoft Entra ID app or reuse an existing one.
 
 In the following screenshot, you can see all the available configuration options.
 
 ![The page to register a new Azure Bot. It includes settings about the Bot handle, the target subscription and resource group, the pricing tier, and the Microsoft App ID settings.](./images/Azure-Portal-Create-Azure-Bot-02.png)
 
-Once you're done with the settings, select the "Review + create" button, review the selected settings and register your Azure Bot by selecting the "Create" button.
+Once you're done with the settings, select the **Review + create** button, review the selected settings, and register your Azure Bot by selecting the **Create** button.
 
 ### Configure the Bot in Azure
 
-Once the Azure Bot is registered, select the "Go to resource" button, or open the Azure Bot configuration from the Azure Management Portal.
+Once the Azure Bot is registered, select the **Go to resource** button, or open the Azure Bot configuration from the Azure Management Portal.
 
 #### Messaging endpoint URL configuration
 
-Open the "Configuration" panel of the Azure Bot and configure the "Messaging endpoint" URL for your Bot.
+Open the **Configuration** panel of the Azure Bot and configure the **Messaging endpoint** URL for your Bot.
+
 In this configuration field, you should provide the base URL of your Bot. For example, if you're planning to use _ngrok_ to run the Bot locally, for testing and debugging purposes, the URL should be something like the following one:
 
 ```http
 https://<your-ngrok-reverse-proxy-name>.ngrok.io/api/messages
 ```
 
-For instance, if you plan to use the name *my-bot-powered-ace* with ngrok, the "Messaging endpoint" URL should be
+For instance, if you plan to use the name *my-bot-powered-ace* with ngrok, the **Messaging endpoint** URL should be
 
 ```http
 https://my-bot-powered-ace.ngrok.io/api/messages
 ```
 
-and the command to run ngrok on your local machine as a reverse proxy for the Bot should be:
+... and the command to run ngrok on your local machine as a reverse proxy for the Bot should be:
 
 ```console
 ngrok http --host-header=localhost --hostname=my-bot-powered-ace.ngrok.io 3978 
 ```
 
-Select "Apply" when you're done configuring the "Messaging endpoint" URL.
+Select **Apply** when you're done configuring the **Messaging endpoint** URL.
 
 ![The configuration panel for an Azure Bot. It includes settings about Messaging Endpoint URL, the Microsoft App ID, the Application Insights keys, the Schema Transformation Version, and the OAuth Connection settings.](./images/Azure-Portal-Create-Azure-Bot-03.png)
 
-Once you configured the URL for your Bot, you need to configure few more settings from the "Configuration" panel. Select the "Manage Password" link, just beside the "Microsoft App ID" setting.
+Once you configured the URL for your Bot, you need to configure a few more settings from the **Configuration** panel. Select the **Manage Password** link, next to the **Microsoft App ID** setting.
 
 #### Microsoft App configuration
 
-You're brought to the "Certificates & secrets" configuration page of the Microsoft App registered in Microsoft Entra ID for your Bot. From within this page, you can configure a new client secret. Copy the value of the new client secret in a safe place, you reuse it later in this tutorial.
+You're brought to the **Certificates & secrets** configuration page of the Microsoft App registered in Microsoft Entra ID for your Bot. From within this page, you can configure a new client secret. Copy the value of the new client secret in a safe place, you're going to reuse it later in this tutorial.
 
-Now, select the "Overview" panel and save in a safe place, together with the client secret, the values of the following settings:
+Now, select the **Overview** panel and save in a safe place, together with the client secret, the values of the following settings:
 
 * Application (client) ID
 * Directory (tenant) ID
 
 ![The "Overview" panel of the Microsoft App. It includes information about the Display Name, the Application ID, the Directory ID, etc.](./images/Azure-Portal-Create-Azure-Bot-04.png)
 
-Now, select the "Authentication" panel of the Microsoft App and under the "Platform configurations" section, select on "Add a platform" and select to add a *Web* platform. Then configure the following value for the "Redirect URIs" setting field.
-
-```http
-https://<your-ngrok-reverse-proxy-name>.ngrok.io/auth-end
-```
-
-One more time, if you plan to use the name *my-bot-powered-ace* with ngrok, the "Redirect URI" should be:
-
-```http
-https://my-bot-powered-ace.ngrok.io/auth-end
-```
-
-You should also enable "Implicit grant and hybrid flows" by selecting the options to issue "Access tokens" and "ID tokens." Select the "Configure" button and your new Web platform is configured.
-
-![The panel to configure a Web platform for the Microsoft App. You can configure the "Redirect URIs" for the web app and enable the "Implicit grant and hybrid flows" with support for "Access tokens" and "ID tokens".](./images/Azure-Portal-Create-Azure-Bot-05.png)
-
-Now, select the "API permissions" panel and configure the app with the following delegated permissions:
-
-* email
-* offline_access
-* openid
-* profile
-* User.Read
-
-Select the "Grant admin consent for ..." button, in order to grant the permissions at tenant level.
-
-![The panel to configure the "API permissions". There are few permissions already selected, including: email, offline_access, openid, profile, and User.Read. All of the permissions are granted at tenant level.](./images/Azure-Portal-Create-Azure-Bot-06.png)
-
-Now, move to the "Expose an API" panel and configure a unique URI for your application selecting the "Add" link just beside the "Application ID URI" label. Here you need to configure a value for the "Application ID URI" that matches the following rule:
-
-```http
-api://<your-ngrok-reverse-proxy-name>.ngrok.io/<App-Client-ID>
-```
-
-For example, if you plan to use the name *my-bot-powered-ace* with ngrok, and the Client ID of your application is *ce34ccbc-5a46-44d5-838a-f39fbdb3a477* the "Application ID URI" should be:
-
-```http
-api://my-bot-powered-ace.ngrok.io/ce34ccbc-5a46-44d5-838a-f39fbdb3a477
-```
-
-> [!NOTE]
-> Mind the api:// moniker at the beginning of the Application ID URI value, and be careful to not use http:// or https:// unless you want to use a verified domain of the organization or its subdomain.
-
-Now in the "Scopes defined by this API" section add a new scope by clicking on the "Add a scope" button. Provide the following settings for the new scope:
-
-* Scope name: *access_as_user*.
-* Who can consent?: Admins and users.
-* Admin consent display name: Teams can access the user's profile.
-* Admin consent description: Allows Teams to call the app's web APIs as the current user.
-* User consent display name: Teams can access the user's profile and make requests on the user's behalf.
-* User consent description: Enables Teams to call this app's APIs with the same rights as the user.
-* State: Enabled.
-
-![The panel to add a new permission scope. There are options to configure the scope name, who can consent the scope, the admin consent display name and description, the user consent display name and description, and the state of the scope.](./images/Azure-Portal-Create-Azure-Bot-07.png)
-
-Lastly, in the "Authorized client applications" section, you need to configure the client ID of the Teams clients. You also need to authorize them to consume your Microsoft App, so that users shouldn't be asked to consent when the Teams client calls your API. The client IDs of the Teams client apps are the following ones:
-
-* 1fec8e78-bce4-4aaf-ab1b-5451cc387264: Teams mobile and desktop application.
-* 5e3ce6c0-2b1f-4285-8d4b-75ee78787346: Teams web application.
-
-For each of them, you should select the permission scope that you configured for the API.
-
-![The panel to add a new authorized client application. You can provide the client ID of the authorized client application and you can select the scopes that you want to authorize for that specific client application.](./images/Azure-Portal-Create-Azure-Bot-08.png)
-
-At the end of this stage, the "Expose an API" panel should look like in the following picture.
-
-![The "Expose an API" panel configured with a custom Application ID URI, a custom scope with name "access_as_user", and a couple of authorized client applications.](./images/Azure-Portal-Create-Azure-Bot-09.png)
-
 #### Configuring the Microsoft 365 Channel
 
-You can now go back to the configuration of your Azure Bot and select the panel "Channels" to configure a new channel for Microsoft 365. In the "Available Channels" section of the page, you need to select the channel with name "Microsoft 365" to enable it.
+You can now go back to the configuration of your Azure Bot and select the panel **Channels** to configure a new channel for Microsoft 365. In the **Available Channels** section of the page, you need to select the channel named **Microsoft 365** to enable it.
 
 ![The panel to configure channels for the Azure Bot. There are two pre-selected channels: "Direct Line" and "Web Chat". There is a list of "Available Channels", including the "Microsoft 365" channel.](./images/Azure-Portal-Create-Azure-Bot-10.png)
 
-A new page shows up, explaining the purpose of the "Microsoft 365" channel. Select the "Apply" button to enable the new channel and go back to the list of channels configured for your Azure Bot.
+A new page shows up, explaining the purpose of the **Microsoft 365** channel. Select the **Apply** button to enable the new channel and go back to the list of channels configured for your Azure Bot.
 
 ![The panel to configure the "Microsoft 365" channel in the list of channels supported by the Azure Bot. There is a description of the purpose of the channel and an "Apply" button to add the channel to the list of channels supported by the Azure Bot.](./images/Azure-Portal-Create-Azure-Bot-11.png)
 
@@ -228,9 +161,9 @@ Right after that, your Azure Bot is fully configured and ready to be used.
 ![The panel to configure channels for the Azure Bot. There are now three pre-selected channels: "Direct Line", "Web Chat", and "Microsoft 365.](./images/Azure-Portal-Create-Azure-Bot-12.png)
 
 > [!IMPORTANT]
-> If you are using ngrok and you have a free license, you will have to rely on a dynamic URL for your local development environment, rather than on a fixed and named URL. As such, whenever you will start ngrok you will get a new URL that you will have to configure in all the places where you have been instructed to configure the URL in this tutorial. Specifically, you will have to re-configure the URL in the "Messaging endpoint URL" of the Azure Bot, in the "Redirect URIs" of the Microsoft App, and in the "Application ID URI" of the Microsoft App. Then wait few seconds before running the Bot, to allow the new URLs to synchronize across the Microsoft Azure services.
+> If you are using ngrok and you have a free license, you will have to rely on a dynamic URL for your local development environment, rather than on a fixed and named URL. As such, whenever you will start ngrok you will get a new URL that you will have to configure in all the places where you have been instructed to configure the URL in this tutorial. Specifically, you will have to re-configure the URL in the "Messaging endpoint URL" of the Azure Bot. Then wait a few seconds before running the Bot, to allow the new URL to synchronize across the Microsoft Azure services.
 
-### Configure the project accordingly to the Azure Bot settings
+### Configure the project according to the Azure Bot settings
 
 Go back to Visual Studio and open the **appsettings.json** file to configure the settings for the Azure Bot. Here follows a code excerpt of the settings file, where you can see how to configure the Azure Bot parameters.
 
@@ -248,9 +181,10 @@ Replace the content of the above placeholders with the actual values that you st
 > [!NOTE]
 > You can also consider using the user's secrets functionality of Visual Studio to store the secrets securely and avoid to accidentally share them with unauthorized people.
 
-### Implement the actual Bot Powered ACE
+## Implement the actual Bot Powered ACE
 
-Rename the **EmptyBot.cs** file with name **CollectFeedbackBot.cs**, open it and replace the base class from `ActivityHandler` to `SharePointActivityHandler` and empty the content of the class itself. You also need to import the namespace `Microsoft.Bot.Builder.SharePoint`. Then, add a set of overrides for all the methods with name starting with `OnSharePointTask*`.
+Rename the **EmptyBot.cs** file with name **CollectFeedbackBot.cs**, open it, and replace the base class from `ActivityHandler` to `SharePointActivityHandler` and empty the content of the class itself. You also need to import the namespace `Microsoft.Bot.Builder.SharePoint`. Then, add a set of overrides for all the methods with name starting with `OnSharePointTask*`.
+
 Here follows the resulting class implementation.
 
 ```CSharp
@@ -306,9 +240,9 @@ Here follows a brief explanation of the overridable methods:
 * `OnSharePointTaskHandleActionAsync`: handles a custom action in the ACE like the select on a button in a Card View or any custom action in the UI of a Quick View.
 
 > [!NOTE]
-> You can dig into the details of how Bot Powered ACEs work by reading the article ["Understanding Bot Powered Adaptive Card Extensions"](./Understanding-Bot-Powered-ACEs.md).
+> You can dig into the details of how Bot Powered ACEs work by reading the article [Understanding Bot Powered Adaptive Card Extensions](./Understanding-Bot-Powered-ACEs.md).
 
-In order to implement the Collect Feedback ACE, you can only focus on `OnSharePointTaskGetCardViewAsync` and `OnSharePointTaskGetQuickViewAsync` to render the Card Views and the Quick View, as well as on the `OnSharePointTaskHandleActionAsync` to handle the actual submission of the feedback. So far, you can remove the two methods for handling the property pane, which is covered in another article.
+To implement the Collect Feedback ACE, you can only focus on `OnSharePointTaskGetCardViewAsync` and `OnSharePointTaskGetQuickViewAsync` to render the Card Views and the Quick View, as well as on the `OnSharePointTaskHandleActionAsync` to handle the actual submission of the feedback. So far, you can remove the two methods for handling the property pane, which is covered in another article.
 
 Every Bot Powered ACE does have a unique ID, which is a string that identifies uniquely the ACE instance in the Viva Connections Dashboard. For that unique ID you can, for example,  use a `Guid` value converted into a string. You can define such a value as a private static string variable in the Bot class definition.
 
@@ -318,9 +252,9 @@ private static string adaptiveCardExtensionId = Guid.NewGuid().ToString();
 
 The `OnSharePointTaskGetCardViewAsync` asynchronous method returns an instance of type `CardViewResponse`, while the `OnSharePointTaskGetQuickViewAsync` method returns an instance of type `QuickViewResponse`. Both `CardViewResponse` and `QuickViewResponse` are defined in the `Microsoft.Bot.Schema.SharePoint` namespace.
 
-#### Rendering Card Views
+### Rendering Card Views
 
-Every `CardViewResponse` instance is made of a property named `AceData` that defines some aesthetic settings like the size of the card, its icon, the title, and the description. It also defines the unique ID of the card and a JSON object to represent some custom `Properties`, if there's need. Every `CardViewResponse` instance also provides a `ViewId` string property, which declares a unique ID to identify the specific Card View instance for the ACE and which is mandatory to assign a value to. There's also an event with name `OnCardSelection`, which can be used to handle custom action when the user selects on the Card View.
+Every `CardViewResponse` instance is made of a property named `AceData` that defines some aesthetic settings like the size of the card, its icon, the title, and the description. It also defines the unique ID of the card and a JSON object to represent some custom `Properties`, if there's need. Every `CardViewResponse` instance also provides a `ViewId` string property, which declares a unique ID to identify the specific Card View instance for the ACE and which is mandatory to assign a value to. There's also an event with name `OnCardSelection`, which can be used to handle custom actions when the user selects on the Card View.
 
 Moreover, the `CardViewResponse` instance provides a property named `CardViewParameters` that defines the actual outline of the Card View. The content of the `CardViewParameters` property defines the structure of the components model used to render the card. Using the `CardViewParameters` factory type you can define different flavors of Card Views using the following methods:
 
@@ -331,7 +265,7 @@ Moreover, the `CardViewResponse` instance provides a property named `CardViewPar
 * `SearchCardViewParameters`: factory method to create a Search Card View.
 * `TextInputCardViewParameters`: factory method to create a Text Input Card View.
 
-For instance, in order to create the Card View to collect user's feedback you can use the `TextInputCardViewParameters` method of `CardViewParameters` and define the components that make up the Card View. Furthermore, the Card View to confirm that the feedback was collected can be created using the `ImageCardViewParameters` method. It's a common habit to define the Card Views, and the Quick Views as well, in the constructor of the Bot, storing them in a static dictionary, where the item key is the `ViewId` of the card. Then, based on the requested Card View, you can return the corresponding item of the dictionary as the result of the `OnSharePointTaskGetCardViewAsync` method.
+For instance, to create the Card View to collect user feedback you can use the `TextInputCardViewParameters` method of `CardViewParameters` and define the components that make up the Card View. Furthermore, the Card View to confirm that the feedback was collected can be created using the `ImageCardViewParameters` method. It's a common habit to define the Card Views, and the Quick Views as well, in the constructor of the Bot, storing them in a static dictionary, where the item key is the `ViewId` of the card. Then, based on the requested Card View, you can return the corresponding item of the dictionary as the result of the `OnSharePointTaskGetCardViewAsync` method.
 
 Here follows a sample implementation of the Bot constructor, also relying on Dependency Injection to retrieve some settings from the **appsettings.json** file via the `IConfiguration` service implementation.
 
@@ -463,11 +397,12 @@ public class CollectFeedbackBot : SharePointActivityHandler
 ```
 
 Notice how the constructor relies on a `ConcurrentDictionary` to store the Card View definitions, to support multi-threaded access to the static dictionary. Notice also how the various components are used to define the outline of the `TextInputCardViewParameters` and of the `ImageCardViewParameters`.
-In the following picture, you can see a diagram that explains the structure of a component based Card View rendered in "Large" format.
+
+In the following picture, you can see a diagram that explains the structure of a component-based Card View rendered in "Large" format.
 
 ![A diagram with the structure of a component based Card View in "Large" format. The shape of the Card View is divided into two main sections, the left one is made of a CardBarComponent, a CardTextComponent, a component that varies depending on the kind of Card View template selected, and a list CardButtonComponent to provide zero, one, or two buttons. On the right section there can be an instance of Microsoft.Bot.Schema.SharePoint.CardImage to render an image, if any, depending on the kind of Card View template selected.](./images/ACE-Component-Based-Structure.png)
 
-A component based Card View in "Large" format does have a shape divided into two main sections, the left one is made of a `CardBarComponent`, a `CardTextComponent`, a component that varies depending on the kind of Card View template selected, and a list of `BaseCardComponent` objects to provide zero, one, or two buttons. On the right section there can be an instance of `Microsoft.Bot.Schema.SharePoint.CardImage` to render an image, if any, depending on the kind of Card View template selected
+A component-based Card View in "Large" format does have a shape divided into two main sections, the left one is made of a `CardBarComponent`, a `CardTextComponent`, a component that varies depending on the kind of Card View template selected, and a list of `BaseCardComponent` objects to provide zero, one, or two buttons. On the right section, there can be an instance of `Microsoft.Bot.Schema.SharePoint.CardImage` to render an image, if any, depending on the kind of Card View template selected
 
 For example, the `TextInputCardViewParameters` instance is made of the following components:
 
@@ -477,11 +412,22 @@ For example, the `TextInputCardViewParameters` instance is made of the following
 * `List<CardButtonComponent>`: defines a list of zero, one, or two action buttons. Each action button does have an `Id` property that is fundamental to identify the button pressed by the user. A button can also have a set of custom properties, which are provided to the Bot upon submission of the form.
 * `Microsoft.Bot.Schema.SharePoint.CardImage`: defines an image that is rendered in the right side of the Card View.
 
-In the code excerpt, the images used to render the Card Views are downloaded from the web site hosted in the Bot project, and available under the **wwwroot** folder of the project. In that folder, you should upload the **Media** subfolder that you can find in the [samples folder of the reference GitHub repository](https://github.com/SharePoint/sp-dev-docs/tree/main/assets/bot-powered/Media).
+In the code excerpt, the images used to render the Card Views are downloaded from the website hosted in the Bot project, and available under the **wwwroot** folder of the project. In that folder, you should upload the **Media** subfolder that you can find in the [samples folder of the reference GitHub repository](https://github.com/SharePoint/sp-dev-docs/tree/main/assets/bot-powered/Media).
 
-#### Handling user's tasks and actions
+### Serving Card Views requests
 
-When the user selects on the submit action in a Card View, the `OnSharePointTaskHandleActionAsync` method is triggered and you can handle the submission event. In the following code excerpt, you can see how the ACE collects the feedback submission.
+To serve the card views, you need to implement the `OnSharePointTaskGetCardViewAsync` method so that it returns the instance of the card view to collect feedback that you created in the constructor. Here follows the method implementation.
+
+```CSharp
+protected override Task<CardViewResponse> OnSharePointTaskGetCardViewAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
+{
+    return Task.FromResult(cardViews[CollectFeedbackCardView_ID]);
+}
+```
+
+### Handling user's tasks and actions
+
+When the user selects the submit action in a Card View, the `OnSharePointTaskHandleActionAsync` method is triggered and you can handle the submission event. In the following code excerpt, you can see how the ACE collects the feedback submission.
 
 ```CSharp
 protected override Task<BaseHandleActionResponse> OnSharePointTaskHandleActionAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
@@ -536,18 +482,18 @@ protected override Task<BaseHandleActionResponse> OnSharePointTaskHandleActionAs
 }
 ```
 
-First of all, the method checks if there's a proper instance of the `TurnContext`, and if the user canceled the asynchronous operation. Inside the `TurnContext` instance, there's all the needed information to properly handle the user's action. For example, there's the `turnContext.Activity.Value` property that represents a `JObject` instance with a property named "data" that contains a dictionary of properties to understand the type of action and the `Id` of the source component for the action.
+First of all, the method checks if there's a proper instance of the `TurnContext`, and if the user canceled the asynchronous operation. Inside the `TurnContext` instance, there's all the needed information to properly handle the user's action. For example, there's the `turnContext.Activity.Value` property that represents a `JObject` instance with a property named `data` that contains a dictionary of properties to understand the type of action and the `Id` of the source component for the action.
 
-In the code excerpt, when the action type is "Submit" and the `Id` of the action is "SendFeedback," it means that the user selected the submit button defined in the `TextInputCardViewParameters` instance, which is the one to collect the feedback. The actual value of the feedback is available in the data field with name equal to the `Id` of the textbox defined in the `CardTextInputComponent` component instance. The handling of the feedback is up to you. In the code excerpt, the sample configures an instance of the second Card View defined in the constructor, and then instructs the ACE to render the new Card View via the `BaseHandleActionResponse` return value.
+In the code excerpt, when the action type is **Submit** and the `Id` of the action is **SendFeedback**, it means that the user selected the submit button defined in the `TextInputCardViewParameters` instance, which is the one to collect the feedback. The actual value of the feedback is available in the data field with name equal to the `Id` of the textbox defined in the `CardTextInputComponent` component instance. The handling of the feedback is up to you. In the code excerpt, the sample configures an instance of the second Card View defined in the constructor and then instructs the ACE to render the new Card View via the `BaseHandleActionResponse` return value.
 
-#### Rendering Quick Views
+### Rendering Quick Views
 
-While the Card Views are rendered based on a set of predefined component based templates, the Quick Views are rendered based on an Adaptive Card definition. The Adaptive Card can be defined either using a declarative and code based approach, or using the `AdaptiveCards.Templating` NuGet package and reading a JSON file with an Adaptive Card definition.
+While the Card Views are rendered based on a set of predefined component based templates, the Quick Views are rendered based on an Adaptive Card definition. The Adaptive Card can be defined either using a declarative and code based approach or using the `AdaptiveCards.Templating` NuGet package and reading a JSON file with an Adaptive Card definition.
 
 > [!IMPORTANT]
-> Keep into account that the `AdaptiveCards.Templating` NuGet package can parse and process JSON files with Adaptive Card definitions up to Adaptive Card schema v. 1.2, while using the declarative and code based model you can leverage any version of the Adaptive Card schema.
+> Keep into account that the `AdaptiveCards.Templating` NuGet package can parse and process JSON files with Adaptive Card definitions up to Adaptive Card schema v1.2, while using the declarative and code-based model you can leverage any version of the Adaptive Card schema.
 
-Here follows a sample implementation of the `OnSharePointTaskGetQuickViewAsync` method, rendering a Quick View using a code based and declarative model.
+Here follows a sample implementation of the `OnSharePointTaskGetQuickViewAsync` method, rendering a Quick View using a code-based and declarative model.
 
 ```CSharp
 protected override Task<QuickViewResponse> OnSharePointTaskGetQuickViewAsync(ITurnContext<IInvokeActivity> turnContext, AceRequest aceRequest, CancellationToken cancellationToken)
@@ -588,16 +534,16 @@ protected override Task<QuickViewResponse> OnSharePointTaskGetQuickViewAsync(ITu
 
 The code relies on the `AdaptiveCard` type defined in the `AdaptiveCards` NuGet package and builds the content of the Adaptive Card nesting various blocks of content into a hierarchy of elements. In the code excerpt, there's an `AdaptiveContainer` made of two `AdaptiveTextBlock` instances.
 
-### Define the **manifest.json** file for the solution
+## Define the **manifest.json** file for the solution
 
-Create a new folder with name **TeamsAppManifest** in the root folder of your project and add a couple of image files for the icons of the Microsoft 365 application that you're defining and a **manifest.json** file.
+Create a new folder with the name **TeamsAppManifest** in the root folder of your project and add a couple of image files for the icons of the Microsoft 365 application that you're defining and a **manifest.json** file.
 
 The image files should be the following ones:
 
-* **icon-color.png**: a 192x192 pixel PNG colored image with transparent background.
-* **icon-outline.png**: a 32x32 pixel PNG wireframe image with transparent background.
+* **icon-color.png**: a 192x192 pixel PNG colored image with a transparent background.
+* **icon-outline.png**: a 32x32 pixel PNG wireframe image with a transparent background.
 
-The manifest file should look like the following one:
+The manifest file should look like the following:
 
 ```JSON
 {
@@ -667,20 +613,21 @@ The manifest file should look like the following one:
 }
 ```
 
-In the **manifest.json** file, you should replace `<App-Client-ID>` with the actual Client ID of your Microsoft App. You should also configure the actual URL of your Bot in the `validDomains` section of the manifest. Lastly, you should consider providing real values for the settings in the `developer` section.
+In the **manifest.json** file, you should replace `<App-Client-ID>` with the actual Client ID of your Microsoft App. You should also configure the actual URL of your Bot in the `validDomains` section of the manifest. Lastly, you should consider providing real values for the settings in the `developer` section. All of the URLs in the `developer` section need to target addresses under HTTPS.
 
 Notice the `dashboardCards` section that defines the actual settings for your Bot Powered ACEs. In particular, through this section you can configure the `id` of the Microsoft App backing your Azure Bot, the `displayName` and `description` of the ACE, as well as the `icon` as a Fluent UI Icon, the Bot that handles the requests and that must be configured in the `bots` section of the **manifest.json**, and last but not least the `defaultSize` for your ACE in the Viva Connections Dashboard.
 
 You can consider copying and reusing the images and the **manifest.json** templates from the [samples folder of the reference GitHub repository](https://github.com/SharePoint/sp-dev-docs/tree/main/assets/bot-powered/TeamsAppManifest) associated with this tutorial.
 
-### Run and test the solution
+## Run and test the solution
 
 You're now ready to package and deploy your custom solution. You simply need to package the **manifest.json** file and the two images into a .ZIP file, like you would do with any other Microsoft Teams or Microsoft 365 custom application. Name the .ZIP file with whatever name you like, open the App Catalog of your target SharePoint Online tenant, and upload the .ZIP file as a new application package.
-The SharePoint Online server-side infrastructure recognizes the manifest structure and prompt you to enable and deploy the solution on the tenant.
+
+The SharePoint Online server-side infrastructure recognizes the manifest structure and prompts you to enable and deploy the solution on the tenant.
 
 ![The UI of the new SharePoint AppCatalog prompting to enable the solution and make it tenant-wide available.](./images/App-Catalog-Package-Publishing.png)
 
-Make the solution tenant-wide available, by choosing the option "Enable this app and add it to all sites," and the Bot Powered ACE is available in the Viva Connections Dashboard.
+Make the solution tenant-wide available, by selecting the option **Enable this app and add it to all sites**, and the Bot Powered ACE is available in the Viva Connections Dashboard.
 
 > [!NOTE]
 >Remember to start ngrok, or any other reverse proxy of your choice, before testing the Bot Powered ACE. 
@@ -693,6 +640,6 @@ In the upcoming articles of this guidance, you also learn how to publish and hos
 
 ## Additional readings
 
-Now that you have built your first Bot Powered ACE, you are ready to dig into additional details reading the following articles. 
+Now that you have built your first Bot Powered ACE, you're ready to dig into additional details by reading the following articles. 
  
 * [Authentication and Authorization in Bot Powered Adaptive Card Extensions](./AuthN-and-AuthZ-in-Bot-Powered-ACEs.md)

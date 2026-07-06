@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Build meeting apps for Microsoft Teams with SPFx"
 description: Build meeting apps for Microsoft Teams with the SharePoint Framework.
-ms.date: 12/30/2023
+ms.date: 02/12/2026
 ms.localizationpriority: medium
 ---
 
@@ -202,13 +202,13 @@ To make your SPFx solution available for use in Microsoft Teams, it must be pack
 1. Execute the following commands to build bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets.
 
     ```console
-    gulp bundle --ship
+    heft build --production
     ```
 
 1. Execute the following task to package your solution. This creates an updated **./sharepoint/solution/\*.sppkg** package.
 
     ```console
-    gulp package-solution --ship
+    heft package-solution --production
     ```
 
 1. Next, deploy the package that was generated to the tenant App Catalog.

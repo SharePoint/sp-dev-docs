@@ -1,7 +1,7 @@
 ---
 title: Use the CloseWorkbook method call asynchronously
 description: When you are using Excel Web Services, it is good practice to close the workbook by calling the CloseWorkbook method if you are finished using the session. This closes the session and allows Excel Services to free resources in a predictable manner. This could potentially improve your server performance and robustness.
-ms.date: 09/25/2017
+ms.date: 04/24/2026
 keywords: async,how to,howdoi,howto
 f1_keywords:
 - async,how to,howdoi,howto
@@ -13,6 +13,9 @@ ms.localizationpriority: medium
 # Use the CloseWorkbook method call asynchronously
 
 When you are using Excel Web Services, it is good practice to close the workbook by calling the **CloseWorkbook** method if you are finished using the session. This closes the session and allows Excel Services to free resources in a predictable manner. This could potentially improve your server performance and robustness.
+
+> [!NOTE]
+> This article applies to SharePoint Excel Services, which is deprecated and no longer recommended for new development. Use modern alternatives such as Microsoft Graph Excel API or Office Scripts where possible.
   
     
     
@@ -43,7 +46,7 @@ public void CloseWorkbookAsync(string sessionId)
 End Sub
 ```
 
-You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called.You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
+You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called. You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
 
 > [!NOTE]
 > You can find the **CloseWorkbookAsync** method in the proxy class that is generated when you add a Web reference using Microsoft Visual Studio 2005. If you are using Visual Studio 2003, you call the **BeginCloseWorkbook** method to close a workbook asynchronously instead.
@@ -96,7 +99,7 @@ namespace SampleApplication
                 // Call the GetCell method 
                 // to retrieve a value from a cell.
                 // The cell is in the first row and ninth column.
-                object[] rangeResult2 = xlservice.GetCell(sessionId, 
+                object[] rangeResult2 = es.GetCell(sessionId, 
                     sheetName, 0, 8, false, out outStatus);
  
                 // Close the workbook asynchronously. 
@@ -152,7 +155,7 @@ Namespace SampleApplication
                 ' Call the GetCell method 
                 ' to retrieve a value from a cell.
                 ' The cell is in the first row and ninth column.
-                Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 8, False, outStatus)
+                Dim rangeResult2() As Object = es.GetCell(sessionId, sheetName, 0, 8, False, outStatus)
 
                 ' Close the workbook asynchronously. 
                 ' This also closes session.

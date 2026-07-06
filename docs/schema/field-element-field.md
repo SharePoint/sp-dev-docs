@@ -227,7 +227,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ShowInListSettings**|Optional **Boolean**. **TRUE** to display the column on the page for customizing list settings.|
 |**ShowInNewForm**|Optional **Boolean**. If **FALSE**, the field does not show up in a **Fields** enumeration when the display mode is set to **New**. Fields with this setting do not show up in the default New Item page for a given list. In particular, this is used to hide fields on the page for uploading documents to the document library.|
 |**ShowInVersionHistory**|Optional **Boolean**. **TRUE** to display the column on the page for viewing list item versions.|
-|**ShowInViewForms**|Optional **Boolean**. **TRUE** to specify that the field is displayed in pages that are used to view list data.|
+|**ShowInViewForms**|Optional **Boolean**. **TRUE** to specify that the field is displayed in pages that are used to view list data. This parameter does not apply to modern UI.|
 |**Sortable**|Optional **Boolean**. **TRUE** if values in the field can be sorted.|
 |**SourceID**|Optional **Text**. Contains the namespace that defines the field, such as `http://schemas.microsoft.com/sharepoint/v3` or the GUID of the list in which the custom field was created.|
 |**StaticName**|Optional **Text**. Contains an internal name of the field that might not be unique within a field collection. However, unlike the **Name** attribute, which might be amended to ensure its uniqueness, the value of the **StaticName** attribute is assigned to the field exactly as you have defined it. You can later use this value in code to get a reference to the field by calling the **TryGetFieldByStaticName** method.|

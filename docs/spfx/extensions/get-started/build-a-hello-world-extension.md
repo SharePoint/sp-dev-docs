@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 12/4/2023
+ms.date: 01/12/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -44,9 +44,6 @@ You can also follow the steps in this article by watching the video on the Micro
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?**: Application Customizer
     - **What is your Application Customizer name?** HelloWorld
-
-    > [!NOTE]
-    > If you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the Application Customizer manifest JSON file. If the alias is longer than 40 characters, you get an exception when you try to serve the extension by using **gulp serve --nobrowser**. You can resolve this by updating the alias entry afterward.
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This usually takes 1-3 minutes.
 
@@ -179,7 +176,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 1. Compile your code and host the compiled files from your local computer by running the following command:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When the code compiles without errors, it serves the resulting manifest from https://localhost:4321 and also starts your default browser with needed query parameters.
@@ -200,4 +197,4 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
 Congratulations, you got your first SharePoint Framework Extension running!
 
-To continue building out your extension, see [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You'll use the same project and take advantage of specific content placeholders for modifying the UI of SharePoint. Notice that the **gulp serve** command is still running in your console window (or in Visual Studio Code if you're using the editor). You can continue to let it run while you go to the next article.
+To continue building out your extension, see [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You'll use the same project and take advantage of specific content placeholders for modifying the UI of SharePoint. Notice that the **heft start** command is still running in your console window (or in Visual Studio Code if you're using the editor). You can continue to let it run while you go to the next article.

@@ -1,7 +1,7 @@
 ---
 title: Use cascading dropdowns in web part properties
 description: Create cascading dropdown controls in the SharePoint client-side web part property pane without developing a custom property pane control.
-ms.date: 09/23/2023
+ms.date: 12/30/2025
 ms.localizationpriority: high
 ---
 # Use cascading dropdowns in web part properties
@@ -203,11 +203,8 @@ You'll build a web part that displays list items from a selected SharePoint list
 1. Run the following command to verify that the project is running:
 
     ```console
-    gulp serve
+    heft start
     ```
-
-    > [!NOTE]
-    > If this is your first time running the `gulp serve` command on your  workstation, you may need to run the `gulp trust-dev-cert` command first.
 
 1. In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
@@ -233,7 +230,7 @@ At this point, a user specifies which list the web part should use by manually e
 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      private lists: IPropertyPaneDropdownOption[];
+      private lists: IPropertyPaneDropdownOption[] = [];
       // ...
     }
     ```
@@ -266,7 +263,7 @@ At this point, a user specifies which list the web part should use by manually e
 
       protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
         return {
-          showLoadingIndicator: this.loadingIndicator,   
+          showLoadingIndicator: this.loadingIndicator,
           pages: [
             {
               header: {
@@ -295,7 +292,7 @@ At this point, a user specifies which list the web part should use by manually e
 1. Run the following command to verify that it's working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     ![The listName property rendered in the web part property pane using a dropdown control](../../../images/react-cascading-dropdowns-listname-property-pane-dropdown.png)
@@ -336,10 +333,10 @@ Previously, you associated the dropdown control of the `listName` property with 
 
       protected async onPropertyPaneConfigurationStart(): Promise<void> {
         // disable the item selector until lists have been loaded
-        this.listsDropdownDisabled = !this.lists;
+        this.listsDropdownDisabled = !this.lists || this.lists.length === 0;
 
         // nothing to do until someone selects a list
-        if (this.lists) {
+        if (this.lists.length > 0) {
           return;
         }
 
@@ -377,7 +374,7 @@ Previously, you associated the dropdown control of the `listName` property with 
 1. Run the following command to confirm that everything is working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     When you add a web part to the canvas and open its property pane, you should see the lists dropdown filled with available lists for the user to choose from.
@@ -533,7 +530,7 @@ Similar to how users can select a list by using a dropdown, they can select the 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
       // ...
-      private items: IPropertyPaneDropdownOption[];
+      private items: IPropertyPaneDropdownOption[] = [];
       // ...
     }
     ```
@@ -553,7 +550,7 @@ Similar to how users can select a list by using a dropdown, they can select the 
     ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
       return {
-        showLoadingIndicator: this.loadingIndicator,   
+        showLoadingIndicator: this.loadingIndicator,
         pages: [
           {
             header: {
@@ -586,7 +583,7 @@ Similar to how users can select a list by using a dropdown, they can select the 
 1. Run the following command to verify that it's working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     ![The itemName property rendered in the web part property pane using a dropdown control](../../../images/react-cascading-dropdowns-itemname-property-pane-dropdown.png)
@@ -685,7 +682,7 @@ Previously, you defined a dropdown control to render the `itemName` property in 
 1. Run the following command to confirm that everything is working as expected:
 
     ```console
-    gulp serve
+    heft start
     ```
 
     As required, initially the item dropdown is disabled, requiring users to select a list first. But at this point, even after a list has been selected, the item dropdown remains disabled.

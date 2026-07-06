@@ -19,6 +19,8 @@ If you prefer, you can watch the following video, instead of reading the whole a
 > [!NOTE]
 > You can find further details about creating SharePoint Framework web parts by reading the document [Build your first SharePoint client-side web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md).
 
+[!INCLUDE [spfx-gulp-heft-migration-wip](../../includes/snippets/spfx-gulp-heft-migration-wip.md)]
+
 ## Transforming an App Part into a client-side web part
 
 Imagine that you have an App Part to render the list of documents in the "Shared Documents" library of a site. The App Part is configurable, and allows to define a search filter on items. In the following screenshot, you can see the UI of the App Part.
@@ -159,7 +161,7 @@ First of all, you need to scaffold the SharePoint Framework solution, so start a
 > [!IMPORTANT]
 > In order to being able to follow the illustrated procedure, you need to have SharePoint Framework installed on your development environment. You can find detailed instructions about how to set up your environment reading the document [Set up your SharePoint Framework development environment](../spfx/set-up-your-development-environment.md).
 
-```powershell
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -176,16 +178,19 @@ With the above answers, you decided to create a solution with name *spo-sp-fx-we
 
 The scaffolding tool generates for you a new SharePoint Framework solution. When it's done, you can open the current folder using your favorite code editor. However, before opening the solution you need to add a package to have an easy and better looking rendering of the list of files in the target library. In fact, you're going to reference the Microsoft Graph Toolkit (MGT) library of components by running the following command:
 
-```PowerShell
+```console
 npm install @microsoft/mgt-spfx @microsoft/mgt-react --save
 ```
 
 > [!NOTE]
 > The Microsoft Graph Toolkit is a set of components to speed up the rendering of the UI of your client-side solutions, including SharePoint Framework solutions. It is not mandatory to use it in this sample solution, but it is an easy way to speed up your learning and development process. You can find detailed information about MGT reading the document [Microsoft Graph Toolkit overview](/graph/toolkit/overview) and you can learn how to integrate MGT with SharePoint Framework reading the document [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx).
 
+> [!WARNING]
+> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
+
 Now you can open the solution in your favorite code editor. If your favorite code editor is Microsoft Visual Studio Code, run the following command:
 
-```PowerShell
+```console
 code .
 ```
 
@@ -467,7 +472,7 @@ Replace the value of the *initialPage* property with the URL of your target site
 
 Then, you can run the following command in the terminal window:
 
-```PowerShell
+```console
 gulp serve
 ```
 

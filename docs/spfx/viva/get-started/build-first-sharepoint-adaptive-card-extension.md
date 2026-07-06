@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 12/14/2023
+ms.date: 02/13/2026
 ms.localizationpriority: high
 ---
 # Build your first SharePoint Adaptive Card Extension
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enables developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. Since Adaptive Card Extensions use Microsoft's Adaptive Card Framework to generate UI with its declarative JSON schema, you only need to focus on your component's business logic and let the SharePoint Framework (SPFx) handle making your component look good and work across all platforms.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
+> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.0.md).
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -30,31 +30,6 @@ When prompted, enter the following values (*select the default option for all pr
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-### Update your project's hosted workbench URL
-
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
-
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
-
-    ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
-      "port": 4321,
-      "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
-    }
-    ```
-
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
-
-> [!TIP]
-> You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
->
-> ```console
-> gulp serve --nobrowser
-> ```
-
 ## Serve the ACE in the workbench
 
 Before digging into the code, run the scaffolded output and see what an Adaptive Card Extension looks like.
@@ -62,7 +37,7 @@ Before digging into the code, run the scaffolded output and see what an Adaptive
 The inner development loop with ACEs is similar to SPFx Web Parts. We can serve locally and run the code on the workbench.
 
 ```console
-gulp serve
+heft start
 ```
 
 Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
@@ -73,7 +48,7 @@ Open the **Web Part Toolbox** and select your ACE:
 
 ### Explore the Card View
 
-ACEs can render in two distinct ways. The first way an ACE can render is called the **Card view**.
+ACEs can render in two distinct ways. The first way an ACE can render is called the **Card View**.
 
 When rendered on a Dashboard or a Page, ACEs will always start in this view.
 
@@ -120,9 +95,9 @@ protected renderCard(): string | undefined {
 }
 ```
 
-The `renderCard()` method is `virtual` that returns a string identifier to a registered View; more on View registration later. This method is invoked during the **initial** render of the Card view.
+The `renderCard()` method is `virtual` that returns a string identifier to a registered View; more on View registration later. This method is invoked during the **initial** render of the Card View.
 
-If `renderCard()` isn't overridden, then a default Card view will be rendered.
+If `renderCard()` isn't overridden, then a default Card View will be rendered.
 
 Comment out the `renderCard()` method and see what happens:
 
@@ -138,14 +113,14 @@ protected renderCard(): string | undefined {
 
 Uncomment the `renderCard()` method to go back to the original state.
 
-The default Card view will render using the following properties from the manifest:
+The default Card View will render using the following properties from the manifest:
 
 - Icon: `iconProperty`
 - Title: `title`
 - Card text: `description`
 
 > [!NOTE]
-> Unlike with the Card view, there is no default Quick View.
+> Unlike with the Card View, there is no default Quick View.
 
 ### Register a view for the ACE
 
@@ -163,7 +138,7 @@ this.quickViewNavigator.register(QUICK_VIEW_REGISTRY_ID, () => new QuickView());
 
 Locate and open the file: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
 
-Card views must extend `BaseComponentsCardView` and override `cardViewParameters` property to specify the look and data for the view.
+Card Views must extend `BaseComponentsCardView` and override `cardViewParameters` property to specify the look and data for the view.
 There are multiple helper methods to simplify the creation of the predefined views:
 
 - `BasicCardView`
@@ -185,14 +160,14 @@ There are multiple helper methods to simplify the creation of the predefined vie
 Each of these Views will render differently and have different constraints on what data can be provided to the template.
 
 As part of the `cardViewParameters` property, you can specify the following:
-- **image**: Image parameters for the card view.
-- **cardBar**: Card bar component for the card view (title and icon).
-- **header**: Header components for the card view.
-- **body**: Body components for the card view.
-- **footer**: Footer components for the card view.
+- **image**: Image parameters for the Card View.
+- **cardBar**: Card bar component for the Card View (title and icon).
+- **header**: Header components for the Card View.
+- **body**: Body components for the Card View.
+- **footer**: Footer components for the Card View.
 
 > [!NOTE]
-> The card views for Adaptive Card templates are limited to predefined [permutations](../design/designing-card.md) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
+> The Card Views for Adaptive Card templates are limited to predefined [permutations](../design/designing-card.md) and cannot be changed. The parameters type (`ComponentsCardViewParameters`) is defined to only accept the properties that are supported by the permutations.
 
 Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 
@@ -203,7 +178,7 @@ Additionally, there are two generics for the `properties` and `state` objects sh
 > SPFx will automatically propagate changes to the ACE's state to each View.
 
 > [!NOTE]
-> Whereas the initial Card view is specified in the ACE's `renderCard()` method, the initial Quick View is specified as part of a `cardButton` component's action `parameters` in the footer. This allows two buttons to potentially open different views.
+> Whereas the initial Card View is specified in the ACE's `renderCard()` method, the initial Quick View is specified as part of a `cardButton` component's action `parameters` in the footer. This allows two buttons to potentially open different views.
 
 Add a second button by adding another object to the `footer` property returned from `cardViewParameters` property:
 
@@ -279,10 +254,10 @@ Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/qu
 Quick Views must extend the **BaseAdaptiveCardView** base class. There are three optional generics that can be defined:
 
 - **TData**: The type returned from the `data()` getter method.
-- **TProperties**: Similar to the Card view, this is the same interface used by persisted properties of the ACE (*property bag*).
-- **TState** Similar to the Card view, this is the set of stateful data the View needs to render. **TState** must share properties with the ACE's state interface.
+- **TProperties**: Similar to the Card View, this is the same interface used by persisted properties of the ACE (*property bag*).
+- **TState** Similar to the Card View, this is the set of stateful data the View needs to render. **TState** must share properties with the ACE's state interface.
 
-A Quick View has more control over the Adaptive Card template schema than a Card view. The
+A Quick View has more control over the Adaptive Card template schema than a Card View. The
 `template()` getter must return valid Adaptive Card template JSON. SPFx ACEs support Adaptive Card
 templating. The properties on the object returned from the `data` getter will automatically be mapped
 to the bound template slot.
@@ -402,7 +377,7 @@ In its `template()` getter, the Quick View of the ACE you generated returns the 
     }
     ```
 
-Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **gulp serve** is still running:
+Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **heft start** is still running:
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-new-ql.png" alt-text="Updated ACE Quick View":::
 
@@ -439,7 +414,7 @@ public onAction(action: IActionArguments): void {
 }
 ```
 
-Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **gulp serve** is still running.
+Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **heft start** is still running.
 
 Selecting either button will now set the state's `subTitle` to the `data.message` value, causing a re-render (*more on this later*). The Quick View's Adaptive Card will now display this message, since its template binds to `subTitle`.
 
@@ -462,7 +437,7 @@ Other than the **Card size** field, the scaffolded ACE has one (1) configurable 
 
 - `title`
 
-Card views are designed to automatically work across all card sizes. Aside from specifying a default card size, ACEs cannot control this property.
+Card Views are designed to automatically work across all card sizes. Aside from specifying a default card size, ACEs cannot control this property.
 
 The `title` value is used in the title of the Property Pane and the title displayed on the Card.
 
@@ -531,7 +506,7 @@ After this tutorial you should be familiar with:
 
 - Scaffolding an Adaptive Card Extension
 - Registering Views
-- Changing the Card view and Quick View
+- Changing the Card View and Quick View
 - Basic action handling
 - Changing the Property Pane
 - Defer loading the Property Pane

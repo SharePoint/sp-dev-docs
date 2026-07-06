@@ -1,7 +1,7 @@
 ---
 title: Adding support for web part Top Actions
 description: Top Actions is a SharePoint Framework feature that allows web part developers to add commands to a web part's toolbar.
-ms.date: 04/12/2023
+ms.date: 11/09/2025
 ms.localizationpriority: high
 ---
 # Adding support for web part Top Actions
@@ -11,7 +11,7 @@ Top Actions provide an alternative and more end user friendlier way to expose th
 ![Top Actions Example](../../../images/webpart-top-actions.png)
 
 > [!IMPORTANT]
-> Web part Top Actions were introduced in the [SharePoint Framework (SPFx) v1.17 release](../../release-1.17.md).
+> Web part Top Actions were introduced in the [SharePoint Framework (SPFx) v1.17 release](../../release-1.17.0.md).
 
 ## Getting started
 
@@ -24,6 +24,16 @@ Both of these steps are accomplished by providing a configuration object of type
 
 > [!TIP]
 > These instructions assume you know [how to create a hello world web part](../get-started/build-a-hello-world-web-part.md).
+
+## Install Top Actions npm package
+
+Top Actions capability is packged to it's own NPM package and you'll need to include that to the SPFx project:
+
+In the console, execute the following to install the Top Actions NPM package:
+
+```console
+npm install @microsoft/sp-top-actions
+```
 
 ## Define a Top Action configuration
 
@@ -45,7 +55,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   public getTopActionsConfiguration(): ITopActions | undefined {
     return {
       topActions: [],
-      onExecute: (actionName: string, newValue: any): void { }
+      onExecute: (actionName: string, newValue: any): void => { }
     };
   }
 
@@ -94,7 +104,7 @@ return {
       }
     }
   ],
-  onExecute: (actionName: string, newValue: any): void { }
+  onExecute: (actionName: string, newValue: any): void => { }
 }
 ```
 
@@ -127,7 +137,7 @@ return {
       }
     }
   ],
-  onExecute: (actionName: string, newValue: any): void { }
+  onExecute: (actionName: string, newValue: any): void => { }
 }
 ```
 

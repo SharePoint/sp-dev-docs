@@ -122,13 +122,24 @@ The following table contains typical REST endpoint URL examples to get you start
 ```json
 {
   "__metadata": {
-    "type": "SP.Data.listname.ListItem"
+    "type": "SP.Data.listnameListItem"
   },
   "Title": "MyItem"
 }
 ```
 
 In the above JSON, replace listname with the name of your SharePoint list by omitting the spaces.
+
+For example, if your SharePoint list name is "My Awesome List" the resulting json should be:
+
+```json
+{
+  "__metadata": {
+    "type": "SP.Data.MyAwesomeListListItem"
+  },
+  "Title": "MyItem"
+}
+```
 
 ## Batch job support
 

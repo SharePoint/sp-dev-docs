@@ -9,7 +9,7 @@ manager: serdars
 audience: ITPro
 f1.keywords:
 - NOCSH
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
 ms.collection:
 - SPMigration

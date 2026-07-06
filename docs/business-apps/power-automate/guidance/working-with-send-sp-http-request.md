@@ -16,6 +16,8 @@ To work effectively with the SharePoint Send HTTP Request action, see the follow
 
 > [!NOTE]
 > This is a developer-focused action. You must understand how SharePoint REST API works and also how to parse JSON strings in Power Automate.
+> 
+> Additionally, this action only supports SharePoint REST APIs (excluding any deprecated APIs), if you need to access another Microsoft service, you will need to leverage the "HTTP with Microsoft Entra ID" connector.
 
 ## Get to know the SharePoint REST/OData APIs
 

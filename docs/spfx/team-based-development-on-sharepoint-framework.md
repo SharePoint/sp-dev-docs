@@ -1,7 +1,7 @@
 ---
 title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
-ms.date: 04/28/2022
+ms.date: 12/10/2025
 ms.localizationpriority: high
 ---
 # Team-based development on the SharePoint Framework
@@ -37,13 +37,13 @@ SharePoint Framework requires Node.js to be installed on the developer machine. 
 
 For more information, see [Set up your SharePoint Framework development environment](set-up-your-development-environment.md)
 
-#### NPM
+#### npm
 
 npm is the equivalent of NuGet in .NET projects: it allows developers to acquire and install packages for use in SharePoint Framework projects. Npm is also used to install the SharePoint Framework toolchain. Typically developers will use the latest version of npm and install it globally on their machine. Npm itself is a Node.js package so if you're running multiple versions of Node.js side by side each will have its own version of npm installed.
 
-#### Gulp
+#### Heft
 
-Gulp is the equivalent of MSBuild in .NET project and is responsible for running tasks such as building or packaging a SharePoint Framework project. Gulp is distributed as a Node.js package and is typically installed globally using npm.
+Heft is a config-driven toolchain that invokes other popular tools like TypeScript, ESLint, Jest, Webpack, and API Extractor to build web applications, Node.js services, command-line tools, and libraries. It's designed for use in monorepos with potentially hundreds of projects, where it's typically launched by package.json commands like **npm run build** or **npm run test**. If you're familiar with build tools like **Vite**, **esbuild**, or task runners like **Gulp** or **Grunt**, Heft plays a similar role but with a focus on large-scale consistency.
 
 #### Yeoman and SharePoint Framework Yeoman generator
 
@@ -71,7 +71,7 @@ In the past, it was challenging for many organizations to justify providing Shar
 
 #### Developing on the host
 
-Probably the easiest option to set up a development environment for SharePoint Framework projects is to install all the tools directly on the host machine. If your team is working only on SharePoint Framework projects, then they can install Node.js on their machines. If they work on other Node.js projects, then they could use third-party solutions such as [nvm](https://github.com/creationix/nvm) to run multiple versions of Node.js side by side.
+Probably the easiest option to set up a development environment for SharePoint Framework projects is to install all the tools directly on the host machine. If your team is working only on SharePoint Framework projects, then they can install Node.js on their machines. If they work on other Node.js projects, then they could use third-party solutions such as node version managers to run multiple versions of Node.js side by side. Learn more about node version managers in [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
 
 Following the tools required by the SharePoint Framework toolchain, developers would install Yeoman and the SharePoint Framework Yeoman generator. Typically both these tools are installed globally. Given however, that the SharePoint Framework Yeoman generator is tied to a specific version of the SharePoint Framework and developers might need to work with projects created using a different version, they would have to uninstall and install the version of the generator specific for the particular project they're working on at the moment. A more viable approach would be to install Yeoman globally but the SharePoint Framework Yeoman generator locally in the given project. While it introduces some overhead, it helps developers ensure that should they need to add new elements to the project in the future they would be compatible with the rest of the project.
 
@@ -107,7 +107,7 @@ A new SharePoint Framework project scaffolded by the SharePoint Framework Yeoman
 
 A common solution to avoid the risk of dependencies changing during the project, in projects built on the open-source toolchain, is to lock the version of all dependencies. When adding a dependency to the project developers can choose to install the dependency with a specific version rather than a version range by calling the **npm install** command with the **--save-exact** argument.
 
-This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the native lock file capability supported by NPM. For more information, see [npm-package-locks: An explanation of NPM lock files](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json).
+This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the native lock file capability supported by npm. For more information, see [npm-package-locks: An explanation of npm lock files](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json).
 
 ### Add the project to source control
 
@@ -119,12 +119,12 @@ One location developers should particularly pay attention not to include in the 
 
 ### Get the project from source control
 
-The first time you'll get the project from source control, you'll get the project's source code but none of the SharePoint Framework libraries required to build the project. Similarly to when working with .NET projects and using NuGet packages, you have to restore the dependencies first. In SharePoint Framework projects, similarly to all other projects built on top of Node.js, you do that by executing **npm install** in the command line. NPM will use the information from the **package.json** file combined with the information from the **package-lock.json** file and install all packages.
+The first time you'll get the project from source control, you'll get the project's source code but none of the SharePoint Framework libraries required to build the project. Similarly to when working with .NET projects and using NuGet packages, you have to restore the dependencies first. In SharePoint Framework projects, similarly to all other projects built on top of Node.js, you do that by executing **npm install** in the command line. npm will use the information from the **package.json** file combined with the information from the **package-lock.json** file and install all packages.
 
 > [!NOTE]
 > Typically restoring dependencies using the **npm install** command requires internet connectivity as packages are downloaded from **https://registry.npmjs.org**.
 >
-> If you experience network connectivity issues or the NPMJS registry is unavailable your build will fail. There are a number of ways to mitigate this limitation. One of them is using [shrinkpack](https://github.com/JamieMason/shrinkpack) to download tarballs of all dependencies and have them stored in the source control. Shrinkpack automatically updates the **npm-shrinkwrap.json** file to use the local tarballs allowing for offline installation of the project's dependencies.
+> If you experience network connectivity issues or the npmJS registry is unavailable your build will fail. There are a number of ways to mitigate this limitation. One of them is using [shrinkpack](https://github.com/JamieMason/shrinkpack) to download tarballs of all dependencies and have them stored in the source control. Shrinkpack automatically updates the **npm-shrinkwrap.json** file to use the local tarballs allowing for offline installation of the project's dependencies.
 
 Some of the packages are compiled into binaries during the installation process. This compilation process is specific to the architecture and operating system. If you restore dependencies in a Docker container running Linux and would then try to build the project on your Windows host you would get an error reporting the mismatch in the environment type used to build and run the binaries.
 
@@ -132,14 +132,14 @@ As your team develops the solution, new or updated dependencies might be added t
 
 ### Add packages to your project
 
-Using existing packages to accomplish specific tasks allows you to be more productive. **https://www.npmjs.com** is a public registry of packages that you can use in your project.
+Using existing packages to accomplish specific tasks allows you to be more productive. `https://www.npmjs.com` is a public registry of packages that you can use in your project.
 
 > [!IMPORTANT]
-> Since there's no formal verification process before a package is published to **https://www.npmjs.com**, you should carefully examine if you can use the particular package both from the contents and license point of view.
+> Since there's no formal verification process before a package is published to `https://www.npmjs.com`, you should carefully examine if you can use the particular package both from the contents and license point of view.
 
 To add a package to your SharePoint Framework project execute the **npm install {package} --save** or **npm install {package} --save-dev** command in the command line, for example: **npm install angular --save**. Using the **--save** or **--save-dev** argument ensures that the package is added to the **package.json** file and other developers on your team will get it as well when restoring dependencies. Without it building the project on a machine other than your own will fail. When adding packages that are required by your solution on runtime, such as Angular or jQuery, you should use the **--save** argument. Packages that are required in the build process, such as additional Gulp tasks, should be installed with the **--save-dev** argument.
 
-When installing a package, if you don't specify a version, npm will install the latest version available in the package registry (**https://www.npmjs.com** by default), which usually is the version that you'll want to use. One specific case when you have to specify the version of the package is when you're using **npm-shrinkwrap.json** and want to upgrade an existing package to a newer version. By default npm will install the version listed in the **npm-shrinkwrap.json** file. Specifying the version number in the **npm install** command, like **npm install angular@1.5.9 --save**, will install that package and update the version number in the **npm-shrinkwrap.json** file.
+When installing a package, if you don't specify a version, npm will install the latest version available in the package registry (`https://www.npmjs.com` by default), which usually is the version that you'll want to use. One specific case when you have to specify the version of the package is when you're using **npm-shrinkwrap.json** and want to upgrade an existing package to a newer version. By default npm will install the version listed in the **npm-shrinkwrap.json** file. Specifying the version number in the **npm install** command, like **npm install angular@1.5.9 --save**, will install that package and update the version number in the **npm-shrinkwrap.json** file.
 
 ## Working with internal packages
 
@@ -160,11 +160,12 @@ Organizations using Visual Studio Team Services or the Team Foundation Server, c
 
 To simplify the installation and management of a private package registry, most engines offer ready-to-use Docker images.
 
-### Linking packages using NPM link
+### Linking packages using npm link
 
 An alternative to using a private registry is linking packages. While it doesn't involve setting up a registry, it requires careful coordination on all developer machines and the build server.
 
 First, every developer on the team must get a copy of the shared package on their development machine. In the command line, they have to change the working directory to the one of the shared packages and then they must execute the **npm link** command. This command registers the particular package as a global package on that particular development machine.
+
 Next, developers have to change the working directory to the directory of the project in which they would like to use the shared package. Then they install the package the same way they would install any other package by executing the **npm install {shared_package} --save** command in the command line. As the shared package is installed globally, npm will use that version as the source to install the package from. At this point, from the project point of view, the package is installed just like any other public package and developers can choose how they want to bundle the package with the project.
 
 Linking the package must be executed on all development machines and on the build server. If the shared package isn't linked using the **npm link** command, restoring project dependencies will fail and break the build.
@@ -214,8 +215,6 @@ SharePoint Framework offers standard support for the [Karma](http://karma-runner
 #### Code analysis
 
 Where linting is helpful to validate the syntax of the particular file, often developers need more support to verify that the project as a whole meets the guidelines. Generally linters focus on the code itself but miss the context of what the particular code file represents. In SharePoint Framework solutions artifacts have specific requirements, for example a web part should have a unique ID in the project. Also organizations might have other requirements such as not referencing scripts from CDN or only using a specific version of a particular library. This is where linters generally fall short and developers need other tools.
-
-[SharePoint Code Analysis Framework](http://rencore.com/spcaf) (SPCAF) is a third-party solution frequently used by SharePoint developers, administrators, and employees in quality assurance and security roles to verify that SharePoint customizations meet organizational quality guidelines. SPCAF integrates with the whole application lifecycle process helping organizations lower the total cost of ownership of SharePoint customizations. SPCAF offers a set of rules that specifically target SharePoint Framework solutions.
 
 ## Upgrading SharePoint Framework projects
 
@@ -272,7 +271,7 @@ Starting with SPFx v1.3, the SharePoint Framework Yeoman generator allows you to
 
 ### Build and package project in release mode
 
-Once you verified that the solution is working as expected, build the project in release mode using the **gulp bundle --ship** command. Then create a new package using the **gulp package-solution --ship** command. Without running the **gulp bundle --ship** command first, the package will include previous version of your project.
+Once you verified that the solution is working as expected, build the project in release mode using the **heft bundle --production** command. Then create a new package using the **heft package-solution --production** command. Without running the **heft bundle --production** command first, the package will include previous version of your project.
 
 ### Deploy new version of your solution
 
