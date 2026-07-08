@@ -14,7 +14,7 @@ Learn how to install, open, and create a workflow by using SharePoint Designer 2
 
 > [!CAUTION]
 > SharePoint 2010 workflows are deprecated for SharePoint On-Premise on July 16, 2026. If you’re using SharePoint 2010 workflows, we recommend migrating to SharePoint 2013 Workflows or using Power Automate with Azure on-premise data gateway or other supported solutions. For more information, see [What's deprecated or removed from SharePoint Server Subscription Edition
-](https://learn.microsoft.com/en-us/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition#deprecated-features).
+](https://learn.microsoft.com/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition#deprecated-features).
 
 > [!CAUTION]
 > SharePoint 2013 workflows are turned off for new SharePoint Online tenants on April 2, 2024, and were fully retired on April 2, 2026. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
