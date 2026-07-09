@@ -19,7 +19,7 @@ For files without a supported viewer (the Office web viewer or the embedded view
 Before you configure `urlTemplate`, ensure you have:
 
 - A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own.
-- The delegated Microsoft Graph permission scope listed in the **Permissions** section of [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update). Application permissions aren't supported.
+- The delegated Microsoft Graph permission scope(s) listed in the **Permissions** section of [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update). Application permissions aren't supported.
 
 > [!NOTE]
 > Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience, such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
