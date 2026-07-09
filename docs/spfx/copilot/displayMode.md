@@ -1,7 +1,7 @@
 ---
 title: Display modes in SharePoint Copilot components
 description: Learn how the inline and fullscreen display modes work in SharePoint Copilot components and what your component must do to switch between them.
-ms.date: 07/08/2026
+ms.date: 07/09/2026
 ms.localizationpriority: high
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint Copilot Apps
 description: Use SharePoint Copilot Apps to build Microsoft 365 Copilot declarative agents with custom interactive UI, hosted automatically in your tenant, using familiar SharePoint Framework tools.
-ms.date: 07/08/2026
+ms.date: 07/09/2026
 ms.localizationpriority: high
 ---
 
