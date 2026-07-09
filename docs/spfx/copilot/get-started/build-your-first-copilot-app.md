@@ -26,7 +26,7 @@ You can follow these steps by watching the video on the Microsoft Community Lear
 
 Before you start, make sure you have the following in place:
 
-- A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](./sharepoint/dev/spfx/set-up-your-development-environment.md).
+- A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](../../set-up-your-development-environment.md).
 - The SharePoint Framework development toolchain installed, including [Node.js](https://nodejs.org) (the version required by SPFx v1.24) and a code editor such as [Visual Studio Code](https://code.visualstudio.com).
 - Permission to upload and deploy solution packages to your tenant app catalog.
 
