@@ -37,7 +37,7 @@ The destination for a file depends on the file type and whether `urlTemplate` is
 | File type | `urlTemplate` set? | Behavior when opened |
 | --- | --- | --- |
 | Files with a supported Office web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Office web viewer |
-| Files supported by the embedded viewer | Either | Opens in the embedded viewer |
+| PDF | Either | Opens in the embedded viewer |
 | All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
