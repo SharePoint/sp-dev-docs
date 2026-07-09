@@ -265,6 +265,10 @@
       href: spfx/copilot/overview-copilot-apps.md
     - name: Display Mode
       href: spfx/copilot/displayMode.md
+    - name: Getting started
+      items:
+      - name: Build your first application customizer extension
+        href: spfx/copilot/get-started/build-your-first-copilot-app
   - name: Library components
     items:
     - name: Overview
