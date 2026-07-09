@@ -1,7 +1,7 @@
 ---
 title: Configuring redirect behavior
 description: Configure the urlTemplate property on a SharePoint Embedded container type to control how Microsoft 365 routes users to container content from Microsoft 365 search results and from the driveItem.webUrl property returned by Microsoft Graph.
-ms.date: 05/29/2026
+ms.date: 07/09/2026
 ms.localizationpriority: high
 ---
 
