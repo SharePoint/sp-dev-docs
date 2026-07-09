@@ -19,7 +19,7 @@ For files without a supported viewer (the Office web viewer or the embedded view
 Before you configure `urlTemplate`, ensure you have:
 
 - A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own.
-- The required Microsoft Graph permission. For details, see [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update). Application permissions aren't supported.
+- The delegated Microsoft Graph permission scope listed in the **Permissions** section of [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update). Application permissions aren't supported.
 
 > [!NOTE]
 > Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience, such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
@@ -54,7 +54,7 @@ For SharePoint Embedded items, the `driveItem.webUrl` property returned by Micro
 
 ## Configure `urlTemplate`
 
-Set `urlTemplate` on your container type by calling the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API (`PATCH /storage/fileStorage/containerTypes/{id}`) and setting `settings.urlTemplate`. The value applies to every tenant that registers the container type. The API requires a delegated permission; application permissions aren't supported.
+Set `urlTemplate` on your container type by calling the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API (`PATCH /storage/fileStorage/containerTypes/{id}`) and setting `settings.urlTemplate`. The value applies to every tenant that registers the container type. This API requires the delegated permission scope(s) listed in its **Permissions** section; application permissions aren't supported.
 
 The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers when a user opens an item.
 
