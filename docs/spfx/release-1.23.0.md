@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release included new capabilities on the list view command sets, preview of CLI for SPFx and addressing all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
-**Released:** May 13, 2025
+**Released:** May 13, 2026
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 

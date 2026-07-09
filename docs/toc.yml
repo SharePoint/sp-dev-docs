@@ -259,6 +259,12 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
+  - name: Copilot Apps
+    items:
+    - name: Overview
+      href: spfx/copilot/overview-copilot-apps.md
+    - name: Display Mode
+      href: spfx/copilot/displayMode.md
   - name: Library components
     items:
     - name: Overview
