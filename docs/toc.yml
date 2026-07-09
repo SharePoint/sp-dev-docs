@@ -268,7 +268,7 @@
     - name: Getting started
       items:
       - name: Build your first application customizer extension
-        href: spfx/copilot/get-started/build-your-first-copilot-app
+        href: spfx/copilot/get-started/build-your-first-copilot-app.md
   - name: Library components
     items:
     - name: Overview

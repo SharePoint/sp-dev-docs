@@ -14,7 +14,7 @@ In this tutorial, you build a baseline SharePoint Copilot App from scratch, test
 
 <!-- PLACEHOLDER: hero screenshot of the finished Copilot component running in Microsoft 365 Copilot -->
 > [!div class="mx-imgBorder"]
-> ![Placeholder: the finished Copilot component running in Microsoft 365 Copilot](../assets/tutorial-hero-placeholder.png)
+> ![Placeholder: the finished Copilot component running in Microsoft 365 Copilot](../../../images/copilot/tutorial-outcome.png)
 
 For a conceptual overview of how SharePoint Copilot Apps work, see [Overview of SharePoint Copilot Apps](../overview-copilot-apps.md).
 
@@ -26,7 +26,7 @@ You can follow these steps by watching the video on the Microsoft Community Lear
 
 Before you start, make sure you have the following in place:
 
-- A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment).
+- A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](./sharepoint/dev/spfx/set-up-your-development-environment.md).
 - The SharePoint Framework development toolchain installed, including [Node.js](https://nodejs.org) (the version required by SPFx v1.24) and a code editor such as [Visual Studio Code](https://code.visualstudio.com).
 - Permission to upload and deploy solution packages to your tenant app catalog.
 
