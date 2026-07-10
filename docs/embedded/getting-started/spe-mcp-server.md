@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # SharePoint Embedded Model Context Protocol (MCP) server
 
-The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded through natural language. It's distributed as the [`@microsoft/spe-mcp-server`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
+The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
 Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, you describe what you want—"create a trial container type for my app"—and the AI client calls the server's tools to do it.
 
@@ -51,7 +51,7 @@ Add an MCP server entry to `.vscode/mcp.json` in your workspace:
     "spe": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@microsoft/spe-mcp-server"]
+      "args": ["-y", "@microsoft/spe-mcp"]
     }
   }
 }
@@ -68,7 +68,7 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
   "mcpServers": {
     "spe": {
       "command": "npx",
-      "args": ["-y", "@microsoft/spe-mcp-server"]
+      "args": ["-y", "@microsoft/spe-mcp"]
     }
   }
 }
@@ -76,7 +76,7 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
 
 ### Cursor and other MCP clients
 
-Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp-server` command. See your client's documentation for where to register MCP servers.
+Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp` command. See your client's documentation for where to register MCP servers.
 
 ## Choose how the server authenticates
 
@@ -96,7 +96,7 @@ The server supports two running modes.
       "spe": {
         "type": "stdio",
         "command": "npx",
-        "args": ["-y", "@microsoft/spe-mcp-server"],
+        "args": ["-y", "@microsoft/spe-mcp"],
         "env": {
           "SPE_CLIENT_ID": "your-client-id",
           "SPE_TENANT_ID": "your-tenant-id"

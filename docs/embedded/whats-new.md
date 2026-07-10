@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 ## July 2026
 
-- The [SharePoint Embedded Model Context Protocol (MCP) server](./getting-started/spe-mcp-server.md) is available in preview as an open-source npm package ([`@microsoft/spe-mcp-server`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)), letting any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude, or Cursor—provision and manage SharePoint Embedded through natural language.
+- The [SharePoint Embedded Model Context Protocol (MCP) server](./getting-started/spe-mcp-server.md) is available in preview as an open-source npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)), letting any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude, or Cursor—provision and manage SharePoint Embedded through natural language.
 
 ## June 2026
 
