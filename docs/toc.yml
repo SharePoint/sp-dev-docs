@@ -602,6 +602,8 @@
     items:
     - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
+    - name: SharePoint Embedded Model Context Protocol (MCP) Server
+      href: embedded/getting-started/spe-mcp-server.md
     - name: Container Types
       href: embedded/getting-started/containertypes.md
     - name: Register Container Type API

@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # What's new in SharePoint Embedded
 
+## July 2026
+
+- The [SharePoint Embedded Model Context Protocol (MCP) server](./getting-started/spe-mcp-server.md) is available in preview as an open-source npm package ([`@microsoft/spe-mcp-server`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)), letting any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude, or Cursor—provision and manage SharePoint Embedded through natural language.
+
 ## June 2026
 
 - The [`FileStorageContainerType.Manage.All`](/graph/permissions-reference#filestoragecontainertypemanageall) Microsoft Graph permission no longer requires the [SharePoint Embedded Administrator](./administration/adminrole.md) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. Any non-guest user in the owning tenant can [create a container type](./getting-started/containertypes.md#creating-container-types) and is automatically assigned as an [owner of that container type](./development/auth.md#container-type-owner-capabilities).
