@@ -64,7 +64,8 @@ Please share any questions or findings on the SharePoint Copilot Apps through th
 #### Assets on Copilot Apps
 
 - [Overview documentation](./copilot/overview-copilot-apps.md)
-- [Creating your first SharePoint Copilot App tutorial](#) – documentation
+- [Creating your first SharePoint Copilot App tutorial](./copilot/get-started/build-your-first-copilot-app.md) – documentation
+- [Creating your first SharePoint Copilot App - Tutorial](https://www.youtube.com/watch?v=1TaK6osdvc0) - video
 - [Going beyond text in Microsoft 365 Copilot: Introducing SharePoint Copilot Apps](https://devblogs.microsoft.com/microsoft365dev/going-beyond-text-in-microsoft-365-copilot-introducing-sharepoint-copilot-apps/) – Public announcement
 - [Creating your first SharePoint Copilot App - Tutorial](https://www.youtube.com/watch?v=ofgERb5Zlbo) - video
 - [Introduction to SharePoint Copilot Apps](https://www.youtube.com/watch?v=mpSVo47LDHE) – video
