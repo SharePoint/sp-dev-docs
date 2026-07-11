@@ -1,71 +1,78 @@
 ---
 title: Scenarios and Use Cases
 description: Scenarios and Use Cases for SharePoint Embedded
-ms.date: 05/21/2024
+ms.date: 07/09/2026
+ms.reviewer: stpuceli
 ms.localizationpriority: high
 ---
 
 # Scenarios and use cases for SharePoint Embedded
 
-Use these example scenarios to prompt ideas about how custom applications can use SharePoint Embedded.
+Use these example scenarios to spark ideas for how your custom application can use SharePoint Embedded. Each scenario combines several features to solve a common content-management problem.
 
 > [!NOTE]
-> This article is not intended to be an exhaustive list of all SharePoint Embedded features and scenarios. The intention is that these scenarios are contextualized examples of how combinations of features can be used.
+> This article isn't an exhaustive list of SharePoint Embedded features and scenarios. Each scenario shows one way to combine features in context.
 
 ## Scenario: Structured user experience
 
 ### Description
 
-Where your application requires a guided user experience to make users work in a structured way, rather than the flexible experience of SharePoint.
+Choose this pattern when your application needs a guided experience. You want users to work in a structured way rather than in the flexible SharePoint Online interface.
 
-Where your application is enabling a business-critical or time sensitive process, use the dedicated resource allocation of SharePoint Embedded to simplify management of throttling.
+This pattern also suits business-critical or time-sensitive processes. SharePoint Embedded allocates dedicated resources, so you can manage throttling more easily.
 
 ### Examples
 
 - Extended Relationship Management (XRM) applications
 - Engagement-based applications
-- Workflow-based collaboration, with defined state
+- Workflow-based collaboration with defined state
 
-### Why use SharePoint Embedded instead of SharePoint?
+### Why use SharePoint Embedded instead of SharePoint Online?
 
-- Your application is the only user interface, allowing you to create a prescriptive user experience
-- Resources are separate from your Microsoft 365 entitlements– allowing for simpler resource management.
+- Your application is the only user interface, so you control the entire user experience.
+- Resources sit apart from your Microsoft 365 entitlements, which simplifies resource management.
 
 ## Scenario: Highly controlled collaboration
 
 ### Description
 
-When building applications on top of SharePoint, it will still be possible for a user with permissions to navigate to the underlying site. Based on their permission level, a user might complete actions in the SharePoint interface that weren't intended by your application, for example changing site settings. These actions might have unintended consequences for your application or content.
+When you build on SharePoint Online directly, a user with permissions can still open the underlying site without awareness from your application. Depending on their permission level, that user might change site settings or take other actions your application didn't intend. Those actions can have unintended consequences for your application or content.
 
-Because SharePoint Embedded is headless, there's no user interface other than what is provided by your custom application. If you don't supply a method to change content or settings through your application, then it won’t be possible for a user to circumvent this through SharePoint. You have the choice for which collaborative features are available in your application, for example sharing.
+SharePoint Embedded is headless, so your custom application provides the only interface. If your application doesn't expose a way to change content or settings, a user can't bypass it through SharePoint Online. You decide which collaborative features, such as sharing, your application offers.
 
 ### Examples
 
 - Deal room applications
 - Shared research environments
 
-### Why use SharePoint Embedded instead of SharePoint?
+### Why use SharePoint Embedded instead of SharePoint Online?
 
-- You need the collaborative capabilities of SharePoint, only via a highly customized user interface
-- You're handling high-value content, where you want to manage risk by removing abilities for a user to discover or alter the content repository
-- All containers for the application can share default sharing settings that are separate from your OneDrive and SharePoint settings
-- Content is logically separated from other Microsoft 365 content
+- You need SharePoint's collaborative capabilities, but only through a highly customized interface.
+- You handle high-value content and want to limit who can discover or alter the repository.
+- Every container in the application can share default sharing settings that stay separate from your OneDrive and SharePoint Online settings.
+- Content stays logically separated from your other Microsoft 365 content.
 
-## Scenario: Customer facing document upload
+## Scenario: Customer-facing document upload
 
 ### Description
 
-Your application is aimed at an end customer, either within your organization or externally, who needs to upload a file as part of their interaction. You require a simplified end-user experience in your custom application, along with the Microsoft 365 capabilities of document storage and compliance.
+Your application serves an end customer, inside or outside your organization, who uploads a file as part of an interaction. You want a simple end-user experience plus the Microsoft 365 capabilities for document storage and compliance.
 
-Using SharePoint Embedded will support this scenario, while not requiring the users of your application to have access or entitlement to your Microsoft 365 tenant.
+SharePoint Embedded supports this scenario. The users of your application don't need access or entitlement to your Microsoft 365 tenant.
 
 ### Examples
 
-- Applying evidence to mortgage application
-- Identity document verification
+- Attaching evidence to a mortgage application
+- Verifying an identity document
 
-### Why use SharePoint Embedded instead of SharePoint?
+### Why use SharePoint Embedded instead of SharePoint Online?
 
-- It's critical to segregate this data from the rest of your Microsoft 365 storage, while still being in scope for compliance tools like eDiscovery
-- No Microsoft 365 licensing is required for users, or the use of external users in SharePoint
-- Containers offer a simple, flexible unit of data storage
+- You must segregate this data from the rest of your Microsoft 365 storage, yet keep it in scope for compliance tools like eDiscovery.
+- Users need no Microsoft 365 licensing, and you avoid adding external users to SharePoint Online.
+- Containers give you a simple, flexible unit of data storage.
+
+## Related content
+
+- [What is SharePoint Embedded?](overview.md)
+- [Understand app and tenant architecture](plan/app-tenant-architecture.md)
+- [Quickstart: Build your first app with VS Code](build/quickstart-vscode.md)

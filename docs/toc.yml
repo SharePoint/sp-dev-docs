@@ -605,91 +605,115 @@
 - name: SharePoint Embedded
   items:
   - name: Overview
-    href: embedded/overview.md
-  - name: What's New
-    href: embedded/whats-new.md
-  - name: Scenarios and Use Cases
-    href: embedded/scenarios-and-use-cases.md
-  - name: Getting Started
     items:
-    - name: SharePoint Embedded Visual Studio Code Extension
-      href: embedded/getting-started/spembedded-for-vscode.md
-    - name: Container Types
-      href: embedded/getting-started/containertypes.md
-    - name: Register Container Type API
-      href: embedded/getting-started/register-api-documentation.md
-    - name: Microsoft 365 Archive support for containers
-      href: embedded/getting-started/microsoft-365-archive-support-for-containers.md
-  - name: Development
+    - name: What is SharePoint Embedded?
+      href: embedded/overview.md
+    - name: Scenarios and use cases
+      href: embedded/scenarios-and-use-cases.md
+    - name: What's new
+      href: embedded/whats-new.md
+  - name: Plan a SharePoint Embedded solution
     items:
-    - name: Application Architecture
-      href: embedded/development/app-architecture.md
-    - name: Authentication and Authorization
-      href: embedded/development/auth.md
-    - name: Sharing and Permissions
-      href: embedded/development/sharing-and-perm.md
-    - name: Limits and Calling Patterns
-      href: embedded/development/limits-calling.md
-    - name: Fluid Framework
-      href: embedded/development/fluid.md
-    - name: Support archive funcationality in your application
-      href: embedded/development/support-archival-of-containers.md
-    - name: Office Experiences
-      href: embedded/development/content-experiences/office-experience.md
-    - name: Configuring redirect behavior
-      href: embedded/development/content-experiences/configure-redirect-behavior.md
-    - name: User Experiences
-      href: embedded/development/content-experiences/user-experiences-overview.md
-    - name: Search Content
-      href: embedded/development/content-experiences/search-content.md
-    - name: Launch Experience
-      href: embedded/development/tutorials/launch-experience.md
-    - name: Using Metadata with SharePoint Embedded Containers
-      href: embedded/development/tutorials/metadata.md
-    - name: Using File Preview
-      href: embedded/development/tutorials/using-file-preview.md
-    - name: Using Document Processing with Azure Cognitive Services
-      href: embedded/development/tutorials/doc-processing-acs.md
-    - name: Using Webhooks
-      href: embedded/development/tutorials/using-webhooks.md
-    - name: Migrate ABS to SPE
-      href: embedded/development/tutorials/migrate-abs-to-spe.md
-    - name: Install Your SPE App in a Consuming Tenant
-      href: embedded/development/tutorials/vendor-install-app-customer.md
-  - name: Administration
+    - name: Understand app and tenant architecture
+      href: embedded/plan/app-tenant-architecture.md
+    - name: 'Choose an app model: single-tenant or multitenant'
+      href: embedded/plan/choose-app-model.md
+    - name: Understand container types and containers
+      href: embedded/plan/container-types-and-containers.md
+    - name: Choose a billing model
+      href: embedded/plan/choose-billing-model.md
+    - name: Plan authentication and permissions
+      href: embedded/plan/authentication-permissions.md
+    - name: Plan security, compliance, and governance
+      href: embedded/plan/security-compliance-governance.md
+    - name: Understand limits and calling patterns
+      href: embedded/plan/limits-calling-patterns.md
+  - name: Build apps with SharePoint Embedded
     items:
-    - name: Billing
-      href: embedded/administration/billing/billing.md
-    - name: Billing Management
-      href: embedded/administration/billing/billingmanagement.md
-    - name: SharePoint Embedded Billing Meters
-      href: embedded/administration/billing/meters.md
-    - name: Consuming Tenant Admin
-      href: embedded/administration/consuming-tenant-admin/cta.md
-    - name: Container Management in PowerShell
-      href: embedded/administration/consuming-tenant-admin/ctapowershell.md
-    - name: Consuming Tenant Admin UX
-      href: embedded/administration/consuming-tenant-admin/ctaUX.md
-    - name: Developer Admin
-      href: embedded/administration/developer-admin/dev-admin.md
-    - name: SharePoint Embedded Admin
-      href: embedded/administration/adminrole.md
-  - name: Compliance
+    - name: 'Quickstart: Build your first app with VS Code'
+      href: embedded/build/quickstart-vscode.md
+    - name: Create and configure a container type
+      href: embedded/build/create-container-type.md
+    - name: Register application permissions
+      href: embedded/build/register-application-permissions.md
+    - name: Configure authentication and authorization
+      href: embedded/build/configure-authentication-authorization.md
+    - name: Create and manage containers
+      href: embedded/build/create-manage-containers.md
+    - name: Upload, download, and manage files
+      href: embedded/build/manage-files.md
+    - name: Open Office files from your app
+      href: embedded/build/open-office-files.md
+    - name: Preview files in your app
+      href: embedded/build/preview-files.md
+    - name: Search containers and files
+      href: embedded/build/search-containers-files.md
+    - name: Store and query container metadata
+      href: embedded/build/container-metadata.md
+    - name: Share files and manage permissions
+      href: embedded/build/share-files-manage-permissions.md
+    - name: Respond to file and container changes with webhooks
+      href: embedded/build/respond-to-changes-webhooks.md
+    - name: Archive and restore containers
+      href: embedded/build/archive-restore-containers.md
+    - name: Add real-time collaboration with Fluid Framework
+      href: embedded/build/fluid-framework.md
+    - name: Add Microsoft 365 Copilot and agent experiences
+      href: embedded/build/agent-experiences.md
+    - name: Set up SharePoint Embedded as a Foundry knowledge source
+      href: embedded/build/sharepoint-embedded-knowledge-source.md
+    - name: Migrate from Azure Blob Storage
+      href: embedded/build/migrate-azure-blob-storage.md
+  - name: Publish and onboard customers
     items:
-    - name: Security and Compliance
-      href: embedded/compliance/security-and-compliance.md
-    - name: Audit log events
-      href: embedded/compliance/audit-events.md
-  - name: SharePoint Embedded Learning Modules
+    - name: Prepare your app for customer installation
+      href: embedded/publish/prepare-customer-installation.md
+    - name: Choose a billing model for your app
+      href: embedded/publish/choose-app-billing-model.md
+    - name: Guide customers through tenant setup
+      href: embedded/publish/customer-tenant-setup-guide.md
+    - name: Validate customer app installation
+      href: embedded/publish/validate-customer-installation.md
+  - name: Install and manage apps
     items:
-      - name: SharePoint Embedded - overview & configuration
-        href: /training/modules/sharepoint-embedded-setup
-      - name: SharePoint Embedded - building applications
-        href: /training/modules/sharepoint-embedded-create-app
-  - name: SharePoint Embedded agent
+    - name: Admin overview
+      href: embedded/admin/admin-overview.md
+    - name: Consuming tenant admin
+      href: embedded/admin/consuming-tenant-admin.md
+    - name: Create apps in SharePoint admin center
+      href: embedded/admin/create-apps-sharepoint-admin-center.md
+    - name: Create apps with PowerShell
+      href: embedded/admin/create-apps-powershell.md
+    - name: Install a SharePoint Embedded app
+      href: embedded/admin/install-sharepoint-embedded-app.md
+    - name: Grant admin consent and permissions
+      href: embedded/admin/grant-admin-consent-permissions.md
+    - name: Set up billing in Microsoft 365 admin center
+      href: embedded/admin/setup-billing-m365-admin-center.md
+    - name: Manage containers in SharePoint admin center
+      href: embedded/admin/manage-containers-sharepoint-admin-center.md
+    - name: Manage containers with PowerShell
+      href: embedded/admin/manage-containers-powershell.md
+    - name: Monitor usage, billing, and cost
+      href: embedded/admin/monitor-usage-billing-cost.md
+    - name: Review audit events
+      href: embedded/admin/review-audit-events.md
+    - name: Apply security and compliance controls
+      href: embedded/admin/apply-security-compliance-controls.md
+  - name: Reference
     items:
-    - name: SharePoint Embedded knowledge source in Microsoft Foundry (Preview)
-      href: embedded/development/declarative-agent/sharepoint-embedded-knowledge-source.md
+    - name: Billing meters
+      href: embedded/reference/billing-meters.md
+    - name: Audit events
+      href: embedded/reference/audit-events.md
+    - name: PowerShell reference
+      href: embedded/reference/powershell.md
+    - name: Microsoft Graph API reference links
+      href: embedded/reference/graph-api-links.md
+    - name: Troubleshooting
+      href: embedded/reference/troubleshooting.md
+    - name: Glossary
+      href: embedded/reference/glossary.md
 - name: Microsoft Teams
   items:
   - name: Overview

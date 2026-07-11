@@ -1,72 +1,81 @@
 ---
 title: SharePoint Embedded Overview
-description: Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
-ms.date: 08/17/2024
+description: Microsoft SharePoint Embedded is an API-only file and document management platform built on Microsoft 365. Start here and route to the right task.
+ms.date: 07/10/2026
+ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
-# Overview of SharePoint Embedded
+# What is SharePoint Embedded?
 
-Microsoft SharePoint Embedded is a cloud-based file and document management system suitable for use in any application. SharePoint Embedded is a new API-only solution that enables app developers to harness the power of the Microsoft 365 file and document storage platform for any app, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
+Microsoft SharePoint Embedded is a cloud-based, API-only file and document management system you can use in any application. It lets app developers harness the Microsoft 365 file and document storage platform, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
 
-SharePoint Embedded allows you to integrate advanced Microsoft 365 features into your apps including full-featured collaborative functions from Office, Purview's security and compliance tools, and Copilot capabilities.
+SharePoint Embedded has no standalone end-user UI and no no-code option. You access it programmatically through Microsoft Graph, so using SharePoint Embedded always involves building or deploying an application.
+
+SharePoint Embedded brings advanced Microsoft 365 capabilities into your app, including Office collaboration, Microsoft Purview security and compliance, and Copilot.
 
 > [!IMPORTANT]
-> Help us shape the future of SharePoint Embedded!
-> Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your experience!
+> Help us shape the future of SharePoint Embedded! Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your thoughts.
 
-## App documents stay in their Microsoft 365 tenant
+<!-- agent:
+task_type: concept
+audience: all
+outcome: The reader understands what SharePoint Embedded is and is routed to the correct task area (plan, build, publish, or administer).
+next: plan/app-tenant-architecture.md
+-->
 
-When a consumer uses a SharePoint Embedded application in their Microsoft 365 tenant, SharePoint Embedded creates another partition within their tenant. This storage partition doesn't have a user experience and the documents in the partition are only accessible via APIs. This means that all documents will be accessible to the developer’s application, but the documents will only reside in the consumer’s Microsoft 365 tenant. Within this new storage partition inside of a Microsoft 365 tenant, a SharePoint Embedded application can create many "File Storage Containers" for storing content.
+## Choose your path
 
-## Introducing File Storage Containers
+This page is a router. Pick the row that matches what you're trying to do.
 
-SharePoint Embedded applications use Microsoft Graph APIs to store files and documents in a new entity called a "File Storage Container” or Container for short.  If you’re an ISV, your app will create these containers in your customer’s Microsoft 365 tenant, and if you’re an enterprise, your app will create these containers in your own tenant. Each container provides a place to store files - you can think of them as similar to an API-only Document Library in SharePoint, but with some slight differences. Your app can create many of these containers inside each tenant that uses your app, and each container can be granted permissions separately storing many files with multiple terabytes of content.
+> [!TIP]
+> **Not sure which path?** Ask one question: *do you write code, or manage a tenant?*
+> **Developers** write and deploy applications that call SharePoint Embedded APIs — start with **Build an app**.
+> **Administrators** install, consent to, and manage SharePoint Embedded apps inside a Microsoft 365 tenant — start with **Install or manage apps**.
 
-SharePoint Embedded containers are dedicated to and accessible by just your app, so the files and documents your app depends on are isolated and secure within that tenant boundary.
+| I want to… | Start here |
+|---|---|
+| **Understand SharePoint Embedded and decide if it fits** | [Scenarios and use cases](scenarios-and-use-cases.md) · keep reading below |
+| **Plan a solution** (architect, IT decision maker) | [Plan a SharePoint Embedded solution](plan/app-tenant-architecture.md) |
+| **Build an app** (developer) | [Quickstart: build your first app with VS Code](build/quickstart-vscode.md) |
+| **Ship my app to customers** (ISV / developer) | [Publish and onboard customers](publish/prepare-customer-installation.md) |
+| **Install or manage apps in my tenant** (admin) | [Install and manage apps](admin/admin-overview.md) |
+| **Govern and secure content** (compliance admin) | [Apply security and compliance controls](admin/apply-security-compliance-controls.md) |
+| **Look something up** | [Reference](reference/glossary.md) · [Graph API](/graph/api/resources/filestoragecontainer) |
 
-## App-managed content experiences
+## Key concepts in 60 seconds
 
-By default, the content stored within a Microsoft 365 tenant by a SharePoint Embedded application is only accessible through that owning application. Applications using SharePoint Embedded also provide the user experience layer for accessing and managing content, using some of the rich content capabilities that Microsoft 365 offers such as:
+### App documents stay in the customer's Microsoft 365 tenant
 
-- Core content management features like support for any file type and folder structure, searching, sharing, automatic versioning, recycle-bin, and more
-- Collaboration features like view, edit, and co-authoring Office Word, Excel, and PowerPoint documents in Office Web and Desktop
+When a customer uses a SharePoint Embedded application, SharePoint Embedded creates a dedicated storage partition inside that customer's Microsoft 365 tenant. The partition has no user experience of its own — its documents are reachable only through Microsoft Graph APIs. Content is accessible to the developer's application, but it physically resides in the customer's tenant.
 
-SharePoint Embedded is used by several types of applications:
+### File Storage Containers
 
-- Certain Microsoft products use SharePoint Embedded to manage customer content, such as Loop and Designer.
-- ISVs can use SharePoint Embedded in their apps to manage content within their customer’s Microsoft 365 tenant
-- Enterprises can use SharePoint Embedded to manage and store content within their own Microsoft 365 tenant, but outside of regular Microsoft 365 entitlements
+SharePoint Embedded apps store files in an entity called a **File Storage Container** (or *container*). Think of a container as an API-only document library. Your app can create many containers in each tenant that uses it, and each container can be permissioned separately and hold terabytes of content. Containers are dedicated to — and accessible only by — your app, keeping your data isolated within the tenant boundary.
 
-## Consumer Microsoft 365 settings apply to app documents
+To learn how containers and container types relate, see [Understand container types and containers](plan/container-types-and-containers.md).
 
-All documents stored in the SharePoint partition created by the SharePoint Embedded app are in the consumer’s Microsoft 365 tenant and therefore are subject to the consumer’s Microsoft 365 tenant settings.
+### App-managed content experiences
 
-This includes settings from Microsoft Purview compliance, risk, and security settings, documents can be opened from Office clients, and customers can use the Office web clients to view and collaborate on the documents. Choosing applications that are built on SharePoint Embedded provides the app consumer Microsoft Purview security and compliance capabilities on that app content, such as:
+By default, content stored by a SharePoint Embedded app is accessible only through that owning app, which also provides the user experience for it. You can light up rich Microsoft 365 capabilities, including:
 
-- eDiscovery
-- Auditing
-- Data loss prevention (DLP)
-- Retention policies, sensitivity labels, conditional access
+- Core content management — any file type, folders, search, sharing, versioning, recycle bin.
+- Office collaboration — view, edit, and co-author Word, Excel, and PowerPoint on the web and desktop.
+- Low-code integration — the [SharePoint Embedded connector](/connectors/sharepointembedded/) for [Power Platform](/power-platform/) (generally available February 2026).
 
-## Understanding the costs and billing for SharePoint Embedded content
+SharePoint Embedded is used by Microsoft products (such as Loop and Designer), by ISVs embedding content management in their apps, and by enterprises storing content outside their regular Microsoft 365 entitlements.
 
-Microsoft 365 customers have different entitlements related to storage, usage, and features depending on the licenses the customer has purchased.
+### Compliance and billing follow the tenant
 
-The partition created in the consumer’s Microsoft 365 tenant by a SharePoint Embedded app doesn’t count towards other Microsoft 365 entitlements including the total amount of Microsoft SharePoint storage that can be used by your organization. Instead, the partition in the consumer’s Microsoft 365 tenant by the SharePoint Embedded app are billed separately through an Azure subscription on a pay-as-you-go metered consumption model that’s based on total storage in active and archived state and the number of API calls.
+Because content lives in the customer's Microsoft 365 tenant, it's subject to that tenant's settings — including Microsoft Purview compliance (eDiscovery, auditing, DLP, retention, sensitivity labels, conditional access). The SharePoint Embedded partition doesn't count against Microsoft 365 storage entitlements; it's billed separately through an Azure subscription on a pay-as-you-go, metered model based on storage and API usage. See [Choose a billing model](plan/choose-billing-model.md) and [Billing meters](reference/billing-meters.md).
 
-> [!NOTE]
-> Learn more about billing for SharePoint Embedded, see [Billing Meters](./administration/billing/meters.md).
+### Availability
 
-## Get Started with SharePoint Embedded
+SharePoint Embedded is available in the Microsoft 365 commercial cloud, in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (November 2025, not yet GCC High or DoD), and in [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet) for customers in China (February 2026). See [Microsoft Graph national cloud deployments](/graph/deployments).
 
-[Review the prerequisites](./administration/billing/billing.md)
+## Next steps
 
-Create a "File Storage Container" in 15 minutes or less:
-
-- [Free trial: SharePoint Embedded for Visual Studio Code](./getting-started/spembedded-for-vscode.md)
-
-Follow manual set-up on SharePoint Embedded from the following Microsoft Learning modules:
-
-- [Microsoft Learning: SharePoint Embedded - overview & configuration](/training/modules/sharepoint-embedded-setup)
-- [Microsoft Learning: SharePoint Embedded - building applications](/training/modules/sharepoint-embedded-create-app)
+- New to SharePoint Embedded? Read [Scenarios and use cases](scenarios-and-use-cases.md), then [Plan a solution](plan/app-tenant-architecture.md).
+- Ready to build? Jump to the [VS Code quickstart](build/quickstart-vscode.md).
+- Administering a tenant? Start at the [Admin overview](admin/admin-overview.md).
+- See [What's new](whats-new.md) for the latest releases.
