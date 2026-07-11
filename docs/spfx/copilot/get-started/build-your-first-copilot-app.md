@@ -260,6 +260,30 @@ When you are satisfied with the experience in the Workbench, build the solution 
     > [!div class="mx-imgBorder"]
     > ![Placeholder: syncing the agent to the tenant agent catalog with Add to Teams](../../../images/copilot/tutorial-sync-teams.png)
 
+### Troubleshooting: invalid_client or AADSTS700046 error
+
+When the Copilot component loads in production Microsoft 365 Copilot for the first time, the authentication layer may fail with:
+
+> **AADSTS700046: Invalid Reply Address.** Reply Address must have scheme `brk-<tenant-id>://` and be of **Single Page Application** type.
+
+The iframe shows a generic "Error initializing application" message instead of the component UI. This error affects Copilot Components at the tenant level after deployment, even though the same component works correctly in the Copilot Workbench (`/_layouts/15/copilotworkbench.aspx`).
+
+**Root cause:** The token request uses the `brk-<tenant-id>` reply URI scheme to deliver the auth response to the Copilot component frame. The SharePoint Online Web Client Extensibility Azure AD application must have this reply URI registered.
+
+**Workaround during preview:**
+
+1. Go to the [Azure AD admin center](https://aad.portal.azure.com) → **App registrations**.
+1. Search for the application named **SharePoint Online Web Client Extensibility** (app ID starting with `08e18876-...`).
+1. Under **Manage** → **Authentication**, add the reply URI:
+   - **Type:** Single Page Application (SPA)
+   - **Redirect URI:** `brk-<your-tenant-id>://m365.cloud.microsoft`
+   - Replace `<your-tenant-id>` with your tenant ID (found in Azure AD → **Properties** → **Tenant ID**)
+1. Select **Save**.
+1. Return to Microsoft 365 Copilot, refresh the page, and invoke the tool again. The component should load and render correctly.
+
+> [!NOTE]
+> The `brk-` scheme is specific to the Copilot component broker. This workaround is part of the preview configuration; the setup for GA may change. If you cannot locate the app registration or are blocked, ensure your tenant is on **Targeted release** and your SPFx generator is v1.24.0-beta.2 or newer.
+
 ## Use the app in Microsoft 365 Copilot
 
 1. Open **Microsoft 365 Copilot** and locate the **MyCopilotApp Agent** in the list of available agents. Select the agent, and then select **Add** to add it to your list of agents in Copilot.
