@@ -24,17 +24,21 @@ The ID is used for access authorization, trial exploration, billing, and configu
 
 > [!NOTE]
 > The Microsoft Graph API — [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) — is delegated-only and can be called by any non-guest owning-tenant user. The caller doesn't need an administrator role and is automatically assigned as an owner of the new container type.
+
 ## Choose trial or production
 Choose the container type purpose when you create it.
 You can't convert a trial container type to production later.
 You can't convert a standard billing type to pass-through billing later.
+
 | Use case | Container type |
 |---|---|
 | Local proof of concept | Trial container type |
 | App owner pays | Standard container type with billing profile |
 | Customer tenant pays | Standard container type with pass-through billing |
+
 > [!IMPORTANT]
 > If you choose the wrong purpose or billing model, you must recreate the container type.
+
 ## Prerequisites
 Before you create a container type, make sure you have:
 - A Microsoft 365 tenant with SharePoint available.
@@ -44,10 +48,8 @@ Before you create a container type, make sure you have:
 - For standard billing setup, owner or contributor permissions on the Azure subscription.
 
 > [!NOTE]
-> Creating a container type through Microsoft Graph requires only the `FileStorageContainerType.Manage.All` delegated permission. Any non-guest user in the owning tenant can create one and is automatically assigned as an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). For tenant-wide administrative operations, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
-
-> [!NOTE]
-> Users who authenticate into containers must exist in Microsoft Entra ID as members or guests. An Office license isn't required to collaborate on Office documents stored in a container, except for documented exceptional experiences such as mentions.
+> - Creating a container type through Microsoft Graph requires only the `FileStorageContainerType.Manage.All` delegated permission. Any non-guest user in the owning tenant can create one and is automatically assigned as an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). For tenant-wide administrative operations, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
+> - Users who authenticate into containers must exist in Microsoft Entra ID as members or guests. An Office license isn't required to collaborate on Office documents stored in a container, except for documented exceptional experiences such as mentions.
 
 ## Create a trial container type
 Use a trial container type for evaluation.
@@ -55,27 +57,34 @@ You can create one with the SharePoint Embedded Visual Studio Code extension or 
 The Visual Studio Code path is fastest for a first app. See [Quickstart: Build your first app with VS Code](quickstart-vscode.md).
 For Microsoft Graph, create the container type with the `trial` billing classification.
 The following restrictions are applied to trial container types:
+
 - The tenant can have up to five containers of the container type. This includes active containers and those in the recycle bin.
 - Each container has up to 200 MB of storage space.
 - The container type expires after 30 days, and access to any existing containers of that container type is then removed.
 - The developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
+
 ## Create a standard container type with app-owner billing
 Use standard billing when the developer or app owner tenant pays for consumption.
 Each tenant can have up to 25 standard container types at a time.
+
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `standard` billing classification.
 1. Attach an Azure billing profile with the SharePoint Embedded Visual Studio Code extension or an administrator-managed billing flow.
 1. Record the container type ID.
 1. Continue to registration in the consuming tenant.
+
 > [!NOTE]
 > If billing setup fails with `SubscriptionNotRegistered`, wait several minutes and retry. The `Microsoft.Syntex` resource provider registration can take time.
+
 ## Create a pass-through billing container type
 Use pass-through billing when the consuming tenant pays for consumption.
+
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `directToCustomer` billing classification.
 1. Register the container type in the consuming tenant.
 1. Have the consuming tenant admin activate pay-as-you-go services.
+
 > [!IMPORTANT]
 > The consuming tenant must complete billing setup before a pass-through application can be used successfully.
 
@@ -94,24 +103,30 @@ Use redirect URIs that match your development and production clients.
 Use credentials appropriate for delegated or app-only flows.
 For auth details, see [Configure authentication and authorization](configure-authentication-authorization.md).
 ## Set basic properties
+
 | Property | Guidance |
 |---|---|
 | Container type name | Use a durable name that maps to your workload. |
 | Owning application ID | Use the app registration that owns this type. |
 | Application redirect URL | Use the URL where files from this app should redirect. |
 | Billing model | Choose trial, standard, or pass-through at creation time. |
+
 > [!CAUTION]
 > The container type ID and owning application ID can't be updated later.
+
 ## Configure container type behavior
 Developers can configure selected behaviors after creation.
 Available settings include:
+
 - `ApplicationRedirectUrl`
 - `DiscoverabilityDisabled`
 - `SharingRestricted`
+
 Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API for supported container type updates. For tenant-wide administrative settings, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 
 > [!IMPORTANT]
 > Updating settings on a container type can take up to **24 hours** to replicate to all consuming tenants. If a consuming tenant applied setting overrides, those overrides remain in place. Some settings apply only to new content, not to existing content.
+
 ## View and update container types
 Use Microsoft Graph to list and update container types.
 A non-administrator container type owner can update the container types they own.

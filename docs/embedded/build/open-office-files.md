@@ -19,6 +19,7 @@ Complete [Upload, download, and manage files](manage-files.md) first so your app
 ## Understand Office experiences
 SharePoint Embedded Office file experiences work similarly to Microsoft 365 file experiences.
 Supported experiences include:
+
 - Opening Office documents in Office for the web.
 - Opening Office documents in Office desktop clients.
 - Viewing and editing files.
@@ -34,6 +35,7 @@ Supported experiences include:
 
 ## Prerequisites
 Before launching Office files, make sure:
+
 - The file is stored in a SharePoint Embedded container.
 - The app can read DriveItem metadata for the file.
 - The user has permission to view or edit the file.
@@ -44,24 +46,29 @@ Before launching Office files, make sure:
 When your app retrieves a DriveItem from Microsoft Graph, the response can include `webUrl`.
 For supported Office file types, `webUrl` can point to a WOPI URL that opens the document in Office for the web.
 A supported Office web URL has this shape:
+
 ```http
 https://host/:w:r/contentstorage/sitecollection/_layouts/15/doc2.aspx?sourcedoc=guid&file=filename.docx&action=default&mobileredirect=true
 ```
+
 For request details, see [Get a DriveItem resource](/graph/api/driveitem-get).
 
 ## Launch Office for the web
 Use the DriveItem `webUrl` when your app should open Office in the browser.
+
 1. Read the DriveItem for the selected file.
 1. Confirm the response includes `webUrl`.
 1. Open the URL in a browser tab, window, or app-controlled navigation surface.
 1. Preserve app context so users can return after editing.
 1. Handle access denied errors by checking file permissions and container membership.
+
 > [!NOTE]
 > Office files use AutoSave when users edit Word, Excel, and PowerPoint files stored in SharePoint Embedded.
 
 ## Configure the default launch experience
 By default, the WOPI URL can include `action=default`.
 To force a mode, update the query parameter with this pattern:
+
 ```csharp
 System.UriBuilder builder = new System.UriBuilder(webUrl);
 System.Collections.Specialized.NameValueCollection queryDictionary = System.Web.HttpUtility.ParseQueryString(builder.Query);
@@ -69,44 +76,59 @@ queryDictionary["action"] = "view";
 builder.Query = queryDictionary.ToString();
 string modifiedWebUrl = builder.ToString();
 ```
+
 Use:
+
 - `action=view` for read-only viewing.
 - `action=edit` for editing when the user has edit permission.
 - `action=default` when Office should choose the default behavior.
+
 For WOPI action details, see [WOPI Discovery - WOPI Actions](/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions).
 ## Open files in Office desktop clients
 Use Office URI schemes when your app should open desktop clients directly.
 The format is:
+
 ```text
 <scheme-name>:<command-name>|<command-argument-descriptor>|<command-argument>
 ```
+
 Common values include:
+
 | Segment | Value |
 |---|---|
 | Scheme name | `ms-word`, `ms-excel`, or `ms-powerpoint` |
 | Open File View command | `ofv` |
 | Open File Edit command | `ofe` |
 | URL descriptor | `u` |
+
 Examples:
+
 ```text
 ms-word:ofv|u|https://contoso.com/document.docx
 ms-powerpoint:ofe|u|https://contoso.com/presentation.pptx
 ```
+
 > [!NOTE]
 > The URI must be opened in a blank window or new tab.
 
 ## Build a desktop client URL
 Because `webUrl` points to Office Online for Office documents, build the desktop URI in two steps:
+
 1. Get the `webUrl` of the parent folder.
 1. Append the file name.
+
 Example pattern:
+
 ```text
 ms-word:ofe|u|{folder.WebUrl}/{item.Name}
 ```
+
 Resulting shape:
+
 ```text
 ms-word:ofe|u|https://contoso.sharepoint.com/contentstorage/CSP_1234765465/Document%20Library/MyDocument.docx
 ```
+
 For scheme details, see [Office URI Schemes](/office/client-developer/office-uri-schemes).
 
 ## Configure redirect behavior
@@ -141,6 +163,7 @@ When you design redirects:
 - Validate that users return to the right in-app context after Office actions.
 - Avoid URL rewriting that removes required Office query parameters.
 - Verify `urlTemplate` after updates because invalid values are stored as `null`.
+
 ## Support sharing and coauthoring
 Office experiences include collaboration features.
 Users can share documents, create shareable links, coauthor in real time, see presence indicators, use comments, and use mentions where supported.
@@ -156,6 +179,7 @@ When a user creates a sharing link, they choose who it grants access to:
 
 > [!NOTE]
 > Mentions require target users to have a Microsoft 365 license assigned. Mentions are restricted to people inside the consuming tenant's organization and exclude guests and users from other tenants in multitenant settings.
+
 ## Use version history
 Versioning is automatically enabled for Word, Excel, and PowerPoint files stored in SharePoint Embedded apps.
 Users can see changes, compare versions, restore previous versions, recover from mistakes, and review changes from coauthoring sessions.
@@ -166,6 +190,7 @@ Use Current Channel to get breadcrumb patterns and future Office app enhancement
 For Office update channel information, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/updates/overview-update-channels).
 ## Validate Office launch
 Test each launch path:
+
 1. Upload a Word document to a container.
 1. Read the DriveItem and capture `webUrl`.
 1. Open `webUrl` with `action=default`.
@@ -175,7 +200,9 @@ Test each launch path:
 1. Confirm permissions block edit when appropriate.
 1. Confirm AutoSave and version history behavior.
 1. Confirm the user can return to your app.
+
 ## Troubleshoot Office launch
+
 | Symptom | Check |
 |---|---|
 | URL opens in view instead of edit | `action` parameter and user edit permission. |
@@ -184,5 +211,6 @@ Test each launch path:
 | Mentions don't find a user | Microsoft 365 license and tenant membership limitations. |
 | Breadcrumb doesn't look right | Container properties and Office update channel. |
 | Redirect returns to wrong route | `ApplicationRedirectUrl` and app route handling. |
+
 ## Next steps
 Add embedded previews in [Preview files in your app](preview-files.md).
