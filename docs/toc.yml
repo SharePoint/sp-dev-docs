@@ -689,7 +689,7 @@
     - name: Grant admin consent and permissions
       href: embedded/admin/grant-admin-consent-permissions.md
     - name: Set up billing in Microsoft 365 admin center
-      href: embedded/admin/setup-billing-m365-admin-center.md
+      href: embedded/admin/setup-billing-microsoft-365-admin-center.md
     - name: Manage containers in SharePoint admin center
       href: embedded/admin/manage-containers-sharepoint-admin-center.md
     - name: Manage containers with PowerShell

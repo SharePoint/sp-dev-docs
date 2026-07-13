@@ -111,7 +111,7 @@ Developer tenants configure billing for standard billing container types.
 Consuming tenants configure billing for pass-through apps before users can access those apps.
 Only a Global Administrator can set up billing in the Microsoft 365 admin center. The SharePoint Embedded Administrator role can't configure billing.
 
-Set up pass-through billing with [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+Set up pass-through billing with [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 Monitor usage with [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).
 
 ### Container administration
@@ -167,7 +167,7 @@ Use this path when your tenant consumes a SharePoint Embedded app:
 1. Assign or confirm the SharePoint Embedded Administrator role.
 1. Install or approve the app in [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md).
 1. Grant admin consent when required.
-1. Set up pass-through billing in [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+1. Set up pass-through billing in [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 1. Manage containers in the SharePoint admin center or with PowerShell.
 1. Apply compliance controls in Microsoft Purview.
 
@@ -186,7 +186,7 @@ Deleted containers can be restored from the deleted container collection within 
 - [Create apps in SharePoint admin center](create-apps-sharepoint-admin-center.md)
 - [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md)
 - [Grant admin consent and permissions](grant-admin-consent-permissions.md)
-- [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 - [Manage containers with PowerShell](manage-containers-powershell.md)
 - [Monitor usage, billing, and cost](monitor-usage-billing-cost.md)

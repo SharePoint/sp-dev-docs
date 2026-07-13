@@ -167,7 +167,7 @@ If you're building an internal enterprise app:
 1. Plan authentication with [Plan authentication and permissions](../plan/authentication-permissions.md).
 1. Understand container type design with [Understand container types and containers](../plan/container-types-and-containers.md).
 1. Create the container type by using the guidance in [SharePoint Embedded container types](../build/create-container-type.md).
-1. Configure billing by using [PAYG billing for SharePoint Embedded](../admin/setup-billing-m365-admin-center.md).
+1. Configure billing by using [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
 If you're building an ISV app:
 

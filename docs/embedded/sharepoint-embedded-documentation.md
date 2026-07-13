@@ -85,7 +85,7 @@ For administrators of a Microsoft 365 tenant that uses SharePoint Embedded apps.
 - [Create apps with PowerShell](./admin/create-apps-powershell.md)
 - [Install a SharePoint Embedded app](./admin/install-sharepoint-embedded-app.md)
 - [Grant admin consent and permissions](./admin/grant-admin-consent-permissions.md)
-- [Set up billing in Microsoft 365 admin center](./admin/setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](./admin/setup-billing-microsoft-365-admin-center.md)
 - [Manage containers in SharePoint admin center](./admin/manage-containers-sharepoint-admin-center.md)
 - [Manage containers with PowerShell](./admin/manage-containers-powershell.md)
 - [Monitor usage, billing, and cost](./admin/monitor-usage-billing-cost.md)

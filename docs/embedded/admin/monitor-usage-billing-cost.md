@@ -36,7 +36,7 @@ Confirm these prerequisites.
 - You know the app IDs, tenant IDs, or container type IDs used for filtering when available.
 - You can review container inventory in the SharePoint admin center or PowerShell.
 
-For billing setup, see [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+For billing setup, see [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
 ## Understand SharePoint Embedded meters
 
@@ -178,7 +178,7 @@ Establish a recurring review process.
 
 ## Related content
 
-- [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 - [Manage containers with PowerShell](manage-containers-powershell.md)
 - [Review audit events](review-audit-events.md)

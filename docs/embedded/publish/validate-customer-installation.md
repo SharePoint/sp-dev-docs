@@ -203,7 +203,7 @@ Use this table during onboarding.
 | Container create fails | Registration, permissions, and billing | [Install a SharePoint Embedded app](../admin/install-sharepoint-embedded-app.md) |
 | Guest user can't access content | Guest identity and sharing policy | [Grant admin consent and permissions](../admin/grant-admin-consent-permissions.md) |
 | Admin tools fail | Role assignment and administrative tool access | [Admin overview](../admin/admin-overview.md) |
-| Billing was disconnected | New container creation is blocked; existing containers remain accessible | [Set up billing in Microsoft 365 admin center](../admin/setup-billing-m365-admin-center.md) |
+| Billing was disconnected | New container creation is blocked; existing containers remain accessible | [Set up billing in Microsoft 365 admin center](../admin/setup-billing-microsoft-365-admin-center.md) |
 
 ## Validation checklist
 

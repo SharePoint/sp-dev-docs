@@ -14,7 +14,7 @@ ms.localizationpriority: high
 task_type: how-to
 audience: administrator
 outcome: Grant admin consent for a SharePoint Embedded app and validate permission readiness.
-next: setup-billing-m365-admin-center.md
+next: setup-billing-microsoft-365-admin-center.md
 -->
 
 Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions always require admin consent, while delegated permissions for SharePoint Embedded do not. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
@@ -135,10 +135,10 @@ Use these checks when consent succeeds but the app owner reports that API calls 
 ## Related content
 
 - [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md)
-- [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md)
 - [Manage containers with PowerShell](manage-containers-powershell.md)
 - [Register file storage container type application permissions](../build/register-application-permissions.md)
 - [Admin overview](admin-overview.md)
 
 ## Next steps
-Configure billing in [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+Configure billing in [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).

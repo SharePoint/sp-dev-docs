@@ -118,7 +118,7 @@ Choose carefully because billing type cannot be changed after app creation.
 Use **User org** for scenarios where each consuming tenant is responsible for billing.
 Use **Owner org** when your organization owns the app and manages billing directly.
 
-For billing concepts, see [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md) and [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).
+For billing concepts, see [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md) and [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).
 
 ## Configure owner organization billing
 
@@ -222,7 +222,7 @@ Use these checks if creation fails or the app is not usable.
 - [Admin overview](admin-overview.md)
 - [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md)
 - [Grant admin consent and permissions](grant-admin-consent-permissions.md)
-- [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 
 ## Next steps

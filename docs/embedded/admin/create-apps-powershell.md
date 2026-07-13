@@ -52,7 +52,7 @@ Use pass-through billing, also known as direct-to-customer billing, when the con
 New-SPOContainerType -IsPassThroughBilling -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId>
 ```
 
-For pass-through billing, the consuming tenant administrator must set up Microsoft 365 pay-as-you-go services before users can access the app. For more information, see [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+For pass-through billing, the consuming tenant administrator must set up Microsoft 365 pay-as-you-go services before users can access the app. For more information, see [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
 ## Create a trial app
 

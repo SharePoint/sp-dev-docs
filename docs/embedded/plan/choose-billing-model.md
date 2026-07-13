@@ -19,7 +19,7 @@ next: ../plan/security-compliance-governance.md
 
 Use this article to choose a billing model for production SharePoint Embedded container types. SharePoint Embedded is a consumption-based, pay-as-you-go offering, and you select billing at the container type level.
 
-For the full billing setup procedure, see [PAYG billing for SharePoint Embedded](../admin/setup-billing-m365-admin-center.md).
+For the full billing setup procedure, see [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
 ## Billing models
 
@@ -175,7 +175,7 @@ For model selection, see [Choose an app model: single-tenant or multitenant](../
 Use these setup references after you choose a model:
 
 - Create and configure container types: [SharePoint Embedded container types](../build/create-container-type.md).
-- Set up billing: [PAYG billing for SharePoint Embedded](../admin/setup-billing-m365-admin-center.md).
+- Set up billing: [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 - Review meters: [SharePoint Embedded billing meters](../reference/billing-meters.md).
 - Register a consuming tenant: [Register file storage container type application permissions](../build/register-application-permissions.md).
 

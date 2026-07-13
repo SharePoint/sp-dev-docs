@@ -31,7 +31,7 @@ SharePoint Embedded supports two production billing models for standard containe
 | Standard billing | Developer tenant | Developer | You include SharePoint Embedded consumption in your product price or centralize billing. |
 | Pass-through billing | Consuming tenant | Customer admin | The customer pays Microsoft directly for their SharePoint Embedded consumption. |
 
-For current billing details, see [PAYG billing for SharePoint Embedded](../admin/setup-billing-m365-admin-center.md).
+For current billing details, see [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
 > [!IMPORTANT]
 > Choose the billing model before you create the container type.

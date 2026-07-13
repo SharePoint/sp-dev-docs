@@ -153,9 +153,9 @@ If billing was skipped during app creation, you can attach it later from the app
 1. Select the app to open its details panel.
 1. In **Billing info**, attach a billing subscription or update the existing one.
 
-For a **User org** app, billing isn't attached from this panel. A Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center. See [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md).
+For a **User org** app, billing isn't attached from this panel. A Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center. See [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
-Use [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md) to configure billing for consuming-tenant scenarios.
+Use [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md) to configure billing for consuming-tenant scenarios.
 Use [Monitor usage, billing, and cost](monitor-usage-billing-cost.md) to review ongoing cost.
 
 ## Verify containers after app use
@@ -223,7 +223,7 @@ Use these checks when installation does not complete.
 - [Admin overview](admin-overview.md)
 - [Create apps in SharePoint admin center](create-apps-sharepoint-admin-center.md)
 - [Grant admin consent and permissions](grant-admin-consent-permissions.md)
-- [Set up billing in Microsoft 365 admin center](setup-billing-m365-admin-center.md)
+- [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 
 ## Next steps

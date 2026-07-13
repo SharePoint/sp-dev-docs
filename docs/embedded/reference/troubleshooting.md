@@ -37,7 +37,7 @@ Use this reference to identify likely causes and fixes. For end-to-end setup, se
 
 - [Authentication and authorization](../build/configure-authentication-authorization.md)
 - [Container types](../plan/container-types-and-containers.md)
-- [Billing](../admin/setup-billing-m365-admin-center.md)
+- [Billing](../admin/setup-billing-microsoft-365-admin-center.md)
 - [Admin overview](../admin/admin-overview.md)
 - [Microsoft Graph API reference links](graph-api-links.md)
 
