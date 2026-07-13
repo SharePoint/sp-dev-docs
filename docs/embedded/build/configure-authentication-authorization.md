@@ -47,9 +47,11 @@ For administrative capabilities on behalf of an administrator user — such as e
 ## Request the permission for registration
 Container type registration uses the Microsoft Graph container type registration API (currently in preview).
 For registration, request the `FileStorageContainerTypeReg.Selected` Microsoft Graph permission (delegated or app-only).
+
 | Scope name | Type | Use |
 |---|---|---|
 | `FileStorageContainerTypeReg.Selected` | Delegated or Application | Enables container type registration on a consuming tenant. |
+
 For delegated registration calls, the signed-in user must have the SharePoint Embedded Administrator or Global Administrator role.
 Use this permission with [Register application permissions](register-application-permissions.md).
 
@@ -104,6 +106,7 @@ These operations use exceptional access patterns:
 
 ## Grant container type application permissions
 The owning application grants container type application permissions through [container type registration](register-application-permissions.md) in a consuming tenant. These permissions determine what an application can do with containers of the container type.
+
 | Permission | Description |
 |---|---|
 | None | No permissions to any containers or content of this container type. |
@@ -138,12 +141,14 @@ Users get container membership in two ways:
 - **Transitive membership** — the user belongs to a [Microsoft 365 group](/microsoft-365/admin/create-groups/office-365-groups) that is a member of the container.
 
 A user must be a member of the container with one of these roles:
+
 | Role | Access summary |
 |---|---|
 | Reader | Read container properties and content. |
 | Writer | Reader access plus create, update, and delete content and update applicable properties. |
 | Manager | Writer access plus manage container membership. |
 | Owner | Manager access plus delete containers. |
+
 When a user creates a container through delegated calls, that user is automatically assigned the Owner role.
 
 To share individual items without granting container access, use the [driveItem invite](/graph/api/driveitem-invite) or [permission create](/graph/api/driveitem-post-permissions) endpoints. Sharing an item doesn't grant access to the container or to any other item in it.
@@ -159,6 +164,7 @@ Validate the flow before feature code:
 1. Confirm app-only access is limited by container type permissions.
 
 ## Troubleshoot authorization failures
+
 | Symptom | Check |
 |---|---|
 | Graph call returns unauthorized | Token is missing, expired, or for the wrong resource. |
