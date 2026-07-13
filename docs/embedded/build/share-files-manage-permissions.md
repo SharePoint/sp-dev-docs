@@ -13,7 +13,7 @@ audience: developer
 outcome: Apply additive file permissions without breaking container inheritance.
 next: respond-to-changes-webhooks.md
 -->
-SharePoint Embedded content inherits permissions from its container hierarchy. You cannot break inheritance on arbitrary files or folders. Use additive permissions to extend access to a specific drive item without changing the baseline container membership.
+SharePoint Embedded content inherits permissions from its container hierarchy. You can't break inheritance on arbitrary files or folders. Use additive permissions to extend access to a specific drive item without changing the baseline container membership.
 
 ## Understand container roles
 Container roles provide the inherited baseline access for a container. These roles are defined in [container permissions](configure-authentication-authorization.md#understand-container-permissions):
@@ -25,7 +25,7 @@ Container roles provide the inherited baseline access for a container. These rol
 | `Manager` | Has Writer access, plus permission to manage container membership. |
 | `Owner` | Has Manager access, plus permission to delete containers. |
 
-A user with inherited `Reader` access can receive additive edit access on one document. Removing that added permission does not remove the user's inherited container role.
+A user with inherited `Reader` access can receive additive edit access on one document. Removing that added permission doesn't remove the user's inherited container role.
 
 ## Grant additive access
 Grant additive access with Microsoft Graph drive item invite. Set `sendInvitation` to `false`. App-only permissions aren't supported for this operation.
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 ```
 
-Use `roles: ["read"]` for view access and `roles: ["write"]` for edit access. Do not grant additive permissions to the root folder of a container; add the user to an appropriate container role instead.
+Use `roles: ["read"]` for view access and `roles: ["write"]` for edit access. Don't grant additive permissions to the root folder of a container; add the user to an appropriate container role instead.
 
 ## Retrieve and delete permissions
 List permissions when you need to show direct sharing state on a file or folder.
@@ -68,10 +68,10 @@ If the user still has access after deletion, inspect inherited container roles, 
 ## Configure who can share
 SharePoint Embedded supports a role-based sharing model on the container type. The restrictive model allows only `Owner` and `Manager` members to add new permissions to files. The open model allows container members and guests with edit permissions to add new file permissions. By default, a container type uses the open model.
 
-Application owner developers control this container type setting. Design your UI so the share action is disabled or hidden when the current user's role cannot add permissions. For administrative configuration, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
+Application owner developers control this container type setting. Design your UI so the share action is disabled or hidden when the current user's role can't add permissions. For administrative configuration, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 
 ## Respect tenant sharing policy
-By default, SharePoint Embedded application sharing follows the consuming tenant's sharing configuration. If the tenant disables guest sharing, your app cannot add guests to container roles or grant guest additive permissions.
+By default, SharePoint Embedded application sharing follows the consuming tenant's sharing configuration. If the tenant disables guest sharing, your app can't add guests to container roles or grant guest additive permissions.
 
 A consuming tenant SharePoint Embedded Administrator can configure application-level sharing in administrative tools.
 

@@ -54,13 +54,13 @@ SharePoint Embedded supports two billing models.
 | Pass-through | The tenant registered to use the app is billed for consumption. |
 
 > [!NOTE]
-> A container type's billing model is set when the container type is created and cannot be changed later. To switch billing models, the developer creates a new container type with the wanted model.
+> A container type's billing model is set when the container type is created and can't be changed later. To switch billing models, the developer creates a new container type with the wanted model.
 
 The following diagram shows standard billing, where consumption charges are billed to the tenant that owns or develops the app.
 
 ![Standard billing model, where the developer or owning tenant is billed for all consumption.](../images/1bill521.png)
 
-The following diagram shows pass-through billing, where consumption charges are billed to the consuming tenant that is registered to use the app.
+The following diagram shows pass-through billing, where consumption charges are billed to the consuming tenant that's registered to use the app.
 
 ![Pass-through billing model, where the consuming tenant is billed for all consumption.](../images/2bill521.png)
 
@@ -129,7 +129,7 @@ After setup, validate that billing is active.
 1. Confirm that the billing subscription remains connected.
 1. Open the SharePoint admin center.
 1. Go to **SharePoint Embedded** > **Apps**.
-1. Confirm that the installed app does not show a billing issue.
+1. Confirm that the installed app doesn't show a billing issue.
 1. Ask the app owner or a pilot user to validate app access.
 
 If the app remains inactive, review the app billing model and the selected billing resources.
@@ -151,27 +151,27 @@ For detailed monitoring steps, see [Monitor usage, billing, and cost](monitor-us
 
 Use these checks when setup fails.
 
-- The admin does not have the Global Administrator role required to set up billing.
+- The admin doesn't have the Global Administrator role required to set up billing.
 - The admin lacks owner or contributor permissions on the Azure subscription.
 - The subscription is disabled or unavailable.
 - No resource group is available for billing setup.
-- The app uses pass-through billing but the consuming tenant has not turned on SharePoint Embedded apps.
+- The app uses pass-through billing but the consuming tenant hasn't turned on SharePoint Embedded apps.
 - The app uses owner organization billing, so the app owner must resolve billing instead.
 - Tenant policies restrict access to the Microsoft 365 admin center billing experience.
 
 ## Common access symptoms
 
-Users may report access failures when billing is not valid.
+Users may report access failures when billing isn't valid.
 Look for these symptoms.
 
 - The SharePoint Embedded app is installed but inactive.
-- Users cannot create new containers or store new content.
+- Users can't create new containers or store new content.
 - The SharePoint admin center shows billing warnings for the app.
-- Azure Cost Management shows no linked usage because setup has not completed.
+- Azure Cost Management shows no linked usage because setup hasn't completed.
 - New container creation stops immediately after SharePoint Embedded is turned off or the subscription is disconnected, although existing containers remain accessible.
 
 > [!WARNING]
-> Do not disconnect the linked Azure subscription during business hours unless you intend to block new container creation for SharePoint Embedded apps. Existing containers stay accessible, but users can't create new containers until billing is valid again.
+> Don't disconnect the linked Azure subscription during business hours unless you intend to block new container creation for SharePoint Embedded apps. Existing containers stay accessible, but users can't create new containers until billing is valid again.
 
 ## Operational guidance
 

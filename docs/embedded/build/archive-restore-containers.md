@@ -42,7 +42,7 @@ POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerI
 
 The caller must have the `Owner` or `PrincipalOwner` role on the container. Global Administrators and SharePoint Embedded Administrators can act on all containers. The app must also have write permission on the container.
 
-An archived container is inaccessible until it is reactivated. Stop uploads, background processors, webhook-dependent workflows, and interactive edits before submitting the archive request.
+An archived container is inaccessible until it's reactivated. Stop uploads, background processors, webhook-dependent workflows, and interactive edits before submitting the archive request.
 
 ## Get archived containers
 Read one archived container with the normal container get operation.
@@ -57,7 +57,7 @@ List archived containers for a container type by filtering for containers that h
 GET https://graph.microsoft.com/beta/storage/fileStorage/containers?$filter=containerTypeId eq {containerTypeId} and archivalDetails ne null
 ```
 
-Use this list for lifecycle views, admin reports, or reactivation flows. Make the archived state visible in your UI so users understand why files cannot be opened.
+Use this list for lifecycle views, admin reports, or reactivation flows. Make the archived state visible in your UI so users understand why files can't be opened.
 
 ## Reactivate a container
 Call the Microsoft Graph beta unarchive action to reactivate an archived container.
@@ -69,7 +69,7 @@ POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerI
 Reactivation is instantaneous during the first seven days after archival. After seven days, reactivation can take up to 24 hours. Keep the container read and write actions disabled until the service reports that the container is active again.
 
 ## Design lifecycle controls
-Require explicit user intent before archive and unarchive requests. Record the container ID, actor, timestamp, and Graph request correlation data in your application logs. Do not treat archive as deletion; retention, eDiscovery, audit, and compliance requirements still apply to archived data.
+Require explicit user intent before archive and unarchive requests. Record the container ID, actor, timestamp, and Graph request correlation data in your application logs. Don't treat archive as deletion; retention, eDiscovery, audit, and compliance requirements still apply to archived data.
 
 If a lifecycle operation fails, check the caller role, app write permission, container type archival setting, and whether the target container is already in the requested state.
 

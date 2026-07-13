@@ -104,7 +104,7 @@ For the registration flow, see [Register file storage container type application
 
 Containers are created in the consuming tenant.
 
-For an enterprise LOB app, that is usually the enterprise tenant.
+For an enterprise LOB app, that's usually the enterprise tenant.
 
 For an ISV app, each customer tenant has its own containers.
 

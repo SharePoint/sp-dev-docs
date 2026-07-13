@@ -113,7 +113,7 @@ IProgress<long> progress = new Progress<long>(prog => Console.WriteLine($"Upload
 var uploadResult = await fileUploadTask.UploadAsync(progress);
 ```
 
-Use `fail` when duplicate files should not be overwritten. Change the conflict behavior only after you define replacement, rename, and audit rules.
+Use `fail` when duplicate files shouldn't be overwritten. Change the conflict behavior only after you define replacement, rename, and audit rules.
 
 ## Run the sample
 The sample uses Microsoft Graph SDK 5.56.0, Azure.Identity 1.12.0, Azure.Storage.Blobs 12.21.0, CommandLineParser 2.9.1, and Newtonsoft.Json 13.0.3.
@@ -127,7 +127,7 @@ Use the optional blob list file for controlled batches and the optional output f
 ## Validate migrated content
 Compare source blob counts with destination drive item counts. Check folder paths, file sizes, upload failures, duplicate handling, and required metadata. Open representative files through your SharePoint Embedded app, then validate search and metadata queries after indexing has had time to complete.
 
-Do not delete source blobs until business owners approve the migration result and retention requirements are satisfied.
+Don't delete source blobs until business owners approve the migration result and retention requirements are satisfied.
 
 ## Next steps
 

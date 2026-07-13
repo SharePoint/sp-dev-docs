@@ -16,7 +16,7 @@ ms.localizationpriority: high
 >
 > A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded.
 
-The organizations that use the SharePoint Embedded applications on their Microsoft 365 (Microsoft 365) tenants are the consuming tenants, and the persona that is responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator. Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and can be performed by the consuming tenant administrator. They can do so either using the PowerShell cmdlets or through the SharePoint Administrator Center (SPAC).
+The organizations that use the SharePoint Embedded applications on their Microsoft 365 (Microsoft 365) tenants are the consuming tenants, and the persona that's responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator. Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and can be performed by the consuming tenant administrator. They can do so either using the PowerShell cmdlets or through the SharePoint Administrator Center (SPAC).
 
 ## Consuming Tenant Admin Role
 
@@ -72,7 +72,7 @@ To use a pass-through billing SharePoint Embedded app, the SharePoint Embedded a
 
 ### [Meters](../reference/billing-meters.md)
 
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that is egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Microsoft Cost Management](https://ms.portal.azure.com/).
+SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that's egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Microsoft Cost Management](https://portal.azure.com/).
 
 SharePoint Embedded has three billing meters, as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details
 

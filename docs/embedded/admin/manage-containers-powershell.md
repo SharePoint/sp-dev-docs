@@ -87,7 +87,7 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <Ap
 `OwningApplicationId` is the ID of the SharePoint Embedded owning application.
 `ApplicationId` is the guest application ID that has access to the SharePoint Embedded application.
 
-Application administration cmdlets do not apply to Microsoft Loop.
+Application administration cmdlets don't apply to Microsoft Loop.
 
 ## Configure application sharing
 
@@ -225,7 +225,7 @@ Remove-SPODeletedContainer -Identity <ContainerId>
 For command details, see [Remove-SPODeletedContainer](/powershell/module/sharepoint-online/remove-spodeletedcontainer).
 
 > [!CAUTION]
-> Permanent deletion cannot be reversed.
+> Permanent deletion can't be reversed.
 > Confirm retention and legal requirements before running this command.
 
 ## Manage guest application permissions

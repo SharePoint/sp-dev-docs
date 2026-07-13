@@ -151,7 +151,7 @@ Use this command:
 Set-SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
 ```
 
-The label is applied at the **container level**: it sets the container's sensitivity and governs container settings such as conditional access and guest sharing. It does not retroactively relabel files that already exist in the container, and each file carries its own sensitivity label. For item-level labeling behavior, see [Learn about sensitivity labels](/purview/sensitivity-labels).
+The label is applied at the **container level**: it sets the container's sensitivity and governs container settings such as conditional access and guest sharing. It doesn't retroactively relabel files that already exist in the container, and each file carries its own sensitivity label. For item-level labeling behavior, see [Learn about sensitivity labels](/purview/sensitivity-labels).
 
 ## Block download policy
 
@@ -197,7 +197,7 @@ Consumer Microsoft 365 settings apply to app documents stored by SharePoint Embe
 
 This includes supported security, compliance, risk, and governance settings.
 
-Your application should not assume that every consuming tenant has the same policy configuration.
+Your application shouldn't assume that every consuming tenant has the same policy configuration.
 
 Design for policy enforcement results, blocked operations, and user-facing messages.
 

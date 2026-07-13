@@ -24,7 +24,7 @@ Cost is based on usage meters, so administrators should review storage, archived
 Use this article to understand cost drivers, review billing in Azure Cost Management, and establish operational controls.
 
 > [!IMPORTANT]
-> Admin actions taken through the SharePoint admin center or SharePoint PowerShell are not charged as SharePoint Embedded API transactions according to the SharePoint Embedded billing meters.
+> Admin actions taken through the SharePoint admin center or SharePoint PowerShell aren't charged as SharePoint Embedded API transactions according to the SharePoint Embedded billing meters.
 
 ## Before you begin
 
@@ -71,7 +71,7 @@ To sort containers by storage with PowerShell, see [Manage containers with Power
 ## Monitor API transactions
 
 Each Microsoft Graph call made explicitly by the SharePoint Embedded application counts as one transaction.
-Calls made by internal services to containers are not charged when the application has no control over those calls.
+Calls made by internal services to containers aren't charged when the application has no control over those calls.
 
 Nonchargeable transactions include:
 
@@ -97,7 +97,7 @@ Large exports, sync-like patterns, or repeated downloads can increase egress.
 
 1. Open the [Azure portal](https://portal.azure.com/).
 1. Select **Cost Management + Billing**.
-1. If you do not see it, search for **Cost Management + Billing**.
+1. If you don't see it, search for **Cost Management + Billing**.
 1. Select the subscription linked to SharePoint Embedded billing.
 1. Open the subscription overview to review current spending, forecasted costs, and anomalies.
 
@@ -122,7 +122,7 @@ If cost increases suddenly, review storage, transaction volume, and egress separ
 Use the **Invoices** area under Billing to view and download billing invoices for the billing period.
 Store invoices according to your organization's finance and procurement processes.
 
-If invoice values do not match expected usage, compare invoice periods with Cost analysis date ranges.
+If invoice values don't match expected usage, compare invoice periods with Cost analysis date ranges.
 
 ## Configure budgets and alerts
 

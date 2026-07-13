@@ -136,7 +136,7 @@ Use redirect settings to route users back to your app when Microsoft 365 can't o
 
 `ApplicationRedirectUrl` configures the application redirect URL on the container type. Use it for the app route that handles file-return scenarios for your workload.
 
-The `urlTemplate` setting controls where Microsoft 365 sends users for files without a supported viewer. Supported Office web viewer files, such as Word, Excel, and PowerPoint, open in the Office web viewer. PDF files open in the embedded viewer. Other file types redirect through `urlTemplate` when it is configured. If `urlTemplate` is not configured, Microsoft 365 sends users to a Microsoft help page.
+The `urlTemplate` setting controls where Microsoft 365 sends users for files without a supported viewer. Supported Office web viewer files, such as Word, Excel, and PowerPoint, open in the Office web viewer. PDF files open in the embedded viewer. Other file types redirect through `urlTemplate` when it's configured. If `urlTemplate` isn't configured, Microsoft 365 sends users to a Microsoft help page.
 
 Set `settings.urlTemplate` with the Microsoft Graph `PATCH /storage/fileStorage/containerTypes/{containerTypeId}` API. Use a valid absolute `https://` URL that doesn't resolve to a loopback address.
 

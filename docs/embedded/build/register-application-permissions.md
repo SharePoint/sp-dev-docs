@@ -127,7 +127,7 @@ After registration succeeds:
 | Access denied on Graph calls | Registration missing or insufficient | Re-register with needed permissions. |
 | Admin can't find hidden permission | Portal doesn't expose it | Use an admin consent URL. |
 ## Re-register safely
-There are no restrictions on how many times the registration API can be invoked.
+There's no restriction on how many times the registration API can be invoked.
 The last successful registration call determines the settings used in the consuming tenant.
 Use a safe update process:
 1. Build a complete registration payload.

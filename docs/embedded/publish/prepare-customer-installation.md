@@ -66,7 +66,7 @@ For model and tenant decisions, see [Choose an app model](../plan/choose-app-mod
 ## Package the application configuration
 
 Give customers the exact identifiers and URLs they need to review and approve the app.
-Do not ask a customer admin to infer these values from code.
+Don't ask a customer admin to infer these values from code.
 
 Include the following information in your installation package:
 
@@ -88,7 +88,7 @@ Include the following information in your installation package:
 
 Every production container type must have an owning application.
 A single owning application can own only one container type at a time.
-Do not reuse one owning application across multiple production container types.
+Don't reuse one owning application across multiple production container types.
 If you need multiple isolation or billing boundaries, plan separate owning applications and container types.
 
 Create the production container type with the SharePoint Embedded Visual Studio Code extension or the Microsoft Graph [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) API. Microsoft Graph creation is delegated-only and doesn't require an admin role.
@@ -163,7 +163,7 @@ Ensure your app's [redirect URI](/entra/identity-platform/reply-url) can handle 
 If your app uses guest application access, explain how the consuming tenant admin can view guest application permissions in administrative tools.
 
 > [!CAUTION]
-> Do not hide optional or elevated permissions in an installation script.
+> Don't hide optional or elevated permissions in an installation script.
 > Customer admins should be able to review the requested permissions before they grant consent.
 
 ## Prepare billing guidance

@@ -51,10 +51,10 @@ After Webpack completes, open `https://localhost:8080`, sign in with tenant cred
 ## Decide what belongs in Fluid
 Use Fluid for collaborative application state that benefits from low-latency synchronization. Store durable documents and files in SharePoint Embedded containers. Persist final business output to your own durable model or to SharePoint Embedded files when your scenario needs audit, retention, search, or reporting.
 
-Treat Fluid shared objects as user-visible collaboration state. Do not place secrets, access tokens, SAS URLs, or privileged Graph responses in shared data structures.
+Treat Fluid shared objects as user-visible collaboration state. Don't place secrets, access tokens, SAS URLs, or privileged Graph responses in shared data structures.
 
 ## Handle identity and access
-Your app still needs the SharePoint Embedded client ID and container type ID to acquire the correct tokens and access containers. Test the sample with one tab, two tabs for the same user, and two different users from the tenant. Verify behavior for users who can view the container but should not edit the collaborative state.
+Your app still needs the SharePoint Embedded client ID and container type ID to acquire the correct tokens and access containers. Test the sample with one tab, two tabs for the same user, and two different users from the tenant. Verify behavior for users who can view the container but shouldn't edit the collaborative state.
 
 ## Move from sample to app design
 Use the item counter sample to prove tenant setup, consent, and client connectivity. In your own app, plan reconnect behavior, token refresh, offline transitions, container switching, and cleanup for collaborative sessions that users abandon.

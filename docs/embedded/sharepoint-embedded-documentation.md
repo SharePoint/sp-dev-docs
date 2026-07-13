@@ -1,6 +1,6 @@
 ---
 title: SharePoint Embedded documentation
-description: Task-based index for SharePoint Embedded. Find the right page by what you are trying to do, whether you build apps or administer them.
+description: Task-based index for SharePoint Embedded. Find the right page by what you're trying to do, whether you build apps or administer them.
 ms.date: 06/25/2026
 ms.localizationpriority: high
 ---
@@ -29,7 +29,7 @@ Almost everyone is one of two people. Architects, IT decision makers, billing ad
 |---|---|---|
 | Developer / architect | Build and ship an app | [Build an app](#build-an-app) |
 | ISV / developer | Onboard customers and bill | [Publish and onboard customers](#publish-and-onboard-customers) |
-| SharePoint / tenant admin | Install and manage apps | [Install and manage apps](#install-and-manage-apps) |
+| SharePoint Embedded admin | Install and manage apps | [Install and manage apps](#install-and-manage-apps) |
 | Compliance admin | Govern and secure content | [Apply security and compliance controls](./admin/apply-security-compliance-controls.md) |
 | Evaluating / planning | Decide and design | [Plan a solution](#plan-a-solution) |
 

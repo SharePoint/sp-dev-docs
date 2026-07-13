@@ -17,7 +17,7 @@ outcome: Grant admin consent for a SharePoint Embedded app and validate permissi
 next: setup-billing-microsoft-365-admin-center.md
 -->
 
-Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions always require admin consent, while delegated permissions for SharePoint Embedded do not. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions always require admin consent, while delegated permissions for SharePoint Embedded don't. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 Use this article to review requested permissions, grant consent, and troubleshoot common consent failures.
 
@@ -43,7 +43,7 @@ An owning application must meet two requirements before it can act on a consumin
 1. The owning app must have a service principal installed in the consuming tenant.
 1. The owning app must be granted the permissions needed to register the container type and access its containers in the consuming tenant.
 
-Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent is not a hard requirement for the owning application to act on the consuming tenant. SharePoint Embedded apps that operate exclusively on behalf of a user do not need to be granted admin consent. Granting admin consent for apps that operate exclusively on behalf of a user may improve user experience as the app won't require consent from every user who wants to sign into the app.
+Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent isn't a hard requirement for the owning application to act on the consuming tenant. SharePoint Embedded apps that operate exclusively on behalf of a user don't need to be granted admin consent. Granting admin consent for apps that operate exclusively on behalf of a user may improve user experience as the app won't require consent from every user who wants to sign into the app.
 
 > [!CAUTION]
 > You need to understand the implications of granting admin consent to an application. To learn more, see [Grant tenant-wide admin consent](/entra/identity/enterprise-apps/grant-admin-consent).
@@ -61,18 +61,18 @@ Before granting consent, review the requested permissions with the app owner.
 
 | Review item | Why it matters |
 | --- | --- |
-| Application client ID | Confirms you are consenting to the intended owning app. |
+| Application client ID | Confirms you're consenting to the intended owning app. |
 | Publisher | Helps validate trust and support ownership. |
 | Permission list | Shows what the app can do after consent. |
 | Container type ID | Identifies the container type the app owns. |
 | Guest app access | Identifies other apps that may receive access through registration. |
 | Billing model | Determines whether the tenant must configure billing before users can use the app. |
 
-Ask the app owner to explain any permission that does not align with the expected scenario.
+Ask the app owner to explain any permission that doesn't align with the expected scenario.
 
 > [!CAUTION]
-> - Do NOT grant consent from a copied URL unless you have verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
-> - Do NOT grant consent if you don't understand why each permission is being requested.
+> - DON'T grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
+> - DON'T grant consent if you don't understand why each permission is being requested.
 
 ## Grant admin consent from the consent endpoint
 
@@ -105,7 +105,7 @@ After consent, confirm that the app is installed in your tenant.
 1. Confirm that permissions show the expected consent state.
 1. Confirm that no unexpected permissions were granted.
 
-If the service principal is missing, consent did not complete.
+If the service principal is missing, consent didn't complete.
 
 ## Troubleshoot consent failures
 
@@ -119,7 +119,7 @@ Use these checks when consent fails.
 - Confirm the redirect URI or success handling is configured by the app owner.
 - Confirm your tenant policies allow user or admin consent for the app.
 - Confirm national cloud endpoints are correct when applicable.
-- Confirm the app is not blocked by publisher or enterprise app policies.
+- Confirm the app isn't blocked by publisher or enterprise app policies.
 
 ## Troubleshoot access denied after consent
 

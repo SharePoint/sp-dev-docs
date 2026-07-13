@@ -16,7 +16,7 @@ next: container-metadata.md
 Use Microsoft Search in Microsoft Graph when your app needs keyword search across SharePoint Embedded containers or content. The search API ranks matching results and returns `drive` resources for containers or `driveItem` resources for files and folders.
 
 > [!NOTE]
-> SharePoint Embedded search is in preview and is available only on the Microsoft Graph **`/beta`** endpoint — there is no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
+> SharePoint Embedded search is in preview and is available only on the Microsoft Graph **`/beta`** endpoint — there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
 
 ## Choose the search scope
 Scope every request to the container type or container that belongs to your app. Search runs in the context of the signed-in user, so the service trims results to content the user can access. Your app must also have access to the corresponding container type before it can open returned containers or files.

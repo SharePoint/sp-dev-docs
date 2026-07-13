@@ -42,9 +42,9 @@ SharePoint Embedded administration commonly involves the following roles.
 | Security administrator | Configure security policies and investigate security events that apply to SharePoint Embedded content. |
 
 The SharePoint Embedded Administrator role is available in Microsoft Entra and the Microsoft 365 admin center.
-It is dedicated to SharePoint Embedded administration.
-It does not grant regular SharePoint site management access.
-For example, a SharePoint Embedded Administrator does not see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and cannot run site-specific SharePoint PowerShell cmdlets.
+It's dedicated to SharePoint Embedded administration.
+It doesn't grant regular SharePoint site management access.
+For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and can't run site-specific SharePoint PowerShell cmdlets.
 
 ### Assign the SharePoint Embedded Administrator role
 
@@ -133,7 +133,7 @@ Review [Review audit events](review-audit-events.md) and [Apply security and com
 ## SharePoint admin center versus PowerShell
 
 Use both management surfaces.
-They are complementary.
+They're complementary.
 
 | Surface | Best for |
 | --- | --- |
@@ -175,10 +175,10 @@ Use this path when your tenant consumes a SharePoint Embedded app:
 
 Before making changes, identify the owning application and affected containers.
 Container deletion can break links, remove content, and interrupt the app that depends on the container.
-Deleted containers can be restored from the deleted container collection within the supported retention period unless they are permanently deleted or retention policies change the behavior.
+Deleted containers can be restored from the deleted container collection within the supported retention period unless they're permanently deleted or retention policies change the behavior.
 
 > [!WARNING]
-> Permanently deleting a container removes it from the deleted container collection and it cannot be restored.
+> Permanently deleting a container removes it from the deleted container collection and it can't be restored.
 > Notify app owners before deleting containers.
 
 ## Related content

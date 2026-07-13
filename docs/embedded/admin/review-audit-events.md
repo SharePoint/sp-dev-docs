@@ -113,7 +113,7 @@ Then widen the search if results are incomplete.
 
 > [!TIP]
 > Start with a narrow time range and known users.
-> Expand to container identifiers or broader SharePoint activity if the first search does not return enough context.
+> Expand to container identifiers or broader SharePoint activity if the first search doesn't return enough context.
 
 ## Interpret event details
 

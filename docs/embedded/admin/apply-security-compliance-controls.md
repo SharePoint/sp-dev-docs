@@ -147,7 +147,7 @@ To apply DLP to selected SharePoint Embedded containers:
 ![Microsoft Purview DLP policy scoped to selected SharePoint Embedded container URLs.](../images/sc7.png)
 
 Some DLP scenarios require user interaction, such as business justification for override or policy tips.
-Because SharePoint Embedded does not provide a native user interface, the client app must implement the required user experience, often by using Microsoft Graph where applicable.
+Because SharePoint Embedded doesn't provide a native user interface, the client app must implement the required user experience, often by using Microsoft Graph where applicable.
 
 For DLP details, see [Learn about data loss prevention](/purview/dlp-learn-about-dlp).
 

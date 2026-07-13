@@ -45,7 +45,7 @@ For role context, see [Admin overview](admin-overview.md).
 1. Select **Deleted containers** to view containers in the deleted container collection.
 
 A SharePoint Embedded Administrator sees only the SharePoint Embedded-specific pages that apply to the role.
-The role does not expose general SharePoint **Active sites** or **Deleted sites** pages.
+The role doesn't expose general SharePoint **Active sites** or **Deleted sites** pages.
 
 ![SharePoint admin center left navigation for a SharePoint Embedded Administrator, showing only the Active containers and Deleted containers pages.](../images/ctaux2.png)
 
@@ -214,7 +214,7 @@ The request displays as "Reactivating" on the Archived containers page. After 24
 
 ## Delete an active or archived container
 
-Delete a container only when there is a clear business reason.
+Delete a container only when there's a clear business reason.
 Container deletion can affect the SharePoint Embedded app that owns the container.
 
 Potential impacts include:
@@ -284,7 +284,7 @@ Permanently delete a container only when recovery is no longer required and rete
 1. Review the confirmation warning.
 1. Confirm the action only if the organization no longer needs the content.
 
-After permanent deletion, the container is removed from the deleted container collection and cannot be restored.
+After permanent deletion, the container is removed from the deleted container collection and can't be restored.
 
 ![Permanently delete action enabled on the Deleted containers page for a selected container.](../images/ctaux12.png)
 

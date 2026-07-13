@@ -143,7 +143,7 @@ You can also manage container types with the `fileStorageContainerType` Microsof
 | Update a container type | [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) |
 | Delete a container type | [Delete fileStorageContainerType](/graph/api/filestorage-delete-containertypes) |
 
-List results are filtered by ownership. Non-administrator users see only the container types they have a permission on, while SharePoint Embedded Administrators and Global Administrators see every container type in the tenant. For the settings you can configure, see [fileStorageContainerTypeSettings](/graph/api/resources/filestoragecontainertypesettings).
+List results are filtered by ownership. Non-administrator users see only the container types they've been granted permission on, while SharePoint Embedded Administrators and Global Administrators see every container type in the tenant. For the settings you can configure, see [fileStorageContainerTypeSettings](/graph/api/resources/filestoragecontainertypesettings).
 
 You can delete only trial container types; deletion of standard container types isn't yet supported. Before you delete a container type, remove every container of that type, including containers in the deleted container collection.
 ## Understand billing dependency

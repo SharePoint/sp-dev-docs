@@ -138,7 +138,7 @@ Container permissions apply only to delegated access. An app that accesses conta
 
 Users get container membership in two ways:
 - **Direct membership** — the user is added directly to a container with specific permissions.
-- **Transitive membership** — the user belongs to a [Microsoft 365 group](/microsoft-365/admin/create-groups/office-365-groups) that is a member of the container.
+- **Transitive membership** — the user belongs to a [Microsoft 365 group](/microsoft-365/admin/create-groups/office-365-groups) that's a member of the container.
 
 A user must be a member of the container with one of these roles:
 

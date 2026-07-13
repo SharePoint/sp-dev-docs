@@ -92,7 +92,7 @@ In **Entra app registration**, choose one option.
 If you choose **New app**, enter the new Entra app name.
 If you choose **Use an existing Entra app**, search by application ID or application name.
 
-Do not create duplicate app registrations unless your app architecture requires them.
+Don't create duplicate app registrations unless your app architecture requires them.
 Use one owning application for the SharePoint Embedded app that owns its container type.
 
 ## Add app owners
@@ -108,7 +108,7 @@ If an owner leaves the organization, update ownership before removing their acco
 ## Select billing type
 
 Billing type determines who pays for SharePoint Embedded consumption.
-Choose carefully because billing type cannot be changed after app creation.
+Choose carefully because billing type can't be changed after app creation.
 
 | Billing type | Meaning |
 | --- | --- |
@@ -145,7 +145,7 @@ If you select **Owner org**, choose when to connect the Azure billing subscripti
 Expand **Advanced settings** when you need optional settings.
 The **Graph Explorer** toggle supports development and testing.
 Turn it on only when administrators or developers need to explore Microsoft Graph requests for the app.
-Turn it off when it is not needed.
+Turn it off when it isn't needed.
 
 For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
 
@@ -190,7 +190,7 @@ Use the billing status to decide the next action.
 
 ## Prepare for installation
 
-App creation does not complete the consuming tenant setup by itself.
+App creation doesn't complete the consuming tenant setup by itself.
 Depending on the app model, the tenant still needs installation, consent, and permission registration.
 
 Continue with these tasks.
@@ -203,7 +203,7 @@ Continue with these tasks.
 
 ## Troubleshoot app creation
 
-Use these checks if creation fails or the app is not usable.
+Use these checks if creation fails or the app isn't usable.
 
 - Confirm your account has the SharePoint Embedded Administrator role.
 - Confirm the selected existing Entra app exists and is available in the tenant.
@@ -211,10 +211,10 @@ Use these checks if creation fails or the app is not usable.
 - Confirm required billing fields are complete.
 - Confirm owner organization billing uses a valid Azure subscription and resource group.
 - If the app is inactive, complete or repair billing setup.
-- If users cannot access the app after creation, verify installation, admin consent, and container type permissions.
+- If users can't access the app after creation, verify installation, admin consent, and container type permissions.
 
 > [!WARNING]
-> Do not treat app creation as proof that the app is ready for users.
+> Don't treat app creation as proof that the app is ready for users.
 > Users may still be blocked by missing installation, missing consent, or invalid billing.
 
 ## Related content

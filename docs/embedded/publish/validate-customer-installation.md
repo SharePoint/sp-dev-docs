@@ -109,7 +109,7 @@ Validate the following items:
 - Test users are present in Microsoft Entra ID as members or guests.
 
 > [!CAUTION]
-> Do not continue validation if the app ID or publisher doesn't match the installation package.
+> Don't continue validation if the app ID or publisher doesn't match the installation package.
 > Stop and resolve the consent mismatch first.
 
 If the owning app or any guest app is missing permissions, return to [Guide customers through tenant setup](customer-tenant-setup-guide.md).
@@ -148,7 +148,7 @@ For billing model guidance, see [Choose a billing model for your app](choose-app
 ## Step 4: Create or open a test container
 
 Use your app's normal product flow to create or open a test container in the customer tenant.
-Do not use a hidden validation path that bypasses the same permissions and container type registration used by production users.
+Don't use a hidden validation path that bypasses the same permissions and container type registration used by production users.
 
 Validate:
 

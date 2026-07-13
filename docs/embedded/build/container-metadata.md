@@ -23,7 +23,7 @@ Container owners can create, update, and delete columns. Container members can r
 ## Choose column types
 SharePoint Embedded metadata supports these column type properties : `boolean`, `choice`, `currency`, `dateTime`, `hyperlinkOrPicture`, `number`, `personOrGroup`, and `text`. It also supports column settings such as `indexed`, `isDeletable`, `isSealed`, `name`, `readOnly`, and `type`.
 
-Column names must follow SharePoint rules. Do not use names that contain `!`, start with a digit or punctuation, contain spaces, look like spreadsheet cell references, represent localized true or false values, or use reserved names such as `Author`, `Created`, or `Description`.
+Column names must follow SharePoint rules. Don't use names that contain `!`, start with a digit or punctuation, contain spaces, look like spreadsheet cell references, represent localized true or false values, or use reserved names such as `Author`, `Created`, or `Description`.
 
 ## Create a column
 Create a column on the container before writing field values on files.

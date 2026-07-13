@@ -78,7 +78,7 @@ The **Installed apps** tab lists SharePoint Embedded apps built by your organiza
 1. Finish the installation.
 
 The exact installation prompts can vary by app ownership and billing model.
-Do not continue if the app identity or publisher is unexpected.
+Don't continue if the app identity or publisher is unexpected.
 
 > [!CAUTION]
 > Install only apps that your organization trusts.
@@ -116,7 +116,7 @@ Select an app on the **Installed apps** tab to open its details panel. The panel
 
 *Figure 1: The app details panel on the Installed apps tab shows identifiers and billing information, and lets you copy the Entra and SharePoint Embedded app IDs.*
 
-If the app is not visible, refresh the page and confirm that installation completed successfully.
+If the app isn't visible, refresh the page and confirm that installation completed successfully.
 If the app remains missing, contact the app owner and verify the app identity.
 
 ## Complete admin consent
@@ -136,7 +136,7 @@ https://login.microsoftonline.com/{your-tenant-id}/v2.0/adminconsent?client_id={
 ```
 
 Use the exact client ID provided by the app owner.
-Do not substitute a different application ID.
+Don't substitute a different application ID.
 
 ## Confirm billing requirements
 
@@ -204,7 +204,7 @@ Consuming tenant admins can also manage container type registrations programmati
 
 ## Troubleshoot installation
 
-Use these checks when installation does not complete.
+Use these checks when installation doesn't complete.
 
 - Confirm the administrator has the SharePoint Embedded Administrator role.
 - Confirm the app identity and publisher.

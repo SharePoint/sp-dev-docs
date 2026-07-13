@@ -30,7 +30,7 @@ A typical container lifecycle includes:
 1. Add or confirm members.
 1. Upload and manage files.
 1. Read or update container metadata.
-1. Recycle a container when it is no longer active.
+1. Recycle a container when it's no longer active.
 1. Restore a recycled container when needed.
 1. Permanently delete containers during cleanup.
 Continue to [Upload, download, and manage files](manage-files.md) for content operations.
@@ -41,7 +41,7 @@ Before creating containers, make sure:
 - The app has Microsoft Graph `FileStorageContainer.Selected` consent.
 - The app has container type permissions for the operation.
 - For delegated calls, the signed-in user can receive the needed container role.
-- For trial container types, you are within trial limits.
+- For trial container types, you're within trial limits.
 > [!IMPORTANT]
 > Trial container types can create up to five containers, including active containers and containers in the recycle bin.
 ## Choose delegated or app-only creation
