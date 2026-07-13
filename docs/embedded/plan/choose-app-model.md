@@ -14,7 +14,7 @@ ms.localizationpriority: high
 task_type: concept
 audience: architect
 outcome: Select the SharePoint Embedded app model and setup path that matches your ownership, billing, and admin responsibilities.
-next: ../plan/container-types-and-containers.md
+next: ../plan/container-types-containers.md
 -->
 
 Use this article to choose between an enterprise line-of-business (LOB) model and an ISV multitenant model for SharePoint Embedded.
@@ -165,7 +165,7 @@ Plan these responsibilities before implementation.
 If you're building an internal enterprise app:
 
 1. Plan authentication with [Plan authentication and permissions](../plan/authentication-permissions.md).
-1. Understand container type design with [Understand container types and containers](../plan/container-types-and-containers.md).
+1. Understand container type design with [Understand container types and containers](../plan/container-types-containers.md).
 1. Create the container type by using the guidance in [SharePoint Embedded container types](../build/create-container-type.md).
 1. Configure billing by using [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
@@ -190,4 +190,4 @@ If you're building an ISV app:
 - Identify who manages compliance policies.
 
 ## Next steps
-Review the storage model: [Understand container types and containers](../plan/container-types-and-containers.md).
+Review the storage model: [Understand container types and containers](../plan/container-types-containers.md).

@@ -39,7 +39,7 @@ Decide how SharePoint Embedded fits before you write code.
 
 - [Understand app and tenant architecture](./plan/app-tenant-architecture.md)
 - [Choose an app model: single-tenant or multitenant](./plan/choose-app-model.md)
-- [Understand container types and containers](./plan/container-types-and-containers.md)
+- [Understand container types and containers](./plan/container-types-containers.md)
 - [Choose a billing model](./plan/choose-billing-model.md)
 - [Plan authentication and permissions](./plan/authentication-permissions.md)
 - [Plan security, compliance, and governance](./plan/security-compliance-governance.md)

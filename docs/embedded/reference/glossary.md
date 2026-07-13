@@ -20,8 +20,8 @@ next: ../plan/choose-app-model.md
 | Term | Definition |
 | --- | --- |
 | Container | A File Storage Container: the basic SharePoint Embedded storage unit and security and compliance boundary for files. See [SharePoint Embedded overview](../overview.md). |
-| Container type | A SharePoint Embedded resource that defines the relationship, access privileges, billing accountability, and behavior for a set of containers. See [container types](../plan/container-types-and-containers.md). |
-| Developer tenant | The tenant that develops or owns the SharePoint Embedded application and creates its container type. See [container types](../plan/container-types-and-containers.md). |
+| Container type | A SharePoint Embedded resource that defines the relationship, access privileges, billing accountability, and behavior for a set of containers. See [container types](../plan/container-types-containers.md). |
+| Developer tenant | The tenant that develops or owns the SharePoint Embedded application and creates its container type. See [container types](../plan/container-types-containers.md). |
 | Consuming tenant | The Microsoft 365 tenant where a SharePoint Embedded app is used and where containers and content are stored. See [app architecture](../plan/app-tenant-architecture.md). |
 | Container type registration | Registration of a container type in a consuming tenant so the app can perform allowed operations against containers of that type. See [register container type application permissions](../build/register-application-permissions.md). |
 | Single-tenant app | An application model intended for use in one tenant, commonly for enterprise line-of-business scenarios. See [choose an app model](../plan/choose-app-model.md). |

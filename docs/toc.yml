@@ -619,7 +619,7 @@
     - name: 'Choose an app model: single-tenant or multitenant'
       href: embedded/plan/choose-app-model.md
     - name: Understand container types and containers
-      href: embedded/plan/container-types-and-containers.md
+      href: embedded/plan/container-types-containers.md
     - name: Choose a billing model
       href: embedded/plan/choose-billing-model.md
     - name: Plan authentication and permissions

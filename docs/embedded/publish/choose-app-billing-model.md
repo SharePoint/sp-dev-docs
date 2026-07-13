@@ -50,7 +50,7 @@ Container types are used for:
 - Billing for non-trial workloads.
 - Shared configuration settings such as discoverability and sharing behavior.
 
-For more about container types, see [Create New SharePoint Embedded Container Types](../plan/container-types-and-containers.md).
+For more about container types, see [Create New SharePoint Embedded Container Types](../plan/container-types-containers.md).
 
 ## Standard billing
 

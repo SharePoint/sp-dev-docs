@@ -91,7 +91,7 @@ Use a container type to answer these architecture questions:
 - Which tenant is accountable for billing?
 - Which behavior settings apply to all containers of this type?
 
-For more detail, see [Understand container types and containers](../plan/container-types-and-containers.md).
+For more detail, see [Understand container types and containers](../plan/container-types-containers.md).
 
 ## Container type registration resource
 
@@ -105,7 +105,7 @@ Use a container type registration to answer these architecture questions:
 - Which tenant can create containers of this type?
 - Which behavior settings apply to all containers of this type in a consuming tenant?
 
-For more detail, see [Understand container types and containers](../plan/container-types-and-containers.md).
+For more detail, see [Understand container types and containers](../plan/container-types-containers.md).
 
 ## Containers
 

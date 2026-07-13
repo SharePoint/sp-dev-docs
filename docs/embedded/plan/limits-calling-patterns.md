@@ -69,7 +69,7 @@ Use containers for application storage instances within the container type.
 
 Choose a container type for app-level behavior, access relationship, and billing accountability.
 
-For container type planning, see [Understand container types and containers](../plan/container-types-and-containers.md).
+For container type planning, see [Understand container types and containers](../plan/container-types-containers.md).
 
 ## Design for container limits
 
@@ -238,7 +238,7 @@ Use these signals to tune concurrency and identify tenants or workflows that nee
 ## Related planning articles
 
 - [Understand app and tenant architecture](../plan/app-tenant-architecture.md)
-- [Understand container types and containers](../plan/container-types-and-containers.md)
+- [Understand container types and containers](../plan/container-types-containers.md)
 - [Plan authentication and permissions](../plan/authentication-permissions.md)
 - [Choose a billing model](../plan/choose-billing-model.md)
 

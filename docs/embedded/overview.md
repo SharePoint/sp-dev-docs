@@ -53,7 +53,7 @@ When a customer uses a SharePoint Embedded application, SharePoint Embedded crea
 
 SharePoint Embedded apps store files in an entity called a **File Storage Container** (or *container*). Think of a container as an API-only document library. Your app can create many containers in each tenant that uses it, and each container can be permissioned separately and hold terabytes of content. Containers are dedicated to — and accessible only by — your app, keeping your data isolated within the tenant boundary.
 
-To learn how containers and container types relate, see [Understand container types and containers](plan/container-types-and-containers.md).
+To learn how containers and container types relate, see [Understand container types and containers](plan/container-types-containers.md).
 
 ### App-managed content experiences
 
