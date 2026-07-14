@@ -1,14 +1,15 @@
 ---
 title: SharePoint Embedded Model Context Protocol (MCP) server
-description: Use the open-source SharePoint Embedded MCP server to provision and manage SharePoint Embedded from any MCP-compatible AI client through natural language.
+description: Use the open-source SharePoint Embedded MCP server to provision and manage SharePoint Embedded  applications from any MCP-compatible AI client through natural language.
 ms.date: 07/10/2026
 ms.localizationpriority: high
 ms.author: grjoseph
+ai-usage: ai-assisted
 ---
 
 # SharePoint Embedded Model Context Protocol (MCP) server
 
-The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
+The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded applications through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
 Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, you describe what you want—"create a trial container type for my app"—and the AI client calls the server's tools to do it.
 
@@ -34,9 +35,9 @@ For the complete, versioned list of tools, CLI flags, and environment variables,
 
 ## Prerequisites
 
-- **Node.js** version 18 or later.
+- **Node.js** version 22 or later.
 - **[Azure CLI](/cli/azure/install-azure-cli)**, signed in with `az login --allow-no-subscriptions`. The `--allow-no-subscriptions` flag is required for Microsoft 365–only tenants that have no Azure subscription.
-- A Microsoft 365 tenant with **SharePoint Embedded** enabled and tenant-admin access (Global Administrator or Application Administrator).
+- A Microsoft 365 tenant and tenant-admin access (Global Administrator or Application Administrator).
 - An **MCP-compatible client**, such as [Visual Studio Code](https://code.visualstudio.com/) with GitHub Copilot, Claude Desktop, or Cursor.
 
 ## Install and configure
@@ -90,7 +91,7 @@ The server supports two running modes.
     az login --allow-no-subscriptions
     ```
 
-- **Pre-provisioned-app mode**: Pass an existing public-client Microsoft Entra ID application that already has admin-consented delegated permissions for `FileStorageContainer.Selected`, `FileStorageContainerType.Manage.All`, and `FileStorageContainerTypeReg.Manage.All`. Provide the app and tenant IDs through the `SPE_CLIENT_ID` and `SPE_TENANT_ID` environment variables (or the `--client-id` and `--tenant-id` flags):
+- **Pre-provisioned-app mode**: Pass an existing public-client Microsoft Entra ID application that already has admin-consented delegated permissions for `FileStorageContainer.Selected`, `FileStorageContainerType.Manage.All`, and `FileStorageContainerTypeReg.Manage.All`. Provide the app ID and tenant ID through the `SPE_CLIENT_ID` and `SPE_TENANT_ID` environment variables (or the `--client-id` and `--tenant-id` flags):
 
     ```json
     {
