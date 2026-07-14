@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 This release included new capabilities on the list view command sets, preview of CLI for SPFx and addressing all known 'npm audit' reported vulnerabilities in the Yeoman package and in the scaffolded projects.
 
-**Released:** May 13, 2025
+**Released:** May 13, 2026
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -23,6 +23,19 @@ npm install @microsoft/generator-sharepoint@latest --global
 ## Upgrading projects to v1.23.0 version
 
 If you are upgrading from older than 1.22 version, please follow the upgrade steps required to convert a [gulp-based toolchain](toolchain/sharepoint-framework-toolchain.md) SPFx project to the [Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md) are detailed in the following article: [Migrate from the Gulp Toolchain to Heft Toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
+
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.23.0 --output md
+> ```
+>
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ## New features and capabilities
 
