@@ -1,13 +1,13 @@
 ---
-title: SharePoint Embedded Model Context Protocol (MCP) server
-description: Use the open-source SharePoint Embedded MCP server to provision and manage SharePoint Embedded  applications from any MCP-compatible AI client through natural language.
+title: Use the MCP server to build apps with a coding agent
+description: Use the open-source SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
 ms.date: 07/10/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ai-usage: ai-assisted
 ---
 
-# SharePoint Embedded Model Context Protocol (MCP) server
+# Use the MCP server to build apps with a coding agent
 
 The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded applications through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
