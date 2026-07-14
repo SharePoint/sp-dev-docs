@@ -178,9 +178,9 @@ For compliance guidance, see [Apply security and compliance controls](apply-secu
 Consuming-tenant administrators can add, remove, or change a user's role on a container directly (September 2025):
 
 ```powershell
-Add-SPOContainerUser -ContainerId <ContainerId> -User <UserPrincipalName> -Role <Reader|Writer|Manager|Owner>
-Set-SPOContainerUser -ContainerId <ContainerId> -User <UserPrincipalName> -Role <Reader|Writer|Manager|Owner>
-Remove-SPOContainerUser -ContainerId <ContainerId> -User <UserPrincipalName>
+Add-SPOContainerUser -ContainerId <ContainerId> -LoginName <UserPrincipalName> -Role <Reader|Writer|Manager|Owner>
+Set-SPOContainerUser -ContainerId <ContainerId> -LoginName <UserPrincipalName> -Role <Reader|Writer|Manager|Owner>
+Remove-SPOContainerUser -ContainerId <ContainerId> -LoginName <UserPrincipalName>
 ```
 
 For command details, see [Add-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [Set-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser), and [Remove-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser).
@@ -244,7 +244,7 @@ Use `Set-SPOApplicationPermission` for this scenario.
 ```powershell
 Set-SPOApplicationPermission
    [[-OwningApplicationId] <OwningApplicationid>]
-   [[-ApplicationId] <ApplicationId>]
+   [[-GuestApplicationId] <GuestApplicationId>]
    [[-PermissionAppOnly] <AppOnlyPermission>]
    [[-PermissionDelegated] <DelegatedPermission>]
 ```
