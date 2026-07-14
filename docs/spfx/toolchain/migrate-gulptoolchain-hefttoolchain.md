@@ -3,6 +3,7 @@ title: Migrate from the Gulp-based to the Heft-based Toolchain
 description: Learn what changes when migrating a SharePoint Framework project from the Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22, and how to perform the migration using CLI for Microsoft 365.
 ms.date: 12/30/2025
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 # Migrate from the Gulp-based to the Heft-based Toolchain
 
