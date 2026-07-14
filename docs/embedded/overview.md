@@ -4,6 +4,7 @@ description: Microsoft SharePoint Embedded is an API-only file and document mana
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # What is SharePoint Embedded?

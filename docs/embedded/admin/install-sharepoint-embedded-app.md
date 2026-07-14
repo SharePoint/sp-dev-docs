@@ -3,7 +3,9 @@ title: Install a SharePoint Embedded App
 description: Install or register a SharePoint Embedded app in a consuming tenant and validate the tenant setup.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Install a SharePoint Embedded app
@@ -18,6 +20,7 @@ next: grant-admin-consent-permissions.md
 -->
 
 Install a SharePoint Embedded app when a consuming Microsoft 365 tenant needs to use the app.
+
 Installation makes the app visible for tenant administration, but the tenant may still need admin consent, container type permission registration, and billing setup before users can access content.
 
 This article focuses on the consuming-tenant administrator path in the SharePoint admin center.
@@ -27,6 +30,7 @@ This article focuses on the consuming-tenant administrator path in the SharePoin
 > Global Administrators can also perform SharePoint Embedded administration tasks.
 
 Use this article with [Choose an App Model: Single-Tenant or Multitenant](../plan/choose-app-model.md) and the app creation guidance.
+
 The app model determines who owns the app, who installs or onboards it, where containers are created, who pays, and which admins must consent or configure billing.
 
 ## Before you begin
@@ -47,8 +51,11 @@ For role information, see [Admin overview](admin-overview.md).
 ## Understand the consuming tenant path
 
 A consuming tenant is the Microsoft 365 tenant where users run the SharePoint Embedded app and where the app stores content in containers.
+
 The consuming tenant admin manages the app and containers in that tenant.
+
 For a single-tenant line-of-business app, the owning tenant and consuming tenant are usually the same.
+
 For a multitenant ISV app, each customer tenant is a consuming tenant and customer files remain in the customer Microsoft 365 tenant boundary.
 
 Consuming tenant administrators use two administration surfaces.
@@ -59,11 +66,13 @@ Consuming tenant administrators use two administration surfaces.
 | SharePoint Online Management Shell | Enumerate applications, enumerate containers, update labels, configure sharing, and manage lifecycle operations. |
 
 Use the SharePoint admin center when you need guided installation and validation.
+
 Use PowerShell for repeatable inventory and operations after installation.
 
 ## Install from the SharePoint admin center
 
 Use the SharePoint Embedded **Apps** experience in the SharePoint admin center when the app is available to install.
+
 The **Installed apps** tab lists SharePoint Embedded apps built by your organization and by external organizations. It currently doesn't include Microsoft-built SharePoint Embedded apps.
 
 1. Sign in to the [SharePoint admin center](https://admin.microsoft.com/sharepoint).
@@ -78,6 +87,7 @@ The **Installed apps** tab lists SharePoint Embedded apps built by your organiza
 1. Finish the installation.
 
 The exact installation prompts can vary by app ownership and billing model.
+
 Don't continue if the app identity or publisher is unexpected.
 
 > [!CAUTION]
@@ -87,7 +97,9 @@ Don't continue if the app identity or publisher is unexpected.
 ## Install an owned app that didn't install
 
 A successful create flow installs the app automatically, so you don't usually install an owned app separately.
+
 Only when the install step in the create flow fails is the SharePoint Embedded app created but not installed.
+
 In that case, install the app from the **Owned apps** tab.
 
 1. Go to **SharePoint Embedded** > **Apps**.
@@ -117,11 +129,13 @@ Select an app on the **Installed apps** tab to open its details panel. The panel
 *Figure 1: The app details panel on the Installed apps tab shows identifiers and billing information, and lets you copy the Entra and SharePoint Embedded app IDs.*
 
 If the app isn't visible, refresh the page and confirm that installation completed successfully.
+
 If the app remains missing, contact the app owner and verify the app identity.
 
 ## Complete admin consent
 
 Installation and consent are related but not always the same task.
+
 The owning app must have a service principal installed in the consuming tenant and admin consent before it can register container type application permissions.
 
 > [!NOTE]
@@ -141,6 +155,7 @@ Don't substitute a different application ID.
 ## Confirm billing requirements
 
 SharePoint Embedded supports standard and pass-through billing models.
+
 For pass-through billing, a Global Administrator in the consuming tenant must set up billing in the Microsoft 365 admin center before users can access the app. Only a Global Administrator can set up billing; the SharePoint Embedded Administrator role can't.
 
 If billing is invalid or SharePoint Embedded is turned off, users can no longer create new containers, although existing containers and their content remain accessible.
@@ -156,6 +171,7 @@ If billing was skipped during app creation, you can attach it later from the app
 For a **User org** app, billing isn't attached from this panel. A Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center. See [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
 Use [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md) to configure billing for consuming-tenant scenarios.
+
 Use [Monitor usage, billing, and cost](monitor-usage-billing-cost.md) to review ongoing cost.
 
 ## Verify containers after app use
@@ -176,7 +192,9 @@ For detailed steps, see [Manage containers in SharePoint admin center](manage-co
 ## Validate with PowerShell
 
 Use SharePoint Online Management Shell when you need a scripted check.
+
 Install the latest SharePoint Online Management Shell and connect to SharePoint Online.
+
 Then use the supported application inventory cmdlets.
 
 ```powershell
@@ -227,4 +245,5 @@ Use these checks when installation doesn't complete.
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 
 ## Next steps
+
 Grant consent and verify permissions in [Grant admin consent and permissions](grant-admin-consent-permissions.md).

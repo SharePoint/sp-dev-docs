@@ -3,7 +3,9 @@ title: Plan Authentication and Permissions
 description: Plan SharePoint Embedded authentication, admin consent, delegated access, app-only access, and container permissions.
 ms.date: 07/13/2026
 ms.reviewer: mawin
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Plan authentication and permissions
@@ -224,4 +226,5 @@ Review these before designing privileged or search-heavy features.
 - Review exceptional access patterns.
 
 ## Next steps
+
 Review scale and performance constraints: [Understand limits and calling patterns](../plan/limits-calling-patterns.md).

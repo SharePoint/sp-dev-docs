@@ -3,7 +3,9 @@ title: Set up SharePoint Embedded as a Foundry knowledge source
 description: Configure Microsoft Foundry Agent Service to use SharePoint Embedded content as a SharePoint knowledge source.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Set up SharePoint Embedded as a Foundry knowledge source

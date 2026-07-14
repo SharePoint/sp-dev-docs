@@ -3,7 +3,9 @@ title: Validate customer app installation
 description: Validate SharePoint Embedded container type registration, permissions, containers, and billing after a customer installs an ISV app.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 # Validate customer app installation
 

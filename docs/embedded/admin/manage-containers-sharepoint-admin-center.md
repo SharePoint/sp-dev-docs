@@ -3,7 +3,9 @@ title: Manage Containers in SharePoint Admin Center
 description: View, inspect, delete, restore, and manage SharePoint Embedded containers in the SharePoint admin center.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Manage containers in SharePoint admin center
@@ -18,6 +20,7 @@ next: manage-containers-powershell.md
 -->
 
 Use the SharePoint admin center to manage SharePoint Embedded containers through a graphical experience.
+
 The SharePoint Embedded container pages help consuming tenant admins view active containers, inspect details, manage membership, apply sensitivity labels, archive and reactivate containers, delete containers, restore deleted containers, and permanently delete containers.
 
 > [!IMPORTANT]
@@ -52,6 +55,7 @@ The role doesn't expose general SharePoint **Active sites** or **Deleted sites**
 ## View active containers
 
 The **Active containers** page shows active containers in the tenant.
+
 Use it for inventory, compliance review, and lifecycle decisions.
 
 The **Active containers** page shows these container properties.
@@ -98,6 +102,7 @@ Use the active container page controls to narrow the inventory.
 ## Inspect container details
 
 Open a container details panel when you need more information.
+
 The details view includes two tabs.
 
 | Tab | Use it for |
@@ -106,6 +111,7 @@ The details view includes two tabs.
 | Membership | Review and manage user permissions for roles associated with the container. |
 
 Review the general tab before lifecycle operations.
+
 Review membership before changing users or owner assignments.
 
 ![Container details General tab showing container metadata, usage, and configuration settings.](../images/ctaux4.png)
@@ -113,6 +119,7 @@ Review membership before changing users or owner assignments.
 ## Manage membership
 
 The SharePoint Embedded platform supports four roles: Owner, Manager, Writer, and Reader.
+
 An individual SharePoint Embedded application may not use all four roles and may display different role names in its own user experience.
 
 In the SharePoint admin center membership panel, administrators can:
@@ -135,6 +142,7 @@ Coordinate with app owners when the app has its own membership workflow.
 ## Set a sensitivity label
 
 Admins can set a sensitivity label on a container from the Active containers page.
+
 Open the container details panel and use the settings area.
 
 Before applying a label, confirm:
@@ -215,6 +223,7 @@ The request displays as "Reactivating" on the Archived containers page. After 24
 ## Delete an active or archived container
 
 Delete a container only when there's a clear business reason.
+
 Container deletion can affect the SharePoint Embedded app that owns the container.
 
 Potential impacts include:
@@ -238,6 +247,7 @@ The container moves to the deleted container collection.
 
 > [!WARNING]
 > Deleting a container may interrupt the associated SharePoint Embedded application.
+>
 > Notify app owners before deleting containers.
 
 ## View deleted containers
@@ -295,6 +305,7 @@ After permanent deletion, the container is removed from the deleted container co
 ## When to use PowerShell instead
 
 Use PowerShell when you need automation or repeatable reporting.
+
 For example, use PowerShell to enumerate applications, list containers for an owning application, sort containers by storage, set sensitivity labels, delete containers, restore deleted containers, or permanently delete deleted containers.
 
 Continue with [Manage containers with PowerShell](manage-containers-powershell.md).
@@ -307,4 +318,5 @@ Continue with [Manage containers with PowerShell](manage-containers-powershell.m
 - [Apply security and compliance controls](apply-security-compliance-controls.md)
 
 ## Next steps
+
 Automate container management in [Manage containers with PowerShell](manage-containers-powershell.md).

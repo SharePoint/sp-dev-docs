@@ -3,7 +3,9 @@ title: Prepare Your App for Customer Installation
 description: Prepare a multitenant SharePoint Embedded app, container type, permissions, billing choice, and admin handoff for customer tenants.
 ms.date: 07/13/2026
 ms.reviewer: stpuceli
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 # Prepare your app for customer installation
 
@@ -215,4 +217,5 @@ Include a checklist the customer can complete with you after installation:
 For detailed validation, see [Validate customer app installation](validate-customer-installation.md).
 
 ## Next steps
+
 Choose the correct billing option before you send installation instructions to a customer: [Choose a billing model for your app](choose-app-billing-model.md).

@@ -4,6 +4,7 @@ description: This article describes the role and responsibilities of Consuming T
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Consuming tenant admin
@@ -29,6 +30,7 @@ next: install-sharepoint-embedded-app.md
 ## Consuming Tenant Admin Role
 
 Microsoft 365 SharePoint Embedded Administrator serves as the consuming tenant admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center.
+
 For information on the SharePoint Embedded Administrator role, see [Admin overview](admin-overview.md).
 
 ## Administration Tools

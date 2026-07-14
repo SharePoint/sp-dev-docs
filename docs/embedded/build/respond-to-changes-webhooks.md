@@ -3,21 +3,28 @@ title: Respond to file and container changes with webhooks
 description: Subscribe to SharePoint Embedded drive changes and handle Microsoft Graph webhook notifications.
 ms.date: 07/10/2026
 ms.reviewer: jaeccles
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
+
 # Respond to file and container changes with webhooks
+
 **Applies to:** Developer
+
 <!-- agent:
 task_type: how-to
 audience: developer
 outcome: Create Graph subscriptions and process SharePoint Embedded change notifications.
 next: archive-restore-containers.md
 -->
+
 Use Microsoft Graph webhooks when your app must react to file changes in a SharePoint Embedded container. A subscription tells Microsoft Graph to call your HTTPS endpoint when the subscribed resource changes.
 
 ![Diagram of the SharePoint Embedded webhook flow: the app creates a Microsoft Graph subscription for a container drive, and Microsoft Graph sends change notifications to the app's HTTPS endpoint.](../images/Using-Webhooks.png)
 
 ## Create a notification endpoint
+
 Expose an HTTPS endpoint that accepts `POST` requests. During local development, use ngrok to tunnel requests to a local server.
 
 ```console
@@ -63,6 +70,7 @@ server.post('/api/onReceiptAdded', async (req, res, next) => {
 ```
 
 ## Subscribe to a container drive
+
 Create the subscription with Microsoft Graph. In this pattern, the SharePoint Embedded container ID is the drive ID.
 
 ```http
@@ -83,6 +91,7 @@ Content-Type: application/json
 Subscribe to changes under `drives/{container-id}/root` and append `driveId={container-id}` to the notification URL so the handler can identify the container.
 
 ## Calculate expiration
+
 Drive item subscriptions have a maximum lifetime of 4,230 minutes. Use a pre-request script or backend scheduler to set the expiration time before creating the subscription.
 
 ```javascript
@@ -95,11 +104,13 @@ pm.environment.set("ContainerSubscriptionExpiry", expiry.toISOString());
 Store the subscription ID, resource, container ID, and expiration time. Renew each subscription before it expires.
 
 ## Process notifications safely
+
 Return quickly from the webhook request. Queue background work, fetch the current file or container state with Microsoft Graph, and make processing idempotent because notifications can be duplicated or delayed.
 
 Use webhooks for actions such as document processing, index refresh, user notifications, or workflow triggers. Keep a periodic reconciliation job for missed notifications or expired subscriptions.
 
 ## Verify the flow
+
 Create a subscription, upload or update a file in the container, and confirm your endpoint logs the expected drive ID. If validation fails, check the public HTTPS URL, the `validationToken` response content type, and whether your server parses query parameters before route execution.
 
 ## Next steps

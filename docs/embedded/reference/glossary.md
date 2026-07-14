@@ -3,7 +3,9 @@ title: Glossary
 description: Concise definitions of common SharePoint Embedded terms and concepts.
 ms.date: 06/25/2026
 ms.reviewer: pemtaira
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Glossary

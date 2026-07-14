@@ -3,7 +3,9 @@ title: Set Up Billing in Microsoft 365 Admin Center
 description: Configure SharePoint Embedded pass-through billing in the Microsoft 365 admin center for a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Set up billing in Microsoft 365 admin center
@@ -18,12 +20,14 @@ next: manage-containers-sharepoint-admin-center.md
 -->
 
 Set up SharePoint Embedded billing in the Microsoft 365 admin center when your tenant uses an app with pass-through or user organization billing.
+
 No user can access a pass-through SharePoint Embedded app before valid billing is configured for the SharePoint Embedded platform in the consuming tenant.
 
 > [!IMPORTANT]
 > Only a Global Administrator can set up SharePoint Embedded billing in the Microsoft 365 admin center. The SharePoint Embedded Administrator role can't configure billing.
 
 SharePoint Embedded billing is pay-as-you-go through Azure.
+
 Charges are based on supported meters such as storage, archived storage, API transactions, and egress.
 
 > [!IMPORTANT]
@@ -42,6 +46,7 @@ Confirm these prerequisites.
 - You understand whether the app uses pass-through billing.
 
 For tenant role context, see [Admin overview](admin-overview.md).
+
 For billing models, see [Choose a Billing Model](../plan/choose-billing-model.md).
 
 ## Understand billing models
@@ -65,6 +70,7 @@ The following diagram shows pass-through billing, where consumption charges are 
 ![Pass-through billing model, where the consuming tenant is billed for all consumption.](../images/2bill521.png)
 
 For standard billing, a Global Administrator in the developer tenant sets up billing for the container type.
+
 For pass-through billing, a Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center.
 
 This article focuses on the consuming tenant pass-through path.
@@ -72,6 +78,7 @@ This article focuses on the consuming tenant pass-through path.
 ## Understand cost meters
 
 SharePoint Embedded uses a consumption-based model.
+
 SharePoint Embedded uses four primary meters.
 
 | Meter | What it measures |
@@ -162,6 +169,7 @@ Use these checks when setup fails.
 ## Common access symptoms
 
 Users may report access failures when billing isn't valid.
+
 Look for these symptoms.
 
 - The SharePoint Embedded app is installed but inactive.
@@ -195,4 +203,5 @@ After setup, establish a billing operations process.
 - [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md)
 
 ## Next steps
+
 Manage containers in [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md).

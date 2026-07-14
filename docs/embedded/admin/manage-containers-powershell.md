@@ -3,7 +3,9 @@ title: Manage Containers with PowerShell
 description: Use SharePoint Online Management Shell to inventory and manage SharePoint Embedded apps and containers.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Manage containers with PowerShell
@@ -18,6 +20,7 @@ next: monitor-usage-billing-cost.md
 -->
 
 Use SharePoint Online Management Shell to automate SharePoint Embedded application and container administration.
+
 PowerShell is useful for inventory, reporting, lifecycle operations, sensitivity label updates, sharing configuration, and permission review.
 
 This article states the supported administrator cmdlets and links to canonical cmdlet references for deeper syntax details.
@@ -40,6 +43,7 @@ For role details, see [SharePoint Embedded administrator](admin-overview.md).
 ## Install SharePoint Online Management Shell
 
 Install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588).
+
 Open it from the Start menu or use a supported PowerShell host with the module available.
 
 Install the latest shell and connect to SharePoint Online before you run SharePoint Embedded cmdlets.
@@ -55,6 +59,7 @@ Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
 ```
 
 Replace `<tenant>` with your tenant name.
+
 Sign in with an account that has the required admin role.
 
 > [!TIP]
@@ -147,6 +152,7 @@ Get-SPOContainer -Identity <SiteURL>
 ```
 
 The detailed result can include storage, ownership details, site URL, label information, and owner count.
+
 Use the site URL when configuring some compliance controls in Microsoft Purview.
 
 ## Set or remove a sensitivity label
@@ -164,6 +170,7 @@ Set-SPOContainer -Identity <ContainerID> -RemoveLabel
 ```
 
 Coordinate sensitivity label changes with compliance administrators.
+
 For compliance guidance, see [Apply security and compliance controls](apply-security-compliance-controls.md).
 
 ## Manage container membership
@@ -187,6 +194,7 @@ Remove-SPOContainer -Identity <ContainerId>
 ```
 
 Deleting a container can cause data loss, broken links, application failures, and permission issues.
+
 Notify container owners and app owners before deleting.
 
 > [!WARNING]
@@ -263,4 +271,5 @@ Follow these operational practices.
 - [Apply security and compliance controls](apply-security-compliance-controls.md)
 
 ## Next steps
+
 Monitor consumption in [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).

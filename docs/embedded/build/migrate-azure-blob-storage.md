@@ -3,22 +3,29 @@ title: Migrate from Azure Blob Storage
 description: Move files from Azure Blob Storage into SharePoint Embedded containers with Microsoft Graph.
 ms.date: 07/10/2026
 ms.reviewer: stpuceli
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
+
 # Migrate from Azure Blob Storage
+
 **Applies to:** Developer
+
 <!-- agent:
 task_type: how-to
 audience: developer
 outcome: Map blobs to SharePoint Embedded drive items and upload content with Graph sessions.
 next: ../publish/prepare-customer-installation.md
 -->
+
 Use this guide when you move content from Azure Blob Storage to SharePoint Embedded. A C# migration app reads blobs with the Azure Storage SDK and uploads them to a SharePoint Embedded container with Microsoft Graph.
 
 > [!TIP]
 > For migrating from SharePoint or OneDrive sources, SharePoint Embedded also provides dedicated [migration APIs](/graph/api/resources/sharepointmigration-api-overview) that are generally available on the **v1.0** Microsoft Graph endpoint (November 2025) and support migrating **file version history** (February 2026). The manual sample in this article is best when copying from Azure Blob Storage specifically.
 
 ## Prepare authentication
+
 For Azure Blob Storage, the sample uses a container-level SAS URL with `Read` and `List` permissions.
 
 ```csharp
@@ -47,6 +54,7 @@ Because the sample uses `InteractiveBrowserCredential` with a `http://localhost`
 The consuming tenant must have the application and container type registered. The sample also requires a SharePoint Embedded container ID for the destination.
 
 ## Enumerate source blobs
+
 List blob names from the Azure Blob Storage container before queuing migration work.
 
 ```csharp
@@ -61,6 +69,7 @@ return blobs;
 Azure Blob Storage uses a flat namespace. If blob names include `/`, parse those segments into SharePoint Embedded folders or decide to upload all files to the container root.
 
 ## Create destination folders
+
 The sample creates a top-level folder named after the Azure Blob Storage container, then creates nested folders as it traverses each blob name. Check for an existing item before creating a folder.
 
 ```csharp
@@ -83,6 +92,7 @@ var createdFolder = await _graphClient.Drives[_containerId].Items[parentFolderId
 ```
 
 ## Upload files with Graph sessions
+
 Download each blob to a stream, reset the stream position, create an upload session, and upload with `LargeFileUploadTask<DriveItem>`.
 
 ```csharp
@@ -116,6 +126,7 @@ var uploadResult = await fileUploadTask.UploadAsync(progress);
 Use `fail` when duplicate files shouldn't be overwritten. Change the conflict behavior only after you define replacement, rename, and audit rules.
 
 ## Run the sample
+
 The sample uses Microsoft Graph SDK 5.56.0, Azure.Identity 1.12.0, Azure.Storage.Blobs 12.21.0, CommandLineParser 2.9.1, and Newtonsoft.Json 13.0.3.
 
 ```console
@@ -125,6 +136,7 @@ dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clienti
 Use the optional blob list file for controlled batches and the optional output file to capture failed blobs for reruns.
 
 ## Validate migrated content
+
 Compare source blob counts with destination drive item counts. Check folder paths, file sizes, upload failures, duplicate handling, and required metadata. Open representative files through your SharePoint Embedded app, then validate search and metadata queries after indexing has had time to complete.
 
 Don't delete source blobs until business owners approve the migration result and retention requirements are satisfied.

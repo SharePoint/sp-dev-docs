@@ -1,9 +1,10 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 07/13/2026
+ms.date: 06/04/2025
 ms.reviewer: dilucesr
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # What's new in SharePoint Embedded
@@ -31,8 +32,8 @@ next: overview.md
 ## March 2026
 
 - [SharePoint Embedded agent SDK](./build/agent-experiences.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./build/sharepoint-embedded-knowledge-source.md).
-- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new **permissions** relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. For more information, see [Manage container type owners](./build/configure-authentication-authorization.md#manage-container-type-owners).
-- [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new **informationBarrier** property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [Information Barriers](/purview/information-barriers-sharepoint).
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new `permissions` relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. For more information, see [Manage container type owners](./build/configure-authentication-authorization.md#manage-container-type-owners).
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new `informationBarrier` property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [Information Barriers](/purview/information-barriers-sharepoint).
 - The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available through the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
 
 ## February 2026
@@ -57,7 +58,7 @@ next: overview.md
 
 ## October 2025
 
-- [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a **recycleBinItem** if the ID of the original **driveItem** is known.
+- [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key to enable restoring a `recycleBinItem` if the ID of the original `driveItem` is known.
 - [Microsoft 365 Archive](/microsoft-365/archive/archive-overview) is previewing support for [SharePoint Embedded](./overview.md) to a limited number of customers. You can [sign up for the private preview](https://forms.office.com/r/98Z4iqSKya) today.
 
 ## September 2025

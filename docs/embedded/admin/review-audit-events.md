@@ -3,7 +3,9 @@ title: Review Audit Events
 description: Find and interpret SharePoint Embedded audit activity in Microsoft Purview audit.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Review audit events
@@ -18,6 +20,7 @@ next: apply-security-compliance-controls.md
 -->
 
 Review SharePoint Embedded audit activity in Microsoft Purview audit when investigating user, admin, file, or container activity.
+
 SharePoint Embedded audit capabilities mirror existing SharePoint audit capabilities, and user and admin operations performed in SharePoint Embedded applications are captured in the organization's unified audit log.
 
 > [!IMPORTANT]
@@ -39,6 +42,7 @@ For supported SharePoint Embedded compliance capabilities, see [Security and Com
 ## Understand SharePoint Embedded audit coverage
 
 Audit capabilities in SharePoint Embedded mirror existing SharePoint audit capabilities.
+
 User and admin operations performed in applications hosted in SharePoint Embedded are captured, recorded, and retained in the unified audit log.
 
 Audit can help answer questions such as:
@@ -51,11 +55,13 @@ Audit can help answer questions such as:
 - Which container type was involved in an event?
 
 Retention and availability depend on your Microsoft Purview audit licensing and configuration.
+
 For audit platform details, see [Auditing solutions in Microsoft Purview](/purview/audit-solutions-overview).
 
 ## Identify SharePoint Embedded fields
 
 In addition to existing SharePoint file properties, SharePoint Embedded audit events include extra data that helps isolate SharePoint Embedded content.
+
 SharePoint Embedded audit events include these fields:
 
 | Field | Use it for |
@@ -64,6 +70,7 @@ SharePoint Embedded audit events include these fields:
 | `ContainerTypeId` | Identify the SharePoint Embedded container type involved in the event. |
 
 Use these fields with app and user context to scope an investigation.
+
 If a result set includes regular SharePoint and SharePoint Embedded activity, filter or inspect these fields to isolate embedded content.
 
 ## SharePoint Embedded audit activities
@@ -91,6 +98,7 @@ Before searching audit, collect the context you have.
 1. Identify the suspected operation, such as read, update, delete, restore, sharing, or label change.
 
 Use [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md) to inspect container details.
+
 Use [Manage containers with PowerShell](manage-containers-powershell.md) to retrieve container IDs and URLs for repeatable investigations.
 
 ## Search in Microsoft Purview audit
@@ -109,6 +117,7 @@ Use Microsoft Purview audit to search activity.
 1. Inspect event details for SharePoint Embedded fields such as `ContainerInstanceId` and `ContainerTypeId`.
 
 Use the most restrictive filters that still capture the incident.
+
 Then widen the search if results are incomplete.
 
 > [!TIP]
@@ -139,31 +148,37 @@ Use audit records for common SharePoint Embedded investigations.
 ### Content access review
 
 Search for file access or read activity by user, date range, and container context.
+
 Use `ContainerInstanceId` to confirm the activity occurred in the expected SharePoint Embedded container.
 
 ### Content change review
 
 Search for create, modify, rename, move, or delete activity.
+
 Review the sequence of operations to identify whether content was changed by a user, app, or admin process.
 
 ### Container lifecycle review
 
 Search for admin operations related to deletion, restore, or permanent deletion.
+
 Correlate audit records with SharePoint admin center or PowerShell change records.
 
 ### Sensitivity label review
 
 Search for label-related activity when investigating data classification changes.
+
 Correlate audit records with the container's current sensitivity label and any policy changes in Microsoft Purview.
 
 ### External sharing review
 
 Search for sharing-related SharePoint activities when investigating access outside the organization.
+
 Also review application-level sharing settings when the app supports external sharing.
 
 ## Correlate with eDiscovery and DLP
 
 Audit shows activity.
+
 Other Microsoft Purview tools help with content investigation and policy enforcement.
 
 - Use eDiscovery to search, hold, and export content in SharePoint Embedded containers.
@@ -188,6 +203,7 @@ Use these checks when expected results are missing.
 
 > [!NOTE]
 > Audit records can take time to appear.
+>
 > If an event is recent, retry after the normal audit ingestion delay for your environment.
 
 ## Preserve investigation context
@@ -213,4 +229,5 @@ Keep records according to your compliance and legal process.
 - [Auditing solutions in Microsoft Purview](/purview/audit-solutions-overview)
 
 ## Next steps
+
 Apply broader controls in [Apply security and compliance controls](apply-security-compliance-controls.md).

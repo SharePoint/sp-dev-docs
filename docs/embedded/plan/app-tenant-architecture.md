@@ -3,7 +3,9 @@ title: Understand App and Tenant Architecture
 description: Plan how SharePoint Embedded apps, tenants, container types, and containers relate across owning and consuming tenants.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Understand app and tenant architecture
@@ -218,4 +220,5 @@ For model selection, see [Choose an app model: single-tenant or multitenant](../
 - Plan security and compliance responsibilities.
 
 ## Next steps
+
 Choose the app model that matches your tenant and customer relationship: [Choose an app model: single-tenant or multitenant](../plan/choose-app-model.md).

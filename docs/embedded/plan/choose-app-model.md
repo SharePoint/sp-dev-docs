@@ -3,7 +3,9 @@ title: "Choose an App Model: Single-Tenant or Multitenant"
 description: Compare single-tenant and multitenant SharePoint Embedded app models before you create container types and containers.
 ms.date: 07/13/2026
 ms.reviewer: mawin
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Choose an app model: single-tenant or multitenant
@@ -190,4 +192,5 @@ If you're building an ISV app:
 - Identify who manages compliance policies.
 
 ## Next steps
+
 Review the storage model: [Understand container types and containers](../plan/container-types-containers.md).

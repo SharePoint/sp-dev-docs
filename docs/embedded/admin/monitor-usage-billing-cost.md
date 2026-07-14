@@ -3,7 +3,9 @@ title: Monitor Usage, Billing, and Cost
 description: Monitor SharePoint Embedded usage and pay-as-you-go costs with billing meters and Azure Cost Management.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Monitor usage, billing, and cost
@@ -18,7 +20,9 @@ next: review-audit-events.md
 -->
 
 Monitor SharePoint Embedded usage and cost after billing is configured.
+
 SharePoint Embedded uses pay-as-you-go billing through an Azure subscription.
+
 Cost is based on usage meters, so administrators should review storage, archived storage, API transactions, and egress regularly.
 
 Use this article to understand cost drivers, review billing in Azure Cost Management, and establish operational controls.
@@ -41,6 +45,7 @@ For billing setup, see [Set up billing in Microsoft 365 admin center](setup-bill
 ## Understand SharePoint Embedded meters
 
 SharePoint Embedded uses these billing meters.
+
 Both standard billing and pass-through billing container types use the same meters.
 
 | Meter | Unit concept | Cost driver |
@@ -55,6 +60,7 @@ For related details, see [SharePoint Embedded Billing Meters](../reference/billi
 ## Monitor storage
 
 Storage consumption includes more than current visible files.
+
 Storage includes files, documents, metadata, versions, recycle bin content, and deleted container collection content.
 
 Use these actions to manage storage.
@@ -71,6 +77,7 @@ To sort containers by storage with PowerShell, see [Manage containers with Power
 ## Monitor API transactions
 
 Each Microsoft Graph call made explicitly by the SharePoint Embedded application counts as one transaction.
+
 Calls made by internal services to containers aren't charged when the application has no control over those calls.
 
 Nonchargeable transactions include:
@@ -79,6 +86,7 @@ Nonchargeable transactions include:
 - Admin actions taken by SharePoint Embedded Admins or Global Admins through SharePoint admin center or SharePoint PowerShell.
 
 Use app telemetry from the owning application to correlate app releases, user activity, and transaction growth.
+
 Work with app owners when transaction growth is unexpected.
 
 ## Monitor egress
@@ -91,6 +99,7 @@ Exempt transfers include:
 - File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC).
 
 Review app download behavior when egress grows.
+
 Large exports, sync-like patterns, or repeated downloads can increase egress.
 
 ## Open Azure Cost Management
@@ -115,11 +124,13 @@ Large exports, sync-like patterns, or repeated downloads can increase egress.
 ![Azure Cost analysis view with filters to break down cost by meter, app ID, tenant ID, or container type ID.](../images/billmanag2.png)
 
 Compare cost trends to app deployment dates and usage campaigns.
+
 If cost increases suddenly, review storage, transaction volume, and egress separately.
 
 ## Download invoices
 
 Use the **Invoices** area under Billing to view and download billing invoices for the billing period.
+
 Store invoices according to your organization's finance and procurement processes.
 
 If invoice values don't match expected usage, compare invoice periods with Cost analysis date ranges.
@@ -185,4 +196,5 @@ Establish a recurring review process.
 - [SharePoint Embedded Billing Meters](../reference/billing-meters.md)
 
 ## Next steps
+
 Review compliance activity in [Review audit events](review-audit-events.md).

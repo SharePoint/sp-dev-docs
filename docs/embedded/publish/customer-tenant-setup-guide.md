@@ -3,7 +3,9 @@ title: Guide customers through tenant setup
 description: Give customer admins the SharePoint Embedded setup, consent, billing, and validation steps needed to install an ISV app.
 ms.date: 07/13/2026
 ms.reviewer: pemtaira
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 # Guide customers through tenant setup
 
@@ -69,7 +71,6 @@ Tell customers exactly which Microsoft Graph permissions your app needs and why.
 | --- | --- | --- |
 | `FileStorageContainerTypeReg.Selected` | Register your container type in the consuming tenant. | The application permission requires admin consent. The delegated permission doesn't require admin consent, but the user who registers the container type must be a SharePoint Embedded Administrator or Global Administrator. |
 | `FileStorageContainer.Selected` | Read and write SharePoint Embedded container content for the container type. | The application permission requires admin consent. The delegated permission does not require admin consent. |
-
 
 ## Setup overview for customers
 

@@ -3,7 +3,9 @@ title: Apply Security and Compliance Controls
 description: Apply Microsoft Purview and SharePoint controls to protect and govern SharePoint Embedded content.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Apply security and compliance controls
@@ -18,6 +20,7 @@ next: ../reference/troubleshooting.md
 -->
 
 Apply security and compliance controls to SharePoint Embedded content by using Microsoft Purview and supported SharePoint administration features.
+
 SharePoint Embedded uses Microsoft 365 compliance and data governance capabilities so organizations can protect, govern, and investigate content stored by embedded applications.
 
 Some compliance scenarios require the owning application to provide the end-user experience because SharePoint Embedded is API-only and doesn't have its own user interface.
@@ -42,6 +45,7 @@ For supported controls, see [Plan Security, Compliance, and Governance](../plan/
 ## Get container details for policy scope
 
 Many compliance tasks need a container URL or container identifier.
+
 Use PowerShell to retrieve application and container details.
 
 1. View SharePoint Embedded applications registered in the tenant.
@@ -63,6 +67,7 @@ Use PowerShell to retrieve application and container details.
    ```
 
 Use the container site URL to target policies at specific SharePoint Embedded containers.
+
 For cmdlet details, see [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer).
 
 ## Apply audit controls
@@ -111,6 +116,7 @@ Use these scoping options:
 | Selected locations | Applies to specific SharePoint locations, including selected SharePoint Embedded container URLs. |
 
 Use broad scope when a policy applies to all SharePoint and SharePoint Embedded content.
+
 Use selected container URLs when a policy applies only to specific data.
 
 ![Microsoft Purview retention policy configured for All sites, which enforces it on all SharePoint sites and SharePoint Embedded containers.](../images/sc4.png)
@@ -147,6 +153,7 @@ To apply DLP to selected SharePoint Embedded containers:
 ![Microsoft Purview DLP policy scoped to selected SharePoint Embedded container URLs.](../images/sc7.png)
 
 Some DLP scenarios require user interaction, such as business justification for override or policy tips.
+
 Because SharePoint Embedded doesn't provide a native user interface, the client app must implement the required user experience, often by using Microsoft Graph where applicable.
 
 For DLP details, see [Learn about data loss prevention](/purview/dlp-learn-about-dlp).
@@ -181,6 +188,7 @@ Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 
 A SharePoint Advanced Management license is needed to enforce this policy.
+
 Read the SharePoint documentation before enabling it in production.
 
 For more information, see [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
@@ -188,6 +196,7 @@ For more information, see [Block download policy for SharePoint sites and OneDri
 ## Apply Conditional Access policy
 
 SharePoint Embedded supports basic Conditional Access policy configurations.
+
 The `ConditionalAccessPolicy` parameter supports these values:
 
 - `AllowFullAccess`
@@ -201,6 +210,7 @@ Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOCondi
 ```
 
 Review tenant access policies before changing container access.
+
 Test app behavior for web, desktop, and mobile clients.
 
 For related guidance, see [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices).
@@ -242,4 +252,5 @@ After applying a control:
 - [Troubleshooting](../reference/troubleshooting.md)
 
 ## Next steps
+
 Review troubleshooting guidance in [Troubleshooting](../reference/troubleshooting.md).

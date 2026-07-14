@@ -3,7 +3,9 @@ title: Choose a Billing Model
 description: Compare standard and pass-through SharePoint Embedded billing models before you create production container types.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Choose a billing model
@@ -193,4 +195,5 @@ Use these setup references after you choose a model:
 - Plan calling patterns to manage API transaction cost.
 
 ## Next steps
+
 Plan governance responsibilities for tenant content: [Plan security, compliance, and governance](../plan/security-compliance-governance.md).

@@ -3,7 +3,9 @@ title: Audit events
 description: Reference for SharePoint Embedded container type audit events in the Microsoft Purview unified audit log.
 ms.date: 07/10/2026
 ms.reviewer: pemtaira
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Audit events

@@ -3,7 +3,9 @@ title: Grant Admin Consent and Permissions
 description: Review SharePoint Embedded permissions, grant admin consent, and verify the consent state in a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Grant admin consent and permissions
@@ -72,6 +74,7 @@ Ask the app owner to explain any permission that doesn't align with the expected
 
 > [!CAUTION]
 > - DON'T grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
+>
 > - DON'T grant consent if you don't understand why each permission is being requested.
 
 ## Grant admin consent from the consent endpoint
@@ -83,6 +86,7 @@ https://login.microsoftonline.com/{your-tenant-id}/v2.0/adminconsent?client_id={
 ```
 
 Confirm that in the admin consent URL:
+
 - `{your-tenant-id}` matches your Microsoft Entra tenant ID.
 - `{owning-app-clientid}` matches the owning application client ID.
 - `{spe-app-redirect-uri}` points to a URL in the SharePoint Embedded app.
@@ -141,4 +145,5 @@ Use these checks when consent succeeds but the app owner reports that API calls 
 - [Admin overview](admin-overview.md)
 
 ## Next steps
+
 Configure billing in [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).

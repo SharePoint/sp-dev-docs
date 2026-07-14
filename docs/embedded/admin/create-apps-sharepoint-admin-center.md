@@ -3,7 +3,9 @@ title: Create Apps in SharePoint Admin Center
 description: Create a SharePoint Embedded app from the SharePoint admin center and validate the new app registration.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Create apps in SharePoint admin center
@@ -90,24 +92,31 @@ In **Entra app registration**, choose one option.
 | Use an existing Entra app | You already have a Microsoft Entra app and want to associate it with the SharePoint Embedded app. |
 
 If you choose **New app**, enter the new Entra app name.
+
 If you choose **Use an existing Entra app**, search by application ID or application name.
 
 Don't create duplicate app registrations unless your app architecture requires them.
+
 Use one owning application for the SharePoint Embedded app that owns its container type.
 
 ## Add app owners
 
 Add up to three owners in the **Owners** field.
+
 Owners can manage app settings and billing configuration.
+
 Assign the developers who build the app as owners so you can hand the app off immediately after creation.
+
 Choose durable administrative owners instead of individual temporary project members when an owner must persist beyond the initial project.
 
 Record the owners in your internal operations documentation.
+
 If an owner leaves the organization, update ownership before removing their account.
 
 ## Select billing type
 
 Billing type determines who pays for SharePoint Embedded consumption.
+
 Choose carefully because billing type can't be changed after app creation.
 
 | Billing type | Meaning |
@@ -116,6 +125,7 @@ Choose carefully because billing type can't be changed after app creation.
 | Owner org | Usage is billed to the organization that owns the app. |
 
 Use **User org** for scenarios where each consuming tenant is responsible for billing.
+
 Use **Owner org** when your organization owns the app and manages billing directly.
 
 For billing concepts, see [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md) and [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).
@@ -143,8 +153,11 @@ If you select **Owner org**, choose when to connect the Azure billing subscripti
 ## Configure advanced settings
 
 Expand **Advanced settings** when you need optional settings.
+
 The **Graph Explorer** toggle supports development and testing.
+
 Turn it on only when administrators or developers need to explore Microsoft Graph requests for the app.
+
 Turn it off when it isn't needed.
 
 For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
@@ -167,6 +180,7 @@ When you select **Create app**, the admin center completes these steps together:
 A successful create flow also installs the app, so the app appears on the **Installed apps** tab. If only the install step fails, the SharePoint Embedded app is created but not installed. In that case, install it later from the **Owned apps** tab. See [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md).
 
 The **Create app** button is available only after required fields are complete.
+
 If you cancel the panel, no app is created.
 
 ## Validate app creation
@@ -191,6 +205,7 @@ Use the billing status to decide the next action.
 ## Prepare for installation
 
 App creation doesn't complete the consuming tenant setup by itself.
+
 Depending on the app model, the tenant still needs installation, consent, and permission registration.
 
 Continue with these tasks.
@@ -226,4 +241,5 @@ Use these checks if creation fails or the app isn't usable.
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 
 ## Next steps
+
 Install the app by using [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md).

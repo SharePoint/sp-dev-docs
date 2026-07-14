@@ -3,22 +3,29 @@ title: Search Containers and Files
 description: Search SharePoint Embedded containers and files with Microsoft Search in Microsoft Graph.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
+
 # Search containers and files
+
 **Applies to:** Developer
+
 <!-- agent:
 task_type: how-to
 audience: developer
 outcome: Scope Microsoft Search requests to SharePoint Embedded containers and files.
 next: container-metadata.md
 -->
+
 Use Microsoft Search in Microsoft Graph when your app needs keyword search across SharePoint Embedded containers or content. The search API ranks matching results and returns `drive` resources for containers or `driveItem` resources for files and folders.
 
 > [!NOTE]
 > SharePoint Embedded search is in preview and is available only on the Microsoft Graph **`/beta`** endpoint — there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
 
 ## Choose the search scope
+
 Scope every request to the container type or container that belongs to your app. Search runs in the context of the signed-in user, so the service trims results to content the user can access. Your app must also have access to the corresponding container type before it can open returned containers or files.
 
 Use these managed properties in the `queryString`:
@@ -34,6 +41,7 @@ Use these managed properties in the `queryString`:
 If your application opted out of Microsoft 365 content discoverability, set `sharePointOneDriveOptions.includeHiddenContent` to `true` in the request body.
 
 ## Search containers
+
 Send a `POST` request to Microsoft Graph search and request `drive` resources.
 
 ```http
@@ -62,6 +70,7 @@ Content-Type: application/json
 The response includes `hitsContainers`. Each hit contains a `hitId`, `rank`, `summary`, and a `resource` whose `@odata.type` is `#microsoft.graph.drive`.
 
 ## Search files and folders
+
 Request `driveItem` resources when the user searches file names or file content. Scope to a specific container with `ContainerId` when the user is already inside a workspace.
 
 ```json
@@ -85,6 +94,7 @@ Request `driveItem` resources when the user searches file names or file content.
 A `driveItem` result can include file metadata such as `id`, `name`, `size`, `createdDateTime`, `lastModifiedDateTime`, `parentReference`, `createdBy`, `lastModifiedBy`, and `webUrl`.
 
 ## Return selected fields and sort results
+
 Use the `fields` collection to request specific managed properties in the response. Use `sortProperties` only with sortable properties.
 
 ```json
@@ -106,6 +116,7 @@ Use the `fields` collection to request specific managed properties in the respon
 Use `from` and `size` to page through ranked results. Read `hitsContainers[].total` and `hitsContainers[].moreResultsAvailable` to decide whether to request another page.
 
 ## Search custom properties
+
 For container custom properties, append `OWSTEXT` to the custom property name in the query string.
 
 ```text
@@ -121,6 +132,7 @@ GET https://graph.microsoft.com/v1.0/drives/{container-id}/items?$filter=startsw
 When a container has more than 5,000 items and you enumerate with `$orderby`, include the `Prefer: HonorNonIndexedQueriesWarningMayFailRandomly` header required for large ordered enumerations.
 
 ## Known limitations
+
 Search enforces the signed-in user's access, not your app's authorization. Results include every container and item the user can access that matches the query — even containers whose container type your app isn't authorized to use. Always include `ContainerTypeId` in the `queryString` to scope results to your app.
 
 To open a container or file returned by search, your app must have access permissions to the corresponding container type.

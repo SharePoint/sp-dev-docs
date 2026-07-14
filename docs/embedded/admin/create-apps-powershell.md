@@ -3,7 +3,9 @@ title: Create apps with PowerShell
 description: Create and configure SharePoint Embedded apps with SharePoint PowerShell.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Create apps with PowerShell

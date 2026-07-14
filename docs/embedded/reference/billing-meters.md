@@ -3,7 +3,9 @@ title: Billing Meters
 description: Reference for SharePoint Embedded pay-as-you-go billing meters and pricing resources.
 ms.date: 07/13/2026
 ms.reviewer: pemtaira
+ms.author: mawin
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # Billing meters
@@ -20,8 +22,6 @@ next: ../admin/monitor-usage-billing-cost.md
 SharePoint Embedded uses pay-as-you-go (PAYG) billing through an Azure subscription. SharePoint Embedded has four billing meters. Both standard billing container types and pass-through billing container types use the same meters.
 
 For setup guidance, see [choose a billing model](../plan/choose-billing-model.md). For monitoring, see [monitor usage, billing, and cost](../admin/monitor-usage-billing-cost.md).
-
-## Billing meters
 
 | Meter | Unit | What is metered | Notes |
 | --- | --- | --- | --- |
