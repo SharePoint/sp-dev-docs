@@ -44,7 +44,7 @@ Before launching Office files, make sure:
 
 ## Get the DriveItem web URL
 When your app retrieves a DriveItem from Microsoft Graph, the response can include `webUrl`.
-For supported Office file types, `webUrl` can point to a WOPI URL that opens the document in Office for the web.
+For supported Office file types, `webUrl` points to a URL that opens the document in Office for the web.
 A supported Office web URL has this shape:
 
 ```http
@@ -66,7 +66,7 @@ Use the DriveItem `webUrl` when your app should open Office in the browser.
 > Office files use AutoSave when users edit Word, Excel, and PowerPoint files stored in SharePoint Embedded.
 
 ## Configure the default launch experience
-By default, the WOPI URL can include `action=default`.
+By default, the Office URL includes `action=default`.
 To force a mode, update the query parameter with this pattern:
 
 ```csharp
@@ -83,7 +83,7 @@ Use:
 - `action=edit` for editing when the user has edit permission.
 - `action=default` when Office should choose the default behavior.
 
-For WOPI action details, see [WOPI Discovery - WOPI Actions](/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions).
+For supported `action` values, see [Web Application Open Platform Interface actions](/microsoft-365/cloud-storage-partner-program/online/discovery#wopi-actions).
 ## Open files in Office desktop clients
 Use Office URI schemes when your app should open desktop clients directly.
 The format is:

@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 # Admin Overview
 
-**Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin / SharePoint admin / Compliance admin / Security admin
+**Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin / Compliance admin / Security admin
 
 <!-- agent:
 task_type: concept
@@ -36,15 +36,15 @@ SharePoint Embedded administration commonly involves the following roles.
 | --- | --- |
 | Global Administrator | Assign the SharePoint Embedded Administrator role and perform any SharePoint Embedded admin task when needed. |
 | SharePoint Embedded Administrator | Manage SharePoint Embedded apps and containers through SharePoint admin center and supported SharePoint PowerShell cmdlets. |
-| SharePoint administrator | Manage SharePoint service configuration. This role doesn't administer SharePoint Embedded apps or containers; use the SharePoint Embedded Administrator role for those tasks. |
 | Tenant administrator | Manage apps and settings in the consuming Microsoft 365 tenant. |
 | Compliance administrator | Configure Microsoft Purview audit, retention, DLP, eDiscovery, and related policies. |
 | Security administrator | Configure security policies and investigate security events that apply to SharePoint Embedded content. |
 
 The SharePoint Embedded Administrator role is available in Microsoft Entra and the Microsoft 365 admin center.
-It's dedicated to SharePoint Embedded administration.
+It is dedicated to SharePoint Embedded administration.
 It doesn't grant regular SharePoint site management access.
-For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and can't run site-specific SharePoint PowerShell cmdlets.
+For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and cannot run site-specific SharePoint PowerShell cmdlets.
+Likewise, the SharePoint administrator role doesn't administer SharePoint Embedded apps or containers.
 
 ### Assign the SharePoint Embedded Administrator role
 
