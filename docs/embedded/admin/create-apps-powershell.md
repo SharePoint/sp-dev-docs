@@ -82,7 +82,6 @@ Update supported container type properties.
 
 ```powershell
 Set-SPOContainerType -ContainerTypeId <ContainerTypeId>
-                     [-OwningApplicationId <OwningApplicationId>]
                      [-ContainerTypeName <ContainerTypeName>]
                      [-WhatIf] [-Confirm]
 ```
