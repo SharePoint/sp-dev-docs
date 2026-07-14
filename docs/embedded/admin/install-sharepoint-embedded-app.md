@@ -1,12 +1,12 @@
 ---
 title: Install a SharePoint Embedded App
 description: Install or register a SharePoint Embedded app in a consuming tenant and validate the tenant setup.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
-# Install a SharePoint Embedded App
+# Install a SharePoint Embedded app
 
 **Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin
 

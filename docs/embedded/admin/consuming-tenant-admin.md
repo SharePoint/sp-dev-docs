@@ -1,11 +1,12 @@
 ---
 title: Consuming Tenant Admin
 description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
-ms.date: 08/13/2025
+ms.date: 07/13/2026
+ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
-# Consuming Tenant Admin
+# Consuming tenant admin
 
 **Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin
 
@@ -16,11 +17,18 @@ ms.localizationpriority: high
 >
 > A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded.
 
-The organizations that use the SharePoint Embedded applications on their Microsoft 365 (Microsoft 365) tenants are the consuming tenants, and the persona that's responsible for managing these applications on their Microsoft 365 tenancy is the consuming tenant administrator. Consuming tenant administrators can perform various administrative actions on the SharePoint Embedded applications registered on their Microsoft 365 tenant and on the containers that hold the content. They can also manage tenant level configurations and ensure that data is stored in a secure, protected way that meets customers’ business and compliance policies. In this article, we describe the enterprise manageability features that are supported and can be performed by the consuming tenant administrator. They can do so either using the PowerShell cmdlets or through the SharePoint Administrator Center (SPAC).
+Organizations that use SharePoint Embedded applications in their Microsoft 365 tenants are consuming tenants. The consuming tenant administrator manages these applications and the containers that hold content. Consuming tenant administrators can manage applications registered in their tenant, tenant-level configurations, and security and compliance settings. This article describes enterprise manageability features that consuming tenant administrators can use through PowerShell cmdlets or the SharePoint admin center.
+
+<!-- agent:
+task_type: concept
+audience: administrator
+outcome: Understand the consuming tenant administrator role and the admin tools available for SharePoint Embedded apps.
+next: install-sharepoint-embedded-app.md
+-->
 
 ## Consuming Tenant Admin Role
 
-Microsoft 365 SharePoint Embedded Administrator serves as the consuming tenant admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center.
+Microsoft 365 SharePoint Embedded Administrator serves as the consuming tenant admin. Global Administrators in Microsoft 365 can assign users the SharePoint Embedded Administrator role. The Global Administrator role already has all the permissions of the SharePoint Embedded Administrator role. The SharePoint Embedded Role is available in Microsoft Entra ID and Microsoft 365 Admin Center.
 For information on the SharePoint Embedded Administrator role, see [Admin overview](admin-overview.md).
 
 ## Administration Tools
@@ -87,7 +95,7 @@ SharePoint Embedded has three billing meters, as shown. Refer to the [product pa
 
 1. A valid Azure subscription is required. You can create one by following the steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 1. A valid Azure resource group is required. You can create one by following the steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
-1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and the view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
+1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and then view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
 
     ![Microsoft 365 admin center Files and Content](../images/DTCBilling1.png)
 

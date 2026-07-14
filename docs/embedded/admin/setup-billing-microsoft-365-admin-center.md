@@ -1,12 +1,12 @@
 ---
 title: Set Up Billing in Microsoft 365 Admin Center
 description: Configure SharePoint Embedded pass-through billing in the Microsoft 365 admin center for a consuming tenant.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
-# Set Up Billing in Microsoft 365 Admin Center
+# Set up billing in Microsoft 365 admin center
 
 **Applies to:** Consuming tenant admin — Billing admin / Global admin
 

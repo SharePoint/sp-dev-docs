@@ -1,12 +1,12 @@
 ---
 title: Billing Meters
 description: Reference for SharePoint Embedded pay-as-you-go billing meters and pricing resources.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: pemtaira
 ms.localizationpriority: high
 ---
 
-# Billing Meters
+# Billing meters
 
 **Applies to:** Billing administrator
 

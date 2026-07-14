@@ -1,11 +1,11 @@
 ---
 title: Archive and Restore Containers
 description: Archive inactive SharePoint Embedded containers and reactivate them with Microsoft Graph beta APIs.
-ms.date: 06/25/2026
+ms.date: 07/13/2026
 ms.reviewer: jaeccles
 ms.localizationpriority: high
 ---
-# Archive and Restore Containers
+# Archive and restore containers
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to

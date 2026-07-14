@@ -1,12 +1,12 @@
 ---
 title: Review Audit Events
 description: Find and interpret SharePoint Embedded audit activity in Microsoft Purview audit.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: dilucesr
 ms.localizationpriority: high
 ---
 
-# Review Audit Events
+# Review audit events
 
 **Applies to:** Consuming tenant admin — Compliance admin / Security admin / Audit reader
 

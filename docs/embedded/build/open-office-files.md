@@ -1,11 +1,11 @@
 ---
 title: Open Office Files From Your App
 description: Launch Word, Excel, and PowerPoint files from SharePoint Embedded in Office web or desktop clients.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: cindylay
 ms.localizationpriority: high
 ---
-# Open Office Files From Your App
+# Open Office files from your app
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to

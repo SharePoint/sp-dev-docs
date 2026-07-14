@@ -1,7 +1,8 @@
 ---
 title: Create apps with PowerShell
 description: Create and configure SharePoint Embedded apps with SharePoint PowerShell.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
+ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
@@ -16,7 +17,7 @@ outcome: Create SharePoint Embedded apps and configure standard billing with Sha
 next: install-sharepoint-embedded-app.md
 -->
 
-Use SharePoint PowerShell to create SharePoint Embedded apps, which are also called container types. Each container type is associated with one Microsoft Entra application.
+Use SharePoint PowerShell to create SharePoint Embedded container types for apps. Each container type is associated with one Microsoft Entra application.
 
 ## Before you begin
 

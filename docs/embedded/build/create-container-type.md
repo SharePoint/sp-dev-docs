@@ -1,7 +1,7 @@
 ---
 title: Create and configure a container type
 description: Create a trial or production SharePoint Embedded container type and configure its owning app and billing model.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: stpuceli
 ms.localizationpriority: high
 ---
@@ -59,7 +59,7 @@ For Microsoft Graph, create the container type with the `trial` billing classifi
 The following restrictions are applied to trial container types:
 
 - The tenant can have up to five containers of the container type. This includes active containers and those in the recycle bin.
-- Each container has up to 200 MB of storage space.
+- Each container has up to 1 GB of storage space.
 - The container type expires after 30 days, and access to any existing containers of that container type is then removed.
 - The developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.

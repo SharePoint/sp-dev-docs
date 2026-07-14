@@ -1,14 +1,23 @@
 ---
 title: Scenarios and Use Cases
-description: Scenarios and Use Cases for SharePoint Embedded
-ms.date: 07/09/2026
+description: Explore scenarios and use cases for SharePoint Embedded.
+ms.date: 07/13/2026
 ms.reviewer: stpuceli
 ms.localizationpriority: high
 ---
 
 # Scenarios and use cases for SharePoint Embedded
 
+**Applies to:** All
+
 Use these example scenarios to spark ideas for how your custom application can use SharePoint Embedded. Each scenario combines several features to solve a common content-management problem.
+
+<!-- agent:
+task_type: concept
+audience: all
+outcome: Understand common SharePoint Embedded scenarios and when they fit a custom application.
+next: overview.md
+-->
 
 > [!NOTE]
 > This article isn't an exhaustive list of SharePoint Embedded features and scenarios. Each scenario shows one way to combine features in context.

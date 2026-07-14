@@ -1,12 +1,12 @@
 ---
 title: Choose a Billing Model
 description: Compare standard and pass-through SharePoint Embedded billing models before you create production container types.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
-# Choose a Billing Model
+# Choose a billing model
 
 **Applies to:** Architect
 

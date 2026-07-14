@@ -1,12 +1,12 @@
 ---
 title: Grant Admin Consent and Permissions
 description: Review SharePoint Embedded permissions, grant admin consent, and verify the consent state in a consuming tenant.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: dilucesr
 ms.localizationpriority: high
 ---
 
-# Grant Admin Consent and Permissions
+# Grant admin consent and permissions
 
 **Applies to:** Consuming tenant admin — Global admin
 

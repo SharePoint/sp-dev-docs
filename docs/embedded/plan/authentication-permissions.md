@@ -1,12 +1,12 @@
 ---
 title: Plan Authentication and Permissions
 description: Plan SharePoint Embedded authentication, admin consent, delegated access, app-only access, and container permissions.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: mawin
 ms.localizationpriority: high
 ---
 
-# Plan Authentication and Permissions
+# Plan authentication and permissions
 
 **Applies to:** Developer
 
@@ -62,7 +62,7 @@ Delegated access means the application acts on behalf of a user.
 
 SharePoint Embedded operations on behalf of a user require Microsoft Graph `FileStorageContainer.Selected` delegated permission.
 
-This permission requires admin consent on the consuming tenant before any user from that tenant can consent to it.
+This delegated permission does not require admin consent on the consuming tenant.
 
 The user must also have container permissions.
 
@@ -93,7 +93,7 @@ Apply least privilege when granting container type application permissions.
 
 An administrator on the consuming tenant must consent to the application's permission request.
 
-Admin consent is required for the `FileStorageContainer.Selected` permission.
+Admin consent is required for the application `FileStorageContainer.Selected` permission. Delegated `FileStorageContainer.Selected` does not require admin consent.
 
 Container type registration also requires consent for the owning application to act in the consuming tenant.
 
@@ -133,7 +133,7 @@ Container type application permissions include:
 - `AddPermissions`
 - `UpdatePermissions`
 - `DeletePermissions`
-- `DeleteOwnPermissions`
+- `DeleteOwnPermission`
 - `ManagePermissions`
 - `ManageContent`
 - `Full`

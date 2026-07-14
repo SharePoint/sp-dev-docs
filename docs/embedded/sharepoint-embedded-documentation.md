@@ -1,11 +1,14 @@
 ---
 title: SharePoint Embedded documentation
 description: Task-based index for SharePoint Embedded. Find the right page by what you're trying to do, whether you build apps or administer them.
-ms.date: 06/25/2026
+ms.date: 07/13/2026
+ms.reviewer: dilucesr
 ms.localizationpriority: high
 ---
 
 # SharePoint Embedded documentation
+
+**Applies to:** All
 
 SharePoint Embedded is a cloud-based, API-only file and document management platform built on Microsoft 365. Developers embed Office collaboration, Microsoft Purview compliance, and Copilot into their own apps — while documents stay inside each customer's Microsoft 365 tenant.
 

@@ -1,7 +1,7 @@
 ---
 title: Add real-time collaboration with Fluid Framework
 description: Use Fluid Framework with SharePoint Embedded for synchronized collaborative application state.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: jaeccles
 ms.localizationpriority: high
 ---
@@ -20,7 +20,7 @@ Create or identify a SharePoint Embedded application before you run the Fluid sa
 
 If you used the SharePoint Embedded Visual Studio Code extension, use the generated sample configuration to find `ContainerTypeId` and `ClientID`. You can also find the client ID in Microsoft Entra ID under **App registrations**.
 
-To try SharePoint Embedded at no cost, create a trial container type. See [Create and Configure a Container Type](create-container-type.md).
+To try SharePoint Embedded at no cost, create a trial container type. See [Create and configure a container type](create-container-type.md).
 
 ## Run the item counter sample
 The `item-counter-spe` sample lives in the Fluid Examples repository.

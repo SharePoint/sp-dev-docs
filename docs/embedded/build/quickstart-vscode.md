@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: Build your first app with VS Code"
 description: Create a standard SharePoint Embedded container type in Visual Studio Code and run the sample application locally.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: mawin
 ms.localizationpriority: high
 ---
-# Quickstart: Build your first app with VS Code
+# Quickstart: build your first app with VS Code
 **Applies to:** Developer
 <!-- agent:
 task_type: quickstart

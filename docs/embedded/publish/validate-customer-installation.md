@@ -1,7 +1,7 @@
 ---
 title: Validate customer app installation
 description: Validate SharePoint Embedded container type registration, permissions, containers, and billing after a customer installs an ISV app.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: dilucesr
 ms.localizationpriority: high
 ---
@@ -97,11 +97,11 @@ For most customer installations, validate at least these permissions:
 | Permission | Typical use | Validation note |
 | --- | --- | --- |
 | `FileStorageContainerTypeReg.Selected` | Register the container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated registration is used, the user performing registration must be a SharePoint Embedded Administrator or Global Administrator. |
-| `FileStorageContainer.Selected` | Access containers and content for the installed app. | This permission requires admin consent and should match the app behavior the customer approved. |
+| `FileStorageContainer.Selected` | Access containers and content for the installed app. | The application permission requires admin consent; the delegated permission does not. Confirm the grant matches the app behavior the customer approved. |
 
 Validate the following items:
 
-- Admin consent was granted by an authorized customer admin.
+- Admin consent was granted by an authorized customer admin for application permissions when required.
 - The consented app ID matches the ISV installation package.
 - The permission set includes the expected registration and content permissions for the app model.
 - Guest application permissions are present when required.

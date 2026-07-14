@@ -1,11 +1,11 @@
 ---
 title: Prepare Your App for Customer Installation
 description: Prepare a multitenant SharePoint Embedded app, container type, permissions, billing choice, and admin handoff for customer tenants.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: stpuceli
 ms.localizationpriority: high
 ---
-# Prepare Your App for Customer Installation
+# Prepare your app for customer installation
 
 **Applies to:** ISV
 
@@ -147,7 +147,7 @@ At minimum, a SharePoint Embedded app installed on a consuming tenant requests t
 | Permission | Type | Purpose |
 | --- | --- | --- |
 | [`FileStorageContainerTypeReg.Selected`](/graph/permissions-reference#filestoragecontainertyperegselected) | Delegated or application | Register your container type in the consuming tenant. With the delegated permission, the user performing registration must be a [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or Global Administrator. The application permission requires admin consent; the delegated permission doesn't. |
-| [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) | Delegated or application | Interact with SharePoint Embedded content for the container type. Requires admin consent. |
+| [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) | Delegated or application | Interact with SharePoint Embedded content for the container type. The application permission requires admin consent; the delegated permission does not. |
 
 > [!IMPORTANT]
 > Using SharePoint Embedded on behalf of a user (delegated access) is the recommended approach. It improves both the security and the auditability of actions performed by your application.

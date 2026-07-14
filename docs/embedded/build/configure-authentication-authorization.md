@@ -1,11 +1,11 @@
 ---
 title: Configure Authentication and Authorization
 description: Configure Microsoft Entra ID authentication and SharePoint Embedded authorization for your application.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: cindylay
 ms.localizationpriority: high
 ---
-# Configure Authentication and Authorization
+# Configure authentication and authorization
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to
@@ -39,13 +39,13 @@ For general steps, see [Register an application with the Microsoft identity plat
 SharePoint Embedded operations through Microsoft Graph require `FileStorageContainer.Selected`.
 Use delegated `FileStorageContainer.Selected` for access on behalf of a user.
 Use application `FileStorageContainer.Selected` for app-only access.
-Both forms require admin consent in the consuming tenant.
+Application `FileStorageContainer.Selected` requires admin consent in the consuming tenant. Delegated `FileStorageContainer.Selected` does not require admin consent.
 For administrative capabilities on behalf of an administrator user — such as enumerating, deleting, restoring, purging, and updating containers and managing their permissions across all governable container types in the consuming tenant — request `FileStorageContainer.Manage.All`.
 > [!NOTE]
 > The combination of Microsoft Graph permissions and container type application permissions determines what the application can actually do.
 
 ## Request the permission for registration
-Container type registration uses the Microsoft Graph container type registration API (currently in preview).
+Container type registration uses the Microsoft Graph container type registration API in v1.0.
 For registration, request the `FileStorageContainerTypeReg.Selected` Microsoft Graph permission (delegated or app-only).
 
 | Scope name | Type | Use |
@@ -66,7 +66,7 @@ Use a confidential client application to keep your app in control of actions tak
 For delegated calls:
 1. Sign in the user with Microsoft identity platform.
 1. Request delegated `FileStorageContainer.Selected`.
-1. Ensure admin consent is granted in the consuming tenant.
+1. Confirm delegated consent is granted according to the consuming tenant's user consent policies.
 1. Acquire an access token for Microsoft Graph.
 1. Call Microsoft Graph SharePoint Embedded endpoints.
 1. Verify the user is a member of the target container.

@@ -1,12 +1,21 @@
 ---
 title: What's new in SharePoint Embedded?
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 07/09/2026
+ms.date: 07/13/2026
 ms.reviewer: dilucesr
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ---
 
 # What's new in SharePoint Embedded
+
+**Applies to:** All
+
+<!-- agent:
+task_type: reference
+audience: all
+outcome: Review recent SharePoint Embedded feature and documentation updates.
+next: overview.md
+-->
 
 ## June 2026
 
@@ -24,7 +33,7 @@ ms.localizationpriority: medium
 - [SharePoint Embedded agent SDK](./build/agent-experiences.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./build/sharepoint-embedded-knowledge-source.md).
 - [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new **permissions** relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. For more information, see [Manage container type owners](./build/configure-authentication-authorization.md#manage-container-type-owners).
 - [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new **informationBarrier** property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [Information Barriers](/purview/information-barriers-sharepoint).
-- The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available via the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
+- The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available through the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
 
 ## February 2026
 
@@ -54,7 +63,7 @@ ms.localizationpriority: medium
 ## September 2025
 
 - [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the beta Microsoft Graph endpoint.
-- [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, and inviting _new_ guests via app-only access.
+- [driveItem: invite](/graph/api/driveitem-invite) has clearer documentation on restrictions for the root item of drives in OneDrive for home, and inviting _new_ guests by using app-only access.
 - [driveItem: copy](/graph/api/driveitem-copy) has clearer documentation on behaviors around metadata, versions, cross-geo operations, and known issues.
 - New cmdlets for consuming tenant administrators to [add](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [remove](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser), or [change](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser) container membership were added to the [SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 

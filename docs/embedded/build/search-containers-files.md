@@ -1,11 +1,11 @@
 ---
 title: Search Containers and Files
 description: Search SharePoint Embedded containers and files with Microsoft Search in Microsoft Graph.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: cindylay
 ms.localizationpriority: high
 ---
-# Search Containers and Files
+# Search containers and files
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to

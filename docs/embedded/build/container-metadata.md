@@ -1,11 +1,11 @@
 ---
 title: Store and Query Container Metadata
 description: Define SharePoint Embedded metadata columns and query drive items by field values.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: cindylay
 ms.localizationpriority: high
 ---
-# Store and Query Container Metadata
+# Store and query container metadata
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to

@@ -1,11 +1,11 @@
 ---
 title: Register Application Permissions
 description: Register SharePoint Embedded container type application permissions in a consuming tenant.
-ms.date: 07/10/2026
+ms.date: 07/13/2026
 ms.reviewer: stpuceli
 ms.localizationpriority: high
 ---
-# Register Application Permissions
+# Register application permissions
 **Applies to:** Developer
 <!-- agent:
 task_type: how-to
@@ -31,7 +31,7 @@ The owning application must have:
 - The `FileStorageContainerTypeReg.Selected` Microsoft Graph permission (user-delegated or app-only).
 - A valid token for the Microsoft Graph resource.
 > [!NOTE]
-> The container type registration API is a Microsoft Graph API. It's currently in preview and subject to change.
+> The container type registration API is available in Microsoft Graph v1.0.
 When the owning application calls the registration API on behalf of a user (delegated), that user must be assigned the [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. When it calls without a user context (app-only), it uses the client credentials grant flow.
 ## Grant admin consent
 Ask a consuming tenant administrator to grant admin consent to the owning application.
@@ -50,7 +50,7 @@ Registration requires:
 ## Register container type permissions
 Call the registration endpoint in the consuming tenant.
 ```http
-PUT https://graph.microsoft.com/beta/storage/fileStorage/containerTypeRegistrations/{containerTypeId}
+PUT https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypeRegistrations/{containerTypeId}
 ```
 `{containerTypeId}` is the container type ID created in the owning tenant.
 In the request body, provide the application permission grants for the container type.
@@ -104,7 +104,7 @@ Replace both app IDs with your applications.
 | `AddPermissions` | Add container members. |
 | `UpdatePermissions` | Update existing memberships. |
 | `DeletePermissions` | Delete other members. |
-| `DeleteOwnPermissions` | Remove the caller's own membership. |
+| `DeleteOwnPermission` | Remove the caller's own membership. |
 | `ManagePermissions` | Manage container role assignments. |
 | `ManageContent` | Manage the content of containers of this type. |
 | `Full` | Grant all permissions. |
