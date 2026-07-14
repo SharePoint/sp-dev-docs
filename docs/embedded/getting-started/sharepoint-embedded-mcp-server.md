@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded Model Context Protocol (MCP) server
 description: Use the open-source SharePoint Embedded MCP server to provision and manage SharePoint Embedded from any MCP-compatible AI client through natural language.
-ms.date: 07/10/2026
+ms.date: 07/14/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ---
@@ -20,15 +20,17 @@ Instead of clicking through portals and stitching together Microsoft Graph and A
 >
 > If you don't already have a tenant, you can get your own with the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program), [Microsoft Customer Digital Experience](https://cdx.transform.microsoft.com/), or a free trial of a [Microsoft 365 E3 license](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-## What you can do with it
+## Available tools
 
-The server exposes tools that an AI client can call on your behalf, grouped by task:
+The server exposes about 40 tools that an AI client can call on your behalf, plus an MCP prompt and reference-architecture resources. The tools are grouped by task:
 
-- **Provisioning and status**: Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](containertypes.md) and containers. A single `project_provision` tool can run the whole sequence—app → container type → billing → registration → container—in one call.
-- **Billing**: Pick an Azure subscription and resource group, register the `Microsoft.Syntex` resource provider, link a container type to [standard billing](../administration/billing/billing.md), and inspect billing classification or trial expiry.
-- **Scaffold, run, and deploy**: Generate a runnable reference application (a React single-page app with Azure Functions, or a C# web app), write its runtime configuration from your provisioning state, seed sample content, run it locally, and deploy it to Azure.
-- **Content operations (opt-in)**: After a separate, explicit consent, upload files, create folders, search, preview, manage sharing and permissions, and archive or restore containers.
-- **Documentation**: Search and fetch official SharePoint Embedded and Microsoft Graph documentation, grounded through the [Microsoft Learn MCP server](/training/support/mcp).
+| Category | What the tools do | Representative tools |
+|----------|-------------------|----------------------|
+| Provisioning and status | Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](containertypes.md) and containers. The `project_provision` tool runs the whole app → container type → billing → registration → container sequence in one call. | `status_get`, `project_provision`, `container_type_create`, `container_type_register`, `container_create` |
+| Billing | Pick an Azure subscription and resource group, register the `Microsoft.Syntex` resource provider, link a container type to [standard billing](../administration/billing/billing.md), and inspect billing classification or trial expiry. | `azure_subscriptions_list`, `billing_setup`, `billing_check` |
+| Scaffold, run, and deploy | Generate a runnable reference application (a React single-page app with Azure Functions, or a C# web app), write its runtime configuration from your provisioning state, seed sample content, run it locally, and deploy it to Azure. | `project_scaffold`, `project_hydrate_config`, `project_run_local`, `project_deploy` |
+| Content operations (opt-in) | After a separate, explicit consent, upload files, create folders, search, preview, manage sharing and permissions, and archive or restore containers. | `content_access_grant`, `content_file_upload`, `content_search`, `content_sharing_manage` |
+| Documentation | Search and fetch official SharePoint Embedded and Microsoft Graph documentation, grounded through the [Microsoft Learn MCP server](/training/support/mcp). | `docs_search`, `docs_fetch` |
 
 For the complete, versioned list of tools, CLI flags, and environment variables, see the [server README](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#available-tools).
 
@@ -45,7 +47,7 @@ MCP clients launch the server with `npx`, so there's no separate global install.
 
 ### Visual Studio Code
 
-Add an MCP server entry to `.vscode/mcp.json` in your workspace:
+In [Visual Studio Code](https://code.visualstudio.com/) with GitHub Copilot, add an MCP server entry to `.vscode/mcp.json` in your workspace:
 
 ```json
 {
@@ -63,7 +65,7 @@ The `-y` flag lets Visual Studio Code launch the server non-interactively. After
 
 ### Claude Desktop
 
-Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS):
+In Claude Desktop, add the server to its configuration file at `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS):
 
 ```json
 {
@@ -79,6 +81,20 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
 ### Cursor and other MCP clients
 
 Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp` command. See your client's documentation for where to register MCP servers.
+
+## Configuration
+
+The server accepts configuration through CLI flags or the equivalent environment variables. When you set both for the same option, the CLI flag wins.
+
+| CLI flag | Environment variable | Description |
+|----------|----------------------|-------------|
+| `--client-id` | `SPE_CLIENT_ID` | Microsoft Entra ID application (client) ID of the owning app. Omit to run in bootstrap mode. |
+| `--tenant-id` | `SPE_TENANT_ID` | Microsoft Entra ID tenant ID. Discovered from your Azure CLI sign-in when omitted. |
+| `--read-only` | `SPE_READ_ONLY` | Advertise and allow only read, list, get, and search tools, and reject any mutating call. |
+| `--tools` | `SPE_TOOLS` | Restrict the exposed tools to a profile (`readOnly`, `docsOnly`, `provisioning`, `content`, or `admin`) or a comma-separated list of tool names. |
+| `--data-dir` | `SPE_DATA_DIR` | Directory for the token cache and provisioning state (default `~/.spe-mcp`). Point each instance at a unique absolute path to run multiple servers without sharing state. |
+
+Set flags in the `args` array or variables in the `env` object of your client's MCP configuration. Run `npx @microsoft/spe-mcp start --help` for the authoritative list of options.
 
 ## Choose how the server authenticates
 
@@ -108,6 +124,9 @@ The server supports two running modes.
     }
     ```
 
+> [!IMPORTANT]
+> If you bring your own app registration in pre-provisioned-app mode, its sign-in URL must be registered as a **Single-page application (SPA)** redirect URI in the app's **Authentication** settings, or the server can't acquire a token. In the [Microsoft Entra admin center](https://entra.microsoft.com/), open **App registrations** > your app > **Authentication**, select **Add a platform** > **Single-page application**, and add the redirect URI. Apps that the server provisions for you in bootstrap mode are configured automatically. For the exact redirect URIs to register, see [Authentication](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#authentication) in the server README.
+
 In bootstrap mode, the first SharePoint Embedded call opens a browser for a one-time consent and caches the token, so no separate terminal step is needed. For the full authentication waterfall, token storage details, and headless/automation guidance, see the [server README](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#authentication).
 
 ## Try it
@@ -126,6 +145,8 @@ The server includes controls to limit which tools are exposed and callable—use
 
 - **Read-only mode**: Advertise and allow only read, list, get, and search tools, and reject any mutating call. Set the `--read-only` flag or the `SPE_READ_ONLY` environment variable.
 - **Tool profiles**: Restrict the exposed tools to a profile (`readOnly`, `docsOnly`, `provisioning`, `content`, or `admin`) or a comma-separated list of tool names, using the `--tools` flag or the `SPE_TOOLS` environment variable.
+
+These and the other options are listed in the [Configuration](#configuration) section.
 
 The **content operations** tools are also gated behind a separate, explicit consent, so an AI client can't read or change files in your containers until you opt in. For the full security model, see [security controls](https://github.com/microsoft/SharePoint-Embedded-MCP-Server/blob/main/docs/SECURITY-CONTROLS.md) in the server repository.
 
