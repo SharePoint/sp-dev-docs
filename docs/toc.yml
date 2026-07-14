@@ -519,7 +519,7 @@
     - name: SPFx v1.24 - July 9, 2026
       href: spfx/release-1.24.0.md            
     - name: SPFx v1.23.2 - June 30, 2026
-      href: spfx/release-1.23.2.md      
+      href: spfx/release-1.23.2.md
     - name: SPFx v1.23.0 - May 13, 2026
       href: spfx/release-1.23.0.md
     - name: SPFx v1.22.2 - January 28, 2026
@@ -632,6 +632,8 @@
     items:
     - name: 'Quickstart: Build your first app with VS Code'
       href: embedded/build/quickstart-vscode.md
+    - name: SharePoint Embedded Model Context Protocol (MCP) Server
+      href: embedded/getting-started/sharepoint-embedded-mcp-server.md
     - name: Create and configure a container type
       href: embedded/build/create-container-type.md
     - name: Register application permissions

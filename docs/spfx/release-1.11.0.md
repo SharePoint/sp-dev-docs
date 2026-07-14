@@ -33,7 +33,18 @@ In the project's **package.json** file, identify all SPFx v1.10 packages. For ea
 > [!IMPORTANT]
 > Be sure you update the **package-solution.json** with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.11.0 --output md
+> ```
+>
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ## New features and capabilities
 

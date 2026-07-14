@@ -18,6 +18,10 @@ outcome: Review recent SharePoint Embedded feature and documentation updates.
 next: overview.md
 -->
 
+## July 2026
+
+- The [SharePoint Embedded Model Context Protocol (MCP) server](./getting-started/sharepoint-embedded-mcp-server.md) is available in preview as an open-source npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)). MCP-compatible AI clients—such as GitHub Copilot in Visual Studio Code or the CLI, Claude, or Cursor—provision and manage SharePoint Embedded applications through natural language.
+
 ## June 2026
 
 - [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) has a new `urlTemplate` [setting](/graph/api/resources/filestoragecontainertypesettings). For more information on what the `urlTemplate` setting does, see [Create and configure a container type](./build/create-container-type.md#configure-container-type-behavior).
