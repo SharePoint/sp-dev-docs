@@ -507,7 +507,7 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.23.2 - June 30, 2026
-      href: spfx/release-1.23.2.md      
+      href: spfx/release-1.23.2.md
     - name: SPFx v1.23.0 - May 13, 2026
       href: spfx/release-1.23.0.md
     - name: SPFx v1.22.2 - January 28, 2026
@@ -603,7 +603,7 @@
     - name: SharePoint Embedded Visual Studio Code Extension
       href: embedded/getting-started/spembedded-for-vscode.md
     - name: SharePoint Embedded Model Context Protocol (MCP) Server
-      href: embedded/getting-started/spe-mcp-server.md
+      href: embedded/getting-started/sharepoint-embedded-mcp-server.md
     - name: Container Types
       href: embedded/getting-started/containertypes.md
     - name: Register Container Type API

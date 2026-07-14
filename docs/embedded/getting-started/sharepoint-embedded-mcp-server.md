@@ -4,7 +4,6 @@ description: Use the open-source SharePoint Embedded MCP server to provision and
 ms.date: 07/10/2026
 ms.localizationpriority: high
 ms.author: grjoseph
-ms.service: sharepoint-embedded
 ---
 
 # SharePoint Embedded Model Context Protocol (MCP) server
