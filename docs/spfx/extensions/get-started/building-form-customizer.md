@@ -74,7 +74,7 @@ import {
 The logic for your Form Customizer is contained in the `onInit()`, `render()`, and `onDispose()` methods.
 
 - `onInit()` is where you'll execute the setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations; `render()` isn't called until your promise has resolved. If you don’t need that, simply return `Promise.resolve<void>();`.
-- `render()` occurs when the component is rendered. It provides an `event.domElement` HTML element where your code can write its content.
+- `render()` occurs when the component is rendered. It provides an `this.domElement` HTML element where your code can write its content.
 - `onDispose()` occurs immediately before the form host element is deleted. It can be used to free any resources that were allocated during form rendering. For example, if `render()` mounted a React element, `onDispose()` must be used to free it; otherwise, a resource leak would occur.
 
 The following are the contents of `render()` and `onDispose()` in the default solution:
@@ -116,7 +116,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
 1. Create a new list named **Business**, and then select **Create**.
 
-    ![Creating a new list with name of Orders](../../../images/ext-forcustomizer-new-list-business.png)
+    ![Creating a new list with name of Business](../../../images/ext-forcustomizer-new-list-business.png)
 
 1. Within Visual Studio Code, open the **./config/serve.json** file.
 
@@ -143,16 +143,16 @@ You can test and debug your Form Customizer within a live SharePoint Online site
     Let's call out a few specific topics from the **serve.json** file
 
     - You can see multiple different configurations that can be used to debug new, edit, and view forms with specific query parameter differences. You can define the used configuration in your **heft start** command, for example, as **heft start --serve-config helloWorld_EditForm**.
-    - componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
+    - componentId is automatically associated to the first form customizer component in your solution (if you have multiple components)
     - To simplify the debugging, you do not need to define the target content type `id` to which the component is associated, but in the runtime, the association is performed in the content type level by updating at least one of the following properties in the content type:
       - ContentType.**NewFormClientSideComponentId** - component id for new form
       - ContentType.**NewFormClientSideComponentProperties** - optional configuration details
-      - ContentType.**DispFormClientSideComponentId** - component id for edit form
+      - ContentType.**DispFormClientSideComponentId** - component id for display form
       - ContentType.**DispFormClientSideComponentProperties** - optional configuration details
-      - ContentType.**EditFormClientSideComponentId** - component id display  form
+      - ContentType.**EditFormClientSideComponentId** - component id edit  form
       - ContentType.**EditFormClientSideComponentProperties** - optional configuration details
 
-1. Compile your code and host the compiled files from the local machine by running this command:
+2. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
     heft start
@@ -164,19 +164,19 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     This will start your default browser and load the page defined in **serve.json** file.
 
-1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+3. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-forcustomizer-accept-debug-scripts.png)
 
     Notice how the custom component is rendered in the page based on the custom content, which we updated to the render method.
 
-    ![List view with from customizer rendered with default outpu](../../../images/ext-forcustomizer-default-output.png)
+    ![List view with form customizer rendered with the default output](../../../images/ext-forcustomizer-default-output.png)
 
 ## Add form item editing capabilities to the sample
 
-Now that we have created the baseline component and tested that it works properly. We will be creating a separate rendering logic for display, edit, and new form,s and to support saving new items to the list.
+Now that we have created the baseline component and tested that it works properly. We will be creating a separate rendering logic for display, edit, and new forms and to support saving new items to the list.
 
-1. Open the **./src/extensions/helloWorld/loc/myStrings.d.ts** file, and add new **Title** to the **IHelloWorldFormCustomizerStrings** interface . Interface should be as follows after your edits..
+1. Open the **./src/extensions/helloWorld/loc/myStrings.d.ts** file, and add new **Title** to the **IHelloWorldFormCustomizerStrings** interface. Interface should be as follows after your edits.
 
     ```typescript
     declare interface IHelloWorldFormCustomizerStrings {
@@ -319,7 +319,7 @@ Now that we have created the baseline component and tested that it works properl
       }
     ```
 
-1. Update the **_onSave** methods in the the **HelloWorldFormCustomizer** class as follows.
+2. Update the **_onSave** methods in the **HelloWorldFormCustomizer** class as follows.
 
     ```typescript
     private _onSave = async (): Promise<void> => {
@@ -363,7 +363,7 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-1. Add new method **_createItem** to the **HelloWorldFormCustomizer** class.
+3. Add new method **_createItem** to the **HelloWorldFormCustomizer** class.
 
     ```typescript
     private _createItem(title: string): Promise<SPHttpClientResponse> {
@@ -379,7 +379,7 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-1. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
+4. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
 
     ```typescript
     private _updateItem(title: string): Promise<SPHttpClientResponse> {
