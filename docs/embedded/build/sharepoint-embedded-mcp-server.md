@@ -25,7 +25,7 @@ Instead of clicking through portals and stitching together Microsoft Graph and A
 
 The server exposes tools that an AI client can call on your behalf, grouped by task:
 
-- **Provisioning and status**: Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](containertypes.md) and containers. A single `project_provision` tool can run the whole sequence—app → container type → billing → registration → container—in one call.
+- **Provisioning and status**: Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](../plan/container-types-containers.md) and containers. A single `project_provision` tool can run the whole sequence—app → container type → billing → registration → container—in one call.
 - **Billing**: Pick an Azure subscription and resource group, register the `Microsoft.Syntex` resource provider, link a container type to [standard billing](../administration/billing/billing.md), and inspect billing classification or trial expiry.
 - **Scaffold, run, and deploy**: Generate a runnable reference application (a React single-page app with Azure Functions, or a C# web app), write its runtime configuration from your provisioning state, seed sample content, run it locally, and deploy it to Azure.
 - **Content operations (opt-in)**: After a separate, explicit consent, upload files, create folders, search, preview, manage sharing and permissions, and archive or restore containers.
@@ -133,8 +133,8 @@ The **content operations** tools are also gated behind a separate, explicit cons
 ## Related content
 
 - [SharePoint Embedded MCP server on GitHub](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) – source code, full tool reference, and issues.
-- [SharePoint Embedded for Visual Studio Code](spembedded-for-vscode.md) – a guided extension for getting started for free.
-- [SharePoint Embedded container types](containertypes.md)
+- [Quickstart: Build your first app with VS Code](quickstart-vscode.md) – a guided extension for getting started for free.
+- [SharePoint Embedded container types](../plan/container-types-containers.md)
 - [SharePoint Embedded app architecture](../development/app-architecture.md)
 - [Authentication and authorization](../development/auth.md)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
