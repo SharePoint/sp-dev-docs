@@ -125,12 +125,7 @@ The server supports two running modes.
     ```
 
 > [!IMPORTANT]
-> When you bring your own app registration in pre-provisioned-app mode, configure it as a public client and add the same redirect URIs the server would otherwise add for you:
->
-> - Under **Authentication** > **Add a platform** > **Mobile and desktop applications**, add `http://localhost`, and set **Allow public client flows** to **Yes**. The server uses this redirect URI for its own interactive sign-in.
-> - To run or deploy the scaffolded reference app (a React single-page app), add its origin as a **Single-page application (SPA)** redirect URI: select **Add a platform** > **Single-page application**, then add `http://localhost:5173` for local development plus your deployed app URL. Without a matching SPA redirect URI, browser sign-in fails with error `AADSTS9002326`.
->
-> Configure these in the [Microsoft Entra admin center](https://entra.microsoft.com/) under **Identity** > **Applications** > **App registrations** > your app > **Authentication**. Apps that the server provisions for you in bootstrap mode are configured with these platforms automatically.
+> If you bring your own app registration in pre-provisioned-app mode, its sign-in URL must be registered as a **Single-page application (SPA)** redirect URI in the app's **Authentication** settings, or the server can't acquire a token. In the [Microsoft Entra admin center](https://entra.microsoft.com/), open **App registrations** > your app > **Authentication**, select **Add a platform** > **Single-page application**, and add the redirect URI. Apps that the server provisions for you in bootstrap mode are configured automatically. For the exact redirect URIs to register, see [Authentication](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#authentication) in the server README.
 
 In bootstrap mode, the first SharePoint Embedded call opens a browser for a one-time consent and caches the token, so no separate terminal step is needed. For the full authentication waterfall, token storage details, and headless/automation guidance, see the [server README](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#authentication).
 
