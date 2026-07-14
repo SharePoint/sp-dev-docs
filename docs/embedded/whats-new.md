@@ -7,9 +7,20 @@ ms.localizationpriority: medium
 
 # What's new in SharePoint Embedded
 
+## July 2026
+
+- The [SharePoint Embedded Model Context Protocol (MCP) server](./getting-started/sharepoint-embedded-mcp-server.md) is available in preview as an open-source npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)), letting any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code, Claude, or Cursor—provision and manage SharePoint Embedded through natural language.
+
 ## June 2026
 
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new `urlTemplate` [setting](/graph/api/resources/filestoragecontainertypesettings). For more information on what the `urlTemplate` setting does, see [Configure redirect behavior](./development/content-experiences/configure-redirect-behavior.md).
 - The [`FileStorageContainerType.Manage.All`](/graph/permissions-reference#filestoragecontainertypemanageall) Microsoft Graph permission no longer requires the [SharePoint Embedded Administrator](./administration/adminrole.md) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. Any non-guest user in the owning tenant can [create a container type](./getting-started/containertypes.md#creating-container-types) and is automatically assigned as an [owner of that container type](./development/auth.md#container-type-owner-capabilities).
+
+## May 2026
+
+- [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) operations now emit audit logs for `ContainerTypeCreated`, `ContainerTypeDeleted`, `ContainerTypeUpdated` and `ContainerTypeOwnersUpdated`. For more information, see [SharePoint Embedded audit log events](./compliance/audit-events.md#container-type-activities).
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) supports bulk creation and update of `permissions` using delta patch. For more information, see [Upsert permissions](/graph/api/filestoragecontainer-patch-permissions).
+- Clarified the authorization model for administrative actions on containers. For more information, see [Operations that involve administrative actions on containers](./development/auth.md#operations-that-involve-administrative-actions-on-containers).
 
 ## March 2026
 

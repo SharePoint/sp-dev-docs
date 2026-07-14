@@ -39,14 +39,25 @@ In the project's **package.json** file, identify all SPFx v1.23.0 packages. For 
     npm install @microsoft/{spfx-package-name}@latest --save --save-exact
     ```
 
-[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To upgrade this project, run:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.23.2 --output md
+> ```
+>
+> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 
 ## Readiness for list panel override
 
 We're rolling out readiness for the Form Customizer panel override with this release. When enabled in the Form Customizer manifest, the extension is automatically rendered in the list panel without requiring a page transition. This enables complex panel extensions directly in the list panel with SPFx.
 
-You can enable this support with the `isPanelExperienceEnabled` attribute in the extension override. When set to `true`, the Form Customizer is rendered inside the new, edit, or display panel in the list view instead of opening a separate page. When the attribute is absent, it defaults to `false` (the existing behavior).
+You can enable this support with the `isPanelExperienceEnabled` attribute in the extension's **manifest.js** file. When set to `true`, the Form Customizer is rendered inside the new, edit, or display panel in the list view instead of opening a separate page. When the attribute is absent, it defaults to `false` (the existing behavior).
 
 ![Form Customizer rendered in the list panel](../images/123-release/list-panel-override.png)
 

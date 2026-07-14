@@ -1,7 +1,7 @@
 ---
 title: Configuring redirect behavior
 description: Configure the urlTemplate property on a SharePoint Embedded container type to control how Microsoft 365 routes users to container content from Microsoft 365 search results and from the driveItem.webUrl property returned by Microsoft Graph.
-ms.date: 05/29/2026
+ms.date: 07/09/2026
 ms.localizationpriority: high
 ---
 
@@ -18,10 +18,8 @@ For files without a supported viewer (the Office web viewer or the embedded view
 
 Before you configure `urlTemplate`, ensure you have:
 
-- A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own, if you want to set `urlTemplate` for every tenant that registers the container type. To override `urlTemplate` for a single consuming tenant instead, you need a registration of that container type in the consuming tenant.
-- The Microsoft Graph permission required by the API you call (see [Configure `urlTemplate`](#configure-urltemplate)):
-  - To set `urlTemplate` on the container type with [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update): `FileStorageContainerType.Manage.All` (delegated, work or school account). Application permissions aren't supported.
-  - To override `urlTemplate` on a registration with [Update fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update): `FileStorageContainerTypeReg.Selected` (least privileged; delegated or application) or `FileStorageContainerTypeReg.Manage.All` (delegated only). Delegated calls also require the SharePoint Embedded Administrator or Global Administrator role.
+- A SharePoint Embedded [container type](../../getting-started/containertypes.md) that you own.
+- The delegated Microsoft Graph permission scope(s) listed in the **Permissions** section of [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update). Application permissions aren't supported.
 
 > [!NOTE]
 > Discoverability is separate from redirect behavior: you don't need to enable it to configure or use `urlTemplate`. The [`isDiscoverabilityEnabled`](/graph/api/resources/filestoragecontainertypesettings) setting is **disabled by default** and controls only whether your content is surfaced in the broader Microsoft 365 experience, such as **My Activity**, office.com, OneDrive.com, other intelligent file discovery features, and Copilot grounding. Leaving it disabled doesn't prevent search: applications can still query content in non-discoverable containers with the [Microsoft Search API](search-content) by setting `sharePointOneDriveOptions.includeHiddenContent` to `true`. To learn how discoverability affects Microsoft 365 surfaces, see [Content discovery in Microsoft 365](user-experiences-overview.md#content-discovery-in-microsoft-365).
@@ -39,7 +37,7 @@ The destination for a file depends on the file type and whether `urlTemplate` is
 | File type | `urlTemplate` set? | Behavior when opened |
 | --- | --- | --- |
 | Files with a supported Office web viewer (Word, Excel, PowerPoint, Visio, OneNote, and others) | Either | Opens in the corresponding Office web viewer |
-| Files supported by the embedded viewer | Either | Opens in the embedded viewer |
+| PDF | Either | Opens in the embedded viewer |
 | All other types | Yes | Redirected to your application through `urlTemplate` |
 | All other types | No | Redirected to a [Microsoft help page](https://aka.ms/spe-openfilelocation) |
 
@@ -56,10 +54,7 @@ For SharePoint Embedded items, the `driveItem.webUrl` property returned by Micro
 
 ## Configure `urlTemplate`
 
-You can set `urlTemplate` in two places:
-
-- **On the container type**, which applies to every tenant that registers it. Call the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API (`PATCH /storage/fileStorage/containerTypes/{id}`) and set `settings.urlTemplate`. This requires the `FileStorageContainerType.Manage.All` delegated permission; application permissions aren't supported.
-- **On a container type registration**, which overrides the value for a single consuming tenant. Call the [Update fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update) API (`PATCH /storage/fileStorage/containerTypeRegistrations/{id}`) and set `settings.urlTemplate`. This requires the `FileStorageContainerTypeReg.Selected` permission (least privileged; delegated or application) or `FileStorageContainerTypeReg.Manage.All` (delegated only). A registration can override `urlTemplate` only if the owning container type lists `urlTemplate` in its `consumingTenantOverridables` setting.
+Set `urlTemplate` on your container type by calling the [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API (`PATCH /storage/fileStorage/containerTypes/{id}`) and setting `settings.urlTemplate`. The value applies to every tenant that registers the container type. This API requires the delegated permission scope(s) listed in its **Permissions** section; application permissions aren't supported.
 
 The value is a URL with placeholder tokens that Microsoft 365 resolves to actual item identifiers when a user opens an item.
 
@@ -164,7 +159,7 @@ For information about calling Microsoft Graph against a consuming tenant's conta
 
 | Symptom | Possible cause |
 | --- | --- |
-| Your files don't appear in Microsoft 365 search results. | The container type's `isDiscoverabilityEnabled` setting is `false`, or the registration in the consuming tenant overrides the setting. Search indexing can also take time after enablement. |
+| Your files don't appear in Microsoft 365 search results. | The container type's `isDiscoverabilityEnabled` setting is `false`. Search indexing can also take time after enablement. |
 | Users land on the Microsoft help page instead of your application. | `urlTemplate` is `null` (likely because the URL failed validation), or the file type opens in a supported viewer (the Office web viewer or the embedded viewer) instead of redirecting. |
 | A token appears as literal text (such as `{tenant-id}`) in the redirect URL. | Microsoft 365 couldn't resolve the token for the current item. Verify the token name matches a [supported token](#supported-tokens) or a [custom property](/graph/api/filestoragecontainer-post-customproperty). |
 | Updates to `urlTemplate` don't appear in search results. | Search index updates aren't instantaneous. See [Limitations](#limitations). |
