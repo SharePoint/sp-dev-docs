@@ -152,7 +152,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
       - ContentType.**EditFormClientSideComponentId** - component id edit  form
       - ContentType.**EditFormClientSideComponentProperties** - optional configuration details
 
-2. Compile your code and host the compiled files from the local machine by running this command:
+1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
     heft start
@@ -164,7 +164,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     This will start your default browser and load the page defined in **serve.json** file.
 
-3. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-forcustomizer-accept-debug-scripts.png)
 
@@ -319,7 +319,7 @@ Now that we have created the baseline component and tested that it works properl
       }
     ```
 
-2. Update the **_onSave** methods in the **HelloWorldFormCustomizer** class as follows.
+1. Update the **_onSave** methods in the **HelloWorldFormCustomizer** class as follows.
 
     ```typescript
     private _onSave = async (): Promise<void> => {
@@ -363,7 +363,7 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-3. Add new method **_createItem** to the **HelloWorldFormCustomizer** class.
+1. Add new method **_createItem** to the **HelloWorldFormCustomizer** class.
 
     ```typescript
     private _createItem(title: string): Promise<SPHttpClientResponse> {
@@ -379,7 +379,7 @@ Now that we have created the baseline component and tested that it works properl
     }
     ```
 
-4. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
+1. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
 
     ```typescript
     private _updateItem(title: string): Promise<SPHttpClientResponse> {
