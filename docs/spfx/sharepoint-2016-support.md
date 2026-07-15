@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint 2016 Feature Pack 2
 description: SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
-ms.date: 12/10/2025
+ms.date: 09/12/2017
 ms.localizationpriority: high
 ---
 # SharePoint Framework development with SharePoint Server 2016 Feature Pack 2
@@ -107,4 +107,4 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 - [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
 - [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2016](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2016/)
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2016](https://www.andrewconnell.com/articles/sharepoint-framework-definitive-guide-sharepoint-server-2016/)

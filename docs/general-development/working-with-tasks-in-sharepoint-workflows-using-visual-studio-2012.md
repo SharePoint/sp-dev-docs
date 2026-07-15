@@ -15,7 +15,7 @@ Learn about the revised workflow task framework that was introduced in SharePoin
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new SharePoint Online tenants and removed from existing SharePoint Online tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
-This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code [here](https://www.voitanos.io/blog/sharepoint-2013-workflow-custom-tasks/).
+This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code [here](https://www.andrewconnell.com/articles/sharepoint-2013-workflow-custom-tasks/).
 
 One of the greatest benefits that the SharePoint brings to Windows Workflow Foundation is the implementation of a new and improved task management framework that incorporates the new Workflow Manager as its hosting environment.
 
