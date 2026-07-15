@@ -54,7 +54,7 @@ Add an MCP server entry to `.vscode/mcp.json` in your workspace:
     "spe": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@microsoft/spe-mcp"]
+      "args": ["-y", "@microsoft/spe-mcp", "start"]
     }
   }
 }
@@ -71,7 +71,7 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
   "mcpServers": {
     "spe": {
       "command": "npx",
-      "args": ["-y", "@microsoft/spe-mcp"]
+      "args": ["-y", "@microsoft/spe-mcp", "start"]
     }
   }
 }
@@ -79,7 +79,7 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
 
 ### Cursor and other MCP clients
 
-Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp` command. See your client's documentation for where to register MCP servers.
+Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp start` command. See your client's documentation for where to register MCP servers.
 
 ## Choose how the server authenticates
 
@@ -99,7 +99,7 @@ The server supports two running modes.
         "spe": {
           "type": "stdio",
           "command": "npx",
-          "args": ["-y", "@microsoft/spe-mcp"],
+          "args": ["-y", "@microsoft/spe-mcp", "start"],
           "env": {
             "SPE_CLIENT_ID": "your-client-id",
             "SPE_TENANT_ID": "your-tenant-id"
