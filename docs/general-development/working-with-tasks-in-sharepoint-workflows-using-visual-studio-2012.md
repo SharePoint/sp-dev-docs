@@ -1,7 +1,7 @@
 ---
 title: Working with Tasks in SharePoint 2013 Workflows using Visual Studio
 description: Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager').
-ms.date: 03/19/2024
+ms.date: 04/24/2017
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ms.localizationpriority: medium
 ---
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager'; see associated [announcement](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/announcing-the-release-of-sharepoint-workflow-manager-for/ba-p/3744881) ).
 
-**Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
+**Provided by:** [Andrew Connell](https://www.andrewconnell.com)
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new SharePoint Online tenants and removed from existing SharePoint Online tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
