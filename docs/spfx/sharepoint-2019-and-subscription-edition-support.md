@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint Server 2019 and Subscription Edition
 description: SharePoint Server 2019 & Subscription Edition (SE) supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
-ms.date: 12/10/2025
+ms.date: 02/14/2020
 ms.localizationpriority: high
 ---
 
@@ -131,5 +131,5 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 - [SharePoint Server 2019 development platform](../general-development/sharepoint-2019-development-platform.md).
 - [SharePoint Framework Legacy Toolchain: Gulp & Webpack](toolchain/sharepoint-framework-toolchain.md)
 - [Set up your SharePoint Framework Gulp-Based development environment](set-up-your-development-environment-gulp-toolchain.md)
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/).
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-subscription-edition/).
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.andrewconnell.com/articles/sharepoint-framework-definitive-guide-sharepoint-server-2019/).
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.andrewconnell.com/articles/sharepoint-framework-definitive-guide-sharepoint-server-subscription-edition/).
