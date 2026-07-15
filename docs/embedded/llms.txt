@@ -1,0 +1,68 @@
+# SharePoint Embedded
+
+> SharePoint Embedded (SPE) is a cloud-based, API-only file and document management platform built on Microsoft 365. Developers embed Office collaboration, Microsoft Purview compliance, and Copilot capabilities into their own apps while content stays inside each customer's Microsoft 365 tenant. This index is organized by task. Each link points to the single best page for that task.
+
+## Overview
+- [What is SharePoint Embedded?](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview): Definition, key concepts (tenant partition, containers), and routing to the right task area.
+- [Scenarios and use cases](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/scenarios-and-use-cases): When to use SPE; enterprise and ISV examples.
+- [What's new](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/whats-new): Recent releases, preview features, and breaking changes.
+
+## Plan a solution (architect, IT decision maker)
+- [Understand app and tenant architecture](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/app-tenant-architecture): Developer vs consuming tenant, app ownership, container types, where files live.
+- [Choose an app model: single-tenant or multitenant](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-app-model): Enterprise LOB vs ISV; who owns, installs, and pays.
+- [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-and-containers): The container type/container model and ownership.
+- [Choose a billing model](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-billing-model): Standard vs pass-through (consuming-tenant) billing.
+- [Plan authentication and permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/authentication-permissions): Permission models, admin consent, app-only vs delegated.
+- [Plan security, compliance, and governance](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/security-compliance-governance): Purview, DLP, retention, sensitivity labels, conditional access.
+- [Understand limits and calling patterns](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/limits-calling-patterns): Service limits, throttling, batching, retry guidance.
+
+## Build an app (developer)
+- [Quickstart: Build your first app with VS Code](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/quickstart-vscode): Install the extension, create a trial container type, run the sample app.
+- [Create and configure a container type](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/create-container-type): Create trial/production container types and the owning Entra app.
+- [Register application permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/register-application-permissions): Register container type permissions and grant consent.
+- [Configure authentication and authorization](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/configure-authentication-authorization): Entra app, tokens, app-only and delegated flows.
+- [Create and manage containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/create-manage-containers): Create, list, update, delete, recycle, and restore containers.
+- [Upload, download, and manage files](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/manage-files): File and folder operations via Microsoft Graph.
+- [Open Office files from your app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/open-office-files): Office web/desktop experiences and launch behavior.
+- [Preview files in your app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/preview-files): File preview UX and preview links.
+- [Search containers and files](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/search-containers-files): Query content with security trimming and paging.
+- [Store and query container metadata](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/container-metadata): Define, set, and filter custom metadata.
+- [Share files and manage permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/share-files-manage-permissions): Grant/revoke access and permission inheritance.
+- [Respond to file and container changes with webhooks](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/respond-to-changes-webhooks): Subscribe to and process change notifications.
+- [Archive and restore containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/archive-restore-containers): Container archival lifecycle and cost.
+- [Add real-time collaboration with Fluid Framework](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/fluid-framework): Live collaborative experiences over SharePoint Embedded.
+- [Add Microsoft 365 Copilot and agent experiences](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/agent-experiences): Agent patterns and knowledge source overview.
+- [Set up SharePoint Embedded as a Foundry knowledge source](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/sharepoint-embedded-knowledge-source): Configure Microsoft Foundry Agent Service to retrieve SharePoint Embedded content.
+- [Migrate from Azure Blob Storage](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/migrate-azure-blob-storage): Move blobs into containers with metadata.
+
+## Publish and onboard customers (ISV, developer)
+- [Prepare your app for customer installation](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/publish/prepare-customer-installation): Package and configure a multitenant app for customers.
+- [Choose a billing model for your app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/publish/choose-app-billing-model): Billing choice and its effect on onboarding.
+- [Guide customers through tenant setup](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/publish/customer-tenant-setup-guide): Customer prerequisites, consent, and billing setup.
+- [Validate customer app installation](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/publish/validate-customer-installation): Confirm registration, permissions, and billing.
+
+## Install and manage apps (administrator)
+- [Admin overview](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/admin-overview): Admin roles and where to manage SharePoint Embedded.
+- [Create apps in SharePoint admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/create-apps-sharepoint-admin-center): Create SharePoint Embedded apps from the admin center.
+- [Create apps with PowerShell](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/create-apps-powershell): Create SharePoint Embedded apps with SharePoint PowerShell.
+- [Install a SharePoint Embedded app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/install-sharepoint-embedded-app): Register/install an app in your tenant.
+- [Grant admin consent and permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/grant-admin-consent-permissions): Review and grant requested permissions.
+- [Set up billing in Microsoft 365 admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/setup-billing-m365-admin-center): Configure billing for a consuming tenant.
+- [Manage containers in SharePoint admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/manage-containers-sharepoint-admin-center): View and manage containers in the UI.
+- [Manage containers with PowerShell](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/manage-containers-powershell): Script container management.
+- [Monitor usage, billing, and cost](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/monitor-usage-billing-cost): Track usage and cost drivers.
+- [Review audit events](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/review-audit-events): Find and interpret SharePoint Embedded audit events.
+- [Apply security and compliance controls](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/apply-security-compliance-controls): Apply Purview retention, DLP, labels, and eDiscovery.
+
+## Reference
+- [Billing meters](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/billing-meters): Storage, transaction, egress, and agent meters.
+- [Audit events](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/audit-events): SharePoint Embedded audit event names and properties.
+- [PowerShell reference](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/powershell): SharePoint Embedded admin cmdlets.
+- [Microsoft Graph API reference links](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/graph-api-links): Graph fileStorageContainer and related APIs.
+- [Troubleshooting](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/troubleshooting): Common setup, auth, billing, and runtime issues.
+- [Glossary](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/glossary): SPE terms and definitions.
+
+## Optional
+- [Microsoft Graph file storage container API](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer): Underlying Graph API surface for SharePoint Embedded.
+- [Learning module: SharePoint Embedded overview and configuration](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-setup): Guided training.
+- [Learning module: Build SharePoint Embedded applications](https://learn.microsoft.com/en-us/training/modules/sharepoint-embedded-create-app): Guided training.
