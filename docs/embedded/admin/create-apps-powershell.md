@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Create apps with PowerShell
 
-**Applies to:** Owning tenant administrator — SharePoint Embedded admin / Global admin
+**Applies to:** Developer tenant administrator — SharePoint Embedded admin / Global admin
 
 <!-- agent:
 task_type: how-to
@@ -49,7 +49,7 @@ Add-SPOContainerTypeBilling -ContainerTypeId <ContainerTypeId> -AzureSubscriptio
 
 ## Create a pass-through billed app
 
-Use pass-through billing, also known as direct-to-customer billing, when the consuming tenant pays for SharePoint Embedded usage.
+Use pass-through billing when the consuming tenant pays for SharePoint Embedded usage.
 
 ```powershell
 New-SPOContainerType -IsPassThroughBilling -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId>

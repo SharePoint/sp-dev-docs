@@ -25,7 +25,7 @@ Use this article to build the setup guide you hand to customers who install your
 
 ## Customer admin role
 
-Tell customers who should perform the setup. A consuming tenant admin is either a **Global Administrator** or a user assigned the **SharePoint Embedded Administrator** role. The role is available in Microsoft Entra ID and the Microsoft 365 Admin Center. Global Administrators already have these permissions.
+Tell customers who should perform the setup. A consuming tenant admin is either a **Global Administrator** or a user assigned the **SharePoint Embedded Administrator** role. The role is available in Microsoft Entra ID and the Microsoft 365 admin center. Global Administrators already have these permissions.
 
 For the role details, see [Install a SharePoint Embedded app](../admin/install-sharepoint-embedded-app.md).
 
@@ -42,7 +42,7 @@ Ask the customer to confirm these prerequisites before the setup meeting or inst
 | Billing | An Azure subscription and resource group are available if the app uses pass-through billing. |
 | Support | The customer has your app ID, support contact, and validation checklist. |
 
-Users don't need an Office license to collaborate on Microsoft Office documents stored in a container.
+Users don't need an Office license to collaborate on Microsoft Office documents stored in a container, except for documented exceptional experiences such as mentions.
 
 ## Information to give the customer
 

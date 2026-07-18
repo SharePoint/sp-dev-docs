@@ -1,5 +1,5 @@
 ---
-title: Scenarios and Use Cases
+title: Scenarios and use cases
 description: Explore scenarios and use cases for SharePoint Embedded.
 ms.date: 07/13/2026
 ms.reviewer: stpuceli

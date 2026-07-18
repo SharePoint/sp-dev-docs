@@ -1,5 +1,5 @@
 ---
-title: Configure Authentication and Authorization
+title: Configure authentication and authorization
 description: Configure Microsoft Entra ID authentication and SharePoint Embedded authorization for your application.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -175,7 +175,7 @@ The owning application grants container type application permissions through [co
 Any Microsoft Entra user that isn't an external identity can be a container type owner. Owners are managed through the [permissions](/graph/api/filestoragecontainertype-post-permissions) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource. Each entry has the `owner` role and identifies the user through `grantedToV2`.
 
 - **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
-- **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions) to add up to three owners per container type.
+- **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions) to add owners. A container type can have at most three owners in total, including the creator who is automatically assigned as the first owner.
 - **Remove owners**: Use [`DELETE /containerTypes/{id}/permissions/{id}`](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
 - **Read owners**: Use [`GET /containerTypes/{id}?$expand=permissions`](/graph/api/filestoragecontainertype-get) or [`GET /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-list-permissions) to retrieve owners.
 

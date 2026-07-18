@@ -1,5 +1,5 @@
 ---
-title: Create and Manage Containers
+title: Create and manage containers
 description: Create, list, update, recycle, restore, and delete SharePoint Embedded containers in your app.
 ms.date: 07/13/2026
 ms.reviewer: jaeccles
@@ -101,7 +101,6 @@ For trial development, the Visual Studio Code extension can create containers.
 1. Right-click **Containers**.
 1. Select **Create container**.
 1. Enter a name.
-
 1. Confirm the container appears under the container type.
 
 See [Quickstart: Build your first app with VS Code](quickstart-vscode.md) for the extension flow.

@@ -1,5 +1,5 @@
 ---
-title: "Choose an App Model: Single-Tenant or Multitenant"
+title: "Choose an app model: single-tenant or multitenant"
 description: Compare single-tenant and multitenant SharePoint Embedded app models before you create container types and containers.
 ms.date: 07/13/2026
 ms.reviewer: mawin

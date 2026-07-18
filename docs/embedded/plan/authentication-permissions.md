@@ -1,5 +1,5 @@
 ---
-title: Plan Authentication and Permissions
+title: Plan authentication and permissions
 description: Plan SharePoint Embedded authentication, admin consent, delegated access, app-only access, and container permissions.
 ms.date: 07/13/2026
 ms.reviewer: mawin
@@ -118,7 +118,7 @@ Container type creation, management, and registration are now Microsoft Graph op
 
 ## Container type application permissions
 
-Container type application permissions are granted by the owner application through container type registration.
+Container type application permissions are granted by the owning application through container type registration.
 
 These permissions define what an application can do against containers of the container type.
 

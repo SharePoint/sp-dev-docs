@@ -1,5 +1,5 @@
 ---
-title: Understand Limits and Calling Patterns
+title: Understand limits and calling patterns
 description: Plan SharePoint Embedded service limits, throttling behavior, retry handling, and performance-sensitive calling patterns.
 ms.date: 07/13/2026
 ms.reviewer: mawin
@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 task_type: concept
 audience: developer
 outcome: Design SharePoint Embedded calls that respect service limits, throttling, and resource unit costs.
-next:
+next: ../build/quickstart-vscode.md
 -->
 
 Use this article to plan SharePoint Embedded calling patterns before you build high-volume container and content operations. SharePoint Embedded expresses throughput as **resource units per minute** (a normalized request-cost model) rather than as a fixed requests-per-second rate; the [API rate limits](#api-rate-limits) section explains how to translate resource units into an expected request rate.

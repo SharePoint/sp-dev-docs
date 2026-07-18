@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 <!-- agent:
 task_type: how-to
-audience: compliance
+audience: administrator
 outcome: Review SharePoint Embedded audit events in Microsoft Purview and use container fields for investigations.
 next: apply-security-compliance-controls.md
 -->

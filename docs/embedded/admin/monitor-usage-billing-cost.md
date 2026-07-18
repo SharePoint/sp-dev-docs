@@ -83,7 +83,7 @@ Calls made by internal services to containers aren't charged when the applicatio
 Nonchargeable transactions include:
 
 - eDiscovery service queries that search container content for compliance or legal purposes.
-- Admin actions taken by SharePoint Embedded Admins or Global Admins through SharePoint admin center or SharePoint PowerShell.
+- Admin actions taken by SharePoint Embedded Administrators or Global Administrators through SharePoint admin center or SharePoint PowerShell.
 
 Use app telemetry from the owning application to correlate app releases, user activity, and transaction growth.
 

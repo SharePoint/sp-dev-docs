@@ -1,5 +1,5 @@
 ---
-title: Preview Files in Your App
+title: Preview files in your app
 description: Create Microsoft Graph preview links and embed supported SharePoint Embedded file previews in your app.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -98,9 +98,8 @@ Use this C# SDK pattern:
 
 ```csharp
 ItemPreviewInfo preview = await graphServiceClient.Drives[driveId].Items[itemId]
-    .Preview()
-    .Request()
-    .PostAsync();
+    .Preview
+    .PostAsync(null);
 ```
 
 The response includes preview URL information:
@@ -250,7 +249,7 @@ Test with multiple file types and users:
 
 After preview is working, add discovery experiences so users can find content across containers and files.
 
-Continue to [Search containers and files](../build/search-containers-files.md).
+Continue to [Search containers and files](search-containers-files.md).
 
 ## Next steps
 

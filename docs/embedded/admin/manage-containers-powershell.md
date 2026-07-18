@@ -243,9 +243,9 @@ Use `Set-SPOApplicationPermission` for this scenario.
 
 ```powershell
 Set-SPOApplicationPermission
-   [[-OwningApplicationId] <OwningApplicationid>]
-   [[-GuestApplicationId] <GuestApplicationId>]
-   [[-PermissionAppOnly] <AppOnlyPermission>]
+   [-OwningApplicationId] <OwningApplicationid>
+   [-GuestApplicationId] <GuestApplicationId>
+   [-PermissionAppOnly] <AppOnlyPermission>
    [[-PermissionDelegated] <DelegatedPermission>]
 ```
 

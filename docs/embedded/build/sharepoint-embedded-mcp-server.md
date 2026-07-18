@@ -4,10 +4,20 @@ description: Use the open-source SharePoint Embedded MCP server with a coding ag
 ms.date: 07/10/2026
 ms.localizationpriority: high
 ms.author: grjoseph
+ms.reviewer: cindylay
 ai-usage: ai-assisted
 ---
 
 # Use the MCP server to build apps with a coding agent
+
+**Applies to:** Developer
+
+<!-- agent:
+task_type: how-to
+audience: developer
+outcome: Use the SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
+next: quickstart-vscode.md
+-->
 
 The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded applications through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
@@ -135,6 +145,6 @@ The **content operations** tools are also gated behind a separate, explicit cons
 - [SharePoint Embedded MCP server on GitHub](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) – source code, full tool reference, and issues.
 - [Quickstart: Build your first app with VS Code](quickstart-vscode.md) – a guided extension for getting started for free.
 - [SharePoint Embedded container types](../plan/container-types-containers.md)
-- [SharePoint Embedded app architecture](../development/app-architecture.md)
-- [Authentication and authorization](../development/auth.md)
+- [SharePoint Embedded app architecture](../plan/app-tenant-architecture.md)
+- [Authentication and authorization](configure-authentication-authorization.md)
 - [Model Context Protocol](https://modelcontextprotocol.io/)

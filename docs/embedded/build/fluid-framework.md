@@ -43,6 +43,7 @@ Create an empty `.env` file in the sample folder and add the SharePoint Embedded
 ```text
 SPE_CLIENT_ID=YOUR_CLIENTID
 SPE_CONTAINER_TYPE_ID=YOUR_CONTAINERTYPE_ID
+SPE_ENTRA_TENANT_ID=YOUR_ENTRA_TENANT_ID
 ```
 
 Install packages and start the development server.

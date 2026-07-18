@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ---
 # Validate customer app installation
 
-**Applies to:** ISV / developer
+**Applies to:** ISV / Developer
 
 <!-- agent:
 task_type: how-to
@@ -74,7 +74,7 @@ Confirm that the container type is registered in the consuming tenant.
 An app can't create or interact with containers until its container type is registered in that tenant.
 Use your product's setup portal or registration flow to show the registration state.
 
-Ask the customer admin to use the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) to verify that your SharePoint Embedded app is listed under the installed apps tab in the Active apps page under SharePoint Embedded. The customer admin may verify details of your SharePoint Embedded app such as:
+Ask the customer admin to use the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) to verify that your SharePoint Embedded app is listed under the installed apps tab in the Active apps page under SharePoint Embedded. The customer admin can verify details of your SharePoint Embedded app such as:
 
 - The owning application ID.
 - The container type ID.
@@ -90,7 +90,7 @@ To verify that your app is properly installed on the customer tenant:
 1. Use the token to [get the registration for your container type in the tenant](/graph/api/filestoragecontainertyperegistration-get). If a registration is returned, it means that your SharePoint Embedded app is installed correctly.
 
 > [!TIP]
-> You may also validate that your guest apps are properly set up by requesting an access token for the Microsoft Graph `.default` scope in the consuming tenant and validating that the scopes/roles you expect are present and that you can use the token to interact with content. Only the owning app can access a container type registration in a tenant.
+> You can also validate that your guest apps are properly set up by requesting an access token for the Microsoft Graph `.default` scope in the consuming tenant and validating that the scopes/roles you expect are present and that you can use the token to interact with content. Only the owning app can access a container type registration in a tenant.
 
 Confirm that the customer granted the expected permissions and no unexpected app ID was used.
 
@@ -215,7 +215,7 @@ Use this checklist as the final customer signoff.
 - [ ] Container type registration is complete.
 - [ ] Customer admin sees your SharePoint Embedded app in SharePoint admin center.
 - [ ] Billing is valid or not required for the customer tenant.
-- [ ] Test user can sign into your app.
+- [ ] Test user can sign in to your app.
 - [ ] Test container can be created or opened.
 - [ ] Test file operations work.
 - [ ] Customer admin can view the app or container in administration tools.

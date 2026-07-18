@@ -1,5 +1,5 @@
 ---
-title: Plan Security, Compliance, and Governance
+title: Plan security, compliance, and governance
 description: Plan how Microsoft Purview, audit, DLP, retention, labels, and access policies apply to SharePoint Embedded content.
 ms.date: 07/13/2026
 ms.reviewer: mawin
@@ -27,7 +27,7 @@ Supported consumer Microsoft 365 tenant settings and Microsoft Purview capabilit
 
 ## Governance model
 
-SharePoint Embedded is API-only and doesn't provide a built-in end-user interface.
+SharePoint Embedded is API-only and doesn't provide a built-in user interface.
 
 The owning application provides the user experience.
 
@@ -121,7 +121,7 @@ Retention policies configured for all SharePoint sites apply to all SharePoint s
 
 To selectively enforce a policy on one or more SharePoint Embedded containers, use the container URL when configuring the policy.
 
-Because SharePoint Embedded has no built-in UI, app support is required for user-interaction scenarios such as an end user applying a retention label through the app.
+Because SharePoint Embedded has no built-in UI, app support is required for user-interaction scenarios such as a user applying a retention label through the app.
 
 For more information, see [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
