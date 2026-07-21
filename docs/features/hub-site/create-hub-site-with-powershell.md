@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site by using PowerShell.
-ms.date: 04/23/2025
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ---
 
