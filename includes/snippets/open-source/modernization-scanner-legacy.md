@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> The SharePoint Modernization Scanner is a legacy tool and is no longer actively maintained. For new assessments, use the [Microsoft 365 Assessment tool](https://pnp.github.io/pnpassessment/index.html) when it supports your scenario. Continue to use the legacy scanner only for an established scanner workflow or a capability that isn't yet available in the Microsoft 365 Assessment tool. For more information, see [Which SharePoint modernization assessment tool should I use?](/sharepoint/dev/transform/modernize-scanner).

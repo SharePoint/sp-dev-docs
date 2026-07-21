@@ -1,12 +1,14 @@
 ---
 title: The SharePoint modernization scanner reports for the workflow scanner mode
 description: Explains the workflow output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Workflow reports
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 > [!Note]
 > Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)

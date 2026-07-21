@@ -1,12 +1,13 @@
 ### YamlMime:FAQ
 metadata:
-  title: The SharePoint modernization scanner FAQ
-  description: he SharePoint modernization scanner FAQ
-  ms.date: 07/22/2020
+  title: The legacy SharePoint modernization scanner FAQ
+  description: Frequently asked questions for the legacy SharePoint modernization scanner.
+  ms.date: 07/21/2026
   ms.localizationpriority: high
     
-title: Frequently Asked Questions
+title: Legacy scanner frequently asked questions
 summary: |
+  The SharePoint Modernization Scanner is a legacy tool and is no longer actively maintained. For new assessments, use the Microsoft 365 Assessment tool when it supports your scenario. This FAQ is retained for customers who continue an established scanner workflow or need a scanner-only capability.
 
 sections:
   - name: Ignored
