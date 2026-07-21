@@ -1,5 +1,5 @@
 ---
-title: Create Apps in SharePoint Admin Center
+title: Create apps in SharePoint admin center
 description: Create a SharePoint Embedded app from the SharePoint admin center and validate the new app registration.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Create apps in SharePoint admin center
 
-**Applies to:** Owning tenant administrator — SharePoint Embedded admin / Global admin
+**Applies to:** Developer tenant administrator — SharePoint Embedded admin / Global admin
 
 <!-- agent:
 task_type: how-to

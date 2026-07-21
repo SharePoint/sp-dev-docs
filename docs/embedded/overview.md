@@ -1,5 +1,5 @@
 ---
-title: SharePoint Embedded Overview
+title: SharePoint Embedded overview
 description: Microsoft SharePoint Embedded is an API-only file and document management platform built on Microsoft 365. Start here and route to the right task.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan

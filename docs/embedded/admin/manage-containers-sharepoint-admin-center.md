@@ -160,6 +160,9 @@ For broader controls, see [Apply security and compliance controls](apply-securit
 
 Archive a container when it's no longer actively used but must be retained for legal, compliance, or business purposes. Documents in an archived container can't be accessed by any user or application until the container is reactivated.
 
+> [!NOTE]
+> Container archival relies on Microsoft 365 Archive, which is in preview for SharePoint Embedded. Validate tenant availability, billing, and API behavior before you archive production containers. For more information, see [Archive and restore containers](../build/archive-restore-containers.md).
+
 1. Open **Active containers**.
 1. Select the container.
 1. Select **Archive**.

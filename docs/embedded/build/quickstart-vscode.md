@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ai-usage: ai-assisted
 ---
 
-# Quickstart: build your first app with VS Code
+# Quickstart: Build your first app with VS Code
 
 **Applies to:** Developer
 
@@ -36,7 +36,6 @@ Before you start, make sure you have:
 - Permission to grant admin consent in Microsoft Entra ID.
 
 > [!IMPORTANT]
-
 > You need administrative access to a Microsoft 365 tenant. If you don't have a tenant, use the Microsoft 365 Developer Program, Microsoft Customer Digital Experience, or a Microsoft 365 E3 trial.
 
 ## Install the extension
@@ -92,6 +91,7 @@ Every container type has one owning Microsoft Entra ID application.
 
 > [!CAUTION]
 > If you select an existing application, the extension updates that app's configuration. Don't use a production app for this quickstart.
+
 For the model, see [SharePoint Embedded app architecture](../plan/app-tenant-architecture.md).
 
 ## Configure standard billing
@@ -140,7 +140,6 @@ A container is the basic storage unit and security boundary in SharePoint Embedd
 
 1. Review the warning about local plain text secrets.
 1. If prompted to create a client secret, select **OK** for local development.
-
 1. Let the extension populate the runtime configuration file.
 
 > [!IMPORTANT]

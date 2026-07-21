@@ -1,5 +1,5 @@
 ---
-title: Open Office Files From Your App
+title: Open Office files from your app
 description: Launch Word, Excel, and PowerPoint files from SharePoint Embedded in Office web or desktop clients.
 ms.date: 07/13/2026
 ms.reviewer: cindylay

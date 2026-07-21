@@ -115,7 +115,7 @@ Before a customer can use a pass-through SharePoint Embedded app, the consuming 
 - Owner or contributor permissions for the admin who creates the billing relationship.
 - Completed app registration and consent steps.
 
-No user can access any pass-through SharePoint Embedded app before valid billing is set up for the SharePoint Embedded platform in the consuming tenant.
+Until valid billing is set up for the SharePoint Embedded platform in the consuming tenant, users can't create new containers in a pass-through SharePoint Embedded app. Existing containers and their content remain accessible.
 For the customer-facing setup path, see [Guide customers through tenant setup](customer-tenant-setup-guide.md).
 
 ## Impact on customer onboarding
@@ -143,7 +143,7 @@ Tell the customer:
 1. The customer can track usage in Azure Cost Management.
 
 > [!TIP]
-> Put the billing model in the first page of your installation guide.
+> Put the billing model on the first page of your installation guide.
 > Customer admins often need to involve both Microsoft 365 and Azure billing owners.
 
 ## Decision checklist
@@ -192,4 +192,5 @@ Before you proceed, record:
 Use these values in [Prepare your app for customer installation](prepare-customer-installation.md) and [Guide customers through tenant setup](customer-tenant-setup-guide.md).
 
 ## Next steps
+
 After you choose a billing model, prepare customer-facing tenant setup instructions: [Guide customers through tenant setup](customer-tenant-setup-guide.md).

@@ -1,5 +1,5 @@
 ---
-title: Grant Admin Consent and Permissions
+title: Grant admin consent and permissions
 description: Review SharePoint Embedded permissions, grant admin consent, and verify the consent state in a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
@@ -32,7 +32,7 @@ Use this article to review requested permissions, grant consent, and troubleshoo
 Confirm these prerequisites:
 
 - You can grant admin consent (see [Grant tenant-wide admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#prerequisites)).
-- You know you Microsoft Entra tenant ID (see [How to find your Microsof Entra tenant ID](/entra/fundamentals/how-to-find-tenant))
+- You know your Microsoft Entra tenant ID (see [How to find your Microsoft Entra tenant ID](/entra/fundamentals/how-to-find-tenant)).
 - You know the owning application client ID.
 - You understand why the app needs each requested permission.
 - The app owner has provided installation and consent instructions.
@@ -73,13 +73,13 @@ Before granting consent, review the requested permissions with the app owner.
 Ask the app owner to explain any permission that doesn't align with the expected scenario.
 
 > [!CAUTION]
-> - DON'T grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
+> - Don't grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
 >
-> - DON'T grant consent if you don't understand why each permission is being requested.
+> - Don't grant consent if you don't understand why each permission is being requested.
 
 ## Grant admin consent from the consent endpoint
 
-The SharePoint Embedded may request admin consent on your tenant by providing you with, or redirecting you to, the admin consent URL. To learn more about the admin consent URL, see [Admin consent on the Microsoft identity platform](/entra/identity-platform/v2-admin-consent).
+The SharePoint Embedded app may request admin consent on your tenant by providing you with, or redirecting you to, the admin consent URL. To learn more about the admin consent URL, see [Admin consent on the Microsoft identity platform](/entra/identity-platform/v2-admin-consent).
 
 ```http
 https://login.microsoftonline.com/{your-tenant-id}/v2.0/adminconsent?client_id={owning-app-clientid}&scope=https://graph.microsoft.com/.default&redirect_uri={spe-app-redirect-uri}

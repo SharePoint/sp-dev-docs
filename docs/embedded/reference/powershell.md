@@ -1,5 +1,5 @@
 ---
-title: PowerShell Reference
+title: PowerShell reference
 description: Reference for SharePoint Online PowerShell cmdlets used to administer SharePoint Embedded.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr

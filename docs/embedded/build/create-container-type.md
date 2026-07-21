@@ -91,7 +91,7 @@ The following restrictions are applied to trial container types:
 
 Use standard billing when the developer or app owner tenant pays for consumption.
 
-Each tenant can have up to 25 standard container types at a time.
+Each tenant can create up to 25 container types in total. One of these can be a free trial container type; the rest are standard (billed) container types.
 
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `standard` billing classification.
@@ -122,7 +122,7 @@ Under **Syntex services for**, select **Apps**, then select **SharePoint Embedde
 
 ![Microsoft 365 admin center Apps panel with SharePoint Embedded selected to activate pay-as-you-go billing.](../images/SyntexPAYGActivateSPE.png)
 
-## Configure the owning Entra app
+## Configure the owning Microsoft Entra ID app
 
 Configure the app so it can own exactly one container type.
 

@@ -1,5 +1,5 @@
 ---
-title: Upload, Download, and Manage Files
+title: Upload, download, and manage files
 description: Use Microsoft Graph DriveItem APIs to upload, download, organize, update, delete, and restore SharePoint Embedded files.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -64,7 +64,6 @@ In your app:
 1. Store the container ID returned when the container is created.
 1. Use the container ID when calling DriveItem APIs that require a drive identifier.
 1. Store item IDs returned by upload or folder creation operations.
-
 1. Avoid reconstructing IDs from URLs.
 
 ## Upload files
@@ -153,7 +152,7 @@ A restore flow should identify the deleted item or version, confirm permission, 
 
 > [!NOTE]
 > [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key (October 2025). If you know the ID of the original **driveItem**, you can restore the corresponding **recycleBinItem** directly without first enumerating the recycle bin.
-> [!NOTE]
+>
 > For exact file operation request and response details, use Microsoft Graph DriveItem documentation.
 
 ## Connect to Office and preview experiences
@@ -162,7 +161,7 @@ After upload, add richer experiences:
 
 - [Open Office files from your app](open-office-files.md) for Word, Excel, and PowerPoint launch behavior.
 - [Preview files in your app](preview-files.md) for browser previews.
-- [Search containers and files](../build/search-containers-files.md) for discovery.
+- [Search containers and files](search-containers-files.md) for discovery.
 
 ## Validate file operations
 
