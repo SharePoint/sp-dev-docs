@@ -1,7 +1,7 @@
 ---
 title: Maximize use of modern lists and libraries
 description: Get the maximum number of lists and libraries when using the SharePoint modern user interface.
-ms.date: 04/29/2021
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -44,7 +44,7 @@ In this section you'll learn how to identify lists which are not showing as a mo
 
 ## Detect lists and libraries not available in the modern user interface
 
-The recommended approach to detect which lists and libraries are not available in the modern user interface is to run the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). This tool performs a deep analysis of all the lists and libraries in your tenant, and creates reports that give you details about which lists and libraries do not show in modern, and more importantly, why that happens. Based on the scanner output, you can unblock lists and libraries by remediating them, which is covered in the next section.
+Use the [Microsoft 365 Assessment tool](assess-sharepoint-modernization.md) Classic assessment and include the Lists component to identify lists and libraries that aren't available in the modern user interface and understand the reasons they fall back to classic. Use the assessment output to plan the remediation covered in the next section.
 
 ## Unblock lists and libraries
 

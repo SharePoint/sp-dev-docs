@@ -1,7 +1,7 @@
 ---
 title: Modernize classic publishing portals
 description: Modernize your classic publishing portals
-ms.date: 06/07/2022
+ms.date: 07/21/2026
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
@@ -35,11 +35,11 @@ In modern intranets we recommend using individual communication sites instead of
 
 ![Diagram of modern information architecture, showing the relationship between the Intranet, Finance, and I T.](media/modernize/modern&#32;information&#32;architecture.png)
 
-As preparation for designing your new information architecture it's useful to understand which publishing features are used and for that you can use the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner). Using this scanner you can scan your complete tenant or a subset of site collections for their readiness in three categories: "Microsoft 365 group connection", "Page transformation" and "Publishing Portal Modernization". You can have the scanner collect all three categories but you can also scope the scan to only get the "Publishing Portal Modernization" information by using the `-m PublishingOnly` option. The result of the scan will be an Excel based dashboard which will allow you to analyze the publishing feature usage of all your portals.
+The Microsoft 365 Assessment tool provides classic publishing page discovery and portal-level summaries, but it doesn't yet include every field from the legacy Publishing Portal scan. If you need the complete legacy inventory, including detailed publishing web configuration, use the [legacy SharePoint Modernization Scanner](modernize-scanner.md) with the `PublishingOnly` or `PublishingWithPagesOnly` mode. The generated Excel dashboard helps you analyze publishing feature usage across your portals.
 
 ![publishing portal dashboard](media/modernize/publishingscanner_1.png)
 
 ## See also
 
 - [Guide to the Modern experience in SharePoint](/sharepoint/guide-to-sharepoint-modern-experience)
-- [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner)
+- [Choose a SharePoint modernization assessment tool](modernize-scanner.md)

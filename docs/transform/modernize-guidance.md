@@ -1,7 +1,7 @@
 ---
 title: SharePoint modernization guidance
 description: Modernization offerings that IT Teams can use with their customers
-ms.date: 04/25/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -17,9 +17,9 @@ The used approach is structured around 4 steps which are described in great deta
 
 ## Step 1: Assessment
 
-Understanding which sites are candidates to be modernized is needed to understand the scope of the work. During the assessment phase you'll learn how to run the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner).
+Understanding which sites are candidates to be modernized is needed to understand the scope of the work. Start with [Assess SharePoint modernization](assess-sharepoint-modernization.md) to select the appropriate assessment tool. If you're following this legacy four-step delivery workflow, also run the legacy Groupify assessment because the execution step consumes its Microsoft 365 group connection reports.
 
-Check the [Assessment page](modernize-guidance-assessment.md) to learn more.
+See the [legacy assessment delivery guidance](modernize-guidance-assessment.md) for the additional Groupify scan.
 
 ## Step 2: Strategy
 

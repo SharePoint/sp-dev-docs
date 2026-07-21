@@ -1,7 +1,7 @@
 ---
 title: Modernize customizations
 description: Overview of the customizations that are not compatible with the modern user interface in SharePoint, and guidelines on how to remediate them.
-ms.date: 06/07/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -21,7 +21,7 @@ This article gives an overview of the customizations that are not compatible wit
 
 This section focuses on customizations that you might have implemented in your lists and libraries. SharePoint automatically falls back to the classic list and library user interface when it detects an incompatible customization. Therefore, it's important to address these customizations if you want to get a 100% modern experience.
 
-To get an understanding of the modern user interface compatibility of your lists and libraries, use the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner).
+To understand the modern user interface compatibility of your lists, libraries, and classic extensibility, use the [Microsoft 365 Assessment tool](assess-sharepoint-modernization.md).
 
 ### JSLink
 

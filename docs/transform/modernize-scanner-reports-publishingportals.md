@@ -1,12 +1,14 @@
 ---
 title: The SharePoint modernization scanner reports for the publishing portal scanner mode
 description: Explains the publishing portal output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Publishing Portal reports
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 ## Excel dashboard
 

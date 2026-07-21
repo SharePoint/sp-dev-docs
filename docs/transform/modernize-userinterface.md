@@ -1,7 +1,7 @@
 ---
 title: Modernize the user interface
 description: Make the switch to a modern user interface by updating your SharePoint lists and libraries and site pages.
-ms.date: 04/23/2018
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -38,7 +38,7 @@ With the right teams looped in and educated, you can continue to the next step.
 
 ## Step 2: Analyze your site collections
 
-Your tenant might contain thousands of site collections, so which of these site collections are good candidates to modernize and which aren't? To help you understand the readiness of your existing sites, Microsoft has built a scanner: The [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) provides a detailed analysis of your site's readiness for connecting to a Microsoft 365 group, helps you get a deep understanding of the modern user interface compatibility of your lists and libraries and also performs a detailed analysis of the wiki and web part pages in your environment to prepare you for a page modernization. These outcomes can be used initially to drive remediation work, followed later on by migration work. If your focus is to **transform your site pages**,  to **transform your lists and libraries** or to **connect your sites to a Microsoft 365 group** then use this scanner.
+Your tenant might contain thousands of site collections, so which ones are good candidates to modernize? Start with [Assess SharePoint modernization](assess-sharepoint-modernization.md). Use the Microsoft 365 Assessment tool for classic pages, lists, and extensibility. Microsoft 365 group connection readiness isn't currently available in that tool, so established Groupify assessments still require the legacy SharePoint Modernization Scanner.
 
 **Microsoft 365 group connection readiness** |
 :---------|
@@ -63,7 +63,7 @@ After you analyze the sites that you want to modernize, you can continue with th
 
   - **[Enabling lists and libraries to show in the modern user interface](modernize-userinterface-lists-and-libraries.md)** by replacing customizations, removing incompatible columns from the used views, or (as a last resort) moving data into a modern user interface-compatible list type.
   - **[Connecting your site to a Microsoft 365 group](modernize-connect-to-office365-group.md)**, which gives your site a modern home page and enables your site to use, for example, a mailbox or Microsoft Planner, which then enables you to use a modern version of a calendar and task list.
-  - **[Creating modern pages](modernize-classic-sites.md)** and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites; transforming all pages is resource-intensive and often not needed. To assist in this triage, the SharePoint Modernization scanner can give you usage information about the current wiki and web part pages.
+  - **[Creating modern pages](modernize-classic-sites.md)** and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites; transforming all pages is resource-intensive and often not needed. The Microsoft 365 Assessment tool's Classic SharePoint Pages Assessment provides page inventory and usage data to support this triage.
 
 - **Communicate to your end users about the completed changes**; the site will work differently in a modern version, so your users need to be aware of that.
 

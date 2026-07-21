@@ -1,12 +1,14 @@
 ---
 title: The SharePoint modernization scanner reports
 description: Explains the output created by the modernization scanner
-ms.date: 06/07/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 The output of a SharePoint Modernization Scanner run is a series of reports (CSV files and Excel dashboards). Using these outputs you can better understand what classic usage there is in your tenant, assess whether it's still relevant for you and get informed on potential remediation's needed before you can modernize. You would typically use the Microsoft Excel based dashboards to inspect the data and build up an understanding of the scan results. If you later on want to modernize sites, lists, etc you can use the CSV files as input for (PowerShell based) automation.
 

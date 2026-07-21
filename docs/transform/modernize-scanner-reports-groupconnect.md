@@ -1,12 +1,14 @@
 ---
 title: The SharePoint modernization scanner reports for the Microsoft 365 group connect scanner mode
 description: Explains the Microsoft 365 group connect output created by the modernization scanner
-ms.date: 06/07/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Microsoft 365 group Connect reports
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 The Microsoft 365 group connect (mode `GroupifyOnly`) is always run as this mode is responsible for creating the main Site and Web reports. 
 

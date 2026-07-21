@@ -1,7 +1,7 @@
 ---
 title: Modernize Delve blogs and classic blogs
 description: Modernize your Delve blogs and classic blogs
-ms.date: 02/09/2023
+ms.date: 07/21/2026
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---
@@ -24,7 +24,7 @@ Before you can start modernizing your blog sites it's important to answer these 
 - Where are the blog sites in my tenant? Getting insight in the blog sites will help you assess the possible modernization impact
 - Which blog sites are still actively used? It makes sense to (initially) only modernize actively maintained blog sites
 
-The best approach to get an answer to the above questions in running the [SharePoint Modernization Scanner](./modernize-scanner.md): when you run this scanner you'll get a [report detailing the classic blog sites](./modernize-scanner-reports-blogs.md).
+Run the [Microsoft 365 Assessment tool's Classic SharePoint Pages Assessment](assess-sharepoint-modernization.md) to discover classic blog pages and review their usage. If you need to interpret output from an existing SharePoint Modernization Scanner run, see the [legacy blog report documentation](modernize-scanner-reports-blogs.md).
 
 ## Step 2: Prepare a target communication site to receive the modernized blog pages
 

@@ -1,12 +1,14 @@
 ---
 title: The SharePoint modernization scanner reports for the blog scanner mode
 description: Explains the blog output created by the modernization scanner
-ms.date: 02/04/2021
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Modernization scanner reports: Blog reports
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 ## Excel dashboard
 

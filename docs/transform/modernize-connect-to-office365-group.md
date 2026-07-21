@@ -1,7 +1,7 @@
 ---
 title: Connect to a Microsoft 365 group
 description: Connect a Microsoft 365 group to an existing SharePoint site to modernize it and have it benefit from all other group-connected services such as Microsoft Teams and Planner.
-ms.date: 01/14/2021
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -63,7 +63,7 @@ Getting familiar with what group-connection does to your site is important, and 
 
 The user interface option shown in the previous section is not suitable if you want to group-connect hundreds of site collections. At that point, using an API to programmatically do this makes a lot of sense. But before doing that, it's best to verify which sites are ready to be group-connected because not all sites are suitable for this.
 
-To help you understand which sites are ready to be group-connected, you can use the [SharePoint Modernization Scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. This link contains all the details needed to run the scanner. After you've run the scanner go the [Understand and process the scanner results](modernize-connect-to-office365-group-scanner.md) article to analyze the scan results.
+Microsoft 365 group connection readiness isn't currently available in the Microsoft 365 Assessment tool. To analyze which sites are ready to be group-connected, use the [legacy SharePoint Modernization Scanner](modernize-scanner.md). After the scan completes, see [Understand and process the scanner results](modernize-connect-to-office365-group-scanner.md).
 
 ### Step 3: Modernize your sites
 

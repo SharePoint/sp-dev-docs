@@ -1,7 +1,7 @@
 ---
 title: Overview of the Connect to new Microsoft 365 group feature
 description: Augment your team site collaboration capabilities with the benefits of other group services such as Outlook, Planner, and Microsoft Teams.
-ms.date: 06/28/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ---
 
@@ -33,6 +33,6 @@ After your site is connected to a Microsoft 365 group, it behaves like a modern 
 ## See also
 
 - [Connect a classic SharePoint team site to a new Microsoft 365 group](../../transform/modernize-connect-to-office365-group.md)
-- [SharePoint Modernization scanner tool](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
+- [Legacy SharePoint Modernization Scanner](../../transform/modernize-scanner.md)
 - [PowerShell cmdlet to connect a SharePoint team site to a new Microsoft 365 group](/powershell/module/sharepoint-online/Set-SPOSiteOffice365Group)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
