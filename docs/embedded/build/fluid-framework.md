@@ -25,7 +25,7 @@ Use Fluid Framework when your SharePoint Embedded app needs real-time shared sta
 
 Create or identify a SharePoint Embedded application before you run the Fluid sample. You need admin credentials for a Microsoft 365 tenant, the application client ID, the container type ID, and at least one container created for that container type.
 
-If you used the SharePoint Embedded Visual Studio Code extension, use the generated sample configuration to find `ContainerTypeId` and `ClientID`. You can also find the client ID in Microsoft Entra ID under **App registrations**.
+If you used the SharePoint Embedded Visual Studio Code extension, use the generated sample configuration to find `ContainerTypeId` and `ClientId`. You can also find the client ID in Microsoft Entra ID under **App registrations**.
 
 To try SharePoint Embedded at no cost, create a trial container type. See [Create and configure a container type](create-container-type.md).
 
@@ -55,7 +55,7 @@ npm run dev
 
 After Webpack completes, open `https://localhost:8080`, sign in with tenant credentials, and grant admin consent for the app when prompted. Open the same URL in another browser tab or send it to another user in the same tenant. Changes to the item counter synchronize across connected clients.
 
-![Item Counter sample app running in the browser, showing a shared counter that synchronizes across connected clients.](../images/itemcount.png)
+![Item counter sample app running in the browser, showing a shared counter that synchronizes across connected clients.](../images/itemcount.png)
 
 ## Decide what belongs in Fluid
 

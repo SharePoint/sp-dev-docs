@@ -1,6 +1,6 @@
 ---
-title: Consuming Tenant Admin
-description: This article describes the role and responsibilities of Consuming Tenant Admin in SharePoint Embedded.
+title: Consuming tenant admin
+description: Understand the consuming tenant admin role and responsibilities for SharePoint Embedded.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
@@ -11,21 +11,21 @@ ai-usage: ai-assisted
 
 **Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin
 
-> [!IMPORTANT]
-> Assign the SharePoint Embedded Administrator role available in Microsoft 365 admin center or Microsoft Entra ID to execute SharePoint Embedded Container cmdlets mentioned in this article.
->
-> Global Administrators can continue to execute SharePoint Embedded container cmdlets.
->
-> A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded.
-
-Organizations that use SharePoint Embedded applications in their Microsoft 365 tenants are consuming tenants. The consuming tenant administrator manages these applications and the containers that hold content. Consuming tenant administrators can manage applications registered in their tenant, tenant-level configurations, and security and compliance settings. This article describes enterprise manageability features that consuming tenant administrators can use through PowerShell cmdlets or the SharePoint admin center.
-
 <!-- agent:
 task_type: concept
 audience: administrator
 outcome: Understand the consuming tenant administrator role and the admin tools available for SharePoint Embedded apps.
 next: install-sharepoint-embedded-app.md
 -->
+
+> [!IMPORTANT]
+> Assign the SharePoint Embedded Administrator role available in Microsoft 365 admin center or Microsoft Entra ID to execute SharePoint Embedded container cmdlets mentioned in this article.
+>
+> Global Administrators can continue to execute SharePoint Embedded container cmdlets.
+>
+> A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded.
+
+Organizations that use SharePoint Embedded applications in their Microsoft 365 tenants are consuming tenants. The consuming tenant administrator manages these applications and the containers that hold content. Consuming tenant administrators can manage applications registered in their tenant, tenant-level configurations, and security and compliance settings. This article describes enterprise manageability features that consuming tenant administrators can use through PowerShell cmdlets or the SharePoint admin center.
 
 ## Consuming tenant admin role
 
@@ -74,17 +74,19 @@ For information on consuming tenant admin in SharePoint admin center, see [Manag
 
 ## Security and compliance administration
 
-SharePoint Embedded uses Microsoft’s comprehensive compliance and data governance solutions to help organizations manage risks, protect, and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in a similar manner in the SharePoint Embedded platform as they do today in the Microsoft 365 platform, so that data is stored in a secure, protected way that meets customers’ business and compliance policies while making it easy for Compliance and SharePoint Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Plan security, compliance, and governance](../plan/security-compliance-governance.md).
+SharePoint Embedded uses Microsoft's comprehensive compliance and data governance solutions to help organizations manage risk, protect and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in SharePoint Embedded in a similar way to Microsoft 365. These solutions help store data securely while making it easier for Compliance Administrators and SharePoint Embedded Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Plan security, compliance, and governance](../plan/security-compliance-governance.md).
 
 ## Set up billing for pass-through container type
 
-To use a pass-through billing SharePoint Embedded app, a Global Administrator needs to set up Microsoft Syntex billing in the [Microsoft 365 admin center](https://admin.microsoft.com/). The SharePoint Embedded Administrator role can't configure billing. No user can access any pass-through SharePoint Embedded apps before valid billing is set up for the SharePoint Embedded platform.
+To use a pass-through billing SharePoint Embedded app, a Global Administrator needs to set up pay-as-you-go services in the [Microsoft 365 admin center](https://admin.microsoft.com/). The SharePoint Embedded Administrator role can't configure billing. No user can access any pass-through SharePoint Embedded apps before valid billing is set up for the SharePoint Embedded platform.
 
-### [Meters](../reference/billing-meters.md)
+### Meters
+
+For detailed meter information, see [Billing meters](../reference/billing-meters.md).
 
 SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that's egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Microsoft Cost Management](https://portal.azure.com/).
 
-SharePoint Embedded has four billing meters, as shown. Refer to the [product page](https://adoption.microsoft.com/en-us/sharepoint/embedded/) for pricing details.
+SharePoint Embedded has four GA billing meters, as shown. For the private preview agent message meter, see [Billing meters](../reference/billing-meters.md). Refer to the [product page](https://adoption.microsoft.com/sharepoint/embedded/) for pricing details.
 
 | SharePoint Embedded Service Meters |   Meter Unit   |
 | ---------------------------------- | -------------- |
@@ -97,18 +99,14 @@ SharePoint Embedded has four billing meters, as shown. Refer to the [product pag
 
 1. A valid Azure subscription is required. You can create one by following the steps here to [create an Azure subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 1. A valid Azure resource group is required. You can create one by following the steps here to [create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal).
-1. In [Microsoft 365 admin center](https://admin.microsoft.com/), select **Setup**, and then view the **Files and Content** section. Select **Automate Content with Microsoft Syntex.**
+1. In the [Microsoft 365 admin center](https://admin.microsoft.com/), open **Setup** > **Billing and licenses**, and then select **Activate pay-as-you-go services**.
+1. Follow the SharePoint Embedded setup prompts to connect the approved Azure subscription and resource group.
 
-    ![Microsoft 365 admin center Files and Content](../images/DTCBilling1.png)
+For detailed setup steps, see [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
-1. Select **Go to Syntex settings**.
-1. Select **Apps** under **Syntex services for**, select **SharePoint Embedded**
+### Billing management
 
-    ![Microsoft 365 admin center SharePoint Embedded Billing setting](../images/DTCBilling2.png)
-
-1. Follow the instructions on the **SharePoint Embedded** flyout to turn on SharePoint Embedded apps.
-
-### [Billing management](monitor-usage-billing-cost.md)
+For detailed billing management steps, see [Monitor usage, billing, and cost](monitor-usage-billing-cost.md).
 
 The [Microsoft Cost Management portal](https://portal.azure.com/#view/Microsoft_Azure_CostManagement/Menu/~/overview/openedBy/AzurePortal) provides a comprehensive overview of your costs, allowing you to track and analyze your spending for the SharePoint Embedded application. This guide walks you through the steps to view your billing details and SharePoint Embedded consumption in the Microsoft Cost Management portal.
 

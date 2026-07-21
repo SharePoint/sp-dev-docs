@@ -26,7 +26,14 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 
 ## Test user experience
 
-Sign in with a user who has a Microsoft 365 Copilot license when required. Upload supported files to a container, wait for indexing, open the chat, and ask questions the file content can answer. If answers omit expected files, check discoverability, supported file formats, app access, user access, scope selection, and indexing delay.
+Sign in with a user who has a Microsoft 365 Copilot license when required. Upload supported files to a container, wait for indexing, open the chat, and ask questions the file content can answer. If answers omit expected files, check:
+
+- Discoverability.
+- Supported file formats.
+- App access.
+- User access.
+- Scope selection.
+- Indexing delay.
 
 ## Next steps
 

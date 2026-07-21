@@ -15,11 +15,11 @@ ai-usage: ai-assisted
 <!-- agent:
 task_type: how-to
 audience: developer
-outcome: Add file preview UX by creating preview links and embedding them safely in your app.
+outcome: Add file preview experiences by creating preview links and embedding them safely in your app.
 next: ../build/search-containers-files.md
 -->
 
-Add file preview UX so users can inspect SharePoint Embedded content without downloading files or opening a full Office editing experience.
+Add file preview experiences so users can inspect SharePoint Embedded content without downloading files or opening a full Office editing experience.
 
 Complete [Open Office files from your app](open-office-files.md) when you need Office editing. Use this article for lightweight previews.
 
@@ -152,12 +152,11 @@ In production, also provide:
 - Responsive sizing.
 - Loading states.
 - Error states.
-
 - A fallback download or open action.
 
 ## Load previews dynamically
 
-Don't call Microsoft Graph directly from a browser script if that creates CORS issues or exposes tokens.
+Don't call Microsoft Graph directly from a browser script if that creates cross-origin resource sharing (CORS) issues or exposes tokens.
 
 Use a server-side endpoint that:
 
@@ -190,9 +189,9 @@ async function preview(driveId, itemId) {
 }
 ```
 
-## Design preview UX
+## Design the preview experience
 
-A good preview UX should:
+A good preview experience should:
 
 - Show the file name.
 - Show a loading indicator.

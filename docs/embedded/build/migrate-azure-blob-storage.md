@@ -22,11 +22,11 @@ next: ../publish/prepare-customer-installation.md
 Use this guide when you move content from Azure Blob Storage to SharePoint Embedded. A C# migration app reads blobs with the Azure Storage SDK and uploads them to a SharePoint Embedded container with Microsoft Graph.
 
 > [!TIP]
-> For migrating from SharePoint or OneDrive sources, SharePoint Embedded also provides dedicated [migration APIs](/graph/api/resources/sharepointmigration-api-overview) that are generally available on the **v1.0** Microsoft Graph endpoint (November 2025) and support migrating **file version history** (February 2026). The manual sample in this article is best when copying from Azure Blob Storage specifically.
+> For migrating from SharePoint or OneDrive sources, SharePoint Embedded also provides dedicated [migration APIs](/graph/api/resources/sharepointmigration-api-overview) that are generally available on the **v1.0** Microsoft Graph endpoint (November 2025). The manual sample in this article is best when copying from Azure Blob Storage specifically.
 
 ## Prepare authentication
 
-For Azure Blob Storage, the sample uses a container-level SAS URL with `Read` and `List` permissions.
+For Azure Blob Storage, the sample uses a container-level shared access signature (SAS) URL with `Read` and `List` permissions.
 
 ```csharp
 _containerClient = new BlobContainerClient(new Uri(_containerLevelSASUrl));
@@ -45,11 +45,10 @@ InteractiveBrowserCredential credential = new InteractiveBrowserCredential(optio
 _graphClient = new GraphServiceClient(credential, scopes, null);
 ```
 
-Because the sample uses `InteractiveBrowserCredential` with a `http://localhost` redirect URI, the Microsoft Entra ID app registration must include a **Mobile and desktop applications** platform that lists `http://localhost` as a redirect URI. Add this platform in the [Microsoft Entra admin center](https://entra.microsoft.com) under the app registration's **Authentication** page before you run the sample.
+Because the sample uses `InteractiveBrowserCredential` with the `http://localhost` redirect URI, the Microsoft Entra ID app registration must include a **Mobile and desktop applications** platform that lists `http://localhost` as a redirect URI. Add this platform in the [Microsoft Entra admin center](https://entra.microsoft.com) under the app registration's **Authentication** page before you run the sample.
 
 ![Screenshot of the Authentication page for a Microsoft Entra ID app registration. A Mobile and desktop applications platform is configured with http://localhost listed as a redirect URI.](../images/app-registration-console-platform.png)
 
-*Figure 1: Add a Mobile and desktop applications platform with the `http://localhost` redirect URI so the interactive sign-in flow can return the token to the migration app.*
 
 The consuming tenant must have the application and container type registered. The sample also requires a SharePoint Embedded container ID for the destination.
 

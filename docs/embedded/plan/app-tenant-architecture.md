@@ -1,6 +1,6 @@
 ---
 title: Understand app and tenant architecture
-description: Plan how SharePoint Embedded apps, tenants, container types, and containers relate across owning and consuming tenants.
+description: Plan how SharePoint Embedded apps, tenants, container types, and containers relate across developer and consuming tenants.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
 ms.author: mawin
@@ -31,9 +31,9 @@ SharePoint Embedded separates three concepts:
 - The container type that defines application access, behavior, and billing accountability.
 - The containers and files that live inside a Microsoft 365 tenant boundary.
 
-All files and documents in SharePoint Embedded are stored in containers.
+SharePoint Embedded stores all files and documents in containers.
 
-All containers and container content are created and stored within a Microsoft 365 tenant.
+Applications create containers and container content within a Microsoft 365 tenant.
 
 Applications create, manage, and interact with containers and container content through Microsoft Graph.
 
@@ -47,17 +47,17 @@ SharePoint Embedded uses two tenant roles.
 
 | Tenant role | Meaning | Typical responsibility |
 | --- | --- | --- |
-| Owning tenant | The Microsoft Entra ID tenant where a container type is created. | Own the Microsoft Entra ID app registration and manage the container type. |
+| Developer tenant | The Microsoft Entra ID tenant where a container type is created. | Own the Microsoft Entra ID app registration and manage the container type. |
 | Consuming tenant | The Microsoft Entra ID tenant where a container type is used. | Host containers and content for users of the application. |
 
-The same Microsoft Entra ID tenant can be both the owning tenant and the consuming tenant for a given container type.
+The same Microsoft Entra ID tenant can be both the developer tenant and the consuming tenant for a given container type.
 
 For example, an enterprise line-of-business (LOB) app can be owned by the enterprise tenant and used in that same tenant.
 
 An independent software vendor (ISV) app can be owned by the ISV tenant and used in many different customer tenants.
 
 > [!IMPORTANT]
-> Containers and content are stored in the consuming tenant. They don't move into the developer or ISV tenant just because the app is owned there.
+> Containers and content are stored in the consuming tenant. They don't move into the developer tenant just because the app is owned there.
 
 ## App ownership
 
@@ -85,7 +85,7 @@ It defines the relationship, access privileges, and billing accountability betwe
 
 It also defines selected behaviors for all containers of that type.
 
-The container type is represented on each container as an immutable property.
+Each container includes its container type as an immutable property.
 
 Use a container type to answer these architecture questions:
 
@@ -141,7 +141,7 @@ For governance planning, see [Plan security, compliance, and governance](../plan
 
 An owning app can't interact with containers in a consuming tenant until the container type is registered in that consuming tenant.
 
-Container type registration is performed by the owning application.
+The owning application performs container type registration.
 
 The registration specifies the permissions that the owning app and guest apps have on containers of that container type in the consuming tenant.
 
@@ -151,7 +151,7 @@ For full registration requirements, see [Register file storage container type ap
 
 An application's access to containers and content is determined by permissions configured during container type registration.
 
-The owning application receives permissions for its container type when the container type is created. However, it may only interact with containers of its container type after registration in a consuming tenant.
+The owning application receives permissions for its container type when the container type is created. However, it can only interact with containers of its container type after registration in a consuming tenant.
 
 The following diagram shows the dedicated pattern. Three applications are deployed in one tenant: two independent software vendor (ISV) apps (App 1 and App 2) and one line-of-business (LOB) app (App 3). Each app owns a separate container type and can access only the stack of containers for the container type it owns.
 
@@ -207,7 +207,7 @@ For model selection, see [Choose an app model: single-tenant or multitenant](../
 
 ## Planning checklist
 
-- Identify the owning tenant.
+- Identify the developer tenant.
 - Identify each consuming tenant.
 - Confirm where the Microsoft Entra ID app registration lives.
 - Confirm which app registration owns the container type.

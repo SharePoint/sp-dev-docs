@@ -11,9 +11,9 @@ ai-usage: ai-assisted
 
 **Applies to:** All
 
-Microsoft SharePoint Embedded is a cloud-based, API-only file and document management system you can use in any application. It lets app developers harness the Microsoft 365 file and document storage platform, and is suitable for enterprises building line-of-business applications and ISVs building multitenant applications.
+Microsoft SharePoint Embedded is a cloud-based, API-only file and document management system you can use in any application. It lets app developers harness the Microsoft 365 file and document storage platform, and is suitable for enterprises building line-of-business applications and independent software vendors (ISVs) building multitenant applications.
 
-SharePoint Embedded has no standalone end-user UI and no no-code option. You access it programmatically through Microsoft Graph, so using SharePoint Embedded always involves building or deploying an application.
+SharePoint Embedded has no standalone end-user interface and doesn't offer a no-code option. You access it programmatically through Microsoft Graph, so using SharePoint Embedded always involves building or deploying an application.
 
 SharePoint Embedded brings advanced Microsoft 365 capabilities into your app, including Office collaboration, Microsoft Purview security and compliance, and Copilot.
 
@@ -74,7 +74,7 @@ Because content lives in the customer's Microsoft 365 tenant, it's subject to th
 
 ### Availability
 
-SharePoint Embedded is available in the Microsoft 365 commercial cloud, in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (November 2025, not yet GCC High or DoD), and in [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet) for customers in China (February 2026). See [Microsoft Graph national cloud deployments](/graph/deployments).
+SharePoint Embedded is available in the Microsoft 365 commercial cloud, in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) and in [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet) for customers in China. It is not yet available in Government Community Cloud High (GCC High) or Department of Defense (DoD). See [Microsoft Graph national cloud deployments](/graph/deployments).
 
 ## Next steps
 
