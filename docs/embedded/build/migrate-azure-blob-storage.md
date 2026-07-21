@@ -1,7 +1,7 @@
 ---
 title: Migrate from Azure Blob Storage
 description: Move files from Azure Blob Storage into SharePoint Embedded containers with Microsoft Graph.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: stpuceli
 ms.author: mawin
 ms.localizationpriority: high
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 <!-- agent:
 task_type: how-to
 audience: developer
-outcome: Map blobs to SharePoint Embedded drive items and upload content with Graph sessions.
+outcome: Map blobs to SharePoint Embedded DriveItems and upload content with Graph sessions.
 next: ../publish/prepare-customer-installation.md
 -->
 
@@ -126,17 +126,17 @@ Use `fail` when duplicate files shouldn't be overwritten. Change the conflict be
 
 ## Run the sample
 
-The sample uses Microsoft Graph SDK 5.56.0, Azure.Identity 1.12.0, Azure.Storage.Blobs 12.21.0, CommandLineParser 2.9.1, and Newtonsoft.Json 13.0.3.
+The sample uses the package versions specified in the sample project file, including the Microsoft Graph SDK, Azure.Identity, Azure.Storage.Blobs, CommandLineParser, and Newtonsoft.Json.
 
 ```console
-dotnet run Program.cs -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]
+dotnet run -- --sasurl "<sas url>" --tenantid "<tenant id>" --clientid "<client id>" --containerid "<container id>" [ --blobfile "<file name>" --outputfile "<file name>" ]
 ```
 
 Use the optional blob list file for controlled batches and the optional output file to capture failed blobs for reruns.
 
 ## Validate migrated content
 
-Compare source blob counts with destination drive item counts. Check folder paths, file sizes, upload failures, duplicate handling, and required metadata. Open representative files through your SharePoint Embedded app, then validate search and metadata queries after indexing has had time to complete.
+Compare source blob counts with destination DriveItem counts. Check folder paths, file sizes, upload failures, duplicate handling, and required metadata. Open representative files through your SharePoint Embedded app, then validate search and metadata queries after indexing has had time to complete.
 
 Don't delete source blobs until business owners approve the migration result and retention requirements are satisfied.
 

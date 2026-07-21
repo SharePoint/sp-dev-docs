@@ -1,7 +1,7 @@
 ---
 title: Apply security and compliance controls
 description: Apply Microsoft Purview and SharePoint controls to protect and govern SharePoint Embedded content.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -63,7 +63,7 @@ Use PowerShell to retrieve application and container details.
 1. Retrieve details for a container.
 
    ```powershell
-   Get-SPOContainer -OwningApplicationId <ApplicationID> -Identity <ContainerID>
+   Get-SPOContainer -Identity <ContainerID>
    ```
 
 Use the container site URL to target policies at specific SharePoint Embedded containers.
@@ -72,7 +72,7 @@ For cmdlet details, see [Get-SPOContainer](/powershell/module/sharepoint-online/
 
 ## Apply audit controls
 
-Audit capabilities for SharePoint Embedded mirror existing SharePoint audit capabilities. User and admin operations performed in SharePoint Embedded applications are captured in the unified audit log.
+Audit capabilities for SharePoint Embedded mirror existing SharePoint audit capabilities. The unified audit log captures user and admin operations performed in SharePoint Embedded applications.
 
 Use Microsoft Purview audit to search activity and investigate file, user, app, and admin operations.
 
@@ -165,7 +165,7 @@ Global Administrators and SharePoint Embedded Administrators can set or remove s
 Set a label:
 
 ```powershell
-Set-SPOContainer -Identity <ContainerID/ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
+Set-SPOContainer -Identity <ContainerID-or-ContainerSiteURL> -SensitivityLabel <SensitivityLabelGUID>
 ```
 
 Remove a label by using the supported container label command documented in [Manage containers with PowerShell](manage-containers-powershell.md).

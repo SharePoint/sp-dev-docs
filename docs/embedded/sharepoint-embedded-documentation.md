@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded documentation
 description: Task-based index for SharePoint Embedded. Find the right page by what you're trying to do, whether you build apps or administer them.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 **Applies to:** All
 
-SharePoint Embedded is a cloud-based, API-only file and document management platform built on Microsoft 365. Developers embed Office collaboration, Microsoft Purview compliance, and Copilot into their own apps — while documents stay inside each customer's Microsoft 365 tenant.
+SharePoint Embedded is a cloud-based, API-only file and document management platform built on Microsoft 365. You can embed Office collaboration, Microsoft Purview compliance, and Copilot into your own apps while documents stay inside each customer's Microsoft 365 tenant.
 
 This page is organized by **task**. Find what you're trying to do and go straight to the page that does it. A machine-readable index is available in this folder as `llms.txt`.
 
@@ -28,7 +28,7 @@ next: overview.md
 
 ## Choose a task path
 
-Most tasks start from a build, publish, administer, govern, or planning path. Use the table to choose the path that matches your role and goal:
+Most tasks start from a build, publish, administer, govern, or plan path. Use the table to choose the path that matches your role and goal:
 
 | You are… | You want to… | Start at |
 |---|---|---|

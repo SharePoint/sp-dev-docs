@@ -1,7 +1,7 @@
 ---
 title: Set up SharePoint Embedded as a Foundry knowledge source
 description: Configure Microsoft Foundry Agent Service to use SharePoint Embedded content as a SharePoint knowledge source.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -31,16 +31,14 @@ Before you start, make sure you have:
 - A SharePoint Embedded app with at least one container.
 - The container type ID for the SharePoint Embedded app.
 - A Microsoft Foundry Agent Service project.
-- At least one Microsoft 365 Copilot license in the tenant during preview.
+- At least one Microsoft 365 Copilot license in the tenant during preview. Billing requirements after preview are subject to change.
 - Permission to update the container type registration in each consuming tenant where the agent must access content.
-
-During preview, the Copilot license is required. Billing requirements after preview are subject to change.
 
 ## Configure the SharePoint knowledge source
 
 Configure the Foundry SharePoint knowledge source with `remoteSharePointParameters.containerTypeId` set to your SharePoint Embedded container type ID.
 
-For source-specific configuration details, see [SharePoint knowledge source properties](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote#source-specific-properties).
+For source-specific configuration details, see [SharePoint knowledge source properties](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote#create-a-knowledge-source).
 
 ## Grant Foundry access to the container type
 

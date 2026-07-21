@@ -1,7 +1,7 @@
 ---
 title: Consuming tenant admin
 description: Understand the consuming tenant admin role and responsibilities for SharePoint Embedded.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -23,9 +23,11 @@ next: install-sharepoint-embedded-app.md
 >
 > Global Administrators can continue to execute SharePoint Embedded container cmdlets.
 >
-> A global administrator can assign a user the SharePoint Embedded administrator role to act as a consuming tenant admin for SharePoint Embedded.
+> A Global Administrator can assign a user the SharePoint Embedded Administrator role to act as a consuming tenant admin for SharePoint Embedded.
 
-Organizations that use SharePoint Embedded applications in their Microsoft 365 tenants are consuming tenants. The consuming tenant administrator manages these applications and the containers that hold content. Consuming tenant administrators can manage applications registered in their tenant, tenant-level configurations, and security and compliance settings. This article describes enterprise manageability features that consuming tenant administrators can use through PowerShell cmdlets or the SharePoint admin center.
+Organizations that use SharePoint Embedded applications in their Microsoft 365 tenants are consuming tenants. The consuming tenant administrator manages these applications and the containers that hold content.
+
+Consuming tenant administrators can manage applications registered in their tenant, tenant-level configurations, and security and compliance settings. They use PowerShell cmdlets or the SharePoint admin center for enterprise management tasks.
 
 ## Consuming tenant admin role
 
@@ -48,33 +50,33 @@ The [fileStorageContainerTypeRegistration](/graph/api/resources/filestorageconta
 
 ### SharePoint Online Management Shell
 
-On PowerShell, the SharePoint Embedded Admin can run the following cmdlets:
+In PowerShell, the SharePoint Embedded Administrator can run the following cmdlets:
 
-1. Enumerate applications in a tenant
-1. Enumerate containers of an application in a tenant
-1. Enumerate containers of an application sorted by storage usage
-1. Enumerate archived containers of an application
-1. Edit the sensitivity label on a container
-1. Set the sharing capability configuration on a container
+- Enumerate applications in a tenant
+- Enumerate containers of an application in a tenant
+- Enumerate containers of an application sorted by storage usage
+- Enumerate archived containers of an application
+- Edit the sensitivity label on a container
+- Set the sharing capability configuration on a container
 
 For information on consuming tenant admin in PowerShell, see [Manage containers with PowerShell](manage-containers-powershell.md).
 
 ### SharePoint admin center
 
-The SharePoint Embedded Admin can access the Active and Deleted containers page in the SharePoint admin center and perform SharePoint Embedded application-level and container-level actions. This includes the following:
+The SharePoint Embedded Administrator can access the Active and Deleted containers page in the SharePoint admin center and perform SharePoint Embedded application-level and container-level actions. This includes the following:
 
-1. View the Active container page
-1. View the Archived container page
-1. View the Deleted container page
-1. View the detailed information of a container
-1. Archive and reactivate containers
-1. Soft delete, restore, and purge deleted containers
+- View the Active container page
+- View the Archived container page
+- View the Deleted container page
+- View the detailed information of a container
+- Archive and reactivate containers
+- Soft delete, restore, and purge deleted containers
 
 For information on consuming tenant admin in SharePoint admin center, see [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md).
 
 ## Security and compliance administration
 
-SharePoint Embedded uses Microsoft's comprehensive compliance and data governance solutions to help organizations manage risk, protect and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in SharePoint Embedded in a similar way to Microsoft 365. These solutions help store data securely while making it easier for Compliance Administrators and SharePoint Embedded Administrators to enforce critical security and compliance policies on the content. For information on supported security and compliance capabilities, see [Plan security, compliance, and governance](../plan/security-compliance-governance.md).
+SharePoint Embedded uses Microsoft 365 compliance and data governance solutions to help organizations manage risk, protect and govern sensitive data, and respond to regulatory requirements. Security and compliance solutions work in SharePoint Embedded in a similar way to Microsoft 365. These solutions help Compliance Administrators and SharePoint Embedded Administrators enforce security and compliance policies on content. For information on supported security and compliance capabilities, see [Plan security, compliance, and governance](../plan/security-compliance-governance.md).
 
 ## Set up billing for pass-through container type
 
@@ -84,9 +86,9 @@ To use a pass-through billing SharePoint Embedded app, a Global Administrator ne
 
 For detailed meter information, see [Billing meters](../reference/billing-meters.md).
 
-SharePoint Embedded employs a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that's egressed from the SharePoint Embedded platform. Each of these factors contributes to the overall cost, ensuring that you only pay for the resources and services you use. You can view this usage and billing details in the [Microsoft Cost Management](https://portal.azure.com/).
+SharePoint Embedded uses a pay-as-you-go (PAYG) billing model through an Azure subscription. Billing is determined by how much data in GB you store in SharePoint Embedded in active and archived states, transactions used to access and modify the container and container contents, and data that's egressed from the SharePoint Embedded platform. You can view usage and billing details in [Microsoft Cost Management](https://portal.azure.com/).
 
-SharePoint Embedded has four GA billing meters, as shown. For the private preview agent message meter, see [Billing meters](../reference/billing-meters.md). Refer to the [product page](https://adoption.microsoft.com/sharepoint/embedded/) for pricing details.
+SharePoint Embedded has four generally available billing meters, as shown. For the private preview agent message meter, see [Billing meters](../reference/billing-meters.md). Refer to the [product page](https://adoption.microsoft.com/sharepoint/embedded/) for pricing details.
 
 | SharePoint Embedded Service Meters |   Meter Unit   |
 | ---------------------------------- | -------------- |

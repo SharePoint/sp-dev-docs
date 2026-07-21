@@ -1,7 +1,7 @@
 ---
 title: Understand app and tenant architecture
 description: Plan how SharePoint Embedded apps, tenants, container types, and containers relate across developer and consuming tenants.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -63,7 +63,7 @@ An independent software vendor (ISV) app can be owned by the ISV tenant and used
 
 A SharePoint Embedded application is a Microsoft Entra ID application registration.
 
-As an owning or guest application to a container type, the app has access to containers of that container type.
+An owning or guest application has access to containers of its assigned container type.
 
 SharePoint Embedded requires a 1:1 relationship between an owning application and a container type.
 
@@ -95,7 +95,7 @@ Use a container type to answer these architecture questions:
 
 For more detail, see [Understand container types and containers](../plan/container-types-containers.md).
 
-## Container type registration resource
+## Container type registration as a resource
 
 A container type registration is also a SharePoint Embedded resource.
 
@@ -131,7 +131,7 @@ The partition doesn't have a SharePoint Online user experience.
 
 Documents in the partition are accessible through APIs and through app-provided content experiences.
 
-Files remain inside the consumer's Microsoft 365 tenant boundary.
+Files remain inside the consuming tenant's Microsoft 365 tenant boundary.
 
 The consuming tenant's Microsoft 365 settings apply to app documents, including supported Microsoft Purview security and compliance policies.
 
@@ -197,7 +197,7 @@ In an ISV app:
 
 Use this model when one app is used by multiple customer tenants.
 
-The following diagram shows a worked example. Contoso is an ISV that built a human-resources app on SharePoint Embedded and deployed it into Fabrikam, an auditing firm. Fabrikam also built its own LOB auditing app. Each app has its own container type: Contoso owns the HR app and its container type, and Fabrikam owns the auditing app and its container type. Fabrikam is the consuming tenant for both apps, so both stacks of containers are stored in Fabrikam's Microsoft 365 tenant. Fabrikam owns all the data stored in its Microsoft 365 tenant, including the HR App data.
+The following diagram shows a worked example. Contoso is an ISV that built a human-resources app on SharePoint Embedded and deployed it into Fabrikam, an auditing firm. Fabrikam also built its own LOB auditing app. Each app has its own container type: Contoso owns the HR app and its container type, and Fabrikam owns the auditing app and its container type. Fabrikam is the consuming tenant for both apps, so both stacks of containers are stored in Fabrikam's Microsoft 365 tenant. Fabrikam owns all the data stored in its Microsoft 365 tenant, including the HR app data.
 
 ![Diagram of a worked ISV example. Contoso's HR application and its container type sit in the Contoso owning tenant. Both Contoso's HR app and Fabrikam's LOB auditing app operate in the Fabrikam consuming tenant, where each app's container stack is stored separately.](../images/apparchexample.png)
 

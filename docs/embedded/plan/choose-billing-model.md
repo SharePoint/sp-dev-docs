@@ -1,7 +1,7 @@
 ---
 title: Choose a billing model
 description: Compare standard and pass-through SharePoint Embedded billing models before you create production container types.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -44,7 +44,7 @@ The model determines which tenant is billed and which admin configures the billi
 
 ## Standard billing
 
-With standard billing, all consumption-based charges are directly billed to the tenant that owns or develops the application.
+With standard billing, Microsoft bills all consumption-based charges to the tenant that owns or develops the application.
 
 The admin in the developer tenant must establish a valid billing profile when creating a standard container type.
 
@@ -63,24 +63,28 @@ The billing setup requires:
 - A SharePoint Embedded Administrator or Global Administrator to operate billing cmdlets.
 - Owner or contributor permissions on the Azure subscription for the admin who sets up billing.
 
-The standard billing pattern creates the container type and then attaches an Azure billing profile (see [Create and configure a container type](../build/create-container-type.md)):
+The standard billing pattern creates the container type with Microsoft Graph and then attaches an Azure billing profile (see [Create and configure a container type](../build/create-container-type.md)):
 
-```powershell
-New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -ApplicationRedirectUrl <ApplicationRedirectUrl>
+```http
+POST https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes
 ```
 
-Attach the Azure billing profile:
-
-```powershell
-Add-SPOContainerTypeBilling -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
+```json
+{
+  "name": "{ContainerTypeName}",
+  "owningAppId": "{OwningApplicationId}",
+  "billingClassification": "standard"
+}
 ```
+
+Attach the Azure billing profile by using the SharePoint Embedded Visual Studio Code extension or an administrator-managed billing flow.
 
 > [!IMPORTANT]
 > Every container type must have an owning application. A single owning app can only own one container type at a time.
 
 ## Pass-through billing
 
-With pass-through billing, consumption-based charges are billed directly to the tenant registered to use the SharePoint Embedded application.
+With pass-through billing, Microsoft bills consumption-based charges directly to the tenant registered to use the SharePoint Embedded application.
 
 Admins in the developer tenant don't need to set up a billing profile when creating a pass-through container type.
 
@@ -95,12 +99,17 @@ Use pass-through billing when:
 
 Use this pass-through creation pattern:
 
-```powershell
-New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -IsPassThroughBilling
+```http
+POST https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes
 ```
 
-> [!NOTE]
-> Use the `-IsPassThroughBilling` switch with `New-SPOContainerType` when the consuming tenant pays for usage.
+```json
+{
+  "name": "{ContainerTypeName}",
+  "owningAppId": "{OwningApplicationId}",
+  "billingClassification": "directToCustomer"
+}
+```
 
 ## Billing meters
 

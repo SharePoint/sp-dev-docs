@@ -1,7 +1,7 @@
 ---
 title: Archive and restore containers
 description: Archive inactive SharePoint Embedded containers and reactivate them with Microsoft Graph beta APIs.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
@@ -48,7 +48,7 @@ Call the Microsoft Graph beta archive action for the target container.
 POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/archive
 ```
 
-The caller must have the `Owner` or `PrincipalOwner` role on the container. Global Administrators and SharePoint Embedded Administrators can act on all containers. The app must also have write permission on the container.
+The caller must have the `Owner` or `PrincipalOwner` role on the container. For tenant-wide administrative access across containers, use `FileStorageContainer.Manage.All` with a signed-in SharePoint Embedded Administrator or Global Administrator. The app must also have write permission on the container.
 
 An archived container is inaccessible until it's reactivated. Stop uploads, background processors, webhook-dependent workflows, and interactive edits before submitting the archive request.
 
@@ -76,7 +76,7 @@ Call the Microsoft Graph beta unarchive action to reactivate an archived contain
 POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/unarchive
 ```
 
-Reactivation is instantaneous during the first seven days after archival. After seven days, reactivation can take up to 24 hours. Keep the container read and write actions disabled until the service reports that the container is active again.
+Reactivation is instantaneous during the first seven days after archival. After seven days, reactivation can take up to 24 hours. For the Microsoft 365 Archive state timing, see [Archive states in Microsoft 365 Archive](/microsoft-365/archive/archive-states). Keep the container read and write actions disabled until the service reports that the container is active again.
 
 ## Design lifecycle controls
 

@@ -1,7 +1,7 @@
 ---
 title: Set up billing in Microsoft 365 admin center
 description: Configure SharePoint Embedded pass-through billing in the Microsoft 365 admin center for a consuming tenant.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -19,7 +19,7 @@ outcome: Set up billing for SharePoint Embedded apps that are billed to the cons
 next: manage-containers-sharepoint-admin-center.md
 -->
 
-Set up SharePoint Embedded billing in the Microsoft 365 admin center when your tenant uses an app with pass-through or user organization billing.
+Set up SharePoint Embedded billing in the Microsoft 365 admin center when your tenant uses an app with pass-through (customer) billing.
 
 No user can access a pass-through SharePoint Embedded app before valid billing is configured for the SharePoint Embedded platform in the consuming tenant.
 
@@ -55,11 +55,11 @@ SharePoint Embedded supports two billing models.
 
 | Billing model | Who pays |
 | --- | --- |
-| Standard | The tenant that owns or develops the app is billed for consumption. |
-| Pass-through | The tenant registered to use the app is billed for consumption. |
+| Standard billing | The tenant that owns or develops the app is billed for consumption. |
+| Pass-through (customer) billing | The tenant registered to use the app is billed for consumption. |
 
 > [!NOTE]
-> A container type's billing model is set when the container type is created and can't be changed later. To switch billing models, the developer creates a new container type with the wanted model.
+> A container type's billing model is set when the container type is created and can't be changed later. To switch billing models, the developer creates a new container type that uses the billing model they want.
 
 The following diagram shows standard billing, where consumption charges are billed to the tenant that owns or develops the app.
 
@@ -163,7 +163,7 @@ Use these checks when setup fails.
 - The subscription is disabled or unavailable.
 - No resource group is available for billing setup.
 - The app uses pass-through billing but the consuming tenant hasn't turned on SharePoint Embedded apps.
-- The app uses owner organization billing, so the app owner must resolve billing instead.
+- The app uses standard billing, so the app owner must resolve billing instead.
 - Tenant policies restrict access to the Microsoft 365 admin center billing experience.
 
 ## Common access symptoms

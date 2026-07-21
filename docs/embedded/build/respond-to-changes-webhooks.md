@@ -1,7 +1,7 @@
 ---
 title: Respond to file and container changes with webhooks
 description: Subscribe to SharePoint Embedded file and container changes and handle Microsoft Graph webhook notifications.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
@@ -25,7 +25,7 @@ Use Microsoft Graph webhooks when your app must react to file changes in a Share
 
 ## Create a notification endpoint
 
-Expose an HTTPS endpoint that accepts `POST` requests. During local development, use ngrok to tunnel requests to a local server.
+Expose an HTTPS endpoint that accepts `POST` requests. During local development, use a tunneling tool such as ngrok to tunnel requests to a local server.
 
 ```console
 ngrok http 3001

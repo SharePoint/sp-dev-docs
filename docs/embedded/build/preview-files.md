@@ -1,7 +1,7 @@
 ---
 title: Preview files in your app
 description: Create Microsoft Graph preview links and embed supported SharePoint Embedded file previews in your app.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -62,7 +62,7 @@ For the current list, see [File types supported for previewing files in OneDrive
 
 ## Native PDF viewing
 
-The SharePoint Embedded native PDF viewing experience supports **searching within the file**, **viewing comments and sticky notes** embedded on the file, and **printing** (added March 2026). These capabilities are available through the [driveItem: preview](/graph/api/driveitem-preview) API in **both the beta and v1.0** Microsoft Graph endpoints.
+The SharePoint Embedded native PDF viewing experience supports **searching within the file**, **viewing comments and sticky notes** embedded on the file, and **printing** (added March 2026). These capabilities are available through the [driveItem: preview](/graph/api/driveitem-preview) API in **both the beta and v1.0** Microsoft Graph endpoints, and they can change as the preview experience evolves.
 
 ### Enhance the PDF previewer with query parameters
 
@@ -79,6 +79,8 @@ Pass parameters as a JSON-encoded `embed` query string. You can include one or m
 | `mpp` | Enables the print icon and Ctrl+P printing. For example, `<webUrl>?&embed={"mpp":true}`. |
 | `mpsn` | Shows sticky note content when the PDF contains sticky notes. For example, `<webUrl>?&embed={"mpsn":true}`. |
 
+These embed parameters are specific to the PDF preview experience and can change.
+
 ## Prerequisites
 
 Before creating previews, make sure:
@@ -87,6 +89,7 @@ Before creating previews, make sure:
 - Your app knows the container ID and DriveItem ID.
 - Your app can acquire a Microsoft Graph token.
 - The caller has permission to read the file.
+- Your app has `FileStorageContainer.Selected` consent and the required container type permissions.
 - The file type is supported for preview.
 - Your UI can host an iframe or open a new page.
 
@@ -244,12 +247,8 @@ Test with multiple file types and users:
 1. Refresh an expired preview URL.
 1. Confirm the fallback action works.
 
-## Connect to the next build task
+## Next steps
 
 After preview is working, add discovery experiences so users can find content across containers and files.
-
-Continue to [Search containers and files](search-containers-files.md).
-
-## Next steps
 
 - [Search containers and files](search-containers-files.md)

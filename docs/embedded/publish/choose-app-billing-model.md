@@ -1,7 +1,7 @@
 ---
 title: Choose a billing model for your app
 description: Compare standard and pass-through billing for SharePoint Embedded apps before onboarding customer tenants.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -61,7 +61,7 @@ The developer must establish a valid Azure billing profile for the container typ
 
 Choose standard billing when:
 
-- You sell a bundled SaaS price and absorb or allocate SharePoint Embedded usage internally.
+- You sell a bundled software as a service (SaaS) price and absorb or allocate SharePoint Embedded usage internally.
 - You want a simpler customer setup path.
 - Customers shouldn't configure an Azure subscription for your app.
 - You operate a managed service where your tenant owns the consumption relationship.

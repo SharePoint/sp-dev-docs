@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded overview
 description: Microsoft SharePoint Embedded is an API-only file and document management platform built on Microsoft 365. Start here and route to the right task.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 **Applies to:** All
 
-Microsoft SharePoint Embedded is a cloud-based, API-only file and document management system you can use in any application. It lets app developers harness the Microsoft 365 file and document storage platform, and is suitable for enterprises building line-of-business applications and independent software vendors (ISVs) building multitenant applications.
+Microsoft SharePoint Embedded is a cloud-based, API-only file and document management system you can use in any application. It lets app developers use the Microsoft 365 file and document storage platform, and is suitable for enterprises building line-of-business applications and independent software vendors (ISVs) building multitenant applications.
 
 SharePoint Embedded has no standalone end-user interface and doesn't offer a no-code option. You access it programmatically through Microsoft Graph, so using SharePoint Embedded always involves building or deploying an application.
 

@@ -1,7 +1,7 @@
 ---
 title: Plan authentication and permissions
 description: Plan SharePoint Embedded authentication, admin consent, delegated access, app-only access, and container permissions.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: mawin
 ms.author: mawin
 ms.localizationpriority: high
@@ -118,7 +118,7 @@ Container type creation, management, and registration are now Microsoft Graph op
 
 ## Container type application permissions
 
-Container type application permissions are granted by the owning application through container type registration.
+The owning application grants container type application permissions through container type registration.
 
 These permissions define what an application can do against containers of the container type.
 
@@ -195,7 +195,7 @@ Exceptional access patterns include:
 
 - Container type management on owning tenants through Microsoft Graph.
 - Container type registration on consuming tenants through Microsoft Graph (`FileStorageContainerTypeReg.Selected`).
-- Administrative container operations that require `FileStorageContainer.Manage.All` and a SharePoint Embedded Administrator or Global Administrator signed-in user.
+- Administrative container operations that require `FileStorageContainer.Manage.All` and a signed-in user with the SharePoint Embedded Administrator or Global Administrator role.
 - Microsoft Search scenarios that require additional permissions during preview.
 - Operations that currently require a user license.
 

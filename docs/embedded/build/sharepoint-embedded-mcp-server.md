@@ -1,7 +1,7 @@
 ---
 title: Use the MCP server to build apps with a coding agent
 description: Use the open-source SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ms.reviewer: cindylay
@@ -19,9 +19,9 @@ outcome: Use the SharePoint Embedded MCP server with a coding agent to provision
 next: quickstart-vscode.md
 -->
 
-The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets MCP-compatible AI clients set up and manage SharePoint Embedded applications through natural language. Supported clients include GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, and Azure AI Foundry. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
+The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets MCP-compatible AI clients set up and manage SharePoint Embedded applications through natural language. Supported clients include GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, and Microsoft Foundry Agent Service. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
-Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, you describe what you want—"create a trial container type for my app"—and the AI client calls the server's tools to do it.
+Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, describe what you want, such as "create a trial container type for my app." The AI client calls the server's tools to do it.
 
 > [!NOTE]
 > The SharePoint Embedded MCP server is an open-source developer tool released in preview. Its source code, full tool reference, and issue tracker live in the [microsoft/SharePoint-Embedded-MCP-Server](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) repository on GitHub.
@@ -35,7 +35,7 @@ Instead of clicking through portals and stitching together Microsoft Graph and A
 
 The server exposes tools that an AI client can call on your behalf, grouped by task:
 
-- **Provisioning and status**: Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](../plan/container-types-containers.md) and containers. A single `project_provision` tool can run the whole sequence—app → container type → billing → registration → container—in one call.
+- **Provisioning and status**: Check your signed-in identity and provisioning readiness, create the owning Microsoft Entra ID application, and create, register, list, update, or delete [container types](../plan/container-types-containers.md) and containers. A single `project_provision` tool can run the whole sequence from app to container type, billing, registration, and container in one call.
 - **Billing**: Pick an Azure subscription and resource group, register the `Microsoft.Syntex` resource provider, link a container type to [standard billing](../administration/billing/billing.md), and inspect billing classification or trial expiry.
 - **Scaffold, run, and deploy**: Generate a runnable reference application (a React single-page app with Azure Functions, or a C# web app), write its runtime configuration from your provisioning state, seed sample content, run it locally, and deploy it to Azure.
 - **Content operations (opt-in)**: After a separate, explicit consent, upload files, create folders, search, preview, manage sharing and permissions, and archive or restore containers.
@@ -143,7 +143,7 @@ The **content operations** tools are also gated behind a separate, explicit cons
 ## Related content
 
 - [SharePoint Embedded MCP server on GitHub](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) – source code, full tool reference, and issues.
-- [Quickstart: Build your first app with VS Code](quickstart-vscode.md) – a guided extension for getting started for free.
+- [Quickstart: Build your first app with Visual Studio Code](quickstart-vscode.md) – a guided extension for getting started for free.
 - [SharePoint Embedded container types](../plan/container-types-containers.md)
 - [SharePoint Embedded app architecture](../plan/app-tenant-architecture.md)
 - [Authentication and authorization](configure-authentication-authorization.md)

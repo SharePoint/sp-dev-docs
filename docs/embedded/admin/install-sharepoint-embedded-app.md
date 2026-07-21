@@ -1,7 +1,7 @@
 ---
 title: Install a SharePoint Embedded app
 description: Install or register a SharePoint Embedded app in a consuming tenant and validate the tenant setup.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -23,7 +23,7 @@ Install a SharePoint Embedded app when a consuming Microsoft 365 tenant needs to
 
 Installation makes the app visible for tenant administration, but the tenant may still need admin consent, container type permission registration, and billing setup before users can access content.
 
-This article focuses on the consuming-tenant administrator path in the SharePoint admin center.
+This article focuses on the consuming tenant administrator path in the SharePoint admin center.
 
 > [!IMPORTANT]
 > A consuming tenant admin is typically a user assigned the **SharePoint Embedded Administrator** role.
@@ -39,9 +39,9 @@ Confirm these prerequisites.
 
 - You can sign in to the consuming tenant.
 - Your account has the SharePoint Embedded Administrator role or Global Administrator role.
-- The SharePoint Embedded app exists in the owning tenant.
+- The SharePoint Embedded app exists in the developer tenant.
 - You have the app identity or installation link provided by the app owner.
-- You know whether billing is handled by the app owner or by the user organization.
+- You know whether the app owner or consuming tenant pays for usage.
 - You know which permissions the app requests.
 - You can complete admin consent if the installation flow requires it.
 - You know whether the app is a single-tenant line-of-business app or a multitenant independent software vendor (ISV) app.
@@ -54,7 +54,7 @@ A consuming tenant is the Microsoft 365 tenant where users run the SharePoint Em
 
 The consuming tenant admin manages the app and containers in that tenant.
 
-For a single-tenant line-of-business app, the owning tenant and consuming tenant are usually the same.
+For a single-tenant line-of-business app, the developer tenant and consuming tenant are usually the same.
 
 For a multitenant ISV app, each customer tenant is a consuming tenant and customer files remain in the customer Microsoft 365 tenant boundary.
 

@@ -1,7 +1,7 @@
 ---
 title: Manage containers in SharePoint admin center
 description: View, inspect, delete, restore, and manage SharePoint Embedded containers in the SharePoint admin center.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -169,7 +169,7 @@ For broader controls, see [Apply security and compliance controls](apply-securit
 
 ## Archive a container
 
-Archive a container when it's no longer actively used but must be retained for legal, compliance, or business purposes. Documents in an archived container can't be accessed by any user or application until the container is reactivated.
+Archive a container when it's no longer actively used but must be retained for legal, compliance, or business purposes. No user or application can open documents in an archived container until you reactivate the container.
 
 > [!NOTE]
 > Container archival relies on Microsoft 365 Archive, which is in preview for SharePoint Embedded. Validate tenant availability, billing, and API behavior before you archive production containers. For more information, see [Archive and restore containers](../build/archive-restore-containers.md).

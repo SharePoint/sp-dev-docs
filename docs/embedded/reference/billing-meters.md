@@ -1,7 +1,7 @@
 ---
 title: Billing meters
 description: Reference for SharePoint Embedded pay-as-you-go billing meters and pricing resources.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -27,8 +27,8 @@ For setup guidance, see [choose a billing model](../plan/choose-billing-model.md
 | --- | --- | --- | --- |
 | Storage | $/GB | Files, documents, metadata, versions, recycle bin content, and deleted container collection content, in both active and archived states. | Storage is based on data stored in SharePoint Embedded. |
 | Archived storage | $/GB | Storage consumed by archived containers within a tenant. | Archiving moves data to the cold storage tier, which offers lower storage costs than active storage. |
-| API transactions | $/Transactions | Each Microsoft Graph call made explicitly by the SharePoint Embedded application. | Internal service calls, such as eDiscovery queries and admin actions in SharePoint admin center or SharePoint PowerShell, aren't charged as application transactions. |
-| Egress | $/GB | Data that exits the SharePoint Embedded platform, such as documents downloaded to a customer's client device or data transferred to a server operated by the customer. Charges are based on total volume transferred out (GB). | Downloads from the SharePoint Embedded application server to Office Desktop clients or Web Application Companion, the Microsoft-integrated Office web experience, aren't charged as egress. |
+| API transactions | $/transaction | Each Microsoft Graph call made explicitly by the SharePoint Embedded application. | Internal service calls, such as eDiscovery queries and admin actions in SharePoint admin center or SharePoint PowerShell, aren't charged as application transactions. |
+| Egress | $/GB | Data that exits the SharePoint Embedded platform, such as documents downloaded to a customer's client device or data transferred to a server operated by the customer. Charges are based on total volume transferred out (GB). | Downloads from the SharePoint Embedded application server to Office Desktop clients or Web Application Companion aren't charged as egress. Web Application Companion is the Microsoft-integrated Office web experience. |
 | Pay-as-you-go message (private preview) | Message | SharePoint Embedded agent interactions. | SharePoint Embedded agents use the Copilot Studio meter. Each agent interaction uses 12 messages. |
 
 ## Storage
@@ -37,7 +37,7 @@ Storage consumption includes files and documents plus their metadata and version
 
 ## Archived storage
 
-The Archived storage meter measures storage consumed by archived containers within a tenant. Archiving a container moves its data to the cold storage tier, which offers lower storage costs compared to active storage. Archived content is still billed, but at the archived-storage rate.
+The Archived storage meter measures storage consumed by archived containers within a tenant. Archiving a container moves its data to the cold storage tier, which offers lower storage costs than active storage. Archived content is still billed, but at the archived-storage rate.
 
 ## API transactions
 

@@ -1,7 +1,7 @@
 ---
 title: Scenarios and use cases
 description: Explore scenarios and use cases for SharePoint Embedded.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: stpuceli
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -46,9 +46,9 @@ This pattern also suits business-critical or time-sensitive processes. SharePoin
 
 ### Description
 
-When you build on SharePoint Online directly, a user with permissions can still open the underlying site without awareness from your application. Depending on their permission level, that user might change site settings or take other actions your application didn't intend. Those actions can have unintended consequences for your application or content.
+When you build on SharePoint Online directly, a user with permissions can still open the underlying site outside your application. Depending on their permission level, that user might change site settings or take other actions your application didn't intend. Those actions can have unintended consequences for your application or content.
 
-SharePoint Embedded is headless, so your custom application provides the only interface. If your application doesn't expose a way to change content or settings, a user can't bypass it through SharePoint Online. You decide which collaborative features, such as sharing, your application offers.
+SharePoint Embedded has no standalone end-user interface, so your custom application provides the only interface. If your application doesn't expose a way to change content or settings, a user can't bypass it through SharePoint Online. You decide which collaborative features, such as sharing, your application offers.
 
 ### Examples
 
@@ -77,7 +77,7 @@ SharePoint Embedded supports this scenario. The users of your application don't 
 
 ### Why use SharePoint Embedded instead of SharePoint Online?
 
-- You must segregate this data from the rest of your Microsoft 365 storage, yet keep it in scope for compliance tools like eDiscovery.
+- You must segregate this data from the rest of your Microsoft 365 storage, yet keep it in scope for compliance tools like [eDiscovery](admin/apply-security-compliance-controls.md#apply-ediscovery).
 - Users need no Microsoft 365 licensing, and you avoid adding external users to SharePoint Online.
 - Containers give you a simple, flexible unit of data storage.
 

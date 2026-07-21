@@ -1,7 +1,7 @@
 ---
 title: Understand limits and calling patterns
 description: Plan SharePoint Embedded service limits, throttling behavior, retry handling, and performance-sensitive calling patterns.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: mawin
 ms.author: mawin
 ms.localizationpriority: high
@@ -55,7 +55,7 @@ SharePoint Embedded enforces the following size limits.
 | Files and folders with additive permissions per container | 5,000 |
 | File size | 250 GB |
 | Version count per file | 500 (default automatic version history limit) |
-| Number of users shared per folder or file | 5,000 |
+| Number of users a folder or file can be shared with | 5,000 |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
@@ -165,7 +165,7 @@ An asterisk (`*`) indicates a limit you can request to increase.
 
 Application limits are defined in resource units.
 
-The actual requests per minute depends on the APIs you call and their resource unit cost.
+The actual requests per minute depend on the APIs you call and their resource unit cost.
 
 To estimate your request rate, average about two resource units per request and divide the application resource unit limit by two.
 

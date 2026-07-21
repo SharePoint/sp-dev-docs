@@ -1,7 +1,7 @@
 ---
 title: Add real-time collaboration with Fluid Framework
 description: Use Fluid Framework with SharePoint Embedded for synchronized collaborative application state.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 task_type: how-to
 audience: developer
 outcome: Run the Fluid item counter sample with a SharePoint Embedded app and container type.
-next: agent-experiences.md
+next: sharepoint-embedded-knowledge-source.md
 -->
 
 Use Fluid Framework when your SharePoint Embedded app needs real-time shared state, such as collaborative controls, live counters, cursors, annotations, or multi-user form state. Fluid provides client libraries for distributing, synchronizing, and saving shared data.
@@ -61,7 +61,7 @@ After Webpack completes, open `https://localhost:8080`, sign in with tenant cred
 
 Use Fluid for collaborative application state that benefits from low-latency synchronization. Store durable documents and files in SharePoint Embedded containers. Persist final business output to your own durable model or to SharePoint Embedded files when your scenario needs audit, retention, search, or reporting.
 
-Treat Fluid shared objects as user-visible collaboration state. Don't place secrets, access tokens, SAS URLs, or privileged Graph responses in shared data structures.
+Treat Fluid shared objects as user-visible collaboration state. Don't place secrets, access tokens, shared access signature (SAS) URLs, or privileged Graph responses in shared data structures.
 
 ## Handle identity and access
 

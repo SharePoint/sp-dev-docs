@@ -1,7 +1,7 @@
 ---
 title: Create apps in SharePoint admin center
 description: Create a SharePoint Embedded app from the SharePoint admin center and validate the new app registration.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -82,7 +82,7 @@ Use it to verify app creation and to start installation when an app is ready.
 
 *Figure 3: The Create app panel registers a Microsoft Entra app, assigns owners, and sets the billing type in a single flow.*
 
-## Choose the Entra app registration option
+## Choose the Microsoft Entra app registration option
 
 In **Entra app registration**, choose one option.
 
@@ -91,7 +91,7 @@ In **Entra app registration**, choose one option.
 | New app | You want the admin center flow to create a new Microsoft Entra application registration. |
 | Use an existing Entra app | You already have a Microsoft Entra app and want to associate it with the SharePoint Embedded app. |
 
-If you choose **New app**, enter the new Entra app name.
+If you choose **New app**, enter the new Microsoft Entra app name.
 
 If you choose **Use an existing Entra app**, search by application ID or application name.
 
@@ -164,7 +164,7 @@ For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph
 
 ## Submit the app
 
-1. Review the Entra app registration selection.
+1. Review the Microsoft Entra app registration selection.
 1. Review the app owners.
 1. Review billing type.
 1. Review advanced settings.
@@ -172,7 +172,7 @@ For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph
 
 When you select **Create app**, the admin center completes these steps together:
 
-- Registers the Microsoft Entra app, or associates the existing Entra app you selected.
+- Registers the Microsoft Entra app, or associates the existing Microsoft Entra app you selected.
 - Creates the SharePoint Embedded app and its associated container type.
 - Installs the app in your tenant.
 - Attaches billing when you select **Owner org** and **Setup now**.
@@ -221,7 +221,7 @@ Continue with these tasks.
 Use these checks if creation fails or the app isn't usable.
 
 - Confirm your account has the SharePoint Embedded Administrator role.
-- Confirm the selected existing Entra app exists and is available in the tenant.
+- Confirm the selected existing Microsoft Entra app exists and is available in the tenant.
 - Confirm owners resolve in the people picker.
 - Confirm required billing fields are complete.
 - Confirm owner organization billing uses a valid Azure subscription and resource group.

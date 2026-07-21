@@ -1,7 +1,7 @@
 ---
 title: Prepare your app for customer installation
 description: Prepare a multitenant SharePoint Embedded app, container type, permissions, billing choice, and admin handoff for customer tenants.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: stpuceli
 ms.author: mawin
 ms.localizationpriority: high
@@ -160,7 +160,7 @@ For single-tenant apps, you can [construct an admin consent URL](/entra/identity
 https://login.microsoftonline.com/{tenant}/v2.0/adminconsent?client_id={client_id}&redirect_uri={redirect_uri}
 ```
 
-Ensure your app's [redirect URI](/entra/identity-platform/reply-url) can handle admin consent flows. For the full permission model, see [Authentication and authorization](../build/configure-authentication-authorization.md).
+Make sure your app's [redirect URI](/entra/identity-platform/reply-url) can handle admin consent flows. For the full permission model, see [Authentication and authorization](../build/configure-authentication-authorization.md).
 
 If your app uses guest application access, explain how the consuming tenant admin can view guest application permissions in administrative tools.
 

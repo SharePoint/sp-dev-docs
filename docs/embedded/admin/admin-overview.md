@@ -1,7 +1,7 @@
 ---
 title: Admin overview
 description: Learn how administrators manage SharePoint Embedded apps, containers, billing, and compliance in Microsoft 365.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -42,9 +42,9 @@ SharePoint Embedded administration commonly involves the following roles.
 | --- | --- |
 | Global Administrator | Assign the SharePoint Embedded Administrator role and perform any SharePoint Embedded admin task when needed. |
 | SharePoint Embedded Administrator | Manage SharePoint Embedded apps and containers through SharePoint admin center and supported SharePoint PowerShell cmdlets. |
-| Tenant administrator | Manage apps and settings in the consuming Microsoft 365 tenant. |
-| Compliance administrator | Configure Microsoft Purview audit, retention, DLP, eDiscovery, and related policies. |
-| Security administrator | Configure security policies and investigate security events that apply to SharePoint Embedded content. |
+| Tenant Administrator | Manage apps and settings in the consuming Microsoft 365 tenant. |
+| Compliance Administrator | Configure Microsoft Purview audit, retention, Data Loss Prevention (DLP), eDiscovery, and related policies. |
+| Security Administrator | Configure security policies and investigate security events that apply to SharePoint Embedded content. |
 
 The SharePoint Embedded Administrator role is available in Microsoft Entra and the Microsoft 365 admin center.
 
@@ -54,7 +54,7 @@ It doesn't grant regular SharePoint site management access.
 
 For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and can't run site-specific SharePoint PowerShell cmdlets.
 
-Likewise, the SharePoint administrator role doesn't administer SharePoint Embedded apps or containers.
+Likewise, the SharePoint Administrator role doesn't administer SharePoint Embedded apps or containers.
 
 ### Assign the SharePoint Embedded Administrator role
 
@@ -153,7 +153,7 @@ Some scenarios that need end-user interaction depend on the owning app to provid
 
 Review [Review audit events](review-audit-events.md) and [Apply security and compliance controls](apply-security-compliance-controls.md).
 
-## SharePoint admin center versus PowerShell
+## SharePoint admin center and PowerShell
 
 Use both management surfaces.
 

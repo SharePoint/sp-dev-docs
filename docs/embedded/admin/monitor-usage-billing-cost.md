@@ -1,7 +1,7 @@
 ---
 title: Monitor usage, billing, and cost
 description: Monitor SharePoint Embedded usage and pay-as-you-go costs with billing meters and Azure Cost Management.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -28,7 +28,7 @@ Cost is based on usage meters, so review storage, archived storage, API transact
 Use this article to understand cost drivers, review billing in Azure Cost Management, and establish operational controls.
 
 > [!IMPORTANT]
-> Admin actions taken through the SharePoint admin center or SharePoint PowerShell aren't charged as SharePoint Embedded API transactions according to the SharePoint Embedded billing meters.
+> Admin actions taken through the SharePoint admin center or SharePoint PowerShell aren't charged as SharePoint Embedded API transactions.
 
 ## Before you begin
 
@@ -96,7 +96,7 @@ Egress refers to data downloaded from SharePoint Embedded to a customer's client
 Exempt transfers include:
 
 - File downloads from the SharePoint Embedded application server to the customer's Office Desktop client.
-- File downloads from the SharePoint Embedded application server to the Web Application Companion (WAC).
+- File downloads from the SharePoint Embedded application server to Office for the web.
 
 Review app download behavior when egress grows.
 

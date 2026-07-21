@@ -1,7 +1,7 @@
 ---
 title: Configure authentication and authorization
 description: Configure Microsoft Entra ID authentication and SharePoint Embedded authorization for your application.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -59,7 +59,7 @@ Use delegated `FileStorageContainer.Selected` for access on behalf of a user.
 
 Use application `FileStorageContainer.Selected` for app-only access.
 
-Application `FileStorageContainer.Selected` requires admin consent in the consuming tenant. Delegated `FileStorageContainer.Selected` does not require admin consent.
+Application `FileStorageContainer.Selected` requires admin consent in the consuming tenant. Delegated `FileStorageContainer.Selected` doesn't require admin consent when the consuming tenant's user consent policies allow users to consent.
 
 Use `FileStorageContainer.Manage.All` for administrative capabilities on behalf of an administrator user across all governable container types in the consuming tenant. These capabilities include enumerating, deleting, restoring, purging, and updating containers and managing their permissions.
 
@@ -142,7 +142,8 @@ These operations use exceptional access patterns:
 - Container type registration in the consuming tenant through the Microsoft Graph container type registration API (`FileStorageContainerTypeReg.Selected`).
 - SharePoint Embedded agent experiences through their own permission requirements.
 - **Search**: Microsoft Search on SharePoint Embedded content requires the delegated `Files.Read.All` permission in addition to `FileStorageContainer.Selected`.
-- **Operations that require a user license**: [List containers](/graph/api/filestorage-list-containers) returns `403 Forbidden` for a delegated user who doesn't have a OneDrive (app-only calls aren't affected), and users need a Microsoft 365 license to appear in the Office @mentions people picker.
+- **List containers with delegated access**: [List containers](/graph/api/filestorage-list-containers) returns `403 Forbidden` for a delegated user who lacks a provisioned OneDrive. App-only calls aren't affected.
+- **Office @mentions people picker**: Users need a Microsoft 365 license to appear in the Office @mentions people picker.
 - **Administrative actions on containers**: `FileStorageContainer.Manage.All` requires the signed-in user to be a SharePoint Embedded Administrator or Global Administrator. For regular app access to containers, use `FileStorageContainer.Selected` with the required container type permissions.
 
 > [!IMPORTANT]
@@ -172,7 +173,7 @@ The owning application grants container type application permissions through [co
 
 ## Manage container type owners
 
-Any Microsoft Entra user that isn't an external identity can be a container type owner. Owner management through the [permissions](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource is currently available only in Microsoft Graph beta. Each entry has the `owner` role and identifies the user through `grantedToV2`.
+Any Microsoft Entra user who isn't an external identity can be a container type owner. Owner management through the [permissions](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource is currently available only in Microsoft Graph beta. Each entry has the `owner` role and identifies the user through `grantedToV2`.
 
 - **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
 - **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta) to add owners. A container type can have at most three owners in total, including the creator who is automatically assigned as the first owner.

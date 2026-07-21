@@ -1,14 +1,14 @@
 ---
-title: "Quickstart: Build your first app with VS Code"
+title: "Quickstart: Build your first app with Visual Studio Code"
 description: Create a standard SharePoint Embedded container type in Visual Studio Code and run the sample application locally.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: mawin
 ms.author: mawin
 ms.localizationpriority: high
 ai-usage: ai-assisted
 ---
 
-# Quickstart: Build your first app with VS Code
+# Quickstart: Build your first app with Visual Studio Code
 
 **Applies to:** Developer
 
@@ -108,7 +108,7 @@ If you skip billing setup or don't have the required Azure permissions, the tree
 
 You must register the container type in the consuming tenant before your app can create containers or access content.
 
-1. After creation, follow the prompt to register the container type in the local tenant.
+1. After creation, follow the prompt to register the container type in the consuming tenant.
 1. If the prompt isn't visible, right-click the container type and select **Register**.
 1. Review the permissions.
 1. Grant admin consent in the browser.
@@ -116,7 +116,7 @@ You must register the container type in the consuming tenant before your app can
 
 Registration configures the permissions the owning app can use against containers of the container type.
 
-![Screenshot of the SharePoint Embedded extension prompting to register the container type on the local tenant, with the registration action highlighted.](../images/vsx-images/n7aregister-ct.png)
+![Screenshot of the SharePoint Embedded extension prompting to register the container type in the consuming tenant, with the registration action highlighted.](../images/vsx-images/n7aregister-ct.png)
 
 ## Create your first container
 

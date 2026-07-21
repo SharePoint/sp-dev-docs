@@ -1,7 +1,7 @@
 ---
 title: "Choose an app model: single-tenant or multitenant"
 description: Compare single-tenant and multitenant SharePoint Embedded app models before you create container types and containers.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: mawin
 ms.author: mawin
 ms.localizationpriority: high
@@ -30,11 +30,11 @@ For architecture details, see [Understand app and tenant architecture](../plan/a
 | Requirement | Choose single-tenant LOB | Choose multitenant ISV |
 | --- | --- | --- |
 | App is built for one organization | Yes | No |
-| App is sold or provided to multiple customer tenants | No | Yes |
+| App is sold or provided to multiple consuming tenants | No | Yes |
 | Developer tenant and consuming tenant are usually the same | Yes | No |
-| Customer tenants host their own containers and files | Not usually | Yes |
+| Consuming tenants host their own containers and files | Not usually | Yes |
 | App owner pays for all usage by default | Often | Depends on billing model |
-| Customer tenant admin must onboard the app | Sometimes | Yes |
+| Consuming tenant admin must onboard the app | Sometimes | Yes |
 
 Both models use the same SharePoint Embedded primitives:
 
@@ -66,17 +66,17 @@ This model is usually single-tenant because the same tenant owns and consumes th
 
 ## Multitenant ISV model
 
-Use the multitenant ISV model when an ISV builds one app for multiple customer tenants.
+Use the multitenant ISV model when an ISV builds one app for multiple consuming tenants.
 
 In this model:
 
 - The ISV owns or develops the app.
 - The ISV tenant usually owns the app registration.
 - The ISV tenant creates the container type.
-- Each customer is a consuming tenant.
-- Containers are created in each customer Microsoft 365 tenant.
-- Files remain in the customer tenant boundary.
-- Customer Microsoft 365 settings apply to that customer's content.
+- Each customer tenant is a consuming tenant.
+- Containers are created in each consuming tenant.
+- Files remain in the consuming tenant boundary.
+- Consuming tenant Microsoft 365 settings apply to that tenant's content.
 
 The ISV app provides the user experience and calls Microsoft Graph. Customer content stays with the consuming tenant.
 
@@ -96,7 +96,7 @@ For an ISV app, the ISV owns both.
 
 In a single-tenant LOB model, admins in the same tenant can create the container type, grant consent, and configure billing.
 
-In a multitenant ISV model, customer tenant admins must onboard the app for their tenant.
+In a multitenant ISV model, consuming tenant admins must onboard the app for their tenant.
 
 The owning app must have a service principal in the consuming tenant and must receive admin consent to perform container type registration.
 
@@ -108,9 +108,9 @@ Containers are created in the consuming tenant.
 
 For an enterprise LOB app, that's usually the enterprise tenant.
 
-For an ISV app, each customer tenant has its own containers.
+For an ISV app, each consuming tenant has its own containers.
 
-This separation keeps customer files in the customer's Microsoft 365 tenant boundary.
+This separation keeps files in the consuming tenant's Microsoft 365 tenant boundary.
 
 > [!IMPORTANT]
 > Don't design an ISV architecture that stores all customer files in the ISV tenant. SharePoint Embedded stores app documents in the consuming tenant.
@@ -146,7 +146,7 @@ The developer tenant admin doesn't set up a billing profile when creating the pa
 
 After the container type is registered in the consuming tenant, the consuming tenant admin sets up the billing profile.
 
-Use pass-through billing when each customer tenant should pay for its own usage.
+Use pass-through billing when each consuming tenant should pay for its own usage.
 
 ## Consent and admin responsibilities
 
@@ -157,10 +157,10 @@ Plan these responsibilities before implementation.
 | Create app registration | Enterprise tenant | ISV tenant |
 | Create container type | Enterprise tenant | ISV tenant |
 | Register container type | Same tenant | Each customer consuming tenant |
-| Grant Microsoft Graph consent | Enterprise admin | Customer tenant admin for consuming tenant access |
+| Grant Microsoft Graph consent | Enterprise admin | Consuming tenant admin |
 | Configure standard billing | Enterprise/developer | ISV/developer |
-| Configure pass-through billing | Consuming tenant admin | Customer tenant admin |
-| Govern content | Enterprise compliance admin | Customer compliance admin |
+| Configure pass-through billing | Consuming tenant admin | Consuming tenant admin |
+| Govern content | Enterprise compliance admin | Consuming tenant compliance admin |
 
 ## Which setup path to follow next
 

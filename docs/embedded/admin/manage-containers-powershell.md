@@ -1,7 +1,7 @@
 ---
 title: Manage containers with PowerShell
 description: Use SharePoint Online Management Shell to inventory and manage SharePoint Embedded apps and containers.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -117,7 +117,7 @@ Review your tenant sharing policy before overriding tenant sharing behavior.
 List active containers for a SharePoint Embedded application.
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> | FT
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> | Format-Table
 ```
 
 The `OwningApplicationId` is the ID of the SharePoint Embedded application.
@@ -135,7 +135,7 @@ For command details, see [Get-SPOContainer](/powershell/module/sharepoint-online
 Sort containers by storage when investigating cost or growth.
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value> | FT
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <value> | Format-Table
 ```
 
 Use `Ascending` or `Descending` for `<value>`.

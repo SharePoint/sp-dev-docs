@@ -1,7 +1,7 @@
 ---
 title: Upload, download, and manage files
 description: Use Microsoft Graph DriveItem APIs to upload, download, organize, update, delete, and restore SharePoint Embedded files.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -42,7 +42,7 @@ Start with these Microsoft Graph references:
 - [Microsoft Graph file storage overview](/graph/api/resources/onedrive)
 
 > [!IMPORTANT]
-> Use documented Microsoft Graph DriveItem and file storage APIs. Don't invent SharePoint Embedded-specific file API names.
+> Use documented Microsoft Graph DriveItem and file storage APIs for file operations in SharePoint Embedded containers.
 
 ## Prerequisites
 
@@ -123,7 +123,7 @@ Before replacing content:
 - Preserve the DriveItem ID where supported.
 - Update your app metadata after Graph succeeds.
 
-Office files stored in SharePoint Embedded have versioning enabled automatically for Word, Excel, and PowerPoint.
+Versioning is enabled by default for Word, Excel, and PowerPoint files stored in SharePoint Embedded, and is governed by the container type's item-versioning setting.
 
 See [Open Office files from your app](open-office-files.md) for Office behavior.
 
@@ -165,7 +165,7 @@ After upload, add richer experiences:
 
 ## Validate file operations
 
-Create a smoke test:
+Create a quick end-to-end test:
 
 1. Create a test container.
 1. Create a folder.
