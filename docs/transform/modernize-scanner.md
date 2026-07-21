@@ -27,13 +27,13 @@ The SharePoint Modernization Scanner is a legacy tool and is no longer actively 
 
 - [Understand the reports created by the legacy scanner](modernize-scanner-reports.md)
 - [Legacy scanner FAQ](modernize-scanner-faq.yml)
-- [Download the legacy SharePoint Modernization Scanner executable](https://github.com/pnp/modernization/blob/master/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true)
+- [Download the legacy SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true)
 
 The following sections document the legacy SharePoint Modernization Scanner for customers who still need it.
 
 ## Step 1: Download the legacy SharePoint modernization scanner
 
-Download the [legacy SharePoint Modernization Scanner executable](https://github.com/pnp/modernization/blob/master/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true). The scanner is no longer actively maintained, so validate its behavior and authentication model before using it.
+Download the [legacy SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true). The scanner is no longer actively maintained, so validate its behavior and authentication model before using it.
 
 ## Step 2: Preparing for a scan
 
