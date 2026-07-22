@@ -1,7 +1,7 @@
 ---
 title: Customizing the "modern" experiences in SharePoint Online
 description: An overview to get you started using the "modern" experiences in SharePoint Online.
-ms.date: 06/13/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ---
 
@@ -27,7 +27,7 @@ The "modern" experiences in SharePoint Online are:
 If you have existing customizations that are business critical for your deployment, we recommend using the following process for adopting the "modern" experiences:
 
 1. **Readiness**: Understand the "modern" experiences, know what features they offer, but equally important, understand which features are not (yet) available.
-1. **Assess**: Assess to what extent your current customizations can work within the "modern" experience. Also assess which of your sites have customizations or features that will not work within the "modern" experiences. These sites and their customizations should be updated or need to stay in "classic". However, other sites should work just fine using the "modern" experiences. The best way to assess your compatibility with the "modern" experiences is by using the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernuiscanner).
+1. **Assess**: Assess to what extent your current customizations can work within the "modern" experience. Also assess which of your sites have customizations or features that will not work within the "modern" experiences. These sites and their customizations should be updated or need to stay in "classic". However, other sites should work just fine using the "modern" experiences. Start with the [Microsoft 365 Assessment tool](../transform/assess-sharepoint-modernization.md) to evaluate the relevant modernization scenarios.
 1. **Solution planning**: Plan the work required for both custom solutions and sites to prepare them to be used with the "modern" experiences.
 1. **Develop and test**: Apply the needed changes to your customizations and test them.
 1. **Deploy**: Roll out the updated changes to your SharePoint Online environment.

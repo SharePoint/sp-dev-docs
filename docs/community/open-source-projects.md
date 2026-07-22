@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer Community open source projects
 description: Open-source projects coordinated by the SharePoint PnP initiative
-ms.date: 06/07/2022
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ---
 
@@ -17,7 +17,7 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 | [Office 365 Developer PnP Core Component](https://github.com/SharePoint/PnP-Sites-Core) | An extension component that encapsulates commonly used remote CSOM/REST operations as reusable extension methods on out-of-the box CSOM objects.  |
 | [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
 | [PnP remote provisioning schema](https://github.com/SharePoint/PnP-provisioning-schema) | Designed to be used as remote creation instructions for the remote provisioning engine for Office 365. |
-| [SharePoint Modernization tooling and guidance](https://github.com/SharePoint/sp-dev-modernization) | Tools like page transformation (classic page to modern page) and a modernization scanner do make it easy to move your classic sites into the modern SharePoint world. |
+| [SharePoint Modernization tooling and guidance](https://github.com/SharePoint/sp-dev-modernization) | Legacy SharePoint modernization tools and scripts. For new assessment work, see [Assess SharePoint modernization](../transform/assess-sharepoint-modernization.md). |
 | [PnPjs](https://pnp.github.io/pnpjs/) | A fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way. |
 | [PnP SPFx Yeoman Generator](https://pnp.github.io/generator-spfx/) | Open-source Yeoman generator which extends out-of-the-box Yeoman generator. |
 | [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Can be used in SharePoint Framework (SPFx) solutions. |

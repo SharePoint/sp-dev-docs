@@ -1,12 +1,14 @@
 ---
 title: SharePoint modernization guidance - Assessment
 description: Modernization offerings that IT Teams and partners can use with their customers - assessment step
-ms.date: 12/06/2019
+ms.date: 07/21/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Assessment
+
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 Understanding which sites are candidates to be modernized is essential to understand the scope of the work. You can either follow the steps described in the [delivery guide](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Modernization%20partner%20guidance/Microsoft%20Teamwork%20Transformation%20Delivery%20Guide.pptx?raw=true) or follow below steps.
 

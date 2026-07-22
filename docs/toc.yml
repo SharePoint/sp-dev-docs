@@ -1108,6 +1108,32 @@
   items:
   - name: Overview
     href: general-development/sharepoint-development-overview.md
+  - name: SharePoint Modernization scanner
+    items:
+    - name: Which assessment tool should I use?
+      href: transform/modernize-scanner.md
+    - name: Understand the legacy scanner reports
+      items:
+      - name: Overview
+        href: transform/modernize-scanner-reports.md
+      - name: Microsoft 365 group connect report
+        href: transform/modernize-scanner-reports-groupconnect.md
+      - name: Modern list and libraries report
+        href: transform/modernize-scanner-reports-lists.md
+      - name: Page modernization report
+        href: transform/modernize-scanner-reports-pages.md
+      - name: Publishing portal modernization report
+        href: transform/modernize-scanner-reports-publishingportals.md
+      - name: Workflow usage report
+        href: transform/modernize-scanner-reports-workflow.md
+      - name: InfoPath usage report
+        href: transform/modernize-scanner-reports-infopath.md
+      - name: Blog usage report
+        href: transform/modernize-scanner-reports-blogs.md
+      - name: SharePoint Designer customized forms report
+        href: transform/modernize-scanner-reports-customizedforms.md
+    - name: Legacy scanner FAQ
+      href: transform/modernize-scanner-faq.yml
   - name: What's new in SharePoint Server 2019
     href: general-development/sharepoint-2019-development-platform.md
   - name: Programming models
@@ -1833,6 +1859,10 @@
   items:
   - name: Overview
     href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
+  - name: Assess SharePoint modernization
+    items:
+    - name: Overview
+      href: transform/assess-sharepoint-modernization.md
   - name: Modernizing your classic SharePoint sites
     items:
     - name: Overview
@@ -1844,7 +1874,7 @@
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
         items:
-        - name: Analyze and use the scanner data
+        - name: Analyze legacy scanner data
           href: transform/modernize-userinterface-lists-and-libraries-scanner.md
         - name: Rollout approaches
           href: transform/modernize-userinterface-lists-and-libraries-rollout.md
@@ -1881,37 +1911,11 @@
           href: transform/modernize-userinterface-site-pages-termmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
-    - name: SharePoint Modernization scanner
-      items:
-      - name: Overview
-        href: transform/modernize-scanner.md
-      - name: Understand the created reports
-        items:
-        - name: Overview
-          href: transform/modernize-scanner-reports.md
-        - name: Microsoft 365 group connect report
-          href: transform/modernize-scanner-reports-groupconnect.md
-        - name: Modern list and libraries report
-          href: transform/modernize-scanner-reports-lists.md
-        - name: Page modernization report
-          href: transform/modernize-scanner-reports-pages.md
-        - name: Publishing portal modernization report
-          href: transform/modernize-scanner-reports-publishingportals.md
-        - name: Workflow usage report
-          href: transform/modernize-scanner-reports-workflow.md
-        - name: InfoPath usage report
-          href: transform/modernize-scanner-reports-infopath.md
-        - name: Blog usage report
-          href: transform/modernize-scanner-reports-blogs.md
-        - name: SharePoint Designer customized forms report
-          href: transform/modernize-scanner-reports-customizedforms.md
-      - name: Scanner FAQ
-        href: transform/modernize-scanner-faq.yml
     - name: SharePoint modernization guidance
       items:
       - name: Overview
         href: transform/modernize-guidance.md
-      - name: Assessment
+      - name: Legacy assessment delivery guidance
         href: transform/modernize-guidance-assessment.md
       - name: Strategy
         href: transform/modernize-guidance-strategy.md
@@ -1933,7 +1937,7 @@
       items:
       - name: Overview
         href: transform/modernize-connect-to-office365-group.md
-      - name: Analyze and use the scanner data
+      - name: Analyze legacy scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
       - name: Subsites versus Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-subsites.md
@@ -1945,7 +1949,7 @@
       items:
       - name: Overview
         href: transform/modernize-publishing-portal.md
-      - name: Analyze and use the scanner data
+      - name: Analyze legacy scanner data
         href: transform/modernize-publishing-portal-scanner.md
     - name: Modernize classic blogs
       href: transform/modernize-blogs.md
