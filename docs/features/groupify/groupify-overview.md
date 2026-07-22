@@ -1,7 +1,7 @@
 ---
 title: Overview of the Connect to new Microsoft 365 group feature
 description: Augment your team site collaboration capabilities with the benefits of other group services such as Outlook, Planner, and Microsoft Teams.
-ms.date: 07/21/2026
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
