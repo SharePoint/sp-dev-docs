@@ -1833,6 +1833,39 @@
   items:
   - name: Overview
     href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
+  - name: Assess SharePoint modernization
+    href: transform/assess-sharepoint-modernization.md
+    items:
+    - name: Microsoft 365 Assessment Tool
+      href: transform/assessment-tool-overview.md
+      items:
+      - name: Classic pages
+        href: transform/assessment-tool-classic-pages.md
+        items:
+        - name: Requirements
+          href: transform/assessment-tool-classic-pages-requirements.md
+        - name: Run the assessment
+          href: transform/assessment-tool-classic-pages-run.md
+        - name: Interpret the report
+          href: transform/assessment-tool-classic-pages-report.md
+        - name: CSV reference
+          href: transform/assessment-tool-classic-pages-csv.md
+        - name: Publishing portal coverage
+          href: transform/assessment-tool-publishing-coverage.md
+      - name: Lists and libraries
+        href: transform/assessment-tool-lists.md
+      - name: Extensibility and custom actions
+        href: transform/assessment-tool-extensibility.md
+        items:
+        - name: CSV reference
+          href: transform/assessment-tool-extensibility-csv.md
+      - name: Reports and CSV files
+        href: transform/assessment-tool-reports.md
+        items:
+        - name: Common CSV files
+          href: transform/assessment-tool-common-reports.md
+    - name: Compare assessment tools
+      href: transform/sharepoint-modernization-assessment-comparison.md
   - name: Modernizing your classic SharePoint sites
     items:
     - name: Overview
