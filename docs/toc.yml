@@ -1836,7 +1836,7 @@
   - name: Assess SharePoint modernization
     href: transform/assess-sharepoint-modernization.md
     items:
-    - name: Microsoft 365 Assessment Tool
+    - name: Microsoft 365 Assessment tool
       href: transform/assessment-tool-overview.md
       items:
       - name: Classic pages

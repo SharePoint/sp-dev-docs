@@ -1,14 +1,14 @@
 ---
-title: Microsoft 365 Assessment Tool overview
-description: Learn what the Microsoft 365 Assessment Tool assesses and how to get started.
-ms.date: 07/22/2026
+title: Microsoft 365 Assessment tool overview
+description: Learn what the Microsoft 365 Assessment tool assesses and how to get started.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Microsoft 365 Assessment Tool overview
+# Microsoft 365 Assessment tool overview
 
-The Microsoft 365 Assessment Tool is an open-source command-line tool that collects data from Microsoft 365 and generates CSV reports. On Windows, it also generates a Power BI template. Use the reports to plan modernization, adoption, and retirement work.
+The Microsoft 365 Assessment tool is an open-source command-line tool that collects data from Microsoft 365 and generates CSV reports. On Windows, it also generates a Power BI template. Use the reports to plan modernization, adoption, and retirement work.
 
 ## Public assessment modules
 
@@ -16,7 +16,7 @@ The Microsoft 365 Assessment Tool is an open-source command-line tool that colle
 | --- | --- | --- |
 | Classic | `Classic` | Assesses classic pages, lists, InfoPath usage, and classic extensibility components selected with `--classicinclude`. |
 | InfoPath Forms Services | `InfoPath` | Inventories InfoPath usage and supports retirement planning. |
-| SharePoint Add-Ins and Azure ACS | `AddInsACS` | Inventories SharePoint Add-Ins and Azure ACS principals. |
+| SharePoint Add-Ins and Microsoft Azure Access Control Service (ACS) | `AddInsACS` | Inventories SharePoint Add-Ins and Azure ACS principals. |
 | SharePoint Alerts | `Alerts` | Inventories SharePoint Alerts for retirement planning. |
 
 The Workflow mode is retired. Workflow implementation and report artifacts remain in the repository for compatibility with existing assessment data, but a new Workflow assessment can't be started.
@@ -30,6 +30,8 @@ The Workflow mode is retired. Workflow implementation and report artifacts remai
 1. Start an assessment.
 1. Monitor it with the `status` and `list` actions.
 1. Generate a report with the `report` action.
+
+Command examples in this guidance use the Windows executable name `microsoft365-assessment.exe`. On macOS or Linux, mark the downloaded binary as executable and use `./microsoft365-assessment` instead. Replace Windows file paths with paths for your operating system.
 
 The detailed open-source project documentation remains available at [pnp.github.io/pnpassessment](https://pnp.github.io/pnpassessment/index.html).
 

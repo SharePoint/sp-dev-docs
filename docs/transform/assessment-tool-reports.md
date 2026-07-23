@@ -1,14 +1,14 @@
 ---
 title: Microsoft 365 Assessment reports and CSV files
-description: Understand the Power BI templates, report tabs, and CSV files produced by the Microsoft 365 Assessment Tool.
-ms.date: 07/22/2026
+description: Understand the Power BI templates, report tabs, and CSV files produced by the Microsoft 365 Assessment tool.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Microsoft 365 Assessment reports and CSV files
 
-The Microsoft 365 Assessment Tool stores assessment data locally and generates CSV exports for the selected mode. On Windows, it also generates a Power BI template. On macOS and Linux, copy the assessment data to Windows if you need to generate the Power BI template.
+The Microsoft 365 Assessment tool stores assessment data locally and generates CSV exports for the selected mode. On Windows, it also generates a Power BI template. On macOS and Linux, copy the assessment data to Windows if you need to generate the Power BI template.
 
 ## Public report templates
 
@@ -75,6 +75,10 @@ For Classic page schemas, join keys, and coverage rules, see [Classic pages CSV 
 Across current public modes, the report contract defines 23 distinct CSV file names, including the optional page audit usage file.
 
 ## Generate reports
+
+Generate a report only after the assessment is `Finished` or intentionally `Paused`. A status of `Finalizing` means post-scan work is still running, and the report command rejects the request.
+
+The examples use the Windows executable name. On macOS or Linux, use `./microsoft365-assessment` and an operating-system-appropriate output path. Power BI template generation remains Windows-only.
 
 ```console
 microsoft365-assessment.exe list

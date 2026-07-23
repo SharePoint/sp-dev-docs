@@ -1,20 +1,20 @@
 ---
 title: Assess classic SharePoint pages
 description: Discover classic pages, inventory their web parts, and measure page modernization readiness.
-ms.date: 07/22/2026
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Assess classic SharePoint pages
 
-Use the Classic pages component of the Microsoft 365 Assessment Tool to discover classic wiki, web part, publishing, blog, ASPX, and Delve Blog pages in SharePoint Online.
+Use the Classic pages component of the Microsoft 365 Assessment tool to discover classic wiki, web part, publishing, blog, ASPX, and Delve Blog pages in SharePoint Online.
 
 Wiki, Web Part, and Publishing pages receive detailed Web Part inventory, layout, home-page, and mapping-readiness enrichment. Blog, ASPX, and Delve Blog pages are discovered and recorded, but they don't receive the same Web Part mapping readiness analysis.
 
 The assessment can optionally collect page view/create/edit activity from the Microsoft Graph audit log.
 
-In the current implementation, Delve Blog pages appear in `classicpages.csv` but aren't included in the page-type counts in `classicwebsummaries.csv` or `classicsitesummaries.csv`.
+In the current implementation, Delve Blog pages appear in `classicpages.csv` but aren't included in `ClassicPages` or the page-type counts in `classicwebsummaries.csv` and `classicsitesummaries.csv`.
 
 ## In this guidance
 
@@ -25,6 +25,8 @@ In the current implementation, Delve Blog pages appear in `classicpages.csv` but
 - [Publishing portal coverage](assessment-tool-publishing-coverage.md)
 
 ## Run the assessment
+
+The example uses the Windows executable name. On macOS or Linux, use `./microsoft365-assessment`.
 
 ```powershell
 microsoft365-assessment.exe start --mode Classic --classicinclude Pages `
@@ -79,4 +81,4 @@ For a complete interpretation workflow, see [Interpret the classic pages assessm
 - [Classic SharePoint Pages Assessment](https://pnp.github.io/pnpassessment/classic/readme.html)
 - [Requirements](https://pnp.github.io/pnpassessment/classic/requirements.html)
 - [Run an assessment](https://pnp.github.io/pnpassessment/classic/assess.html)
-- [Power BI report](https://pnp.github.io/pnpassessment/classic/report-intro.html)
+- [Open-source Power BI report page](https://pnp.github.io/pnpassessment/classic/report-intro.html). That project page describes intended readiness visuals; use the [Learn report guide](assessment-tool-classic-pages-report.md) for the fields available in the current embedded template.

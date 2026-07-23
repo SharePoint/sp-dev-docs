@@ -1,22 +1,29 @@
 ---
 title: Understand publishing portal assessment coverage
-description: Compare Microsoft 365 Assessment Tool publishing output with the legacy SharePoint Modernization Scanner publishing reports.
-ms.date: 07/22/2026
+description: Compare Microsoft 365 Assessment tool publishing output with the legacy SharePoint Modernization Scanner publishing reports.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Understand publishing portal assessment coverage
 
-The Microsoft 365 Assessment Tool provides page-level publishing readiness and a site-collection-level publishing portal summary. It doesn't reproduce the complete web-level publishing configuration inventory from the legacy SharePoint Modernization Scanner.
+The Microsoft 365 Assessment tool provides page-level publishing readiness and a site-collection-level publishing portal summary. It doesn't reproduce the complete web-level publishing configuration inventory from the legacy SharePoint Modernization Scanner.
+
+## Before you begin
+
+- Complete the [Classic Pages requirements](assessment-tool-classic-pages-requirements.md). This assessment includes Pages and requires the broader page-inventory permissions.
+- Include both Pages and Extensibility to populate page readiness, page layouts, custom master pages, and alternate CSS.
+- The following command skips page Audit usage. Remove `--skipusageinformation` only after configuring the documented Audit application permission.
 
 ## Run the required components
 
-Include both Pages and Extensibility to populate page readiness, page layouts, custom master pages, and alternate CSS:
+The example uses the Windows executable name. On macOS or Linux, use `./microsoft365-assessment`.
 
 ```powershell
 microsoft365-assessment.exe start --mode Classic `
   --classicinclude Pages Extensibility `
+  --skipusageinformation `
   --authmode application `
   --tenant <tenant>.sharepoint.com `
   --applicationid <application-id> `
@@ -45,6 +52,9 @@ If Extensibility isn't included, the custom master-page fields in `classicpublis
 - Latest publishing-page modification date.
 
 Use this file to identify large or stale publishing portals.
+
+> [!CAUTION]
+> The current Assessment implementation can aggregate `UsedSiteMasterPages` and `UsedSystemMasterPages` from other publishing site collections in the same assessment. For site-specific master-page analysis, filter `classicextensibilities.csv` by `ScanId` and `SiteUrl`.
 
 ## Page-level coverage
 

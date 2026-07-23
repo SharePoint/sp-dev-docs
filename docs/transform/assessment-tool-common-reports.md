@@ -1,14 +1,14 @@
 ---
 title: Common Microsoft 365 Assessment CSV files
-description: Understand the scans, properties, history, site collection, and web CSV files exported by every Microsoft 365 Assessment Tool report.
-ms.date: 07/22/2026
+description: Understand the scans, properties, history, site collection, and web CSV files exported by every Microsoft 365 Assessment tool report.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Common Microsoft 365 Assessment CSV files
 
-Every Microsoft 365 Assessment Tool report exports these files:
+Every Microsoft 365 Assessment tool report exports these files:
 
 ```text
 scans.csv
@@ -40,7 +40,7 @@ This file contains one row for the assessment.
 | `Status` | `Queued`, `Running`, `Pausing`, `Paused`, `Finished`, or `Terminated`. |
 | `PreScanStatus` | Status of component-specific pre-assessment work. |
 | `PostScanStatus` | Status of the post-scan processing phase. |
-| `Version` | Assessment Tool version. |
+| `Version` | Assessment tool version. |
 | `CLIMode` | Selected assessment mode. |
 | `CLITenant` | SharePoint tenant host supplied to the CLI. |
 | `CLITenantId` | Microsoft Entra tenant identifier when recorded. |

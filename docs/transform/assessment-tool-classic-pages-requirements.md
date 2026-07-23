@@ -1,7 +1,7 @@
 ---
 title: Requirements for the classic pages assessment
-description: Configure authentication, permissions, audit access, and a supported environment for the Microsoft 365 Assessment Tool classic pages component.
-ms.date: 07/22/2026
+description: Configure authentication, permissions, audit access, and a supported environment for the Microsoft 365 Assessment tool classic pages component.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -10,7 +10,9 @@ ms.service: sharepoint
 
 The classic pages component assesses SharePoint Online. It doesn't assess SharePoint Server or another on-premises source.
 
-Download the latest [Microsoft 365 Assessment Tool release](https://github.com/pnp/pnpassessment/releases). Core classic page readiness analysis is available in version 1.15.0 and later. The Microsoft Graph audit usage flow, `--auditlogwindowdays`, and `classicpageauditusage.csv` contract documented in this guidance require version 1.16.0 or later.
+Download the latest [Microsoft 365 Assessment tool release](https://github.com/pnp/pnpassessment/releases). Core classic page readiness analysis is available in version 1.15.0 and later. The Microsoft Graph audit usage flow, `--auditlogwindowdays`, and `classicpageauditusage.csv` contract documented in this guidance require version 1.16.0 or later.
+
+For GCC High, Department of Defense, China, Germany, or a tenant that uses vanity URLs, configure `appsettings.json` as described in [Assessment tool configuration](https://pnp.github.io/pnpassessment/using-the-assessment-tool/configuration.html).
 
 ## Authentication
 
@@ -43,14 +45,9 @@ Grant admin consent for the configured permissions before starting the assessmen
 
 Unless you specify `--skipusageinformation`, the assessment queries Microsoft Graph for `ClassicPageViewed`, `ClassicPageCreated`, and `ClassicPageEdited` audit events.
 
-Add `AuditLogsQuery-SharePoint.Read.All` in the same permission type as the authentication mode:
+For the currently documented Assessment flow, add the Microsoft Graph application permission `AuditLogsQuery-SharePoint.Read.All` and grant admin consent.
 
-| Authentication | Additional Microsoft Graph permission |
-| --- | --- |
-| Application | `AuditLogsQuery-SharePoint.Read.All` application permission |
-| Interactive or Device | `AuditLogsQuery-SharePoint.Read.All` delegated permission |
-
-Admin consent is required. For delegated authentication, the signed-in account must also be authorized to search audit data in Microsoft Purview.
+Microsoft Graph also exposes a delegated permission with the same name. However, delegated Audit collection hasn't been validated end to end with Assessment version 1.16.0, and the current tool guidance and permission error are application-specific. For an Interactive or Device assessment, use `--skipusageinformation` until delegated behavior and the required Microsoft Purview role are validated.
 
 If the permission is missing, page discovery and web part analysis can still finish. Audit rows are marked `failed`, and `SkipReason` explains the missing permission.
 

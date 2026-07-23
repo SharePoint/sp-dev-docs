@@ -1,16 +1,27 @@
 ---
 title: Assess classic SharePoint extensibility
-description: Find classic branding and incompatible user custom actions with the Microsoft 365 Assessment Tool.
-ms.date: 07/22/2026
+description: Find classic branding and incompatible user custom actions with the Microsoft 365 Assessment tool.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Assess classic SharePoint extensibility
 
-Use the Extensibility component of the Microsoft 365 Assessment Tool to identify classic branding and user customizations that require remediation before adopting modern SharePoint experiences.
+Use the Extensibility component of the Microsoft 365 Assessment tool to identify classic branding and user customizations that require remediation before adopting modern SharePoint experiences.
+
+## Before you begin
+
+- Download the latest [Microsoft 365 Assessment tool release](https://github.com/pnp/pnpassessment/releases).
+- [Configure an Entra application](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html). Application authentication is recommended for a full-tenant assessment.
+- Use `--skipusageinformation` for an Extensibility-only assessment because the current Classic post-scan path otherwise starts the page Audit query.
+
+> [!IMPORTANT]
+> The least-privileged permission set for an Extensibility-only run must be validated before this draft is published. Don't assume that the broader Classic Pages FullControl permissions are required when Pages isn't selected.
 
 ## Run the assessment
+
+The example uses the Windows executable name. On macOS or Linux, use `./microsoft365-assessment`.
 
 ```powershell
 microsoft365-assessment.exe start --mode Classic --classicinclude Extensibility `
@@ -20,8 +31,6 @@ microsoft365-assessment.exe start --mode Classic --classicinclude Extensibility 
   --applicationid <application-id> `
   --certpath "My|CurrentUser|<certificate-thumbprint>"
 ```
-
-The current Classic post-scan path starts page audit collection even when Pages isn't selected. Use `--skipusageinformation` for an Extensibility-only assessment unless you intentionally want that audit query.
 
 ## What the assessment checks
 
@@ -34,7 +43,7 @@ The component identifies:
 - JavaScript commands embedded in command UI extensions.
 - Incompatible custom-action locations.
 
-Out-of-box master pages are excluded from the custom master-page result.
+Out-of-the-box master pages are excluded from the custom master-page result.
 
 ## Output
 
@@ -94,4 +103,10 @@ The model contains a `CE5` custom-theme code, but the current Extensibility comp
 
 ## Scope boundaries
 
-The Extensibility component doesn't replace Microsoft 365 group connection readiness. It also doesn't assess SharePoint Add-Ins or Azure ACS inside Classic mode; use the separate `AddInsACS` assessment.
+The Extensibility component doesn't replace Microsoft 365 group connection readiness. It also doesn't assess SharePoint Add-Ins or Microsoft Azure Access Control Service (ACS) inside Classic mode; use the separate `AddInsACS` assessment.
+
+## Next steps
+
+- [Modernize customizations](modernize-customizations.md)
+- [SharePoint Framework Extensions](../spfx/extensions/overview-extensions.md)
+- [Compare SharePoint modernization assessment tools](sharepoint-modernization-assessment-comparison.md)

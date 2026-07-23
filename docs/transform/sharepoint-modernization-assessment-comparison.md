@@ -1,18 +1,18 @@
 ---
 title: Compare SharePoint modernization assessment tools
 description: Compare Microsoft 365 Assessment, the legacy SharePoint Modernization Scanner, and on-premises assessment tools.
-ms.date: 07/22/2026
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Compare SharePoint modernization assessment tools
 
-Use the Microsoft 365 Assessment Tool for new SharePoint Online assessments when it supports the scenario. Continue to use the legacy SharePoint Modernization Scanner only for an established workflow or a capability that isn't yet available in Assessment.
+Use the Microsoft 365 Assessment tool for new SharePoint Online assessments when it supports the scenario. Continue to use the legacy SharePoint Modernization Scanner only for an established workflow or a capability that isn't yet available in Assessment.
 
 ## Capability comparison
 
-| Capability | Microsoft 365 Assessment Tool | Legacy Modernization Scanner | Guidance |
+| Capability | Microsoft 365 Assessment tool | Legacy Modernization Scanner | Guidance |
 | --- | --- | --- | --- |
 | Classic page discovery and Web Part readiness | Available | Available | Use Assessment for new work. |
 | Modern list and library readiness | Available; output is normalized and isn't field-for-field compatible | Available | Use Assessment for new work; retain Scanner documentation for existing reports. |
@@ -23,7 +23,7 @@ Use the Microsoft 365 Assessment Tool for new SharePoint Online assessments when
 | Microsoft 365 group connection readiness | Not available | Available | Use the legacy Scanner. |
 | SharePoint Designer customized forms | Not available as a dedicated assessment | Available | Use the legacy Scanner. |
 | Workflow 2013 | Retired | Legacy workflow reports | Follow workflow retirement guidance instead of starting a new scan. |
-| SharePoint Server/on-premises | Not supported | Not supported | Use SMAT or another on-premises assessment tool. |
+| SharePoint Server/on-premises | Not supported | Not supported | Use the SharePoint Migration Assessment Tool (SMAT) or another on-premises assessment tool. |
 
 ## Output compatibility
 
