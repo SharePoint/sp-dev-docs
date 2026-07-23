@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 04/21/2017
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions in Visual Studio Code
@@ -34,7 +34,7 @@ You can locate the debug configurations in the **./vscode/launch.json** file und
     ```console
     heft start
     ```
-    ![The gulp serve command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
+    ![The heft start command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
 
 ### Start debugging in Visual Studio Code
 

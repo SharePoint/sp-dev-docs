@@ -1,12 +1,12 @@
 ---
 title: SharePoint solution packaging
-description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
-ms.date: 03/11/2026
+description: The package-solution Heft task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging
 
-The **package-solution** gulp task looks at **./config/package-solution.json** for various configuration details, including some generic filepaths, and defines the relationship between components (*WebParts* and *Applications*) in a package.
+The **package-solution** Heft task looks at **./config/package-solution.json** for various configuration details, including some generic filepaths, and defines the relationship between components (*WebParts* and *Applications*) in a package.
 
 The schema for the configuration file is as follows:
 
