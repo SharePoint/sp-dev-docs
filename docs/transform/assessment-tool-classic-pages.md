@@ -79,6 +79,6 @@ For a complete interpretation workflow, see [Interpret the classic pages assessm
 ## Additional open-source documentation
 
 - [Classic SharePoint Pages Assessment](https://pnp.github.io/pnpassessment/classic/readme.html)
-- [Open-source requirements page](https://pnp.github.io/pnpassessment/classic/requirements.html). That project page still lists FullControl; use the [Learn requirements](assessment-tool-classic-pages-requirements.md) for the read permission profile validated with Assessment 1.16.0.
+- [Open-source requirements page](https://pnp.github.io/pnpassessment/classic/requirements.html). That project page still lists FullControl and only the application Audit permission; use the [Learn requirements](assessment-tool-classic-pages-requirements.md) for the Assessment 1.16.0 permission profile.
 - [Run an assessment](https://pnp.github.io/pnpassessment/classic/assess.html)
 - [Open-source Power BI report page](https://pnp.github.io/pnpassessment/classic/report-intro.html). That project page describes intended readiness visuals; use the [Learn report guide](assessment-tool-classic-pages-report.md) for the fields available in the current embedded template.

@@ -45,15 +45,21 @@ Grant admin consent for the configured permissions before starting the assessmen
 
 Unless you specify `--skipusageinformation`, the assessment queries Microsoft Graph for `ClassicPageViewed`, `ClassicPageCreated`, and `ClassicPageEdited` audit events.
 
-For the currently documented Assessment flow, add the Microsoft Graph application permission `AuditLogsQuery-SharePoint.Read.All` and grant admin consent.
+Add `AuditLogsQuery-SharePoint.Read.All` in the permission type used by the authentication mode:
 
-Microsoft Graph also exposes a delegated permission with the same name. However, delegated Audit collection hasn't been validated end to end with Assessment version 1.16.0, and the current tool guidance and permission error are application-specific. For an Interactive or Device assessment, use `--skipusageinformation` until delegated behavior and the required Microsoft Purview role are validated.
+| Authentication | Additional Microsoft Graph permission |
+| --- | --- |
+| Application | `AuditLogsQuery-SharePoint.Read.All` application permission |
+| Interactive or Device | `AuditLogsQuery-SharePoint.Read.All` delegated permission |
+
+Grant admin consent. For delegated authentication, the signed-in account must also be authorized to search Audit data in Microsoft Purview.
 
 If the permission is missing, page discovery and web part analysis can still finish. Audit rows are marked `failed`, and `SkipReason` explains the missing permission.
 
 ## Audit availability
 
 - Verify that Microsoft Purview Audit is available and recording activity for the tenant.
+- Unified Audit ingestion is enabled by default for most organizations. Verify `UnifiedAuditLogIngestionEnabled`; when it is `False`, enable it before running the query. Organization customization might need to be enabled first, and the change can take up to 60 minutes to propagate.
 - New events can take approximately 60 to 90 minutes to become available.
 - `--auditlogwindowdays` accepts a value from 1 through 180. The default is 14.
 - The Microsoft Graph audit query API used by the tool is available only in the global service. The current tool records audit collection as `skipped` in sovereign-cloud environments.
