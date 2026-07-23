@@ -60,6 +60,7 @@ If the permission is missing, page discovery and web part analysis can still fin
 
 - Verify that Microsoft Purview Audit is available and recording activity for the tenant.
 - Unified Audit ingestion is enabled by default for most organizations. Verify `UnifiedAuditLogIngestionEnabled`; when it is `False`, enable it before running the query. Organization customization might need to be enabled first, and the change can take up to 60 minutes to propagate.
+- The administrative property can return `True` before the Graph Audit Query backend is ready. During propagation, Graph can return HTTP 400 with backend status `AuditingDisabledTenant`; this is an Audit provisioning state, not a missing app permission.
 - New events can take approximately 60 to 90 minutes to become available.
 - `--auditlogwindowdays` accepts a value from 1 through 180. The default is 14.
 - The Microsoft Graph audit query API used by the tool is available only in the global service. The current tool records audit collection as `skipped` in sovereign-cloud environments.
