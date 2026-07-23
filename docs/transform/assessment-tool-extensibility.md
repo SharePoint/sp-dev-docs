@@ -16,8 +16,12 @@ Use the Extensibility component of the Microsoft 365 Assessment tool to identify
 - [Configure an Entra application](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html). Application authentication is recommended for a full-tenant assessment.
 - Use `--skipusageinformation` for an Extensibility-only assessment because the current Classic post-scan path otherwise starts the page Audit query.
 
-> [!IMPORTANT]
-> The least-privileged permission set for an Extensibility-only run must be validated before this draft is published. Don't assume that the broader Classic Pages FullControl permissions are required when Pages isn't selected.
+Use the following permissions:
+
+| Authentication | Microsoft Graph | SharePoint |
+| --- | --- | --- |
+| Application | `Sites.Read.All` application permission | `Sites.Read.All` application permission |
+| Interactive or Device | `Sites.Read.All` and `User.Read` delegated permissions | `AllSites.Read` delegated permission |
 
 ## Run the assessment
 

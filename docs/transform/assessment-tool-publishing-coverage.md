@@ -12,7 +12,7 @@ The Microsoft 365 Assessment tool provides page-level publishing readiness and a
 
 ## Before you begin
 
-- Complete the [Classic Pages requirements](assessment-tool-classic-pages-requirements.md). This assessment includes Pages and requires the broader page-inventory permissions.
+- Complete the [Classic Pages requirements](assessment-tool-classic-pages-requirements.md). This assessment includes Pages and uses the documented read permission profile.
 - Include both Pages and Extensibility to populate page readiness, page layouts, custom master pages, and alternate CSS.
 - The following command skips page Audit usage. Remove `--skipusageinformation` only after configuring the documented Audit application permission.
 

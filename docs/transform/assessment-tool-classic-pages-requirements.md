@@ -34,10 +34,10 @@ The current classic pages implementation requires the following permissions:
 
 | Authentication | Microsoft Graph | SharePoint |
 | --- | --- | --- |
-| Application | `Sites.Read.All` application permission | `Sites.FullControl.All` application permission |
-| Interactive or Device | `Sites.Read.All` and `User.Read` delegated permissions | `AllSites.FullControl` delegated permission |
+| Application | `Sites.Read.All` application permission | `Sites.Read.All` application permission |
+| Interactive or Device | `Sites.Read.All` and `User.Read` delegated permissions | `AllSites.Read` delegated permission |
 
-The page inventory reads web part configuration through the SharePoint `LimitedWebPartManager` API. Read-only SharePoint permission isn't sufficient for this operation.
+The page inventory reads web part configuration through the SharePoint `LimitedWebPartManager` API. Assessment version 1.16.0 can complete page and web part extraction with the read permissions in this table.
 
 Grant admin consent for the configured permissions before starting the assessment.
 
