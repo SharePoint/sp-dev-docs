@@ -34,7 +34,7 @@ Before you start, make sure you have:
 - At least one Microsoft 365 Copilot license in the tenant during preview.
 - Permission to update the container type registration in each consuming tenant where the agent must access content.
 
-During preview, the Copilot license is required. After preview, this feature is expected to move to metered billing.
+During preview, the Copilot license is required. Billing requirements after preview are subject to change.
 
 ## Configure the SharePoint knowledge source
 

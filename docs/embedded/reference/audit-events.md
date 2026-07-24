@@ -19,7 +19,7 @@ outcome: Look up SharePoint Embedded container type audit event names and proper
 next: ../admin/review-audit-events.md
 -->
 
-SharePoint Embedded container type and container type registration operations are captured in the Microsoft 365 unified audit log through [Microsoft Purview](/purview/audit-solutions-overview). These events let compliance administrators and developers track changes to container type definitions and registrations in consuming tenants. File and folder activity inside containers is captured by standard SharePoint file audit events.
+The Microsoft 365 unified audit log captures SharePoint Embedded container type and container type registration operations through [Microsoft Purview](/purview/audit-solutions-overview). These events let compliance administrators and developers track changes to container type definitions and registrations in consuming tenants. File and folder activity inside containers is captured by standard SharePoint file audit events.
 
 For step-by-step investigation guidance, see [Review audit events](../admin/review-audit-events.md).
 
@@ -29,10 +29,10 @@ These events are logged when a container type is created, updated, or deleted. T
 
 | Friendly name | Operation | Description |
 | --- | --- | --- |
-| Created container type | `ContainerTypeCreated` | A new SharePoint Embedded container type definition was created. |
-| Deleted container type | `ContainerTypeDeleted` | A SharePoint Embedded container type owned by the tenant was deleted. |
-| Updated container type | `ContainerTypeUpdated` | Properties of a container type, such as name or configuration, were changed. |
-| Updated container type owners | `ContainerTypeOwnersUpdated` | Owners were added to or removed from a container type. |
+| Created container type | `ContainerTypeCreated` | Records creation of a new SharePoint Embedded container type definition. |
+| Deleted container type | `ContainerTypeDeleted` | Records deletion of a SharePoint Embedded container type owned by the tenant. |
+| Updated container type | `ContainerTypeUpdated` | Records changes to properties of a container type, such as name or configuration. |
+| Updated container type owners | `ContainerTypeOwnersUpdated` | Records owner additions to or removals from a container type. |
 
 For the full list of audit activities, see [Audit log activities](/purview/audit-log-activities#sharepoint-embedded-container-type-activities).
 
@@ -42,9 +42,9 @@ These events are logged when a container type registration is created, updated, 
 
 | Friendly name | Operation | Description |
 | --- | --- | --- |
-| Created container type registration | `ContainerTypeRegistrationCreated` | A SharePoint Embedded container type registration was created in a tenant. |
-| Deleted container type registration | `ContainerTypeRegistrationDeleted` | A SharePoint Embedded container type registration was deleted from a tenant. |
-| Updated container type registration | `ContainerTypeRegistrationUpdated` | A SharePoint Embedded container type registration was updated in a tenant. |
+| Created container type registration | `ContainerTypeRegistrationCreated` | Records creation of a SharePoint Embedded container type registration in a tenant. |
+| Deleted container type registration | `ContainerTypeRegistrationDeleted` | Records deletion of a SharePoint Embedded container type registration from a tenant. |
+| Updated container type registration | `ContainerTypeRegistrationUpdated` | Records updates to a SharePoint Embedded container type registration in a tenant. |
 
 For the full list of audit activities, see [Audit log activities](/purview/audit-log-activities#sharepoint-embedded-container-type-registration-activities).
 

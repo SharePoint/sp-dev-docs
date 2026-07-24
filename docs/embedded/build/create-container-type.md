@@ -7,6 +7,7 @@ ms.author: mawin
 ms.localizationpriority: high
 ai-usage: ai-assisted
 ---
+
 # Create and configure a container type
 
 **Applies to:** Developer
@@ -32,7 +33,7 @@ SharePoint Embedded requires a one-to-one relationship between one owning applic
 
 The container type ID is stored on each container as an immutable property.
 
-The ID is used for access authorization, trial exploration, billing, and configurable behaviors.
+SharePoint Embedded uses the ID for access authorization, trial exploration, billing, and configurable behaviors.
 
 > [!NOTE]
 > The Microsoft Graph API — [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) — is delegated-only and can be called by any non-guest owning-tenant user. The caller doesn't need an administrator role and is automatically assigned as an owner of the new container type.
@@ -79,7 +80,7 @@ The Visual Studio Code path is fastest for a first app. See [Quickstart: Build y
 
 For Microsoft Graph, create the container type with the `trial` billing classification.
 
-The following restrictions are applied to trial container types:
+The following restrictions apply to trial container types:
 
 - The tenant can have up to five containers of the container type. This includes active containers and those in the recycle bin.
 - Each container has up to 1 GB of storage space.

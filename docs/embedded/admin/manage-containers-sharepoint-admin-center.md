@@ -1,5 +1,5 @@
 ---
-title: Manage Containers in SharePoint Admin Center
+title: Manage containers in SharePoint admin center
 description: View, inspect, delete, restore, and manage SharePoint Embedded containers in the SharePoint admin center.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -21,7 +21,18 @@ next: manage-containers-powershell.md
 
 Use the SharePoint admin center to manage SharePoint Embedded containers through a graphical experience.
 
-The SharePoint Embedded container pages help consuming tenant admins view active containers, inspect details, manage membership, apply sensitivity labels, archive and reactivate containers, delete containers, restore deleted containers, and permanently delete containers.
+The SharePoint Embedded container pages help consuming tenant admins manage container inventory and lifecycle.
+
+Use them to:
+
+- View active containers.
+- Inspect details.
+- Manage membership.
+- Apply sensitivity labels.
+- Archive and reactivate containers.
+- Delete containers.
+- Restore deleted containers.
+- Permanently delete containers.
 
 > [!IMPORTANT]
 > To manage SharePoint Embedded containers, assign the **SharePoint Embedded Administrator** role.

@@ -70,7 +70,7 @@ Tell customers exactly which Microsoft Graph permissions your app needs and why.
 | Permission | Purpose | Admin consent |
 | --- | --- | --- |
 | `FileStorageContainerTypeReg.Selected` | Register your container type in the consuming tenant. | The application permission requires admin consent. The delegated permission doesn't require admin consent, but the user who registers the container type must be a SharePoint Embedded Administrator or Global Administrator. |
-| `FileStorageContainer.Selected` | Read and write SharePoint Embedded container content for the container type. | The application permission requires admin consent. The delegated permission does not require admin consent. |
+| `FileStorageContainer.Selected` | Read and write SharePoint Embedded container content for the container type. | The application permission requires admin consent. The delegated permission doesn't require admin consent. |
 
 ## Setup overview for customers
 
@@ -139,11 +139,8 @@ Skip this step when your app uses standard billing. If your app uses pass-throug
 The customer needs a valid Azure subscription and resource group. A Global Administrator sets up billing in the Microsoft 365 admin center, and the admin who creates the billing relationship also needs the Owner or Contributor role on the Azure subscription. Then set up billing:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com/).
-1. Go to **Setup**.
-1. In **Files and Content**, select **Automate Content with Microsoft Syntex**.
-1. Select **Go to Syntex settings**.
-1. Under **Syntex services for**, select **Apps**.
-1. Select **SharePoint Embedded**.
+1. Go to **Setup** > **Billing and licenses**, and select **Activate pay-as-you-go services**.
+1. Under **Syntex services for**, select **Apps**, and then select **SharePoint Embedded**.
 1. Follow the instructions on the **SharePoint Embedded** page to turn on SharePoint Embedded apps.
 
 > [!WARNING]

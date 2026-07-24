@@ -1,5 +1,5 @@
 ---
-title: Set Up Billing in Microsoft 365 Admin Center
+title: Set up billing in Microsoft 365 admin center
 description: Configure SharePoint Embedded pass-through billing in the Microsoft 365 admin center for a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -38,7 +38,7 @@ Charges are based on supported meters such as storage, archived storage, API tra
 Confirm these prerequisites.
 
 - You can sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
-- You have the Global Administrator role. Only a Global Administrator can set up billing in the Microsoft 365 admin center.
+- You have the Global Administrator role.
 - You have owner or contributor permissions on the Azure subscription used for billing.
 - You have an Azure subscription in the tenant.
 - You have a resource group attached to the subscription.
@@ -47,7 +47,7 @@ Confirm these prerequisites.
 
 For tenant role context, see [Admin overview](admin-overview.md).
 
-For billing models, see [Choose a Billing Model](../plan/choose-billing-model.md).
+For billing models, see [Choose a billing model](../plan/choose-billing-model.md).
 
 ## Understand billing models
 
@@ -84,7 +84,7 @@ SharePoint Embedded uses four primary meters.
 | Meter | What it measures |
 | --- | --- |
 | Storage | Data stored in files, documents, metadata, versions, recycle bin, and deleted container collection, in active and archived states. |
-| Archived Storage | Storage consumed by archived containers. Archiving moves data to the cold storage tier, which costs less than active storage. |
+| Archived storage | Storage consumed by archived containers. Archiving moves data to the cold storage tier, which costs less than active storage. |
 | API transactions | Microsoft Graph calls made explicitly by the SharePoint Embedded application. |
 | Egress | Data that exits SharePoint Embedded, such as documents downloaded to customer client devices or data transferred to customer-operated servers, subject to documented exemptions. |
 
@@ -198,8 +198,8 @@ After setup, establish a billing operations process.
 - [Grant admin consent and permissions](grant-admin-consent-permissions.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 - [Monitor usage, billing, and cost](monitor-usage-billing-cost.md)
-- [Choose a Billing Model](../plan/choose-billing-model.md)
-- [SharePoint Embedded Billing Meters](../reference/billing-meters.md)
+- [Choose a billing model](../plan/choose-billing-model.md)
+- [SharePoint Embedded billing meters](../reference/billing-meters.md)
 - [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md)
 
 ## Next steps

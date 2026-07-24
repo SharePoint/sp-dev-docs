@@ -20,14 +20,14 @@ next: install-sharepoint-embedded-app.md
 -->
 
 Use the SharePoint admin center **Apps** experience to create a SharePoint Embedded app that your organization owns.
-The create flow can register a new Microsoft Entra app or associate an existing Entra app with a new SharePoint Embedded app.
+The create flow can register a new Microsoft Entra app or associate an existing Microsoft Entra app with a new SharePoint Embedded app.
 
-A **SharePoint Embedded Administrator** can complete this flow end to end. Creating a line-of-business app no longer depends on a Global Administrator granting consent first, so you can create an app and hand it off to developers quickly. You add up to three owners during creation, so developers you assign as owners can start building against the app right away.
+A **SharePoint Embedded Administrator** can complete this flow end to end and hand the app off to developers quickly. You add up to three owners during creation, so developers you assign as owners can start building against the app right away.
 
 This article explains the administrator flow and calls out where command or API details affect app readiness.
 
 > [!IMPORTANT]
-> You need the **SharePoint Embedded Administrator** role or Global Administrator privileges to create and manage SharePoint Embedded apps in the SharePoint admin center. For a line-of-business app, the SharePoint Embedded Administrator can create the app without Global Administrator consent.
+> You need the **SharePoint Embedded Administrator** role or Global Administrator privileges to create and manage SharePoint Embedded apps in the SharePoint admin center.
 
 ## Before you begin
 
@@ -50,7 +50,7 @@ The page includes two app inventory views.
 
 | Tab | Use it for |
 | --- | --- |
-| Installed apps | Review SharePoint Embedded apps installed in the tenant. The list includes apps built by your organization and by external organizations. It currently doesn't include Microsoft-built SharePoint Embedded apps. |
+| Installed apps | Review SharePoint Embedded apps installed in the tenant. The list includes apps built by your organization and by external organizations. |
 | Owned apps | Review SharePoint Embedded apps created by your organization, regardless of installation status. |
 
 The **Installed apps** tab shows each app's publisher, billing type, billing status, and installed date.
@@ -173,7 +173,7 @@ For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph
 When you select **Create app**, the admin center completes these steps together:
 
 - Registers the Microsoft Entra app, or associates the existing Entra app you selected.
-- Creates the SharePoint Embedded app, which is also called the container type.
+- Creates the SharePoint Embedded app and its associated container type.
 - Installs the app in your tenant.
 - Attaches billing when you select **Owner org** and **Setup now**.
 

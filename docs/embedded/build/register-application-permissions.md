@@ -84,7 +84,7 @@ Call the registration endpoint in the consuming tenant.
 PUT https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypeRegistrations/{containerTypeId}
 ```
 
-`{containerTypeId}` is the container type ID created in the owning tenant.
+`{containerTypeId}` is the container type ID created in the developer tenant.
 
 In the request body, provide the application permission grants for the container type.
 
@@ -138,24 +138,24 @@ Replace both app IDs with your applications.
 
 | Permission | Use |
 |---|---|
-| `None` | Grant no permissions. |
-| `ReadContent` | Read content in containers of this type. |
-| `WriteContent` | Write content in containers of this type. |
-| `Create` | Create containers of this type. |
-| `Delete` | Delete containers of this type. |
-| `Read` | Read container metadata. |
-| `Write` | Update container metadata. |
-| `EnumeratePermissions` | Enumerate container members and roles. |
-| `AddPermissions` | Add container members. |
-| `UpdatePermissions` | Update existing memberships. |
-| `DeletePermissions` | Delete other members. |
-| `DeleteOwnPermission` | Remove the caller's own membership. |
-| `ManagePermissions` | Manage container role assignments. |
-| `ManageContent` | Manage the content of containers of this type. |
-| `Full` | Grant all permissions. |
+| `none` | Grant no permissions. |
+| `readContent` | Read content in containers of this type. |
+| `writeContent` | Write content in containers of this type. |
+| `create` | Create containers of this type. |
+| `delete` | Delete containers of this type. |
+| `read` | Read container metadata. |
+| `write` | Update container metadata. |
+| `enumeratePermissions` | Enumerate container members and roles. |
+| `addPermissions` | Add container members. |
+| `updatePermissions` | Update existing memberships. |
+| `deletePermissions` | Delete other members. |
+| `deleteOwnPermission` | Remove the caller's own membership. |
+| `managePermissions` | Manage container role assignments. |
+| `manageContent` | Manage the content of containers of this type. |
+| `full` | Grant all permissions. |
 
 > [!NOTE]
-> `WriteContent` can't be granted without `ReadContent`.
+> `writeContent` can't be granted without `readContent`.
 
 ## Validate registration
 

@@ -113,6 +113,7 @@ You must register the container type in the consuming tenant before your app can
 1. Review the permissions.
 1. Grant admin consent in the browser.
 1. Return to Visual Studio Code.
+
 Registration configures the permissions the owning app can use against containers of the container type.
 
 ![Screenshot of the SharePoint Embedded extension prompting to register the container type on the local tenant, with the registration action highlighted.](../images/vsx-images/n7aregister-ct.png)

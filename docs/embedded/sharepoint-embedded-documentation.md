@@ -22,18 +22,18 @@ This page is organized by **task**. Find what you're trying to do and go straigh
 <!-- agent:
 task_type: concept
 audience: all
-outcome: The reader is routed to the single best page for their task, by build vs administer intent.
+outcome: The reader is routed to the single best page for their task, by build or administer intent.
 next: overview.md
 -->
 
-## Two roads
+## Choose a task path
 
-Almost everyone is one of two people. Architects, IT decision makers, billing admins, and compliance admins each merge onto one of these:
+Most tasks start from a build, publish, administer, govern, or planning path. Use the table to choose the path that matches your role and goal:
 
 | You are… | You want to… | Start at |
 |---|---|---|
 | Developer / architect | Build and ship an app | [Build an app](#build-an-app) |
-| ISV / developer | Onboard customers and bill | [Publish and onboard customers](#publish-and-onboard-customers) |
+| Independent software vendor (ISV) / developer | Onboard customers and bill | [Publish and onboard customers](#publish-and-onboard-customers) |
 | SharePoint Embedded admin | Install and manage apps | [Install and manage apps](#install-and-manage-apps) |
 | Compliance admin | Govern and secure content | [Apply security and compliance controls](./admin/apply-security-compliance-controls.md) |
 | Evaluating / planning | Decide and design | [Plan a solution](#plan-a-solution) |
@@ -55,22 +55,23 @@ Decide how SharePoint Embedded fits before you write code.
 An ordered journey from first container to a full-featured app.
 
 1. [Quickstart: build your first app with VS Code](./build/quickstart-vscode.md)
-2. [Create and configure a container type](./build/create-container-type.md)
-3. [Register application permissions](./build/register-application-permissions.md)
-4. [Configure authentication and authorization](./build/configure-authentication-authorization.md)
-5. [Create and manage containers](./build/create-manage-containers.md)
-6. [Upload, download, and manage files](./build/manage-files.md)
-7. [Open Office files from your app](./build/open-office-files.md)
-8. [Preview files in your app](./build/preview-files.md)
-9. [Search containers and files](./build/search-containers-files.md)
-10. [Store and query container metadata](./build/container-metadata.md)
-11. [Share files and manage permissions](./build/share-files-manage-permissions.md)
-12. [Respond to file and container changes with webhooks](./build/respond-to-changes-webhooks.md)
-13. [Archive and restore containers](./build/archive-restore-containers.md)
-14. [Add real-time collaboration with Fluid Framework](./build/fluid-framework.md)
-15. [Add Microsoft 365 Copilot and agent experiences](./build/agent-experiences.md)
-16. [Set up SharePoint Embedded as a Foundry knowledge source](./build/sharepoint-embedded-knowledge-source.md)
-17. [Migrate from Azure Blob Storage](./build/migrate-azure-blob-storage.md)
+2. [Use the MCP server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md)
+3. [Create and configure a container type](./build/create-container-type.md)
+4. [Register application permissions](./build/register-application-permissions.md)
+5. [Configure authentication and authorization](./build/configure-authentication-authorization.md)
+6. [Create and manage containers](./build/create-manage-containers.md)
+7. [Upload, download, and manage files](./build/manage-files.md)
+8. [Open Office files from your app](./build/open-office-files.md)
+9. [Preview files in your app](./build/preview-files.md)
+10. [Search containers and files](./build/search-containers-files.md)
+11. [Store and query container metadata](./build/container-metadata.md)
+12. [Share files and manage permissions](./build/share-files-manage-permissions.md)
+13. [Respond to file and container changes with webhooks](./build/respond-to-changes-webhooks.md)
+14. [Archive and restore containers](./build/archive-restore-containers.md)
+15. [Add real-time collaboration with Fluid Framework](./build/fluid-framework.md)
+16. [Add Microsoft 365 Copilot and agent experiences](./build/agent-experiences.md)
+17. [Set up SharePoint Embedded as a Foundry knowledge source](./build/sharepoint-embedded-knowledge-source.md)
+18. [Migrate from Azure Blob Storage](./build/migrate-azure-blob-storage.md)
 
 ## Publish and onboard customers
 

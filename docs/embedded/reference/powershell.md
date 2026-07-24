@@ -30,7 +30,7 @@ For task guidance, see [manage containers with PowerShell](../admin/manage-conta
 | List SharePoint Embedded applications | [Get-SPOApplication](/powershell/module/sharepoint-online/get-spoapplication) | None | `Get-SPOApplication` |
 | Get a specific owning application | [Get-SPOApplication](/powershell/module/sharepoint-online/get-spoapplication) | `-OwningApplicationId` | `Get-SPOApplication -OwningApplicationId <OwningApplicationId>` |
 | View guest application permissions | [Get-SPOApplication](/powershell/module/sharepoint-online/get-spoapplication) | `-OwningApplicationId`, `-ApplicationId` | `Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>` |
-| Set application sharing capability | Set-SPOApplication | `-OwningApplicationId`, `-SharingCapability`, `-OverrideTenantSharingCapability` | `Set-SPOApplication -OwningApplicationId <OwningApplicationId> -SharingCapability <SharingCapability> -OverrideTenantSharingCapability <$OverrideTenantSharingCapability>` |
+| Set application sharing capability | [Set-SPOApplication](/powershell/module/sharepoint-online/set-spoapplication) | `-OwningApplicationId`, `-SharingCapability`, `-OverrideTenantSharingCapability` | `Set-SPOApplication -OwningApplicationId <OwningApplicationId> -SharingCapability <SharingCapability> -OverrideTenantSharingCapability <$OverrideTenantSharingCapability>` |
 | Manage guest application permission | [Set-SPOApplicationPermission](/powershell/module/sharepoint-online/set-spoapplicationpermission) | `-OwningApplicationId`, `-GuestApplicationId`, `-PermissionAppOnly`, `-PermissionDelegated` | `Set-SPOApplicationPermission -OwningApplicationId <OwningApplicationId> -GuestApplicationId <GuestApplicationId> -PermissionAppOnly <AppOnlyPermission> -PermissionDelegated <DelegatedPermission>` |
 
 `SharingCapability` accepts `Disabled`, `ExistingExternalUserSharingOnly`, `ExternalUserSharingOnly`, and `ExternalUserAndGuestSharing`. `OverrideTenantSharingCapability` can be `$true` or `$false`.
@@ -47,11 +47,11 @@ For task guidance, see [manage containers with PowerShell](../admin/manage-conta
 | List archived containers for an application | [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer) | `-OwningApplicationId`, `-ArchiveStatus` | `Get-SPOContainer -OwningApplicationId <OwningApplicationId> -ArchiveStatus Archived \| FT` |
 | Get container details | [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer) | `-Identity` | `Get-SPOContainer -Identity <ContainerId>` |
 | Get container details by site URL | [Get-SPOContainer](/powershell/module/sharepoint-online/get-spocontainer) | `-Identity` | `Get-SPOContainer -Identity <siteURL>` |
-| Set a sensitivity label | Set-SPOContainer | `-Identity`, `-SensitivityLabel` | `Set-SPOContainer -Identity <ContainerID> -SensitivityLabel <SensitivityLabel>` |
-| Remove a sensitivity label | Set-SPOContainer | `-Identity`, `-RemoveLabel` | `Set-SPOContainer -Identity <ContainerID> -RemoveLabel` |
+| Set a sensitivity label | [Set-SPOContainer](/powershell/module/sharepoint-online/set-spocontainer) | `-Identity`, `-SensitivityLabel` | `Set-SPOContainer -Identity <ContainerID> -SensitivityLabel <SensitivityLabel>` |
+| Remove a sensitivity label | [Set-SPOContainer](/powershell/module/sharepoint-online/set-spocontainer) | `-Identity`, `-RemoveLabel` | `Set-SPOContainer -Identity <ContainerID> -RemoveLabel` |
 | Soft delete a container | [Remove-SPOContainer](/powershell/module/sharepoint-online/remove-spocontainer) | `-Identity` | `Remove-SPOContainer -Identity <ContainerId>` |
 | List deleted containers | [Get-SPODeletedContainer](/powershell/module/sharepoint-online/get-spodeletedcontainer) | None | `Get-SPODeletedContainer` |
-| Restore a deleted container | Restore-SPODeletedContainer | `-Identity` | `Restore-SPODeletedContainer -Identity <ContainerId>` |
+| Restore a deleted container | [Restore-SPODeletedContainer](/powershell/module/sharepoint-online/restore-spodeletedcontainer) | `-Identity` | `Restore-SPODeletedContainer -Identity <ContainerId>` |
 | Permanently delete a deleted container | [Remove-SPODeletedContainer](/powershell/module/sharepoint-online/remove-spodeletedcontainer) | `-Identity` | `Remove-SPODeletedContainer -Identity <ContainerId>` |
 
 Deleted containers can be restored from the deleted container collection within 93 days. Permanently deleting a container deletes all documents and files in it. If a container was in the archived state when it was deleted, restoring it returns it to the archived state.

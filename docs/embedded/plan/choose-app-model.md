@@ -19,7 +19,7 @@ outcome: Select the SharePoint Embedded app model and setup path that matches yo
 next: ../plan/container-types-containers.md
 -->
 
-Use this article to choose between an enterprise line-of-business (LOB) model and an ISV multitenant model for SharePoint Embedded.
+Use this article to choose between an enterprise line-of-business (LOB) model and an independent software vendor (ISV) multitenant model for SharePoint Embedded.
 
 The app model determines who owns the app, who installs it, where containers are created, who pays, and which admins must consent or configure billing.
 
@@ -31,7 +31,7 @@ For architecture details, see [Understand app and tenant architecture](../plan/a
 | --- | --- | --- |
 | App is built for one organization | Yes | No |
 | App is sold or provided to multiple customer tenants | No | Yes |
-| Owning tenant and consuming tenant are usually the same | Yes | No |
+| Developer tenant and consuming tenant are usually the same | Yes | No |
 | Customer tenants host their own containers and files | Not usually | Yes |
 | App owner pays for all usage by default | Often | Depends on billing model |
 | Customer tenant admin must onboard the app | Sometimes | Yes |
@@ -62,7 +62,7 @@ In this model:
 This model is usually single-tenant because the same tenant owns and consumes the application.
 
 > [!NOTE]
-> The same Microsoft Entra ID tenant can be both the owning tenant and the consuming tenant for a container type.
+> The same Microsoft Entra ID tenant can be both the developer tenant and the consuming tenant for a container type.
 
 ## Multitenant ISV model
 
@@ -175,13 +175,13 @@ If you're building an ISV app:
 
 1. Plan tenant relationships with [Understand app and tenant architecture](../plan/app-tenant-architecture.md).
 1. Choose standard or pass-through billing with [Choose a billing model](../plan/choose-billing-model.md).
-1. Create the container type in the owning tenant.
+1. Create the container type in the developer tenant.
 1. Register the container type in each consuming tenant by using [Register file storage container type application permissions](../build/register-application-permissions.md).
 
 ## Planning checklist
 
 - Identify whether the app is internal or customer-facing.
-- Identify the owning tenant.
+- Identify the developer tenant.
 - Identify all consuming tenants.
 - Confirm who owns the Microsoft Entra ID application registration.
 - Confirm where the container type is created.

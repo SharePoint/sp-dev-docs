@@ -143,14 +143,14 @@ Before updating:
 
 ## Delete or recycle a container
 
-Use delete behavior when a container is no longer active.
+Recycle or delete a container when it's no longer active.
 
 Before deletion:
 
 - Confirm the caller has permission.
 - Confirm your app has archived business references.
 - Decide whether the container should be recycled first.
-- Explain restore options.
+- Tell users how they can restore a recycled container.
 
 The Visual Studio Code extension includes recycle and recovery capabilities for trial development.
 

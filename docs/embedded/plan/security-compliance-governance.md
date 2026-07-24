@@ -23,11 +23,11 @@ Use this article to plan security, compliance, and governance for content stored
 
 SharePoint Embedded content resides in the consuming tenant's Microsoft 365 boundary.
 
-Supported consumer Microsoft 365 tenant settings and Microsoft Purview capabilities apply to the app documents stored there.
+Supported consuming tenant Microsoft 365 settings and Microsoft Purview capabilities apply to the app documents stored there.
 
 ## Governance model
 
-SharePoint Embedded is API-only and doesn't provide a built-in user interface.
+SharePoint Embedded is API-only and doesn't provide a built-in user interface (UI).
 
 The owning application provides the user experience.
 
@@ -41,15 +41,15 @@ Content is stored in the consuming tenant.
 
 Therefore, consuming tenant policies and administrator decisions govern the content.
 
-For an enterprise LOB app, the enterprise tenant owns and consumes the app.
+For an enterprise line-of-business (LOB) app, the enterprise tenant owns and consumes the app.
 
-For an ISV app, each customer tenant governs its own SharePoint Embedded content.
+For an independent software vendor (ISV) app, each customer tenant governs its own SharePoint Embedded content.
 
 For tenant role planning, see [Understand app and tenant architecture](../plan/app-tenant-architecture.md).
 
 ## Discover applications and containers
 
-Compliance admins may need container details to target policies.
+Compliance administrators may need container details to target policies.
 
 Use this PowerShell discovery flow to retrieve container details for policy scope:
 
@@ -103,7 +103,7 @@ For more information, see [Auditing solutions in Microsoft Purview](/purview/aud
 
 ## eDiscovery
 
-Compliance admins can use Microsoft Purview eDiscovery tools to search, hold, and export SharePoint Embedded content.
+Compliance administrators can use Microsoft Purview eDiscovery tools to search, hold, and export SharePoint Embedded content.
 
 To search all SharePoint Embedded content, configure eDiscovery Search for all SharePoint sites.
 
@@ -173,13 +173,13 @@ For more information, see [Block download policy for SharePoint sites and OneDri
 
 SharePoint Embedded supports basic Conditional Access policy configurations.
 
-Use this command:
+Available policy values:
 
 - `AllowFullAccess`
 - `AllowLimitedAccess`
 - `BlockAccess`
 
-These settings are available through:
+Use this cmdlet:
 
 ```powershell
 Set-SPOContainer -Identity <ContainerSiteURL> -ConditionalAccessPolicy <SPOConditionalAccessPolicyType>
@@ -189,13 +189,13 @@ For more information, see [Control access from unmanaged devices](/sharepoint/co
 
 ## Information barriers
 
-The `fileStorageContainer` resource has an **informationBarrier** property that lets you manage a container's information barrier (beta Microsoft Graph endpoint, March 2026). Use information barrier segments to restrict communication and collaboration between groups of users where required by compliance policy.
+The beta Microsoft Graph `fileStorageContainer` resource has an **informationBarrier** property that lets you manage a container's information barrier. Because the endpoint is in beta, don't use it in production. Use information barrier segments to restrict communication and collaboration between groups of users where required by compliance policy.
 
 For more information, see [Information barriers in SharePoint](/purview/information-barriers-sharepoint).
 
 ## Tenant settings
 
-Consumer Microsoft 365 settings apply to app documents stored by SharePoint Embedded.
+Consuming tenant Microsoft 365 settings apply to app documents stored by SharePoint Embedded.
 
 This includes supported security, compliance, risk, and governance settings.
 
@@ -209,7 +209,7 @@ Design for policy enforcement results, blocked operations, and user-facing messa
 | --- | --- | --- |
 | User experience for files | Provide app UI. | Validate policy expectations. |
 | Container discovery | Expose identifiers where appropriate. | Use PowerShell and admin tools. |
-| Purview policies | Handle policy-driven UX requirements. | Configure audit, eDiscovery, DLP, retention, and labels. |
+| Purview policies | Handle policy-driven user experience (UX) requirements. | Configure audit, eDiscovery, DLP, retention, and labels. |
 | Access model | Request least privilege. | Grant consent and manage tenant settings. |
 | Compliance evidence | Preserve app context and auditability. | Use unified audit log and Purview tools. |
 

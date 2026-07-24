@@ -20,7 +20,7 @@ next: overview.md
 
 ## July 2026
 
-- You can [use the MCP server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md). The open-source SharePoint Embedded MCP server npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)) lets MCP-compatible AI clients—such as GitHub Copilot in Visual Studio Code or the CLI, Claude, or Cursor—provision and manage SharePoint Embedded applications through natural language.
+- You can [use the Model Context Protocol (MCP) server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md). The open-source SharePoint Embedded MCP server npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)) is preview software. It lets MCP-compatible AI clients, such as GitHub Copilot in Visual Studio Code or the CLI, Claude, or Cursor, provision and manage SharePoint Embedded applications through natural language.
 
 ## June 2026
 
@@ -35,9 +35,9 @@ next: overview.md
 
 ## March 2026
 
-- [SharePoint Embedded agent SDK](./build/agent-experiences.md) has been deprecated in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./build/sharepoint-embedded-knowledge-source.md).
+- Microsoft has deprecated the [SharePoint Embedded agent SDK](./build/agent-experiences.md) in favor of the new [SharePoint Embedded knowledge source in Microsoft Foundry](./build/sharepoint-embedded-knowledge-source.md).
 - [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource has a new `permissions` relationship that allows management of the container type's owners. This is available in the beta Microsoft Graph endpoint. For more information, see [Manage container type owners](./build/configure-authentication-authorization.md#manage-container-type-owners).
-- [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new `informationBarrier` property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [Information Barriers](/purview/information-barriers-sharepoint).
+- [fileStorageContainer](/graph/api/resources/filestoragecontainer) resource has a new `informationBarrier` property that allows management of the container's information barrier. This is available in the beta Microsoft Graph endpoint. For more information, see [information barriers](/purview/information-barriers-sharepoint).
 - The SharePoint Embedded native PDF viewing experience now supports searching within the file, viewing comments and sticky notes embedded on the file, and printing. The new features are now available through the [driveItem: preview](/graph/api/driveitem-preview) API in both the beta and v1.0 Microsoft Graph endpoints.
 
 ## February 2026
@@ -83,7 +83,7 @@ next: overview.md
 
 ## May 2025
 
-- The limit of container types that a partner tenant can create has been increased to 25 by default. For more information, see [Limits and Calling Patterns](./plan/limits-calling-patterns.md#size-limits).
-- SharePoint Embedded agent switched to a consumption-based model for all users regardless of whether they have a Copilot license or not. For more information, see [SharePoint Embedded agent](./build/agent-experiences.md).
-- The guidance on how to grant admin consent to a SharePoint Embedded application has been updated to use URL-based admin consent. For more information, see [Grant admin consent](./build/register-application-permissions.md#grant-admin-consent).
+- The default limit for container types that a partner tenant can create is now 25. For more information, see [Limits and Calling Patterns](./plan/limits-calling-patterns.md#size-limits).
+- The SharePoint Embedded agent switched to a consumption-based model for all users, whether they have a Copilot license. For more information, see [SharePoint Embedded agent](./build/agent-experiences.md).
+- The guidance for granting admin consent to a SharePoint Embedded application now uses URL-based admin consent. For more information, see [Grant admin consent](./build/register-application-permissions.md#grant-admin-consent).
 - Documented an exceptional access pattern for operations that may require a user license. For more information, see [Handle operations not exposed through Graph](./build/configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).

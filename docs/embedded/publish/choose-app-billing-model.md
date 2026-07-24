@@ -19,7 +19,7 @@ next: customer-tenant-setup-guide.md
 -->
 
 SharePoint Embedded is a consumption-based pay-as-you-go service.
-As an ISV, you choose the billing model when you create the production container type for your app.
+As an independent software vendor (ISV), you choose the billing model when you create the production container type for your app.
 That choice affects who pays for storage, API transactions, and egress, and it changes what the customer administrator must do during onboarding.
 
 Use this article to decide between standard billing and pass-through billing before you publish customer setup instructions.
@@ -33,7 +33,7 @@ SharePoint Embedded supports two production billing models for standard containe
 | Standard billing | Developer tenant | Developer | You include SharePoint Embedded consumption in your product price or centralize billing. |
 | Pass-through billing | Consuming tenant | Customer admin | The customer pays Microsoft directly for their SharePoint Embedded consumption. |
 
-For current billing details, see [PAYG billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
+For current billing details, see [Pay-as-you-go billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
 > [!IMPORTANT]
 > Choose the billing model before you create the container type.
@@ -52,7 +52,7 @@ Container types are used for:
 - Billing for non-trial workloads.
 - Shared configuration settings such as discoverability and sharing behavior.
 
-For more about container types, see [Create New SharePoint Embedded Container Types](../plan/container-types-containers.md).
+For more about container types, see [Understand container types and containers](../plan/container-types-containers.md).
 
 ## Standard billing
 
@@ -153,7 +153,7 @@ Use this checklist before you create the production container type.
 | Question | Prefer standard billing when | Prefer pass-through billing when |
 | --- | --- | --- |
 | Who should receive Microsoft consumption charges? | You should. | The customer should. |
-| Who owns Azure cost management? | Your operations team. | The customer's operations team. |
+| Who owns Azure Cost Management? | Your operations team. | The customer's operations team. |
 | How simple should customer setup be? | Minimize billing steps. | Customer billing control is required. |
 | How is your product priced? | SharePoint Embedded consumption is bundled. | SharePoint Embedded consumption is separate. |
 | Do customers require tenant-level billing visibility? | Not required. | Required. |
