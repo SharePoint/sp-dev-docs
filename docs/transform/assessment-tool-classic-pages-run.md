@@ -1,7 +1,7 @@
 ---
 title: Run a classic pages assessment
 description: Start, scope, monitor, and report a Microsoft 365 Assessment tool classic pages assessment.
-ms.date: 07/23/2026
+ms.date: 07/24/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -108,7 +108,7 @@ microsoft365-assessment.exe restart --id <assessment-id>
 
 The assessment ID is also the name of the local data folder. Review the log in that folder if progress stops changing.
 
-After site processing finishes, `status` can show `Finalizing` while post-scan work runs. Page Audit queries can remain in this phase for an extended period. Review `[AuditLog]` entries in the assessment log before treating `Finalizing` as a hang.
+After site processing finishes, `status` can show `Finalizing` while post-scan work runs. Assessment waits up to 90 minutes for each page Audit query. A query can remain `notStarted` or `running` during that wait; when the wait expires, Assessment records `QueryTimeout`. Review `[AuditLog]` entries in the assessment log before treating `Finalizing` as a hang.
 
 ## Generate report output
 

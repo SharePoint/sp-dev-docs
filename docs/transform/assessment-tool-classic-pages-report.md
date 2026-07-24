@@ -1,7 +1,7 @@
 ---
 title: Interpret the classic pages assessment report
 description: Use page, web part, usage, and rollup results from the Microsoft 365 Assessment tool to plan SharePoint page modernization.
-ms.date: 07/23/2026
+ms.date: 07/24/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -68,6 +68,8 @@ Audit usage is a planning signal, not a raw web analytics counter. Always check 
 | `error` | An unexpected post-scan exception occurred. Review `SkipReason` and the assessment log. |
 
 When a site's audit query succeeded, the absence of a page row means that no matching events were returned for that page in the requested window. Treat an absent row as zero activity only after confirming successful coverage for the site.
+
+If `SkipReason` starts with `QueryTimeout`, Microsoft Purview accepted the query but didn't complete it during Assessment's 90-minute wait. This is different from `NoPermission`, which indicates a missing Audit permission.
 
 ## Understand page-type coverage
 
