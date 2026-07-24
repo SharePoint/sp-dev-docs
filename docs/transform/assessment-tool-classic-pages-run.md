@@ -8,7 +8,7 @@ ms.service: sharepoint
 
 # Run a classic pages assessment
 
-Use `--mode Classic --classicinclude Pages` to run only the classic pages component. If you omit `--classicinclude`, the tool runs all supported Classic components: Pages, Lists, InfoPath, and Extensibility.
+Use `--mode Classic --classicinclude Pages` to run only the classic pages component. Always specify `Pages`; omitting `--classicinclude` also runs additional Classic components that aren't covered in this guidance.
 
 Before you start, complete the [classic pages requirements](assessment-tool-classic-pages-requirements.md).
 
@@ -135,3 +135,4 @@ Use `--delimiter Semicolon` when a semicolon-delimited export is required. Use `
 - [Interpret the classic pages report](assessment-tool-classic-pages-report.md)
 - [Classic pages CSV reference](assessment-tool-classic-pages-csv.md)
 - [Understand publishing portal coverage](assessment-tool-publishing-coverage.md)
+- [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)

@@ -8,26 +8,9 @@ ms.service: sharepoint
 
 # Interpret the classic pages assessment report
 
-A Classic assessment exports CSV files for every Classic component. On Windows, the default `report` command also creates `ClassicAssessmentReport.pbit`.
+A Classic assessment exports page-specific and shared CSV files. On Windows, the default `report` command also creates `ClassicAssessmentReport.pbit`.
 
-The Power BI template contains these tabs:
-
-```text
-Start
-Summary
-Sites overview
-Extensibility
-Extensibility: user custom actions
-InfoPath
-Lists
-Lists details
-Pages
-Workflow
-Workflow details
-Scan overview
-```
-
-Workflow is retired. Its tabs and `workflows.csv` remain for compatibility with existing assessment data.
+This guidance covers the **Pages** and scan-coverage views. The shared Classic template contains other component and compatibility tabs, but they are outside this page-assessment scope.
 
 ## Validate scan coverage first
 
@@ -114,6 +97,88 @@ Rollups are useful for sequencing, but return to the page and web part CSV files
 `classicpublishingsitesummaries.csv` provides a site-collection-level publishing summary. Detailed legacy web-level publishing configuration isn't included.
 
 See [Understand publishing portal coverage](assessment-tool-publishing-coverage.md) before replacing an established Publishing Scanner workflow.
+
+## Move from assessment to transformation
+
+Turn the report into a transformation backlog:
+
+1. Exclude failed or incomplete scan locations.
+1. Prioritize active pages and important home pages.
+1. Group pages by page type, layout, and unmapped Web Part combination.
+1. Resolve common blockers before transforming a large wave.
+1. Map the CSV page identity to the PnP PowerShell source connection and cmdlet parameters.
+1. Transform a representative sample and validate the result before scaling out.
+
+### Map CSV fields to PnP PowerShell
+
+| CSV field | Transformation use |
+| --- | --- |
+| `SiteUrl` + `WebUrl` | Build the source web URL for `Connect-PnPOnline`. |
+| `PageUrl` + `ListUrl` | Derive the page file name, containing library, and optional folder. |
+| `PageName` | Use the page title as `-Identity` for a classic Blog page. |
+| `PageType` | Route to the Wiki/Web Part, Publishing, or Blog transformation path. |
+| `Layout` | Select or validate page-layout mapping for publishing pages. |
+
+The Assessment app is read-only. Use a separate PnP PowerShell connection with permission to create or update pages in the source or target web.
+
+### Transform one selected Wiki or Web Part page
+
+This example selects one assessed page and transforms it in place. Filter on the exact `PageUrl` that you approved for the migration wave.
+
+```powershell
+$row = Import-Csv .\classicpages.csv |
+  Where-Object PageUrl -eq '/sites/source/SitePages/ApprovedPage.aspx' |
+  Select-Object -First 1
+
+if ($row.PageType -notin @('WikiPage', 'WebPartPage')) {
+  throw "This example only handles WikiPage and WebPartPage rows."
+}
+
+$sourceWebUrl = if ($row.WebUrl -eq '/') {
+  $row.SiteUrl
+}
+else {
+  "$($row.SiteUrl.TrimEnd('/'))$($row.WebUrl)"
+}
+
+$source = Connect-PnPOnline `
+  -Url $sourceWebUrl `
+  -Interactive `
+  -ClientId <application-id> `
+  -ReturnConnection
+
+$libraryPath = $row.ListUrl.TrimEnd('/')
+if (-not $row.PageUrl.StartsWith("$libraryPath/", [StringComparison]::OrdinalIgnoreCase)) {
+  throw "PageUrl isn't under ListUrl."
+}
+
+$pageRelativeToLibrary = $row.PageUrl.Substring($libraryPath.Length).TrimStart('/')
+$pageName = [IO.Path]::GetFileName($pageRelativeToLibrary)
+$folder = [IO.Path]::GetDirectoryName($pageRelativeToLibrary) -replace '\\', '/'
+$libraryName = [Uri]::UnescapeDataString([IO.Path]::GetFileName($libraryPath))
+
+$parameters = @{
+  Identity = $pageName
+  Connection = $source
+}
+
+if ($libraryName -ne 'SitePages') {
+  $parameters.Library = $libraryName
+}
+if (-not [string]::IsNullOrWhiteSpace($folder)) {
+  $parameters.Folder = $folder
+}
+
+ConvertTo-PnPPage @parameters
+```
+
+Route other page types deliberately:
+
+- `PublishingPage`: use `-PublishingPage`, a target web, and the [publishing page-layout model](modernize-userinterface-site-pages-model-publishing.md).
+- `BlogPage`: use `-BlogPage`, `PageName` as the blog-title identity, and a target web. Blog rows don't receive the detailed mapping-readiness enrichment described for Wiki, Web Part, and Publishing pages.
+- `ASPXPage` and `DelveBlogPage`: exclude them from this automated transformation queue; the page assessment doesn't provide an equivalent readiness path for them.
+
+Start with [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md). Use the [page transformation model](modernize-userinterface-site-pages-model.md) for custom Web Part mappings and the [publishing model](modernize-userinterface-site-pages-model-publishing.md) for publishing page layouts.
 
 ## Power BI and CSV
 

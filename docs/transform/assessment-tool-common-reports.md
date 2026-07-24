@@ -1,14 +1,14 @@
 ---
-title: Common Microsoft 365 Assessment CSV files
-description: Understand the scans, properties, history, site collection, and web CSV files exported by every Microsoft 365 Assessment tool report.
+title: Common CSV files for a classic pages assessment
+description: Use the common scan, property, history, site collection, and web files to validate Classic Pages assessment coverage.
 ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Common Microsoft 365 Assessment CSV files
+# Common CSV files for a classic pages assessment
 
-Every Microsoft 365 Assessment tool report exports these files:
+A Classic pages report also exports these common files:
 
 ```text
 scans.csv
@@ -125,4 +125,4 @@ The internal error and stack-trace properties aren't exported to this CSV.
 1. Review `history.csv` and the local log for failure details.
 1. Only then interpret module-specific counts and findings.
 
-For the complete mode-specific inventory, see [Microsoft 365 Assessment reports and CSV files](assessment-tool-reports.md).
+For page-specific fields and joins, see [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md).

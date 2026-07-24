@@ -127,7 +127,7 @@ An `error` row represents an unexpected post-scan exception. It is a site-level 
 
 ## `classicwebsummaries.csv`
 
-This file is shared by the Pages, Lists, InfoPath, Workflow-compatibility, and Extensibility components.
+This file is shared by Classic components. The table below documents only page-related columns.
 
 Page-related columns include:
 
@@ -154,7 +154,7 @@ Page-related columns include:
 | `RemediationCode` | Web-level remediation classification. |
 | `AggregatedRemediationCodes` | De-duplicated component remediation codes. |
 
-The file also contains Classic Lists, Workflow compatibility, InfoPath, Extensibility, SharePoint Add-In, and Microsoft Azure Access Control Service (ACS) rollup columns.
+The file also contains columns for other Classic components. They are outside this page-assessment reference.
 
 The current page-type rollups don't include `DelveBlogPage` rows, although those rows are present in `classicpages.csv`.
 
@@ -184,7 +184,7 @@ Page-related columns include:
 | `UncustomizedHomePages` | Recognized default home-page count. |
 | `AggregatedRemediationCodes` | De-duplicated component remediation codes. |
 
-The file also contains site-level Lists, Workflow compatibility, InfoPath, Extensibility, SharePoint Add-In, and Azure ACS counts.
+The file also contains site-level columns for other Classic components. They are outside this page-assessment reference.
 
 The current page-type rollups don't include `DelveBlogPage` rows, although those rows are present in `classicpages.csv`.
 
@@ -198,12 +198,9 @@ This file contains one row per site collection that has at least one publishing 
 | `SiteUrl` | Absolute publishing portal site-collection URL. |
 | `NumberOfWebs` | Number of publishing webs. |
 | `NumberOfPages` | Number of classic publishing pages. |
-| `UsedSiteMasterPages` | De-duplicated custom site master pages. Populated when Extensibility is included. |
-| `UsedSystemMasterPages` | De-duplicated custom system master pages. Populated when Extensibility is included. |
 | `UsedPageLayouts` | De-duplicated publishing page layouts. |
 | `LastPageUpdateDate` | Most recent publishing-page modification time. |
 
-> [!CAUTION]
-> In the current implementation, `UsedSiteMasterPages` and `UsedSystemMasterPages` can include values from other publishing site collections in the same assessment. For a site-specific decision, filter `classicextensibilities.csv` by `ScanId` and `SiteUrl` instead of relying only on these two rollup fields.
+The file also contains master-page fields populated by another Classic component. They are outside this Page Assessment reference.
 
 For legacy publishing fields that aren't represented by this file, see [Understand publishing portal coverage](assessment-tool-publishing-coverage.md).

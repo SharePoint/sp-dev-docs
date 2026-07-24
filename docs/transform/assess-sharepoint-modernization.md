@@ -1,47 +1,46 @@
 ---
-title: Assess SharePoint modernization
-description: Choose an assessment tool and start collecting the data needed to modernize SharePoint.
-ms.date: 07/23/2026
+title: Assess and transform classic SharePoint pages
+description: Assess classic SharePoint pages, prioritize remediation, and continue into page transformation with PnP PowerShell.
+ms.date: 07/24/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Assess SharePoint modernization
+# Assess and transform classic SharePoint pages
 
-Assess your environment before you plan remediation or migration. The assessment identifies the classic features and customizations that are still in use, provides usage and readiness data, and helps you decide which sites and pages to modernize first.
+Use the Microsoft 365 Assessment tool to discover classic pages and understand their page-transformation readiness. Then use the assessment results to prioritize remediation and transform selected pages with PnP PowerShell.
 
-For new SharePoint Online assessments, start with the [Microsoft 365 Assessment tool](assessment-tool-overview.md). The tool is open source and produces CSV output for supported modernization, adoption, and retirement scenarios. On Windows, it can also generate a Power BI template.
+This guidance focuses only on classic page assessment and its handoff to page transformation.
 
-## Choose an assessment tool
+## Page modernization workflow
 
-| Scenario | Recommended tool |
+1. [Configure and run the Classic pages assessment](assessment-tool-classic-pages-run.md).
+1. Validate site, web, and Audit coverage before interpreting page counts.
+1. Prioritize pages by usage, modification date, home-page status, mapping percentage, and unmapped Web Parts.
+1. Decide whether each blocking Web Part should be removed, replaced, or handled through a custom mapping.
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. Validate the new pages and iterate on mappings or remediation.
+
+## Use assessment output for transformation
+
+| Assessment output | Transformation decision |
 | --- | --- |
-| Assess classic SharePoint pages | [Microsoft 365 Assessment tool - Classic pages](assessment-tool-classic-pages.md) |
-| Assess modern list and library readiness | [Microsoft 365 Assessment tool - Lists and libraries](assessment-tool-lists.md) |
-| Find custom master pages, alternate CSS, and incompatible user custom actions | [Microsoft 365 Assessment tool - Extensibility](assessment-tool-extensibility.md) |
-| Assess InfoPath, SharePoint Add-Ins, Microsoft Azure Access Control Service (ACS), or SharePoint Alerts | [Microsoft 365 Assessment tool](assessment-tool-overview.md) |
-| Assess Microsoft 365 group connection readiness | [Legacy SharePoint Modernization Scanner](modernize-scanner.md) |
-| Inventory SharePoint Designer customized forms | [Legacy Scanner customized forms report](modernize-scanner-reports-customizedforms.md) |
-| Collect the complete legacy Publishing Portal Web-level inventory | [Legacy Scanner publishing reports](modernize-scanner-reports-publishingportals.md) |
-| Assess SharePoint Server or another on-premises source | [SharePoint Migration Assessment Tool](/sharepointmigration/overview-of-the-sharepoint-migration-assessment-tool) or another scenario-specific tool |
+| `PageUrl`, `PageType`, `Layout` | Identify the source page and transformation path. |
+| `HomePage`, `UncustomizedHomePage` | Select home pages and simple early migration waves. |
+| `MappingPercentage`, `UnmappedWebParts` | Find pages that need Web Part remediation or mapping changes. |
+| `classicpagewebparts.csv` | Review the exact Web Part type, position, visibility, and mapping result. |
+| `ModifiedAt`, `classicpageauditusage.csv` | Prioritize active content and avoid transforming unused pages without a business need. |
+| `classicpublishingsitesummaries.csv` | Size publishing-page work and identify used layouts. |
 
-For a detailed capability comparison, see [Compare SharePoint modernization assessment tools](sharepoint-modernization-assessment-comparison.md).
+Mapping readiness is an input to planning, not a guarantee that the transformed page will preserve every visual or business behavior.
 
-> [!NOTE]
-> Existing Scanner articles remain available for established report workflows and Scanner-only capabilities. The scanner-based remediation path will be updated separately from this assessment reference.
+## Scope
 
-## Assessment workflow
-
-1. Select the assessment tool and modules that cover your scenario.
-1. Configure authentication and scope.
-1. Run the assessment against a test scope before scanning the full tenant.
-1. Generate CSV output and, on Windows, the Power BI template.
-1. Validate the report coverage and any failed sites or queries.
-1. Use the results to define remediation and migration waves.
+This section doesn't document other Assessment modules, end-to-end classic-site modernization, or legacy Scanner operation. Page-transformation execution is covered by the existing transformation guidance. Legacy Scanner documentation remains unchanged in this stage.
 
 ## Next steps
 
-- [Microsoft 365 Assessment tool overview](assessment-tool-overview.md)
-- [Assessment reports and CSV files](assessment-tool-reports.md)
+- [Assess classic SharePoint pages](assessment-tool-classic-pages.md)
+- [Interpret and prioritize assessment results](assessment-tool-classic-pages-report.md)
 - [Transform classic pages to modern pages](modernize-userinterface-site-pages.md)
-- [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md)
+- [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)

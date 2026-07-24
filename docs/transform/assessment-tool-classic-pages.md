@@ -76,6 +76,18 @@ For an enriched page, `WebPartCount=0` and `MappingPercentage=100` means that no
 
 For a complete interpretation workflow, see [Interpret the classic pages assessment report](assessment-tool-classic-pages-report.md).
 
+## Continue to page transformation
+
+Use the assessment output to select pages and identify Web Parts that need remediation. A high mapping percentage helps prioritize work, but it doesn't transform the page.
+
+1. Review `classicpages.csv` and `classicpagewebparts.csv`.
+1. Remove, replace, or map blocking Web Parts.
+1. Start with a small representative wave.
+1. [Transform the selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. Validate the generated modern pages before expanding the wave.
+
+For the complete transformation model and advanced mapping options, see [Transform classic pages to modern pages](modernize-userinterface-site-pages.md).
+
 ## Additional open-source documentation
 
 - [Classic SharePoint Pages Assessment](https://pnp.github.io/pnpassessment/classic/readme.html)

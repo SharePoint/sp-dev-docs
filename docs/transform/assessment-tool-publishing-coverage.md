@@ -1,19 +1,19 @@
 ---
-title: Understand publishing portal assessment coverage
-description: Compare Microsoft 365 Assessment tool publishing output with the legacy SharePoint Modernization Scanner publishing reports.
-ms.date: 07/23/2026
+title: Assess publishing pages for transformation
+description: Use Microsoft 365 Assessment tool publishing-page output to plan page transformation and page-layout mapping.
+ms.date: 07/24/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Understand publishing portal assessment coverage
+# Assess publishing pages for transformation
 
-The Microsoft 365 Assessment tool provides page-level publishing readiness and a site-collection-level publishing portal summary. It doesn't reproduce the complete web-level publishing configuration inventory from the legacy SharePoint Modernization Scanner.
+The Microsoft 365 Assessment tool provides page-level publishing readiness and a site-collection-level publishing-page summary. Use these results to size publishing transformation work and identify layouts or Web Parts that require custom mappings.
 
 ## Before you begin
 
-- Complete the [Classic Pages requirements](assessment-tool-classic-pages-requirements.md). This assessment includes Pages and uses the documented read permission profile.
-- Include both Pages and Extensibility to populate page readiness, page layouts, custom master pages, and alternate CSS.
+- Complete the [Classic Pages requirements](assessment-tool-classic-pages-requirements.md).
+- Run the Pages component to populate publishing-page readiness, page layouts, and Web Part inventory.
 - The following command skips page Audit usage. Remove `--skipusageinformation` only after configuring the documented Audit application permission.
 
 ## Run the required components
@@ -22,7 +22,7 @@ The example uses the Windows executable name. On macOS or Linux, use `./microsof
 
 ```powershell
 microsoft365-assessment.exe start --mode Classic `
-  --classicinclude Pages Extensibility `
+  --classicinclude Pages `
   --skipusageinformation `
   --authmode application `
   --tenant <tenant>.sharepoint.com `
@@ -30,31 +30,16 @@ microsoft365-assessment.exe start --mode Classic `
   --certpath "My|CurrentUser|<certificate-thumbprint>"
 ```
 
-If Extensibility isn't included, the custom master-page fields in `classicpublishingsitesummaries.csv` aren't populated.
-
-## Legacy report mapping
-
-| Legacy Scanner output | Assessment output | Coverage |
-| --- | --- | --- |
-| `ModernizationPublishingSiteScanResults.csv` | `classicpublishingsitesummaries.csv` | Close site-collection-level match. |
-| `ModernizationPublishingWebScanResults.csv` | `classicwebsummaries.csv` plus `classicextensibilities.csv` | Partial. The complete publishing configuration isn't available. |
-| `ModernizationPublishingPageScanResults.csv` | `classicpages.csv` plus `classicpagewebparts.csv` | Partial. Core page, layout, modification, and web part readiness is available, but several publishing-specific fields aren't. |
-| Publishing readiness Excel dashboard | Classic Power BI template | Different model. The legacy complexity categorization isn't reproduced. |
-
 ## Site-collection summary
 
-`classicpublishingsitesummaries.csv` provides the same core site-collection fields as the legacy publishing site report:
+Use these page-related fields in `classicpublishingsitesummaries.csv`:
 
 - Publishing web count.
 - Publishing page count.
-- Used custom site and system master pages.
 - Used page layouts.
 - Latest publishing-page modification date.
 
 Use this file to identify large or stale publishing portals.
-
-> [!CAUTION]
-> The current Assessment implementation can aggregate `UsedSiteMasterPages` and `UsedSystemMasterPages` from other publishing site collections in the same assessment. For site-specific master-page analysis, filter `classicextensibilities.csv` by `ScanId` and `SiteUrl`.
 
 ## Page-level coverage
 
@@ -66,34 +51,38 @@ Assessment provides:
 - Mapping percentage and unmapped web part types.
 - Optional page view/create/edit audit activity.
 
-Assessment doesn't provide these legacy publishing page fields:
+The current page assessment doesn't provide these publishing transformation inputs:
 
 - Content type name and ID.
 - Page layout file and whether the layout was customized.
 - Global, security-group, and SharePoint-group audience values.
-- The legacy fixed `WPType1` through `WPType20` and `WPTitle1` through `WPTitle20` columns.
+- Master-page, alternate-CSS, navigation, approval, versioning, scheduling, variation, audience, and ownership configuration.
 
-The normalized `classicpagewebparts.csv` file replaces the fixed web part columns and doesn't have the legacy 20-web-part limit.
+These areas are outside the Page Assessment scope. The lifecycle of legacy Scanner reports is handled separately from this guidance.
 
-## Web-level gaps
+## Continue to publishing-page transformation
 
-The current Assessment output doesn't reproduce the full `ModernizationPublishingWebScanResults.csv` contract, including:
+1. Group publishing pages by `Layout`.
+1. Review `MappingPercentage` and `UnmappedWebParts`.
+1. Identify custom layouts that need a page-layout mapping.
+1. Validate representative pages before processing a complete portal.
 
-- Site-collection complexity and web depth categorization.
-- Web language and variation labels.
-- Allowed and default page-layout configuration.
-- Global and current navigation settings.
-- Managed navigation term-set identifiers.
-- Page library scheduling, moderation, versioning, minor versions, and approval workflow configuration.
-- Broken permission inheritance.
-- Web administrators and owners.
+For an out-of-the-box publishing layout, use the built-in layout mapping where possible:
 
-If a migration plan depends on these fields, continue to use the legacy Scanner publishing mode for that inventory and retain its report schema with the project evidence.
+```powershell
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/source -Interactive -ClientId <application-id>
 
-## Tool choice
+ConvertTo-PnPPage `
+  -PublishingPage `
+  -Identity Article.aspx `
+  -TargetWebUrl https://contoso.sharepoint.com/sites/target
+```
 
-Use Assessment for new SharePoint Online page discovery, web part readiness, usage, and site-level publishing summaries.
+For a custom publishing layout, generate and review a mapping before transformation:
 
-Use the legacy Scanner only when you need its established report contract or the unsupported web-level publishing configuration. Don't assume that an empty Assessment field proves that the corresponding publishing feature isn't configured.
+```powershell
+Export-PnPPageMapping -CustomPageLayoutMapping -Folder C:\temp
+```
 
 For field-level Assessment output, see [Classic pages CSV reference](assessment-tool-classic-pages-csv.md).
+For page-layout mapping details, see [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md).
