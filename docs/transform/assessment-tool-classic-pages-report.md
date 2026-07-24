@@ -69,7 +69,7 @@ Audit usage is a planning signal, not a raw web analytics counter. Always check 
 
 When a site's audit query succeeded, the absence of a page row means that no matching events were returned for that page in the requested window. Treat an absent row as zero activity only after confirming successful coverage for the site.
 
-If `SkipReason` starts with `QueryTimeout`, Microsoft Purview accepted the query but didn't complete it during Assessment's 90-minute wait. This is different from `NoPermission`, which indicates a missing Audit permission.
+If `SkipReason` starts with `QueryTimeout`, Microsoft Purview didn't complete the query during Assessment's 90-minute wait. When no audit chunk succeeds, the row has `QueryStatus=failed`; treat its zero counts as failed coverage, not as evidence of no activity. This is different from `NoPermission`, which indicates a missing Audit permission.
 
 ## Understand page-type coverage
 
