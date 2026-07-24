@@ -16,6 +16,9 @@ If you're a global or SharePoint admin in Office 365, you can convert any existi
 > [!NOTE]
 > To work with this example in SharePoint Online, we recommend that you use a developer tenant and not your production tenant. All of the following steps use a fictional tenant named "Contoso" that you can replace with your tenant name.
 
+> [!NOTE]
+> In SharePoint Multi-Geo environments, Hub Site association operations against sites located in satellite geo locations are not supported when using app-only authentication. To perform these operations, use delegated permissions.
+
 ## Using PnP PowerShell
 
 The samples below can be performed using [PnP PowerShell](https://www.powershellgallery.com/packages/PnP.PowerShell).
