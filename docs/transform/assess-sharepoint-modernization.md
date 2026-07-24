@@ -31,7 +31,9 @@ Mapping readiness is an input to planning, not a guarantee that the transformed 
 
 ## Next steps
 
-- [Assess classic SharePoint pages](assessment-tool-classic-pages.md)
-- [Interpret and prioritize assessment results](assessment-tool-classic-pages-report.md)
-- [Transform classic pages to modern pages](modernize-userinterface-site-pages.md)
-- [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)
+1. [Configure and run the Classic pages assessment](assessment-tool-classic-pages-run.md).
+1. [Interpret and prioritize the page results](assessment-tool-classic-pages-report.md).
+1. [Review page-specific CSV fields and joins](assessment-tool-classic-pages-csv.md).
+1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. [Use the full page-transformation guidance](modernize-userinterface-site-pages.md) for advanced mappings and scenarios.
