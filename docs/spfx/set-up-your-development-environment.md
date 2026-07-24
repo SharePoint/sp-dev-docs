@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 08/18/2016
+ms.date: 07/23/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -125,7 +125,7 @@ heft trust-dev-cert
 
 ## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
 
-Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
+Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute `heft start` with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
 
 ```json
 {
