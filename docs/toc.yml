@@ -1833,6 +1833,29 @@
   items:
   - name: Overview
     href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
+  - name: Assess and transform classic pages
+    href: transform/assess-sharepoint-modernization.md
+    items:
+    - name: Assess classic pages
+      href: transform/assessment-tool-classic-pages.md
+      items:
+      - name: Requirements
+        href: transform/assessment-tool-classic-pages-requirements.md
+      - name: Run the assessment
+        href: transform/assessment-tool-classic-pages-run.md
+      - name: Interpret and prioritize
+        href: transform/assessment-tool-classic-pages-report.md
+      - name: CSV reference
+        href: transform/assessment-tool-classic-pages-csv.md
+      - name: Common CSV files
+        href: transform/assessment-tool-common-reports.md
+      - name: Publishing portal coverage
+        href: transform/assessment-tool-publishing-coverage.md
+    - name: Transform classic pages
+      href: transform/modernize-userinterface-site-pages.md
+      items:
+      - name: Transform with PnP PowerShell
+        href: transform/modernize-userinterface-site-pages-powershell.md
   - name: Modernizing your classic SharePoint sites
     items:
     - name: Overview
