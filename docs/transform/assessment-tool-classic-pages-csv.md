@@ -24,6 +24,25 @@ The page-specific output is:
 
 `classicpageauditusage.csv` is created only when audit collection writes rows. It isn't created when `--skipusageinformation` is used.
 
+## File relationship
+
+```text
+scans.csv
+|-- properties.csv
+|-- history.csv
+|-- sitecollections.csv
+|   |-- classicsitesummaries.csv
+|   |-- classicpublishingsitesummaries.csv
+|   `-- classicpageauditusage.csv *
+|-- webs.csv
+|   |-- classicwebsummaries.csv
+|   `-- classicpages.csv
+|       `-- classicpagewebparts.csv
+`-- classicwebpartunique.csv
+```
+
+`classicwebpartunique.csv` is scan-wide. The `*` marks site-scoped output: `classicpageauditusage.csv` isn't a strict child of `classicpages.csv`, although individual page activity rows can optionally join to assessed pages.
+
 ## Join keys
 
 Use these keys when combining files:
@@ -31,12 +50,19 @@ Use these keys when combining files:
 | Relationship | Keys |
 | --- | --- |
 | Page to web part | `ScanId`, `SiteUrl`, `WebUrl`, `PageUrl` |
-| Page to audit usage | Normally `ScanId`, `SiteUrl`, `PageUrl` |
+| Audit page activity to an assessed page | `ScanId`, `SiteUrl`, `PageUrl` when the page exists in both files |
+| Audit coverage row to a site | `ScanId`, `SiteUrl` |
 | Page to web summary | `ScanId`, `SiteUrl`, `WebUrl` |
 | Web summary to site summary | `ScanId`, `SiteUrl` |
 | Publishing summary to site summary | `ScanId`, `SiteUrl` |
 
-`PageUrl` is normally a server-relative URL in both `classicpages.csv` and `classicpageauditusage.csv`. An unexpected post-scan exception creates a site-level audit row with `QueryStatus=error` and an absolute `PageUrl`; use `ScanId` and `SiteUrl` to identify that coverage row.
+`classicpageauditusage.csv` has three row shapes:
+
+- Page activity rows use the server-relative page URL. They join to `classicpages.csv` only when that page was included in the assessment scope.
+- Standard site-level coverage rows use the server-relative site URL. These rows surface failed, skipped, empty, or partial site coverage and don't represent a page.
+- An unexpected post-scan exception creates a site-level row with `QueryStatus=error` and the absolute site URL in `PageUrl`.
+
+Use `ScanId` and `SiteUrl` for every site-level coverage row; don't join those rows to `classicpages.csv`.
 
 ## `classicpages.csv`
 
@@ -109,7 +135,7 @@ This file is scan-wide. It doesn't contain `SiteUrl` or `WebUrl`.
 | --- | --- |
 | `ScanId` | Assessment identifier. |
 | `SiteUrl` | Absolute site-collection URL. |
-| `PageUrl` | Normally a server-relative page URL. On a site-level coverage row, this is normally the server-relative site URL; an unexpected `error` row instead contains the absolute site URL. |
+| `PageUrl` | Server-relative page URL for page rows. Site-level coverage rows use the server-relative site URL, except an unexpected `error` row, which contains the absolute site URL. |
 | `AuditViewsCount` | Number of `ClassicPageViewed` events. |
 | `AuditCreatesCount` | Number of `ClassicPageCreated` events. |
 | `AuditEditsCount` | Number of `ClassicPageEdited` events. |

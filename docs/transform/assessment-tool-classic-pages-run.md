@@ -14,6 +14,10 @@ Before you start, complete the [classic pages requirements](assessment-tool-clas
 
 The examples use the Windows executable name and PowerShell line continuation. On macOS or Linux, use `./microsoft365-assessment`, your shell's line-continuation syntax, and operating-system-appropriate file paths.
 
+## Page modernization workflow
+
+[!INCLUDE [classic-page-modernization-workflow](../../includes/snippets/assessment/classic-page-modernization-workflow.md)]
+
 ## Assess the complete tenant
 
 Application authentication is recommended for a full-tenant assessment:
@@ -132,7 +136,7 @@ Use `--delimiter Semicolon` when a semicolon-delimited export is required. Use `
 
 ## Next steps
 
-- [Interpret the classic pages report](assessment-tool-classic-pages-report.md)
-- [Classic pages CSV reference](assessment-tool-classic-pages-csv.md)
-- [Understand publishing portal coverage](assessment-tool-publishing-coverage.md)
-- [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)
+1. [Interpret and prioritize the classic page results](assessment-tool-classic-pages-report.md).
+1. [Review page-specific CSV fields and joins](assessment-tool-classic-pages-csv.md).
+1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).

@@ -14,12 +14,7 @@ This guidance focuses only on classic page assessment and its handoff to page tr
 
 ## Page modernization workflow
 
-1. [Configure and run the Classic pages assessment](assessment-tool-classic-pages-run.md).
-1. Validate site, web, and Audit coverage before interpreting page counts.
-1. Prioritize pages by usage, modification date, home-page status, mapping percentage, and unmapped Web Parts.
-1. Decide whether each blocking Web Part should be removed, replaced, or handled through a custom mapping.
-1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
-1. Validate the new pages and iterate on mappings or remediation.
+[!INCLUDE [classic-page-modernization-workflow](../../includes/snippets/assessment/classic-page-modernization-workflow.md)]
 
 ## Use assessment output for transformation
 
@@ -33,10 +28,6 @@ This guidance focuses only on classic page assessment and its handoff to page tr
 | `classicpublishingsitesummaries.csv` | Size publishing-page work and identify used layouts. |
 
 Mapping readiness is an input to planning, not a guarantee that the transformed page will preserve every visual or business behavior.
-
-## Scope
-
-This section doesn't document other Assessment modules, end-to-end classic-site modernization, or legacy Scanner operation. Page-transformation execution is covered by the existing transformation guidance. Legacy Scanner documentation remains unchanged in this stage.
 
 ## Next steps
 
