@@ -51,8 +51,8 @@ The admin in the developer tenant must establish a valid billing profile when cr
 Use standard billing when:
 
 - The application owner wants to centralize usage charges.
-- The app is an internal enterprise LOB app.
-- The ISV or developer tenant plans to absorb or separately recover usage costs.
+- The app is an internal enterprise line-of-business (LOB) app.
+- The independent software vendor (ISV) or developer tenant plans to absorb or separately recover usage costs.
 - Customer tenants shouldn't configure their own SharePoint Embedded billing profile.
 
 The billing setup requires:
@@ -144,7 +144,7 @@ Nonchargeable transactions include:
 
 Egress is data that exits the SharePoint Embedded platform, such as a document downloaded to a customer client device or data transferred to a server operated by the customer. Charges are based on the total volume of data transferred out (GB).
 
-Downloads from the SharePoint Embedded application server to Office desktop clients or Web Application Companion are exempt from egress charges.
+Downloads from the SharePoint Embedded application server to Office desktop clients or Office for the web through Web Application Companion (WAC) are exempt from egress charges.
 
 Review pricing and cost management in Azure Cost Management as part of your operations plan.
 

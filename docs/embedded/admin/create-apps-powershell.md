@@ -19,7 +19,7 @@ outcome: Create SharePoint Embedded apps and configure standard billing with Sha
 next: install-sharepoint-embedded-app.md
 -->
 
-Use SharePoint PowerShell to create SharePoint Embedded container types for apps. Each container type is associated with one Microsoft Entra application.
+Use SharePoint PowerShell to create SharePoint Embedded container types for apps. Each container type maps to one Microsoft Entra application.
 
 ## Before you begin
 

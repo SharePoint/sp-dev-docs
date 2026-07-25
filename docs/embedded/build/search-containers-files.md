@@ -22,7 +22,7 @@ next: container-metadata.md
 Use Microsoft Search in Microsoft Graph when your app needs keyword search across SharePoint Embedded containers or content. The search API ranks matching results and returns `drive` resources for containers or `driveItem` resources for files and folders.
 
 > [!NOTE]
-> SharePoint Embedded search is in preview and is available only on the Microsoft Graph **`/beta`** endpoint — there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
+> SharePoint Embedded search is in preview. Use the Microsoft Graph **`/beta`** endpoint because there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
 
 ## Choose the search scope
 
@@ -71,7 +71,7 @@ The response includes `hitsContainers`. Each hit contains a `hitId`, `rank`, `su
 
 ## Search files and folders
 
-Request `driveItem` resources when the user searches file names or file content. Scope to a specific container with `ContainerId` when the user is already inside a workspace.
+Request `driveItem` resources when the user searches file names or file content. Scope to a specific container with `ContainerId` when the user is already inside a container.
 
 ```json
 {

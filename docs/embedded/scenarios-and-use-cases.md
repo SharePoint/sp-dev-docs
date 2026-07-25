@@ -33,7 +33,7 @@ This pattern also suits business-critical or time-sensitive processes. SharePoin
 
 ### Examples
 
-- Extended Relationship Management (XRM) applications
+- Extended Relationship Management (XRM) applications for tracking external relationships and interactions
 - Engagement-based applications
 - Workflow-based collaboration with defined state
 
@@ -59,7 +59,7 @@ SharePoint Embedded is headless, so your custom application provides the only in
 
 - You need SharePoint's collaborative capabilities, but only through a highly customized interface.
 - You handle high-value content and want to limit who can discover or alter the repository.
-- Every container in the application can share default sharing settings that stay separate from your OneDrive and SharePoint Online settings.
+- Every container in the application can inherit default sharing settings that stay separate from your OneDrive and SharePoint Online settings.
 - Content stays logically separated from your other Microsoft 365 content.
 
 ## Scenario: Customer-facing document upload
@@ -85,4 +85,4 @@ SharePoint Embedded supports this scenario. The users of your application don't 
 
 - [What is SharePoint Embedded?](overview.md)
 - [Understand app and tenant architecture](plan/app-tenant-architecture.md)
-- [Quickstart: Build your first app with VS Code](build/quickstart-vscode.md)
+- [Quickstart: build your first app with VS Code](build/quickstart-vscode.md)

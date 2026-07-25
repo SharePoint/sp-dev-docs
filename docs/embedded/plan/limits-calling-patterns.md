@@ -27,15 +27,15 @@ Limits marked with `*` can be increased on request through Microsoft support or 
 
 SharePoint Embedded limits affect:
 
-- *Container type counts
-- *Container counts
+- Container type counts*
+- Container counts*
 - Storage per container type and container
 - Files and folders
 - Permissions
 - File size
 - Version count
-- *API rate limits
-- *Requests per app, container, and user
+- API rate limits*
+- Requests per app, container, and user*
 
 > [!NOTE]
 > These limits can change. Verify the current limits before you launch to production.
@@ -46,16 +46,16 @@ SharePoint Embedded enforces the following size limits.
 
 | Resource | Limit |
 | --- | --- |
-| Container types that a partner tenant can create | 25* |
+| Container types that a developer tenant can create | 25* |
 | Container types that an app can own | 1 |
-| Containers of a container type per consuming tenant | 100k* |
+| Containers of a container type per consuming tenant | 100,000* |
 | Storage per container type per consuming tenant | 100 TB* |
-| Files and folders per container | 30M |
+| Files and folders per container | 30 million |
 | Storage per container | 25 TB |
-| Files and folders with additive permissions per container | 5k |
+| Files and folders with additive permissions per container | 5,000 |
 | File size | 250 GB |
-| Version count per file | 500 (Automatic Version History Limits Default Setting) |
-| Number of users shared per folder or file | 5k |
+| Version count per file | 500 (default automatic version history limit) |
+| Number of users shared per folder or file | 5,000 |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
@@ -157,9 +157,9 @@ SharePoint Embedded enforces these API rate limits.
 
 | Resource | Limit |
 | --- | --- |
-| Requests per container | 3k resource units per min |
-| Requests per app per tenant | 12k resource units per min* |
-| Requests per user | 600 resource units per min |
+| Requests per container | 3,000 resource units per minute |
+| Requests per app per tenant | 12,000 resource units per minute* |
+| Requests per user | 600 resource units per minute |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 

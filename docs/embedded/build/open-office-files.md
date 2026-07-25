@@ -127,7 +127,7 @@ ms-powerpoint:ofe|u|https://contoso.com/presentation.pptx
 ```
 
 > [!NOTE]
-> The URI must be opened in a blank window or new tab.
+> Open the URI in a blank window or new tab.
 
 ## Build a desktop client URL
 
@@ -171,7 +171,7 @@ Content-Type: application/json
 }
 ```
 
-Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. Common tokens include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`.
+Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. For example, supported tokens can include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`.
 
 When your app receives a `urlTemplate` redirect, authenticate the user, parse the token values, and use Microsoft Graph to retrieve the file. If you need the canonical file URL, use the DriveItem `webDavUrl` property instead of `webUrl`.
 
@@ -214,7 +214,7 @@ Office clients can display breadcrumb-style elements that associate Office files
 
 Breadcrumb patterns are constructed from container properties configured for your app.
 
-Use Current Channel to get breadcrumb patterns and future Office app enhancements.
+Use the Current Channel update channel for Microsoft 365 Apps so users receive the latest Office breadcrumb behavior and future Office app enhancements.
 
 For Office update channel information, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/updates/overview-update-channels).
 

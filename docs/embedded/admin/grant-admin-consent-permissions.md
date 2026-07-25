@@ -19,7 +19,7 @@ outcome: Grant admin consent for a SharePoint Embedded app and validate permissi
 next: setup-billing-microsoft-365-admin-center.md
 -->
 
-Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions always require admin consent, while delegated permissions for SharePoint Embedded don't. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions require admin consent. Delegated flows can avoid tenant-wide admin consent, but they still require the appropriate admin role for registration or per-user consent for container access. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 Use this article to review requested permissions, grant consent, and troubleshoot common consent failures.
 
@@ -45,7 +45,7 @@ An owning application must meet two requirements before it can act on a consumin
 1. The owning app must have a service principal installed in the consuming tenant.
 1. The owning app must be granted the permissions needed to register the container type and access its containers in the consuming tenant.
 
-Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent isn't a hard requirement for the owning application to act on the consuming tenant. SharePoint Embedded apps that operate exclusively on behalf of a user don't need to be granted admin consent. Granting admin consent for apps that operate exclusively on behalf of a user may improve user experience as the app won't require consent from every user who wants to sign into the app.
+Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent isn't a hard requirement for the owning application to act on the consuming tenant. Apps that operate exclusively on behalf of a user don't need admin consent. Admin consent can still improve the user experience because each user won't need to consent when they sign in to the app.
 
 > [!CAUTION]
 > You need to understand the implications of granting admin consent to an application. To learn more, see [Grant tenant-wide admin consent](/entra/identity/enterprise-apps/grant-admin-consent).
@@ -93,7 +93,7 @@ Confirm that in the admin consent URL:
 - The scope value points to the `.default` Microsoft Graph scope. If the app owner gives you a different scope value, make sure you understand why.
 - A `state` query parameter may or may not be present.
 
-For national cloud environments, the admin consent endpoint will vary. See [Microsoft Entra authentication endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints) for more information.
+For national cloud environments, the admin consent endpoint varies. See [Microsoft Entra authentication endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints) for more information.
 
 ## Grant consent from Microsoft Entra admin experiences
 

@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Admin overview
 
-**Applies to:** Consuming tenant admin — SharePoint Embedded admin / Global admin / Compliance admin / Security admin
+**Applies to:** Consuming tenant administrator — SharePoint Embedded Administrator / Global Administrator / Compliance Administrator / Security Administrator
 
 <!-- agent:
 task_type: concept
@@ -48,11 +48,11 @@ SharePoint Embedded administration commonly involves the following roles.
 
 The SharePoint Embedded Administrator role is available in Microsoft Entra and the Microsoft 365 admin center.
 
-It is dedicated to SharePoint Embedded administration.
+It's dedicated to SharePoint Embedded administration.
 
 It doesn't grant regular SharePoint site management access.
 
-For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and cannot run site-specific SharePoint PowerShell cmdlets.
+For example, a SharePoint Embedded Administrator doesn't see the **Active sites** or **Deleted sites** pages in the SharePoint admin center and can't run site-specific SharePoint PowerShell cmdlets.
 
 Likewise, the SharePoint administrator role doesn't administer SharePoint Embedded apps or containers.
 
@@ -75,7 +75,7 @@ A Global Administrator assigns the SharePoint Embedded Administrator role in eit
 1. Select **Users**, then select **Active users**.
 1. Select the user to assign the role to.
 1. Under **Roles**, select **Manage roles**.
-1. Select **Admin center access**, then under **Collaboration**, select **SharePoint Embedded Administrator**.
+1. Search for and select **SharePoint Embedded Administrator** in the roles list.
 1. Select **Save changes**.
 
 ## Developer tenant and consuming tenant responsibilities
@@ -113,7 +113,7 @@ Use [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md) for 
 
 Admin consent installs the application service principal in the consuming tenant and grants the requested permissions.
 
-For container type registration, the owning application must have admin consent and the required SharePoint application permission before it can register permissions in the consuming tenant.
+For app-only container type registration, the owning application must have admin consent and the required SharePoint application permission before it can register permissions in the consuming tenant. For delegated registration, admin consent isn't required, but the user must be a SharePoint Embedded Administrator or Global Administrator.
 
 Review consent guidance in [Grant admin consent and permissions](grant-admin-consent-permissions.md).
 

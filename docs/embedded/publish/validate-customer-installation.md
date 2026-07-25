@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ---
 # Validate customer app installation
 
-**Applies to:** ISV / Developer
+**Applies to:** ISV
 
 <!-- agent:
 task_type: how-to
@@ -74,7 +74,7 @@ Confirm that the container type is registered in the consuming tenant.
 An app can't create or interact with containers until its container type is registered in that tenant.
 Use your product's setup portal or registration flow to show the registration state.
 
-Ask the customer admin to use the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) to verify that your SharePoint Embedded app is listed under the installed apps tab in the Active apps page under SharePoint Embedded. The customer admin can verify details of your SharePoint Embedded app such as:
+Ask the customer admin to open the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), go to **SharePoint Embedded** > **Active apps** > **Installed apps**, and verify that your SharePoint Embedded app is listed. The customer admin can verify details of your SharePoint Embedded app such as:
 
 - The owning application ID.
 - The container type ID.
@@ -99,7 +99,7 @@ For most customer installations, validate at least these permissions:
 | Permission | Typical use | Validation note |
 | --- | --- | --- |
 | `FileStorageContainerTypeReg.Selected` | Register the container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated registration is used, the user performing registration must be a SharePoint Embedded Administrator or Global Administrator. |
-| `FileStorageContainer.Selected` | Access containers and content for the installed app. | The application permission requires admin consent; the delegated permission does not. Confirm the grant matches the app behavior the customer approved. |
+| `FileStorageContainer.Selected` | Access containers and content for the installed app. | The application permission requires admin consent; the delegated permission doesn't. Confirm the grant matches the app behavior the customer approved. |
 
 Validate the following items:
 
@@ -135,7 +135,7 @@ Check:
 ### Pass-through billing
 
 For pass-through billing, no user can access the app until the customer sets up valid billing.
-Ask the customer admin to confirm billing in the [Microsoft 365 admin center](https://admin.cloud.microsoft).
+Ask the customer admin to confirm billing in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 Check:
 

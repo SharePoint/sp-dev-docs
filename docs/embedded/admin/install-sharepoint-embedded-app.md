@@ -1,5 +1,5 @@
 ---
-title: Install a SharePoint Embedded App
+title: Install a SharePoint Embedded app
 description: Install or register a SharePoint Embedded app in a consuming tenant and validate the tenant setup.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -29,7 +29,7 @@ This article focuses on the consuming-tenant administrator path in the SharePoin
 > A consuming tenant admin is typically a user assigned the **SharePoint Embedded Administrator** role.
 > Global Administrators can also perform SharePoint Embedded administration tasks.
 
-Use this article with [Choose an App Model: Single-Tenant or Multitenant](../plan/choose-app-model.md) and the app creation guidance.
+Use this article with [Choose an app model: single-tenant or multitenant](../plan/choose-app-model.md) and the app creation guidance.
 
 The app model determines who owns the app, who installs or onboards it, where containers are created, who pays, and which admins must consent or configure billing.
 
@@ -44,7 +44,7 @@ Confirm these prerequisites.
 - You know whether billing is handled by the app owner or by the user organization.
 - You know which permissions the app requests.
 - You can complete admin consent if the installation flow requires it.
-- You know whether the app is a single-tenant line-of-business app or a multitenant ISV app.
+- You know whether the app is a single-tenant line-of-business app or a multitenant independent software vendor (ISV) app.
 
 For role information, see [Admin overview](admin-overview.md).
 
@@ -73,7 +73,7 @@ Use PowerShell for repeatable inventory and operations after installation.
 
 Use the SharePoint Embedded **Apps** experience in the SharePoint admin center when the app is available to install.
 
-The **Installed apps** tab lists SharePoint Embedded apps built by your organization and by external organizations. It currently doesn't include Microsoft-built SharePoint Embedded apps.
+The **Installed apps** tab lists SharePoint Embedded apps built by your organization and by external organizations.
 
 1. Sign in to the [SharePoint admin center](https://admin.microsoft.com/sharepoint).
 1. In the left navigation, expand **SharePoint Embedded**.
@@ -122,11 +122,9 @@ After installation, validate the app inventory.
 1. If the app is owned by your organization, open **Owned apps** and confirm ownership metadata.
 1. Record the owning application ID for future PowerShell and permission review.
 
-Select an app on the **Installed apps** tab to open its details panel. The panel shows the app's status, Entra app ID, SharePoint Embedded app ID, publisher, and billing information.
+Select an app on the **Installed apps** tab to open its details panel. The panel shows the app's status, Microsoft Entra ID app ID, SharePoint Embedded app ID, publisher, and billing information.
 
-![App details panel for an installed app, showing an Active status, the Entra app ID, the SharePoint Embedded app ID, the publisher, and billing info that includes billing status, Azure subscription ID, resource group, and billing type.](../images/installed-app-details-panel.png)
-
-*Figure 1: The app details panel on the Installed apps tab shows identifiers and billing information, and lets you copy the Entra and SharePoint Embedded app IDs.*
+![App details panel for an installed app, showing an Active status, the Microsoft Entra ID app ID, the SharePoint Embedded app ID, the publisher, and billing info that includes billing status, Azure subscription ID, resource group, and billing type.](../images/installed-app-details-panel.png)
 
 If the app isn't visible, refresh the page and confirm that installation completed successfully.
 
@@ -211,7 +209,7 @@ For command details, see [Manage containers with PowerShell](manage-containers-p
 
 ## Manage container type registrations with Microsoft Graph
 
-Consuming tenant admins can also manage container type registrations programmatically. The [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) resource represents the registration of a container type in a consuming tenant. Managing all registrations in the tenant requires the `FileStorageContainerTypeReg.Manage.All` delegated permission.
+Consuming tenant admins can also manage container type registrations programmatically. The [fileStorageContainerTypeRegistration](/graph/api/resources/filestoragecontainertyperegistration) resource represents the registration of a container type in a consuming tenant. The `FileStorageContainerTypeReg.Selected` delegated permission is sufficient for registrations owned by the calling app. Managing all registrations in the tenant requires the `FileStorageContainerTypeReg.Manage.All` delegated permission.
 
 | Operation | API |
 | --- | --- |

@@ -1,5 +1,5 @@
 ---
-title: Monitor Usage, Billing, and Cost
+title: Monitor usage, billing, and cost
 description: Monitor SharePoint Embedded usage and pay-as-you-go costs with billing meters and Azure Cost Management.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -23,7 +23,7 @@ Monitor SharePoint Embedded usage and cost after billing is configured.
 
 SharePoint Embedded uses pay-as-you-go billing through an Azure subscription.
 
-Cost is based on usage meters, so administrators should review storage, archived storage, API transactions, and egress regularly.
+Cost is based on usage meters, so review storage, archived storage, API transactions, and egress regularly.
 
 Use this article to understand cost drivers, review billing in Azure Cost Management, and establish operational controls.
 
@@ -51,11 +51,11 @@ Both standard billing and pass-through billing container types use the same mete
 | Meter | Unit concept | Cost driver |
 | --- | --- | --- |
 | Storage | GB | Files, documents, metadata, versions, recycle bin content, and deleted container collection content. |
-| Archived Storage | GB | Data in archived containers, held in a lower-cost cold storage tier. |
+| Archived storage | GB | Data in archived containers, held in a lower-cost cold storage tier. |
 | API transactions | Transactions | Microsoft Graph calls made explicitly by the SharePoint Embedded application. |
-| Egress | GB | Data downloaded from SharePoint Embedded to a customer's client device, subject to exemptions. |
+| Egress | GB | Data downloaded from SharePoint Embedded to a customer's client device or transferred to a customer-operated server, subject to exemptions. |
 
-For related details, see [SharePoint Embedded Billing Meters](../reference/billing-meters.md).
+For related details, see [SharePoint Embedded billing meters](../reference/billing-meters.md).
 
 ## Monitor storage
 
@@ -91,7 +91,7 @@ Work with app owners when transaction growth is unexpected.
 
 ## Monitor egress
 
-Egress refers to data downloaded from SharePoint Embedded to a customer's client device. Some Microsoft service transfers are exempt.
+Egress refers to data downloaded from SharePoint Embedded to a customer's client device or transferred to a customer-operated server. Some Microsoft service transfers are exempt.
 
 Exempt transfers include:
 
@@ -193,7 +193,7 @@ Establish a recurring review process.
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
 - [Manage containers with PowerShell](manage-containers-powershell.md)
 - [Review audit events](review-audit-events.md)
-- [SharePoint Embedded Billing Meters](../reference/billing-meters.md)
+- [SharePoint Embedded billing meters](../reference/billing-meters.md)
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: Manage Containers with PowerShell
+title: Manage containers with PowerShell
 description: Use SharePoint Online Management Shell to inventory and manage SharePoint Embedded apps and containers.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -23,7 +23,7 @@ Use SharePoint Online Management Shell to automate SharePoint Embedded applicati
 
 PowerShell is useful for inventory, reporting, lifecycle operations, sensitivity label updates, sharing configuration, and permission review.
 
-This article states the supported administrator cmdlets and links to canonical cmdlet references for deeper syntax details.
+This article lists the supported administrator cmdlets and links to canonical cmdlet references for deeper syntax details.
 
 > [!IMPORTANT]
 > Use the latest version of SharePoint Online Management Shell before running SharePoint Embedded container administration cmdlets.
@@ -175,7 +175,7 @@ For compliance guidance, see [Apply security and compliance controls](apply-secu
 
 ## Manage container membership
 
-Consuming-tenant administrators can add, remove, or change a user's role on a container directly (September 2025):
+Consuming-tenant administrators can add, remove, or change a user's role on a container directly:
 
 ```powershell
 Add-SPOContainerUser -ContainerId <ContainerId> -LoginName <UserPrincipalName> -Role <Reader|Writer|Manager|Owner>
@@ -184,6 +184,8 @@ Remove-SPOContainerUser -ContainerId <ContainerId> -LoginName <UserPrincipalName
 ```
 
 For command details, see [Add-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser), [Set-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser), and [Remove-SPOContainerUser](/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser).
+
+A user can have only one role in a container at a time.
 
 ## Delete a container
 

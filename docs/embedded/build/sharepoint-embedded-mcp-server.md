@@ -19,7 +19,7 @@ outcome: Use the SharePoint Embedded MCP server with a coding agent to provision
 next: quickstart-vscode.md
 -->
 
-The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets any MCP-compatible AI client—such as GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, or Azure AI Foundry—set up and manage SharePoint Embedded applications through natural language. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
+The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets MCP-compatible AI clients set up and manage SharePoint Embedded applications through natural language. Supported clients include GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, and Azure AI Foundry. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
 Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, you describe what you want—"create a trial container type for my app"—and the AI client calls the server's tools to do it.
 

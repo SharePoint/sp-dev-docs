@@ -57,7 +57,7 @@ Before managing files, make sure:
 
 ## Map container IDs to drives
 
-The preview source notes that the Graph preview endpoint uses a `driveId`, and for SharePoint Embedded the drive ID is the container ID that starts with `b!`.
+Microsoft Graph DriveItem APIs use a `driveId`. For SharePoint Embedded, the drive ID is the container ID that starts with `b!`.
 
 In your app:
 
@@ -123,7 +123,7 @@ Before replacing content:
 - Preserve the DriveItem ID where supported.
 - Update your app metadata after Graph succeeds.
 
-Office files stored in SharePoint Embedded have versioning enabled automatically for Word, Excel, and PowerPoint files.
+Office files stored in SharePoint Embedded have versioning enabled automatically for Word, Excel, and PowerPoint.
 
 See [Open Office files from your app](open-office-files.md) for Office behavior.
 
@@ -131,7 +131,7 @@ See [Open Office files from your app](open-office-files.md) for Office behavior.
 
 Use documented DriveItem update and move operations where supported.
 
-A safe flow should read the current DriveItem, confirm the destination folder, apply the operation, refresh stored path or display name, and keep the DriveItem ID as the durable reference when possible.
+Read the current DriveItem, confirm the destination folder, apply the operation, refresh the stored path or display name, and keep the DriveItem ID as the durable reference when possible.
 
 ## Delete files
 
@@ -148,10 +148,10 @@ Before deleting:
 
 Use Microsoft Graph and SharePoint file restore capabilities documented for DriveItems and the service experience.
 
-A restore flow should identify the deleted item or version, confirm permission, perform the restore, refresh the item list, and communicate the restored location.
+Identify the deleted item or version, confirm permission, perform the restore, refresh the item list, and communicate the restored location.
 
 > [!NOTE]
-> [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key (October 2025). If you know the ID of the original **driveItem**, you can restore the corresponding **recycleBinItem** directly without first enumerating the recycle bin.
+> [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem?view=graph-rest-beta) supports `driveItemId` as an alternate key in Microsoft Graph beta (October 2025). If you know the ID of the original **driveItem**, you can restore the corresponding **recycleBinItem** directly without first enumerating the recycle bin.
 >
 > For exact file operation request and response details, use Microsoft Graph DriveItem documentation.
 

@@ -36,7 +36,7 @@ A user with inherited `Reader` access can receive additive edit access on one do
 
 ## Grant additive access
 
-Grant additive access with Microsoft Graph drive item invite. Set `sendInvitation` to `false`. App-only permissions aren't supported for this operation.
+Grant additive access with Microsoft Graph drive item invite. Set `sendInvitation` to `false`. App-only requests can invite existing users and guests, but they can't invite new guests.
 
 ```http
 POST https://graph.microsoft.com/v1.0/drives/{drive-id}/items/{item-id}/invite
@@ -78,19 +78,19 @@ If the user still has access after deletion, inspect inherited container roles, 
 
 SharePoint Embedded supports a role-based sharing model on the container type. The restrictive model allows only `Owner` and `Manager` members to add new permissions to files. The open model allows container members and guests with edit permissions to add new file permissions. By default, a container type uses the open model.
 
-Application owner developers control this container type setting. Design your UI so the share action is disabled or hidden when the current user's role can't add permissions. For administrative configuration, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
+Developers in the developer tenant control this container type setting. Design your UI so the share action is disabled or hidden when the current user's role can't add permissions. For administrative configuration, see [Admin overview](../admin/admin-overview.md).
 
 ## Respect tenant sharing policy
 
 By default, SharePoint Embedded application sharing follows the consuming tenant's sharing configuration. If the tenant disables guest sharing, your app can't add guests to container roles or grant guest additive permissions.
 
-A consuming tenant SharePoint Embedded Administrator can configure application-level sharing in administrative tools.
+A consuming tenant SharePoint Embedded Administrator can configure application-level sharing in the SharePoint admin center or with SharePoint Embedded PowerShell. For more information, see [Admin overview](../admin/admin-overview.md).
 
 Report policy failures in user-facing language. Distinguish inherited container access from direct item access in permission panels so users understand why a person can still open a file.
 
 ## Manage membership from the consuming tenant
 
-Consuming-tenant administrators can manage container membership directly in administrative tools. These tools complement the app-driven Microsoft Graph permission APIs and are useful for administrative or break-glass membership changes.
+Consuming-tenant administrators can manage container membership directly in the SharePoint admin center or with SharePoint Embedded PowerShell. These tools complement the app-driven Microsoft Graph permission APIs and are useful for administrative or break-glass membership changes.
 
 ## Next steps
 

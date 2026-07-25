@@ -27,7 +27,7 @@ next: ../plan/choose-app-model.md
 | Consuming tenant | The Microsoft 365 tenant where a SharePoint Embedded app is used and where containers and content are stored. See [app architecture](../plan/app-tenant-architecture.md). |
 | Container type registration | Registration of a container type in a consuming tenant so the app can perform allowed operations against containers of that type. See [register container type application permissions](../build/register-application-permissions.md). |
 | Single-tenant app | An application model intended for use in one tenant, commonly for enterprise line-of-business scenarios. See [choose an app model](../plan/choose-app-model.md). |
-| Multitenant app | An application model intended for use across customer tenants, commonly for ISV scenarios. See [choose an app model](../plan/choose-app-model.md). |
+| Multitenant app | An application model intended for use across customer tenants, commonly for independent software vendor (ISV) scenarios. See [choose an app model](../plan/choose-app-model.md). |
 | Standard billing | A billing model where consumption charges are billed to the tenant that owns or develops the application. See [choose a billing model](../plan/choose-billing-model.md). |
 | Pass-through (customer) billing | A billing model where consumption charges are billed directly to the consuming tenant registered to use the app. See [choose a billing model](../plan/choose-billing-model.md). |
 | Owning application | The Microsoft Entra ID application registration strongly coupled with a container type; each owning app can own one container type at a time. See [app architecture](../plan/app-tenant-architecture.md). |
