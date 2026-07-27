@@ -1,7 +1,7 @@
 ---
 title: SharePoint solution packaging
 description: The package-solution Heft task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
-ms.date: 07/23/2026
+ms.date: 03/11/2026
 ms.localizationpriority: high
 ---
 # SharePoint solution packaging

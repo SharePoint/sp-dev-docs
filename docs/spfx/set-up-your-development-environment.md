@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 07/23/2026
+ms.date: 08/18/2016
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
