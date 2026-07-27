@@ -1,46 +1,103 @@
 ---
-title: Transform classic pages to modern pages
-description: Explains how to transform classic wiki and web part pages into modern pages
-ms.date: 08/13/2024
+title: Transform classic SharePoint pages to modern pages
+description: Select assessed classic pages, transform a representative wave with PnP PowerShell, validate the results, and expand safely.
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Transform classic pages to modern pages
+# Transform classic SharePoint pages to modern pages
 
-Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
+This primary workflow transforms classic pages in SharePoint Online. Use the Microsoft 365 Assessment tool to identify pages and their Web Parts, and then use PnP PowerShell to transform approved pages and validate each result before processing a larger wave.
 
-SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) library ([source code](https://github.com/pnp/pnpframework/tree/dev/src/lib/PnP.Framework/Modernization)) and does bring page transformation capabilities which will be explained in the upcoming chapters.
+This workflow uses PnP PowerShell as the primary execution path. The page transformation engine is part of the open-source [PnP Framework](https://github.com/pnp/pnpframework) and doesn't have a Microsoft support SLA.
 
-> [!IMPORTANT]
-> - Page transformation today works for wiki pages, web part pages, blog pages and publishing pages.
-> - SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) and is continuously evolving, checkout [the release notes](https://github.com/pnp/pnpframework/blob/dev/src/lib/CHANGELOG.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Framework GitHub issue list](https://github.com/pnp/pnpframework/issues).
-> - Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
+## Page transformation workflow
 
-Page transformation can be used in one or more of the below models:
+[!INCLUDE [classic-page-transformation-workflow](../../includes/snippets/modernization/classic-page-transformation-workflow.md)]
 
-Model | Technique | Audience | Publishing Page support | Comments
-------|---------- |----------|-------------------------|---------
-I want to transform pages for my users | [PowerShell](modernize-userinterface-site-pages-powershell.md) | DevOps | Yes | Typically used when you want to modernize pages for multiple site collections. Using [PowerShell](modernize-userinterface-site-pages-powershell.md) is the **easiest and recommended** approach.
-I want to have full control on the page transformation process | [.Net](modernize-userinterface-site-pages-dotnet.md) | DevOps | Yes | Typically used when you integrate page transformation into existing services or tools. The core of page transformation is the .Net based SharePoint PnP Modernization framework. Using .Net you can fully tailor the transformation process, this approach is recommended whenever you want full control on the transformation process or when you want to integrate page transformation into another solution/product.
+## 1. Select page candidates
 
-Page transformation supports a wide range of SharePoint versions and page types as source, **all of these result in modern pages in SharePoint Online** as a result. Below table shows the possible page types versus pages sources that can be transformed to modern pages using the latest page transformation release.
+Start with a completed [Classic pages assessment](assessment-tool-classic-pages.md). Confirm scan coverage before selecting pages.
 
-Page Type | SharePoint 2010 | SharePoint 2013 | SharePoint 2016 | SharePoint 2019 | SharePoint Online
-----------|-----------------|-----------------|-----------------|-----------------|------------------
-Wiki page | x | x | x | x | x
-Webpart page | x | x | x | x | x
-Blog page | x | x | x | x | x
-Publishing page | x | x | x | x | x
+For the first wave:
 
-> [!Note]
-> To transform SharePoint 2010 pages you need to use our legacy versions: [SharePointPnPPowerShellOnline](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline/3.29.2101.0) / [PnP Modernization Framework](https://www.nuget.org/packages/SharePointPnPModernizationOnline/).
+- Select `WikiPage` or `WebPartPage` rows from successful site and web scans.
+- Prefer pages with no unmapped Web Parts and a high mapping percentage.
+- Review `classicpagewebparts.csv` for the exact Web Part types and mappings.
+- Manually inspect any page with `WebPartCount=0`. A mapping percentage of 100 for a zero-part page only means that Assessment extracted no Web Parts.
+- Avoid a home page until the transformation and validation process is proven.
+- Record visible text, Web Parts, links, images, and layout that must be present after transformation.
 
-## See also
+`MappingPercentage=100` is a planning signal. It doesn't guarantee that the transformation will run successfully or preserve the expected content.
 
-- [Modernize your classic SharePoint sites](modernize-classic-sites.md)
-- [Using SharePoint Page Transformation from PowerShell](modernize-userinterface-site-pages-powershell.md)
-- [Using SharePoint Page Transformation from .Net](modernize-userinterface-site-pages-dotnet.md)
-- [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md)
-- [SharePoint Look Book](https://adoption.microsoft.com/sharepoint-look-book/)
-- [Classic and modern web part experiences](https://support.office.com/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)
+Route page types deliberately:
+
+| Assessment page type | Transformation route |
+| --- | --- |
+| `WikiPage`, `WebPartPage` | Transform in place for the first wave. Use a target web only when the modern page must be created in another site. |
+| `PublishingPage` | Use a target modern web and review the page-layout mapping. |
+| `BlogPage` | Use the blog title as the identity and provide a target modern web. |
+| `ASPXPage`, `DelveBlogPage` | Keep outside this Assessment-driven workflow because the page assessment doesn't provide equivalent transformation-readiness analysis. |
+
+For field-to-command mapping and a selected-page example, see [Interpret the classic pages assessment report](assessment-tool-classic-pages-report.md#move-from-assessment-to-transformation).
+
+## 2. Resolve blockers and choose the target
+
+Group candidate pages by page type, layout, and unmapped Web Part combination. Resolve common blockers before transforming a wave.
+
+- For Wiki and Web Part pages, in-place transformation is the preferred starting point because dependencies remain in the source site.
+- Publishing and Blog pages require a target modern web.
+- Custom publishing layouts require a reviewed page-layout mapping. Without one, the engine generates a default mapping and places the content in a default section.
+- Cross-site transformations require additional validation for links, files, lists, users, and taxonomy.
+
+See [Choose in-place or cross-site transformation](modernize-userinterface-site-pages-approach.md) and [Review classic Web Part mappings](modernize-userinterface-site-pages-webparts.md).
+
+## 3. Prepare PnP PowerShell
+
+PnP PowerShell requires a tenant-owned Microsoft Entra application. Use a separate transformation application from the read-only Assessment application.
+
+For the primary interactive flow, use delegated SharePoint `AllSites.Manage`, together with the signed-in user's existing site permissions. Copying item-level unique permissions requires `AllSites.FullControl`; otherwise, explicitly skip that copy.
+
+Follow [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md) to register the application, connect, and run the first transformation.
+
+## 4. Transform a representative wave
+
+Transform a small wave that represents the page types, layouts, and Web Part combinations that you intend to process.
+
+For the first wave:
+
+- Let the generated page use the default `Migrated_` prefix.
+- Don't use `-TakeSourcePageName`, `-Overwrite`, or home-page replacement options.
+- Enable file logging and retain the log with the wave manifest.
+- Stop on the first unexpected failure or content mismatch.
+
+Only enable source-renaming or overwrite behavior after the generated pages have been approved and a rollback plan exists.
+
+## 5. Validate and expand
+
+Opening without an error isn't sufficient validation. A generated page can exist and still be blank or incomplete.
+
+Validate the source and generated page, transformation log, content, Web Parts, layout, links, images, metadata, permissions, and publication state. Expand the wave only when every selected page meets the acceptance criteria.
+
+See [Validate transformed classic pages](modernize-userinterface-site-pages-validation.md).
+
+## Next steps
+
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. [Validate the transformed pages](modernize-userinterface-site-pages-validation.md).
+
+## Advanced reference
+
+- [Choose in-place or cross-site transformation](modernize-userinterface-site-pages-approach.md)
+- [Security requirements](modernize-userinterface-site-pages-security.md)
+- [Classic Web Part mappings](modernize-userinterface-site-pages-webparts.md)
+- [Page transformation configuration options](modernize-userinterface-site-pages-configuration.md)
+- [Page transformation model](modernize-userinterface-site-pages-model.md)
+- [Publishing page transformation model](modernize-userinterface-site-pages-model-publishing.md)
+- [URL mapping](modernize-userinterface-site-pages-urlmapping.md)
+- [User mapping](modernize-userinterface-site-pages-usermapping.md)
+- [Term mapping](modernize-userinterface-site-pages-termmapping.md)
+- [Layout transformation](modernize-userinterface-site-pages-layout.md)
+- [.NET integration](modernize-userinterface-site-pages-dotnet.md)
+- [Transform pages from SharePoint Server](modernize-userinterface-site-pages-powershell.md#route-other-page-types)

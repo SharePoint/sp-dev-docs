@@ -25,6 +25,7 @@ In the current implementation, Delve Blog pages appear in `classicpages.csv` but
 1. [Interpret and prioritize the results](assessment-tool-classic-pages-report.md).
 1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
 1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. [Validate the transformed pages](modernize-userinterface-site-pages-validation.md).
 
 ### Reference
 
@@ -91,7 +92,7 @@ Use the assessment output to select pages and identify Web Parts that need remed
 1. Remove, replace, or map blocking Web Parts.
 1. Start with a small representative wave.
 1. [Transform the selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
-1. Validate the generated modern pages before expanding the wave.
+1. [Validate the generated modern pages](modernize-userinterface-site-pages-validation.md) before expanding the wave.
 
 For the complete transformation model and advanced mapping options, see [Transform classic pages to modern pages](modernize-userinterface-site-pages.md).
 

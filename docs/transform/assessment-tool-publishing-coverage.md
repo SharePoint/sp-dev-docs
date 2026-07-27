@@ -58,31 +58,19 @@ The current page assessment doesn't provide these publishing transformation inpu
 - Global, security-group, and SharePoint-group audience values.
 - Master-page, alternate-CSS, navigation, approval, versioning, scheduling, variation, audience, and ownership configuration.
 
-These areas are outside the Page Assessment scope. The lifecycle of legacy Scanner reports is handled separately from this guidance.
+These areas are outside the Page Assessment scope.
 
 ## Continue to publishing-page transformation
 
 1. Group publishing pages by `Layout`.
 1. Review `MappingPercentage` and `UnmappedWebParts`.
 1. Identify custom layouts that need a page-layout mapping.
-1. Validate representative pages before processing a complete portal.
+1. [Transform representative publishing pages](modernize-userinterface-site-pages-powershell.md#route-other-page-types).
+1. [Validate representative pages](modernize-userinterface-site-pages-validation.md) before processing a complete portal.
 
-For an out-of-the-box publishing layout, use the built-in layout mapping where possible:
+For an out-of-the-box publishing layout, use the built-in layout mapping where possible. For a custom publishing layout, generate and review a mapping before transformation.
 
-```powershell
-Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/source -Interactive -ClientId <application-id>
-
-ConvertTo-PnPPage `
-  -PublishingPage `
-  -Identity Article.aspx `
-  -TargetWebUrl https://contoso.sharepoint.com/sites/target
-```
-
-For a custom publishing layout, generate and review a mapping before transformation:
-
-```powershell
-Export-PnPPageMapping -CustomPageLayoutMapping -Folder C:\temp
-```
+Continue with [Transform selected classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md#route-other-page-types) and the [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md).
 
 ## Reference
 

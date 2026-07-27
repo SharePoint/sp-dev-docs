@@ -81,7 +81,7 @@ Use `classicpagewebparts.csv` for the per-page decision:
 
 Use `classicwebpartunique.csv` to identify web part types that affect many pages. `InMappingFile` is weaker than `IsMappable`: it only means that the type has an entry in the mapping file.
 
-The current Assessment implementation deliberately treats the community mappings for `ScriptEditorWebPart` and `SimpleFormWebPart` as unavailable. It also doesn't support the legacy Scanner's on-disk mapping-file override.
+The current Assessment implementation deliberately treats the community mappings for `ScriptEditorWebPart` and `SimpleFormWebPart` as unavailable. It also doesn't support an on-disk mapping-file override.
 
 ## Use rollups
 
@@ -98,7 +98,7 @@ Rollups are useful for sequencing, but return to the page and web part CSV files
 
 `classicpublishingsitesummaries.csv` provides a site-collection-level publishing summary. Detailed legacy web-level publishing configuration isn't included.
 
-See [Understand publishing portal coverage](assessment-tool-publishing-coverage.md) before replacing an established Publishing Scanner workflow.
+See [Understand publishing portal coverage](assessment-tool-publishing-coverage.md) before planning publishing page transformation.
 
 ## Move from assessment to transformation
 
@@ -123,56 +123,9 @@ Turn the report into a transformation backlog:
 
 The Assessment app is read-only. Use a separate PnP PowerShell connection with permission to create or update pages in the source or target web.
 
-### Transform one selected Wiki or Web Part page
+### Continue with the transformation task
 
-This example selects one assessed page and transforms it in place. Filter on the exact `PageUrl` that you approved for the migration wave.
-
-```powershell
-$row = Import-Csv .\classicpages.csv |
-  Where-Object PageUrl -eq '/sites/source/SitePages/ApprovedPage.aspx' |
-  Select-Object -First 1
-
-if ($row.PageType -notin @('WikiPage', 'WebPartPage')) {
-  throw "This example only handles WikiPage and WebPartPage rows."
-}
-
-$sourceWebUrl = if ($row.WebUrl -eq '/') {
-  $row.SiteUrl
-}
-else {
-  "$($row.SiteUrl.TrimEnd('/'))$($row.WebUrl)"
-}
-
-$source = Connect-PnPOnline `
-  -Url $sourceWebUrl `
-  -Interactive `
-  -ClientId <application-id> `
-  -ReturnConnection
-
-$libraryPath = $row.ListUrl.TrimEnd('/')
-if (-not $row.PageUrl.StartsWith("$libraryPath/", [StringComparison]::OrdinalIgnoreCase)) {
-  throw "PageUrl isn't under ListUrl."
-}
-
-$pageRelativeToLibrary = $row.PageUrl.Substring($libraryPath.Length).TrimStart('/')
-$pageName = [IO.Path]::GetFileName($pageRelativeToLibrary)
-$folder = [IO.Path]::GetDirectoryName($pageRelativeToLibrary) -replace '\\', '/'
-$libraryName = [Uri]::UnescapeDataString([IO.Path]::GetFileName($libraryPath))
-
-$parameters = @{
-  Identity = $pageName
-  Connection = $source
-}
-
-if ($libraryName -ne 'SitePages') {
-  $parameters.Library = $libraryName
-}
-if (-not [string]::IsNullOrWhiteSpace($folder)) {
-  $parameters.Folder = $folder
-}
-
-ConvertTo-PnPPage @parameters
-```
+Use the field mapping to approve the exact Assessment row and record the expected content. Then follow [Transform selected classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md) for the current application, permission, source-identity, draft-output, logging, and validation safeguards.
 
 Route other page types deliberately:
 
@@ -180,7 +133,7 @@ Route other page types deliberately:
 - `BlogPage`: use `-BlogPage`, `PageName` as the blog-title identity, and a target web. Blog rows don't receive the detailed mapping-readiness enrichment described for Wiki, Web Part, and Publishing pages.
 - `ASPXPage` and `DelveBlogPage`: exclude them from this automated transformation queue; the page assessment doesn't provide an equivalent readiness path for them.
 
-Start with [Transform classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md). Use the [page transformation model](modernize-userinterface-site-pages-model.md) for custom Web Part mappings and the [publishing model](modernize-userinterface-site-pages-model-publishing.md) for publishing page layouts.
+Start with [Transform selected classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md), and then [validate each transformed page](modernize-userinterface-site-pages-validation.md). Use the [page transformation model](modernize-userinterface-site-pages-model.md) for custom Web Part mappings and the [publishing model](modernize-userinterface-site-pages-model-publishing.md) for publishing page layouts.
 
 ## Power BI and CSV
 
