@@ -1,7 +1,7 @@
 ---
 title: Assess classic SharePoint pages
 description: Discover classic pages, inventory their web parts, and measure page modernization readiness.
-ms.date: 07/23/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -18,15 +18,22 @@ In the current implementation, Delve Blog pages appear in `classicpages.csv` but
 
 ## In this guidance
 
-- [Requirements](assessment-tool-classic-pages-requirements.md)
-- [Run the assessment](assessment-tool-classic-pages-run.md)
-- [Interpret the report](assessment-tool-classic-pages-report.md)
-- [CSV reference](assessment-tool-classic-pages-csv.md)
-- [Publishing portal coverage](assessment-tool-publishing-coverage.md)
+### Workflow
+
+1. [Review the requirements](assessment-tool-classic-pages-requirements.md).
+1. [Run the assessment](assessment-tool-classic-pages-run.md).
+1. [Interpret and prioritize the results](assessment-tool-classic-pages-report.md).
+1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+
+### Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Common assessment CSV reference](assessment-tool-common-reports.md)
 
 ## Run the assessment
 
-The example uses the Windows executable name. On macOS or Linux, use `./microsoft365-assessment`.
+Before running the application-authentication example, configure the [application certificate](assessment-tool-classic-pages-requirements.md#application-certificate).
 
 ```powershell
 microsoft365-assessment.exe start --mode Classic --classicinclude Pages `

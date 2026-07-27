@@ -1,7 +1,7 @@
 ---
 title: Interpret the classic pages assessment report
 description: Use page, web part, usage, and rollup results from the Microsoft 365 Assessment tool to plan SharePoint page modernization.
-ms.date: 07/24/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -22,6 +22,8 @@ Before interpreting page readiness, confirm that the expected scope completed:
 1. Review `classicpageauditusage.csv` coverage status before using activity counts.
 
 An assessment that finished can still contain site or web failures. Treat missing locations as a coverage gap, not as a finding that no classic content exists.
+
+For the common file schemas and join keys, see [Common assessment CSV reference](assessment-tool-common-reports.md).
 
 ## Prioritize pages
 
@@ -191,4 +193,7 @@ The Power BI template is a visualization layer over the CSV output. The CSV file
 
 Power BI template generation requires Windows. CSV generation works on Windows, macOS, and Linux.
 
-For every field and join key, see [Classic pages CSV reference](assessment-tool-classic-pages-csv.md).
+## Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Common assessment CSV reference](assessment-tool-common-reports.md)

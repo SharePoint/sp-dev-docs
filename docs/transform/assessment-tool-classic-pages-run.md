@@ -132,11 +132,15 @@ microsoft365-assessment.exe report --id <assessment-id> --mode CsvOnly --path "C
 
 By default, output is written to the `report` subfolder under the assessment-ID folder.
 
-Use `--delimiter Semicolon` when a semicolon-delimited export is required. Use `--open:$false` to prevent the generated report from opening automatically in PowerShell.
+Use `--delimiter Semicolon` when a semicolon-delimited export is required. Use `--open false` to prevent the generated report from opening automatically.
 
 ## Next steps
 
 1. [Interpret and prioritize the classic page results](assessment-tool-classic-pages-report.md).
-1. [Review page-specific CSV fields and joins](assessment-tool-classic-pages-csv.md).
 1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
 1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+
+## Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Common assessment CSV reference](assessment-tool-common-reports.md)

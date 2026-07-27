@@ -1845,12 +1845,14 @@
         href: transform/assessment-tool-classic-pages-run.md
       - name: Interpret and prioritize
         href: transform/assessment-tool-classic-pages-report.md
-      - name: CSV reference
-        href: transform/assessment-tool-classic-pages-csv.md
-      - name: Common CSV files
-        href: transform/assessment-tool-common-reports.md
-      - name: Publishing portal coverage
+      - name: Publishing page readiness
         href: transform/assessment-tool-publishing-coverage.md
+      - name: Reference
+        items:
+        - name: Classic pages CSV files
+          href: transform/assessment-tool-classic-pages-csv.md
+        - name: Common CSV files
+          href: transform/assessment-tool-common-reports.md
     - name: Transform classic pages
       href: transform/modernize-userinterface-site-pages.md
       items:

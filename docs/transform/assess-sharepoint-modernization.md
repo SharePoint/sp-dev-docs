@@ -1,7 +1,7 @@
 ---
 title: Assess and transform classic SharePoint pages
 description: Assess classic SharePoint pages, prioritize remediation, and continue into page transformation with PnP PowerShell.
-ms.date: 07/24/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -31,9 +31,14 @@ Mapping readiness is an input to planning, not a guarantee that the transformed 
 
 ## Next steps
 
-1. [Configure and run the Classic pages assessment](assessment-tool-classic-pages-run.md).
+1. [Review the Classic pages assessment requirements](assessment-tool-classic-pages-requirements.md).
+1. [Run the Classic pages assessment](assessment-tool-classic-pages-run.md).
 1. [Interpret and prioritize the page results](assessment-tool-classic-pages-report.md).
-1. [Review page-specific CSV fields and joins](assessment-tool-classic-pages-csv.md).
 1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
 1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
-1. [Use the full page-transformation guidance](modernize-userinterface-site-pages.md) for advanced mappings and scenarios.
+
+## Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Common assessment CSV reference](assessment-tool-common-reports.md)
+- [Page transformation guidance](modernize-userinterface-site-pages.md)

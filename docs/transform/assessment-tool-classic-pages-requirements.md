@@ -97,6 +97,12 @@ Assessment output can contain tenant and site URLs, application identifiers, use
 
 ## Next steps
 
-- [Run a classic pages assessment](assessment-tool-classic-pages-run.md)
-- [Interpret the classic pages report](assessment-tool-classic-pages-report.md)
-- [Classic pages CSV reference](assessment-tool-classic-pages-csv.md)
+1. [Run a classic pages assessment](assessment-tool-classic-pages-run.md).
+1. [Interpret and prioritize the classic page results](assessment-tool-classic-pages-report.md).
+1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
+1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+
+## Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Common assessment CSV reference](assessment-tool-common-reports.md)

@@ -1,7 +1,7 @@
 ---
 title: Assess publishing pages for transformation
 description: Use Microsoft 365 Assessment tool publishing-page output to plan page transformation and page-layout mapping.
-ms.date: 07/24/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -84,5 +84,7 @@ For a custom publishing layout, generate and review a mapping before transformat
 Export-PnPPageMapping -CustomPageLayoutMapping -Folder C:\temp
 ```
 
-For field-level Assessment output, see [Classic pages CSV reference](assessment-tool-classic-pages-csv.md).
-For page-layout mapping details, see [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md).
+## Reference
+
+- [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
+- [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md)
