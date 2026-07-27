@@ -8,11 +8,9 @@ ms.service: sharepoint
 
 # Run a classic pages assessment
 
-Use `--mode Classic --classicinclude Pages` to run only the classic pages component. Always specify `Pages`; omitting `--classicinclude` also runs additional Classic components that aren't covered in this guidance.
+Run the classic pages assessment with `--mode Classic --classicinclude Pages`.
 
 Before you start, complete the [classic pages requirements](assessment-tool-classic-pages-requirements.md).
-
-The examples use the Windows executable name and PowerShell line continuation. On macOS or Linux, use `./microsoft365-assessment`, your shell's line-continuation syntax, and operating-system-appropriate file paths.
 
 ## Page modernization workflow
 
