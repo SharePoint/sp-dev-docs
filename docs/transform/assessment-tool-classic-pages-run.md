@@ -20,6 +20,8 @@ Before you start, complete the [classic pages requirements](assessment-tool-clas
 
 Application authentication is recommended for a full-tenant assessment:
 
+Before running the command, configure the [application certificate](assessment-tool-classic-pages-requirements.md#application-certificate).
+
 ```powershell
 microsoft365-assessment.exe start --mode Classic --classicinclude Pages `
   --authmode application `

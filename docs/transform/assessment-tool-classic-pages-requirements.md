@@ -28,6 +28,18 @@ Application authentication is recommended for a full-tenant assessment. A delega
 
 For general application-registration steps, see [Configure authentication](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html).
 
+### Application certificate
+
+Application authentication requires a certificate associated with the Microsoft Entra application. Upload the public certificate to the app registration, and make sure that the account running the assessment can access the matching private key.
+
+The application-authentication examples use a certificate in the current user's **Personal** certificate store:
+
+```console
+--certpath "My|CurrentUser|<certificate-thumbprint>"
+```
+
+In this value, `My` identifies the Personal certificate store, `CurrentUser` identifies the account running the assessment, and the final value is the certificate thumbprint. The [authentication setup guidance](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html) explains how to create the certificate, add it to the app registration, and find its thumbprint.
+
 ## Permissions
 
 The current classic pages implementation requires the following permissions:
