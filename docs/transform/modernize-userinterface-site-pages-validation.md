@@ -81,10 +81,21 @@ If a page fails, stop processing comparable pages. Review the log and source Web
 
 After a draft page is approved, publish it through the page editing experience or with the current [Set-PnPPage](https://pnp.github.io/powershell/cmdlets/Set-PnPPage.html) `-Publish` option.
 
+## Expand the wave
+
+After validating every representative page:
+
+1. Set each representative result to `ValidationStatus=Passed`.
+1. Create `approved-pages.csv` from the additional grouped rows that the user approved.
+1. Run `Convert-SelectedPages.ps1` with the original representative manifest and validated results.
+1. Validate every generated page in the expanded wave before publishing it.
+
+The script blocks expansion if a representative result is missing, stale, not passed, or based on a different PnP PowerShell or Web Part mapping profile.
+
 ## Next steps
 
 1. Return failed pages to the remediation backlog.
-1. Add passed page patterns to the next approved wave.
+1. Add passed page patterns to `approved-pages.csv` and run the expansion script.
 
 ## Reference
 

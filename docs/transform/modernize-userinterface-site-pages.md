@@ -101,6 +101,8 @@ For the first wave:
 
 Only enable source-renaming or overwrite behavior after the generated pages have been approved and a rollback plan exists.
 
+Use `Convert-RepresentativePages.ps1` to process every approved representative page through the same safety and result contract.
+
 ## 5. Validate and expand
 
 Opening without an error isn't sufficient validation. A generated page can exist and still be blank or incomplete.
@@ -108,6 +110,8 @@ Opening without an error isn't sufficient validation. A generated page can exist
 Validate the source and generated page, transformation log, content, Web Parts, layout, links, images, metadata, permissions, and publication state. Expand the wave only when every selected page meets the acceptance criteria.
 
 See [Validate transformed classic pages](modernize-userinterface-site-pages-validation.md).
+
+After every representative result is marked `Passed`, use `Convert-SelectedPages.ps1` to process all additional user-approved rows. The script rejects pages whose transformation pattern doesn't have a passed representative.
 
 ## Next steps
 

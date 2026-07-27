@@ -126,6 +126,7 @@ $candidates = foreach ($page in $pages) {
 
   if ($page.PageType -notin @('WikiPage', 'WebPartPage') -or
       $page.HomePage -eq 'True' -or
+      -not $page.ListUrl.EndsWith('/SitePages', [StringComparison]::OrdinalIgnoreCase) -or
       $page.WebPartCount -eq '0' -or
       $page.MappingPercentage -ne '100' -or
       -not [string]::IsNullOrWhiteSpace($page.UnmappedWebParts) -or
@@ -155,10 +156,19 @@ $candidates = foreach ($page in $pages) {
     WebUrl = $page.WebUrl
     PageUrl = $page.PageUrl
     PageType = $page.PageType
+    ListUrl = $page.ListUrl
+    ListId = $page.ListId
     Layout = $page.Layout
+    HomePage = $page.HomePage
     WebPartCount = [int]$page.WebPartCount
+    MappingPercentage = $page.MappingPercentage
+    UnmappedWebParts = $page.UnmappedWebParts
     ModifiedAt = $page.ModifiedAt
     WebPartSignature = $signature
+    IncludePattern = 'True'
+    Selected = 'False'
+    ExpectedVisibleContent = ''
+    ValidationOwner = ''
   }
 }
 
@@ -176,7 +186,10 @@ $candidateInventory |
 
 Review `representative-page-groups.csv` and select at least one page from every `PatternKey` that the migration wave will contain. Select additional pages when Web Part properties, linked content, or business behavior differ materially within a pattern.
 
+Set `IncludePattern=False` for patterns outside the planned migration. For each selected page, set `Selected=True` and fill `ExpectedVisibleContent` and `ValidationOwner`.
+
 Keep zero-part pages, home pages, publishing pages, and pages with unresolved mappings in separate review queues.
+Pages outside the default `SitePages` library also remain on the separately reviewed single-page path.
 
 ## Understand the source-preserving defaults
 
@@ -194,84 +207,9 @@ Keep zero-part pages, home pages, publishing pages, and pages with unresolved ma
 
 ## Transform one selected Wiki or Web Part page
 
-Filter on the exact `PageUrl` approved for the migration wave:
+Use the representative-page script with one row marked `Selected=True`. This keeps the one-page test on the same validation, authentication, and result contract as a larger wave.
 
-```powershell
-$row = Import-Csv .\classicpages.csv |
-  Where-Object PageUrl -eq '/sites/source/SitePages/ApprovedPage.aspx' |
-  Select-Object -First 1
-
-if (-not $row) {
-  throw "The approved page wasn't found in classicpages.csv."
-}
-if ($row.PageType -notin @('WikiPage', 'WebPartPage')) {
-  throw "This example only handles WikiPage and WebPartPage rows."
-}
-if ($row.WebPartCount -eq '0') {
-  throw "Inspect a zero-part page manually before adding it to a transformation wave."
-}
-if ($row.MappingPercentage -ne '100' -or
-    -not [string]::IsNullOrWhiteSpace($row.UnmappedWebParts)) {
-  throw "Resolve unmapped Web Parts before using this first-wave example."
-}
-
-$sourceWebUrl = if ($row.WebUrl -eq '/') {
-  $row.SiteUrl
-}
-else {
-  "$($row.SiteUrl.TrimEnd('/'))$($row.WebUrl)"
-}
-
-$source = Connect-PnPOnline `
-  -Url $sourceWebUrl `
-  -Interactive `
-  -ClientId "<application-id>" `
-  -ReturnConnection
-
-$libraryPath = $row.ListUrl.TrimEnd('/')
-if (-not $row.PageUrl.StartsWith("$libraryPath/", [StringComparison]::OrdinalIgnoreCase)) {
-  throw "PageUrl isn't under ListUrl."
-}
-
-$libraryName = [Uri]::UnescapeDataString([IO.Path]::GetFileName($libraryPath))
-$sourceItem = Get-PnPFile `
-  -Url $row.PageUrl `
-  -AsListItem `
-  -ThrowExceptionIfFileNotFound `
-  -Connection $source
-
-$hasUniquePermissions = Get-PnPProperty `
-  -ClientObject $sourceItem `
-  -Property HasUniqueRoleAssignments `
-  -Connection $source
-
-if ($hasUniquePermissions) {
-  throw "This first-wave example handles only pages that inherit library permissions."
-}
-
-$logFolder = Join-Path (Get-Location) 'page-transformation-logs'
-New-Item -ItemType Directory -Path $logFolder -Force | Out-Null
-
-$parameters = @{
-  Identity = $sourceItem.Id
-  Connection = $source
-  SkipItemLevelPermissionCopyToClientSidePage = $true
-  DontPublish = $true
-  LogType = 'File'
-  LogFolder = $logFolder
-  LogVerbose = $true
-}
-
-if ($libraryName -ne 'SitePages') {
-  $parameters.Library = $libraryName
-}
-
-ConvertTo-PnPPage @parameters
-```
-
-This command binds the exact approved file by list item ID, preserves the source page, doesn't overwrite an existing migrated page, and leaves the generated page as a draft.
-
-This automated example handles pages stored in a library. Treat a Web Part page stored at the web root as an advanced case and use `-Folder "<root>"` only after validating its exact source identity.
+The batch scripts support Wiki and Web Part pages in the default `SitePages` library. They exclude home pages, zero-part pages, pages with unique permissions, and pages modified after Assessment. Handle those pages through a separately reviewed path.
 
 ## Route other page types
 
@@ -282,18 +220,79 @@ This automated example handles pages stored in a library. Treat a Web Part page 
 
 Use [in-place versus cross-site guidance](modernize-userinterface-site-pages-approach.md) before providing `-TargetWebUrl` or `-TargetConnection`.
 
-## Transform a representative wave
+## Transform all representative pages
 
-Process one approved manifest row at a time until the page selection and validation process is proven. Record:
+Download the [Assessment page wave scripts](https://github.com/pnp/modernization/tree/dev/Scripts/PageTransformation/AssessmentPageWaves).
 
-- Assessment ID and source page identity.
-- Page type, layout, Web Part count, mapping percentage, and unmapped types.
-- Expected visible content.
-- Target page URL.
-- Transformation status and log path.
-- Validation owner, result, and notes.
+In `representative-page-groups.csv`:
 
-Stop the wave on an exception, blank target, missing content, or unexpected source-page change.
+1. Set `IncludePattern=True` for each transformation pattern in the planned migration.
+1. Set `Selected=True` on at least one page in every included pattern.
+1. Fill `ExpectedVisibleContent` and `ValidationOwner` for every selected page.
+
+Preview the complete wave without authenticating or writing SharePoint pages:
+
+```powershell
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<application-id>" `
+  -AuthenticationMode Interactive `
+  -WhatIf `
+  -Force
+```
+
+Run interactively with High-impact confirmation:
+
+```powershell
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<application-id>" `
+  -AuthenticationMode Interactive `
+  -Confirm
+```
+
+For unattended execution, use a certificate-based application and disable confirmation explicitly:
+
+```powershell
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<application-id>" `
+  -AuthenticationMode CertificateThumbprint `
+  -Tenant "<tenant>.onmicrosoft.com" `
+  -Thumbprint "<certificate-thumbprint>" `
+  -Confirm:$false
+```
+
+The script writes each result immediately to `representative-page-results.csv`. Generated pages remain drafts, and each created row starts with `ValidationStatus=Pending`.
+
+Follow [Validate transformed classic pages](modernize-userinterface-site-pages-validation.md), and set `ValidationStatus=Passed` only after the page meets every acceptance criterion.
+
+## Expand to all user-specified pages
+
+Create `approved-pages.csv` by copying the additional rows that the user approved from `representative-page-groups.csv`. Retain the Assessment fields, `PatternKey`, `ExpectedVisibleContent`, and `ValidationOwner`.
+
+Run the expansion script:
+
+```powershell
+.\Convert-SelectedPages.ps1 `
+  -PagesPath .\approved-pages.csv `
+  -RepresentativeManifestPath .\representative-page-groups.csv `
+  -RepresentativeResultsPath .\representative-page-results.csv `
+  -ClientId "<application-id>" `
+  -AuthenticationMode Interactive `
+  -Confirm
+```
+
+The script refuses to expand when:
+
+- The representative manifest and results don't match.
+- Any representative page isn't `Created` and `Passed`.
+- The PnP PowerShell version or Web Part mapping differs from the representative run.
+- An approved page belongs to a pattern without a passed representative.
+
+The expanded wave also creates draft pages and writes `selected-page-results.csv`. Validate those pages before publishing them.
+
+For app-only setup and certificate authentication, see [PnP PowerShell authentication](https://pnp.github.io/powershell/articles/authentication.html) and [determine required permissions](https://pnp.github.io/powershell/articles/determinepermissions.html). Run `-WhatIf` before unattended execution.
 
 ## Options requiring explicit review
 
@@ -311,7 +310,7 @@ Review these options only when the scenario requires them:
 ## Next steps
 
 1. [Validate each transformed page](modernize-userinterface-site-pages-validation.md).
-1. Expand the wave only after every representative page passes validation.
+1. Run `Convert-SelectedPages.ps1` only after every representative page passes validation.
 
 ## Reference
 
