@@ -1,7 +1,7 @@
 ---
 title: Requirements for the classic pages assessment
 description: Configure authentication, permissions, audit access, and a supported environment for the Microsoft 365 Assessment tool classic pages component.
-ms.date: 07/23/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -12,7 +12,7 @@ The classic pages component assesses SharePoint Online. It doesn't assess ShareP
 
 Download the latest [Microsoft 365 Assessment tool release](https://github.com/pnp/pnpassessment/releases). Core classic page readiness analysis is available in version 1.15.0 and later. The Microsoft Graph audit usage flow, `--auditlogwindowdays`, and `classicpageauditusage.csv` contract documented in this guidance require version 1.16.0 or later.
 
-For GCC High, Department of Defense, China, Germany, or a tenant that uses vanity URLs, configure `appsettings.json` as described in [Assessment tool configuration](https://pnp.github.io/pnpassessment/using-the-assessment-tool/configuration.html).
+Configure `appsettings.json` for tenants in GCC High, DoD, or [Microsoft 365 operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-operated-by-21vianet), and for tenants that use custom SharePoint URLs (vanity URLs). See [Assessment tool configuration](https://pnp.github.io/pnpassessment/using-the-assessment-tool/configuration.html).
 
 ## Authentication
 

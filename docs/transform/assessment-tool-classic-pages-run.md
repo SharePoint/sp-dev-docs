@@ -1,7 +1,7 @@
 ---
 title: Run a classic pages assessment
 description: Start, scope, monitor, and report a Microsoft 365 Assessment tool classic pages assessment.
-ms.date: 07/24/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -82,7 +82,7 @@ microsoft365-assessment.exe start --mode Classic --classicinclude Pages `
 
 ## Scope considerations
 
-- For a vanity URL tenant, configure both `AdminCenterUrl` and `MySiteHostUrl` in `appsettings.json`, and provide `--siteslist` or `--sitesfile`. See [Assessment tool configuration](https://pnp.github.io/pnpassessment/using-the-assessment-tool/configuration.html).
+- For a tenant that uses custom SharePoint URLs (vanity URLs), configure both `AdminCenterUrl` and `MySiteHostUrl` in `appsettings.json`, and provide `--siteslist` or `--sitesfile`. See [Assessment tool configuration](https://pnp.github.io/pnpassessment/using-the-assessment-tool/configuration.html).
 - For a Multi-Geo tenant, run a separate assessment for each geo. Use the primary tenant host in `--tenant` and provide the geo's site collections with `--siteslist` or `--sitesfile`.
 - Run a small representative scope first to validate authentication, output, audit access, and scan duration.
 - The tool supports up to three parallel assessments, but parallel scans increase the risk of throttling.
