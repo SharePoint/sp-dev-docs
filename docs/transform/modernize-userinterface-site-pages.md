@@ -40,6 +40,33 @@ Route page types deliberately:
 | `BlogPage` | Use the blog title as the identity and provide a target modern web. |
 | `ASPXPage`, `DelveBlogPage` | Keep outside this Assessment-driven workflow because the page assessment doesn't provide equivalent transformation-readiness analysis. |
 
+### Build a representative wave
+
+Treat pages as the same transformation pattern only when these dimensions match:
+
+| Dimension | Why it defines a separate pattern |
+| --- | --- |
+| `PageType` | Selects the Wiki/Web Part, Publishing, or Blog transformation path. |
+| `Layout` | Controls the generated sections and columns. |
+| Ordered Web Part signature | Pages with different Web Part types, order, hidden state, or closed state can transform differently. |
+| Mapping result | Unmapped or differently mapped Web Parts require separate remediation and validation. |
+| Target approach | In-place and cross-site transformations have different dependency and URL behavior. |
+| Special handling | Home pages, custom publishing layouts, and zero-part pages require separate review. |
+
+Use `classicpagewebparts.csv` to build the ordered Web Part signature for each page. Don't group only by `MappingPercentage` or `UnmappedWebParts`; fully mapped pages can still contain different Web Part types and runtime behavior.
+
+For the first wave:
+
+1. Exclude failed coverage, unsupported page types, home pages, zero-part pages, and unresolved mappings.
+1. Group the remaining pages by page type, layout, and ordered Web Part signature.
+1. Select at least one page from each pattern that you plan to migrate.
+1. Add another representative when pages in the same pattern use materially different Web Part properties or content dependencies.
+1. Prefer a page with a clear content baseline and a business owner who can validate the result.
+
+Use activity and modification dates to prioritize which pattern to process first, not as a replacement for pattern coverage.
+
+See [Build representative page groups with PowerShell](modernize-userinterface-site-pages-powershell.md#build-representative-page-groups).
+
 For field-to-command mapping and a selected-page example, see [Interpret the classic pages assessment report](assessment-tool-classic-pages-report.md#move-from-assessment-to-transformation).
 
 ## 2. Resolve blockers and choose the target

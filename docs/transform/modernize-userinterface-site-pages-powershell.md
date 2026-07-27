@@ -95,6 +95,89 @@ Before transforming a first-wave page, require:
 - A source page that inherits permissions from its library.
 - A recorded content and layout baseline for validation.
 
+## Build representative page groups
+
+The following script creates a candidate inventory. It doesn't transform pages.
+
+It groups eligible Wiki and Web Part pages by page type, layout, and ordered Web Part signature. The signature includes Web Part type, mapping result, hidden state, and closed state.
+
+```powershell
+$pages = Import-Csv .\classicpages.csv
+$webParts = Import-Csv .\classicpagewebparts.csv
+$partsByPage = @{}
+
+function Get-PageKey {
+  param($Row)
+
+  '{0}|{1}|{2}|{3}' -f $Row.ScanId, $Row.SiteUrl, $Row.WebUrl, $Row.PageUrl
+}
+
+foreach ($part in $webParts) {
+  $key = Get-PageKey $part
+  if (-not $partsByPage.ContainsKey($key)) {
+    $partsByPage[$key] = [Collections.Generic.List[object]]::new()
+  }
+
+  $partsByPage[$key].Add($part)
+}
+
+$candidates = foreach ($page in $pages) {
+  $fileName = [IO.Path]::GetFileName($page.PageUrl)
+
+  if ($page.PageType -notin @('WikiPage', 'WebPartPage') -or
+      $page.HomePage -eq 'True' -or
+      $page.WebPartCount -eq '0' -or
+      $page.MappingPercentage -ne '100' -or
+      -not [string]::IsNullOrWhiteSpace($page.UnmappedWebParts) -or
+      $fileName.StartsWith('Migrated_', [StringComparison]::OrdinalIgnoreCase) -or
+      $fileName.StartsWith('Previous_', [StringComparison]::OrdinalIgnoreCase)) {
+    continue
+  }
+
+  $key = Get-PageKey $page
+  if (-not $partsByPage.ContainsKey($key)) {
+    throw "Web Part rows are missing for $($page.PageUrl)."
+  }
+
+  $signature = (
+    $partsByPage[$key] |
+      Sort-Object { [int]$_.WebPartIndex } |
+      ForEach-Object {
+        '{0}|Mappable={1}|Hidden={2}|Closed={3}' -f
+          $_.WebPartTypeShort, $_.IsMappable, $_.Hidden, $_.IsClosed
+      }
+  ) -join ';'
+
+  [pscustomobject]@{
+    PatternKey = '{0}|{1}|{2}' -f $page.PageType, $page.Layout, $signature
+    ScanId = $page.ScanId
+    SiteUrl = $page.SiteUrl
+    WebUrl = $page.WebUrl
+    PageUrl = $page.PageUrl
+    PageType = $page.PageType
+    Layout = $page.Layout
+    WebPartCount = [int]$page.WebPartCount
+    ModifiedAt = $page.ModifiedAt
+    WebPartSignature = $signature
+  }
+}
+
+$groups = $candidates | Group-Object PatternKey -AsHashTable -AsString
+
+$candidateInventory = foreach ($candidate in $candidates) {
+  $candidate | Select-Object *,
+    @{ Name = 'PatternPageCount'; Expression = { $groups[$candidate.PatternKey].Count } }
+}
+
+$candidateInventory |
+  Sort-Object PatternKey, PageUrl |
+  Export-Csv .\representative-page-groups.csv -NoTypeInformation
+```
+
+Review `representative-page-groups.csv` and select at least one page from every `PatternKey` that the migration wave will contain. Select additional pages when Web Part properties, linked content, or business behavior differ materially within a pattern.
+
+Keep zero-part pages, home pages, publishing pages, and pages with unresolved mappings in separate review queues.
+
 ## Understand the source-preserving defaults
 
 > [!CAUTION]
