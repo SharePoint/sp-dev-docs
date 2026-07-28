@@ -222,7 +222,7 @@ Use [in-place versus cross-site guidance](modernize-userinterface-site-pages-app
 
 ## Transform all representative pages
 
-Download the [Assessment page wave scripts](https://github.com/TaoziZ03/modernization/tree/titao/assessment-page-wave-scripts/Scripts/PageTransformation/AssessmentPageWaves).
+Save the three embedded files from [Run Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md) in the same folder.
 
 In `representative-page-groups.csv`:
 

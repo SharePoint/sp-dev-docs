@@ -101,7 +101,7 @@ For the first wave:
 
 Only enable source-renaming or overwrite behavior after the generated pages have been approved and a rollback plan exists.
 
-Use `Convert-RepresentativePages.ps1` to process every approved representative page through the same safety and result contract.
+Use the embedded [Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md) to process every approved representative page through the same safety and result contract.
 
 ## 5. Validate and expand
 

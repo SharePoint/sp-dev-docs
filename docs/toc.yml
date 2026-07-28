@@ -1858,6 +1858,8 @@
       items:
       - name: Transform with PnP PowerShell
         href: transform/modernize-userinterface-site-pages-powershell.md
+      - name: Run page wave scripts
+        href: transform/modernize-userinterface-site-pages-wave-scripts.md
       - name: Validate transformed pages
         href: transform/modernize-userinterface-site-pages-validation.md
       - name: Reference

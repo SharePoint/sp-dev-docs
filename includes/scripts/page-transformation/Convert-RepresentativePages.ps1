@@ -1,0 +1,178 @@
+<#
+.SYNOPSIS
+Transforms all approved representative Wiki and Web Part pages from an Assessment manifest.
+
+.DESCRIPTION
+Requires one or more rows marked Selected=true for every IncludePattern=true PatternKey.
+Generated pages remain drafts and source pages aren't renamed or overwritten.
+
+.EXAMPLE
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<client-id>" `
+  -AuthenticationMode Interactive `
+  -Confirm
+
+.EXAMPLE
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<client-id>" `
+  -AuthenticationMode CertificateThumbprint `
+  -Tenant "contoso.onmicrosoft.com" `
+  -Thumbprint "<certificate-thumbprint>" `
+  -Confirm:$false
+#>
+
+[CmdletBinding(SupportsShouldProcess = $true, ConfirmImpact = 'High')]
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$ManifestPath,
+
+    [Parameter(Mandatory = $true)]
+    [string]$ClientId,
+
+    [Parameter(Mandatory = $false)]
+    [ValidateSet('Interactive', 'DeviceLogin', 'CertificateThumbprint', 'CertificateFile')]
+    [string]$AuthenticationMode = 'Interactive',
+
+    [Parameter(Mandatory = $false)]
+    [string]$Tenant,
+
+    [Parameter(Mandatory = $false)]
+    [string]$Thumbprint,
+
+    [Parameter(Mandatory = $false)]
+    [string]$CertificatePath,
+
+    [Parameter(Mandatory = $false)]
+    [securestring]$CertificatePassword,
+
+    [Parameter(Mandatory = $false)]
+    [string]$AzureEnvironment = 'Production',
+
+    [Parameter(Mandatory = $false)]
+    [string]$ResultPath,
+
+    [Parameter(Mandatory = $false)]
+    [string]$LogFolder,
+
+    [Parameter(Mandatory = $false)]
+    [string]$WebPartMappingFile,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$AllowModifiedPages,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$Force
+)
+
+Set-StrictMode -Version Latest
+. "$PSScriptRoot\PageTransformation.Common.ps1"
+
+if (-not (Test-Path -LiteralPath $ManifestPath -PathType Leaf)) {
+    throw "Manifest not found: $ManifestPath"
+}
+
+$ManifestPath = (Resolve-Path -LiteralPath $ManifestPath).Path
+$manifest = @(Import-Csv -LiteralPath $ManifestPath)
+if ($manifest.Count -eq 0) {
+    throw "The representative manifest is empty."
+}
+
+foreach ($column in @('PatternKey', 'IncludePattern', 'Selected', 'ExpectedVisibleContent', 'ValidationOwner')) {
+    if ($manifest[0].PSObject.Properties.Name -notcontains $column) {
+        throw "The representative manifest requires a $column column."
+    }
+}
+
+$includedRows = @(
+    $manifest |
+        Where-Object {
+            ConvertTo-PageWaveBoolean `
+                -Value $_.IncludePattern `
+                -Name "IncludePattern for $($_.PageUrl)"
+        }
+)
+$selectedRows = @(
+    $includedRows |
+        Where-Object {
+            ConvertTo-PageWaveBoolean `
+                -Value $_.Selected `
+                -Name "Selected for $($_.PageUrl)"
+        }
+)
+
+if ($includedRows.Count -eq 0) {
+    throw "No patterns are marked IncludePattern=true."
+}
+if ($selectedRows.Count -eq 0) {
+    throw "No pages are marked Selected=true."
+}
+
+$includedPatterns = @($includedRows.PatternKey | Sort-Object -Unique)
+$selectedPatterns = @($selectedRows.PatternKey | Sort-Object -Unique)
+$missingPatterns = @($includedPatterns | Where-Object { $_ -notin $selectedPatterns })
+if ($missingPatterns.Count -gt 0) {
+    throw "Select at least one representative page for each included pattern: $($missingPatterns -join ', ')"
+}
+
+foreach ($row in $selectedRows) {
+    if ([string]::IsNullOrWhiteSpace($row.PatternKey)) {
+        throw "Every selected representative page needs PatternKey: $($row.PageUrl)"
+    }
+    if ([string]::IsNullOrWhiteSpace($row.ExpectedVisibleContent) -or
+        [string]::IsNullOrWhiteSpace($row.ValidationOwner)) {
+        throw "Every selected representative page needs ExpectedVisibleContent and ValidationOwner: $($row.PageUrl)"
+    }
+}
+
+$manifestFolder = Split-Path -Parent $ManifestPath
+if ([string]::IsNullOrWhiteSpace($ResultPath)) {
+    $resultName = if ($WhatIfPreference) {
+        'representative-page-preview.csv'
+    }
+    else {
+        'representative-page-results.csv'
+    }
+    $ResultPath = Join-Path $manifestFolder $resultName
+}
+if ([string]::IsNullOrWhiteSpace($LogFolder)) {
+    $LogFolder = Join-Path $manifestFolder 'representative-page-logs'
+}
+
+$entryCmdlet = $PSCmdlet
+$shouldProcess = {
+    param($target, $action)
+    $entryCmdlet.ShouldProcess($target, $action)
+}.GetNewClosure()
+Test-PageWaveAuthentication `
+    -AuthenticationMode $AuthenticationMode `
+    -Tenant $Tenant `
+    -Thumbprint $Thumbprint `
+    -CertificatePath $CertificatePath
+Test-AssessmentPageWaveRows -Rows $selectedRows
+$transformationProfile = Get-PageWaveTransformationProfile -WebPartMappingFile $WebPartMappingFile
+$resultWriter = New-PageWaveResultWriter -Path $ResultPath -Force:$Force
+$ResultPath = $resultWriter.Path
+
+$results = Invoke-AssessmentPageWave `
+    -Rows $selectedRows `
+    -ClientId $ClientId `
+    -AuthenticationMode $AuthenticationMode `
+    -ShouldProcessCallback $shouldProcess `
+    -ResultWriter $resultWriter.Write `
+    -TransformationProfile $transformationProfile `
+    -Tenant $Tenant `
+    -Thumbprint $Thumbprint `
+    -CertificatePath $CertificatePath `
+    -CertificatePassword $CertificatePassword `
+    -AzureEnvironment $AzureEnvironment `
+    -LogFolder $LogFolder `
+    -AllowModifiedPages:$AllowModifiedPages
+
+$failed = @($results | Where-Object TransformationStatus -eq 'Failed')
+if ($failed.Count -gt 0) {
+    throw "$($failed.Count) representative page transformations failed. Review $ResultPath."
+}
+
+Write-Host "Representative page results: $ResultPath" -ForegroundColor Green

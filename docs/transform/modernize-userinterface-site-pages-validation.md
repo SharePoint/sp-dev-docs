@@ -100,5 +100,6 @@ The script blocks expansion if a representative result is missing, stale, not pa
 ## Reference
 
 - [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)
+- [Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md)
 - [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
 - [Classic Web Part mappings](modernize-userinterface-site-pages-webparts.md)
