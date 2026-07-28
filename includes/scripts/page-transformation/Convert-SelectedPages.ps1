@@ -78,8 +78,11 @@ param(
 )
 
 Set-StrictMode -Version Latest
+# Use the same source validation and conversion engine as the representative run.
 . "$PSScriptRoot\PageTransformation.Common.ps1"
 
+# Expansion always requires all three artifacts: the pages to add, the original
+# representative manifest, and the manually validated representative results.
 foreach ($path in @($PagesPath, $RepresentativeResultsPath, $RepresentativeManifestPath)) {
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
         throw "Input file not found: $path"
@@ -95,6 +98,8 @@ if ($representativeManifest.Count -eq 0 -or $representativeResults.Count -eq 0) 
     throw "The representative manifest and results files must both contain rows."
 }
 
+# Rebuild the complete representative scope from the current manifest. A newly included
+# pattern cannot be ignored simply because it has no result yet.
 $includedRepresentativeRows = @(
     $representativeManifest |
         Where-Object {
@@ -122,6 +127,8 @@ if ($patternsWithoutRepresentative.Count -gt 0) {
     throw "Every included pattern needs a selected representative: $($patternsWithoutRepresentative -join ', ')"
 }
 
+# Normalize manifest and result rows by Assessment identity, rejecting duplicates before
+# any target page can be created.
 $representativeRowsByKey = @{}
 foreach ($row in $representativeRows) {
     $key = Get-PageWaveKey -Row $row
@@ -144,6 +151,9 @@ if ($representativeRowsByKey.Count -ne $representativeResultsByKey.Count) {
     throw "Representative manifest and result row counts don't match."
 }
 
+# Bind each approval to both the complete manifest row and the transformation profile.
+# This blocks stale results and prevents a different PnP or mapping configuration from
+# inheriting an earlier validation decision.
 $passedPatterns = @{}
 foreach ($key in $representativeRowsByKey.Keys) {
     if (-not $representativeResultsByKey.ContainsKey($key)) {
@@ -186,6 +196,8 @@ foreach ($row in $pages) {
     }
 }
 
+# Representative pages are already transformed and validated. Exclude them from the
+# expanded wave even if the user accidentally leaves them in approved-pages.csv.
 $representativeKeys = @{}
 foreach ($row in $representativeResults) {
     $representativeKeys["$($row.ScanId)|$($row.SiteUrl)|$($row.WebUrl)|$($row.PageUrl)"] = $true
@@ -203,6 +215,7 @@ if ($pagesToTransform.Count -eq 0) {
     throw "No additional pages remain after excluding validated representative pages."
 }
 
+# Keep preview and execution evidence separate and refuse implicit result replacement.
 $pagesFolder = Split-Path -Parent $PagesPath
 if ([string]::IsNullOrWhiteSpace($ResultPath)) {
     $resultName = if ($WhatIfPreference) {
@@ -217,6 +230,8 @@ if ([string]::IsNullOrWhiteSpace($LogFolder)) {
     $LogFolder = Join-Path $pagesFolder 'selected-page-logs'
 }
 
+# Preserve the High-impact confirmation behavior of this entry script when the shared
+# engine asks permission for each page.
 $entryCmdlet = $PSCmdlet
 $shouldProcess = {
     param($target, $action)
@@ -228,6 +243,8 @@ Test-PageWaveAuthentication `
     -Thumbprint $Thumbprint `
     -CertificatePath $CertificatePath
 Test-AssessmentPageWaveRows -Rows $pagesToTransform
+
+# Persist each page result at the moment it finishes, rather than after the full wave.
 $resultWriter = New-PageWaveResultWriter -Path $ResultPath -Force:$Force
 $ResultPath = $resultWriter.Path
 
@@ -246,6 +263,7 @@ $results = Invoke-AssessmentPageWave `
     -LogFolder $LogFolder `
     -AllowModifiedPages:$AllowModifiedPages
 
+# Surface a failing process exit after every individual error has been written.
 $failed = @($results | Where-Object TransformationStatus -eq 'Failed')
 if ($failed.Count -gt 0) {
     throw "$($failed.Count) selected page transformations failed. Review $ResultPath."

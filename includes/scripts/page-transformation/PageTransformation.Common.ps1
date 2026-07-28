@@ -1,5 +1,7 @@
 Set-StrictMode -Version Latest
 
+# CSV values arrive as strings. Parse safety-critical values strictly instead of
+# treating blanks or misspellings as False.
 function ConvertTo-PageWaveBoolean {
     param(
         [Parameter(Mandatory = $true)]
@@ -25,6 +27,7 @@ function ConvertTo-PageWaveBoolean {
     }
 }
 
+# Use bounded integer parsing for Assessment counts and readiness percentages.
 function ConvertTo-PageWaveInteger {
     param(
         [Parameter(Mandatory = $true)]
@@ -50,6 +53,7 @@ function ConvertTo-PageWaveInteger {
     return $parsed
 }
 
+# Reconstruct the exact web URL from the Assessment SiteUrl + WebUrl contract.
 function Get-PageWaveSourceUrl {
     param(
         [Parameter(Mandatory = $true)]
@@ -68,6 +72,7 @@ function Get-PageWaveSourceUrl {
     return "$($Row.SiteUrl.TrimEnd('/'))$($Row.WebUrl)"
 }
 
+# Read optional manifest/result properties without breaking StrictMode error handling.
 function Get-PageWaveValue {
     param(
         [Parameter(Mandatory = $true)]
@@ -84,6 +89,7 @@ function Get-PageWaveValue {
     return ''
 }
 
+# This key uniquely identifies one assessed page across scans, sites, and webs.
 function Get-PageWaveKey {
     param(
         [Parameter(Mandatory = $true)]
@@ -99,6 +105,8 @@ function Get-PageWaveKey {
     ).ToLowerInvariant()
 }
 
+# Hash every transformation-relevant manifest value. The expansion script uses this
+# hash to prove that the validated representative row hasn't changed.
 function Get-PageWaveManifestHash {
     param(
         [Parameter(Mandatory = $true)]
@@ -139,6 +147,8 @@ function Get-PageWaveManifestHash {
     }
 }
 
+# Validation is meaningful only when the same scripts, PnP.PowerShell version, and Web
+# Part mapping are used for both the representative and expanded waves.
 function Get-PageWaveTransformationProfile {
     param(
         [Parameter(Mandatory = $false)]
@@ -181,6 +191,7 @@ function Get-PageWaveTransformationProfile {
     }
 }
 
+# Validate unattended inputs before result files are reserved or page processing begins.
 function Test-PageWaveAuthentication {
     param(
         [Parameter(Mandatory = $true)]
@@ -221,6 +232,8 @@ function Test-PageWaveAuthentication {
     }
 }
 
+# Reserve the output path before the first SharePoint write. The returned callback
+# appends one durable result row after every page attempt.
 function New-PageWaveResultWriter {
     param(
         [Parameter(Mandatory = $true)]
@@ -269,6 +282,8 @@ function New-PageWaveResultWriter {
     }
 }
 
+# Build a connection without logging secrets. Connections are cached by web by the
+# calling engine.
 function New-PageWaveConnection {
     param(
         [Parameter(Mandatory = $true)]
@@ -345,6 +360,8 @@ function New-PageWaveConnection {
     Connect-PnPOnline @parameters
 }
 
+# Validate the whole manifest before any page is transformed. This prevents a malformed
+# later row from stopping a wave after earlier pages have already been created.
 function Test-AssessmentPageWaveRows {
     param(
         [Parameter(Mandatory = $true)]
@@ -420,6 +437,7 @@ function Test-AssessmentPageWaveRows {
     }
 }
 
+# Shared execution engine used by both public entry scripts.
 function Invoke-AssessmentPageWave {
     [CmdletBinding()]
     param(
@@ -468,6 +486,7 @@ function Invoke-AssessmentPageWave {
         throw "PnP PowerShell requires PowerShell 7.4.0 or later."
     }
 
+    # Repeat the entry-point validation because this function can also be invoked directly.
     Test-PageWaveAuthentication `
         -AuthenticationMode $AuthenticationMode `
         -Tenant $Tenant `
@@ -478,6 +497,8 @@ function Invoke-AssessmentPageWave {
     Import-Module PnP.PowerShell -ErrorAction Stop
     $WebPartMappingFile = $TransformationProfile.WebPartMappingFile
 
+    # WhatIf doesn't create a SharePoint connection or log folder, but still writes a
+    # preview result CSV through the supplied ResultWriter.
     if (Test-Path -LiteralPath $LogFolder -PathType Container) {
         $LogFolder = (Resolve-Path -LiteralPath $LogFolder).Path
     }
@@ -510,6 +531,7 @@ function Invoke-AssessmentPageWave {
         $observedModifiedAt = $null
 
         try {
+            # Reject page categories that require a separately reviewed migration path.
             if ($row.PageType -notin @('WikiPage', 'WebPartPage')) {
                 throw "Page type '$($row.PageType)' isn't supported by these Wiki/Web Part wave scripts."
             }
@@ -535,12 +557,16 @@ function Invoke-AssessmentPageWave {
 
             $sourceWebUrl = Get-PageWaveSourceUrl -Row $row
             $action = "Create a draft modern page from $($row.PageUrl)"
+
+            # Ask permission before authentication or any tenant read. -WhatIf exits here.
             if (-not (& $ShouldProcessCallback $sourceWebUrl $action)) {
                 $status = 'Skipped'
                 $errorMessage = "The operation wasn't approved or was run with -WhatIf."
                 continue
             }
 
+            # Reuse successful connections and avoid repeating a known authentication
+            # failure for every remaining page in the same web.
             if ($connectionErrors.ContainsKey($sourceWebUrl)) {
                 throw $connectionErrors[$sourceWebUrl]
             }
@@ -563,6 +589,8 @@ function Invoke-AssessmentPageWave {
             }
             $connection = $connections[$sourceWebUrl]
 
+            # Assessment HomePage can become stale without changing the page itself.
+            # Re-read the current welcome page immediately before conversion.
             if (-not $webs.ContainsKey($sourceWebUrl)) {
                 $webs[$sourceWebUrl] = Get-PnPWeb `
                     -Includes WelcomePage, ServerRelativeUrl `
@@ -585,6 +613,8 @@ function Invoke-AssessmentPageWave {
                 throw "PageUrl isn't under ListUrl: $($row.PageUrl)"
             }
 
+            # Resolve the assessed list by GUID, then verify its URL. This prevents a
+            # reused item ID in another library from being transformed.
             $sourceList = Get-PnPList `
                 -Identity ([guid]$row.ListId) `
                 -ThrowExceptionIfListNotFound `
@@ -606,6 +636,8 @@ function Invoke-AssessmentPageWave {
                 throw "ListUrl changed for $($row.PageUrl). Rerun Assessment before transforming this page."
             }
 
+            # Resolve the exact approved file and prove that it still belongs to the
+            # assessed list.
             $sourceItem = Get-PnPFile `
                 -Url $row.PageUrl `
                 -AsListItem `
@@ -619,6 +651,8 @@ function Invoke-AssessmentPageWave {
                 throw "The approved file no longer belongs to the assessed list: $($row.PageUrl)"
             }
 
+            # Compare the live file identity and modification timestamp with Assessment.
+            # -AllowModifiedPages is an explicit reapproval escape hatch.
             $observedFileRef = [string]$sourceItem.FieldValues['FileRef']
             if (-not $observedFileRef.Equals($row.PageUrl, [StringComparison]::OrdinalIgnoreCase)) {
                 throw "The current file URL doesn't match the approved PageUrl: $($row.PageUrl)"
@@ -634,6 +668,8 @@ function Invoke-AssessmentPageWave {
                 throw "The source was modified after Assessment. Rerun Assessment or use -AllowModifiedPages after reapproval: $($row.PageUrl)"
             }
 
+            # Batch scripts deliberately exclude unique ACLs. Silent permission-copy
+            # failures could otherwise expose the draft through broader inheritance.
             $hasUniquePermissions = Get-PnPProperty `
                 -ClientObject $sourceItem `
                 -Property HasUniqueRoleAssignments `
@@ -643,6 +679,7 @@ function Invoke-AssessmentPageWave {
                 throw "The source has unique permissions and is excluded from these batch scripts: $($row.PageUrl)"
             }
 
+            # Keep source and target in the same default SitePages permission scope.
             $webServerRelativeUrl = $web.ServerRelativeUrl.TrimEnd('/')
             $libraryRelativeUrl = if ([string]::IsNullOrWhiteSpace($webServerRelativeUrl)) {
                 $sourceList.RootFolder.ServerRelativeUrl.TrimStart('/')
@@ -654,6 +691,8 @@ function Invoke-AssessmentPageWave {
                 throw "These batch scripts only support pages in the default SitePages library: $($row.PageUrl)"
             }
 
+            # Always preserve the source, create a draft, skip ACL copying, and log.
+            # Overwrite and TakeSourcePageName are intentionally unavailable here.
             $parameters = @{
                 Identity = $sourceItem.Id
                 Connection = $connection
@@ -668,6 +707,8 @@ function Invoke-AssessmentPageWave {
                 $parameters.WebPartMappingFile = $WebPartMappingFile
             }
 
+            # ConvertTo-PnPPage returns the created server-relative URL. A missing URL is
+            # treated as a failure even if the cmdlet didn't throw.
             $conversionOutput = @(ConvertTo-PnPPage @parameters)
             $targetPageUrl = $conversionOutput |
                 Where-Object { $_ -is [string] -and -not [string]::IsNullOrWhiteSpace($_) } |
@@ -683,6 +724,8 @@ function Invoke-AssessmentPageWave {
             $errorMessage = $_.Exception.Message
         }
         finally {
+            # Persist success, failure, skip, observed source identity, and validation
+            # profile before moving to the next page.
             $resultRow = [pscustomobject][ordered]@{
                 ManifestRowHash = Get-PageWaveManifestHash -Row $row
                 TransformationProfileHash = $TransformationProfile.Hash

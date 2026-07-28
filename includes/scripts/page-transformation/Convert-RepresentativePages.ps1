@@ -67,8 +67,11 @@ param(
 )
 
 Set-StrictMode -Version Latest
+# Keep shared authentication, manifest validation, and conversion behavior identical
+# between the representative and expanded-wave entry points.
 . "$PSScriptRoot\PageTransformation.Common.ps1"
 
+# Resolve the manifest once so result and log defaults stay next to the reviewed input.
 if (-not (Test-Path -LiteralPath $ManifestPath -PathType Leaf)) {
     throw "Manifest not found: $ManifestPath"
 }
@@ -85,6 +88,8 @@ foreach ($column in @('PatternKey', 'IncludePattern', 'Selected', 'ExpectedVisib
     }
 }
 
+# IncludePattern defines the patterns in the planned migration. Selected identifies
+# the concrete pages that must prove those patterns before the wave can expand.
 $includedRows = @(
     $manifest |
         Where-Object {
@@ -109,6 +114,7 @@ if ($selectedRows.Count -eq 0) {
     throw "No pages are marked Selected=true."
 }
 
+# A representative run is incomplete when any included pattern lacks a selected page.
 $includedPatterns = @($includedRows.PatternKey | Sort-Object -Unique)
 $selectedPatterns = @($selectedRows.PatternKey | Sort-Object -Unique)
 $missingPatterns = @($includedPatterns | Where-Object { $_ -notin $selectedPatterns })
@@ -126,6 +132,8 @@ foreach ($row in $selectedRows) {
     }
 }
 
+# Preview runs use a separate result name. Existing evidence is never replaced unless
+# the caller explicitly supplies -Force.
 $manifestFolder = Split-Path -Parent $ManifestPath
 if ([string]::IsNullOrWhiteSpace($ResultPath)) {
     $resultName = if ($WhatIfPreference) {
@@ -140,6 +148,8 @@ if ([string]::IsNullOrWhiteSpace($LogFolder)) {
     $LogFolder = Join-Path $manifestFolder 'representative-page-logs'
 }
 
+# Capture the entry script's High-impact ShouldProcess context. The shared engine calls
+# this closure before it authenticates or reads SharePoint.
 $entryCmdlet = $PSCmdlet
 $shouldProcess = {
     param($target, $action)
@@ -151,7 +161,13 @@ Test-PageWaveAuthentication `
     -Thumbprint $Thumbprint `
     -CertificatePath $CertificatePath
 Test-AssessmentPageWaveRows -Rows $selectedRows
+
+# The profile binds validation to the exact script version, PnP.PowerShell version,
+# and Web Part mapping used during this representative run.
 $transformationProfile = Get-PageWaveTransformationProfile -WebPartMappingFile $WebPartMappingFile
+
+# Reserve the result file before the first SharePoint write, then append every result
+# immediately so an interrupted wave retains completed evidence.
 $resultWriter = New-PageWaveResultWriter -Path $ResultPath -Force:$Force
 $ResultPath = $resultWriter.Path
 
@@ -170,6 +186,7 @@ $results = Invoke-AssessmentPageWave `
     -LogFolder $LogFolder `
     -AllowModifiedPages:$AllowModifiedPages
 
+# The detailed per-page failures are already durable in the result CSV.
 $failed = @($results | Where-Object TransformationStatus -eq 'Failed')
 if ($failed.Count -gt 0) {
     throw "$($failed.Count) representative page transformations failed. Review $ResultPath."
