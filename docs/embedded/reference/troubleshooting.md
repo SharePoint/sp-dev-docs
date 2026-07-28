@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 description: Common SharePoint Embedded setup, auth, billing, Office, search, webhook, and admin issues.
-ms.date: 07/09/2026
+ms.date: 07/28/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -33,6 +33,7 @@ Use this reference to identify likely causes and fixes. For end-to-end setup, se
 | Search API calls fail because of permissions. | Search scenarios require delegated Microsoft Graph permissions during preview, including `Files.Read.All` in addition to `FileStorageContainer.Selected`. | Request and consent to the required delegated permissions and retest with a signed-in user. | [Build search experiences](../build/search-containers-files.md) |
 | Webhook subscription validation fails. | The notification endpoint doesn't echo the `validationToken` as plain text, or the endpoint isn't publicly reachable. | Return `200` with the `validationToken` and `Content-Type: text/plain`; expose the endpoint through a reachable public URL. | [Use webhooks](../build/respond-to-changes-webhooks.md) |
 | Webhook notifications don't identify the intended container. | The subscription notification URL doesn't carry the container ID, or the handler doesn't read it. | Append `driveId={{ContainerId}}` to the notification URL and have the handler read the `driveId` query parameter. | [Use webhooks](../build/respond-to-changes-webhooks.md) |
+| Copilot Retrieval API requests against the preview `sharePointEmbedded` data source return no results. | No user in the tenant has a Microsoft 365 Copilot license, so the semantic index never initialized. Content might also still be indexing. | Assign a Microsoft 365 Copilot license to at least one user in the tenant, then retry after indexing completes. Individual querying users don't need their own license. For more information, see [Semantic index for Microsoft 365 Copilot](/microsoftsearch/semantic-index-for-copilot). | [Use the Retrieval API](../build/agent-experiences.md#use-the-retrieval-api) |
 | Container isn't visible in SharePoint admin center. | The admin is using the wrong owning application ID, identity, or role. | Confirm the owning application ID and admin role, then refresh the admin experience. | [Admin overview](../admin/admin-overview.md) |
 
 ## Diagnostic links

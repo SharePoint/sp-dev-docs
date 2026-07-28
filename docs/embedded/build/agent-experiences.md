@@ -1,7 +1,7 @@
 ---
 title: Add Microsoft 365 Copilot and agent experiences
-description: Ground Copilot-style agents in SharePoint Embedded content and expose SharePoint Embedded to Microsoft Foundry.
-ms.date: 07/10/2026
+description: Ground agents in SharePoint Embedded content with Microsoft Foundry knowledge sources and the Copilot Retrieval API.
+ms.date: 07/28/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -15,7 +15,7 @@ ai-usage: ai-assisted
 <!-- agent:
 task_type: how-to
 audience: developer
-outcome: Configure Foundry knowledge sources over SharePoint Embedded containers.
+outcome: Configure Foundry knowledge sources and the Copilot Retrieval API over SharePoint Embedded containers.
 next: migrate-azure-blob-storage.md
 -->
 
@@ -23,6 +23,101 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 
 > [!CAUTION]
 > The earlier **SharePoint Embedded agent SDK** (the React `ChatEmbedded` control) was **deprecated in March 2026** and replaced by [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote) configured for SharePoint Embedded. Use the Foundry knowledge source for new work.
+
+## Use the Retrieval API
+
+Use the [Microsoft 365 Copilot Retrieval API](/graph/api/copilotroot-retrieval) when your app builds its own grounding step instead of using a Foundry knowledge source. Set `dataSource` to `sharePointEmbedded` to scope retrieval to SharePoint Embedded content.
+
+> [!NOTE]
+> Retrieval API support for the `sharePointEmbedded` data source is in preview.
+
+### Retrieval API prerequisites
+
+- A SharePoint Embedded app with at least one container, plus the container type ID.
+- Pay-as-you-go billing configured for the container type.
+- At least one user in the tenant with a Microsoft 365 Copilot license, so the semantic index initializes. For more information, see [Semantic index for Microsoft 365 Copilot](/microsoftsearch/semantic-index-for-copilot).
+
+The `sharePointEmbedded` data source bills pay-as-you-go, so each user who queries the Retrieval API doesn't need an individual Microsoft 365 Copilot license.
+
+### Retrieve content from a container type
+
+Call `POST /copilot/retrieval` with a delegated token. Set `dataSource` to `sharePointEmbedded` and pass your container type ID in `dataSourceConfiguration`. The request needs the `FileStorageContainer.Selected` delegated permission, and the service trims results to content the signed-in user can access.
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+```
+
+```json
+{
+  "queryString": "What are the terms of the Contoso agreement?",
+  "dataSource": "sharePointEmbedded",
+  "dataSourceConfiguration": {
+    "sharePointEmbedded": {
+      "containerTypeId": "{containerTypeId}"
+    }
+  },
+  "resourceMetadata": ["containerTypeId"]
+}
+```
+
+Replace `{containerTypeId}` with your container type ID.
+
+The response returns a `retrievalHits` collection. Each hit identifies a source file through `webUrl` and carries one or more `extracts`, ordered by `relevanceScore`.
+
+```json
+{
+  "retrievalHits": [
+    {
+      "webUrl": "https://contoso.sharepoint.com/contentstorage/...&file=agreement.docx",
+      "extracts": [
+        {
+          "text": "The agreement renews annually unless either party gives 30 days' notice.",
+          "relevanceScore": 0.8421
+        }
+      ],
+      "resourceMetadata": {
+        "containerTypeId": "{containerTypeId}"
+      }
+    }
+  ]
+}
+```
+
+Pass the extracts to your own model or answer-generation step as grounding data. This snippet sends the query and reads the top extract from each hit:
+
+```javascript
+const response = await fetch("https://graph.microsoft.com/v1.0/copilot/retrieval", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${accessToken}`
+  },
+  body: JSON.stringify({
+    queryString: query,
+    dataSource: "sharePointEmbedded",
+    dataSourceConfiguration: {
+      sharePointEmbedded: { containerTypeId: containerTypeId }
+    },
+    resourceMetadata: ["containerTypeId"]
+  })
+});
+
+const data = await response.json();
+const grounding = (data.retrievalHits ?? []).map(hit => ({
+  url: hit.webUrl,
+  text: hit.extracts?.[0]?.text?.trim(),
+  score: hit.extracts?.[0]?.relevanceScore
+}));
+```
+
+Retrieval covers every container of the container type that the signed-in user can access. If a request returns no hits, confirm that the semantic index initialized, that indexing finished, and that the user has access to the content.
+
+### Retrieval API billing
+
+Retrieval API requests that use the `sharePointEmbedded` data source bill on the Copilot Studio message meter. Charges follow the billing model configured for the container type. Standard billing charges the owning tenant's Azure subscription, and pass-through billing charges the consuming tenant's subscription.
+
+For meter details, see [Billing meters](../reference/billing-meters.md). To compare models, see [Choose a billing model](../plan/choose-billing-model.md).
 
 ## Test user experience
 
@@ -38,3 +133,4 @@ Sign in with a user who has a Microsoft 365 Copilot license when required. Uploa
 ## Next steps
 
 - [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md)
+- [Billing meters](../reference/billing-meters.md)

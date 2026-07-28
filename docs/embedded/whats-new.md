@@ -20,6 +20,7 @@ next: overview.md
 
 ## July 2026
 
+- The [Copilot Retrieval API](/graph/api/copilotroot-retrieval) supports the `sharePointEmbedded` data source in preview with pay-as-you-go billing.
 - You can [use the Model Context Protocol (MCP) server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md). The open-source SharePoint Embedded MCP server npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)) is preview software. It lets MCP-compatible AI clients, such as GitHub Copilot in Visual Studio Code or the CLI, Claude, or Cursor, provision and manage SharePoint Embedded applications through natural language.
 
 ## June 2026
