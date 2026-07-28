@@ -192,18 +192,17 @@ function Get-PageWaveIncludedManifestHash {
         [object[]]$Rows
     )
 
-    $entries = @(
-        $Rows |
-            ForEach-Object {
-                [pscustomobject]@{
-                    PageKey = Get-PageWaveKey -Row $_
-                    CandidateHash = Get-PageWaveCandidateHash -Row $_
-                }
-            } |
-            Sort-Object PageKey, CandidateHash |
-            ForEach-Object { '{0}|{1}' -f $_.PageKey, $_.CandidateHash }
-    )
-    $payload = $entries -join [char]0x1e
+    $entries = [Collections.Generic.List[string]]::new()
+    foreach ($row in $Rows) {
+        $entries.Add(
+            (Get-PageWaveKey -Row $row) +
+            '|' +
+            (Get-PageWaveCandidateHash -Row $row)
+        )
+    }
+    $sortedEntries = $entries.ToArray()
+    [Array]::Sort($sortedEntries, [StringComparer]::Ordinal)
+    $payload = $sortedEntries -join [char]0x1e
     $sha256 = [Security.Cryptography.SHA256]::Create()
     try {
         return [Convert]::ToHexString(
