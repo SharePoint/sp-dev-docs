@@ -57,10 +57,7 @@ param(
     [string]$LogFolder,
 
     [Parameter(Mandatory = $false)]
-    [string]$WebPartMappingFile,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$AllowModifiedPages,
+    [switch]$PreflightOnly,
 
     [Parameter(Mandatory = $false)]
     [switch]$Force
@@ -139,6 +136,9 @@ if ([string]::IsNullOrWhiteSpace($ResultPath)) {
     $resultName = if ($WhatIfPreference) {
         'representative-page-preview.csv'
     }
+    elseif ($PreflightOnly) {
+        'representative-page-preflight.csv'
+    }
     else {
         'representative-page-results.csv'
     }
@@ -163,8 +163,8 @@ Test-PageWaveAuthentication `
 Test-AssessmentPageWaveRows -Rows $selectedRows
 
 # The profile binds validation to the exact script version, PnP.PowerShell version,
-# and Web Part mapping used during this representative run.
-$transformationProfile = Get-PageWaveTransformationProfile -WebPartMappingFile $WebPartMappingFile
+# and exact page wave scripts used during this representative run.
+$transformationProfile = Get-PageWaveTransformationProfile
 
 # Reserve the result file before the first SharePoint write, then append every result
 # immediately so an interrupted wave retains completed evidence.
@@ -184,7 +184,7 @@ $results = Invoke-AssessmentPageWave `
     -CertificatePassword $CertificatePassword `
     -AzureEnvironment $AzureEnvironment `
     -LogFolder $LogFolder `
-    -AllowModifiedPages:$AllowModifiedPages
+    -PreflightOnly:$PreflightOnly
 
 # The detailed per-page failures are already durable in the result CSV.
 $failed = @($results | Where-Object TransformationStatus -eq 'Failed')

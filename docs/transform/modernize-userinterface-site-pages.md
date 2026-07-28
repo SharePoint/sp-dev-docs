@@ -1,14 +1,16 @@
 ---
 title: Transform classic SharePoint pages to modern pages
 description: Select assessed classic pages, transform a representative wave with PnP PowerShell, validate the results, and expand safely.
-ms.date: 07/27/2026
+ms.date: 07/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Transform classic SharePoint pages to modern pages
 
-This primary workflow transforms classic pages in SharePoint Online. Use the Microsoft 365 Assessment tool to identify pages and their Web Parts, and then use PnP PowerShell to transform approved pages and validate each result before processing a larger wave.
+This primary workflow transforms classic Wiki and Web Part pages in the default `SitePages` library in SharePoint Online. Use the Microsoft 365 Assessment tool to identify pages and their Web Parts, and then use PnP PowerShell to transform approved pages and validate each result before processing a larger wave.
+
+Publishing pages, Blog pages, pages outside `SitePages`, home pages, and SharePoint Server sources require separate advanced procedures and aren't accepted by the page wave scripts.
 
 This workflow uses PnP PowerShell as the primary execution path. The page transformation engine is part of the open-source [PnP Framework](https://github.com/pnp/pnpframework) and doesn't have a Microsoft support SLA.
 
@@ -31,22 +33,13 @@ For the first wave:
 
 `MappingPercentage=100` is a planning signal. It doesn't guarantee that the transformation will run successfully or preserve the expected content.
 
-Route page types deliberately:
-
-| Assessment page type | Transformation route |
-| --- | --- |
-| `WikiPage`, `WebPartPage` | Transform in place for the first wave. Use a target web only when the modern page must be created in another site. |
-| `PublishingPage` | Use a target modern web and review the page-layout mapping. |
-| `BlogPage` | Use the blog title as the identity and provide a target modern web. |
-| `ASPXPage`, `DelveBlogPage` | Keep outside this Assessment-driven workflow because the page assessment doesn't provide equivalent transformation-readiness analysis. |
-
 ### Build a representative wave
 
 Treat pages as the same transformation pattern only when these dimensions match:
 
 | Dimension | Why it defines a separate pattern |
 | --- | --- |
-| `PageType` | Selects the Wiki/Web Part, Publishing, or Blog transformation path. |
+| `PageType` | Separates Wiki and Web Part transformation behavior. |
 | `Layout` | Controls the generated sections and columns. |
 | Ordered Web Part signature | Pages with different Web Part types, order, hidden state, or closed state can transform differently. |
 | Mapping result | Unmapped or differently mapped Web Parts require separate remediation and validation. |
@@ -74,9 +67,7 @@ For field-to-command mapping and a selected-page example, see [Interpret the cla
 Group candidate pages by page type, layout, and unmapped Web Part combination. Resolve common blockers before transforming a wave.
 
 - For Wiki and Web Part pages, in-place transformation is the preferred starting point because dependencies remain in the source site.
-- Publishing and Blog pages require a target modern web.
-- Custom publishing layouts require a reviewed page-layout mapping. Without one, the engine generates a default mapping and places the content in a default section.
-- Cross-site transformations require additional validation for links, files, lists, users, and taxonomy.
+- Cross-site Wiki and Web Part transformations require additional validation for links, files, lists, users, and taxonomy.
 
 See [Choose in-place or cross-site transformation](modernize-userinterface-site-pages-approach.md) and [Review classic Web Part mappings](modernize-userinterface-site-pages-webparts.md).
 
@@ -101,7 +92,7 @@ For the first wave:
 
 Only enable source-renaming or overwrite behavior after the generated pages have been approved and a rollback plan exists.
 
-Use the embedded [Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md) to process every approved representative page through the same safety and result contract.
+Use the embedded scripts from [Page wave script reference](modernize-userinterface-site-pages-wave-scripts.md) to process every approved representative page through the same safety and result contract.
 
 ## 5. Validate and expand
 
@@ -125,10 +116,12 @@ After every representative result is marked `Passed`, use `Convert-SelectedPages
 - [Classic Web Part mappings](modernize-userinterface-site-pages-webparts.md)
 - [Page transformation configuration options](modernize-userinterface-site-pages-configuration.md)
 - [Page transformation model](modernize-userinterface-site-pages-model.md)
-- [Publishing page transformation model](modernize-userinterface-site-pages-model-publishing.md)
 - [URL mapping](modernize-userinterface-site-pages-urlmapping.md)
 - [User mapping](modernize-userinterface-site-pages-usermapping.md)
 - [Term mapping](modernize-userinterface-site-pages-termmapping.md)
 - [Layout transformation](modernize-userinterface-site-pages-layout.md)
 - [.NET integration](modernize-userinterface-site-pages-dotnet.md)
-- [Transform pages from SharePoint Server](modernize-userinterface-site-pages-powershell.md#route-other-page-types)
+- [Transform pages from SharePoint Server](modernize-userinterface-site-pages-approach.md#cross-site-transformation)
+- [Publishing page readiness](assessment-tool-publishing-coverage.md)
+- [Publishing page transformation model](modernize-userinterface-site-pages-model-publishing.md)
+- [Modernize classic Blog pages](modernize-blogs.md)

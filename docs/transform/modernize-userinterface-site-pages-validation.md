@@ -1,7 +1,7 @@
 ---
 title: Validate transformed classic pages
 description: Validate transformed page content, layout, links, metadata, permissions, and publication state before expanding a migration wave.
-ms.date: 07/27/2026
+ms.date: 07/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -56,13 +56,14 @@ Use one record per attempted page:
 
 | Field | Purpose |
 | --- | --- |
-| `AssessmentId` | Links the page to the source evidence. |
-| `SourcePageUrl`, `TargetPageUrl` | Identifies both pages. |
+| `ScanId` | Links the page to the Assessment evidence. |
+| `SiteUrl`, `WebUrl`, `PageUrl` | Identifies the source page. |
+| `PlannedTargetPageUrl`, `TargetPageUrl` | Identifies the reviewed plan and created target. |
 | `PageType`, `Layout` | Groups comparable results. |
 | `MappingPercentage`, `UnmappedWebParts` | Preserves the planning signal. |
-| `TransformationStatus` | Created, failed, or skipped. |
-| `LogPath` | Points to the PnP transformation log. |
-| `ValidationStatus` | Passed, failed, or needs remediation. |
+| `TransformationStatus` | `Skipped`, `PreflightPassed`, `Created`, or `Failed`. |
+| `LogPath` | Points to the exact PnP transformation log for the page. |
+| `ValidationStatus` | `Pending`, `Passed`, or `Failed`. |
 | `ValidationNotes` | Records missing content, mapping issues, and follow-up work. |
 | `ValidatedBy`, `ValidatedAt` | Records approval ownership. |
 
@@ -86,11 +87,13 @@ After a draft page is approved, publish it through the page editing experience o
 After validating every representative page:
 
 1. Set each representative result to `ValidationStatus=Passed`.
+1. Fill `ValidationNotes`, `ValidatedBy`, and the ISO-8601 `ValidatedAt` timestamp.
 1. Create `approved-pages.csv` from the additional grouped rows that the user approved.
-1. Run `Convert-SelectedPages.ps1` with the original representative manifest and validated results.
+1. Run `Convert-SelectedPages.ps1 -PreflightOnly` with the original representative manifest and validated results.
+1. Run the live expansion only after every preflight row passes.
 1. Validate every generated page in the expanded wave before publishing it.
 
-The script blocks expansion if a representative result is missing, stale, not passed, or based on a different PnP PowerShell or Web Part mapping profile.
+The script blocks expansion if a representative result is missing, stale, not passed, or based on a different PnP PowerShell or script profile.
 
 ## Next steps
 
@@ -100,6 +103,6 @@ The script blocks expansion if a representative result is missing, stale, not pa
 ## Reference
 
 - [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md)
-- [Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md)
+- [Page wave script reference](modernize-userinterface-site-pages-wave-scripts.md)
 - [Classic pages assessment CSV reference](assessment-tool-classic-pages-csv.md)
 - [Classic Web Part mappings](modernize-userinterface-site-pages-webparts.md)

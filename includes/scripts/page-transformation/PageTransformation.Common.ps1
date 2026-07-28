@@ -148,31 +148,81 @@ function Get-PageWaveManifestHash {
     }
 }
 
-# Validation is meaningful only when the same scripts, PnP.PowerShell version, and Web
-# Part mapping are used for both the representative and expanded waves.
-function Get-PageWaveTransformationProfile {
+function Get-PageWaveCandidateHash {
     param(
-        [Parameter(Mandatory = $false)]
-        [string]$WebPartMappingFile
+        [Parameter(Mandatory = $true)]
+        [object]$Row
     )
 
+    $fields = @(
+        'ScanId',
+        'SiteUrl',
+        'WebUrl',
+        'PageUrl',
+        'PageType',
+        'ListUrl',
+        'ListTitle',
+        'ListId',
+        'ModifiedAt',
+        'AssessmentTimeZoneId',
+        'Layout',
+        'HomePage',
+        'WebPartCount',
+        'MappingPercentage',
+        'UnmappedWebParts',
+        'WebPartSignature',
+        'PatternKey',
+        'IncludePattern'
+    )
+    $payload = ($fields | ForEach-Object { [string](Get-PageWaveValue -Row $Row -Name $_) }) -join [char]0x1f
+    $sha256 = [Security.Cryptography.SHA256]::Create()
+    try {
+        return [Convert]::ToHexString(
+            $sha256.ComputeHash([Text.Encoding]::UTF8.GetBytes($payload))
+        ).ToLowerInvariant()
+    }
+    finally {
+        $sha256.Dispose()
+    }
+}
+
+# Validation is meaningful only when the same scripts, PnP.PowerShell version, and Web
+# Part transformation implementation are used for both waves.
+function Get-PageWaveTransformationProfile {
     Import-Module PnP.PowerShell -ErrorAction Stop
     $module = Get-Module PnP.PowerShell | Sort-Object Version -Descending | Select-Object -First 1
     if (-not $module) {
         throw "PnP.PowerShell isn't loaded."
     }
 
-    $mappingHash = 'embedded-default'
-    if (-not [string]::IsNullOrWhiteSpace($WebPartMappingFile)) {
-        if (-not (Test-Path -LiteralPath $WebPartMappingFile -PathType Leaf)) {
-            throw "Web Part mapping file not found: $WebPartMappingFile"
+    $scriptNames = @(
+        'PageTransformation.Common.ps1',
+        'Convert-RepresentativePages.ps1',
+        'Convert-SelectedPages.ps1'
+    )
+    $scriptHashes = @{}
+    foreach ($scriptName in $scriptNames) {
+        $scriptPath = Join-Path $PSScriptRoot $scriptName
+        if (-not (Test-Path -LiteralPath $scriptPath -PathType Leaf)) {
+            throw "Required page wave script not found: $scriptPath"
         }
-        $WebPartMappingFile = (Resolve-Path -LiteralPath $WebPartMappingFile).Path
-        $mappingHash = (Get-FileHash -LiteralPath $WebPartMappingFile -Algorithm SHA256).Hash.ToLowerInvariant()
+        $scriptHashes[$scriptName] = (
+            Get-FileHash -LiteralPath $scriptPath -Algorithm SHA256
+        ).Hash.ToLowerInvariant()
     }
 
     $scriptVersion = '1.0.0'
-    $payload = "Script=$scriptVersion|PnP=$($module.Version)|Mapping=$mappingHash|Draft=True|UniquePermissions=Excluded"
+    $payload = (
+        "Script=$scriptVersion",
+        "PnP=$($module.Version)",
+        "Common=$($scriptHashes['PageTransformation.Common.ps1'])",
+        "Representative=$($scriptHashes['Convert-RepresentativePages.ps1'])",
+        "Selected=$($scriptHashes['Convert-SelectedPages.ps1'])",
+        'Mapping=embedded-default',
+        'Draft=True',
+        'UniquePermissions=Excluded',
+        'ModifiedSources=Excluded'
+    ) -join '|'
     $sha256 = [Security.Cryptography.SHA256]::Create()
     try {
         $profileHash = [Convert]::ToHexString(
@@ -187,8 +237,10 @@ function Get-PageWaveTransformationProfile {
         Hash = $profileHash
         ScriptVersion = $scriptVersion
         PnPPowerShellVersion = $module.Version.ToString()
-        WebPartMappingHash = $mappingHash
-        WebPartMappingFile = $WebPartMappingFile
+        CommonScriptHash = $scriptHashes['PageTransformation.Common.ps1']
+        RepresentativeScriptHash = $scriptHashes['Convert-RepresentativePages.ps1']
+        SelectedScriptHash = $scriptHashes['Convert-SelectedPages.ps1']
+        WebPartMappingHash = 'embedded-default'
     }
 }
 
@@ -488,7 +540,7 @@ function Invoke-AssessmentPageWave {
         [string]$LogFolder = (Join-Path (Get-Location) 'page-transformation-logs'),
 
         [Parameter(Mandatory = $false)]
-        [switch]$AllowModifiedPages
+        [switch]$PreflightOnly
     )
 
     if ($PSVersionTable.PSVersion -lt [version]'7.4.0') {
@@ -504,7 +556,6 @@ function Invoke-AssessmentPageWave {
     Test-AssessmentPageWaveRows -Rows $Rows
 
     Import-Module PnP.PowerShell -ErrorAction Stop
-    $WebPartMappingFile = $TransformationProfile.WebPartMappingFile
 
     # WhatIf doesn't create a SharePoint connection or log folder, but still writes a
     # preview result CSV through the supplied ResultWriter.
@@ -532,6 +583,9 @@ function Invoke-AssessmentPageWave {
     foreach ($row in $Rows) {
         $startedAt = Get-Date
         $sourceWebUrl = $null
+        $plannedAction = $null
+        $plannedTargetPageUrl = $null
+        $targetExists = 'NotChecked'
         $targetPageUrl = $null
         $status = 'Failed'
         $errorMessage = $null
@@ -543,6 +597,9 @@ function Invoke-AssessmentPageWave {
         $observedModifiedUtc = $null
         $siteTimeZoneId = $null
         $siteTimeZoneDescription = $null
+        $logPath = $null
+        $logFilesBefore = @()
+        $conversionAttempted = $false
 
         try {
             # Reject page categories that require a separately reviewed migration path.
@@ -563,17 +620,24 @@ function Invoke-AssessmentPageWave {
             if ($webPartCount -eq 0) {
                 throw "Zero-part pages are excluded from these batch scripts: $($row.PageUrl)"
             }
-            if ([string]::IsNullOrWhiteSpace($WebPartMappingFile) -and
-                ($mappingPercentage -ne 100 -or
-                 -not [string]::IsNullOrWhiteSpace($row.UnmappedWebParts))) {
-                throw "Resolve unmapped Web Parts or provide WebPartMappingFile: $($row.PageUrl)"
+            if ($mappingPercentage -ne 100 -or
+                -not [string]::IsNullOrWhiteSpace($row.UnmappedWebParts)) {
+                throw "These batch scripts require Assessment readiness of 100 with no unmapped Web Parts: $($row.PageUrl)"
             }
 
             $sourceWebUrl = Get-PageWaveSourceUrl -Row $row
-            $action = "Create a draft modern page from $($row.PageUrl)"
+            $sourceDirectory = ([IO.Path]::GetDirectoryName($row.PageUrl) -replace '\\', '/').TrimEnd('/')
+            $sourceFileName = [IO.Path]::GetFileName($row.PageUrl)
+            $plannedTargetPageUrl = "$sourceDirectory/Migrated_$sourceFileName"
+            $plannedAction = if ($PreflightOnly) {
+                "Validate the source and target plan for $($row.PageUrl)"
+            }
+            else {
+                "Create a draft modern page from $($row.PageUrl)"
+            }
 
             # Ask permission before authentication or any tenant read. -WhatIf exits here.
-            if (-not (& $ShouldProcessCallback $sourceWebUrl $action)) {
+            if (-not (& $ShouldProcessCallback $sourceWebUrl $plannedAction)) {
                 $status = 'Skipped'
                 $errorMessage = "The operation wasn't approved or was run with -WhatIf."
                 continue
@@ -708,9 +772,8 @@ function Invoke-AssessmentPageWave {
             Invoke-PnPQuery -Connection $connection
             $observedModifiedUtc = [datetime]$siteUtcResult.Value
 
-            if (-not $AllowModifiedPages -and
-                [Math]::Abs(($approvedModifiedUtc - $observedModifiedUtc).TotalSeconds) -ge 1) {
-                throw "The source was modified after Assessment. Rerun Assessment or use -AllowModifiedPages after reapproval: $($row.PageUrl)"
+            if ([Math]::Abs(($approvedModifiedUtc - $observedModifiedUtc).TotalSeconds) -ge 1) {
+                throw "The source was modified after Assessment. Rerun Assessment before transforming this page: $($row.PageUrl)"
             }
 
             # Batch scripts deliberately exclude unique ACLs. Silent permission-copy
@@ -736,6 +799,19 @@ function Invoke-AssessmentPageWave {
                 throw "These batch scripts only support pages in the default SitePages library: $($row.PageUrl)"
             }
 
+            $existingTarget = Get-PnPFile `
+                -Url $plannedTargetPageUrl `
+                -AsListItem `
+                -Connection $connection
+            $targetExists = $null -ne $existingTarget
+            if ($targetExists) {
+                throw "The planned target already exists and must be reviewed instead of overwritten: $plannedTargetPageUrl"
+            }
+            if ($PreflightOnly) {
+                $status = 'PreflightPassed'
+                continue
+            }
+
             # Always preserve the source, create a draft, skip ACL copying, and log.
             # Overwrite and TakeSourcePageName are intentionally unavailable here.
             $parameters = @{
@@ -748,12 +824,13 @@ function Invoke-AssessmentPageWave {
                 SkipItemLevelPermissionCopyToClientSidePage = $true
             }
 
-            if (-not [string]::IsNullOrWhiteSpace($WebPartMappingFile)) {
-                $parameters.WebPartMappingFile = $WebPartMappingFile
-            }
-
             # ConvertTo-PnPPage returns the created server-relative URL. A missing URL is
             # treated as a failure even if the cmdlet didn't throw.
+            $logFilesBefore = @(
+                Get-ChildItem -LiteralPath $LogFolder -File -ErrorAction SilentlyContinue |
+                    Select-Object -ExpandProperty FullName
+            )
+            $conversionAttempted = $true
             $conversionOutput = @(ConvertTo-PnPPage @parameters)
             $targetPageUrl = $conversionOutput |
                 Where-Object { $_ -is [string] -and -not [string]::IsNullOrWhiteSpace($_) } |
@@ -769,13 +846,24 @@ function Invoke-AssessmentPageWave {
             $errorMessage = $_.Exception.Message
         }
         finally {
+            if ($conversionAttempted) {
+                $logPath = Get-ChildItem -LiteralPath $LogFolder -File -ErrorAction SilentlyContinue |
+                    Where-Object { $_.FullName -notin $logFilesBefore } |
+                    Sort-Object LastWriteTimeUtc -Descending |
+                    Select-Object -First 1 -ExpandProperty FullName
+            }
+
             # Persist success, failure, skip, observed source identity, and validation
             # profile before moving to the next page.
             $resultRow = [pscustomobject][ordered]@{
                 ManifestRowHash = Get-PageWaveManifestHash -Row $row
+                CandidateRowHash = Get-PageWaveCandidateHash -Row $row
                 TransformationProfileHash = $TransformationProfile.Hash
                 ScriptVersion = $TransformationProfile.ScriptVersion
                 PnPPowerShellVersion = $TransformationProfile.PnPPowerShellVersion
+                CommonScriptHash = $TransformationProfile.CommonScriptHash
+                RepresentativeScriptHash = $TransformationProfile.RepresentativeScriptHash
+                SelectedScriptHash = $TransformationProfile.SelectedScriptHash
                 WebPartMappingHash = $TransformationProfile.WebPartMappingHash
                 ScanId = Get-PageWaveValue -Row $row -Name 'ScanId'
                 SiteUrl = Get-PageWaveValue -Row $row -Name 'SiteUrl'
@@ -797,10 +885,19 @@ function Invoke-AssessmentPageWave {
                 ObservedModifiedUtc = if ($observedModifiedUtc) { $observedModifiedUtc.ToString('o') } else { '' }
                 SiteTimeZoneId = $siteTimeZoneId
                 SiteTimeZoneDescription = $siteTimeZoneDescription
+                MappingPercentage = Get-PageWaveValue -Row $row -Name 'MappingPercentage'
+                UnmappedWebParts = Get-PageWaveValue -Row $row -Name 'UnmappedWebParts'
+                PlannedAction = $plannedAction
+                PlannedTargetPageUrl = $plannedTargetPageUrl
+                TargetExists = $targetExists
                 TargetPageUrl = $targetPageUrl
                 TransformationStatus = $status
                 ValidationStatus = if ($status -eq 'Created') { 'Pending' } else { '' }
                 LogFolder = $LogFolder
+                LogPath = $logPath
+                ValidationNotes = ''
+                ValidatedBy = ''
+                ValidatedAt = ''
                 StartedAt = $startedAt.ToString('o')
                 FinishedAt = (Get-Date).ToString('o')
                 Error = $errorMessage

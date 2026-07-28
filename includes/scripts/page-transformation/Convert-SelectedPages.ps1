@@ -68,10 +68,7 @@ param(
     [string]$LogFolder,
 
     [Parameter(Mandatory = $false)]
-    [string]$WebPartMappingFile,
-
-    [Parameter(Mandatory = $false)]
-    [switch]$AllowModifiedPages,
+    [switch]$PreflightOnly,
 
     [Parameter(Mandatory = $false)]
     [switch]$Force
@@ -116,7 +113,7 @@ if ($representativeRows.Count -eq 0) {
     throw "The representative manifest has no included selected rows."
 }
 
-$transformationProfile = Get-PageWaveTransformationProfile -WebPartMappingFile $WebPartMappingFile
+$transformationProfile = Get-PageWaveTransformationProfile
 $includedPatterns = @($includedRepresentativeRows.PatternKey | Sort-Object -Unique)
 $selectedPatterns = @($representativeRows.PatternKey | Sort-Object -Unique)
 $patternsWithoutRepresentative = @(
@@ -172,6 +169,15 @@ foreach ($key in $representativeRowsByKey.Keys) {
         $resultRow.ValidationStatus -ne 'Passed') {
         throw "Every representative page must be Created and validated as Passed before expanding the wave: $($manifestRow.PageUrl)"
     }
+    foreach ($validationField in @('ValidationNotes', 'ValidatedBy', 'ValidatedAt')) {
+        if ([string]::IsNullOrWhiteSpace($resultRow.$validationField)) {
+            throw "Passed representative result requires $validationField`: $($manifestRow.PageUrl)"
+        }
+    }
+    $validatedAt = [datetimeoffset]::MinValue
+    if (-not [datetimeoffset]::TryParse([string]$resultRow.ValidatedAt, [ref]$validatedAt)) {
+        throw "ValidatedAt must be an ISO-8601 timestamp: $($manifestRow.PageUrl)"
+    }
 
     $passedPatterns[$manifestRow.PatternKey] = $true
 }
@@ -190,26 +196,52 @@ foreach ($row in $pages) {
         [string]::IsNullOrWhiteSpace($row.ValidationOwner)) {
         throw "Every approved page needs ExpectedVisibleContent and ValidationOwner: $($row.PageUrl)"
     }
-    if ([string]::IsNullOrWhiteSpace($row.PatternKey) -or
-        -not $passedPatterns.ContainsKey($row.PatternKey)) {
-        throw "Page pattern doesn't have a passed representative: $($row.PageUrl)"
+    if ($row.PSObject.Properties.Name -notcontains 'PatternKey' -or
+        [string]::IsNullOrWhiteSpace($row.PatternKey)) {
+        throw "Every approved page requires PatternKey: $($row.PageUrl)"
     }
 }
 
-# Representative pages are already transformed and validated. Exclude them from the
-# expanded wave even if the user accidentally leaves them in approved-pages.csv.
-$representativeKeys = @{}
-foreach ($row in $representativeResults) {
-    $representativeKeys["$($row.ScanId)|$($row.SiteUrl)|$($row.WebUrl)|$($row.PageUrl)"] = $true
+# Bind every approved page to the original included manifest. The caller cannot assign
+# a passed PatternKey to an unknown or altered page.
+$includedRowsByKey = @{}
+foreach ($row in $includedRepresentativeRows) {
+    $key = Get-PageWaveKey -Row $row
+    if ($includedRowsByKey.ContainsKey($key)) {
+        throw "Duplicate included manifest row: $($row.PageUrl)"
+    }
+    $includedRowsByKey[$key] = $row
 }
 
-$pagesToTransform = @(
-    $pages |
-        Where-Object {
-            $key = "$($_.ScanId)|$($_.SiteUrl)|$($_.WebUrl)|$($_.PageUrl)"
-            -not $representativeKeys.ContainsKey($key)
-        }
-)
+# Representative pages are already transformed and validated.
+$representativeKeys = @{}
+foreach ($row in $representativeResults) {
+    $representativeKeys[(Get-PageWaveKey -Row $row)] = $true
+}
+
+$pagesToTransform = [Collections.Generic.List[object]]::new()
+foreach ($approvedRow in $pages) {
+    $key = Get-PageWaveKey -Row $approvedRow
+    if ($representativeKeys.ContainsKey($key)) {
+        continue
+    }
+    if (-not $includedRowsByKey.ContainsKey($key)) {
+        throw "Approved page isn't present in the included representative manifest: $($approvedRow.PageUrl)"
+    }
+
+    $manifestRow = $includedRowsByKey[$key]
+    if ((Get-PageWaveCandidateHash -Row $approvedRow) -ne
+        (Get-PageWaveCandidateHash -Row $manifestRow)) {
+        throw "Approved page doesn't match the reviewed manifest row: $($approvedRow.PageUrl)"
+    }
+    if (-not $passedPatterns.ContainsKey($manifestRow.PatternKey)) {
+        throw "Page pattern doesn't have a passed representative: $($approvedRow.PageUrl)"
+    }
+
+    # PatternKey is authoritative from the reviewed manifest.
+    $approvedRow.PatternKey = $manifestRow.PatternKey
+    $pagesToTransform.Add($approvedRow)
+}
 
 if ($pagesToTransform.Count -eq 0) {
     throw "No additional pages remain after excluding validated representative pages."
@@ -220,6 +252,9 @@ $pagesFolder = Split-Path -Parent $PagesPath
 if ([string]::IsNullOrWhiteSpace($ResultPath)) {
     $resultName = if ($WhatIfPreference) {
         'selected-page-preview.csv'
+    }
+    elseif ($PreflightOnly) {
+        'selected-page-preflight.csv'
     }
     else {
         'selected-page-results.csv'
@@ -261,7 +296,7 @@ $results = Invoke-AssessmentPageWave `
     -CertificatePassword $CertificatePassword `
     -AzureEnvironment $AzureEnvironment `
     -LogFolder $LogFolder `
-    -AllowModifiedPages:$AllowModifiedPages
+    -PreflightOnly:$PreflightOnly
 
 # Surface a failing process exit after every individual error has been written.
 $failed = @($results | Where-Object TransformationStatus -eq 'Failed')

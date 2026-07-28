@@ -1,7 +1,7 @@
 ---
 title: Assess publishing pages for transformation
 description: Use Microsoft 365 Assessment tool publishing-page output to plan page transformation and page-layout mapping.
-ms.date: 07/27/2026
+ms.date: 07/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -60,17 +60,17 @@ The current page assessment doesn't provide these publishing transformation inpu
 
 These areas are outside the Page Assessment scope.
 
-## Continue to publishing-page transformation
+## Prepare a publishing-page backlog
 
 1. Group publishing pages by `Layout`.
 1. Review `MappingPercentage` and `UnmappedWebParts`.
 1. Identify custom layouts that need a page-layout mapping.
-1. [Transform representative publishing pages](modernize-userinterface-site-pages-powershell.md#route-other-page-types).
-1. [Validate representative pages](modernize-userinterface-site-pages-validation.md) before processing a complete portal.
+1. Define the target modern web, page-layout mapping, metadata, and validation owner for each layout group.
+1. Validate a separately reviewed publishing procedure before processing a complete portal.
 
 For an out-of-the-box publishing layout, use the built-in layout mapping where possible. For a custom publishing layout, generate and review a mapping before transformation.
 
-Continue with [Transform selected classic pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md#route-other-page-types) and the [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md).
+The Assessment-driven page wave scripts don't transform publishing pages. Use the [Publishing Page transformation model](modernize-userinterface-site-pages-model-publishing.md) as advanced reference while defining and validating the separate procedure.
 
 ## Reference
 

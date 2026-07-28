@@ -1,7 +1,7 @@
 ---
 title: Transform selected classic pages with PnP PowerShell
 description: Prepare a minimally privileged PnP PowerShell connection and transform approved classic pages with source-preserving defaults.
-ms.date: 07/27/2026
+ms.date: 07/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -23,7 +23,7 @@ Complete these prerequisites:
 1. Run and interpret the [Classic pages assessment](assessment-tool-classic-pages.md).
 1. Select a representative wave from successful scan coverage.
 1. Install PowerShell 7.4.0 or later and the current stable PnP PowerShell release.
-1. Register a tenant-owned Microsoft Entra application for PnP PowerShell.
+1. Register a tenant-owned Microsoft Entra application for interactive PnP PowerShell.
 1. Confirm that the signed-in user can edit pages in the source and target webs.
 
 Since September 9, 2024, interactive PnP PowerShell authentication requires your own application registration and client ID.
@@ -32,7 +32,7 @@ The account that registers the application must be allowed to create app registr
 
 ### Permissions
 
-Use a separate application from the read-only Assessment application.
+Use a separate delegated application from the read-only Assessment application.
 
 | Transformation requirement | Delegated SharePoint scope |
 | --- | --- |
@@ -58,7 +58,7 @@ If PnP PowerShell is already installed, run `Update-Module PnP.PowerShell` from 
 
 See [Install PnP PowerShell](https://pnp.github.io/powershell/articles/installation.html).
 
-## Register the transformation application
+## Register the interactive transformation application
 
 The following command creates a public-client application for interactive sign-in:
 
@@ -72,6 +72,8 @@ Register-PnPEntraIDAppForInteractiveLogin `
 
 Copy the returned application ID. Depending on tenant consent policy, an administrator might need to grant consent before the first connection.
 
+This public-client registration is for delegated interactive or device login. It doesn't provide the application permissions or certificate required for unattended authentication.
+
 For manual registration and other authentication methods, see [Register an Entra ID application for PnP PowerShell](https://pnp.github.io/powershell/articles/registerapplication.html).
 
 For GCC High, DoD, or Microsoft 365 operated by 21Vianet, specify the matching `-AzureEnvironment` value when registering the application and connecting. See the [Register-PnPEntraIDAppForInteractiveLogin](https://pnp.github.io/powershell/cmdlets/Register-PnPEntraIDAppForInteractiveLogin.html) and [Connect-PnPOnline](https://pnp.github.io/powershell/cmdlets/Connect-PnPOnline.html) cmdlet references.
@@ -81,10 +83,9 @@ For GCC High, DoD, or Microsoft 365 operated by 21Vianet, specify the matching `
 | Assessment field | PnP PowerShell use |
 | --- | --- |
 | `SiteUrl` + `WebUrl` | Source URL for `Connect-PnPOnline`. |
-| `ListUrl` + `PageUrl` | Source library, optional folder, and page file name. |
-| `PageName` | Blog title identity. |
-| `PageType` | Wiki/Web Part, Publishing, or Blog route. |
-| `Layout` | Publishing page-layout decision. |
+| `ListUrl`, `ListId`, `PageUrl` | Exact `SitePages` library and source file identity. |
+| `PageType` | Must be `WikiPage` or `WebPartPage` for this workflow. |
+| `Layout` | Representative-pattern grouping and validation. |
 
 Before transforming a first-wave page, require:
 
@@ -214,18 +215,9 @@ Use the representative-page script with one row marked `Selected=True`. This kee
 
 The batch scripts support Wiki and Web Part pages in the default `SitePages` library. They exclude home pages, zero-part pages, pages with unique permissions, and pages modified after Assessment. Handle those pages through a separately reviewed path.
 
-## Route other page types
-
-- `PublishingPage`: connect to a target modern web, add `-PublishingPage`, and review the [publishing page-layout model](modernize-userinterface-site-pages-model-publishing.md).
-- `BlogPage`: use `PageName` as the `-Identity`, add `-BlogPage`, and provide a target modern web.
-- `ASPXPage` and `DelveBlogPage`: keep them outside this Assessment-driven workflow.
-- SharePoint Server source: use `Connect-PnPOnline -TransformationOnPrem` for the source and a separate SharePoint Online target connection. Treat this as an advanced cross-site scenario.
-
-Use [in-place versus cross-site guidance](modernize-userinterface-site-pages-approach.md) before providing `-TargetWebUrl` or `-TargetConnection`.
-
 ## Transform all representative pages
 
-Save the three embedded files from [Run Assessment page wave scripts](modernize-userinterface-site-pages-wave-scripts.md) in the same folder.
+Save the three embedded files from [Page wave script reference](modernize-userinterface-site-pages-wave-scripts.md) in the same folder.
 
 In `representative-page-groups.csv`:
 
@@ -244,6 +236,22 @@ Preview the complete wave without authenticating or writing SharePoint pages:
   -Force
 ```
 
+The preview CSV records `PlannedAction` and `PlannedTargetPageUrl`. Because `-WhatIf` doesn't authenticate, `TargetExists` is `NotChecked`.
+
+Run an authenticated read-only preflight to verify the current source, home page, permissions, timestamps, and target absence:
+
+```powershell
+.\Convert-RepresentativePages.ps1 `
+  -ManifestPath .\representative-page-groups.csv `
+  -ClientId "<application-id>" `
+  -AuthenticationMode Interactive `
+  -PreflightOnly `
+  -Confirm:$false `
+  -Force
+```
+
+Every row must report `TransformationStatus=PreflightPassed` before live conversion.
+
 Run interactively with High-impact confirmation:
 
 ```powershell
@@ -254,25 +262,15 @@ Run interactively with High-impact confirmation:
   -Confirm
 ```
 
-For unattended execution, use a certificate-based application and disable confirmation explicitly:
-
-```powershell
-.\Convert-RepresentativePages.ps1 `
-  -ManifestPath .\representative-page-groups.csv `
-  -ClientId "<application-id>" `
-  -AuthenticationMode CertificateThumbprint `
-  -Tenant "<tenant>.onmicrosoft.com" `
-  -Thumbprint "<certificate-thumbprint>" `
-  -Confirm:$false
-```
-
 The script writes each result immediately to `representative-page-results.csv`. Generated pages remain drafts, and each created row starts with `ValidationStatus=Pending`.
 
-Follow [Validate transformed classic pages](modernize-userinterface-site-pages-validation.md), and set `ValidationStatus=Passed` only after the page meets every acceptance criterion.
+Follow [Validate transformed classic pages](modernize-userinterface-site-pages-validation.md). Set `ValidationStatus=Passed`, `ValidationNotes`, `ValidatedBy`, and `ValidatedAt` only after the page meets every acceptance criterion.
 
 ## Expand to all user-specified pages
 
-Create `approved-pages.csv` by copying the additional rows that the user approved from `representative-page-groups.csv`. Retain the Assessment fields, `PatternKey`, `ExpectedVisibleContent`, and `ValidationOwner`.
+Create `approved-pages.csv` by copying the additional included rows that the user approved from the original `representative-page-groups.csv`. Retain every generated field, and fill `ExpectedVisibleContent` and `ValidationOwner`.
+
+Run the selected-page script with `-PreflightOnly -Confirm:$false -Force` first. Every row must report `PreflightPassed`.
 
 Run the expansion script:
 
@@ -290,25 +288,48 @@ The script refuses to expand when:
 
 - The representative manifest and results don't match.
 - Any representative page isn't `Created` and `Passed`.
-- The PnP PowerShell version or Web Part mapping differs from the representative run.
+- Validation notes, validator, or validation timestamp are missing.
+- The PnP PowerShell version or any of the three script files differs from the representative run.
+- An approved page isn't an unchanged included row from the original manifest.
 - An approved page belongs to a pattern without a passed representative.
 
 The expanded wave also creates draft pages and writes `selected-page-results.csv`. Validate those pages before publishing them.
-
-For app-only setup and certificate authentication, see [PnP PowerShell authentication](https://pnp.github.io/powershell/articles/authentication.html) and [determine required permissions](https://pnp.github.io/powershell/articles/determinepermissions.html). Run `-WhatIf` before unattended execution.
 
 ## Options requiring explicit review
 
 Use the generated [ConvertTo-PnPPage cmdlet reference](https://pnp.github.io/powershell/cmdlets/ConvertTo-PnPPage.html) for the complete parameter contract.
 
-Review these options only when the scenario requires them:
+The batch scripts don't support custom Web Part mappings, publishing pages, or cross-site targets. Handle those scenarios through a separately reviewed single-page or advanced procedure.
 
-- `-WebPartMappingFile` for custom Web Part mappings.
-- `-PageLayoutMapping` for custom publishing layouts.
-- `-TargetWebUrl` or `-TargetConnection` for cross-site transformation.
+Review these options only outside the batch workflow:
+
 - `-CopyPageMetadata` and `-KeepPageCreationModificationInformation`.
 - `-UrlMappingFile`, `-UserMappingFile`, and `-TermMappingFile`.
 - `-Overwrite` and `-TakeSourcePageName` after approval and rollback planning.
+
+## Unattended authentication and other page types
+
+The delegated public-client application created earlier can't be reused for certificate app-only authentication unless it is separately configured for app-only access.
+
+Before unattended execution:
+
+1. Create a separate app-only registration and certificate by following [Register an Entra ID application for app-only access](https://pnp.github.io/powershell/articles/registerapplication.html#setting-up-access-to-your-own-entra-id-app-for-app-only-access).
+1. Configure SharePoint **application** permissions or site assignments for every source site by following [Determine required PnP PowerShell permissions](https://pnp.github.io/powershell/articles/determinepermissions.html#when-using-an-app-only-context).
+1. Grant the required administrator consent.
+1. Run the batch script with `-PreflightOnly -Confirm:$false` and the certificate authentication mode.
+1. Remove `-PreflightOnly` only after the authenticated preflight passes in a test tenant.
+
+> [!IMPORTANT]
+> The certificate parameter paths are Pester-tested, but the Stage 2 live tenant run validated delegated interactive authentication. Validate the chosen app-only permission profile in your tenant before unattended writes.
+
+Publishing pages, Blog pages, pages outside `SitePages`, home pages, custom Web Part mappings, and SharePoint Server sources aren't supported by the batch scripts. Use these advanced references:
+
+- [In-place versus cross-site transformation](modernize-userinterface-site-pages-approach.md)
+- [Publishing page readiness](assessment-tool-publishing-coverage.md)
+- [Publishing page transformation model](modernize-userinterface-site-pages-model-publishing.md)
+- [Page transformation model and custom Web Part mappings](modernize-userinterface-site-pages-model.md)
+- [Modernize classic Blog pages](modernize-blogs.md)
+- [Transform pages from SharePoint Server](modernize-userinterface-site-pages-approach.md#cross-site-transformation)
 
 ## Next steps
 

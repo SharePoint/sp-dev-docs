@@ -1858,12 +1858,12 @@
       items:
       - name: Transform with PnP PowerShell
         href: transform/modernize-userinterface-site-pages-powershell.md
-      - name: Run page wave scripts
-        href: transform/modernize-userinterface-site-pages-wave-scripts.md
       - name: Validate transformed pages
         href: transform/modernize-userinterface-site-pages-validation.md
       - name: Reference
         items:
+        - name: Page wave script reference
+          href: transform/modernize-userinterface-site-pages-wave-scripts.md
         - name: In-place versus cross-site transformation
           href: transform/modernize-userinterface-site-pages-approach.md
         - name: Security requirements
@@ -1907,8 +1907,8 @@
           href: transform/modernize-userinterface-lists-and-libraries-rollout.md
         - name: Opting out from modern
           href: transform/modernize-userinterface-lists-and-libraries-optout.md
-      - name: Transform classic pages to modern pages
-        href: transform/modernize-userinterface-site-pages.md
+      - name: Assess and transform classic pages
+        href: transform/assess-sharepoint-modernization.md
     - name: SharePoint Modernization scanner
       items:
       - name: Overview
