@@ -194,12 +194,14 @@ function Get-PageWaveIncludedManifestHash {
 
     $entries = @(
         $Rows |
-            Sort-Object { Get-PageWaveKey -Row $_ } |
             ForEach-Object {
-                '{0}|{1}' -f
-                    (Get-PageWaveKey -Row $_),
-                    (Get-PageWaveCandidateHash -Row $_)
-            }
+                [pscustomobject]@{
+                    PageKey = Get-PageWaveKey -Row $_
+                    CandidateHash = Get-PageWaveCandidateHash -Row $_
+                }
+            } |
+            Sort-Object PageKey, CandidateHash |
+            ForEach-Object { '{0}|{1}' -f $_.PageKey, $_.CandidateHash }
     )
     $payload = $entries -join [char]0x1e
     $sha256 = [Security.Cryptography.SHA256]::Create()

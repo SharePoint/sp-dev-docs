@@ -160,7 +160,8 @@ Test-PageWaveAuthentication `
     -Tenant $Tenant `
     -Thumbprint $Thumbprint `
     -CertificatePath $CertificatePath
-Test-AssessmentPageWaveRows -Rows $selectedRows
+# Validate every included row before sealing the complete migration scope.
+Test-AssessmentPageWaveRows -Rows $includedRows
 
 # The profile binds validation to the exact script version, PnP.PowerShell version,
 # and exact page wave scripts used during this representative run.
