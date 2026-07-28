@@ -158,6 +158,7 @@ $candidates = foreach ($page in $pages) {
     PageType = $page.PageType
     ListUrl = $page.ListUrl
     ListId = $page.ListId
+    AssessmentTimeZoneId = [TimeZoneInfo]::Local.Id
     Layout = $page.Layout
     HomePage = $page.HomePage
     WebPartCount = [int]$page.WebPartCount
@@ -187,6 +188,8 @@ $candidateInventory |
 Review `representative-page-groups.csv` and select at least one page from every `PatternKey` that the migration wave will contain. Select additional pages when Web Part properties, linked content, or business behavior differ materially within a pattern.
 
 Set `IncludePattern=False` for patterns outside the planned migration. For each selected page, set `Selected=True` and fill `ExpectedVisibleContent` and `ValidationOwner`.
+
+Run the grouping step on the same machine that generated the Assessment CSVs. `AssessmentTimeZoneId` records the timezone used to interpret the offset-free `ModifiedAt` value.
 
 Keep zero-part pages, home pages, publishing pages, and pages with unresolved mappings in separate review queues.
 Pages outside the default `SitePages` library also remain on the separately reviewed single-page path.

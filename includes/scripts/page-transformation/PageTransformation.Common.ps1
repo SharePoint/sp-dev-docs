@@ -123,6 +123,7 @@ function Get-PageWaveManifestHash {
         'ListTitle',
         'ListId',
         'ModifiedAt',
+        'AssessmentTimeZoneId',
         'Layout',
         'HomePage',
         'WebPartCount',
@@ -377,6 +378,7 @@ function Test-AssessmentPageWaveRows {
         'ListUrl',
         'ListId',
         'ModifiedAt',
+        'AssessmentTimeZoneId',
         'HomePage',
         'WebPartCount',
         'MappingPercentage',
@@ -390,7 +392,8 @@ function Test-AssessmentPageWaveRows {
         'PageType',
         'ListUrl',
         'ListId',
-        'ModifiedAt'
+        'ModifiedAt',
+        'AssessmentTimeZoneId'
     )
     $keys = @{}
 
@@ -420,6 +423,12 @@ function Test-AssessmentPageWaveRows {
             [ref]$modifiedAt
         )) {
             throw "ModifiedAt must use MM/dd/yyyy HH:mm:ss: $($row.ModifiedAt)"
+        }
+        try {
+            [TimeZoneInfo]::FindSystemTimeZoneById([string]$row.AssessmentTimeZoneId) | Out-Null
+        }
+        catch {
+            throw "AssessmentTimeZoneId isn't available on this machine: $($row.AssessmentTimeZoneId)"
         }
 
         ConvertTo-PageWaveBoolean -Value $row.HomePage -Name "HomePage for $($row.PageUrl)" | Out-Null
@@ -517,6 +526,7 @@ function Invoke-AssessmentPageWave {
     $connections = @{}
     $connectionErrors = @{}
     $webs = @{}
+    $siteTimeZones = @{}
     $results = [Collections.Generic.List[object]]::new()
 
     foreach ($row in $Rows) {
@@ -529,6 +539,10 @@ function Invoke-AssessmentPageWave {
         $sourceUniqueId = $null
         $observedListId = $null
         $observedModifiedAt = $null
+        $approvedModifiedUtc = $null
+        $observedModifiedUtc = $null
+        $siteTimeZoneId = $null
+        $siteTimeZoneDescription = $null
 
         try {
             # Reject page categories that require a separately reviewed migration path.
@@ -593,10 +607,21 @@ function Invoke-AssessmentPageWave {
             # Re-read the current welcome page immediately before conversion.
             if (-not $webs.ContainsKey($sourceWebUrl)) {
                 $webs[$sourceWebUrl] = Get-PnPWeb `
-                    -Includes WelcomePage, ServerRelativeUrl `
+                    -Includes WelcomePage, ServerRelativeUrl, RegionalSettings `
                     -Connection $connection
+                $siteTimeZones[$sourceWebUrl] = Get-PnPProperty `
+                    -ClientObject $webs[$sourceWebUrl].RegionalSettings `
+                    -Property TimeZone `
+                    -Connection $connection
+                Get-PnPProperty `
+                    -ClientObject $siteTimeZones[$sourceWebUrl] `
+                    -Property Id, Description `
+                    -Connection $connection | Out-Null
             }
             $web = $webs[$sourceWebUrl]
+            $siteTimeZone = $siteTimeZones[$sourceWebUrl]
+            $siteTimeZoneId = $siteTimeZone.Id
+            $siteTimeZoneDescription = $siteTimeZone.Description
             if (-not [string]::IsNullOrWhiteSpace($web.WelcomePage)) {
                 $currentHomePageUrl = (
                     '{0}/{1}' -f
@@ -651,8 +676,9 @@ function Invoke-AssessmentPageWave {
                 throw "The approved file no longer belongs to the assessed list: $($row.PageUrl)"
             }
 
-            # Compare the live file identity and modification timestamp with Assessment.
-            # -AllowModifiedPages is an explicit reapproval escape hatch.
+            # Assessment exports runner-local time without an offset, while PnP returns
+            # site-local time. Normalize both through their recorded time zones before
+            # deciding whether the source changed.
             $observedFileRef = [string]$sourceItem.FieldValues['FileRef']
             if (-not $observedFileRef.Equals($row.PageUrl, [StringComparison]::OrdinalIgnoreCase)) {
                 throw "The current file URL doesn't match the approved PageUrl: $($row.PageUrl)"
@@ -664,7 +690,26 @@ function Invoke-AssessmentPageWave {
                 'MM/dd/yyyy HH:mm:ss',
                 [Globalization.CultureInfo]::InvariantCulture
             )
-            if (-not $AllowModifiedPages -and $observedModifiedAt -ne $row.ModifiedAt) {
+            $assessmentLocal = [datetime]::ParseExact(
+                [string]$row.ModifiedAt,
+                'MM/dd/yyyy HH:mm:ss',
+                [Globalization.CultureInfo]::InvariantCulture,
+                [Globalization.DateTimeStyles]::None
+            )
+            $assessmentTimeZone = [TimeZoneInfo]::FindSystemTimeZoneById(
+                [string]$row.AssessmentTimeZoneId
+            )
+            $approvedModifiedUtc = [TimeZoneInfo]::ConvertTimeToUtc(
+                [datetime]::SpecifyKind($assessmentLocal, [DateTimeKind]::Unspecified),
+                $assessmentTimeZone
+            )
+
+            $siteUtcResult = $siteTimeZone.LocalTimeToUTC($observedModified)
+            Invoke-PnPQuery -Connection $connection
+            $observedModifiedUtc = [datetime]$siteUtcResult.Value
+
+            if (-not $AllowModifiedPages -and
+                [Math]::Abs(($approvedModifiedUtc - $observedModifiedUtc).TotalSeconds) -ge 1) {
                 throw "The source was modified after Assessment. Rerun Assessment or use -AllowModifiedPages after reapproval: $($row.PageUrl)"
             }
 
@@ -747,6 +792,11 @@ function Invoke-AssessmentPageWave {
                 ObservedListId = $observedListId
                 ApprovedModifiedAt = Get-PageWaveValue -Row $row -Name 'ModifiedAt'
                 ObservedModifiedAt = $observedModifiedAt
+                AssessmentTimeZoneId = Get-PageWaveValue -Row $row -Name 'AssessmentTimeZoneId'
+                ApprovedModifiedUtc = if ($approvedModifiedUtc) { $approvedModifiedUtc.ToString('o') } else { '' }
+                ObservedModifiedUtc = if ($observedModifiedUtc) { $observedModifiedUtc.ToString('o') } else { '' }
+                SiteTimeZoneId = $siteTimeZoneId
+                SiteTimeZoneDescription = $siteTimeZoneDescription
                 TargetPageUrl = $targetPageUrl
                 TransformationStatus = $status
                 ValidationStatus = if ($status -eq 'Created') { 'Pending' } else { '' }
