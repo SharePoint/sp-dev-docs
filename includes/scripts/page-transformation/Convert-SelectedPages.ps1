@@ -114,6 +114,7 @@ if ($representativeRows.Count -eq 0) {
 }
 
 $transformationProfile = Get-PageWaveTransformationProfile
+$includedManifestHash = Get-PageWaveIncludedManifestHash -Rows $includedRepresentativeRows
 $includedPatterns = @($includedRepresentativeRows.PatternKey | Sort-Object -Unique)
 $selectedPatterns = @($representativeRows.PatternKey | Sort-Object -Unique)
 $patternsWithoutRepresentative = @(
@@ -163,7 +164,10 @@ foreach ($key in $representativeRowsByKey.Keys) {
         throw "Representative result doesn't match the current manifest row: $($manifestRow.PageUrl)"
     }
     if ($resultRow.TransformationProfileHash -ne $transformationProfile.Hash) {
-        throw "Representative results used a different PnP version or Web Part mapping: $($manifestRow.PageUrl)"
+        throw "Representative results used a different PnP version or script profile: $($manifestRow.PageUrl)"
+    }
+    if ($resultRow.IncludedManifestHash -ne $includedManifestHash) {
+        throw "Representative results don't match the complete included manifest."
     }
     if ($resultRow.TransformationStatus -ne 'Created' -or
         $resultRow.ValidationStatus -ne 'Passed') {
@@ -177,6 +181,10 @@ foreach ($key in $representativeRowsByKey.Keys) {
     $validatedAt = [datetimeoffset]::MinValue
     if (-not [datetimeoffset]::TryParse([string]$resultRow.ValidatedAt, [ref]$validatedAt)) {
         throw "ValidatedAt must be an ISO-8601 timestamp: $($manifestRow.PageUrl)"
+    }
+    if ([string]::IsNullOrWhiteSpace($resultRow.LogPath) -or
+        -not (Test-Path -LiteralPath $resultRow.LogPath -PathType Leaf)) {
+        throw "Passed representative result requires a retained LogPath: $($manifestRow.PageUrl)"
     }
 
     $passedPatterns[$manifestRow.PatternKey] = $true
@@ -290,6 +298,7 @@ $results = Invoke-AssessmentPageWave `
     -ShouldProcessCallback $shouldProcess `
     -ResultWriter $resultWriter.Write `
     -TransformationProfile $transformationProfile `
+    -IncludedManifestHash $includedManifestHash `
     -Tenant $Tenant `
     -Thumbprint $Thumbprint `
     -CertificatePath $CertificatePath `

@@ -49,7 +49,7 @@ Each attempt is written immediately. Important fields include:
 
 | Field | Meaning |
 | --- | --- |
-| `ManifestRowHash`, `CandidateRowHash` | Bind the result and approved page to reviewed manifest content. |
+| `ManifestRowHash`, `CandidateRowHash`, `IncludedManifestHash` | Bind each result, approved page, and the complete included scope to reviewed manifest content. |
 | `TransformationProfileHash` and script hashes | Bind representative validation to the executed scripts and PnP PowerShell version. |
 | `PlannedAction`, `PlannedTargetPageUrl`, `TargetExists` | Retain the preview or authenticated preflight plan. |
 | `TransformationStatus` | `Skipped`, `PreflightPassed`, `Created`, or `Failed`. |

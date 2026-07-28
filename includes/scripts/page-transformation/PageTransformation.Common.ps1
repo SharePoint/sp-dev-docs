@@ -186,6 +186,33 @@ function Get-PageWaveCandidateHash {
     }
 }
 
+function Get-PageWaveIncludedManifestHash {
+    param(
+        [Parameter(Mandatory = $true)]
+        [object[]]$Rows
+    )
+
+    $entries = @(
+        $Rows |
+            Sort-Object { Get-PageWaveKey -Row $_ } |
+            ForEach-Object {
+                '{0}|{1}' -f
+                    (Get-PageWaveKey -Row $_),
+                    (Get-PageWaveCandidateHash -Row $_)
+            }
+    )
+    $payload = $entries -join [char]0x1e
+    $sha256 = [Security.Cryptography.SHA256]::Create()
+    try {
+        return [Convert]::ToHexString(
+            $sha256.ComputeHash([Text.Encoding]::UTF8.GetBytes($payload))
+        ).ToLowerInvariant()
+    }
+    finally {
+        $sha256.Dispose()
+    }
+}
+
 # Validation is meaningful only when the same scripts, PnP.PowerShell version, and Web
 # Part transformation implementation are used for both waves.
 function Get-PageWaveTransformationProfile {
@@ -520,6 +547,9 @@ function Invoke-AssessmentPageWave {
 
         [Parameter(Mandatory = $true)]
         [object]$TransformationProfile,
+
+        [Parameter(Mandatory = $true)]
+        [string]$IncludedManifestHash,
 
         [Parameter(Mandatory = $false)]
         [string]$Tenant,
@@ -858,6 +888,7 @@ function Invoke-AssessmentPageWave {
             $resultRow = [pscustomobject][ordered]@{
                 ManifestRowHash = Get-PageWaveManifestHash -Row $row
                 CandidateRowHash = Get-PageWaveCandidateHash -Row $row
+                IncludedManifestHash = $IncludedManifestHash
                 TransformationProfileHash = $TransformationProfile.Hash
                 ScriptVersion = $TransformationProfile.ScriptVersion
                 PnPPowerShellVersion = $TransformationProfile.PnPPowerShellVersion

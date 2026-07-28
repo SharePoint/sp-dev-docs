@@ -165,6 +165,7 @@ Test-AssessmentPageWaveRows -Rows $selectedRows
 # The profile binds validation to the exact script version, PnP.PowerShell version,
 # and exact page wave scripts used during this representative run.
 $transformationProfile = Get-PageWaveTransformationProfile
+$includedManifestHash = Get-PageWaveIncludedManifestHash -Rows $includedRows
 
 # Reserve the result file before the first SharePoint write, then append every result
 # immediately so an interrupted wave retains completed evidence.
@@ -178,6 +179,7 @@ $results = Invoke-AssessmentPageWave `
     -ShouldProcessCallback $shouldProcess `
     -ResultWriter $resultWriter.Write `
     -TransformationProfile $transformationProfile `
+    -IncludedManifestHash $includedManifestHash `
     -Tenant $Tenant `
     -Thumbprint $Thumbprint `
     -CertificatePath $CertificatePath `
