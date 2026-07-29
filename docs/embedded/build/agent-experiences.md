@@ -34,7 +34,7 @@ Choose the knowledge source when you want Foundry to manage retrieval and agent 
 The [Microsoft 365 Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) returns relevant text extracts that your app passes to its own model as grounding data. Set `dataSource` to `sharePointEmbedded` to retrieve from SharePoint Embedded content.
 
 > [!NOTE]
-> The `sharePointEmbedded` data source is in preview in its entirety, including its pay-as-you-go billing. The Copilot Retrieval API itself is generally available on the Microsoft Graph `v1.0` endpoint, but don't use the `sharePointEmbedded` data source in production.
+> Retrieval API support for the `sharePointEmbedded` data source is in preview.
 
 ### Retrieval API prerequisites
 
