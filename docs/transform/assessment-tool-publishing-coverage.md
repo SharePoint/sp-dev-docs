@@ -1,7 +1,7 @@
 ---
 title: Assess publishing pages for transformation
 description: Use Microsoft 365 Assessment tool publishing-page output to plan page transformation and page-layout mapping.
-ms.date: 07/28/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -50,15 +50,6 @@ Assessment provides:
 - Normalized one-row-per-web-part inventory.
 - Mapping percentage and unmapped web part types.
 - Optional page view/create/edit audit activity.
-
-The current page assessment doesn't provide these publishing transformation inputs:
-
-- Content type name and ID.
-- Page layout file and whether the layout was customized.
-- Global, security-group, and SharePoint-group audience values.
-- Master-page, alternate-CSS, navigation, approval, versioning, scheduling, variation, audience, and ownership configuration.
-
-These areas are outside the Page Assessment scope.
 
 ## Prepare a publishing-page backlog
 
