@@ -1,7 +1,7 @@
 ---
 title: Billing meters
 description: Reference for SharePoint Embedded pay-as-you-go billing meters and pricing resources.
-ms.date: 07/28/2026
+ms.date: 07/13/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -51,7 +51,7 @@ Egress is data that exits the SharePoint Embedded platform, such as a document d
 
 The private preview SharePoint Embedded agent meter uses the Copilot Studio message meter. One SharePoint Embedded agent interaction uses 12 messages: two for generative answer and 10 for tenant graph grounding.
 
-[Copilot Retrieval API](/graph/api/copilotroot-retrieval) requests that use the preview `sharePointEmbedded` data source also bill on the Copilot Studio message meter. Charges follow the billing model configured for the container type, so standard billing container types charge the owning tenant and pass-through billing container types charge the consuming tenant. For more information, see [Add Microsoft 365 Copilot and agent experiences](../build/agent-experiences.md#use-the-retrieval-api).
+[Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) requests that use the `sharePointEmbedded` data source also bill on the Copilot Studio message meter. The `sharePointEmbedded` data source is in preview in its entirety, including its pay-as-you-go billing, although the Retrieval API itself is generally available. Charges follow the billing model configured for the container type, so standard billing container types charge the owning tenant and pass-through billing container types charge the consuming tenant. For more information, see [Add Microsoft 365 Copilot and agent experiences](../build/agent-experiences.md#use-the-retrieval-api).
 
 ## Pricing links
 

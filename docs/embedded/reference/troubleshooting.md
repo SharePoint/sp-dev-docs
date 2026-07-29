@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 description: Common SharePoint Embedded setup, auth, billing, Office, search, webhook, and admin issues.
-ms.date: 07/28/2026
+ms.date: 07/09/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high

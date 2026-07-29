@@ -1,7 +1,7 @@
 ---
 title: Add Microsoft 365 Copilot and agent experiences
 description: Ground agents in SharePoint Embedded content with Microsoft Foundry knowledge sources and the Copilot Retrieval API.
-ms.date: 07/28/2026
+ms.date: 07/10/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -19,17 +19,22 @@ outcome: Configure Foundry knowledge sources and the Copilot Retrieval API over 
 next: migrate-azure-blob-storage.md
 -->
 
-SharePoint Embedded agent experiences let your app answer questions over files stored in SharePoint Embedded containers. The recommended path is to use **Microsoft Foundry Agent Service** with a **SharePoint knowledge source** configured for SharePoint Embedded. For setup steps, see [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md).
+SharePoint Embedded agent experiences let your app answer questions over files stored in SharePoint Embedded containers. Two separate products ground those experiences in container content:
+
+- **Microsoft Foundry Agent Service with a SharePoint knowledge source** — for agents you build on Foundry. Foundry runs retrieval for you as part of the agent. For setup steps, see [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md).
+- **Microsoft 365 Copilot Retrieval API** — for custom agents and apps that run their own grounding step. Call it from any app, including a Foundry agent that doesn't use the SharePoint knowledge source.
+
+Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself.
 
 > [!CAUTION]
-> The earlier **SharePoint Embedded agent SDK** (the React `ChatEmbedded` control) was **deprecated in March 2026** and replaced by [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote) configured for SharePoint Embedded. Use the Foundry knowledge source for new work.
+> The earlier **SharePoint Embedded agent SDK** (the React `ChatEmbedded` control) was **deprecated in March 2026** and replaced by [Microsoft Foundry Agent Service](/azure/foundry/agents/overview) with a [SharePoint knowledge source (preview)](/azure/search/agentic-knowledge-source-how-to-sharepoint-remote) configured for SharePoint Embedded. Use one of the two options in this article for new work.
 
 ## Use the Retrieval API
 
-Use the [Microsoft 365 Copilot Retrieval API](/graph/api/copilotroot-retrieval) when your app builds its own grounding step instead of using a Foundry knowledge source. Set `dataSource` to `sharePointEmbedded` to scope retrieval to SharePoint Embedded content.
+The [Microsoft 365 Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) returns relevant text extracts that your app passes to its own model as grounding data. Set `dataSource` to `sharePointEmbedded` to retrieve from SharePoint Embedded content.
 
 > [!NOTE]
-> Retrieval API support for the `sharePointEmbedded` data source is in preview.
+> The `sharePointEmbedded` data source is in preview in its entirety, including its pay-as-you-go billing. The Copilot Retrieval API itself is generally available on the Microsoft Graph `v1.0` endpoint, but don't use the `sharePointEmbedded` data source in production.
 
 ### Retrieval API prerequisites
 
@@ -46,9 +51,7 @@ Call `POST /copilot/retrieval` with a delegated token. Set `dataSource` to `shar
 ```http
 POST https://graph.microsoft.com/v1.0/copilot/retrieval
 Content-Type: application/json
-```
 
-```json
 {
   "queryString": "What are the terms of the Contoso agreement?",
   "dataSource": "sharePointEmbedded",
@@ -56,8 +59,7 @@ Content-Type: application/json
     "sharePointEmbedded": {
       "containerTypeId": "{containerTypeId}"
     }
-  },
-  "resourceMetadata": ["containerTypeId"]
+  }
 }
 ```
 
@@ -69,20 +71,21 @@ The response returns a `retrievalHits` collection. Each hit identifies a source 
 {
   "retrievalHits": [
     {
-      "webUrl": "https://contoso.sharepoint.com/contentstorage/...&file=agreement.docx",
+      "webUrl": "https://contoso.com/spe/file",
       "extracts": [
         {
           "text": "The agreement renews annually unless either party gives 30 days' notice.",
           "relevanceScore": 0.8421
         }
-      ],
-      "resourceMetadata": {
-        "containerTypeId": "{containerTypeId}"
-      }
+      ]
     }
   ]
 }
 ```
+
+The shape of `webUrl` depends on the container type's `urlTemplate` setting, so treat it as an opaque link rather than parsing it. To resolve file details, call [Get a driveItem](/graph/api/driveitem-get). For more information about `urlTemplate`, see [Create and configure a container type](create-container-type.md#configure-container-type-behavior).
+
+To return extra fields such as `title` or `author` with each hit, add a `resourceMetadata` collection to the request. Request only the fields your app uses, because each field adds to the response payload.
 
 Pass the extracts to your own model or answer-generation step as grounding data. This snippet sends the query and reads the top extract from each hit:
 
@@ -98,8 +101,7 @@ const response = await fetch("https://graph.microsoft.com/v1.0/copilot/retrieval
     dataSource: "sharePointEmbedded",
     dataSourceConfiguration: {
       sharePointEmbedded: { containerTypeId: containerTypeId }
-    },
-    resourceMetadata: ["containerTypeId"]
+    }
   })
 });
 
@@ -121,7 +123,7 @@ For meter details, see [Billing meters](../reference/billing-meters.md). To comp
 
 ## Test user experience
 
-Sign in with a user who has a Microsoft 365 Copilot license when required. Upload supported files to a container, wait for indexing, open the chat, and ask questions the file content can answer. If answers omit expected files, check:
+Sign in with a user who can access the container content. Upload supported files to a container, wait for indexing, open the chat, and ask questions the file content can answer. If answers omit expected files, check:
 
 - Discoverability.
 - Supported file formats.
@@ -134,3 +136,4 @@ Sign in with a user who has a Microsoft 365 Copilot license when required. Uploa
 
 - [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md)
 - [Billing meters](../reference/billing-meters.md)
+- [Choose a billing model](../plan/choose-billing-model.md)

@@ -1,7 +1,7 @@
 ---
 title: Set up SharePoint Embedded as a Foundry knowledge source
 description: Configure Microsoft Foundry Agent Service to use SharePoint Embedded content as a SharePoint knowledge source.
-ms.date: 07/28/2026
+ms.date: 07/13/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -21,7 +21,7 @@ next: migrate-azure-blob-storage.md
 
 Use Microsoft Foundry Agent Service with a SharePoint knowledge source when your app needs a grounded agent experience over files stored in SharePoint Embedded containers.
 
-For SharePoint Embedded container types, the knowledge source grounds answers through the [Microsoft 365 Copilot Retrieval API](/graph/api/copilotroot-retrieval). Foundry issues the retrieval calls for you, so the same prerequisites, indexing behavior, and billing apply. To call the API directly instead, see [Use the Retrieval API](agent-experiences.md#use-the-retrieval-api).
+For SharePoint Embedded container types, the knowledge source grounds answers through the generally available [Microsoft 365 Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval). Foundry runs the retrieval calls as part of the agent, so the same prerequisites, indexing behavior, and billing apply. The `sharePointEmbedded` data source that Foundry uses is in preview. To run your own grounding step instead, call the Retrieval API directly, as described in [Use the Retrieval API](agent-experiences.md#use-the-retrieval-api).
 
 > [!NOTE]
 > SharePoint knowledge sources for SharePoint Embedded are in preview.
