@@ -1,7 +1,7 @@
 ---
 title: Interpret the classic pages assessment report
 description: Use page, web part, usage, and rollup results from the Microsoft 365 Assessment tool to plan SharePoint page modernization.
-ms.date: 07/27/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -52,6 +52,9 @@ Audit usage is a planning signal, not a raw web analytics counter. Always check 
 | `skipped` | Audit collection wasn't run for the site, such as in an unsupported cloud. |
 | `error` | An unexpected post-scan exception occurred. Review `SkipReason` and the assessment log. |
 
+> [!IMPORTANT]
+> Sovereign-cloud assessments don't provide page Audit usage. Don't interpret missing or skipped usage rows as zero activity. Prioritize with `ModifiedAt`, known page importance, and business-owner input.
+
 When a site's audit query succeeded, the absence of a page row means that no matching events were returned for that page in the requested window. Treat an absent row as zero activity only after confirming successful coverage for the site.
 
 If `SkipReason` starts with `QueryTimeout`, Microsoft Purview didn't complete the query during Assessment's 90-minute wait. When no audit chunk succeeds, the row has `QueryStatus=failed`; treat its zero counts as failed coverage, not as evidence of no activity. This is different from `NoPermission`, which indicates a missing Audit permission.
@@ -83,6 +86,28 @@ Use `classicwebpartunique.csv` to identify web part types that affect many pages
 
 The current Assessment implementation deliberately treats the community mappings for `ScriptEditorWebPart` and `SimpleFormWebPart` as unavailable. It also doesn't support an on-disk mapping-file override.
 
+This Assessment result means that the default readiness model doesn't approve those Web Parts. PnP transformation can optionally route Script Editor and Simple Form content to the open-source Community Script Editor after that solution is installed and `-UseCommunityScriptEditor` is selected.
+
+> [!CAUTION]
+> A script editor can execute custom code in the page. Treat this as an advanced remediation decision with security review and a separately validated page. The Assessment-driven batch scripts don't enable Community Script Editor.
+
+See [Classic Web Part mappings](modernize-userinterface-site-pages-webparts.md#enabling-the-use-of-the-community-script-editor-web-part-to-be-used-during-transformation).
+
+### Decide the next action
+
+Evaluate the table from top to bottom and use the first matching row. Mapping-based decisions apply only after coverage and page-type routing are complete.
+
+| Assessment result | Decision | Next action |
+| --- | --- | --- |
+| Site collection or web didn't finish | Coverage blocked | Resolve the scan failure before interpreting page counts or readiness. |
+| Page type is Blog, ASPX, or Delve Blog | Mapping score isn't actionable | Follow the [page-type support guidance](assessment-tool-classic-pages.md#page-type-support) instead of using the readiness percentage. |
+| Page type is Publishing | Advanced backlog | Review the layout and missing portal-level inputs before defining a separate target and procedure. |
+| Wiki or Web Part page is a home page | Separate approval required | Keep it out of the first wave and define URL, navigation, and rollback behavior before transformation. |
+| Wiki or Web Part page has `WebPartCount=0` and `MappingPercentage=0` with an enrichment error | Page scan failed | Review the log and rerun Assessment before selecting the page. |
+| Wiki or Web Part page has `WebPartCount=0` and `MappingPercentage=100` | Manual review required | Open the source page and confirm whether Assessment missed visible content. Don't place it in an automated wave. |
+| Wiki or Web Part page has `WebPartCount>0`, `MappingPercentage=100`, and no unmapped Web Parts | Representative-pilot candidate | Group it by layout and ordered Web Part signature, transform a draft, and validate the result. |
+| Wiki or Web Part page has `MappingPercentage<100` or one or more `UnmappedWebParts` | Remediation required | Replace the blocking Web Parts or define and separately validate a custom mapping before transformation. |
+
 ## Use rollups
 
 Use `classicwebsummaries.csv` and `classicsitesummaries.csv` to identify:
@@ -90,7 +115,7 @@ Use `classicwebsummaries.csv` and `classicsitesummaries.csv` to identify:
 - Webs and site collections with the most classic pages.
 - Pages with fully mappable or unmapped web parts.
 - Average mapping percentage across pages that contain web parts.
-- Default home pages that can be replaced as an early modernization wave.
+- Home pages that require a separate approved backlog for URL, navigation, and rollback planning.
 
 Rollups are useful for sequencing, but return to the page and web part CSV files before making a remediation decision.
 

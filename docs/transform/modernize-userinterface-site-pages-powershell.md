@@ -1,7 +1,7 @@
 ---
 title: Transform selected classic pages with PnP PowerShell
 description: Prepare a minimally privileged PnP PowerShell connection and transform approved classic pages with source-preserving defaults.
-ms.date: 07/28/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -209,6 +209,18 @@ Pages outside the default `SitePages` library also remain on the separately revi
 | `-DontPublish` | Use for the first wave so the generated page remains a draft during validation. |
 | `-SkipItemLevelPermissionCopyToClientSidePage` | Use with the `AllSites.Manage` application unless unique permissions must be copied. |
 
+## Roll back a first-wave draft
+
+The batch workflow doesn't rename or overwrite the classic source page. If a generated draft fails validation:
+
+1. Keep the classic source page in service.
+1. Keep `TransformationStatus=Created`, set `ValidationStatus=Failed`, and fill `ValidationNotes`, `ValidatedBy`, and `ValidatedAt`.
+1. Preserve `TargetPageUrl` and `LogPath` with the failed validation evidence.
+1. Recycle the generated `Migrated_` draft from the **Site Pages** library when it is no longer needed for investigation and the organization's retention policy permits removal.
+1. Correct the candidate rule or remediation, and retry one representative page before resuming the wave.
+
+`-Overwrite` and `-TakeSourcePageName` are outside the batch workflow. Before using either option in a separate procedure, preserve the page versions and URLs, record the current home-page setting, test the reverse rename or restore process in a nonproduction site, and obtain explicit approval.
+
 ## Transform one selected Wiki or Web Part page
 
 Use the representative-page script with one row marked `Selected=True`. This keeps the one-page test on the same validation, authentication, and result contract as a larger wave.
@@ -306,6 +318,53 @@ Review these options only outside the batch workflow:
 - `-CopyPageMetadata` and `-KeepPageCreationModificationInformation`.
 - `-UrlMappingFile`, `-UserMappingFile`, and `-TermMappingFile`.
 - `-Overwrite` and `-TakeSourcePageName` after approval and rollback planning.
+
+## Troubleshoot modern page capability
+
+The page wave scripts don't enable SharePoint features. This troubleshooting path applies only to a supported classic team site. Don't enable the feature on a classic publishing portal; route Publishing pages to the separate cross-site publishing backlog and model. See [Supported customizations for modern pages](../solution-guidance/modern-experience-customizations-customize-pages.md#supported-customizations-for-modern-pages).
+
+Connect with an account authorized to manage the web, and list the activated web features:
+
+```powershell
+$source = Connect-PnPOnline `
+  -Url "https://<tenant>.sharepoint.com/sites/<site>" `
+  -Interactive `
+  -ClientId "<application-id>" `
+  -ReturnConnection
+
+$modernPageFeatureId = [guid]'B6917CB1-93A0-4B97-A84D-7CF49975D4EC'
+$modernPageFeature = Get-PnPFeature `
+  -Scope Web `
+  -Connection $source |
+  Where-Object DefinitionId -eq $modernPageFeatureId
+
+if ($modernPageFeature) {
+  Write-Host "Modern pages feature is active."
+}
+else {
+  Write-Host "Modern pages feature is not active."
+}
+```
+
+The delegated `AllSites.Manage` application used by the batch scripts isn't sufficient to activate web features. If the feature isn't active on a supported classic team site, obtain site-owner approval and connect with:
+
+- A separate delegated application with SharePoint `AllSites.FullControl`.
+- A signed-in account with Full Control on the web.
+
+```powershell
+$adminConnection = Connect-PnPOnline `
+  -Url "https://<tenant>.sharepoint.com/sites/<site>" `
+  -Interactive `
+  -ClientId "<full-control-application-id>" `
+  -ReturnConnection
+
+Enable-PnPFeature `
+  -Identity $modernPageFeatureId `
+  -Scope Web `
+  -Connection $adminConnection
+```
+
+Re-run authenticated preflight after enabling the feature.
 
 ## Unattended authentication and other page types
 

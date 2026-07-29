@@ -1,7 +1,7 @@
 ---
 title: Run a classic pages assessment
 description: Start, scope, monitor, and report a Microsoft 365 Assessment tool classic pages assessment.
-ms.date: 07/27/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -68,6 +68,9 @@ The sites file contains one absolute site-collection URL per line. Don't combine
 | `--skipuserinformation` | Omits page modifier information. |
 | `--homepageonly` | Filters the page inventory to the home page of each web. It doesn't filter site-scoped Audit results. |
 | `--threads <number>` | Changes parallelism. Start with 4 to 8 threads when throttling is a concern. |
+
+> [!IMPORTANT]
+> Microsoft Graph Audit Query isn't available to this assessment in sovereign-cloud environments, including GCC High, DoD, and Microsoft 365 operated by 21Vianet. Use `--skipusageinformation`; prioritize pages with `ModifiedAt`, page importance, and business-owner input instead of Audit activity.
 
 For example, assess only home pages, export web part properties, and skip audit usage:
 

@@ -1,7 +1,7 @@
 ---
 title: Assess classic SharePoint pages
 description: Discover classic pages, inventory their web parts, and measure page modernization readiness.
-ms.date: 07/27/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -15,6 +15,17 @@ Wiki, Web Part, and Publishing pages receive detailed Web Part inventory, layout
 The assessment can optionally collect page view/create/edit activity from the Microsoft Graph audit log.
 
 In the current implementation, Delve Blog pages appear in `classicpages.csv` but aren't included in `ClassicPages` or the page-type counts in `classicwebsummaries.csv` and `classicsitesummaries.csv`.
+
+## Page-type support
+
+| Page type | Discovered | Detailed readiness | Transformation route | Recommended action |
+| --- | --- | --- | --- | --- |
+| `WikiPage` | Yes | Yes | [Representative-page batch workflow](modernize-userinterface-site-pages.md) for eligible pages in the default `SitePages` library | Select representative patterns, create drafts, and validate before expansion. |
+| `WebPartPage` | Yes | Yes | [Representative-page batch workflow](modernize-userinterface-site-pages.md) for eligible pages in the default `SitePages` library | Select representative patterns, create drafts, and validate before expansion. |
+| `PublishingPage` | Yes | Yes | Advanced PnP cross-site transformation | Build a publishing backlog and define a separate target, layout mapping, metadata, and validation procedure. |
+| `BlogPage` | Yes | No | Advanced PnP Blog transformation to a target modern web | Don't use mapping percentage for selection; review the page and use a separately validated procedure. |
+| `ASPXPage` | Yes | No | No equivalent Assessment-driven transformation route | Replace or rebuild the page through a scenario-specific plan. |
+| `DelveBlogPage` | Yes | No | A legacy PnP cmdlet option exists, but isn't part of this workflow | Keep it outside automated waves and review the legacy scenario separately. |
 
 ## In this guidance
 

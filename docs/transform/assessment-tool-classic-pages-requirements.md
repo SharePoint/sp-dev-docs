@@ -1,7 +1,7 @@
 ---
 title: Requirements for the classic pages assessment
 description: Configure authentication, permissions, audit access, and a supported environment for the Microsoft 365 Assessment tool classic pages component.
-ms.date: 07/27/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -26,7 +26,37 @@ The tool supports the following authentication modes:
 
 Application authentication is recommended for a full-tenant assessment. A delegated assessment can access only the sites that the signed-in account can access.
 
-For general application-registration steps, see [Configure authentication](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html).
+Use a dedicated Microsoft Entra application and grant only the permission type required by the selected authentication mode. The permission tables on this page are authoritative for the Classic Pages component in Assessment 1.16.0.
+
+### Create a delegated application
+
+1. In the Microsoft Entra admin center, open **App registrations**, and select **New registration**.
+1. Enter a name. Under **Supported account types**, select **Single tenant only - \<your tenant\>**, and register the application.
+1. Under **API permissions**, select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, select `Sites.Read.All` and `User.Read`, and select **Add permissions**.
+1. Select **Add a permission** > **SharePoint** > **Delegated permissions**, select `AllSites.Read`, and select **Add permissions**.
+1. If the assessment will collect Audit usage, add the Microsoft Graph delegated permission `AuditLogsQuery-SharePoint.Read.All`.
+1. Select **Grant admin consent for \<tenant\>**, and select **Yes**.
+1. Copy the **Application (client) ID** for `--applicationid`.
+
+For Interactive authentication, under **Authentication**, select **Add a platform** > **Mobile and desktop applications**, add the custom redirect URI `http://localhost`, and select **Configure**.
+
+For Device authentication, a redirect URI isn't required. Under **Authentication** > **Advanced settings**, set **Allow public client flows** to **Yes**, and select **Save**.
+
+An application used for both Interactive and Device authentication requires both settings.
+
+### Register an application-authentication application
+
+1. Create a single-tenant app registration. A redirect URI isn't required for application authentication.
+1. Under **API permissions**, remove the default delegated Microsoft Graph `User.Read` permission.
+1. Select **Add a permission** > **Microsoft Graph** > **Application permissions**, select `Sites.Read.All`, and select **Add permissions**.
+1. Select **Add a permission** > **SharePoint** > **Application permissions**, select `Sites.Read.All`, and select **Add permissions**.
+1. If the assessment will collect Audit usage, add the Microsoft Graph application permission `AuditLogsQuery-SharePoint.Read.All`.
+1. Under **Certificates & secrets** > **Certificates**, select **Upload certificate**, choose the public certificate, and select **Add**.
+1. Select **Grant admin consent for \<tenant\>**, and select **Yes**.
+1. Copy the **Application (client) ID** for `--applicationid`.
+1. Install or securely provide the matching private-key certificate to the account that runs the assessment.
+
+For additional certificate-generation options, see [Configure authentication](https://pnp.github.io/pnpassessment/using-the-assessment-tool/setupauth.html). Don't copy broader permissions from a generic sample; use the Classic Pages permission tables on this page.
 
 ### Application certificate
 
@@ -52,6 +82,8 @@ The current classic pages implementation requires the following permissions:
 The page inventory reads web part configuration through the SharePoint `LimitedWebPartManager` API. Assessment version 1.16.0 can complete page and web part extraction with the read permissions in this table.
 
 Grant admin consent for the configured permissions before starting the assessment.
+
+These permissions are read-only. They don't allow PnP PowerShell to create or update modern pages. Use a separate transformation application and the [PnP PowerShell transformation permission guidance](modernize-userinterface-site-pages-powershell.md#permissions).
 
 ## Audit usage permission
 
