@@ -1,7 +1,7 @@
 ---
 title: Assess classic SharePoint pages
 description: Discover classic pages, inventory their web parts, and measure page modernization readiness.
-ms.date: 07/27/2026
+ms.date: 07/29/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -16,6 +16,17 @@ The assessment can optionally collect page view/create/edit activity from the Mi
 
 In the current implementation, Delve Blog pages appear in `classicpages.csv` but aren't included in `ClassicPages` or the page-type counts in `classicwebsummaries.csv` and `classicsitesummaries.csv`.
 
+## Page-type support
+
+| Page type | Discovered | Detailed readiness | Transformation route | Recommended action |
+| --- | --- | --- | --- | --- |
+| `WikiPage` | Yes | Yes | [Representative-page batch workflow](modernize-userinterface-site-pages.md) for eligible pages in the default `SitePages` library | Select representative patterns, create drafts, and validate before expansion. |
+| `WebPartPage` | Yes | Yes | [Representative-page batch workflow](modernize-userinterface-site-pages.md) for eligible pages in the default `SitePages` library | Select representative patterns, create drafts, and validate before expansion. |
+| `PublishingPage` | Yes | Yes | Advanced PnP cross-site transformation | Build a publishing backlog and define a separate target, layout mapping, metadata, and validation procedure. |
+| `BlogPage` | Yes | No | Advanced PnP Blog transformation to a target modern web | Don't use mapping percentage for selection; review the page and use a separately validated procedure. |
+| `ASPXPage` | Yes | No | No equivalent Assessment-driven transformation route | Replace or rebuild the page through a scenario-specific plan. |
+| `DelveBlogPage` | Yes | No | A legacy PnP cmdlet option exists, but isn't part of this workflow | Keep it outside automated waves and review the legacy scenario separately. |
+
 ## In this guidance
 
 ### Workflow
@@ -25,6 +36,7 @@ In the current implementation, Delve Blog pages appear in `classicpages.csv` but
 1. [Interpret and prioritize the results](assessment-tool-classic-pages-report.md).
 1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
 1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. [Validate the transformed pages](modernize-userinterface-site-pages-validation.md).
 
 ### Reference
 
@@ -91,7 +103,7 @@ Use the assessment output to select pages and identify Web Parts that need remed
 1. Remove, replace, or map blocking Web Parts.
 1. Start with a small representative wave.
 1. [Transform the selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
-1. Validate the generated modern pages before expanding the wave.
+1. [Validate the generated modern pages](modernize-userinterface-site-pages-validation.md) before expanding the wave.
 
 For the complete transformation model and advanced mapping options, see [Transform classic pages to modern pages](modernize-userinterface-site-pages.md).
 

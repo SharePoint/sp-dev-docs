@@ -36,6 +36,7 @@ Mapping readiness is an input to planning, not a guarantee that the transformed 
 1. [Interpret and prioritize the page results](assessment-tool-classic-pages-report.md).
 1. [Review publishing-page readiness](assessment-tool-publishing-coverage.md), when applicable.
 1. [Transform selected pages with PnP PowerShell](modernize-userinterface-site-pages-powershell.md).
+1. [Validate the transformed pages](modernize-userinterface-site-pages-validation.md).
 
 ## Reference
 
