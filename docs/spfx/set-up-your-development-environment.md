@@ -125,7 +125,7 @@ heft trust-dev-cert
 
 ## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
 
-Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
+Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute `heft start` with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
 
 ```json
 {
