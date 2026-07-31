@@ -1,7 +1,7 @@
 ---
 title: Configure authentication and authorization
 description: Configure Microsoft Entra ID authentication and SharePoint Embedded authorization for your application.
-ms.date: 07/27/2026
+ms.date: 07/13/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
