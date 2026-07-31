@@ -1110,7 +1110,7 @@
     href: general-development/sharepoint-development-overview.md
   - name: SharePoint Modernization scanner
     items:
-    - name: Which assessment tool should I use?
+    - name: Where should I start?
       href: transform/modernize-scanner.md
     - name: Understand the legacy scanner reports
       items:

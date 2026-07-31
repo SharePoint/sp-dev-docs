@@ -1,21 +1,26 @@
 ---
-title: Which SharePoint modernization assessment tool should I use?
-description: Choose between the Microsoft 365 Assessment tool and the legacy SharePoint Modernization Scanner.
-ms.date: 07/21/2026
+title: Where should I start a SharePoint modernization assessment?
+description: Start classic page modernization on Microsoft Learn, find another Assessment module, or review an archived Scanner workflow.
+ms.date: 07/31/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
-# Which SharePoint modernization assessment tool should I use?
+# Where should I start a SharePoint modernization assessment?
 
-For new SharePoint Online modernization assessments, use the [Microsoft 365 Assessment tool](https://pnp.github.io/pnpassessment/index.html) when it supports your scenario. It is the actively developed assessment platform and includes the current classic pages assessment.
+For a new classic page assessment and transformation project, start with [Assess and transform classic SharePoint pages](assess-sharepoint-modernization.md) on Microsoft Learn. The guidance includes requirements, application setup, assessment execution, report interpretation, CSV reference, publishing-page readiness, PnP PowerShell transformation, and validation.
+
+After reviewing the Microsoft Learn classic-page workflow, use the [Microsoft 365 Assessment tool project documentation](https://pnp.github.io/pnpassessment/index.html) for release downloads, configuration options, and implementation details.
+
+For another supported Assessment module, start directly with the [Microsoft 365 Assessment tool project documentation](https://pnp.github.io/pnpassessment/index.html).
 
 The SharePoint Modernization Scanner is a legacy tool and is no longer actively maintained. Its documentation remains available for customers who already use the scanner, need to interpret existing scanner reports, or need a capability that isn't yet available in the Microsoft 365 Assessment tool.
 
-| Scenario | Recommended tool |
+| Scenario | Start here |
 | --- | --- |
-| Start a new SharePoint modernization assessment | [Microsoft 365 Assessment tool](https://pnp.github.io/pnpassessment/index.html) |
-| Assess classic SharePoint pages | [Microsoft 365 Assessment tool - Classic SharePoint Pages](https://pnp.github.io/pnpassessment/classic/readme.html) |
+| Assess and transform classic SharePoint pages | Start with the [self-contained Microsoft Learn workflow](assess-sharepoint-modernization.md) |
+| Download or configure the Microsoft 365 Assessment tool | Use the [Microsoft 365 Assessment tool project documentation](https://pnp.github.io/pnpassessment/index.html) |
+| Use another supported Assessment module | Use the [Microsoft 365 Assessment tool project documentation](https://pnp.github.io/pnpassessment/index.html) |
 | Review output from an existing SharePoint Modernization Scanner run | Use the legacy scanner report documentation in this archive |
 | Continue an established scanner workflow or use a scanner-only capability | Use the legacy scanner documentation and validate that the capability still works in your environment |
 | Assess SharePoint Server or another on-premises environment | Use the [SharePoint Migration Assessment Tool](/sharepointmigration/overview-of-the-sharepoint-migration-assessment-tool) or another scenario-specific assessment tool |
