@@ -1,7 +1,7 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
 description: This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
-ms.date: 05/12/2023
+ms.date: 07/31/2026
 ms.service: power-automate
 search.app:
   - Flow
@@ -35,7 +35,7 @@ While both workflow systems allow users to build and publish workflows in ShareP
 Users primarily use SharePoint Designer to author and publish workflows in SharePoint, while professional developers, looking to extend and build workflows, use Visual Studio to build and publish workflows in SharePoint.
 
 > [!Important]
-> After August 1, 2020, new Microsoft 365 customers can use SharePoint 2013 workflows or Power Automate. However, SharePoint 2013 workflows will follow a similar retirement path in the future, so it's highly recommended to use Power Automate or other supported solutions. If you want to learn more about the SharePoint 2013 workflow usage inside your tenant you can use the [Workflow 2013 Assessment tool](https://aka.ms/microsoft365assessmenttool). This tool will assess your tenant on SharePoint 2013 workflow usage and generates a Power BI report with the findings.
+> SharePoint 2013 workflows were turned off for new Microsoft 365 tenants on April 2, 2024, and were fully retired for existing tenants on April 2, 2026. Use Power Automate or another supported solution. Inventory any workflow definitions, owners, dependencies, and business processes that still require replacement before planning migration.
 
 >[!Note]
 >The SharePoint Migration Tool (SPMT) lets you migrate SharePoint Server 2010 out-of-the-box workflows and SharePoint Designer 2010 & 2013 workflows to Power Automate. [Learn more about migrating your SharePoint Server and SharePoint Designer workflows with SPMT.](/sharepointmigration/spmt-workflow-overview)

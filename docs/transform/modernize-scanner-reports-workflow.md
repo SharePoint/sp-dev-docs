@@ -10,8 +10,8 @@ ms.service: sharepoint
 
 [!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
-> [!Note]
-> Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
+> [!NOTE]
+> For current workflow migration guidance, see [Migrate from classic workflows to Power Automate flows](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md).
 
 ## Excel dashboard
 

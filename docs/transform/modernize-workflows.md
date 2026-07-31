@@ -1,7 +1,7 @@
 ---
 title: Modernize SharePoint 2013 workflows
-description: Make the switch to Power Automate instead of SharePoint 2013 workflow for your business processes.
-ms.date: 05/25/2022
+description: Plan the transition from retired SharePoint 2013 workflows to Power Automate for your business processes.
+ms.date: 07/31/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -10,12 +10,12 @@ ms.service: sharepoint
 
 Modern business processes are essential for transforming organizational productivity in Microsoft 365. Since the release of SharePoint workflows, Microsoft has evolved workflow orchestration to not only encompass SharePoint, but all the productivity services you use with Microsoft 365 and beyond with Microsoft Power Automate. Power Automate connects to all Microsoft 365 services and over 220 other services to let an enterprise build custom workflows.
 
-With the continued investment in Power Automate as the universal solution to workflow orchestration, SharePoint 2010 workflows are retired as of November 2020. SharePoint 2013 workflow has been deprecated since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://aka.ms/sp-workflows-2013support). 
+With the continued investment in Power Automate as the universal solution to workflow orchestration, SharePoint 2010 workflows were retired in November 2020. SharePoint 2013 workflow was deprecated in April 2023, turned off for new tenants on April 2, 2024, and fully retired for existing tenants on April 2, 2026. If your organization still has workflow definitions or business processes that depended on SharePoint 2013 workflow, migrate them to Power Automate or another supported solution. For more information, see [SharePoint 2013 workflow retirement in Microsoft 365](https://aka.ms/sp-workflows-2013support).
 
-## Assessing your SharePoint 2013 workflow usage
+## Plan migration from SharePoint 2013 workflows
 
-Before you can plan to migrate your SharePoint 2013 workflows to Power Automate you first need to understand how many SharePoint 2013 workflows there are in your tenant, and for that you can use the [Workflow 2013 Assessment tool](https://aka.ms/microsoft365assessmenttool). This tool will assess your tenant on SharePoint 2013 workflow usage and generates a Power BI report with the findings. This assessment tool allows you to not only identify the SharePoint 2013 workflows active in your tenant but it also evaluates if they should be migrated to a Power Automate flow before SharePoint 2013 workflows are retired.
+Identify the workflow definitions, business owners, dependencies, and processes that still require replacement. If you retained output from an earlier SharePoint Modernization Scanner run, use the [archived workflow report reference](modernize-scanner-reports-workflow.md) to interpret it. Then see [Migrate from classic workflows to Power Automate flows](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md) for migration planning guidance.
 
 ## Migrating from SharePoint 2013 workflow to Power Automate
 
-Once you've defined a list of SharePoint 2013 workflows to migrate to Power Automate you use the [Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md) article to get guidance.
+After you define the workflows to replace, use [Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md) for guidance.

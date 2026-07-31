@@ -12,8 +12,8 @@ ms.service: sharepoint
 
 The output of a SharePoint Modernization Scanner run is a series of reports (CSV files and Excel dashboards). Using these outputs you can better understand what classic usage there is in your tenant, assess whether it's still relevant for you and get informed on potential remediation's needed before you can modernize. You would typically use the Microsoft Excel based dashboards to inspect the data and build up an understanding of the scan results. If you later on want to modernize sites, lists, etc you can use the CSV files as input for (PowerShell based) automation.
 
-> [!Note]
-> Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
+> [!NOTE]
+> For current workflow migration guidance, see [Migrate from classic workflows to Power Automate flows](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md).
 
 ## Overview of the scanner output
 
