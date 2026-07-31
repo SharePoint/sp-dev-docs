@@ -1104,6 +1104,63 @@
     href: sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md
   - name: Modern provisioning of artifacts and information architecture
     href: sp-add-ins-modernize/modern-provisioning.md
+- name: Assess and transform classic pages
+  href: transform/assess-sharepoint-modernization.md
+  items:
+  - name: Assess classic pages
+    href: transform/assessment-tool-classic-pages.md
+    items:
+    - name: Requirements
+      href: transform/assessment-tool-classic-pages-requirements.md
+    - name: Run the assessment
+      href: transform/assessment-tool-classic-pages-run.md
+    - name: Interpret and prioritize
+      href: transform/assessment-tool-classic-pages-report.md
+    - name: Publishing page readiness
+      href: transform/assessment-tool-publishing-coverage.md
+    - name: Reference
+      items:
+      - name: Classic pages CSV files
+        href: transform/assessment-tool-classic-pages-csv.md
+      - name: Common CSV files
+        href: transform/assessment-tool-common-reports.md
+  - name: Transform classic pages
+    href: transform/modernize-userinterface-site-pages.md
+    items:
+    - name: Transform with PnP PowerShell
+      href: transform/modernize-userinterface-site-pages-powershell.md
+    - name: Validate transformed pages
+      href: transform/modernize-userinterface-site-pages-validation.md
+    - name: Reference
+      items:
+      - name: Page wave script reference
+        href: transform/modernize-userinterface-site-pages-wave-scripts.md
+      - name: In-place versus cross-site transformation
+        href: transform/modernize-userinterface-site-pages-approach.md
+      - name: Security requirements
+        href: transform/modernize-userinterface-site-pages-security.md
+      - name: Configuration options
+        href: transform/modernize-userinterface-site-pages-configuration.md
+      - name: Classic Web Part mappings
+        href: transform/modernize-userinterface-site-pages-webparts.md
+      - name: Page transformation model
+        href: transform/modernize-userinterface-site-pages-model.md
+      - name: Publishing page transformation model
+        href: transform/modernize-userinterface-site-pages-model-publishing.md
+      - name: Functions and selectors
+        href: transform/modernize-userinterface-site-pages-api.md
+      - name: User mapping
+        href: transform/modernize-userinterface-site-pages-usermapping.md
+      - name: URL mapping
+        href: transform/modernize-userinterface-site-pages-urlmapping.md
+      - name: Term mapping
+        href: transform/modernize-userinterface-site-pages-termmapping.md
+      - name: Layout transformation
+        href: transform/modernize-userinterface-site-pages-layout.md
+      - name: .NET integration
+        href: transform/modernize-userinterface-site-pages-dotnet.md
+      - name: Videos
+        href: transform/modernize-userinterface-site-pages-videos.md
 - name: Archive
   items:
   - name: Overview
@@ -1855,63 +1912,6 @@
       href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
     - name: Back up and restore a search service application
       href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
-- name: Assess and transform classic pages
-  href: transform/assess-sharepoint-modernization.md
-  items:
-  - name: Assess classic pages
-    href: transform/assessment-tool-classic-pages.md
-    items:
-    - name: Requirements
-      href: transform/assessment-tool-classic-pages-requirements.md
-    - name: Run the assessment
-      href: transform/assessment-tool-classic-pages-run.md
-    - name: Interpret and prioritize
-      href: transform/assessment-tool-classic-pages-report.md
-    - name: Publishing page readiness
-      href: transform/assessment-tool-publishing-coverage.md
-    - name: Reference
-      items:
-      - name: Classic pages CSV files
-        href: transform/assessment-tool-classic-pages-csv.md
-      - name: Common CSV files
-        href: transform/assessment-tool-common-reports.md
-  - name: Transform classic pages
-    href: transform/modernize-userinterface-site-pages.md
-    items:
-    - name: Transform with PnP PowerShell
-      href: transform/modernize-userinterface-site-pages-powershell.md
-    - name: Validate transformed pages
-      href: transform/modernize-userinterface-site-pages-validation.md
-    - name: Reference
-      items:
-      - name: Page wave script reference
-        href: transform/modernize-userinterface-site-pages-wave-scripts.md
-      - name: In-place versus cross-site transformation
-        href: transform/modernize-userinterface-site-pages-approach.md
-      - name: Security requirements
-        href: transform/modernize-userinterface-site-pages-security.md
-      - name: Configuration options
-        href: transform/modernize-userinterface-site-pages-configuration.md
-      - name: Classic Web Part mappings
-        href: transform/modernize-userinterface-site-pages-webparts.md
-      - name: Page transformation model
-        href: transform/modernize-userinterface-site-pages-model.md
-      - name: Publishing page transformation model
-        href: transform/modernize-userinterface-site-pages-model-publishing.md
-      - name: Functions and selectors
-        href: transform/modernize-userinterface-site-pages-api.md
-      - name: User mapping
-        href: transform/modernize-userinterface-site-pages-usermapping.md
-      - name: URL mapping
-        href: transform/modernize-userinterface-site-pages-urlmapping.md
-      - name: Term mapping
-        href: transform/modernize-userinterface-site-pages-termmapping.md
-      - name: Layout transformation
-        href: transform/modernize-userinterface-site-pages-layout.md
-      - name: .NET integration
-        href: transform/modernize-userinterface-site-pages-dotnet.md
-      - name: Videos
-        href: transform/modernize-userinterface-site-pages-videos.md
 - name: Scenario guidance
   items:
   - name: Overview
