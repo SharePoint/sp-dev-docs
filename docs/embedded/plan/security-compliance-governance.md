@@ -1,7 +1,7 @@
 ---
 title: Plan security, compliance, and governance
-description: Plan how Microsoft Purview, audit, DLP, retention, labels, and access policies apply to SharePoint Embedded content.
-ms.date: 07/13/2026
+description: Plan how Microsoft Purview, audit, data loss prevention, retention, labels, and access policies apply to SharePoint Embedded content.
+ms.date: 07/21/2026
 ms.reviewer: mawin
 ms.author: mawin
 ms.localizationpriority: high
@@ -49,7 +49,7 @@ For tenant role planning, see [Understand app and tenant architecture](../plan/a
 
 ## Discover applications and containers
 
-Compliance administrators may need container details to target policies.
+Compliance administrators might need container details to target policies.
 
 Use this PowerShell discovery flow to retrieve container details for policy scope:
 
@@ -82,15 +82,15 @@ SharePoint Embedded supports these Microsoft Purview capabilities:
 - Audit
 - eDiscovery
 - Data Lifecycle Management
-- Data Loss Prevention
+- Data Loss Prevention (DLP)
 
-These capabilities work similarly to SharePoint content, with limitations where the app must provide user interaction.
+These capabilities work for SharePoint Embedded content similarly to how they work for SharePoint content, with limitations where the app must provide user interaction.
 
 ## Audit
 
 Audit capabilities mirror the existing audit functionality supported in SharePoint.
 
-User and admin operations performed in applications hosted in SharePoint Embedded are captured, recorded, and retained in the organization's unified audit log.
+The organization's unified audit log captures, records, and retains user and admin operations performed in applications hosted in SharePoint Embedded.
 
 Audit events related to SharePoint Embedded include additional data to help filter results:
 
@@ -105,11 +105,11 @@ For more information, see [Auditing solutions in Microsoft Purview](/purview/aud
 
 Compliance administrators can use Microsoft Purview eDiscovery tools to search, hold, and export SharePoint Embedded content.
 
-To search all SharePoint Embedded content, configure eDiscovery Search for all SharePoint sites.
+To search all SharePoint Embedded content, configure eDiscovery search for all SharePoint sites.
 
 This includes SharePoint sites and SharePoint Embedded containers.
 
-To limit eDiscovery Search to specific containers, choose sites under the SharePoint sites workload and provide the container URL.
+To limit eDiscovery search to specific containers, choose sites under the SharePoint sites workload and provide the container URL.
 
 For more information, see [Microsoft Purview eDiscovery solutions](/purview/ediscovery).
 
@@ -125,7 +125,7 @@ Because SharePoint Embedded has no built-in UI, app support is required for user
 
 For more information, see [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
-## Data Loss Prevention
+## Data Loss Prevention (DLP)
 
 Microsoft Purview Data Loss Prevention can identify, monitor, and automatically protect sensitive items stored in SharePoint Embedded applications.
 
@@ -157,17 +157,17 @@ The label is applied at the **container level**: it sets the container's sensiti
 
 ## Block download policy
 
-SharePoint Administrators or Global Administrators can block file downloads from SharePoint Embedded containers.
+SharePoint Embedded Administrators can block file downloads from SharePoint Embedded containers.
 
 Use this command:
 
 ```powershell
-Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
+Set-SPOContainer -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 
 A SharePoint Advanced Management license is needed to enforce this policy.
 
-For more information, see [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
+For more information, see [Set-SPOContainer](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontainer).
 
 ## Conditional Access
 

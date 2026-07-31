@@ -1,7 +1,7 @@
 ---
 title: Register application permissions
 description: Register SharePoint Embedded container type application permissions in a consuming tenant.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: stpuceli
 ms.author: mawin
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ Registration controls:
 - Which app-only permissions each application has.
 - Whether guest applications can interact with the owning application's containers.
 
-If registration is missing or incomplete, later calls can fail with access denied errors.
+If registration is missing or incomplete, later calls can fail with access-denied errors.
 
 ## Understand who can register
 
@@ -174,7 +174,7 @@ After registration succeeds:
 | Symptom | Likely cause | Action |
 |---|---|---|
 | `401 Unauthorized` | Missing or invalid token | Request a valid app-only token. |
-| `403 Forbidden` | App lacks permission or isn't owning app | Confirm `FileStorageContainerTypeReg.Selected`, consent, and app ID. |
+| `403 Forbidden` | App lacks permission or isn't the owning app | Confirm `FileStorageContainerTypeReg.Selected`, consent, and app ID. |
 | `404 Not Found` | Container type doesn't exist | Verify ID and tenant. |
 | Access denied on Graph calls | Registration missing or insufficient | Re-register with needed permissions. |
 | Admin can't find hidden permission | Portal doesn't expose it | Use an admin consent URL. |

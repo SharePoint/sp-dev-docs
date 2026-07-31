@@ -1,7 +1,7 @@
 ---
 title: Store and query container metadata
 description: Define SharePoint Embedded metadata columns and query drive items by field values.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -25,11 +25,11 @@ Use metadata when your app needs structured fields on files in a SharePoint Embe
 
 Call the metadata APIs with an app-only or delegated bearer token. Use `FileStorageContainer.Selected` for application and delegated calls.
 
-Container owners and managers can create, update, and delete columns. Container members can read and list columns.
+Column API authorization depends on the caller's Microsoft Graph permissions and the container type application permissions granted to the app.
 
 ## Choose column types
 
-SharePoint Embedded metadata supports these column type properties: `boolean`, `choice`, `currency`, `dateTime`, `hyperlinkOrPicture`, `number`, `personOrGroup`, and `text`. It also supports column settings such as `indexed`, `isDeletable`, `isSealed`, `name`, `readOnly`, and `type`.
+SharePoint Embedded metadata supports these column type properties: `boolean`, `choice`, `currency`, `dateTime`, `hyperlinkOrPicture`, `number`, `personOrGroup`, and `text`. It also supports column settings such as `indexed`, `isDeletable`, `isSealed`, `name`, and `readOnly`.
 
 Column names must follow SharePoint rules. Don't use names that contain `!`, start with a digit or punctuation, contain spaces, look like spreadsheet cell references, represent localized true or false values, or use reserved names such as `Author`, `Created`, or `Description`.
 

@@ -10,7 +10,7 @@
 ## Plan a solution (architect, IT decision maker)
 - [Understand app and tenant architecture](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/app-tenant-architecture): Developer vs consuming tenant, app ownership, container types, where files live.
 - [Choose an app model: single-tenant or multitenant](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-app-model): Enterprise LOB vs ISV; who owns, installs, and pays.
-- [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-and-containers): The container type/container model and ownership.
+- [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-containers): The container type/container model and ownership.
 - [Choose a billing model](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-billing-model): Standard vs pass-through (consuming-tenant) billing.
 - [Plan authentication and permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/authentication-permissions): Permission models, admin consent, app-only vs delegated.
 - [Plan security, compliance, and governance](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/security-compliance-governance): Purview, DLP, retention, sensitivity labels, conditional access.
@@ -47,7 +47,7 @@
 - [Create apps with PowerShell](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/create-apps-powershell): Create SharePoint Embedded apps with SharePoint PowerShell.
 - [Install a SharePoint Embedded app](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/install-sharepoint-embedded-app): Register/install an app in your tenant.
 - [Grant admin consent and permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/grant-admin-consent-permissions): Review and grant requested permissions.
-- [Set up billing in Microsoft 365 admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/setup-billing-m365-admin-center): Configure billing for a consuming tenant.
+- [Set up billing in Microsoft 365 admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/setup-billing-microsoft-365-admin-center): Configure billing for a consuming tenant.
 - [Manage containers in SharePoint admin center](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/manage-containers-sharepoint-admin-center): View and manage containers in the UI.
 - [Manage containers with PowerShell](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/manage-containers-powershell): Script container management.
 - [Monitor usage, billing, and cost](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/admin/monitor-usage-billing-cost): Track usage and cost drivers.

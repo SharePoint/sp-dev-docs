@@ -1,7 +1,7 @@
 ---
 title: Validate customer app installation
 description: Validate SharePoint Embedded container type registration, permissions, containers, and billing after a customer installs an ISV app.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -87,7 +87,7 @@ To verify that your app is properly installed on the customer tenant:
 
 1. Using the owning app, request an access token for the Microsoft Graph `.default` scope in the consuming tenant.
 1. Verify that the access token includes `FileStorageContainer.Selected` and `FileStorageContainerTypeReg.Selected` in either the `scp` claim (for access on behalf of a user) or `roles` claim (for access without a user).
-1. Use the token to [get the registration for your container type in the tenant](/graph/api/filestoragecontainertyperegistration-get). If a registration is returned, it means that your SharePoint Embedded app is installed correctly.
+1. Use the token to [get the registration for your container type in the tenant](/graph/api/filestoragecontainertyperegistration-get). A returned registration confirms that your SharePoint Embedded app is installed correctly.
 
 > [!TIP]
 > You can also validate that your guest apps are properly set up by requesting an access token for the Microsoft Graph `.default` scope in the consuming tenant and validating that the scopes/roles you expect are present and that you can use the token to interact with content. Only the owning app can access a container type registration in a tenant.

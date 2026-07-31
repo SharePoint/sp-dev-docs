@@ -1,7 +1,7 @@
 ---
 title: Audit events
 description: Reference for SharePoint Embedded container type audit events in the Microsoft Purview unified audit log.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -25,7 +25,7 @@ For step-by-step investigation guidance, see [Review audit events](../admin/revi
 
 ## Container type activities
 
-These events are logged when a container type is created, updated, or deleted. They use the **Workload** value **SharePoint** and appear under the **SharePoint Embedded Container Type activities** category in Microsoft Purview audit.
+Microsoft Purview audit logs record these events when a container type is created, updated, or deleted. They use the **Workload** value **SharePoint** and appear under the **SharePoint Embedded Container Type activities** category in Microsoft Purview audit.
 
 | Friendly name | Operation | Description |
 | --- | --- | --- |
@@ -38,7 +38,7 @@ For the full list of audit activities, see [Audit log activities](/purview/audit
 
 ## Container type registration activities
 
-These events are logged when a container type registration is created, updated, or deleted in a consuming tenant. A registration lets a SharePoint Embedded application operate in a given tenant. They use the **Workload** value **SharePoint** and appear under the **SharePoint Embedded Container Type Registration activities** category in Microsoft Purview audit.
+Microsoft Purview audit logs record these events when a container type registration is created, updated, or deleted in a consuming tenant. A registration lets a SharePoint Embedded application operate in a given tenant. They use the **Workload** value **SharePoint** and appear under the **SharePoint Embedded Container Type Registration activities** category in Microsoft Purview audit.
 
 | Friendly name | Operation | Description |
 | --- | --- | --- |

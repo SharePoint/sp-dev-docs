@@ -1,7 +1,7 @@
 ---
 title: Guide customers through tenant setup
 description: Give customer admins the SharePoint Embedded setup, consent, billing, and validation steps needed to install an ISV app.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: pemtaira
 ms.author: mawin
 ms.localizationpriority: high
@@ -42,7 +42,7 @@ Ask the customer to confirm these prerequisites before the setup meeting or inst
 | Billing | An Azure subscription and resource group are available if the app uses pass-through billing. |
 | Support | The customer has your app ID, support contact, and validation checklist. |
 
-Users don't need an Office license to collaborate on Microsoft Office documents stored in a container, except for documented exceptional experiences such as mentions.
+Users don't need an Office license to collaborate on Microsoft Office documents stored in a container. Some features, such as resolving mentions, require a Microsoft 365 license for target users.
 
 ## Information to give the customer
 
@@ -105,7 +105,7 @@ Ask the customer administrator to review:
 - Support and incident response commitments.
 - Billing model.
 
-If your installation flow is hosted in your SaaS admin portal, include screenshots or tenant-specific values in your handoff, and keep links stable so customer admins can reuse the guide for production and disaster recovery.
+If your installation flow is hosted in your software as a service (SaaS) admin portal, include screenshots or tenant-specific values in your handoff, and keep links stable so customer admins can reuse the guide for production and disaster recovery.
 
 ## Step 3: Grant admin consent
 

@@ -1,7 +1,7 @@
 ---
 title: PowerShell reference
 description: Reference for SharePoint Online PowerShell cmdlets used to administer SharePoint Embedded.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -57,7 +57,7 @@ For task guidance, see [manage containers with PowerShell](../admin/manage-conta
 Deleted containers can be restored from the deleted container collection within 93 days. Permanently deleting a container deletes all documents and files in it. If a container was in the archived state when it was deleted, restoring it returns it to the archived state.
 
 > [!NOTE]
-> To enumerate Microsoft Loop containers, use owning app ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+> To enumerate Microsoft Loop containers, use the owning application ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 
 ## Related resources
 

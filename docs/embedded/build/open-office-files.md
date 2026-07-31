@@ -1,7 +1,7 @@
 ---
 title: Open Office files from your app
 description: Launch Word, Excel, and PowerPoint files from SharePoint Embedded in Office web or desktop clients.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -131,7 +131,7 @@ ms-powerpoint:ofe|u|https://contoso.com/presentation.pptx
 
 ## Build a desktop client URL
 
-Because `webUrl` points to Office Online for Office documents, build the desktop URI in two steps:
+Because `webUrl` points to Office for the web for Office documents, build the desktop URI in two steps:
 
 1. Get the `webUrl` of the parent folder.
 1. Append the file name.
@@ -156,7 +156,12 @@ Use redirect settings to route users back to your app when Microsoft 365 can't o
 
 `ApplicationRedirectUrl` configures the application redirect URL on the container type. Use it for the app route that handles file-return scenarios for your workload.
 
-The `urlTemplate` setting controls where Microsoft 365 sends users for files without a supported viewer. Supported Office web viewer files, such as Word, Excel, and PowerPoint, open in the Office web viewer. PDF files open in the embedded viewer. Other file types redirect through `urlTemplate` when it's configured. If `urlTemplate` isn't configured, Microsoft 365 sends users to a Microsoft help page.
+The `urlTemplate` setting controls where Microsoft 365 sends users for files without a supported viewer. Routing works this way:
+
+- Supported Office files, such as Word, Excel, and PowerPoint files, open in Office for the web.
+- PDF files open in the embedded viewer.
+- Other file types redirect through `urlTemplate` when it's configured.
+- If `urlTemplate` isn't configured, Microsoft 365 sends users to a Microsoft help page.
 
 Set `settings.urlTemplate` with the Microsoft Graph `PATCH /storage/fileStorage/containerTypes/{containerTypeId}` API. Use a valid absolute `https://` URL that doesn't resolve to a loopback address.
 
@@ -171,7 +176,7 @@ Content-Type: application/json
 }
 ```
 
-Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. For example, supported tokens can include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`.
+Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. Examples of supported tokens can include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`; the supported token set can change.
 
 When your app receives a `urlTemplate` redirect, authenticate the user, parse the token values, and use Microsoft Graph to retrieve the file. If you need the canonical file URL, use the DriveItem `webDavUrl` property instead of `webUrl`.
 

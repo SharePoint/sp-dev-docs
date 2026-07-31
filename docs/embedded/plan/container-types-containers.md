@@ -1,7 +1,7 @@
 ---
 title: Understand container types and containers
 description: Learn how SharePoint Embedded container types define app access and how containers store files in consuming tenants.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ Each container type is strongly coupled with one SharePoint Embedded application
 
 ## Container type identity
 
-The container type is represented on each container as an immutable property named `ContainerTypeID`. The property is used across the SharePoint Embedded ecosystem. It affects:
+The container type is represented on each container as an immutable Microsoft Graph property named `containerTypeId`. The property is used across the SharePoint Embedded ecosystem. It affects:
 
 - Access authorization.
 - Trial exploration.
@@ -73,7 +73,7 @@ For tenant architecture, see [Understand app and tenant architecture](../plan/ap
 
 ## Access authorization
 
-A SharePoint Embedded application must be associated with a container type to access containers of that type. After association, the application has access to containers of that type according to application-container type permissions. The owning application has full access privilege by default to containers of the container type it's coupled with. Actual access also depends on whether the app uses delegated access or app-only access.
+A SharePoint Embedded application must be associated with a container type to access containers of that type. After association, the application has access to containers of that type according to container type application permissions. The owning application has full access privilege by default to containers of the container type it's coupled with. Actual access also depends on whether the app uses delegated access or app-only access.
 
 For permission planning, see [Plan authentication and permissions](../plan/authentication-permissions.md).
 
@@ -87,7 +87,7 @@ For trial container types:
 - Each developer can have only one trial container type in their tenant at a time.
 - The trial is valid for up to 30 days.
 - Up to five containers of the container type can be created, including active containers and containers in the recycle bin.
-- Each container has up to 1 GB of storage.
+- Each container has up to 200 MB of storage.
 - The container type is restricted to the developer tenant.
 
 A trial container type can't be converted to production.
@@ -100,7 +100,7 @@ Container types are created with the Microsoft Graph `POST /v1.0/storage/fileSto
 
 A standard container type is used for non-trial scenarios.
 
-By default, each tenant can have 25 container types at a time; one can be a free trial container type, and the rest are standard container types. You can request an increase through Microsoft support or your SharePoint Embedded onboarding contact.
+By default, each tenant can have up to 25 standard container types, plus one free trial container type. You can request an increase through Microsoft support or your SharePoint Embedded onboarding contact.
 
 Standard container types are billable and must use a billing model.
 

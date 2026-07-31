@@ -1,7 +1,7 @@
 ---
 title: Share files and manage permissions
 description: Grant targeted SharePoint Embedded file access with additive permissions and role-based sharing.
-ms.date: 07/10/2026
+ms.date: 07/21/2026
 ms.reviewer: cindylay
 ms.author: mawin
 ms.localizationpriority: high
@@ -78,7 +78,7 @@ If the user still has access after deletion, inspect inherited container roles, 
 
 SharePoint Embedded supports a role-based sharing model on the container type. The restrictive model allows only `Owner` and `Manager` members to add new permissions to files. The open model allows container members and guests with edit permissions to add new file permissions. By default, a container type uses the open model.
 
-Developers in the developer tenant control this container type setting. Design your UI so the share action is disabled or hidden when the current user's role can't add permissions. For administrative configuration, see [Admin overview](../admin/admin-overview.md).
+Developers in the developer tenant control this container type setting. Design your user interface so the share action is disabled or hidden when the current user's role can't add permissions. For administrative configuration, see [Admin overview](../admin/admin-overview.md).
 
 ## Respect tenant sharing policy
 

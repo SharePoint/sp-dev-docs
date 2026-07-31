@@ -1,7 +1,7 @@
 ---
-title: What's new in SharePoint Embedded?
+title: What's new in SharePoint Embedded
 description: Updates about Microsoft SharePoint Embedded.
-ms.date: 06/04/2025
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -57,7 +57,7 @@ next: overview.md
 
 ## November 2025
 
-- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 GCC](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (not yet GCC High or DoD) for US Government customers. For more information, see [Microsoft Graph national cloud deployments](/graph/deployments).
+- [SharePoint Embedded](./overview.md) is now available in [Microsoft 365 Government Community Cloud (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc) (not yet Government Community Cloud High (GCC High) or Department of Defense (DoD)) for US Government customers. For more information, see [Microsoft Graph national cloud deployments](/graph/deployments).
 - [SharePoint Embedded migration](/graph/api/resources/sharepointmigration-api-overview) APIs are now available in the v1.0 Microsoft Graph endpoint.
 
 ## October 2025
@@ -83,7 +83,7 @@ next: overview.md
 
 ## May 2025
 
-- The default limit for container types that a partner tenant can create is now 25. For more information, see [Limits and Calling Patterns](./plan/limits-calling-patterns.md#size-limits).
-- The SharePoint Embedded agent switched to a consumption-based model for all users, whether they have a Copilot license. For more information, see [SharePoint Embedded agent](./build/agent-experiences.md).
+- The default limit for container types that a developer tenant can create is now 25. For more information, see [Limits and Calling Patterns](./plan/limits-calling-patterns.md#size-limits).
+- The SharePoint Embedded agent switched to a consumption-based model for all users, regardless of whether they have a Copilot license. For more information, see [SharePoint Embedded agent](./build/agent-experiences.md).
 - The guidance for granting admin consent to a SharePoint Embedded application now uses URL-based admin consent. For more information, see [Grant admin consent](./build/register-application-permissions.md#grant-admin-consent).
 - Documented an exceptional access pattern for operations that may require a user license. For more information, see [Handle operations not exposed through Graph](./build/configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).

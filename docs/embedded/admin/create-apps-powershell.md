@@ -1,7 +1,7 @@
 ---
 title: Create apps with PowerShell
 description: Create and configure SharePoint Embedded apps with SharePoint PowerShell.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: shsaravanan
 ms.author: mawin
 ms.localizationpriority: high
@@ -33,7 +33,7 @@ Make sure you have:
 > [!IMPORTANT]
 > Choose the billing method when you create the container type. You can't change the billing method after creation.
 
-## Create a standard billed app
+## Create an app that uses standard billing
 
 Use standard billing when the organization that owns the app pays for SharePoint Embedded usage.
 
@@ -47,7 +47,7 @@ Set up billing for the standard container type by assigning an Azure subscriptio
 Add-SPOContainerTypeBilling -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
 ```
 
-## Create a pass-through billed app
+## Create an app that uses pass-through (customer) billing
 
 Use pass-through billing when the consuming tenant pays for SharePoint Embedded usage.
 

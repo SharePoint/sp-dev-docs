@@ -1,7 +1,7 @@
 ---
 title: Grant admin consent and permissions
 description: Review SharePoint Embedded permissions, grant admin consent, and verify the consent state in a consuming tenant.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -19,7 +19,9 @@ outcome: Grant admin consent for a SharePoint Embedded app and validate permissi
 next: setup-billing-microsoft-365-admin-center.md
 -->
 
-Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions require admin consent. Delegated flows can avoid tenant-wide admin consent, but they still require the appropriate admin role for registration or per-user consent for container access. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant.
+
+Application permissions require admin consent. Delegated flows can avoid tenant-wide admin consent, but they still require the appropriate admin role for registration or per-user consent for container access. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 Use this article to review requested permissions, grant consent, and troubleshoot common consent failures.
 
@@ -55,7 +57,7 @@ These are the permissions that the owning application needs to act on the consum
 | Permission | Why the app requests it | Consent note |
 | --- | --- | --- |
 | [`FileStorageContainerTypeReg.Selected`](/graph/permissions-reference#filestoragecontainertyperegselected) | Register the container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated registration is used, no admin consent is required but the user performing the registration must be a SharePoint Embedded Administrator or Global Administrator. |
-| [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) | Access containers and content for its container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated access is used, no admin consent is required but each user of the app will need to consent when signing into the app. |
+| [`FileStorageContainer.Selected`](/graph/permissions-reference#filestoragecontainerselected) | Access containers and content for its container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated access is used, no admin consent is required but each user of the app will need to consent when signing in to the app. |
 
 ## Review requested permissions
 

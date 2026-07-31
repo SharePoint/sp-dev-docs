@@ -1,7 +1,7 @@
 ---
 title: Create and manage containers
 description: Create, list, update, recycle, restore, and delete SharePoint Embedded containers in your app.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
@@ -119,7 +119,7 @@ When listing containers:
 - Map results to your application data.
 
 > [!NOTE]
-> Delegated list containers currently returns `403 Forbidden` if the user doesn't have a OneDrive. This dependency doesn't apply to app-only list calls.
+> Delegated list containers currently returns `403 Forbidden` if the user lacks a provisioned OneDrive. This dependency doesn't apply to app-only list calls.
 
 ## Get a container
 

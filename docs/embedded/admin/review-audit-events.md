@@ -1,7 +1,7 @@
 ---
 title: Review audit events
 description: Find and interpret SharePoint Embedded audit activity in Microsoft Purview audit.
-ms.date: 07/13/2026
+ms.date: 07/21/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -40,8 +40,6 @@ Confirm these prerequisites.
 For supported SharePoint Embedded compliance capabilities, see [Security and Compliance](apply-security-compliance-controls.md).
 
 ## Understand SharePoint Embedded audit coverage
-
-Audit capabilities in SharePoint Embedded mirror existing SharePoint audit capabilities.
 
 User and admin operations performed in applications hosted in SharePoint Embedded are captured, recorded, and retained in the unified audit log.
 
