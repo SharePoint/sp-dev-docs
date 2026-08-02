@@ -96,7 +96,7 @@ Use a confidential client application to keep your app in control of actions tak
 
 For delegated calls:
 
-1. Sign in the user with Microsoft identity platform.
+1. Sign in the user with the Microsoft identity platform.
 1. Request delegated `FileStorageContainer.Selected`.
 1. Confirm delegated consent is granted according to the consuming tenant's user consent policies.
 1. Acquire an access token for Microsoft Graph.
@@ -172,12 +172,12 @@ The owning application grants container type application permissions through [co
 
 ## Manage container type owners
 
-Any Microsoft Entra user that isn't an external identity can be a container type owner. Owner management through the [permissions](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource is currently available only in Microsoft Graph beta. Each entry has the `owner` role and identifies the user through `grantedToV2`.
+Any Microsoft Entra user that isn't an external identity can be a container type owner. Owner management through the [permissions](/graph/api/filestoragecontainertype-post-permissions) navigation property on the [fileStorageContainerType](/graph/api/resources/filestoragecontainertype) resource is currently available only in Microsoft Graph beta. Each entry has the `owner` role and identifies the user through `grantedToV2`.
 
 - **Automatic assignment**: The user who [creates a container type](/graph/api/filestorage-post-containertypes) is automatically assigned as an owner.
-- **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta) to add owners. A container type can have at most three owners in total, including the creator who is automatically assigned as the first owner.
-- **Remove owners**: Use [`DELETE /containerTypes/{id}/permissions/{id}`](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta) to remove an owner.
-- **Read owners**: Use [`GET /containerTypes/{id}?$expand=permissions`](/graph/api/filestoragecontainertype-get?view=graph-rest-beta) or [`GET /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta) to retrieve owners.
+- **Add owners**: Use [`POST /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-post-permissions) to add owners. A container type can have at most three owners in total, including the creator who is automatically assigned as the first owner.
+- **Remove owners**: Use [`DELETE /containerTypes/{id}/permissions/{id}`](/graph/api/filestoragecontainertype-delete-permissions) to remove an owner.
+- **Read owners**: Use [`GET /containerTypes/{id}?$expand=permissions`](/graph/api/filestoragecontainertype-get) or [`GET /containerTypes/{id}/permissions`](/graph/api/filestoragecontainertype-list-permissions) to retrieve owners.
 
 SharePoint Embedded Administrators can manage all applications created in the owning tenant and installed in the consuming tenant. Assign the least privileged role necessary; the SharePoint Embedded Administrator role is recommended over Global Administrator for these tasks.
 
