@@ -20,6 +20,7 @@ next: overview.md
 
 ## July 2026
 
+- The [Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) is generally available and now offers a `sharePointEmbedded` data source in preview, with pay-as-you-go billing on the Copilot Studio message meter. Users who query the API no longer each need a Microsoft 365 Copilot license, but one licensed user still initializes the semantic index. For more information, see [Use the Retrieval API](./build/agent-experiences.md#use-the-retrieval-api).
 - You can [use the Model Context Protocol (MCP) server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md). The open-source SharePoint Embedded MCP server npm package ([`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server)) is preview software. It lets MCP-compatible AI clients, such as GitHub Copilot in Visual Studio Code or the CLI, Claude, or Cursor, provision and manage SharePoint Embedded applications through natural language.
 
 ## June 2026

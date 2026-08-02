@@ -21,20 +21,23 @@ next: migrate-azure-blob-storage.md
 
 Use Microsoft Foundry Agent Service with a SharePoint knowledge source when your app needs a grounded agent experience over files stored in SharePoint Embedded containers.
 
+For SharePoint Embedded container types, the knowledge source grounds answers through the generally available [Microsoft 365 Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval). Foundry runs the retrieval calls as part of the agent, so the same prerequisites, indexing behavior, and billing apply. The `sharePointEmbedded` data source that Foundry uses is in preview. To run your own grounding step instead, call the Retrieval API directly, as described in [Use the Retrieval API](agent-experiences.md#use-the-retrieval-api).
+
 > [!NOTE]
 > SharePoint knowledge sources for SharePoint Embedded are in preview.
 
 ## Prerequisites
 
-Before you start, make sure you have:
+Before you start, verify that you have:
 
 - A SharePoint Embedded app with at least one container.
 - The container type ID for the SharePoint Embedded app.
 - A Microsoft Foundry Agent Service project.
-- At least one Microsoft 365 Copilot license in the tenant during preview.
+- Pay-as-you-go billing configured for the container type.
+- At least one user in the tenant with a Microsoft 365 Copilot license, so the semantic index initializes. For more information, see [Semantic index for Microsoft 365 Copilot](/microsoftsearch/semantic-index-for-copilot).
 - Permission to update the container type registration in each consuming tenant where the agent must access content.
 
-During preview, the Copilot license is required. Billing requirements after preview are subject to change.
+Users who query the agent don't each need a Microsoft 365 Copilot license. Usage bills on the Copilot Studio message meter, and charges follow the billing model configured for the container type. For more information, see [Billing meters](../reference/billing-meters.md).
 
 ## Configure the SharePoint knowledge source
 
@@ -76,6 +79,7 @@ If the answer omits expected files, check:
 
 - Container type registration in the consuming tenant.
 - Foundry application permission grants.
+- Semantic index initialization in the tenant.
 - User access to the container and files.
 - Supported file formats.
 - Content discoverability settings.
@@ -83,5 +87,6 @@ If the answer omits expected files, check:
 
 ## Next steps
 
+- [Use the Retrieval API](agent-experiences.md#use-the-retrieval-api)
 - [Add Microsoft 365 Copilot and agent experiences](agent-experiences.md)
 - [Register application permissions](register-application-permissions.md)
