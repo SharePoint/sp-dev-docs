@@ -170,7 +170,7 @@ Use this server-side pattern:
 
 ```csharp
 [HttpGet]
-[AuthorizeForScopes(Scopes = new string[] { "Files.Read.All" })]
+[AuthorizeForScopes(Scopes = new string[] { "FileStorageContainer.Selected" })]
 public async Task<ActionResult<string>> GetPreviewUrl(string driveId, string itemId)
 {
   return url + "&nb=true";
