@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the blog scanner mode
 description: Explains the blog output created by the modernization scanner
-ms.date: 07/21/2026
+ms.date: 02/04/2021
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

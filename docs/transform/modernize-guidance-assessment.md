@@ -1,7 +1,7 @@
 ---
 title: SharePoint modernization guidance - Assessment
 description: Modernization offerings that IT Teams and partners can use with their customers - assessment step
-ms.date: 07/21/2026
+ms.date: 12/06/2019
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

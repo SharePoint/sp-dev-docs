@@ -1,7 +1,7 @@
 ---
 title: Opting out of the modern list and library experience 
 description: Explains how to correctly opt out from modern list and libraries
-ms.date: 07/21/2026
+ms.date: 06/05/2020
 ms.localizationpriority: medium
 ms.service: sharepoint
 ---

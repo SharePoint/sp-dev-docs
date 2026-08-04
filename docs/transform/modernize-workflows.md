@@ -1,7 +1,7 @@
 ---
 title: Modernize SharePoint 2013 workflows
 description: Plan the transition from retired SharePoint 2013 workflows to Power Automate for your business processes.
-ms.date: 07/31/2026
+ms.date: 05/25/2022
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

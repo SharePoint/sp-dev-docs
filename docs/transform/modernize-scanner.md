@@ -1,7 +1,7 @@
 ---
 title: Where should I start a SharePoint modernization assessment?
 description: Start classic page modernization on Microsoft Learn or review an archived SharePoint Modernization Scanner workflow.
-ms.date: 07/31/2026
+ms.date: 11/26/2025
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
