@@ -1104,7 +1104,7 @@
     href: sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md
   - name: Modern provisioning of artifacts and information architecture
     href: sp-add-ins-modernize/modern-provisioning.md
-- name: Assess and transform classic pages
+- name: Modernizing classic SharePoint pages
   href: transform/assess-sharepoint-modernization.md
   items:
   - name: Assess classic pages
