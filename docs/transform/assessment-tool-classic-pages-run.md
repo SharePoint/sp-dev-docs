@@ -1,7 +1,7 @@
 ---
 title: Run a classic pages assessment
 description: Start, scope, monitor, and report a Microsoft 365 Assessment tool classic pages assessment.
-ms.date: 07/27/2026
+ms.date: 07/22/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
