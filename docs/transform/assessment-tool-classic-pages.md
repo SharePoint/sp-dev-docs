@@ -1,7 +1,7 @@
 ---
 title: Assess classic SharePoint pages
 description: Discover classic pages, inventory their web parts, and measure page modernization readiness.
-ms.date: 07/29/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

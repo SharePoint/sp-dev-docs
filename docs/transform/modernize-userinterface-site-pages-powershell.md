@@ -1,7 +1,7 @@
 ---
 title: Transform selected classic pages with PnP PowerShell
 description: Prepare a minimally privileged PnP PowerShell connection and transform approved classic pages with source-preserving defaults.
-ms.date: 07/29/2026
+ms.date: 02/09/2023
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

@@ -1,7 +1,7 @@
 ---
 title: Assess publishing pages for transformation
 description: Use Microsoft 365 Assessment tool publishing-page output to plan page transformation and page-layout mapping.
-ms.date: 07/29/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

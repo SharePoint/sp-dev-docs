@@ -1,7 +1,7 @@
 ---
 title: Transform classic SharePoint pages to modern pages
 description: Select assessed classic pages, transform a representative wave with PnP PowerShell, validate the results, and expand safely.
-ms.date: 07/28/2026
+ms.date: 08/13/2024
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

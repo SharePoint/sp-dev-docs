@@ -1,7 +1,7 @@
 ---
 title: Requirements for the classic pages assessment
 description: Configure authentication, permissions, audit access, and a supported environment for the Microsoft 365 Assessment tool classic pages component.
-ms.date: 07/29/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---

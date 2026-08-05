@@ -1,7 +1,7 @@
 ---
 title: Interpret the classic pages assessment report
 description: Use page, web part, usage, and rollup results from the Microsoft 365 Assessment tool to plan SharePoint page modernization.
-ms.date: 07/29/2026
+ms.date: 07/27/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
