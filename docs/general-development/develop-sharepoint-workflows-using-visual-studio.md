@@ -10,14 +10,10 @@ ms.localizationpriority: high
 SharePoint supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each.
 
 > [!NOTE]
-> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants on SharePoint Online and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more information, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+> SharePoint 2010 workflows retired on August 1, 2020 for new tenants on SharePoint Online and were removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more information, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 > [!NOTE]
-> SharePoint 2010 workflows are deprecated for SharePoint On-Premise on July 16, 2026. If you’re using SharePoint 2010 workflows, we recommend migrating to SharePoint 2013 Workflows or using Power Automate with Azure on-premise data gateway or other supported solutions. For more information, see [What's deprecated or removed from SharePoint Server Subscription Edition
-](/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition#deprecated-features).
-
-> [!NOTE]
-> SharePoint 2013 workflows are turned off for new SharePoint Online tenants on April 2, 2024, and were fully retired on April 2, 2026. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
+> SharePoint 2013 workflows were retired on April 2, 2026. For more information, see: [SharePoint 2013 workflow retirement](https://support.microsoft.com/office/sharepoint-2013-workflow-retirement-4613d9cf-69aa-40f7-b6bf-6e7831c9691e).
 
 ## Authoring basics for SharePoint workflows
 
@@ -45,7 +41,6 @@ Both of these workflow authoring environments—SharePoint Designer and Visual S
 
 - **Target users:** Information workers, business analysts, SharePoint developers.
 - **Difficulty level:** Familiarity with SharePoint Designer, including the core workflow components, such as stages, gates, actions, conditions, and loops.
-
 
 With SharePoint Designer, users can create a workflow that is attached to a list, library, or site using a no-code, text-based designer. Or, they can use the new visual design environment in which graphical elements are arranged on a design surface to represent the logical flow of a business process. SharePoint Designer excels at enabling rapid workflow development by non-technical workers.
 
