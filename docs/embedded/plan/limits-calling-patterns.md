@@ -56,6 +56,8 @@ SharePoint Embedded enforces the following size limits.
 | File size | 250 GB |
 | Version count per file | 500 (default automatic version history limit) |
 | Number of users shared per folder or file | 5,000 |
+| Number of searchable columns per container | 40 |
+| Number of indexed columns per container | 20 |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
