@@ -93,7 +93,15 @@ Use container membership and roles where possible.
 
 For permission concepts, see [Plan authentication and permissions](../plan/authentication-permissions.md).
 
-## Throttling responses
+## Throttling management
+
+Throttling is a mechanism to protect the SharePoint Embedded service and ensure fair usage.
+Your application must handle throttling signals and react appropriately.
+
+> [!TIP]
+> Read [Avoid getting throttled or blocked in SharePoint](../../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) to understand the best practices for your application. The limits for SharePoint Embedded are described in [API rate limits](#api-rate-limits).
+
+### Throttling responses
 
 When applications hit service limits, SharePoint Embedded can return:
 
@@ -107,7 +115,7 @@ The header tells the app how long to wait before retrying or making a new reques
 > [!IMPORTANT]
 > Throttled requests count toward usage limits. If you ignore `Retry-After`, your app can cause more throttling.
 
-## Retry guidance
+### Retry guidance
 
 Implement retry logic that:
 
@@ -120,7 +128,7 @@ Implement retry logic that:
 
 Use bounded retries and surface persistent failures to operations telemetry. For general guidance on handling throttling responses, see [Microsoft Graph throttling guidance](/graph/throttling).
 
-## Concurrency guidance
+### Concurrency guidance
 
 Reduce the number of concurrent requests when throttling occurs.
 
@@ -157,9 +165,9 @@ SharePoint Embedded enforces these API rate limits.
 
 | Resource | Limit |
 | --- | --- |
-| Requests per container | 3,000 resource units per minute |
+| Requests per container | 3,000 resource units per minute* |
 | Requests per app per tenant | 12,000 resource units per minute* |
-| Requests per user | 600 resource units per minute |
+| Requests per user | 600 resource units per minute* |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
@@ -206,6 +214,7 @@ Design for:
 - Separation of foreground and background work.
 - Tenant-level fairness for multitenant apps.
 - Monitoring of request rate, response codes, and latency.
+- Spreading load across several containers.
 
 For billing impact of API transactions, see [Choose a billing model](../plan/choose-billing-model.md).
 
@@ -214,6 +223,8 @@ For billing impact of API transactions, see [Choose a billing model](../plan/cho
 Track:
 
 - HTTP `429` and `503` response rates.
+- `RateLimit-*` headers returned for both successful and throttled calls.
+- `Retry-After` header for throttled calls.
 - Retry counts and wait durations.
 - Resource-intensive operations.
 - Requests by app, tenant, user, and container.
@@ -227,6 +238,7 @@ Use these signals to tune concurrency and identify tenants or workflows that nee
 
 - Confirm current size limits before production launch.
 - Model containers instead of creating many container types.
+- Design your architecture to spread load across as many containers as possible.
 - Estimate storage per container and per consuming tenant.
 - Estimate file and folder counts.
 - Avoid unnecessary additive permissions.
