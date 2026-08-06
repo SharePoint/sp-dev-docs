@@ -99,7 +99,7 @@ Throttling is a mechanism to protect the SharePoint Embedded service and ensure 
 Your application must handle throttling signals and react appropriately.
 
 > [!TIP]
-> Read [Avoid getting throttled or blocked in SharePoint](../../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online) to understand the best practices for your application. The limits for SharePoint Embedded are described in [API rate limits](#api-rate-limits).
+> Read [Avoid getting throttled or blocked in SharePoint](../../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md) to understand the best practices for your application. The limits for SharePoint Embedded are described in [API rate limits](#api-rate-limits).
 
 ### Throttling responses
 
