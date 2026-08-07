@@ -11,7 +11,7 @@ Learn how to install, open, and create a workflow by using SharePoint Designer 2
 
 > [!NOTE]
 > SharePoint Designer 2013 was deprecated on July 14, 2026. For more information, see [What's deprecated or removed from SharePoint Server Subscription Edition
-](/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition#sharepoint-designer-2013). For new workflows, we recommend using Visual Studio, see [Develop SharePoint workflows using Visual Studio](/sharepoint/dev/general-development/develop-sharepoint-workflows-using-visual-studio).
+](/sharepoint/what-s-new/what-s-deprecated-or-removed-from-sharepoint-server-subscription-edition#sharepoint-designer-2013). For new workflows, we recommend using Visual Studio, see [Develop SharePoint workflows using Visual Studio](./develop-sharepoint-workflows-using-visual-studio.md).
 
 > [!CAUTION]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants on SharePoint Online and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more information, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
