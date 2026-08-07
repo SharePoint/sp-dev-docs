@@ -8,8 +8,7 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: InfoPath reports
 
-> [!Note]
-> Assessing your InfoPath usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
 
 ## Excel dashboard
 

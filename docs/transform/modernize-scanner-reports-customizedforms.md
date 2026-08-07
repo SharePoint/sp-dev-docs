@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: Customized Forms reports
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 ## Understanding the ModernizationCustomizedFormsScanResults.csv file
 
 This report contains the following columns:

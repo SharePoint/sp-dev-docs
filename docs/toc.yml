@@ -1104,10 +1104,93 @@
     href: sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md
   - name: Modern provisioning of artifacts and information architecture
     href: sp-add-ins-modernize/modern-provisioning.md
+- name: Modernizing classic SharePoint pages
+  href: transform/assess-sharepoint-modernization.md
+  items:
+  - name: Assess classic pages
+    href: transform/assessment-tool-classic-pages.md
+    items:
+    - name: Requirements
+      href: transform/assessment-tool-classic-pages-requirements.md
+    - name: Run the assessment
+      href: transform/assessment-tool-classic-pages-run.md
+    - name: Interpret and prioritize
+      href: transform/assessment-tool-classic-pages-report.md
+    - name: Publishing page readiness
+      href: transform/assessment-tool-publishing-coverage.md
+    - name: Reference
+      items:
+      - name: Classic pages CSV files
+        href: transform/assessment-tool-classic-pages-csv.md
+      - name: Common CSV files
+        href: transform/assessment-tool-common-reports.md
+  - name: Transform classic pages
+    href: transform/modernize-userinterface-site-pages.md
+    items:
+    - name: Transform with PnP PowerShell
+      href: transform/modernize-userinterface-site-pages-powershell.md
+    - name: Validate transformed pages
+      href: transform/modernize-userinterface-site-pages-validation.md
+    - name: Reference
+      items:
+      - name: Page wave script reference
+        href: transform/modernize-userinterface-site-pages-wave-scripts.md
+      - name: In-place versus cross-site transformation
+        href: transform/modernize-userinterface-site-pages-approach.md
+      - name: Security requirements
+        href: transform/modernize-userinterface-site-pages-security.md
+      - name: Configuration options
+        href: transform/modernize-userinterface-site-pages-configuration.md
+      - name: Classic Web Part mappings
+        href: transform/modernize-userinterface-site-pages-webparts.md
+      - name: Page transformation model
+        href: transform/modernize-userinterface-site-pages-model.md
+      - name: Publishing page transformation model
+        href: transform/modernize-userinterface-site-pages-model-publishing.md
+      - name: Functions and selectors
+        href: transform/modernize-userinterface-site-pages-api.md
+      - name: User mapping
+        href: transform/modernize-userinterface-site-pages-usermapping.md
+      - name: URL mapping
+        href: transform/modernize-userinterface-site-pages-urlmapping.md
+      - name: Term mapping
+        href: transform/modernize-userinterface-site-pages-termmapping.md
+      - name: Layout transformation
+        href: transform/modernize-userinterface-site-pages-layout.md
+      - name: .NET integration
+        href: transform/modernize-userinterface-site-pages-dotnet.md
+      - name: Videos
+        href: transform/modernize-userinterface-site-pages-videos.md
 - name: Archive
   items:
   - name: Overview
     href: general-development/sharepoint-development-overview.md
+  - name: SharePoint Modernization scanner
+    items:
+    - name: Where should I start?
+      href: transform/modernize-scanner.md
+    - name: Understand the legacy scanner reports
+      items:
+      - name: Overview
+        href: transform/modernize-scanner-reports.md
+      - name: Microsoft 365 group connect report
+        href: transform/modernize-scanner-reports-groupconnect.md
+      - name: Modern list and libraries report
+        href: transform/modernize-scanner-reports-lists.md
+      - name: Page modernization report
+        href: transform/modernize-scanner-reports-pages.md
+      - name: Publishing portal modernization report
+        href: transform/modernize-scanner-reports-publishingportals.md
+      - name: Workflow usage report
+        href: transform/modernize-scanner-reports-workflow.md
+      - name: InfoPath usage report
+        href: transform/modernize-scanner-reports-infopath.md
+      - name: Blog usage report
+        href: transform/modernize-scanner-reports-blogs.md
+      - name: SharePoint Designer customized forms report
+        href: transform/modernize-scanner-reports-customizedforms.md
+    - name: Legacy scanner FAQ
+      href: transform/modernize-scanner-faq.yml
   - name: What's new in SharePoint Server 2019
     href: general-development/sharepoint-2019-development-platform.md
   - name: Programming models
@@ -1833,63 +1916,6 @@
   items:
   - name: Overview
     href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
-  - name: Assess and transform classic pages
-    href: transform/assess-sharepoint-modernization.md
-    items:
-    - name: Assess classic pages
-      href: transform/assessment-tool-classic-pages.md
-      items:
-      - name: Requirements
-        href: transform/assessment-tool-classic-pages-requirements.md
-      - name: Run the assessment
-        href: transform/assessment-tool-classic-pages-run.md
-      - name: Interpret and prioritize
-        href: transform/assessment-tool-classic-pages-report.md
-      - name: Publishing page readiness
-        href: transform/assessment-tool-publishing-coverage.md
-      - name: Reference
-        items:
-        - name: Classic pages CSV files
-          href: transform/assessment-tool-classic-pages-csv.md
-        - name: Common CSV files
-          href: transform/assessment-tool-common-reports.md
-    - name: Transform classic pages
-      href: transform/modernize-userinterface-site-pages.md
-      items:
-      - name: Transform with PnP PowerShell
-        href: transform/modernize-userinterface-site-pages-powershell.md
-      - name: Validate transformed pages
-        href: transform/modernize-userinterface-site-pages-validation.md
-      - name: Reference
-        items:
-        - name: Page wave script reference
-          href: transform/modernize-userinterface-site-pages-wave-scripts.md
-        - name: In-place versus cross-site transformation
-          href: transform/modernize-userinterface-site-pages-approach.md
-        - name: Security requirements
-          href: transform/modernize-userinterface-site-pages-security.md
-        - name: Configuration options
-          href: transform/modernize-userinterface-site-pages-configuration.md
-        - name: Classic Web Part mappings
-          href: transform/modernize-userinterface-site-pages-webparts.md
-        - name: Page transformation model
-          href: transform/modernize-userinterface-site-pages-model.md
-        - name: Publishing page transformation model
-          href: transform/modernize-userinterface-site-pages-model-publishing.md
-        - name: Functions and selectors
-          href: transform/modernize-userinterface-site-pages-api.md
-        - name: User mapping
-          href: transform/modernize-userinterface-site-pages-usermapping.md
-        - name: URL mapping
-          href: transform/modernize-userinterface-site-pages-urlmapping.md
-        - name: Term mapping
-          href: transform/modernize-userinterface-site-pages-termmapping.md
-        - name: Layout transformation
-          href: transform/modernize-userinterface-site-pages-layout.md
-        - name: .NET integration
-          href: transform/modernize-userinterface-site-pages-dotnet.md
-        - name: Videos
-          href: transform/modernize-userinterface-site-pages-videos.md
   - name: Modernizing your classic SharePoint sites
     items:
     - name: Overview
@@ -1901,45 +1927,17 @@
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
         items:
-        - name: Analyze and use the scanner data
+        - name: Analyze legacy scanner data
           href: transform/modernize-userinterface-lists-and-libraries-scanner.md
         - name: Rollout approaches
           href: transform/modernize-userinterface-lists-and-libraries-rollout.md
         - name: Opting out from modern
           href: transform/modernize-userinterface-lists-and-libraries-optout.md
-      - name: Assess and transform classic pages
-        href: transform/assess-sharepoint-modernization.md
-    - name: SharePoint Modernization scanner
-      items:
-      - name: Overview
-        href: transform/modernize-scanner.md
-      - name: Understand the created reports
-        items:
-        - name: Overview
-          href: transform/modernize-scanner-reports.md
-        - name: Microsoft 365 group connect report
-          href: transform/modernize-scanner-reports-groupconnect.md
-        - name: Modern list and libraries report
-          href: transform/modernize-scanner-reports-lists.md
-        - name: Page modernization report
-          href: transform/modernize-scanner-reports-pages.md
-        - name: Publishing portal modernization report
-          href: transform/modernize-scanner-reports-publishingportals.md
-        - name: Workflow usage report
-          href: transform/modernize-scanner-reports-workflow.md
-        - name: InfoPath usage report
-          href: transform/modernize-scanner-reports-infopath.md
-        - name: Blog usage report
-          href: transform/modernize-scanner-reports-blogs.md
-        - name: SharePoint Designer customized forms report
-          href: transform/modernize-scanner-reports-customizedforms.md
-      - name: Scanner FAQ
-        href: transform/modernize-scanner-faq.yml
     - name: SharePoint modernization guidance
       items:
       - name: Overview
         href: transform/modernize-guidance.md
-      - name: Assessment
+      - name: Legacy assessment delivery guidance
         href: transform/modernize-guidance-assessment.md
       - name: Strategy
         href: transform/modernize-guidance-strategy.md
@@ -1961,7 +1959,7 @@
       items:
       - name: Overview
         href: transform/modernize-connect-to-office365-group.md
-      - name: Analyze and use the scanner data
+      - name: Analyze legacy scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
       - name: Subsites versus Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-subsites.md
@@ -1973,7 +1971,7 @@
       items:
       - name: Overview
         href: transform/modernize-publishing-portal.md
-      - name: Analyze and use the scanner data
+      - name: Analyze legacy scanner data
         href: transform/modernize-publishing-portal-scanner.md
     - name: Modernize classic blogs
       href: transform/modernize-blogs.md
