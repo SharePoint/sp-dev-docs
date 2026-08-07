@@ -43,8 +43,6 @@ The signed-in user's site permissions also apply. The application's delegated sc
 
 With `AllSites.Manage`, add `-SkipItemLevelPermissionCopyToClientSidePage` so the generated page inherits permissions from its library. Use `AllSites.FullControl` only when the page's unique permissions must be retained.
 
-See [Migrate classic pages with the least permission possible](https://pnp.github.io/pnpassessment/classic/migrate-minimal-permissions.html).
-
 ## Install or update PnP PowerShell
 
 PnP PowerShell requires PowerShell 7.4.0 or later.

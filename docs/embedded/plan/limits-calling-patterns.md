@@ -48,7 +48,6 @@ SharePoint Embedded enforces the following size limits.
 | --- | --- |
 | Container types that a developer tenant can create | 25* |
 | Container types that an app can own | 1 |
-| Containers of a container type per consuming tenant | 100,000* |
 | Storage per container type per consuming tenant | 100 TB* |
 | Files and folders per container | 30 million |
 | Storage per container | 25 TB |
@@ -62,6 +61,9 @@ SharePoint Embedded enforces the following size limits.
 An asterisk (`*`) indicates a limit you can request to increase.
 
 Of the container types a tenant creates, one can be a free **trial container type** for development and testing, and the rest are **standard** (billed) container types. New tenants start with a lower default that can be raised on request. For trial-versus-standard details, see [Create and configure a container type](../build/create-container-type.md).
+
+Containers in a tenant count towards "sites per organization" in [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+The current limit is set to 2 million sites and containers per tenant. If you plan to exceed this limit in a specific consuming tenant of your SharePoint Embedded application, contact a Microsoft representative.
 
 ## Design for container type limits
 
