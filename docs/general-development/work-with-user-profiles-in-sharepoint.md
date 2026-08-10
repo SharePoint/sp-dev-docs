@@ -14,35 +14,35 @@ Learn about common programming tasks for working with user profiles in SharePoin
 <a name="bkmk_APIversions"> </a>
 
 User profiles and user profile properties provide information about SharePoint users. SharePoint provides the following APIs that you can use to programmatically work with user profiles:
-  
-    
-    
+
+
+
 
 - Client object models for managed code
-    
-  - .NET client object model
-    
-  
-- JavaScript object model
-    
-  
-- Representational State Transfer (REST) service
-    
-  
-- Server object model
-    
-  
-As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET client object model, the JavaScript object model, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
-  
-> [!NOTE] 
-> Not all functionality that you find in the **Microsoft.Office.Server.UserProfiles** assembly is available from client APIs. For example, you have to use the server object model to create or change user profiles because they're read-only from client APIs (except the user profile picture). Also, there's no client-side access to some namespaces, such as [Microsoft.Office.Server.Audience](https://msdn.microsoft.com/library/Microsoft.Office.Server.Audience.aspx) , [Microsoft.Office.Server.ReputationModel](https://msdn.microsoft.com/library/Microsoft.Office.Server.ReputationModel.aspx) , or [Microsoft.Office.Server.SocialData](https://msdn.microsoft.com/library/Microsoft.Office.Server.SocialData.aspx) . To see what's supported functionality for the client APIs, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) and [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) .
-  
-    
-    
 
-Each API includes a manager object that you use to perform core profile-related tasks. Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or access point) where you can find them.  
-    
-    
+  - .NET client object model
+
+
+- JavaScript object model
+
+
+- Representational State Transfer (REST) service
+
+
+- Server object model
+
+
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET client object model, the JavaScript object model, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
+
+> [!NOTE]
+> Not all functionality that you find in the **Microsoft.Office.Server.UserProfiles** assembly is available from client APIs. For example, you have to use the server object model to create or change user profiles because they're read-only from client APIs (except the user profile picture). Also, there's no client-side access to some namespaces, such as [Microsoft.Office.Server.Audience](https://msdn.microsoft.com/library/Microsoft.Office.Server.Audience.aspx) , [Microsoft.Office.Server.ReputationModel](https://msdn.microsoft.com/library/Microsoft.Office.Server.ReputationModel.aspx) , or [Microsoft.Office.Server.SocialData](https://msdn.microsoft.com/library/Microsoft.Office.Server.SocialData.aspx) . To see what's supported functionality for the client APIs, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) and [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) .
+
+
+
+
+Each API includes a manager object that you use to perform core profile-related tasks. Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or access point) where you can find them.
+
+
 
 
 **Table 1. SharePoint APIs used for working with user profiles programmatically**
@@ -53,15 +53,15 @@ Each API includes a manager object that you use to perform core profile-related 
 |JavaScript object model  <br/> See:  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)|Manager object:            [PeopleManager](https://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-ba2ccb156d00%28Office.15%29.aspx) <br/> Primary namespace:            [SP.UserProfiles](https://msdn.microsoft.com/library/8c1fcceb-cd9a-b25c-32f4-1cfb0578278c%28Office.15%29.aspx) <br/> Other key objects:            [PersonProperties](https://msdn.microsoft.com/library/0274d97f-b697-f436-2aaf-f5bcf9b70df8%28Office.15%29.aspx),  [ProfileLoader](https://msdn.microsoft.com/library/c8dd9919-66a9-fffc-1100-14472d2ec2cb%28Office.15%29.aspx),  [UserProfile](https://msdn.microsoft.com/library/f8c4a219-fbaa-2e50-1bd5-fdc80051b33d%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js |
 |REST service  <br/> See:  [User profiles REST API reference](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)|Manager resource:            [PeopleManager](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx#bk_PeopleManager) <br/> Endpoint URI:            `http://<siteUri>/_api/SP.UserProfiles.PeopleManager` <br/> Primary namespace:           **SP.UserProfiles** <br/> Other key resources:            [PersonProperties](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx#bk_PersonProperties),  [ProfileLoader](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx#bk_ProfileLoader),  [UserProfile](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx#bk_UserProfile)|
 |Server object model  <br/> See:  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)|Manager objects:            [UserProfileManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfileManager.aspx) , [PeopleManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PeopleManager.aspx) <br/> Primary namespace:            [Microsoft.Office.Server.UserProfiles](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.aspx) <br/> Other key objects:            [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) , [CorePropertyManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CorePropertyManager.aspx) , [ProfilePropertyManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfilePropertyManager.aspx) , [ProfileSubtypeManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeManager.aspx) , [ProfileSubtypePropertyManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypePropertyManager.aspx) , [ProfileTypePropertyManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypePropertyManager.aspx) <br/> Class library:           Microsoft.Office.Server.UserProfiles.dll |
-   
+
 
 ## Common programming tasks for working with user profiles in SharePoint
 <a name="bkmk_CommonTasks"> </a>
 
 Table 2 shows common programming tasks for working with user profiles and the members that you use to perform them. Members are from the .NET client object model (CSOM), JavaScript object model (JSOM), REST service, and server object model (SSOM).
-  
-    
-    
+
+
+
 
 **Table 2. API for common programming tasks for working with user profiles**
 
@@ -79,30 +79,31 @@ Table 2 shows common programming tasks for working with user profiles and the me
 |Create or change user profiles and user profile properties and attributes  <br/> (Client APIs can change the profile picture. See the "Change the user's profile picture" task in this table.) |CSOM: not implemented  <br/> JSOM: not implemented  <br/> REST: not implemented  <br/> SSOM: multiple - see  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)|
 |Delete a user profile |CSOM: not implemented  <br/> JSOM: not implemented  <br/> REST: not implemented  <br/> SSOM:  [RemoveProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfileManager.RemoveProfile.aspx) or [RemoveUserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfileManager.RemoveUserProfile.aspx) (overloaded)|
 |Provision a user's personal site |CSOM:  [CreatePersonalSiteEnque](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.CreatePersonalSiteEnque.aspx) (overloaded) <br/> JSOM:  [createPersonalSiteEnque](https://msdn.microsoft.com/library/f4bcb82d-4048-0b29-9bc6-ce70ead49988%28Office.15%29.aspx) (overloaded) <br/> REST: **POST** [`http://<siteUri>/_api/SP.UserProfiles.ProfileLoader.GetProfileLoader/GetUserProfile/CreatePersonalSiteEnqueue`](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx#bk_UserProfileCreatePersonalSiteEnque) <br/> SSOM:  [CreatePersonalSite()](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.CreatePersonalSite.aspx) (overloaded)|
-|Provision one or more users' personal sites  <br/> Available for My Site Host administrators on SharePoint Online only |CSOM:  [CreatePersonalSiteEnqueueBulk](what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md#bk_CreatePersonalSiteEnqueueBulk) <br/> JSOM: **createPersonalSiteEnqueueBulk** <br/> REST: **POST** [`https://<domain>-admin.sharepoint.com/_api/SP.UserProfiles.ProfileLoader.GetProfileLoader/CreatePersonalSiteEnqueueBulk`](https://msdn.microsoft.com/library/dn790354.aspx#bk_ProfileLoaderCreatePersonalSiteEnqueueBulk) and pass a string array of email addresses for the _emailIDs_ parameter (200 characters maximum) in the request body (example: `{'emailIDs':['usera@contoso.onmicrosoft.com','userb@contoso.onmicrosoft.com']}`).  <br/> SSOM: **CreatePersonalSiteEnqueueBulk**|
-   
+|Provision one or more users' personal sites  <br/> Available for My Site Host administrators on SharePoint Online only |CSOM:  [CreatePersonalSiteEnqueueBulk](what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md#use-the-profileloadercreatepersonalsiteenqueuebulk-method-to-provision-personal-sites-and-onedrive-for-business-for-multiple-users-my-site-host-administrators-on-sharepoint-online-only) <br/> JSOM: **createPersonalSiteEnqueueBulk** <br/> REST: **POST** [`https://<domain>-admin.sharepoint.com/_api/SP.UserProfiles.ProfileLoader.GetProfileLoader/CreatePersonalSiteEnqueueBulk`](https://msdn.microsoft.com/library/dn790354.aspx#bk_ProfileLoaderCreatePersonalSiteEnqueueBulk) and pass a string array of email addresses for the _emailIDs_ parameter (200 characters maximum) in the request body (example: `{'emailIDs':['usera@contoso.onmicrosoft.com','userb@contoso.onmicrosoft.com']}`).  <br/> SSOM: **CreatePersonalSiteEnqueueBulk**|
+
+
 
 ## New objects for users and user properties in SharePoint
 <a name="bkmk_NewUserObjects"> </a>
 
 SharePoint includes the following new objects that represent users and user properties:
-  
-    
-    
+
+
+
 
 - The  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) object and the [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) object represent users (and documents, sites, and tasks) for feed and following activities.
-    
-  
+
+
 - A new client-side  [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) object that provides methods you can use to create a personal site for the current user. However, it does not contain all the user properties that the server-side [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object contains.
-    
-  
+
+
 - The  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object contains general user properties and its [UserProfileProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.UserProfileProperties.aspx) property contains user profile properties. [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) is the primary API for accessing user properties from client-side code.
-    
-> [!NOTE] 
+
+> [!NOTE]
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
-  
-    
-    
+
+
+
 
 
 ## See also
@@ -110,23 +111,21 @@ SharePoint includes the following new objects that represent users and user prop
 
 
 -  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md)
-    
-  
+
+
 -  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
-    
-  
+
+
 -  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
-    
-  
+
+
 -  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
-    
-  
+
+
 -  [User profiles REST API reference](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
-    
-  
+
+
 -  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)
-    
-  
+
+
 -  [Follow people in SharePoint](follow-people-in-sharepoint.md)
-    
-  

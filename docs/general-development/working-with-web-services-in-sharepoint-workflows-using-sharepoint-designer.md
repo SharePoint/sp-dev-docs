@@ -1,7 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
 description: Demonstrates how to use web services in SharePoint Designer 2013 workflows.
-ms.date: 10/15/2022
+ms.date: 04/24/2017
 ms.assetid: bc8769c6-ae71-4519-abf3-c1b6fb071059
 ms.localizationpriority: high
 ---
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
 Demonstrates how to use web services in SharePoint Designer 2013 workflows.
- **Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
+ **Provided by:** [Andrew Connell](https://www.andrewconnell.com)
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
@@ -41,7 +41,7 @@ Perhaps best of all, in cases where there is an existing web service that you ne
 
 
 
-While SharePoint can consume any type of web service, it is easiest (and recommended) that you use web services that accept and return data using the standard  [OData](http://www.odata.org/) formats of [Atom](https://msdn.microsoft.com/library/ff478141.aspx) or [JSON](http://json.org/) (JavaScript Object Notation).
+While SharePoint can consume any type of web service, it is easiest (and recommended) that you use web services that accept and return data using the standard  [OData](https://www.odata.org/) formats of [Atom](https://msdn.microsoft.com/library/ff478141.aspx) or [JSON](http://json.org/) (JavaScript Object Notation).
 
 
 
@@ -123,7 +123,7 @@ Following are discussions of two common scenarios in which RESTful web services 
 
 ### Implementing OData service CRUD-Q operations
 
-A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data in a database. It is relatively easy to create an OData web service for a SharePoint workflow WCF data service an OData service to be used by a workflow by using WCF Data services. You can review the walkthroughs and samples on creating web services at sites like  [WCF Data Services](https://msdn.microsoft.com/library/cc668792.aspx),  [www.OData.org](http://www.odata.org), and others.
+A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data in a database. It is relatively easy to create an OData web service for a SharePoint workflow WCF data service an OData service to be used by a workflow by using WCF Data services. You can review the walkthroughs and samples on creating web services at sites like  [WCF Data Services](https://msdn.microsoft.com/library/cc668792.aspx), [OData.org](https://www.odata.org), and others.
 
 
 
@@ -158,7 +158,7 @@ However, you can support this scenario by using OData and WCF Data Services, thr
 
 ## Create a workflow with SharePoint Designer 2013
 
-The following walkthrough demonstrates how to create a custom workflow that calls the OData web service of the Northwind database, which you can find publically hosted at the  [www.odata.org](http://www.odata.org) site. In this sample, the user enters a customer ID and then starts the workflow, which takes the customer ID and uses it to query the web service to collect additional information about the customer - specifically, the user's full name and employer. The workflow then takes this information and updates the list item by adding the user's customer name and employer.
+The following walkthrough demonstrates how to create a custom workflow that calls the OData web service of the Northwind database, which you can find publically hosted at the [odata.org](https://www.odata.org) site. In this sample, the user enters a customer ID and then starts the workflow, which takes the customer ID and uses it to query the web service to collect additional information about the customer - specifically, the user's full name and employer. The workflow then takes this information and updates the list item by adding the user's customer name and employer.
 
 
 
@@ -223,7 +223,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 2. To the right of the **Enter the HTTP web service URL** text box, click the builder button ( **???**) to open the **String Builder** dialog box.
 
 
-3. In the **String Builder**, enter this URL:  `http://services.odata.org/Northwind/Northwind.svc/Customers('CUSTOMERID')?$format=json&amp;$select=ContactName,CompanyName`. Notice the " `$select`" portion of the URL is retrieving only the fields that are relevant to this list.
+3. In the **String Builder**, enter this URL: `https://services.odata.org/Northwind/Northwind.svc/Customers('CUSTOMERID')?$format=json&amp;$select=ContactName,CompanyName`. Notice the " `$select`" portion of the URL is retrieving only the fields that are relevant to this list.
 
 
 4. In the URL, locate the URL segment  `CUSTOMERID` and remove it. Leave the parentheses and single quotes in place.
@@ -386,7 +386,7 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
 -  [Workflows in SharePoint](workflows-in-sharepoint.md)
 
 
--  [OData](http://www.odata.org/)
+-  [OData](https://www.odata.org/)
 
 
 -  [Introducing JSON](http://json.org/)

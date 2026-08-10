@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework Gulp-Based development environment
 description: Learn how set up your development environment for the SharePoint Framework legacy gulp-based toolchain.
-ms.date: 12/10/2025
+ms.date: 08/18/2016
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -152,7 +152,7 @@ The SPFx build toolchain will replace this value on the fly with a value defined
 
 Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to specify the tenant domain (or site URL) for serve configurations across different SPFx solutions. If a URL in the serve configuration (for example, `pageUrl` for Field Customizer) contains the `{tenantDomain}` placeholder, it will be automatically replaced with the variable's value.
 
-For more information on how to set the environment variable on your developer environment, including Windows or macOS, see [Setting the SharePoint Framework Hosted Workbench Test Site](https://www.voitanos.io/blog/set-spfx-hosted-workbench-test-site/).
+For more information on how to set the environment variable on your developer environment, including Windows or macOS, see [Setting the SharePoint Framework Hosted Workbench Test Site](https://www.andrewconnell.com/articles/sharepoint-framework-set-spfx-hosted-workbench-test-site/).
 
 ## Optional tools
 
@@ -190,7 +190,7 @@ Depending on your scenario, you may need to maintain different development envir
 - Node version managers
 
 > [!TIP]
-> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
+> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.andrewconnell.com/articles/better-node-js-install-management-with-node-version-manager/).
 >
 > - [Node Version Manager (NVM)](https://github.com/creationix/nvm): for macOS
 > - [Fast Node Manager (FNM)](https://github.com/Schniz/fnm): cross-platform (Windows and MacOS)
@@ -218,7 +218,7 @@ In case the certificate is not added to the Trusted Root Certification Authority
 
 ### Unable to Install Packages with npm - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
+If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.andrewconnell.com/articles/node-npm-fix-proxy-config/)
 
 ## See also
 

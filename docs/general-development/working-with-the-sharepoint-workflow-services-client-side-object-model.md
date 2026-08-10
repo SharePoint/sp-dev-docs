@@ -1,13 +1,13 @@
 ---
 title: Working with the SharePoint Workflow Services Client Side Object Model
 description: Demonstrates how to use the SharePoint client-side object model (CSOM) API to create and control Workflow Manager 1.0 workflow definitions and instances.
-ms.date: 10/15/2022
+ms.date: 04/24/2017
 ms.assetid: e180c2fb-a903-4ded-884e-b7584fa99189
 ms.localizationpriority: high
 ---
 # Working with the SharePoint Workflow Services Client Side Object Model
 
-Demonstrates how to use the SharePoint client-side object model (CSOM) API to create and control Workflow Manager 1.0 workflow definitions and instances. **Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
+Demonstrates how to use the SharePoint client-side object model (CSOM) API to create and control Workflow Manager 1.0 workflow definitions and instances. **Provided by:** [Andrew Connell](https://www.andrewconnell.com)
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).

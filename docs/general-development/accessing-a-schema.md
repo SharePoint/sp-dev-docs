@@ -1,51 +1,38 @@
 ---
 title: Accessing a Schema
-description: This topic shows one example of how you can access and look at a schema for the REST service in Excel Services.
-ms.date: 06/03/2022
+description: This article shows one example of how you can access and look at a schema for the REST service in Excel Services.
+ms.date: 04/24/2017
 ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 ms.localizationpriority: high
 ---
 
-
 # Accessing a Schema
 
-This topic shows one example of how you can access and look at a schema for the REST service in Excel Services. This topic assumes that you have read  [Sample URI For Excel Services REST API](sample-uri-for-excel-services-rest-api.md).
-  
-> [!NOTE]
-> 
-> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/docs/api-reference/v1.0/resources/excel
-) endpoint.
-  
-    
-    
+This article shows one example of how you can access and look at a schema for the REST service in Excel Services. This article assumes that you have read [Sample URI For Excel Services REST API](sample-uri-for-excel-services-rest-api.md).
 
+> [!NOTE]
+>
+> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Microsoft 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the [Microsoft Graph](/graph/api/resources/excel) endpoint.
 
 ## Viewing a Schema
 
- In the browser address bar, type the URI to an Atom XML feed by using a URI, as follows:
-  
-    
-    
+In the browser address bar, type the URI to an Atom XML feed by using a URI, as follows:
 
 ```
-
-http://myserver/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|H3')?$format=atom
+https://{{myserver}}/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|H3')?$format=atom
 ```
 
-Right-click the webpage, and then click **View Source**.
-  
-    
-    
+Right-click the webpage, and then select **View Source**.
+
 You should see a schema that looks similar to the following example:
-  
-    
-    
-
-
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
-<entry xml:base="http://excel.live.com/REST" xmlns:x="http://schemas.microsoft.com/office/2008/07/excelservices/rest" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservice" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+<entry xml:base="http://excel.live.com/REST"
+       xmlns:x="http://schemas.microsoft.com/office/2008/07/excelservices/rest"
+       xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservice"
+       xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+       xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Sheet1!A1:H3</title>
   <id>http://myserver/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1%7CH3')</id>
   <updated>2009-06-25T00:41:37Z</updated>
@@ -72,7 +59,7 @@ You should see a schema that looks similar to the following example:
         <x:c>
           <x:fv>Last Trade </x:fv>
         </x:c>
-        <x:c />
+        <x:c/>
         <x:c>
           <x:fv>Change </x:fv>
         </x:c>
@@ -97,7 +84,7 @@ You should see a schema that looks similar to the following example:
           <x:v>26.25</x:v>
           <x:fv>26.25</x:fv>
         </x:c>
-        <x:c />
+        <x:c/>
         <x:c>
           <x:fv>-0.23 (-0.87%) </x:fv>
         </x:c>
@@ -107,17 +94,17 @@ You should see a schema that looks similar to the following example:
         </x:c>
       </x:row>
       <x:row>
-        <x:c />
-        <x:c />
+        <x:c/>
+        <x:c/>
         <x:c>
           <x:fv> </x:fv>
         </x:c>
-        <x:c />
+        <x:c/>
         <x:c>
           <x:v>15.58</x:v>
           <x:fv>15.58</x:fv>
         </x:c>
-        <x:c />
+        <x:c/>
         <x:c>
           <x:fv>-1.38 (-8.14%) </x:fv>
         </x:c>
@@ -129,7 +116,4 @@ You should see a schema that looks similar to the following example:
     </x:range>
   </content>
 </entry>
-
 ```
-
-

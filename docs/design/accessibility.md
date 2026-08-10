@@ -1,7 +1,7 @@
 ---
 title: Accessibility in SharePoint web part design
 description: Guidelines for adding accessibility to your web part.
-ms.date: 06/13/2022
+ms.date: 10/19/2017
 ms.localizationpriority: medium
 ---
 # Accessibility in SharePoint web part design
@@ -18,7 +18,7 @@ The SharePoint Framework provides a structure to help make all web parts accessi
 
 In addition, many [Office UI Fabric components](https://developer.microsoft.com/fabric#/components) have built-in support for accessibility options, to make it quick to configure keyboard and screen reader navigation when you use the components in a web part.
 
-The following image shows keyboard  navigation on a web part.
+The following image shows keyboard navigation on a web part.
 
 ![Image that shows keyboard navigation on a web part](../images/accessibility-illustration-01.png)
 
@@ -106,7 +106,7 @@ The following image shows theme colors on the left and neutral colors on the rig
 <table>
 <tr>
     <th>Theme colors</th>
-    <th>Neutral colors</th> 
+    <th>Neutral colors</th>
   </tr>
 <tr>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>

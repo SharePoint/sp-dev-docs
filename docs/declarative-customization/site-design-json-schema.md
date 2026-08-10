@@ -1,7 +1,10 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 11/18/2024
+ms.date: 07/02/2026
+author: ntennant4
+ms.author: natenna
+ms.reviewer: natenna
 ms.localizationpriority: high
 ---
 
@@ -1030,6 +1033,23 @@ Use the `setSiteExternalSharingCapability` action to manage guest access. For mo
   "verb": "setSiteExternalSharingCapability",
   "capability": "Disabled"
 }
+```
+## Enable Approvals for a list or library
+
+Use the `enableApprovals` to turn on approvals for lists and libraries. For more information, see [Approvals in lists & libraries](https://support.microsoft.com/en-us/sharepoint/data-and-lists/approvals-in-lists-document-libraries).
+
+<!-- update this table matrix -->
+
+#### JSON values
+
+- `enableApprovals`: turns on the approvals feature for a list or library.
+
+#### Example
+
+```json
+{
+  "verb": "enableApprovals"
+ }
 ```
 
 ## See also

@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 12/22/2025
+ms.date: 06/07/2026
 ms.localizationpriority: high
 ---
 
@@ -89,6 +89,11 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'manageForms'
 'favoriteCommand'
 'createCopilot'
+'workflowsCommand'
+'quickStepsCommand'
+'rulesCommand'
+'approvalsCommand'
+'Copilot'
 ```
 
 ## ⚠️ Recent updates to `commandBarCustomization` Keys

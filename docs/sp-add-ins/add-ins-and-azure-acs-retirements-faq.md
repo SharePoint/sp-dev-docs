@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-Ins and Azure ACS retirement FAQ
 description: Answers frequently asked questions related to the retirements of SharePoint Add-In and Azure ACS in Microsoft 365.
-ms.date: 04/15/2025
+ms.date: 06/19/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -56,7 +56,7 @@ Yes, you can still read and update user profiles without Azure ACS. When you con
 
 ## Will remote event receivers also be retired?
 
-Yes, remote event receivers are part of this retirement. Remote event receivers have a dependency on Azure ACS, and will stop working when Azure ACS is turned off. Although remote event receivers can still be programmatically added once Azure ACS has fully retired in April 2026, the events won't fire anymore. The recommended path forward is to use [SharePoint Online Webhooks](../apis/webhooks/overview-sharepoint-webhooks.md). More information on how to replace remote event receivers with webhooks can be found in the [Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks](../sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md) article. The article shows how to use the SharePoint REST API to add the webhooks, but you may prefer to use Microsoft Graph [change notifications](/graph/change-notifications-overview) to add a [subscription for a SharePoint List](/graph/api/resources/subscription).
+Yes, remote event receivers are part of this retirement. Remote event receivers have a dependency on Azure ACS, and will be in broken state when Azure ACS is turned off. Although remote event receivers can still be programmatically added once Azure ACS has fully retired in April 2026, they cannot use ACS anymore to make delegated or app-only calls back into SharePoint. The recommended path forward is to use [SharePoint Online Webhooks](../apis/webhooks/overview-sharepoint-webhooks.md). More information on how to replace remote event receivers with webhooks can be found in the [Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks](../sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md) article. The article shows how to use the SharePoint REST API to add the webhooks, but you may prefer to use Microsoft Graph [change notifications](/graph/change-notifications-overview) to add a [subscription for a SharePoint List](/graph/api/resources/subscription).
 
 As webhooks are asynchronous by definition, synchronous events that allow an app to block or cancel a SharePoint action are no longer possible. If event blocking is being used to prevent accidental data updates/deletes by unauthorized users, then possible workarounds are securing the protected files/folders so they cannot be updated/deleted anymore, or by moving this type of data to a hidden library. In general, moving from synchronous to asynchronous events will require updating your application logic.
 
@@ -77,7 +77,7 @@ No, both CSOM (client-side object model) and JSOM (JavaScript object model) will
 
 ## When I use appregnew.aspx the created ACS principals show up in Entra
 
-As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. These app principals are detected by the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), however you need version 1.10.0 to ensure the principal validity is correctly reported. Note, if you want to renew the secret of these principals ensure you're using the right approach as described in [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
+As of December 2024 we've streamlined the app creation flow and as a result ACS principals created using appregnew.aspx now show are created as "regular" Entra app principal versus previously service principals with `legacyServicePrincipal` property set to `Legacy`. Microsoft 365 Assessment tool version 1.10.0 or later can detect these principals and report their validity. Note, if you want to renew the secret of these principals ensure you're using the right approach as described in [Replace an expiring client secret in a SharePoint Add-in](replace-an-expiring-client-secret-in-a-sharepoint-add-in.md).
 
 ## Do I need to delete Azure ACS principals that are not needed anymore?
 
