@@ -1,7 +1,7 @@
 ---
 title: Create and Manage Containers
 description: Create, list, update, recycle, restore, and delete SharePoint Embedded containers in your app.
-ms.date: 07/13/2026
+ms.date: 08/10/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
@@ -22,6 +22,10 @@ next: manage-files.md
 Create and manage containers after your container type is created, registered, and authorized. Containers are the basic storage unit in SharePoint Embedded.
 
 Complete [Configure authentication and authorization](configure-authentication-authorization.md) before you call container APIs.
+
+You can also manage the container lifecycle through a coding agent by installing the SharePoint Embedded MCP server.
+
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
 
 ## Understand containers
 
