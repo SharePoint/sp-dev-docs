@@ -93,6 +93,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'quickStepsCommand'
 'rulesCommand'
 'approvalsCommand'
+'Copilot'
 ```
 
 ## ⚠️ Recent updates to `commandBarCustomization` Keys

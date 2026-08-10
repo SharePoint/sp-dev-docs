@@ -29,7 +29,7 @@ For setup guidance, see [choose a billing model](../plan/choose-billing-model.md
 | Archived storage | $/GB | Storage consumed by archived containers within a tenant. | Archiving moves data to the cold storage tier, which offers lower storage costs than active storage. |
 | API transactions | $/Transactions | Each Microsoft Graph call made explicitly by the SharePoint Embedded application. | Internal service calls, such as eDiscovery queries and admin actions in SharePoint admin center or SharePoint PowerShell, aren't charged as application transactions. |
 | Egress | $/GB | Data that exits the SharePoint Embedded platform, such as documents downloaded to a customer's client device or data transferred to a server operated by the customer. Charges are based on total volume transferred out (GB). | Downloads from the SharePoint Embedded application server to Office Desktop clients or Web Application Companion, the Microsoft-integrated Office web experience, aren't charged as egress. |
-| Pay-as-you-go message (private preview) | Message | SharePoint Embedded agent interactions. | SharePoint Embedded agents use the Copilot Studio meter. Each agent interaction uses 12 messages. |
+| Pay-as-you-go message (private preview) | Message | SharePoint Embedded agent interactions and Copilot Retrieval API requests that use the preview `sharePointEmbedded` data source. | Both use the Copilot Studio meter. Each agent interaction uses 12 messages. |
 
 ## Storage
 
@@ -50,6 +50,8 @@ Egress is data that exits the SharePoint Embedded platform, such as a document d
 ## Agent message meter
 
 The private preview SharePoint Embedded agent meter uses the Copilot Studio message meter. One SharePoint Embedded agent interaction uses 12 messages: two for generative answer and 10 for tenant graph grounding.
+
+[Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) requests that use the `sharePointEmbedded` data source also bill on the Copilot Studio message meter. The `sharePointEmbedded` data source is in preview in its entirety, including its pay-as-you-go billing, although the Retrieval API itself is generally available. Charges follow the billing model configured for the container type, so standard billing container types charge the owning tenant and pass-through billing container types charge the consuming tenant. For more information, see [Add Microsoft 365 Copilot and agent experiences](../build/agent-experiences.md#use-the-retrieval-api).
 
 ## Pricing links
 

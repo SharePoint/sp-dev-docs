@@ -1,7 +1,7 @@
 ---
 title: Transform selected classic pages with PnP PowerShell
 description: Prepare a minimally privileged PnP PowerShell connection and transform approved classic pages with source-preserving defaults.
-ms.date: 07/29/2026
+ms.date: 11/19/2018
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -42,8 +42,6 @@ Use a separate delegated application from the read-only Assessment application.
 The signed-in user's site permissions also apply. The application's delegated scope doesn't grant the user access to a site that they couldn't otherwise access.
 
 With `AllSites.Manage`, add `-SkipItemLevelPermissionCopyToClientSidePage` so the generated page inherits permissions from its library. Use `AllSites.FullControl` only when the page's unique permissions must be retained.
-
-See [Migrate classic pages with the least permission possible](https://pnp.github.io/pnpassessment/classic/migrate-minimal-permissions.html).
 
 ## Install or update PnP PowerShell
 

@@ -48,7 +48,6 @@ SharePoint Embedded enforces the following size limits.
 | --- | --- |
 | Container types that a developer tenant can create | 25* |
 | Container types that an app can own | 1 |
-| Containers of a container type per consuming tenant | 100,000* |
 | Storage per container type per consuming tenant | 100 TB* |
 | Files and folders per container | 30 million |
 | Storage per container | 25 TB |
@@ -56,6 +55,7 @@ SharePoint Embedded enforces the following size limits.
 | File size | 250 GB |
 | Version count per file | 500 (default automatic version history limit) |
 | Number of users shared per folder or file | 5,000 |
+| Custom Columns per container | 40 |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
