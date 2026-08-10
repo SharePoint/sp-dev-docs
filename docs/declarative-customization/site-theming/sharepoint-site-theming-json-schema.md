@@ -78,12 +78,12 @@ Here is an example of secondaryColors, it is the set of combination of themePrim
 ```json
   "secondaryColors": {
     "light": [
-      { "themePrimary": "#FFFFFF", "backgroundColor": "#03787C" },
-      { "themePrimary": "#E3FFFD", "backgroundColor": "#03787C" },
-      { "themePrimary": "#03787C", "backgroundColor": "#E3FFFD" },
-      { "themePrimary": "#FFF9E3", "backgroundColor": "#03787C" },
-      { "themePrimary": "#03787C", "backgroundColor": "#FFF9E3" },
-      { "themePrimary": "#03787C", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#007780" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#007780" },
+      { "themePrimary": "#007780", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#007780" },
+      { "themePrimary": "#007780", "backgroundColor": "#FFF9E3" },
+      { "themePrimary": "#007780", "backgroundColor": "#F5F5F5" },
       { "themePrimary": "#242424", "backgroundColor": "#F5F5F5" },
       { "themePrimary": "#155473", "backgroundColor": "#FFFFFF" },
       { "themePrimary": "#FFFFFF", "backgroundColor": "#155473" },
@@ -106,15 +106,15 @@ The following is an example of a JSON object that defines a theme in new theme f
 {
   "isInverted": true,
   "palette": {    
-    "themeDarker": "#014446",
-    "themeDark": "#025C5F",
-    "themeDarkAlt": "#026D70",
-    "themePrimary": "#03787C",
-    "themeSecondary": "#13898D",
-    "themeTertiary": "#49AEB1",
-    "themeLight": "#98D6D8",
-    "themeLighter": "#C5E9EA",
-    "themeLighterAlt": "#F0F9FA",
+    "themeDarker": "#003a3d",
+    "themeDark": "#00585e",
+    "themeDarkAlt": "#00676e",
+    "themePrimary": "#007780",
+    "themeSecondary": "#078b94",
+    "themeTertiary": "#45c3cc",
+    "themeLight": "#8ae7ed",
+    "themeLighter": "#b0f8ff",
+    "themeLighterAlt": "#d4fbff",
     "neutralDark": "#201F1E",
     "neutralPrimary": "#323130",
     "neutralPrimaryAlt": "#3B3A39",
@@ -132,12 +132,12 @@ The following is an example of a JSON object that defines a theme in new theme f
   },
   "secondaryColors": {
     "light": [
-      { "themePrimary": "#FFFFFF", "backgroundColor": "#03787C" },
-      { "themePrimary": "#E3FFFD", "backgroundColor": "#03787C" },
-      { "themePrimary": "#03787C", "backgroundColor": "#E3FFFD" },
-      { "themePrimary": "#FFF9E3", "backgroundColor": "#03787C" },
-      { "themePrimary": "#03787C", "backgroundColor": "#FFF9E3" },
-      { "themePrimary": "#03787C", "backgroundColor": "#F5F5F5" },
+      { "themePrimary": "#FFFFFF", "backgroundColor": "#007780" },
+      { "themePrimary": "#E3FFFD", "backgroundColor": "#007780" },
+      { "themePrimary": "#007780", "backgroundColor": "#E3FFFD" },
+      { "themePrimary": "#FFF9E3", "backgroundColor": "#007780" },
+      { "themePrimary": "#007780", "backgroundColor": "#FFF9E3" },
+      { "themePrimary": "#007780", "backgroundColor": "#F5F5F5" },
       { "themePrimary": "#242424", "backgroundColor": "#F5F5F5" },
       { "themePrimary": "#155473", "backgroundColor": "#FFFFFF" },
       { "themePrimary": "#FFFFFF", "backgroundColor": "#155473" },
@@ -161,15 +161,15 @@ The following is an example of a JSON object that defines a theme in legacy them
 {
   "isInverted": true,
   "palette": {    
-    "themeDarker": "#014446",
-    "themeDark": "#025C5F",
-    "themeDarkAlt": "#026D70",
-    "themePrimary": "#03787C",
-    "themeSecondary": "#13898D",
-    "themeTertiary": "#49AEB1",
-    "themeLight": "#98D6D8",
-    "themeLighter": "#C5E9EA",
-    "themeLighterAlt": "#F0F9FA",
+    "themeDarker": "#003a3d",
+    "themeDark": "#00585e",
+    "themeDarkAlt": "#00676e",
+    "themePrimary": "#007780",
+    "themeSecondary": "#078b94",
+    "themeTertiary": "#45c3cc",
+    "themeLight": "#8ae7ed",
+    "themeLighter": "#b0f8ff",
+    "themeLighterAlt": "#d4fbff",
     "neutralDark": "#201F1E",
     "neutralPrimary": "#323130",
     "neutralPrimaryAlt": "#3B3A39",
@@ -202,13 +202,13 @@ Use the following PowerShell hashtable to define the color pairs for the Teal th
 ```powershell
 $colorPairs = @{
   light = @(
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#FFFFFF" }
-    @{ "accentColor" = "#FFFFFF"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#E3FFFD"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#E3FFFD" }
-    @{ "accentColor" = "#FFF9E3"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#FFF9E3" }
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#F5F5F5" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#FFFFFF" }
+    @{ "accentColor" = "#FFFFFF"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#E3FFFD"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#E3FFFD" }
+    @{ "accentColor" = "#FFF9E3"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#FFF9E3" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#F5F5F5" }
     @{ "accentColor" = "#242424"; "backgroundColor" = "#F5F5F5" }
     @{ "accentColor" = "#155473"; "backgroundColor" = "#FFFFFF" }
     @{ "accentColor" = "#FFFFFF"; "backgroundColor" = "#155473" }
@@ -401,11 +401,11 @@ Use the following PowerShell hashtable to define the color pairs for the Dark Te
 $colorPairs = @{
   light = @(
     @{ "accentColor" = "#51AEB2"; "backgroundColor" = "#292929" }
-    @{ "accentColor" = "#FFFFFF"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#E3FFFD"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#E3FFFD" }
-    @{ "accentColor" = "#FFF9E3"; "backgroundColor" = "#03787C" }
-    @{ "accentColor" = "#03787C"; "backgroundColor" = "#FFF9E3" }
+    @{ "accentColor" = "#FFFFFF"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#E3FFFD"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#E3FFFD" }
+    @{ "accentColor" = "#FFF9E3"; "backgroundColor" = "#007780" }
+    @{ "accentColor" = "#007780"; "backgroundColor" = "#FFF9E3" }
     @{ "accentColor" = "#FFF9E3"; "backgroundColor" = "#292929" }
     @{ "accentColor" = "#F5F5F5"; "backgroundColor" = "#292929" }
     @{ "accentColor" = "#E3FFFD"; "backgroundColor" = "#292929" }
