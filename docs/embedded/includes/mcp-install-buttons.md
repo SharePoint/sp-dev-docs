@@ -4,4 +4,10 @@
 > [!div class="nextstepaction"]
 > [Install in Visual Studio Code](https://aka.ms/spe-mcp/install/learn/vscode)
 
-Install with one click in [Visual Studio Code Insiders](https://aka.ms/spe-mcp/install/learn/vscode-insiders), [Visual Studio](https://aka.ms/spe-mcp/install/learn/visual-studio), or [Cursor](https://aka.ms/spe-mcp/install/learn/cursor). For Claude Code or the Codex CLI, use the [command-line setup](../build/sharepoint-embedded-mcp-server.md#claude-code-and-codex-cli).
+Other clients:
+
+- [Install in Visual Studio Code Insiders](https://aka.ms/spe-mcp/install/learn/vscode-insiders)
+- [Install in Visual Studio](https://aka.ms/spe-mcp/install/learn/visual-studio)
+- [Install in Cursor](https://aka.ms/spe-mcp/install/learn/cursor)
+- [Configure Claude Code](../build/sharepoint-embedded-mcp-server.md#claude-code-and-codex-cli)
+- [Configure the Codex CLI](../build/sharepoint-embedded-mcp-server.md#claude-code-and-codex-cli)
