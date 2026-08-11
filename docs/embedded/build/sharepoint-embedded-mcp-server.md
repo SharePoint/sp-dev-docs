@@ -1,7 +1,7 @@
 ---
 title: Use the MCP server to build apps with a coding agent
 description: Use the open-source SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
-ms.date: 08/10/2026
+ms.date: 07/10/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ai-usage: ai-assisted

@@ -1,7 +1,7 @@
 ---
 title: Create and Manage Containers
 description: Create, list, update, recycle, restore, and delete SharePoint Embedded containers in your app.
-ms.date: 08/10/2026
+ms.date: 07/13/2026
 ms.reviewer: jaeccles
 ms.author: mawin
 ms.localizationpriority: high
