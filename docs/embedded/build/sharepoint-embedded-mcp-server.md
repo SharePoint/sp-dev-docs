@@ -79,6 +79,15 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
 }
 ```
 
+### Claude Code and Codex CLI
+
+Add the server from a terminal:
+
+```console
+claude mcp add spe -- npx -y @microsoft/spe-mcp start --install-source microsoft-learn --install-campaign docs-install-buttons
+codex mcp add spe -- npx -y @microsoft/spe-mcp start --install-source microsoft-learn --install-campaign docs-install-buttons
+```
+
 ### Cursor and other MCP clients
 
 Any client that supports MCP servers over the stdio transport can run the server with the same `npx -y @microsoft/spe-mcp` command. See your client's documentation for where to register MCP servers.
