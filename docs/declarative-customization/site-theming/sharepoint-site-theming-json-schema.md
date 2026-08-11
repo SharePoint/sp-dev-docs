@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 08/10/2026
+ms.date: 02/25/2026
 ms.localizationpriority: high
 ---
 
