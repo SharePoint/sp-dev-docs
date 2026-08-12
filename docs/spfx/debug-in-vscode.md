@@ -34,7 +34,7 @@ You can locate the debug configurations in the **./vscode/launch.json** file und
     ```console
     heft start
     ```
-    ![The gulp serve command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
+    ![The heft start command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
 
 ### Start debugging in Visual Studio Code
 

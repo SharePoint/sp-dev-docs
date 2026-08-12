@@ -1,7 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using Visual Studio 2012
 description: Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
-ms.date: 10/15/2022
+ms.date: 04/24/2017
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
 ms.localizationpriority: medium
 ---
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
 
-**Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
+**Provided by:** [Andrew Connell](https://www.andrewconnell.com)
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
@@ -71,7 +71,7 @@ OData and WCF data services support this scenario by providing you with  [servic
 
 ## Walkthrough: Create a workflow with Visual Studio 2012
 
-The following walkthrough demonstrates how to create a custom workflow that calls an OData web service on the Northwind database. You can find the Northwind database hosted at  [OData.org](http://www.odata.org).
+The following walkthrough demonstrates how to create a custom workflow that calls an OData web service on the Northwind database. You can find the Northwind database hosted at  [OData.org](https://www.odata.org).
 
 When the workflow is completed, users will enter a customer ID, then start the workflow. When started, the workflow retrieves additional customer information and updates the list item with the data it has retrieved.
 
@@ -148,7 +148,7 @@ The workflow now has a reference to the customer ID, so the next step is to call
 
 1. To create the URL to query the web service, start by locating an **Assign** activity in the workflow toolbox and drag it to the **Get Customer Data from Service** sequence. Notice that the **Assign** activity has two parts representing a name-value pair.
 1. Set the left portion of the **Assign** activity to **NorthwindServiceUri**.
-1. Set the right portion of the activity to the string  `"http://services.odata.org/Northwind/Northwind.svc/Customers('" + CustomerId + "')?$format=json"`. Figure 5 shows the completed activity.
+1. Set the right portion of the activity to the string  `"https://services.odata.org/Northwind/Northwind.svc/Customers('" + CustomerId + "')?$format=json"`. Figure 5 shows the completed activity.
 
     **Figure 5. Assign Activity Used to Set a Variable Containing the OData Service**
 

@@ -1,7 +1,7 @@
 ---
 title: Understanding the Heft-based toolchain (how it works)
 description: Understand how the SharePoint Framework uses Heft as a pluggable build system, learn about key Heft architectural concepts like actions, phases, tasks, and rig packages, and explore common customization scenarios for the SPFx toolchain.
-ms.date: 12/10/2025
+ms.date: 11/19/2025
 ms.localizationpriority: high
 ---
 # Understanding the Heft-based toolchain (how it works)
@@ -32,7 +32,7 @@ npx @rushstack/heft --help
 ```
 
 > [!TIP]
-> Similar to Gulp, Heft is installed locally within your project. However, [unlike Gulp that requires installing the Gulp CLI globally](https://www.voitanos.io/blog/mea-culpa-always-install-gulp-cli-globally-not-gulp/), you can install the same Heft npm package globally to simplify running Heft commands.
+> Similar to Gulp, Heft is installed locally within your project. However, [unlike Gulp that requires installing the Gulp CLI globally](https://www.andrewconnell.com/articles/mea-culpa-always-install-gulp-cli-globally-not-gulp/), you can install the same Heft npm package globally to simplify running Heft commands.
 >
 > ```console
 > npm install @rushstack/heft --global

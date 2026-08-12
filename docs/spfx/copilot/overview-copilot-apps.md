@@ -220,6 +220,7 @@ The following are known issues in the current public preview. They are expected 
 
 - **Copilot UX only** - Initially during the public preview, components render only in the Microsoft 365 Copilot user experience. Support for other surfaces and hosting options is in the works.
 - **Duplicate tool names across solutions** - If two deployed solutions declare a tool with the same name, only one of them is registered and the other is silently ignored. Until this is fixed, make sure each tool name is unique across all SharePoint Copilot Apps deployed to the tenant.
+- **No agent definition validation** - There's currently no validation on the created agent definition when the solution is bundled. This can cause challenges if the lenght of the json definitions are too long vs the agent defition schema. You can use [Agent Toolkit CLI](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli) to validate the created package with `atk validate --package-file agent-file.zip` command. This will be addressed in upcoming preview releases before general availability.
 
 ## See also
 

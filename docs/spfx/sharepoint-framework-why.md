@@ -40,4 +40,4 @@ The SharePoint Framework is the next evolution in SharePoint development.
 
 ## See Also
 
-- [Why did Microsoft create the SharePoint Framework (SPFx)?](https://www.voitanos.io/blog/spfx-5w1h-why-did-microsoft-create-sharepoint-framework/)
+- [Why did Microsoft create the SharePoint Framework (SPFx)?](https://www.andrewconnell.com/articles/sharepoint-framework-5w1h-why-did-microsoft-create-spfx/)
