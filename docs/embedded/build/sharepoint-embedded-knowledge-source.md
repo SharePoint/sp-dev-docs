@@ -19,7 +19,7 @@ outcome: Configure Microsoft Foundry Agent Service to retrieve SharePoint Embedd
 next: migrate-azure-blob-storage.md
 -->
 
-Use Microsoft Foundry Agent Service with a SharePoint knowledge source when your app needs a grounded agent experience over files stored in SharePoint Embedded containers.
+Use Microsoft Foundry Agent Service with a SharePoint knowledge source when your app needs a grounded agent experience over files stored in SharePoint Embedded containers. Content stays in the customer's Microsoft 365 tenant, so Microsoft Purview compliance applies and you don't copy content into an external vector database. For the decision context, see [Ground AI without an external vector database](../plan/ground-ai-without-a-vector-db.md).
 
 For SharePoint Embedded container types, the knowledge source grounds answers through the generally available [Microsoft 365 Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval). Foundry runs the retrieval calls as part of the agent, so the same prerequisites, indexing behavior, and billing apply. The `sharePointEmbedded` data source that Foundry uses is in preview. To run your own grounding step instead, call the Retrieval API directly, as described in [Use the Retrieval API](agent-experiences.md#use-the-retrieval-api).
 

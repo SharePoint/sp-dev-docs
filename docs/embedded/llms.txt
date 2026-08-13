@@ -4,11 +4,14 @@
 
 ## Overview
 - [What is SharePoint Embedded?](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview): Definition, key concepts (tenant partition, containers), and routing to the right task area.
-- [Scenarios and use cases](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/scenarios-and-use-cases): When to use SPE; enterprise and ISV examples.
+- [Scenarios and use cases](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/scenarios-and-use-cases): Match a real problem to SPE — multitenant SaaS storage, Office co-authoring, AI grounding, and compliant document management.
+- [When to choose SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/when-to-choose-sharepoint-embedded): Decide if SPE fits, and compare it to Azure Blob, Google Drive/Box/Dropbox APIs, and standard SharePoint sites.
 - [What's new](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/whats-new): Recent releases, preview features, and breaking changes.
 
 ## Plan a solution (architect, IT decision maker)
 - [Understand app and tenant architecture](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/app-tenant-architecture): Developer vs consuming tenant, app ownership, container types, where files live.
+- [Add Office editing without building it](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/office-collaboration-instead-of-building): Get Office co-authoring, AutoSave, versioning, and sharing without building a collaboration engine.
+- [Ground AI without an external vector database](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/ground-ai-without-a-vector-db): Ground an agent on enterprise content that stays in the M365 tenant, with Purview intact.
 - [Choose an app model: single-tenant or multitenant](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-app-model): Enterprise LOB vs ISV; who owns, installs, and pays.
 - [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-and-containers): The container type/container model and ownership.
 - [Choose a billing model](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-billing-model): Standard vs pass-through (consuming-tenant) billing.
