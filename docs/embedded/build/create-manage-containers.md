@@ -70,7 +70,7 @@ Before creating containers, make sure:
 
 Creating a container requires a *confidential client* application. A confidential client holds a credential, such as a client secret or certificate, and acquires tokens from a component that keeps that credential private, like a web app back end or a service.
 
-Create calls that use a token from a *public client* application fail. Public clients include single-page apps, mobile apps, and desktop apps, because they can't store a credential securely.
+Create container calls that use a token from a *public client* application fail because public client tokens are accessible to the end user and can be re-used without the application's awareness. Public clients include single-page apps, mobile apps, and desktop apps.
 
 This requirement applies to both delegated and app-only creation:
 
