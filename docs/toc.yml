@@ -630,7 +630,7 @@
       href: embedded/plan/security-compliance-governance.md
     - name: Understand limits and calling patterns
       href: embedded/plan/limits-calling-patterns.md
-    - name: Add Office editing without building it
+    - name: Add Office co-authoring without building it
       href: embedded/plan/office-collaboration-instead-of-building.md
     - name: Ground AI without an external vector database
       href: embedded/plan/ground-ai-without-a-vector-db.md

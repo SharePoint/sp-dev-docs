@@ -1,5 +1,5 @@
 ---
-title: Ground AI on Enterprise Content Without an External Vector Database
+title: Ground AI on enterprise content without an external vector database
 description: Ground an AI agent on enterprise documents while keeping content in the Microsoft 365 tenant, using SharePoint Embedded instead of an external vector database.
 ms.date: 08/13/2026
 ms.reviewer: shsaravanan
@@ -17,27 +17,28 @@ outcome: The reader understands that SharePoint Embedded grounds AI agents on en
 next: ../build/sharepoint-embedded-knowledge-source.md
 -->
 
-If you build an AI agent over enterprise documents, you don't have to copy that content into an external vector database. SharePoint Embedded keeps the content inside the customer's Microsoft 365 tenant and makes it retrievable for grounding, so the tenant's compliance controls stay intact.
+If you build an AI agent over enterprise documents, you don't have to copy that content into an external vector database. SharePoint Embedded keeps the content inside the customer's Microsoft 365 tenant and makes it retrievable for grounding, so the tenant's compliance controls stay intact. This article helps you choose a retrieval path and understand the governance that gates it. For the problem framing, see [Ground an AI agent on enterprise content](../scenarios-and-use-cases.md#scenario-ground-an-ai-agent-on-enterprise-content).
 
-## The problem
+## Choose a retrieval path
 
-You build an "ask the knowledge base" agent over thousands of internal documents. You want to consolidate them, make them searchable, and use them to ground a large language model (LLM). But security teams reject copying content into an external vector database, and the content must keep its retention and eDiscovery controls.
+SharePoint Embedded content can ground AI through more than one path. Pick the one that matches how your agent retrieves content.
 
-## Why an external vector database falls short
+| Path | Use it when | Learn more |
+|---|---|---|
+| Microsoft Search API | Your app runs its own retrieval and ranks results itself | [Search containers and files](../build/search-containers-files.md) |
+| Microsoft Foundry knowledge source | You build an agent in Microsoft Foundry and want managed grounding | [Set up a Foundry knowledge source](../build/sharepoint-embedded-knowledge-source.md) |
+| Microsoft 365 Copilot | You want content to surface in Copilot experiences | [Add Copilot and agent experiences](../build/agent-experiences.md) |
 
-- **It moves data out of the tenant.** Copying documents into a third-party store breaks the compliance boundary.
-- **You rebuild compliance.** Retention, eDiscovery, and data loss prevention (DLP) don't follow the copy.
-- **You maintain a pipeline.** Sync, re-indexing, and access trimming become your ongoing responsibility.
+Retrieval through every path is scoped to your app's content, so an agent never reaches beyond the containers your app controls.
 
-## Why SharePoint Embedded
+## Governance that gates grounding
 
-Store the documents in SharePoint Embedded containers and ground your agent on them in place:
+Grounding stays inside the tenant's compliance boundary, and nothing is exposed automatically:
 
 - **Content stays in the customer's Microsoft 365 tenant**, inside the compliance boundary.
-- **Content discoverability is a container-type setting.** You control whether Microsoft 365 Copilot can surface content from a container type.
-- **Retrieve with the Microsoft Search API**, scoped by `ContainerTypeId`, or with a Microsoft Foundry SharePoint knowledge source.
+- **Content discoverability is configurable for your app** and determines whether Microsoft 365 Copilot can surface the content.
 - **Microsoft Purview applies.** DLP, retention, and eDiscovery follow the content.
-- **Nothing is auto-exposed.** SharePoint Embedded content isn't available to Copilot until you enable discoverability.
+- **Nothing is auto-exposed.** SharePoint Embedded content isn't available to Copilot until discoverability is enabled.
 
 ## Next steps
 

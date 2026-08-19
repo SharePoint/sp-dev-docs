@@ -1,19 +1,19 @@
 # SharePoint Embedded
 
-> SharePoint Embedded (SPE) is a cloud-based, API-only file and document management platform built on Microsoft 365. Developers embed Office collaboration, Microsoft Purview compliance, and Copilot capabilities into their own apps while content stays inside each customer's Microsoft 365 tenant. This index is organized by task. Each link points to the single best page for that task.
+> SharePoint Embedded is a cloud-based, API-only file and document management platform built on Microsoft 365. Developers embed Office collaboration, Microsoft Purview compliance, and Copilot capabilities into their own apps while content stays inside each customer's Microsoft 365 tenant. This index is organized by task. Each link points to the single best page for that task.
 
 ## Overview
 - [What is SharePoint Embedded?](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/overview): Definition, key concepts (tenant partition, containers), and routing to the right task area.
-- [Scenarios and use cases](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/scenarios-and-use-cases): Match a real problem to SPE — multitenant SaaS storage, Office co-authoring, AI grounding, and compliant document management.
-- [When to choose SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/when-to-choose-sharepoint-embedded): Decide if SPE fits, and compare it to Azure Blob, Google Drive/Box/Dropbox APIs, and standard SharePoint sites.
+- [Scenarios and use cases](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/scenarios-and-use-cases): Match a real problem to SharePoint Embedded — multitenant SaaS storage, Office co-authoring, AI grounding, and compliant document management.
+- [When to choose SharePoint Embedded](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/when-to-choose-sharepoint-embedded): Decide if SharePoint Embedded fits, and compare it to blob storage, Google Drive/Box/Dropbox APIs, and SharePoint Online sites.
 - [What's new](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/whats-new): Recent releases, preview features, and breaking changes.
 
 ## Plan a solution (architect, IT decision maker)
 - [Understand app and tenant architecture](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/app-tenant-architecture): Developer vs consuming tenant, app ownership, container types, where files live.
-- [Add Office editing without building it](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/office-collaboration-instead-of-building): Get Office co-authoring, AutoSave, versioning, and sharing without building a collaboration engine.
+- [Add Office co-authoring without building it](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/office-collaboration-instead-of-building): Get Office co-authoring, AutoSave, versioning, and sharing without building a collaboration engine. Editing launches in Office; previews embed in your app.
 - [Ground AI without an external vector database](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/ground-ai-without-a-vector-db): Ground an agent on enterprise content that stays in the M365 tenant, with Purview intact.
 - [Choose an app model: single-tenant or multitenant](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-app-model): Enterprise LOB vs ISV; who owns, installs, and pays.
-- [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-and-containers): The container type/container model and ownership.
+- [Understand container types and containers](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/container-types-containers): The container type/container model and ownership.
 - [Choose a billing model](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/choose-billing-model): Standard vs pass-through (consuming-tenant) billing.
 - [Plan authentication and permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/authentication-permissions): Permission models, admin consent, app-only vs delegated.
 - [Plan security, compliance, and governance](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/security-compliance-governance): Purview, DLP, retention, sensitivity labels, conditional access.
@@ -63,7 +63,7 @@
 - [PowerShell reference](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/powershell): SharePoint Embedded admin cmdlets.
 - [Microsoft Graph API reference links](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/graph-api-links): Graph fileStorageContainer and related APIs.
 - [Troubleshooting](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/troubleshooting): Common setup, auth, billing, and runtime issues.
-- [Glossary](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/glossary): SPE terms and definitions.
+- [Glossary](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/reference/glossary): SharePoint Embedded terms and definitions.
 
 ## Optional
 - [Microsoft Graph file storage container API](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer): Underlying Graph API surface for SharePoint Embedded.

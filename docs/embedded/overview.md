@@ -22,14 +22,14 @@ SharePoint Embedded brings advanced Microsoft 365 capabilities into your app, in
 SharePoint Embedded fits when you're trying to do any of these tasks:
 
 - **Store files for a multitenant SaaS app** so each customer's content stays in their own Microsoft 365 tenant. See [Store files for a multitenant SaaS app](scenarios-and-use-cases.md#scenario-store-files-for-a-multitenant-saas-app).
-- **Add Office editing and co-authoring** to your app instead of building it. See [Add Office editing without building it](plan/office-collaboration-instead-of-building.md).
+- **Add Office co-authoring** to your app instead of building it. See [Add Office co-authoring without building it](plan/office-collaboration-instead-of-building.md).
 - **Ground an AI agent** on enterprise content without an external vector database. See [Ground AI without an external vector database](plan/ground-ai-without-a-vector-db.md).
 - **Run a compliant, API-only document store** with recycle bin, restore, and search. See [Run a compliant, API-only document store](scenarios-and-use-cases.md#scenario-run-a-compliant-api-only-document-store).
 
 For a full comparison with alternatives, see [When to choose SharePoint Embedded](plan/when-to-choose-sharepoint-embedded.md).
 
 > [!NOTE]
-> SharePoint Embedded isn't the same as standard SharePoint sites or document libraries, the SharePoint Framework (SPFx), OneDrive APIs, or Azure Blob Storage. It's an API-only storage platform whose content lives in the customer's Microsoft 365 tenant.
+> SharePoint Embedded isn't the same as SharePoint Online sites or document libraries, the SharePoint Framework (SPFx), OneDrive APIs, or blob storage. It's an API-only storage platform whose content lives in the customer's Microsoft 365 tenant.
 
 > [!IMPORTANT]
 > Help us shape the future of SharePoint Embedded! Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your thoughts.
@@ -78,7 +78,7 @@ By default, content stored by a SharePoint Embedded app is accessible only throu
 
 - Core content management — any file type, folders, search, sharing, versioning, recycle bin.
 - Office collaboration — view, edit, and co-author Word, Excel, and PowerPoint on the web and desktop.
-- AI and agent grounding — make content discoverable to Microsoft 365 Copilot through the container type's content-discoverability setting, and search it with the Microsoft Search API scoped by `ContainerTypeId`.
+- AI and agent grounding — make content discoverable to Microsoft 365 Copilot through the container type's content-discoverability setting, and search it with the Microsoft Search API scoped to your app's content.
 - Low-code integration — the [SharePoint Embedded connector](/connectors/sharepointembedded/) for [Power Platform](/power-platform/) (generally available February 2026).
 
 SharePoint Embedded is used by Microsoft products (such as Loop and Designer), by ISVs embedding content management in their apps, and by enterprises storing content outside their regular Microsoft 365 entitlements.

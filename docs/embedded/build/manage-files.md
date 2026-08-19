@@ -23,7 +23,7 @@ Use Microsoft Graph file and DriveItem APIs to manage files inside SharePoint Em
 
 Complete [Create and manage containers](create-manage-containers.md) first so you have a container ID.
 
-SharePoint Embedded gives your app an API-only document store with Microsoft 365 capabilities built in. File management is fully programmatic through Microsoft Graph, with no SharePoint UI. The full lifecycle includes upload and download, folders, versioning, a recycle bin, and 93-day container restore. Content is searchable through the Microsoft Search API and inherits the tenant's Microsoft Purview compliance. Your app's end users don't need a Microsoft 365 license for basic file operations.
+SharePoint Embedded gives your app an API-only document store with Microsoft 365 capabilities built in. File management is fully programmatic through Microsoft Graph, with no SharePoint UI. The full lifecycle includes upload and download, folders, versioning, a recycle bin, and 93-day content restore. Content is searchable through the Microsoft Search API and inherits the tenant's Microsoft Purview compliance. Your app's end users don't need a Microsoft 365 license for basic file operations.
 
 ## Understand file storage
 

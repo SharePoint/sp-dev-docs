@@ -1,12 +1,14 @@
 ---
-title: Scenarios and Use Cases
+title: Scenarios and use cases
 description: Common developer problems that SharePoint Embedded solves, from multitenant SaaS storage to Office co-authoring, AI grounding, and compliant document management.
-ms.date: 08/13/2026
+ms.date: 07/13/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ---
 
 # Scenarios and use cases for SharePoint Embedded
+
+**Applies to:** All
 
 <!-- agent:
 task_type: concept
@@ -24,7 +26,7 @@ Use these scenarios to decide whether SharePoint Embedded fits your app. Each on
 
 ### The problem
 
-You build a multitenant SaaS product, such as contract management for enterprise legal teams. Your biggest blocker is file storage. Enterprise customers won't accept their documents living in your storage. Their IT teams want to apply their own data loss prevention (DLP) and retention rules. You still need full control of the files from your app: create, read, organize, permission, and delete, all through APIs.
+You build a multitenant SaaS product, such as contract management for enterprise legal teams. Your biggest blocker is file storage. Enterprise customers won't accept their documents living in your storage. Their IT teams want to apply their own security and compliance policies, like data loss prevention (DLP) and retention rules. You still need full control of the files from your app: create, read, organize, permission, and delete, all through APIs.
 
 ### Why the usual approaches fall short
 
@@ -42,11 +44,11 @@ SharePoint Embedded stores each customer's files inside that customer's own Micr
 
 See [Choose an app model](plan/choose-app-model.md) and [Create and manage containers](build/create-manage-containers.md).
 
-## Scenario: Add Office editing and co-authoring to your app
+## Scenario: Add Office co-authoring to your app
 
 ### The problem
 
-You have a custom app, and your top feature request is "let me edit documents without leaving the app." Today you store files and hand out download links. Users want to open a Word or Excel file and co-author it in real time, with AutoSave and version history, plus sharing with an external person through a link.
+You have a custom app, and your top feature request is "let me edit Office documents the same way I'm used to." Today you store files and hand out download links. Perhaps you even use a Web Application Open Platform Interface (WOPI) host. But your users want to open a Word or Excel file and co-author it in real time, with AutoSave, version history, sharing, and all the features of Office for the web, Office Desktop, and Microsoft 365 for mobile.
 
 ### Why the usual approaches fall short
 
@@ -55,14 +57,16 @@ You have a custom app, and your top feature request is "let me edit documents wi
 
 ### Why SharePoint Embedded
 
-Store the files in a SharePoint Embedded container and open them through Office:
+Store the files in a SharePoint Embedded container and launch them in Office. Your app links to the same Office service Microsoft 365 uses, so you don't build a collaboration engine:
 
 - **Real-time co-authoring** in Office for the web and Office desktop clients.
 - **AutoSave** and **automatic version history** for Word, Excel, and PowerPoint.
-- **Sharing** through email invitations, shareable links, and @mentions.
+- **Sharing** through shareable links, plus @mentions for licensed users.
 - **Scoped access levels**: Anyone, People in your organization, Specific people, and People with existing access.
 
-See [Add Office editing without building it](plan/office-collaboration-instead-of-building.md) and [Open Office files from your app](build/open-office-files.md).
+Editing opens in Office, not inside your app: Office for the web opens in a new browser tab or window, and desktop clients open in their own app. To keep users in your app's UI, embed a read-only [file preview](build/preview-files.md); use Office launch for editing.
+
+See [Add Office co-authoring without building it](plan/office-collaboration-instead-of-building.md) and [Open Office files from your app](build/open-office-files.md).
 
 ## Scenario: Ground an AI agent on enterprise content
 
@@ -80,9 +84,9 @@ You build an internal "ask the knowledge base" agent over thousands of documents
 Store the documents in SharePoint Embedded containers and ground your agent in place:
 
 - Content **stays in the customer's Microsoft 365 tenant**.
-- **Content discoverability is a container-type setting** that controls whether Microsoft 365 Copilot can surface the content.
-- Retrieve content with the **Microsoft Search API**, scoped by `ContainerTypeId`, or a Microsoft Foundry knowledge source.
-- **Microsoft Purview** DLP, retention, and eDiscovery apply, and nothing is exposed to Copilot until you enable discoverability.
+- **Content discoverability is configurable for your app** and controls whether Microsoft 365 Copilot can surface the content.
+- Retrieve content with the **Microsoft Search API** or a Microsoft Foundry knowledge source, scoped to your app's content.
+- **Microsoft Purview** DLP, retention, and eDiscovery apply, and nothing is exposed to Copilot until discoverability is enabled.
 
 See [Ground AI without an external vector database](plan/ground-ai-without-a-vector-db.md) and [Set up SharePoint Embedded as a Foundry knowledge source](build/sharepoint-embedded-knowledge-source.md).
 
@@ -94,7 +98,7 @@ Your app collects documents from customers, inside or outside your organization,
 
 ### Why the usual approaches fall short
 
-- **Standard SharePoint sites** expose an interface users can browse, which you don't want.
+- **SharePoint Online sites** expose an interface users can browse, which you don't want.
 - **Blob storage** leaves you to build recycle bin, restore, search, and compliance yourself.
 
 ### Why SharePoint Embedded
@@ -102,7 +106,7 @@ Your app collects documents from customers, inside or outside your organization,
 SharePoint Embedded gives you an API-only document store with Microsoft 365 capabilities built in:
 
 - **API-only** through Microsoft Graph, with no SharePoint UI to bypass.
-- Full lifecycle: upload and download, folders, versioning, **recycle bin**, and **93-day container restore**.
+- Full lifecycle: upload and download, folders, versioning, **recycle bin**, and **93-day content restore**.
 - Content is searchable through the **Microsoft Search API** and **inherits the tenant's Microsoft Purview** compliance.
 - Your app's end users **don't need a Microsoft 365 license** for basic file operations.
 

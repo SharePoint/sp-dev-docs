@@ -23,7 +23,10 @@ Open Office files from your SharePoint Embedded app by using Microsoft Graph Dri
 
 Complete [Upload, download, and manage files](manage-files.md) first so your app has files to launch.
 
-When you store Office files in a SharePoint Embedded container, your app gets a full collaboration stack without building one. Word, Excel, and PowerPoint files support real-time co-authoring, AutoSave, automatic version history, and sharing through email invitations, shareable links, and @mentions, with scoped access levels. You don't need to build a collaboration engine. For the decision context, see [Add Office editing without building it](../plan/office-collaboration-instead-of-building.md).
+When you store Office files in a SharePoint Embedded container, your app links to a full collaboration stack without building one. Word, Excel, and PowerPoint files support real-time co-authoring, AutoSave, automatic version history, and sharing through shareable links and @mentions, with scoped access levels. You don't need to build a collaboration engine. Editing opens in Office for the web (in a new browser tab or window) or in Office desktop clients, so users leave your app's UI to edit; embed a read-only [preview](preview-files.md) when you need inline, in-app viewing. For the decision context, see [Add Office co-authoring without building it](../plan/office-collaboration-instead-of-building.md).
+
+> [!NOTE]
+> @mentions notify only recipients who have a Microsoft 365 license. SharePoint Embedded sharing doesn't send email invitations.
 
 ## Understand Office experiences
 
