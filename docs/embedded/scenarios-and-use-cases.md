@@ -84,7 +84,7 @@ You build an internal "ask the knowledge base" agent over thousands of documents
 Store the documents in SharePoint Embedded containers and ground your agent in place:
 
 - Content **stays in the customer's Microsoft 365 tenant**.
-- **Content discoverability is a setting on the container type.** It governs whether SharePoint Embedded content surfaces in Microsoft 365 experiences, including Copilot. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
+- **Content discoverability is a setting on the [container type](plan/container-types-containers.md)** — the template that defines your app's containers. It governs whether SharePoint Embedded content surfaces in Microsoft 365 experiences, including Copilot. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
 - Retrieve content with the **Microsoft Search API**, scoped by the container type ID (`ContainerTypeId`), or with a Microsoft Foundry knowledge source.
 - **Microsoft Purview** data loss prevention (DLP), retention, and eDiscovery apply. Nothing is exposed to Copilot until discoverability is enabled on the container type.
 

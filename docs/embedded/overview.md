@@ -21,10 +21,10 @@ SharePoint Embedded brings advanced Microsoft 365 capabilities into your app, in
 
 SharePoint Embedded fits when you're trying to do any of these tasks:
 
-- **Store files for a multitenant SaaS app** so each customer's content stays in their own Microsoft 365 tenant. See [Store files for a multitenant SaaS app](scenarios-and-use-cases.md#scenario-store-files-for-a-multitenant-saas-app).
-- **Add Office co-authoring** to your app instead of building it. See [Add Office co-authoring without building it](plan/office-collaboration-instead-of-building.md).
-- **Ground an AI agent** on enterprise content without an external vector database. See [Ground AI without an external vector database](plan/ground-ai-without-a-vector-db.md).
-- **Run a compliant, API-only document store** with recycle bin, restore, and search. See [Run a compliant, API-only document store](scenarios-and-use-cases.md#scenario-run-a-compliant-api-only-document-store).
+- **[Store files for a multitenant SaaS app](scenarios-and-use-cases.md#scenario-store-files-for-a-multitenant-saas-app)** so each customer's content stays in their own Microsoft 365 tenant.
+- **[Add Office co-authoring](plan/office-collaboration-instead-of-building.md)** to your app instead of building it.
+- **[Ground an AI agent](plan/ground-ai-without-a-vector-db.md)** on enterprise content without an external vector database.
+- **[Run a compliant, API-only document store](scenarios-and-use-cases.md#scenario-run-a-compliant-api-only-document-store)** with recycle bin, restore, and search.
 
 For a full comparison with alternatives, see [When to choose SharePoint Embedded](plan/when-to-choose-sharepoint-embedded.md).
 

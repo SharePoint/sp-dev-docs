@@ -36,7 +36,7 @@ Retrieval through every path is scoped to your app's content, so an agent never 
 Grounding stays inside the tenant's compliance boundary, and nothing is exposed automatically:
 
 - **Content stays in the customer's Microsoft 365 tenant**, inside the compliance boundary.
-- **Content discoverability is a setting on the container type** that governs whether Microsoft 365 Copilot can surface the content. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
+- **Content discoverability is a setting on the [container type](container-types-containers.md)** — the template that defines your app's containers — that governs whether Microsoft 365 Copilot can surface the content. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
 - **Retrieve content with the Microsoft Search API**, scoped by the container type ID (`ContainerTypeId`), or with a Microsoft Foundry knowledge source.
 - **Microsoft Purview applies.** DLP, retention, and eDiscovery follow the content.
 - **Nothing is auto-exposed.** SharePoint Embedded content isn't available to Copilot until discoverability is enabled on the container type.
