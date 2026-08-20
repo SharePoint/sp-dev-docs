@@ -31,7 +31,7 @@ You build a multitenant SaaS product, such as contract management for enterprise
 ### Why the usual approaches fall short
 
 - **Your own blob storage** puts customer data outside the customer's tenant, which enterprise IT rejects.
-- **Google Drive, Box, or Dropbox APIs** use per-seat licensing and give the customer's admin little policy control.
+- **Competing file storage APIs** use per-seat licensing and give the customer's admin little policy control.
 
 ### Why SharePoint Embedded
 

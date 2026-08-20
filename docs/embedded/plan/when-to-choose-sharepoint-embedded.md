@@ -50,11 +50,11 @@ Choose SharePoint Embedded over blob storage when compliance and Office collabor
 | Search and Copilot grounding | Microsoft Search API and Copilot discoverability built in | You build indexing and grounding yourself |
 | Access model | Microsoft Graph, per-container permissions | Blob SAS tokens and cloud IAM roles |
 
-## SharePoint Embedded vs Google Drive, Box, or Dropbox APIs
+## SharePoint Embedded vs competing file storage APIs
 
-Choose SharePoint Embedded over consumer or third-party file APIs when your enterprise customers must control their own data and policies.
+Choose SharePoint Embedded over competing file storage APIs when your enterprise customers must control their own data and policies.
 
-| Consideration | SharePoint Embedded | Google Drive, Box, or Dropbox APIs |
+| Consideration | SharePoint Embedded | Competing file storage APIs |
 |---|---|---|
 | Data residency | Stays in the customer's Microsoft 365 tenant | Stored in the provider's cloud |
 | Customer-enforced policy | Customer's existing Microsoft 365 policies apply | Limited customer control |
