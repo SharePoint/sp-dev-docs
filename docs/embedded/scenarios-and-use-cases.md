@@ -48,7 +48,7 @@ See [Choose an app model](plan/choose-app-model.md) and [Create and manage conta
 
 ### The problem
 
-You have a custom app, and your top feature request is "let me edit Office documents the same way I'm used to." Today you store files and hand out download links. Perhaps you even use a Web Application Open Platform Interface (WOPI) host. But your users want to open a Word or Excel file and co-author it in real time, with AutoSave, version history, sharing, and all the features of Office for the web, Office Desktop, and Microsoft 365 for mobile.
+You have a custom app, and your top feature request is "let me edit Office documents the same way I'm used to." Today you store files and hand out download links. Perhaps you even use a Web Application Open Platform Interface (WOPI) host. But your users want to open a Word or Excel file and co-author it in real time. They expect AutoSave, version history, and sharing, plus the full experience of Office for the web, Office desktop, and Microsoft 365 for mobile.
 
 ### Why the usual approaches fall short
 
@@ -64,7 +64,7 @@ Store the files in a SharePoint Embedded container and launch them in Office. Yo
 - **Sharing** through shareable links, plus @mentions for licensed users.
 - **Scoped access levels**: Anyone, People in your organization, Specific people, and People with existing access.
 
-Editing opens in Office, not inside your app: Office for the web opens in a new browser tab or window, and desktop clients open in their own app. To keep users in your app's UI, embed a read-only [file preview](build/preview-files.md); use Office launch for editing.
+Editing opens in Office, not inside your app. Office for the web opens in a new browser tab or window, and desktop clients open in their own app. To keep users in your app's UI, embed a read-only [file preview](build/preview-files.md); use Office launch for editing.
 
 See [Add Office co-authoring without building it](plan/office-collaboration-instead-of-building.md) and [Open Office files from your app](build/open-office-files.md).
 
@@ -84,9 +84,9 @@ You build an internal "ask the knowledge base" agent over thousands of documents
 Store the documents in SharePoint Embedded containers and ground your agent in place:
 
 - Content **stays in the customer's Microsoft 365 tenant**.
-- **Content discoverability is configurable for your app** and controls whether Microsoft 365 Copilot can surface the content.
-- Retrieve content with the **Microsoft Search API** or a Microsoft Foundry knowledge source, scoped to your app's content.
-- **Microsoft Purview** DLP, retention, and eDiscovery apply, and nothing is exposed to Copilot until discoverability is enabled.
+- **Content discoverability is a setting on the container type.** It governs whether SharePoint Embedded content surfaces in Microsoft 365 experiences, including Copilot. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
+- Retrieve content with the **Microsoft Search API**, scoped by the container type ID (`ContainerTypeId`), or with a Microsoft Foundry knowledge source.
+- **Microsoft Purview** data loss prevention (DLP), retention, and eDiscovery apply. Nothing is exposed to Copilot until discoverability is enabled on the container type.
 
 See [Ground AI without an external vector database](plan/ground-ai-without-a-vector-db.md) and [Set up SharePoint Embedded as a Foundry knowledge source](build/sharepoint-embedded-knowledge-source.md).
 
@@ -105,9 +105,11 @@ Your app collects documents from customers, inside or outside your organization,
 
 SharePoint Embedded gives you an API-only document store with Microsoft 365 capabilities built in:
 
-- **API-only** through Microsoft Graph, with no SharePoint UI to bypass.
-- Full lifecycle: upload and download, folders, versioning, **recycle bin**, and **93-day content restore**.
-- Content is searchable through the **Microsoft Search API** and **inherits the tenant's Microsoft Purview** compliance.
+- **API-only through Microsoft Graph**: every file and container operation uses Microsoft Graph, with no SharePoint UI for users to bypass.
+- **Full content lifecycle**: upload and download, folder structure, and versioning.
+- **Two-level soft delete**: deleted items go to a container recycle bin you can restore from, and deleted containers move to a deleted container collection that stays restorable for **93 days** before permanent purge.
+- **Search** through the **Microsoft Search API**, scoped to your app's containers.
+- **Microsoft Purview compliance** inherited from the consuming tenant: DLP, retention policies, sensitivity labels, and eDiscovery.
 - Your app's end users **don't need a Microsoft 365 license** for basic file operations.
 
 See [Upload, download, and manage files](build/manage-files.md) and [Archive and restore containers](build/archive-restore-containers.md).

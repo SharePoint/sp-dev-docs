@@ -30,8 +30,8 @@ Choose the knowledge source when you want Foundry to manage retrieval and agent 
 
 SharePoint Embedded grounds AI agents on enterprise content while keeping that content and its compliance controls inside the customer's Microsoft 365 tenant. You don't copy content into an external vector database. Key facts:
 
-- **Content discoverability is configurable for your app** and determines whether Microsoft 365 Copilot can surface the content.
-- **Retrieve content with the Microsoft Search API**, scoped by `ContainerTypeId`, or with a Foundry SharePoint knowledge source.
+- **Content discoverability is a setting on the container type** that governs whether Microsoft 365 Copilot can surface the content. Tenant governance controls this setting, so an app can't expose content by changing its own configuration.
+- **Retrieve content with the Microsoft Search API**, scoped by the container type ID (`ContainerTypeId`), or with a Foundry SharePoint knowledge source.
 - **Content stays in the customer's Microsoft 365 tenant**, so Microsoft Purview data loss prevention (DLP), retention, and eDiscovery apply.
 - **Nothing is auto-exposed.** SharePoint Embedded content isn't available to Copilot until discoverability is enabled on the container type.
 
