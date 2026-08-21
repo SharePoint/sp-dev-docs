@@ -25,8 +25,8 @@ SharePoint Embedded content can ground AI through more than one path. Pick the o
 
 | Path | Use it when | Learn more |
 |---|---|---|
-| Microsoft Search API | Your app runs its own retrieval and ranks results itself | [Search containers and files](../build/search-containers-files.md) |
-| Microsoft Foundry knowledge source | You build an agent in Microsoft Foundry and want managed grounding | [Set up a Foundry knowledge source](../build/sharepoint-embedded-knowledge-source.md) |
+| Microsoft Search API | Your app runs its own retrieval and ranks results itself. Search is lexical (keyword), not semantic, so add your own embeddings if you need vector ranking. | [Search containers and files](../build/search-containers-files.md) |
+| Microsoft Foundry knowledge source | You build an agent in Microsoft Foundry and want managed, semantic grounding | [Set up a Foundry knowledge source](../build/sharepoint-embedded-knowledge-source.md) |
 | Microsoft 365 Copilot | You want content to surface in Copilot experiences | [Add Copilot and agent experiences](../build/agent-experiences.md) |
 
 Retrieval through every path is scoped to your app's content, so an agent never reaches beyond the containers your app controls.
