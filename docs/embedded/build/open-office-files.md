@@ -51,7 +51,7 @@ Supported experiences include:
 
 ## Control Office integration
 
-Office integration is enabled by default. To disable Office access for a container type, set the `isOfficeRestricted` property in `fileStorageContainerTypeSettings` to `true`. For the property definition and supported API surface, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings?view=graph-rest-beta).
+Office integration is enabled by default. To disable Office access for a container type, set the `isOfficeRestricted` property in `fileStorageContainerTypeSettings` to `true`. For the property definition and supported API surface, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings?view=graph-rest-beta&preserve-view=true).
 
 When Office integration is disabled, users can't launch files from affected containers in Office for the web or Office desktop clients. Before enabling this restriction, make sure your app provides or directs users to an appropriate alternative experience for viewing or editing files.
 
