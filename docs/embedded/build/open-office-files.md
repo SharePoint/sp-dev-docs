@@ -44,7 +44,16 @@ Supported experiences include:
 - Breadcrumbs in Office clients that associate a file with your app.
 
 > [!NOTE]
+> Office integration is enabled by default for SharePoint Embedded container types. Authorized users can open supported files in Office for the web and Office desktop clients, including through Office experiences outside your app's custom user interface. If your app requires file access to remain within app-controlled experiences, you can disable Office integration for the container type.
+
+> [!NOTE]
 > Documents stored in an archived container can't be viewed or accessed. Your app must handle the archived state by showing an appropriate error and guiding users on next steps, such as reactivating the container.
+
+## Control Office integration
+
+Office integration is enabled by default. To disable Office access for a container type, set the `isOfficeRestricted` property in `fileStorageContainerTypeSettings` to `true`. For the property definition and supported API surface, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings?view=graph-rest-beta).
+
+When Office integration is disabled, users can't launch files from affected containers in Office for the web or Office desktop clients. Before enabling this restriction, make sure your app provides or directs users to an appropriate alternative experience for viewing or editing files.
 
 ## Prerequisites
 
@@ -247,6 +256,7 @@ Test each launch path:
 | Mentions don't find a user | Microsoft 365 license and tenant membership limitations. |
 | Breadcrumb doesn't look right | Container properties and Office update channel. |
 | Redirect returns to wrong route | `ApplicationRedirectUrl` and app route handling. |
+| Office for the web or an Office desktop client doesn't open the file | Confirm that Office integration isn't disabled for the container type through `isOfficeRestricted`, and then check the user's file permissions and the existing client-specific launch requirements. |
 
 ## Next steps
 
