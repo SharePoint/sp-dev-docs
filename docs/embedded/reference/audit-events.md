@@ -19,7 +19,7 @@ outcome: Look up SharePoint Embedded container type audit event names and proper
 next: ../admin/review-audit-events.md
 -->
 
-The Microsoft 365 unified audit log captures SharePoint Embedded container type and container type registration operations through [Microsoft Purview](/purview/audit-solutions-overview). These events let compliance administrators and developers track changes to container type definitions and registrations in consuming tenants. File and folder activity inside containers is captured by standard SharePoint file audit events.
+The Microsoft 365 unified audit log captures SharePoint Embedded container type and container type registration operations through [Microsoft Purview](/purview/audit-solutions-overview). These events let compliance administrators and developers track changes to container type definitions and registrations in consuming tenants. File and folder activity inside containers is captured by SharePoint file audit events.
 
 For step-by-step investigation guidance, see [Review audit events](../admin/review-audit-events.md).
 
