@@ -142,6 +142,9 @@ Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to spe
 
 For more information on how to set the environment variable on your developer environment, including Windows or macOS, see [Setting the SharePoint Framework Hosted Workbench Test Site](https://www.andrewconnell.com/articles/sharepoint-framework-set-spfx-hosted-workbench-test-site/).
 
+> [!NOTE]
+> SharePoint Copilot Apps are tested in the Copilot Workbench rather than the SharePoint workbench. It's available at the **/_layouts/15/copilotworkbench.aspx** path of any site in your tenant. For more information, see [Test with the Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench).
+
 ## Optional tools
 
 While not required for SPFx development, you may also find the following tools useful:

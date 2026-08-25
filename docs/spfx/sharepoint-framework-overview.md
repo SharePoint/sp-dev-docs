@@ -30,6 +30,8 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 
 ![Use SharePoint Framework solutions to extend Viva Connections](../images/overview/viva-spfx-extensibility.png)
 
+Use SPFx to extend [Microsoft 365 Copilot](./copilot/overview-copilot-apps.md) by building SharePoint Copilot Apps. A Copilot App packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the same SharePoint app catalog you already use. SharePoint Copilot Apps are currently in preview.
+
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
 To learn more about where developers can use SPFx, see [Supported extensibility platforms](supported-extensibility-platforms-overview.md).
@@ -49,6 +51,7 @@ The following are some of the key features included as part of the SPFx:
 - SPFx web parts can be added to both classic and modern pages.
 - SPFx web parts solutions can be used to extend Microsoft Teams.
 - SPFx Adaptive Card Extensions (ACEs) can be used to extend Microsoft Viva Connections.
+- SPFx Copilot components can be used to extend Microsoft 365 Copilot (currently in preview).
 
 The runtime model improves on the Script Editor web part. It includes a robust client API, an `HttpClient` object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
@@ -74,5 +77,6 @@ You can also post issues, questions, or feedback about the docs at the following
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
+- [Overview of SharePoint Copilot Apps](./copilot/overview-copilot-apps.md)
 - [SharePoint development](/sharepoint/dev)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md)
