@@ -263,12 +263,12 @@
     items:
     - name: Overview
       href: spfx/copilot/overview-copilot-apps.md
-    - name: Display Mode
-      href: spfx/copilot/displayMode.md
     - name: Getting started
       items:
       - name: Build your first Copilot App
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
+    - name: Display Mode
+      href: spfx/copilot/displayMode.md
   - name: Library components
     items:
     - name: Overview

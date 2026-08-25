@@ -118,7 +118,7 @@ When you deploy the app package to the **SharePoint app catalog**, the declarati
 ```json
 // declarativeAgent.json (excerpt)
 {
-  "version": "v1.5",
+  "version": "v1.7",
   "name": "helloCopilot Agent",
   "instructions": "$[file('instruction.txt')]",
   "conversation_starters": [
@@ -188,20 +188,9 @@ When you make changes on the declarative agent side - for example, editing `decl
 > [!NOTE]
 > Deployment of the agent to the tenant agent catalog can take some time to complete. Improvements to this deployment experience are planned for a future release.
 
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md)
-
-- Learn how the [`displayMode`](displayMode.md) host context works and how to add an expand-to-fullscreen control.
-- Review available samples in the [GitHub sample repository](https://github.com/pnp/spfx-copilot-apps).
-
 ## Availability during preview
 
 Keep the following preview-time considerations in mind as you plan when and how to ship SharePoint Copilot Apps.
-
-> [!NOTE]
-> The public preview capabilities are rolling out in sequence. Tenants on the [targeted release](/microsoft-365/admin/manage/release-options-in-office-365) program get them first, followed by the remaining tenants. All tenants are expected to have the preview enabled - including automatic publishing of the declarative agent from the SharePoint app catalog to the tenant agent catalog - by the end of July 2026.
 
 ### No license required (during preview)
 
@@ -220,6 +209,14 @@ The following are known issues in the current public preview. They are expected 
 
 - **Copilot UX only** - Initially during the public preview, components render only in the Microsoft 365 Copilot user experience. Support for other surfaces and hosting options is in the works.
 - **Duplicate tool names across solutions** - If two deployed solutions declare a tool with the same name, only one of them is registered and the other is silently ignored. Until this is fixed, make sure each tool name is unique across all SharePoint Copilot Apps deployed to the tenant.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md)
+
+- Learn how the [`displayMode`](displayMode.md) host context works and how to add an expand-to-fullscreen control.
+- Review available samples in the [GitHub sample repository](https://github.com/pnp/spfx-copilot-apps).
 
 ## See also
 
