@@ -450,6 +450,8 @@
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
+    - name: SPFx development skill for AI coding agents
+      href: spfx/agent-skills.md
     - name: Heft-based toolchain (SPFx v1.22.0+)
       items:
         - name: Overview
