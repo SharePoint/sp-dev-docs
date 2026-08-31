@@ -155,9 +155,9 @@ Developers can configure selected behaviors after creation.
 
 Available settings include:
 
-- `ApplicationRedirectUrl`
-- `DiscoverabilityDisabled`
-- `SharingRestricted`
+- `urlTemplate`
+- `isDiscoverabilityEnabled`
+- `isSharingRestricted`
 
 Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API for supported container type updates. For tenant-wide administrative settings, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 
