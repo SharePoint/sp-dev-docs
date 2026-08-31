@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Set up billing in Microsoft 365 admin center
 
-**Applies to:** Consuming tenant admin — Billing admin / Global admin
+**Applies to:** Global Administrator in a consuming tenant
 
 <!-- agent:
 task_type: how-to
@@ -19,7 +19,7 @@ outcome: Set up billing for SharePoint Embedded apps that are billed to the cons
 next: manage-containers-sharepoint-admin-center.md
 -->
 
-Set up SharePoint Embedded billing in the Microsoft 365 admin center when your tenant uses an app with pass-through or user organization billing.
+Set up SharePoint Embedded billing in the Microsoft 365 admin center when your tenant uses an app with pass-through billing.
 
 No user can access a pass-through SharePoint Embedded app before valid billing is configured for the SharePoint Embedded platform in the consuming tenant.
 
@@ -39,7 +39,7 @@ Confirm these prerequisites.
 
 - You can sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 - You have the Global Administrator role.
-- You have owner or contributor permissions on the Azure subscription used for billing.
+- You have Owner or Contributor access to the Azure subscription used for billing.
 - You have an Azure subscription in the tenant.
 - You have a resource group attached to the subscription.
 - The SharePoint Embedded app is installed or ready to use in the consuming tenant.
@@ -69,7 +69,7 @@ The following diagram shows pass-through billing, where consumption charges are 
 
 ![Pass-through billing model, where the consuming tenant is billed for all consumption.](../images/2bill521.png)
 
-For standard billing, a Global Administrator in the developer tenant sets up billing for the container type.
+For standard billing, a [container type owner](../plan/authentication-permissions.md#container-type-owners) can manage billing for a container type they own only through Azure Resource Manager. SharePoint Embedded Administrators and Global Administrators can manage standard billing across the developer tenant.
 
 For pass-through billing, a Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center.
 
@@ -159,11 +159,11 @@ For detailed monitoring steps, see [Monitor usage, billing, and cost](monitor-us
 Use these checks when setup fails.
 
 - The admin doesn't have the Global Administrator role required to set up billing.
-- The admin lacks owner or contributor permissions on the Azure subscription.
+- The admin lacks Owner or Contributor access to the Azure subscription.
 - The subscription is disabled or unavailable.
 - No resource group is available for billing setup.
 - The app uses pass-through billing but the consuming tenant hasn't turned on SharePoint Embedded apps.
-- The app uses owner organization billing, so the app owner must resolve billing instead.
+- The app uses standard billing, so billing must be resolved in the developer tenant instead.
 - Tenant policies restrict access to the Microsoft 365 admin center billing experience.
 
 ## Common access symptoms

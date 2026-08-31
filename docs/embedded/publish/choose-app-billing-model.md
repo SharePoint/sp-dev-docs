@@ -20,7 +20,7 @@ next: customer-tenant-setup-guide.md
 
 SharePoint Embedded is a consumption-based pay-as-you-go service.
 As an independent software vendor (ISV), you choose the billing model when you create the production container type for your app.
-That choice affects who pays for storage, API transactions, and egress, and it changes what the customer administrator must do during onboarding.
+That choice affects who pays for storage, API transactions, and egress. It also changes what the Global Administrator in the consuming tenant must do during onboarding.
 
 Use this article to decide between standard billing and pass-through billing before you publish customer setup instructions.
 
@@ -30,8 +30,8 @@ SharePoint Embedded supports two production billing models for standard containe
 
 | Billing model | Who is billed | Who configures billing | Typical ISV use |
 | --- | --- | --- | --- |
-| Standard billing | Developer tenant | Developer | You include SharePoint Embedded consumption in your product price or centralize billing. |
-| Pass-through billing | Consuming tenant | Customer admin | The customer pays Microsoft directly for their SharePoint Embedded consumption. |
+| Standard billing | Developer tenant | Container type owner for a container type they own; SharePoint Embedded Administrator or Global Administrator across the developer tenant | You include SharePoint Embedded consumption in your product price or centralize billing. |
+| Pass-through billing | Consuming tenant | Global Administrator in the consuming tenant | The customer pays Microsoft directly for their SharePoint Embedded consumption. |
 
 For current billing details, see [Pay-as-you-go billing for SharePoint Embedded](../admin/setup-billing-microsoft-365-admin-center.md).
 
@@ -57,7 +57,7 @@ For more about container types, see [Understand container types and containers](
 ## Standard billing
 
 With standard billing, all consumption-based SharePoint Embedded charges are billed to the tenant that owns or develops the application.
-The developer must establish a valid Azure billing profile for the container type.
+A container type owner, SharePoint Embedded Administrator, or Global Administrator in the developer tenant must establish a valid Azure billing profile for the container type.
 
 Choose standard billing when:
 
@@ -76,12 +76,16 @@ Before you create or activate a standard billing container type, confirm that yo
 
 - An active SharePoint tenant.
 - A Microsoft Entra owning application.
-- A SharePoint Embedded Administrator or Global Administrator.
+- A container type owner, SharePoint Embedded Administrator, or Global Administrator.
 - An Azure subscription in the developer tenant.
 - A resource group attached to the subscription.
-- Owner or contributor permissions for the admin who sets up the billing relationship.
+- Owner or Contributor access to the Azure subscription for the person who sets up the billing relationship.
 
 When you set up standard billing, provide the Azure subscription, resource group, and region for the billing profile.
+
+A non-administrator container type owner can create and manage the billing profile only through Azure Resource Manager. This access applies only to a container type they own. For the owner path, see [Manage standard billing as a container type owner](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
+
+SharePoint Embedded Administrators and Global Administrators can manage billing across the developer tenant.
 
 > [!NOTE]
 > Standard billing doesn't remove the need for customer consent, container type registration, or validation.
@@ -91,7 +95,7 @@ When you set up standard billing, provide the Azure subscription, resource group
 
 With pass-through billing, consumption charges are billed directly to the tenant registered to use the SharePoint Embedded application.
 The developer creates the container type with pass-through billing enabled.
-The customer administrator then configures billing in the consuming tenant before users can access the app.
+A Global Administrator in the consuming tenant then configures billing before users can access the app.
 
 Choose pass-through billing when:
 
@@ -102,17 +106,17 @@ Choose pass-through billing when:
 - You want a cleaner separation between app subscription revenue and platform consumption.
 
 Pass-through billing adds customer onboarding work.
-The customer admin must set up pay-as-you-go billing in the Microsoft 365 admin center and connect a valid Azure subscription and resource group.
+A Global Administrator in the consuming tenant must set up pay-as-you-go billing in the Microsoft 365 admin center and connect a valid Azure subscription and resource group.
 
 ### Pass-through billing dependencies
 
 Before a customer can use a pass-through SharePoint Embedded app, the consuming tenant needs:
 
 - A SharePoint tenant.
-- A Global Administrator or SharePoint Embedded Administrator.
+- A Global Administrator to set up pass-through billing.
 - A valid Azure subscription.
 - A valid Azure resource group.
-- Owner or contributor permissions for the admin who creates the billing relationship.
+- Owner or Contributor access to the Azure subscription for the Global Administrator who creates the billing relationship.
 - Completed app registration and consent steps.
 
 Until valid billing is set up for the SharePoint Embedded platform in the consuming tenant, users can't create new containers in a pass-through SharePoint Embedded app. Existing containers and their content remain accessible.
@@ -138,7 +142,7 @@ Tell the customer:
 
 1. The app uses SharePoint Embedded pass-through billing.
 1. The customer must provide an Azure subscription and resource group.
-1. The customer admin must turn on billing for SharePoint Embedded apps.
+1. A Global Administrator in the consuming tenant must turn on billing for SharePoint Embedded apps.
 1. Users can't use the app until billing is valid.
 1. The customer can track usage in Azure Cost Management.
 
