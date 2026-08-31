@@ -39,7 +39,7 @@ Confirm these prerequisites.
 - You know whether to create a new Microsoft Entra app or use an existing app registration.
 - You know which owners should manage the app.
 - You know which billing type applies to the app.
-- For owner organization billing, you have owner or contributor access to the Azure subscription used for billing.
+- For owner organization billing, you have [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription used for billing.
 
 For role details, see [SharePoint Embedded administrator](admin-overview.md).
 
@@ -103,7 +103,7 @@ Use one owning application for the SharePoint Embedded app that owns its contain
 
 Add up to three owners in the **Owners** field.
 
-Owners can manage app settings and billing configuration.
+Owners can manage app settings. Billing permissions depend on the billing model. For standard billing, a container type owner can manage billing only for a container type they own and only through [Azure Resource Manager](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant. For **User org** billing, a Billing Administrator or Global Administrator in the consuming tenant completes pass-through billing setup in the Microsoft 365 admin center.
 
 Assign the developers who build the app as owners so you can hand the app off immediately after creation.
 
@@ -148,7 +148,7 @@ If you select **Owner org**, choose when to connect the Azure billing subscripti
 *Figure 4: For Owner org billing, choose Setup now to attach an Azure subscription during creation, or Setup later to attach it from the app details panel afterward.*
 
 > [!NOTE]
-> **User org** billing isn't set up in this panel. For a User org app, a Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center before users can access the app. Only a Global Administrator can set up billing.
+> **User org** billing isn't set up in this panel. For a User org app, a Billing Administrator or Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center before users can access the app. The SharePoint Embedded Administrator role alone doesn't grant access to this billing procedure.
 
 ## Configure advanced settings
 

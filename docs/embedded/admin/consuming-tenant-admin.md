@@ -78,7 +78,7 @@ SharePoint Embedded uses Microsoft's comprehensive compliance and data governanc
 
 ## Set up billing for pass-through container type
 
-To use a pass-through billing SharePoint Embedded app, a Global Administrator needs to set up pay-as-you-go services in the [Microsoft 365 admin center](https://admin.microsoft.com/). The SharePoint Embedded Administrator role can't configure billing. No user can access any pass-through SharePoint Embedded apps before valid billing is set up for the SharePoint Embedded platform.
+To use a pass-through billing SharePoint Embedded app, a Billing Administrator or Global Administrator needs to set up pay-as-you-go services in the [Microsoft 365 admin center](https://admin.microsoft.com/). The SharePoint Embedded Administrator role alone doesn't grant access to this billing procedure. No user can access any pass-through SharePoint Embedded apps before valid billing is set up for the SharePoint Embedded platform.
 
 ### Meters
 

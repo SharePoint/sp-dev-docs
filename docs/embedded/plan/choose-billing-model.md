@@ -40,7 +40,7 @@ The model determines which tenant is billed and who configures the billing profi
 | Billing model | Who is billed | Who configures billing |
 | --- | --- | --- |
 | Standard | Tenant that owns or develops the application. | Container type owner, SharePoint Embedded Administrator, or Global Administrator in the developer tenant. |
-| Pass-through | Tenant registered to use the SharePoint Embedded application. | Global Administrator in the consuming tenant. |
+| Pass-through | Tenant registered to use the SharePoint Embedded application. | Billing Administrator or Global Administrator in the consuming tenant. |
 
 ## Standard billing
 
@@ -48,7 +48,7 @@ With standard billing, all consumption-based charges are directly billed to the 
 
 A container type owner can create and manage a billing profile for a container type they own. The owner doesn't need the SharePoint Embedded Administrator or Global Administrator role.
 
-SharePoint Embedded Administrators and Global Administrators can manage standard billing across the developer tenant.
+SharePoint Embedded Administrators and Global Administrators can manage billing for any standard-billed container type in the developer tenant.
 
 Use standard billing when:
 
@@ -63,7 +63,7 @@ The billing setup requires:
 - An Azure subscription in the developer tenant.
 - A resource group attached to the Azure subscription.
 - A container type owner, SharePoint Embedded Administrator, or Global Administrator in the developer tenant.
-- Owner or Contributor permissions on the Azure subscription for the person who sets up billing.
+- [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription for the person who sets up billing.
 
 ### Manage standard billing as a container type owner
 
@@ -116,7 +116,7 @@ A user who doesn't own the container type needs the SharePoint Embedded Administ
 
 ### Manage standard billing as an administrator
 
-SharePoint Embedded Administrators and Global Administrators can use the SharePoint Online Management Shell to manage standard billing across the developer tenant.
+SharePoint Embedded Administrators and Global Administrators can use the SharePoint Online Management Shell to manage billing for any standard-billed container type in the developer tenant.
 
 Create the container type:
 
@@ -139,14 +139,14 @@ With pass-through billing, consumption-based charges are billed directly to the 
 
 SharePoint Embedded Administrators and Global Administrators in the developer tenant don't set up a billing profile when creating a pass-through container type.
 
-After the container type is registered in the consuming tenant, a Global Administrator in that tenant sets up the billing profile.
+After the container type is registered in the consuming tenant, a Billing Administrator or Global Administrator in that tenant sets up the billing profile.
 
 Use pass-through billing when:
 
 - Each consuming tenant should pay for its own SharePoint Embedded usage.
 - The app is an ISV multitenant application.
 - The consuming tenant controls the Azure subscription used for pay-as-you-go charges.
-- A Global Administrator in the consuming tenant completes billing onboarding.
+- A Billing Administrator or Global Administrator in the consuming tenant completes billing onboarding.
 
 Use this pass-through creation pattern:
 
@@ -210,9 +210,9 @@ Plan these responsibilities by billing model.
 | Responsibility | Standard billing | Pass-through billing |
 | --- | --- | --- |
 | Create container type | Developer in the developer tenant | Developer in the developer tenant |
-| Attach or manage billing profile | Container type owner for a container type they own; SharePoint Embedded Administrator or Global Administrator across the developer tenant | Not in developer tenant |
+| Attach or manage billing profile | Container type owner for a container type they own; SharePoint Embedded Administrator or Global Administrator for any standard-billed container type in the developer tenant | Not in developer tenant |
 | Register container type | Owning app in consuming tenant | Owning app in consuming tenant |
-| Set up consuming tenant billing | Not required for app usage billing | Global Administrator in the consuming tenant |
+| Set up consuming tenant billing | Not required for app usage billing | Billing Administrator or Global Administrator in the consuming tenant |
 | Monitor Azure cost | Developer tenant | Consuming tenant |
 
 ## Relationship to app model
@@ -242,9 +242,9 @@ Use these setup references after you choose a model:
 - Confirm the app model.
 - Confirm whether the container type is standard or pass-through.
 - Identify the Azure subscription and resource group if using standard billing.
-- Identify the Global Administrator in the consuming tenant if using pass-through billing.
+- Identify a Billing Administrator or Global Administrator in the consuming tenant if using pass-through billing.
 - Confirm container type owner access or the SharePoint Embedded Administrator or Global Administrator role for standard billing.
-- Confirm Global Administrator access for pass-through billing.
+- Confirm Billing Administrator or Global Administrator access for pass-through billing.
 - Confirm Owner or Contributor access to the Azure subscription.
 - Plan cost monitoring in Azure Cost Management.
 - Plan storage lifecycle to control storage consumption.

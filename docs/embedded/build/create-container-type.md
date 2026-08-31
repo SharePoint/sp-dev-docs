@@ -63,8 +63,8 @@ Before you create a container type, make sure you have:
 - A Microsoft Entra ID app registration for the owning app.
 - A non-guest member account in the owning tenant.
 - For standard billing, an Azure subscription and resource group.
-- To manage billing for an existing standard container type, be a [container type owner](../plan/authentication-permissions.md#container-type-owners) or have the SharePoint Embedded Administrator or Global Administrator role.
-- For standard billing setup, Owner or Contributor access to the Azure subscription.
+- To manage billing for an existing standard container type as a non-administrator, be an [owner of that container type](../plan/authentication-permissions.md#container-type-owners) and use Azure Resource Manager. SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant.
+- For standard billing setup, [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription.
 
 > [!NOTE]
 > - Creating a container type through Microsoft Graph requires only the `FileStorageContainerType.Manage.All` delegated permission. Any non-guest user in the owning tenant can create one and is automatically assigned as an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). For tenant-wide administrative operations, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
@@ -111,12 +111,12 @@ Use pass-through billing when the consuming tenant pays for consumption.
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `directToCustomer` billing classification.
 1. Register the container type in the consuming tenant.
-1. Have a Global Administrator in the consuming tenant activate pay-as-you-go services.
+1. Have a Billing Administrator or Global Administrator in the consuming tenant activate pay-as-you-go services.
 
 > [!IMPORTANT]
 > The consuming tenant must complete billing setup before a pass-through application can be used successfully.
 
-A Global Administrator in the consuming tenant activates pay-as-you-go services in the Microsoft 365 admin center. In **Setup** > **Billing and licenses**, select **Activate pay-as-you-go services**.
+A Billing Administrator or Global Administrator in the consuming tenant activates pay-as-you-go services in the Microsoft 365 admin center. In **Setup** > **Billing and licenses**, select **Activate pay-as-you-go services**.
 
 ![Microsoft 365 admin center Billing and licenses section with the Activate pay-as-you-go services option.](../images/SyntexActivatePAYGSetup.png)
 
