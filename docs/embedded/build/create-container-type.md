@@ -63,7 +63,7 @@ Before you create a container type, make sure you have:
 - A Microsoft Entra ID app registration for the owning app.
 - A non-guest member account in the owning tenant.
 - For standard billing, an Azure subscription and resource group.
-- To manage billing for an existing standard container type as a non-administrator, be an [owner of that container type](../plan/authentication-permissions.md#container-type-owners) and use Azure Resource Manager. SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant.
+- To manage billing for an existing standard container type as a non-administrator, be an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant.
 - For standard billing setup, [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription.
 
 > [!NOTE]
@@ -97,7 +97,7 @@ Each tenant can create up to 25 container types in total. One of these can be a 
 
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `standard` billing classification.
-1. Attach an Azure billing profile through [Azure Resource Manager](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner). The SharePoint Embedded Visual Studio Code extension uses this flow for standard billing. SharePoint Embedded Administrators and Global Administrators can also use the [administrator PowerShell procedure](../plan/choose-billing-model.md#manage-standard-billing-as-an-administrator).
+1. [Manage billing](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner) on the container type. The SharePoint Embedded Visual Studio Code extension and the [SharePoint Embedded Model Context Protocol (MCP) server](sharepoint-embedded-mcp-server.md#available-tools) enable billing management for standard-billed container types. SharePoint Embedded Administrators and Global Administrators can also [use PowerShell to manage billing](../plan/choose-billing-model.md#manage-standard-billing-as-an-administrator).
 1. Record the container type ID.
 1. Continue to registration in the consuming tenant.
 
@@ -169,7 +169,7 @@ Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestorage
 
 Use Microsoft Graph to list and update container types.
 
-A non-administrator container type owner can update container types they own. They can also [create and manage the standard billing profile through Azure Resource Manager](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
+A non-administrator container type owner can update container types they own. They can also [create and manage the standard billing profile](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
 
 The owner needs Owner or Contributor access to the Azure subscription for billing changes.
 

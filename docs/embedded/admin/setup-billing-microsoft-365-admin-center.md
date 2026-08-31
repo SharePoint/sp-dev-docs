@@ -69,7 +69,7 @@ The following diagram shows pass-through billing, where consumption charges are 
 
 ![Pass-through billing model, where the consuming tenant is billed for all consumption.](../images/2bill521.png)
 
-For standard billing, a [container type owner](../plan/authentication-permissions.md#container-type-owners) can manage billing for a container type they own only through Azure Resource Manager. SharePoint Embedded Administrators and Global Administrators can manage billing for any standard-billed container type in the developer tenant.
+For standard billing, a [container type owner](../plan/authentication-permissions.md#container-type-owners) can manage billing for a container type they own through the [SharePoint Embedded Visual Studio Code extension](../build/quickstart-vscode.md#configure-standard-billing) or [SharePoint Embedded Model Context Protocol (MCP) server](../build/sharepoint-embedded-mcp-server.md#available-tools). SharePoint Embedded Administrators and Global Administrators can manage billing for any standard-billed container type in the developer tenant.
 
 For pass-through billing, a Billing Administrator or Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center.
 

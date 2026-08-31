@@ -83,7 +83,7 @@ Before you create or activate a standard billing container type, confirm that yo
 
 When you set up standard billing, provide the Azure subscription, resource group, and region for the billing profile.
 
-A non-administrator container type owner can create and manage the billing profile only through Azure Resource Manager. This access applies only to a container type they own. For the owner path, see [Manage standard billing as a container type owner](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
+A non-administrator container type owner can create and manage the billing profile only for the container type they own, through the [SharePoint Embedded Visual Studio Code extension](../build/quickstart-vscode.md#configure-standard-billing) or [SharePoint Embedded Model Context Protocol (MCP) server](../build/sharepoint-embedded-mcp-server.md#available-tools). For the owner path, see [Manage standard billing as a container type owner](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
 
 SharePoint Embedded Administrators and Global Administrators can manage billing for any standard-billed container type in the developer tenant.
 

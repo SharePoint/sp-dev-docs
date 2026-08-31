@@ -103,7 +103,7 @@ Use one owning application for the SharePoint Embedded app that owns its contain
 
 Add up to three owners in the **Owners** field.
 
-Owners can manage app settings. Billing permissions depend on the billing model. For standard billing, a container type owner can manage billing only for a container type they own and only through [Azure Resource Manager](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant. For **User org** billing, a Billing Administrator or Global Administrator in the consuming tenant completes pass-through billing setup in the Microsoft 365 admin center.
+Owners can manage app settings. Billing permissions depend on the billing model. For standard billing, a container type owner can manage billing for the container type they own through the [SharePoint Embedded Visual Studio Code extension](../build/quickstart-vscode.md#configure-standard-billing) or [SharePoint Embedded Model Context Protocol (MCP) server](../build/sharepoint-embedded-mcp-server.md#available-tools). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant. For **User org** billing, a Billing Administrator or Global Administrator in the consuming tenant completes pass-through billing setup in the Microsoft 365 admin center.
 
 Assign the developers who build the app as owners so you can hand the app off immediately after creation.
 

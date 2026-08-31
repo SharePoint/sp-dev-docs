@@ -67,48 +67,12 @@ The billing setup requires:
 
 ### Manage standard billing as a container type owner
 
-A non-administrator container type owner can create and manage a standard billing profile for a container type they own only through Azure Resource Manager.
+A non-administrator container type owner can create and manage a standard billing profile for a container type they own through the SharePoint Embedded Visual Studio Code extension or Model Context Protocol (MCP) server.
 
-Before you start, install [Azure CLI](/cli/azure/install-azure-cli) and sign in with the container type owner's identity. The owner also needs Owner or Contributor access to the Azure subscription.
+The owner also needs Owner or Contributor access to the Azure subscription. Choose one of these facilities:
 
-1. Register the `Microsoft.Syntex` resource provider in the Azure subscription.
-
-    ```azurecli
-    az provider register \
-      --namespace Microsoft.Syntex \
-      --subscription <azure-subscription-id> \
-      --wait
-    ```
-
-1. Create the billing profile. Set `<billing-profile-id>` to a new GUID.
-
-    ```azurecli
-    az resource create \
-      --subscription <azure-subscription-id> \
-      --resource-group <resource-group> \
-      --resource-type Microsoft.Syntex/accounts \
-      --name <billing-profile-id> \
-      --api-version 2023-01-04-preview \
-      --location <azure-region> \
-      --properties '{"friendlyName":"CT_<container-type-id>","identityId":"<container-type-id>","identityType":"ContainerType","feature":"RaaS","scope":"Global","service":"SPO"}'
-    ```
-
-1. Check the profile's provisioning state.
-
-    ```azurecli
-    az resource show \
-      --subscription <azure-subscription-id> \
-      --resource-group <resource-group> \
-      --resource-type Microsoft.Syntex/accounts \
-      --name <billing-profile-id> \
-      --api-version 2023-01-04-preview \
-      --query properties.provisioningState \
-      --output tsv
-    ```
-
-    Provisioning is asynchronous. Repeat this command until the state is `Succeeded`. If the state is `Failed` or `Canceled`, review the Azure activity log before you retry.
-
-To update supported properties, reuse the resource name and its original location with `az resource create`. To use another region, delete the existing billing profile and create a new one.
+- In the [SharePoint Embedded Visual Studio Code extension](../build/quickstart-vscode.md#configure-standard-billing), select the container type and use **Attach billing**. Then select the Azure subscription and resource group.
+- In the [SharePoint Embedded MCP server](../build/sharepoint-embedded-mcp-server.md#available-tools), use `billing_setup` to connect the container type to an Azure subscription and resource group. Use `billing_check` to inspect the billing configuration.
 
 The SharePoint Embedded billing service verifies that the signed-in user owns the container type.
 
