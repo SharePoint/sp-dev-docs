@@ -13,7 +13,7 @@ Use the Microsoft 365 Assessment tool to discover classic pages and understand t
 This guidance focuses only on classic page assessment and its handoff to page transformation.
 
 > [!IMPORTANT]
-> Classic SharePoint pages are being deprecated in SharePoint Online. Beginning March 1, 2027, creation of new classic experiences will be restricted in certain scenarios, and beginning October 1, 2028, existing classic user-created pages will become read-only. Existing page content isn't deleted and remains available for viewing. We recommend planning your transition to modern SharePoint experiences. For details, timelines, and modernization guidance, see [Upcoming changes to classic publishing sites, classic pages, and custom scripting in SharePoint Online](/sharepoint/classic-user-created-page-deprecation).
+> Classic user-created pages are being deprecated in SharePoint Online. Beginning **March 1, 2027**, creation of classic pages will be disabled for new tenants, and beginning **October 1, 2028**, existing classic user-created pages will become read-only for all tenants. Existing classic page content isn't deleted and remains available for viewing. We recommend planning your transition to modern SharePoint page experiences. For details, timelines, and modernization guidance, see [Upcoming changes to classic publishing sites, classic pages, and custom scripting in SharePoint Online](/sharepoint/classic-user-created-page-deprecation).
 
 ## Page modernization workflow
 
