@@ -27,7 +27,7 @@ Complete [Configure authentication and authorization](configure-authentication-a
 
 The [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) exposes container tools—such as `container_create`, `container_list`, `container_permissions_manage`, `container_archive_restore`, and `container_delete`—that a coding agent can call to manage containers through natural language.
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
 
 ## Understand containers
 

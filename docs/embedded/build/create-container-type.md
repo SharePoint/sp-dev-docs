@@ -29,9 +29,9 @@ To decide between single-tenant and multitenant models first, see [Choose an app
 
 You can create and configure a container type without calling the APIs directly:
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
 
-[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/spe-vscode-extension.md)]
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
 
 ## Understand the container type relationship
 

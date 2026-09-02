@@ -59,7 +59,7 @@ MCP clients launch the server with `npx`, so there's no separate global install.
 
 ### Add the server with one click
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
 
 To add the server manually instead, use the following client-specific steps.
 

@@ -43,7 +43,7 @@ Before you start, make sure you have:
 
 ## Install the extension
 
-[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/spe-vscode-extension.md)]
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
 
 Or install it from within the editor:
 
