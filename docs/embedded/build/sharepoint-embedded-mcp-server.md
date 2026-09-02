@@ -57,6 +57,12 @@ For the complete, versioned list of tools, CLI flags, and environment variables,
 
 MCP clients launch the server with `npx`, so there's no separate global install. Add a server entry to your client's MCP configuration.
 
+### Add the server with one click
+
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+
+To add the server manually instead, use the following client-specific steps.
+
 ### Visual Studio Code
 
 Add an MCP server entry to `.vscode/mcp.json` in your workspace:

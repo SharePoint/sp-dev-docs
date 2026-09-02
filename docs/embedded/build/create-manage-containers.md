@@ -23,6 +23,12 @@ Create and manage containers after your container type is created, registered, a
 
 Complete [Configure authentication and authorization](configure-authentication-authorization.md) before you call container APIs.
 
+## Manage containers with a coding agent
+
+The [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) exposes container tools—such as `container_create`, `container_list`, `container_permissions_manage`, `container_archive_restore`, and `container_delete`—that a coding agent can call to manage containers through natural language.
+
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+
 ## Understand containers
 
 All SharePoint Embedded files and documents are stored in containers.

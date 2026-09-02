@@ -23,6 +23,9 @@ Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.v
 
 This article starts the build journey. For more billing guidance, see [Create and configure a container type](create-container-type.md).
 
+> [!TIP]
+> Prefer to build with a coding agent instead of a guided view? Use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) to provision and manage resources through natural language.
+
 ## Prerequisites
 
 Before you start, make sure you have:
@@ -39,6 +42,10 @@ Before you start, make sure you have:
 > You need administrative access to a Microsoft 365 tenant. If you don't have a tenant, use the Microsoft 365 Developer Program, Microsoft Customer Digital Experience, or a Microsoft 365 E3 trial.
 
 ## Install the extension
+
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/spe-vscode-extension.md)]
+
+Or install it from within the editor:
 
 1. Open Visual Studio Code.
 1. Open **Extensions** from the activity bar.

@@ -25,6 +25,14 @@ If you're just starting, complete [Quickstart: Build your first app with VS Code
 
 To decide between single-tenant and multitenant models first, see [Choose an app model](../plan/choose-app-model.md).
 
+## Create a container type with a coding agent or the VS Code extension
+
+You can create and configure a container type without calling the APIs directly:
+
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/spe-mcp-install.md)]
+
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/spe-vscode-extension.md)]
+
 ## Understand the container type relationship
 
 A container type is strongly coupled with one Microsoft Entra ID application, called the owning application.
