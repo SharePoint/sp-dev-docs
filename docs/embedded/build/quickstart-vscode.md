@@ -21,6 +21,8 @@ next: create-container-type.md
 
 Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) to create a standard container type for your first app. The extension also configures the owning app, attaches Azure billing, and registers the container type. Then you create a container and run a local sample app.
 
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
+
 This article starts the build journey. For more billing guidance, see [Create and configure a container type](create-container-type.md).
 
 > [!TIP]
@@ -43,9 +45,7 @@ Before you start, make sure you have:
 
 ## Install the extension
 
-[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
-
-Or install it from within the editor:
+Install the extension with the button at the top of this article, or from within the editor:
 
 1. Open Visual Studio Code.
 1. Open **Extensions** from the activity bar.

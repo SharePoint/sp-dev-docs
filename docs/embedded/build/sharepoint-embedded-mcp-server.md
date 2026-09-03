@@ -23,6 +23,8 @@ The SharePoint Embedded MCP server is an open-source [Model Context Protocol](ht
 
 Instead of clicking through portals and stitching together Microsoft Graph and Azure CLI commands by hand, you describe what you want—"create a trial container type for my app"—and the AI client calls the server's tools to do it.
 
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+
 > [!NOTE]
 > The SharePoint Embedded MCP server is an open-source developer tool released in preview. Its source code, full tool reference, and issue tracker live in the [microsoft/SharePoint-Embedded-MCP-Server](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) repository on GitHub.
 
@@ -55,13 +57,7 @@ For the complete, versioned list of tools, CLI flags, and environment variables,
 
 ## Install and configure
 
-MCP clients launch the server with `npx`, so there's no separate global install. Add a server entry to your client's MCP configuration.
-
-### Add the server with one click
-
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
-
-To add the server manually instead, use the following client-specific steps.
+MCP clients launch the server with `npx`, so there's no separate global install. Use the one-click buttons at the top of this article, or add a server entry to your client's MCP configuration manually with the following client-specific steps.
 
 ### Visual Studio Code
 
