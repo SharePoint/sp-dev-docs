@@ -55,6 +55,8 @@ For the complete, versioned list of tools, CLI flags, and environment variables,
 
 ## Install and configure
 
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
+
 MCP clients launch the server with `npx`, so there's no separate global install. Add a server entry to your client's MCP configuration.
 
 ### Visual Studio Code
@@ -88,6 +90,15 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
     }
   }
 }
+```
+
+### Claude Code and Codex CLI
+
+Add the server from a terminal:
+
+```console
+claude mcp add spe -- npx -y @microsoft/spe-mcp start
+codex mcp add spe -- npx -y @microsoft/spe-mcp start
 ```
 
 ### Cursor and other MCP clients

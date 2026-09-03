@@ -23,6 +23,10 @@ Create and manage containers after your container type is created, registered, a
 
 Complete [Configure authentication and authorization](configure-authentication-authorization.md) before you call container APIs.
 
+To manage the container lifecycle through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
+
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
+
 ## Understand containers
 
 All SharePoint Embedded files and documents are stored in containers.

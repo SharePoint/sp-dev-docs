@@ -23,6 +23,11 @@ Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.v
 
 This article starts the build journey. For more billing guidance, see [Create and configure a container type](create-container-type.md).
 
+> [!TIP]
+> To build through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
+
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
+
 ## Prerequisites
 
 Before you start, make sure you have:

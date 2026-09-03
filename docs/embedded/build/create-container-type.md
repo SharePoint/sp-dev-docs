@@ -78,6 +78,10 @@ You can create one with the SharePoint Embedded Visual Studio Code extension or 
 
 The Visual Studio Code path is fastest for a first app. See [Quickstart: Build your first app with VS Code](quickstart-vscode.md).
 
+To create and configure a container type through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
+
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
+
 For Microsoft Graph, create the container type with the `trial` billing classification.
 
 The following restrictions apply to trial container types:
