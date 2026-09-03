@@ -33,7 +33,7 @@ The SharePoint Embedded migration workflow has five stages:
 1. Poll the job's progress events until the job completes or reports an error.
 1. Delete a migration job if you need to remove it while it's queued.
 
-The Azure Blob Storage containers are temporary intermediary storage. Creating a migration job schedules the import; it doesn't import the content synchronously.
+The Azure Blob Storage containers are temporary intermediary storage. Creating a migration job schedules the import; it doesn't import the content synchronously. 
 
 ## Prerequisites
 
