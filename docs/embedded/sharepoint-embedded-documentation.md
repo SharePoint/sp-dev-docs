@@ -52,7 +52,7 @@ Decide how SharePoint Embedded fits before you write code.
 
 ## Build an app
 
-An ordered journey from first container to a full-featured app.
+An ordered journey from first container to a full-featured app. You can also build with a guided view using the [SharePoint Embedded VS Code extension](./build/quickstart-vscode.md) or from a coding agent with the [SharePoint Embedded MCP server](./build/sharepoint-embedded-mcp-server.md).
 
 1. [Quickstart: build your first app with VS Code](./build/quickstart-vscode.md)
 2. [Use the MCP server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md)

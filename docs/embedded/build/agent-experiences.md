@@ -26,6 +26,9 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 
 Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself.
 
+> [!TIP]
+> To provision and manage the SharePoint Embedded resources behind these experiences from a coding agent, use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md).
+
 ## How SharePoint Embedded grounds agents
 
 SharePoint Embedded grounds AI agents on enterprise content while keeping that content and its compliance controls inside the customer's Microsoft 365 tenant. You don't copy content into an external vector database. Key facts:

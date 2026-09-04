@@ -19,6 +19,10 @@ outcome: Create a container type, connect it to an owning app, and choose the ri
 next: register-application-permissions.md
 -->
 
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
+
 Create a SharePoint Embedded container type for your application to create containers or store files. A container type defines access, billing accountability, and selected behaviors for containers created by your app.
 
 If you're just starting, complete [Quickstart: Build your first app with VS Code](quickstart-vscode.md). Then use this article for trial, standard, and pass-through decisions.
