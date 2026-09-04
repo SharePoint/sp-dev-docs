@@ -124,7 +124,9 @@ GET https://graph.microsoft.com/beta/drives/{drive-id}/items?$orderby=listitem/f
 
 Use `$expand=listitem($expand=fields)` when the result needs field values in the response. Create indexed columns for high-cardinality filters that your app runs frequently.
 
-For full-text search across containers and custom metadata (using the `OWSTEXT` property suffix), see [Search containers and files](search-containers-files.md). Use OData `$filter` for structured queries inside a single container drive; use search for free-text queries across many containers.
+For full-text search across containers and custom metadata, see [Search containers and files](search-containers-files.md). To filter semantic retrieval by indexed custom metadata, see [Filter retrieval by custom metadata](agent-experiences.md#filter-retrieval-by-custom-metadata). Both experiences use SharePoint managed properties, such as the `OWSTEXT` property generated for a text column.
+
+Use OData `$filter` for structured queries inside one container drive. Use search for free-text queries across many containers, or use the Retrieval API to return extracts for AI grounding.
 
 ## Keep schema consistent
 
