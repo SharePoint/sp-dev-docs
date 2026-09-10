@@ -54,7 +54,7 @@ All `@microsoft/sp-*` packages in `dependencies` are updated to the target SPFx 
 Run the following command from the root of your project to generate a complete upgrade report:
 
 ```console
-npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.22.2 --output md
+npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.22.2 --output md
 ```
 
 The report lists every required change and includes a combined script at the end that applies all changes in a single execution. Review the report, then run the script to complete the migration.

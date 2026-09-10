@@ -55,7 +55,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
 > To upgrade this project, run:
 >
 > ```console
-> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.5 --output md
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.5.0 --output md
 > ```
 >
 > This analyzes your project and outputs all required changes, including a single script to apply them in one go.
