@@ -145,7 +145,7 @@ The developer creates the container type with the `directToCustomer` billing cla
 }
 ```
 
-After registration, a Global Administrator in the consuming tenant sets up billing in the consuming tenant.
+After registration, a Billing Administrator or Global Administrator in the consuming tenant sets up billing.
 
 ## Admin and developer interaction
 

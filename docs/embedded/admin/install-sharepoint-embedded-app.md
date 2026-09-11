@@ -154,7 +154,7 @@ Don't substitute a different application ID.
 
 SharePoint Embedded supports standard and pass-through billing models.
 
-For pass-through billing, a Global Administrator in the consuming tenant must set up billing in the Microsoft 365 admin center before users can access the app. Only a Global Administrator can set up billing; the SharePoint Embedded Administrator role can't.
+For pass-through billing, a Billing Administrator or Global Administrator in the consuming tenant must set up billing in the Microsoft 365 admin center before users can access the app. The SharePoint Embedded Administrator role alone doesn't grant access to this billing procedure.
 
 If billing is invalid or SharePoint Embedded is turned off, users can no longer create new containers, although existing containers and their content remain accessible.
 
@@ -166,7 +166,7 @@ If billing was skipped during app creation, you can attach it later from the app
 1. Select the app to open its details panel.
 1. In **Billing info**, attach a billing subscription or update the existing one.
 
-For a **User org** app, billing isn't attached from this panel. A Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center. See [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
+For a **User org** app, billing isn't attached from this panel. A Billing Administrator or Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center. See [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
 Use [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md) to configure billing for consuming-tenant scenarios.
 
