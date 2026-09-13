@@ -19,9 +19,15 @@ outcome: Implement the basic SharePoint Embedded container lifecycle for applica
 next: manage-files.md
 -->
 
+[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+
 Create and manage containers after your container type is created, registered, and authorized. Containers are the basic storage unit in SharePoint Embedded.
 
 Complete [Configure authentication and authorization](configure-authentication-authorization.md) before you call container APIs.
+
+## Manage containers with a coding agent
+
+The [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) exposes container tools—such as `container_create`, `container_list`, `container_permissions_manage`, `container_archive_restore`, and `container_delete`—that a coding agent can call to manage containers through natural language.
 
 ## Understand containers
 
