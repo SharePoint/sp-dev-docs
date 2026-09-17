@@ -34,7 +34,7 @@ In the project's **package.json** file, identify all SPFx v1.6 packages. For eac
 > To upgrade this project, run:
 >
 > ```console
-> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.7 --output md
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.7.0 --output md
 > ```
 >
 > This analyzes your project and outputs all required changes, including a single script to apply them in one go.

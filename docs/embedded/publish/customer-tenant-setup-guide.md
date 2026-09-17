@@ -36,7 +36,7 @@ Ask the customer to confirm these prerequisites before the setup meeting or inst
 | Area | Customer requirement |
 | --- | --- |
 | Microsoft 365 | An active Microsoft 365 tenant with at least one SharePoint license. |
-| Admin role | A Global Administrator or SharePoint Embedded Administrator can complete setup. |
+| Admin role | A SharePoint Embedded Administrator or Global Administrator can complete app and container setup. For pass-through billing, a Billing Administrator or Global Administrator must also complete billing setup. |
 | Users | Users who authenticate to SharePoint Embedded containers exist in Microsoft Entra ID as members or guests. |
 | Consent | The customer can review and grant the Microsoft Entra permissions your app requests. |
 | Billing | An Azure subscription and resource group are available if the app uses pass-through billing. |
@@ -88,9 +88,9 @@ Use this high-level sequence in your customer guide:
 
 ## Step 1: Assign the administrator
 
-Ask the customer to choose an administrator who can complete the full setup. If the customer doesn't want to use a Global Administrator, they can assign the SharePoint Embedded Administrator role.
+Ask the customer to choose a SharePoint Embedded Administrator or Global Administrator for app and container setup. If the app uses pass-through billing, ensure that a Billing Administrator or Global Administrator completes billing setup in the Microsoft 365 admin center.
 
-Tell the customer to finish role assignment before the installation window. This avoids delays when billing or validation needs elevated access.
+Tell the customer to finish the required role assignments before the installation window. This avoids delays during setup and validation.
 
 ## Step 2: Review the application
 
@@ -136,7 +136,7 @@ Ask the customer to confirm that:
 
 Skip this step when your app uses standard billing. If your app uses pass-through billing, tell the customer that SharePoint Embedded billing must be configured before users can access the app.
 
-The customer needs a valid Azure subscription and resource group. A Global Administrator sets up billing in the Microsoft 365 admin center, and the admin who creates the billing relationship also needs the Owner or Contributor role on the Azure subscription. Then set up billing:
+The customer needs a valid Azure subscription and resource group. A Billing Administrator or Global Administrator sets up billing in the Microsoft 365 admin center. This administrator also needs the [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) role on the Azure subscription. Then set up billing:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. Go to **Setup** > **Billing and licenses**, and select **Activate pay-as-you-go services**.
@@ -165,7 +165,8 @@ For deeper validation steps, see [Validate customer app installation](validate-c
 
 Give customers a checklist they can sign off.
 
-- [ ] The assigned admin has the Global Administrator or SharePoint Embedded Administrator role.
+- [ ] A SharePoint Embedded Administrator or Global Administrator is assigned for app and container setup.
+- [ ] A Billing Administrator or Global Administrator is available to complete pass-through billing setup, if required.
 - [ ] The app ID and publisher match the ISV handoff.
 - [ ] Admin consent is granted for the expected app.
 - [ ] The container type is registered in the consuming tenant.

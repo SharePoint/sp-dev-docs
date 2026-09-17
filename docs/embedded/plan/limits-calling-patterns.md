@@ -51,14 +51,16 @@ SharePoint Embedded enforces the following size limits.
 | Storage per container type per consuming tenant | 100 TB* |
 | Files and folders per container | 30 million |
 | Storage per container | 25 TB |
-| Files and folders with additive permissions per container | 5,000 |
+| Files and folders with additive permissions per container | 5,000** |
 | File size | 250 GB |
 | Version count per file | 500 (default automatic version history limit) |
 | Number of users shared per folder or file | 5,000 |
 | Number of searchable columns per container | 40 |
 | Number of indexed columns per container | 20 |
 
-An asterisk (`*`) indicates a limit you can request to increase.
+<sup>*</sup> indicates a limit you can request to increase.
+
+<sup>**</sup> there is a recommended limit and a supported limit for permission scopes in a container. See [Manage permission scopes in SharePoint](/sharepoint/manage-permission-scope) to learn more.
 
 Of the container types a tenant creates, one can be a free **trial container type** for development and testing, and the rest are **standard** (billed) container types. New tenants start with a lower default that can be raised on request. For trial-versus-standard details, see [Create and configure a container type](../build/create-container-type.md).
 

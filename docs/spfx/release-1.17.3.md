@@ -46,7 +46,7 @@ npm install @microsoft/generator-sharepoint@latest --global
 > To upgrade this project, run:
 >
 > ```console
-> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.17.3 --output md
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.17.3 --output md
 > ```
 >
 > This analyzes your project and outputs all required changes, including a single script to apply them in one go.

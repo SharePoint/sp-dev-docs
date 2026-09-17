@@ -519,7 +519,7 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.24 - August 27, 2026
-      href: spfx/release-1.24.0.md            
+      href: spfx/release-1.24.0.md
     - name: SPFx v1.23.2 - June 30, 2026
       href: spfx/release-1.23.2.md
     - name: SPFx v1.23.0 - May 13, 2026
@@ -674,6 +674,8 @@
       href: embedded/build/sharepoint-embedded-knowledge-source.md
     - name: Migrate from Azure Blob Storage
       href: embedded/build/migrate-azure-blob-storage.md
+    - name: Migrate content with the SPE migration API
+      href: embedded/build/migrate-content-with-sharepoint-embedded-migration-api.md
   - name: Publish and onboard customers
     items:
     - name: Prepare your app for customer installation
