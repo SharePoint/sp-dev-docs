@@ -1,5 +1,5 @@
 ---
-title: Migrate content with the migration API
+title: Migrate content with the SharePoint Embedded migration API
 description: Prepare migration manifests and import content into SharePoint Embedded containers with Microsoft Graph.
 ms.date: 09/03/2026
 ms.reviewer: troys
