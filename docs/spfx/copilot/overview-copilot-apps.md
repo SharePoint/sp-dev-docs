@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint Copilot Apps
 description: Use SharePoint Copilot Apps to build Microsoft 365 Copilot declarative agents with custom interactive UI, hosted automatically in your tenant, using familiar SharePoint Framework tools.
-ms.date: 07/09/2026
+ms.date: 09/23/2026
 ms.localizationpriority: high
 ---
 
@@ -14,14 +14,14 @@ You can use **SharePoint Copilot Apps** to extend Microsoft 365 Copilot with cus
 
 ![Copilot Apps sample scenarios - side by side on display modes](../../images/124-release/copilot-apps-teaser-slide.png)
 
-Where SPFx web parts and extensions extend the *SharePoint* user experience, SharePoint Copilot Apps extend the *Microsoft 365 Copilot* experience. You author them with the same toolchain (`heft`, TypeScript, SCSS, the `@microsoft/sp-*` libraries), package them as a SharePoint solution package (`.sppkg`), and deploy them through the SharePoint app catalog you already use.
+Where SPFx web parts and extensions extend the *SharePoint* user experience, SharePoint Copilot Apps extend the *Microsoft 365 Copilot* experience. You author them with the same toolchain (`heft`, TypeScript, SCSS, the `@microsoft/sp-*` libraries), package them as a SharePoint solution package (`.sppkg`), and deploy them through the SharePoint App Catalog you already use.
 
 SharePoint Copilot Apps enable you to:
 
 - **Render rich, interactive UI inside Copilot** - Surface custom, branded experiences directly in a Copilot conversation instead of returning plain text.
 - **Ship agent logic and UI together** - A single package contains both the declarative agent definition and the Copilot components it renders.
 - **Reuse your SharePoint Framework skills** - Use the same project structure, build tooling, and deployment pipeline as your existing SPFx solutions.
-- **Move solutions across tenants easily** - Because Copilot Apps are built with SPFx and packaged as a standard `.sppkg`, you can move them between tenants simply by deploying the same package to another tenant's app catalog.
+- **Move solutions across tenants easily** - Because Copilot Apps are built with SPFx and packaged as a standard `.sppkg`, you can move them between tenants simply by deploying the same package to another tenant's SharePoint App Catalog.
 - **Share the same UX across surfaces** - Build a UX component once and reuse it across Microsoft 365 - in Microsoft 365 Copilot, in SharePoint, and in Microsoft Teams - for a consistent end-user experience wherever people work.
 
 ## Build once, reach every surface
@@ -95,9 +95,11 @@ protected render(): void {
 
 Because parameters shape the first render, a single tool can serve many scenarios without you shipping a separate component for each one.
 
-### Automatic hosting in the customer tenant
+### Automatic hosting from the SharePoint App Catalog
 
-When you set `includeClientSideAssets` to `true` in **package-solution.json**, the component's JavaScript assets are bundled into the `.sppkg` and hosted automatically in the customer's own Microsoft 365 tenant. You don't need to provision or maintain an external content delivery network, Azure Storage account, or any separate hosting infrastructure. The assets are served from, and stay within, the tenant where the app is installed.
+Copilot components use the same established SPFx deployment and hosting model as solutions built for SharePoint and Microsoft Teams. You deploy the `.sppkg` file to the tenant's SharePoint App Catalog. When `includeClientSideAssets` is set to `true` in **package-solution.json**, the component's JavaScript and other static assets are bundled into the package and deployed to the **ClientSideAssets** folder in the App Catalog site collection. SharePoint hosts these assets automatically and, depending on the tenant configuration, can serve them through the Microsoft 365 CDN.
+
+Microsoft 365 Copilot loads the hosted client-side assets when it renders the component in the Copilot user experience. You don't deploy the UI code to a separate Copilot host or provision an external content delivery network, Azure Storage account, or other hosting infrastructure. Copilot is another host for SPFx solutions, alongside the SharePoint and Teams experiences that use this pattern today.
 
 ```json
 // package-solution.json (excerpt)
@@ -110,10 +112,10 @@ When you set `includeClientSideAssets` to `true` in **package-solution.json**, t
 
 A SharePoint Copilot App defines a declarative agent, a Microsoft 365 Copilot agent described by a manifest, an agent definition, instructions, and one or more actions that map to the Copilot components' tools.
 
-When you deploy the app package to the **SharePoint app catalog**, the declarative agent is automatically synchronized to the tenant's agent catalog. There is no separate publishing step in Microsoft 365 Copilot or Teams admin: deploying the `.sppkg` makes the agent available to users. Removing or updating the app in the SharePoint app catalog likewise updates the corresponding agent.
+After you deploy the app package to the **SharePoint App Catalog**, you can synchronize the declarative agent to the tenant's agent catalog from the App Catalog. There is no separate publishing step in Microsoft 365 Copilot or the Teams admin center. Updating or removing the app in the SharePoint App Catalog likewise updates or removes the corresponding agent.
 
 > [!NOTE]
-> The only action an administrator needs to take is to upload the `.sppkg` file to the SharePoint app catalog and select **Add to Teams**, which deploys the declarative agent to the tenant's agent catalog. The label of this button will be updated in a future release to better reflect that it also publishes the agent.
+> An administrator uploads and enables the `.sppkg` file in the SharePoint App Catalog, and then selects **Add to Teams** for the app. This action deploys the declarative agent to the tenant's agent catalog. The label of this button will be updated in a future release to better reflect that it also publishes the agent.
 
 ```json
 // declarativeAgent.json (excerpt)
@@ -153,7 +155,7 @@ The Copilot component itself is a client-side component that derives from `BaseC
 
 You author the source files in the `copilot` folder - most importantly `manifest.json` and `declarativeAgent.json` - and the build combines them with your components. When the solution is built, the toolchain **merges your declarative agent definition** with the details of the Copilot components declared in **copilot-agent.json** - the components they reference and each component's tools and properties - and bundles the result into the solution package (`.sppkg`) alongside the component assets. You can see the packaged output under the project's `temp/copilot` folder during a build.
 
-When you deploy that package to the **SharePoint app catalog**, the declarative agent is also **deployed to the tenant agent store**. This is what makes the experience available to end users through **Microsoft 365 Copilot** and **Copilot Chat** - there is no separate step to register or publish the agent. Updating or removing the app in the app catalog updates or removes the corresponding agent in the tenant agent store.
+When you upload and enable that package in the **SharePoint App Catalog**, SharePoint hosts the packaged component assets in the App Catalog site collection. When you then select **Add to Teams** for the app, the declarative agent is deployed to the **tenant agent catalog**. Together, these steps make the experience available to end users through **Microsoft 365 Copilot** and **Copilot Chat**, without requiring you to provision a separate host or register the agent in another portal. Updating or removing the app in the App Catalog updates or removes the corresponding agent in the tenant agent catalog.
 
 ## Choose a starter template
 
@@ -168,11 +170,11 @@ When you scaffold a new SharePoint Copilot App, the SharePoint Framework generat
 
 ## Test with the Copilot Workbench
 
-The **Copilot Workbench** lets you deploy and test your Copilot components while they are hosted locally on your development machine, before you package and deploy them to the SharePoint app catalog and sync them to Microsoft 365 Copilot. This gives you a fast inner-loop: you run your component from `localhost`, load it in the Workbench, and iterate on rendering, display modes, and tool parameters against a real Copilot surface without a full deployment cycle.
+The **Copilot Workbench** lets you test your Copilot components while they are hosted locally on your development machine, before you package and deploy them to the SharePoint App Catalog and sync them to Microsoft 365 Copilot. This gives you a fast inner-loop: you run your component from `localhost`, load it in the Workbench, and iterate on rendering, display modes, and tool parameters against a real Copilot surface without a full deployment cycle.
 
 The Copilot Workbench is always available at the `/_layouts/15/copilotworkbench.aspx` path of any SharePoint site in your tenant - for example, `https://yourtenantname.sharepoint.com/_layouts/15/copilotworkbench.aspx`. Once your local dev server is running and serving the component from `localhost` - by running `heft start --nobrowser` - browse to that URL and the debug version of your component is loaded in the Workbench, ready for testing and development.
 
-Once you are satisfied with the experience in the Workbench, you build the solution package and deploy it to the app catalog, where the declarative agent is automatically synced to the tenant agent catalog.
+Once you are satisfied with the experience in the Workbench, you build the solution package, deploy it to the SharePoint App Catalog, and select **Add to Teams** to sync the declarative agent to the tenant agent catalog.
 
 > [!div class="mx-imgBorder"]
 > ![A Copilot component under test in the Copilot Workbench.](../../images/copilot/copilot-workbench.png)
@@ -183,7 +185,7 @@ Keep the following in mind as you build and maintain SharePoint Copilot Apps, es
 
 ### Update the declarative agent version on every change
 
-When you make changes on the declarative agent side - for example, editing `declarativeAgent.json`, its instructions, conversation starters, or actions - you must **update the declarative agent `version`** so the new definition is picked up. If the version stays the same, Microsoft 365 Copilot may continue to use the previously synced agent even after you deploy an updated solution to the app catalog. Bumping the version ensures the changes are recognized and the refreshed agent is applied with the new deployment.
+When you make changes on the declarative agent side - for example, editing `declarativeAgent.json`, its instructions, conversation starters, or actions - you must **update the declarative agent `version`** so the new definition is picked up. If the version stays the same, Microsoft 365 Copilot may continue to use the previously synced agent even after you deploy an updated solution to the SharePoint App Catalog. Bumping the version ensures the changes are recognized and the refreshed agent is applied with the new deployment.
 
 > [!NOTE]
 > Deployment of the agent to the tenant agent catalog can take some time to complete. Improvements to this deployment experience are planned for a future release.
@@ -201,15 +203,13 @@ During the preview period, SharePoint Copilot Apps do **not** require a Microsof
 
 ### Not yet supported in the Microsoft marketplace (during preview)
 
-During the public preview, SharePoint Copilot Apps **cannot** be published to or distributed through the Microsoft commercial marketplace (Microsoft AppSource). While in preview, you deploy them privately to your own tenant through the SharePoint app catalog. Microsoft marketplace support is planned for when the feature reaches general availability.
+During the public preview, SharePoint Copilot Apps **cannot** be published to or distributed through the Microsoft commercial marketplace (Microsoft AppSource). While in preview, you deploy them privately to your own tenant through the SharePoint App Catalog. Microsoft marketplace support is planned for when the feature reaches general availability.
 
 ## Known issues
 
 The following are known issues in the current public preview. They are expected to be resolved in an upcoming release.
 
 - **Copilot UX only** - Initially during the public preview, components render only in the Microsoft 365 Copilot user experience. Support for other surfaces and hosting options is in the works.
-- **Duplicate tool names across solutions** - If two deployed solutions declare a tool with the same name, only one of them is registered and the other is silently ignored. Until this is fixed, make sure each tool name is unique across all SharePoint Copilot Apps deployed to the tenant.
-- **No agent definition validation** - There's currently no validation on the created agent definition when the solution is bundled. This can cause challenges if the lenght of the json definitions are too long vs the agent defition schema. You can use [Agent Toolkit CLI](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/microsoft-365-agents-toolkit-cli) to validate the created package with `atk validate --package-file agent-file.zip` command. This will be addressed in upcoming preview releases before general availability.
 
 ## Next steps
 
