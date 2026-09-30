@@ -50,12 +50,12 @@ Supported experiences include:
 
 Office integration is enabled by default for SharePoint Embedded container types. Authorized users can open supported files in Office for the web and Office desktop clients, including through Office experiences outside your app's custom user interface. If your app requires file access to remain within app-controlled experiences, you can disable Office integration for the container type by setting the `isOfficeRestricted` property in `fileStorageContainerTypeSettings` to `true`.
 
-`isOfficeRestricted` is currently available only through the Microsoft Graph beta endpoint. It's not yet available in v1.0. For the property definition, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings?view=graph-rest-beta&preserve-view=true).
+For the property definition, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings).
 
-Set `settings.isOfficeRestricted` with the Microsoft Graph `PATCH /storage/fileStorage/containerTypes/{containerTypeId}` API against the beta endpoint.
+Set `settings.isOfficeRestricted` with the Microsoft Graph `PATCH /storage/fileStorage/containerTypes/{containerTypeId}` API.
 
 ```http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containerTypes/{containerTypeId}
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes/{containerTypeId}
 Content-Type: application/json
 
 {
