@@ -46,8 +46,9 @@ SharePoint Embedded enforces the following size limits.
 
 | Resource | Limit |
 | --- | --- |
-| Container types that a developer tenant can create | 25* |
+| Container types that a developer tenant can create | 100 |
 | Container types that an app can own | 1 |
+| Container types registered per consuming tenant | 100 |
 | Storage per container type per consuming tenant | 100 TB* |
 | Files and folders per container | 30 million |
 | Storage per container | 25 TB |
