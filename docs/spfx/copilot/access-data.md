@@ -335,7 +335,7 @@ private _handleContentResize = (width: number, height: number): void => {
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![The SharePointLists component showing the lists on a site in the Copilot Workbench](../../images/copilot/access-data-SharePoint-lists.png)
+    > ![The SharePointLists component showing the lists on a site in the Copilot Workbench](../../images/copilot/access-data-sharepoint-lists.png)
 
     For **MyProfile**, set `view` to `mail` or `calendar`:
 
@@ -358,7 +358,7 @@ To package and deploy the solution, follow the steps in [Build your first ShareP
 ## Next steps
 
 - [Display modes in SharePoint Copilot components](displayMode.md)
-- [Access data companion sample](SAMPLE-DOWNLOAD-URL)
+- [Access data companion sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-connect-to-sharepoint-data)
 
 ## See also
 
