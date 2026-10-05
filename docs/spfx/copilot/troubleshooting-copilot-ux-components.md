@@ -46,8 +46,6 @@ Copilot can show what the agent did for each response, including the tool call a
 1. Start a new conversation with the agent and send your prompt.
 1. Under the response, open **Agent debug info**.
 
-<!-- VERIFY: Add a screenshot of Agent debug info with the agent, action, and executed action versions visible (for example articles/article-02/article-02-copilot-debug-tool-fail-expanded.png from the article 02 verification). -->
-
 The debug info has the information you need for most sections in this article:
 
 | Field | What it tells you |
@@ -68,8 +66,6 @@ After **Add to Teams**, the agent might not appear in Copilot for some time, eve
 1. Sign out of Microsoft 365, close all browser windows, and sign in again. Reloading the page isn't enough.
 1. If the agent still doesn't appear, install it for users from the Teams admin center.
 1. Search for the agent by its name. It might not appear in the agent list before it appears in search.
-
-<!-- VERIFY: Installing from the Teams admin center worked when installing from the Microsoft 365 admin center (Agents) didn't. Confirm whether that's expected. -->
 
 ### Remove old copies of the agent
 
@@ -97,8 +93,6 @@ If you change only your component code and the solution version in **./config/pa
 
 The build stores the version in **./teams/.copilot-agent-hotfix.json**. If you delete the **teams** folder, or you build on another computer, the build starts again from the version in **./copilot/manifest.json** and can create a version that Teams already has. Increase `version` in **./copilot/manifest.json** after a clean build.
 
-<!-- VERIFY: Confirm whether the product team recommends committing ./teams/.copilot-agent-hotfix.json to source control. -->
-
 ### Change the Teams app ID
 
 If you deleted the app in the Teams admin center, **Add to Teams** for the same Teams app ID can still fail with the 409 conflict. Give the app a new ID: replace `id` in **./copilot/manifest.json** with a new GUID, rebuild, package, and deploy again. This creates a new agent, so remove the old copies. For more information, see [Remove old copies of the agent](#remove-old-copies-of-the-agent).
@@ -112,13 +106,11 @@ Open **Agent debug info** for the response:
 - If **Executed actions** shows a response with "CopilotComponent '...' not found in solution '...'", the agent calls a solution that doesn't have the component. See [The agent calls an old solution](#the-agent-calls-an-old-solution).
 - If **Actions** has no tool, or the action has no name, Copilot hasn't loaded the tool definition yet. This can happen right after you deploy a new agent. Wait, and test again in a new conversation.
 
-<!-- VERIFY: In October 2026, a new agent's tool was unavailable for hours after deployment, and in one case didn't load at all. Get guidance on the expected delay from the product team. -->
-
 ### The agent calls an old solution
 
 The agent package doesn't contain the URL of the tool. **Add to Teams** fills it in with the ID of the solution that ran the sync: `https://<tenant>.sharepoint.com/_api/mcp/beta/spfx?solutionId=<solution ID>`. You can see this URL in **Executed actions** as the MCP server URL.
 
-The agent stays bound to that solution ID. If you delete the solution, or you deploy a package with a new solution ID but the same Teams app ID, the agent can still call the old solution. The tool call then fails with "CopilotComponent '<tool name>' not found in solution '<solution ID>'."
+The agent stays bound to that solution ID. If you delete the solution, or you deploy a package with a new solution ID but the same Teams app ID, the agent can still call the old solution. The tool call then fails with "CopilotComponent '[[TOOL_NAME]]' not found in solution '[[SOLUTION_ID]]'."
 
 To fix it:
 
@@ -145,17 +137,15 @@ To work with this:
 - Validate the properties in your component and show a clear message when a required property is missing, for example "No site URL was given." Then you can see the problem right away instead of a component that fails without a reason.
 - Test parameter changes in the Copilot Workbench, where the component gets the properties you enter.
 
-<!-- VERIFY: In October 2026, the executed action version stayed at the old version for more than a day, and a manual version change in ./copilot/manifest.json didn't fix it. Get the expected behavior and a supported fix from the product team before publishing this section. -->
-
 ## The tool gets the wrong arguments
 
 The component renders but shows that a property is missing or wrong, for example "No site URL was given." Copilot decides which arguments to send from the text you give it. Open **Agent debug info** and check the tool arguments in **Executed actions**.
 
 - **The arguments use old property names:** see [Copilot uses the old tool definition after an update](#copilot-uses-the-old-tool-definition-after-an-update).
 - **A property is missing or has the wrong value:** make the description clearer. Copilot reads three descriptions:
-    - The `.describe()` text of each property in the properties schema. Say what the value is and give an example, for example "The absolute URL of a SharePoint site, such as https://contoso.sharepoint.com/sites/marketing."
-    - The tool `description` in the component manifest. Say when Copilot should call the tool.
-    - The agent instructions in **./copilot/instruction.txt**. Say what to do when the user doesn't give a required value, for example ask for it.
+  - The `.describe()` text of each property in the properties schema. Say what the value is and give an example, for example "The absolute URL of a SharePoint site, such as `https://contoso.sharepoint.com/sites/marketing`."
+  - The tool `description` in the component manifest. Say when Copilot should call the tool.
+  - The agent instructions in **./copilot/instruction.txt**. Say what to do when the user doesn't give a required value, for example ask for it.
 - **The prompt doesn't have the value:** if a conversation starter doesn't contain the value, Copilot has nothing to send. Make the instructions tell the agent to ask the user.
 
 For an example of a tool with clear descriptions, see [Connect your Copilot UX component to SharePoint data](get-started/connect-to-sharepoint-data.md).
@@ -178,8 +168,6 @@ To fix it:
 1. Reload Copilot and send the prompt again.
 
 The same component can render in Copilot in Microsoft Teams without this fix. A private browser window doesn't prevent the problem.
-
-<!-- VERIFY: Confirm with the product team whether this is a known issue and whether a fix is planned. Users of a deployed app can't be expected to unregister a service worker. -->
 
 ## A Microsoft Graph permission can't be approved
 
@@ -222,8 +210,6 @@ In tenants that use the new SharePoint Framework principal, **SharePoint Online 
     ```
 
 To remove a permission, send the same request without it. The permissions apply to every SPFx solution in the tenant, not only to yours. For more information about requesting permissions, see [Access data from a Copilot UX component](access-data.md#request-microsoft-graph-permissions).
-
-<!-- VERIFY: Seen in one tenant in October 2026 with CLI for Microsoft 365 v11.8.0. Check whether approving on the API access page of the SharePoint admin center works in the same tenant. -->
 
 ## The component fails on unexpected data
 
