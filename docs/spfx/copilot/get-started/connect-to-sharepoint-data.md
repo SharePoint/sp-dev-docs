@@ -737,6 +737,5 @@ try {
 ## Next steps
 
 - [Access data from a Copilot UX component](../access-data.md)
-- [Theme and design for the Copilot canvas](../theme-and-design.md)
 - [Display modes in SharePoint Copilot components](../displayMode.md)
-- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-apps).
+- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-access-data).
