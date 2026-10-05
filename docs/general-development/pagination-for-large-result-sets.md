@@ -68,4 +68,4 @@ keywordQuery.SortList.Add("[DocId]", Microsoft.SharePoint.Client.Search.Query.So
 ```
 
 > [!NOTE]
-> When using the SortList in search queries, the fieldname being used must be enclosed by brackets (e.g. `[DocId]`).
+> Earlier versions of this article used a bracketed field name in the REST examples. The REST examples now use `docid`. This documentation change does not announce deprecation or removal of the bracketed form. The CSOM example above retains brackets around the field name.
