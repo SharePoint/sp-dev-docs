@@ -267,6 +267,8 @@
       items:
       - name: Build your first Copilot App
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
+      - name: Connect Copilot UX components to SharePoint data
+        href: spfx/copilot/get-started/connect-to-sharepoint-data.md
     - name: Display Mode
       href: spfx/copilot/displayMode.md
   - name: Library components
