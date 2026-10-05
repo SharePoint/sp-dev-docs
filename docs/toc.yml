@@ -259,13 +259,13 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
-  - name: Copilot Apps
+  - name: Copilot UX components
     items:
     - name: Overview
       href: spfx/copilot/overview-copilot-apps.md
     - name: Getting started
       items:
-      - name: Build your first Copilot App
+      - name: Build your first Copilot UX component
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
       - name: Connect Copilot UX components to SharePoint data
         href: spfx/copilot/get-started/connect-to-sharepoint-data.md
