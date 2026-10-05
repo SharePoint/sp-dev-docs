@@ -271,6 +271,8 @@
         href: spfx/copilot/get-started/connect-to-sharepoint-data.md
     - name: Display Mode
       href: spfx/copilot/displayMode.md
+    - name: Access data from a Copilot UX component
+      href: spfx/copilot/access-data.md
   - name: Library components
     items:
     - name: Overview
