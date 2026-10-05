@@ -267,8 +267,14 @@
       items:
       - name: Build your first Copilot App
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
+      - name: Connect Copilot UX components to SharePoint data
+        href: spfx/copilot/get-started/connect-to-sharepoint-data.md
     - name: Display Mode
       href: spfx/copilot/displayMode.md
+    - name: Access data from a Copilot UX component
+      href: spfx/copilot/access-data.md
+    - name: Troubleshoot Copilot UX components
+      href: spfx/copilot/troubleshooting-copilot-ux-components.md
   - name: Library components
     items:
     - name: Overview
