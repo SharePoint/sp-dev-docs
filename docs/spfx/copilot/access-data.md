@@ -335,7 +335,7 @@ private _handleContentResize = (width: number, height: number): void => {
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![The SharePointLists component showing the lists on a site in the Copilot Workbench](../../images/copilot/access-data-sharepoint-lists.png)
+    > ![The SharePointLists component showing the lists on a site in the Copilot Workbench](../../images/copilot/access-data-copilot-sharepoint-lists.png)
 
     For **MyProfile**, set `view` to `mail` or `calendar`:
 
