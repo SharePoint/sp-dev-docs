@@ -269,6 +269,8 @@
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
     - name: Display Mode
       href: spfx/copilot/displayMode.md
+    - name: Troubleshoot Copilot UX components
+      href: spfx/copilot/troubleshooting-copilot-ux-components.md
   - name: Library components
     items:
     - name: Overview
