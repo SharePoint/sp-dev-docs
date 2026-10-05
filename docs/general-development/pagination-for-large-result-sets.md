@@ -63,9 +63,9 @@ if (startRow == 0) // When issueing the query for first time, we don't have a Do
 else  // Putting the IndexDocId first and then the 'actual' query matters (in this case searching for the keyword 'sharepoint')
     keywordQuery.QueryText = string.Format("IndexDocId>{0} AND (sharepoint)", startRow);
 keywordQuery.EnableSorting = true;
-keywordQuery.SortList.Add("[DocId]", Microsoft.SharePoint.Client.Search.Query.SortDirection.Ascending);
+keywordQuery.SortList.Add("DocId", Microsoft.SharePoint.Client.Search.Query.SortDirection.Ascending);
 ...
 ```
 
 > [!NOTE]
-> Earlier versions of this article used a bracketed field name in the REST examples. The REST examples now use `docid`. This documentation change does not announce deprecation or removal of the bracketed form. The CSOM example above retains brackets around the field name.
+> Earlier versions of this article used a bracketed field name in the REST and CSOM examples. The examples now use `docid` in REST queries and `DocId` in CSOM. This documentation change does not announce deprecation or removal of the bracketed form.
