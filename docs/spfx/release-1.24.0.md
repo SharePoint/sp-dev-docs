@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.24 preview release notes
 description: Release notes for the SharePoint Framework v1.24 preview release.
-Copims.date: 09/23/2026
+Copims.date: 10/02/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.24 preview release notes
@@ -14,6 +14,7 @@ This preview update brings the long-requested React 18 support to SPFx solutions
 - **beta.3 released:** August 27, 2026
 - **beta.4 released:** September 17, 2026
 - **beta.5 released:** September 23, 2026
+- **rc.0 released:** October 2, 2026
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -32,6 +33,10 @@ npm install @microsoft/generator-sharepoint@next --global
 The out-of-the-box React version used by SPFx solutions has been updated to React 18.x. This has been one of the most consistent asks from customers and partners, and it now lands in the 1.24 preview line so you can start validating your solutions against a modern React runtime well before general availability.
 
 Please take this build for a spin and validate your solutions against React 18 — this is exactly the kind of change where broad, real-world testing before general availability makes the difference. If you run into anything unexpected, report it on our [issue list](https://aka.ms/spfx/issues) so we can address it in an upcoming preview.
+
+### Node.js 24 & 26 support
+
+We are pleased to share the SPFx 1.24 will include an update for the Node.js support all the way to v24 and v26. Current version in Node.js is 24 and the next as version 26 is also already out. 
 
 ### Copilot UX components updates (Public Preview)
 
@@ -58,6 +63,10 @@ You don't need a Microsoft 365 Copilot license to develop or test Copilot UX com
 #### Updates in beta.4 and beta.5
 
 Technically beta.5 is rollback to the beta.3 level as we found out an issue on the tool resolution with the new approach introduced in the beta 4. We have decided to keep the model as it is with the beta 3 and most likely next step is the initial release candidate with target to release GA (General Availability) to production usage in October.
+
+### Updates in rc.0
+
+RC is technically the same setup as previously, but we have introduced back the dynamic tool recovery pattern as we prepare for General Availability.
 
 #### Getting started
 
@@ -91,11 +100,25 @@ Please share any questions or findings on Copilot UX components through the [sp-
 - [Build UX components for your Copilot agent – My Day scenario – SharePoint Copilot Apps](https://www.youtube.com/watch?v=VCkoAucaodw) – video
 - [GitHub repository for samples](https://github.com/pnp/spfx-copilot-apps) - contributions are welcome
 
+
+### New documents for Copilot UX components
+
+- [Connect your Copilot UX component to SharePoint data](./copilot/get-started/connect-to-sharepoint-data.md)
+- [Access data from a Copilot UX component](./copilot/access-data.md)
+- [Troubleshoot Copilot UX components](./copilot/troubleshooting-copilot-ux-components.md)
+-
+
 ### Addressing npm audit issues
 
 We continue to address the `npm audit` findings reported when installing the SharePoint Framework Yeoman generator or scaffolding solutions. Dependency vulnerabilities evolve over time, and we review them with every release.
 
 We are aware of the findings reported for this preview and are working with the relevant teams to address them. Based on our current assessment, these findings don't affect the runtime or development-time security of SPFx solutions.
+
+## Fixed Issues
+
+Here's a list of specific issues fixed around SharePoint Framework which are specifically fixed with this release:
+
+- [#11030](https://github.com/SharePoint/sp-dev-docs/issues/11030) - [SPFx 1.23] Sass cannot resolve bare package imports inside dependencies — no loadPaths / importIncludePaths, no workaround (regression from 1.22)
 
 ## Deprecations
 
