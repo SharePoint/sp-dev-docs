@@ -100,7 +100,7 @@ Container types are created with the Microsoft Graph `POST /v1.0/storage/fileSto
 
 A standard container type is used for non-trial scenarios.
 
-By default, each tenant can have 25 container types at a time; one can be a free trial container type, and the rest are standard container types. You can request an increase through Microsoft support or your SharePoint Embedded onboarding contact.
+Each tenant can have 100 container types at a time; one can be a free trial container type, and the rest are standard container types.
 
 Standard container types are billable and must use a billing model.
 
@@ -176,6 +176,8 @@ Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestorage
 ## Registration
 
 To create and interact with containers in a consuming tenant, the container type must be registered in that tenant.
+
+A consuming tenant can have up to 100 container types registered at a time.
 
 The owning application invokes the registration API to define application permissions for the container type.
 
