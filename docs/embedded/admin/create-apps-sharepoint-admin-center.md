@@ -1,5 +1,5 @@
 ---
-title: Create Apps in SharePoint Admin Center
+title: Create apps in SharePoint admin center
 description: Create a SharePoint Embedded app from the SharePoint admin center and validate the new app registration.
 ms.date: 07/13/2026
 ms.reviewer: shsaravanan
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Create apps in SharePoint admin center
 
-**Applies to:** Owning tenant administrator — SharePoint Embedded admin / Global admin
+**Applies to:** Developer tenant administrator — SharePoint Embedded admin / Global admin
 
 <!-- agent:
 task_type: how-to
@@ -20,14 +20,14 @@ next: install-sharepoint-embedded-app.md
 -->
 
 Use the SharePoint admin center **Apps** experience to create a SharePoint Embedded app that your organization owns.
-The create flow can register a new Microsoft Entra app or associate an existing Entra app with a new SharePoint Embedded app.
+The create flow can register a new Microsoft Entra app or associate an existing Microsoft Entra app with a new SharePoint Embedded app.
 
-A **SharePoint Embedded Administrator** can complete this flow end to end. Creating a line-of-business app no longer depends on a Global Administrator granting consent first, so you can create an app and hand it off to developers quickly. You add up to three owners during creation, so developers you assign as owners can start building against the app right away.
+A **SharePoint Embedded Administrator** can complete this flow end to end and hand the app off to developers quickly. You add up to three owners during creation, so developers you assign as owners can start building against the app right away.
 
 This article explains the administrator flow and calls out where command or API details affect app readiness.
 
 > [!IMPORTANT]
-> You need the **SharePoint Embedded Administrator** role or Global Administrator privileges to create and manage SharePoint Embedded apps in the SharePoint admin center. For a line-of-business app, the SharePoint Embedded Administrator can create the app without Global Administrator consent.
+> You need the **SharePoint Embedded Administrator** role or Global Administrator privileges to create and manage SharePoint Embedded apps in the SharePoint admin center.
 
 ## Before you begin
 
@@ -39,7 +39,7 @@ Confirm these prerequisites.
 - You know whether to create a new Microsoft Entra app or use an existing app registration.
 - You know which owners should manage the app.
 - You know which billing type applies to the app.
-- For owner organization billing, you have owner or contributor access to the Azure subscription used for billing.
+- For owner organization billing, you have [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription used for billing.
 
 For role details, see [SharePoint Embedded administrator](admin-overview.md).
 
@@ -50,7 +50,7 @@ The page includes two app inventory views.
 
 | Tab | Use it for |
 | --- | --- |
-| Installed apps | Review SharePoint Embedded apps installed in the tenant. The list includes apps built by your organization and by external organizations. It currently doesn't include Microsoft-built SharePoint Embedded apps. |
+| Installed apps | Review SharePoint Embedded apps installed in the tenant. The list includes apps built by your organization and by external organizations. |
 | Owned apps | Review SharePoint Embedded apps created by your organization, regardless of installation status. |
 
 The **Installed apps** tab shows each app's publisher, billing type, billing status, and installed date.
@@ -103,7 +103,7 @@ Use one owning application for the SharePoint Embedded app that owns its contain
 
 Add up to three owners in the **Owners** field.
 
-Owners can manage app settings and billing configuration.
+Owners can manage app settings. Billing permissions depend on the billing model. For standard billing, a container type owner can manage billing for the container type they own through the [SharePoint Embedded Visual Studio Code extension](../build/quickstart-vscode.md#configure-standard-billing) or [SharePoint Embedded Model Context Protocol (MCP) server](../build/sharepoint-embedded-mcp-server.md#available-tools). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant. For **User org** billing, a Billing Administrator or Global Administrator in the consuming tenant completes pass-through billing setup in the Microsoft 365 admin center.
 
 Assign the developers who build the app as owners so you can hand the app off immediately after creation.
 
@@ -148,7 +148,7 @@ If you select **Owner org**, choose when to connect the Azure billing subscripti
 *Figure 4: For Owner org billing, choose Setup now to attach an Azure subscription during creation, or Setup later to attach it from the app details panel afterward.*
 
 > [!NOTE]
-> **User org** billing isn't set up in this panel. For a User org app, a Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center before users can access the app. Only a Global Administrator can set up billing.
+> **User org** billing isn't set up in this panel. For a User org app, a Billing Administrator or Global Administrator in the consuming tenant sets up billing in the Microsoft 365 admin center before users can access the app. The SharePoint Embedded Administrator role alone doesn't grant access to this billing procedure.
 
 ## Configure advanced settings
 
@@ -173,7 +173,7 @@ For Graph Explorer documentation, see [Use Graph Explorer to try Microsoft Graph
 When you select **Create app**, the admin center completes these steps together:
 
 - Registers the Microsoft Entra app, or associates the existing Entra app you selected.
-- Creates the SharePoint Embedded app, which is also called the container type.
+- Creates the SharePoint Embedded app and its associated container type.
 - Installs the app in your tenant.
 - Attaches billing when you select **Owner org** and **Setup now**.
 

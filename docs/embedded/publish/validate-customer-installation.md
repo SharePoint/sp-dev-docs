@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 ---
 # Validate customer app installation
 
-**Applies to:** ISV / developer
+**Applies to:** ISV
 
 <!-- agent:
 task_type: how-to
@@ -47,8 +47,9 @@ Validation usually needs both ISV and customer roles.
 | Role | Responsibility |
 | --- | --- |
 | ISV developer | Supplies expected app IDs, container type ID, app behavior, and support troubleshooting. |
-| Customer Global Administrator or SharePoint Embedded Administrator | Confirms SharePoint Embedded app setup, billing, and administration visibility. |
-| Customer Azure billing owner or contributor | Helps resolve pass-through billing setup issues. |
+| Customer Billing Administrator or Global Administrator | Sets up or confirms pass-through billing. |
+| Customer SharePoint Embedded Administrator or Global Administrator | Confirms SharePoint Embedded app setup and administration visibility. |
+| Customer with the [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) role on the Azure subscription | Helps resolve pass-through billing setup issues. |
 | Customer test user | Signs in and performs app-level document actions. |
 
 ## Before you start
@@ -74,7 +75,7 @@ Confirm that the container type is registered in the consuming tenant.
 An app can't create or interact with containers until its container type is registered in that tenant.
 Use your product's setup portal or registration flow to show the registration state.
 
-Ask the customer admin to use the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) to verify that your SharePoint Embedded app is listed under the installed apps tab in the Active apps page under SharePoint Embedded. The customer admin may verify details of your SharePoint Embedded app such as:
+Ask the customer admin to open the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), go to **SharePoint Embedded** > **Active apps** > **Installed apps**, and verify that your SharePoint Embedded app is listed. The customer admin can verify details of your SharePoint Embedded app such as:
 
 - The owning application ID.
 - The container type ID.
@@ -90,7 +91,7 @@ To verify that your app is properly installed on the customer tenant:
 1. Use the token to [get the registration for your container type in the tenant](/graph/api/filestoragecontainertyperegistration-get). If a registration is returned, it means that your SharePoint Embedded app is installed correctly.
 
 > [!TIP]
-> You may also validate that your guest apps are properly set up by requesting an access token for the Microsoft Graph `.default` scope in the consuming tenant and validating that the scopes/roles you expect are present and that you can use the token to interact with content. Only the owning app can access a container type registration in a tenant.
+> You can also validate that your guest apps are properly set up by requesting an access token for the Microsoft Graph `.default` scope in the consuming tenant and validating that the scopes/roles you expect are present and that you can use the token to interact with content. Only the owning app can access a container type registration in a tenant.
 
 Confirm that the customer granted the expected permissions and no unexpected app ID was used.
 
@@ -99,7 +100,7 @@ For most customer installations, validate at least these permissions:
 | Permission | Typical use | Validation note |
 | --- | --- | --- |
 | `FileStorageContainerTypeReg.Selected` | Register the container type in the consuming tenant. | The app can request this as delegated or application permission. If delegated registration is used, the user performing registration must be a SharePoint Embedded Administrator or Global Administrator. |
-| `FileStorageContainer.Selected` | Access containers and content for the installed app. | The application permission requires admin consent; the delegated permission does not. Confirm the grant matches the app behavior the customer approved. |
+| `FileStorageContainer.Selected` | Access containers and content for the installed app. | The application permission requires admin consent; the delegated permission doesn't. Confirm the grant matches the app behavior the customer approved. |
 
 Validate the following items:
 
@@ -135,14 +136,14 @@ Check:
 ### Pass-through billing
 
 For pass-through billing, no user can access the app until the customer sets up valid billing.
-Ask the customer admin to confirm billing in the [Microsoft 365 admin center](https://admin.cloud.microsoft).
+Ask the customer admin to confirm billing in the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
 Check:
 
 - A valid Azure subscription is connected.
 - A valid resource group is selected.
 - The setup was completed for SharePoint Embedded apps.
-- The customer billing admin has owner or contributor permissions where required.
+- The customer administrator who sets up billing has the Owner or Contributor role on the Azure subscription where required.
 - The customer understands that disabling billing interrupts user access.
 
 For billing model guidance, see [Choose a billing model for your app](choose-app-billing-model.md).
@@ -215,7 +216,7 @@ Use this checklist as the final customer signoff.
 - [ ] Container type registration is complete.
 - [ ] Customer admin sees your SharePoint Embedded app in SharePoint admin center.
 - [ ] Billing is valid or not required for the customer tenant.
-- [ ] Test user can sign into your app.
+- [ ] Test user can sign in to your app.
 - [ ] Test container can be created or opened.
 - [ ] Test file operations work.
 - [ ] Customer admin can view the app or container in administration tools.

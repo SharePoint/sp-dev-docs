@@ -1,5 +1,5 @@
 ---
-title: Store and Query Container Metadata
+title: Store and query container metadata
 description: Define SharePoint Embedded metadata columns and query drive items by field values.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -25,11 +25,11 @@ Use metadata when your app needs structured fields on files in a SharePoint Embe
 
 Call the metadata APIs with an app-only or delegated bearer token. Use `FileStorageContainer.Selected` for application and delegated calls.
 
-Container owners can create, update, and delete columns. Container members can read and list columns.
+Container owners and managers can create, update, and delete columns. Container members can read and list columns.
 
 ## Choose column types
 
-SharePoint Embedded metadata supports these column type properties : `boolean`, `choice`, `currency`, `dateTime`, `hyperlinkOrPicture`, `number`, `personOrGroup`, and `text`. It also supports column settings such as `indexed`, `isDeletable`, `isSealed`, `name`, `readOnly`, and `type`.
+SharePoint Embedded metadata supports these column type properties: `boolean`, `choice`, `currency`, `dateTime`, `hyperlinkOrPicture`, `number`, `personOrGroup`, and `text`. It also supports column settings such as `indexed`, `isDeletable`, `isSealed`, `name`, `readOnly`, and `type`.
 
 Column names must follow SharePoint rules. Don't use names that contain `!`, start with a digit or punctuation, contain spaces, look like spreadsheet cell references, represent localized true or false values, or use reserved names such as `Author`, `Created`, or `Description`.
 
@@ -124,7 +124,9 @@ GET https://graph.microsoft.com/beta/drives/{drive-id}/items?$orderby=listitem/f
 
 Use `$expand=listitem($expand=fields)` when the result needs field values in the response. Create indexed columns for high-cardinality filters that your app runs frequently.
 
-For full-text search across containers and custom metadata (using the `OWSTEXT` property suffix), see [Search containers and files](search-containers-files.md). Use OData `$filter` for structured queries inside a single container drive; use search for free-text queries across many containers.
+For full-text search across containers and custom metadata, see [Search containers and files](search-containers-files.md). To filter semantic retrieval by indexed custom metadata, see [Filter retrieval by custom metadata](agent-experiences.md#filter-retrieval-by-custom-metadata). Both experiences use SharePoint managed properties, such as the `OWSTEXT` property generated for a text column.
+
+Use OData `$filter` for structured queries inside one container drive. Use search for free-text queries across many containers, or use the Retrieval API to return extracts for AI grounding.
 
 ## Keep schema consistent
 

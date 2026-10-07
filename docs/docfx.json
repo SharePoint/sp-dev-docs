@@ -23,7 +23,8 @@
         "files": [
           "**/*.png",
           "**/*.jpg",
-          "**/*.gif"
+          "**/*.gif",
+          "embedded/llms.txt"
         ],
         "exclude": [
           "**/obj/**",

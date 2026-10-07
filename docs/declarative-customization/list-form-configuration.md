@@ -290,7 +290,7 @@ The custom formatter ensures a consistent user experience:
 
 - New Item form: The read-only field will not be shown.
 - Edit form: The field is displayed without an editable textbox, similar to a Calculated Column.
-- Edit all mode: The field remains visible and uneditable.
+- Edit all mode: The read-only field will not be shown.
 
 The Save button works as expected — no accidental modifications to the read-only fields.
 

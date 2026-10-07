@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: Microsoft 365 group Connect reports
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 The Microsoft 365 group connect (mode `GroupifyOnly`) is always run as this mode is responsible for creating the main Site and Web reports. 
 
 ## Excel dashboard

@@ -1,5 +1,5 @@
 ---
-title: Create and Manage Containers
+title: Create and manage containers
 description: Create, list, update, recycle, restore, and delete SharePoint Embedded containers in your app.
 ms.date: 07/13/2026
 ms.reviewer: jaeccles
@@ -19,13 +19,15 @@ outcome: Implement the basic SharePoint Embedded container lifecycle for applica
 next: manage-files.md
 -->
 
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-manage-containers.md)]
+
 Create and manage containers after your container type is created, registered, and authorized. Containers are the basic storage unit in SharePoint Embedded.
 
 Complete [Configure authentication and authorization](configure-authentication-authorization.md) before you call container APIs.
 
-To manage the container lifecycle through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
+## Manage containers with a coding agent
 
-[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-manage-containers.md)]
+The [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) exposes container tools—such as `container_create`, `container_list`, `container_permissions_manage`, `container_archive_restore`, and `container_delete`—that a coding agent can call to manage containers through natural language.
 
 ## Understand containers
 
@@ -63,11 +65,27 @@ Before creating containers, make sure:
 - The container type is registered in the consuming tenant.
 - The app has Microsoft Graph `FileStorageContainer.Selected` consent.
 - The app has container type permissions for the operation.
+- The app acquires its token as a confidential client, because container creation requires it.
 - For delegated calls, the signed-in user can receive the needed container role.
 - For trial container types, you're within trial limits.
 
 > [!IMPORTANT]
 > Trial container types can create up to five containers, including active containers and containers in the recycle bin.
+
+## Use a confidential client to create containers
+
+Creating a container requires a *confidential client* application. A confidential client holds a credential, such as a client secret or certificate, and acquires tokens from a component that keeps that credential private, like a web app back-end or a service.
+
+Create container calls that use a token from a *public client* application fail because public client tokens are accessible to the end user and can be re-used without the application's awareness. Public clients include single-page apps, mobile apps, and desktop apps.
+
+This requirement applies to both delegated and app-only creation:
+
+- For delegated creation, acquire the token with the authorization code flow and a client credential, then call Microsoft Graph from your back-end.
+- For app-only creation, acquire the token with the client credentials flow, which is always confidential.
+
+If your app has a public client front end, route container creation through a confidential back-end service instead of calling Microsoft Graph from the client.
+
+For more information, see [Public client and confidential client applications](/entra/identity-platform/msal-client-applications).
 
 ## Choose delegated or app-only creation
 
@@ -86,7 +104,7 @@ For the canonical API shape, see [Create fileStorageContainer](/graph/api/filest
 
 Implementation steps:
 
-1. Acquire a valid Microsoft Graph token.
+1. Acquire a valid Microsoft Graph token from a confidential client.
 1. Include the target container type information required by the API.
 1. Send the create request.
 1. Store the returned container ID.
@@ -105,7 +123,6 @@ For trial development, the Visual Studio Code extension can create containers.
 1. Right-click **Containers**.
 1. Select **Create container**.
 1. Enter a name.
-
 1. Confirm the container appears under the container type.
 
 See [Quickstart: Build your first app with VS Code](quickstart-vscode.md) for the extension flow.
@@ -148,14 +165,14 @@ Before updating:
 
 ## Delete or recycle a container
 
-Use delete behavior when a container is no longer active.
+Recycle or delete a container when it's no longer active.
 
 Before deletion:
 
 - Confirm the caller has permission.
 - Confirm your app has archived business references.
 - Decide whether the container should be recycled first.
-- Explain restore options.
+- Tell users how they can restore a recycled container.
 
 The Visual Studio Code extension includes recycle and recovery capabilities for trial development.
 
@@ -199,7 +216,8 @@ Create a smoke test:
 | Symptom | Check |
 |---|---|
 | Create fails | Registration and `Create` permission. |
-| Delegated create fails | User consent and role assignment behavior. |
+| Create fails from a browser, mobile, or desktop app | The token comes from a public client. Acquire it from a confidential client instead. |
+| Delegated create fails | User consent, confidential client token acquisition, and role assignment behavior. |
 | List fails for delegated user | OneDrive dependency noted in the auth article. |
 | Delete fails | `Delete` permission and user Owner role. |
 | Trial create fails | Active plus recycled containers may have reached the limit. |

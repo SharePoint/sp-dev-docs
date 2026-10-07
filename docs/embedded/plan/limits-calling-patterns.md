@@ -1,5 +1,5 @@
 ---
-title: Understand Limits and Calling Patterns
+title: Understand limits and calling patterns
 description: Plan SharePoint Embedded service limits, throttling behavior, retry handling, and performance-sensitive calling patterns.
 ms.date: 07/13/2026
 ms.reviewer: mawin
@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 task_type: concept
 audience: developer
 outcome: Design SharePoint Embedded calls that respect service limits, throttling, and resource unit costs.
-next:
+next: ../build/quickstart-vscode.md
 -->
 
 Use this article to plan SharePoint Embedded calling patterns before you build high-volume container and content operations. SharePoint Embedded expresses throughput as **resource units per minute** (a normalized request-cost model) rather than as a fixed requests-per-second rate; the [API rate limits](#api-rate-limits) section explains how to translate resource units into an expected request rate.
@@ -27,15 +27,15 @@ Limits marked with `*` can be increased on request through Microsoft support or 
 
 SharePoint Embedded limits affect:
 
-- *Container type counts
-- *Container counts
+- Container type counts*
+- Container counts*
 - Storage per container type and container
 - Files and folders
 - Permissions
 - File size
 - Version count
-- *API rate limits
-- *Requests per app, container, and user
+- API rate limits*
+- Requests per app, container, and user*
 
 > [!NOTE]
 > These limits can change. Verify the current limits before you launch to production.
@@ -46,20 +46,26 @@ SharePoint Embedded enforces the following size limits.
 
 | Resource | Limit |
 | --- | --- |
-| Container types that a partner tenant can create | 25* |
+| Container types that a developer tenant can create | 25* |
 | Container types that an app can own | 1 |
-| Containers of a container type per consuming tenant | 100k* |
 | Storage per container type per consuming tenant | 100 TB* |
-| Files and folders per container | 30M |
+| Files and folders per container | 30 million |
 | Storage per container | 25 TB |
-| Files and folders with additive permissions per container | 5k |
+| Files and folders with additive permissions per container | 5,000** |
 | File size | 250 GB |
-| Version count per file | 500 (Automatic Version History Limits Default Setting) |
-| Number of users shared per folder or file | 5k |
+| Version count per file | 500 (default automatic version history limit) |
+| Number of users shared per folder or file | 5,000 |
+| Number of searchable columns per container | 40 |
+| Number of indexed columns per container | 20 |
 
-An asterisk (`*`) indicates a limit you can request to increase.
+<sup>*</sup> indicates a limit you can request to increase.
+
+<sup>**</sup> there is a recommended limit and a supported limit for permission scopes in a container. See [Manage permission scopes in SharePoint](/sharepoint/manage-permission-scope) to learn more.
 
 Of the container types a tenant creates, one can be a free **trial container type** for development and testing, and the rest are **standard** (billed) container types. New tenants start with a lower default that can be raised on request. For trial-versus-standard details, see [Create and configure a container type](../build/create-container-type.md).
+
+Containers in a tenant count towards "sites per organization" in [SharePoint limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+The current limit is set to 2 million sites and containers per tenant. If you plan to exceed this limit in a specific consuming tenant of your SharePoint Embedded application, contact a Microsoft representative.
 
 ## Design for container type limits
 
@@ -93,7 +99,15 @@ Use container membership and roles where possible.
 
 For permission concepts, see [Plan authentication and permissions](../plan/authentication-permissions.md).
 
-## Throttling responses
+## Throttling management
+
+Throttling is a mechanism to protect the SharePoint Embedded service and ensure fair usage.
+Your application must handle throttling signals and react appropriately.
+
+> [!TIP]
+> Read [Avoid getting throttled or blocked in SharePoint](../../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md) to understand the best practices for your application. The limits for SharePoint Embedded are described in [API rate limits](#api-rate-limits).
+
+### Throttling responses
 
 When applications hit service limits, SharePoint Embedded can return:
 
@@ -107,7 +121,7 @@ The header tells the app how long to wait before retrying or making a new reques
 > [!IMPORTANT]
 > Throttled requests count toward usage limits. If you ignore `Retry-After`, your app can cause more throttling.
 
-## Retry guidance
+### Retry guidance
 
 Implement retry logic that:
 
@@ -120,7 +134,7 @@ Implement retry logic that:
 
 Use bounded retries and surface persistent failures to operations telemetry. For general guidance on handling throttling responses, see [Microsoft Graph throttling guidance](/graph/throttling).
 
-## Concurrency guidance
+### Concurrency guidance
 
 Reduce the number of concurrent requests when throttling occurs.
 
@@ -157,9 +171,9 @@ SharePoint Embedded enforces these API rate limits.
 
 | Resource | Limit |
 | --- | --- |
-| Requests per container | 3k resource units per min |
-| Requests per app per tenant | 12k resource units per min* |
-| Requests per user | 600 resource units per min |
+| Requests per container | 3,000 resource units per minute* |
+| Requests per app per tenant | 12,000 resource units per minute* |
+| Requests per user | 600 resource units per minute* |
 
 An asterisk (`*`) indicates a limit you can request to increase.
 
@@ -206,6 +220,7 @@ Design for:
 - Separation of foreground and background work.
 - Tenant-level fairness for multitenant apps.
 - Monitoring of request rate, response codes, and latency.
+- Spreading load across several containers.
 
 For billing impact of API transactions, see [Choose a billing model](../plan/choose-billing-model.md).
 
@@ -214,6 +229,8 @@ For billing impact of API transactions, see [Choose a billing model](../plan/cho
 Track:
 
 - HTTP `429` and `503` response rates.
+- `RateLimit-*` headers returned for both successful and throttled calls.
+- `Retry-After` header for throttled calls.
 - Retry counts and wait durations.
 - Resource-intensive operations.
 - Requests by app, tenant, user, and container.
@@ -227,6 +244,7 @@ Use these signals to tune concurrency and identify tenants or workflows that nee
 
 - Confirm current size limits before production launch.
 - Model containers instead of creating many container types.
+- Design your architecture to spread load across as many containers as possible.
 - Estimate storage per container and per consuming tenant.
 - Estimate file and folder counts.
 - Avoid unnecessary additive permissions.

@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ai-usage: ai-assisted
 ---
 
-# Quickstart: build your first app with VS Code
+# Quickstart: Build your first app with VS Code
 
 **Applies to:** Developer
 
@@ -19,12 +19,14 @@ outcome: Create a standard container type, attach billing, register it locally, 
 next: create-container-type.md
 -->
 
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
+
 Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) to create a standard container type for your first app. The extension also configures the owning app, attaches Azure billing, and registers the container type. Then you create a container and run a local sample app.
 
 This article starts the build journey. For more billing guidance, see [Create and configure a container type](create-container-type.md).
 
 > [!TIP]
-> To build through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
+> Prefer to build with a coding agent instead of a guided view? Use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) to provision and manage resources through natural language.
 
 [!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-quickstart-vscode.md)]
 
@@ -41,10 +43,11 @@ Before you start, make sure you have:
 - Permission to grant admin consent in Microsoft Entra ID.
 
 > [!IMPORTANT]
-
 > You need administrative access to a Microsoft 365 tenant. If you don't have a tenant, use the Microsoft 365 Developer Program, Microsoft Customer Digital Experience, or a Microsoft 365 E3 trial.
 
 ## Install the extension
+
+Install the extension with the button at the top of this article, or from within the editor:
 
 1. Open Visual Studio Code.
 1. Open **Extensions** from the activity bar.
@@ -97,6 +100,7 @@ Every container type has one owning Microsoft Entra ID application.
 
 > [!CAUTION]
 > If you select an existing application, the extension updates that app's configuration. Don't use a production app for this quickstart.
+
 For the model, see [SharePoint Embedded app architecture](../plan/app-tenant-architecture.md).
 
 ## Configure standard billing
@@ -118,6 +122,7 @@ You must register the container type in the consuming tenant before your app can
 1. Review the permissions.
 1. Grant admin consent in the browser.
 1. Return to Visual Studio Code.
+
 Registration configures the permissions the owning app can use against containers of the container type.
 
 ![Screenshot of the SharePoint Embedded extension prompting to register the container type on the local tenant, with the registration action highlighted.](../images/vsx-images/n7aregister-ct.png)
@@ -145,7 +150,6 @@ A container is the basic storage unit and security boundary in SharePoint Embedd
 
 1. Review the warning about local plain text secrets.
 1. If prompted to create a client secret, select **OK** for local development.
-
 1. Let the extension populate the runtime configuration file.
 
 > [!IMPORTANT]

@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Analyze and use the scanner data: Modernize lists & libraries
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 To help you understand which lists are not ready to use the modern list and library user interface, you can use the  [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. Use this article to understand how you can use the scanner output to prepare your lists for getting the most out of the modern list and library experience. The scanner will generate an Excel report plus several CSV files. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 
 ## Using the "Modern UI List readiness" report

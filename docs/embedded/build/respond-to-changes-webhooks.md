@@ -1,6 +1,6 @@
 ---
 title: Respond to file and container changes with webhooks
-description: Subscribe to SharePoint Embedded drive changes and handle Microsoft Graph webhook notifications.
+description: Subscribe to SharePoint Embedded file and container changes and handle Microsoft Graph webhook notifications.
 ms.date: 07/10/2026
 ms.reviewer: jaeccles
 ms.author: mawin
@@ -83,7 +83,7 @@ Content-Type: application/json
   "changeType": "updated",
   "notificationUrl": "https://contoso.example/api/onReceiptAdded?driveId={container-id}",
   "resource": "drives/{container-id}/root",
-  "expirationDateTime": "2026-06-25T03:58:34.088Z",
+  "expirationDateTime": "{future-expiration-date-time}",
   "clientState": ""
 }
 ```

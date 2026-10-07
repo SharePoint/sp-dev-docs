@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: List reports
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 ## Excel dashboard
 
 ![Lists dashboard](media/modernize/excel_listmodernization.png)

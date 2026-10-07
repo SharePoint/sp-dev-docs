@@ -1,5 +1,5 @@
 ---
-title: Open Office Files From Your App
+title: Open Office files from your app
 description: Launch Word, Excel, and PowerPoint files from SharePoint Embedded in Office web or desktop clients.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -23,6 +23,11 @@ Open Office files from your SharePoint Embedded app by using Microsoft Graph Dri
 
 Complete [Upload, download, and manage files](manage-files.md) first so your app has files to launch.
 
+When you store Office files in a SharePoint Embedded container, your app links to a full collaboration stack without building one. Word, Excel, and PowerPoint files support real-time co-authoring, AutoSave, automatic version history, and sharing through shareable links and @mentions, with scoped access levels. You don't need to build a collaboration engine. Editing opens in Office for the web (in a new browser tab or window) or in Office desktop clients, so users leave your app's UI to edit; embed a read-only [preview](preview-files.md) when you need inline, in-app viewing. For the decision context, see [Add Office co-authoring without building it](../plan/office-collaboration-instead-of-building.md).
+
+> [!NOTE]
+> @mentions notify only recipients who have a Microsoft 365 license. SharePoint Embedded sharing doesn't send email invitations.
+
 ## Understand Office experiences
 
 SharePoint Embedded Office file experiences work similarly to Microsoft 365 file experiences.
@@ -40,6 +45,27 @@ Supported experiences include:
 
 > [!NOTE]
 > Documents stored in an archived container can't be viewed or accessed. Your app must handle the archived state by showing an appropriate error and guiding users on next steps, such as reactivating the container.
+
+## Control Office integration
+
+Office integration is enabled by default for SharePoint Embedded container types. Authorized users can open supported files in Office for the web and Office desktop clients, including through Office experiences outside your app's custom user interface. If your app requires file access to remain within app-controlled experiences, you can disable Office integration for the container type by setting the `isOfficeRestricted` property in `fileStorageContainerTypeSettings` to `true`.
+
+For the property definition, see [fileStorageContainerTypeSettings resource type](/graph/api/resources/filestoragecontainertypesettings).
+
+Set `settings.isOfficeRestricted` with the Microsoft Graph `PATCH /storage/fileStorage/containerTypes/{containerTypeId}` API.
+
+```http
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypes/{containerTypeId}
+Content-Type: application/json
+
+{
+  "settings": {
+    "isOfficeRestricted": true
+  }
+}
+```
+
+When Office integration is disabled, users can't launch files from affected containers in Office for the web or Office desktop clients. Before enabling this restriction, make sure your app provides or directs users to an appropriate alternative experience for viewing or editing files.
 
 ## Prerequisites
 
@@ -127,7 +153,7 @@ ms-powerpoint:ofe|u|https://contoso.com/presentation.pptx
 ```
 
 > [!NOTE]
-> The URI must be opened in a blank window or new tab.
+> Open the URI in a blank window or new tab.
 
 ## Build a desktop client URL
 
@@ -171,7 +197,7 @@ Content-Type: application/json
 }
 ```
 
-Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. Common tokens include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`.
+Microsoft 365 resolves supported tokens, URL-encodes their values, and substitutes them into the template. For example, supported tokens can include `{tenant-id}`, `{drive-id}`, `{folder-id}`, `{item-id}`, `{site-domain}`, `{list-id}`, and `{site-url}`.
 
 When your app receives a `urlTemplate` redirect, authenticate the user, parse the token values, and use Microsoft Graph to retrieve the file. If you need the canonical file URL, use the DriveItem `webDavUrl` property instead of `webUrl`.
 
@@ -214,7 +240,7 @@ Office clients can display breadcrumb-style elements that associate Office files
 
 Breadcrumb patterns are constructed from container properties configured for your app.
 
-Use Current Channel to get breadcrumb patterns and future Office app enhancements.
+Use the Current Channel update channel for Microsoft 365 Apps so users receive the latest Office breadcrumb behavior and future Office app enhancements.
 
 For Office update channel information, see [Overview of update channels for Microsoft 365 Apps](/deployoffice/updates/overview-update-channels).
 
@@ -242,6 +268,7 @@ Test each launch path:
 | Mentions don't find a user | Microsoft 365 license and tenant membership limitations. |
 | Breadcrumb doesn't look right | Container properties and Office update channel. |
 | Redirect returns to wrong route | `ApplicationRedirectUrl` and app route handling. |
+| Office for the web or an Office desktop client doesn't open the file | Confirm that Office integration isn't disabled for the container type through `isOfficeRestricted`, and then check the user's file permissions and the existing client-specific launch requirements. |
 
 ## Next steps
 

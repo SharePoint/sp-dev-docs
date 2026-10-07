@@ -13,7 +13,7 @@ Like the Microsoft brand palette, the SharePoint themes are designed to build on
 
 The SharePoint color palette is now optimized for screens and devices. In addition, it is optimized to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
-![SharePoint color palette, Red A4262C, Orange CA5010, Gold 986f0b, Green 498205, Teal 038387, Blue 0078d4, Dark Blue 004e8c, Indigo 4f6bed, Plum 881798, Purple 8764B8, Cool Grey 69797e, Warm Grey 7a7574](../images/sharepoint-themes.png)
+![SharePoint color palette, Red A4262C, Orange CA5010, Gold 986f0b, Green 498205, Teal 007780, Blue 0078d4, Dark Blue 004e8c, Indigo 4f6bed, Plum 881798, Purple 8764B8, Cool Grey 69797e, Warm Grey 7a7574](../images/sharepoint-themes.png)
 
 ## Neutral palette
 

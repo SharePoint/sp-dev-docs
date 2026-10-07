@@ -43,3 +43,12 @@ Learn more about using SPFx for Microsoft Teams: [SPFx support for Microsoft Tea
 Microsoft Viva Connections, your gateway to modern engagement experiences is designed to keep everyone in your organization engaged and informed. Viva Connections entirely relies on SharePoint for its customization and extensibility story. This includes both the Viva Connections desktop and mobile experiences. Both of these experiences rely on the SPFx for all customizations.
 
 Learn more about using SPFx on Viva Connections: [SPFx support for Viva Connections](viva/overview-viva-connections.md).
+
+## Microsoft 365 Copilot
+
+Microsoft 365 Copilot can be extended with SharePoint Copilot Apps. These solutions pair SPFx Copilot components, which render interactive UI inside a Copilot conversation, with a declarative agent definition that makes them discoverable and callable. They're built with the familiar SPFx toolchain, packaged as a solution package (`.sppkg`), and deployed through the SharePoint app catalog.
+
+> [!IMPORTANT]
+> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments.
+
+Learn more about using SPFx for Microsoft 365 Copilot: [Overview of SharePoint Copilot Apps](copilot/overview-copilot-apps.md).

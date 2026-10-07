@@ -1,5 +1,5 @@
 ---
-title: Apply Security and Compliance Controls
+title: Apply security and compliance controls
 description: Apply Microsoft Purview and SharePoint controls to protect and govern SharePoint Embedded content.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 <!-- agent:
 task_type: how-to
-audience: compliance
+audience: administrator
 outcome: Apply supported Microsoft Purview and SharePoint controls to SharePoint Embedded containers and content.
 next: ../reference/troubleshooting.md
 -->
@@ -23,7 +23,7 @@ Apply security and compliance controls to SharePoint Embedded content by using M
 
 SharePoint Embedded uses Microsoft 365 compliance and data governance capabilities so organizations can protect, govern, and investigate content stored by embedded applications.
 
-Some compliance scenarios require the owning application to provide the end-user experience because SharePoint Embedded is API-only and doesn't have its own user interface.
+Some compliance scenarios require the owning application to provide the user experience because SharePoint Embedded is API-only and doesn't have its own user interface.
 
 > [!IMPORTANT]
 > Coordinate compliance controls with the SharePoint Embedded app owner.
@@ -40,7 +40,7 @@ Confirm these prerequisites.
 - App owners understand the policy impact on their user experience.
 - Legal, records management, and security stakeholders approve the control design.
 
-For supported controls, see [Plan Security, Compliance, and Governance](../plan/security-compliance-governance.md).
+For supported controls, see [Plan security, compliance, and governance](../plan/security-compliance-governance.md).
 
 ## Get container details for policy scope
 
@@ -124,12 +124,12 @@ Use selected container URLs when a policy applies only to specific data.
 ![Microsoft Purview retention policy scoped to selected SharePoint Embedded container URLs.](../images/sc5.png)
 
 > [!NOTE]
-> SharePoint Embedded doesn't provide a native end-user interface for retention label interactions.
+> SharePoint Embedded doesn't provide a native user interface for retention label interactions.
 > If users need to apply or respond to retention labels in an app, the owning app must provide that experience.
 
 For Microsoft Purview Data Lifecycle Management, see [Learn about Microsoft Purview Data Lifecycle Management](/purview/data-lifecycle-management).
 
-## Apply DLP policies
+## Apply Data Loss Prevention policies
 
 Use Microsoft Purview Data Loss Prevention (DLP) to identify, monitor, and automatically protect sensitive items stored in SharePoint Embedded applications.
 
@@ -181,17 +181,15 @@ For label concepts, see [Learn about sensitivity labels](/purview/sensitivity-la
 
 ## Apply block download policy
 
-SharePoint Administrators and Global Administrators can block file downloads from SharePoint Embedded containers with the SharePoint site policy cmdlet.
+SharePoint Embedded Administrators and Global Administrators can block file downloads from SharePoint Embedded containers with the SharePoint container policy cmdlet.
 
 ```powershell
-Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
+Set-SPOContainer -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 
-A SharePoint Advanced Management license is needed to enforce this policy.
+You need a SharePoint Advanced Management license to enforce this policy.
 
-Read the SharePoint documentation before enabling it in production.
-
-For more information, see [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
+Review [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites) before enabling it in production.
 
 ## Apply Conditional Access policy
 
@@ -248,7 +246,7 @@ After applying a control:
 - [Review audit events](review-audit-events.md)
 - [Manage containers with PowerShell](manage-containers-powershell.md)
 - [Manage containers in SharePoint admin center](manage-containers-sharepoint-admin-center.md)
-- [Plan Security, Compliance, and Governance](../plan/security-compliance-governance.md)
+- [Plan security, compliance, and governance](../plan/security-compliance-governance.md)
 - [Troubleshooting](../reference/troubleshooting.md)
 
 ## Next steps

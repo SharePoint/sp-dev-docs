@@ -1,5 +1,5 @@
 ---
-title: Review Audit Events
+title: Review audit events
 description: Find and interpret SharePoint Embedded audit activity in Microsoft Purview audit.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 <!-- agent:
 task_type: how-to
-audience: compliance
+audience: administrator
 outcome: Review SharePoint Embedded audit events in Microsoft Purview and use container fields for investigations.
 next: apply-security-compliance-controls.md
 -->
@@ -82,7 +82,7 @@ Container type events include the `ContainerTypeId` property. Unlike container-l
 You can search these events with the [`Search-UnifiedAuditLog`](/powershell/module/exchangepowershell/search-unifiedauditlog) cmdlet. For example:
 
 ```powershell
-Search-UnifiedAuditLog -Operations ContainerTypeCreated,ContainerTypeDeleted,ContainerTypeUpdated,ContainerTypeOwnersUpdated -StartDate (Get-Date).AddDays(-7) -EndDate (Get-Date)
+Search-UnifiedAuditLog -Operations ContainerTypeCreated,ContainerTypeDeleted,ContainerTypeUpdated,ContainerTypeOwnersUpdated,ContainerTypeRegistrationCreated,ContainerTypeRegistrationDeleted,ContainerTypeRegistrationUpdated -StartDate (Get-Date).AddDays(-7) -EndDate (Get-Date)
 ```
 
 ## Get container context
@@ -182,7 +182,7 @@ Audit shows activity.
 Other Microsoft Purview tools help with content investigation and policy enforcement.
 
 - Use eDiscovery to search, hold, and export content in SharePoint Embedded containers.
-- Use DLP to identify and protect sensitive information.
+- Use data loss prevention (DLP) to identify and protect sensitive information.
 - Use retention policies to preserve or delete content according to policy.
 - Use sensitivity labels to classify and protect containers.
 

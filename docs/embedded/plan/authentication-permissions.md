@@ -1,5 +1,5 @@
 ---
-title: Plan Authentication and Permissions
+title: Plan authentication and permissions
 description: Plan SharePoint Embedded authentication, admin consent, delegated access, app-only access, and container permissions.
 ms.date: 07/13/2026
 ms.reviewer: mawin
@@ -31,9 +31,9 @@ SharePoint Embedded authentication and authorization follow these principles:
 
 - Applications interact with SharePoint Embedded through Microsoft Graph.
 - Applications need container type application permissions to access containers of that container type.
-- Applications can only access containers that the user is a member of when using access on behalf of a user.
-- Applications can access all containers enabled by their container type application permissions when using access without a user.
-- Applications should use access on behalf of users whenever possible to enhance security and accountability.
+- Applications can only access containers that the user is a member of when using delegated access on behalf of a user.
+- Applications can access all containers enabled by their container type application permissions when using app-only access without a user.
+- Applications should use delegated access whenever possible to enhance security and accountability.
 
 ## Prerequisites
 
@@ -64,7 +64,7 @@ Delegated access means the application acts on behalf of a user.
 
 SharePoint Embedded operations on behalf of a user require Microsoft Graph `FileStorageContainer.Selected` delegated permission.
 
-This delegated permission does not require admin consent on the consuming tenant.
+This delegated permission doesn't require admin consent on the consuming tenant.
 
 The user must also have container permissions.
 
@@ -76,6 +76,14 @@ The application's effective permissions are the intersection of:
 Use delegated access whenever possible.
 
 Delegated access improves auditability because actions can be associated with the user.
+
+## Confidential client requirement for container creation
+
+Creating a container requires a *confidential client* application—one that holds a client secret or certificate and keeps it private. Create calls that use a token from a public client application, such as a single-page app, mobile app, or desktop app, fail.
+
+Plan a back-end component that acquires the token and calls Microsoft Graph when your app's front end is a public client. App-only creation already meets this requirement because the client credentials flow is confidential.
+
+For more information, see [Public client and confidential client applications](/entra/identity-platform/msal-client-applications).
 
 ## App-only access
 
@@ -95,7 +103,7 @@ Apply least privilege when granting container type application permissions.
 
 An administrator on the consuming tenant must consent to the application's permission request.
 
-Admin consent is required for the application `FileStorageContainer.Selected` permission. Delegated `FileStorageContainer.Selected` does not require admin consent.
+Admin consent is required for the application `FileStorageContainer.Selected` permission. Delegated `FileStorageContainer.Selected` doesn't require admin consent.
 
 Container type registration also requires consent for the owning application to act in the consuming tenant.
 
@@ -118,7 +126,7 @@ Container type creation, management, and registration are now Microsoft Graph op
 
 ## Container type application permissions
 
-Container type application permissions are granted by the owner application through container type registration.
+Container type application permissions are granted by the owning application through container type registration.
 
 These permissions define what an application can do against containers of the container type.
 
@@ -170,7 +178,7 @@ When a user creates a new container through delegated calls, that user is automa
 Container type owners are distinct from container owners. They govern the container type itself, in the **owning** tenant.
 
 - **Automatic assignment**: The user who creates a container type is automatically assigned as an owner.
-- **Add or remove owners**: Use the container type `permissions` relationship (`POST`/`DELETE /storage/fileStorage/containerTypes/{id}/permissions`, beta) to manage up to **three** owners per container type.
+- **Add or remove owners**: Use the container type `permissions` relationship (beta) to manage up to **three** owners per container type: `POST /storage/fileStorage/containerTypes/{id}/permissions` adds an owner, and `DELETE /storage/fileStorage/containerTypes/{id}/permissions/{permissionId}` removes a specific owner permission.
 - **Capabilities**: With `FileStorageContainerType.Manage.All` in delegated mode, owners can create, read, update, and delete the container type they own, manage its owners, and create containers of that type (delegated calls only).
 - **Restrictions**: External identities (guest users) can't be container type owners. Owner information exists **only** in the owning tenant and isn't propagated to consuming tenants on registration.
 - **Effective access**: Owner capabilities are user permissions; effective access is the intersection of the app's Graph permissions and the owner role.

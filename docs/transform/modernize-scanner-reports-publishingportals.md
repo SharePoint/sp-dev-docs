@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: Publishing Portal reports
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 ## Excel dashboard
 
 ![Publishing portal dashboard](media/modernize/excel_publishingportal.png)

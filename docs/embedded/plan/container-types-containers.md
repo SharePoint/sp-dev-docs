@@ -57,7 +57,7 @@ The container type is represented on each container as an immutable property nam
 
 ## Containers
 
-A container is the basic storage unit in SharePoint Embedded, and it defines a security and compliance boundary. Applications create containers in consuming tenants by using Microsoft Graph.
+A container is the basic storage unit in SharePoint Embedded, and it defines a security and compliance boundary. Applications create containers in consuming tenants by using Microsoft Graph. Container creation requires a confidential client application, so plan for a component that holds a client secret or certificate. For more information, see [Plan authentication and permissions](../plan/authentication-permissions.md#confidential-client-requirement-for-container-creation).
 
 Files, folders, metadata, versions, and recycle bin content are stored within containers and are subject to current SharePoint Embedded limits.
 
@@ -65,7 +65,7 @@ For limits, see [Understand limits and calling patterns](../plan/limits-calling-
 
 ## Ownership
 
-Container type ownership and container residency are different. The owning tenant creates the container type. The consuming tenant uses the container type and hosts containers.
+Container type ownership and container residency are different. The developer tenant creates the container type. The consuming tenant uses the container type and hosts containers.
 
 All container content created through the application is stored within the consuming tenant's Microsoft 365 tenant boundary.
 
@@ -94,13 +94,13 @@ A trial container type can't be converted to production.
 
 To create a trial container type, developers can use the SharePoint Embedded Visual Studio Code extension or the Microsoft Graph container type API.
 
-Container types are created with the Microsoft Graph `POST /v1.0/storage/fileStorage/containerTypes` endpoint, using the `trial` billing classification. This call requires the `FileStorageContainerType.Manage.All` delegated permission; app-only access isn't supported. The calling user must be a non-guest member of the owning tenant (no admin role required) and is automatically assigned as an owner of the new container type.
+Container types are created with the Microsoft Graph `POST /v1.0/storage/fileStorage/containerTypes` endpoint, using the `trial` billing classification. This call requires the `FileStorageContainerType.Manage.All` delegated permission; app-only access isn't supported. The calling user must be a non-guest member of the developer tenant (no admin role required) and is automatically assigned as an owner of the new container type.
 
 ## Standard container types
 
 A standard container type is used for non-trial scenarios.
 
-Each tenant can have 25 container types at a time.
+By default, each tenant can have 25 container types at a time; one can be a free trial container type, and the rest are standard container types. You can request an increase through Microsoft support or your SharePoint Embedded onboarding contact.
 
 Standard container types are billable and must use a billing model.
 
@@ -115,7 +115,7 @@ For billing selection, see [Choose a billing model](../plan/choose-billing-model
 
 With standard billing, consumption-based charges are billed to the tenant that owns or develops the application.
 
-The owning tenant attaches a billing profile after creating the standard container type.
+The developer tenant attaches a billing profile after creating the standard container type.
 
 Create the container type with the Microsoft Graph `POST /v1.0/storage/fileStorage/containerTypes` endpoint using the `standard` billing classification, then attach an Azure billing profile:
 
@@ -145,7 +145,7 @@ The developer creates the container type with the `directToCustomer` billing cla
 }
 ```
 
-After registration, a Global Administrator in the consuming tenant sets up billing in the consuming tenant.
+After registration, a Billing Administrator or Global Administrator in the consuming tenant sets up billing.
 
 ## Admin and developer interaction
 
@@ -167,9 +167,9 @@ Developers can configure selected container type settings after creation.
 
 You can configure these container type settings:
 
-- `ApplicationRedirectUrl`
-- `DiscoverabilityDisabled`
-- `SharingRestricted`
+- `urlTemplate`
+- `isDiscoverabilityEnabled`
+- `isSharingRestricted`
 
 Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API for supported container type updates. For administrative settings, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 

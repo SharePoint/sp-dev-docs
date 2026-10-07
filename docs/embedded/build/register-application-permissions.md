@@ -1,5 +1,5 @@
 ---
-title: Register Application Permissions
+title: Register application permissions
 description: Register SharePoint Embedded container type application permissions in a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: stpuceli
@@ -49,6 +49,7 @@ The owning application must have:
 
 > [!NOTE]
 > The container type registration API is available in Microsoft Graph v1.0.
+
 When the owning application calls the registration API on behalf of a user (delegated), that user must be assigned the [SharePoint Embedded Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-embedded-administrator) or [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role. When it calls without a user context (app-only), it uses the client credentials grant flow.
 
 ## Grant admin consent
@@ -83,7 +84,7 @@ Call the registration endpoint in the consuming tenant.
 PUT https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypeRegistrations/{containerTypeId}
 ```
 
-`{containerTypeId}` is the container type ID created in the owning tenant.
+`{containerTypeId}` is the container type ID created in the developer tenant.
 
 In the request body, provide the application permission grants for the container type.
 
@@ -123,7 +124,7 @@ Use this pattern when a guest app needs a defined workload, such as backup or pr
       "applicationPermissions": ["full"]
     },
     {
-      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6",
+      "appId": "89ea5c94-7736-4e25-95ad-3fa95f62b6cd",
       "delegatedPermissions": ["read", "write"],
       "applicationPermissions": ["none"]
     }
@@ -137,25 +138,24 @@ Replace both app IDs with your applications.
 
 | Permission | Use |
 |---|---|
-| `None` | Grant no permissions. |
-| `ReadContent` | Read content in containers of this type. |
-| `WriteContent` | Write content in containers of this type. |
-| `Create` | Create containers of this type. |
-| `Delete` | Delete containers of this type. |
-| `Read` | Read container metadata. |
-| `Write` | Update container metadata. |
-| `EnumeratePermissions` | Enumerate container members and roles. |
-| `AddPermissions` | Add container members. |
-| `UpdatePermissions` | Update existing memberships. |
-| `DeletePermissions` | Delete other members. |
-| `DeleteOwnPermission` | Remove the caller's own membership. |
-| `ManagePermissions` | Manage container role assignments. |
-| `ManageContent` | Manage the content of containers of this type. |
-| `Full` | Grant all permissions. |
+| `none` | Grant no permissions. |
+| `readContent` | Read content in containers of this type. |
+| `writeContent` | Write content in containers of this type. |
+| `create` | Create containers of this type. |
+| `delete` | Delete containers of this type. |
+| `read` | Read container metadata. |
+| `write` | Update container metadata. |
+| `enumeratePermissions` | Enumerate container members and roles. |
+| `addPermissions` | Add container members. |
+| `updatePermissions` | Update existing memberships. |
+| `deletePermissions` | Delete other members. |
+| `deleteOwnPermission` | Remove the caller's own membership. |
+| `managePermissions` | Manage container role assignments. |
+| `manageContent` | Manage the content of containers of this type. |
+| `full` | Grant all permissions. |
 
 > [!NOTE]
-
-> `WriteContent` can't be granted without `ReadContent`.
+> `writeContent` can't be granted without `readContent`.
 
 ## Validate registration
 

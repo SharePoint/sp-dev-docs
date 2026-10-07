@@ -3,6 +3,7 @@ title: Build your first SharePoint Copilot App
 description: Create a SharePoint Copilot App with SPFx, test it in the Copilot Workbench, package and deploy it to the app catalog, and use it in Microsoft 365 Copilot.
 ms.date: 07/09/2026
 ms.localizationpriority: high
+ms.custom: scenarios:getting-started
 ---
 
 # Build your first SharePoint Copilot App
@@ -12,9 +13,8 @@ ms.localizationpriority: high
 
 In this tutorial, you build a baseline SharePoint Copilot App from scratch, test it locally in the Copilot Workbench, package it, deploy it to the SharePoint app catalog, and use it inside Microsoft 365 Copilot. This gives you the complete end-to-end path for the model: create, test, package, deploy, and use.
 
-<!-- PLACEHOLDER: hero screenshot of the finished Copilot component running in Microsoft 365 Copilot -->
 > [!div class="mx-imgBorder"]
-> ![Placeholder: the finished Copilot component running in Microsoft 365 Copilot](../../../images/copilot/tutorial-outcome.png)
+> ![The finished Copilot component running in Microsoft 365 Copilot](../../../images/copilot/tutorial-outcome.png)
 
 For a conceptual overview of how SharePoint Copilot Apps work, see [Overview of SharePoint Copilot Apps](../overview-copilot-apps.md).
 
@@ -75,7 +75,6 @@ Before you start, make sure you have the following in place:
 
 A SharePoint Copilot App groups the Copilot component source with the declarative agent definition in a single SPFx solution. The following files and folders are the most important ones to understand.
 
-<!-- PLACEHOLDER: screenshot highlighting the copilot folder and copilotComponents folder -->
 > [!div class="mx-imgBorder"]
 > ![The project structure, highlighting the copilot and copilotComponents folders](../../../images/copilot/tutorial-structure.png)
 
@@ -209,9 +208,8 @@ The Copilot Workbench lets you run and debug your component while it is hosted l
 
 1. When prompted, accept the loading of debug manifests so the debug version of your component loads in the Workbench.
 
-    <!-- PLACEHOLDER: screenshot of the component running in the Copilot Workbench -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: the component under test in the Copilot Workbench](../../../images/copilot/tutorial-workbench.png)
+    > ![The component under test in the Copilot Workbench](../../../images/copilot/tutorial-workbench.png)
 
 1. Activate the component from the left side of the screen and select the **Fire turn** button to pass the properties JSON to the component and initialize it in the debug canvas.
 
@@ -235,9 +233,8 @@ When you are satisfied with the experience in the Workbench, build the solution 
 
     The command creates the package at **./sharepoint/solution/my-copilot-app.sppkg**. Because `includeClientSideAssets` is set to `true` in **config/package-solution.json**, the component assets are bundled into the package and hosted automatically in the tenant where the app is installed.
 
-    <!-- PLACEHOLDER: screenshot of the generated .sppkg package -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: the generated solution package](../../../images/copilot/tutorial-package.png)
+    > ![The generated solution package](../../../images/copilot/tutorial-package.png)
 
 ## Deploy to the SharePoint app catalog
 
@@ -247,18 +244,16 @@ When you are satisfied with the experience in the Workbench, build the solution 
 
 1. Select **Enable app**.
 
-    <!-- PLACEHOLDER: screenshot of the trust/deploy dialog in the app catalog -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: deploying the package in the SharePoint app catalog](../../../images/copilot/tutorial-deploy.png)
+    > ![Deploying the package in the SharePoint app catalog](../../../images/copilot/tutorial-deploy.png)
 
 1. In the app catalog list, select the uploaded app and select **Add to Teams**. This deploys the declarative agent to the tenant's agent catalog and makes it available to users in Microsoft 365 Copilot.
 
     > [!NOTE]
     > The **Add to Teams** button label will be updated in a future release to better reflect that it also publishes the agent to the tenant agent catalog. Deployment of the agent can take some time to complete.
 
-    <!-- PLACEHOLDER: screenshot of selecting Add to Teams in the app catalog -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: syncing the agent to the tenant agent catalog with Add to Teams](../../../images/copilot/tutorial-sync-teams.png)
+    > ![Syncing the agent to the tenant agent catalog with Add to Teams](../../../images/copilot/tutorial-sync-teams.png)
 
 ## Use the app in Microsoft 365 Copilot
 
@@ -267,9 +262,8 @@ When you are satisfied with the experience in the Workbench, build the solution 
     > [!NOTE]
     > There can be a delay before the agent appears in the all-agents listing. You can also go to the Microsoft 365 admin center and install the agent directly for users, which can speed up the deployment process.
 
-    <!-- PLACEHOLDER: screenshot of selecting the agent in Microsoft 365 Copilot -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: selecting the MyCopilotApp agent in Microsoft 365 Copilot](../../../images/copilot/tutorial-selecting-agent.png)
+    > ![Selecting the MyCopilotApp agent in Microsoft 365 Copilot](../../../images/copilot/tutorial-selecting-agent.png)
 
 1. Start a conversation with the agent by entering "Call MyCopilotAppTool" and submitting it to Copilot. Copilot invokes your tool and renders the Copilot component inline in the conversation.
 
@@ -278,15 +272,13 @@ When you are satisfied with the experience in the Workbench, build the solution 
 
 1. The first time the tool (UX component) is accessed, Copilot confirms the call with the user. Select **Allow** when prompted. The prompt might currently appear a few times before the UX renders. After that, Copilot renders the UX component in the Copilot canvas.
 
-    <!-- PLACEHOLDER: screenshot of the component rendered inline in Microsoft 365 Copilot -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: the Copilot component rendered inline in the conversation](../../../images/copilot/tutorial-inline-experience.png)
+    > ![The Copilot component rendered inline in the conversation](../../../images/copilot/tutorial-inline-experience.png)
 
 1. Expand the component to fullscreen to see the display mode switch in action. In the default **No framework** component, an expand button is rendered in the top-right corner, next to the user's name.
 
-    <!-- PLACEHOLDER: screenshot of the component rendered in fullscreen in Microsoft 365 Copilot -->
     > [!div class="mx-imgBorder"]
-    > ![Placeholder: the Copilot component expanded to fullscreen](../../../images/copilot/tutorial-fullscreen-experience.png)
+    > ![The Copilot component expanded to fullscreen](../../../images/copilot/tutorial-fullscreen-experience.png)
 
 ## Next steps
 

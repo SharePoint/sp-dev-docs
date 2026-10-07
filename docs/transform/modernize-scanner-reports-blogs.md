@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # SharePoint Modernization scanner reports: Blog reports
 
+[!INCLUDE [legacy-modernization-scanner](../../includes/snippets/open-source/modernization-scanner-legacy.md)]
+
 ## Excel dashboard
 
 ![Blog dashboard](media/modernize/excel_blogusage.png)

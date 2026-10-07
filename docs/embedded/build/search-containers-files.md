@@ -1,5 +1,5 @@
 ---
-title: Search Containers and Files
+title: Search containers and files
 description: Search SharePoint Embedded containers and files with Microsoft Search in Microsoft Graph.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -22,7 +22,7 @@ next: container-metadata.md
 Use Microsoft Search in Microsoft Graph when your app needs keyword search across SharePoint Embedded containers or content. The search API ranks matching results and returns `drive` resources for containers or `driveItem` resources for files and folders.
 
 > [!NOTE]
-> SharePoint Embedded search is in preview and is available only on the Microsoft Graph **`/beta`** endpoint — there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
+> SharePoint Embedded search is in preview. Use the Microsoft Graph **`/beta`** endpoint because there's no `v1.0` search API for containers. Search supports delegated permissions only and follows the [exceptional access pattern](configure-authentication-authorization.md#handle-operations-not-exposed-through-graph).
 
 ## Choose the search scope
 
@@ -71,7 +71,7 @@ The response includes `hitsContainers`. Each hit contains a `hitId`, `rank`, `su
 
 ## Search files and folders
 
-Request `driveItem` resources when the user searches file names or file content. Scope to a specific container with `ContainerId` when the user is already inside a workspace.
+Request `driveItem` resources when the user searches file names or file content. Scope to a specific container with `ContainerId` when the user is already inside a container.
 
 ```json
 {
@@ -120,10 +120,10 @@ Use `from` and `size` to page through ranked results. Read `hitsContainers[].tot
 For container custom properties, append `OWSTEXT` to the custom property name in the query string.
 
 ```text
-customPropertyNametOWSTEXT:customPropertyValue AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae
+customPropertyNameOWSTEXT:customPropertyValue AND ContainerTypeId:498c6855-8f0e-0de7-142e-4e9ff86af9ae
 ```
 
-Use full-text **search** (the `/beta/search/query` endpoint above) when users type free-text terms and you want relevance ranking across containers. Use direct enumeration instead of search when your app must filter on known metadata values without relevance ranking. For example, query drive items with `$filter`, `$expand`, and `$orderby`:
+Use full-text search (the `/beta/search/query` endpoint above) when users type free-text terms and you want relevance ranking across containers. Use direct enumeration instead of search when your app must filter on known metadata values without relevance ranking. For example, query drive items with `$filter`, `$expand`, and `$orderby`:
 
 ```http
 GET https://graph.microsoft.com/v1.0/drives/{container-id}/items?$filter=startswith(listitem/fields/{column}, '{value}')&$expand=listitem($expand=fields)

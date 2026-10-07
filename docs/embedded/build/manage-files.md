@@ -1,5 +1,5 @@
 ---
-title: Upload, Download, and Manage Files
+title: Upload, download, and manage files
 description: Use Microsoft Graph DriveItem APIs to upload, download, organize, update, delete, and restore SharePoint Embedded files.
 ms.date: 07/13/2026
 ms.reviewer: cindylay
@@ -22,6 +22,8 @@ next: open-office-files.md
 Use Microsoft Graph file and DriveItem APIs to manage files inside SharePoint Embedded containers.
 
 Complete [Create and manage containers](create-manage-containers.md) first so you have a container ID.
+
+SharePoint Embedded gives your app an API-only document store with Microsoft 365 capabilities built in. File management is fully programmatic through Microsoft Graph, with no SharePoint UI. The full lifecycle includes upload and download, folders, versioning, a recycle bin, and 93-day content restore. Content is searchable through the Microsoft Search API and inherits the tenant's Microsoft Purview compliance. Your app's end users don't need a Microsoft 365 license for basic file operations.
 
 ## Understand file storage
 
@@ -57,14 +59,13 @@ Before managing files, make sure:
 
 ## Map container IDs to drives
 
-The preview source notes that the Graph preview endpoint uses a `driveId`, and for SharePoint Embedded the drive ID is the container ID that starts with `b!`.
+Microsoft Graph DriveItem APIs use a `driveId`. For SharePoint Embedded, the drive ID is the container ID that starts with `b!`.
 
 In your app:
 
 1. Store the container ID returned when the container is created.
 1. Use the container ID when calling DriveItem APIs that require a drive identifier.
 1. Store item IDs returned by upload or folder creation operations.
-
 1. Avoid reconstructing IDs from URLs.
 
 ## Upload files
@@ -124,7 +125,7 @@ Before replacing content:
 - Preserve the DriveItem ID where supported.
 - Update your app metadata after Graph succeeds.
 
-Office files stored in SharePoint Embedded have versioning enabled automatically for Word, Excel, and PowerPoint files.
+Office files stored in SharePoint Embedded have versioning enabled automatically for Word, Excel, and PowerPoint.
 
 See [Open Office files from your app](open-office-files.md) for Office behavior.
 
@@ -132,7 +133,7 @@ See [Open Office files from your app](open-office-files.md) for Office behavior.
 
 Use documented DriveItem update and move operations where supported.
 
-A safe flow should read the current DriveItem, confirm the destination folder, apply the operation, refresh stored path or display name, and keep the DriveItem ID as the durable reference when possible.
+Read the current DriveItem, confirm the destination folder, apply the operation, refresh the stored path or display name, and keep the DriveItem ID as the durable reference when possible.
 
 ## Delete files
 
@@ -149,11 +150,11 @@ Before deleting:
 
 Use Microsoft Graph and SharePoint file restore capabilities documented for DriveItems and the service experience.
 
-A restore flow should identify the deleted item or version, confirm permission, perform the restore, refresh the item list, and communicate the restored location.
+Identify the deleted item or version, confirm permission, perform the restore, refresh the item list, and communicate the restored location.
 
 > [!NOTE]
-> [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem) supports `driveItemId` as an alternate key (October 2025). If you know the ID of the original **driveItem**, you can restore the corresponding **recycleBinItem** directly without first enumerating the recycle bin.
-> [!NOTE]
+> [recycleBinItem: restore](/graph/api/filestoragecontainer-restore-recyclebinitem?view=graph-rest-beta) supports `driveItemId` as an alternate key in Microsoft Graph beta (October 2025). If you know the ID of the original **driveItem**, you can restore the corresponding **recycleBinItem** directly without first enumerating the recycle bin.
+>
 > For exact file operation request and response details, use Microsoft Graph DriveItem documentation.
 
 ## Connect to Office and preview experiences
@@ -162,7 +163,7 @@ After upload, add richer experiences:
 
 - [Open Office files from your app](open-office-files.md) for Word, Excel, and PowerPoint launch behavior.
 - [Preview files in your app](preview-files.md) for browser previews.
-- [Search containers and files](../build/search-containers-files.md) for discovery.
+- [Search containers and files](search-containers-files.md) for discovery.
 
 ## Validate file operations
 

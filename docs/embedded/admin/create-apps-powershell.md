@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 
 # Create apps with PowerShell
 
-**Applies to:** Owning tenant administrator — SharePoint Embedded admin / Global admin
+**Applies to:** Developer tenant administrator — SharePoint Embedded admin / Global admin
 
 <!-- agent:
 task_type: how-to
@@ -19,7 +19,7 @@ outcome: Create SharePoint Embedded apps and configure standard billing with Sha
 next: install-sharepoint-embedded-app.md
 -->
 
-Use SharePoint PowerShell to create SharePoint Embedded container types for apps. Each container type is associated with one Microsoft Entra application.
+Use SharePoint PowerShell to create SharePoint Embedded container types for apps. Each container type maps to one Microsoft Entra application.
 
 ## Before you begin
 
@@ -49,7 +49,7 @@ Add-SPOContainerTypeBilling -ContainerTypeId <ContainerTypeId> -AzureSubscriptio
 
 ## Create a pass-through billed app
 
-Use pass-through billing, also known as direct-to-customer billing, when the consuming tenant pays for SharePoint Embedded usage.
+Use pass-through billing when the consuming tenant pays for SharePoint Embedded usage.
 
 ```powershell
 New-SPOContainerType -IsPassThroughBilling -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId>
@@ -75,6 +75,12 @@ List SharePoint Embedded apps created in the owning tenant.
 Get-SPOContainerType
 Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 ```
+
+`Get-SPOContainerType` checks Azure access before it displays the billing subscription, resource group, and region for a standard-billed container type. The signed-in account needs the `Microsoft.Resources/subscriptions/read` permission at the linked Azure subscription scope. The Azure Reader, Contributor, and Owner roles include this permission.
+
+Without this Azure permission, the cmdlet still returns the container type. However, it omits the billing details and displays a permissions message. The SharePoint Embedded Administrator and Global Administrator roles don't grant access to the Azure subscription.
+
+Reader access is sufficient to view the billing details. Owner or Contributor access is required to add or change the billing relationship.
 
 ## Update app properties
 

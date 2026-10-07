@@ -65,13 +65,13 @@ function RestRequest(url,params) {
 
 var colorPairs = {
   "light": [
-    { "accentColor": "#03787C", "backgroundColor": "#FFFFFF" },
-    { "accentColor": "#FFFFFF", "backgroundColor": "#03787C" },
-    { "accentColor": "#E3FFFD", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#E3FFFD" },
-    { "accentColor": "#FFF9E3", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#FFF9E3" },
-    { "accentColor": "#03787C", "backgroundColor": "#F5F5F5" },
+    { "accentColor": "#007780", "backgroundColor": "#FFFFFF" },
+    { "accentColor": "#FFFFFF", "backgroundColor": "#007780" },
+    { "accentColor": "#E3FFFD", "backgroundColor": "#007780" },
+    { "accentColor": "#007780", "backgroundColor": "#E3FFFD" },
+    { "accentColor": "#FFF9E3", "backgroundColor": "#007780" },
+    { "accentColor": "#007780", "backgroundColor": "#FFF9E3" },
+    { "accentColor": "#007780", "backgroundColor": "#F5F5F5" },
     { "accentColor": "#242424", "backgroundColor": "#F5F5F5" },
     { "accentColor": "#155473", "backgroundColor": "#FFFFFF" },
     { "accentColor": "#FFFFFF", "backgroundColor": "#155473" },
@@ -279,13 +279,13 @@ function RestRequest(url,params) {
 
 var colorPairs = {
   "light": [
-    { "accentColor": "#03787C", "backgroundColor": "#FFFFFF" },
-    { "accentColor": "#FFFFFF", "backgroundColor": "#03787C" },
-    { "accentColor": "#E3FFFD", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#E3FFFD" },
-    { "accentColor": "#FFF9E3", "backgroundColor": "#03787C" },
-    { "accentColor": "#03787C", "backgroundColor": "#FFF9E3" },
-    { "accentColor": "#03787C", "backgroundColor": "#F5F5F5" },
+    { "accentColor": "#007780", "backgroundColor": "#FFFFFF" },
+    { "accentColor": "#FFFFFF", "backgroundColor": "#007780" },
+    { "accentColor": "#E3FFFD", "backgroundColor": "#007780" },
+    { "accentColor": "#007780", "backgroundColor": "#E3FFFD" },
+    { "accentColor": "#FFF9E3", "backgroundColor": "#007780" },
+    { "accentColor": "#007780", "backgroundColor": "#FFF9E3" },
+    { "accentColor": "#007780", "backgroundColor": "#F5F5F5" },
     { "accentColor": "#242424", "backgroundColor": "#F5F5F5" },
     { "accentColor": "#155473", "backgroundColor": "#FFFFFF" },
     { "accentColor": "#FFFFFF", "backgroundColor": "#155473" },

@@ -1,5 +1,5 @@
 ---
-title: Grant Admin Consent and Permissions
+title: Grant admin consent and permissions
 description: Review SharePoint Embedded permissions, grant admin consent, and verify the consent state in a consuming tenant.
 ms.date: 07/13/2026
 ms.reviewer: dilucesr
@@ -19,7 +19,7 @@ outcome: Grant admin consent for a SharePoint Embedded app and validate permissi
 next: setup-billing-microsoft-365-admin-center.md
 -->
 
-Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions always require admin consent, while delegated permissions for SharePoint Embedded don't. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
+Grant admin consent when a SharePoint Embedded app needs high-privilege permissions in your Microsoft 365 tenant. Application permissions require admin consent. Delegated flows can avoid tenant-wide admin consent, but they still require the appropriate admin role for registration or per-user consent for container access. To learn more, see [Grant admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
 Use this article to review requested permissions, grant consent, and troubleshoot common consent failures.
 
@@ -32,7 +32,7 @@ Use this article to review requested permissions, grant consent, and troubleshoo
 Confirm these prerequisites:
 
 - You can grant admin consent (see [Grant tenant-wide admin consent](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#prerequisites)).
-- You know you Microsoft Entra tenant ID (see [How to find your Microsof Entra tenant ID](/entra/fundamentals/how-to-find-tenant))
+- You know your Microsoft Entra tenant ID (see [How to find your Microsoft Entra tenant ID](/entra/fundamentals/how-to-find-tenant)).
 - You know the owning application client ID.
 - You understand why the app needs each requested permission.
 - The app owner has provided installation and consent instructions.
@@ -45,7 +45,7 @@ An owning application must meet two requirements before it can act on a consumin
 1. The owning app must have a service principal installed in the consuming tenant.
 1. The owning app must be granted the permissions needed to register the container type and access its containers in the consuming tenant.
 
-Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent isn't a hard requirement for the owning application to act on the consuming tenant. SharePoint Embedded apps that operate exclusively on behalf of a user don't need to be granted admin consent. Granting admin consent for apps that operate exclusively on behalf of a user may improve user experience as the app won't require consent from every user who wants to sign into the app.
+Both requirements are typically satisfied when a tenant administrator grants admin consent to the owning application. However, admin consent isn't a hard requirement for the owning application to act on the consuming tenant. Apps that operate exclusively on behalf of a user don't need admin consent. Admin consent can still improve the user experience because each user won't need to consent when they sign in to the app.
 
 > [!CAUTION]
 > You need to understand the implications of granting admin consent to an application. To learn more, see [Grant tenant-wide admin consent](/entra/identity/enterprise-apps/grant-admin-consent).
@@ -73,13 +73,13 @@ Before granting consent, review the requested permissions with the app owner.
 Ask the app owner to explain any permission that doesn't align with the expected scenario.
 
 > [!CAUTION]
-> - DON'T grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
+> - Don't grant consent from a copied URL unless you've verified the `client_id` value in the URL. A consent URL grants permissions to the app identified by that client ID.
 >
-> - DON'T grant consent if you don't understand why each permission is being requested.
+> - Don't grant consent if you don't understand why each permission is being requested.
 
 ## Grant admin consent from the consent endpoint
 
-The SharePoint Embedded may request admin consent on your tenant by providing you with, or redirecting you to, the admin consent URL. To learn more about the admin consent URL, see [Admin consent on the Microsoft identity platform](/entra/identity-platform/v2-admin-consent).
+The SharePoint Embedded app may request admin consent on your tenant by providing you with, or redirecting you to, the admin consent URL. To learn more about the admin consent URL, see [Admin consent on the Microsoft identity platform](/entra/identity-platform/v2-admin-consent).
 
 ```http
 https://login.microsoftonline.com/{your-tenant-id}/v2.0/adminconsent?client_id={owning-app-clientid}&scope=https://graph.microsoft.com/.default&redirect_uri={spe-app-redirect-uri}
@@ -93,7 +93,7 @@ Confirm that in the admin consent URL:
 - The scope value points to the `.default` Microsoft Graph scope. If the app owner gives you a different scope value, make sure you understand why.
 - A `state` query parameter may or may not be present.
 
-For national cloud environments, the admin consent endpoint will vary. See [Microsoft Entra authentication endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints) for more information.
+For national cloud environments, the admin consent endpoint varies. See [Microsoft Entra authentication endpoints on national clouds](/entra/identity-platform/authentication-national-cloud#microsoft-entra-authentication-endpoints) for more information.
 
 ## Grant consent from Microsoft Entra admin experiences
 

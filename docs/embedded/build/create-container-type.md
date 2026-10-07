@@ -7,6 +7,7 @@ ms.author: mawin
 ms.localizationpriority: high
 ai-usage: ai-assisted
 ---
+
 # Create and configure a container type
 
 **Applies to:** Developer
@@ -17,6 +18,10 @@ audience: developer
 outcome: Create a container type, connect it to an owning app, and choose the right billing configuration.
 next: register-application-permissions.md
 -->
+
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-container-type.md)]
+
+[!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
 
 Create a SharePoint Embedded container type for your application to create containers or store files. A container type defines access, billing accountability, and selected behaviors for containers created by your app.
 
@@ -32,7 +37,7 @@ SharePoint Embedded requires a one-to-one relationship between one owning applic
 
 The container type ID is stored on each container as an immutable property.
 
-The ID is used for access authorization, trial exploration, billing, and configurable behaviors.
+SharePoint Embedded uses the ID for access authorization, trial exploration, billing, and configurable behaviors.
 
 > [!NOTE]
 > The Microsoft Graph API — [Create fileStorageContainerType](/graph/api/filestorage-post-containertypes) — is delegated-only and can be called by any non-guest owning-tenant user. The caller doesn't need an administrator role and is automatically assigned as an owner of the new container type.
@@ -43,13 +48,13 @@ Choose the container type purpose when you create it.
 
 You can't convert a trial container type to production later.
 
-You can't convert a standard billing type to pass-through billing later.
+You can't change a container type from standard billing to pass-through billing later.
 
 | Use case | Container type |
 |---|---|
 | Local proof of concept | Trial container type |
-| App owner pays | Standard container type with billing profile |
-| Customer tenant pays | Standard container type with pass-through billing |
+| Developer tenant pays | Container type with standard billing |
+| Consuming tenant pays | Container type with pass-through billing |
 
 > [!IMPORTANT]
 > If you choose the wrong purpose or billing model, you must recreate the container type.
@@ -62,7 +67,8 @@ Before you create a container type, make sure you have:
 - A Microsoft Entra ID app registration for the owning app.
 - A non-guest member account in the owning tenant.
 - For standard billing, an Azure subscription and resource group.
-- For standard billing setup, owner or contributor permissions on the Azure subscription.
+- To manage billing for an existing standard container type as a non-administrator, be an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). SharePoint Embedded Administrators and Global Administrators can manage any standard-billed container type in the developer tenant.
+- For standard billing setup, [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) access to the Azure subscription.
 
 > [!NOTE]
 > - Creating a container type through Microsoft Graph requires only the `FileStorageContainerType.Manage.All` delegated permission. Any non-guest user in the owning tenant can create one and is automatically assigned as an [owner of that container type](../plan/authentication-permissions.md#container-type-owners). For tenant-wide administrative operations, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
@@ -77,13 +83,9 @@ You can create one with the SharePoint Embedded Visual Studio Code extension or 
 
 The Visual Studio Code path is fastest for a first app. See [Quickstart: Build your first app with VS Code](quickstart-vscode.md).
 
-To create and configure a container type through a coding agent, install the SharePoint Embedded Model Context Protocol (MCP) server.
-
-[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-container-type.md)]
-
 For Microsoft Graph, create the container type with the `trial` billing classification.
 
-The following restrictions are applied to trial container types:
+The following restrictions apply to trial container types:
 
 - The tenant can have up to five containers of the container type. This includes active containers and those in the recycle bin.
 - Each container has up to 1 GB of storage space.
@@ -91,15 +93,15 @@ The following restrictions are applied to trial container types:
 - The developer must permanently delete all containers of an existing container type in trial status to create a new container type for trial. This includes containers in the deleted container collection.
 - The container type is restricted to work in the developer tenant. It can't be deployed in other consuming tenants.
 
-## Create a standard container type with app-owner billing
+## Create a container type with standard billing
 
-Use standard billing when the developer or app owner tenant pays for consumption.
+Use standard billing when the developer tenant pays for consumption.
 
-Each tenant can have up to 25 standard container types at a time.
+Each tenant can create up to 25 container types in total. One of these can be a free trial container type; the rest are standard (billed) container types.
 
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `standard` billing classification.
-1. Attach an Azure billing profile with the SharePoint Embedded Visual Studio Code extension or an administrator-managed billing flow.
+1. [Manage billing](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner) on the container type. The SharePoint Embedded Visual Studio Code extension and the [SharePoint Embedded Model Context Protocol (MCP) server](sharepoint-embedded-mcp-server.md#available-tools) enable billing management for standard-billed container types. SharePoint Embedded Administrators and Global Administrators can also [use PowerShell to manage billing](../plan/choose-billing-model.md#manage-standard-billing-as-an-administrator).
 1. Record the container type ID.
 1. Continue to registration in the consuming tenant.
 
@@ -113,12 +115,12 @@ Use pass-through billing when the consuming tenant pays for consumption.
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `directToCustomer` billing classification.
 1. Register the container type in the consuming tenant.
-1. Have the consuming tenant admin activate pay-as-you-go services.
+1. Have a Billing Administrator or Global Administrator in the consuming tenant activate pay-as-you-go services.
 
 > [!IMPORTANT]
 > The consuming tenant must complete billing setup before a pass-through application can be used successfully.
 
-The consuming tenant admin activates pay-as-you-go services in the Microsoft 365 admin center. In **Setup** > **Billing and licenses**, select **Activate pay-as-you-go services**.
+A Billing Administrator or Global Administrator in the consuming tenant activates pay-as-you-go services in the Microsoft 365 admin center. In **Setup** > **Billing and licenses**, select **Activate pay-as-you-go services**.
 
 ![Microsoft 365 admin center Billing and licenses section with the Activate pay-as-you-go services option.](../images/SyntexActivatePAYGSetup.png)
 
@@ -126,7 +128,7 @@ Under **Syntex services for**, select **Apps**, then select **SharePoint Embedde
 
 ![Microsoft 365 admin center Apps panel with SharePoint Embedded selected to activate pay-as-you-go billing.](../images/SyntexPAYGActivateSPE.png)
 
-## Configure the owning Entra app
+## Configure the owning Microsoft Entra ID app
 
 Configure the app so it can own exactly one container type.
 
@@ -147,7 +149,7 @@ For auth details, see [Configure authentication and authorization](configure-aut
 | Container type name | Use a durable name that maps to your workload. |
 | Owning application ID | Use the app registration that owns this type. |
 | Application redirect URL | Use the URL where files from this app should redirect. |
-| Billing model | Choose trial, standard, or pass-through at creation time. |
+| Billing model | Choose trial, standard billing, or pass-through billing at creation time. |
 
 > [!CAUTION]
 > The container type ID and owning application ID can't be updated later.
@@ -158,9 +160,9 @@ Developers can configure selected behaviors after creation.
 
 Available settings include:
 
-- `ApplicationRedirectUrl`
-- `DiscoverabilityDisabled`
-- `SharingRestricted`
+- `urlTemplate`
+- `isDiscoverabilityEnabled`
+- `isSharingRestricted`
 
 Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API for supported container type updates. For tenant-wide administrative settings, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 
@@ -171,9 +173,9 @@ Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestorage
 
 Use Microsoft Graph to list and update container types.
 
-A non-administrator container type owner can update the container types they own.
+A non-administrator container type owner can update container types they own. They can also [create and manage the standard billing profile](../plan/choose-billing-model.md#manage-standard-billing-as-a-container-type-owner).
 
-You need owner or contributor access to billing subscriptions for billing changes.
+The owner needs Owner or Contributor access to the Azure subscription for billing changes.
 
 ### Manage container types with Microsoft Graph
 
@@ -192,7 +194,7 @@ You can delete only trial container types; deletion of standard container types 
 
 ## Understand billing dependency
 
-For app-owner billing, the developer tenant attaches an Azure subscription and resource group.
+For standard billing, the developer tenant attaches an Azure subscription and resource group.
 
 For pass-through billing, the consuming tenant activates pay-as-you-go services.
 

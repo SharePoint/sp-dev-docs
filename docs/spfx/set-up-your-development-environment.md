@@ -125,7 +125,7 @@ heft trust-dev-cert
 
 ## Set the SPFX_SERVE_TENANT_DOMAIN environment variable (optional)
 
-Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute gulp serve with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
+Starting with [SPFx v1.17](release-1.17.1.md), Microsoft replaced the hosted workbench URL launched when you execute `heft start` with a dynamic value. This is defined in the project's **./config/serve.json** file in the `initialPage` property:
 
 ```json
 {
@@ -141,6 +141,9 @@ The SPFx build toolchain will replace this value on the fly with a value defined
 Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to specify the tenant domain (or site URL) for serve configurations across different SPFx solutions. If a URL in the serve configuration (for example, `pageUrl` for Field Customizer) contains the `{tenantDomain}` placeholder, it will be automatically replaced with the variable's value.
 
 For more information on how to set the environment variable on your developer environment, including Windows or macOS, see [Setting the SharePoint Framework Hosted Workbench Test Site](https://www.andrewconnell.com/articles/sharepoint-framework-set-spfx-hosted-workbench-test-site/).
+
+> [!NOTE]
+> SharePoint Copilot Apps are tested in the Copilot Workbench rather than the SharePoint workbench. It's available at the **/_layouts/15/copilotworkbench.aspx** path of any site in your tenant. For more information, see [Test with the Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench).
 
 ## Optional tools
 

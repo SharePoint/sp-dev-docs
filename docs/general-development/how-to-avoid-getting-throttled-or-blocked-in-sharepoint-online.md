@@ -182,53 +182,9 @@ Honoring the `Retry-After` HTTP header is the fastest way to handle being thrott
 
 Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling. In other words, aggressive retries work against calling applications because even though the calls fail, they still count toward usage limits. Honoring the `Retry-After` HTTP header will ensure the shortest delay and reduce wasting quotas in throttled requests.
 
-### RateLimit headers - preview
+### RateLimit headers
 
-In addition to the `Retry-After` header in the response to throttled requests, SharePoint Online also returns the [IETF RateLimit headers](https://github.com/ietf-wg-httpapi/ratelimit-headers) for selected limits in certain conditions to help applications manage rate limiting. We recommend applications to take advantage of these headers to avoid hitting the throttle. 
-
-- `RateLimit-Limit` contains the limit in the current time window.
-- `RateLimit-Remaining` indicates the remaining quota in the current window.
-- `RateLimit-Reset` indicates the number of seconds until the quota is refilled.
-
-> [!NOTE]
-> These headers are currently in **beta** and subject to change. At the time when the headers were adopted, the IETF specification was in draft. The current implementation is based on the [draft-03](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-03) of the IETF specification. There is the potential for changes when the specification is final, and we will adapt to those changes in the future.  
-
-The `RateLimit` headers are returned on a **best-efforts** basis, so applications may not receive the headers under all conditions. Additionally, there are other limits that aren't presented in the `RateLimit` headers, so applications can get throttled even before reaching the limit described in the `RateLimit` headers. 
-Below is the list of limits which we support the `RateLimit` headers for. The policies and values are subject to change:
-
-| limit                      | Condition                 | limit value   | Description                                                                                                      |
-|----------------------------|---------------------------|---------------|------------------------------------------------------------------------------------------------------------------|
-| App 1-minute resource unit | Usage >= 80% of the limit | Resource unit | When an application consumes 80% or more of its app 1-minute limit, the limit, remaining, and reset are returned.| 
-
-Below are some examples to help you understand the `RateLimit` headers:
-
-- An application has consumed 90% of its resource unit quota (1,080 out of 1,200), and its consumption is within all the limits that apply to it. The request succeeds and the `RateLimit` headers are returned.
-
-    ```
-    HTTP/1.1 200 Ok
-    RateLimit-Limit: 1200
-    RateLimit-Remaining: 120
-    RateLimit-Reset: 5
-    ```
-
-- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled, and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`. There are instances where the `Retry-After` returns a smaller value. In such cases, the general rule of thumb is to honor the greater of the two values.
-
-    ```
-    HTTP/1.1 429 Too Many Requests
-    Retry-After: 31
-    RateLimit-Limit: 1200
-    RateLimit-Remaining: 0
-    RateLimit-Reset: 31
-    ```
-
-- An application has consumed 90% of its resource unit quota, but its consumption has already reached other limits that the `RateLimit` headers don't support. In this case, the request is throttled and the `RateLimit` headers aren't returned to avoid confusion, although the condition to return the headers is satisfied.
-
-    ```
-    HTTP/1.1 429 Too Many Requests
-    Retry-After: 9
-    ```
-
-Additional information can be found in [Prevent throttling in your application by using RateLimit headers in SharePoint Online](https://devblogs.microsoft.com/microsoft365dev/prevent-throttling-in-your-application-by-using-ratelimit-headers-in-sharepoint-online/)
+SharePoint Online does not return or support `IETF RateLimit` headers. Although these headers may be used by other services, applications should not depend on them for SharePoint Online and should instead honor the `Retry-After` header when throttling occurs.
     
 ### How to decorate your HTTP traffic?
 

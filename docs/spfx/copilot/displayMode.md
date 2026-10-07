@@ -7,7 +7,8 @@ ms.localizationpriority: high
 
 # Display modes in SharePoint Copilot components
 
-> Status: preview - based on the in-development SPFx Copilot Component model. APIs may change before general availability.
+> [!IMPORTANT]
+> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments. The APIs described in this article may change before general availability.
 
 A Copilot component can render in two layouts inside Microsoft 365 Copilot:
 
