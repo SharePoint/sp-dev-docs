@@ -19,7 +19,7 @@ outcome: Implement the basic SharePoint Embedded container lifecycle for applica
 next: manage-files.md
 -->
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-manage-containers.md)]
 
 Create and manage containers after your container type is created, registered, and authorized. Containers are the basic storage unit in SharePoint Embedded.
 

@@ -19,7 +19,7 @@ outcome: Use the SharePoint Embedded MCP server with a coding agent to provision
 next: quickstart-vscode.md
 -->
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons.md)]
 
 The SharePoint Embedded MCP server is an open-source [Model Context Protocol](https://modelcontextprotocol.io/) server that lets MCP-compatible AI clients set up and manage SharePoint Embedded applications through natural language. Supported clients include GitHub Copilot in Visual Studio Code or CLI, Claude Desktop, Cursor, and Azure AI Foundry. It's distributed as the [`@microsoft/spe-mcp`](https://github.com/microsoft/SharePoint-Embedded-MCP-Server) npm package and runs locally on your machine as a developer tool.
 
@@ -90,6 +90,15 @@ Add the server to `%APPDATA%\Claude\claude_desktop_config.json` (Windows) or `~/
     }
   }
 }
+```
+
+### Claude Code and Codex CLI
+
+Add the server from a terminal:
+
+```console
+claude mcp add spe -- npx -y @microsoft/spe-mcp start --install-source microsoft-learn --install-content sharepoint-embedded-mcp-server --install-campaign docs-install-buttons
+codex mcp add spe -- npx -y @microsoft/spe-mcp start --install-source microsoft-learn --install-content sharepoint-embedded-mcp-server --install-campaign docs-install-buttons
 ```
 
 ### Cursor and other MCP clients
