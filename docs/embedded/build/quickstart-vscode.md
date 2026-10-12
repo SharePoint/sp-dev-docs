@@ -28,6 +28,8 @@ This article starts the build journey. For more billing guidance, see [Create an
 > [!TIP]
 > Prefer to build with a coding agent instead of a guided view? Use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) to provision and manage resources through natural language.
 
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-quickstart-vscode.md)]
+
 ## Prerequisites
 
 Before you start, make sure you have:

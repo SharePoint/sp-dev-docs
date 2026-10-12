@@ -19,7 +19,7 @@ outcome: Create a container type, connect it to an owning app, and choose the ri
 next: register-application-permissions.md
 -->
 
-[!INCLUDE [Add the SharePoint Embedded MCP server](../includes/sharepoint-embedded-mcp-install.md)]
+[!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-create-container-type.md)]
 
 [!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
 
