@@ -32,7 +32,7 @@ For a full comparison with alternatives, see [When to choose SharePoint Embedded
 > SharePoint Embedded isn't the same as SharePoint Online sites or document libraries, the SharePoint Framework (SPFx), OneDrive APIs, or blob storage. It's an API-only storage platform whose content lives in the customer's Microsoft 365 tenant.
 
 > [!IMPORTANT]
-> Help us shape the future of SharePoint Embedded! Take our [quick survey](https://forms.microsoft.com/r/1YpGd2pAUS) and share your thoughts.
+> Help us shape the future of SharePoint Embedded! Take our [quick survey](https://forms.cloud.microsoft/r/y3pWeZn0q2) and share your thoughts.
 
 <!-- agent:
 task_type: concept
