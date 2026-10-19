@@ -45,7 +45,7 @@ The following table lists the SPFx and compatible versions of common tools and l
 
 |              SPFx               | Node.js (LTS) |   TypeScript   |    React    |
 | ------------------------------- | ------------- | -------------- | ----------- |
-| [1.24](release-1.24.md)       | v22, v24, v26 | v2.9 - v5.8    | v18.3.1     |
+| [1.24](release-1.24.0.md.md)       | v22, v24, v26 | v2.9 - v5.8    | v18.3.1     |
 | [1.23.2](release-1.23.2.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
 | [1.23.0](release-1.23.0.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
 | [1.22.2](release-1.22.2.md)     | v22           | v2.9 - v5.8    | v17.0.1     |
