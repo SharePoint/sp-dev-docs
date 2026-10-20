@@ -490,6 +490,8 @@
       href: spfx/toolchain/sharepoint-framework-cli.md
     - name: Platform & platform dependency compatibility reference
       href: spfx/compatibility.md
+    - name: Upgrade to React 18 in SPFx 1.24
+      href: spfx/react-18-upgrade.md
     - name: How to configure SASS processing
       href: spfx/toolchain/configure-sass.md
     - name: Understanding npm audit vulnerabilities in SPFx projects

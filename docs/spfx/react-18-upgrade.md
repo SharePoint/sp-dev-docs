@@ -1,7 +1,7 @@
 ---
 title: Upgrade to React 18 in SharePoint Framework 1.24
-description: Upgrade a SharePoint Framework 1.23 project to SPFx 1.24 and React 18.3.1. Update dependencies, rendering, TypeScript definitions, and deployment packages.
-ms.date: 10/19/2026
+description: Learn how to upgrade a SharePoint Framework 1.23 React solution to the SPFx 1.24 preview, including dependencies, rendering, cleanup, and tests.
+ms.date: 10/20/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -9,20 +9,22 @@ ai-usage: ai-assisted
 
 # Upgrade to React 18 in SharePoint Framework 1.24
 
-SharePoint Framework (SPFx) 1.24 uses React 18.3.1, replacing React 17.0.1 in SPFx 1.23. This article explains how to update an existing React-based solution's dependencies, rendering code, tests, and deployment packages.
+SharePoint Framework (SPFx) 1.24 introduces support for React 18.3.1, replacing React 17.0.1 in SPFx 1.23. This article walks you through upgrading an existing SPFx 1.23 React solution: update the dependencies, migrate React rendering and cleanup, and validate the solution in its target hosts.
+
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-prerelease-related.md)]
 
 SPFx 1.23 and 1.24 both use the Heft-based toolchain, so this upgrade doesn't require a Gulp-to-Heft migration. Existing function components, class components, hooks, and JSX can generally remain in place. Updating the globally installed Yeoman generator alone doesn't update an existing solution.
 
 > [!NOTE]
-> The commands target SPFx 1.24 general availability (`1.24.0`). To test a prerelease, replace `1.24.0` with its exact version, such as `1.24.0-rc.0`, for the generator and all SPFx packages. Don't mix prerelease and general availability SPFx packages in the same solution.
+> The commands in this article target SPFx `1.24.0-rc.0`, the release candidate documented in the [SPFx 1.24 release notes](release-1.24.0.md). When targeting another release, use its exact version for the generator and all SPFx packages. Don't mix SPFx package versions.
 
 ## Prerequisites
 
 - An existing SPFx 1.23.x React project that targets SharePoint Online. SPFx 1.24 isn't supported on SharePoint Server.
-- A [supported development environment](set-up-your-development-environment.md). You can keep using Node.js 22.14.0 or later in the Node.js 22 line; moving to Node.js 24 or 26 isn't required for this upgrade.
+- A [supported development environment](set-up-your-development-environment.md) for the target SPFx version. You can continue using a supported Node.js 22 version; upgrading Node.js isn't required to adopt React 18.
 - Access to a development tenant and the hosts that your solution supports, such as SharePoint, Teams, or Microsoft 365 Copilot.
 
-The commands in this article use npm. Run project commands from the directory that contains `package.json`, except when generating the separate comparison project.
+The commands in this article use npm. Run project commands from the folder that contains **package.json**, except when generating the separate comparison project.
 
 If your project still uses Gulp, first follow [Migrate from the Gulp-based to the Heft-based toolchain](toolchain/migrate-gulptoolchain-hefttoolchain.md).
 
@@ -30,14 +32,13 @@ If your project still uses Gulp, first follow [Migrate from the Gulp-based to th
 
 | Area | SPFx 1.23 | SPFx 1.24 |
 | --- | --- | --- |
-| SPFx packages | Your existing 1.23.x version | 1.24.0 |
+| SPFx packages | Your existing 1.23.x version | 1.24.0-rc.0 |
 | `react` and `react-dom` | 17.0.1 | 18.3.1 |
 | `@types/react` and `@types/react-dom` | 17.x | Compatible 18.x definitions |
 | React rendering | `ReactDom.render(element, container)` | `createRoot(container)`, followed by `root.render(element)` |
 | React cleanup | `ReactDom.unmountComponentAtNode(container)` | `root.unmount()` |
-| Heft | 1.2.17 in the 1.23.2 template | 1.3.2, including any Heft override |
-| TypeScript | ~5.8.0 in the 1.23.2 template | ~5.8.0 in the 1.24 template |
-| Node.js | 22 | 22, 24, or 26 |
+
+For supported Node.js and TypeScript versions, see the [SPFx compatibility reference](compatibility.md). Use a project generated with the target SPFx version to compare build toolchain dependencies and configuration.
 
 > [!IMPORTANT]
 > Upgrade SPFx and React together. Installing React 18 into an SPFx 1.23 project, or using `react@latest`, isn't a supported substitute for upgrading the framework. Use the exact React version listed in the [SPFx compatibility reference](compatibility.md), not the latest React major version.
@@ -56,7 +57,7 @@ If your project still uses Gulp, first follow [Migrate from the Gulp-based to th
 2. Install the generator for the target SPFx version.
 
    ```console
-   npm install @microsoft/generator-sharepoint@1.24.0 --global
+   npm install @microsoft/generator-sharepoint@1.24.0-rc.0 --global
    ```
 
 3. In a new, empty directory outside the existing solution, run the generator. Select the same component type as your solution and the React framework option where available.
@@ -71,47 +72,43 @@ If your project still uses Gulp, first follow [Migrate from the Gulp-based to th
 
 Use `npm pkg set` to update `package.json` before installing packages. This lets npm resolve the SPFx, React, and type-definition changes together, rather than trying to install an intermediate combination.
 
-1. Update every SPFx package that your project already references to the same exact `1.24.0` version.
+1. Update every SPFx package that your project already references to the same exact `1.24.0-rc.0` version.
 
    The following commands cover the SPFx packages in a generated SPFx 1.23.2 React web part. Run only the commands for packages that your project uses, and keep each package in its existing `dependencies` or `devDependencies` section.
 
    ```console
-   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.0"
-   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.0"
-   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.0"
-   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.0"
-   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.0"
-   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.0-rc.0"
+   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.0-rc.0"
+   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.0-rc.0"
+   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.0-rc.0"
+   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.0-rc.0"
+   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.0-rc.0"
    ```
 
    Also update any component-specific SPFx packages that your project references. Examples include `@microsoft/sp-application-base`, `@microsoft/sp-listview-extensibility`, `@microsoft/sp-dialog`, `@microsoft/sp-adaptive-card-extension-base`, and `@microsoft/sp-copilot-component`. Don't add packages for component types that your solution doesn't use.
 
-2. Pin the React runtime and compatible React 18 type definitions.
+2. Pin the React runtime to `18.3.1` and use compatible React 18 type definitions.
 
    ```console
    npm pkg set "dependencies.react=18.3.1" "dependencies.react-dom=18.3.1"
-   npm pkg set "devDependencies.@types/react=18.3.31" "devDependencies.@types/react-dom=18.3.7"
+   npm pkg set "devDependencies.@types/react=^18.3.0" "devDependencies.@types/react-dom=^18.3.0"
    ```
 
-   Type definitions are versioned independently of the runtime; their patch versions don't have to match `18.3.1`. The example pins above also expose the `React.act` API used by React 18.3 unit tests. A generated project can use other compatible 18.x definitions. Don't install an unqualified latest type package, which might target a different React major version.
+   Type definitions are versioned independently of the runtime; their patch versions don't have to match `18.3.1`. These ranges allow updates within React 18 without selecting definitions for a different React major version. Keep the resolved versions in the lock file.
 
-3. Align the toolchain dependencies and applicable overrides with the target template. For Heft, update both entries if your project has an override.
+3. Align the build toolchain dependencies with the generated comparison project. If your project overrides `@rushstack/heft`, update the override along with the direct dependency.
 
-   ```console
-   npm pkg set "devDependencies.@rushstack/heft=1.3.2" "overrides.@rushstack/heft=1.3.2"
-   ```
-
-   Don't assign the SPFx version to unrelated packages such as Fluent UI, TypeScript, or Heft. Compare the remaining development dependencies and overrides with the generated project instead of upgrading every package to its latest version.
+   Don't assign the SPFx version to unrelated packages such as Fluent UI, TypeScript, or Heft. Use the versions from the target template instead of upgrading every package to its latest version.
 
 4. Update existing `overrides` or Yarn `resolutions` that pin React 17 or its type definitions. For example, update the React type resolution if your project has the template's `resolutions` entry.
 
    ```console
-   npm pkg set "resolutions.@types/react=18.3.31"
+   npm pkg set "resolutions.@types/react=^18.3.0"
    ```
 
    npm doesn't enforce `resolutions`. Use npm's `overrides` only where needed and after checking the affected library's compatibility. If your solution includes shared React libraries that you maintain, also review their `peerDependencies` and verify React 18 support before changing their supported version ranges.
@@ -125,7 +122,7 @@ Use `npm pkg set` to update `package.json` before installing packages. This lets
 
 Keep the updated lock file with the package changes. Investigate invalid peer dependencies or unexpected React/type-definition versions instead of using `--force` or `--legacy-peer-deps` to hide conflicts. Update or replace incompatible libraries with versions that support React 18; don't upgrade all dependencies indiscriminately.
 
-SPFx packages can have their own transitive React dependencies. Don't force those internal dependencies to a different version just to make every entry in `npm ls` match. Keep your solution's direct React dependencies aligned with the compatibility reference, and let SPFx manage the framework-provided React libraries rather than adding a separate CDN copy.
+SPFx packages can have their own transitive React dependencies. Don't override them solely to make every entry in `npm ls` match. Keep your solution's direct React dependencies aligned with the compatibility reference, and use the SPFx-provided React libraries rather than adding a separate CDN copy.
 
 ## Review project configuration
 
@@ -133,22 +130,10 @@ Preserve your project's customizations while comparing these files with the targ
 
 | File or setting | What to review |
 | --- | --- |
-| `package.json` and CI configuration | Keep local and CI Node.js versions within the supported range. If you move to Node.js 24 or 26, update the project's `engines.node` restriction to match the target template. |
+| `package.json` and continuous integration (CI) configuration | Keep local and CI Node.js versions within the supported range, and align `engines.node` with the target template. |
 | `tsconfig.json` | Preserve the SPFx rig configuration and supported TypeScript version. React 18 doesn't require changing the rig's `jsx: "react"` setting to the automatic JSX transform. |
-| `eslint.config.js` and `config/*.json` | Compare custom overrides with the updated rig. Include authored test and preview files in the appropriate TypeScript projects, but exclude generated bundles from linting. |
+| `eslint.config.js` and `config/*.json` | Compare custom overrides with the updated rig and preserve project-specific settings. |
 | `.yo-rc.json` | Update `version` under `@microsoft/generator-sharepoint` when the migration is complete. Keep existing solution and component identities; changing this metadata alone doesn't upgrade the project. |
-
-If the solution generates Teams or Copilot packages, merge the target template's watch exclusions into `tsconfig.json`. These prevent regenerated package output from repeatedly triggering incremental builds:
-
-```json
-{
-  "watchOptions": {
-    "excludeDirectories": ["**/teams", "**/temp/copilot"]
-  }
-}
-```
-
-This is a configuration fragment, not a replacement for the existing `tsconfig.json`.
 
 ## Migrate React rendering and cleanup
 
@@ -244,13 +229,13 @@ interface IPanelProps {
 
 Alternatively, use `React.PropsWithChildren<IPanelProps>`. For components that require child content, make `children` required. Fix the props contract rather than suppressing the error with a cast or disabling type checking.
 
-If you encounter incompatible `ReactNode` or JSX component type errors, check for libraries that still depend on React 17 type definitions:
+If you encounter incompatible `ReactNode` or JSX component type errors, inspect the installed type definitions:
 
 ```console
 npm explain @types/react
 ```
 
-Update the incompatible library or its type definitions rather than suppressing the error. Also check that your own components use the updated props contracts.
+Check for multiple React type-definition versions or a library that doesn't support React 18. Update the incompatible library or its type definitions rather than suppressing the error. Also check that your own components use the updated props contracts.
 
 ### Review rendering assumptions
 
@@ -263,9 +248,11 @@ You don't need to adopt transitions, Suspense, or other new React features as pa
 
 ### Update unit tests
 
-If the solution has React unit tests, update mount, rerender, and unmount helpers together. Tests still using `ReactDom.render` exercise legacy rendering behavior. Use `act` from `react`, rather than `react-dom/test-utils`, with compatible 18.3 type definitions, and wait for asynchronous work before asserting on the DOM.
+### Update unit tests
 
-For direct React DOM unit tests, enable `IS_REACT_ACT_ENVIRONMENT` in the test setup. In an SPFx Heft project, a `config/jest.config.json` can extend the existing rig configuration:
+If the solution has React unit tests, update mount, rerender, and unmount helpers together. Tests still using `ReactDom.render` exercise legacy rendering behavior. With React 18.3.1, use [`act` from `react`](https://react.dev/reference/react/act) rather than `react-dom/test-utils`, and wait for updates before asserting on the DOM.
+
+Run DOM tests in a browser-like environment, such as Jest with jsdom. For direct React DOM unit tests, enable `IS_REACT_ACT_ENVIRONMENT` in the test setup. In an SPFx Heft project, **config/jest.config.json** can extend the existing rig configuration:
 
 ```json
 {
@@ -276,15 +263,14 @@ For direct React DOM unit tests, enable `IS_REACT_ACT_ENVIRONMENT` in the test s
 }
 ```
 
-Merge this with any existing Jest configuration instead of replacing project-specific settings. Don't add this test-only flag to production code or suppress React warnings to make tests pass.
+Merge this with any existing Jest configuration instead of replacing project-specific settings. Libraries such as React Testing Library can configure the flag and wrap their helpers in `act` for you. Don't add this test-only flag to production code.
 
 For a direct DOM test, wrap rendering and cleanup in `act`:
 
 ```typescript
 import * as React from 'react';
+import { act } from 'react';
 import { createRoot } from 'react-dom/client';
-
-const { act } = React;
 
 test('renders with a React 18 root', async () => {
   const container = document.createElement('div');
@@ -304,13 +290,11 @@ test('renders with a React 18 root', async () => {
 });
 ```
 
-## Build and validate in the target host
+## Build and validate the solution
 
-1. Before generating the release package, increment `solution.version` in `config/package-solution.json`. This value has four parts, such as `1.1.0.0`. Keep existing solution and component IDs.
+1. Before generating the updated package, increment `solution.version` in **config/package-solution.json**. This value has four parts, such as `1.1.0.0`. Keep existing solution and component IDs.
 
-   If the solution includes a Teams or Copilot app, also follow its manifest versioning process. The authored Teams manifest, such as `copilot/manifest.json`, uses a three-part `version`, such as `1.1.0`. Preserve the app ID and regenerate the app package instead of editing a generated ZIP file.
-
-   For Copilot UX components upgraded from an earlier SPFx 1.24 preview, also review the [SPFx 1.24 release notes](release-1.24.0.md) for agent manifest and dynamic MCP tool-discovery changes. Update custom package validators for the target release's generated format instead of restoring older generated plugin content.
+   If the solution includes a Teams or Copilot app, also follow its manifest versioning process. Preserve the app ID and regenerate the app package instead of editing a generated ZIP file.
 
 2. Verify that the updated lock file supports a clean install, then run the project's production build and tests.
 
@@ -321,11 +305,11 @@ test('renders with a React 18 root', async () => {
 
    The standard Heft-based React template's build script runs `heft test --clean --production` followed by `heft package-solution --production`. Preserve any additional checks in your project's build script. A project without tests can still complete that script successfully; add or run the tests appropriate to your solution.
 
-3. Inspect the generated manifests in `dist`. For components that import React and `react-dom/client`, the corresponding entries in `loaderConfig.scriptResources` should reference the SPFx-provided component resources at version `18.3.1`. Don't edit generated manifests to correct a dependency problem; correct the source or package configuration and rebuild.
+3. Inspect the generated manifests in **dist** to confirm that React dependencies use the SPFx-provided resources for the target release. Don't edit generated manifests to correct a dependency problem; correct the source or package configuration and rebuild.
 
 4. Use `npm start` to debug with your configured SharePoint or Copilot workbench. Validate the packaged solution in every host it supports, including SharePoint pages, Teams, Viva Connections, or Microsoft 365 Copilot as applicable.
 
-Before releasing, check the following:
+In each target host, check the following:
 
 - Initial rendering, data loading, forms, and user interactions still work.
 - Property, theme, size, and display-mode changes update the existing tree without unexpectedly resetting state.
@@ -333,7 +317,7 @@ Before releasing, check the following:
 - Dialogs, menus, portals, focus handling, and styles work in the host document.
 - The browser console has no legacy-render, duplicate-root, invalid-hook-call, or unhandled-error warnings.
 
-Deploy the versioned `.sppkg` and any associated Teams or Copilot app updates through your normal app catalog process. Complete tenant testing before replacing the production package; local builds and browser previews don't validate host integration.
+Deploy the versioned `.sppkg` and any associated Teams or Copilot app updates to your development tenant through the [app catalog](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md). Local builds and browser previews don't validate host integration. Keep preview packages out of production environments.
 
 ## See also
 
