@@ -38,7 +38,7 @@ Column names must follow SharePoint rules. Don't use names that contain `!`, sta
 Create a column on the container before writing field values on files.
 
 ```http
-POST https://graph.microsoft.com/beta/storage/fileStorage/containers/{container-id}/columns
+POST https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{container-id}/columns
 Content-Type: application/json
 ```
 
@@ -62,17 +62,17 @@ Content-Type: application/json
 The create request doesn't support `type`, and text `maxLength` must be less than or equal to 255.
 
 > [!NOTE]
-> As of January 2026, the container column APIs (list, create, update, delete columns) are also generally available on the **v1.0** Microsoft Graph endpoint. You can replace `/beta/` with `/v1.0/` in the column requests below. The beta endpoint remains available.
+> Use the Microsoft Graph `v1.0` endpoint for container column operations. For the supported operations, see [fileStorageContainer methods](/graph/api/resources/filestoragecontainer?view=graph-rest-1.0&preserve-view=true#methods).
 
 ## Manage columns
 
 Use the column ID returned by the create or list operation.
 
 ```http
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{container-id}/columns
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{container-id}/columns/{column-id}
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{container-id}/columns/{column-id}
-DELETE https://graph.microsoft.com/beta/storage/fileStorage/containers/{container-id}/columns/{column-id}
+GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{container-id}/columns
+GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{container-id}/columns/{column-id}
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{container-id}/columns/{column-id}
+DELETE https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{container-id}/columns/{column-id}
 ```
 
 Patch supported properties when the schema changes. You can update any property of a column except the `id` property.
@@ -90,14 +90,14 @@ Patch supported properties when the schema changes. You can update any property 
 Field values are stored on the drive item's list item fields. Read all fields or select the ones your UI needs.
 
 ```http
-GET https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/listitem/fields
-GET https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/listitem/fields?$select=Name,Color
+GET https://graph.microsoft.com/v1.0/drives/{drive-id}/items/{item-id}/listitem/fields
+GET https://graph.microsoft.com/v1.0/drives/{drive-id}/items/{item-id}/listitem/fields?$select=Name,Color
 ```
 
 Patch field values to update metadata. Use `null` to clear a field value when the column allows empty values.
 
 ```http
-PATCH https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/listitem/fields
+PATCH https://graph.microsoft.com/v1.0/drives/{drive-id}/items/{item-id}/listitem/fields
 Content-Type: application/json
 ```
 
@@ -119,7 +119,7 @@ Content-Type: application/json
 Use OData query options on custom columns when you need structured filtering or ordering inside a container drive.
 
 ```http
-GET https://graph.microsoft.com/beta/drives/{drive-id}/items?$orderby=listitem/fields/TestField asc&$filter=startswith(listitem/fields/TestField, '3')&$expand=listitem($expand=fields)
+GET https://graph.microsoft.com/v1.0/drives/{drive-id}/items?$orderby=listitem/fields/TestField asc&$filter=startswith(listitem/fields/TestField, '3')&$expand=listitem($expand=fields)
 ```
 
 Use `$expand=listitem($expand=fields)` when the result needs field values in the response. Create indexed columns for high-cardinality filters that your app runs frequently.
