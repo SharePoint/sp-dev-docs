@@ -1,7 +1,7 @@
 ---
 title: Build your first Form customizer extension
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience at a list or library level by associating the component with the used content type.
-ms.date: 01/06/2025
+ms.date: 10/23/2026
 ms.custom: scenarios:getting-started
 ---
 
@@ -147,8 +147,8 @@ You can test and debug your Form Customizer within a live SharePoint Online site
     - To simplify the debugging, you do not need to define the target content type `id` to which the component is associated, but in the runtime, the association is performed in the content type level by updating at least one of the following properties in the content type:
       - ContentType.**NewFormClientSideComponentId** - component id for new form
       - ContentType.**NewFormClientSideComponentProperties** - optional configuration details
-      - ContentType.**DispFormClientSideComponentId** - component id for display form
-      - ContentType.**DispFormClientSideComponentProperties** - optional configuration details
+      - ContentType.**DisplayFormClientSideComponentId** - component id for display form
+      - ContentType.**DisplayFormClientSideComponentProperties** - optional configuration details
       - ContentType.**EditFormClientSideComponentId** - component id edit  form
       - ContentType.**EditFormClientSideComponentProperties** - optional configuration details
 
