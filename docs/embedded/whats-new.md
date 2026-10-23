@@ -18,6 +18,10 @@ outcome: Review recent SharePoint Embedded feature and documentation updates.
 next: overview.md
 -->
 
+## October 2026
+
+- The limit for container types that a tenant can create is now 100, up from 25. For more information, see [Understand limits and calling patterns](./plan/limits-calling-patterns.md#size-limits).
+
 ## July 2026
 
 - The [Copilot Retrieval API](/microsoft-365/copilot/extensibility/api/ai-services/retrieval/copilotroot-retrieval) is generally available and now offers a `sharePointEmbedded` data source in preview, with pay-as-you-go billing on the Copilot Studio message meter. Users who query the API no longer each need a Microsoft 365 Copilot license, but one licensed user still initializes the semantic index. For more information, see [Use the Retrieval API](./build/agent-experiences.md#use-the-retrieval-api).
