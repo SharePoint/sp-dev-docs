@@ -1,14 +1,11 @@
 ---
-title: Display modes in SharePoint Copilot components
-description: Learn how the inline and fullscreen display modes work in SharePoint Copilot components and what your component must do to switch between them.
-ms.date: 07/09/2026
+title: Display modes in Copilot UX components
+description: Learn how the inline and fullscreen display modes work in Copilot UX components and what your component must do to switch between them.
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
-# Display modes in SharePoint Copilot components
-
-> [!IMPORTANT]
-> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments. The APIs described in this article may change before general availability.
+# Display modes in Copilot UX components
 
 A Copilot component can render in two layouts inside Microsoft 365 Copilot:
 

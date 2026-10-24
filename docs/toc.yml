@@ -269,7 +269,7 @@
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
       - name: Connect Copilot UX components to SharePoint data
         href: spfx/copilot/get-started/connect-to-sharepoint-data.md
-    - name: Display Mode
+    - name: Display modes
       href: spfx/copilot/displayMode.md
     - name: Theme and design
       href: spfx/copilot/theme-and-design.md
@@ -528,7 +528,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.24 - October 2, 2026
+    - name: SPFx v1.24 - October 29, 2026
       href: spfx/release-1.24.0.md
     - name: SPFx v1.23.2 - June 30, 2026
       href: spfx/release-1.23.2.md

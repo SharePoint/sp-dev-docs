@@ -1,16 +1,15 @@
 ---
 title: Troubleshoot Copilot UX components
 description: Find and fix common problems when you build, deploy, and update a Copilot UX component and its agent in Microsoft 365 Copilot.
-ms.date: 10/04/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
 # Troubleshoot Copilot UX components
 
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. Some of the behavior described in this article is preview behavior that might change before general availability.
-
 A Copilot UX component runs in several places: your code in the Copilot Workbench, the solution in the SharePoint app catalog, the agent in the tenant agent catalog, and the tool call in Microsoft 365 Copilot. A problem in any one of them can look the same to the user: the agent answers in text, or the component doesn't render. This article helps you find which part failed and fix it.
+
+Before troubleshooting, check the [license and supported-client requirements](overview-copilot-apps.md#availability). At GA, iOS and Android aren't supported. A solution combining Copilot UX components and SPFx Teams functionality also has an automatic-sync limitation; use the [manual Teams package workaround](overview-copilot-apps.md#ga-limitations).
 
 | Symptom | Go to |
 | --- | --- |
@@ -35,7 +34,7 @@ The Copilot Workbench runs your component code with the properties you enter. It
 - If the component fails in the Workbench, the problem is in your code. Fix it there first.
 - If the component works in the Workbench but fails in Copilot, the problem is in the agent, the tool definition, or the deployment. Your component code is probably fine.
 
-For more information about the Workbench, see [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md#test-in-the-copilot-workbench).
+For more information about the Workbench, see [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md#test-in-the-copilot-workbench).
 
 ### Turn on developer mode in Copilot
 
@@ -223,8 +222,8 @@ For an example of these checks, see [Connect your Copilot UX component to ShareP
 
 ## See also
 
-- [Overview of SharePoint Copilot Apps](overview-copilot-apps.md)
-- [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md)
+- [Overview of Copilot UX components](overview-copilot-apps.md)
+- [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md)
 - [Connect your Copilot UX component to SharePoint data](get-started/connect-to-sharepoint-data.md)
 - [Access data from a Copilot UX component](access-data.md)
 - [Display modes in SharePoint Copilot components](displayMode.md)

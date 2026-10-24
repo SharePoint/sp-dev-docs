@@ -1,14 +1,13 @@
 ---
 title: Overview of Copilot UX components
 description: Use Copilot UX components to build Microsoft 365 Copilot declarative agents with custom interactive UI, hosted automatically in your tenant, using familiar SharePoint Framework tools.
-ms.date: 09/23/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
 # Overview of Copilot UX components
 
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. APIs, schemas, and tooling described in this article may change before general availability.
+Copilot UX components are generally available with **SharePoint Framework 1.24**, released on **October 29, 2026**. For licensing, supported clients, and distribution, see [Availability](#availability). Review the [GA limitations](#ga-limitations) before deployment.
 
 You can use **Copilot UX components** to extend Microsoft 365 Copilot with custom, interactive experiences that you build using the familiar SharePoint Framework (SPFx) tools, libraries, and client-side development model. A solution can package one or more Copilot UX components - client-side UI components that render inside Microsoft 365 Copilot - together with a **declarative agent** definition that makes them discoverable and callable from within a Copilot conversation.
 
@@ -34,8 +33,8 @@ A single SPFx solution package (`.sppkg`) can contain a mix of different compone
 
 The result is a single investment in your UX that delivers a consistent, branded experience across Copilot, SharePoint, and Teams, without rebuilding the core interaction pattern for every surface.
 
-> [!NOTE]
-> During the public preview, Copilot UX components render only in the Microsoft 365 Copilot user experience. The cross-surface reuse described here is the direction of the model; support for additional surfaces is on the way. See [Known issues](#known-issues) for the current preview limitations.
+> [!IMPORTANT]
+> Reusing UI across hosts doesn't make a Copilot UX component directly runnable as a web part or Teams tab. Use the appropriate host-specific base class. At GA, a solution combining Copilot UX components and SPFx Teams functionality requires a manually created Teams package because automatic **Sync to Teams** has a mismatch for this combination. See [GA limitations](#ga-limitations).
 
 ## Key concepts
 
@@ -112,7 +111,7 @@ Microsoft 365 Copilot loads the hosted client-side assets when it renders the co
 
 A solution with Copilot UX components defines a declarative agent, a Microsoft 365 Copilot agent described by a manifest, an agent definition, instructions, and one or more actions that map to the components' tools.
 
-After you deploy the app package to the **SharePoint App Catalog**, you can synchronize the declarative agent to the tenant's agent catalog from the App Catalog. There is no separate publishing step in Microsoft 365 Copilot or the Teams admin center. Updating or removing the app in the SharePoint App Catalog likewise updates or removes the corresponding agent.
+After you deploy the app package to the **SharePoint App Catalog**, synchronize the baseline declarative agent to the tenant's agent catalog from the App Catalog. Subsequent component/tool changes are discovered at runtime; changes to the baseline agent configuration require another sync. See [Update components and the baseline agent](#update-components-and-the-baseline-agent).
 
 > [!NOTE]
 > An administrator uploads and enables the `.sppkg` file in the SharePoint App Catalog, and then selects **Add to Teams** for the app. This action deploys the declarative agent to the tenant's agent catalog. The label of this button will be updated in a future release to better reflect that it also publishes the agent.
@@ -120,7 +119,7 @@ After you deploy the app package to the **SharePoint App Catalog**, you can sync
 ```json
 // declarativeAgent.json (excerpt)
 {
-  "version": "v1.7",
+  "version": "v1.8",
   "name": "helloCopilot Agent",
   "instructions": "$[file('instruction.txt')]",
   "conversation_starters": [
@@ -155,7 +154,7 @@ The Copilot UX component itself is a client-side component that derives from `Ba
 
 You author the source files in the `copilot` folder - most importantly `manifest.json` and `declarativeAgent.json` - and the build combines them with your components. When the solution is built, the toolchain **merges your declarative agent definition** with the details of the Copilot UX components declared in **copilot-agent.json** - the components they reference and each component's tools and properties - and bundles the result into the solution package (`.sppkg`) alongside the component assets. You can see the packaged output under the project's `temp/copilot` folder during a build.
 
-When you upload and enable that package in the **SharePoint App Catalog**, SharePoint hosts the packaged component assets in the App Catalog site collection. When you then select **Add to Teams** for the app, the declarative agent is deployed to the **tenant agent catalog**. Together, these steps make the experience available to end users through **Microsoft 365 Copilot** and **Copilot Chat**, without requiring you to provision a separate host or register the agent in another portal. Updating or removing the app in the App Catalog updates or removes the corresponding agent in the tenant agent catalog.
+When you upload and enable that package in the **SharePoint App Catalog**, SharePoint hosts the packaged component assets in the App Catalog site collection. When you then select **Add to Teams** for the app, the baseline declarative agent is deployed to the **tenant agent catalog**. Together, these steps make the experience available to licensed users through the supported Microsoft 365 Copilot clients, without requiring you to provision a separate host. Later updates follow the [component and baseline-agent update model](#update-components-and-the-baseline-agent).
 
 ## Choose a starter template
 
@@ -170,7 +169,7 @@ When you scaffold a new Copilot UX component, the SharePoint Framework generator
 
 ## Test with the Copilot Workbench
 
-The **Copilot Workbench** lets you test your Copilot UX components while they are hosted locally on your development machine, before you package and deploy them to the SharePoint App Catalog and sync them to Microsoft 365 Copilot. This gives you a fast inner-loop: you run your component from `localhost`, load it in the Workbench, and iterate on rendering, display modes, and tool parameters against a real Copilot surface without a full deployment cycle.
+The **Copilot Workbench** is fully supported and remains the local development and testing model for Copilot UX components. It lets you test components hosted on your development machine before you package and deploy them to the SharePoint App Catalog and sync the baseline agent to Microsoft 365 Copilot. Run your component from `localhost`, load it in the Workbench, and iterate on rendering, display modes, and tool parameters without a full deployment cycle. Workbench testing doesn't validate agent discovery or intent matching; test those in a deployed agent.
 
 The Copilot Workbench is always available at the `/_layouts/15/copilotworkbench.aspx` path of any SharePoint site in your tenant - for example, `https://yourtenantname.sharepoint.com/_layouts/15/copilotworkbench.aspx`. Once your local dev server is running and serving the component from `localhost` - by running `heft start --nobrowser` - browse to that URL and the debug version of your component is loaded in the Workbench, ready for testing and development.
 
@@ -181,35 +180,53 @@ Once you are satisfied with the experience in the Workbench, you build the solut
 
 ## Developer guidance and considerations
 
-Keep the following in mind as you build and maintain Copilot UX components, especially during the preview phase. This section will be updated with additional guidance and assets as the preview evolves.
+Keep the following in mind as you build and maintain Copilot UX components.
 
-### Update the declarative agent version on every change
+### Update components and the baseline agent
 
-When you make changes on the declarative agent side - for example, editing `declarativeAgent.json`, its instructions, conversation starters, or actions - you must **update the declarative agent `version`** so the new definition is picked up. If the version stays the same, Microsoft 365 Copilot may continue to use the previously synced agent even after you deploy an updated solution to the SharePoint App Catalog. Bumping the version ensures the changes are recognized and the refreshed agent is applied with the new deployment.
+The initial **Sync to Teams** operation, labeled **Add to Teams** in the SharePoint App Catalog, deploys the baseline agent definition. After that, [dynamic tool discovery](/microsoft-365/copilot/extensibility/plugin-dynamic-tool-discovery) detects changes to tool parameters and additions or removals of components/functions at runtime.
 
-> [!NOTE]
-> Deployment of the agent to the tenant agent catalog can take some time to complete. Improvements to this deployment experience are planned for a future release.
+Rebuild, package, and redeploy the solution when component code or tool definitions change. You don't need to sync again if the baseline agent configuration hasn't changed. Changes to that baseline, such as its image, title, instructions, or starter prompts, require another sync.
 
-## Availability during preview
-
-Keep the following preview-time considerations in mind as you plan when and how to ship Copilot UX component solutions.
-
-### No license required (during preview)
-
-During the preview period, Copilot UX components do **not** require a Microsoft 365 Copilot license to build, deploy, or run. Both makers and end users can create and use these experiences without a per-user Copilot license while the feature is in preview.
+The numeric app `version` in `copilot/manifest.json` is separate from the declarative-agent schema version, such as `v1.8` in `declarativeAgent.json`. Don't increment the schema version as a deployment counter.
 
 > [!NOTE]
-> Licensing requirements may change when the feature reaches general availability. Review the licensing guidance again before you plan a production rollout.
+> Deployment and runtime discovery can take time. Test updated tools in a new conversation rather than assuming an existing conversation refreshes immediately.
 
-### Not yet supported in the Microsoft marketplace (during preview)
+## Availability
 
-During the public preview, solutions with Copilot UX components **cannot** be published to or distributed through the Microsoft commercial marketplace (Microsoft AppSource). While in preview, you deploy them privately to your own tenant through the SharePoint App Catalog. Microsoft marketplace support is planned for when the feature reaches general availability.
+Copilot UX components are generally available starting with SPFx 1.24 on **October 29, 2026**.
 
-## Known issues
+### Licensing and costs
 
-The following are known issues in the current public preview. They are expected to be resolved in an upcoming release.
+Copilot UX components require a **USL (user-specific license)**: the **Microsoft 365 Copilot add-on license** on top of the user's normal **E3, E5, or E7** license. A base license alone isn't sufficient. Users without the required add-on can't use the component experience.
 
-- **Copilot UX only** - Initially during the public preview, components render only in the Microsoft 365 Copilot user experience. Support for other surfaces and hosting options is in the works.
+Copilot UX components **don't fall under a consumption-based plan and have no consumption-based charges**. APIs or services called inside a component's implementation can have their own charges. Those charges are separate from the component capability; consumption billing isn't an alternative to the required user license.
+
+Use an account with the required Copilot add-on license when validating the component in Copilot.
+
+### Supported clients
+
+Copilot UX components are supported in:
+
+- Microsoft 365 Copilot in browser and desktop clients.
+- Copilot in Microsoft Teams in browser and desktop clients.
+
+iOS and Android clients, including Teams mobile, aren't supported at GA. See [GA limitations](#ga-limitations).
+
+### SharePoint Store distribution
+
+Solutions containing Copilot UX components are supported in the **SharePoint Store starting with SPFx 1.24 GA**. This includes Store solutions that add Copilot UX components. See [Publish SharePoint Framework solutions to the SharePoint Store](../publish-to-marketplace-overview.md) for the submission process. SharePoint Store support doesn't imply support for independent distribution through the Teams Store.
+
+You can also deploy solutions privately through your tenant's SharePoint App Catalog. In either case, deploy the solution and sync the baseline agent before users access it.
+
+## GA limitations
+
+- **Combined Copilot/Teams solutions:** Combining Copilot UX components and SPFx Teams functionality in the same solution causes a mismatch in automatic **Sync to Teams** at GA. Manually creating the Teams package for the solution works as a workaround. See [Deploy SPFx solutions to Microsoft Teams](../deployment-spfx-teams-solutions.md) for developer-provided package guidance. This is an automatic packaging/sync limitation, not a prohibition on sharing UI code across hosts.
+- **Mobile clients:** Copilot UX components aren't supported on iOS or Android, including Teams mobile, at GA. Responsive UI and mobile-related SDK types don't establish mobile support.
+- **Additional Copilot surfaces:** Standard-chat Copilot plug-in packaging, Cowork, and other additional surfaces aren't GA capabilities of this release.
+
+A fix for combined-solution automatic sync and support for mobile clients are planned as fast follows after GA. No delivery dates are committed.
 
 ## Next steps
 

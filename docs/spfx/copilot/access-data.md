@@ -1,14 +1,11 @@
 ---
 title: Access data from a Copilot UX component
 description: Learn how to call SharePoint REST APIs and Microsoft Graph from a Copilot UX component.
-ms.date: 10/01/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
 # Access data from a Copilot UX component
-
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. APIs, schemas, and tooling described in this article may change before general availability.
 
 A Copilot UX component gets the same SharePoint Framework (SPFx) clients as a web part through `this.context`. SPFx gets the access tokens for these clients, so the component doesn't need any authentication code.
 
@@ -347,7 +344,7 @@ private _handleContentResize = (width: number, height: number): void => {
 
 In the Workbench, Microsoft Graph calls succeed only for permissions that are already approved in the tenant. A permission the solution requests for the first time is approved after the package is deployed.
 
-To package and deploy the solution, follow the steps in [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md#package-the-solution). After the agent is deployed, search for it by name in the Agent Store, add it, and then ask it for data. Copilot calls the tool that matches the request and renders the component in the conversation.
+To package and deploy the solution, follow the steps in [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md#package-the-solution). After the agent is deployed, search for it by name in the Agent Store, add it, and then ask it for data. Copilot calls the tool that matches the request and renders the component in the conversation.
 
 > [!div class="mx-imgBorder"]
 > ![The SharePointLists component showing the lists on the root site in Microsoft 365 Copilot](../../images/copilot/access-data-copilot-sharepoint-lists.png)

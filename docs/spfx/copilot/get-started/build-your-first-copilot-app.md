@@ -1,22 +1,19 @@
 ---
-title: Build your first SharePoint Copilot App
-description: Create a SharePoint Copilot App with SPFx, test it in the Copilot Workbench, package and deploy it to the app catalog, and use it in Microsoft 365 Copilot.
-ms.date: 07/09/2026
+title: Build your first Copilot UX component
+description: Create a Copilot UX component with SPFx, test it in the Copilot Workbench, package and deploy it to the app catalog, and use it in Microsoft 365 Copilot.
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 
-# Build your first SharePoint Copilot App
+# Build your first Copilot UX component
 
-> [!IMPORTANT]
-> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments. Please make sure that you are using the SharePoint Framework v1.24 beta 2 or newer version to be able to complete the following steps.
-
-In this tutorial, you build a baseline SharePoint Copilot App from scratch, test it locally in the Copilot Workbench, package it, deploy it to the SharePoint app catalog, and use it inside Microsoft 365 Copilot. This gives you the complete end-to-end path for the model: create, test, package, deploy, and use.
+In this tutorial, you build a baseline Copilot UX component from scratch, test it locally in the Copilot Workbench, package it, deploy it to the SharePoint app catalog, and use it inside Microsoft 365 Copilot. This gives you the complete end-to-end path for the model: create, test, package, deploy, and use.
 
 > [!div class="mx-imgBorder"]
 > ![The finished Copilot component running in Microsoft 365 Copilot](../../../images/copilot/tutorial-outcome.png)
 
-For a conceptual overview of how SharePoint Copilot Apps work, see [Overview of SharePoint Copilot Apps](../overview-copilot-apps.md).
+For a conceptual overview, see [Overview of Copilot UX components](../overview-copilot-apps.md).
 
 You can follow these steps by watching the video on the Microsoft Community Learning YouTube Channel:
 
@@ -27,11 +24,16 @@ You can follow these steps by watching the video on the Microsoft Community Lear
 Before you start, make sure you have the following in place:
 
 - A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](../../set-up-your-development-environment.md).
-- The SharePoint Framework development toolchain installed, including [Node.js](https://nodejs.org) (the version required by SPFx v1.24) and a code editor such as [Visual Studio Code](https://code.visualstudio.com).
+- The SharePoint Framework **1.24.0** development toolchain installed, including a supported [Node.js](https://nodejs.org) version and a code editor such as [Visual Studio Code](https://code.visualstudio.com). See the [compatibility reference](../../compatibility.md).
 - Permission to upload and deploy solution packages to your tenant app catalog.
+- A Microsoft 365 Copilot add-on USL (user-specific license) on top of your normal E3, E5, or E7 license to use the component in Copilot.
+- A supported browser or desktop client. iOS and Android, including Teams mobile, aren't supported at GA.
 
 > [!NOTE]
-> During the public preview, no Microsoft 365 Copilot license is required to build, deploy, or run SharePoint Copilot Apps. For more information, see [Availability during preview](../overview-copilot-apps.md#availability-during-preview).
+> Copilot UX components don't incur consumption-based charges, but APIs/services used by an implementation can have separate charges. For licensing and distribution details, see [Availability](../overview-copilot-apps.md#availability).
+
+> [!IMPORTANT]
+> If you add SPFx Teams functionality to this solution, automatic **Sync to Teams** has a mismatch at GA. Use a manually created Teams package for the combined solution. See [GA limitations](../overview-copilot-apps.md#ga-limitations).
 
 ## Create a Copilot component project
 
@@ -73,7 +75,7 @@ Before you start, make sure you have the following in place:
 
 ## Review the project structure
 
-A SharePoint Copilot App groups the Copilot component source with the declarative agent definition in a single SPFx solution. The following files and folders are the most important ones to understand.
+A Copilot UX component solution groups the component source with the declarative agent definition in a single SPFx solution. The following files and folders are the most important ones to understand.
 
 > [!div class="mx-imgBorder"]
 > ![The project structure, highlighting the copilot and copilotComponents folders](../../../images/copilot/tutorial-structure.png)
@@ -282,6 +284,6 @@ When you are satisfied with the experience in the Workbench, build the solution 
 
 ## Next steps
 
-- [Overview of SharePoint Copilot Apps](../overview-copilot-apps.md)
+- [Overview of Copilot UX components](../overview-copilot-apps.md)
 - [Display modes in SharePoint Copilot components](../displayMode.md)
 - Review available samples in the [GitHub sample repository](https://github.com/pnp/spfx-copilot-apps).

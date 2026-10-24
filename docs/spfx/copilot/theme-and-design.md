@@ -1,14 +1,11 @@
 ---
 title: Theme and design for the Copilot canvas
 description: Learn how to style Copilot UX components to match the Microsoft 365 Copilot canvas in both inline and fullscreen display modes.
-ms.date: 10/11/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
 # Theme and design for the Copilot canvas
-
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. APIs, schemas, and tooling described in this article may change before general availability.
 
 A Copilot UX component runs in an iframe on the Microsoft 365 Copilot canvas. The host context has fields for the theme, the display mode, the container size, and the platform, but the host supplies no design tokens, so the component brings its own design system. This article uses Fluent UI v9, which the React template includes. The code in this article comes from the [tutorial-theme-and-design sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-theme-and-design).
 
@@ -24,6 +21,9 @@ The host sends its state in `this.hostContext`. Every field is optional.
 | `containerDimensions` | `{ width?, height?, maxWidth?, maxHeight? }` | The size of the container, in pixels. |
 | `platform` | `'web' \| 'desktop' \| 'mobile'` | The type of device. |
 | `deviceCapabilities` | `{ touch?, hover? }` | Whether the device supports touch and hover. |
+
+> [!NOTE]
+> Mobile-related host context fields don't establish client support. Copilot UX components aren't supported on iOS or Android at GA, including Teams mobile. See [Availability](overview-copilot-apps.md#availability).
 
 The framework calls `render()` again when a value changes. Read `this.hostContext` on every render, and don't keep a copy:
 
@@ -233,7 +233,7 @@ const [selectedId, setSelectedId] = React.useState<string | undefined>(undefined
 
 In the Copilot Workbench, the selected card stays selected in fullscreen, with its details shown, and stays selected after the return to inline. In Microsoft 365 Copilot, the selected card stays selected in fullscreen, with its details shown.
 
-In Microsoft 365 Copilot, the fullscreen view opens as a panel next to the chat. The host owns the way out of fullscreen, so the fullscreen view shows no collapse control. The display mode article states that `requestDisplayModeAsync` accepts only `'fullscreen'`. In testing on SharePoint Framework 1.24.0-beta.5, a call with `'inline'` resolved and returned the component to the inline view, in the Copilot Workbench and in Microsoft 365 Copilot. Because this behavior isn't documented, the sample leaves the way out of fullscreen to the host.
+In Microsoft 365 Copilot, the fullscreen view opens as a panel next to the chat. The host owns the way out of fullscreen, so the fullscreen view shows no collapse control. Use `requestDisplayModeAsync('fullscreen')` to request expansion, and leave the return to inline to the host. Don't rely on undocumented behavior to collapse the component.
 
 > [!div class="mx-imgBorder"]
 > ![The fullscreen view in Microsoft 365 Copilot in the dark theme, with eight project cards in two columns and a details pane next to them](../../images/copilot/theme-and-design-fullscreen-dark.png)

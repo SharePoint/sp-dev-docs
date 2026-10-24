@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft 365.
-ms.date: 12/10/2025
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -30,7 +30,7 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 
 ![Use SharePoint Framework solutions to extend Viva Connections](../images/overview/viva-spfx-extensibility.png)
 
-Use SPFx to extend [Microsoft 365 Copilot](./copilot/overview-copilot-apps.md) by building SharePoint Copilot Apps. A Copilot App packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the same SharePoint app catalog you already use. SharePoint Copilot Apps are currently in preview.
+Use SPFx to extend Microsoft 365 Copilot by building [Copilot UX components](./copilot/overview-copilot-apps.md), generally available with SPFx 1.24 on October 29, 2026. A solution packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the SharePoint app catalog. See the [licensing and supported-client requirements](./copilot/overview-copilot-apps.md#availability), including the required Copilot add-on license and the iOS/Android exclusions at GA.
 
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
@@ -40,8 +40,8 @@ To learn more about where developers can use SPFx, see [Supported extensibility 
 
 The following are some of the key features included as part of the SPFx:
 
-- It runs in the context of the current user and connection in the browser. There are no iframes for the customization (JavaScript is embedded directly to the page).
-- The controls are rendered in the normal page DOM.
+- It runs in the context of the current user and connection in the browser. SharePoint page customizations run in the page, while Copilot UX components are hosted in an iframe in the Copilot canvas.
+- SharePoint page controls are rendered in the page DOM; Copilot UX components render in their host iframe.
 - The controls are responsive and accessible by nature.
 - It enables the developer to access the lifecycle in addition to **render**, **load**, **serialize** and **deserialize**, **configuration changes**, and more.
 - It's framework-agnostic. You can use any JavaScript web framework that you like including, but not limited to, React, Handlebars, Knockout, Angular, and Vue.js.
@@ -51,7 +51,7 @@ The following are some of the key features included as part of the SPFx:
 - SPFx web parts can be added to both classic and modern pages.
 - SPFx web parts solutions can be used to extend Microsoft Teams.
 - SPFx Adaptive Card Extensions (ACEs) can be used to extend Microsoft Viva Connections.
-- SPFx Copilot components can be used to extend Microsoft 365 Copilot (currently in preview).
+- SPFx Copilot UX components can be used to extend Microsoft 365 Copilot.
 
 The runtime model improves on the Script Editor web part. It includes a robust client API, an `HttpClient` object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
@@ -77,6 +77,6 @@ You can also post issues, questions, or feedback about the docs at the following
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
-- [Overview of SharePoint Copilot Apps](./copilot/overview-copilot-apps.md)
+- [Overview of Copilot UX components](./copilot/overview-copilot-apps.md)
 - [SharePoint development](/sharepoint/dev)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md)
