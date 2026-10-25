@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 08/18/2016
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -20,18 +20,18 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
 
 > [!IMPORTANT]
-> The following steps assume you're building solutions for SharePoint Online using the latest version of the SharePoint Framework.
+> The following steps assume you're building solutions for SharePoint Online using SharePoint Framework 1.24. For other SPFx versions, check the [compatibility reference](compatibility.md) before installing Node.js.
 
 ## Install Node.js
 
-Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v22**.
+Install the latest available **[Node.js](https://nodejs.org) 24 LTS** release. Node.js 24 LTS is the recommended baseline for a new **SPFx 1.24** development environment.
 
-This version is the recommended version of Node.js to use with the SPFx v1.22.*. If you are using a different version of SPFx, verify you install a version of Node.js that's supported by that version of SPFx.
+SPFx 1.24 also supports Node.js 22 (22.14.0 or later within the 22.x release line) and Node.js 26. If you're maintaining a solution on an earlier SPFx version, use the Node.js version listed for that release in the [compatibility reference](compatibility.md). Don't apply the Node.js 24 recommendation to older projects without checking their supported versions.
 
 > [!IMPORTANT]
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
 >
-> Be aware that Node.js maintains two different releases at all times: LTS & Current version. The SPFx is only supported on LTS versions. For more information about Node.js's Long Term Support (LTS) releases, see: [Node.js > About](https://nodejs.org/about/previous-releases).
+> Node.js lifecycle status and SPFx compatibility are separate. At the SPFx 1.24 release, Node.js 24 is LTS and Node.js 26 is Current. SPFx 1.24 supports both, but Node.js 24 LTS is recommended for getting started. Don't assume a newer Node.js release is supported just because it's available. For Node.js lifecycle details, see [Node.js releases](https://nodejs.org/en/about/previous-releases).
 
 > [!TIP]
 > The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads](https://nodejs.org/download/) page and select the version you want to install.
@@ -45,7 +45,7 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-The SharePoint Framework v1.22.* is supported on Node.js v22 LTS (*aka Jod*).
+For the recommended SPFx 1.24 setup, the command should report a version starting with `v24.`. If you use a Node.js version manager, select Node.js 24 in the shell where you install the toolchain and run your project. See [Managing multiple development environments](#managing-multiple-development-environments).
 
 ## Install a code editor
 

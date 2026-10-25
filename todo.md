@@ -1,6 +1,7 @@
 # SPFx documentation health and 1.24 GA tracker
 
-Last reviewed: October 23, 2026  
+Last reviewed: October 25, 2026
+
 Scope: all of [docs/spfx](docs/spfx), [docs/community](docs/community), navigation in [docs/toc.yml](docs/toc.yml), and directly related setup, support, landing-page, and shared-content references.
 
 This is an implementation backlog, not a declaration that GA documentation or runtime validation is complete. The initial scan added this tracker; subsequent implementation is recorded below. Keep task IDs stable when adding follow-up requirements. **Use `[x]` for completed implementation or verification work. For partially completed tasks, check completed subtasks and leave the parent unchecked. Track release verification and publication separately under G01-G03 and V01-V09; don't leave completed content work unchecked solely because launch checks are pending.**
@@ -171,7 +172,14 @@ Dynamic discovery is **not** automatic deployment of source edits, a substitute 
   **Done when:** examples agree, declare only supported modes, and pass the theme/mode/accessibility matrix. Dependencies: G03, R02.
 
 - [ ] **U02 - Align environment setup and compatibility with SPFx 1.24.**  
-  Update [set-up-your-development-environment.md](docs/spfx/set-up-your-development-environment.md) and [compatibility.md](docs/spfx/compatibility.md). Setup still recommends Node.js 22 specifically for 1.22 while assuming the latest SPFx; compatibility already lists 1.24 with Node.js 22/24/26 and React 18.3.1. Verify the exact supported set/minimums and select an explicit recommended Node.js baseline. Reconcile the "Node.js (LTS)" header/"only LTS" language with Node.js 26 support. Make the unqualified React install example match current GA or label it as an older-version example. Keep older rows and on-premises limits unchanged.  
+  - [x] **October 25:** updated the environment installation guide to recommend the latest Node.js **24 LTS** release for SPFx 1.24, explain the expected `v24.` version output and active version-manager shell, and retain version-specific guidance for older projects.
+  - [x] **October 25:** aligned the compatibility reference with that recommendation, documented Node.js 22's 22.14.0 minimum, and distinguished supported Node.js 26 Current from LTS. Removed the setup's blanket "LTS only" claim and the table's misleading "Node.js (LTS)" heading; older support rows and on-premises limits are unchanged.
+  - [ ] Label or align the compatibility reference's unqualified React install example; no React tutorial changes in this Node.js-only pass.
+  - [ ] Complete final package-engine verification and clean-environment scaffold/serve/build/package checks under G03/V01/B01 before full baseline sign-off.
+
+  **October 25 validation:** Node.js recommendation/support assertions, unchanged existing compatibility rows, YAML metadata, 234 local links across the changed files/tracker, the new setup anchor, and editor diagnostics passed. No environment installs or sample builds were performed in this documentation-only pass.
+
+  Update [set-up-your-development-environment.md](docs/spfx/set-up-your-development-environment.md) and [compatibility.md](docs/spfx/compatibility.md). The initial Node.js 22-for-1.22 recommendation and LTS-only contradictions are corrected as checked above. Compatibility lists 1.24 with Node.js 22/24/26 and React 18.3.1. Verify final package minimums and preserve older-version/on-premises boundaries. Make the unqualified React install example match current GA or label it as an older-version example.
   **Done when:** setup, compatibility, release notes, and tutorial prerequisites recommend compatible versions with no unsupported blanket claims. Dependencies: G01, G03.
 
 - [ ] **U03 - Graduate the existing React 18 upgrade guide and add preview-to-GA pointers.**  
@@ -270,7 +278,7 @@ The main problem is **inconsistent generations of guidance**, not simply old met
 
 | Area | Observed evidence | Recommended treatment |
 | --- | --- | --- |
-| Setup/runtime | Setup recommends Node.js 22 specifically for 1.22; compatibility already lists 1.24 with 22/24/26. | Mandatory baseline update under U02/B01. |
+| Setup/runtime | Initial scan found Node.js 22-for-1.22 setup guidance beside a 1.24 compatibility row with 22/24/26. | Node.js 24 LTS recommendation and support/lifecycle wording corrected October 25 under U02; final package/runtime baseline validation remains open under G03/V01/B01. |
 | Debugging | 55 active SPFx files mention a workbench, including valid Copilot Workbench references. Shared notice deprecates the SharePoint Online workbench from May 13, 2026 and schedules retirement for December 1, 2026. Some pages still promise a local workbench or suggest debugging extensions there. | Direct every current Online workbench reference to page-based debugging with the developer toolbar. Copilot Workbench remains fully supported. Track deferred tutorial corrections separately. |
 | Retired capabilities | Isolated web parts' documented retirement date was April 2, 2026; Graph Toolkit's announced full retirement date was August 28, 2026. Both remain in current development navigation. | Remove all Graph Toolkit recommendations and preferred getting-started links; retain only clearly labeled historical/migration context where needed. Refresh lifecycle notices; hold tutorial implementation rewrites. |
 | On-premises support | Compatibility lists Subscription Edition up to SPFx 1.5, while the server guide and platform overview describe parity with 2019/1.4.1. | Resolve the actual supported matrix with the product owner; do not guess or upgrade on-premises to 1.24. |
