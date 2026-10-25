@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 08/18/2016
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -171,7 +171,7 @@ Depending on your scenario, you may need to maintain different development envir
 - Node version managers
 
 > [!TIP]
-> For more information on node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.andrewconnell.com/articles/better-node-js-install-management-with-node-version-manager/).
+> For more information on node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.andrewconnell.com/articles/node-js-better-install-management-with-node-version-manager/).
 >
 > - [Node Version Manager (NVM)](https://github.com/creationix/nvm): for macOS
 > - [Fast Node Manager (FNM)](https://github.com/Schniz/fnm): cross-platform (Windows and MacOS)
@@ -199,7 +199,7 @@ In case the certificate is not added to the Trusted Root Certification Authority
 
 ### Unable to Install Packages with npm - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.andrewconnell.com/articles/node-npm-fix-proxy-config/)
+If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.andrewconnell.com/articles/node-js-npm-fix-proxy-config/)
 
 ## See also
 
