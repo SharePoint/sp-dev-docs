@@ -11,6 +11,8 @@ ms.assetid: 6c5814c2-aeb3-bbf1-8a6a-f7362a20e508
 
 # ContextualTabs element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

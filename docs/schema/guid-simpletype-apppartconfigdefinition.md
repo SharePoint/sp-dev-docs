@@ -11,6 +11,8 @@ ms.assetid: c535cb42-5748-92ea-b258-cca570ca6e51
 
 # GUID simpleType (AppPartConfigDefinition)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 > [!NOTE]

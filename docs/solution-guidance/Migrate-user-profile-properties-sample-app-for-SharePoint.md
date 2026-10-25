@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 
 # Migrate user profile properties sample SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
    
 The Core.ProfileProperty.Migration sample shows you how to migrate user profile data from SharePoint Server into SharePoint Online.
     

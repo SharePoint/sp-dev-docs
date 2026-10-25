@@ -1,11 +1,14 @@
 ---
 title: Consume the Microsoft Graph in the SharePoint Framework
-description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
+description: Tutorial on using the AadHttpClient or MSGraphClientV3 class to connect to Microsoft Graph in SharePoint Framework solutions.
 ms.date: 01/14/2026
 ms.localizationpriority: high
 ---
 
 # Consume the Microsoft Graph in the SharePoint Framework
+
+> [!NOTE]
+> This walkthrough contains older generated React and property-pane code. `MSGraphClientV3` requires SPFx 1.15 or later in SharePoint Online; the earlier 1.4.1 API introduction isn't the minimum version for these snippets. For SPFx 1.24, use React 18.3.1 and preserve the generated root and disposal method as described in the [React 18 upgrade guide](react-18-upgrade.md). The legacy render call below isn't a current React 18 example.
 
 Consuming REST APIs secured with Azure Active Directory (Azure AD) and Open Authorization (OAuth 2.0) from within a SharePoint Framework client-side web part or extension is a common enterprise-level business scenario.
 
@@ -25,13 +28,13 @@ The steps in this article show you how to build a client-side web part that enab
 The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to select how to access Microsoft Graph. In versions of the SharePoint Framework starting with v1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD-secured REST API (**AadHttpClient**).
 
 > [!NOTE]
-> To get the source code for this solution, see the [api-scopes](s://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
+> To get the historical source code for this solution, see the [api-scopes](https://github.com/pnp/sp-dev-fx-webparts/tree/main/tutorials/api-scopes) GitHub repo. Its version history targets SPFx 1.10, so compare its package versions before reusing the sample.
 
 If you're already familiar with how to create SharePoint Framework solutions, you can continue to [Configure the API permissions requests](#configure-the-api-permissions-requests).
 
 ## Create the initial solution
 
-If you have an old version of the SharePoint Framework generator, you need to update it to v1.4.1 or later. To do that, run the following command to globally install the latest version of the package.
+For a new SharePoint Online project, use the generator version specified in [Set up your development environment](set-up-your-development-environment.md). The command below installs the latest published generator; it doesn't upgrade an existing solution.
 
 ```console
 npm install -g @microsoft/generator-sharepoint
@@ -50,10 +53,9 @@ Next, create a new SharePoint Framework solution:
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?** spfx-api-scopes-tutorial
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
     - **Which type of client-side component to create?** Web Part
     - **What is your Web part name?** GraphConsumer
-    - **Which framework would you like to use?** React
+    - **Which template would you like to use?** React
 
 1. Start Visual Studio Code (or your favorite code editor) within the context of the current folder.
 
@@ -473,7 +475,7 @@ The `scope` can be the name of the permission, or the unique ID of that permissi
 > [!NOTE]
 > For a list of the permissions that are available in Microsoft Graph, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 >
-> By default, the service principal has no explicit permissions granted to access Microsoft Graph. However, if you request an access token for Microsoft Graph, you get a token with the `user_impersonation` permission that you can use to read information about the users (User.Read.All). You can request additional permissions to be granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
+> Request and approve the least-privileged permission required by the operation; don't depend on historical default grants. This example requests `User.ReadBasic.All`. For the supported approval process, see [Connect to Microsoft Entra ID-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 The **User.ReadBasic.All** permission is sufficient for searching for users and getting their `displayName`, `mail`, and `userPrincipalName`.
 
@@ -641,7 +643,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
    ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
-   Using this page, you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. You don't see which solution package is requesting which permission because the permissions are defined at the tenant level and for a unique application.
+   An administrator with the required permissions can approve or deny requests on this page. Review the current [API permission-management guidance](use-aadhttpclient.md) for roles and tenant-wide scope; don't assume every administrative role can approve every API request.
 
    > [!NOTE]
    > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#see-also) section.
@@ -651,7 +653,7 @@ You're now ready to build, bundle, package, and deploy the solution.
    ![Screenshot of the WebApiPermission management page during the approval process](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 > [!WARNING]
-> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 - [CorrelationId]`), update the `resource` attribute in your **package-solution.json** to use the value `Microsoft.Azure.AgregatorService` rather than `Microsoft Graph`, which was instructed earlier in this tutorial. Reject the existing request and update the solution package in the app catalog with the update value.
+> If permission approval fails, retain the intended `Microsoft Graph` resource and investigate the error and correlation ID using the current [API permission guidance](use-aadhttpclient.md). Don't substitute a different service principal name as a generic workaround.
 
 ## Test the solution
 
@@ -661,15 +663,15 @@ You're now ready to build, bundle, package, and deploy the solution.
     heft start --nobrowser
     ```
 
-1. Open the browser and go to the following URL to go to the SharePoint Framework Workbench page:
+1. Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](debug-modern-pages.md). For example:
 
     ```text
-    https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
+    https://contoso.sharepoint.com/sites/dev/SitePages/GraphConsumer.aspx
     ```
 
-1. Add the **GraphConsumer** client-side web part, configure the **Client Mode**, and search for users.
+1. Edit the page, add the **GraphConsumer** client-side web part, and configure **Client Mode**. Save the page and leave edit mode to search for users.
 
-   When you make your first request, you'll see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD by using an OAuth implicit flow.
+   SharePoint Framework manages token acquisition through its native clients. Don't depend on the historical ADAL or implicit-flow implementation, or use the appearance of a pop-up as a success check. Verify the API response and handle authentication or consent errors as described in [AadHttpClient guidance](use-aadhttpclient.md).
 
    ![Screenshot of the UI of the sample application](../images/use-aad-tutorial-video.gif)
 
@@ -678,6 +680,5 @@ And that's it! Now you can build enterprise-level solutions that use Azure AD-se
 ## See also
 
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md)
-- [Use the MSGraphClient to connect to Microsoft Graph](use-msgraph.md)
-- [Complete source code from this tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes)
-
+- [Use MSGraphClientV3 to connect to Microsoft Graph](use-msgraph.md)
+- [Historical source code for this tutorial](https://github.com/pnp/sp-dev-fx-webparts/tree/main/tutorials/api-scopes)

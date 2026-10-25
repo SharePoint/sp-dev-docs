@@ -98,6 +98,9 @@ Please share any questions or findings on Copilot UX components through the [sp-
 #### Copilot UX component resources
 
 - [Copilot UX components overview](./copilot/overview-copilot-apps.md)
+- [Develop and deploy Copilot UX components](./copilot/development-and-deployment.md)
+- [Provide Copilot with context from your component](./copilot/provide-context-to-copilot.md)
+- [Configure Copilot UX components and agents](./copilot/component-and-agent-configuration.md)
 - [Build your first Copilot UX component](./copilot/get-started/build-your-first-copilot-app.md) – documentation
 - [Theme and design for the Copilot canvas](./copilot/theme-and-design.md)
 - [Creating your first SharePoint Copilot App - Tutorial](https://www.youtube.com/watch?v=1TaK6osdvc0) - video

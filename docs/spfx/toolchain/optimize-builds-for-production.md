@@ -1,7 +1,7 @@
 ---
 title: Optimize SharePoint Framework builds for production
 description: The differences between debug and release builds and how you can optimize your bundle for use in production environments.
-ms.date: 02/20/2026
+ms.date: 10/25/2026
 ms.localizationpriority: medium
 ---
 # Optimize SharePoint Framework builds for production
@@ -12,7 +12,7 @@ When deploying SharePoint Framework solutions to production, you should always u
 
 When building a SharePoint Framework project, you can choose whether you want to build it in a debug or release mode. By default, SharePoint Framework projects are built in debug mode, which makes it easier for you to debug code. But when your code is finished and is working as expected, you should build it in release mode to optimize it for running in the production environment.
 
-For more information about building your project in release mode, see [SharePoint Framework toolchain](./sharepoint-framework-toolchain.md).
+For SPFx 1.24 projects generated with the standard Heft configuration, `npm run build` runs `heft test --clean --production` followed by `heft package-solution --production`. See the [Heft-based toolchain](sharepoint-framework-toolchain-rushstack-heft.md). For older gulp-based projects, use the commands in the [legacy toolchain reference](sharepoint-framework-toolchain.md).
 
 The main difference between the output of a debug and release build is that the release version of the generated bundle is minified and smaller in size than its debug equivalent. To illustrate the difference, compare the size of the debug and release version of a SharePoint Framework project with a web part using Angular.
 

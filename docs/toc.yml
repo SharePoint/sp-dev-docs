@@ -203,7 +203,7 @@
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md
       - name: Web part top actions
         href: spfx/web-parts/guidance/getting-started-with-top-actions.md
-      - name: Isolated web parts
+      - name: Domain-isolated web parts (retired)
         href: spfx/web-parts/isolated-web-parts.md
       - name: Isolated web parts retirement announcement
         href: spfx/web-parts/isolated-web-parts-retirement.md
@@ -221,8 +221,6 @@
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
       - name: Use Microsoft Graph in web parts
         href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
-      - name: Use Microsoft Graph Toolkit in web parts
-        href: spfx/web-parts/get-started/build-web-part-microsoft-graph-toolkit.md
       - name: Provision assets from a web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
@@ -269,6 +267,12 @@
         href: spfx/copilot/get-started/build-your-first-copilot-app.md
       - name: Connect Copilot UX components to SharePoint data
         href: spfx/copilot/get-started/connect-to-sharepoint-data.md
+    - name: Development and deployment
+      href: spfx/copilot/development-and-deployment.md
+    - name: Provide context to Copilot
+      href: spfx/copilot/provide-context-to-copilot.md
+    - name: Configure components and agents
+      href: spfx/copilot/component-and-agent-configuration.md
     - name: Display modes
       href: spfx/copilot/displayMode.md
     - name: Theme and design
@@ -452,7 +456,7 @@
       href: spfx/fluent-ui-integration.md
     - name: Image Helper API
       href: spfx/image-helper-api.md
-    - name: Microsoft Graph Toolkit
+    - name: Microsoft Graph Toolkit retirement and migration
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Build toolchain & dependencies
     items:
@@ -5639,6 +5643,12 @@
     href: support-feedback.md
   - name: How to contribute
     href: community/contribute.md
+  - name: Microsoft 365 & Power Platform community
+    href: community/community.md
+  - name: Community projects
+    href: community/open-source-projects.md
+  - name: Community calls
+    href: https://aka.ms/community/calls
   - name: How to submit issues
     href: https://aka.ms/spdev-issues
   - name: How to submit feature requests

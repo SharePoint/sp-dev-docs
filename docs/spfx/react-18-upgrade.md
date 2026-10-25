@@ -1,7 +1,7 @@
 ---
 title: Upgrade to React 18 in SharePoint Framework 1.24
-description: Learn how to upgrade a SharePoint Framework 1.23 React solution to the SPFx 1.24 preview, including dependencies, rendering, cleanup, and tests.
-ms.date: 10/20/2026
+description: Learn how to upgrade a SharePoint Framework 1.23 React solution to SPFx 1.24, including dependencies, rendering, cleanup, and tests.
+ms.date: 10/25/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -11,17 +11,15 @@ ai-usage: ai-assisted
 
 SharePoint Framework (SPFx) 1.24 introduces support for React 18.3.1, replacing React 17.0.1 in SPFx 1.23. This article walks you through upgrading an existing SPFx 1.23 React solution: update the dependencies, migrate React rendering and cleanup, and validate the solution in its target hosts.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-prerelease-related.md)]
-
 SPFx 1.23 and 1.24 both use the Heft-based toolchain, so this upgrade doesn't require a Gulp-to-Heft migration. Existing function components, class components, hooks, and JSX can generally remain in place. Updating the globally installed Yeoman generator alone doesn't update an existing solution.
 
 > [!NOTE]
-> The commands in this article target SPFx `1.24.0-rc.0`, the release candidate documented in the [SPFx 1.24 release notes](release-1.24.0.md). When targeting another release, use its exact version for the generator and all SPFx packages. Don't mix SPFx package versions.
+> The commands in this article target SPFx `1.24.0`. The React contract is unchanged from `1.24.0-rc.0`; see the [SPFx 1.24 release notes](release-1.24.0.md). Use the exact target version for the generator and all SPFx packages. Don't mix release-candidate and stable packages.
 
 ## Prerequisites
 
 - An existing SPFx 1.23.x React project that targets SharePoint Online. SPFx 1.24 isn't supported on SharePoint Server.
-- A [supported development environment](set-up-your-development-environment.md) for the target SPFx version. You can continue using a supported Node.js 22 version; upgrading Node.js isn't required to adopt React 18.
+- A [supported development environment](set-up-your-development-environment.md) for the target SPFx version. Node.js 24 LTS is recommended for a new SPFx 1.24 environment. You can continue using a supported Node.js 22 version; upgrading Node.js isn't required to adopt React 18.
 - Access to a development tenant and the hosts that your solution supports, such as SharePoint, Teams, or Microsoft 365 Copilot.
 
 The commands in this article use npm. Run project commands from the folder that contains **package.json**, except when generating the separate comparison project.
@@ -32,7 +30,7 @@ If your project still uses Gulp, first follow [Migrate from the Gulp-based to th
 
 | Area | SPFx 1.23 | SPFx 1.24 |
 | --- | --- | --- |
-| SPFx packages | Your existing 1.23.x version | 1.24.0-rc.0 |
+| SPFx packages | Your existing 1.23.x version | 1.24.0 |
 | `react` and `react-dom` | 17.0.1 | 18.3.1 |
 | `@types/react` and `@types/react-dom` | 17.x | Compatible 18.x definitions |
 | React rendering | `ReactDom.render(element, container)` | `createRoot(container)`, followed by `root.render(element)` |
@@ -57,7 +55,7 @@ For supported Node.js and TypeScript versions, see the [SPFx compatibility refer
 2. Install the generator for the target SPFx version.
 
    ```console
-   npm install @microsoft/generator-sharepoint@1.24.0-rc.0 --global
+   npm install @microsoft/generator-sharepoint@1.24.0 --global
    ```
 
 3. In a new, empty directory outside the existing solution, run the generator. Select the same component type as your solution and the React framework option where available.
@@ -72,22 +70,22 @@ For supported Node.js and TypeScript versions, see the [SPFx compatibility refer
 
 Use `npm pkg set` to update `package.json` before installing packages. This lets npm resolve the SPFx, React, and type-definition changes together, rather than trying to install an intermediate combination.
 
-1. Update every SPFx package that your project already references to the same exact `1.24.0-rc.0` version.
+1. Update every SPFx package that your project already references to the same exact `1.24.0` version.
 
    The following commands cover the SPFx packages in a generated SPFx 1.23.2 React web part. Run only the commands for packages that your project uses, and keep each package in its existing `dependencies` or `devDependencies` section.
 
    ```console
-   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.0-rc.0"
-   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.0-rc.0"
-   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.0-rc.0"
-   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.0-rc.0"
-   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.0-rc.0"
-   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.0-rc.0"
-   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.0-rc.0"
-   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.0-rc.0"
-   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.0-rc.0"
-   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.0-rc.0"
-   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.0-rc.0"
+   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.0"
+   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.0"
+   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.0"
+   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.0"
+   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.0"
+   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.0"
    ```
 
    Also update any component-specific SPFx packages that your project references. Examples include `@microsoft/sp-application-base`, `@microsoft/sp-listview-extensibility`, `@microsoft/sp-dialog`, `@microsoft/sp-adaptive-card-extension-base`, and `@microsoft/sp-copilot-component`. Don't add packages for component types that your solution doesn't use.
@@ -248,8 +246,6 @@ You don't need to adopt transitions, Suspense, or other new React features as pa
 
 ### Update unit tests
 
-### Update unit tests
-
 If the solution has React unit tests, update mount, rerender, and unmount helpers together. Tests still using `ReactDom.render` exercise legacy rendering behavior. With React 18.3.1, use [`act` from `react`](https://react.dev/reference/react/act) rather than `react-dom/test-utils`, and wait for updates before asserting on the DOM.
 
 Run DOM tests in a browser-like environment, such as Jest with jsdom. For direct React DOM unit tests, enable `IS_REACT_ACT_ENVIRONMENT` in the test setup. In an SPFx Heft project, **config/jest.config.json** can extend the existing rig configuration:
@@ -307,7 +303,7 @@ test('renders with a React 18 root', async () => {
 
 3. Inspect the generated manifests in **dist** to confirm that React dependencies use the SPFx-provided resources for the target release. Don't edit generated manifests to correct a dependency problem; correct the source or package configuration and rebuild.
 
-4. Use `npm start` to debug with your configured SharePoint or Copilot workbench. Validate the packaged solution in every host it supports, including SharePoint pages, Teams, Viva Connections, or Microsoft 365 Copilot as applicable.
+4. Use `npm start` to serve the project locally. For SharePoint, load local manifests on an actual [SharePoint page with the developer toolbar](debug-modern-pages.md). For Copilot UX components, use the fully supported [Copilot Workbench](copilot/get-started/build-your-first-copilot-app.md). Validate the packaged solution in every host it supports, including SharePoint pages, Teams, Viva Connections, or Microsoft 365 Copilot as applicable.
 
 In each target host, check the following:
 

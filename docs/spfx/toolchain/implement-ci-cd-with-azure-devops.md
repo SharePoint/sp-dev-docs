@@ -14,7 +14,7 @@ This article explains the steps involved in setting up your Azure DevOps environ
 > [!NOTE]
 > Starting with **SPFx v1.22.0**, the build system uses [Heft](https://rushstack.io/pages/heft/overview/) instead of Gulp. For Heft-based pipelines, see [Azure DevOps Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md). For legacy Gulp-based projects (SPFx v1.0 - v1.21.x), this article applies. To migrate to Heft, see [Migrate from the Gulp Toolchain to Heft Toolchain](./migrate-gulptoolchain-hefttoolchain.md).
 
-## Choosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
+## Choosing between Azure Multi-stage Pipelines and Azure DevOps builds and releases
 
 There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.
 Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.
@@ -52,12 +52,12 @@ The Build Definition, as its name suggests, includes all the definitions and the
 
 ### Installing NodeJS
 
-Once the Build Definition has been created, the first thing you need to do is install NodeJS. Make sure to install a supported version for your SPFx project (Node 18.x or later for SPFx 1.22+).
+Once the Build Definition has been created, install the Node.js version supported by the project's exact SPFx version. This article covers legacy Gulp projects, not SPFx 1.22 or later.
 
 ![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE]
-> Make sure you specify the appropriate Node version in the `Version Spec` field. For SPFx 1.22+, use `22.x` (LTS). For SPFx 1.20-1.21.x, use `18.x`.
+> Use the [SPFx compatibility table](../compatibility.md) when setting `Version Spec`; don't assume that all Gulp-era projects use the same Node.js version. Older runtimes can be out of support and need an isolated maintenance environment. For SPFx 1.24, follow the current environment guidance and use a Heft-based pipeline; Node.js 24 LTS is recommended.
 
 ### Restoring dependencies
 
@@ -73,7 +73,7 @@ The SharePoint Framework doesn't provide a testing framework by default (since 1
 
 #### Configuring Jest
 
-By default SharePoint Framework projects doesn't include a testing framework. We'll use Jest in this sample.
+The following Jest configuration is a historical React 16 example, not a preset for every Gulp-based SPFx version. Match the test runner and preset to the project's React and TypeScript versions. Don't install these packages into an SPFx 1.24/React 18 project; see the [React 18 test guidance](../react-18-upgrade.md#update-unit-tests).
 
 ```console
 npm i jest jest-junit @voitanos/jest-preset-spfx-react16 -D
@@ -242,7 +242,10 @@ The Microsoft 365 Common Language Interface (CLI) is an open-source project buil
 
 ### Connecting to SharePoint Online
 
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant. To do so, add a `Command Line` task and paste in the following command into the `script` field `m365 login -t password -u $(username) -p $(password)`.
+Before using the app catalog, authenticate to the target tenant with your own Microsoft Entra application. For unattended deployments, follow the CLI's [certificate login reference](https://pnp.github.io/cli-microsoft365/cmd/login/), [own-app setup](https://pnp.github.io/cli-microsoft365/user-guide/using-own-identity/), and [certificate permission guidance](https://pnp.github.io/cli-microsoft365/user-guide/cli-certificate-caveats/). Store the private certificate in Azure Pipelines secure files and its password in a secret variable. Validate app-catalog upload and deployment permissions in a test tenant.
+
+> [!WARNING]
+> The screenshots and variables below belong to the historical username/password release definition. Don't reproduce that authentication setup for a new pipeline, bypass MFA, or commit credentials. Replace it with your approved unattended authentication configuration.
 
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 

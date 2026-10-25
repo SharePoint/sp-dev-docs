@@ -7,6 +7,9 @@ ms.localizationpriority: high
 
 # Localize SharePoint Framework client-side web parts
 
+> [!NOTE]
+> The React snippets below retain the legacy rendering API from before SPFx 1.24. When applying the localization concepts to a React 18 project, preserve its generated root and cleanup lifecycle rather than copying `ReactDom.render`. See the [React 18 upgrade guide](../../react-18-upgrade.md).
+
 You can broaden the appeal of your SharePoint Framework client-side web part by localizing it for different languages spoken by SharePoint users all over the world. In this article, you'll localize a web part to the Dutch (Netherlands) locale, and verify that the localized values are displayed correctly.
 
 > [!NOTE]
@@ -201,7 +204,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
     heft start
     ```
 
-1. In the SharePoint Workbench, add the web part to the page, and open its configuration.
+1. Open a test SharePoint page with local manifests enabled using the [SPFx developer toolbar](../../debug-modern-pages.md). Add the web part to the page and open its configuration.
 
     ![Greeting web part added to the page with its property pane open](../../../images/localization-initial-changes.png)
 
@@ -246,7 +249,7 @@ Properties that support localization are of type **ILocalizedString**. Each loca
     ```
 
 > [!NOTE]
-> Unfortunately, the SharePoint Workbench doesn't currently support previewing the localized values from the web part manifest. It always uses the default translation.
+> Verify localized manifest values on a multilingual SharePoint test site, including the deployed solution without debug parameters. Don't rely on the historical workbench screenshots to validate localization.
 
 ## Localize the web part property pane
 
@@ -295,15 +298,15 @@ You can override this behavior by creating a locale file named **default.js** wi
 
 ### Verify the localized web part property pane strings
 
-When testing web parts by using the hosted version of the SharePoint Workbench or team sites on a developer tenant, the locale of the context site expressed by the **spPageContextInfo.currentUICultureName** property is used as the default locale.
+When testing on a SharePoint page, use `this.context.pageContext.cultureInfo.currentUICultureName` to inspect the UI culture provided by SharePoint.
 
-When testing web parts by using the local SharePoint Workbench, the SharePoint Framework uses the en-US locale by default to display web part property pane strings. There are two ways in which you can test the values from other locales supported by your web part.
+Use a multilingual test site with Dutch (Netherlands) enabled and a test user whose SharePoint display language is Dutch. Reload the page with local manifests enabled, then open the web part's property pane. Verify both translated values and fallback values for missing translations.
 
-#### Specify the locale to be tested by using the command-line argument
+#### Historical command-line locale example
 
-Another way to specify the locale used by the local SharePoint Workbench is to pass it as an argument to Heft.
+The following command-line example is retained for existing projects that support a locale override. It isn't a substitute for validating the user's UI culture on a SharePoint page. Check the available arguments for your project's toolchain before using it.
 
-- Start the SharePoint Workbench by running the following command:
+- Start the project's development server with the locale override:
 
     ```console
     heft start --locales nl-nl
@@ -468,7 +471,7 @@ Finding out about all these issues late in the project will likely lead to delay
 
 SharePoint supports Multilingual User Interface (MUI) where the site administrator can enable multiple languages for the user interface. When the user visits the site, its UI automatically is displayed using the preferred language based on that user's preferences.
 
-Web parts used on multilingual sites should automatically detect the currently used language and display their contents in that language. The SharePoint Framework simplifies this process by automatically loading the resource file corresponding to the currently used language. Additionally, when testing SharePoint Framework web parts using the hosted version of the SharePoint Workbench, the Workbench also automatically uses the language preferred by the user.
+Web parts used on multilingual sites should detect the current UI language and display their contents in that language. SharePoint Framework loads the corresponding resource file. Validate this on a SharePoint test page with the developer toolbar, using the site's enabled languages and the test user's language preferences.
 
 Values configured through web part properties aren't stored in resource files. By default, the configured value is used as-is, which might lead to inconsistencies, such as greeting the user in English when the user's preferred language is Dutch.
 
@@ -958,5 +961,3 @@ By keeping the resource files separate, the SharePoint Framework minimizes the a
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
-
-

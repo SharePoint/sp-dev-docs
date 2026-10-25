@@ -47,6 +47,8 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ## SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** Office 365 | SharePoint Server_
 
 The approaches you take to ensure optimal performance with SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario most code operations took place in the SharePoint Server-side Object Model code.

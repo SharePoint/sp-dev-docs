@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Bulk upload documents sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!NOTE] 
 > The sample uploads one file to a document library. To upload multiple files, you'll need to extend the sample.
 

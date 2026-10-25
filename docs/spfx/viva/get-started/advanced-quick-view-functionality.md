@@ -113,13 +113,13 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
 
   You'll also need to import **QUICK_VIEW_REGISTRY_ID** from **../HelloWorldAdaptiveCardExtension**
 
-Build and launch the ACE in the hosted workbench:
+Start the local development server using the toolchain for your project's SPFx version (Heft for SPFx 1.22 and later):
 
 ```console
 heft start
 ```
 
-Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Open the test SharePoint page and enable local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Add the ACE, save the page, and leave edit mode to interact with it.
 
 Open the Toolbox and select your ACE. Select the Card to open the Quick View:
 
@@ -294,7 +294,7 @@ Update the Quick View to navigate between views:
 
   You'll also need to import `IActionArguments` from `@microsoft/sp-adaptive-card-extension-base`.
 
-Reload the workbench, select on the Card to open the Quick View, and select on an item in the Quick View.
+Reload the test page with local manifests enabled, select the Card to open the Quick View, and select an item in the Quick View.
 
 :::image type="content" source="../../../images/viva-extensibility/lab3-detailed.png" alt-text="Selecting an item in the Quick View":::
 
@@ -328,7 +328,7 @@ For example, you might want to maintain the Card state when opening the Quick Vi
     }
     ```
 
-Reload the workbench. Try opening and closing the Quick View after clicking on different items. Notice the Card View will remain in the state it was opened.
+Reload the test page with local manifests enabled. Try opening and closing the Quick View after clicking different items. Notice the Card View will remain in the state it was opened.
 
 ## Conclusion
 

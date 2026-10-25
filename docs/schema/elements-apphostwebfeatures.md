@@ -11,6 +11,8 @@ ms.assetid: 90375774-33ca-2b50-1578-9631f3e86d1a
 
 # Elements (AppHostWebFeatures)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This topic lists the elements in the **AppHostWebFeatures** XML schema.
 
 > [!NOTE]

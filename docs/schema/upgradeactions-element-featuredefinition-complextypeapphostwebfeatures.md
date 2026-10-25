@@ -11,6 +11,8 @@ ms.assetid: 221aecfb-1668-adc7-aa6e-8278d108553f
 
 # UpgradeActions element (FeatureDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

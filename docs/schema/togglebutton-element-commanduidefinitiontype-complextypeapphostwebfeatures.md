@@ -11,6 +11,8 @@ ms.assetid: a0815122-d337-2a11-5e98-386b1fe4e709
 
 # ToggleButton element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

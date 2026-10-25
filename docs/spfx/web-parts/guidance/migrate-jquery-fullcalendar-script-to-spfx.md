@@ -417,9 +417,9 @@ The last step is to include the code that initializes the FullCalendar jQuery pl
     heft start --nobrowser
     ```
 
-    Because the web part loads its data from SharePoint, you have to test the web part by using the hosted SharePoint Framework workbench.
+    Because the web part loads data from SharePoint, test it on a SharePoint page in the site that contains the list. Enable local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md).
 
-1. Navigate to **https://{your-tenant-name}.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the tasks displayed in a calendar view by using the FullCalendar jQuery plug-in.
+1. Edit the test page and add the web part. You should now see the tasks displayed in a calendar view by using the FullCalendar jQuery plug-in.
 
     ![Tasks displayed in a calendar view in a SharePoint Framework client-side web part](../../../images/fullcalendar-spfx.png)
 
@@ -690,7 +690,7 @@ Initially, the name of the list from which the data should be loaded was embedde
     heft start --nobrowser
     ```
 
-1. Navigate to the hosted Workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with tasks, and select the **Apply** button to confirm the changes. You should now see tasks displayed in a calendar view in the web part.
+1. Open the test page with local manifests enabled and add the web part. Open its property pane, specify the name of the list with tasks, and select **Apply** to confirm the changes. You should now see tasks displayed in a calendar view.
 
     ![Tasks loaded from the configured list and displayed in a SharePoint Framework client-side web part](../../../images/fullcalendar-spfx-list-configured.png)
 
@@ -910,7 +910,7 @@ Now that you have type declarations for all libraries installed in the project, 
     heft start --nobrowser
     ```
 
-1. Go to the hosted Workbench and add the web part to the canvas. Although visually nothing has changed, the new code base uses TypeScript and its type declarations to help you maintain the solution.
+1. Reload the test page with local manifests enabled. Although visually nothing has changed, the new code base uses TypeScript and its type declarations to help you maintain the solution.
 
 ### Replace jQuery AJAX calls with SharePoint Framework API
 
@@ -1094,5 +1094,4 @@ this.context.spHttpClient.post(`${this.context.pageContext.web.absoluteUrl}\
     heft start --nobrowser
     ```
 
-1. Go to the hosted Workbench and add the web part to the canvas. Although there are still no visual changes, the new code uses the SharePoint Framework SPHttpClient, which simplifies your code and maintains your solution.
-
+1. Reload the test page with local manifests enabled. Although there are still no visual changes, the new code uses the SharePoint Framework SPHttpClient, which simplifies your code and maintains your solution.

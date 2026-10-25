@@ -11,6 +11,8 @@ ms.assetid: bee593c6-802f-8d0c-d619-4adbcc6b1aae
 
 # CustomActionRegistrationType simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

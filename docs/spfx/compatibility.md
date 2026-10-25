@@ -38,8 +38,10 @@ As each new version of the SPFx is released, support for newer library versions 
 > When installing React packages, use the `--save-exact` flag to prevent npm from installing newer patch versions:
 >
 > ```console
-> npm install react@17.0.1 react-dom@17.0.1 --save-exact
+> npm install react@18.3.1 react-dom@18.3.1 --save-exact
 > ```
+>
+> This example is for SPFx 1.24. For earlier SPFx releases, use the React version in the corresponding row.
 
 The following table lists the SPFx and compatible versions of common tools and libraries:
 

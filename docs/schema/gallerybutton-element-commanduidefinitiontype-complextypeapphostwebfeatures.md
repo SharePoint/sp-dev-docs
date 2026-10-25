@@ -11,6 +11,8 @@ ms.assetid: cf945d0d-4801-6866-821f-0af0e8530f44
 
 # GalleryButton element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

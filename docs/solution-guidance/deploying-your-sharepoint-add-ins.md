@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Deploying your SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The articles in this section show you how to deploy your SharePoint Add-ins.
 
 |Article|Shows you how to use the add-in model to|

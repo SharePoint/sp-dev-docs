@@ -11,6 +11,8 @@ ms.assetid: 6793ccee-0f76-f798-eeb8-c1f9309d7685
 
 # Schema map (SharePoint Add-in Manifest)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 This topic shows the schema definition for **SharePoint Add-in Manifest**.

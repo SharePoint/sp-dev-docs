@@ -252,7 +252,7 @@ When you are satisfied with the experience in the Workbench, build the solution 
 1. In the app catalog list, select the uploaded app and select **Add to Teams**. This deploys the declarative agent to the tenant's agent catalog and makes it available to users in Microsoft 365 Copilot.
 
     > [!NOTE]
-    > The **Add to Teams** button label will be updated in a future release to better reflect that it also publishes the agent to the tenant agent catalog. Deployment of the agent can take some time to complete.
+    > **Add to Teams** performs the initial **Sync to Teams** operation and deploys the baseline agent. Deployment can take time. Later component/parameter changes don't require another sync unless the baseline agent configuration also changes. See [Develop and deploy Copilot UX components](../development-and-deployment.md).
 
     > [!div class="mx-imgBorder"]
     > ![Syncing the agent to the tenant agent catalog with Add to Teams](../../../images/copilot/tutorial-sync-teams.png)
@@ -285,5 +285,8 @@ When you are satisfied with the experience in the Workbench, build the solution 
 ## Next steps
 
 - [Overview of Copilot UX components](../overview-copilot-apps.md)
-- [Display modes in SharePoint Copilot components](../displayMode.md)
-- Review available samples in the [GitHub sample repository](https://github.com/pnp/spfx-copilot-apps).
+- [Display modes in Copilot UX components](../displayMode.md)
+- [Develop and deploy Copilot UX components](../development-and-deployment.md)
+- [Configure components and agents](../component-and-agent-configuration.md)
+- [Provide Copilot with context from your component](../provide-context-to-copilot.md): use `createCopilotTextContent` with the bridge to describe the visible UX. Context larger than 10 KB blocks sending the message.
+- Review available samples in the [Copilot UX component sample gallery](https://aka.ms/spfx/copilot/samples). Check each sample's declared SPFx version before using it as a GA baseline.

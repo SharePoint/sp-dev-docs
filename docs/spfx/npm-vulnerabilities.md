@@ -1,7 +1,7 @@
 ---
 title: Understanding npm audit vulnerabilities in SPFx projects
 description: When running npm install on a SharePoint Framework (SPFx) project, npm automatically performs a security audit and may report vulnerabilities. Learn what these vulnerability reports mean, how the SPFx architecture affects their relevance, and the recommended approach for handling them.
-ms.date: 01/28/2026
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 # Understanding npm audit vulnerabilities in SharePoint Framework projects
@@ -10,7 +10,7 @@ When running `npm install` on a SharePoint Framework (SPFx) project, npm automat
 
 ## Overview
 
-npm runs a security audit on installed packages after every `npm install` command. This audit checks the current version of each package in your project against a database of known vulnerabilities. You can also manually run this audit using the `npm audit` command. For more information, see [npm-audit](https://docs.npmjs.com/cli/audit).
+By default, npm runs a security audit during `npm install`. This audit checks package versions against a database of known vulnerabilities; it doesn't determine whether vulnerable code is reachable in your particular solution. You can also run `npm audit` manually. For more information, see [npm-audit](https://docs.npmjs.com/cli/audit).
 
 When creating a new SPFx project using the SharePoint Framework Yeoman generator, or running `npm install` on an existing project, you may see vulnerability warnings after the initial package installation. These warnings can include moderate, high, or even critical severity ratings across numerous packages.
 
@@ -52,36 +52,36 @@ SPFx projects contain core Microsoft packages that have their own dependency cha
 - `@microsoft/sp-property-pane`
 - `@microsoft/sp-webpart-base`
 
-These dependency relationships mean that the vulnerable packages are not direct dependencies of your project code but rather transitive dependencies managed by the SPFx packages.
+Findings can affect these transitive dependencies, development tools, or packages your solution depends on directly. Use the dependency path and advisory details to identify the affected package and the conditions required to exploit it.
 
 ## SPFx build output and deployment
 
 Understanding the SPFx build and deployment architecture is important when evaluating the relevance of npm audit vulnerabilities.
 
-SPFx projects are development environments used to create deployment artifacts. The build process compiles TypeScript code, bundles JavaScript files, and creates a SharePoint package (**\*.sppkg** file) for deployment. **The npm packages installed in your project are used during the build process but are not deployed to SharePoint.**
+SPFx projects are development environments used to create deployment artifacts. The build process compiles TypeScript, bundles JavaScript, and creates a SharePoint package (**\*.sppkg** file). Although the **node_modules** directory isn't deployed as a directory, code imported from npm dependencies can be included in the generated JavaScript bundles and run in users' browsers. External libraries can also be loaded separately at runtime.
 
 The deployment artifacts include:
 
-- Bundled JavaScript files containing your component code
+- Bundled JavaScript files containing your component code and any bundled dependency code
 - A SharePoint package manifest
 - Asset files (images, CSS, localization files)
 
 > [!IMPORTANT]
-> The **node_modules** folder and its contents remain on the development machine and are not included in the deployed package.
+> Not deploying **node_modules** does not establish that a vulnerability is irrelevant. Assess shipped dependency code and development/CI tools separately. A build-only dependency can still affect the workstation, build agent, or produced artifacts under the conditions described in its advisory.
 
 ## Microsoft's approach to npm vulnerabilities in SPFx projects
 
-Microsoft strives to update the latest version of the SPFx with zero vulnerabilities. However, an upstream dependency may contain a vulnerability discovered between SPFx releases. Therefore, you may see some vulnerabilities in the summary after executing `npm install` until the next SPFx release.
+SPFx releases can update dependency versions, but new advisories can be published between releases. Check the advisory, the affected versions, and the release notes for an applicable fix. Neither a new SPFx release nor a clean audit is a guarantee that a project is free of vulnerabilities.
 
 ## Recommended approach for handling vulnerabilities
 
 ### For new projects
 
-When working with a newly created SPFx project, the recommended approach is to proceed with development without attempting to resolve the reported vulnerabilities. The vulnerabilities exist in the transitive dependencies of the SPFx packages, which are managed by Microsoft.
+Use the supported dependency versions for your SPFx release and review reported advisories before deciding how to proceed. A finding in a freshly generated project is not automatically exploitable, but it should not be dismissed solely because the dependency was generated or is transitive.
 
 ### Why npm audit fix is not recommended
 
-Running `npm audit fix` or `npm audit fix --force` to automatically update packages is not recommended for the following reasons:
+Don't run `npm audit fix`, particularly `npm audit fix --force`, without reviewing the proposed dependency changes and validating compatibility:
 
 - Transitive dependencies are controlled by the parent packages that depend on them. Changing these dependencies can cause version conflicts or unexpected behavior.
 - Semantic versioning (semver) is not universally followed by all packages. A "patch" or "minor" version update may introduce breaking changes.
@@ -89,11 +89,13 @@ Running `npm audit fix` or `npm audit fix --force` to automatically update packa
 
 ### When to investigate vulnerabilities
 
-Consider investigating vulnerabilities when:
+Assess each finding according to your organization's security policy:
 
-- You have added third-party packages to your project beyond the default SPFx dependencies
-- The vulnerable package is a direct dependency that you control
-- Your organization's security policies require documented assessment of all vulnerabilities
+1. Record the advisory, affected version, severity, and dependency path from `npm audit`. Use `npm explain <package-name>` to identify why a package is installed.
+1. Determine whether affected code is bundled or otherwise loaded at runtime, used only during development or CI, or unused. A package's placement in `dependencies` or `devDependencies` alone doesn't prove what ships.
+1. Check the advisory's prerequisites against your use of the package, including exposed inputs and execution environment. Severity alone doesn't establish exploitability, and lack of runtime exposure doesn't rule out build-time impact.
+1. For dependencies you control, choose a compatible patched version and review the manifest and lockfile diff. For SPFx-managed dependencies, check for an applicable SPFx update or seek guidance through your organization's support process.
+1. Validate the build, production package, and affected runtime scenarios. Document mitigations, accepted risk, and unresolved findings; don't treat this article as a vulnerability-specific safety assessment.
 
 ### Addressing vulnerabilities in the ecosystem
 
@@ -106,6 +108,7 @@ For vulnerabilities in the SPFx's transitive dependencies, resolution requires u
 
 ## See also
 
-- [Set up your SharePoint Framework development environment](set-up-your-development-environment)
-- [SharePoint Framework toolchain](sharepoint-framework-toolchain)
+- [Set up your SharePoint Framework development environment](set-up-your-development-environment.md)
+- [SharePoint Framework Heft-based toolchain](toolchain/sharepoint-framework-toolchain-rushstack-heft.md)
+- [Update SharePoint Framework packages](toolchain/update-latest-packages.md)
 - [npm audit documentation](https://docs.npmjs.com/cli/audit)

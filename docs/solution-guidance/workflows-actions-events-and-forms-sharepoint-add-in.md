@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Workflows, actions (activities), events, and forms in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 The approach you take to implement workflows and their associated components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, workflows and their associated components were built with server side code and deployed via SharePoint Solutions.  The workflows and their associated components ran on the SharePoint server.

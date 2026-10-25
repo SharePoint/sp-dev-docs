@@ -9,46 +9,32 @@ ms.localizationpriority: high
 Advance API features for the Viva Connections Card Designer enable the dashboard editors to create API powered Quick View experiences without actual code. This new option is supported with all the different form factors or Viva Connections dashboard - mobile, tablet and desktop.
 
 > [!IMPORTANT]
-> First version of this feature is rolling out worldwide by end of the 2023 calendar year. User interface for Card designer will be further evolved within early 2024 for a better end user experience with the advance API features.
+> The screenshots below show the original Card Designer API experience introduced in 2023. For current dashboard-authoring guidance, see [Design your own card with a Quick View](/viva/connections/create-dashboard#design-your-own-card-with-a-quick-view). Check your tenant's configuration rather than relying on the original rollout schedule.
 
 ## Enabling feature in the tenant
 
-By default this feature isn't currently available in the tenants and it has to be enabled by using SharePoint Online Management Shell with following command.
+Have a SharePoint administrator check the tenant's current configuration and the supported settings in the [`Set-SPOTenant` reference](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant). Don't assume the feature is enabled or disabled in every tenant. The following example enables the setting; it doesn't inspect its current value.
 
 ```powershell
 Set-SPOTenant -IsDataAccessInCardDesignerEnabled $true
 ```
 
 > [!IMPORTANT]
-> You'll need to use [SharePoint Online PowerShell](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/16.0.24322.12000) version 16.0.24308.12000 or newer to have this option available in the `Set-SPOTenant` cmdlet.
+> Use a current [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) and consult the [`Set-SPOTenant` reference](/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant) for the setting. The original minimum module version was 16.0.24308.12000; it isn't a recommendation to install that historical build.
 
-If this setting isn't enabled in the tenant, you see following message in the Card Designer property pane: `Advance features have not been enabled by an administrator`.
+The original Card Designer UI displayed `Advance features have not been enabled by an administrator` when the setting wasn't enabled. The current UI and message wording can differ.
 
-When the feature is enabled, you see new options visible as a Data source in the **Data source** selection as shown in following image.
+The following historical screenshot illustrates the API options in the **Data source** selection:
 
 ![API options in the Data source selection in the webpart toolbox](./img/data-source-api-options.png)
 
 ## Managing available API permissions
 
-To be able to use the API features, you'll need to grant the available API permissions in the Entra app management. Card designer feature uses the same app registration as the [SharePoint Framework (SPFx) solutions](https://aka.ms/spfx), so any API that is approved for the SharePoint Framework solutions, will be also available to be used in the Card Designer.
+Enabling the tenant setting doesn't grant API permissions. Have an administrator review the required permissions through **API access** in the SharePoint admin center, following the supported [SharePoint Framework API permission-management guidance](../../../use-aadhttpclient.md). Check the required administrator role and tenant-wide impact before approving access.
 
-If you try to use the API features in the Card Designer, you'll see following exception in the property pane: `Cannot make any requests to Microsoft Graph as the SharePoint Online Client Extensibility Web Application Principal is not configured or consented to.`
+Request only the permissions needed by the API operation. Consent doesn't give a signed-in user access to data they aren't authorized to read. If a request fails, investigate the current authentication or consent error using that guidance rather than editing a service principal based on the historical screenshots.
 
-Needed permissions can be also granted directly to the SharePoint Framework extensibility app registration in the Entry Applications with following steps.
-
-1. Move to the API management page in the SharePoint administration - first time you access this page, the needed app registrations are automatically created to the tenant.
-
-    ![API access page in the SharePoint admin center](./img/sharepoint-admin-api-management.png)
-
-1. Move the Microsoft Entra admin center to confirm that the needed app registrations are available.
-
-    ![Microsoft Entra admin center app registration](./img/entra-app-registration.png)
-
-1. Move to the **SharePoint Online Client Extensibility Web Application Principal** registration and include the needed permissions, which you'd like to be available for the dashboard editors when they use Card Designer feature.
-
-    ![Microsoft Entra admin center app permissions](./img/entra-app-permissions.png)
-
-Notice that after you granted the permissions in the Microsoft Entra admin center, the matching permissions are also visible in the API management page in the SharePoint admin center.
+![Historical API access page in the SharePoint admin center](./img/sharepoint-admin-api-management.png)
 
 ## Using dynamic API data in the Card Designer
 

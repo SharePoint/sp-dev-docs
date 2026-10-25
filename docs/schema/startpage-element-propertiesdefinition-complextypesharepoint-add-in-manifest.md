@@ -11,6 +11,8 @@ ms.assetid: 3092674c-a6c3-9021-3d7e-e716562a4a4f
 
 # StartPage element (PropertiesDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

@@ -11,6 +11,8 @@ ms.assetid: 44a8617a-eb05-bbb2-fcb0-61e6a9f4d246
 
 # QAT element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

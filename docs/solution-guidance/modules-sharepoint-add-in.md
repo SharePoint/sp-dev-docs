@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Modules in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to deploy artifacts to a SharePoint environment is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, modules defined in declarative code (feature framework XML files) were added to SharePoint features. The modules included the list of artifacts to deploy to the SharePoint server. The modules were added to SharePoint features and deployed via SharePoint Solutions. Upon feature activation, the artifacts defined in the modules were deployed to the SharePoint environment.
 
 In a SharePoint Add-in model scenario, the remote provisioning pattern is used to deploy artifacts to SharePoint environments.

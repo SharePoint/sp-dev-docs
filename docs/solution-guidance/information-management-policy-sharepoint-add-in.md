@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Information management policy in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!NOTE]
 > **Important (Modern SharePoint update):**
 >

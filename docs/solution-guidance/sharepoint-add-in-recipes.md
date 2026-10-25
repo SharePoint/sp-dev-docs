@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # SharePoint Add-in recipes
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The articles in this section show you how to use the SharePoint Add-in model to customize your SharePoint sites. The following table lists the articles that are included.
 
 |**Article**|**Shows you how to use the add-in model to**|

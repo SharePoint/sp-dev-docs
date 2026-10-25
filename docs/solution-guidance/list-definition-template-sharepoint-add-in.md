@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # List definition / list template in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to create list definitions / list templates is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, custom list definitions / list templates were created with declarative code and deployed via SharePoint Solutions.
 
 In a SharePoint Add-in model scenario, one cannot actually create custom list definitions.  It is simply impossible to do this.  However, the remote provisioning pattern may used to deploy custom list templates (.stp files) to Office 365.

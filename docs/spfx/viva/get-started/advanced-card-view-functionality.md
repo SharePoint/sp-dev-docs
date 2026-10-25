@@ -14,7 +14,8 @@ This tutorial builds off the following tutorial: [Build your first SharePoint Ad
 
 In this tutorial, you'll implement advanced Card View functionality. You'll build off the previous tutorial and create a Card View that's powered by data in a SharePoint list.
 
-[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
+> [!NOTE]
+> This walkthrough continues the version-scoped sample from the previous tutorial. Use its matching dependencies and toolchain; Heft commands apply to SPFx 1.22 and later. Card Views aren't a preview feature.
 
 ## Create a test list
 
@@ -270,16 +271,16 @@ With the ACE updated to fetch items from a SharePoint list, let's update the car
     }
     ```
 
-Now you can test the ACE. Build and launch the ACE in the hosted workbench:
+Now you can test the ACE. Start the local development server:
 
 ```console
 heft start
 ```
 
-Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Open a page in the site containing the test list and load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Edit the page to add the ACE, then save and leave edit mode to interact with it.
 
 > [!NOTE]
-> Remove any old instance of the ACE from your workbench. ACE instances from [the previous tutorial](build-first-sharepoint-adaptive-card-extension.md) will show an error message since the ACE properties have been updated.
+> Remove any old instance of the ACE from your test page. ACE instances from [the previous tutorial](build-first-sharepoint-adaptive-card-extension.md) will show an error message since the ACE properties have been updated.
 
 Open the Toolbox and select your ACE:
 
@@ -372,7 +373,7 @@ Let's create a medium Card View for our ACE:
     }
     ```
 
-Test your changes by refreshing the workbench:
+Test your changes by refreshing the test page with local manifests enabled:
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-2.png" alt-text="Updated ACE rendering different sizes of the ACE":::
 
@@ -474,7 +475,7 @@ ACE Card Views support user interaction. The buttons can invoke REST APIs or be 
     }
     ```
 
-Test your changes by reloading the workbench in your browser.
+Test your changes by reloading the test page with local manifests enabled.
 
 The first instance of the card will show the first list item with a **Next** button:
 

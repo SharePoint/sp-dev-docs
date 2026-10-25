@@ -11,7 +11,15 @@ Azure Pipelines is the newer version of the Azure DevOps build and release featu
 This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 > [!NOTE]
-> Starting with **SPFx v1.22.0**, the build system is based on [Heft](https://rushstack.io/pages/heft/overview/) instead of Gulp. The following examples show the Heft-based approach for SPFx 1.22+. If you're using an older SPFx version, see [Azure DevOps Builds and Releases](./implement-ci-cd-with-azure-devops.md) for Gulp-based guidance or refer to [Migrate from the Gulp Toolchain to Heft Toolchain](./migrate-gulptoolchain-hefttoolchain.md).
+> Starting with SPFx 1.22, the build system uses Heft instead of Gulp. The YAML below is a historical pipeline example, not a validated SPFx 1.24 pipeline. For new SPFx 1.24 builds, use the project's generated scripts and lock file, with Node.js 24 LTS recommended. See [development environment compatibility](../compatibility.md). Older Gulp projects require their version-specific runtime and [legacy pipeline guidance](implement-ci-cd-with-azure-devops.md).
+
+Before adapting the sample to a current project:
+
+- Resolve Heft through project-local npm scripts; don't assume a clean hosted agent has a global `heft` command.
+- Use supported Azure Pipelines task versions, including [Cache@2](/azure/devops/pipelines/tasks/reference/cache-v2) and [PublishCodeCoverageResults@2](/azure/devops/pipelines/tasks/reference/publish-code-coverage-results-v2). Their inputs aren't necessarily identical to the older tasks below.
+- Configure the project's test runner to produce the report formats and paths consumed by the publishing tasks. Generated projects don't automatically produce the `junit.xml` and coverage files in this example.
+- Preserve test failures as pipeline failures. Publish diagnostic results even after a failing test step, without allowing failed tests to produce a releasable artifact.
+- Test build, packaging, and deployment independently before enabling unattended production releases.
 
 ## Choosing between Azure Multi-stage Pipelines and Azure DevOps builds and releases
 
@@ -104,7 +112,12 @@ jobs:
 
 ## Implementing Continuous Deployment
 
-The continuous deployment stage is described by the following YAML template.
+> [!WARNING]
+> The YAML below retains an older username/password login flow. Don't use that authentication step for new deployments or to work around MFA or Conditional Access. CLI for Microsoft 365 requires your own Microsoft Entra app registration. Configure unattended certificate authentication using the current [login reference](https://pnp.github.io/cli-microsoft365/cmd/login/), [own-app setup](https://pnp.github.io/cli-microsoft365/user-guide/using-own-identity/), and [certificate permission guidance](https://pnp.github.io/cli-microsoft365/user-guide/cli-certificate-caveats/). Store the private certificate in Azure Pipelines secure files and its password in a secret variable; never commit credentials or private keys.
+
+The application and tenant IDs, API permissions, and app-catalog scope must match the target tenant. Grant only the permissions required for app-catalog operations and obtain administrator consent. Validate the CLI version, certificate login, upload, and deployment on a non-production app catalog before replacing the historical authentication steps. Don't assume the build agent's sign-in or Azure service connection automatically grants SharePoint access.
+
+The following YAML illustrates the structure of the historical deployment stage; its authentication and tooling require the changes described above before use.
 
 Copy the following content in a new file at the root of the project called **azure-pipelines-deploy-template.yml**.
 

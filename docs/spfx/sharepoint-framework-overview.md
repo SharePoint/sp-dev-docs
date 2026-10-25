@@ -32,6 +32,8 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 
 Use SPFx to extend Microsoft 365 Copilot by building [Copilot UX components](./copilot/overview-copilot-apps.md), generally available with SPFx 1.24 on October 29, 2026. A solution packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the SharePoint app catalog. See the [licensing and supported-client requirements](./copilot/overview-copilot-apps.md#availability), including the required Copilot add-on license and the iOS/Android exclusions at GA.
 
+Follow [Develop and deploy Copilot UX components](copilot/development-and-deployment.md) for initial agent sync and later runtime-discovered updates. Explore [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/) and [Copilot UX component samples](https://aka.ms/spfx/copilot/samples) for host-specific examples.
+
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
 To learn more about where developers can use SPFx, see [Supported extensibility platforms](supported-extensibility-platforms-overview.md).

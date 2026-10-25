@@ -11,6 +11,8 @@ ms.assetid: 02ae200c-9856-b264-2303-36ce7c44e520
 
 # DropDown element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Use asynchronous operations in SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Implement asynchronous operations in SharePoint Add-ins by using Microsoft Azure WebJobs.
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_

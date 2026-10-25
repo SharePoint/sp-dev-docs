@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Authorize provider-hosted add-in users at run time by using OAuth
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Provide authorized access to SharePoint resources by using OAuth in provider-hosted add-ins at run time.
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_

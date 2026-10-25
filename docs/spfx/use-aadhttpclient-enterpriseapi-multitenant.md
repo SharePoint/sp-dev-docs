@@ -9,6 +9,9 @@ ms.localizationpriority: medium
 
 This article illustrates how you would connect to a multi-tenant enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well building the SharePoint Framework solution.
 
+> [!NOTE]
+> Azure Active Directory is now Microsoft Entra ID. This walkthrough retains older Functions, portal, and consent examples. For new deployments, follow the current [App Service authentication configuration](/azure/app-service/configure-authentication-provider-aad) and [Microsoft Entra admin-consent guidance](/entra/identity-platform/v2-admin-consent). Validate token audience and issuer handling, authorized tenants, API permissions, and CORS on the backend; a successful client sign-in isn't sufficient authorization.
+
 ## Create a multi-tenant enterprise API secured with Azure AD
 
 Start with creating a multi-tenant enterprise API secured with Azure Active Directory. While there are no restrictions how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you'll build the API using Azure Functions and secure it using Azure App Service Authentication.
@@ -237,7 +240,7 @@ Confirm that you want users in your organization to use the API, by selecting th
 
 With the API configured and working, the next step is to build the SharePoint Framework solution that will consume this API.
 
-> Before you proceed, ensure that you have installed version 1.4.1 or higher of the SharePoint Framework Yeoman generator. If you have installed the generator globally, you can check the installed version by executing in the command line: **npm ls -g --depth=0**.
+> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). Node.js 24 LTS is recommended for SPFx 1.24. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
 
 ### Create new SharePoint Framework project
 
@@ -262,13 +265,9 @@ yo @microsoft/sharepoint
 When prompted, use the following values:
 
 - **contoso-api** as the solution name
-- **SharePoint Online only (latest)** as the baseline packages
-- **Use the current folder** as the location to place files
-- **Y** as the choice for enabling tenant-wide deployment
 - **WebPart** as the type of component to create
 - **Orders** as the name of the web part to create
-- **Shows recent orders** as the web part description
-- **No JavaScript framework** as the framework to use
+- **No framework** as the template to use
 
 ![SharePoint Framework Yeoman generator prompts in a terminal window](../images/use-aadhttpclient-enterpriseapi-yeoman.png)
 
@@ -487,4 +486,3 @@ Select the **+** option to open the toolbox. In the search box type `Orders` to 
 Select the **Orders** web part to add it to the page. You should see the list of orders retrieved from the enterprise API.
 
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
-

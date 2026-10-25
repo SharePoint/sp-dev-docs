@@ -6,6 +6,9 @@ ms.localizationpriority: high
 ---
 # Build custom controls for the property pane
 
+> [!NOTE]
+> The React examples below retain the legacy rendering API used before SPFx 1.24. For React 18, follow the [upgrade guide](../../react-18-upgrade.md). Each web part and each custom property-pane container needs its own root and disposal callback; don't share a root between dropdowns or create a new root on every render.
+
 The SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. You might need asynchronous updates to the data on a control or a specific user interface. Build a custom control for the property pane to get the functionality you need.
 
 In this article, you'll build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the web part.

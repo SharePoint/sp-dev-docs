@@ -252,7 +252,7 @@ The component calls the SharePoint REST API with `this.context.spHttpClient`. Th
     }
     ```
 
-1. Replace the contents of **./src/copilotComponents/myCopilotApp/MyCopilotAppCopilotComponent.ts** with the [MyCopilotAppCopilotComponent.ts file from the sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-access-data). The rest of this section and the next section explain its parts.
+1. Replace the contents of **./src/copilotComponents/myCopilotApp/MyCopilotAppCopilotComponent.ts** with the **MyCopilotAppCopilotComponent.ts** file from the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data). The rest of this section and the next section explain its parts.
 
     The component imports the service and the `escape` function, which part 1 already uses.
 
@@ -624,7 +624,7 @@ When the user selects a list, the component gets the first 25 items and shows a 
     };
     ```
 
-The full entry class, including the focus handling, is in the [sample](https://github.com/pnp/spfx-copilot-apps). <!-- VERIFY: link to the file in the final sample location. -->
+The full entry class, including the focus handling, is in the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data).
 
 ## Handle errors
 
@@ -695,6 +695,8 @@ try {
 
 ## Update the deployed app
 
+This walkthrough changes both tool parameters and the agent's instructions/conversation starter. **Re-sync is required because the baseline agent changes**, not because `message` was replaced by `siteUrl`. See [Develop and deploy Copilot UX components](../development-and-deployment.md).
+
 1. Bundle the solution in production mode.
 
     ```console
@@ -718,10 +720,12 @@ try {
 
 ## Try it in Microsoft 365 Copilot
 
+For a parameter-only variation, change the tool schema or description without editing agent instructions, icons, title, or starter prompts. Build, package, and redeploy the solution, but don't sync the unchanged baseline. In a new conversation, inspect the tool arguments to verify that dynamic discovery supplies the updated schema.
+
 1. Open **Microsoft 365 Copilot** and start a new chat with **MyCopilotApp Agent**. The conversation starter now reads **Lists on a site**.
 
     > [!NOTE]
-    > If the agent or the new conversation starter doesn't appear, sign out of Microsoft 365, close the browser, and sign in again.
+    > If the agent or the new conversation starter doesn't appear, verify the baseline was synced, allow for propagation, and test in a new conversation with the intended account and tenant.
 
 1. Enter "Show me the lists on https://contoso.sharepoint.com/sites/hr" with the URL of a site in your tenant. You don't need to enter "Call MyCopilotAppTool" anymore: the tool description and the instructions tell Copilot when to call the tool and how to fill in `siteUrl`.
 
@@ -735,5 +739,6 @@ try {
 ## Next steps
 
 - [Access data from a Copilot UX component](../access-data.md)
-- [Display modes in SharePoint Copilot components](../displayMode.md)
-- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-access-data).
+- [Display modes in Copilot UX components](../displayMode.md)
+- [Provide context to Copilot](../provide-context-to-copilot.md): describe the chosen list, visible columns/rows, and selection rather than sending every returned item.
+- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data). Check its declared package versions before adopting it for GA.

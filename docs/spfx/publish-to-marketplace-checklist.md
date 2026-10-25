@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 10/05/2024
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -30,6 +30,21 @@ When testing your application against checks described in the following section,
 
 No, offers setup in Partner Center must be published to the Marketplace before using the client IDs in production.
 
+## Copilot UX component test guidance
+
+Copilot UX components are supported in the SharePoint Store starting with **SPFx 1.24 GA**. Include these scenarios in your submission preparation and reviewer instructions, alongside the applicable certification requirements:
+
+- Identify the declarative agent and the Copilot UX components included in the package.
+- Explain tenant app-catalog deployment, initial **Sync to Teams**/**Add to Teams**, agent availability, data setup, and API permission approvals.
+- Disclose the required **Microsoft 365 Copilot add-on USL**, in addition to E3, E5, or E7. The component itself has no consumption-based charges; disclose separately any charged APIs/services used by your implementation.
+- Test Copilot and Copilot in Teams in the browser/desktop clients you claim to support. Don't claim iOS/Android support at GA.
+- Provide sample prompts and expected outcomes for each tool, including missing/invalid parameters, unavailable data, and denied access. Test with appropriate licensed accounts through the approved review process.
+- Verify inline/fullscreen behavior, light/dark themes, keyboard access, useful text context, and an actionable error/retry path when context exceeds the **10 KB** limit.
+- Document the combined Copilot/Teams automatic-sync limitation when applicable. A manual Teams package is the deployment workaround, but confirm Store acceptance for embedded custom packages rather than assuming the workaround changes certification policy.
+- For updates, distinguish runtime-discovered component/tool changes from baseline-agent changes that need re-sync.
+
+See [Develop and deploy Copilot UX components](copilot/development-and-deployment.md) and [Provide context to Copilot](copilot/provide-context-to-copilot.md). This guidance doesn't create an exemption from the Store's current certification requirements.
+
 ## Required checks
 
 Following checks must be passed. If one or more checks from this category failed, your application will be rejected and you will be instructed to fix the reported issues.
@@ -40,7 +55,7 @@ Your web part or customizer must only manipulate the DOM element provided throug
 
 ### Under normal circumstances solution should work as intended
 
-Under normal circumstances, all components (web parts and extensions) in your solution should work as intended. Preferably, before submitting your application for approval, you should verify that it's working as expected on multiple tenants and using different user accounts to ensure that it doesn't depend on any specific configuration. If your solution requires specific settings, mention it explicitly in your solution's description.
+Under normal circumstances, all components (web parts, extensions, and Copilot UX components) in your solution should work as intended. Preferably, before submitting your application for approval, you should verify that it's working as expected on multiple tenants and using different user accounts to ensure that it doesn't depend on any specific configuration. If your solution requires specific settings, mention it explicitly in your solution's description.
 
 ### Web part should work in all hosts in which it is exposed
 

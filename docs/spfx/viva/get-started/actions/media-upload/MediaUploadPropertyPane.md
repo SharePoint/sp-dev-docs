@@ -12,7 +12,7 @@ In this tutorial we'll see how we can explore this capability via the property p
 - Update the card strings
 - Introduce media upload actions on the Card View, primary button, and secondary button.
 
-First, figure out the domain to the URL of your SharePoint tenant and site you want to use for testing and access the `workbench.aspx` page. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+Open a test SharePoint page, for example `https://contoso.sharepoint.com/sites/devsite/SitePages/MediaUpload.aspx`, and load local manifests using the [SPFx developer toolbar](../../../../debug-modern-pages.md). Edit the page to add and configure the ACE.
 
 Here, click on the '+' icon in the middle of the page, and add the `card-designer` card on the canvas.
 

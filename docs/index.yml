@@ -10,7 +10,7 @@ metadata:
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/18/2022 #Required; mm/dd/yyyy format.
+  ms.date: 10/29/2026 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -24,6 +24,8 @@ landingContent:
         links:
           - text: Overview of the SharePoint Framework
             url: /sharepoint/dev/spfx/sharepoint-framework-overview
+          - text: Copilot UX components
+            url: /sharepoint/dev/spfx/copilot/overview-copilot-apps
       - linkListType: get-started
         links:
           - text: Set up your SharePoint Framework development environment
@@ -32,6 +34,8 @@ landingContent:
             url: /sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part
           - text: Build your first SharePoint Framework extension
             url: /sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension
+          - text: Build your first Copilot UX component
+            url: /sharepoint/dev/spfx/copilot/get-started/build-your-first-copilot-app
       - linkListType: tutorial
         links:
           - text: Build Microsoft Teams tab using SharePoint Framework - Tutorial
@@ -61,7 +65,9 @@ landingContent:
       - linkListType: sample
         links:
           - text: SharePoint Framework Web Part
-            url: https://aka.ms/spfx-webparts
+            url: https://pnp.github.io/sp-dev-fx-webparts/
+          - text: Copilot UX components
+            url: https://aka.ms/spfx/copilot/samples
           - text: Column and View formatting samples
             url: https://aka.ms/list-formatting
           - text: SharePoint Framework Extensions
@@ -101,6 +107,10 @@ landingContent:
   # Card (optional)
   - title: Open Source
     linkLists:
+      - linkListType: overview
+        links:
+          - text: Microsoft 365 & Power Platform community calls
+            url: https://aka.ms/community/calls
       - linkListType: sample
         links:
           - text: PnPjs - Client-side library

@@ -119,7 +119,7 @@ In this step, you verify that the description web part property is specified and
     heft start
     ```
 
-1. In the workbench, add the web part to the canvas and open its properties. If you remove the description, you should see the first validation error.
+1. Open a test SharePoint page with local manifests enabled using the [SPFx developer toolbar](../../debug-modern-pages.md). Add the web part and open its properties. If you remove the description, you should see the first validation error.
 
     ![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-description-error.png)
 
@@ -354,7 +354,7 @@ In this step, you validate the provided list name and check if it corresponds to
     heft start
     ```
 
-    Because the list name validation method communicates with the SharePoint REST API, you have to test the web part in the hosted version of the SharePoint workbench.
+    Because the list name validation method communicates with the SharePoint REST API, test the web part on a page in the SharePoint site that contains the list.
 
 1. Add the web part to the canvas and open its properties. Because you haven't specified a default value for the list name, which is a required property, you see a validation error.
 

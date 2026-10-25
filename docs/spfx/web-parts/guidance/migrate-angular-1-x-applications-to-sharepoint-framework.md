@@ -172,7 +172,7 @@ You also need to implement CSS styles that you're using the template. In the cod
 }
 ```
 
-### Preview web part in the hosted Workbench
+### Preview the web part on a SharePoint page
 
 1. In the command line, execute:
 
@@ -180,7 +180,7 @@ You also need to implement CSS styles that you're using the template. In the cod
     heft start --nobrowser
     ```
 
-1. To the URL of your SharePoint site, add **/_layouts/workbench.aspx**, for example, **https://contoso.sharepoint.com/_layouts/workbench.aspx**, and navigate to it in the web browser.
+1. Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Edit the page to add the web part. The screenshots below show the historical workbench UI, not the current debugging surface.
 
     If you followed all steps correctly, you should see the web part in the browser showing the form to add To Do items.
 
@@ -192,7 +192,7 @@ You also need to implement CSS styles that you're using the template. In the cod
 
 ### Fix web part styling
 
-Although the web part is working correctly, it doesn't look the same as the AngularJS application you started with. This is caused because ngOfficeUIFabric uses an older version of Office UI Fabric than the one available in the SharePoint Workbench. The easy fix would be to load the CSS styles used by ngOfficeUIFabric. The problem with that is that these styles would collide with the Office UI Fabric styles used by the SharePoint Workbench, breaking its user interface. A better solution is to add the styles required by the specific components to the web part styles.
+Although the web part is working correctly, it doesn't look the same as the AngularJS application you started with. In this historical example, ngOfficeUIFabric depends on older Office UI Fabric styles. Loading those styles globally can conflict with the host page. Instead, scope the styles required by the components to the web part.
 
 1. In the code editor, open the **./src/webparts/toDo/ToDoWebPart.module.scss** file. Change its contents to:
 
@@ -657,7 +657,7 @@ Now that the AngularJS application is built using TypeScript, and its different 
     heft start --nobrowser
     ```
 
-1. In the web browser, refresh the SharePoint Workbench, which should display your web part as previously.
+1. In the web browser, refresh the test page with local manifests enabled. It should display your web part as previously.
 
     ![Migrated AngularJS application correctly marking completed items in the web part](../../../images/ng-migration-correct-styling.png)
 
@@ -1212,6 +1212,6 @@ export default class DataService implements IDataService {
     heft start --nobrowser
     ```
 
-1. In your web browser, go to the SharePoint Workbench and add the web part to canvas. If you toggle the **Hide finished tasks** option, you should see completed tasks being displayed or hidden accordingly.
+1. In your web browser, open the test page with local manifests enabled and add the web part. If you toggle **Hide finished tasks**, you should see completed tasks being displayed or hidden accordingly.
 
     ![AngularJS application hiding finished tasks as configured in web part properties](../../../images/ng-migration-finished-tasks-hidden.png)

@@ -11,6 +11,8 @@ ms.assetid: d3dd2b0b-a8b0-b004-4e14-042152f2e377
 
 # CheckBox element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

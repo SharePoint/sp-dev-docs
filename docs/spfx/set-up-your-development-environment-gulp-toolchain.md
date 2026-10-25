@@ -14,6 +14,9 @@ ms.custom: scenarios:getting-started
 
 [!INCLUDE [spfx-gulp-toolchain-legacy](../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
+> [!IMPORTANT]
+> For SharePoint Online, workbench URLs later in this version-scoped article are historical. Debug web parts on actual SharePoint pages with the [developer toolbar](debug-toolbar.md) instead. The Online workbench is deprecated and scheduled for retirement on December 1, 2026. This doesn't change SharePoint Server's version-specific development requirements or the fully supported Copilot Workbench.
+
 You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]

@@ -11,6 +11,8 @@ ms.assetid: f097071f-3a01-20c3-1178-860270677478
 
 # ClientWebPartDefinitionContentType simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

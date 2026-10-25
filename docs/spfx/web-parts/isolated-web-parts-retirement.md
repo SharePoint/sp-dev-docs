@@ -1,26 +1,27 @@
 ---
 title: Isolated web parts retirement
-description: All datails on the domain isolated web parts retirement
-ms.date: 04/23/2024
+description: Retirement status and migration guidance for domain isolated web parts in SharePoint Online.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# Retiring SharePoint Framework domain isolated web parts for SharePoint Online
+# SharePoint Framework domain isolated web parts retirement for SharePoint Online
 
-After careful consideration and extensive review of usage data and feedback we’ve decided to announce the retirement of the domain isolated web parts feature in SharePoint Framework (SPFx). As of April 2nd, 2026 domain isolated web parts will be fully retired and stop working for existing tenants. If tenants are still using domain isolated web parts then they’ll see the web part render and error message and stop functioning. New tenants onboarding from April 2nd, 2025 will not be able to use domain isolated web parts. This applies to all environments including Government Clouds and Department of Defense. There will not be an option to extend domain isolated web parts beyond April 2, 2026.
+> [!IMPORTANT]
+> Domain isolated web parts in SharePoint Framework (SPFx) were retired on April 2, 2026 and no longer work in SharePoint Online. This applies to all environments, including government clouds and the U.S. Department of Defense. There is no option to extend their use beyond the retirement date.
 
-We apologize for any inconvenience this may cause, but we believe this is the best decision for the future of SPFx and SharePoint.
+Existing pages with domain isolated web parts can display an error instead of the web part's functionality. Migrate affected solutions to regular SPFx web parts using the guidance below. Regular SPFx web parts are not retired by this change.
 
 ## Timeline
 
 Date | Action
 -----|-------
-April 2, 2025 | Domain isolated web parts will be turned off for newly created tenants.
-April 2, 2026 | Domain isolated web parts will be turned off for existing tenants.
+April 2, 2025 | Domain isolated web parts were turned off for newly created tenants.
+April 2, 2026 | Domain isolated web parts were retired for all tenants.
 
 ## Overview
 
-Domain isolated web parts allow developers to create web parts that run in a separate domain from the host page, providing an additional layer of security and isolation. Due to the performance implications of running in dedicated domain we saw limited usage of this feature.
+Domain isolated web parts ran in a separate domain from the host page to isolate API permissions for a solution. The feature had limited usage and performance implications from running in a dedicated domain. The [historical architecture overview](./isolated-web-parts.md) is retained to help with migration.
 
 To understand whether you have installed domain isolated web parts and granted permissions you can verify if the [SharePoint admin center API access page](/sharepoint/api-access) contains permissions listed under the “Isolated” grouping.
 
@@ -55,11 +56,16 @@ To use this script follow these steps:
 
 ## Call to Action Guidance
 
-If you are using domain isolated web parts in your SPFx solutions, you will need to migrate them to regular web parts before April 2026. Otherwise, your web parts will stop working after that date. Microsoft is working on to be announced features that offer an alternative strategy for domain isolated web parts, but we strongly recommend to move away from domain isolated web parts.
+If your SPFx solutions still contain domain isolated web parts, migrate them to regular web parts to restore their functionality. Do not create new domain isolated solutions.
 
-To migrate your web parts, you will need to switch the `isDomainIsolated` property from the **package-solution.json** file to false, increment the version and redeploy your solution.
+To migrate your web parts, set `isDomainIsolated` to `false` in **config/package-solution.json**, increment the solution version, rebuild, and redeploy your solution.
 
-Next to that you also need to ensure that the permissions granted to the domain isolated web part, listed under the **Isolated** grouping in the **API access** page of SharePoint admin center, are now granted as **Organization-wide** permissions. Check the [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access?WT.mc_id=365AdminCSH_spo) article to learn more.
+Review the API permissions previously listed under **Isolated** on the SharePoint admin center **API access** page. Request and approve only the permissions the migrated solution needs under **Organization-wide**. See [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access).
+
+> [!IMPORTANT]
+> Organization-wide permissions are shared with other SPFx solutions and scripts in the tenant; they do not preserve the retired feature's per-solution isolation. Review your authorization design and least-privileged permissions before approving these grants.
+
+Test affected pages, API calls, and property panes after deployment. Remove obsolete isolated grants and dedicated Microsoft Entra applications only after confirming that they are no longer needed.
 
 ## PowerShell script to discover domain isolated web part usage
 

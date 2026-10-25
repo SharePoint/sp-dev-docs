@@ -14,7 +14,9 @@ A Copilot UX component gets the same SharePoint Framework (SPFx) clients as a we
 | `this.context.spHttpClient` | SharePoint REST API |
 | `this.context.msGraphClientFactory` | Microsoft Graph |
 
-This article uses code from the [Access data companion sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-connect-to-sharepoint-data).
+This article uses code from the [Access data companion sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-access-data). Check the sample's declared package versions before using it as a GA baseline.
+
+Automatic hosting and sign-in don't grant permission to business data. API consent, the signed-in user's access, and server-side authorization still apply. Backend services can have costs separate from the Copilot UX component capability.
 
 ## Choose where to load data
 
@@ -354,8 +356,15 @@ To package and deploy the solution, follow the steps in [Build your first Copilo
 
 ## Next steps
 
-- [Display modes in SharePoint Copilot components](displayMode.md)
-- [Access data companion sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-connect-to-sharepoint-data)
+### Supply context and confirm consequential actions
+
+Use `createCopilotTextContent` to describe the data currently visible in the component, such as the selected list, displayed rows, and current filter. Keep it within the **10 KB** context limit; oversized context blocks sending the message. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for model-context updates versus user-triggered follow-ups.
+
+For actions that change business data, let the user review the target and values before confirming. Enforce authorization and validation in the backend, prevent duplicate submissions, and report the actual operation result. Copilot's tool selection and contextual text don't supply those safeguards automatically.
+
+- [Display modes in Copilot UX components](displayMode.md)
+- [Develop and deploy Copilot UX components](development-and-deployment.md)
+- [Access data companion sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-access-data)
 
 ## See also
 
@@ -363,3 +372,4 @@ The `this.context.aadHttpClientFactory` and `this.context.httpClient` clients ar
 
 - [Connect to SharePoint APIs](../connect-to-sharepoint.md)
 - [Use the MSGraphClientV3 to connect to Microsoft Graph](../use-msgraph.md)
+- [Use AadHttpClient for external APIs](../use-aadhttpclient.md)

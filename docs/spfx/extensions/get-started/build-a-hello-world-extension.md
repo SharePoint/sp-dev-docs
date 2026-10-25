@@ -126,7 +126,7 @@ If your Application Customizer uses the `ClientSideComponentProperties` JSON inp
 
 ## Debug your Application Customizer
 
-You can't use the SharePoint Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. However, you don't have to deploy your customization to the app catalog to test the solution, which makes the debugging experience simple and efficient.
+Test the Application Customizer on a live SharePoint Online page, not in a workbench. Use the [SPFx developer toolbar](../../debug-modern-pages.md) and the extension-specific debug configuration below to load local manifests. You don't have to deploy the customization to the app catalog for this debugging workflow.
 
 1. Open the **./config/serve.json** file.
 
@@ -181,7 +181,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
     When the code compiles without errors, it serves the resulting manifest from https://localhost:4321 and also starts your default browser with needed query parameters.
 
-    ![Gulp serve](../../../images/ext-app-gulp-serve.png)
+    ![Historical Gulp-era screenshot of the development server; current projects use Heft](../../../images/ext-app-gulp-serve.png)
 
 1. Move to your browser and select **Load debug scripts** to continue loading scripts from your local host.
 

@@ -11,6 +11,8 @@ ms.assetid: 2db6c755-3082-82a7-f12a-608342829a10
 
 # Spinner element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

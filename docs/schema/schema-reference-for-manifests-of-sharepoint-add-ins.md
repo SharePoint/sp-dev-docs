@@ -11,6 +11,8 @@ ms.assetid: 1f8c5d44-3b60-0bfe-9069-1df821220691
 
 # Schema reference for manifests of SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 > [!NOTE]

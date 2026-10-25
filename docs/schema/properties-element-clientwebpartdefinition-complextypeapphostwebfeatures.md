@@ -11,6 +11,8 @@ ms.assetid: 4aa16313-3172-c658-a072-e477f8140709
 
 # Properties element (ClientWebPartDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

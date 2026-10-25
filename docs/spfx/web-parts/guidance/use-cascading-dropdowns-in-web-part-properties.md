@@ -6,6 +6,9 @@ ms.localizationpriority: high
 ---
 # Use cascading dropdowns in web part properties
 
+> [!NOTE]
+> The React snippets below use the legacy rendering API from before SPFx 1.24. For a React 18 project, retain the generated web part root and disposal method when adapting the property-pane logic. Any custom React property control needs its own root and disposal callback. See the [React 18 upgrade guide](../../react-18-upgrade.md).
+
 When designing the property pane for your SharePoint client-side web parts, you may have one web part property that displays its options based on the  value selected in another property. This scenario typically occurs when implementing cascading dropdown controls. In this article, you learn how to create cascading dropdown controls in the web part property pane without developing a custom property pane control.
 
 ![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)

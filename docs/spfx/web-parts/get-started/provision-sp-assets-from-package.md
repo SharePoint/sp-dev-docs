@@ -246,7 +246,7 @@ There are a few things to take note of from this XML:
 
 ## Deploy and test asset provisioning
 
-Now you're ready to deploy the solution to SharePoint. Because we're provisioning assets directly to the SharePoint sites when the solution is installed, you can't test the capability in a local or online Workbench.
+Now you're ready to deploy the solution to SharePoint. Because the solution provisions assets when it's installed on a site, loading local manifests with the [SPFx developer toolbar](../../debug-modern-pages.md) isn't enough to test provisioning. Package, deploy, and install the solution on a test site.
 
 1. In the console, execute the following command to package your client-side solution that contains the web part to get the basic structure ready for packaging:
 
@@ -445,4 +445,3 @@ With the package been updated in the app catalog, we can move to the SharePoint 
 
 - [Provision SharePoint assets with your solution package](../../toolchain/provision-sharepoint-assets.md)
 - [Sample solution - Deployment of SharePoint assets as part of SPFx package](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-feature-framework)
-

@@ -6,6 +6,9 @@ ms.localizationpriority: high
 ---
 # Migrating from JSLink to SharePoint Framework extensions
 
+> [!NOTE]
+> The field-cell example below doesn't mount React. If you adapt it to React 18 in SPFx 1.24, keep a separate root for each cell container and unmount it in `onDisposeCell()`. Don't share one root across rows. See the [React 18 upgrade guide](../../react-18-upgrade.md#update-other-react-entry-points); the legacy React APIs mentioned in the sample comments aren't the current rendering pattern.
+
 Since Microsoft SharePoint 2013, most of the enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the `JSLink` property of fields and list views to customize the rendering of fields.
 
 Within the "modern" UI of SharePoint Online and SharePoint Server 2019, most of those customizations are no longer available. Fortunately, SharePoint Framework extensions enable you to provide similar functionality in the "modern" UI.

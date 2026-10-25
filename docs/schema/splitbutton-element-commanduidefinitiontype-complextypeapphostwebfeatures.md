@@ -11,6 +11,8 @@ ms.assetid: bd9faa8b-96e0-6f8d-db8c-cf833dde228f
 
 # SplitButton element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

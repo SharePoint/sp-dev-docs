@@ -11,6 +11,8 @@ ms.assetid: af9f83d8-8325-3ede-d7b0-bb82c0445eb9
 
 # InstalledEventEndpoint element (PropertiesDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

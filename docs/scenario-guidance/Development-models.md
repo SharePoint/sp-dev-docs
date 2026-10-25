@@ -44,6 +44,8 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 
 ## SharePoint Add-Ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
 The SharePoint Add-In model is a development model for SharePoint Online and SharePoint 2013/2016 on-premises. The main goal of this model is to make developers able of customizing and extending SharePoint sites without the need of having full trust access to the target farm, being able to work remotely with client-side code, which is based on the Client Side Object Model (CSOM) and the REST API of SharePoint.

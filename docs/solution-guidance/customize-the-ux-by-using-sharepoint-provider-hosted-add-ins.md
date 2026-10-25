@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Customize the UX by using SharePoint provider-hosted add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This article describes samples that show best practices for customizing SharePoint UX components, including the following scenarios:
 
 - Page manipulation (adding and modifying a wiki page)

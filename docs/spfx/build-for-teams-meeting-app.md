@@ -14,7 +14,7 @@ Developers can create apps for Microsoft Teams meetings using the same technique
 Microsoft Teams meeting apps must support configurable tabs in the **[groupchat](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs)** scope. This enables the [pre-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#pre-meeting-app-experience) and [post-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#post-meeting-app-experience) chats. Refer to the following documentation for additional requirements: [Create apps for Teams meetings: Prerequisites and considerations](/microsoftteams/platform/apps-in-teams-meetings/create-apps-for-teams-meetings#prerequisites-and-considerations)
 
 > [!IMPORTANT]
-> This tutorial requires SPFx v1.11 or higher.
+> This walkthrough originated with SPFx 1.11 and retains older Teams context and manifest examples. For a current solution, use the Teams SDK provided by your SPFx version, as described in [Teams development considerations](build-for-teams-considerations.md); don't install a separate arbitrary SDK version. Heft commands below apply only to SPFx 1.22 and later. Validate the meeting experience with the current Teams manifest requirements and target clients before deployment.
 
 ## Create a Microsoft Teams tab project
 
@@ -39,11 +39,9 @@ Microsoft Teams meeting apps must support configurable tabs in the **[groupchat]
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: teams-meeting-app
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: MyFirstTeamsMeetingApp
-    - **What is your Web part description?**: My first Microsoft Teams meeting app
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which template would you like to use?**: No framework
 
     At this point, Yeoman creates the folders & files for the project and then installs the required dependencies.
 

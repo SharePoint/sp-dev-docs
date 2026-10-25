@@ -185,7 +185,7 @@ const canExpand: boolean =
   !isFullscreen && (hostContext.availableDisplayModes ?? []).indexOf('fullscreen') !== -1;
 ```
 
-The expand button calls `requestDisplayModeAsync('fullscreen')`. For more information, see [Display modes in SharePoint Copilot components](displayMode.md).
+The expand button calls `requestDisplayModeAsync('fullscreen')`. For more information, see [Display modes in Copilot UX components](displayMode.md).
 
 > [!div class="mx-imgBorder"]
 > ![The inline view in Microsoft 365 Copilot in the light theme, with four project cards, status badges, an expand button, and a View all 8 projects button](../../images/copilot/theme-and-design-inline-light.png)
@@ -322,6 +322,7 @@ Check each item in both display modes:
 
 ## Next steps
 
-- [Display modes in SharePoint Copilot components](displayMode.md)
+- [Display modes in Copilot UX components](displayMode.md)
+- [Provide context about the visible UX](provide-context-to-copilot.md)
 - [Access data from a Copilot UX component](access-data.md)
 - Review the [tutorial-theme-and-design sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-theme-and-design).

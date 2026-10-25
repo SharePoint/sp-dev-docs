@@ -57,7 +57,7 @@ Before moving forward, update the `title` and `description` fields of your ACE t
 }
 ```
 
-Next, run **heft start** from the command line in the root of the project to start the build and debugging process. In the hosted workbench, you'll see the **FocusFeature** card:
+Start the project's development server (**heft start** for SPFx 1.22 and later; use the Gulp toolchain for earlier projects). Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](../../../debug-modern-pages.md). Edit the page, add **FocusFeature**, then save and leave edit mode to interact with the card. The screenshots illustrate the original sample's development UI:
 
 ![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 

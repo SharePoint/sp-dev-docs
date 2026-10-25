@@ -30,7 +30,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take a few minutes.
 
-Next, run **heft start** from the command line in the root of the project. When the hosted workbench loads, you'll see the **GeoLocation** card:
+Start the project's development server (**heft start** for SPFx 1.22 and later; use the Gulp toolchain for earlier projects). Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](../../../../debug-modern-pages.md). Edit the page, add **GeoLocation**, then save and leave edit mode to interact with the card. The screenshots illustrate the original sample's development UI:
 
 ![See the GeoLocation card icon in the webpart toolbox](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
 

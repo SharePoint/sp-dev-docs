@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework Debug Toolbar
 description: Learn about the debug toolbar available to SharePoint Framework (SPFx) developers when debugging SPFx solutions.
-ms.date: 01/26/2026
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
@@ -9,9 +9,11 @@ ms.localizationpriority: high
 
 In this article, you'll learn about the debug toolbar available to SharePoint Framework (SPFx) developers when debugging SPFx solutions.
 
-Developers have tested and debugged their SPFx solutions using the SharePoint workbench, either the [SharePoint-hosted workbench](debug-in-vscode.md#debug-solution-using-hosted-workbench) and/or the now-retired local workbench. However the workbench is limited in debugging and testing because it is not a *real* SharePoint page. The workbench is limited to testing web parts and Adaptive Card Extensions (ACE) and doesn't support testing SPFx extensions or other scenarios.
+Use the SharePoint Framework Debug Toolbar, also called the developer toolbar, to test web parts and extensions on actual SharePoint pages. The local workbench was removed in SPFx 1.13.
 
-Another approach is to test and debug SPFx solutions on SharePoint site pages. This approach enables you to test your SPFx solutions on live pages and is the only way you can test some SPFx component types, including SPFx extensions.
+[!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
+
+For Adaptive Card Extensions, follow the [Viva Connections development guidance](viva/overview-viva-connections.md) for the appropriate host. An ordinary web-part page doesn't replace every host-specific test surface.
 
 To test SPFx solutions on a SharePoint site page, developers can add parameters to the URL (aka: querystring) to instruct SharePoint Online and the SharePoint Framework to load a manifest and component from the user's local machine. This uses the same process that the workbench uses. To learn more about debugging SPFx solutions in site pages, see [Debug SharePoint Framework solutions on modern SharePoint pages](debug-modern-pages.md).
 
@@ -23,7 +25,7 @@ To aid developers in the development and debugging of their SPFx solutions, Shar
 
 The Debug Toolbar has the following features:
 
-- **Show info**:Use this feature to see information about the loaded manifest.
+- **Show info**: Use this feature to see information about the loaded manifest.
 - **Hide bar**: You might want to see your SPFx solution without the Debug Toolbar visible. After clicking on "Hide bar" the Debug Toolbar will be hidden but you stay in debugging mode. To show the Debug Toolbar again simply reload the page.
 - **Show developer dashboard**: Use this to toggle the developer dashboard on or off. To learn more about the developer dashboard, see [Use the developer dashboard](use-developer-dashboard.md).
 - **Log a bug**: This open a new tab loading the sp-dev-docs GitHub issue list which can you use to log SPFx issues.

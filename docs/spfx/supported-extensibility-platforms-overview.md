@@ -51,3 +51,5 @@ Microsoft 365 Copilot can be extended with **Copilot UX components**, generally 
 Copilot UX components require the Microsoft 365 Copilot add-on USL (user-specific license) on top of a normal E3, E5, or E7 license. Supported clients are Copilot in browser/desktop and Copilot in Teams in browser/desktop; iOS and Android aren't supported at GA. See [Availability](copilot/overview-copilot-apps.md#availability) and [GA limitations](copilot/overview-copilot-apps.md#ga-limitations).
 
 Learn more about using SPFx for Microsoft 365 Copilot: [Overview of Copilot UX components](copilot/overview-copilot-apps.md).
+
+For initial agent deployment and subsequent component updates, see [Develop and deploy Copilot UX components](copilot/development-and-deployment.md).

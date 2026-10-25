@@ -1,85 +1,69 @@
 ---
-title: Isolated web parts
-description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 05/39/2024
+title: Isolated web parts (retired)
+description: Historical architecture and migration considerations for retired SharePoint Framework domain isolated web parts.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# Isolated web parts
-
-Using this capability, you can build web parts that securely communicate with APIs secured with Azure AD without exposing the access token to other components on the page or even scripts in the tenant.
+# Isolated web parts (retired)
 
 > [!IMPORTANT]
-> The isolated web parts feature has been deprecated and will be retired as of April 2, 2026. Check the [retirement announcement](./isolated-web-parts-retirement.md) to learn more.
+> Domain isolated web parts were retired in SharePoint Online on April 2, 2026 and no longer work. They were disabled for newly created tenants on April 2, 2025. Do not create or deploy solutions that use domain isolation. Follow the [retirement and migration guidance](./isolated-web-parts-retirement.md) to move existing solutions to regular SharePoint Framework web parts.
 
-## Why isolated web parts
+This article preserves the architecture and behavior of the retired feature to help you identify and migrate existing solutions. It is not guidance for new development.
 
-To allow your SharePoint Framework solutions to securely access APIs secured with Azure AD, you can use the API management to specify which APIs can be accessed by scripts in your tenant and with which permissions. Next, using the SharePoint Framework, you can easily retrieve an access token for the specific API. While it significantly simplifies communicating with APIs secured with Azure AD, it allows all scripts, not just specific SharePoint Framework solutions, to obtain an access token for any of the approved APIs. If one of the scripts you use in your tenant was exploited, then it could access any of the approved APIs on behalf of the current user.
+## Why isolated web parts existed
 
-Isolated web parts introduce a new way to isolate access to APIs secured with Azure AD and ensure that only specific SharePoint Framework web parts are allowed to obtain an access token for the particular API.
+SharePoint Framework API access permissions allow scripts in a tenant to access approved APIs on behalf of the current user. Domain isolated web parts were designed to limit access to Microsoft Entra ID-secured APIs to a specific SPFx solution rather than sharing those permissions with other scripts.
 
-## How isolated web parts work
+Regular SPFx web parts do not provide the same per-solution permission isolation. Review your API authorization requirements and least-privileged permissions as part of migration.
 
-> [!IMPORTANT]
-> The isolated web parts capability is available only in SharePoint Framework v1.8 and later.
-> Isolated web parts are only supported on modern pages. While you might be able to add isolated web parts to classic pages, upon publishing, the web part will not render and generate an error.
-> Isolated web parts can only be installed into the tenant app catalog.  They will not work from a Site Collection app catalog.
+## How isolated web parts worked
 
-![Architectural overview illustrating how isolated web parts work](../../images/isolated-web-parts.png)
+The feature was introduced in SPFx 1.8. It applied only to web parts on modern pages and required deployment through the tenant app catalog. It did not support extensions, classic pages, or site collection app catalogs.
 
-Solutions using the isolated web parts capability, have a specific flag set in the project metadata in the **\*.sppkg** file. When deploying these solutions to the app catalog, all API permission requests are specified as isolated.
+![Historical architecture of isolated web parts](../../images/isolated-web-parts.png)
 
-After approving an isolated API permission request, SharePoint will create a separate Azure AD application in the Azure AD linked to the Microsoft 365 tenant. This Azure AD application is specific to the SharePoint Framework solution that requested API permissions and will have set OAuth permissions as requested by that solution. The return URL of that Azure AD application, which is used by the OAuth implicit flow, will be set to a unique domain that is tied to that specific SharePoint Framework application.
+Solutions using domain isolation had `isDomainIsolated` set to `true` in `config/package-solution.json`. Their `.sppkg` packages requested isolated API permissions.
 
-All web parts from solutions using isolated permissions, when added to a page, will be displayed using an `<iframe>` pointing to a unique domain tied to the particular SharePoint Framework solution. This way, SharePoint Framework can enforce unique API permissions and ensure that no other solution or script in the tenant can obtain an access token to these APIs.
+When an administrator approved those permissions, SharePoint created a separate Microsoft Entra application for the solution. Its OAuth permissions matched the approved requests, and its redirect URI used a domain unique to that SPFx solution.
+
+Web parts from that solution ran in an `<iframe>` on the solution-specific domain. This separated their access tokens from other solutions and scripts.
 
 ### Scaffolding a project that uses isolated permissions
 
-When you scaffold a new SharePoint Framework project that targets SharePoint Online, the SharePoint Framework Yeoman generator will display the following prompt:
+Older versions of the SharePoint Framework Yeoman generator asked whether the solution needed API permissions that were unique and not shared with other components in the tenant. Answering **Yes** set `isDomainIsolated` to `true` and restricted the project to web parts.
 
-**Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**:
-
-If you answer **Yes**, the generator will add a flag to your project's configuration in the **config/package-solution.json** file, by setting the `isDomainIsolated` property to `true`. Because the isolated web parts capability applies only to web parts, the generator will only allow you to create web parts in your project.
-
-> [!IMPORTANT]
-> Theoretically, you could manually create a SharePoint Framework extension in a project that uses isolated permissions. This is, however a bad idea, something you should never do and is not supported.
->
-> If the extension you have added communicated with APIs secured with Azure AD, it wouldn't be able to retrieve the access token in an isolated way and would fail on runtime.
+This is a way to recognize legacy configuration, not an option to select for new projects. Extensions were not supported in domain isolated solutions.
 
 ### Communicating with APIs
 
-Despite the web part using isolated permissions, there's nothing specific to how you obtain an access token to an API secured with Azure AD in your code. Additionally, even though on runtime isolated web parts will be loaded inside an `<iframe>` pointing to a unique domain, you can communicate with SharePoint REST API, the same way as you would in non-isolated web parts.
+Isolated web parts used the same SPFx client APIs to obtain access tokens and communicate with SharePoint REST APIs as regular web parts. Migration still requires reviewing permission grants because isolated grants do not become organization-wide grants automatically.
 
 ### Deploying solutions with isolated web parts
 
-Solutions with isolated web parts are deployed the same way as regular SharePoint Framework solutions. The only difference is, that the API permission requests are deployed as isolated. This is clearly visible on the API management page, where the API permission requests are grouped per solution to which they apply.
+Historically, these solutions were deployed through the tenant app catalog. Their API permission requests appeared under **Isolated** on the SharePoint admin center **API access** page, grouped by solution.
 
-API permissions granted on the tenant-level can be used by any SharePoint Framework solution or piece of script on the tenant. Isolated permissions on the other hand, can only be used by the solution that requested them.
-
-> [!IMPORTANT]
-> It might take up to 24 hours for isolated web parts to be available for consumption once deployed. During that time, users can receive a "The redirect URI specified in the request does not match the redirect URIs configured for the application" AADSTS50011 error.
+Isolated grants applied only to the requesting solution, whereas organization-wide grants could be used by other SPFx solutions and scripts in the tenant. Initial provisioning could take up to 24 hours and could produce an `AADSTS50011` redirect URI error during that time. Waiting for provisioning no longer restores a retired isolated web part.
 
 ### Using isolated web parts
 
-When added to the page, isolated web parts are displayed using an iframe. This `<iframe>` points to a unique domain assigned to the SharePoint Framework solution where the web part is located. This domain is also referenced in the return URL of the Azure AD application created to host the isolated permissions for the particular SharePoint Framework solution. Using the unique domain allows to ensure, that only web parts from the particular SharePoint Framework solution can obtain an access token for the isolated set of permissions.
+At runtime, the solution-specific iframe domain matched the redirect URI of the Microsoft Entra application that held the isolated permissions. After retirement, these web parts no longer function; they must be migrated rather than re-enabled.
 
 ### Property pane for isolated web parts
 
-Property pane for isolated web parts is rendered as a separate `<iframe>` with _additional_ instance of the same web part. It brings some specifics that developers should be aware of:
+The property pane rendered in a separate `<iframe>` with another instance of the web part. Lifecycle events such as `render` ran for both instances, and the property pane iframe was limited to the panel's dimensions.
 
-- Isolated web part's lifecycle events such as `render` will be called twice: once for the web part itself and once for the property pane.
-- The property pane's `<iframe>` size is limited to the panel's dimensions. Take it into consideration if you plan to use modals or any wide controls in your property pane.
+When migrating, test the property pane and remove any assumptions that it runs in a separate iframe.
 
 ### Disposal of isolated web parts
 
-`onDispose` method for isolated web parts _may not be called_ as `<iframe>` removal from DOM automatically cleans all the resources, including socket connections, associated with the iframe's document.
+For isolated web parts, `onDispose` might not have been called because removing the iframe cleaned up its document resources. Regular web parts must clean up their own resources, such as event listeners and connections, when disposed.
 
 ### Upgrading existing project to use isolated permissions
 
-If you're upgrading an existing SharePoint Framework project to v1.8.0 and want to use the isolated permissions capability, you can do it, by setting in the **config/package-solution.json** file, the `isDomainIsolated` property to `true`. You should ensure, that your project contains only web parts.
-
-After changing the project to use isolated permissions, you should redeploy your project. This will issue new API permission requests, isolated to your solution, which will need to be approved by the tenant admin.
+Enabling `isDomainIsolated` is no longer a supported upgrade path. To migrate a legacy project, set the property to `false`, increment the solution version, rebuild and redeploy, and review and approve the required organization-wide API permissions. See the [migration guidance](./isolated-web-parts-retirement.md#call-to-action-guidance).
 
 ### Removing solutions with isolated permissions
 
-When approving isolated API permissions, SharePoint creates a dedicated Azure AD application specific for the SharePoint Framework solution that requested permissions. When the SharePoint Framework solution is removed from the app catalog, the API permissions and the Azure AD application aren't removed.
+Removing a solution from the app catalog did not automatically remove its dedicated Microsoft Entra application or isolated API permissions. After migration, review and remove obsolete grants and applications only after confirming that they are no longer needed.

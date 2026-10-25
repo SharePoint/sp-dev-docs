@@ -1,57 +1,89 @@
 ---
-title:  SharePoint Developer GitHub repositories
-description: List of different SharePoint Developer GitHub repositories and their description
-ms.date: 09/23/2022
+title: SharePoint developer GitHub repositories
+description: Find current SharePoint documentation, samples, and PnP projects, with separate references for archived and legacy repositories.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# SharePoint Developer GitHub repositories
+# SharePoint developer GitHub repositories
 
-There are numerous SharePoint Developer GitHub repositories, which all have different use cases. All of the SharePoint repositories are listed in the following table.
+This catalog highlights repositories in the [SharePoint](https://github.com/SharePoint) and [PnP](https://github.com/pnp) GitHub organizations. It isn't an exhaustive list. Start with the [Microsoft 365 & Power Platform Community](https://pnp.github.io/) for broader resources.
 
 > [!TIP]
-> We welcome community contributions to all of these GitHub repositories. All contributors are acknowledged in our monthly communications. Join hundreds of other SharePoint community members and help us build an even stronger community together. *Sharing is caring!*
+> Read a repository's README, license, contribution instructions, and support guidance before submitting an issue or pull request. Archived repositories are retained for reference; use a current project where one is available.
 
 > [!NOTE]
-> You can also use the [SharePoint Developer Sample Gallery](https://aka.ms/spdev-samples) in the SharePoint Developer portal to find samples relevant to you.
+> Browse the [SPFx web part sample gallery](https://pnp.github.io/sp-dev-fx-webparts/), [Copilot UX component samples](https://aka.ms/spfx/copilot/samples), or [Microsoft 365 & Power Platform sample gallery](https://aka.ms/community/samples). Check the individual sample's prerequisites and SPFx version before using it.
 
-## SharePoint repositories
-
-| Repository | Description |
-|--------|--------|
-| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at `https://learn.microsoft.com/sharepoint/dev/` |
-| [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
-| [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
-| [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization) | Solutions, tools and script to help you modernize your sites |
-| [sp-dev-solutions](https://github.com/SharePoint/sp-dev-solutions) | More polished and fine-tuned reusable solutions built with the SharePoint Framework |
-| [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) | Various [column formatting](../declarative-customization/column-formatting.md) json files shared among the community |
-| [sp-dev-site-scripts](https://github.com/SharePoint/sp-dev-site-scripts) | Various [Site Script and Site Design](../declarative-customization/site-design-overview.md) json files shared among the community |
-| [sp-dev-fx-controls-react](https://github.com/SharePoint/sp-dev-fx-controls-react) | Reusable content controls for SharePoint Framework solutions built with React |
-| [sp-dev-fx-property-controls](https://github.com/SharePoint/sp-dev-fx-property-controls) | Reusable property pane controls for use in SharePoint Framework web parts |
-| [sp-dev-gdpr-activity-hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | A reference solution for the business case of GDPR demonstrating an SPFx implementation with Power BI and modern sites |
-| [sp-dev-build-extensions](https://github.com/SharePoint/sp-dev-build-extensions) | Various build extensions (such as gulp tasks and gulp plug-ins) from the community and engineering for use in SharePoint development |
-| [sp-dev-fx-vs-extension](https://github.com/SharePoint/sp-dev-fx-vs-extension) | Visual Studio IDE extension for creating SharePoint Framework solutions in Visual Studio 2015 or 2017 |
-| [sp-dev-samples](https://github.com/SharePoint/sp-dev-samples) | Samples for add-ins, webhooks, and other APIs |
-
-## PnP repositories
+## Documentation and sample repositories
 
 | Repository | Description |
-|--------|--------|
-| [pnp](https://github.com/SharePoint/pnp) | Main repository for SharePoint Add-ins, Microsoft Graph, and other samples |
-| [pnp-sites-core](https://github.com/SharePoint/pnp-sites-core) | Office Dev PnP CSOM Core component - Extension component for native SharePoint Client-Side Object Model |
-| [pnp-powershell](https://github.com/SharePoint/pnp-powershell) | Source code for [SharePoint PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) |
-| [pnp-provisioning-schema](https://github.com/SharePoint/PnP-Provisioning-Schema) | PnP provisioning engine schema repository |
-| [pnp-tools](https://github.com/SharePoint/PnP-Tools) | Repository for tools and scripts targeted primarily for IT pros and for on-premises SharePoint 2013 and SharePoint 2016 |
-| [pnp-partner-pack](https://github.com/SharePoint/PnP-Partner-Pack) | Packaged guidance with detailed instructions about setting things up in Office 365 and Azure |
-| [pnp-js-core](https://github.com/SharePoint/PnP-JS-Core) | Office Dev PnP Core component for JavaScript |
-| [pnp-transformation](https://github.com/SharePoint/PnP-Transformation) | Material specifically for the transformation process. Currently, includes samples around InfoPath replacement and transformation tooling from farm solutions to the add-in model |
-| [pnp-js-provisioning](https://github.com/pnp/sp-js-provisioning) | Repository for planned JavaScript provisioning library |
-| [pnp-provisioning-templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Repository for provisioning templates.
-| [pnp-guidance](https://github.com/SharePoint/PnP-Guidance) | Old repository on guidance, presentations, and articles that were partially synced to MSDN |
-| [pnp-identitymodel](https://github.com/SharePoint/PnP-IdentityModel) | Open source replacement of Microsoft.IdentityModel.Extensions.dll |
+| --- | --- |
+| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for [SharePoint developer documentation](/sharepoint/dev/) and the issue tracker for SPFx product bugs and documentation issues. |
+| [sp-dev-fx-webparts](https://github.com/pnp/sp-dev-fx-webparts) | SPFx client-side web part samples and tutorial code. |
+| [sp-dev-fx-extensions](https://github.com/pnp/sp-dev-fx-extensions) | SPFx extension samples and tutorial code. |
+| [spfx-copilot-components](https://github.com/pnp/spfx-copilot-components) | Copilot UX component samples built with SPFx. |
+| [List-Formatting](https://github.com/pnp/List-Formatting) | Community JSON examples for [list and column formatting](../declarative-customization/column-formatting.md). |
+| [sp-dev-site-scripts](https://github.com/pnp/sp-dev-site-scripts) | JSON examples for [site templates and site scripts](../declarative-customization/site-design-overview.md). |
+| [sp-dev-samples](https://github.com/pnp/sp-dev-samples) | SharePoint API and webhook examples, including older extensibility samples. Check the selected sample's requirements and the lifecycle of the APIs it uses. |
 
-## Other repositories
+## Active PnP libraries and tools
 
 | Repository | Description |
-|--------|--------|
-| [pnpjs](https://github.com/pnp/pnpjs) | [PnPJS](https://pnp.github.io/pnpjs/) is a fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way; this repository contains the library's source code |
+| --- | --- |
+| [pnpcore](https://github.com/pnp/pnpcore) | PnP Core SDK for .NET development with SharePoint Online and Teams. |
+| [pnpframework](https://github.com/pnp/pnpframework) | PnP Framework, including the provisioning engine and SharePoint Online CSOM extensions. |
+| [powershell](https://github.com/pnp/powershell) | Current PnP PowerShell module for Microsoft 365 automation. |
+| [pnpjs](https://github.com/pnp/pnpjs) | Fluent JavaScript libraries for SharePoint and Microsoft Graph APIs. |
+| [cli-microsoft365](https://github.com/pnp/cli-microsoft365) | Community CLI for Microsoft 365 administration, automation, and SPFx project management. |
+| [sp-dev-fx-controls-react](https://github.com/pnp/sp-dev-fx-controls-react) | Reusable React controls for SPFx solutions. |
+| [sp-dev-fx-property-controls](https://github.com/pnp/sp-dev-fx-property-controls) | Reusable SPFx property pane controls. |
+
+See [Open-source projects](open-source-projects.md) for project documentation and support considerations. Choose package versions that match your target environment; this catalog doesn't certify compatibility with a particular SPFx release.
+
+## SPFx scaffolding repositories
+
+| Repository | Description |
+| --- | --- |
+| [SharePoint/spfx](https://github.com/SharePoint/spfx) | Microsoft's open-source SPFx CLI and templates. Consult the repository for its release status and supported template versions; these are separate from SPFx runtime releases. |
+| [pnp/generator-spfx](https://github.com/pnp/generator-spfx) | Community extension to the Microsoft Yeoman generator. Check its documented version requirements before use. |
+
+Neither scaffolding project is the same tool as the CLI for Microsoft 365.
+
+## Other solution and historical references
+
+The following repositories aren't archived, but contain solutions or older material with their own prerequisites. Check the selected branch, dependencies, and maintenance guidance; repository availability doesn't establish current platform compatibility.
+
+| Repository | Scope |
+| --- | --- |
+| [sp-starter-kit](https://github.com/pnp/sp-starter-kit) | SharePoint Starter Kit examples; older branches have separate maintenance status. |
+| [sp-dev-solutions](https://github.com/pnp/sp-dev-solutions) | Reusable SharePoint solutions with solution-specific dependencies. |
+| [sp-dev-provisioning-templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Templates previously used by the SharePoint Look Book provisioning service, not a current service endpoint. |
+| [modernization](https://github.com/pnp/modernization) | Legacy modernization tooling. For new assessments, see [Assess SharePoint modernization](../transform/assess-sharepoint-modernization.md). |
+| [sp-dev-build-extensions](https://github.com/pnp/sp-dev-build-extensions) | Build extensions, including gulp-era tasks. Check toolchain compatibility before use. |
+| [PnP-Tools](https://github.com/pnp/PnP-Tools) | Tools and scripts, including material for older SharePoint Server versions. |
+| [PnP-Transformation](https://github.com/pnp/PnP-Transformation) | Historical transformation guidance, including older customization models. |
+| [sp-js-provisioning](https://github.com/pnp/sp-js-provisioning) | JavaScript provisioning project; review its README for scope and status rather than assuming a supported provisioning engine. |
+
+## Archived repositories
+
+These repositories are historical references, not recommendations for new projects.
+
+| Archived repository | Current direction or historical scope |
+| --- | --- |
+| [PnP-Sites-Core](https://github.com/pnp/PnP-Sites-Core) | Superseded by [PnP Framework](https://github.com/pnp/pnpframework) for SharePoint Online. Review platform and API differences when migrating. |
+| [PnP-PowerShell](https://github.com/pnp/PnP-PowerShell) | Superseded by the current [PnP PowerShell](https://github.com/pnp/powershell) module. |
+| [PnP-JS-Core](https://github.com/SharePoint/PnP-JS-Core) | Superseded by [PnPjs](https://github.com/pnp/pnpjs). |
+| [sp-dev-fx-vs-extension](https://github.com/pnp/sp-dev-fx-vs-extension) | Historical Visual Studio 2015/2017 extension. Use the current [SPFx environment setup guidance](../spfx/set-up-your-development-environment.md). |
+| [PnP-Provisioning-Schema](https://github.com/pnp/PnP-Provisioning-Schema) | Archived provisioning schema. See [PnP Framework](https://pnp.github.io/pnpframework/) for current provisioning engine guidance. |
+| [PnP](https://github.com/pnp/PnP) | Historical samples, including the SharePoint Add-In model. Start with the current sample galleries above. |
+| [sp-dev-gdpr-activity-hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | Historical GDPR Activity Hub reference solution. |
+| [PnP-Partner-Pack](https://github.com/SharePoint/PnP-Partner-Pack) | Historical packaged guidance for SharePoint and Azure. |
+| [PnP-Provisioning-Templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Archived provisioning template collection. |
+| [PnP-Guidance](https://github.com/SharePoint/PnP-Guidance) | Historical guidance, presentations, and articles. |
+| [PnP-IdentityModel](https://github.com/pnp/PnP-IdentityModel) | Historical replacement for Microsoft.IdentityModel.Extensions.dll. |
+
+## See also
+
+- [How to contribute](contribute.md)
+- [Support and feedback](../support-feedback.md)

@@ -6,6 +6,8 @@ ms.localizationpriority: high
 ---
 # Event receivers and list event receivers in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to handle events in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code.
 
 In a typical Full Trust Code (FTC) / Farm Solution scenario, Event Receivers and List Event Receivers were created with the SharePoint

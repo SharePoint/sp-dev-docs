@@ -11,6 +11,8 @@ ms.assetid: a9c03296-9144-b65f-c271-97ca3875f657
 
 # ComboBox element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

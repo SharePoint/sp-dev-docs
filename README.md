@@ -1,65 +1,67 @@
-# Welcome to the SharePoint Developer Documentation! 
+# SharePoint developer documentation
 
-This is a locationf or all SharePoint extensibility and developer topics, including following:
+This repository contains the source for the [SharePoint developer documentation on Microsoft Learn](https://learn.microsoft.com/sharepoint/dev/), including:
 
-* [SharePoint Framework](https://aka.ms/spfx)
-* [SharePoint Embedded](https://aka.ms/spe)
-* [List formatting](https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting)
-* [Site templates  & site scripts](https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview)
-* [SharePoint add-ins](https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/retirement-announcement-for-add-ins) - SharePoint add-ins will have end of life in April 2026 at SharePoint Online / Microsoft 365
-* and more...
+- [SharePoint Framework (SPFx)](https://aka.ms/spfx)
+- [SharePoint Embedded](https://aka.ms/spe)
+- [List formatting](https://learn.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
+- [Site templates and site scripts](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
 
-This repository contains the raw documents published to Microsoft Docs at https://learn.microsoft.com/en-us/sharepoint/dev/.
+For legacy solutions, see the [SharePoint Add-In retirement and migration guidance](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/retirement-announcement-for-add-ins). SharePoint Add-Ins retired in SharePoint Online on April 2, 2026; use the guidance to plan migration rather than start a new Add-In project.
 
-## Questions & Help
+## Questions & help
 
-Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) list to report us potential issues around the SharePoint Framework or gaps in our documentation. You can also submit directly pull requests towards our documentation. 
+- **SPFx product bugs and documentation issues:** Search the [sp-dev-docs issue list](https://github.com/SharePoint/sp-dev-docs/issues) before opening an issue. Include a reproducible example for product bugs or the affected article URL for documentation issues.
+- **How-to questions, sample or library defects, and Microsoft product support:** Follow the [support and feedback guidance](docs/support-feedback.md) to choose the appropriate channel.
+- **Feature suggestions:** Use the [SharePoint developer platform feedback portal](https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472).
 
-You can also tweet / follow [@Microsoft365Dev](https://x.com/Microsoft365Dev) or [@m365pnp](https://x.com/m365pnp).
+## SharePoint Framework releases
 
-## SharePoint Framework Releases
+See the [SPFx compatibility reference](docs/spfx/compatibility.md) for supported combinations and links to released versions, the [SPFx 1.24 release notes](docs/spfx/release-1.24.0.md) for that release, and the [SharePoint Framework roadmap](docs/spfx/roadmap.md) for plans.
 
-Review all the SPFx releases here from the [SharePoint Framework roadmap](https://learn.microsoft.com/sharepoint/dev/spfx/roadmap)
+## Get started
 
-## Get Started
+- [Set up your Microsoft 365 developer tenant](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
+- [Set up your development environment](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
+- [Build your first web part](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
-* [Setup your Office 365 Developer Tenant](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
-* [Go build your first web part](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+## Learn more
 
-## Learn More
-
-* [Background and Philosophy](https://learn.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](https://learn.microsoft.com/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](https://learn.microsoft.com/javascript/api/sp-application-base)
+- [SharePoint Framework overview](https://learn.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+- [Design guidance](https://learn.microsoft.com/sharepoint/dev/design/design-guidance-overview)
+- [API reference](https://learn.microsoft.com/javascript/api/sp-application-base)
 
 ## Community engagement
 
-• [Microsoft Community Learning in YouTube](https://aka.ms/community/videos) - Videos on Microsoft 365 & Power Platform - Copilot, SharePoint, Power Apps and more
-• [Microsoft 365 & Power Platform Unified Sample gallery](https://aka.ms/community/samples) - Microsoft and community provided samples on Microsoft 365 & Power Platform
-• [Microsoft 365 & Power Platform Community](http://aka.ms/community/home) - Community calls, open-source, guidance and more. Don't miss out!
+- [Microsoft 365 & Power Platform Community](https://pnp.github.io/) - Community resources, open-source projects, and ways to participate.
+- [Community calls](https://aka.ms/community/calls) - Current schedules, calendar invitations, and joining details.
+- [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/) - Find examples for SharePoint Framework development.
+- [Copilot UX component samples](https://aka.ms/spfx/copilot/samples) - Explore SPFx components for Microsoft 365 Copilot.
+- [Microsoft 365 & Power Platform sample gallery](https://aka.ms/community/samples) - Browse samples across Microsoft 365 and Power Platform.
+- [Microsoft Community Learning videos](https://aka.ms/community/videos) - Tutorials, demos, and community call recordings.
 
-## Updates & Feedback
+Samples can target different SPFx versions. Check each sample's README, dependencies, and prerequisites before using it with SPFx 1.24 or another release.
 
-To keep track of improvements to the Microsoft 365 and SharepPoint Framework, please take a look at:
+## Updates & feedback
 
-* [Microsoft 365 Developer in LinkedIn](https://www.linkedin.com/showcase/microsoft365dev/)
-* [Microsoft 365 & Power Platform Community in LinkedIn](https://www.linkedin.com/company/m365pnp/)
-* [@SharePoint](https://x.com/sharepoint), [@Microsoft365Dev](https://x.com/Microsoft365Dev) and [@m365pnp](https://x.com/m365pnp) on X.com
-* [Office Developer Blog](https://developer.microsoft.com/office/blogs/)
+- [Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/)
+- [Microsoft 365 Developer on LinkedIn](https://www.linkedin.com/showcase/microsoft365dev/)
+- [Microsoft 365 & Power Platform Community on LinkedIn](https://www.linkedin.com/company/m365pnp/)
+- [@SharePoint](https://x.com/SharePoint), [@Microsoft365Dev](https://x.com/Microsoft365Dev), and [@m365pnp](https://x.com/m365pnp) on X
 
-Provide Feedback:
+For issue reports and feature suggestions, use the channels in [Questions & help](#questions--help) rather than social media.
 
-* If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues).
+## Contribute to SharePoint developer documentation
 
-## Contribute on the SharePoint Dev Docs
+Documentation fixes and improvements are welcome. Review these instructions before submitting a pull request:
 
-Please see following guidance if you are planning to submit changes on the SharePoint developer documentation. We do welcome your pull requests!
+- [Contribution guidance](.github/CONTRIBUTING.md)
+- [How to create good pull requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
+- [Community contribution options](docs/community/contribute.md)
+- Microsoft contributors can also use the [internal Microsoft Learn contribution guidance](https://review.learn.microsoft.com/help/contribute/?branch=main).
 
-* [Contribution guidance](https://github.com/SharePoint/sp-dev-docs/blob/master/.github/CONTRIBUTING.md)
-* [How to Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
-* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.learn.microsoft.com/help/contribute/?branch=main) for Microsoft Docs contributors
+See the repository's [documentation license](LICENSE) and [code license](LICENSE-CODE) for the applicable terms.
 
-## Have Fun
+## Have fun
 
-We look forward to seeing what you build and we are here to help 🙋‍♂️
+We look forward to seeing what you build!

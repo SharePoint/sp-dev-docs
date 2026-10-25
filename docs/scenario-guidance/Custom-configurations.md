@@ -76,6 +76,8 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ## SharePoint add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** Office 365 | SharePoint Server_
 
 Description.

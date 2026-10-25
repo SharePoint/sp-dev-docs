@@ -44,10 +44,12 @@ The following sections describe the concepts that are important to understand wh
 
 A Copilot UX component declares the display modes it supports in its component manifest through the `availableDisplayModes` capability. Microsoft 365 Copilot renders the component in one of two layouts:
 
-- **`inline`** - The component renders inline within the Copilot conversation, alongside the chat flow. This is the default, compact presentation.
+- **`inline`** - The component renders inline within the Copilot conversation, alongside the chat flow. This is the fallback, compact presentation when no supported fullscreen startup preference is granted.
 - **`fullscreen`** - The component expands to occupy the full Copilot surface, giving it maximum space for richer interactions.
 
 The host owns the layout. Your component reads the current mode from `this.hostContext.displayMode` and can *request* expansion to fullscreen by calling `this.requestDisplayModeAsync('fullscreen')`. Collapsing back to inline is always host-initiated - the user clicks the host's collapse affordance, and your component is notified through `onHostContextChanged`.
+
+Set `capabilities.defaultDisplayMode` to choose a startup preference from the declared available modes. The host can decline a fullscreen preference, and its later mode updates remain authoritative. See [Display modes](displayMode.md) for close/reopen behavior.
 
 ```json
 // HelloCopilotCopilotComponent.manifest.json (excerpt)
@@ -182,6 +184,12 @@ Once you are satisfied with the experience in the Workbench, you build the solut
 
 Keep the following in mind as you build and maintain Copilot UX components.
 
+### Provide context about the visible UX
+
+Use `createCopilotTextContent` to describe the current view, values, filters, and selection. Rendering the component doesn't automatically tell Copilot what the user sees. Model-context updates provide information for subsequent conversation turns; a user-triggered follow-up can ask Copilot to explain the selected data.
+
+The context limit is **10 KB**. Anything larger blocks sending the message rather than being silently truncated. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for the bridge operations, error handling, and deliberate reduction/retry workflow.
+
 ### Update components and the baseline agent
 
 The initial **Sync to Teams** operation, labeled **Add to Teams** in the SharePoint App Catalog, deploys the baseline agent definition. After that, [dynamic tool discovery](/microsoft-365/copilot/extensibility/plugin-dynamic-tool-discovery) detects changes to tool parameters and additions or removals of components/functions at runtime.
@@ -192,6 +200,14 @@ The numeric app `version` in `copilot/manifest.json` is separate from the declar
 
 > [!NOTE]
 > Deployment and runtime discovery can take time. Test updated tools in a new conversation rather than assuming an existing conversation refreshes immediately.
+
+For the complete update decision table, versioning, cross-tenant deployment, and retirement considerations, see [Develop and deploy Copilot UX components](development-and-deployment.md). See [Configure Copilot UX components and agents](component-and-agent-configuration.md) for component manifests and grouping.
+
+### Reuse UI without sharing tenant assumptions
+
+Share UI and business logic, but keep host adapters and tenant configuration separate. Use `BaseCopilotComponent` for Copilot and `BaseClientSideWebPart` for web parts. Follow [Teams integration](../integrate-with-teams-introduction.md) and [Outlook/Office hosting guidance](../office/overview.md) for those hosts; a Copilot component manifest doesn't run unchanged in every application.
+
+Deploying the same `.sppkg` to another tenant doesn't grant access to data, provision a backend, or copy consent and agent policies. Configure and test each tenant independently. The combined Copilot/Teams automatic-sync limitation still applies when packaging shared UI in one solution.
 
 ## Availability
 
@@ -234,7 +250,9 @@ A fix for combined-solution automatic sync and support for mobile clients are pl
 > [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md)
 
 - Learn how the [`displayMode`](displayMode.md) host context works and how to add an expand-to-fullscreen control.
-- Review available samples in the [GitHub sample repository](https://github.com/pnp/spfx-copilot-apps).
+- Review available samples in the [Copilot UX component sample gallery](https://aka.ms/spfx/copilot/samples).
+- [Develop and deploy Copilot UX components](development-and-deployment.md).
+- [Provide context to Copilot](provide-context-to-copilot.md).
 
 ## See also
 

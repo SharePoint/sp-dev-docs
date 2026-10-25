@@ -11,6 +11,8 @@ ms.assetid: 0fca1944-4181-7f6f-e02c-f875932a5ed2
 
 # CustomAction element (ElementDefinitionCollection complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

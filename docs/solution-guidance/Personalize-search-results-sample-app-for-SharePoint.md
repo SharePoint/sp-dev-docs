@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Personalize search results sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The Search.PersonalizedResults sample shows you how to personalize SharePoint by filtering information based on the value of a user profile property. Some examples of personalization include:
 
 - News articles or other content filtered by country or location.
