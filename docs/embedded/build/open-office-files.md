@@ -201,6 +201,32 @@ Microsoft 365 resolves supported tokens, URL-encodes their values, and substitut
 
 When your app receives a `urlTemplate` redirect, authenticate the user, parse the token values, and use Microsoft Graph to retrieve the file. If you need the canonical file URL, use the DriveItem `webDavUrl` property instead of `webUrl`.
 
+### Add custom tokens from container custom properties
+
+Beyond the built-in tokens, you can define your own `urlTemplate` tokens from [custom properties](/graph/api/resources/filestoragecontainercustompropertyvalue) on a container. Set `isPatternToken` to `true` on a custom property to make its name available as a token, resolved to that property's value, the same way Microsoft 365 resolves the built-in tokens.
+
+Add or update the custom property with the Microsoft Graph `PATCH /storage/fileStorage/containers/{containerId}/customProperties` API. For request and response details, see [Add custom properties to a fileStorageContainer](/graph/api/filestoragecontainer-post-customproperty) and [Update custom properties of a fileStorageContainer](/graph/api/filestoragecontainer-update-customproperty).
+
+```http
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{containerId}/customProperties
+Content-Type: application/json
+
+{
+  "projectId": {
+    "value": "c5d88310-1fc7-49be-80ca-e7d7a11e638b",
+    "isPatternToken": true
+  }
+}
+```
+
+With the custom property set, reference it in `urlTemplate` like any other token, for example `https://app.contoso.com/open?t={tenant-id}&i={item-id}&p={projectId}`.
+
+Keep these constraints in mind:
+
+- Custom property names can't start with `vti_` or contain `|`.
+- A pattern-token value must be a GUID, an integer, a Boolean, or an encoded item ID. Other value types are rejected when you set `isPatternToken` to `true`.
+- If a container doesn't have a value for a pattern-token property, Microsoft 365 removes that token from the resolved URL instead of leaving it unresolved, the same way it handles other unpopulated optional tokens.
+
 When you design redirects:
 
 - Use a stable production URL for your app.
