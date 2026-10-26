@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Transforming SharePoint hosted add-ins to SharePoint Framework solutions
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint Add-in model you used to create so called SharePoint-hosted add ins, which were applications hosted on SharePoint Online, with a dedicated app site automatically created by the SharePoint Add-in model infrastructure. In the SharePoint-hosted add-ins you used to consume SharePoint Online data either in the app site itself, or in the host site, via JavaScript SharePoint Object Model (JSOM).
 
 In the modern development world of SharePoint Online, you can simply create client-side solutions with SharePoint Framework and start consuming SharePoint Online data relying on REST APIs and Microsoft Graph.

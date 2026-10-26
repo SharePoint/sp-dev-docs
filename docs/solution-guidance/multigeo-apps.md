@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Manage apps and add-ins in a Multi-Geo tenant
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In a Multi-Geo tenant, you have an app catalog per geo location, which is something to consider if you want to deploy your apps across all geo locations.
 
 By "app", we mean all apps that you deploy by first adding them to your tenant app catalog. All such apps are in scope of this guidance, including SharePoint Add-Ins (.app files) and SharePoint Framework apps and extensions (.sppkg files). 

@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Set up a Multi-Geo sample application
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 When developing for a Multi-Geo tenant, it's important to understand the security model. Fortunately, the model used for a Multi-Geo tenant is the same as the model used for a regular tenant. 
 
 This article shows you how to configure the following sample applications:

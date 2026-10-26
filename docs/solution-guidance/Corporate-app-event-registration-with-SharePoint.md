@@ -7,6 +7,10 @@ ms.localizationpriority: high
 
 # Corporate event add-in integration with SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The [BusinessApps.CorporateEventsApp](https://github.com/SharePoint/PnP/tree/master/Solutions/BusinessApps.CorporateEventsApp) sample shows you how to implement a centralized corporate events management system as a provider-hosted add-in that integrates with your existing line-of-business (LOB) applications.
 
 More specifically, the BusinessApps.CorporateEventsApp sample shows you how to implement an ASP.NET web application that interacts with SharePoint as a data store for LOB entities. It also shows you how to implement multiple steps in a complex business task with a single provider-hosted add-in.

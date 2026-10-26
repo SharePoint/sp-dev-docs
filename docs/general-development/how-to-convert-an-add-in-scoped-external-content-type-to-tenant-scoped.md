@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Convert an add-in-scoped external content type to tenant-scoped
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn how to create an OData-based external content type using Visual Studio 2012 auto-generation tools and import it into the Business Connectivity Services (BCS) metadata store so that it can be used across an entire tenant workspace.
 BDC models are complex XML definitions of an external data source. They are used when defining external content types for BCS. They are very difficult to build manually, so tools have been built to automatically generate the files using Visual Studio 2012 and Office Developer Tools for Visual Studio 2012. Using these tools, you can create an .app package using Visual Studio publishing, and then open that package to extract the model file.
   

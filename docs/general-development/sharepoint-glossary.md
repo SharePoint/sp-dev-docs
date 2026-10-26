@@ -11,6 +11,10 @@ description: "Find definitions for terms used in SharePoint developer documentat
 
 # SharePoint glossary
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Find definitions for terms used in SharePoint developer documentation.
   
 ## Glossary

@@ -7,6 +7,10 @@ ms.localizationpriority: high
 
 # Branding and site provisioning solutions for SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The introduction of the Cloud Add-in Model and SharePoint Add-ins provides alternatives to existing, established ways of branding and provisioning SharePoint sites.
 
 Up to now, you might have used the SharePoint feature framework, site templates, web templates, and site definitions to provision your sites and site collections.

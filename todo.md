@@ -1,12 +1,123 @@
 # SPFx documentation health and 1.24 GA tracker
 
-Last reviewed: October 25, 2026
+Last reviewed: October 26, 2026
 
-Scope: all of [docs/spfx](docs/spfx), [docs/community](docs/community), navigation in [docs/toc.yml](docs/toc.yml), [README](README.md), and directly related setup, support, landing-page, and shared-content references. Expanded to SharePoint Online Add-in end-of-life notices in Add-in, API, schema, solution, and scenario documentation.
+Scope: all documentation outside the **Embedded folder**, including SPFx, community, declarative customization, design, business apps, general development, features, scenarios, solution guidance, APIs, schema, modernization, transformation, and training. Main entry points include [README](README.md), [the Learn landing-page source](docs/index.yml), and [the development overview](docs/general-development/sharepoint-development-overview.md). Embedded is owned by another team and is excluded from reading, editing, and validation. Its existing landing-page card and navigation section are preserved. **October 26 navigation policy:** hide SharePoint Add-in-specific and Add-in/ACS-registration-dependent topics from [the TOC](docs/toc.yml), but retain their source files. This supersedes the earlier instruction to retain those navigation entries; supported APIs and modern Entra application registration aren't retired.
 
 This is an implementation backlog, not a declaration that GA documentation or runtime validation is complete. The initial scan added this tracker; subsequent implementation is recorded below. Keep task IDs stable when adding follow-up requirements. **Use `[x]` for completed implementation or verification work. For partially completed tasks, check completed subtasks and leave the parent unchecked. Track release verification and publication separately under G01-G03 and V01-V09; don't leave completed content work unchecked solely because launch checks are pending.**
 
-## Current implementation status - October 25, 2026
+## Latest navigation and deployment follow-up - October 26, 2026
+
+- [x] **H15 - Hide Add-in and ACS-dependent navigation without deleting articles.** **P0.**
+  Removed **450 navigation nodes**, including group containers and **421 article links**, from [toc.yml](docs/toc.yml). This covers the complete SharePoint Add-ins, Add-in modernization, and Add-in schema branches; Add-in recipes, deployment, migration-to-Add-in and provider-hosted sample branches; individual ACS-dependent walkthroughs; legacy Add-in management APIs; and the Add-in Client Web Part Definition schema.
+
+  | Article area | Links hidden |
+  | --- | ---: |
+  | SharePoint Add-ins | 97 |
+  | Add-in modernization | 19 |
+  | Solution guidance | 106 |
+  | General development / Archive | 27 |
+  | Add-in management API | 1 |
+  | Add-in schemas and app-part schema | 171 |
+  | **Total** | **421** |
+
+  - [x] Hid the requested [workflow web-service walkthrough](docs/solution-guidance/Call-web-services-from-SharePoint-workflows.md), ACS app-only registration, tenant app-only permission recipes, and dependent workflow/BCS/social samples. Their source files remain available; hiding navigation doesn't delete or unpublish an article.
+  - [x] Retained **16 supported API/reference articles** under the historical `sp-add-ins` path, current SPFx ALM, webhooks, Entra app-only, ResourcePath, and independent Server/CSOM guidance. Removed the REST permissions walkthrough whose prerequisites require a SharePoint-hosted Add-in. Moved [ChangeQuery/ChangeToken](docs/solution-guidance/query-sharepoint-change-log-with-changequery-and-changeToken.md) out of the removed Add-in recipes branch into ECM solutions. Updated the Multi-Geo label to **Manage SharePoint Framework solutions** and the app-only label to **Microsoft Entra ID**.
+  - [x] Validated YAML structure, no empty groups, no remaining Add-in/ACS-specific navigation labels, and **2,124 retained local article targets** with **no new missing targets**. All **421 hidden article files still exist**. **13 other root sections**, including SPFx/Copilot, Embedded, Teams, Viva, and capabilities, are byte-identical to the pre-edit TOC. Preserved the existing worktree edits and did not edit shared includes or Embedded articles.
+  - [x] Recorded one pre-existing missing CDN navigation target under H13. The historical case-mismatch inventory needs re-scanning after these removals. Publishing/rendering and runtime checks remain open; this is a source/navigation validation, not publication to Learn.
+
+The same follow-up clarifies the few-minute dynamic tool-discovery cache versus immediately available App Catalog-served UX changes in the three Copilot lifecycle articles, tracked under D01. No implementation code or code-hold status changed.
+
+## Latest quality scan and follow-up - October 25, 2026
+
+This follow-up is based on commit `804c5359d`, not on the original unrefreshed documentation. The [previous per-file GA review inventory](ga-docs-review.md) describes that earlier committed batch; the changes and findings below are the subsequent quality pass.
+
+**Method and boundaries:** statically inventoried **2,587 Markdown/YAML files outside Embedded**, parsed their YAML/frontmatter, scanned lifecycle/tooling/authentication/debugging signals, checked source article-link targets, and directly reviewed high-risk and entry-point content. This is not a manual line-by-line technical certification of every article, an exhaustive external-link/image audit, or execution of the tutorials. Dates and keyword matches alone aren't defects. For example, the **Preview** button in list formatting isn't a feature-preview warning.
+
+### Area coverage and recommended disposition
+
+| Area | Files scanned | Result and next action |
+| --- | ---: | --- |
+| [SPFx](docs/spfx) | 235 | Current Node.js 24, roadmap, Copilot lifecycle and Workbench direction retained. Fixed overview support/cost/reuse overstatements and Store checklist assumptions. Runtime, React/tutorial implementation and SE support gates remain under B01/M03/C06/Q01. |
+| [Declarative customization](docs/declarative-customization) | 28 | Added current PnP app-registration prerequisites and removed uncommitted site-template promises. Validate authentication examples, gallery behavior, formatting/schema versions and permissions; don't strip UI Preview instructions. |
+| [Design](docs/design) | 19 | Removed old adoption statistics; added Copilot/SharePoint/Viva host-specific routes and corrected semantic-slot accessibility guarantees. Validate older Fabric/semantic-slot guidance against its actual library version. |
+| [Business apps](docs/business-apps) | 13 | Added supported workflow-migration/current-connector routes and corrected publishing-versus-access wording. Refresh connector operation labels, limits, licensing, flow ownership and run-history advice against current Power Platform references. |
+| [General development](docs/general-development) | 335 | Replaced the obsolete development front door; added 40 scoped Add-in notices and corrected app-catalog capability wording. Triage Windows Phone, Visual Studio 2012, BCS/Duet, classic social/search and Server-specific material before further modernization. |
+| [Features](docs/features) | 19 | Scoped historical footer authentication and removed stale rollout promises. Validate footer limits/defaults, group-connected-site CSOM authentication, hub-site tooling and current UI. |
+| [Scenario guidance](docs/scenario-guidance) | 16 | Added six scoped Add-in notices, repaired the LOB API link and removed the obsolete throttling route. Replace historical sample recommendations only after their supported replacements are verified. |
+| [Solution guidance](docs/solution-guidance) | 155 | Added 27 more Add-in notices. Audit archived PnP samples, ACS/app-only recipes, classic portal assumptions, InfoPath and sandbox-to-Add-in migration paths; a notice isn't a working replacement implementation. |
+| [APIs](docs/apis) | 48 | Clarified supported SPFx ALM versus retired Add-in operations; scoped Add-in permission tables in three webhook articles. Modernize archived PnP CSOM/auth examples and verify current permissions without retiring REST/CSOM/webhooks. |
+| [Schema](docs/schema) | 1,516 | Existing Add-in-specific notices retained. Generic schemas remain available for supported Server/API scenarios; no blanket schema retirement. Audit schema links and version applicability before archiving. |
+| [Add-ins](docs/sp-add-ins) | 114 | Existing 112 shared notices retained. Experimental license terms and the modern Entra admin-API article remain deliberate exclusions. No pages deleted. |
+| [Add-in modernization](docs/sp-add-ins-modernize) | 19 | Added 17 scoped notices; corrected the still-supported claim, ACS 2018 exception, RER timing and modern Store route. Replacement APIs themselves aren't retired. |
+| [Transformation](docs/transform) | 60 | Inventoried scanner, InfoPath/workflow, authentication, page transformation and old library dependencies. Validate current tools and migration outputs before updating executable recipes. |
+| [Community](docs/community) | 5 | Prior call/sample/support refresh retained; don't replace living invitation links with fixed schedules or imply all samples target 1.24. |
+| [Training](docs/training) | 1 | Review linked module/toolchain versions and obsolete prerequisites when validating the learning path. |
+| [Breadcrumb](docs/breadcrumb) and root documentation files | 4 | Parsed navigation/root sources. Landing page refreshed; breadcrumb and TOC preserved in this October 25 pass. H15 records the subsequent TOC cleanup. |
+
+### Completed edits and remaining actions
+
+- [x] **H01 - Refocus the current development entry points.** **P0.**
+  Added a dedicated first Copilot card and deployment/context/Store routes in [index.yml](docs/index.yml), with web parts, extensions, Teams, Viva, debugging, releases and roadmap still discoverable. Removed the Add-in creation card and the classic-portal recommendation. Removed Add-in promotion from [README](README.md), [SPFx overview](docs/spfx/sharepoint-framework-overview.md), and the rebuilt [general development overview](docs/general-development/sharepoint-development-overview.md). Retained REST links whose historical source paths contain `sp-add-ins`; those APIs aren't the retired Add-in model. No Add-in TOC entries were removed in this October 25 pass; H15 records the later navigation cleanup. No Embedded card/content was changed.
+
+- [x] **H02 - Close the broader Add-in legacy-notice gaps.** **P0.**
+  Added **94** scoped notices using the existing [shared retirement include](includes/snippets/sp-add-in-deprecation.md): **40 general-development, 27 solution-guidance, six scenario, 17 modernization, one ALM API, and three webhook articles**. Notices explicitly mark the Add-in portions as legacy and state that Add-ins no longer work in SharePoint Online; supported APIs, modern replacement technologies and Server scenarios aren't globally retired. The existing shared include wasn't edited, avoiding indirect changes to other teams' content.
+  At the October 25 checkpoint, the residual keyword exceptions were intentional: the retained TOC; the generic schema index; experimental license terms; the modern Store walkthrough (Office Add-ins in screenshots are a different model); and two SPFx articles that compare historical infrastructure rather than teach a current Add-in implementation. H15 supersedes the TOC-retention decision. The articles' code/host assumptions remain in the tutorial backlog.
+
+- [x] **H03 - Recheck Copilot SharePoint Store support across discovery and submission.** **P0.**
+  Made support explicit in the [Marketplace opening](docs/spfx/publish-to-marketplace-overview.md), [checklist](docs/spfx/publish-to-marketplace-checklist.md), [FAQ](docs/spfx/publish-to-marketplace-faq.yml), main entry points, and the [modernization publishing walkthrough](docs/sp-add-ins-modernize/publishing-modern-sharepoint-apps-on-appsource.md).
+  Corrected the v1.11-versus-v1.24 distinction, site tests versus Copilot host tests, web-part-only DOM wording, obsolete Windows 10 baseline, missing component listing scope, and the implication that an upgrade report executes the upgrade. Retained USL/no-consumption wording, iOS/Android exclusions, and the distinction between the manual combined-package deployment workaround and Store certification approval. Rechecked after-publishing/common-validation-error guidance; existing GA requirements there remain applicable.
+  **Owner-dependent acceptance remains open under N02/G02:** confirm the combined custom-package submission path and current review policy. No new certification exemption was invented.
+
+- [ ] **H04 - Finish SPFx runtime and support-quality acceptance.** **P0.**
+  - [x] Removed overview promises of identical components in all hosts, universal consent-free SSO, and backend-free operating costs. Kept the GA roadmap, Node.js 24 and Copilot Workbench direction.
+  - [ ] Resume B01/G03/V01-V03/V07 only when execution is available. Validate React roots/disposal, current generator/build output, the retained first-Copilot v1.7 excerpt, resize/fullscreen error paths, actual host permissions and the unconfirmed exact 10 KB measurement. Keep the SE maximum conflict flagged. No application-code modernization or runtime testing occurred in this pass.
+
+- [ ] **H05 - Validate declarative customization with current tools and schemas.** **P1.**
+  - [x] Added own-Entra-app/client-ID prerequisites to [PnP site-design setup](docs/declarative-customization/site-design-pnppowershell.md); removed stale future availability/version-history/gallery promises from [the site-template overview](docs/declarative-customization/site-design-overview.md).
+  - [ ] Execute the PnP connection/permission examples with current prerequisites; confirm site-template gallery/default/version behavior. Validate [column formatting](docs/declarative-customization/column-formatting.md), [list forms](docs/declarative-customization/list-form-configuration.md), and [site-script schema](docs/declarative-customization/site-design-json-schema.md) against supported hosts and schemas. Preserve meaningful UI Preview steps and version-specific Server examples.
+
+- [ ] **H06 - Complete host-specific design and accessibility review.** **P1.**
+  - [x] Updated [design overview](docs/design/design-guidance-overview.md) and [semantic slots](docs/design/semantic_slots.md): current host routes, no stale audience counts, no automatic accessibility guarantee, no conflation of Fabric semantic slots with every Fluent UI/Copilot token model.
+  - [ ] Review typography/grid/icon/theme examples, Figma kit links and screenshots. Validate contrast, keyboard/focus, responsive states and accessibility in actual hosts; a mobile-sized mockup isn't proof of Copilot mobile support.
+
+- [ ] **H07 - Refresh business-app and automation specifics.** **P1.**
+  - [x] Updated [business-app entry guidance](docs/business-apps/introduction-to-sharepoint-business-process-integration.md) and linked the authoritative [connector reference](https://learn.microsoft.com/connectors/sharepointonline/) from [the connector article](docs/business-apps/power-automate/sharepoint-connector-actions-triggers.md). Publishing doesn't grant licenses or data access; Copilot doesn't inherit Power Apps mobile support.
+  - [ ] Reconcile connector preview/deprecation labels, flow run/history limits, licensing, service-account/ownership and impersonation advice in [workflow migration](docs/business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md) with current Power Platform guidance. Existing SharePoint 2013 workflow retirement text is already correct; don't retire Power Automate or infer Server workflow lifecycle.
+
+- [ ] **H08 - Review feature-specific limits, authentication and UX.** **P1.**
+  - [x] Scoped [footer scripts](docs/features/site-footer.md) as historical and removed outdated rollout/MFA advice.
+  - [ ] Verify footer link counts/layout/default/client rules and screenshots; modernize the [group-connected-site CSOM sample](docs/features/groupify/groupify-csom.md) and hub-site tooling only with executable evidence. The [embedded-pages-to-Teams article](docs/features/embed-pages-to-teams.md) already routes to Viva Connections and is not part of the separately owned Embedded product folder.
+
+- [ ] **H09 - Separate legacy general-development material from supported Online/Server paths.** **P1.**
+  - [x] Rebuilt the front door, scoped 40 legacy Add-in areas, and corrected [site collection app catalog](docs/general-development/site-collection-app-catalog.md) wording so it doesn't offer Add-ins as a current Online capability.
+  - [ ] Inventory retention/archival and supported replacements for [Windows Phone](docs/general-development/build-windows-phone-apps-that-access-sharepoint.md), [general environment setup](docs/general-development/set-up-a-general-development-environment-for-sharepoint.md), BCS/Duet, classic social/search, and old workflow/Visual Studio examples. Confirm each product's lifecycle and Server applicability before declaring it retired. Don't modernize unrelated SDKs by name substitution.
+
+- [ ] **H10 - Replace obsolete solution/scenario recommendations deliberately.** **P1.**
+  - [x] Added 33 more scoped notices across these two areas; corrected [Performance](docs/scenario-guidance/Performance.md) and [LOB integration](docs/scenario-guidance/Line-of-Business-integration.md) article routes.
+  - [ ] Review the PnP solution-guidance entry point, archived `SharePoint/PnP` samples, ACS/app-only recipes, classic portals, InfoPath and sandbox-to-Add-in migration advice. Retaining historical instructions with a warning isn't validation of their current execution. Use supported SPFx/Entra/webhook/Power Platform replacements only where the scenario supports them.
+
+- [ ] **H11 - Modernize API examples without retiring supported APIs or schemas.** **P1.**
+  - [x] Updated [ALM scope](docs/apis/alm-api-for-spfx-add-ins.md) and archived-library warning; marked the legacy permission tables in webhook [get](docs/apis/webhooks/lists/get-subscription.md), [update](docs/apis/webhooks/lists/update-subscription.md), and [delete](docs/apis/webhooks/lists/delete-subscription.md).
+  - [ ] Verify least-privilege Entra permissions, app ownership, subscription examples, current PnP libraries and credential patterns. Review historical XML schemas by platform/version rather than deleting generic CAML/Server schema documentation because Add-ins used it.
+
+- [ ] **H12 - Finish the modernization/transformation learning paths.** **P1.**
+  - [x] Corrected [modernization overview](docs/sp-add-ins-modernize/sp-add-in-modernize.md) still-supported/future-deprecation claims, [ACS migration](docs/sp-add-ins-modernize/from-acs-to-aad-apps.md) 2018 exception wording, [RER timing](docs/sp-add-ins-modernize/use-remote-event-receivers-without-azure-acs-dependency.md), modern Store discovery, and the malformed [multi-tenant API link](docs/sp-add-ins-modernize/multi-tenant-applications.md).
+  - [ ] Validate the modernization scanner, [InfoPath inventory](docs/transform/modernize-scanner-reports-infopath.md), [workflow transformation](docs/transform/modernize-workflows.md), PnP library/runtime versions, transformation outputs and linked training. Keep Entra-registered RERs' separate July 1, 2027 timeline distinct from already-retired ACS/Add-ins. Track executable migrations under the existing code hold.
+
+- [ ] **H13 - Resolve case-sensitive publishing risks after source review.** **P1.**
+  - [x] The non-Embedded source-link scan found and repaired two unresolved article targets, plus the previously recorded Performance route. Root `/sharepoint/dev/` links were recognized as valid landing routes, not reported as failures.
+  - [ ] Re-scan after H15 and normalize case-mismatched source references after case-sensitive publishing checks. The **October 25 snapshot found 199 references across 66 files**, including TOC entries subsequently removed by H15. Examples: `rest-sphubsite-type.md` versus the actual filename in the hub-site API area; differently cased solution-guidance links; and capitalized links in the modernization overview. These are portability/publishing risks, not 199 verified live HTTP404s. Preserve URLs/redirects and source files, while following H15's navigation policy; no filenames were renamed here.
+  - [ ] Resolve the pre-existing `general-development/office-365-cdn.md` target in [the TOC](docs/toc.yml) after confirming the correct current CDN guidance. H15's retained-target check found this missing source path; it wasn't introduced by the pruning.
+
+- [ ] **H14 - Validate and publish the agreed quality scope.** **P0 for changed pages.**
+  - [x] Scanned all 2,587 in-scope source documents with no YAML parse errors. The broad article-link pass covers over 13,600 local references; external URLs, every old anchor/image and runtime behavior are not exhaustively checked.
+  - [x] **October 25 validation:** focused checks passed for **113 changed files**: **111 metadata blocks**, **195 new local links/includes**, **three new anchors**, **411 unchanged fenced blocks**, **94 new scoped retirement notices**, and **69 unique tracker IDs**. Main-page/Store assertions, unchanged Embedded folder/card, unchanged TOC/shared includes, and added-line whitespace checks passed. `git -c core.whitespace=-blank-at-eol,cr-at-eol diff --check` passed. H15 records the subsequent TOC changes. No runtime or publishing-render test was run.
+  - [ ] Publish approved changes through the upstream documentation pipeline and inspect the live Learn landing page. The fetched public page still promotes Add-in creation and reflects older upstream content; editing this fork doesn't update Learn. Keep October 29 GA coordination under V06.
+
+**Execution order:** approve H01-H03 and their static validation first; close P0 runtime/product gates independently; then assign area owners for H05-H13. Embedded stays outside this backlog. Do not delay current landing/legacy-notice corrections until every historical tutorial can be rewritten, and do not mark the full library modernized.
+
+## Earlier GA implementation batch - October 25, 2026
 
 - [x] Prepared the remaining GA reference batch: roadmap, three new Copilot articles, lifecycle/context/configuration cross-links, Store guidance, setup/debug/toolchain references, community/support, README, and retirement notices. See [the complete per-file review inventory](ga-docs-review.md).
 - [x] Used the [September 2026 roadmap announcement](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-september-2026/) as the roadmap source. Product owner approved December 2026 / January 2027 as a **tentative** 1.25 window; October 29 remains the locked 1.24 GA date.
@@ -153,6 +264,7 @@ The initial scan inventoried **233 SPFx text files**: 230 Markdown articles, two
 
 - [x] **D01 - Create the canonical development and deployment model article.**  
   - [x] **October 25 completion:** Created the canonical lifecycle article, including the update decision table, identities/versions, tenant rollout, rollback/retirement, and mixed-solution workaround. Live acceptance remains under V02.
+  - [x] **October 26 clarification:** Documented the product-owner-confirmed few-minute dynamic tool-discovery cache in the [deployment article](docs/spfx/copilot/development-and-deployment.md), [overview](docs/spfx/copilot/overview-copilot-apps.md), and [troubleshooting guidance](docs/spfx/copilot/troubleshooting-copilot-ux-components.md). New functions/tool definitions can take a few minutes after `.sppkg` deployment; UX changes are immediately available because code is served directly from the SharePoint App Catalog site collection. A new conversation doesn't bypass the discovery cache, and an unchanged baseline doesn't need another sync. No exact cache duration or runtime test result is claimed.
 
   Proposed new article: `docs/spfx/copilot/development-and-deployment.md`, titled **Develop and deploy Copilot UX components**. This lifecycle deserves a dedicated article; don't repeat the full explanation in every tutorial. Cover the local inner loop, initial deployment, subsequent component/tool updates, baseline-agent updates, stable identities, propagation checks, and cleanup/rollback considerations. Link to [dynamic tool discovery](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/plugin-dynamic-tool-discovery) and the existing first tutorial for basic packaging steps. Use the decision table below as the core requirement.  
   **Done when:** a reader can identify whether a change requires rebuilding/redeploying, syncing, or both, without conflating local hot reload and tenant deployment. Dependencies: G03.
@@ -398,9 +510,10 @@ Static pattern inventory, excluding release-history/template content: **12** act
 
 - [x] **M02 - Correct retired-feature status and navigation without rewriting tutorials yet.** **P1, high impact.**  
   - [x] **October 25 completion:** Changed domain-isolation and MGT pages to retirement/migration guidance; removed MGT adoption instructions and recommendations without introducing replacement application code.
+  - [x] **October 26 navigation follow-up:** Removed both the isolated web parts article and its retirement announcement from [the TOC](docs/toc.yml), retaining their source files. Confirmed that [build-web-part-microsoft-graph-toolkit.md](docs/spfx/web-parts/get-started/build-web-part-microsoft-graph-toolkit.md) is already absent from both non-Embedded TOCs; its file remains available. The separate Graph Toolkit retirement/migration reference remains in navigation. This is additional to H15's Add-in-specific removal counts.
 
   **Graph Toolkit removal scope:** flag/remove every recommendation to choose, install, or prefer MGT in current guidance, including [Graph Toolkit guidance](docs/spfx/use-microsoft-graph-toolkit.md), its [tutorial](docs/spfx/web-parts/get-started/build-web-part-microsoft-graph-toolkit.md), TOC getting-started entries, landing pages, community/project recommendations, and inbound "next steps" links. Replace preferred paths with [MSGraphClientV3](docs/spfx/use-msgraph.md), [the existing Graph API tutorial](docs/spfx/web-parts/get-started/using-microsoft-graph-apis.md), or appropriate supported SDK/UI guidance. For the deferred tutorial, record the removal/migration work now rather than modernizing its MGT implementation. Keeping an old URL for migration context is not approval to keep MGT as a recommended option. Acceptance requires a scoped recommendation sweep, not just adding another deprecation warning.
-  Update [isolated web parts](docs/spfx/web-parts/isolated-web-parts.md), its [retirement guidance](docs/spfx/web-parts/isolated-web-parts-retirement.md), [Graph Toolkit guidance](docs/spfx/use-microsoft-graph-toolkit.md), relevant FAQ/overview references, and TOC labels. Dates already documented are past; replace future-tense launch recommendations with accurate retirement/migration context. The Store FAQ currently says either isolated or non-isolated web parts can be published; correct that conflict with the lifecycle owner. Don't confuse retired domain isolation with Copilot's iframe hosting. Reclassify the Graph Toolkit tutorial in navigation as legacy/migration material; defer rewriting its body under Q01. Use existing [MSGraphClientV3 guidance](docs/spfx/use-msgraph.md) and supported UI libraries as migration entry points. Preserve old URLs or redirect intentionally. Dependencies: owner confirmation of current lifecycle status; Q01 is not a prerequisite for reference notices.
+  Update [isolated web parts](docs/spfx/web-parts/isolated-web-parts.md), its [retirement guidance](docs/spfx/web-parts/isolated-web-parts-retirement.md), [Graph Toolkit guidance](docs/spfx/use-microsoft-graph-toolkit.md), relevant FAQ/overview references, and TOC visibility. Dates already documented are past; replace future-tense launch recommendations with accurate retirement/migration context. The Store FAQ currently says either isolated or non-isolated web parts can be published; correct that conflict with the lifecycle owner. Don't confuse retired domain isolation with Copilot's iframe hosting. Keep the isolated web parts articles and Graph Toolkit tutorial hidden from navigation; retain their files and defer tutorial rewrites under Q01. Use existing [MSGraphClientV3 guidance](docs/spfx/use-msgraph.md) and supported UI libraries as migration entry points. Preserve old URLs or redirect intentionally. Dependencies: owner confirmation of current lifecycle status; Q01 is not a prerequisite for reference notices.
 
 - [ ] **M03 - Resolve the contradictory SharePoint Server/Subscription Edition matrix.** **P0 for support accuracy.**  
   - [x] **October 25 delivered:** Preserved historical/on-premises target scope and tracked the contradictory SE values.

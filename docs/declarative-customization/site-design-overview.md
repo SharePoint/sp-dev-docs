@@ -10,10 +10,10 @@ ms.localizationpriority: high
 > [!NOTE]
 > - Site templates and site scripts are currently only supported by SharePoint Online.
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
-> - SharePoint has a new site template experience that will be available to all SharePoint users with permission to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
+> - For the current user experience and permissions, see [Apply and customize SharePoint site templates](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398).
 > - As of today, the site template experience cannot be disabled.
 > - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
-> - Site template version history is not currently available for the new site template experience but will be included in future iterations.
+> - Use the current management interfaces to check available version and template-management options.
 
 Use site templates and site scripts to automate the provisioning of new or existing modern SharePoint sites that use your own custom configurations.
 
@@ -27,7 +27,7 @@ Site templates can be used each time a new site is created to apply a consistent
 
 > [!NOTE]
 > - Site templates created using custom site scripts will display in the **From your organization** tab in the site template gallery.
-> - Custom site templates made by your organization will be displayed in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.
+> - Custom site templates are displayed according to the site type and template configuration. Check the gallery for the target site rather than assuming every organizational template applies to both communication and team sites.
 
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 

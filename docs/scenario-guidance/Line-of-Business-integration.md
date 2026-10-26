@@ -32,7 +32,7 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 
 ### Articles
 
-* [Connect to API secured with Azure Active Directory](../spfx/web-parts/guidance/connect-to-api-secured-with-aad.md)
+* [Consume enterprise APIs secured with Microsoft Entra ID](../spfx/use-aadhttpclient-enterpriseapi.md)
 * [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../spfx/use-aadhttpclient.md)
 * [Consume enterprise APIs secured with Azure AD in SharePoint Framework](../spfx/use-aadhttpclient-enterpriseapi.md)
 

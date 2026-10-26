@@ -199,7 +199,7 @@ Rebuild, package, and redeploy the solution when component code or tool definiti
 The numeric app `version` in `copilot/manifest.json` is separate from the declarative-agent schema version, such as `v1.8` in `declarativeAgent.json`. Don't increment the schema version as a deployment counter.
 
 > [!NOTE]
-> Deployment and runtime discovery can take time. Test updated tools in a new conversation rather than assuming an existing conversation refreshes immediately.
+> Dynamic tool discovery caches tool definitions for a few minutes, so new functions or updated definitions can take a few minutes to become available after you deploy an updated `.sppkg`. UX changes are available immediately after deployment because the component code is served directly from the SharePoint App Catalog site collection. Allow for the discovery cache to refresh, then test updated tools in a new conversation.
 
 For the complete update decision table, versioning, cross-tenant deployment, and retirement considerations, see [Develop and deploy Copilot UX components](development-and-deployment.md). See [Configure Copilot UX components and agents](component-and-agent-configuration.md) for component manifests and grouping.
 

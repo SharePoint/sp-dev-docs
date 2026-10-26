@@ -8,6 +8,10 @@ ms.localizationpriority: high
 
 
 # Access SharePoint from mobile and native device apps
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Learn how to access SharePoint from mobile apps and other native device apps, and from external web applications.
 SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all run from within SharePoint, but apps on other platforms can also access SharePoint client APIs.
   
@@ -17,10 +21,6 @@ SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all ru
 
 > [!IMPORTANT]
 > To test and debug on any platform, you need a **developer account on Office 365**. More info: [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) or [Create a developer site on an existing Office 365 subscription](https://msdn.microsoft.com/library/2ec857d5-dc6f-4cf6-ba45-adc845ef2a25%28Office.15%29.aspx). 
-  
-    
-    
-
 
 ## Non-Microsoft mobile and native device apps
 

@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Publish SharePoint Framework applications to the marketplace
 
-Publishing your SharePoint Framework solutions to [marketplace (also known as AppSource)](https://appsource.microsoft.com/) and to SharePoint store, which allows you to reach other organizations and let them easily install your application in their Microsoft 365 tenant. Following sections describe considerations that you should take into account before publishing your solutions to the marketplace.
+Publish SharePoint Framework solutions through [Microsoft AppSource](https://appsource.microsoft.com/) and the SharePoint Store so other organizations can discover and install them in their Microsoft 365 tenants. This guidance covers web parts, extensions, and **Copilot UX components**, which are supported in the SharePoint Store starting with SPFx 1.24 GA.
 
 > [!NOTE]
 > See the [Microsoft 365 App Stores documentation](/office/dev/store/) for the general process for submitting your solution to the store. This guidance is the same for all different application types in Microsoft 365. Documentation also includes details on the submission process.

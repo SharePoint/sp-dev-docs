@@ -10,6 +10,10 @@ ms.localizationpriority: medium
 
 # Site Provisioning
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 Site provisioning is a highly requested capability in the fields of SharePoint customization. In fact, most of the companies have the functional requirement to make it possible for qualified end-users to create sites based on templates, so that they can reuse the same information architecture, the same branding, and the same User Experience, across multiple sites.
 From a developer perspective you need to make it possible to programmatically create sites, and too programmatically provision a custom Information Architecture (IA) on those sites.

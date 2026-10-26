@@ -9,20 +9,18 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.
 
-[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
-
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
 
-You can build SharePoint Framework powered solutions by using [SharePoint Framework Yeoman Generator](set-up-your-development-environment.md), [Microsoft Agents Toolkit](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals?pivots=visual-studio-code), or with the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/). Key advantage is the flexibility of automatic hosting with the option to use the exact same component across the different hosts without any code level changes. This is designed to maximize the value of your development investments, regardless of which primary host you are targeting.
+Start with the [SharePoint Framework development environment and generator](set-up-your-development-environment.md). Tooling extensions, such as the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/), can assist with supported scenarios; check their SPFx and component-type requirements. Share UI and business logic across hosts while using the appropriate component type, host adapter, manifest, and deployment configuration.
 
 Key capabilities of the SharePoint Framework for Microsoft 365 are the following:
 
 - **Content Driven Applications** – SharePoint Framework can be used to build content driven applications for surfacing information easily from Microsoft 365 with Microsoft Graph or to integrate with externally hosted content.
-- **Automatic Single Sign On** – SharePoint Framework components have automatic and seamless SSO included for all platforms they are hosted on. No specific consents needed from Microsoft 365 end users.
-- **Automatic hosting** – SharePoint Framework components can be securely and automatically hosted in SharePoint without additional maintenance or operational costs.
+- **Integrated authentication** – Use the framework-provided clients for supported signed-in-user API access. Authentication doesn't grant access to data: tenant consent, user permissions, API requirements, and host behavior still apply.
+- **Component hosting** – SharePoint can host packaged component assets. External APIs and backend services used by a solution have their own hosting, operations, licensing, and cost requirements.
 - **Industry standard tooling** – SharePoint Framework is using standard web stack tooling with node, npm, TypeScript and any JavaScript framework of your preference. You just need standard web skills to succeed without needing any proprietary tooling.
 
-Write once and surface exactly the same code across [multiple applications](./office/overview.md). Below picture shows example case with a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/) available from GitHub.
+Reuse shared code across [supported applications](./office/overview.md), and validate the solution in each host it targets. The following image illustrates a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/).
 
 ![Use SharePoint Framework solutions across multiple Microsoft 365 apps.](../images/overview/spfx-across-apps.png)
 
@@ -33,6 +31,8 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 Use SPFx to extend Microsoft 365 Copilot by building [Copilot UX components](./copilot/overview-copilot-apps.md), generally available with SPFx 1.24 on October 29, 2026. A solution packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the SharePoint app catalog. See the [licensing and supported-client requirements](./copilot/overview-copilot-apps.md#availability), including the required Copilot add-on license and the iOS/Android exclusions at GA.
 
 Follow [Develop and deploy Copilot UX components](copilot/development-and-deployment.md) for initial agent sync and later runtime-discovered updates. Explore [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/) and [Copilot UX component samples](https://aka.ms/spfx/copilot/samples) for host-specific examples.
+
+Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. See [Publish SharePoint Framework applications to the marketplace](publish-to-marketplace-overview.md) for submission, licensing, and supported-client guidance.
 
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 

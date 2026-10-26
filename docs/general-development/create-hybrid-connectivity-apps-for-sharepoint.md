@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 # Create hybrid connectivity apps for SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn about the process of developing and deploying apps for SharePoint hybrid connectivity solutions.
 
 ## Hybrid connectivity in SharePoint and SharePoint Online

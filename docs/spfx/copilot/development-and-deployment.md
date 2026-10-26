@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 A Copilot UX component solution has two related deployment surfaces: its SPFx components and its baseline declarative agent. **Sync to Teams is required for the initial agent deployment and changes to the baseline agent configuration. It isn't required for every component update.**
 
-This article applies to SPFx 1.24. For an end-to-end first deployment, follow [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md). Check [licensing and supported clients](overview-copilot-apps.md#availability) before testing in Copilot.
+This article applies to SPFx 1.24 and forward. For an end-to-end first deployment, follow [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md). Check [licensing and supported clients](overview-copilot-apps.md#availability) before testing in Copilot.
 
 ## Develop locally
 
@@ -43,7 +43,12 @@ Keep the solution ID, component IDs, and Teams app ID stable for subsequent upda
 
 [Dynamic tool discovery](/microsoft-365/copilot/extensibility/plugin-dynamic-tool-discovery) discovers the current tool definitions at runtime. It doesn't upload source edits, approve permissions, or bypass tenant governance. SPFx supplies the managed tool-discovery endpoint; you don't need to host an external MCP server merely to use SPFx Copilot UX components.
 
-After deployment, test in a **new conversation**. An existing conversation can retain earlier tool context; don't assume an already-open session immediately refreshes.
+> [!NOTE]
+> Dynamic tool discovery caches tool definitions for a few minutes. After you deploy an updated `.sppkg`, it can take a few minutes before new functions or updated tool definitions are available in Copilot. You don't need to sync again to refresh this cache.
+>
+> UX changes are available immediately after deployment because the component code is served directly from the SharePoint App Catalog site collection. They don't wait for the dynamic tool-discovery cache to refresh.
+
+Allow a few minutes for tool discovery, then test in a **new conversation**. Starting a new conversation doesn't bypass the discovery cache. An existing conversation can also retain earlier tool context; don't assume an already-open session immediately refreshes.
 
 ## Keep version fields separate
 

@@ -15,16 +15,18 @@ Before a SharePoint Framework application is published in the Marketplace, it mu
 
 To build solutions that you want to publish to the Marketplace, you need to use SharePoint Framework v1.11 or higher. Starting from version 1.11, SharePoint Framework solution manifest has additional information about your organization and solution, which is required for publishing your application in the Marketplace.
 
+**Solutions containing Copilot UX components require SPFx 1.24 or later.** The v1.11 minimum for other SPFx submissions doesn't enable Copilot components in older packages.
+
 > [!TIP]
-> If your application is built using an older version of the SharePoint Framework, you can easily upgrade it to SharePoint Framework v1.11 or newer using CLI for Microsoft 365. For more information, visit [https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/).
+> CLI for Microsoft 365 can generate an [SPFx project upgrade report](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/). Apply and test the required changes for your target release; generating a report isn't a completed or verified upgrade.
 
 ### Test application in both root and non-root sites
 
-When testing your application, verify that it's working as intended when installed both in the root site collection of a tenant as well as non-root sites. This will help you verify that it doesn't have any dependencies on specific site URLs.
+For components exposed in SharePoint sites, verify both root and non-root site collections so the solution doesn't depend on a specific site URL. Test Copilot UX components in their supported Copilot hosts; they aren't web parts to install on a SharePoint page.
 
 ### Test application in the required browsers
 
-When testing your application against checks described in the following section, verify that it works as expected at least on Windows 10 in the latest versions of Microsoft Edge, Google Chrome, Firefox, and Microsoft Teams Desktop client (if your application exposes web parts in Teams).
+Test on operating systems, browsers, and desktop clients supported by each host your solution targets, and follow the current [Microsoft Marketplace certification policies](/legal/marketplace/certification-policies). Don't treat an old Windows 10 test baseline or a web-part browser list as the support matrix for Copilot UX components. Use the [Copilot availability guidance](copilot/overview-copilot-apps.md#availability) for Copilot client and license requirements.
 
 ### Can I rely on unpublished offers in Partner Center for managing a multi-tenant Client ID for customers?
 
@@ -51,7 +53,7 @@ Following checks must be passed. If one or more checks from this category failed
 
 ### Ensure SharePoint Framework Contract Conformance
 
-Your web part or customizer must only manipulate the DOM element provided through the `domElement` property. This element and the provided context object are the only approved ways to add functionality into sites through your app. Directly manipulating the page DOM will result in rejection of your solution.
+Use only supported component APIs, host-provided context, and the DOM containers owned by your component. Web parts must stay within their provided container; extensions must use their supported extension points. Copilot UX components render inside their hosted iframe and must use the supported bridge APIs rather than attempting to manipulate the parent Copilot interface. Don't modify unrelated SharePoint or host DOM.
 
 ### Under normal circumstances solution should work as intended
 
@@ -83,7 +85,7 @@ Ensure that your web part's description in the metadata is meaningful so that us
 
 ### Solution's description must clearly describe the different components included in the package
 
-When submitting your package to the Marketplace, be sure to clearly describe what different components (web parts, application customizers, etc.) are included in the package to manage user expectations and help them understand the impact of using your application.
+Describe every component type in the package, including web parts, extensions, and Copilot UX components. For Copilot solutions, identify the accompanying agent, required license, setup steps, and supported clients so customers and reviewers understand the installed experience.
 
 ### Don't use names of features in Teams and SharePoint in your solution's name
 

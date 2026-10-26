@@ -10,7 +10,7 @@ summary: Following are some of the most frequently asked questions regarding pub
 
 
 sections:
-  - name: Ignored
+  - name: SharePoint Store submissions
     questions:
       - question: |
           Is it required to configure web parts to be isolated for publishing in the Marketplace
@@ -23,6 +23,13 @@ sections:
           Yes. Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA on October 29, 2026, including updates that add the capability to an existing Store solution. Package the declarative agent and components in the SPFx solution, and provide setup and test instructions.
 
           Disclose the required Microsoft 365 Copilot add-on USL on top of E3, E5, or E7, supported browser/desktop clients, and any API/service dependencies. The component capability has no consumption-based charges. iOS and Android aren't supported at GA. See [Copilot UX component test guidance](publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance).
+
+      - question: |
+          Do Copilot UX components have the same minimum SPFx version and test hosts as web parts?
+        answer: |
+          No. Copilot UX components require SPFx 1.24 or later, even though the general Store minimum for other SPFx solutions is 1.11. Test Copilot components in supported Copilot browser/desktop clients, not by adding them to a SharePoint page. The SharePoint site tests apply to web parts and other site-hosted components in the same solution.
+
+          Follow the [Copilot test checklist](publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance). Store availability doesn't remove the Copilot add-on license requirement, the iOS/Android exclusion at GA, or the combined Copilot/Teams automatic-sync limitation.
 
       - question: |
           Can I request additional API permissions for my solution

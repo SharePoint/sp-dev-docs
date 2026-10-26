@@ -121,6 +121,8 @@ Keep both identities stable for ordinary updates. If an identity change is inten
 
 When you change the tool parameters, for example rename or add a property in the properties schema, Copilot can keep calling the tool with the old parameters after you deploy the update. Your new component code then gets properties it doesn't expect.
 
+Dynamic tool discovery caches tool definitions for a few minutes after an updated `.sppkg` is deployed. New functions can take a few minutes to become available for the same reason. UX changes are available immediately after deployment because the component code is served directly from the SharePoint App Catalog site collection, independently of the discovery cache.
+
 Open **Agent debug info** and compare the versions:
 
 - **Agent version** and the **Actions** version show the version that Copilot loaded for the agent.
@@ -131,7 +133,7 @@ If the **Executed actions** version is older, Copilot built the call from the ol
 To work with this:
 
 - Confirm the updated `.sppkg` is deployed. Tool parameters and the number of component functions are discovered dynamically; no re-sync is needed unless the baseline agent also changed.
-- Wait, and test again in a new conversation.
+- Allow a few minutes for the discovery cache to refresh, then test again in a new conversation. Starting a new conversation doesn't bypass the cache; don't re-sync an unchanged baseline to refresh it.
 - Validate the properties in your component and show a clear message when a required property is missing, for example "No site URL was given." Then you can see the problem right away instead of a component that fails without a reason.
 - Test parameter changes in the Copilot Workbench, where the component gets the properties you enter.
 

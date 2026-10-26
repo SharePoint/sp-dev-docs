@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 ---
 # What's new for developers in social and collaboration features in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
 Social and collaboration features in SharePoint make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up to date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
 

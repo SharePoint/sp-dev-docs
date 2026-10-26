@@ -11,6 +11,10 @@ ms.localizationpriority: high
 
 
 # Set up a general development environment for SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Learn the steps to set up a SharePoint development environment by installing SharePoint and Visual Studio.
 ## How to determine the SharePoint development environment you need
 <a name="SP15_bk_determinedevenv"> </a>

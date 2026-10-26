@@ -7,6 +7,10 @@ ms.localizationpriority: high
 
 # SharePoint site branding and page customization solutions
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 You can customize the look and feel of a SharePoint site in two ways: 
 
 - **By using the theming engine to create custom themes** (composed looks in SharePoint and SharePoint Online). At a minimum, themes define colors. A complete theme defines colors, fonts, a background image, and the associated master page, and a .preview file that defines how the master page is previewed. You can use the remote provisioning pattern to apply themes to sites.

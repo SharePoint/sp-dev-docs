@@ -8,6 +8,10 @@ ms.localizationpriority: high
 
 
 # Build sites for SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Learn about the new site authoring and publishing model for websites in SharePoint.
 
 <a name="SP15_BuildSitesForSP2013_IntroToSitePublishing"> </a>

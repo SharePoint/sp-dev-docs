@@ -7,6 +7,10 @@ ms.localizationpriority: high
 ---
 # Access external data by using REST in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn how to access external data from SharePoint by using Representational State Transfer (REST) URLs for Business Connectivity Services (BCS).
 This article shows how to set up an external list that retrieves data from an Open Data protocol (OData) source.
 

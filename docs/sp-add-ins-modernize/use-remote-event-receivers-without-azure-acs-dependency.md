@@ -8,7 +8,11 @@ ms.service: sharepoint
 
 # Registering and using Remote Event Receivers without having a dependency on Azure ACS
 
-The classical usage of Remote Event Receivers, which we'll name RERs in the remainder of this page, is strongly tied to Azure ACS. Key RER use cases are being part of a provider hosted SharePoint Add-Ins or being used outside of SharePoint Add-Ins by registering them using an Azure ACS principal as authentication means. With the announced [retirement of Azure ACS](https://aka.ms/retirement/acs/support) and the [retirement of SharePoint Add-Ins](https://aka.ms/retirement/addins/support), RERs depending on Azure ACS will stop working as they'll follow the outlined Azure ACS retirement path.
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+Legacy Remote Event Receivers (RERs) used Azure ACS either as part of a provider-hosted SharePoint Add-in or through an ACS principal registered separately. These ACS-dependent RERs stopped working in SharePoint Online with the April 2, 2026 [ACS retirement](https://aka.ms/retirement/acs/support). Changing authentication doesn't restore the retired Add-in model. RERs registered with a Microsoft Entra application have the separate timeline described below; prefer webhooks for new implementations.
 
 However, there's an option to use RERs via an Entra application, so without having a dependency on Azure ACS. In the coming chapters you'll learn how to configure the Entra app for registering the RERs and you'll learn more about the differences between a RER registered using Azure ACS versus one registered using an Entra app.
 

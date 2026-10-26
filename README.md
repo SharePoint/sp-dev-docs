@@ -3,11 +3,10 @@
 This repository contains the source for the [SharePoint developer documentation on Microsoft Learn](https://learn.microsoft.com/sharepoint/dev/), including:
 
 - [SharePoint Framework (SPFx)](https://aka.ms/spfx)
+- [Copilot UX components with SPFx](docs/spfx/copilot/overview-copilot-apps.md)
 - [SharePoint Embedded](https://aka.ms/spe)
 - [List formatting](https://learn.microsoft.com/sharepoint/dev/declarative-customization/column-formatting)
 - [Site templates and site scripts](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
-
-For legacy solutions, see the [SharePoint Add-In retirement and migration guidance](https://learn.microsoft.com/sharepoint/dev/sp-add-ins/retirement-announcement-for-add-ins). SharePoint Add-Ins retired in SharePoint Online on April 2, 2026; use the guidance to plan migration rather than start a new Add-In project.
 
 ## Questions & help
 
@@ -24,6 +23,8 @@ See the [SPFx compatibility reference](docs/spfx/compatibility.md) for supported
 - [Set up your Microsoft 365 developer tenant](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
 - [Set up your development environment](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
 - [Build your first web part](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+- [Build your first Copilot UX component](docs/spfx/copilot/get-started/build-your-first-copilot-app.md)
+- [Publish SPFx solutions, including Copilot UX components, to the SharePoint Store](docs/spfx/publish-to-marketplace-overview.md)
 
 ## Learn more
 

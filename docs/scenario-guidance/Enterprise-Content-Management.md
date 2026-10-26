@@ -12,6 +12,10 @@ ms.assetid: 6f2336fc-0cdd-6596-fdb7-45607006b2c8
 
 # Enterprise Content Management
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 SharePoint has been heavily used for Enterprise Content Management (ECM), since its very first release. Nowadays with SharePoint Online and SharePoint 2013/2016 on-premises there are a lot of services, capabilities, and options to manage ECM and content in SharePoint. This article is about all the available options and techniques.

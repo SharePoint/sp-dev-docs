@@ -6,6 +6,10 @@ ms.localizationpriority: medium
 ---
 # Elevated privileges
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
 
 _**Applies to:** apps for SharePoint | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_

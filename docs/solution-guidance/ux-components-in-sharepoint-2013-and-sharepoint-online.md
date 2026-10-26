@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # UX components in SharePoint and SharePoint Online
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Use provider-hosted SharePoint Add-ins to control user experience (UX) components in SharePoint and SharePoint Online.
 
 <br/>

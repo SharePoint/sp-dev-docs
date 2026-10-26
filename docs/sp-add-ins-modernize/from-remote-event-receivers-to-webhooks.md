@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Transform SharePoint Add-in model Remote Event Receivers to SharePoint Online Webhooks
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint Add-in model you can create Remote Event Receivers, which can be used to handle events related to a list item, a list, a website, an app, a BCS entity, or a security configuration. The Remote Event Receivers rely on a SOAP communication channel that allows an external SOAP service to get notifications of events. The events can be synchronous or asynchronous. 
 
 The synchronous events allow a developer to intercept an event while it is happening and with custom logic the Remote Event Receiver can even cancel the currently running operation. 
