@@ -1,7 +1,7 @@
 ---
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -33,7 +33,7 @@ Tenant App Catalog administrators can update applications acquired from the Mark
 
 Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. After a customer acquires the solution in the tenant App Catalog, the administrator must deploy it and sync the baseline agent before users can access the experience. Store acquisition doesn't grant a Copilot license or approve API permissions.
 
-Keep installation instructions current for the required Copilot add-on USL, supported browser/desktop clients, data configuration, and agent availability. iOS/Android clients aren't supported at GA. Disclose any separately charged APIs/services; Copilot UX components themselves aren't consumption-based.
+Keep installation instructions current for the required Copilot add-on USL, supported browser/desktop clients, data configuration, and agent availability. The same license is required for development and testing. iOS/Android clients aren't supported at GA. Disclose any separately charged APIs/services; Copilot UX components themselves aren't consumption-based.
 
 When adding components or changing parameters, update the Store package and explain how customers obtain the new solution version. After redeployment, runtime discovery detects those tool changes without re-sync if the baseline agent is unchanged. Changes to the agent's image, title, instructions, or starter prompts require another sync.
 

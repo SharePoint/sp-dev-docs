@@ -1,7 +1,7 @@
 ---
 title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Team-based development on the SharePoint Framework

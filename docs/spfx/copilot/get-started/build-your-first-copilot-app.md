@@ -1,7 +1,7 @@
 ---
 title: Build your first Copilot UX component
 description: Create a Copilot UX component with SPFx, test it in the Copilot Workbench, package and deploy it to the app catalog, and use it in Microsoft 365 Copilot.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -26,7 +26,7 @@ Before you start, make sure you have the following in place:
 - A Microsoft 365 tenant with the SharePoint app catalog provisioned. For more information, see [Set up your SharePoint Framework development environment](../../set-up-your-development-environment.md).
 - The SharePoint Framework **1.24.0** development toolchain installed, including a supported [Node.js](https://nodejs.org) version and a code editor such as [Visual Studio Code](https://code.visualstudio.com). See the [compatibility reference](../../compatibility.md).
 - Permission to upload and deploy solution packages to your tenant app catalog.
-- A Microsoft 365 Copilot add-on USL (user-specific license) on top of your normal E3, E5, or E7 license to use the component in Copilot.
+- A Microsoft 365 Copilot add-on USL (user-specific license) on top of your normal E3, E5, or E7 license for development, testing in Copilot Workbench, and use of the component in Copilot.
 - A supported browser or desktop client. iOS and Android, including Teams mobile, aren't supported at GA.
 
 > [!NOTE]
@@ -288,5 +288,5 @@ When you are satisfied with the experience in the Workbench, build the solution 
 - [Display modes in Copilot UX components](../displayMode.md)
 - [Develop and deploy Copilot UX components](../development-and-deployment.md)
 - [Configure components and agents](../component-and-agent-configuration.md)
-- [Provide Copilot with context from your component](../provide-context-to-copilot.md): use `createCopilotTextContent` with the bridge to describe the visible UX. Context larger than 10 KB blocks sending the message.
+- [Provide Copilot with context from your component](../provide-context-to-copilot.md): use `createCopilotTextContent` with the bridge to describe the visible UX. The GA text-context limit is 10 KB; larger text context blocks sending the message.
 - Review available samples in the [Copilot UX component sample gallery](https://aka.ms/spfx/copilot/samples). Check each sample's declared SPFx version before using it as a GA baseline.

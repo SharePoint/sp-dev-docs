@@ -1,7 +1,7 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Deployment options for SharePoint Framework solutions for Microsoft Teams

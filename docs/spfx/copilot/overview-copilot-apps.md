@@ -1,13 +1,13 @@
 ---
 title: Overview of Copilot UX components
 description: Use Copilot UX components to build Microsoft 365 Copilot declarative agents with custom interactive UI, hosted automatically in your tenant, using familiar SharePoint Framework tools.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Overview of Copilot UX components
 
-Copilot UX components are generally available with **SharePoint Framework 1.24**, released on **October 29, 2026**. For licensing, supported clients, and distribution, see [Availability](#availability). Review the [GA limitations](#ga-limitations) before deployment.
+Copilot UX components are generally available with **SharePoint Framework 1.24**, released on **October 28, 2026**. For licensing, supported clients, and distribution, see [Availability](#availability). Review the [GA limitations](#ga-limitations) before deployment.
 
 You can use **Copilot UX components** to extend Microsoft 365 Copilot with custom, interactive experiences that you build using the familiar SharePoint Framework (SPFx) tools, libraries, and client-side development model. A solution can package one or more Copilot UX components - client-side UI components that render inside Microsoft 365 Copilot - together with a **declarative agent** definition that makes them discoverable and callable from within a Copilot conversation.
 
@@ -173,6 +173,8 @@ When you scaffold a new Copilot UX component, the SharePoint Framework generator
 
 The **Copilot Workbench** is fully supported and remains the local development and testing model for Copilot UX components. It lets you test components hosted on your development machine before you package and deploy them to the SharePoint App Catalog and sync the baseline agent to Microsoft 365 Copilot. Run your component from `localhost`, load it in the Workbench, and iterate on rendering, display modes, and tool parameters without a full deployment cycle. Workbench testing doesn't validate agent discovery or intent matching; test those in a deployed agent.
 
+Development and testing in Copilot Workbench require the same Microsoft 365 Copilot add-on license as production use. See [Licensing and costs](#licensing-and-costs).
+
 The Copilot Workbench is always available at the `/_layouts/15/copilotworkbench.aspx` path of any SharePoint site in your tenant - for example, `https://yourtenantname.sharepoint.com/_layouts/15/copilotworkbench.aspx`. Once your local dev server is running and serving the component from `localhost` - by running `heft start --nobrowser` - browse to that URL and the debug version of your component is loaded in the Workbench, ready for testing and development.
 
 Once you are satisfied with the experience in the Workbench, you build the solution package, deploy it to the SharePoint App Catalog, and select **Add to Teams** to sync the declarative agent to the tenant agent catalog.
@@ -188,7 +190,7 @@ Keep the following in mind as you build and maintain Copilot UX components.
 
 Use `createCopilotTextContent` to describe the current view, values, filters, and selection. Rendering the component doesn't automatically tell Copilot what the user sees. Model-context updates provide information for subsequent conversation turns; a user-triggered follow-up can ask Copilot to explain the selected data.
 
-The context limit is **10 KB**. Anything larger blocks sending the message rather than being silently truncated. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for the bridge operations, error handling, and deliberate reduction/retry workflow.
+The GA limit for text context supplied using `createCopilotTextContent` is **10 KB**. Text context larger than this limit blocks sending the message rather than being silently truncated. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for the bridge operations, error handling, and deliberate reduction/retry workflow.
 
 ### Update components and the baseline agent
 
@@ -211,11 +213,11 @@ Deploying the same `.sppkg` to another tenant doesn't grant access to data, prov
 
 ## Availability
 
-Copilot UX components are generally available starting with SPFx 1.24 on **October 29, 2026**.
+Copilot UX components are generally available starting with SPFx 1.24 on **October 28, 2026**.
 
 ### Licensing and costs
 
-Copilot UX components require a **USL (user-specific license)**: the **Microsoft 365 Copilot add-on license** on top of the user's normal **E3, E5, or E7** license. A base license alone isn't sufficient. Users without the required add-on can't use the component experience.
+Copilot UX components require a **USL (user-specific license)**: the **Microsoft 365 Copilot add-on license** on top of the user's normal **E3, E5, or E7** license. A base license alone isn't sufficient. The same requirement applies to development and testing, including Copilot Workbench. Users without the required add-on can't use the component experience.
 
 Copilot UX components **don't fall under a consumption-based plan and have no consumption-based charges**. APIs or services called inside a component's implementation can have their own charges. Those charges are separate from the component capability; consumption billing isn't an alternative to the required user license.
 

@@ -1,7 +1,7 @@
 ---
 title: Publishing modern SharePoint applications on Microsoft AppSource
 description: Publishing modern SharePoint applications on Microsoft AppSource
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -10,7 +10,7 @@ ms.service: sharepoint
 
 In this article, you will learn how to publish on the Microsoft 365 Store (via [Microsoft AppSource](https://appsource.microsoft.com/)) a modern solution built with SharePoint Framework. Your SharePoint Framework solution can target SharePoint Online only, or also Microsoft Teams. In the latter case, the application will show up in the Microsoft Teams gallery through the SharePoint Online tenant App Catalog.
 
-**Copilot UX components are also supported in the SharePoint Store starting with SPFx 1.24 GA on October 29, 2026.** Follow the current [Marketplace overview](../spfx/publish-to-marketplace-overview.md), [Copilot submission checklist](../spfx/publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance), and [FAQ](../spfx/publish-to-marketplace-faq.yml) for agent packaging, the required Copilot add-on USL, supported clients, and the combined Copilot/Teams package limitation.
+**Copilot UX components are also supported in the SharePoint Store starting with SPFx 1.24 GA on October 28, 2026.** Follow the current [Marketplace overview](../spfx/publish-to-marketplace-overview.md), [Copilot submission checklist](../spfx/publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance), and [FAQ](../spfx/publish-to-marketplace-faq.yml) for agent packaging, the required Copilot add-on USL, supported clients, and the combined Copilot/Teams package limitation.
 
 The walkthrough and screenshots below describe an earlier Partner Center experience. Check the current submission instructions before relying on exact UI labels, program names, or enrollment timelines.
 

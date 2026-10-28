@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Copilot UX components
 description: Find and fix common problems when you build, deploy, and update a Copilot UX component and its agent in Microsoft 365 Copilot.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -166,7 +166,7 @@ Check the reported schema path and required fields in the source agent definitio
 
 ## Context is too large or the host rejects the message
 
-Context larger than **10 KB** blocks sending the message to Copilot. `createCopilotTextContent` creates a block; it doesn't bypass size limits or send by itself. Reduce the view/selection or create a deliberate shorter summary, then retry.
+At GA, text context supplied using `createCopilotTextContent` is limited to **10 KB**. Larger text context blocks sending the message to Copilot. The helper creates a block; it doesn't send by itself. Reduce the view/selection or create a deliberate shorter summary, then retry.
 
 Handle rejected promises and check `isError` on follow-up responses. Don't display success after discarding context. See [Provide Copilot with context from your component](provide-context-to-copilot.md).
 

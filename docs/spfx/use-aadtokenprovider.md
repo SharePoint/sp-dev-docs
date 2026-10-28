@@ -1,7 +1,7 @@
 ---
 title: Working with the AADTokenProvider
 description: Learn how to work with, and configure, the AADTokenProvider API for certain scenarios.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Working with the AADTokenProvider

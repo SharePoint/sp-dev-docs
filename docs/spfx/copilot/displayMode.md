@@ -1,7 +1,7 @@
 ---
 title: Display modes in Copilot UX components
 description: Learn how the inline and fullscreen display modes work in Copilot UX components and what your component must do to switch between them.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

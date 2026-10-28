@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework support on SharePoint Online
 description: Learn about SharePoint Framework support in SharePoint Online and the version, host, and lifecycle requirements for your solution.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

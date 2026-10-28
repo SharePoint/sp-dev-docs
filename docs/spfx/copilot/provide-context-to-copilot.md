@@ -1,7 +1,7 @@
 ---
 title: Provide Copilot with context from your component
 description: Use createCopilotTextContent to describe the visible component state, update model context, and send contextual follow-up messages within the 10 KB limit.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -40,9 +40,9 @@ For a SharePoint list view, describe the site/list the user chose, the visible c
 ## Respect the 10 KB limit
 
 > [!IMPORTANT]
-> The maximum context size is **10 KB**. Context larger than the limit **blocks sending the message to Copilot**. It isn't silently truncated.
+> At GA, text context supplied using `createCopilotTextContent` has a maximum size of **10 KB**. Text context larger than the limit **blocks sending the message to Copilot**. It isn't silently truncated.
 
-Keep context concise and leave room for the content-block representation. JavaScript string length isn't a reliable byte count, especially for localized text. Don't equate 10 KB with 10,000 characters or assume that measuring only one text field validates an aggregate payload.
+Keep text context concise. JavaScript string length isn't a reliable byte count, especially for localized text. Don't equate 10 KB with 10,000 characters.
 
 When the context is too large:
 

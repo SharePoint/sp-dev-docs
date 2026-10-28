@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.24 release notes
-description: Release notes for SharePoint Framework v1.24, generally available October 29, 2026, including Copilot UX components, React 18, and Node.js 24 and 26 support.
-ms.date: 10/29/2026
+description: Release notes for SharePoint Framework v1.24, generally available October 28, 2026, including Copilot UX components, React 18, and Node.js 24 and 26 support.
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.24 release notes
 
-SharePoint Framework (SPFx) 1.24 is generally available on **October 29, 2026**. This release makes **Copilot UX components** generally available, updates the React runtime to **React 18.3.1**, and adds support for **Node.js 24 and 26**, alongside Node.js 22.
+SharePoint Framework (SPFx) 1.24 is generally available on **October 28, 2026**. This release makes **Copilot UX components** generally available, updates the React runtime to **React 18.3.1**, and adds support for **Node.js 24 and 26**, alongside Node.js 22.
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -17,6 +17,14 @@ Install the SPFx 1.24 generator:
 ```console
 npm install @microsoft/generator-sharepoint@1.24.0 --global
 ```
+
+Alternatively, install the latest public release using the npm `@latest` tag:
+
+```console
+npm install @microsoft/generator-sharepoint@latest --global
+```
+
+At SPFx 1.24 GA, `@latest` selects `1.24.0`. The tag advances with subsequent public releases; keep the `1.24.0` pin when reproducing this release's setup.
 
 For existing solutions, follow [Update SharePoint Framework packages](toolchain/update-latest-packages.md). Keep the SPFx packages in a project on the same release version. Projects created with a 1.24 beta or release candidate must update their SPFx package references to `1.24.0` before production deployment.
 
@@ -44,7 +52,7 @@ Copilot UX components are powered by the **SharePoint Framework (SPFx)** and imp
 
 #### Licensing, costs, and availability
 
-Copilot UX components require a **USL (user-specific license)**: the **Microsoft 365 Copilot add-on license** on top of the user's normal **E3, E5, or E7** license. The base license alone isn't sufficient.
+Copilot UX components require a **USL (user-specific license)**: the **Microsoft 365 Copilot add-on license** on top of the user's normal **E3, E5, or E7** license. The base license alone isn't sufficient. The same requirement applies to development and testing, including Copilot Workbench.
 
 Copilot UX components **don't use a consumption-based plan and have no consumption-based charges**. APIs or services called by a component's implementation can have their own charges. Those charges are separate from the Copilot UX component capability and don't replace the required user license.
 
@@ -74,7 +82,7 @@ Changes to the baseline agent configuration, such as its image, title, or starte
 
 Use `createCopilotTextContent` to provide context about what the component currently displays. This helps Copilot provide natural-language information alongside the interactive UX and use that information in the conversation.
 
-The context limit is **10 KB**. Context larger than this limit **blocks sending the message to Copilot**; it isn't silently truncated. Keep the context focused on the current view and include only information the user is authorized to access.
+The GA limit for text context supplied using `createCopilotTextContent` is **10 KB**. Text context larger than this limit **blocks sending the message to Copilot**; it isn't silently truncated. Keep the context focused on the current view and include only information the user is authorized to access.
 
 #### Getting started
 

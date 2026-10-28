@@ -1,7 +1,7 @@
 ---
 title: SharePoint development overview
 description: Choose supported SharePoint and Microsoft 365 development options, including SPFx Copilot UX components, web parts, extensions, APIs, and automation.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ms.localizationpriority: high
 ---

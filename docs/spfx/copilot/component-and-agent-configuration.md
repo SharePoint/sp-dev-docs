@@ -1,7 +1,7 @@
 ---
 title: Configure Copilot UX components and agents
 description: Understand component manifests, tool parameters, agent grouping, declarative-agent files, and versioning in an SPFx Copilot UX component solution.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

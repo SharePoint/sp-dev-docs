@@ -1,7 +1,7 @@
 ---
 title: Connect your Copilot UX component to SharePoint data
 description: Extend the Copilot UX component from part 1 to read live SharePoint data and accept parameters from the agent.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---

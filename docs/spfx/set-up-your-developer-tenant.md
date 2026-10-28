@@ -1,7 +1,7 @@
 ---
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
-ms.date: 10/25/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -85,7 +85,7 @@ The local workbench was removed in SPFx 1.13 and isn't included in current proje
 
 [!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
 
-For Copilot UX components, use the fully supported [Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench). Eligibility for a Microsoft 365 developer subscription doesn't by itself establish Copilot licensing or feature availability; check the [Copilot UX component prerequisites](copilot/overview-copilot-apps.md).
+For Copilot UX components, use the fully supported [Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench). Development and testing, including Copilot Workbench, require the Microsoft 365 Copilot add-on license on top of your normal E3, E5, or E7 license, just as production use does. Eligibility for a Microsoft 365 developer subscription doesn't replace this requirement. See the [Copilot UX component licensing and availability requirements](copilot/overview-copilot-apps.md#availability).
 
 ## Next steps
 

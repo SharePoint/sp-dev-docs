@@ -1,7 +1,7 @@
 ---
 title: Why the SharePoint Framework?
 description: Learn why Microsoft introduced and now recommends the SharePoint Framework for customer SharePoint extensibility and customizations.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

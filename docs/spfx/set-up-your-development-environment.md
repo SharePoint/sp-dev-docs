@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 10/25/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -102,6 +102,8 @@ To install the SharePoint Framework Yeoman generator globally, enter the followi
 npm install @microsoft/generator-sharepoint@1.24.0 --global
 ```
 
+Use `@microsoft/generator-sharepoint@latest` instead to install the latest public release. At SPFx 1.24 GA, the npm `@latest` tag selects `1.24.0`; it advances with subsequent releases. Keep the explicit version when you need a reproducible SPFx 1.24 environment.
+
 For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md).
 
 ## Install a modern web browser
@@ -159,7 +161,7 @@ Run `heft start` from the project folder. To load your local web parts on the pa
 [!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
 
 > [!NOTE]
-> Copilot UX components use the fully supported **Copilot Workbench**, available at **/_layouts/15/copilotworkbench.aspx** in your tenant. See [Test with the Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench) for its prerequisites and setup.
+> Copilot UX components use the fully supported **Copilot Workbench**, available at **/_layouts/15/copilotworkbench.aspx** in your tenant. Development and testing require the Microsoft 365 Copilot add-on license on top of your normal E3, E5, or E7 license, just as production use does. See [Test with the Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench) for its prerequisites and setup.
 
 ## Optional tools
 

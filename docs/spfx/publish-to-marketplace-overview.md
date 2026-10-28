@@ -1,7 +1,7 @@
 ---
 title: Publish SharePoint Framework applications to the marketplace
 description: Considerations for publishing SharePoint Framework applications to the marketplace.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -24,9 +24,9 @@ Publish SharePoint Framework solutions through [Microsoft AppSource](https://app
 
 ## Copilot UX components
 
-**Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA on October 29, 2026.** Existing Store solutions can add this capability through an updated submission. Package the declarative agent and components together in the SPFx `.sppkg`.
+**Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA on October 28, 2026.** Existing Store solutions can add this capability through an updated submission. Package the declarative agent and components together in the SPFx `.sppkg`.
 
-State the required Microsoft 365 Copilot add-on USL (user-specific license) on top of E3, E5, or E7 in your listing and setup instructions. The component capability isn't consumption-based; APIs/services called by your implementation can have separate charges. Describe those dependencies separately.
+State the required Microsoft 365 Copilot add-on USL (user-specific license) on top of E3, E5, or E7 in your listing and setup instructions. The same license is required for development and testing. The component capability isn't consumption-based; APIs/services called by your implementation can have separate charges. Describe those dependencies separately.
 
 Test in the supported Copilot and Copilot-in-Teams browser/desktop clients. iOS and Android, including Teams mobile, aren't supported at GA. Document tenant deployment, initial agent sync, permissions, and any additional configuration needed by reviewers and customers.
 

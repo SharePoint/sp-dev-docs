@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Released SharePoint Framework capabilities and planned investments across SharePoint and Microsoft 365.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -9,11 +9,13 @@ ms.localizationpriority: high
 
 SharePoint Framework (SPFx) supports client-side extensibility across SharePoint and Microsoft 365. This roadmap distinguishes released capabilities from planned investments. For exact version requirements and changes, use the [compatibility reference](compatibility.md) and the release notes.
 
-This page incorporates the [September 2026 roadmap update](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-september-2026/) and the October 29 SPFx 1.24 GA release. The September post describes the preview state at publication; the current release notes and availability guidance supersede its preview licensing and release-status statements.
+For monthly roadmap updates from the Microsoft engineering team, visit the [Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/).
+
+This page incorporates the [September 2026 roadmap update](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-september-2026/) and the October 28 SPFx 1.24 GA release. The September post describes the preview state at publication; the current release notes and availability guidance supersede its preview licensing and release-status statements.
 
 [!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
 
-## Released: SPFx 1.24 - October 29, 2026
+## Released: SPFx 1.24 - October 28, 2026
 
 - **Copilot UX components generally available.** Package interactive UI with a declarative agent using the SPFx deployment model. See [availability, licensing, and supported clients](copilot/overview-copilot-apps.md#availability).
 - **React 18.3.1** for React-based SPFx solutions.

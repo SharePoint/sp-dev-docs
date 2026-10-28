@@ -1,7 +1,7 @@
 ---
 title: Theme and design for the Copilot canvas
 description: Learn how to style Copilot UX components to match the Microsoft 365 Copilot canvas in both inline and fullscreen display modes.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

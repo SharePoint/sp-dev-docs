@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -38,10 +38,10 @@ Copilot UX components are supported in the SharePoint Store starting with **SPFx
 
 - Identify the declarative agent and the Copilot UX components included in the package.
 - Explain tenant app-catalog deployment, initial **Sync to Teams**/**Add to Teams**, agent availability, data setup, and API permission approvals.
-- Disclose the required **Microsoft 365 Copilot add-on USL**, in addition to E3, E5, or E7. The component itself has no consumption-based charges; disclose separately any charged APIs/services used by your implementation.
+- Disclose the required **Microsoft 365 Copilot add-on USL**, in addition to E3, E5, or E7, for production use and for development and testing, including Copilot Workbench. The component itself has no consumption-based charges; disclose separately any charged APIs/services used by your implementation.
 - Test Copilot and Copilot in Teams in the browser/desktop clients you claim to support. Don't claim iOS/Android support at GA.
 - Provide sample prompts and expected outcomes for each tool, including missing/invalid parameters, unavailable data, and denied access. Test with appropriate licensed accounts through the approved review process.
-- Verify inline/fullscreen behavior, light/dark themes, keyboard access, useful text context, and an actionable error/retry path when context exceeds the **10 KB** limit.
+- Verify inline/fullscreen behavior, light/dark themes, keyboard access, useful text context, and an actionable error/retry path when text context supplied using `createCopilotTextContent` exceeds the GA **10 KB** limit.
 - Document the combined Copilot/Teams automatic-sync limitation when applicable. A manual Teams package is the deployment workaround, but confirm Store acceptance for embedded custom packages rather than assuming the workaround changes certification policy.
 - For updates, distinguish runtime-discovered component/tool changes from baseline-agent changes that need re-sync.
 

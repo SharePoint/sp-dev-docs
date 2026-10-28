@@ -1,7 +1,7 @@
 ---
 title: Develop and deploy Copilot UX components
 description: Understand local testing, initial agent deployment, runtime tool discovery, baseline agent updates, and deployment limitations for Copilot UX components.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -14,6 +14,8 @@ This article applies to SPFx 1.24 and forward. For an end-to-end first deploymen
 ## Develop locally
 
 Use the **Copilot Workbench**, which remains fully supported, to run the component from your local development server. Test rendering, parameters, display modes, loading and error states, theme changes, keyboard interaction, and sizing.
+
+Development and testing, including Copilot Workbench, require the Microsoft 365 Copilot add-on license on top of your normal E3, E5, or E7 license. The licensing requirement is the same as for production use.
 
 Workbench testing doesn't validate agent intent matching, runtime tool discovery, tenant permissions, or deployment to a user's Copilot session. Test those with a deployed agent in a development tenant.
 

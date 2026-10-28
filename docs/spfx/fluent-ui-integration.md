@@ -1,7 +1,7 @@
 ---
 title: Using Fluent UI in SharePoint Framework
 description: Information about using Fluent UI React and Fabric Core styles in SharePoint Framework, including CSS challenges and migration guidance.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 

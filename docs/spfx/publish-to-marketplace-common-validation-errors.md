@@ -1,7 +1,7 @@
 ---
 title: Common validation errors when publishing your SharePoint Framework application in the Marketplace
 description: Common validation errors you can avoid when you want to get your SharePoint Framework application published in the Marketplace
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -11,9 +11,9 @@ ms.localizationpriority: high
 
 Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. To avoid incomplete submissions:
 
-- Describe the included agent and components, required Copilot add-on USL, supported browser/desktop clients, and any API/service charges. Don't imply the component is available through consumption billing or on iOS/Android at GA.
+- Describe the included agent and components, required Copilot add-on USL for production use and development/testing, supported browser/desktop clients, and any API/service charges. Don't imply the component is available through consumption billing or on iOS/Android at GA.
 - Provide complete tenant deployment, initial agent-sync, permissions, and test-data instructions, with prompts for each component.
-- Test successful rendering and explicit handling of missing arguments, denied data access, and context larger than the 10 KB limit.
+- Test successful rendering and explicit handling of missing arguments, denied data access, and text context supplied using `createCopilotTextContent` that exceeds the GA 10 KB limit.
 - If the solution also includes SPFx Teams functionality, document the automatic-sync limitation and confirm the Store path for the manual-package workaround.
 
 See the [Copilot UX component test guidance](publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance). The current Store certification requirements remain authoritative.

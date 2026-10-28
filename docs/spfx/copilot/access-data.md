@@ -1,7 +1,7 @@
 ---
 title: Access data from a Copilot UX component
 description: Learn how to call SharePoint REST APIs and Microsoft Graph from a Copilot UX component.
-ms.date: 10/29/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -358,7 +358,7 @@ To package and deploy the solution, follow the steps in [Build your first Copilo
 
 ### Supply context and confirm consequential actions
 
-Use `createCopilotTextContent` to describe the data currently visible in the component, such as the selected list, displayed rows, and current filter. Keep it within the **10 KB** context limit; oversized context blocks sending the message. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for model-context updates versus user-triggered follow-ups.
+Use `createCopilotTextContent` to describe the data currently visible in the component, such as the selected list, displayed rows, and current filter. The GA limit for text context supplied using this helper is **10 KB**; larger text context blocks sending the message. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for model-context updates versus user-triggered follow-ups.
 
 For actions that change business data, let the user review the target and values before confirming. Enforce authorization and validation in the backend, prevent duplicate submissions, and report the actual operation result. Copilot's tool selection and contextual text don't supply those safeguards automatically.
 
