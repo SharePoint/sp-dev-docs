@@ -1,0 +1,98 @@
+<!doctype html>
+<!-- Copyright (c) Microsoft Corporation. Licensed under the MIT license. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>SharePoint Embedded | Demo playground</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#request-heading">Skip to request editor</a>
+  <header class="masthead">
+    <div class="brand-mark" aria-hidden="true">SPE</div>
+    <div><p class="eyebrow">SharePoint Embedded</p><p class="brand-title">Playground</p></div>
+    <span class="badge">DEMO ONLY</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">Explore the shape. Not your tenant.</p>
+      <h1 id="page-title">A small space to learn containers.</h1>
+      <p class="lede">List, create, and read synthetic containers in your browser. No sign-in, credentials, tenant, or API connection required.</p>
+    </section>
+
+    <aside class="boundary" aria-labelledby="boundary-heading">
+      <div>
+        <h2 id="boundary-heading"><span class="badge">DEMO</span> Synthetic data, local state</h2>
+        <p>Nothing here calls Microsoft Graph. Status codes are illustrative, not HTTP results.
+          <strong>All <code>demo-</code> identifiers are invalid for Live use.</strong>
+          Do not paste credentials, tokens, or personal data.</p>
+      </div>
+      <details>
+        <summary>Live is unavailable / pending</summary>
+        <p>No Live mode, sign-in flow, or synthetic fallback for Live exists here. Readiness would require an owned confidential backend, an approved application and tenant, Graph consent, container-type grants, user/resource access, and an explicitly authorized operation sequence.</p>
+        <p>Actual Graph creation uses a confidential client. This Demo creates no real resources and proves no authentication, permissions, or service behavior.</p>
+      </details>
+    </aside>
+
+    <section class="recipe card" aria-labelledby="recipe-heading">
+      <div class="section-top"><div><p class="eyebrow">Start here</p><h2 id="recipe-heading">Four requests. One learning loop.</h2></div><span class="muted">Examples fill a draft. They never run it.</span></div>
+      <ol class="recipe-steps">
+        <li><button type="button" data-example="list"><span class="step-number">1</span><span><strong>List containers</strong><small>See the known Demo seed</small></span></button></li>
+        <li><button type="button" data-example="create"><span class="step-number">2</span><span><strong>Create a container</strong><small>Add synthetic browser state</small></span></button></li>
+        <li><button type="button" data-example="list"><span class="step-number">3</span><span><strong>List again</strong><small>Observe the state change</small></span></button></li>
+        <li><button type="button" data-example="read"><span class="step-number">4</span><span><strong>Read the new container</strong><small>Use demo-container-2</small></span></button></li>
+      </ol>
+      <p class="hint">For each step: choose an example, inspect or edit the draft, then select <strong>Run Demo request</strong>. After Reset, the first create yields <code>demo-container-2</code>.</p>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Loading Demo storage. No request has run.</div>
+    <div id="error" class="error" role="alert" tabindex="-1" hidden></div>
+
+    <div class="workspace">
+      <section class="card editor" aria-labelledby="request-heading">
+        <div class="section-top"><div><p class="eyebrow">01 / Draft</p><h2 id="request-heading" tabindex="-1">Request editor</h2></div><span class="badge">LOCAL ONLY</span></div>
+        <form id="request-form">
+          <label for="method">Method</label>
+          <input id="method" name="method" value="GET" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="method-hint">
+          <p id="method-hint" class="hint">Supported: uppercase GET or POST.</p>
+          <label for="path">Relative Graph-style path</label>
+          <textarea id="path" name="path" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="path-hint">/storage/fileStorage/containers?$filter=containerTypeId eq demo-container-type</textarea>
+          <p id="path-hint" class="hint">List requires this containerTypeId filter. Other query options, types, hosts, and APIs are unsupported.</p>
+          <label for="body">JSON body</label>
+          <textarea id="body" name="body" rows="8" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="body-hint"></textarea>
+          <p id="body-hint" class="hint">Leave empty for list/read. Create requires displayName, description, and containerTypeId. Drafts are not saved by this app.</p>
+          <button class="primary" id="run" type="button" disabled>Run Demo request</button>
+        </form>
+      </section>
+
+      <section class="card results" aria-labelledby="result-heading">
+        <div class="section-top"><div><p class="eyebrow">02 / Inspect</p><h2 id="result-heading" tabindex="-1">Execution details</h2></div><span class="badge">SYNTHETIC</span></div>
+        <h3>Actual parsed request</h3>
+        <pre id="parsed" tabindex="0" aria-label="Actual parsed request">No request has run. The editor is only a draft.</pre>
+        <h3>Synthetic response <span class="muted">(not Microsoft Graph)</span></h3>
+        <p id="response-status" class="hint">No illustrative status yet.</p>
+        <pre id="response" tabindex="0" aria-label="Synthetic response">Run a valid Demo request to see an illustrative result.</pre>
+        <h3>State effect</h3>
+        <p id="effect">No request has run. No request-driven state change.</p>
+      </section>
+    </div>
+
+    <section class="card state" aria-labelledby="state-heading">
+      <div class="section-top">
+        <div><p class="eyebrow">03 / Observe</p><h2 id="state-heading">Current synthetic state</h2></div>
+        <div class="actions"><button id="retry" type="button">Retry storage</button><button id="reset" type="button">Reset Demo</button></div>
+      </div>
+      <p id="storage-note" class="hint">Only synthetic state is saved under this app's own browser storage key. No drafts, tokens, or history are saved.</p>
+      <pre id="state" tabindex="0" aria-label="Current synthetic state">State is not yet available.</pre>
+      <p class="hint">Reset overwrites only <code>spe-playground.demo.v1</code> with the known seed. It does not clear other storage or contact a service.</p>
+    </section>
+    <noscript><p class="error">JavaScript is required for the local Demo engine. No request can run without it.</p></noscript>
+  </main>
+  <footer>Browser-only Demo. No real resources. No permissions proven. No assistant or model calls.</footer>
+</body>
+</html>

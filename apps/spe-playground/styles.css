@@ -1,0 +1,90 @@
+/* Copyright (c) Microsoft Corporation. Licensed under the MIT license. */
+:root {
+  color-scheme: light;
+  --page: #f3f6fa;
+  --surface: #fff;
+  --text: #17263c;
+  --muted: #4c6075;
+  --line: #c6d2de;
+  --brand: #07578a;
+  --accent: #006a67;
+  --tint: #e8f4f3;
+  --code: #f3f6f9;
+  --error: #8c2030;
+  --error-bg: #fff0f2;
+  font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--text); }
+button, input, textarea { font: inherit; }
+button, summary { cursor: pointer; }
+button, input, textarea, summary, pre { border-radius: 6px; }
+button {
+  padding: .65rem 1rem;
+  background: var(--surface);
+  color: var(--brand);
+  border: 1px solid var(--line);
+  font-weight: 650;
+  min-height: 44px;
+}
+button:hover { border-color: var(--brand); background: var(--code); }
+button:disabled { cursor: not-allowed; opacity: .6; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
+[tabindex="-1"]:focus { outline: 3px solid var(--brand); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 1; background: var(--surface); padding: 1rem; color: var(--brand); }
+.skip-link:focus { top: 1rem; }
+.masthead { display: flex; align-items: center; gap: .85rem; padding: 1.15rem max(1.25rem, calc((100% - 1200px) / 2)); background: var(--surface); border-bottom: 1px solid var(--line); }
+.masthead > .badge { margin-left: auto; }
+.brand-mark { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font-size: .9rem; font-weight: 750; }
+.brand-title { margin: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.2; }
+.eyebrow { margin: 0 0 .25rem; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; font-weight: 750; }
+.badge { display: inline-block; flex-shrink: 0; color: var(--accent); background: var(--tint); border: 1px solid var(--accent); border-radius: 4px; padding: .12rem .45rem; font-size: .7rem; font-weight: 750; letter-spacing: .06em; white-space: nowrap; vertical-align: middle; }
+main { max-width: 1240px; padding: 0 1.25rem; margin: auto; }
+.intro { max-width: 810px; padding: 3.2rem 0 1.7rem; }
+h1 { margin: .25rem 0 1rem; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -.035em; }
+h2 { font-size: 1.2rem; line-height: 1.4; margin: 0; }
+h3 { font-size: .93rem; margin: 1.4rem 0 .5rem; }
+p { margin: .6rem 0; }
+.lede { color: var(--muted); font-size: 1.15rem; }
+.boundary { background: var(--tint); border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; }
+.boundary h2 .badge { margin-right: .4rem; }
+details { border-top: 1px solid var(--line); margin-top: 1rem; padding-top: .75rem; }
+summary { font-weight: 650; color: var(--text); padding: .4rem 0; min-height: 44px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.5rem; min-width: 0; }
+.section-top { display: flex; gap: 1rem; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.muted, .hint { color: var(--muted); font-size: .85rem; }
+.recipe-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; padding: 0; margin: 1.25rem 0 .75rem; list-style: none; }
+.recipe-steps button { display: flex; align-items: flex-start; gap: .65rem; width: 100%; height: 100%; padding: 1rem .7rem; text-align: left; }
+.recipe-steps strong { display: block; font-size: .86rem; }
+.recipe-steps small { display: block; font-size: .75rem; font-weight: 400; color: var(--muted); margin-top: .2rem; }
+.step-number { display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; background: var(--tint); color: var(--accent); border-radius: 50%; font-size: .8rem; }
+.status { min-height: 1.7rem; padding: 1rem .2rem; font-size: .9rem; }
+.error { border: 2px solid var(--error); background: var(--error-bg); color: var(--error); padding: 1rem; margin-bottom: 1.25rem; border-radius: 6px; overflow-wrap: anywhere; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: start; gap: 1.25rem; }
+label { display: block; margin: 1.25rem 0 .35rem; font-size: .9rem; font-weight: 650; }
+input, textarea { width: 100%; padding: .7rem; color: var(--text); background: var(--code); border: 1px solid var(--line); font-family: ui-monospace, Consolas, monospace; font-size: .88rem; line-height: 1.5; }
+#method { max-width: 180px; }
+textarea { resize: vertical; min-height: 70px; }
+.primary { width: 100%; background: var(--brand); border-color: var(--brand); color: #fff; margin-top: 1rem; }
+.primary:hover { background: var(--accent); border-color: var(--accent); }
+pre { max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--code); border: 1px solid var(--line); padding: 1rem; margin: .5rem 0; font: .82rem/1.65 ui-monospace, Consolas, monospace; tab-size: 2; }
+code { font: .85em ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+.state { margin-top: 1.25rem; }
+.actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+footer { max-width: 1240px; margin: 2rem auto; padding: 0 1.25rem; color: var(--muted); font-size: .8rem; }
+@media (max-width: 900px) { .recipe-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 680px) {
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .card, .boundary { padding: 1.1rem; }
+  .intro { padding-top: 2rem; }
+  .masthead { padding: 1rem 1.25rem; }
+  .masthead .eyebrow { font-size: .62rem; }
+}
+@media (max-width: 390px) { .recipe-steps { grid-template-columns: minmax(0, 1fr); } .brand-mark { display: none; } }
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme: dark; --page: #101923; --surface: #192632; --text: #e8eff6; --muted: #b2c4d5; --line: #4b6376; --brand: #86caff; --accent: #89d8ce; --tint: #203d41; --code: #11202d; --error: #ffb1bc; --error-bg: #3a2029; }
+  .primary { color: #102537; }
+  .brand-mark { color: #102537; }
+}
+@media (forced-colors: active) { .badge, .step-number, .brand-mark { border: 1px solid ButtonText; } }
