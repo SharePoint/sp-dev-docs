@@ -11,6 +11,8 @@ ms.assetid: 31e10f82-c29d-dbd5-0250-43457db24d85
 
 # Types (AppPartConfigDefinition)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 This topic lists the types in the **AppPartConfigDefinition** XML schema.

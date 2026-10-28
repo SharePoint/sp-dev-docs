@@ -23,13 +23,11 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 > [!NOTE]
 > Microsoft renamed Office UI Fabric to Fluent UI in early 2020.
 
-The transition from Office UI Fabric to Fluent UI, and the respective React components, is currently in a state of transition. To learn more about the current state and their roadmap, see the FAQ provided by the Fluent UI team: [FAQ Fabric and Stardust to Fluent UI](https://github.com/microsoft/fluentui/wiki/FAQ---Fabric-and-Stardust-to-Fluent-UI).
+This walkthrough retains the older Office UI Fabric examples, generated component structure, and legacy React rendering API. It isn't a drop-in SPFx 1.24 tutorial. For a current project, use [Fluent UI integration guidance](../../fluent-ui-integration.md) and the [React 18 upgrade guide](../../react-18-upgrade.md); preserve the generated React root and dispose it with the web part.
 
-SharePoint Framework (SPFx) packages currently reference the original Office UI Fabric NPM Packages. These packages are currently supported & will continue to work.
+Fluent UI v8 (`@fluentui/react`) and v9 (`@fluentui/react-components`) are distinct libraries. Don't replace package names in this historical sample without checking the component APIs and React compatibility.
 
-The primary Fluent UI React package, **\@fluentui/react**, simply exports components from the **office-ui-fabric-react** package used in SharePoint Framework projects. At this time, you should continue to use the **office-ui-fabric-react** package in your SharePoint Framework projects.
-
-This page will continue to refer to the Office UI Fabric packages until Microsoft recommends switching to the Fluent UI packages. The documentation links on this page may point to the Fluent UI documentation but it applies to the Office UI Fabric as well.
+For SharePoint Online, use [SharePoint pages and the SPFx developer toolbar](../../debug-modern-pages.md). The screenshots and video show the older workbench interface.
 
 - [Fluent UI website](https://developer.microsoft.com/fluentui#/controls/web) - detailed API documentation along with implementation code examples for each control.
 - [API reference](https://storybooks.fluentui.dev/react/) - detailed API reference documentation.
@@ -72,7 +70,7 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
     >
     > Different versions of Office UI Fabric React have different dependencies on versions of TypeScript. If you want to upgrade an existing SPFx project to a newer version of Office UI Fabric React, see the following section: [Appendix: Upgrading Office UI Fabric React versions](#appendix-upgrading-office-ui-fabric-react-versions)
     >
-    > This page assumes you are using the latest version of the SharePoint Framework.
+    > These are historical version examples, not instructions to install an older Fabric package into the latest SharePoint Framework.
 
 1. Next, execute the following command to open the web part project in Visual Studio Code:
 
@@ -202,15 +200,15 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 > [!NOTE]
 > In the code, we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the **\*.sppkg** solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
 
-## Preview the web part in the hosted workbench
+## Preview the web part on a SharePoint page
 
-1. In the console, enter the following to preview your web part in the SharePoint hosted workbench:
+1. Start the local development server using your project's toolchain (the following command is for Heft-based projects):
 
     ```console
     heft start
     ```
 
-1. Open a browser and navigate to your SharePoint site's hosted workbench: `https://enter-your-SharePoint-site/_layouts/workbench.aspx`.
+1. Open a test SharePoint page and enable local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Edit the page and add the web part.
 1. In the toolbox, select your `DocumentCardExample` web part to add:
 
     ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)

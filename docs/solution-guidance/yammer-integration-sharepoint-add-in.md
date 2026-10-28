@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Yammer integration in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 The approach you take to integrate Yammer with SharePoint is the same in the new SharePoint Add-in model as it is with Full Trust Code.

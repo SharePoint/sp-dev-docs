@@ -11,6 +11,8 @@ ms.assetid: a1098092-2383-d963-4fbd-8bd953a3c9b9
 
 # ContextualGroup element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

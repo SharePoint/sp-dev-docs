@@ -10,10 +10,10 @@ ai-usage: ai-assisted
 SPFx v1.22 introduced a new Heft-based build toolchain, replacing the Gulp-based toolchain used in SPFx v1.0–v1.21.1. This article explains what changes during the migration and how to perform it.
 
 > [!IMPORTANT]
-> This migration involves changes across more than 12 files including package removals, new package installations, configuration file replacements, new file creation, ESLint rule changes, and build script rewrites. Don't attempt to perform these changes manually — use the CLI for Microsoft 365 to generate the complete set of changes for your project.
+> This article targets the Gulp-to-Heft transition to SPFx 1.22.2, not a direct upgrade to SPFx 1.24. Save a known-good version first. Review changes to dependencies, configuration, lint rules, and scripts against a project generated for the target version. A separate [manual migration walkthrough](migrate-gulptoolchain-hefttoolchain-manual.md) targets SPFx 1.22.1.
 
 > [!TIP]
-> Use the [CLI for Microsoft 365 spfx project upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) command to perform this migration automatically. It handles upgrades across any version gap — not just from v1.21.1 — by detecting your current version and generating the precise changes needed for your project. The report includes a single script to apply all changes in one go. See the [release notes](../release-1.22.2.md) for your target version for the specific command to run.
+> The [CLI for Microsoft 365 spfx project upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) command generates an upgrade report; it doesn't change project files. Check that your installed CLI supports the requested target version. Review and apply the reported changes, including project-specific configuration that automation can't assess. See the [SPFx 1.22.2 release notes](../release-1.22.2.md).
 
 [!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
@@ -57,7 +57,7 @@ Run the following command from the root of your project to generate a complete u
 npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.22.2 --output md
 ```
 
-The report lists every required change and includes a combined script at the end that applies all changes in a single execution. Review the report, then run the script to complete the migration.
+Review the report and apply the relevant changes in a working copy of your project. Don't assume it supplies or executes a complete migration script. Preserve solution identities, custom tasks, deployment settings, and the lock file while resolving the updated dependencies.
 
 ## Verify the migration
 
@@ -68,6 +68,8 @@ npm run build
 ```
 
 ## See also
+
+- [Upgrade to React 18 in SPFx 1.24](../react-18-upgrade.md) — a separate step from this 1.22 toolchain migration.
 
 - [SharePoint Framework Toolchain: Rush Stack, Heft, and Webpack](sharepoint-framework-toolchain-rushstack-heft.md)
 - [Customize the Heft-based SPFx Toolchain](./customize-heft-toolchain-overview.md)

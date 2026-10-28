@@ -9,7 +9,7 @@ ms.localizationpriority: high
 Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enables developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. Since Adaptive Card Extensions use Microsoft's Adaptive Card Framework to generate UI with its declarative JSON schema, you only need to focus on your component's business logic and let the SharePoint Framework (SPFx) handle making your component look good and work across all platforms.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.18. For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.0.md).
+> The code and screenshots in this walkthrough originated with [SPFx 1.18](../../release-1.18.0.md). Preserve that version's dependencies when reproducing the historical sample. Heft commands shown below apply only to SPFx 1.22 and later; older projects use the [Gulp toolchain](../../toolchain/sharepoint-framework-toolchain.md). For a new project, use the [current development environment](../../set-up-your-development-environment.md) and compare its generated files rather than copying older configuration wholesale.
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -30,17 +30,17 @@ When prompted, enter the following values (*select the default option for all pr
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Serve the ACE in the workbench
+## Serve the ACE on a SharePoint page
 
 Before digging into the code, run the scaffolded output and see what an Adaptive Card Extension looks like.
 
-The inner development loop with ACEs is similar to SPFx Web Parts. We can serve locally and run the code on the workbench.
+The inner development loop with ACEs is similar to SPFx web parts. Serve the code locally and load it on a test SharePoint page using the [SPFx developer toolbar](../../debug-modern-pages.md). Set `initialPage` in **config/serve.json** to the test page, not the SharePoint Online workbench.
 
 ```console
 heft start
 ```
 
-Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server is running, open your test page with local manifests enabled and edit the page. The screenshots below show the older development UI; use the page-based workflow instead.
 
 Open the **Web Part Toolbox** and select your ACE:
 
@@ -59,11 +59,9 @@ When rendered on a Dashboard or a Page, ACEs will always start in this view.
 The second way an ACE can render is called the **Quick View**. When you interact with an ACE, ACEs can launch a larger, customized experience.
 
 > [!NOTE]
-> ACE interaction is disabled while in **Edit** mode. The Workbench or Page must be in *Preview* or *Read* mode to interact with the ACE.
+> ACE interaction is disabled while the page is in **Edit** mode. Save the page and use read mode to interact with the ACE.
 
-Switch the Workbench to **Preview** mode.
-
-:::image type="content" source="../../../images/viva-extensibility/lab1-preview.png" alt-text="Set the workbench to preview mode":::
+Save the page and leave edit mode.
 
 Select the **Quick View** button on the ACE:
 
@@ -377,7 +375,7 @@ In its `template()` getter, the Quick View of the ACE you generated returns the 
     }
     ```
 
-Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **heft start** is still running:
+Test your changes by refreshing the test page with local manifests enabled. It should pick up changes while the development server is running:
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-new-ql.png" alt-text="Updated ACE Quick View":::
 
@@ -414,7 +412,7 @@ public onAction(action: IActionArguments): void {
 }
 ```
 
-Test your changes by refreshing the hosted workbench in the browser. It should pickup the changes you've applied to the project if **heft start** is still running.
+Test your changes by refreshing the test page with local manifests enabled. It should pick up changes while the development server is running.
 
 Selecting either button will now set the state's `subTitle` to the `data.message` value, causing a re-render (*more on this later*). The Quick View's Adaptive Card will now display this message, since its template binds to `subTitle`.
 

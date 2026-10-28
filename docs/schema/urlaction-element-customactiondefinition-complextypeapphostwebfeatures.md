@@ -11,6 +11,8 @@ ms.assetid: 467fb784-088c-1cef-425f-ea1d94836c45
 
 # UrlAction element (CustomActionDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

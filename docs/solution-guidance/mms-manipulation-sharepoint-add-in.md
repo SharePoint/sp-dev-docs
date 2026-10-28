@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # MMS manipulation in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the Managed Metadata Service (MMS) is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, MMS CRUD operations were performed with the SharePoint server-side object model code and deployed via Farm Solutions.
 
 In a SharePoint Add-in model scenario, MMS CRUD operations are performed with the client-side object model (CSOM).

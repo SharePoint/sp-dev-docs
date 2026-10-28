@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Use OData query operations in SharePoint REST requests
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!TIP]
 > Before you start, review the following resources:
 >

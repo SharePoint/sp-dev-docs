@@ -1,25 +1,23 @@
 ---
 title: Connect your Copilot UX component to SharePoint data
 description: Extend the Copilot UX component from part 1 to read live SharePoint data and accept parameters from the agent.
-ms.date: 10/04/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 
 # Connect your Copilot UX component to SharePoint data
 
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. APIs, schemas, and tooling described in this article may change before general availability.
-
-In this tutorial, you extend the Copilot UX component from [Build your first SharePoint Copilot App](build-your-first-copilot-app.md). The agent passes a `siteUrl` parameter to the component, and the component shows the lists on that site. When the user selects a list, the component shows the items in it.
+In this tutorial, you extend the Copilot UX component from [Build your first Copilot UX component](build-your-first-copilot-app.md). The agent passes a `siteUrl` parameter to the component, and the component shows the lists on that site. When the user selects a list, the component shows the items in it.
 
 > [!div class="mx-imgBorder"]
 > ![The Copilot UX component showing the lists on a SharePoint site in Microsoft 365 Copilot](../../../images/copilot/connect-to-sharepoint-data-outcome.png)
 
 ## Prerequisites
 
-- You completed [Build your first SharePoint Copilot App](build-your-first-copilot-app.md), and the `my-copilot-app` solution is deployed to your tenant.
-- The project uses SharePoint Framework 1.24.0-beta.5.
+- You completed [Build your first Copilot UX component](build-your-first-copilot-app.md), and the `my-copilot-app` solution is deployed to your tenant.
+- The project uses SharePoint Framework **1.24.0**.
+- You meet the [Copilot licensing and supported-client requirements](../overview-copilot-apps.md#availability).
 
 ## Define the tool parameters
 
@@ -124,7 +122,7 @@ The component calls the SharePoint REST API with `this.context.spHttpClient`. Th
 1. Install the SharePoint Framework HTTP package. The **No framework** template doesn't include it.
 
     ```console
-    npm install @microsoft/sp-http@1.24.0-beta.5 --save-exact
+    npm install @microsoft/sp-http@1.24.0 --save-exact
     ```
 
 1. Create a file named **SharePointListsService.ts** in **./src/copilotComponents/myCopilotApp** with the following code.
@@ -254,7 +252,7 @@ The component calls the SharePoint REST API with `this.context.spHttpClient`. Th
     }
     ```
 
-1. Replace the contents of **./src/copilotComponents/myCopilotApp/MyCopilotAppCopilotComponent.ts** with the [MyCopilotAppCopilotComponent.ts file from the sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-access-data). The rest of this section and the next section explain its parts.
+1. Replace the contents of **./src/copilotComponents/myCopilotApp/MyCopilotAppCopilotComponent.ts** with the **MyCopilotAppCopilotComponent.ts** file from the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data). The rest of this section and the next section explain its parts.
 
     The component imports the service and the `escape` function, which part 1 already uses.
 
@@ -626,7 +624,7 @@ When the user selects a list, the component gets the first 25 items and shows a 
     };
     ```
 
-The full entry class, including the focus handling, is in the [sample](https://github.com/pnp/spfx-copilot-apps). <!-- VERIFY: link to the file in the final sample location. -->
+The full entry class, including the focus handling, is in the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data).
 
 ## Handle errors
 
@@ -697,6 +695,8 @@ try {
 
 ## Update the deployed app
 
+This walkthrough changes both tool parameters and the agent's instructions/conversation starter. **Re-sync is required because the baseline agent changes**, not because `message` was replaced by `siteUrl`. See [Develop and deploy Copilot UX components](../development-and-deployment.md).
+
 1. Bundle the solution in production mode.
 
     ```console
@@ -720,10 +720,12 @@ try {
 
 ## Try it in Microsoft 365 Copilot
 
+For a parameter-only variation, change the tool schema or description without editing agent instructions, icons, title, or starter prompts. Build, package, and redeploy the solution, but don't sync the unchanged baseline. In a new conversation, inspect the tool arguments to verify that dynamic discovery supplies the updated schema.
+
 1. Open **Microsoft 365 Copilot** and start a new chat with **MyCopilotApp Agent**. The conversation starter now reads **Lists on a site**.
 
     > [!NOTE]
-    > If the agent or the new conversation starter doesn't appear, sign out of Microsoft 365, close the browser, and sign in again.
+    > If the agent or the new conversation starter doesn't appear, verify the baseline was synced, allow for propagation, and test in a new conversation with the intended account and tenant.
 
 1. Enter "Show me the lists on https://contoso.sharepoint.com/sites/hr" with the URL of a site in your tenant. You don't need to enter "Call MyCopilotAppTool" anymore: the tool description and the instructions tell Copilot when to call the tool and how to fill in `siteUrl`.
 
@@ -737,5 +739,6 @@ try {
 ## Next steps
 
 - [Access data from a Copilot UX component](../access-data.md)
-- [Display modes in SharePoint Copilot components](../displayMode.md)
-- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-access-data).
+- [Display modes in Copilot UX components](../displayMode.md)
+- [Provide context to Copilot](../provide-context-to-copilot.md): describe the chosen list, visible columns/rows, and selection rather than sending every returned item.
+- Review the [tutorial-connect-to-sharepoint-data sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-connect-to-sharepoint-data). Check its declared package versions before adopting it for GA.

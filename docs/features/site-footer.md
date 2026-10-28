@@ -14,7 +14,7 @@ Footers are a common branding / navigation control in websites and portals. Shar
 - Footer name
 
 > [!IMPORTANT]
-> Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts.
+> Footer settings apply to supported communication-site layouts. Check the current [Change the look guidance](https://support.microsoft.com/office/06bbadc3-6b04-4a60-9d14-894f6a170818) for available layouts and options rather than treating the original rollout announcement or screenshots as current defaults.
 >
 > Footers don't appear in sites on mobile devices or apps.
 
@@ -26,6 +26,9 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 
 ## Controlling footer rendering using code or PowerShell
 
+> [!IMPORTANT]
+> The script below is a historical example, not the current authentication baseline. Follow the [PnP PowerShell authentication guidance](https://pnp.github.io/powershell/articles/authentication.html), use your own Microsoft Entra application, and validate the current cmdlets. Don't disable multifactor authentication or rely on a password-only connection to reproduce the example.
+
 You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets):
 
 ```powershell
@@ -35,7 +38,7 @@ Set-PnPFooter -Enabled:$true # for enabling the footer
 ```
 
 > [!NOTE]
-> Above PowerShell scripts assumes that you have already installed PnP PowerShell cmdlets for your environment and you are not using multi-factor authentication. You can install PnP PowerShell cmdlets to your computer by opening PowerShell console in administrative mode and executing following command: `Install-Module PnP.PowerShell -Scope CurrentUser`. If you are using multi-factor authentication, you can enable MFA login by updating the `Connect-PnPOnline` line as follows: `Connect-PnPOnline -Url "<SiteURL>" -Interactive`.
+> Use a PnP PowerShell version and authentication method supported for your environment. Follow its current installation and app-registration prerequisites; the historical connection command above hasn't been validated as a current setup procedure.
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
@@ -44,7 +47,7 @@ Set-PnPFooter -Enabled:$true # for enabling the footer
 Site owner can control the footer visibility using the **Change the look** functionality of the site, which exposes the different user interface configuration options.
 
 > [!NOTE]
-> These options will be visible in the sites when the feature(s) are rolled out and released.
+> Screenshots show an earlier interface. Use the current site settings and supported site layout when configuring the footer.
 
 ![Change the look configuration options](../images/footer-change-the-look.png)
 

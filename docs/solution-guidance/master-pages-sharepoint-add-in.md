@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Master pages in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!IMPORTANT]
 > This guidance applies to classic SharePoint experiences and the SharePoint Add-in model. Custom master pages aren't supported in modern SharePoint Online experiences and are considered a legacy customization approach.
 

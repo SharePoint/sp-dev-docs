@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 ---
 # Prepare to set up and configure a SharePoint workflow development environment
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing [apps for SharePoint](https://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
 
 > [!NOTE]

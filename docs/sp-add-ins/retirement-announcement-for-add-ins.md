@@ -1,21 +1,18 @@
 ---
 title: SharePoint Add-In retirement in Microsoft 365
 description: Describes the details around the retirement of SharePoint Add-In in Microsoft 365.
-ms.date: 07/30/2023
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # SharePoint Add-In retirement in Microsoft 365
 
-Microsoft strives to deliver value to our customers through modern, optimized, secure solutions. As part of this evolution of Microsoft 365 solutions, we are retiring the SharePoint Add-In extensibility model and believe Microsoft 365 customers will be better served by modern SharePoint extensibility models.
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
-> [!IMPORTANT]
-> The SharePoint add-in model deprecation in SharePoint Online does not impact [SharePoint Framework (SPFx)](https://aka.ms/spfx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported.
+SharePoint Add-Ins stopped working for new SharePoint Online tenants on November 1, 2024 and for all SharePoint Online tenants on April 2, 2026. This applies to all environments, including government clouds and the U.S. Department of Defense.
 
-SharePoint Add-Ins will stop working for new tenants as of November 1st, 2024; they will stop working for all tenants as of April 2nd, 2026. This applies to all environments including Government Clouds and the U.S. Department of Defense.
-
-In parallel with the SharePoint Add-In retirement, the ability to add, update, remove, and acquire SharePoint Add-Ins from the public marketplace will also be discontinued. As of March 1st, 2024 Microsoft will not accept new SharePoint Add-Ins for listing in the public marketplace; as of July 1st, 2024, SharePoint Add-Ins cannot be acquired from the public marketplace. Using a tenant app catalog is supported and enables 3rd parties to offer their SharePoint Add-Ins until April 2nd, 2026.
+Microsoft stopped accepting new SharePoint Add-Ins for listing in the public marketplace on March 1, 2024. SharePoint Online users could no longer acquire them from the public marketplace starting July 1, 2024. Distribution through a tenant app catalog was available only until April 2, 2026; an app catalog does not provide a way to continue using SharePoint Add-Ins in SharePoint Online after retirement. App catalogs continue to support SPFx solutions.
 
 If you are using custom developed SharePoint Add-Ins, we recommend migrating them to SharePoint Framework based solutions. If you’ve acquired SharePoint Add-Ins from the public marketplace or from a 3rd party,  contact the provider for an updated version that does not depend on the SharePoint Add-In extensibility model. 
 
@@ -25,7 +22,7 @@ To learn how to migrate SharePoint Add-Ins to alternative solutions, see these [
 
 ### SharePoint Add-Ins
 
-SharePoint Add-Ins come in two flavors: SharePoint hosted Add-Ins and provider hosted Add-Ins, both of which are impacted.
+Both SharePoint hosted Add-Ins and provider hosted Add-Ins are retired in SharePoint Online.
 
 [SharePoint hosted Add-Ins primarily bring UX elements](sharepoint-add-ins.md#sharepoint-hosted-sharepoint-add-ins) to the site the Add-In was installed into and the app web that was created for the Add-In. A common use case is showing SharePoint Add-In web parts on pages of the host web, using [SharePoint Framework](https://aka.ms/spfx) based web parts is the recommended alternative here. These applications use JavaScript for writing business logic using the logged in user context to authenticate.
 
@@ -33,11 +30,11 @@ SharePoint Add-Ins come in two flavors: SharePoint hosted Add-Ins and provider h
 
 ### SharePoint Server support for SharePoint Add-Ins
 
-Users of SharePoint Server running on-premises can, if configured by the farm admins, install SharePoint Add-Ins from the public marketplace or from the app catalog. The option to acquire and use SharePoint Add-Ins via the app catalog will not be impacted by this retirement, acquiring SharePoint Add-Ins from the public marketplace will stop working from April 2nd, 2026.
+This retirement does not retire SharePoint Add-Ins on SharePoint Server when deployed through an on-premises app catalog. Acquiring SharePoint Add-Ins from the public marketplace for SharePoint Server ended on April 2, 2026. The SharePoint Online retirement must not be interpreted as retirement of the SharePoint Server Add-in model.
 
 ### Project Online support for SharePoint Add-Ins
 
-Project Online is an extension on top of SharePoint Online and SharePoint Add-Ins could also have been used to extend Project Online. The retirement of SharePoint Add-Ins applies to Project Online as well, any SharePoint Add-In used in Project Online will follow the same retirement path as SharePoint Add-Ins used in SharePoint Online.
+SharePoint Add-Ins could also have been used to extend Project Online. Those Add-Ins followed the same retirement timeline as SharePoint Add-Ins in SharePoint Online and retired on April 2, 2026.
 
 ## Call to Action Guidance
 
@@ -59,14 +56,14 @@ To learn more about how to migrate SharePoint Add-Ins to alternative solutions c
 
 ### Disable Add-In usage for your tenant
 
-Admins can disable SharePoint Add-Ins with the [Set-SPOTenant SharePoint Management Shell PowerShell command](/powershell/module/sharepoint-online/set-spotenant).
+Before retirement, admins could block new Add-In installations with the [Set-SPOTenant SharePoint Management Shell PowerShell command](/powershell/module/sharepoint-online/set-spotenant). The following command is retained for historical context; it does not extend or restore Add-In functionality after April 2, 2026.
 
 ```PowerShell
 Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
 Set-SPOTenant -IsSharePointAddInsDisabled $true
 ```
 
-After SharePoint Add-Ins are disabled, users will not be able to add SharePoint Add-Ins to their sites, and admins cannot add new SharePoint Add-Ins to the tenant and site collection app catalogs. SharePoint Add-Ins already added to sites will stay available and can still be used by the site's users.
+Before retirement, this setting blocked new Add-In installations but allowed previously installed Add-Ins to keep running. That exception ended with retirement: existing SharePoint Online Add-Ins no longer work.
 
 ## How do I get help?
 
@@ -83,4 +80,4 @@ You can use the following services and partner programs to help with your migrat
 - Friendly link to the Azure ACS retirement article: https://aka.ms/retirement/acs/support
 - Friendly link to Migration Guidance: https://aka.ms/retirement/addins/guidance
 
-A Message Center post in the Microsoft 365 admin center is being sent to all tenants, and the post will be updated periodically with timelines.
+The retirement was also communicated through the Microsoft 365 admin center Message Center.

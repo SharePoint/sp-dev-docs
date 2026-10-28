@@ -11,6 +11,8 @@ ms.assetid: d5f30dfe-7500-5f85-0f08-f4f220c0c692
 
 # App element (SharePoint Add-in Manifest)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 The top level node of the manifest of a SharePoint Add-in.

@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 # Developing with Duet Enterprise 2.0
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Overview
 
 Duet Enterprise 2.0 is the latest version of a collaborative effort between Microsoft and SAP to give SharePoint users the ability to work with data from SAP systems.It combines components from SAP as well as SharePoint and SharePoint Online. It gives a developer the ability to create components that will allow users to bring data from SAP systems into the familiar SharePoint environment.

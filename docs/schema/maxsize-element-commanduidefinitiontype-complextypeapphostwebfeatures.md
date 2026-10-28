@@ -11,6 +11,8 @@ ms.assetid: 5d0fa351-a4f7-c57a-0832-3de3f4306029
 
 # MaxSize element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

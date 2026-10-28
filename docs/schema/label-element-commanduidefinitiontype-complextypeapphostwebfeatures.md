@@ -11,6 +11,8 @@ ms.assetid: e81bc60f-f474-78b4-084d-230f19448407
 
 # Label element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Composite business SharePoint Add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Composite business add-ins are add-ins that are tightly integrated with your business processes and line-of-business (LOB) technologies (such as databases and web services). These add-ins typically include a number of complex interactions with users and with other technologies.
 
 The sample composite business add-ins described in this section provide building blocks that you can use to integrate your technologies and processes with the SharePoint Add-in model.

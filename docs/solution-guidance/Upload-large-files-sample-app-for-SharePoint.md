@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Upload large files sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The Core.LargeFileUpload sample shows you how to use a provider-hosted add-in to upload large files to SharePoint, and how to bypass the 2-MB file upload limit.
 
 Use this solution if you want to upload files that are larger than 2 MB to SharePoint.

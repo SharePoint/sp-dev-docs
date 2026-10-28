@@ -11,6 +11,8 @@ ms.assetid: 9a87218f-b491-e4b6-e0f4-a2219f48fcd1
 
 # WebTemplateDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

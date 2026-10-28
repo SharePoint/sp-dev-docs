@@ -1,7 +1,7 @@
 ---
 title: Supported extensibility platforms - overview
 description: Learn what platforms support customizations and rely on the SharePoint Framework for their extensibility opportunities available to developers.
-ms.date: 11/16/2021
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -46,9 +46,10 @@ Learn more about using SPFx on Viva Connections: [SPFx support for Viva Connecti
 
 ## Microsoft 365 Copilot
 
-Microsoft 365 Copilot can be extended with SharePoint Copilot Apps. These solutions pair SPFx Copilot components, which render interactive UI inside a Copilot conversation, with a declarative agent definition that makes them discoverable and callable. They're built with the familiar SPFx toolchain, packaged as a solution package (`.sppkg`), and deployed through the SharePoint app catalog.
+Microsoft 365 Copilot can be extended with **Copilot UX components**, generally available with SPFx 1.24 on **October 28, 2026**. These solutions pair SPFx Copilot UX components, which render interactive UI inside a Copilot conversation, with a declarative agent definition that makes them discoverable and callable. They're built with the familiar SPFx toolchain, packaged as a solution package (`.sppkg`), and deployed through the SharePoint app catalog.
 
-> [!IMPORTANT]
-> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments.
+Copilot UX components require the Microsoft 365 Copilot add-on USL (user-specific license) on top of a normal E3, E5, or E7 license. Supported clients are Copilot in browser/desktop and Copilot in Teams in browser/desktop; iOS and Android aren't supported at GA. See [Availability](copilot/overview-copilot-apps.md#availability) and [GA limitations](copilot/overview-copilot-apps.md#ga-limitations).
 
-Learn more about using SPFx for Microsoft 365 Copilot: [Overview of SharePoint Copilot Apps](copilot/overview-copilot-apps.md).
+Learn more about using SPFx for Microsoft 365 Copilot: [Overview of Copilot UX components](copilot/overview-copilot-apps.md).
+
+For initial agent deployment and subsequent component updates, see [Develop and deploy Copilot UX components](copilot/development-and-deployment.md).

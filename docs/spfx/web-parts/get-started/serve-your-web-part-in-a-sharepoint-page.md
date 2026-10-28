@@ -28,7 +28,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 1. If **Heft start** is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
-  Unlike in the Workbench, to use client-side web parts on modern SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
+  To make the web part available without local debugging, deploy and register the solution with SharePoint. First, package the web part. Local development on a page with the [SPFx developer toolbar](../../debug-modern-pages.md) is a separate workflow.
 
 1. Open the **HelloWorldWebPart** web part solution in Visual Studio Code, or your preferred IDE.
 1. Open **package-solution.json** from the **config** folder.
@@ -98,7 +98,7 @@ You can view the raw package contents in the **./sharepoint/solution/debug** fol
 
 The contents are then packaged into an **.sppkg** file. The package format is similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution.
 
-The JavaScript files, CSS, and other assets are packaged in the package when the `--production` option is used. In this tutorial, however, we'll first test deployment and capabilities by hosting JavaScript files from localhost. Automated packaging and hosting option is explained in the next tutorial.
+With `includeClientSideAssets` set to `true`, the production JavaScript, CSS, and other assets are included in the package. This tutorial tests those deployed assets without depending on a local development server.
 
 > [!NOTE]
 > Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the app catalog, the assets are automatically hosted either from Office 365 CDN (if enabled) or from an app catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the **package-solution.json** file.
@@ -146,24 +146,7 @@ The **Site Contents** page shows you the installation status of your client-side
 
 ## Preview the web part on a SharePoint page
 
-Now that you've deployed and installed the client-side solution, add the web part to a SharePoint page. Remember that resources such as JavaScript and CSS are available from the local computer, so rendering of the web parts will fail unless your localhost is running.
-
-1. Open the **{{your-webpart-guid}}.manifest.json** from the **dist** folder.
-
-    Notice that the `internalModuleBaseUrls` property in the `loaderConfig` entry still refers to your local computer:
-
-    ```json
-    "internalModuleBaseUrls": [
-      "https://localhost:4321/dist/"
-    ],
-    ```
-
-1. *Before* adding the web part to a SharePoint server-side page, run the local server.
-1. In the console window that has the **helloworld-webpart** project directory, run the Heft task to start serving from localhost:
-
-    ```json
-    heft start
-    ```
+Now that you've deployed and installed the client-side solution, add the web part to a SharePoint page. Stop the local development server and open the page without debug query parameters to verify that it uses the deployed assets.
 
 ## Add the HelloWorld web part to modern page
 
@@ -187,7 +170,7 @@ You should see the **HelloWorld** web part you built in the previous article tha
 
     ![Edit web part](../../../images/edit-webpart-modern-page.png)
 
-    This is the same property pane you built and previewed in the Workbench.
+    This is the same property pane you built and previewed on your test page using the developer toolbar.
 
 1. Edit the **Description** property, and enter **Client-side web parts are awesome!**
 

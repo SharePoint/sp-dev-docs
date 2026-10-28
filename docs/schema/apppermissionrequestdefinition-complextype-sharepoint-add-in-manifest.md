@@ -11,6 +11,8 @@ ms.assetid: 0ca537a2-d784-e761-eb27-13b8c373bdba
 
 # AppPermissionRequestDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

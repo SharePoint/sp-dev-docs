@@ -1,7 +1,7 @@
 ---
 title: Responding to changes
 description: Responding to changes
-ms.date: 06/28/2022
+ms.date: 10/25/2026
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: article
@@ -44,6 +44,10 @@ For further details about Webhooks you can read the following articles, inspect 
 * [Getting started with SharePoint Webhooks](https://www.youtube.com/watch?v=IbVlDkmsh8w)
 
 ## Remote Event Receivers
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+In SharePoint Online, remote event receivers registered using Azure ACS stopped working on April 2, 2026. Receivers registered using a Microsoft Entra application have a separate retirement date of July 1, 2027; this does not extend the SharePoint Add-in model's lifetime. Use webhooks for new solutions and migration. See the [remote event receiver retirement FAQ](../sp-add-ins/add-ins-and-azure-acs-retirements-faq.md#will-remote-event-receivers-also-be-retired) and [migration guidance](../sp-add-ins-modernize/from-remote-event-receivers-to-webhooks.md).
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 

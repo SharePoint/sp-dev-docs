@@ -8,6 +8,10 @@ ms.localizationpriority: high
 
 # Choose the right API set in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn about the several sets of APIs that are provided in SharePoint, including the server object model and the various client object models, and the REST/OData web service.
 
 <a name="Factors"> </a>

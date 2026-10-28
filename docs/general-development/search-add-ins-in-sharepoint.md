@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 ---
 # Search add-ins in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn about search SharePoint Add-ins and how you can create your own search add-ins. The add-ins you create can be added to the SharePoint add-ins catalog so that they can be used in both on-premises deployment and Microsoft 365. Search add-ins only work with data that is stored in the search index and not with the original source documents.
 
 SharePoint Add-ins are self-contained pieces of functionality that extend the capabilities of a SharePoint website. These add-ins solve specific business and end-user needs by integrating the best of the web and SharePoint. An add-in can contain various SharePoint elements like Lists, Remote Event Receivers, Content Types, Workflows, Workflow Custom Activities, Site Columns, Modules, Menu Item Custom Actions, Client web parts, and Search Configurations. For more information, see [SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md)

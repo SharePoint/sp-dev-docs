@@ -6,6 +6,10 @@ ms.localizationpriority: medium
 ---
 # Transformation
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 Office 365 and SharePoint evolve continuously. As new capabilities are added, it might be necessary to update the existing configuration and customizations. Transforming your solutions can help you get more benefit out of using SharePoint and Office 365.

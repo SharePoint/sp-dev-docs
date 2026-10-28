@@ -1,64 +1,63 @@
 ---
-title:  SharePoint Developer Community (SharePoint PnP) resources
-description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
-ms.date: 11/19/2025
+title: Microsoft 365 & Power Platform Community resources
+description: Find SharePoint Framework samples, community calls, open-source projects, and contribution opportunities in the Microsoft 365 & Power Platform Community.
+ms.date: 10/25/2026
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
 
-# Microsoft 365 & Power Platform Community resources around SharePoint Framework
+# Microsoft 365 & Power Platform Community resources
 
-The Microsoft 365 Platform Community (also known as M365 PnP community) is an open-source initiative coordinated by Microsoft 365 engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
+The [Microsoft 365 & Power Platform Community](https://pnp.github.io/), also known as PnP, brings together Microsoft employees and community contributors to share samples, reusable components, and guidance. SharePoint and SharePoint Framework (SPFx) development are part of this broader community.
+
+Use these resources to learn from other developers, find examples, and contribute your own experience. Community projects complement the official SharePoint developer documentation; they aren't Microsoft products.
+
+## Samples and learning resources
+
+- [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/) - Explore community examples for SharePoint Framework.
+- [Copilot UX component samples](https://aka.ms/spfx/copilot/samples) - Explore SPFx components for Microsoft 365 Copilot.
+- [Microsoft 365 & Power Platform sample gallery](https://aka.ms/community/samples) - Find examples across the platforms.
+- [Open-source projects](open-source-projects.md) - Find current libraries and tools, with separate guidance for archived projects.
+
+Check each sample's README, dependencies, and prerequisites. Inclusion in a gallery doesn't mean that a sample has been updated or tested for your SPFx version.
 
 ## Blog posts, videos, and social media
 
-- [SharePoint Developer Blog](https://developer.microsoft.com/office/blogs/) - Latest developer news around SharePoint and Office 365
-- [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
-- [Microsoft 365 Dev X](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
-- [Microsoft 365 PnP X](https://twitter.com/m365pnp) - Community account for Microsoft 365 and SharePoint topics
-- [Microsoft 365 Dev Facebook](https://www.facebook.com/Microsoft365Developer) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
+- [Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/) - Developer news and technical articles.
+- [Microsoft Community Learning videos](https://aka.ms/community/videos) - Tutorials, demos, and community call recordings.
+- [Social media and update channels](social-media.md) - Developer and community accounts on X and LinkedIn.
 
 ## GitHub
 
-There are numerous different repositories related on the provided samples and [open-source projects](open-source-projects.md) available in the following GitHub organizations.
+Find documentation, samples, and open-source projects in these organizations:
 
 - [SharePoint GitHub organization](https://github.com/SharePoint)
-- [PnP GitHub organization](https://github.com/PnP)
+- [PnP GitHub organization](https://github.com/pnp)
+
+Use the [repository catalog](repositories.md) to find a project's current home and the [contribution guidance](contribute.md) to get involved.
 
 ## Issues with SharePoint development
 
-Found an issue related to SharePoint development around the APIs, documentation, or other topics? Are we missing something from the developer documentation? Please let us know!
-
-- [SharePoint development issues list](https://github.com/SharePoint/sp-dev-docs/issues)
+For SPFx product bugs and documentation issues, use the [sp-dev-docs issue list](https://github.com/SharePoint/sp-dev-docs/issues). For how-to questions, library or sample defects, and Microsoft product support, follow [Support and feedback](../support-feedback.md). Submit feature suggestions through the [SharePoint developer platform feedback portal](https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472).
 
 ## Community calls
 
-There are numerous community calls for SharePoint development, and you can choose which of them you'd like to join based on your interest and availability. Each call has live demos from SharePoint Engineering, MVPs, or other community members.
+Community calls include product updates, technical guidance, and demos from Microsoft and community speakers. Visit the [community calls page](https://aka.ms/community/calls) for the current schedule, calendar invitations, and joining links. Use the calendar invitation for the call you choose rather than a fixed time copied from this article.
 
 > [!TIP]
-> If you are interested in doing a live demo in any of our community calls, please reach out by [requesting a demo slot](https://aka.ms/community/request/demo) and we'll get you a spot for 10-15 minutes for demonstrating your Microsoft 365 & Power Platform development topic(s).
->
-> **Do's & Dont's**: Interested in presenting during one of the community calls? Keep in mind these are community calls. The focus of these demos should be on learning and topics beneficial to the community. Please refrain from commercial activities such as selling or promoting products or services. Commercial activities in the community calls are not well received by the community and in certain instances may result in stopping the demo early. In your request to present, please be descriptive about what you intend to show to avoid any confusion. If you are not sure if what you want to present is appropriate, just ask in the submission.
+> To propose a demo, use the [community demo request form](https://aka.ms/community/request/demo). Describe what you want to demonstrate and what attendees can learn. See the form for current submission guidance.
 
-|                                         Community call                                          |                           When                           |                                                                                    Description                                                                                    |                                Microsoft Teams Link                                |
-| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [Microsoft 365 & Power Platform Call (Microsoft Speakers)](https://aka.ms/community/ms-speakers-call-invite)                                             | Weekly on Tuesdays at 8:00 AM PT / 3:00 PM GMT | Community call with Microsoft speakers covering the latest news from  Microsoft engineerung on the Microsoft 365 & Power Platform topics including news, UserVoice updates, and demos | [Direct MS Teams link to meeting](https://aka.ms/community/ms-speakers-call-join)      |
-| [Microsoft 365 & Power Platform Development Community call](https://aka.ms/community/m365-powerplat-dev-call-invite) | Weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT | Latest on Latest on open-source and community efforts plus community demos | [Direct MS Teams link to meeting](https://aka.ms/community/m365-powerplat-dev-call-join)  |
+If you can't attend live, browse the [community recordings](https://aka.ms/community/videos).
 
 ## What’s the supportability statement around open-source components and solutions?
 
-Following statements apply across all of the PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
+PnP libraries, controls, and samples are community projects. Follow each repository's support guidance and license, and report defects to that project's issue tracker. Community participation doesn't make an asset a Microsoft-supported product or guarantee a response time.
 
-- PnP assets are created by Microsoft & the community
-- PnP assets are maintained by Microsoft & the community
-- PnP uses supported and recommended techniques defined by Microsoft
-- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side
-- PnP is supported in similar ways as other open source projects done by Microsoft with support from the community by the community
-- There are numerous partners that utilize PnP within their solutions for customers. Support for this is provided by the Partner. When PnP material is used in deployments, we recommend being clear with your customer/deployment owner on the support model
+If you identify a defect in the underlying supported SharePoint or Microsoft 365 service, use the applicable Microsoft product support channel. See [Support and feedback](../support-feedback.md) for routing. If a partner delivers a solution using PnP components, clarify support responsibilities with that partner.
 
 ## See also
 
 - [SharePoint developer portal](https://aka.ms/spdev)
-- [SharePoint developer samples](https://aka.ms/spdev-samples)
-- [SharePoint PnP open-source projects](open-source-projects.md)
+- [SharePoint Framework samples](https://pnp.github.io/sp-dev-fx-webparts/)
+- [Community open-source projects](open-source-projects.md)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md)

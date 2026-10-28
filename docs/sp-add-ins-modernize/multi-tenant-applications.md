@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Building Multi-tenant applications for SharePoint Online
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 A really common use-case when developing applications for SharePoint Online is the need to create reusable solutions that can be installed and shared across multiple tenants. Could be that you are simply developing a solution for an enterprise organization with a multi-tenant topology, or that you are building a solution targeting a multi-geo tenant, or simply that you are an ISV and you plan to sell your solution to multiple customers and as such your solution will need to handle multiple tenants with proper isolation and security boundaries.
 
 In the SharePoint Add-in model there wasn't a real concept of multi-tenant solution, but you could create a provider-hosted application and in the provider-hosted code you could handle different target tenants and application identities when talking with Azure Access Control Service (ACS) to retrieve a token to consume SharePoint Online.
@@ -166,7 +170,7 @@ When you consume back-end APIs in SharePoint Framework using the `AadHttpClient`
 In the above excerpt, the *webApiPermissionRequests* section of the configuration file declares that the solution needs the permission scope with name *Orders.FullControl* provided by the Azure AD application with name *PnP.Contoso.Orders*. Practically speaking, the *PnP.Contoso.Orders* represents the multi-tenant back-end application that the SharePoint Framework solution is willing to consume and that should be registered in the target tenants, while the *Orders.FullControl* scope is the permission that tenant admins should grant in their tenants prior to being able to consume the back-end API.
 
 > [!NOTE]
-> You can dig into consuming external APIs in SharePoint Framework by reading the articles [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../spfx/use-aadhttpclient.md) and [Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework](..spfx/use-aadhttpclient-enterpriseapi-multitenant.md).
+> For external APIs in SharePoint Framework, see [Connect to Microsoft Entra ID-secured APIs](../spfx/use-aadhttpclient.md) and [Consume multi-tenant enterprise APIs](../spfx/use-aadhttpclient-enterpriseapi-multitenant.md).
 
 One option, as already illustrated in this article, would be to provide the admin consent URL to a tenant admin of a target tenant and to follow the manual consent flow. Another and better option that you have, since SharePoint Framework 1.15, is to enrich the *webApiPermissionRequests* section of the *package-solution.json* file like in the following code excerpt.
 

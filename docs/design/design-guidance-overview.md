@@ -1,15 +1,21 @@
 ---
 title: Designing great SharePoint experiences
 description: Create compelling SharePoint experiences and effectively communicate your brand and message to your audience.
-ms.date: 06/28/2022
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Designing great SharePoint experiences
 
-SharePoint is a platform that delivers content to more than 200,000 organizations and 190 million people worldwide. This SharePoint design guidance helps you create compelling SharePoint experiences and effectively communicate your brand and message to your audience. In addition, this guidance helps you better take advantage of the powerful tools in SharePoint while creating your own customized and optimized experiences. We welcome your feedback and input so that we can keep making improvements to this guidance.
+Use this guidance to design accessible SharePoint sites, pages, and custom components. Choose guidance for the actual host: a SharePoint page layout isn't the layout contract for a Copilot conversation or a Viva Connections card.
 
-<!-- Seems like you should tell them how you'd like to receive feedback - i.e. via issues in the repo? -->
+## Design for the component's host
+
+- **Copilot UX components:** follow [Copilot theme and design guidance](../spfx/copilot/theme-and-design.md), [display modes](../spfx/copilot/displayMode.md), and [visible-context guidance](../spfx/copilot/provide-context-to-copilot.md). The host controls the surrounding conversation; the component owns its iframe UI.
+- **SharePoint web parts and extensions:** use the page design principles below and the [SPFx Fluent UI guidance](../spfx/fluent-ui-integration.md). Match the library version to the component/template instead of upgrading every sample to the same Fluent UI version.
+- **Viva Connections:** start with the [Adaptive Card Extension guidance](../spfx/viva/overview-viva-connections.md).
+
+Test keyboard access, focus, themes, resizing, and error states in each supported host. A responsive design or a mobile-sized mockup doesn't establish client support; Copilot UX components don't support iOS/Android at GA.
 
 ![SharePoint communication site on multiple devices](../images/design-guidance-overview.png)
 

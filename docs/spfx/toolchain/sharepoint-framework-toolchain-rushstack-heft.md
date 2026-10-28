@@ -1,12 +1,14 @@
 ---
 title: "SharePoint Framework Toolchain: Heft-based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the Heft-based toolchain introduced in SPFx v1.22.
-ms.date: 12/10/2025
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework Toolchain: Heft & Webpack
 
 The SharePoint Framework (SPFx) v1.22 introduced a significant change to the build toolchain used to develop and package SPFx solutions. This article explains the changes, the reasons behind them, and how they affect both new and existing projects.
+
+For new SPFx 1.24 projects, follow the [development environment setup](../set-up-your-development-environment.md) using Node.js 24 LTS. Heft is the supported toolchain for SPFx 1.24.
 
 > [!NOTE]
 > Prior to SPFx v1.22, Microsoft used a gulp and webpack based toolchain. Learn more: [SPFx Toolchain: Gulp & Webpack](sharepoint-framework-toolchain.md).
@@ -21,9 +23,9 @@ The decision to transition from gulp-based toolchain to the Heft-based toolchain
 
 ### Technical debt and maintenance
 
-The current gulp-based toolchain is a custom solution built specifically for SPFx. Over time, this has created several issues.
+The legacy gulp-based toolchain is a custom solution built specifically for SPFx. Over time, this created several issues.
 
-The current toolchain has received minimal maintenance over the years, resulting in significant technical debt. This has led to numerous npm audit warnings due to outdated dependencies in the unmaintained gulp-core-build stack. Additionally, Microsoft internally moved away from this toolchain several years ago, which created a problematic split between internal and external development ecosystems.
+The legacy toolchain accumulated technical debt and outdated dependencies, contributing to npm audit warnings. Assess individual advisories as described in [Understanding npm audit vulnerabilities](../npm-vulnerabilities.md); the choice of toolchain alone doesn't establish that a project is safe.
 
 ### Community feedback
 
@@ -66,7 +68,9 @@ When creating new SPFx projects with the SharePoint Framework Yeoman Generator v
 
 ### Developer workflow changes
 
-The transition to Heft fundamentally changes how developers customize their build process. In the new toolchain, existing **gulpfile.js** customizations are no longer compatible and will need to be migrated. For webpack configuration modifications, developers must now use either Heft plugins or eject to gain direct access to the webpack configuration. Additionally, the **config.json** file has been eliminated, with external library configurations now handled through webpack-native configuration patterns instead.
+The transition to Heft changes how developers customize their build process. Existing **gulpfile.js** customizations must be migrated to Heft configuration or plugins. For webpack modifications, use the [Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md) where possible.
+
+Standard SPFx 1.24 projects still contain **config/config.json**, with `bundles`, `externals`, and `localizedResources` configuration. The SPFx rig and plugins use this configuration to generate the webpack configuration and manifests. It is not removed by adopting Heft. [Ejecting webpack](customize-heft-toolchain-eject-webpack.md) is a separate, unsupported customization path that transfers configuration ownership to your project.
 
 ## When - support timeline and migration path
 
@@ -74,18 +78,18 @@ Microsoft has established a phased transition timeline to minimize disruption:
 
 ### SPFx version v1.22 (Initial Release)
 
-Starting with SPFx v1.22, all new projects generated with the SharePoint Framework Yeoman generator will default to using Heft as the build tool. However, for developers who need to continue using the previous system, the generator provides a command-line option to use the legacy gulp toolchain instead. Importantly, existing projects that upgrade to SPFx v1.22 can continue using their current gulp-based builds without modification. During this transitional period, Microsoft will support both toolchains, though it's worth noting that only critical breaking fixes will be applied to the gulp toolchain as development resources shift toward improving the new Heft-based system.
+SPFx v1.22 introduced Heft as the default for new projects. That release also provided a transitional `--use-gulp` generator option for developers maintaining the previous toolchain. This historical option isn't the supported setup for SPFx 1.24.
 
 ### SPFx version v1.23
 
-Starting with SPFx v1.23, new projects will exclusively support Heft, contingent on the readiness of the SPFx CLI. If the SPFx CLI isn't fully prepared by this release, the generator from v1.22 will continue with its existing support model. Developers with existing projects will still be able to use gulp-based builds in v1.23. During this transition period, both toolchains will continue to receive support, though it's important to note that only critical breaking fixes will be applied to the gulp toolchain as development resources shift toward the Heft-based system.
+SPFx v1.23 continued the transition to Heft, with transitional support for existing gulp-based projects. Use the [SPFx 1.23 release notes](../release-1.23.0.md) when maintaining that version rather than applying the SPFx 1.24 setup to it.
 
 ### SPFx version v1.24 (and Beyond)
 
-Starting with SPFx v1.24, while existing projects may still technically continue using gulp-based builds, the gulp toolchain will become officially unsupported. At this point, all new development efforts and fixes will focus exclusively on the Heft toolchain, as Microsoft fully transitions to the new build system.
+Starting with SPFx v1.24, the gulp-based toolchain is unsupported. Migrate projects to Heft when upgrading to SPFx 1.24, including their build customizations and CI commands.
 
 > [!IMPORTANT]
-> Projects that upgrade their **package.json** to reference SPFx v1.22 or later can continue using gulp and existing customizations without breaking changes. The new toolchain only affects newly generated projects and those that choose to migrate projects to SPFx v1.22 or later.
+> The transitional gulp option described for SPFx 1.22 and 1.23 does not establish support for gulp in SPFx 1.24. Updating package versions alone does not migrate a project's toolchain.
 
 ## How the new toolchain works
 
@@ -135,7 +139,7 @@ Learn more how to extend the webpack configuration in the Heft-based toolchain i
 
 ### External library configuration
 
-The **config.json** file previously controlled both webpack externals and the SPFx runtime manifest. In the new toolchain, external libraries are now configured directly in the webpack configuration, providing more native control over external dependencies. Additionally, the manifest generation process has been restructured and is now handled by dedicated SPFx webpack plugins, maintaining compatibility while aligning with the new architecture.
+In a standard SPFx 1.24 project, **config/config.json** continues to define SPFx bundles, external libraries, and localized resources. The Heft rig invokes SPFx plugins that generate the webpack configuration and runtime manifests. Use the [Webpack Patch plugin](customize-heft-toolchain-customize-webpack-config.md) for additional webpack customization rather than removing the generated SPFx configuration files.
 
 ### Custom build tasks
 
@@ -151,11 +155,18 @@ Microsoft has committed to ensuring a smooth migration process with specific pri
 
 ### For new projects
 
-When creating a new SPFx v1.22 project, you'll continue using the SharePoint Framework Yeoman generator just as you have with previous SPFx versions. Your newly created project will automatically use Heft as the default build toolchain. After project creation, take some time to examine the new configuration files to gain a better understanding of how the build process works in this updated architecture. For detailed guidance on customizing your project within the new toolchain, refer to the [Heft documentation](https://heft.rushstack.io/) which provides comprehensive information on configuration options and extension points.
+Create new SPFx 1.24 projects with the [Yeoman generator](../yeoman-generator-for-spfx-intro.md). The generated **package.json** scripts use the project-local Heft installation:
+
+```console
+npm run start
+npm run build
+```
+
+The SPFx 1.24 `start` script runs `heft start --clean`. The `build` script runs `heft test --clean --production && heft package-solution --production`, producing the production solution package. Verify the scripts in your own project rather than assuming earlier releases use the same commands.
 
 ### For existing projects
 
-When upgrading an existing project to SPFx v1.22:
+The following transitional steps apply to upgrading to SPFx 1.22, not SPFx 1.24:
 
 1. Update your **package.json** dependencies to SPFx v1.22
 1. Continue using your existing gulp-based build process

@@ -11,6 +11,8 @@ ms.assetid: c5b76f13-c582-b3ce-d077-f06f8e60dac6
 
 # Menu element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

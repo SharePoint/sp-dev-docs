@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Site columns and content types in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to create site columns and content types in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you use declarative code to create site columns and content types. In the declarative code approach, you define the site columns and content types in XML and then use SharePoint's feature framework elements to package and deploy them.
 
 In a SharePoint Add-in model scenario, you use the SharePoint Client-Side Object Model (CSOM) or SharePoint REST APIs to create site columns and content types.

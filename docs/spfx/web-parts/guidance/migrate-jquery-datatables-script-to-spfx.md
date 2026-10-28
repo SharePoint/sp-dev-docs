@@ -383,7 +383,7 @@ The last step is to include the code that initializes the data table and loads t
     heft start --nobrowser
     ```
 
-Because the web part loads its data from SharePoint, you have to test the web part by using the hosted SharePoint Framework Workbench. Navigate to **https://{your-tenant-name}.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the IT requests displayed by using the DataTables jQuery plug-in.
+Because the web part loads data from SharePoint, test it on a SharePoint page in the site that contains the list. Load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md), edit the page, and add the web part. You should see the IT requests displayed by the DataTables jQuery plug-in.
 
 ![IT requests displayed in a SharePoint Framework client-side web part](../../../images/datatables-spfx.png)
 
@@ -533,7 +533,7 @@ Initially, the name of the list from which the data should be loaded was embedde
     heft start --nobrowser
     ```
 
-1. Navigate to the hosted Workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with IT requests, and select the **Apply** button to confirm the changes.
+1. Open the test page with local manifests enabled and add the web part. Open its property pane, specify the name of the list with IT requests, and select **Apply** to confirm the changes.
 
     You should now see IT requests displayed in the web part.
 
@@ -693,5 +693,4 @@ The last piece of the solution that needs to be transformed to TypeScript is the
     heft start --nobrowser
     ```
 
-1. Navigate to the hosted Workbench and add the web part to the canvas. Although visually nothing has changed, the new code base uses TypeScript and its type definitions to help you maintain the solution.
-
+1. Reload the test page with local manifests enabled. Although visually nothing has changed, the new code base uses TypeScript and its type definitions to help you maintain the solution.

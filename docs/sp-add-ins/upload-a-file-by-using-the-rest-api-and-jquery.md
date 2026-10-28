@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Upload a file by using the REST API and jQuery
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the **Documents** library, and then change properties of the list item that represents the uploaded file.
 
 This process uses the following high-level steps:

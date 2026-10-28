@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Fix InfoPath forms in sandbox solutions
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 When you're using InfoPath forms with code-behind, the forms depend on code-based sandbox solutions for executing the code-behind. This article helps you to either fix or transform your InfoPath forms so they are no longer dependent on sandbox solutions.
 
 > [!NOTE] 

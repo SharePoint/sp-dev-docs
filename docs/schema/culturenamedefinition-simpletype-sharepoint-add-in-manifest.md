@@ -11,6 +11,8 @@ ms.assetid: c377416b-e3c5-f74f-e5d4-dcb98466126d
 
 # CultureNameDefinition simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

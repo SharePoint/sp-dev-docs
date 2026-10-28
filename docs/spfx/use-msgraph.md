@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClientV3 to connect to Microsoft Graph
 description: Use the MSGraphClientV3 class to make calls to the Microsoft Graph REST API.
-ms.date: 08/29/2022
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,7 @@ When building SharePoint Framework solutions, you can easily connect to the Micr
 
 ## MSGraphClient overview
 
-**MSGraphClientV3** is a new HTTP client introduced in SharePoint Framework v1.15.0 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClientV3** wraps the [Microsoft Graph JavaScript Client Library v3](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
+**MSGraphClientV3** is an HTTP client introduced in SharePoint Framework v1.15.0 that simplifies connecting to Microsoft Graph inside SharePoint Framework solutions. It wraps version 3 of the [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client).
 
 **MSGraphClientV3** replaces **MSGraphClient** which was introduced in SharePoint Framework v1.6.0. **MSGraphClient** wrapped the Microsoft Graph JavaScript Client Library v1.
 
@@ -23,7 +23,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 > The **MSGraphClientV3** is available only in projects built using SharePoint Framework v1.15.0 and later. While the **MSGraphClientV3** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
 
 > [!NOTE]
-> The single sign-on for the **MSGraphClientV3** is only available in SharePoint Online today. You can leverage the client for on premises developments but your users will be requested to sign in again within the webpart.
+> This guidance applies to SharePoint Online. SharePoint Server supports SPFx versions below the 1.15.0 minimum required by **MSGraphClientV3**; installing a newer client package doesn't make it supported on premises. See the [platform compatibility reference](compatibility.md).
 
 1. To use the **MSGraphClientV3** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
@@ -113,19 +113,21 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 
 ## Available permission scopes
 
-By default, the service principal has no explicit permissions granted to access the Microsoft Graph. However, if you request an access token for the Microsoft Graph, you get a token with the `user_impersonation` permission scope that can be used for reading information about the users (that is, `User.Read.All`).
+Determine the least-privileged delegated permissions required by each Microsoft Graph endpoint and request them through your solution's `webApiPermissionRequests`. For example, [Get the signed-in user](/graph/api/user-get) documents the permissions required for `/me`. Don't assume every tenant or authentication configuration provides `User.Read.All`, or treat a `user_impersonation` scope as a general substitute for a documented Graph permission.
 
-Additional permission scopes can be requested by developers and granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient.md).
+Administrators review the requests through **API access** in the SharePoint admin center. The required admin role depends on the API; approval for Microsoft Graph requires a Global Administrator. See [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access) and [Connect to Microsoft Entra ID-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 ## Known issues
 
-### Azure AD roles with delegated authentication
+### Microsoft Entra roles with delegated authentication
 
-The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow because of length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
+Some Graph operations require both delegated permissions and a supported Microsoft Entra role for the signed-in user. Don't assume that granting a permission alone meets the endpoint's authorization requirements.
 
-As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles also to delegated permissions may fail because of the `wids` claim not being present.  At the time of writing this includes the following endpoints:
+For authentication failures, check the requested resource, approved scopes, user role, and endpoint documentation. Authentication behavior can vary with the SPFx version and host; don't diagnose every failure as an implicit-flow limitation based on older **MSGraphClient** guidance.
 
 - [Office 365 usage reports](/graph/reportroot-authorization)
+
+For browser cookie and interactive sign-in considerations, see [Working with AadTokenProvider](use-aadtokenprovider.md). Use the framework-provided client rather than adding a separate authentication library to change the flow.
 
 ## See also
 

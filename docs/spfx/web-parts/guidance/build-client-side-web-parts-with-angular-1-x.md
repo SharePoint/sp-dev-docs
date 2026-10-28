@@ -8,7 +8,7 @@ ms.localizationpriority: high
 # Build SharePoint Framework client-side web parts with AngularJS
 
 > [!NOTE]
-> This page has been retired as AngularJS v1 is very old and no longer supported by Angular maintainers.
+> This page is historical. AngularJS v1 is no longer supported by its maintainers and isn't recommended for new solutions. The screenshots show the older workbench; for SharePoint Online debugging, use [SharePoint pages with the SPFx developer toolbar](../../debug-modern-pages.md).
 
 If you're familiar with AngularJS, you can also use this popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part.
 

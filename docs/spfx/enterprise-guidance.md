@@ -1,13 +1,15 @@
 ---
 title: SharePoint Framework enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 03/16/2026
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
 # SharePoint Framework enterprise guidance
 
-The SharePoint Framework (SPFx) is a new development model for SharePoint user interface extensibility. It's used by first and third parties, complementing existing customization, and extensibility options such as the SharePoint add-in model. The SharePoint Framework allows for a structured and supported approach to enrich and extend the user interface of SharePoint by using client-side frameworks. Based on modern web standards, it offers a unique set of features to make SharePoint customizations broadly available for developers and enterprises, but at the same time aligns with previous models and patterns in SharePoint. On this page, we provide administrators with the background, benefits, and knowledge they need to successfully manage SharePoint Framework-based components within their SharePoint environments.
+The SharePoint Framework (SPFx) is the supported development model for SharePoint client-side extensibility, used by Microsoft and third-party developers. This article provides administrators with the background and governance considerations needed to manage SPFx components within their SharePoint environments.
+
+For new SharePoint Online projects, follow the [SPFx 1.24 setup guidance](set-up-your-development-environment.md), using Node.js 24 LTS and Heft. SharePoint Server requires version-specific dependencies; see the [compatibility reference](compatibility.md).
 
 ## Background
 
@@ -34,7 +36,7 @@ The SharePoint Framework is built from the ground up using a modern web stack ba
 
 ## Current status of SharePoint Framework
 
-The SharePoint Framework was released to SharePoint Online in February 2017. The latest version, and all previous versions, of the SharePoint Framework are hosted and available in SharePoint Online.
+The SharePoint Framework was released to SharePoint Online in February 2017. SharePoint Online hosts the SPFx runtime and supports solutions subject to the [platform compatibility requirements](compatibility.md), component host capabilities, and published feature retirements. Availability of a newer SPFx version doesn't make every older dependency or retired feature supported.
 
 The SharePoint Framework is also available for SharePoint Server 2016 (with Feature Pack 2) as version v1.1 and SharePoint Server 2019 as version v1.4.1.
 
@@ -50,12 +52,16 @@ One of the most common patterns in SharePoint Online extensibility has been the 
 
 ## In perspective: SharePoint Framework in the broader SharePoint platform
 
-The SharePoint Framework is a new model, an addition to already existing methods, but focused on leveraging more value to user interface customizations such as client-side web parts. This framework is designed to work in conjunction with already existing working models and makes it easier to create new user interface customizations in a more supported and sustainable way.
+The SharePoint Framework provides supported extension points for user interface customizations such as client-side web parts. When maintaining older customization models, assess their lifecycle and migrate unsupported dependencies rather than assuming the earlier model remains available in SharePoint Online.
 
 > [!IMPORTANT]
 > The SharePoint page [HTML DOM](https://www.w3.org/TR/WD-DOM/introduction.html) is not an API. You should avoid taking any dependencies on the page DOM structure or CSS styles, which are subject to change and potentially break your solutions. SharePoint Framework provides a rich API to customize the SharePoint experience in reliable ways and is the only supported means to interact with the SharePoint page HTML DOM.
 
 ### Compared with add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+The comparison below is historical context for migration and for applicable SharePoint Server deployments, not a recommendation to build new SharePoint Online Add-ins.
 
 SharePoint Add-ins, introduced in SharePoint 2013 as SharePoint Apps but later renamed, have been one of the only available options of adding customizations to SharePoint Online in a supported and governed way. However, SharePoint Add-ins require a lot more infrastructure than necessary in many cases where a simple user interface customization is needed.
 
@@ -65,11 +71,11 @@ Provider-hosted add-ins are add-ins that are executed remotely from SharePoint (
 
 The primary advantage of add-ins is isolation: because the actual code isn't executed in the SharePoint site browser, cross-site scripting protections prevent the add-in from getting the same access as the user has. Add-ins are limited to the permissions that the add-in was granted at install time. This makes add-ins a safer option for scenarios where an admin acquires an add-in from a third party, and it also allows Microsoft to have a Store from where you can download add-ins.
 
-The SharePoint Framework works side by side with both SharePoint-hosted and provider-hosted add-ins, but can also be used as an alternative in scenarios where only client-side scripting is required. For example, add-ins can add app parts to the site where they are hosted. These app parts are similar to web parts, but instead of running in the context of the page, they run in their own domain (App Web or provider-hosted web) within an `<iframe>` on the page. This prevents the add-in from gaining the user context from the rest of the page.
+Before Add-in retirement in SharePoint Online, SPFx could run alongside SharePoint-hosted and provider-hosted Add-ins. Add-in app parts ran in their own domain inside an `<iframe>`, unlike web parts running directly in the SharePoint page context.
 
-The SharePoint Framework doesn't run in an Iframe. Thanks to this, it can more seamlessly run in the context of the page with the full power of the user viewing the part. This is the key to enabling it to run with rich functionality, but at the same time this means that it doesn't have the same level of security controls as add-ins. SharePoint Framework solutions are due to this also being referred to as *full trust client-side solutions*. Iframes suffer from the problem that they aren't responsive, which results in the rendered webpage not being as fluent on a mobile phone or alternate screen size.
+Standard SPFx web parts run in the SharePoint page context with the permissions of the current user. This enables rich integration but requires administrators to review the code and dependencies before approving deployment. Hosting differs for other SPFx component types: for example, Copilot UX components use an iframe host. Don't treat iframe hosting as equivalent to the retired domain-isolated web part feature.
 
-The SharePoint Framework solutions don't, at the time of writing, have a store where you can download and install solutions, because of the security aspect mentioned earlier. In many scenarios, using the user's context is a wanted scenario where SharePoint Framework could be used instead.
+SPFx solutions can be distributed through an organization's app catalog or, for eligible solutions, the SharePoint Store. Store availability doesn't remove the need for administrator review and applicable API consent. See [Publish solutions to the SharePoint Store](publish-to-marketplace-overview.md).
 
 ### Embedding JavaScript in HTML
 
@@ -107,20 +113,17 @@ Because of the need for specific and targeted tools provided via Visual Studio, 
 
 SharePoint Framework solutions are created by using a tool called [Yeoman](https://yeoman.io/) along with a specific SharePoint Framework generator, which is based on Node.js. Yeoman is a project scaffolding tool that will create your project and generate the required artifacts, install the needed Node.js packages, and configure the build system.
 
-After the project is generated, it can be edited in any editor on any operating system such as Visual Studio, Visual Studio Code, Sublime, or Atom. This allows for a wider usage preference and style, in and between teams. The Yeoman generator can be run multiple times on the same project to add additional artifacts, such as client-side web parts.
+After the project is generated, it can be edited with a code editor such as Visual Studio Code or WebStorm on a supported operating system. The Yeoman generator can be run multiple times on the same project to add components, such as client-side web parts.
 
 ### Developing and building solutions
 
 The build system is based on [Heft](https://rushstack.io/pages/heft/overview/) (starting with SPFx v1.22.0; earlier versions used Gulp as the legacy toolchain). Heft is a build system from the RushStack project that builds, packages, and optionally deploys the SharePoint Framework artifacts. Like Yeoman, Heft is also based on Node.js and allows developers to build and deploy on any operating system.
 
-One part of the build toolset for SharePoint Framework is the *Workbench*. The Workbench is a tool where the developer can host and test their SharePoint Framework solution. The Workbench is reactive and will automatically reload your artifacts when the developer saves a file so that developers can see and test the solution quickly.
+Test locally served web parts and extensions on actual development SharePoint pages using the [SharePoint Framework Debug Toolbar](debug-toolbar.md). Use a development tenant or isolated development site with appropriate access rather than assuming the local toolchain provides an offline SharePoint host. The local workbench was removed in SPFx 1.13.
 
-There are two versions of the Workbench. One version exists outside of SharePoint, hosted locally on the development machine that runs offline without SharePoint access and SharePoint data. This allows the team and designers to build and design solutions with mock or fake data to focus on the user interface.
+[!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
 
-The other version of the Workbench is hosted inside SharePoint and is used when you need to test and verify the SharePoint Framework solution by using real SharePoint data and context.
-
-> [!IMPORTANT]
-> The local Workbench requires a modern evergreen browser. Internet Explorer 11 is not supported and has been retired by Microsoft as of June 2022.
+Copilot UX components use the fully supported [Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench). Adaptive Card Extensions require their own [Viva Connections host guidance](viva/overview-viva-connections.md).
 
 ### Deploying SharePoint Framework solutions
 
@@ -172,9 +175,9 @@ Given that the above mentioned *Custom Script* control methods are in place, the
 
 ### User experience designers and front-end developers
 
-For web developers or user experience/interface designers, the SharePoint Framework will be valuable. The Workbench allows front-end developers to work with a SharePoint Framework solution on any operating system and by using their preferred editing tools without SharePoint, given that they use mock data, and focus on the user experience.
+Front-end developers and designers can use their preferred editing tools on a supported operating system. They can use mock data in UI development, but validating an SPFx component's integration requires its supported host. For SharePoint web parts, use a development tenant and actual pages with the [Debug Toolbar](debug-toolbar.md); current SPFx doesn't supply an offline local workbench.
 
-The SharePoint Framework is released in parallel with [Fluent UI](https://developer.microsoft.com/fluentui#/), which is the official front-end development framework for Microsoft 365, and allows user experience designers to create a seamless experience across Microsoft 365 and custom-built solutions.
+Use compatible [Fluent UI](https://developer.microsoft.com/fluentui#/) components to align custom interfaces with Microsoft 365. Fluent UI and SPFx have separate versions; check the [tools and libraries guidance](tools-and-libraries.md) before updating dependencies.
 
 ### System Integrators (SI)
 
@@ -202,7 +205,7 @@ Developers might want to standardize on one specific client-side framework for t
 
 There are advantages of allowing more than one framework since each client-side framework has its pros and cons and use cases. But allowing any client-side framework may cause fragmentation in your enterprise solutions, not to mention having multiple different frameworks might add to the page load time, since many frameworks require loading of more external libraries.
 
-Out-of-the-box, the SharePoint Framework Yeoman generator has templates for two client-side frameworks: React and Knockout. Over time, one can expect that the community adds more generators or subgenerators to use other client-side frameworks. Choosing React as your preferred client-side framework has an advantage because Microsoft has created a React version of Fluent UI, so you'll get the Microsoft 365 look and feel in your customization if that is something your organization prefers.
+The web part templates in the current Yeoman generator include **Minimal**, **No framework**, and **React**. Knockout is not a current generator template. SPFx 1.24 uses React 18.3.1; align framework and UI library dependencies with the [compatibility reference](compatibility.md) and [tools and libraries guidance](tools-and-libraries.md).
 
 The fourth thing is how and where you deploy your solution artifacts, that is, what CDN your generated script bundles and assets are stored in. Out-of-the-box, the build tasks included in the toolchain support Azure Blob storage and Azure CDN. This might be a good option if you can manage an Azure subscription and share your assets between multiple tenants. Another common scenario is to use SharePoint Online, and its CDN feature, as a host for the artifacts. Starting from the SharePoint Framework v1.4, static assets are by default packaged in the SharePoint Framework package. When this package is deployed in the app catalog, they're automatically hosted either from Microsoft 365 CDN (if enabled) or from an app catalog URL.
 
@@ -235,7 +238,7 @@ While the developers building the solution decide if the solution supports tenan
 > [!IMPORTANT]
 > Tenant-wide deployment is available only in SharePoint Online. In SharePoint hosted on-premises, SharePoint Framework solutions can be deployed only to specific sites.
 
-The SharePoint Framework doesn't have a store, which SharePoint Add-ins have. For this reason, any deployments always must be initiated by the tenant admin by adding and approving a solution package to the app catalog.
+SPFx solutions can be acquired through the SharePoint Store or deployed through an organization's app catalog. Apply your organization's app deployment and API permission policies to either distribution path.
 
 ### Backing up and restoring SharePoint Framework components
 
@@ -245,7 +248,7 @@ What you can't back up is the actual solution artifacts such as script bundles a
 
 ## SharePoint Framework roadmap
 
-The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means IT and developers can use SharePoint Framework in production in a supported manner. Beyond General Availability, we would expect the set of scenarios where we would see SharePoint Framework-based components built and used will expand beyond web part scenarios, and into areas like list and site customizations.
+The SharePoint Framework reached General Availability (GA) in February 2017 and now includes web parts, extensions, Adaptive Card Extensions, and Copilot UX components. Check each component's supported hosts and requirements before planning a deployment.
 
 For more information about the SharePoint Framework, see the dedicated [SharePoint Framework Roadmap](./roadmap.md).
 
@@ -257,10 +260,10 @@ Microsoft doesn't provide support for custom solutions built for SharePoint thro
 
 If your organization has a Premier Support agreement, then it should be the default channel for you to request support with any issues related to building SharePoint solutions. Microsoft escalation engineers will handle your requests according to their urgency.
 
-SharePoint Framework is designed to be backwards-compatible. Microsoft guarantees that solutions built using any of the generally available versions of the SharePoint Framework will keep working until an explicit deprecation notice for the specific version has been given in advance.
+SharePoint Framework is designed for backward compatibility, subject to published deprecation and retirement notices, supported dependencies, and host-specific requirements. Don't interpret compatibility as a guarantee that preview features, retired component types, or unsupported runtimes remain supported. Validate existing solutions when updating their dependencies or target hosts.
 
 ## Summary
 
-The SharePoint Framework is a great new addition to and evolution of the SharePoint customization toolbox that allows developers to extend SharePoint in a supported and controllable way. SharePoint Framework, based on open source and modern technologies, lets developers extend your SharePoint enterprise development story not only to the SharePoint team, but also to a more diverse set of developers. As an administrator, providing proper governance and support for SharePoint Framework within your tenancy can empower your developers to build more engaging solutions more quickly, resulting in better efficiency all around.
+The SharePoint Framework lets developers extend SharePoint using supported extension points and modern web technologies. Administrators should establish dependency review, deployment approval, API consent, and host testing practices for the solutions used in their organization.
 
 Since the SharePoint Framework is created for first- and third-party developers, and in growing use by Microsoft for future feature enhancements of SharePoint, it's also a safe bet for your organization. We can expect to see incremental updates and additions to the SharePoint Framework over time to close the feature gap between the classic SharePoint and the modern SharePoint experience.

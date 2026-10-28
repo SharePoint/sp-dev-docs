@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Cross-domain images in SharePoint provider-hosted add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Use images across domains in provider-hosted add-ins.
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_

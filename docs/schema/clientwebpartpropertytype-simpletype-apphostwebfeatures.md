@@ -11,6 +11,8 @@ ms.assetid: aed2ce76-7e2d-84df-e80b-496d5b4bd3d8
 
 # ClientWebPartPropertyType simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

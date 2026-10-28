@@ -11,6 +11,8 @@ ms.assetid: 9067ee8d-6eff-950a-3cf3-5aa1586c1d24
 
 # FlyoutAnchor element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

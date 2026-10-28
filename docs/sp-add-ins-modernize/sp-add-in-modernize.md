@@ -1,7 +1,7 @@
 ---
 title: Modernizing your SharePoint Add-In model implementations in Microsoft 365
-description: 
-ms.date: 09/25/2023
+description: Migrate retired SharePoint Online Add-in and Azure ACS implementations to supported authentication, SPFx, and automation options.
+ms.date: 10/25/2026
 ms.service: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,12 +12,12 @@ The SharePoint Add-In model was introduced as part of the SharePoint 2013 timefr
 
 [!INCLUDE [sp-Add-In-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
-While SharePoint Add-In model is currently still supported in SharePoint Online, the model and patterns are outdated and aren't recommended to be used.
+SharePoint Add-ins are legacy technology and no longer work in SharePoint Online. Use this collection to inventory and replace existing implementations, not to create new Add-ins. The replacement technologies remain supported according to their own platform requirements.
 
 > [!NOTE] 
-> This upcoming deprecation announcement will impact SharePoint Online. There are no changes on the Add-In model supportability within the SharePoint on-premises versions.
+> The April 2, 2026 retirement applies to SharePoint Online. It doesn't retire SharePoint Server Add-ins deployed through an on-premises app catalog or supported SharePoint APIs such as REST, CSOM, and JSOM.
 
-These upcoming changes are impacting SharePoint Add-In model and also authentication patterns using the classic [SharePoint Online hosted Microsoft Azure Access Control Service](https://learn.microsoft.com/sharepoint/dev/sp-Add-Ins/authorization-code-oauth-flow-for-sharepoint-Add-Ins) (ACS) authentication patterns, used with the provided hosted Add-Ins and potentially with other unattended services connecting to SharePoint Online.
+Azure ACS authentication for SharePoint Online also retired on April 2, 2026. Replace ACS-based authentication used by provider-hosted Add-ins or unattended services with supported Microsoft Entra ID authentication; choose permissions and credentials for the actual workload.
 
 [!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]
 
@@ -28,10 +28,10 @@ Here's a high level table of the feature mapping as the Add-In model implementat
 | Classic technology 	       | New technology
 |--------------------	       |----------------
 | SharePoint Add-In          | SharePoint Framework
-| Provider hosted Add-In     | Azure AD registered apps
-| App registration using ACS | Azure AD registered apps
-| JSOM                       | Graph JS SDK & PnPjs library
-| SharePoint Workflow        | Power Automate Flows
+| Provider hosted Add-In     | Microsoft Entra ID registered applications
+| App registration using ACS | Microsoft Entra ID registered applications
+| JSOM-based legacy implementation | Evaluate Microsoft Graph, supported SharePoint APIs, and PnPjs; JSOM itself isn't retired by Add-in retirement
+| SharePoint Online classic workflows | Power Automate flows or another supported automation service
 
 ## Transformation guidance for the Add-In techniques
 

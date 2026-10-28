@@ -10,7 +10,7 @@ search.appverid: met150
 
 # Microsoft SharePoint Connector in Power Automate
 
-In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
+This article explains common SharePoint connector triggers and actions in Power Automate. For the current operation list, deprecated operations, limits, and supported authentication, use the [SharePoint connector reference](/connectors/sharepointonline/). Historical labels and screenshots below aren't a current release-status or licensing reference.
 
 ## SharePoint triggers
 

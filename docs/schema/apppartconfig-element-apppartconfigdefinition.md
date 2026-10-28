@@ -11,6 +11,8 @@ ms.assetid: 95395db7-c2c2-a74a-3e56-7555adc768b7
 
 # AppPartConfig element (AppPartConfigDefinition)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 The top level node of an app part configuration file.

@@ -11,6 +11,8 @@ ms.assetid: f48e399b-a510-ec1e-b538-094c76323236
 
 # FeatureVersion simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

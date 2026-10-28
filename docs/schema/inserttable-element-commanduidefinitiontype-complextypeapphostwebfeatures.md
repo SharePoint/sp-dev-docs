@@ -11,6 +11,8 @@ ms.assetid: 49a6f617-a2d0-7e83-35cf-edc99d7ac10a
 
 # InsertTable element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

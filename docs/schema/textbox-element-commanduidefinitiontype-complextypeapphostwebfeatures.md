@@ -11,6 +11,8 @@ ms.assetid: 164eca19-d2e1-a5f7-6599-c6b622658eeb
 
 # TextBox element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

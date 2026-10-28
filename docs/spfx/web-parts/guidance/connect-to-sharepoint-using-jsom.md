@@ -7,6 +7,9 @@ ms.localizationpriority: high
 
 # Connect to SharePoint using the JavaScript Object Model (JSOM)
 
+> [!NOTE]
+> The React snippet below retains the legacy rendering API from before SPFx 1.24. For a React 18 project, preserve the generated web part root and disposal method while adapting the JSOM integration. See the [React 18 upgrade guide](../../react-18-upgrade.md). This doesn't change JSOM's requirement for a SharePoint context or upgrade a SharePoint Server project to SPFx 1.24.
+
 > [!IMPORTANT]
 > JSOM is considered a legacy option to operate the data in SharePoint Online. You should be looking into using the SharePoint REST API or Microsoft Graph APIs either directly or through the [Microsoft Graph SDKs](/graph/sdks/sdk-installation) or with the [PnPjs JavaScript Library](https://github.com/pnp/pnpjs).
 
@@ -353,7 +356,7 @@ Having loaded the titles of SharePoint lists in the current site, the final step
     heft start --nobrowser
     ```
 
-1. As you're using SharePoint JSOM to communicate with SharePoint, you have to test the web part by using the hosted version of the SharePoint Workbench (which is why the `--nobrowser` parameter is specified to prevent the automatic loading of the local Workbench).
+1. Because SharePoint JSOM requires a SharePoint context, test on a SharePoint page. Open your test page and load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). The `--nobrowser` parameter lets you open the test page yourself.
 
     ![SharePoint Framework client-side web part showing titles of SharePoint lists in the current site](../../../images/tutorial-spjsom-web-part-list-titles.png)
 

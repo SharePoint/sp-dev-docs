@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Upgrading Provider-hosted applications to Azure Active Directory applications
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint Add-in model you used to create so called Provider-hosted applications, which were applications built outside of SharePoint Online, hosted on a third party hosting platform like for example Microsoft Azure, and capable of communicating with SharePoint Online and consuming its data via CSOM or REST APIs.
 
 In the modern development world of SharePoint Online, you can register Azure Active Directory (Azure AD) applications and still consume SharePoint Online via CSOM, REST, or Microsoft Graph. In this article you can find detailed information about how to transform an already existing Provider-hosted application into a modern Azure AD application.

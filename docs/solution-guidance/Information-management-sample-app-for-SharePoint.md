@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Information management sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The Core.InformationManagement sample shows you how to use an ASP.NET provider-hosted add-in to get and set a site policy on a site. 
 
 Use this solution if you want to:

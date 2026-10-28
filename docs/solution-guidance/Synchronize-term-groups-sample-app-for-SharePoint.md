@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Synchronize term groups sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The Core.MMSSync sample shows you how to use a provider-hosted add-in to synchronize a source and target taxonomy. This add-in synchronizes two term stores in the managed metadata service&mdash;a source and a target term store. 
 
 The following objects are used to synchronize term groups:

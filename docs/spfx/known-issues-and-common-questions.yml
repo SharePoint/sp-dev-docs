@@ -2,7 +2,7 @@
 metadata:
   title: SharePoint Framework known issues and frequently asked questions
   description: Find answers to issues and FAQ about the SharePoint Framework.
-  ms.date: 10/22/2019
+  ms.date: 10/28/2026
   ms.localizationpriority: high
 
 title: SharePoint Framework known issues and frequently asked questions
@@ -10,11 +10,27 @@ summary: This page is for listing any known issues or to answer any frequently a
 
 
 sections:
-  - name: Known issues
+  - name: Current setup and support
     questions:
       - question: |
-          Dev certificate issue with Chrome (v58-)
+          Where should I start with SPFx 1.24?
         answer: |
+          Follow [environment setup](set-up-your-development-environment.md) using Node.js 24 LTS and the SPFx 1.24 toolchain. Check the [compatibility reference](compatibility.md) for older projects and SharePoint Server deployments.
+      - question: |
+          Should I use the SharePoint workbench to debug web parts?
+        answer: |
+          Debug web parts on actual SharePoint pages using the [developer toolbar](debug-toolbar.md). The local workbench was removed in SPFx 1.13; the SharePoint Online workbench is deprecated and scheduled for retirement on December 1, 2026. Copilot Workbench is a separate, fully supported experience for Copilot UX components.
+      - question: |
+          What are the Copilot UX component requirements and limitations?
+        answer: |
+          See [Copilot availability](copilot/overview-copilot-apps.md#availability) for the required user-specific Copilot add-on license and supported browser/desktop clients. iOS/Android aren't supported at GA. A combined Copilot/Teams solution requires the manual Teams package workaround for the automatic-sync limitation.
+  - name: Historical issues
+    questions:
+      - question: |
+          Historical certificate issue with Chrome 58 and early SPFx releases
+        answer: |
+          This is a historical 2017 issue, not the current setup procedure. For modern projects, follow [developer certificate setup](set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate) and page-based debugging with the [developer toolbar](debug-toolbar.md).
+
           - *Date - April 28, 2017*
           - *Updated - May 2, 2017*
           
@@ -37,11 +53,9 @@ sections:
           - [SharePoint Framework Extensions Tutorials](./extensions/get-started/build-a-hello-world-extension.md)
           
       - question: |
-          Will SharePoint Framework be available in on-premises?
+          Is SharePoint Framework available on premises?
         answer: |
-          - *Date - June 6, 2017*
-          
-          SharePoint Framework client-side web parts on classic pages were released to SharePoint 2016 as part of the Feature Pack 2 (FP2). There are no plans currently to provide SharePoint Framework capabilities to SharePoint 2013. There's no specific list of SharePoint Framework capabilities that will be included in the SharePoint 2019 release.
+          SharePoint Server 2016 Feature Pack 2 supports SPFx 1.1.0, and SharePoint Server 2019 supports SPFx through 1.4.1. Don't install the current SharePoint Online toolchain for a Server project. Follow the [Server development guidance](sharepoint-2019-and-subscription-edition-support.md) and [platform compatibility reference](compatibility.md), and verify the supported target for your Server edition.
           
 additionalContent: |
 

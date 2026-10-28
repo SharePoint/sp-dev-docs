@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # List instance in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions.
 
 In a SharePoint Add-in model scenario, the remote provisioning pattern is used to create list instances.

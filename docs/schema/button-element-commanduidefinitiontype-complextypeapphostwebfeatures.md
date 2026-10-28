@@ -11,6 +11,8 @@ ms.assetid: 36526b46-2384-3dfc-e5cf-68a5782f3fb0
 
 # Button element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

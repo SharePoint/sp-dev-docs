@@ -7,6 +7,10 @@ ms.localizationpriority: high
 
 # Call web services from SharePoint workflows
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 You can use the SharePoint Add-in model to create and deploy workflows that run on either the add-in web or the host web. These workflows can interact with the remotely hosted portions of provider-hosted add-ins. 
 
 The workflows can also call remote web services that contain important business data in one of two ways: 

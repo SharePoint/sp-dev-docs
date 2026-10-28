@@ -97,7 +97,7 @@ public onDisposeCell(event: IFieldCustomizerCellEventParameters): void {
 
 ## Debug your Field Customizer
 
-You can't use the local Workbench to test SharePoint Framework Extensions. You need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient.
+Test the Field Customizer on a live SharePoint Online list view, not in a workbench. Use the [SPFx developer toolbar](../../debug-modern-pages.md) with the field-specific debug configuration below. Loading local manifests doesn't require deploying the customization to the app catalog.
 
 1. To test your extension, you'll need to first create the field to test the customizer in. So move to the site in your SharePoint Online tenant where you want to test the field customizer.
 1. Navigate to the **Site Contents** page.
@@ -168,7 +168,7 @@ You can't use the local Workbench to test SharePoint Framework Extensions. You n
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
 
-    ![gulp serve](../../../images/ext-field-gulp-serve.png)
+    ![Historical Gulp-era screenshot of the development server; current projects use Heft](../../../images/ext-field-gulp-serve.png)
 
     This will start your default browser and load the page defined in **serve.json** file.
 
@@ -372,4 +372,3 @@ The process for publishing your app is identical among the different extension t
 
 - [Build your first ListView Command Set extension](building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)
-

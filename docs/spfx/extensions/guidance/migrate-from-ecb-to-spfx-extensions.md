@@ -72,7 +72,6 @@ To migrate the previous solution to the SharePoint Framework, see the following 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: spfx-ecb-extension
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** ListView Command Set
     - **What is your Command Set name?** CustomECB

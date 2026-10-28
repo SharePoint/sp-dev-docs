@@ -1,11 +1,15 @@
 ---
 title: Using Fluent UI in SharePoint Framework
 description: Information about using Fluent UI React and Fabric Core styles in SharePoint Framework, including CSS challenges and migration guidance.
-ms.date: 03/23/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Using Fluent UI in SharePoint Framework
+
+For SPFx 1.24, use the React version in the [compatibility reference](compatibility.md) and review third-party peer dependencies before upgrading. The React web-part and Copilot UX component templates can use different Fluent UI packages; use the package and styling approach appropriate to the host rather than assuming all templates have identical dependencies.
+
+Copilot UX components render in an iframe and bring their own styling. See [Theme and design for the Copilot canvas](copilot/theme-and-design.md) for Fluent UI v9, theme context, and accessible display-mode controls.
 
 > [!NOTE]
 > **Office UI Fabric has been renamed to Fluent UI.** Starting with SPFx v1.18, new projects use the `@fluentui/react` (v8) package. Older SPFx projects may still reference the legacy `office-ui-fabric-react` package. Both package names are supported. For more information, see [Fluent UI](https://developer.microsoft.com/fluentui).

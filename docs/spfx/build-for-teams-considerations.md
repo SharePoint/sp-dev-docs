@@ -1,7 +1,7 @@
 ---
 title: Considerations for building for Microsoft Teams using SharePoint Framework
 description: There are a number of things that you should take into account when building for Microsoft Teams using SharePoint Framework.
-ms.date: 03/06/2026
+ms.date: 10/28/2026
 ms.localizationpriority: medium
 ---
 
@@ -41,6 +41,8 @@ SharePoint Framework provides access to Teams JS SDK via `sdks.microsoftTeams` p
 ## Deployment
 
 SharePoint Online can automatically create the Microsoft Teams app manifest and app package for SharePoint Framework solutions deployed to the tenant's app catalog, or you can use a developer-provided Microsoft Teams app package. For more information, see [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md).
+
+At SPFx 1.24 GA, a solution combining Teams functionality and Copilot UX components has a mismatch in automatic Sync to Teams packaging. Use the developer-provided Teams package option for that combination. This doesn't prevent sharing UI code across separate host adapters. See [Copilot development and deployment](copilot/development-and-deployment.md).
 
 ## See also
 

@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Set custom permissions on a list by using the REST interface
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 SharePoint sites, lists, and list items are types of **SecurableObject**. By default, a securable object inherits the permissions of its parent. To set custom permissions for an object, you need to break its inheritance so that it stops inheriting permissions from its parent, and then define new permissions by adding or removing role assignments.
 
 > [!NOTE]

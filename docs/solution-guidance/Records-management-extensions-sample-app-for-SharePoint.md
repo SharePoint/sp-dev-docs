@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Records management extensions sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The ECM.RecordsManagement sample shows you how to use a provider-hosted add-in to control the in-place records management settings for a site or list.
 
 Use this solution if you want to configure in-place records management settings during your custom site provisioning process.

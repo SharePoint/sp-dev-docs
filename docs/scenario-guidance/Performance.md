@@ -25,7 +25,6 @@ SharePoint Online uses throttling to prevent users from over-consuming resources
 
 ### Articles
 
-- [Handle SharePoint Online throttling by using exponential back off](/sharepoint/dev/solution-guidance/handle-sharepoint-online-throttling-by-using-exponential-back-off)
 - [Avoid getting throttled or blocked in SharePoint Online](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
 
 ### Samples
@@ -43,9 +42,11 @@ _**Applies to:** Office 365 | SharePoint Server_
 - [Make batch requests with the REST APIs](/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
 - [SharePoint Framework (SPFx) enterprise guidance](/sharepoint/dev/spfx/enterprise-guidance)
 - [Use existing JavaScript libraries in SharePoint Framework client-side web parts](/sharepoint/dev/spfx/web-parts/guidance/use-existing-javascript-libraries)
-- [Use the Office 365 content delivery network (CDN)](/sharepoint/dev/general-development/office-365-cdn)
+- [Use the Microsoft 365 content delivery network (CDN)](/office365/enterprise/use-office-365-cdn-with-spo)
 
 ## SharePoint Add-ins
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
 _**Applies to:** Office 365 | SharePoint Server_
 

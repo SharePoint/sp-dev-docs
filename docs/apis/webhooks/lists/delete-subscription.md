@@ -10,6 +10,10 @@ Deletes a webhook subscription from a SharePoint list. After deleting the subscr
 
 ## Permissions
 
+The SharePoint Add-in permission table below is **legacy reference only**. Use supported Microsoft Entra authentication for SharePoint Online webhooks.
+
+[!INCLUDE [sp-add-in-deprecation](../../../../includes/snippets/sp-add-in-deprecation.md)]
+
 The application must have at least edit permissions to the SharePoint list where the subscription will be deleted.
 
 ### If your application is a Microsoft Azure Active Directory (Azure AD) application

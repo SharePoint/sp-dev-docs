@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 
 # Setting up a development environment for BCS in SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Learn about setting up a development environment for developing SharePoint solutions and SharePoint Add-ins using Business Connectivity Services (BCS).
 You can create SharePoint solutions and SharePoint Add-ins by using BCS on a client computer or on a server computer, depending on the type of solution you are building.
   

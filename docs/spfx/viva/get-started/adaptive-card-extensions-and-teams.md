@@ -25,7 +25,7 @@ When prompted, accept the default option for all prompts by the generator.
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes.
 
 > [!IMPORTANT]
-> There's a known issue where installation of all dependencies may fail when the generator executes the **npm install** command.
+> The following workaround applies only to older projects that still reference `@microsoft/sp-webpart-workbench`. It isn't a general fix for installation failures in current SPFx projects. For current SharePoint Online debugging, use [SharePoint pages with the SPFx developer toolbar](../../debug-modern-pages.md).
 >
 > To work around this error, locate and open the following file in the project: **./package.json**.
 >

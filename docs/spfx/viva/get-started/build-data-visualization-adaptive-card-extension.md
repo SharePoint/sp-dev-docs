@@ -33,11 +33,11 @@ When prompted, enter the following values (select the default option for all oth
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Next, run **heft start** from the command line in the root of the project. Select the **add** icon in the hosted workbench to open the toolbox, you see the **Data Visualization** card:
+Start the project's development server (**heft start** for SPFx 1.22 and later; use the Gulp toolchain for earlier projects). Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Edit the page and open the toolbox to find the **Data Visualization** card. The screenshots show the original sample's development UI:
 
-![See the Data Visualization card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/data-visualization/toolbox.png)
+![Historical toolbox screenshot showing the Data Visualization card](../../../../docs/images/viva-extensibility/data-visualization/toolbox.png)
 
-Select the **DataVisualization** component to add it to the workbench. The default rendering renders the line chart using mock data:
+Select **DataVisualization** to add it to the page. Save the page and leave edit mode. The default rendering displays the line chart using mock data:
 
 ![Default Data Visualization card](../../../../docs/images/viva-extensibility/data-visualization/ace-default.png)
 
@@ -341,7 +341,7 @@ export class CardView extends BaseComponentsCardView<
 }
 ```
 
-Notice how the `dataVisualizationKind` is set to `pie` and `PieChartCardView` is returned with the required parameters. Upon refreshing the card on the workbench, you see that a pie chart is rendered:
+Notice how `dataVisualizationKind` is set to `pie` and `PieChartCardView` is returned with the required parameters. Refresh the test page with local manifests enabled to see the pie chart:
 
 ![Pie chart example](../../../../docs/images/viva-extensibility/data-visualization/pie-chart.png)
 

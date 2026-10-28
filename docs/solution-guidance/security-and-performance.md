@@ -6,6 +6,10 @@ ms.localizationpriority: medium
 ---
 # Security and Performance
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The articles in this section show you how to improve the security and performance of your SharePoint sites. The following table lists the articles that are included.
 
 |Article|Shows you how to use the add-in model to|

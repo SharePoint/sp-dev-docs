@@ -11,6 +11,8 @@ ms.assetid: 0d6081a2-40a6-50d5-8e47-9ec1b6b1c8bc
 
 # CustomActionLocations simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -7,6 +7,10 @@ ms.localizationpriority: high
 ---
 # How-tos for SharePoint Development
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ![SharePoint](../images/mod_logo_sharepoint.png)
 
 Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, SharePoint Framework and SharePoint Add-ins.

@@ -11,6 +11,8 @@ ms.assetid: aea65d49-3b3f-2bf4-50e2-5967ffd753d2
 
 # Schema map (AppPartConfigDefinition)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 This topic shows the schema definition for **AppPartConfigDefinition**.

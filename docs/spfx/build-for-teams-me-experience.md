@@ -19,13 +19,13 @@ In the following sections, we present a few ways of how you could implement a Me
 
 ## Embed a modern SharePoint page
 
-Recently SharePoint Online introduced the ability to [embed modern SharePoint pages in Microsoft Teams](/sharepoint/dev/features/embed-pages-to-teams). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
+SharePoint Online supports [embedding modern SharePoint pages in Microsoft Teams](/sharepoint/dev/features/embed-pages-to-teams). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
 
 ![Modern SharePoint page with several SharePoint Framework web parts showing personalized information for the current user](../images/me-experience/me-experience-sharepoint-page.png)
 
 Once the page is ready, in Microsoft Teams, you would create a personal app pointing to the SharePoint page.
 
-![Building personal Teams app using App Studio](../images/me-experience/me-experience-app-studio.png)
+![Historical App Studio screenshot of personal app configuration; use Developer Portal for current app management](../images/me-experience/me-experience-app-studio.png)
 
 > [!CAUTION]
 > When embedding a modern SharePoint page in Teams, you shouldn't use the URL of the page as it won't work in the desktop Teams app. Instead, use a special [URL pointing to the `teamslogon.aspx` page](/sharepoint/dev/features/embed-pages-to-teams#embed-sharepoint-modern-sites--pages-into-microsoft-teams-with-app-studio).
@@ -52,7 +52,7 @@ It also doesn't matter if the web parts you put on the page are provided by Micr
 
 #### Package and distribute applications in your organization without code
 
-To offer the Me-experience built this way to your users, you would package it as a personal Teams app. Using [App Studio](/microsoftteams/platform/concepts/build-and-test/app-studio-overview), you can create the personal app and publish it to your organizational catalog for everyone else to use.
+To offer the Me-experience built this way to your users, package it as a personal Teams app. Use [Developer Portal for Teams](/microsoftteams/platform/concepts/build-and-test/teams-developer-portal) to manage the app manifest and package, then distribute it through your organization's approved app-publishing process.
 
 ### Considerations for embedding SharePoint pages as tabs
 
@@ -177,7 +177,7 @@ Building multi-tab personal Teams apps offers you more flexibility with regards 
 
 #### Requires custom development
 
-In comparison to building a dashboard using a modern SharePoint page and exposing it as a personal Teams app using App Studio, building a personal Teams app using SharePoint Framework requires custom development. The complexity of that effort will depend very much on your solution and what kind of information you choose to expose.
+In comparison to building a dashboard using a modern SharePoint page and exposing it as a personal Teams app, building a personal Teams app using SharePoint Framework requires custom development. The complexity depends on your solution and the information you choose to expose.
 
 #### Limited to custom web parts
 

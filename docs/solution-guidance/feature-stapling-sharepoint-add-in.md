@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Feature Stapling in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to run code and deploy artifacts when a SharePoint site is provisioned is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, out-of-the-box site definitions were modified with stapled features.  Features were used to package and deploy artifacts, configurations, and branding assets associated with a SharePoint site and features were stapled to the site definition.  Then the stapled features were automatically installed and activated upon site provisioning.
 
 In an SharePoint Add-in model scenario, you may staple features, staple Add-ins, or use the SharePoint Client Side Object Model (CSOM) to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them. This pattern is commonly referred to as the *remote provisioning pattern*.

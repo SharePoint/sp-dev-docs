@@ -11,6 +11,8 @@ ms.assetid: 2dc9b295-4355-d6e9-c734-4d636bef3a74
 
 # SupportedLanguagesDefinition simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

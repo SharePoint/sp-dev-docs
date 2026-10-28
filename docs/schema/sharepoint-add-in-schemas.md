@@ -11,6 +11,8 @@ ms.assetid: 68be63fc-cc31-4003-be2e-58303d74dda0
 
 # SharePoint Add-in schemas
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Document schemas that support SharePoint Add-ins, including the App Manifest schema.

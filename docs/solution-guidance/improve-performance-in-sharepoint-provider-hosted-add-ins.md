@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 ---
 # Improve performance in SharePoint provider-hosted add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 You can improve the performance of your SharePoint provider-hosted add-in by limiting the number and frequency of remote calls to SharePoint. Too many calls to the host site degrades performance. To limit the number of remote calls, you can implement either HTTP cookies or HTML5 local storage.
 
 The [Performance.Caching](https://github.com/SharePoint/PnP/tree/dev/Samples/Performance.Caching) sample shows you how to use HTTP cookies and HTML5 local storage to cache data. The sample includes two provider-hosted add-ins that allow you to view the **About Me** section of your user profile, add data, and save it for later. The add-in does not update user profile information; it caches it so that it can be used later. 

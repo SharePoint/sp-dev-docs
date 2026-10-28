@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Working with folders and files with REST
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!NOTE]
 > The examples on this page do not support the % and # characters. [Support % and # in files and folders with ResourcePath API](../solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md)
 

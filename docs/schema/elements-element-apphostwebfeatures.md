@@ -11,6 +11,8 @@ ms.assetid: 52d0b0de-1541-1790-70d2-76d37013af74
 
 # Elements element (AppHostWebFeatures)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 

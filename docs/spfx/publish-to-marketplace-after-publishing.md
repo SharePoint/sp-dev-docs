@@ -1,7 +1,7 @@
 ---
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
-ms.date: 10/21/2024
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -28,6 +28,16 @@ SharePoint Framework applications execute on behalf of the current user and can 
 As you update your application, you should notify your users when an updated version is available. The Marketplace does not offer any version checking mechanism and you should implement it your application so that notifications are meaningful and as unobtrusive as possible. In your code, you can, for example,  call a custom API that you own to compare the current version of the application with the latest version available.
 
 Tenant App Catalog administrators can update applications acquired from the Marketplace directly from the App Catalog, by selecting the application in the App Catalog and from the ribbon choosing the **Upgrade Store App** option. When the upgrade succeeds, the latest version will be automatically visible to users in all sites where the application has been installed.
+
+## Maintain Copilot UX component solutions
+
+Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. After a customer acquires the solution in the tenant App Catalog, the administrator must deploy it and sync the baseline agent before users can access the experience. Store acquisition doesn't grant a Copilot license or approve API permissions.
+
+Keep installation instructions current for the required Copilot add-on USL, supported browser/desktop clients, data configuration, and agent availability. The same license is required for development and testing. iOS/Android clients aren't supported at GA. Disclose any separately charged APIs/services; Copilot UX components themselves aren't consumption-based.
+
+When adding components or changing parameters, update the Store package and explain how customers obtain the new solution version. After redeployment, runtime discovery detects those tool changes without re-sync if the baseline agent is unchanged. Changes to the agent's image, title, instructions, or starter prompts require another sync.
+
+For combined Copilot/Teams solutions, describe the automatic-sync limitation and the manual-package deployment workaround, subject to the approved Store submission path. See [Develop and deploy Copilot UX components](copilot/development-and-deployment.md) for the update decision table.
 
 ## Applications listed in the SharePoint category
 

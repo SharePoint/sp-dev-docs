@@ -11,6 +11,8 @@ ms.assetid: d4f4221c-8ad3-e966-37c8-12b59b6181f3
 
 # CommandUIDefinitionType complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -322,11 +322,10 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
     heft start --nobrowser
     ```
 
-    Once the web server starts, open a browser and navigate to a SharePoint site's hosted workbench to test your project. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+    Once the web server starts, open a test SharePoint page, for example `https://contoso.sharepoint.com/sites/devsite/SitePages/Accordion.aspx`. Load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md), then edit the page.
 
-1. On the workbench, select the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
+1. On the page, select the **+** (plus sign) to show the list of web parts, and add the jQuery web part. Save the page and test the jQueryUI Accordion.
 
     ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 1. In the console where you have **heft start** running, select <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate the task.
-

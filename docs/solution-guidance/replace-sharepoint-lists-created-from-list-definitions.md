@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Replace SharePoint lists created from list definitions in farm solutions
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 If you used list definitions to create lists in your farm solution, learn how to transform them into new solutions that provide similar functionality by using the client object model (CSOM). 
 
 > [!IMPORTANT] 

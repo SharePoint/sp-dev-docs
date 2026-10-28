@@ -9,7 +9,7 @@ ms.localizationpriority: high
 The migration steps in moving from a Gulp-based toolchain SharePoint Framework (SPFx) project to a Heft-based toolchain are more involved than a typical SPFx project upgrade from one version to another version.
 
 > [!NOTE]
-> This article covers the manual steps to migrate an existing SharePoint Framework v1.21.1 project based on the legacy Gulp-based build toolchain to the Heft-based build toolchain introduced in SPFx v1.22.\*. You can also perform the same task using the CLI for Microsoft 365 that is covered in this article: [Migrate from the Gulp-based to the Heft-based Toolchain](migrate-gulptoolchain-hefttoolchain.md).
+> This article's package pins target SPFx 1.22.1 from an existing SPFx 1.21.1 project. Don't substitute 1.24 package versions into these commands without reviewing the complete dependency and configuration changes. For upgrade-report guidance, see [Migrate from the Gulp-based to the Heft-based Toolchain](migrate-gulptoolchain-hefttoolchain.md). React 18 is a separate [SPFx 1.24 migration](../react-18-upgrade.md); legacy render APIs mentioned in lint-rule comments below aren't a reason to change the 1.22 sample.
 
 In this article, you'll walk through in detail the manual steps required for removing the Gulp toolchain from a SPFx version v1.21.1 project and adding the Heft-based toolchain as part of the upgrade to an SPFx v1.22.\* project.
 

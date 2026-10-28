@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Read or update user profile properties sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The UserProfile.Manipulation.CSOM sample shows you how to read and update user profile properties for a particular user. This sample uses a provider-hosted add-in to:
 
 - Read and display all user profile properties for a user.

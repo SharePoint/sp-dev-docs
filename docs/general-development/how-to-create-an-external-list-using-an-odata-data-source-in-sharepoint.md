@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Create an external list using an OData data source in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn how to create an external list programmatically and bind it to an OData-based external content type in SharePoint.
 Although a power user or SharePoint administrator will likely create an external list using SharePoint Designer 2013, a developer will be interested in the ability to create external lists using the tools of their trade, Visual Studio 2012 and the Office Developer Tools for Visual Studio 2012. This gives them more flexibility to add functionality and to package a solution that includes Business Connectivity Services (BCS) features for later deployment into one or many host environments.
   

@@ -6,6 +6,10 @@ ms.localizationpriority: high
 ---
 # Developing using Tenant permissions with App-Only in SharePoint Online
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The developer experience has changed for SharePoint **Provider-hosted Add-ins** that require **Tenant permission in combination with app-only**. This article walks you through the new experience for developing and debugging these solutions.
 
 _**Applies to:** Provider Hosted Add-ins for SharePoint Online_

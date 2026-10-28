@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Read and write to the social feed by using the REST service in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Create a SharePoint-hosted app that uses the REST service to publish a post and get the personal feed for the current user.
 
 ## Prerequisites for creating a SharePoint-hosted SharePoint Add-in that publishes a post and gets the social feed by using the SharePoint REST service

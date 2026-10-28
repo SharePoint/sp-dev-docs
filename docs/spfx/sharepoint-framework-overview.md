@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft 365.
-ms.date: 12/10/2025
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -9,20 +9,18 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.
 
-[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
-
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
 
-You can build SharePoint Framework powered solutions by using [SharePoint Framework Yeoman Generator](set-up-your-development-environment.md), [Microsoft Agents Toolkit](/microsoftteams/platform/toolkit/agents-toolkit-fundamentals?pivots=visual-studio-code), or with the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/). Key advantage is the flexibility of automatic hosting with the option to use the exact same component across the different hosts without any code level changes. This is designed to maximize the value of your development investments, regardless of which primary host you are targeting.
+Start with the [SharePoint Framework development environment and generator](set-up-your-development-environment.md). Tooling extensions, such as the [SharePoint Framework Toolkit](https://pnp.github.io/vscode-viva/), can assist with supported scenarios; check their SPFx and component-type requirements. Share UI and business logic across hosts while using the appropriate component type, host adapter, manifest, and deployment configuration.
 
 Key capabilities of the SharePoint Framework for Microsoft 365 are the following:
 
 - **Content Driven Applications** – SharePoint Framework can be used to build content driven applications for surfacing information easily from Microsoft 365 with Microsoft Graph or to integrate with externally hosted content.
-- **Automatic Single Sign On** – SharePoint Framework components have automatic and seamless SSO included for all platforms they are hosted on. No specific consents needed from Microsoft 365 end users.
-- **Automatic hosting** – SharePoint Framework components can be securely and automatically hosted in SharePoint without additional maintenance or operational costs.
+- **Integrated authentication** – Use the framework-provided clients for supported signed-in-user API access. Authentication doesn't grant access to data: tenant consent, user permissions, API requirements, and host behavior still apply.
+- **Component hosting** – SharePoint can host packaged component assets. External APIs and backend services used by a solution have their own hosting, operations, licensing, and cost requirements.
 - **Industry standard tooling** – SharePoint Framework is using standard web stack tooling with node, npm, TypeScript and any JavaScript framework of your preference. You just need standard web skills to succeed without needing any proprietary tooling.
 
-Write once and surface exactly the same code across [multiple applications](./office/overview.md). Below picture shows example case with a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/) available from GitHub.
+Reuse shared code across [supported applications](./office/overview.md), and validate the solution in each host it targets. The following image illustrates a [reference solution](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/contoso-retail-demo/).
 
 ![Use SharePoint Framework solutions across multiple Microsoft 365 apps.](../images/overview/spfx-across-apps.png)
 
@@ -30,7 +28,11 @@ Use SPFx to extend [Microsoft Viva Connections](./viva/overview-viva-connections
 
 ![Use SharePoint Framework solutions to extend Viva Connections](../images/overview/viva-spfx-extensibility.png)
 
-Use SPFx to extend [Microsoft 365 Copilot](./copilot/overview-copilot-apps.md) by building SharePoint Copilot Apps. A Copilot App packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the same SharePoint app catalog you already use. SharePoint Copilot Apps are currently in preview.
+Use SPFx to extend Microsoft 365 Copilot by building [Copilot UX components](./copilot/overview-copilot-apps.md), generally available with SPFx 1.24 on October 28, 2026. A solution packages interactive UI components that render inside a Copilot conversation together with a declarative agent definition, and deploys through the SharePoint app catalog. See the [licensing and supported-client requirements](./copilot/overview-copilot-apps.md#availability), including the required Copilot add-on license and the iOS/Android exclusions at GA.
+
+Follow [Develop and deploy Copilot UX components](copilot/development-and-deployment.md) for initial agent sync and later runtime-discovered updates. Explore [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/) and [Copilot UX component samples](https://aka.ms/spfx/copilot/samples) for host-specific examples.
+
+Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. See [Publish SharePoint Framework applications to the marketplace](publish-to-marketplace-overview.md) for submission, licensing, and supported-client guidance.
 
 In addition to Microsoft 365, the SPFx is supported and can be used to customize SharePoint on-premises deployments going back to SharePoint Server 2016.
 
@@ -40,8 +42,8 @@ To learn more about where developers can use SPFx, see [Supported extensibility 
 
 The following are some of the key features included as part of the SPFx:
 
-- It runs in the context of the current user and connection in the browser. There are no iframes for the customization (JavaScript is embedded directly to the page).
-- The controls are rendered in the normal page DOM.
+- It runs in the context of the current user and connection in the browser. SharePoint page customizations run in the page, while Copilot UX components are hosted in an iframe in the Copilot canvas.
+- SharePoint page controls are rendered in the page DOM; Copilot UX components render in their host iframe.
 - The controls are responsive and accessible by nature.
 - It enables the developer to access the lifecycle in addition to **render**, **load**, **serialize** and **deserialize**, **configuration changes**, and more.
 - It's framework-agnostic. You can use any JavaScript web framework that you like including, but not limited to, React, Handlebars, Knockout, Angular, and Vue.js.
@@ -51,7 +53,7 @@ The following are some of the key features included as part of the SPFx:
 - SPFx web parts can be added to both classic and modern pages.
 - SPFx web parts solutions can be used to extend Microsoft Teams.
 - SPFx Adaptive Card Extensions (ACEs) can be used to extend Microsoft Viva Connections.
-- SPFx Copilot components can be used to extend Microsoft 365 Copilot (currently in preview).
+- SPFx Copilot UX components can be used to extend Microsoft 365 Copilot.
 
 The runtime model improves on the Script Editor web part. It includes a robust client API, an `HttpClient` object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
@@ -77,6 +79,6 @@ You can also post issues, questions, or feedback about the docs at the following
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
-- [Overview of SharePoint Copilot Apps](./copilot/overview-copilot-apps.md)
+- [Overview of Copilot UX components](./copilot/overview-copilot-apps.md)
 - [SharePoint development](/sharepoint/dev)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md)

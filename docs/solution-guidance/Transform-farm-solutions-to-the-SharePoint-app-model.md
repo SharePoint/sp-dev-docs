@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Transform farm solutions to the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 If you have extended your SharePoint environment by using farm solutions, and you want to migrate your extensions to the SharePoint Add-in model to make your transition to SharePoint Online easier, you need to transform your farm solutions to the SharePoint Add-in model. 
 
 Transforming your farm solutions to the SharePoint Add-in model involves analyzing your existing extensions, designing and developing your new SharePoint Add-in, and then testing and deploying your add-in in your production environment. 

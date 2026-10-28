@@ -1,18 +1,15 @@
 ---
-title: Display modes in SharePoint Copilot components
-description: Learn how the inline and fullscreen display modes work in SharePoint Copilot components and what your component must do to switch between them.
-ms.date: 07/09/2026
+title: Display modes in Copilot UX components
+description: Learn how the inline and fullscreen display modes work in Copilot UX components and what your component must do to switch between them.
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
-# Display modes in SharePoint Copilot components
-
-> [!IMPORTANT]
-> SharePoint Copilot Apps are currently in **preview** and are subject to change. Do not use them in production environments. The APIs described in this article may change before general availability.
+# Display modes in Copilot UX components
 
 A Copilot component can render in two layouts inside Microsoft 365 Copilot:
 
-- **`inline`** - a compact layout that sits within the Copilot conversation flow. This is the default.
+- **`inline`** - a compact layout that sits within the Copilot conversation flow. This is the fallback when no supported fullscreen startup preference is granted.
 - **`fullscreen`** - an expanded layout that takes over the full Copilot surface.
 
 This article explains how the current mode is delivered to your component and what you need to do to flip it.
@@ -42,6 +39,14 @@ A component only renders in the modes it advertises in its manifest through the 
 
 Never request a mode the host has not advertised in `this.hostContext.availableDisplayModes`.
 
+### Choose the initial mode
+
+Set `capabilities.defaultDisplayMode` in the component manifest to `inline` or `fullscreen`. The value must also appear in `availableDisplayModes`; otherwise it is ignored.
+
+For a supported fullscreen preference, SPFx requests fullscreen once for the logical invocation and uses the mode the host grants. Don't assume a requested mode was granted. After initialization, the host's mode updates are authoritative.
+
+When the user closes the fullscreen view, don't automatically request fullscreen again during rendering. Leave the conversation inline until the user explicitly chooses to reopen the component. The default is a startup preference, not a rule to enforce on every render.
+
 ## Flipping the mode
 
 The transition is asymmetric - each direction is owned by a different party:
@@ -54,7 +59,7 @@ The transition is asymmetric - each direction is owned by a different party:
 
 ### Inline to fullscreen (your job)
 
-Call `requestDisplayModeAsync('fullscreen')`. The method only accepts `'fullscreen'` - it is the single mode you can request:
+Call `requestDisplayModeAsync('fullscreen')` for the supported expansion workflow shown here. Treat the host's returned mode as authoritative:
 
 ```ts
 private _handleRequestFullscreen = async (): Promise<void> => {
@@ -71,14 +76,14 @@ Do not optimistically change any local state after calling it. The host may hono
 
 ### Fullscreen to inline (the host's job)
 
-There is no API to collapse. The user clicks the host's own collapse control, and your component simply re-renders with `displayMode` back to `'inline'`. Design your UI so that the way out of fullscreen is clearly the host's control, not a close button of your own.
+Let the user use the host's own collapse control. Your component re-renders with `displayMode` back to `'inline'`. Don't rely on an SDK type accepting a value as proof that every host supports that transition. Design the way out of fullscreen around the host's control.
 
 ## No native button or icon - you own the control
 
 > [!IMPORTANT]
 > The Copilot host does **not** provide a built-in "expand" button or icon inside your component. The developer is fully responsible for rendering whatever affordance triggers the switch to fullscreen and wiring it to `requestDisplayModeAsync('fullscreen')`.
 >
-> Design guidance and recommended visuals for this control will be provided by the time the feature reaches general availability.
+> Use a labeled, keyboard-accessible control and show it only when fullscreen is available. Follow [Theme and design for the Copilot canvas](theme-and-design.md).
 
 The sample renders its own expand button and only shows it when the component is not already in fullscreen:
 
@@ -101,4 +106,4 @@ if (expandButton) {
 1. **Read the mode from `this.hostContext.displayMode`** on every render. Do not cache it.
 2. **Only request `'fullscreen'`.** Collapsing is host-initiated.
 3. **Respect `availableDisplayModes`.** Do not offer a transition the host has not advertised.
-4. **Render your own trigger.** There is no native button - the developer controls it, with design guidance coming at GA.
+4. **Render your own trigger.** Use the [theme and design guidance](theme-and-design.md) for an accessible expand control.

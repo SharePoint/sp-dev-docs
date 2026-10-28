@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Search solutions for SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Search in SharePoint combines ease of configuration and deployment with the scalability and extensibility of the FAST Search Server on a single enterprise search platform.
 
 SharePoint includes common patterns in the search platform to help you customize search for different scenarios. For example:

@@ -1,12 +1,12 @@
 ---
 title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
-ms.date: 12/10/2025
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Team-based development on the SharePoint Framework
 
-SharePoint Framework is a new development model for building SharePoint customizations. Unlike other SharePoint development models available to date, the SharePoint Framework focuses on client-side development and is built on top of popular open-source tools such as Gulp and webpack. One large benefit of this change is that developers on any platform can build SharePoint customizations.
+SharePoint Framework is a client-side development model for building SharePoint and Microsoft 365 customizations. SPFx 1.22 and later use the Heft-based toolchain; earlier releases use Gulp. Match the tools, Node.js version, and dependencies to the release your team targets.
 
 SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
 
@@ -39,7 +39,7 @@ For more information, see [Set up your SharePoint Framework development environm
 
 #### npm
 
-npm is the equivalent of NuGet in .NET projects: it allows developers to acquire and install packages for use in SharePoint Framework projects. Npm is also used to install the SharePoint Framework toolchain. Typically developers will use the latest version of npm and install it globally on their machine. Npm itself is a Node.js package so if you're running multiple versions of Node.js side by side each will have its own version of npm installed.
+npm installs the project dependencies and toolchain packages. Use a compatible Node.js/npm combination consistently across the team and CI, and commit the project's lockfile. Use `npm ci` for reproducible restores and `npm install` for deliberate dependency updates. Don't replace the lockfile or upgrade npm globally merely because a newer version is available. Each Node.js version selected through a version manager can have its own npm and global tools.
 
 #### Heft
 
@@ -202,7 +202,7 @@ Using coding standards offers you clear advantages, but just having coding stand
 
 #### Linting
 
-Linting is the process of verifying that the code meets specific rules. By default SharePoint Framework projects are built using TypeScript. On each build TSLint - the linter for TypeScript, analyzes the project against the predefined set of rules and reports any inconsistencies. Developers can choose which rules they want to enable and if necessary can build their own rules that reflect their team's or organization's guidelines.
+Linting verifies that code meets the project's rules. Current SPFx projects use ESLint; older projects can use TSLint. Use the configuration and lint task supplied by the project's versioned toolchain, and review rule changes as part of an upgrade.
 
 Developers can use linting to verify not only the contents of TypeScript files. There are linters available for most popular languages such as CSS, JavaScript or Markdown, and if your team has specific guidelines for these languages it would be beneficial to implement them in a linter so that they can be validated automatically every time a developer builds the project.
 
@@ -210,7 +210,7 @@ Developers can use linting to verify not only the contents of TypeScript files. 
 
 Using automated tests developers can easily verify that after applying the latest changes to the project, all elements continue working as expected. As the project grows so does the importance of automated tests: with the code base expanding every change has bigger impact and risk of affecting some other pieces of code. Automated tests allow developers to verify that the solution works correctly and catch any possible issues early on.
 
-SharePoint Framework offers standard support for the [Karma](http://karma-runner.github.io/1.0/index.html) test runner and the [Mocha](http://mochajs.org) framework that developers can use to write tests. If necessary, developers can use additional building blocks provided with the SharePoint Framework such as [Jest](https://jestjs.io/) and [PhantomJS](http://phantomjs.org) to further extend the coverage of their tests. All tests in the SharePoint Framework projects can be run using the standard **gulp test** task.
+Use the test runner and scripts configured for the project's SPFx version. Current Heft-based projects integrate Jest; historical Gulp projects can have different test tasks and dependencies. Run the project-defined checks in CI and record failures rather than assuming every project uses the same `gulp test` command. Include host-level tests for UI behavior that unit tests don't cover.
 
 #### Code analysis
 
@@ -257,7 +257,7 @@ SharePoint Framework solutions are deployed using an **\*.sppkg** file installed
 One of the reasons for an update of a SharePoint Framework project might be a change to one of the underlying dependencies, for example a new release of Angular with bug fixes and performance improvements. If your team follows the recommended approach of using npm shrinkwrap for locking dependency versions, then you would use the **npm install {package}@{version} --save** command to update your dependency to the specific version and test your project to verify that it works as expected with the latest updates. Depending on how the changes to the underlying dependencies impact the project, the overall project update might vary from a patch to a full major release.
 
 > [!IMPORTANT]
-> Don't modify the version numbers of dependencies in the **package.json** file manually. If you're using a lock file such as npm shrinkwrap, your manual changes to the **package.json** file will be ignored and the version numbers recorded in the lock files will be used instead which will lead to hard to track errors in your project.
+> Keep the dependency manifest and lockfile synchronized. `npm install` reconciles deliberate dependency changes; `npm ci` requires a consistent lockfile and fails when it doesn't match the manifest. Review and commit both files. Don't delete the lockfile as a routine upgrade step.
 
 #### Mind project structure changes
 
@@ -267,15 +267,15 @@ Updating your project to a newer version of the SharePoint Framework, might requ
 
 One of the ways to find out which dependencies in your project need updating, is to run the **npm outdated** command. This command will scan your dependency tree and will show you which packages could be updated. While using this command is convenient, it has to be done with caution.
 
-Starting with SPFx v1.3, the SharePoint Framework Yeoman generator allows you to choose whether you want to scaffold a project that should work only in SharePoint Online or in both SharePoint 2016 Feature Pack 2 and up and SharePoint Online. SharePoint hosted on-premises uses an older version of the SharePoint Framework than the latest version available in SharePoint Online. If you would run the **npm outdated** command on a project compatible with SharePoint on-premises, it would suggest updating all core SharePoint Framework packages to the latest versions published to npm. Unfortunately, by updating these packages to their latest versions, your project wouldn't work with SharePoint on-premises anymore. Before updating the versions of the SharePoint Framework packages, you should always verify if your project is meant to work with SharePoint hosted on-premises and if so, what version of the SharePoint Framework you have to support.
+Historical generators, beginning with SPFx 1.3, offered SharePoint Online/Server target prompts. The current generator doesn't scaffold those older targets. Select the generator, Node.js runtime and package versions supported by your target platform using the [compatibility reference](compatibility.md). `npm outdated` reports available packages, not platform support: don't upgrade a SharePoint Server project to the latest SharePoint Online dependencies merely because they appear in that output.
 
 ### Build and package project in release mode
 
-Once you verified that the solution is working as expected, build the project in release mode using the **heft bundle --production** command. Then create a new package using the **heft package-solution --production** command. Without running the **heft bundle --production** command first, the package will include previous version of your project.
+Use the production build and packaging scripts defined by the project's toolchain, not a command copied from a different SPFx release. Current generated Heft-based projects provide `npm run build`; inspect the script and run all configured checks before deployment. Build from the intended source revision and verify that the resulting package contains the current assets. See [the Heft toolchain reference](toolchain/sharepoint-framework-toolchain-rushstack-heft.md).
 
 ### Deploy new version of your solution
 
-After building and packaging the project the next step is to deploy it. First deploy the updated web part bundles located in the **./temp/deploy** folder in your project. Publish the files next to web part bundles of the previous version of your solution.
+After building and packaging, deploy according to the solution's asset-hosting configuration. Solutions with client-side assets included in the package don't require a separate manual bundle upload. If the solution uses an external CDN, publish the generated assets before deploying the updated package, and preserve assets that existing component instances still use.
 
 > [!NOTE]
 > You shouldn't remove the previous versions of your solution as long as there are active instances of web parts using them. Each version of the bundle files has a unique name and removing previous versions before updating web parts will break these web parts.

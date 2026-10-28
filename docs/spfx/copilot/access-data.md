@@ -1,14 +1,11 @@
 ---
 title: Access data from a Copilot UX component
 description: Learn how to call SharePoint REST APIs and Microsoft Graph from a Copilot UX component.
-ms.date: 10/01/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Access data from a Copilot UX component
-
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. APIs, schemas, and tooling described in this article may change before general availability.
 
 A Copilot UX component gets the same SharePoint Framework (SPFx) clients as a web part through `this.context`. SPFx gets the access tokens for these clients, so the component doesn't need any authentication code.
 
@@ -17,7 +14,9 @@ A Copilot UX component gets the same SharePoint Framework (SPFx) clients as a we
 | `this.context.spHttpClient` | SharePoint REST API |
 | `this.context.msGraphClientFactory` | Microsoft Graph |
 
-This article uses code from the [Access data companion sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-connect-to-sharepoint-data).
+This article uses code from the [Access data companion sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-access-data). Check the sample's declared package versions before using it as a GA baseline.
+
+Automatic hosting and sign-in don't grant permission to business data. API consent, the signed-in user's access, and server-side authorization still apply. Backend services can have costs separate from the Copilot UX component capability.
 
 ## Choose where to load data
 
@@ -347,7 +346,7 @@ private _handleContentResize = (width: number, height: number): void => {
 
 In the Workbench, Microsoft Graph calls succeed only for permissions that are already approved in the tenant. A permission the solution requests for the first time is approved after the package is deployed.
 
-To package and deploy the solution, follow the steps in [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md#package-the-solution). After the agent is deployed, search for it by name in the Agent Store, add it, and then ask it for data. Copilot calls the tool that matches the request and renders the component in the conversation.
+To package and deploy the solution, follow the steps in [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md#package-the-solution). After the agent is deployed, search for it by name in the Agent Store, add it, and then ask it for data. Copilot calls the tool that matches the request and renders the component in the conversation.
 
 > [!div class="mx-imgBorder"]
 > ![The SharePointLists component showing the lists on the root site in Microsoft 365 Copilot](../../images/copilot/access-data-copilot-sharepoint-lists.png)
@@ -357,8 +356,15 @@ To package and deploy the solution, follow the steps in [Build your first ShareP
 
 ## Next steps
 
-- [Display modes in SharePoint Copilot components](displayMode.md)
-- [Access data companion sample](https://github.com/pnp/spfx-copilot-apps/samples/tutorial-connect-to-sharepoint-data)
+### Supply context and confirm consequential actions
+
+Use `createCopilotTextContent` to describe the data currently visible in the component, such as the selected list, displayed rows, and current filter. The GA limit for text context supplied using this helper is **10 KB**; larger text context blocks sending the message. See [Provide Copilot with context from your component](provide-context-to-copilot.md) for model-context updates versus user-triggered follow-ups.
+
+For actions that change business data, let the user review the target and values before confirming. Enforce authorization and validation in the backend, prevent duplicate submissions, and report the actual operation result. Copilot's tool selection and contextual text don't supply those safeguards automatically.
+
+- [Display modes in Copilot UX components](displayMode.md)
+- [Develop and deploy Copilot UX components](development-and-deployment.md)
+- [Access data companion sample](https://github.com/pnp/spfx-copilot-components/tree/main/samples/tutorial-access-data)
 
 ## See also
 
@@ -366,3 +372,4 @@ The `this.context.aadHttpClientFactory` and `this.context.httpClient` clients ar
 
 - [Connect to SharePoint APIs](../connect-to-sharepoint.md)
 - [Use the MSGraphClientV3 to connect to Microsoft Graph](../use-msgraph.md)
+- [Use AadHttpClient for external APIs](../use-aadhttpclient.md)

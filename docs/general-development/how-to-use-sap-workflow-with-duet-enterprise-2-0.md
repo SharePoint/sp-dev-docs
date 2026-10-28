@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Use SAP workflow with Duet Enterprise 2.0
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Introduction
 <a name="bkmk_Introduction"> </a>
 

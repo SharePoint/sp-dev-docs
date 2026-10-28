@@ -1,16 +1,15 @@
 ---
 title: Troubleshoot Copilot UX components
 description: Find and fix common problems when you build, deploy, and update a Copilot UX component and its agent in Microsoft 365 Copilot.
-ms.date: 10/04/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Troubleshoot Copilot UX components
 
-> [!IMPORTANT]
-> Copilot UX components are currently in **preview** and are subject to change. Do not use them in production environments. Some of the behavior described in this article is preview behavior that might change before general availability.
-
 A Copilot UX component runs in several places: your code in the Copilot Workbench, the solution in the SharePoint app catalog, the agent in the tenant agent catalog, and the tool call in Microsoft 365 Copilot. A problem in any one of them can look the same to the user: the agent answers in text, or the component doesn't render. This article helps you find which part failed and fix it.
+
+Before troubleshooting, check the [license and supported-client requirements](overview-copilot-apps.md#availability). At GA, iOS and Android aren't supported. A solution combining Copilot UX components and SPFx Teams functionality also has an automatic-sync limitation; use the [manual Teams package workaround](overview-copilot-apps.md#ga-limitations).
 
 | Symptom | Go to |
 | --- | --- |
@@ -23,6 +22,8 @@ A Copilot UX component runs in several places: your code in the Copilot Workbenc
 | The component shows a loading skeleton that never ends | [The component never renders](#the-component-never-renders) |
 | Approving a Microsoft Graph permission fails | [A Microsoft Graph permission can't be approved](#a-microsoft-graph-permission-cant-be-approved) |
 | The component works for some URLs or users and fails for others | [The component fails on unexpected data](#the-component-fails-on-unexpected-data) |
+| Context cannot be sent to Copilot | [Context is too large or the host rejects the message](#context-is-too-large-or-the-host-rejects-the-message) |
+| Agent schema validation fails during build | [The agent fails build-time validation](#the-agent-fails-build-time-validation) |
 
 ## Find where the problem is
 
@@ -35,7 +36,7 @@ The Copilot Workbench runs your component code with the properties you enter. It
 - If the component fails in the Workbench, the problem is in your code. Fix it there first.
 - If the component works in the Workbench but fails in Copilot, the problem is in the agent, the tool definition, or the deployment. Your component code is probably fine.
 
-For more information about the Workbench, see [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md#test-in-the-copilot-workbench).
+For more information about the Workbench, see [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md#test-in-the-copilot-workbench).
 
 ### Turn on developer mode in Copilot
 
@@ -54,7 +55,7 @@ The debug info has the information you need for most sections in this article:
 | **Actions** | The tools that Copilot matched for the prompt, their version, and whether Copilot selected them. |
 | **Executed actions** | The tool that Copilot called, the version of the tool definition it used, the tool arguments, the MCP server URL, and the response. |
 
-When the three versions differ, Copilot isn't using your latest deployment everywhere. For more information, see [Copilot uses the old tool definition after an update](#copilot-uses-the-old-tool-definition-after-an-update).
+App and tool versions identify different artifacts and aren't required to be numerically identical. Inspect the actual tool arguments and deployed configuration when diagnosing stale definitions. See [Copilot uses the old tool definition after an update](#copilot-uses-the-old-tool-definition-after-an-update).
 
 ## The agent doesn't appear in Copilot
 
@@ -63,13 +64,13 @@ After **Add to Teams**, the agent might not appear in Copilot for some time, eve
 1. Confirm that the app is deployed:
     - In the Teams admin center, under **Manage apps**, the app shows **App status: Unblocked**.
     - In the Microsoft 365 admin center, under **Agents**, the agent shows **Status: Available**.
-1. Sign out of Microsoft 365, close all browser windows, and sign in again. Reloading the page isn't enough.
+1. Allow for deployment propagation and test in a new conversation. Verify that you're signed in with the intended licensed account and tenant.
 1. If the agent still doesn't appear, install it for users from the Teams admin center.
 1. Search for the agent by its name. It might not appear in the agent list before it appears in search.
 
 ### Remove old copies of the agent
 
-Each time you deploy with a new Teams app ID, you get a new agent, and the old one stays. Several agents with the same name make it hard to know which one you're testing. In the Teams admin center, under **Manage apps**, search for the agent name and delete the copies you don't need. Use developer mode to confirm which agent you're talking to: the agent ID is in **Agent debug info**.
+Deploying with a new Teams app ID can create a separate agent. Use **Agent debug info** to identify the agent you're testing. Work with the tenant administrator to retire obsolete copies only after checking ownership and user impact. Don't delete agents or change identities as a routine update step.
 
 ## Add to Teams fails
 
@@ -79,23 +80,19 @@ When **Add to Teams** fails, the app catalog shows only "Couldn't add app to Tea
 1. Select **Add to Teams** again.
 1. Select the failed `SyncSolutionToTeams` request and read the response.
 
-The most common error is a 400 response that contains "The remote server returned an error: (409) Conflict." Teams rejects the app because an app with the same ID and version already exists.
+One possible response is a 400 error containing "The remote server returned an error: (409) Conflict." Check whether the app ID and version duplicate a deployed package. Also check the [combined Copilot/Teams automatic-sync limitation](overview-copilot-apps.md#ga-limitations).
 
 ### Change the Teams app version
 
-Teams accepts an update only when the `version` of the Teams app is higher than the deployed version. The build sets this version for you:
+First decide whether another sync is required. For a component-only or tool-parameter update, redeploy the SPFx solution and test runtime discovery in a new conversation. **Don't re-sync an unchanged baseline merely to update a component.**
 
-- The build compares the agent files in **./copilot** with the last build. When they changed, it increases the fourth part of the version, for example from `1.0.0` to `1.0.0.1`.
-- When the agent files didn't change, the build reuses the last version.
-- The build saves its state in **./teams/.copilot-agent-hotfix.json** and writes the version it used to the build output, for example `Teams manifest.json version: 1.0.0.1 (content changed — bumped '1.0.0' → '1.0.0.1')`.
+For a baseline-agent update, inspect the built Teams app manifest and compare its numeric `version` with the deployed app. The build automatically updates the app version for relevant changes, but a clean build or a different build machine can have different local build state. If the built package would reuse a deployed app version, update the source app version in **./copilot/manifest.json**, rebuild and package, then upload and sync the changed baseline.
 
-If you change only your component code and the solution version in **./config/package-solution.json**, the agent files are the same and the build reuses the Teams version. **Add to Teams** then fails with the 409 conflict. To fix it, increase `version` in **./copilot/manifest.json**, rebuild, package, upload the package again, and select **Add to Teams**.
-
-The build stores the version in **./teams/.copilot-agent-hotfix.json**. If you delete the **teams** folder, or you build on another computer, the build starts again from the version in **./copilot/manifest.json** and can create a version that Teams already has. Increase `version` in **./copilot/manifest.json** after a clean build.
+Don't use the declarative-agent schema version (such as `v1.8`) as an app version counter. See [Keep version fields separate](development-and-deployment.md#keep-version-fields-separate).
 
 ### Change the Teams app ID
 
-If you deleted the app in the Teams admin center, **Add to Teams** for the same Teams app ID can still fail with the 409 conflict. Give the app a new ID: replace `id` in **./copilot/manifest.json** with a new GUID, rebuild, package, and deploy again. This creates a new agent, so remove the old copies. For more information, see [Remove old copies of the agent](#remove-old-copies-of-the-agent).
+Changing the app ID creates a different identity and can leave users with duplicate agents or an old solution binding. Keep the existing identity for normal updates. If an app was deleted and a conflict persists, collect the sync response, app ID, package version, and tenant details for administrator/support investigation before planning an identity migration.
 
 ## Copilot can't call the tool
 
@@ -118,11 +115,13 @@ To fix it:
 1. If they're different, select the solution in the app catalog and select **Add to Teams** again.
 1. If the sync fails, see [Add to Teams fails](#add-to-teams-fails).
 
-Don't change the solution ID of a deployed solution unless you also change the Teams app ID and remove the old agent.
+Keep both identities stable for ordinary updates. If an identity change is intentional, plan it as a migration and verify old-agent retirement separately.
 
 ## Copilot uses the old tool definition after an update
 
 When you change the tool parameters, for example rename or add a property in the properties schema, Copilot can keep calling the tool with the old parameters after you deploy the update. Your new component code then gets properties it doesn't expect.
+
+Dynamic tool discovery caches tool definitions for a few minutes after an updated `.sppkg` is deployed. New functions can take a few minutes to become available for the same reason. UX changes are available immediately after deployment because the component code is served directly from the SharePoint App Catalog site collection, independently of the discovery cache.
 
 Open **Agent debug info** and compare the versions:
 
@@ -133,7 +132,8 @@ If the **Executed actions** version is older, Copilot built the call from the ol
 
 To work with this:
 
-- Wait, and test again in a new conversation.
+- Confirm the updated `.sppkg` is deployed. Tool parameters and the number of component functions are discovered dynamically; no re-sync is needed unless the baseline agent also changed.
+- Allow a few minutes for the discovery cache to refresh, then test again in a new conversation. Starting a new conversation doesn't bypass the cache; don't re-sync an unchanged baseline to refresh it.
 - Validate the properties in your component and show a clear message when a required property is missing, for example "No site URL was given." Then you can see the problem right away instead of a component that fails without a reason.
 - Test parameter changes in the Copilot Workbench, where the component gets the properties you enter.
 
@@ -158,16 +158,17 @@ Copilot calls the tool, **Executed actions** shows **200 OK**, but the component
 Error: Host did not send tool-input within 30000ms
 ```
 
-The console can also show an error from the SharePoint service worker (`spserviceworker.js`) with "Failed to fetch" for a request to `/_layouts/15/PortableComponent.aspx`. The SharePoint service worker breaks the load of the page that hosts your component, so the component never gets its properties from Copilot. Your component code doesn't run.
+A failed request to `/_layouts/15/PortableComponent.aspx`, including one reported through a service worker, is diagnostic evidence rather than proof of a single cause. Inspect the network response, client console, sign-in state, and access to the deployed assets. Compare a supported browser and desktop client and collect the failing request details for support. Don't unregister service workers as a universal GA repair procedure.
 
-To fix it:
+## The agent fails build-time validation
 
-1. Open the browser developer tools on the Copilot page.
-1. Select **Application** > **Service workers**.
-1. For your SharePoint domain, for example `https://contoso.sharepoint.com`, select **Unregister**.
-1. Reload Copilot and send the prompt again.
+Check the reported schema path and required fields in the source agent definition. Verify referenced instruction/action files exist and that the schema URL and declared version agree. Fix source configuration and rebuild; don't repair only the generated temporary package. See [Configure Copilot UX components and agents](component-and-agent-configuration.md).
 
-The same component can render in Copilot in Microsoft Teams without this fix. A private browser window doesn't prevent the problem.
+## Context is too large or the host rejects the message
+
+At GA, text context supplied using `createCopilotTextContent` is limited to **10 KB**. Larger text context blocks sending the message to Copilot. The helper creates a block; it doesn't send by itself. Reduce the view/selection or create a deliberate shorter summary, then retry.
+
+Handle rejected promises and check `isError` on follow-up responses. Don't display success after discarding context. See [Provide Copilot with context from your component](provide-context-to-copilot.md).
 
 ## A Microsoft Graph permission can't be approved
 
@@ -223,8 +224,10 @@ For an example of these checks, see [Connect your Copilot UX component to ShareP
 
 ## See also
 
-- [Overview of SharePoint Copilot Apps](overview-copilot-apps.md)
-- [Build your first SharePoint Copilot App](get-started/build-your-first-copilot-app.md)
+- [Overview of Copilot UX components](overview-copilot-apps.md)
+- [Build your first Copilot UX component](get-started/build-your-first-copilot-app.md)
 - [Connect your Copilot UX component to SharePoint data](get-started/connect-to-sharepoint-data.md)
 - [Access data from a Copilot UX component](access-data.md)
-- [Display modes in SharePoint Copilot components](displayMode.md)
+- [Display modes in Copilot UX components](displayMode.md)
+- [Develop and deploy Copilot UX components](development-and-deployment.md)
+- [Provide context to Copilot](provide-context-to-copilot.md)

@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Transform sandbox solutions to the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Transforming your sandbox solutions to the SharePoint Add-in model involves analyzing your existing extensions, designing and developing your new SharePoint Add-ins, and then testing and deploying your add-in in your production environment. 
 
 > [!NOTE] 

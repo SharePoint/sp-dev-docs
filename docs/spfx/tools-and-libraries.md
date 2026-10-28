@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries
 description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
-ms.date: 11/18/2025
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries
@@ -21,14 +21,14 @@ To get started with TypeScript, see the following resources:
 
 ## Web frameworks
 
-You can choose any one of a number of web frameworks frameworks to develop client-side web parts. The following are some of the most popular:
+You can choose among different web frameworks to develop client-side web parts:
 
 - [React](https://react.dev)
-- [Angular](https://angular.io)
+- [Angular](https://angular.dev)
 - [Vue.js](https://vuejs.org)
-- [Handlebars](http://handlebarsjs.com)
+- [Handlebars](https://handlebarsjs.com)
 
-Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts.
+Because client-side web parts are components that are placed on a SharePoint page, choose a framework that supports component-based development and check its dependencies against your SPFx version.
 
 > [!IMPORTANT]
 > While the SPFx is unopinionated in the web framework you use, Microsoft recommends using React in SPFx solutions. In addition, most tools and packages from both Microsoft and the community use React, such as:
@@ -36,6 +36,8 @@ Because client-side web parts are components that are dropped into a SharePoint 
 > - [Fluent UI React](https://developer.microsoft.com/fluentui#/get-started/web)
 > - [PnP React Reusable Controls](https://pnp.github.io/sp-dev-fx-controls-react/)
 > - [PnP React Reusable Property Pane Controls](https://pnp.github.io/sp-dev-fx-property-controls/)
+
+SPFx 1.24 uses **React 18.3.1** and scaffolds projects with **TypeScript 5.8**. Use the [compatibility reference](compatibility.md) for the supported versions for each SPFx release rather than independently upgrading framework dependencies.
 
 ## Node Package Manager (npm)
 
@@ -45,7 +47,9 @@ For more information about npm, see the [npm documentation](https://docs.npmjs.c
 
 ## Node.js
 
-Node.js is an open source, cross-platform runtime environment for hosting and serving JavaScript code. You can use Node.js to develop server-side web applications written in JavaScript. The Node.js ecosystem is tightly coupled with npm and task runners such as gulp to provide an efficient environment for building JavaScript-based applications. Node.js is similar to IIS Express or IIS, but includes tools to simplify client-side development.
+Node.js is an open-source, cross-platform JavaScript runtime. SPFx uses Node.js to run development tools, including npm and Heft, on the developer workstation and build agent; the deployed client-side components run in the user's browser.
+
+For new SPFx 1.24 projects, use **Node.js 24 LTS**. Node.js 22 (22.14.0 or later in 22.x) and Node.js 26 are also supported. For earlier releases, follow their own [compatibility requirements](compatibility.md). See [Set up your development environment](set-up-your-development-environment.md).
 
 For more information about Node.js, see the following:
 
@@ -68,7 +72,7 @@ The development tool chain uses [webpack](https://webpack.js.org/) for bundling.
 For more information about webpack, see the following:
 
 - [Webpack documentation](https://webpack.js.org/)
-- [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+- [TypeScript JSX support](https://www.typescriptlang.org/docs/handbook/jsx.html)
 
 ## Create new project with Yeoman
 
@@ -84,7 +88,6 @@ For more information about Yeoman, see the following:
 The SPFx is client-side driven and thus you can use your choice of HTML/JavaScript code editors, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The SPFx documentation uses Visual Studio Code in the docs and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.

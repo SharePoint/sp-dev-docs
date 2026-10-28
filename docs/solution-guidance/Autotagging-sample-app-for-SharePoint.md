@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Auto-tagging sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The ECM.AutoTagging sample shows you how to use a provider-hosted add-in to automatically tag content added to a SharePoint library with data sourced from a custom user profile property. 
 
 This add-in uses remote event receivers, hosted on an Azure website, to:   

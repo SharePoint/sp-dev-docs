@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Custom actions in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 The approach you take to modify list item menus and the ribbon in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list item menus and ribbon modifications were defined in XML (custom actions), packaged in features, and deployed via SharePoint Solutions.

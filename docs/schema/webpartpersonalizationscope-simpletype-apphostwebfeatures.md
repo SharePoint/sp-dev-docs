@@ -11,6 +11,8 @@ ms.assetid: 6559a32e-1b3c-89d0-48ee-46208f7c0495
 
 # WebPartPersonalizationScope simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

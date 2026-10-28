@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 ---
 # Create custom SharePoint workflow forms with Visual Studio 2012
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Presents workflow forms in SharePoint. This article uses SharePoint with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint on-premises deployments as well as Office 365.
 
 **Provided by:** [Andrew Connell](https://www.andrewconnell.com)

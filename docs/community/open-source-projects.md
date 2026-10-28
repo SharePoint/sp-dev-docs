@@ -1,38 +1,59 @@
 ---
-title:  SharePoint Developer Community open source projects
-description: Open-source projects coordinated by the SharePoint PnP initiative
-ms.date: 06/07/2022
+title: SharePoint community open-source projects
+description: Find current PnP libraries and tools for SharePoint development, and identify archived projects and their successors.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# SharePoint Developer Community - Open-source projects
+# SharePoint community open-source projects
 
-There are numerous open-source projects that are coordinated by the SharePoint PnP initiative. These are open-source, community-driven initiatives that are still closely involved with SharePoint engineering, but are not part of the standard product or service offerings.
+The [Microsoft 365 & Power Platform Community](https://pnp.github.io/) includes open-source libraries, tools, controls, and samples for SharePoint development. This article highlights current projects and distinguishes them from archived or historical resources. See the [repository catalog](repositories.md) for source repositories and sample collections.
 
-| Repository | Description |
-|--------|--------|
-| [SharePoint Starter kit](https://github.com/SharePoint/sp-starter-kit) | A starter kit for showing how to extend modern experiences in SharePoint Online by extending them with modern extensibility options. |
-| [SharePoint Provisioning Service templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Tenant templates previously used by the Look Book Services to easily provision sample content and structures demonstrating what's possible with modern SharePoint experiences. |
-| [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/) | A cross-platform command-line interface (CLI) that allows users on any platform to manage their Microsoft 365 and SharePoint Framework projects. |
-| [Office 365 Developer PnP Core Component](https://github.com/SharePoint/PnP-Sites-Core) | An extension component that encapsulates commonly used remote CSOM/REST operations as reusable extension methods on out-of-the box CSOM objects.  |
-| [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
-| [PnP remote provisioning schema](https://github.com/SharePoint/PnP-provisioning-schema) | Designed to be used as remote creation instructions for the remote provisioning engine for Office 365. |
-| [SharePoint Modernization tooling and guidance](https://github.com/SharePoint/sp-dev-modernization) | Legacy SharePoint modernization tools and scripts. For new assessment work, see [Assess SharePoint modernization](../transform/assess-sharepoint-modernization.md). |
-| [PnPjs](https://pnp.github.io/pnpjs/) | A fluent JavaScript API for consuming SharePoint and Office 365 REST APIs in a type-safe way. |
-| [PnP SPFx Yeoman Generator](https://pnp.github.io/generator-spfx/) | Open-source Yeoman generator which extends out-of-the-box Yeoman generator. |
-| [SharePoint Framework reusable property pane controls](https://sharepoint.github.io/sp-dev-fx-property-controls) | Can be used in SharePoint Framework (SPFx) solutions. |
-| [SharePoint Framework reusable react controls](https://sharepoint.github.io/sp-dev-fx-controls-react) | Can be used in SharePoint Framework (SPFx) solutions. |
-| [Visual Studio extension for SharePoint Framework](https://github.com/SharePoint/sp-dev-fx-vs-extension) | Projects that you can use with Visual Studio 2015 or 2017. |
+## Active community libraries and tools
+
+| Project | Purpose |
+| --- | --- |
+| [PnP Core SDK](https://pnp.github.io/pnpcore/) | A .NET SDK with a unified object model for SharePoint Online and Teams. |
+| [PnP Framework](https://pnp.github.io/pnpframework/) | A .NET library for SharePoint Online that includes the PnP provisioning engine and CSOM extensions. The successor to PnP Sites Core. |
+| [PnP PowerShell](https://pnp.github.io/powershell/) | Cross-platform PowerShell cmdlets for Microsoft 365 administration and automation. See the project documentation for supported workloads and authentication requirements. |
+| [PnPjs](https://pnp.github.io/pnpjs/) | Fluent JavaScript libraries for working with SharePoint and Microsoft Graph APIs. |
+| [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/) | A community CLI for Microsoft 365 administration, automation, and SPFx project management. |
+| [SPFx reusable React controls](https://pnp.github.io/sp-dev-fx-controls-react/) | React controls for use in SharePoint Framework solutions. |
+| [SPFx reusable property pane controls](https://pnp.github.io/sp-dev-fx-property-controls/) | Property pane controls for SharePoint Framework web parts. |
+
+Use each project's documentation to select a compatible version. An active repository doesn't mean that every sample or package version supports SPFx 1.24 or your target SharePoint environment.
+
+## Scaffolding tools
+
+- [SharePoint Framework CLI and templates](https://github.com/SharePoint/spfx) is Microsoft's open-source SPFx scaffolding project. Its release status and template versions are separate from the SPFx runtime release; see the repository and [SPFx CLI documentation](../spfx/toolchain/sharepoint-framework-cli.md) for current guidance.
+- [PnP SPFx Yeoman generator](https://pnp.github.io/generator-spfx/) is a community extension to the Microsoft Yeoman generator. It isn't the official SPFx CLI. Check its documented SPFx and toolchain requirements before use.
+
+The CLI for Microsoft 365 listed above is a separate community tool, not another name for the official SPFx CLI.
+
+## Solution and provisioning references
+
+These repositories contain broader solutions or historical tooling. Check their README files and dependencies before reusing them; an unarchived repository alone isn't a compatibility or maintenance guarantee.
+
+| Repository | Scope and considerations |
+| --- | --- |
+| [SharePoint Starter Kit](https://github.com/pnp/sp-starter-kit) | A collection of SharePoint extensibility examples. Check the selected version's prerequisites; older branches have separate maintenance status. |
+| [SharePoint provisioning templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Templates previously used by the SharePoint Look Book provisioning service. Their availability doesn't imply that the service is available. |
+| [SharePoint modernization](https://github.com/pnp/modernization) | Legacy modernization tools and scripts. For new assessment work, see [Assess SharePoint modernization](../transform/assess-sharepoint-modernization.md). |
+
+## Archived projects
+
+These repositories are archived and aren't starting points for new projects.
+
+| Archived repository | Current direction |
+| --- | --- |
+| [PnP Sites Core](https://github.com/pnp/PnP-Sites-Core) | Use [PnP Framework](https://pnp.github.io/pnpframework/) for its SharePoint Online provisioning and CSOM extensions. Review the differences in supported environments rather than assuming a drop-in replacement for on-premises solutions. |
+| [Legacy PnP-PowerShell](https://github.com/pnp/PnP-PowerShell) | Move to the current [PnP PowerShell](https://pnp.github.io/powershell/) project and review its installation, authentication, and migration guidance. |
+| [PnP-JS-Core](https://github.com/SharePoint/PnP-JS-Core) | Use [PnPjs](https://pnp.github.io/pnpjs/). Review API and version changes before migrating. |
+| [Visual Studio extension for SPFx](https://github.com/pnp/sp-dev-fx-vs-extension) | Historical Visual Studio 2015/2017 integration. Follow the current [SPFx development environment setup](../spfx/set-up-your-development-environment.md) instead. |
+| [PnP provisioning schema](https://github.com/pnp/PnP-Provisioning-Schema) | Archived schema repository. For provisioning engine usage, start with the current [PnP Framework documentation](https://pnp.github.io/pnpframework/). |
 
 ## Supportability of open-source projects
 
-The following statements apply across all of the SharePoint development (PnP) samples, reusable solutions, controls, and core components, and even the more polished solutions, such as the GDPR Activity Hub or the PnP provisioning engine:
+PnP projects are community-provided, not Microsoft product offerings. Follow each repository's support guidance and license. Report a library, control, or sample defect to its owning repository; don't assume a Microsoft support agreement covers community code.
 
-* PnP guidance and samples are created by Microsoft and the community.
-* PnP guidance and samples are maintained by Microsoft and the community.
-* PnP uses supported and recommended techniques.
-* PnP implementations are reviewed and approved by Microsoft engineering.
-* PnP is an open source initiative by the community – people who work on the initiative for the benefit of others, and have their normal day job as well.
-* PnP is NOT a product, and therefore it’s not supported by Premier Support or other official support channels.
-* PnP is supported in similar ways as other open source projects done by Microsoft with support from the community by the community.
-* There are numerous partners that utilize PnP within their solutions for customers. Support for this is provided by the Partner. When PnP material is used in deployments, we recommend being clear with your customer/deployment owner on the support model.
+A defect in an underlying supported Microsoft service has its own product support route. See [Support and feedback](../support-feedback.md) to distinguish product bugs, documentation issues, how-to questions, and community-project defects.

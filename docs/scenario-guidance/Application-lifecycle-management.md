@@ -13,6 +13,8 @@ Microsoft SharePoint gives developers several options for creating and deploying
 
 ## SharePoint Add-Ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
 The SharePoint Add-In Model introduces new development techniques, mainly based on client-side code. Thus, the ALM of SharePoint Add-In solutions is slightly different from the previous Sandbox or Full Trust Code (FTC) solutions. Here follow articles and videos about how to manage ALM with the SharePoint Add-In model.

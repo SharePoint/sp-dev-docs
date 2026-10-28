@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Upgrading your code from SharePoint Client Side Object Model (CSOM) to the PnP Libraries
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In SharePoint classic solution, most likely you have been using the Client Side Object Model (CSOM) for .NET Framework as the primary client library for consuming SharePoint data. CSOM has been available for many years with different flavors targeting different versions of SharePoint on-premises and SharePoint Online. Since 2021, Microsoft released a new version of CSOM for SharePoint Online that targets .NET Standard 2.0 and as such can be referenced in .NET Framework 4.5+, .NET Core 2.0+, and .NET 5.0/6.0/7.0/8.0.
 
 > [!IMPORTANT]
