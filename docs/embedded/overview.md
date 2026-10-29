@@ -54,7 +54,7 @@ This page is a router. Pick the row that matches what you're trying to do.
 |---|---|
 | **Understand SharePoint Embedded and decide if it fits** | [Scenarios and use cases](scenarios-and-use-cases.md) · [When to choose SharePoint Embedded](plan/when-to-choose-sharepoint-embedded.md) |
 | **Plan a solution** (architect, IT decision maker) | [Plan a SharePoint Embedded solution](plan/app-tenant-architecture.md) |
-| **Build an app** (developer) | [Quickstart: build your first app with VS Code](build/quickstart-vscode.md) |
+| **Build an app** (developer) | [Build a SharePoint Embedded app end to end](build/build-app-end-to-end.md) |
 | **Ship my app to customers** (ISV / developer) | [Publish and onboard customers](publish/prepare-customer-installation.md) |
 | **Install or manage apps in my tenant** (admin) | [Install and manage apps](admin/admin-overview.md) |
 | **Govern and secure content** (compliance admin) | [Apply security and compliance controls](admin/apply-security-compliance-controls.md) |
@@ -94,6 +94,6 @@ SharePoint Embedded is available in the Microsoft 365 commercial cloud, in [Micr
 ## Next steps
 
 - New to SharePoint Embedded? Read [Scenarios and use cases](scenarios-and-use-cases.md), then [Plan a solution](plan/app-tenant-architecture.md).
-- Ready to build? Jump to the [VS Code quickstart](build/quickstart-vscode.md).
+- Ready to build? Follow the [end-to-end app build sequence](build/build-app-end-to-end.md), or use the [VS Code quickstart](build/quickstart-vscode.md).
 - Administering a tenant? Start at the [Admin overview](admin/admin-overview.md).
 - See [What's new](whats-new.md) for the latest releases.

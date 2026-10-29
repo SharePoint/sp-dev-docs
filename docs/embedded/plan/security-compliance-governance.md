@@ -157,17 +157,17 @@ The label is applied at the **container level**: it sets the container's sensiti
 
 ## Block download policy
 
-SharePoint Administrators or Global Administrators can block file downloads from SharePoint Embedded containers.
+SharePoint Embedded Administrators or Global Administrators can block file downloads from SharePoint Embedded containers.
 
 Use this command:
 
 ```powershell
-Set-SPOSite -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
+Set-SPOContainer -Identity <ContainerSiteURL> -BlockDownloadPolicy $true
 ```
 
-A SharePoint Advanced Management license is needed to enforce this policy.
+Block download policy requires a supported Microsoft 365 base subscription and a current SharePoint Advanced Management entitlement. Eligible entitlement paths include the SharePoint Advanced Management Plan 1 add-on, qualifying Microsoft Copilot licensing, and Microsoft 365 E7. Verify the current [SharePoint Advanced Management prerequisites](/sharepoint/sharepoint-advanced-management-prerequisites) before deployment.
 
-For more information, see [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
+For cmdlet details, see [Set-SPOContainer](/powershell/module/microsoft.online.sharepoint.powershell/set-spocontainer).
 
 ## Conditional Access
 
