@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Get to know the SharePoint REST service
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 SharePoint includes a Representational State Transfer (REST) service that is comparable to the existing SharePoint [client object models](/previous-versions/office/sharepoint-csom/jj193041(v=office.15)). Now, developers can interact remotely with SharePoint data by using any technology that supports REST web requests. This means that developers can perform **Create**, **Read**, **Update**, and **Delete** (CRUD) operations from their SharePoint Add-ins, solutions, and client applications, using REST web technologies and standard Open Data Protocol (OData) syntax.
 
 ## Prerequisites

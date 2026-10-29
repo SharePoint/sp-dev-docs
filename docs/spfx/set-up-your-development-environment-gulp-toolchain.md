@@ -14,6 +14,9 @@ ms.custom: scenarios:getting-started
 
 [!INCLUDE [spfx-gulp-toolchain-legacy](../../includes/snippets/spfx-gulp-toolchain-legacy.md)]
 
+> [!IMPORTANT]
+> For SharePoint Online, workbench URLs later in this version-scoped article are historical. Debug web parts on actual SharePoint pages with the [developer toolbar](debug-toolbar.md) instead. The Online workbench is deprecated and scheduled for retirement on December 1, 2026. This doesn't change SharePoint Server's version-specific development requirements or the fully supported Copilot Workbench.
+
 You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
@@ -190,7 +193,7 @@ Depending on your scenario, you may need to maintain different development envir
 - Node version managers
 
 > [!TIP]
-> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.andrewconnell.com/articles/better-node-js-install-management-with-node-version-manager/).
+> For more information on Node version managers, see [Better Node.js Install Management with Node Version Manager](https://www.andrewconnell.com/articles/node-js-better-install-management-with-node-version-manager/).
 >
 > - [Node Version Manager (NVM)](https://github.com/creationix/nvm): for macOS
 > - [Fast Node Manager (FNM)](https://github.com/Schniz/fnm): cross-platform (Windows and MacOS)
@@ -218,7 +221,7 @@ In case the certificate is not added to the Trusted Root Certification Authority
 
 ### Unable to Install Packages with npm - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.andrewconnell.com/articles/node-npm-fix-proxy-config/)
+If your development environment is behind a corporate proxy, you need to configure npm to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure npm for a corporate web proxy](https://www.andrewconnell.com/articles/node-js-npm-fix-proxy-config/)
 
 ## See also
 

@@ -41,6 +41,7 @@ SharePoint Embedded administration commonly involves the following roles.
 | Role | Use it for |
 | --- | --- |
 | Global Administrator | Assign the SharePoint Embedded Administrator role and perform any SharePoint Embedded admin task when needed. |
+| Billing Administrator | Set up pass-through billing in the Microsoft 365 admin center. |
 | SharePoint Embedded Administrator | Manage SharePoint Embedded apps and containers through SharePoint admin center and supported SharePoint PowerShell cmdlets. |
 | Tenant administrator | Manage apps and settings in the consuming Microsoft 365 tenant. |
 | Compliance administrator | Configure Microsoft Purview audit, retention, DLP, eDiscovery, and related policies. |
@@ -88,7 +89,7 @@ Developer tenant admins can create container types, configure billing for standa
 
 A consuming tenant uses a SharePoint Embedded application in its Microsoft 365 tenant.
 
-Consuming tenant admins manage installed applications, containers, sharing settings, sensitivity labels, deleted containers, and compliance controls. A Global Administrator sets up billing for pass-through apps.
+Consuming tenant admins manage installed applications, containers, sharing settings, sensitivity labels, deleted containers, and compliance controls. A Billing Administrator or Global Administrator sets up billing for pass-through apps.
 
 For the consuming tenant admin model, see [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md).
 
@@ -127,7 +128,7 @@ Developer tenants configure billing for standard billing container types.
 
 Consuming tenants configure billing for pass-through apps before users can access those apps.
 
-Only a Global Administrator can set up billing in the Microsoft 365 admin center. The SharePoint Embedded Administrator role can't configure billing.
+A Billing Administrator or Global Administrator can set up pass-through billing in the Microsoft 365 admin center. The SharePoint Embedded Administrator role alone doesn't grant access to this billing procedure.
 
 Set up pass-through billing with [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 
@@ -194,7 +195,7 @@ Use this path when your tenant consumes a SharePoint Embedded app:
 1. Assign or confirm the SharePoint Embedded Administrator role.
 1. Install or approve the app in [Install a SharePoint Embedded app](install-sharepoint-embedded-app.md).
 1. Grant admin consent when required.
-1. Set up pass-through billing in [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
+1. Have a Billing Administrator or Global Administrator set up pass-through billing in [Set up billing in Microsoft 365 admin center](setup-billing-microsoft-365-admin-center.md).
 1. Manage containers in the SharePoint admin center or with PowerShell.
 1. Apply compliance controls in Microsoft Purview.
 

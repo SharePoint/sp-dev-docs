@@ -76,6 +76,12 @@ Get-SPOContainerType
 Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 ```
 
+`Get-SPOContainerType` checks Azure access before it displays the billing subscription, resource group, and region for a standard-billed container type. The signed-in account needs the `Microsoft.Resources/subscriptions/read` permission at the linked Azure subscription scope. The Azure Reader, Contributor, and Owner roles include this permission.
+
+Without this Azure permission, the cmdlet still returns the container type. However, it omits the billing details and displays a permissions message. The SharePoint Embedded Administrator and Global Administrator roles don't grant access to the Azure subscription.
+
+Reader access is sufficient to view the billing details. Owner or Contributor access is required to add or change the billing relationship.
+
 ## Update app properties
 
 Update supported container type properties.

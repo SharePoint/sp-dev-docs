@@ -1,7 +1,7 @@
 ---
 title: Ejecting the webpack configuration
 description: Learn how to eject the webpack configuration from the SharePoint Framework build toolchain for complete control over webpack settings, understand the implications of this irreversible process, and explore a practical example of customizing the ejected configuration.
-ms.date: 12/10/2025
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 # Ejecting the webpack configuration
@@ -55,6 +55,9 @@ The ejection process will
 1. Create webpack configuration files for production and development
 
 Let's look at the changes applied to a default SPFx v1.22 React web part project after ejecting the webpack configuration.
+
+> [!NOTE]
+> The file and dependency lists below describe SPFx 1.22 ejection output; they aren't a universal schema for later releases. Standard, non-ejected SPFx 1.24 projects still use **config/config.json** for bundles, externals, and localized resources. Adopting Heft alone doesn't delete that file.
 
 ### Project dev dependencies
 

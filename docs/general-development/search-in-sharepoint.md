@@ -9,6 +9,10 @@ ms.localizationpriority: high
 
 
 # Search in SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Understand the extensibility building blocks in Search in SharePoint and how you can use these building blocks to suit your use cases.
 Search in SharePoint enables users to find relevant information more quickly and easily than ever before and makes it easy for Search administrators to customize the search experience. It also provides several API sets for more advanced customizations and solutions.
   

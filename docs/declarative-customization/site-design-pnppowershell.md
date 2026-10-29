@@ -15,6 +15,9 @@ Use PnP PowerShell cmdlets to create, retrieve, update, and remove site designs 
 
 To run the PnP PowerShell cmdlets, you'll need to do the following:
 
+> [!IMPORTANT]
+> Follow the current [PnP PowerShell installation](https://pnp.github.io/powershell/articles/installation.html) and [authentication guidance](https://pnp.github.io/powershell/articles/authentication.html). Use your own Microsoft Entra application registration and approved permissions; don't rely on the retired shared PnP Management Shell application. The connection example below assumes the client ID is supplied through supported PnP PowerShell configuration. Otherwise, provide it as described in that authentication guidance.
+
 1. Download and install the PnP PowerShell Module by running:
 
     ```PowerShell

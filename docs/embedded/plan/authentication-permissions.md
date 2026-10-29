@@ -77,6 +77,14 @@ Use delegated access whenever possible.
 
 Delegated access improves auditability because actions can be associated with the user.
 
+## Confidential client requirement for container creation
+
+Creating a container requires a *confidential client* application—one that holds a client secret or certificate and keeps it private. Create calls that use a token from a public client application, such as a single-page app, mobile app, or desktop app, fail.
+
+Plan a back-end component that acquires the token and calls Microsoft Graph when your app's front end is a public client. App-only creation already meets this requirement because the client credentials flow is confidential.
+
+For more information, see [Public client and confidential client applications](/entra/identity-platform/msal-client-applications).
+
 ## App-only access
 
 App-only access means the application acts without a user.

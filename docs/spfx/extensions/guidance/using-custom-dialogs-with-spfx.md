@@ -7,6 +7,9 @@ ms.localizationpriority: high
 
 # Use custom dialog boxes with SharePoint Framework Extensions
 
+> [!NOTE]
+> This walkthrough retains the React 17 rendering lifecycle used by SPFx 1.23 and earlier. Don't install React 17 into an SPFx 1.24 project. For React 18.3.1, follow the [upgrade guide](../../react-18-upgrade.md): retain one root for the dialog, unmount and clear it in `onAfterClose()`, and create a fresh root when the dialog reopens. The code below hasn't been converted to that lifecycle.
+
 You can use custom dialog boxes, available from the **[@microsoft/sp-dialog](https://www.npmjs.com/package/@microsoft/sp-dialog)** package, within the context of SharePoint Framework Extensions or client-side web parts.
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
@@ -41,7 +44,7 @@ You can access the sample code that this article is based on in the [sp-dev-fx-e
     npm install @fluentui/react@8 --save
     ```
 
-1. Install the correct version of React and React-dom indicated in [SPFx development environment compatibility](../../compatibility.md#spfx-development-environment-compatibility).
+1. Match React and React DOM to your project's [SPFx version](../../compatibility.md#spfx-development-environment-compatibility). The following React 17 command is only for the historical project; SPFx 1.24 requires React 18.3.1 and a corresponding rendering migration.
 
     ```console
     npm install react@17.0.1 react-dom@17.0.1 --save-exact

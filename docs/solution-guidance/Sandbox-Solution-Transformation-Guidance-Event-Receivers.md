@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Replace event receivers in sandbox solutions 
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to handle events in SharePoint is slightly different in the SharePoint Add-in model than it was with Full Trust Code or in coded-sandbox solutions. In typical previous solutions, event receivers were created by using the SharePoint Server-Side Object Model and deployed via solutions packages, which executed the code on the SharePoint servers. 
 
 In the SharePoint Add-in model, however, the event receiver implementation executes on the web server that is hosting the event receiver; these are called remote event receivers (RERs). Event receivers can in many cases be replaced with a remote event receiver implementation. 

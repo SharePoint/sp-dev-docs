@@ -7,6 +7,10 @@ ms.localizationpriority: high
 ---
 # Create a SharePoint workflow app using Visual Studio 2012
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Walk through the process of creating a workflow SharePoint Add-in using Microsoft Visual Studio 2012.
 
 > [!NOTE]

@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Transform Add-in model Dialogs to modern Dialogs in SharePoint Framework
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint Add-in model, you were used to rely on the JavaScript Object Model for SharePoint to show dialog windows, using syntax like as follows:
 
 ```javascript

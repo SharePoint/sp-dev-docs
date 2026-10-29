@@ -26,6 +26,9 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 
 Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself.
 
+> [!TIP]
+> To provision and manage the SharePoint Embedded resources behind these experiences from a coding agent, use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md).
+
 ## How SharePoint Embedded grounds agents
 
 SharePoint Embedded grounds AI agents on enterprise content while keeping that content and its compliance controls inside the customer's Microsoft 365 tenant. You don't copy content into an external vector database. Key facts:
@@ -97,6 +100,54 @@ The response returns a `retrievalHits` collection. Each hit identifies a source 
 The shape of `webUrl` depends on the container type's `urlTemplate` setting, so treat it as an opaque link rather than parsing it. To resolve file details, call [Get a driveItem](/graph/api/driveitem-get). For more information about `urlTemplate`, see [Create and configure a container type](create-container-type.md#configure-container-type-behavior).
 
 To return extra fields such as `title` or `author` with each hit, add a `resourceMetadata` collection to the request. Request only the fields your app uses, because each field adds to the response payload.
+
+### Filter retrieval by custom metadata
+
+Use `filterExpression` to limit retrieval to files with specific custom metadata. First, create an indexed custom column, set the file values, and wait for search indexing to finish. For instructions, see [Store and query container metadata](container-metadata.md).
+
+SharePoint Embedded stores a file's custom column values on its associated `listItem/fields` resource. Retrieval filters on the column's indexed SharePoint managed property, not the stored field name.
+
+For example, a single-line text column named `ClientMatterCode` typically has this managed property:
+
+```text
+ClientMatterCodeOWSTEXT
+```
+
+Automatically created managed properties are text properties, even when their source columns use another data type. The suffix and indexed value format depend on the column type. Confirm the generated property name and value format in the target tenant. For naming details, see [Automatically created managed properties in SharePoint Server](/sharepoint/technical-reference/automatically-created-managed-properties-in-sharepoint).
+
+This request limits candidates to files with an exact indexed metadata value. It also returns the value with each matching hit:
+
+```http
+POST https://graph.microsoft.com/v1.0/copilot/retrieval
+Content-Type: application/json
+
+{
+  "queryString": "What obligations are described in the client agreement?",
+  "dataSource": "sharePointEmbedded",
+  "dataSourceConfiguration": {
+    "sharePointEmbedded": {
+      "containerTypeId": "{containerTypeId}"
+    }
+  },
+  "filterExpression": "ClientMatterCodeOWSTEXT=\"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\"",
+  "resourceMetadata": [
+    "title",
+    "containerTypeId",
+    "ClientMatterCodeOWSTEXT"
+  ],
+  "maximumNumberOfResults": 10
+}
+```
+
+Use `=` when the complete indexed value must match:
+
+```text
+ClientMatterCodeOWSTEXT="aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+```
+
+Don't use the `:` operator for an exact boundary. The colon operator performs term matching and can match related values or prefixes. For more information, see [Keyword Query Language syntax reference](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+
+The filter limits the candidate files before `queryString` ranks semantically relevant extracts. A file with matching metadata might not appear when its content doesn't relate to `queryString`.
 
 Pass the extracts to your own model or answer-generation step as grounding data. This snippet sends the query and reads the top extract from each hit:
 

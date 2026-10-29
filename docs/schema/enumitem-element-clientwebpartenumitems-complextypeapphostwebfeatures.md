@@ -11,6 +11,8 @@ ms.assetid: 6a27b5f3-6452-573f-8756-f63cfddfa4bf
 
 # EnumItem element (ClientWebPartEnumItems complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

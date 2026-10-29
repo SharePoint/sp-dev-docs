@@ -6,6 +6,10 @@ ms.localizationpriority: high
 ---
 # How to provide add-in app only tenant administrative permissions in SharePoint Online
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 When you are developing SharePoint add-ins and want to register them using the ACS model (**appregnew.aspx** and **appinv.aspx**), you will need to follow a special process, when an add-in is requesting tenant admin permissions and in app-only mode.
 
 [!INCLUDE [azure-acs-retirement](../../includes/snippets/azure-acs-deprecation.md)]

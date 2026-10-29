@@ -6,6 +6,10 @@ ms.localizationpriority: medium
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 When your Office 365 tenant is hosted in an specific environment like the Germany, China or US Government environments then you'll need to take this in account when you're developing against your tenant. 
 
 _**Applies to:** Office 365 hosted in the Germany, China or US Government environments_

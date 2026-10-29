@@ -57,7 +57,7 @@ The container type is represented on each container as an immutable property nam
 
 ## Containers
 
-A container is the basic storage unit in SharePoint Embedded, and it defines a security and compliance boundary. Applications create containers in consuming tenants by using Microsoft Graph.
+A container is the basic storage unit in SharePoint Embedded, and it defines a security and compliance boundary. Applications create containers in consuming tenants by using Microsoft Graph. Container creation requires a confidential client application, so plan for a component that holds a client secret or certificate. For more information, see [Plan authentication and permissions](../plan/authentication-permissions.md#confidential-client-requirement-for-container-creation).
 
 Files, folders, metadata, versions, and recycle bin content are stored within containers and are subject to current SharePoint Embedded limits.
 
@@ -145,7 +145,7 @@ The developer creates the container type with the `directToCustomer` billing cla
 }
 ```
 
-After registration, a Global Administrator in the consuming tenant sets up billing in the consuming tenant.
+After registration, a Billing Administrator or Global Administrator in the consuming tenant sets up billing.
 
 ## Admin and developer interaction
 
@@ -167,9 +167,9 @@ Developers can configure selected container type settings after creation.
 
 You can configure these container type settings:
 
-- `ApplicationRedirectUrl`
-- `DiscoverabilityDisabled`
-- `SharingRestricted`
+- `urlTemplate`
+- `isDiscoverabilityEnabled`
+- `isSharingRestricted`
 
 Use the Microsoft Graph [Update fileStorageContainerType](/graph/api/filestoragecontainertype-update) API for supported container type updates. For administrative settings, see [Create apps with PowerShell](../admin/create-apps-powershell.md).
 

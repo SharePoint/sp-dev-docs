@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 
 # Add-in-scoped external content types in SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Learn about external content types that are installed or scoped at the add-in level in SharePoint and enable you to create data-rich SharePoint Add-ins using external data sources.
 ## Overview of add-in-scoped external content types in SharePoint
 <a name="Appscopedect_overview"> </a>

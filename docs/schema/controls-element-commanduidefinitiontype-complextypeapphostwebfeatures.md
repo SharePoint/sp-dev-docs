@@ -11,6 +11,8 @@ ms.assetid: 747506d5-af8d-a6ca-7fae-a1e7fc22b7ae
 
 # Controls element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

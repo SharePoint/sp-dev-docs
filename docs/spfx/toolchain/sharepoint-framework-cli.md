@@ -1,18 +1,20 @@
 ---
 title: SharePoint Framework CLI (spfx-cli)
-description: Scaffold SPFx projects with the open-source spfx-cli, the modern replacement for the Yeoman generator.
+description: Explore the prerelease open-source spfx-cli and its independently versioned templates.
 author: andrewconnell
 ms.topic: concept-article
 ms.service: sharepoint
-ms.date: 04/09/2026
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
 # SharePoint Framework CLI (spfx-cli)
 
-The **SharePoint Framework CLI** (`@microsoft/spfx-cli`) is the modern, open-source command-line tool for scaffolding SharePoint Framework (SPFx) projects. It replaces the legacy Yeoman-based generator (`@microsoft/generator-sharepoint`) with a purpose-built CLI and a template system that's versioned independently of the tool itself.
+The **SharePoint Framework CLI** (`@microsoft/spfx-cli`) is a prerelease, open-source command-line tool for scaffolding SharePoint Framework (SPFx) projects, with templates versioned independently of the CLI.
 
 [!INCLUDE [spfx-prerelease-related](../../../includes/snippets/spfx-prerelease-related.md)]
+
+For the SPFx 1.24 baseline, use the supported [Yeoman generator](../yeoman-generator-for-spfx-intro.md) and [development environment setup](../set-up-your-development-environment.md). SPFx 1.24 GA doesn't change the prerelease status of this separate CLI. The CLI and selected template can have different Node.js requirements from SPFx itself; check both before using them.
 
 ## Why a new SPFx CLI?
 

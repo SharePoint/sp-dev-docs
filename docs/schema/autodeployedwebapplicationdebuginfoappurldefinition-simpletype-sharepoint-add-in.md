@@ -11,6 +11,8 @@ ms.assetid: 98162f2e-f926-69a0-df95-6597c8ad0b6a
 
 # AutoDeployedWebApplicationDebugInfoAppUrlDefinition simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

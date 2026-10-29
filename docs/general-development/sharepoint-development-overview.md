@@ -1,97 +1,61 @@
 ---
 title: SharePoint development overview
-description: Provides an overview of the SharePoint development platform and provides resources for developing with the SharePoint Framework.
-ms.date: 06/13/2022
+description: Choose supported SharePoint and Microsoft 365 development options, including SPFx Copilot UX components, web parts, extensions, APIs, and automation.
+ms.date: 10/28/2026
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ms.localizationpriority: high
 ---
 
 # SharePoint development overview
 
-SharePoint is a development platform for SharePoint Framework, SharePoint Add-ins and farm solutions. Get acquainted with the capabilities and features of SharePoint to start your development.
+Build SharePoint and Microsoft 365 experiences with SharePoint Framework (SPFx), declarative customization, supported APIs, and Power Platform. Choose the development model for the experience and host you need.
 
 ## Introducing the SharePoint development platform
 <a name="bk_introduction"> </a>
 
-SharePoint is a versatile development platform for building client-side components, add-ins and solutions with varying scopes that address a wide range of needs. The SharePoint developer documentation guides you through the features, technologies, capabilities, and models for development that distinguish SharePoint as a development platform.
+SPFx provides client-side components, tenant deployment, and integration with Microsoft 365 hosts. With SPFx 1.24, **Copilot UX components** add interactive UI to Microsoft 365 Copilot conversations. Web parts, extensions, and Adaptive Card Extensions address different SharePoint, Teams, and Viva Connections scenarios.
+
+Use the [supported-platform overview](../spfx/supported-extensibility-platforms-overview.md) and [compatibility reference](../spfx/compatibility.md) before selecting a framework version. A component's host, permissions, licensing, and supported clients are part of its requirements, not interchangeable defaults.
 
 ## What kinds of development can you do with SharePoint?
 <a name="bk_whatkinds"> </a>
 
-**For SharePoint Framework**
-
-The following article can help you get acquainted with SharePoint Framework and determine whether they are a good option for you.
-
-- [Overview of the SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
-
-**For SharePoint Add-ins development**
-
-The following article can help you get acquainted with SharePoint Add-ins and determine whether they are a good option for you.
-
-- [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
-
-**For SharePoint solutions and add-ins for mobility features development**
-
-The following sections describe how to create mobile solutions for SharePoint.
-
-- [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
-- [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md)
-  
-The following sections provide information about SharePoint features that are available for farm solutions. 
-
-- [Build sites for SharePoint](build-sites-for-sharepoint.md)
-- [Add SharePoint capabilities](add-sharepoint-capabilities.md)
+| Goal | Start here |
+| --- | --- |
+| Render interactive experiences in Microsoft 365 Copilot | [Copilot UX components](../spfx/copilot/overview-copilot-apps.md) |
+| Add client-side web parts to SharePoint pages | [SPFx web parts](../spfx/web-parts/overview-client-side-web-parts.md) |
+| Extend page, list, or form experiences | [SPFx extensions](../spfx/extensions/overview-extensions.md) |
+| Build Viva Connections cards | [Viva Connections and SPFx](../spfx/viva/overview-viva-connections.md) |
+| Reuse web-part functionality in Microsoft Teams | [SPFx integration with Teams](../spfx/integrate-with-teams-introduction.md) |
+| Format list columns and views without a custom component | [Column formatting](../declarative-customization/column-formatting.md) and [view formatting](../declarative-customization/view-formatting.md) |
+| Apply repeatable site configuration | [Site templates and site scripts](../declarative-customization/site-design-overview.md) |
+| Build forms and automate processes | [Power Apps and Power Automate](../business-apps/introduction-to-sharepoint-business-process-integration.md) |
+| Access sites and content through APIs | [SharePoint in Microsoft Graph](/graph/sharepoint-concept-overview) and [SPFx data access](../spfx/use-msgraph.md) |
 
 ## Set up your development environment and start developing
 <a name="bk_getstarted"> </a>
 
+For SPFx 1.24, follow the [development environment setup](../spfx/set-up-your-development-environment.md) with **Node.js 24 LTS**. Use the version-specific prerequisites for older projects and SharePoint Server.
 
-**For SharePoint Framework**
-  
-Table 1 shows the resources for setting up a development environment and beginning to take advantage of the new capabilities for building SharePoint Framework customizations.
+- [Build your first Copilot UX component](../spfx/copilot/get-started/build-your-first-copilot-app.md).
+- [Build your first web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md).
+- [Build your first extension](../spfx/extensions/get-started/build-a-hello-world-extension.md).
+- Debug web parts on actual SharePoint pages with the [developer toolbar](../spfx/debug-toolbar.md). Use the fully supported **Copilot Workbench** for Copilot UX components.
 
-**Table 1. Resources to help you get started with SharePoint Framework solutions**
+Copilot UX components require the Microsoft 365 Copilot add-on USL on top of E3, E5, or E7. Review [availability and client limitations](../spfx/copilot/overview-copilot-apps.md#availability), [deployment and dynamic discovery](../spfx/copilot/development-and-deployment.md), and [visible context](../spfx/copilot/provide-context-to-copilot.md).
 
-|Topic|Description|
-|:-----|:-----|
-| [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint Framework development environment.  <br/> |
-| [Build your first SharePoint client-side web part](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) <br/> | Describes how to build your first client-side web part using SharePoint Framework <br/> |
-| [Build your first SharePoint Framework Extension](/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) <br/> | Describes how to build your first SharePoint Framework Extension  <br/> |
+## Publish and distribute your solution
 
+Copilot UX components are supported in the **SharePoint Store starting with SPFx 1.24 GA**. Use the [Marketplace guidance](../spfx/publish-to-marketplace-overview.md) and [submission checklist](../spfx/publish-to-marketplace-checklist.md). Store publication doesn't bypass tenant deployment, license requirements, API consent, or supported-client restrictions.
 
-**For SharePoint solutions and add-ins for mobility features development**
-  
-Table 2 shows the resources for setting up a development environment and beginning to take advantage of the new capabilities for building farm solutions with SharePoint.
+## SharePoint Server development
 
-**Table 2. Resources to help you get started with SharePoint farm solutions development**
-
-|Topic|Description|
-|:-----|:-----|
-| [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint development environment.  <br/> |
-| [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md) <br/> |Describes the several sets of APIs that are provided in SharePoint, including the server object model and the various client-side object models, and the REST/OData web service.  <br/> |
-| [Programming models in SharePoint](programming-models-in-sharepoint.md) <br/> |Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint.  <br/> |
-| [Add SharePoint capabilities](add-sharepoint-capabilities.md) <br/> |Provides a gateway to detailed information about using the capabilities of SharePoint in your solutions.  <br/> |
-
-**For SharePoint Add-ins development**
-  
-If you want to get started development SharePoint Add-ins, first think about the kinds of add-ins that you might want to build, the technologies that you want to include, and the hosting options that you want to use. 
-  
-When you know the kinds of SharePoint Add-in that you want to create, we provide guidance to help you match them to the appropriate development environment. Table 3 shows the resources for setting up your SharePoint development environment and beginning to create your add-ins.
-
-**Table 3. Resources to help you get started with SharePoint Add-ins development**
-
-|**Topic**|**Description**|
-|:-----|:-----|
-|||
-| [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) <br/> |Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins.  <br/> |
-| [Set up an on-premises development environment for SharePoint Add-ins](/sharepoint/dev/sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins) <br/> |Explains how to set up a local, on-premises installation of SharePoint and configure it for developing SharePoint Add-ins.  <br/> |
-| [Get started creating provider-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted separately from a SharePoint site.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
+Server solutions have version-specific APIs, deployment models, and tooling. Follow the [Server support guidance](../spfx/sharepoint-2019-and-subscription-edition-support.md) and, for server-side customizations, [farm solution guidance](build-farm-solutions-in-sharepoint.md). Don't treat farm deployment or old mobile-platform walkthroughs as current SharePoint Online setup.
 
 ## See also
 
-- [Accessibility in SharePoint](accessibility-in-sharepoint.md)
-- [Protocol handler error due to deprecated interface in SharePoint 2016](protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md)
-- [.NET server API reference for SharePoint](https://msdn.microsoft.com/library/fb8a82f1-9239-49ae-89f3-ce1385fb28b5%28Office.15%29.aspx)
-- [.NET client API reference for SharePoint Online](https://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx)
-- [SharePoint glossary](sharepoint-glossary.md) 
+- [SharePoint Framework roadmap](../spfx/roadmap.md)
+- [SPFx web part samples](https://pnp.github.io/sp-dev-fx-webparts/)
+- [Copilot UX component samples](https://aka.ms/spfx/copilot/samples)
+- [Microsoft 365 & Power Platform community calls](https://aka.ms/community/calls)
+- [Support and feedback](../support-feedback.md)

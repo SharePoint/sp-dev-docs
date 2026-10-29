@@ -8,6 +8,10 @@ ms.localizationpriority: high
 
 
 # Build farm solutions in SharePoint
+
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 Get an overview of our documentation about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.
 ## What are farm solutions?
 <a name="WhatAreFarmSolutions"> </a>

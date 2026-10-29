@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Determine SharePoint REST service endpoint URIs
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!TIP]
 > Before you start, review the following resources:
 >

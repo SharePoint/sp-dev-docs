@@ -16,6 +16,8 @@ Solutions Deployment and Maintenance are really important topics in the fields o
 
 ## SharePoint Add-Ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
 In the SharePoint Add-In Model there are many well-known rules and guidelines about how to manage solutions deployment and maintenance. Here you can find some reference articles.

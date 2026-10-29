@@ -6,6 +6,9 @@ ms.date: 06/13/2022
 
 # Supporting section backgrounds
 
+> [!NOTE]
+> The React snippet below uses the legacy rendering API from before SPFx 1.24. For React 18, keep one root for the web part and reuse it when theme properties change; unmount it only when the web part is disposed. See the [React 18 upgrade guide](../../react-18-upgrade.md).
+
 Starting with SharePoint Framework v1.8, web parts can be made aware of any section backgrounds and use these colors to improve the appearance of a web part when hosted in a section with a different background.
 
 ## Configuring your section to use a different background

@@ -11,6 +11,8 @@ ms.assetid: b100cec4-2d26-e763-3eb7-df5c1523985d
 
 # MRUSplitButton element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -1,15 +1,18 @@
 ---
 title: SharePoint Add-in related APIs 
-description: We provided some Add-in related APIs to get Add-in's installation info and uninstall the Add-in. 
+description: Reference for inventorying and removing legacy SharePoint Add-in deployments.
 audience: admin 
-ms.date: 03/25/2023 
+ms.date: 10/25/2026
 ms.localizationpriority: medium
 ---
 
 # SharePoint Add-in Management APIs
 
-This documentation will introduce some APIs which related to SharePoint Add-ins. They could help to have a clear view
-and better management of the Add-ins in tenant level, including these:
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+This reference describes APIs for assessing and removing legacy SharePoint Add-in deployments. The retirement notice applies to the Add-in model, not to SharePoint REST APIs generally. This article is not guidance for installing or running Add-ins in SharePoint Online.
+
+The operations described here include:
 
 - Get available Add-ins in sites
 - Get Add-in permissions in site collections
@@ -28,8 +31,7 @@ For more information about SharePoint Add-in, see [SharePoint Add-ins](../sp-add
 
 ## Get available Add-ins in sites
 
-This API will return the Add-ins that could be used on the given sites. This contains two kinds of install, one is the Add-in installed on the site.
-The other is the Add-in installed on the tenant level app catalog site, and it matches the conditions to use the Add-in.
+This API reports Add-in inventory for the given sites, including Add-ins installed on a site and Add-ins deployed through the tenant app catalog. A reported Add-in is not an indication that it can run in SharePoint Online after retirement.
 For more information, see [Tenancies and deployment scopes for SharePoint Add-ins](../sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
 
 This API needs the app to have at least Sites.Read.All permission.

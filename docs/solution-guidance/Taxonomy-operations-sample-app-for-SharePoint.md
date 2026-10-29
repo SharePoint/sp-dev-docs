@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Taxonomy operations sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The Core.MMS sample console application shows you how to interact with the SharePoint managed metadata service to create and retrieve terms, term sets, and groups. This sample also runs in a provider-hosted add-in, such as an ASP.NET MVC web application. 
 
 Use this solution if you want to migrate terms between SharePoint farms or display terms in your custom add-in.   

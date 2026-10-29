@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Transform SharePoint add-in App Parts and classic web parts to SharePoint Framework web parts
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint Add-in model, you're used to creating custom web parts for SharePoint classic pages by creating App Parts. In the new SharePoint Framework, you can achieve the same result both for classic and modern pages by creating client-side web parts.
 
 In this article, you can find detailed information about how to transform an already existing App Part into a modern client-side web part.

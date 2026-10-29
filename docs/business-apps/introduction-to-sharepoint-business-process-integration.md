@@ -1,7 +1,7 @@
 ---
 title: Business apps and business process automation
 description: Business apps and business process automation.
-ms.date: 06/28/2022
+ms.date: 10/28/2026
 ms.service: sharepoint-online
 ms.localizationpriority: high
 ---
@@ -13,6 +13,8 @@ Creativity and teamwork are essential to transforming business processes. Most p
 Microsoft 365 provides connections to a range of third-party systems with Power Automate and Power Apps. Power Automate lets you automate business processes, and Power Apps lets you create great forms and mobile apps based on SharePoint files and data. Both Power Automate and Power Apps feature intuitive visual designers, so anyone can craft forms and screens using a convenient interface.
 
 ## Power Automate
+
+For classic workflow replacements, use the [migration guidance](power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md). SharePoint 2013 workflows retired in SharePoint Online on April 2, 2026; this doesn't retire Power Automate or define SharePoint Server workflow support.
 
 Using Power Automate, you can create workflows through an easy-to-use visual designer that will guide you through each step and help authenticate your accounts.
 
@@ -32,7 +34,7 @@ Using Microsoft Power Apps, you can create apps with a point-and-click approach 
 
 Classic mobile and web apps typically required separate coding for each platform, which can be costly and time-consuming to do—especially with developers in high demand. Instead, Power Apps simplifies the process so anyone can do it. Its easy-to-use, browser-based visual designer helps you rapidly build custom business apps without having to write any code.
 
-By connecting Power Apps to your existing systems and data, you can quickly build reports, forms, and workflows, and then publish your app instantly to all users in your organization.
+Connect Power Apps to the required systems and data, then share the app with its intended users. Publishing alone doesn't grant access: sharing, underlying data permissions, licenses, and connector requirements still apply.
 
 Power Apps also lets you easily customize the form for a SharePoint list. For example, with custom forms, you can:
 
@@ -46,6 +48,8 @@ When you publish your changes, the form is embedded within the SharePoint list f
 Cross-tool functionality seamlessly moves your data from one operation to another. With SharePoint being a core component of the Microsoft 365 suite, your data easily integrates with tools like Excel or Power BI reporting. And because it uses an Excel-inspired expression language, these tools talk with each other, using formula language you already recognize and understand to integrate your data from one function to the next.
 
 ## Next steps
+
+For custom Microsoft 365 UI, consider [SharePoint Framework](../spfx/sharepoint-framework-overview.md), including [Copilot UX components](../spfx/copilot/overview-copilot-apps.md). These complement forms and automation; they don't automatically run a flow, authorize a backend action, or inherit Power Apps' mobile support. Review the target host's licensing and client requirements separately.
 
 * [Get started with Power Automate and SharePoint](./power-automate/get-started/create-your-first-flow.md)
 * [Get started with Power Apps and SharePoint](/powerapps/maker/canvas-apps/customize-list-form)

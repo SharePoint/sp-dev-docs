@@ -6,6 +6,10 @@ ms.localizationpriority: high
 ---
 # Use remote event receivers in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Use remote event receivers to handle events in the SharePoint Add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
 
 _**Applies to:** add-ins for SharePoint | SharePoint 2013 | SharePoint Online_

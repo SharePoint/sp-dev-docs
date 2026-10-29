@@ -1,10 +1,12 @@
 ---
 title: Working with the AADTokenProvider
 description: Learn how to work with, and configure, the AADTokenProvider API for certain scenarios.
-ms.date: 06/30/2023
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Working with the AADTokenProvider
+
+This article describes the browser popup-flow capability introduced in SPFx 1.17. Token acquisition can differ by host, browser, tenant configuration, and SPFx version; don't apply this historical flow description to every Copilot, Teams, or SharePoint experience. Prefer the framework-provided [AadHttpClient](use-aadhttpclient.md) or [MSGraphClientV3](use-msgraph.md) for supported API access rather than depending on internal provider implementations.
 
 The [AADTokenProvider](/javascript/api/sp-http-base/aadtokenprovider) API in the SharePoint Framework (SPFx) allows developers to obtain OAuth tokens from Azure AD. These tokens are used to authenticate the user from the SharePoint page to other services, such as Power BI, Sway, Exchange, Yammer, etc.
 
@@ -25,7 +27,7 @@ To support this scenario, a new event was added to the **AADTokenProvider** so d
 To enable the popup experience, a tenant administrator must first enable the feature on the tenant. This is done using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) to set the [`-IsEnableAppAuthPopupEnabled`](/powershell/module/sharepoint-online/set-spotenant#-isenableappauthpopupenabled) argument on the tenant.
 
 > [!IMPORTANT]
-> The SPFx will always attempt to obtain an access token using the *silent SSO* first with the hidden `<iframe>`.
+> In the browser flow described here, SPFx attempts silent SSO before an interactive fallback. This isn't a guarantee that all SPFx hosts or versions use a hidden iframe.
 >
 > If the SPFx fails to obtain an access token using the silent SSO approach, it will then fall back to the full page redirect or the popup flow experience.
 

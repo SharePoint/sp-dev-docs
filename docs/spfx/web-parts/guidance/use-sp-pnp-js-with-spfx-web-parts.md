@@ -14,7 +14,7 @@ You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) libra
 You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-pnp-js-sample) for this article from the samples site.
 
 > [!NOTE]
-> Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
+> This is a PnPjs v3-era walkthrough, including historical SPFx 1.14 compiler guidance. It isn't a validated PnPjs v4 or SPFx 1.24 walkthrough. For a new solution, follow the [current PnPjs getting-started guidance](https://pnp.github.io/pnpjs/getting-started/) and [SPFx development environment](../../set-up-your-development-environment.md). Match the PnPjs major version, SPFx version, and toolchain; don't install an unspecified latest PnPjs version into the historical example.
 
 ## Create a new project
 
@@ -39,12 +39,8 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 1. Enter the following values when prompted during the setup of the new project:
 
     - **spfx-pnp-js-example** as the solution name (keep default)
-    - **spfx-pnp-js-example description** as the solution description (keep default)
-    - **SharePoint Online only (latest)** as the baseline packages version
-    - **N** to allow access to unique web APIs
     - **WebPart** as the component to create
     - **PnPJSExample** as the name of the web part
-    - **PnPJSExample description** as the description
     - **React** as the framework
 
 1. Open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
@@ -55,14 +51,14 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
     ![Project as first opened in Visual Studio Code](../../../images/sp-pnp-js-guide-first-open.png)
 
-1. Set up the location of your SharePoint-hosted workbench by modifying the `initialPage` value in the config/serve.json to point to your tenant/site.
+1. Set `initialPage` in **config/serve.json** to a test SharePoint page. Load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md) instead of the SharePoint Online workbench.
 
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
   "port": 4321,
   "https": true,
-  "initialPage": "https://{your tenant name}/sites/dev/_layouts/15/workbench.aspx"
+  "initialPage": "https://contoso.sharepoint.com/sites/dev/SitePages/PnPjs.aspx"
 }
 ```
 
@@ -74,7 +70,7 @@ After your project is created, you must install and set up **@pnp/sp** package. 
 npm install @pnp/logging @pnp/sp --save
 ```
 
-### For SPFx Version 1.14.x or those that aren't supporting typescript v4.x
+### Historical compiler configuration for SPFx 1.14.x
 
 > [!NOTE]
 > PnPjs version 3.x is only supported in SPFx v1.14 and higher and NodeJs v12.x and higher.
@@ -365,7 +361,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
 
 ## Run the example
 
-Start the sample, and add the web part to your SharePoint-hosted Workbench (**/_layouts/15/workbench.aspx**) to see it in action.
+Start the sample using its matching toolchain, open the test SharePoint page with local manifests enabled, and add the web part to see it in action.
 
 ```console
 heft start

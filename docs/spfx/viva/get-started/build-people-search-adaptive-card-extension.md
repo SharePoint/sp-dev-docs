@@ -39,15 +39,15 @@ When prompted, enter the following values (select the default option for all que
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-Next, run **heft start** from the command line in the root of the project. Once the hosted workbench loads, you'll see the **People Search** card:
+Start the project's development server (**heft start** for SPFx 1.22 and later; use the Gulp toolchain for earlier projects). Open a test SharePoint page and load local manifests using the [SPFx developer toolbar](../../debug-modern-pages.md). Edit the page to find the **People Search** card. The screenshots show the original sample's development UI:
 
-![See the People Search card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/people-search/toolbox.png)
+![Historical toolbox screenshot showing the People Search card](../../../../docs/images/viva-extensibility/people-search/toolbox.png)
 
-If you add the ACE to the workbench, you see it already prepared for mock search scenario.
+Add the ACE to the page to see the mock search scenario.
 
 ![Default People Search card](../../../../docs/images/viva-extensibility/people-search/ace-default.png)
 
-If you switch to Preview mode of the workbench, you can engage with it:
+Save the page and leave edit mode to interact with it:
 
 - type in the search box and select on the search icon to see the results Quick View mockup
 

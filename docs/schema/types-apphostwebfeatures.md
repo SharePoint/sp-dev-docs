@@ -11,6 +11,8 @@ ms.assetid: 471b53e5-90ca-2ca4-d89a-9d814b2c5dae
 
 # Types (AppHostWebFeatures)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This topic lists the types in the **AppHostWebFeatures** XML schema.
 
 > [!NOTE]

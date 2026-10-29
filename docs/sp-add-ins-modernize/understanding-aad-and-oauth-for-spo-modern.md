@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Understanding Microsoft Entra ID and OAuth 2.0 in the context of SharePoint Online modern development
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Authentication and Authorization play a key role in any development platform. In the fields of SharePoint Online modern development Microsoft Entra ID (formerly Azure Active Directory) and the Open Authorization 2.0 (OAuth 2.0) protocol are key elements of the security infrastructure.
 
 In fact, Microsoft Entra ID sits under the cover of every Microsoft 365 tenant and handles authentication and authorization requirements when accessing native services, as well as custom developed applications. OAuth 2.0 is the industry protocol used to authorize access to native workloads and custom developed applications.

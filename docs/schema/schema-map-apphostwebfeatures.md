@@ -11,6 +11,8 @@ ms.assetid: d64d36be-8a19-6fd8-2798-0cbac949649b
 
 # Schema map (AppHostWebFeatures)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This topic shows the schema definition for **AppHostWebFeatures**.
 
 > [!NOTE]

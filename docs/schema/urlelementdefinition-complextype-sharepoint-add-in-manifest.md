@@ -11,6 +11,8 @@ ms.assetid: 3175eb50-b75d-1515-6f0e-83318b887053
 
 # UrlElementDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

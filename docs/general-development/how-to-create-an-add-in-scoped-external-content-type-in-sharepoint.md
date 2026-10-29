@@ -9,6 +9,10 @@ ms.localizationpriority: medium
 
 # Create an add-in-scoped external content type in SharePoint
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn how to create external content types that can be installed, secured, and used in an SharePoint Add-in.
 
 ## Prerequisites for developing add-in-scoped external content types

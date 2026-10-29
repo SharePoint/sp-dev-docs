@@ -11,6 +11,8 @@ ms.assetid: cbecb71a-63fc-5c28-d31e-5b7296c0ed23
 
 # Elements (SharePoint Add-in Manifest)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 This topic lists the elements in the **SharePoint Add-in Manifest** XML schema.

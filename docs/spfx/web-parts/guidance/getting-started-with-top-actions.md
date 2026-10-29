@@ -186,7 +186,7 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 
 ## Testing & debugging Top Actions
 
-Similar to the different types of SPFx extensions, Top Actions must be tested in a live SharePoint modern page. They won't render on the SharePoint hosted workbench.
+Similar to SPFx extensions, Top Actions must be tested on a live modern SharePoint page. Use the [SPFx developer toolbar](../../debug-modern-pages.md) to load local manifests for debugging.
 
 ### See more
 

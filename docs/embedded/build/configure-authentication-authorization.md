@@ -92,6 +92,8 @@ The user must be a member of the container.
 
 Use a confidential client application to keep your app in control of actions taken on behalf of a user. A public client application can expose user tokens to the end user, which can lead to actions taken outside your app's control. For more information, see [Public client and confidential client applications](/entra/identity-platform/msal-client-applications).
 
+Creating a container in particular requires using a confidential client application and will fail if a public client application is used. For details, see [Create and manage containers](create-manage-containers.md#use-a-confidential-client-to-create-containers).
+
 ## Configure delegated token acquisition
 
 For delegated calls:
@@ -99,7 +101,7 @@ For delegated calls:
 1. Sign in the user with the Microsoft identity platform.
 1. Request delegated `FileStorageContainer.Selected`.
 1. Confirm delegated consent is granted according to the consuming tenant's user consent policies.
-1. Acquire an access token for Microsoft Graph.
+1. Acquire an access token for Microsoft Graph from a confidential client.
 1. Call Microsoft Graph SharePoint Embedded endpoints.
 1. Verify the user is a member of the target container.
 

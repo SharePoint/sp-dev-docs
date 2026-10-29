@@ -1,7 +1,7 @@
 ---
 title: Extend Outlook and Office with the SharePoint Framework
 description: Learn how you can use the SharePoint Framework to create apps for Microsoft 365, including Microsoft Teams, Outlook, and Office clients
-ms.date: 03/06/2025
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
@@ -12,6 +12,8 @@ With this improvement in SPFx v1.16 forward, developers can now use the SPFx to 
 
 > [!NOTE]
 > Creating traditional [Office add-in solutions](https://learn.microsoft.com/en-us/office/dev/add-ins/) with SPFx is not supported. This pattern focuses on the model where Teams apps can run also in Outlook or within other Microsoft 365 products.
+
+This web-part/Teams app hosting model is separate from **Copilot UX components**. You can share UI/business logic, but each host needs the appropriate adapter and package configuration. Copilot UX component GA doesn't make a component manifest directly runnable in Outlook or Office. See [Copilot client availability](../copilot/overview-copilot-apps.md#availability) and the [combined Copilot/Teams packaging limitation](../copilot/development-and-deployment.md#combined-copilot-and-teams-solutions).
 
 ## Create Microsoft Teams apps for Outlook and Office
 

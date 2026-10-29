@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Create UX controls by using SharePoint provider-hosted add-ins
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Create UX controls in SharePoint provider-hosted add-ins that work and behave like UX controls on the host web. 
 
 The article describes three samples that show you how to implement UX controls in your provider-hosted add-in:

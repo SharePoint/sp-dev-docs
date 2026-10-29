@@ -11,6 +11,8 @@ ms.assetid: 84f34bdc-14ec-58f2-1667-5adaae41be7e
 
 # Ribbon element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

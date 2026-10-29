@@ -11,6 +11,8 @@ ms.assetid: 060aa8d2-a12a-ff26-2ca4-ebf9b6dc88f1
 
 # ApplyElementManifests element (UpgradeActionsGroup group)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

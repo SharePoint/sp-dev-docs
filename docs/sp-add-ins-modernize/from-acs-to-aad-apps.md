@@ -8,10 +8,14 @@ ms.service: sharepoint
 
 # Upgrading SharePoint applications from Azure Access Control Service to Azure Active Directory
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The SharePoint Add-in model allows you to register applications in Azure Access Control Service (ACS) in order to gain app-only access to your SharePoint Online resources. Depending on how you configure the app-only access, you can grant different levels of permission from read-only to full-control. In the articles ["Accessing SharePoint using an application context, also known as app-only"](../solution-guidance/security-apponly.md) and ["Granting access using SharePoint App-Only"](../solution-guidance/security-apponly-azureacs.md) you can find step-by-step guidance about how to configure such kind of applications.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://devblogs.microsoft.com/microsoft365dev/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/). For new tenants, apps using an ACS app-only access token is disabled by default. We recommend using the Azure AD app-only model which is modern and more secure.
+> The general Azure ACS retirement in 2018 originally excluded its use with SharePoint Online. That exception ended on April 2, 2026: ACS authentication and SharePoint Add-ins no longer work in SharePoint Online. Use this article to migrate to supported Microsoft Entra ID authentication, not to configure new ACS access. See the [SharePoint Online ACS retirement announcement](../sp-add-ins/retirement-announcement-for-azure-acs.md).
 
 > [!IMPORTANT]
 > This article refers to so called PnP components, samples and/or tooling which are open-source assets backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels. These components or samples are however using Microsoft supported out of the box APIs and features which are supported by Microsoft.

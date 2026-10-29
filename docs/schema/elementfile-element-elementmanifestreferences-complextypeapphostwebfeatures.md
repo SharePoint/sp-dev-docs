@@ -11,6 +11,8 @@ ms.assetid: c25a5ef2-b9ef-926d-cf7b-9a91168c9f1f
 
 # ElementFile element (ElementManifestReferences complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

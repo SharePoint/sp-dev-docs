@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Upgrading your code from SharePoint JavaScript Object Model (JSOM) to Client-side code and PnPjs
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 While developing solutions with the SharePoint Add-in model you used to rely on the SharePoint JavaScript Object Model (JSOM) to consume SharePoint Online from client-side code. For example, you used to get a reference to the client context with the following syntax.
 
 > [!IMPORTANT]

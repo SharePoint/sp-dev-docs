@@ -11,6 +11,8 @@ ms.assetid: b828a39b-c365-186c-939d-c8d74a342ba1
 
 # AppPartConfigDefinition schema reference
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 > [!NOTE]

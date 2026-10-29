@@ -54,11 +54,20 @@ An archived container is inaccessible until it's reactivated. Stop uploads, back
 
 ## Get archived containers
 
-Read one archived container with the normal container get operation.
+Read an archived container's standard properties with the [v1.0 container get operation](/graph/api/filestoragecontainer-get?view=graph-rest-1.0&preserve-view=true).
 
 ```http
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}
+GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/{containerId}
 ```
+
+To inspect the container's archive state, use the beta endpoint and select `archivalDetails`.
+
+```http
+GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}?$select=id,displayName,archivalDetails
+```
+
+> [!NOTE]
+> The [archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) and [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) actions and the [archivalDetails property](/graph/api/resources/filestoragecontainer?view=graph-rest-beta&preserve-view=true#properties) are available only in Microsoft Graph beta. Keep requests that read or filter on `archivalDetails` on `/beta`, even though standard container get and list operations are available in `v1.0`.
 
 List archived containers for a container type by filtering for containers that have archival details.
 

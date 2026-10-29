@@ -1,12 +1,17 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 02/20/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 # Deployment options for SharePoint Framework solutions for Microsoft Teams
 
 Developers have multiple options when deploying SharePoint Framework (SPFx) solutions for use within Microsoft Teams. This article explains the options supported in SharePoint Online.
+
+> [!IMPORTANT]
+> At SPFx 1.24 GA, automatic **Sync to Teams** packaging has a mismatch when a solution contains both Copilot UX components and SPFx Teams functionality. Use a [developer-provided Teams package](#developer-provided-microsoft-teams-app-manifest--package) for this combination. Include the agent and Teams capabilities in that package; don't use a web-part-only manifest for a combined solution. A fix is planned as a fast follow after GA, without a committed date.
+>
+> For Copilot UX components, initial sync deploys the baseline agent. Later tool-parameter or component/function changes are discovered at runtime after redeployment; baseline-agent changes require re-sync. See [Develop and deploy Copilot UX components](copilot/development-and-deployment.md).
 
 > [!NOTE]
 > Prior to January 2021, SharePoint Online only supported one option: when a qualifying SPFx solution was uploaded to the SharePoint tenant app catalog, the **Sync To Teams** button in the tenant app catalog's ribbon.

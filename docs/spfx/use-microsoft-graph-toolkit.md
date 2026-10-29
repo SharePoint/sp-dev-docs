@@ -1,89 +1,36 @@
 ---
-title: Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
-description: Use Microsoft Graph Toolkit to easily connect your SharePoint Framework web parts and extensions to Microsoft Graph.
-ms.date: 11/19/2025
+title: Migrate SharePoint Framework solutions from Microsoft Graph Toolkit
+description: Replace the retired Microsoft Graph Toolkit in SharePoint Framework solutions with MSGraphClientV3 and your own user interface.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
-
-When building SharePoint Framework solutions, on option to show data from Microsoft 365 is by using Microsoft Graph Toolkit.
+# Migrate SharePoint Framework solutions from Microsoft Graph Toolkit
 
 > [!WARNING]
-> Microsoft Graph Toolkit is deprecated and will be fully retired on August 28th, 2026. See more details from [Microsoft Graph Toolkit retirement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
+> Microsoft Graph Toolkit was deprecated on September 1, 2025 and retired on August 28, 2026. It is no longer maintained or supported. Do not adopt or install it for new SharePoint Framework solutions. See the [Microsoft Graph Toolkit retirement announcement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
-## What is Microsoft Graph Toolkit
+Microsoft Graph Toolkit provided reusable components and authentication providers for Microsoft Graph. This article is retained to help maintainers migrate existing SharePoint Framework (SPFx) solutions. The retirement applies to the toolkit, not to Microsoft Graph or SPFx.
 
-Microsoft Graph Toolkit is a collection of reusable, framework-agnostic components and authentication providers for accessing and working with Microsoft Graph. The components are fully functional right out of the box, with built-in providers that authenticate with and fetch data from Microsoft Graph.
+## Use MSGraphClientV3 instead
 
-Microsoft Graph Toolkit makes it easy to use Microsoft Graph in your application. The following example shows the calendar events of the signed-in user with just one line of code using the [Agenda](/graph/toolkit/components/agenda) component.
+For Microsoft Graph access in SPFx, use [MSGraphClientV3](./use-msgraph.md). It handles authentication using the SharePoint Framework context. Your solution makes the Microsoft Graph requests, handles responses and errors, and renders the user interface.
 
-## Why use Microsoft Graph Toolkit in SharePoint Framework?
+MSGraphClientV3 is available in SPFx 1.15.0 and later. If your solution uses an older SPFx version, upgrade it to a supported version before migrating. Start with the [Microsoft Graph API tutorial](./web-parts/get-started/using-microsoft-graph-apis.md) for an end-to-end example.
 
-When building solutions using SharePoint Framework, you connect to Microsoft Graph using the [MSGraphClient](./use-msgraph.md) exposed by SharePoint Framework. The **MSGraphClient** handles authentication with Microsoft Graph for you, allowing you to focus on building your app. Still, you need to build the necessary API requests, execute them, handle their responses, and show the data in your app.
+## Migrate an existing solution
 
-Microsoft Graph Toolkit simplifies working with Microsoft Graph even further. Not only does it handle the authentication, but it also communicates with Microsoft Graph for you and automatically shows the retrieved data in your app, saving you precious time.
-
-The following example shows how to use the toolkit's Agenda component in a plain JavaScript SharePoint Framework web part to display the current user's calendar events:
-
-```typescript
-import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
-
-// ...
-
-export default class CalendarWebPart extends BaseClientSideWebPart<ICalendarWebPartProps> {
-  protected async onInit() {
-    if (!Providers.globalProvider) {
-      Providers.globalProvider = new SharePointProvider(this.context);
-    }
-  }
-
-  public render(): void {
-    this.domElement.innerHTML = `
-      <div class="${ styles.calendar }">
-        <mgt-agenda></mgt-agenda>
-      </div>`;
-  }
-
-  // ...
-}
-```
-
-Notice, how Microsoft Graph Toolkit uses the current context from SharePoint Framework and abstracts away retrieving calendar events from Microsoft Graph and showing them in your app to a single line of code: `<mgt-agenda></mgt-agenda>`.
-
-## Use Microsoft Graph Toolkit in SharePoint Framework
-
-Microsoft Graph Toolkit connects to Microsoft Graph to retrieve data stored in Microsoft 365. To access the data, the service principal, that facilitates the communication with APIs, will require the necessary API permissions for Microsoft Graph. The necessary permissions for your project depend on which toolkit components you use. For more information about the Microsoft Graph permissions required by components, see [their documentation](/graph/toolkit/overview?WT.mc_id=m365-29707-wmastyka).
-
-After you have determined the list of API permissions needed for your SharePoint Framework project, [add them to the project's configuration](./use-aadhttpclient.md#request-permissions-to-an-entra-id-application).
-
-The next step is to add Microsoft Graph Toolkit to your project. For the exact steps, see the [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka) documentation.
-
-> [!IMPORTANT]
-> If you use React in your SharePoint Framework project, you'll need to install both `@microsoft/mgt-spfx` and `@microsoft/mgt-react` packages in your project. You'll also need to adjust imports for the types that you load from the toolkit. For more information, see the [React section](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka#react) of the SharePoint Framework library for Microsoft Graph Toolkit documentation.
-
-After you complete the configuration steps, you can use Microsoft Graph Toolkit in your project.
-
-## Known issues
-
-### Web parts and extensions show error
-
-SharePoint Framework web parts and extensions that use Microsoft Graph Toolkit show an error similar to:
-
-> Failed to execute 'define' on 'CustomElementRegistry': the name "mgt-xyz" has already been used with this registry.
-
-This error is caused by multiple SharePoint Framework components trying to instantiate their own copy of the Microsoft Graph Toolkit. To avoid this issue, you should deploy the `mgt-spfx.sppkg` package to the SharePoint app catalog in your tenant and update all solutions that use Microsoft Graph Toolkit to use the `@microsoft/mgt-spfx` SharePoint package. For more information, see the [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka) documentation.
-
-### `AADSTS65001` error logged in the developer console
-
-SharePoint Framework web parts and extensions that use Microsoft Graph Toolkit don't work as expected. In the developer console, you see an error similar to:
-
-> AADSTS65001: The user or administrator has not consented to use the application with ID 'f96cafc5-5fa8-4594-9815-aa169a8c6d09' named 'SharePoint Online Client Extensibility Web Application Principal'. Send an interactive authorization request for this user and resource.
-
-This error is often caused by the necessary Microsoft Graph API permissions not being granted to the SharePoint Framework service principal. In your SharePoint admin center, ensure that the necessary permissions are granted and listed on the API access page. For more information, see the [SharePoint API management documentation](/sharepoint/api-access?WT.mc_id=m365-29707-wmastyka).
+1. Inventory toolkit dependencies, including `@microsoft/mgt-spfx`, `@microsoft/mgt-react`, other `@microsoft/mgt-*` packages, provider initialization, and `<mgt-*>` elements.
+1. Identify the Microsoft Graph endpoints and least-privileged permissions needed for each feature. Replace toolkit provider and data-access calls with MSGraphClientV3.
+1. Replace toolkit components with your own UI, using components appropriate for your project's supported React version where needed. There is no direct replacement for every toolkit component. Implement loading, empty, error, and accessibility states as well as the data display.
+1. Review `webApiPermissionRequests` in `config/package-solution.json` and have an administrator approve the required permissions through [SharePoint API access](/sharepoint/api-access). For configuration details, see [Request permissions to a Microsoft Entra ID application](./use-aadhttpclient.md#request-permissions-to-an-entra-id-application).
+1. Remove unused toolkit imports, provider initialization, and package dependencies after replacing their functionality. Update the project's lockfile using its package manager.
+1. Build, deploy, and test the migrated solution on a SharePoint page. Verify permissions, API responses, user interface behavior, and accessibility.
+1. Remove the shared `mgt-spfx.sppkg` library from the tenant app catalog only after confirming that no deployed solutions still depend on it. Review unused permissions separately before revoking them, because other SPFx solutions might use the same grants.
 
 ## See also
 
-- [Microsoft Graph Toolkit overview](/graph/toolkit/overview?WT.mc_id=m365-29707-wmastyka)
-- [SharePoint Framework library for Microsoft Graph Toolkit](/graph/toolkit/get-started/mgt-spfx?WT.mc_id=m365-29707-wmastyka)
-- [Microsoft Graph Toolkit Playground](https://mgt.dev/?path=/story/samples-general--login-to-show-agenda)
+- [Use MSGraphClientV3 to connect to Microsoft Graph](./use-msgraph.md)
+- [Use Microsoft Graph in your solution](./web-parts/get-started/using-microsoft-graph-apis.md)
+- [Migrate a SharePoint web part from Microsoft Graph Toolkit](./web-parts/get-started/build-web-part-microsoft-graph-toolkit.md)
+- [Microsoft Graph SDKs overview](/graph/sdks/sdks-overview)

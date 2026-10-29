@@ -7,6 +7,8 @@ ms.service: sharepoint
 ---
 # Complete basic operations using SharePoint REST endpoints
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 You can perform basic create, read, update, and delete (CRUD) operations by using the Representational State Transfer (REST) interface provided by SharePoint. The REST interface exposes all the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items.
 
 For an introduction to the SharePoint REST interface and its architecture, see [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md).

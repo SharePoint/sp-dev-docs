@@ -53,9 +53,11 @@ npm install
 npm run dev
 ```
 
-After Webpack completes, open `https://localhost:8080`, sign in with tenant credentials, and grant admin consent for the app when prompted. Open the same URL in another browser tab or send it to another user in the same tenant. Changes to the item counter synchronize across connected clients.
+After Webpack completes, open `http://localhost:8080`, sign in with tenant credentials, and grant admin consent for the app when prompted. Open the same URL in another browser tab or send it to another user in the same tenant. Changes to the item counter synchronize across connected clients.
 
 ![Item counter sample app running in the browser, showing a shared counter that synchronizes across connected clients.](../images/itemcount.png)
+
+If you can't sign in to the sample or it displays a blank page, see [Troubleshooting](../reference/troubleshooting.md) for redirect URI and API permission checks.
 
 ## Decide what belongs in Fluid
 

@@ -11,6 +11,8 @@ ms.assetid: fbdf0dec-58f9-e419-c543-7729f9ee7523
 
 # AutoDeployedWebApplication element (AppPrincipalDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

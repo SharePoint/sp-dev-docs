@@ -9,6 +9,9 @@ ms.localizationpriority: high
 
 This article illustrates how you would connect to an enterprise API secured with Azure Active Directory from a SharePoint Framework solution. It covers both creating and securing the API as well as building the SharePoint Framework solution.
 
+> [!NOTE]
+> Azure Active Directory is now Microsoft Entra ID. This walkthrough retains older Azure Functions and portal examples. For a new API, follow the current [App Service authentication configuration](/azure/app-service/configure-authentication-provider-aad) and [AadHttpClient guidance](use-aadhttpclient.md). Validate the supported Functions runtime, authentication requirements, permissions, and CORS configuration before deploying; the historical screenshots aren't a current portal walkthrough.
+
 ## Create an enterprise API secured with Azure AD
 
 Start with creating an enterprise API secured with Azure Active Directory. While there are no restrictions on how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you'll build the API using Azure Functions and secure it using Azure App Service Authentication.
@@ -200,7 +203,7 @@ Confirm your changes by pressing the **Save** button.
 
 With the API configured and working, the next step is to build the SharePoint Framework solution that will consume the API.
 
-> Before you proceed, ensure that you have installed version 1.4.1 or higher of the SharePoint Framework Yeoman generator. If you have installed the generator globally, you can check the installed version by executing in the command line: `npm ls -g --depth=0`.
+> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). SPFx 1.24 uses React 18.3.1 where React is selected, with Node.js 24 LTS recommended. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
 
 ### Create a new SharePoint Framework project
 
@@ -227,14 +230,9 @@ yo @microsoft/sharepoint
 When prompted, use the following values:
 
 - **What is your solution name?** contoso-api
-- **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
-- **Where do you want to place the files?** Use the current folder
-- **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
-- **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?** No
 - **Which type of client-side component to create?** WebPart
 - **What is your Web part name?** Orders
-- **What is your Web part description?** Show recent orders
-- **Which framework would you like to use?** No JavaScript framework
+- **Which template would you like to use?** No framework
 
 After the project is created, open it in a code editor. In this tutorial, you'll use Visual Studio Code:
 
@@ -434,7 +432,7 @@ In the side panel, grant the access to the API by pressing the **Approve** butto
 ![The 'Approve' button highlighted in the side panel for managing an API request in the new SharePoint admin center](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 > [!NOTE]
-> It is possible to create a domain isolated web part that connects to the API secured with AAD. In this case, the CORS for the API has to be re-configured appropriately, because each instance of domain isolated web part execute in dedicated app web with unique domain.
+> Domain-isolated web parts are retired in SharePoint Online. Don't enable domain isolation for this scenario. Use a standard SPFx web part, configure the API's allowed SharePoint origins, and follow the [retirement guidance](web-parts/isolated-web-parts-retirement.md) for existing isolated solutions.
 
 ### Add the Orders web part to the page
 
@@ -457,4 +455,3 @@ Select the **Orders** web part to add it to the page. You should see the list of
 ![List of recent orders retrieved from an enterprise API displayed on a SharePoint page](../images/use-aadhttpclient-enterpriseapi-webpart-orders.png)
 
 > If you receive an error with the technical details of "Failed to open pop-up window", you have a pop-up blocker enabled. You will need to disable the browser's pop-up blocker for your site in order to show the page correctly.
-

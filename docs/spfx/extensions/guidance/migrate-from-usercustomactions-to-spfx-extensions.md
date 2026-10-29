@@ -7,6 +7,9 @@ ms.localizationpriority: medium
 
 # Migrating from UserCustomAction to SharePoint Framework extensions
 
+> [!NOTE]
+> The React example below uses the legacy rendering API from before SPFx 1.24. For a current React 18 solution, follow the [upgrade guide](../../react-18-upgrade.md). A placeholder owns its React root: clean it up in the placeholder's disposal callback, recreate it if the placeholder returns, and unsubscribe from placeholder events when the extension is disposed.
+
 Many enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the site *CustomAction* capability of the SharePoint Feature Framework to extend the UI of pages. In the current "modern" UI of SharePoint Server 2019 and SharePoint Online, most of those customizations are no longer available. Fortunately, with SharePoint Framework extensions, you can provide similar functionality in the "modern" UI.
 
 In this tutorial, you learn how to migrate from the old "classic" customizations to the new model based on SharePoint Framework extensions.
@@ -203,7 +206,7 @@ The UI elements of the custom footer are rendered using React and a custom React
     > [!IMPORTANT]
     > **Install React Dependencies First**
     > 
-    > Before starting, ensure React dependencies are installed:
+    > Before starting, choose the React runtime and type definitions listed for your project's [SPFx version](../../compatibility.md). The unversioned command below is historical, not a recommendation to install the latest React major. SPFx 1.24 uses React 18.3.1, and the legacy rendering code below also needs migration:
     > 
     > ```console
     > npm install react react-dom @types/react @types/react-dom
@@ -492,4 +495,3 @@ Enjoy your new custom footer built using the SharePoint Framework extensions!
 ## See also
 
 - [Overview of SharePoint Framework extensions](../overview-extensions.md)
-

@@ -1,32 +1,35 @@
 ---
-title: Connect to Entra ID-secured APIs in SharePoint Framework solutions
-description: Use the AadHttpClient class to connect to Entra ID-secured APIs in SharePoint Framework solutions.
-ms.date: 07/01/2025
+title: Connect to Microsoft Entra ID-secured APIs in SharePoint Framework solutions
+description: Use the AadHttpClient class to connect to Microsoft Entra ID-secured APIs in SharePoint Framework solutions.
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ---
 
-# Connect to Entra ID-secured APIs in SharePoint Framework solutions
+# Connect to Microsoft Entra ID-secured APIs in SharePoint Framework solutions
 
-When building SharePoint Framework solutions, you might need to connect to an API secured by using Entra ID. SharePoint Framework allows you to specify which Entra ID applications and permissions your solution requires, and a global or SharePoint administrator can grant the necessary permissions if they haven't yet been granted. By using the **AadHttpClient**, you can easily connect to APIs secured by using Entra ID without having to implement the OAuth flow yourself.
+When building SharePoint Framework solutions, you might need to connect to an API secured by Microsoft Entra ID. Specify the required delegated permissions in your solution and have an administrator with the appropriate role review them. **AadHttpClient** handles token acquisition for supported SPFx scenarios so you don't need to implement the OAuth flow yourself.
+
+> [!IMPORTANT]
+> The administrator role required for API approval depends on the target API. Approval for Microsoft Graph or other Microsoft APIs requires a **Global Administrator**; for third-party APIs registered in the tenant, an **Application Administrator** is sufficient. A SharePoint Administrator role alone doesn't establish authority to grant every API permission. See [Manage access to Microsoft Entra ID-secured APIs](/sharepoint/api-access).
 
 ## Web API permissions overview
 
 Entra ID secures a number of resources, from Microsoft 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
-Client-side applications that are incapable of storing a secret, such as SharePoint Framework solutions, use a specific type of OAuth flow named [OAuth implicit flow](/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
+Client-side applications cannot securely store client secrets. Use the SPFx-provided authentication clients rather than embedding secrets or implementing a separate token flow.
 
-Developers building client-side solutions are responsible for implementing authorization by using the OAuth implicit flow in their application. In SharePoint Framework solutions, that's already done as part of the framework through **MSGraphClient** and **AadHttpClient**, both of which are introduced in SharePoint Framework v1.4.1.
+Use **AadHttpClient** for Microsoft Entra ID-secured APIs and [**MSGraphClientV3**](use-msgraph.md) for Microsoft Graph. The underlying authentication implementation is managed by SharePoint and can differ by SPFx version and host; older implicit-flow descriptions aren't a universal statement about current SPFx authentication.
 
 > [!NOTE]
-> Directly using [Microsoft Authentication Library for JavaScript](https://learn.microsoft.com/javascript/api/overview/msal-overview) with SPFx is not supported with SPFx v1.4.1 and beyond. `AADHttpClient` is the recommended approach to authenticate for using Entra ID secured resources.
+> Use **AadHttpClient** or **MSGraphClientV3** for the supported SPFx authentication integration rather than adding your own MSAL instance to replace it. For cookie restrictions, interactive sign-in, and the popup event, see [Working with AadTokenProvider](use-aadtokenprovider.md). Browser popup restrictions and tenant settings can affect sign-in; don't assume silent authentication always succeeds.
 
 As part of the SharePoint Framework, a specific process is defined for how developers can request permissions and administrators can manage permissions to resources secured with Entra ID. The following schema illustrates this process.
 
 ![Schema illustrating the flow of requesting, granting and using permissions to Entra ID applications](../images/webapipermissions-logical.png)
 
-Developers building a SharePoint Framework solution that requires access to specific resources secured with Entra ID list these resources along with the required permission scopes in the solution manifest. When deploying the solution package to the app catalog, SharePoint creates permission requests and prompts the administrator to manage the requested permissions. For each requested permission, a global or SharePoint administrator can decide whether they want to grant or deny the specific permission.
+Developers list required resources and permission scopes in **config/package-solution.json**. Deploying the package to the app catalog creates permission requests for an appropriately authorized administrator to approve or reject.
 
-All permissions are granted to the whole tenant and not to a specific application that has requested them. When the administrator grants a specific permission, its added to the **SharePoint Online Client Extensibility** Entra ID application, which is provisioned by Microsoft in every Entra ID and which is used by the SharePoint Framework in the OAuth flow to provide solutions with valid access tokens.
+For the shared SPFx permission model, grants aren't isolated to the solution that requested them. The [SharePoint API access documentation](/sharepoint/api-access) identifies the **SharePoint Online Client Extensibility Web Application Principal** as the recipient of delegated permissions. Older guidance abbreviates this name as **SharePoint Online Client Extensibility**. Manage requests and grants through SharePoint's supported API access controls rather than selecting or modifying a principal solely by its display name.
 
 ## Discover available applications and permissions
 
@@ -63,41 +66,11 @@ One way to see the available applications in Entra ID is by navigating to the [A
 
 ### Use Azure PowerShell
 
-> [!NOTE]
-> Before you can execute the following steps, you must install [Azure PowerShell](/powershell/azure/install-az-ps). Alternatively, you can execute the cmdlets mentioned in this section in the Azure Cloud Shell PowerShell.
-
-1. Sign in to your Azure subscription by executing in PowerShell (this isn't necessary if you're using the Azure Cloud Shell):
-
-    ```powershell
-    Login-AzureRmAccount
-    ```
-
-1. Enter the following to list the applications available in your tenant:
-
-    ```powershell
-    Get-AzureRmADServicePrincipal | sort DisplayName | ft DisplayName, Id
-    ```
-
-    Running this cmdlet lists all applications available in your tenant. For each application, its display name and object ID are displayed, which you can use in your SharePoint Framework solution to request application permissions.
+Use the supported [Azure PowerShell Az module](/powershell/azure/install-az-ps) and [Get-AzADServicePrincipal](/powershell/module/az.resources/get-azadserviceprincipal) reference to discover service principals in your tenant. Older examples using `Login-AzureRmAccount` and `Get-AzureRmADServicePrincipal` target the legacy AzureRM module and aren't current setup instructions.
 
 ### Use Azure CLI
 
-> [!NOTE]
-> Before you can execute the following steps, you must install the [Azure CLI](/cli/azure/install-azure-cli). Alternatively, you can run the Azure CLI through the [Azure Cloud Shell](/azure/cloud-shell/overview) or as a [Docker container](https://hub.docker.com/r/microsoft/azure-cli/).
-
-1. If you're running the CLI on your machine or in a Docker container, start by connecting to your Azure subscription by executing:
-
-    ```console
-    azure login
-    ```
-
-1. After you're connected, execute the following command to list all available Entra ID applications:
-
-    ```console
-    Entra ID sp list --query "sort_by([*].{displayName: displayName, objectId: objectId}, &displayName)" -o table
-    ```
-
-    Running this command lists all Entra ID applications available in your tenant, sorted by displayName. For each application, the command displays its displayName and objectId. Additionally, the output is formatted as a table.
+Use the [Azure CLI](/cli/azure/install-azure-cli) and its [az ad sp list](/cli/azure/ad/sp#az-ad-sp-list) command reference to discover service principals. Azure CLI command identifiers retain `ad`; don't replace that identifier with the product name "Entra ID".
 
 ### Get the list of permission scopes exposed by the application
 
@@ -226,7 +199,7 @@ To learn how to use the API access page in the new SharePoint admin center, see 
 
 ### Manage permissions with PowerShell
 
-Global and SharePoint administrators can also use the SharePoint Online Management Shell to manage permissions and permission requests in SharePoint Online.
+Administrators can also use the SharePoint Online Management Shell to manage permissions and requests. The required role depends on the operation and target API; follow the [API access requirements](/sharepoint/api-access).
 
 - To *view all pending permission requests*, use the **Get-SPOTenantServicePrincipalPermissionRequests** cmdlet. For each permission request, the cmdlet lists its ID (required to either approve or deny the request), the resource for which permissions have been requested, and the requested permissions.
 
@@ -258,7 +231,7 @@ Global and SharePoint administrators can also use the SharePoint Online Manageme
 
 ### Manage permissions using the CLI for Microsoft 365
 
-Global and SharePoint administrators can use the [CLI for Microsoft 365](https://aka.ms/o365cli) to manage permissions and permission requests in SharePoint Online.
+Administrators can use the [CLI for Microsoft 365](https://aka.ms/o365cli) to manage permissions and requests, subject to the same API approval requirements.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
@@ -352,11 +325,11 @@ Following are some considerations that you should take into account when working
 
 ### Request permissions via SharePoint Framework solutions
 
-It's only possible to request additional permissions through a SharePoint Framework solution. The request is started when the solution package (**/*.sppkg**) containing a permissions request is deployed in the app catalog. After the request is started, it can be approved or denied by a global or SharePoint administrator.
+For the solution-based workflow described here, deploy a package (**\*.sppkg**) containing `webApiPermissionRequests` to the app catalog. An administrator with the required role can then approve or reject each request through the supported [API access controls](/sharepoint/api-access).
 
 ### Granted permissions apply to the entire tenant
 
-Although permissions to Entra ID resources are being requested by a SharePoint Framework solution, once granted, they apply to the entire tenant and can be leveraged by any client-side request in that tenant. This includes SPFx solutions and non-SPFx solutions because.
+In the shared SPFx permission model, approved delegated permissions can be used by other components and custom scripts using the same principal in the tenant. They aren't restricted to the solution that requested them and don't grant application-only access or permissions beyond those of the signed-in user.
 
 ### Removing the solution doesn't revoke permissions
 
@@ -378,4 +351,3 @@ The service principal can be re-enabled by using the **Enable-SPOTenantServicePr
 
 > [!NOTE]
 > The **SharePoint Online Client Extensibility** principal is fully controlled by SharePoint via the API access page in the SharePoint admin center. Making any changes directly to the principal in the Microsoft Entra admin center can result in unpredictable behaviors and is not supported.  
-

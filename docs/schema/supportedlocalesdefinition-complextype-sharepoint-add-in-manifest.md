@@ -11,6 +11,8 @@ ms.assetid: 0efd105a-d89e-039c-3f64-cc78d8160503
 
 # SupportedLocalesDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

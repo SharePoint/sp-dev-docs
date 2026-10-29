@@ -160,7 +160,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     When the code compiles without errors, it serves the resulting manifest from **https://localhost:4321**.
 
-    ![gulp serve](../../../images/ext-forcustomizer-gulp-serve.png)
+    ![Historical Gulp-era screenshot of the development server; current projects use Heft](../../../images/ext-forcustomizer-gulp-serve.png)
 
     This will start your default browser and load the page defined in **serve.json** file.
 

@@ -1,7 +1,7 @@
 ---
 title:  Application Lifecycle Management (ALM) APIs
-description: ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant.
-ms.date: 06/28/2022
+description: Manage SharePoint Framework solution deployment with the application lifecycle management APIs.
+ms.date: 10/25/2026
 ms.subservice: migration-tool
 ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 ms.localizationpriority: high
@@ -9,7 +9,13 @@ ms.localizationpriority: high
 
 # Application Lifecycle Management (ALM) APIs
 
-ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities:
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+Use ALM APIs to manage SharePoint Framework solution deployment across your tenant. The APIs remain available for SPFx; historical Add-in operations described below don't restore the retired SharePoint Online Add-in model. For Copilot UX components, distinguish solution-package deployment from the [agent's initial sync and baseline updates](../spfx/copilot/development-and-deployment.md).
+
+The following operation descriptions originated when both solution types were available:
 
 - Add SharePoint Framework solution or SharePoint Add-in to tenant or site collection app catalog.
 - Remove SharePoint Framework solution or SharePoint Add-in from tenant or site collection app catalog.
@@ -52,6 +58,9 @@ For example:
 Learn more here: [SharePoint REST API](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 
 ### PnP CSOM (also known as: PnP Sites Core)
+
+> [!IMPORTANT]
+> The following sample uses the archived PnP Sites Core library. For new development, review [PnP Framework](https://pnp.github.io/pnpframework/) and the native ALM APIs. Don't install the old library or use its credential example as the current authentication baseline; validate any replacement code before deploying it.
 
 The PnP CSOM implements the ALM APIs by calling the SharePoint REST API.
 

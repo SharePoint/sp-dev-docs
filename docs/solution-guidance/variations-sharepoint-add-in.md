@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 Variations in the SharePoint Add-in model
 =========================================
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 ## Summary
 
 The approach you take to configure variations is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint Server-side Object Model (Microsoft.SharePoint.Publishing.Variations) was used to configure variations, and features that executed the code were deployed via SharePoint Solutions.

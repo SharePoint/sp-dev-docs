@@ -8,6 +8,10 @@ ms.localizationpriority: medium
 
 # Working with Tasks in SharePoint Workflows using Visual Studio
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Learn about the revised workflow task framework that was introduced in SharePoint Server 2013, (and which is available in SharePoint Server 2016, SharePoint Server 2019, and SharePoint Server Subscription Edition). This is built on the Workflow Manager (which was more recently superseded by 'SharePoint Workflow Manager'; see associated [announcement](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/announcing-the-release-of-sharepoint-workflow-manager-for/ba-p/3744881) ).
 
 **Provided by:** [Andrew Connell](https://www.andrewconnell.com)

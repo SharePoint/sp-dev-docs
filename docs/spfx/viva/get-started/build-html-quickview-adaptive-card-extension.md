@@ -8,10 +8,10 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) v1.20 release introduced a new option to use HTML to render the Viva Connection Adaptive Card Extension (ACE) Quick Views. This enables more advanced user experiences. You can even use whatever suitable JavaScript web framework you prefer (ie: React etc.) in your Quick View experiences.
 
-You can start using this option by updating your Quick View implementation to be inherited from xxx class, which will be automatically detected by the underlying platform.
+Use [BaseWebQuickView](/javascript/api/sp-adaptive-card-extension-base/basewebquickview) as the base class for an HTML Quick View.
 
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.20. For more information on installing the SPFx v1.20, see [SharePoint Framework v1.20 release notes](../../release-1.20.0.md).
+> This walkthrough's code and screenshots target [SPFx 1.20](../../release-1.20.0.md). Heft commands shown below apply only to SPFx 1.22 and later; use the Gulp toolchain for the original 1.20 project. Match all SPFx packages to your project's version. If you add React to an SPFx 1.24 HTML Quick View, use [React 18 root ownership and disposal](../../react-18-upgrade.md#update-other-react-entry-points); the plain HTML example below doesn't mount React.
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -31,21 +31,21 @@ When prompted, enter the following values (*select the default option for all pr
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Test the ACE in the hosted workbench
+## Test the ACE on a SharePoint page
 
 Before digging into the code, run the scaffolded output and see what an Adaptive Card Extension looks like.
 
-The inner development loop with ACEs is similar to SPFx Web Parts. We can serve locally and run the code on the SharePoint Online hosted workbench.
+Serve the ACE locally and load it on a test SharePoint page using the [SPFx developer toolbar](../../debug-modern-pages.md). Set `initialPage` in **config/serve.json** to that page.
 
 ```console
 heft start
 ```
 
-Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server is running, open the test page with local manifests enabled and edit the page.
 
 Open the **Web Part Toolbox** and select your ACE.
 
-Once added to the page, select the **Preview** link in the top-right area of the workbench to interact with the ACE. Next, select the **Quick View** button. This will open the default Adaptive Card implementation of the Quick View defined in the **src/adaptiveCardExtensions/htmlQuickView/quickView/template/QuickViewTemplate.json** file:
+After adding the ACE, save the page and leave edit mode to interact with it. Select **Quick View** to open the default Adaptive Card implementation defined in **src/adaptiveCardExtensions/htmlQuickView/quickView/template/QuickViewTemplate.json**. The screenshots illustrate the original sample's UI:
 
 ![Screenshot of the default ACE & Quick View](../../../images/viva-extensibility/ace-basic-html-quickview-01.png)
 
@@ -193,7 +193,7 @@ The last step is to update the Quick View component to import the style sheet an
 
 ## Test the new HTML enabled Quick View
 
-With all the changes now applied, retest solution in the hosted workbench to see the new HTML enabled Quick View:
+With all the changes applied, reload the test page with local manifests enabled and open the HTML Quick View:
 
 ![Preview on HTML Quick Views](../../../images/120-release-notes/html-quick-views.png)
 

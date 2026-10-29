@@ -8,6 +8,8 @@ ms.service: sharepoint
 
 # Make batch requests with the REST APIs
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This article describes how you can batch queries and operations against the REST/OData API of Microsoft SharePoint Online (and on-premises SharePoint 2016 and later) and the [Files and folders subset](working-with-folders-and-files-with-rest.md) of the Office 365 REST APIs. With this technique, you can improve the performance of your add-in by combining many operations into a single request to the server and a single response back.
 
 ## Executive summary of the $batch option

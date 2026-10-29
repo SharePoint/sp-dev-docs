@@ -1,7 +1,7 @@
 ---
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
-ms.date: 02/13/2024
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -22,7 +22,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 ## Create app catalog site
 
-You need an app catalog to upload and deploy web parts. If you've already set up an app catalog, see [Create app catalog sites](#create-app-catalog-site).
+You need an app catalog to upload and deploy web parts. If you've already set up an app catalog, continue to [Create a new site collection](#create-a-new-site-collection).
 
 ### To create an app catalog site
 
@@ -77,15 +77,15 @@ After SharePoint creates the site, you can browse to your site collection by sel
 > [!NOTE]
 > You can potentially use the same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do, however, recommend the use of isolated developer tenants for each developer, for the best isolated developer experience.
 
-## SharePoint Workbench
+## Set up a page for debugging
 
-SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions that you're building.
+Create a modern SharePoint page in your development site and make sure your developer account can edit it. Use this page to test locally served web parts in their actual SharePoint context, with the [SharePoint Framework Debug Toolbar (developer toolbar)](debug-toolbar.md). Extensions require an appropriate modern page, list, or library for their extension type. See [Debug SharePoint Framework solutions on modern SharePoint pages](debug-modern-pages.md).
 
-It's also hosted in your tenant to preview and test your local web parts in development. You can access the **Hosted SharePoint Workbench** from any SharePoint site in your tenancy by browsing to the following URL:
+The local workbench was removed in SPFx 1.13 and isn't included in current projects.
 
-```http
-https://your-sharepoint-site/_layouts/workbench.aspx
-```
+[!INCLUDE [spfx-online-workbench-deprecation](../../includes/snippets/spfx-online-workbench-deprecation.md)]
+
+For Copilot UX components, use the fully supported [Copilot Workbench](copilot/overview-copilot-apps.md#test-with-the-copilot-workbench). Development and testing, including Copilot Workbench, require the Microsoft 365 Copilot add-on license on top of your normal E3, E5, or E7 license, just as production use does. Eligibility for a Microsoft 365 developer subscription doesn't replace this requirement. See the [Copilot UX component licensing and availability requirements](copilot/overview-copilot-apps.md#availability).
 
 ## Next steps
 

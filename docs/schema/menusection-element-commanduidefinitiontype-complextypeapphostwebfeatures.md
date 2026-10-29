@@ -12,6 +12,8 @@ ms.assetid: 015f7028-917f-95df-c48f-8473fff51b5d
 
 # MenuSection element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

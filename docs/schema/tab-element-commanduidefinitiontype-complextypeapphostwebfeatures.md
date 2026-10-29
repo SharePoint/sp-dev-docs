@@ -11,6 +11,8 @@ ms.assetid: d787785a-24f8-f183-56ad-3ec39dc01334
 
 # Tab element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

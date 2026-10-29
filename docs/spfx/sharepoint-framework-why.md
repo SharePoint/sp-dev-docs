@@ -1,7 +1,7 @@
 ---
 title: Why the SharePoint Framework?
 description: Learn why Microsoft introduced and now recommends the SharePoint Framework for customer SharePoint extensibility and customizations.
-ms.date: 09/08/2021
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -23,7 +23,9 @@ There are a few downsides to this approach:
 
 ## SharePoint Add-in model
 
-One option for solutions that run in NoScript sites is the add-in/app-part model introduced in SharePoint Server 2013. This implementation creates an **iFrame** where the actual experience resides and executes. The advantage is that because it's external to the system and has no access to the current DOM/connection, it's easier for information workers to trust and deploy. End users can install add-ins on NoScript sites.
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+Historically, an option for solutions that ran in NoScript sites was the add-in/app-part model introduced in SharePoint Server 2013. This implementation creates an **iFrame** where the actual experience resides and executes. The following comparison explains the historical design, not a recommendation to build SharePoint Online Add-ins.
 
 There are some downsides to this approach as well
 

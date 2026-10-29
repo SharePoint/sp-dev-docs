@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Upgrading from XSLT views rendering to List Formatting
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 In the SharePoint classic world, you were used to customize the rendering of lists and libraries using XSLT (eXtensible Stylesheet Language for Transformation) and the *XsltListViewWebPart* control. Nowadays, in the modern world, you can achive better results relying on List Formatting.
 
 > [!IMPORTANT]

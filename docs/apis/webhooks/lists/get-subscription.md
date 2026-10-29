@@ -10,6 +10,10 @@ Gets one or more webhook subscriptions on a SharePoint list.
 
 ## Permissions
 
+The SharePoint Add-in permission tables below are **legacy reference only**. Use supported Microsoft Entra authentication for SharePoint Online webhooks.
+
+[!INCLUDE [sp-add-in-deprecation](../../../../includes/snippets/sp-add-in-deprecation.md)]
+
 ### Get a single subscription
 
 The application must have at least edit permissions to the SharePoint list where the subscription will be retrieved.

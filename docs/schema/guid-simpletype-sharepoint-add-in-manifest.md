@@ -11,6 +11,8 @@ ms.assetid: 8bdba352-fd8f-6aac-7aaa-25e7031f514e
 
 # GUID simpleType (SharePoint Add-in Manifest)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 A Guid in the form of XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX. It may be surrounded by `{}`s.

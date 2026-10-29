@@ -7,6 +7,10 @@ ms.localizationpriority: high
 
 # Office 365 development and SharePoint PnP solution guidance
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Solution guidance, including insights and details based on scenarios and functional requirements, for Office 365 development and SharePoint patterns and practices (PnP). 
 
 <br/>

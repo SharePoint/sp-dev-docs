@@ -1,22 +1,26 @@
 ---
 title: Use the site collection app catalog
-description: Using site collection app catalogs, SharePoint tenant administrators can decentralize the management and scope the deployment of SharePoint add-ins and SharePoint Framework solutions to specific sites.
-ms.date: 04/23/2025
+description: Use site collection app catalogs to scope SharePoint Framework solution deployment to specific sites.
+ms.date: 10/25/2026
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
 ms.localizationpriority: high
 ---
 
 # Use the site collection app catalog
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 _**Applies to:** Office 365_
 
-Using site collection app catalogs, SharePoint tenant administrators can decentralize the management and scope the deployment of SharePoint add-ins and SharePoint Framework solutions to specific sites.
+Use site collection app catalogs to decentralize the management of supported SharePoint Framework solutions and scope deployment to specific sites. They don't provide a way to run retired SharePoint Add-ins in SharePoint Online.
 
 ## Why site collection app catalogs
 
 Previously, all add-ins and SharePoint Framework solutions had to be managed centrally in the tenant app catalog. While tenant administrators could delegate access to other people in the organization, a deployed package was visible on all site collections. SharePoint offered no supported way of deploying add-ins and SharePoint Framework solutions only to specific sites.
 
-With the introduction of site collection app catalogs, tenant administrators can enable the app catalog on specific sites. Once enabled, site collection administrators can deploy SharePoint add-ins and SharePoint Framework solutions that will be available only in that particular site collection.
+Tenant administrators can enable an app catalog on specific sites. Once enabled, site collection administrators can deploy supported SharePoint Framework solutions for that site collection.
 
 The following schema illustrates using site collection app catalogs:
 
@@ -26,9 +30,11 @@ In your Office 365 tenant, you have a tenant app catalog. Solutions deployed to 
 
 ## Supported capabilities
 
-### Support for both SharePoint add-ins and SharePoint Framework packages
+<a id="support-for-both-sharepoint-add-ins-and-sharepoint-framework-packages"></a>
 
-In site collection app catalogs, just as in tenant app catalogs, you can deploy both SharePoint add-ins and SharePoint Framework solutions (.sppkg).
+### SharePoint Framework packages
+
+Site collection app catalogs support SPFx solution packages (`.sppkg`). Historical support for SharePoint Add-ins ended with their retirement in SharePoint Online. For Copilot UX components, follow the [documented tenant app-catalog and agent deployment lifecycle](../spfx/copilot/development-and-deployment.md); don't infer support for a different agent deployment scope from web-part package capabilities.
 
 ### Including assets in solution packages
 

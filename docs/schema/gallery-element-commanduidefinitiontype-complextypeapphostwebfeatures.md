@@ -11,6 +11,8 @@ ms.assetid: c7d94a88-407f-5ef6-d6dd-dbc4084f6df7
 
 # Gallery element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -7,6 +7,9 @@ ms.localizationpriority: high
 
 # Connect SharePoint Framework components using dynamic data
 
+> [!NOTE]
+> The React snippets below retain the legacy rendering API from before SPFx 1.24. Dynamic-data registration and notifications don't change in the React 18 migration. Give each web part its own root, reuse it for property updates, and unmount it during disposal. See the [React 18 upgrade guide](react-18-upgrade.md).
+
 You can connect two or more SharePoint Framework components together and exchange data between them using *dynamic data*. This capability allows you to build rich experiences and compelling end-user solutions.
 
 ![Three SharePoint Framework web parts connected to each other showing information about events](../images/dynamic-data-webparts.png)

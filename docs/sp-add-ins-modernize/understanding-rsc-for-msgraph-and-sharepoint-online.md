@@ -8,6 +8,10 @@ ms.service: sharepoint
 
 # Understanding Resource Specific Consent for Microsoft Graph and SharePoint Online
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Historically in Microsoft SharePoint, both on-premises and online, there has been the capability to register applications in Azure Access Control Services (ACS) with granular permissions targeting specific site collections only. Through this technique, you were able to authorize a custom application to read, write, manage, or have full control on specific site collections with application-only permissions.
 
 ACS isn't however anymore the best option to manage application registration and security for SharePoint. You should rely on Microsoft Entra (formerly Azure Active Directory) application registration and OAuth. By default, when you register an application in Microsoft Entra, and you can configure Microsoft Graph application permissions like *Sites.Read.All*, *Sites.ReadWrite.All*, *Sites.Manage.All*, or *Sites.FullControl.All*, which are permission that targets all the site collections in the target tenant, as the *All* word implies in the name of the permission scopes.

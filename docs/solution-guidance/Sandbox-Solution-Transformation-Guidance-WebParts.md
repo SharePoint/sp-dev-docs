@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Replace web parts in sandbox solutions
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 One of the reasons many developers have leveraged code-based sandbox solutions is a desire to utilize visual web parts. This provides a great way to separate code from layout as well as utilize the ASP.NET controls. You can continue to use visual web parts in a provider-hosted add-in via client web parts. This is a great approach and provides a direct migration path for many applications.
 
 Another option is to rewrite the web part as a client-side solution. This involves redesigning the solution to use JavaScript, HTML fragments, and one or more supporting frameworks. While this is net-new work, it has the added benefit of setting up your solution to easily integrate into the upcoming SharePoint Framework. This is a great choice for simple display or data entry web parts, and can scale up to full-page client applications.

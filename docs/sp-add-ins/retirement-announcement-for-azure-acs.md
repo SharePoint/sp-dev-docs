@@ -1,18 +1,20 @@
 ---
 title: Azure ACS retirement in Microsoft 365
 description: Describes the details around the retirement of Azure ACS (Access Control Services) for SharePoint Online in Microsoft 365.
-ms.date: 11/13/2023
+ms.date: 10/25/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
 
 # Azure ACS retirement in Microsoft 365
 
-Microsoft strives to deliver utmost value to our customers through modern, optimized, secure solutions in this newly evolved world focused on digital transformation. As part of this evolution of Microsoft 365 solutions we will be retiring the use of Azure ACS (Access Control Services) for SharePoint Online auth needs and believe Microsoft 365 customers will be better served by modern auth offered via [Microsoft Entra ID](/azure/active-directory/develop/).
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
 
-Azure ACS will stop working for new tenants as of November 1st, 2024 and it will stop working for existing tenants and will be fully retired as of April 2nd, 2026. This applies to all environments including Government Clouds and Department of Defense.
+Azure ACS (Access Control Services) authentication for SharePoint Online was retired on April 2, 2026. Use modern authentication through [Microsoft Entra ID](/entra/identity-platform/) instead.
 
-If you are using custom developed applications or are using SharePoint provider hosted Add-Ins, we recommend switching those applications to use Microsoft Entra ID for authorization and authentication needs. Aligned with the Azure ACS retirement also SharePoint Add-Ins are retired, check out this [support article](https://aka.ms/retirement/addins/support) for more information. There will not be an option to extend using Azure ACS with SharePoint Online beyond April 2nd, 2026.
+Azure ACS stopped working for new SharePoint Online tenants on November 1, 2024 and for existing tenants on April 2, 2026. This applies to all environments, including government clouds and the U.S. Department of Defense.
+
+If your custom applications depended on Azure ACS, migrate their authorization and authentication to Microsoft Entra ID. SharePoint provider hosted Add-Ins also require migration away from the retired Add-in model; changing authentication alone does not restore them. See the [SharePoint Add-In retirement announcement](retirement-announcement-for-add-ins.md). There is no option to extend Azure ACS use with SharePoint Online beyond April 2, 2026.
 
 To learn more about how to migrate Azure ACS usage for SharePoint Online and how to migrate SharePoint Add-Ins to alternative solutions check out these [articles](https://aka.ms/retirement/addins/guidance) and accompanying [videos](https://aka.ms/sp/add-in/modernize/videos).
 
@@ -20,9 +22,9 @@ To learn more about how to migrate Azure ACS usage for SharePoint Online and how
 
 ### Azure ACS usage in SharePoint Online
 
-Azure ACS is used in SharePoint Online for providing auth for provider hosted SharePoint Add-Ins plus it’s used to grant applications access to SharePoint Online, optionally using application permissions and granular scopes.
+Azure ACS was used in SharePoint Online to authenticate provider hosted SharePoint Add-Ins and to grant applications access to SharePoint Online, including application permissions with granular scopes.
 
-To learn more about the provider hosted Add-In use case please check out the respective retirement articles, granting applications access to SharePoint Online will need to be transitioned to [Microsoft Entra ID](/azure/active-directory/develop/).
+For the provider hosted Add-In use case, see the Add-In retirement announcement. Applications that accessed SharePoint Online through Azure ACS must transition to [Microsoft Entra ID](/entra/identity-platform/).
 
 ### Azure ACS usage by SharePoint Server
 
@@ -30,7 +32,7 @@ SharePoint Server running on-premises can, if configured by the farm admins, dep
 
 ### Azure ACS usage by Project Online
 
-Project Online is an extension on top of SharePoint Online and Project Online custom developments could also have used Azure ACS. The retirement of Azure ACS applies to Project Online as well, any Azure ACS usage in Project Online will follow the same retirement path as Azure ACS usage in SharePoint Online.
+Project Online custom developments could also have used Azure ACS. Azure ACS usage in Project Online followed the same retirement timeline as SharePoint Online and retired on April 2, 2026.
 
 ## Call to Action Guidance
 
@@ -45,14 +47,14 @@ Using the Azure ACS Report along with site information, tenant administrators to
 
 ### Turn off the use of Azure ACS on your tenant
 
-We recommend tenant admins to turn off the usage of Azure ACS app-only access once they’ve ensured there is no business relevant Azure ACS usage anymore. The assessment tool should give administrators the usage information to understand where and when Azure ACS principals are being used.
+Before retirement, tenant admins could turn off Azure ACS app-only access after migrating dependent applications. The following command is retained for historical context:
 
 ```PowerShell
 Connect-SPOService -Url https://<tenant>-admin.sharepoint.com
 Set-SPOTenant -DisableCustomAppAuthentication $true
 ```
 
-This setting will not impact the Azure ACS usage by SharePoint provider hosted Add-Ins. You can use the same command to re-enable the usage Azure ACS app-only access if required.
+This setting did not control Azure ACS usage by SharePoint provider hosted Add-Ins. Changing it cannot re-enable Azure ACS authentication in SharePoint Online after retirement.
 
 ## How do I get help?
 
@@ -69,4 +71,4 @@ You can use the following services and partner programs to help with your migrat
 - Friendly link to the SharePoint Add-In retirement article: https://aka.ms/retirement/addins/support
 - Friendly link to Migration Guidance: https://aka.ms/retirement/acs/guidance
 
-A Message Center post in the Microsoft 365 admin center is being sent to all tenants, and the post will be updated periodically with timelines.
+The retirement was also communicated through the Microsoft 365 admin center Message Center.

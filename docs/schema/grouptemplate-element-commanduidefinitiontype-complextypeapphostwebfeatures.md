@@ -11,6 +11,8 @@ ms.assetid: 4a5e059e-14ac-8ddd-dea7-a74f4b3e2d6e
 
 # GroupTemplate element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -11,6 +11,8 @@ ms.assetid: 9c9dd6a2-8f5c-28be-3a7a-77e2a6c9a87f
 
 # ID element (AppPartConfigDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppPartConfigDefinition)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

@@ -1,4 +1,4 @@
 > [!IMPORTANT]
-> The SharePoint add-in model deprecation in SharePoint Online does not impact SharePoint Framework (SPFx), which is the primary replacement technology for SharePoint add-ins. SPFx is the most widely used extensibility model in Microsoft 365 and continues to be supported also in future.
+> SharePoint Add-ins reached end of life in SharePoint Online on April 2, 2026 and no longer work there. This retirement does not affect SharePoint Framework (SPFx), the recommended replacement for SharePoint Add-in user interface extensions. SPFx continues to be supported. SharePoint Server Add-ins deployed through an on-premises app catalog are not retired by this change.
 >
 > See more on the SharePoint add-in model retirement from the [full add-in model retirement announcement](https://aka.ms/retirement/addins/support).

@@ -11,6 +11,8 @@ ms.assetid: e2e2ff43-f3a6-1060-d8b2-bae4ea9b2a41
 
 # VersionRangeDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)<
 
 > [!NOTE]

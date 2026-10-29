@@ -11,6 +11,8 @@ ms.assetid: 2e8af4be-41fd-3029-5e04-8a63f1e96f10
 
 # RemoteEndpointDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

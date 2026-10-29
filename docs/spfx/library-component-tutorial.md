@@ -1,7 +1,7 @@
 ---
 title: Build solutions with the library component type in SharePoint Framework
 description: Build solutions with the library component type in SharePoint Framework
-ms.date: 02/03/2026
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
@@ -90,7 +90,7 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 
     Notice that we're creating a new instance of the library, and then refer to the `getCurrentTime()` method to retrieve the current time string from the library.
 
-1. Test your web part by launching the local workbench and add the web part to the page:
+1. Start the development server, then test the consuming web part on a SharePoint page with the [developer toolbar](debug-toolbar.md). The local workbench was removed in SPFx 1.13; the SharePoint Online workbench is deprecated.
 
     ```console
     heft start

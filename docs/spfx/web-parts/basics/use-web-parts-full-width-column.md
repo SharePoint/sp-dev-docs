@@ -37,4 +37,4 @@ With this setting enabled, when you edit a page with a full-width column layout,
 ![Custom SharePoint Framework client-side web part displayed among web parts that can be added to a full-width column layout](../../../images/fullwidthcolumn-webpart-add.png)
 
 > [!NOTE]
-> The SharePoint workbench doesn't support testing web parts in the full-width column layout. Instead, you will have to deploy your web part to a developer tenant, create a communication site, and test your web part there.
+> Test the full-width column layout on a communication site in a developer tenant. Use a page with a full-width section and the [SPFx developer toolbar](../../debug-modern-pages.md) for local debugging, then verify the deployed solution without debug parameters.

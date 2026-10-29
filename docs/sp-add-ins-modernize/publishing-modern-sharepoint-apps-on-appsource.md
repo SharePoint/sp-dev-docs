@@ -1,7 +1,7 @@
 ---
 title: Publishing modern SharePoint applications on Microsoft AppSource
 description: Publishing modern SharePoint applications on Microsoft AppSource
-ms.date: 06/08/2024
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ms.service: sharepoint
 ---
@@ -9,6 +9,10 @@ ms.service: sharepoint
 # Publishing modern SharePoint applications on Microsoft AppSource
 
 In this article, you will learn how to publish on the Microsoft 365 Store (via [Microsoft AppSource](https://appsource.microsoft.com/)) a modern solution built with SharePoint Framework. Your SharePoint Framework solution can target SharePoint Online only, or also Microsoft Teams. In the latter case, the application will show up in the Microsoft Teams gallery through the SharePoint Online tenant App Catalog.
+
+**Copilot UX components are also supported in the SharePoint Store starting with SPFx 1.24 GA on October 28, 2026.** Follow the current [Marketplace overview](../spfx/publish-to-marketplace-overview.md), [Copilot submission checklist](../spfx/publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance), and [FAQ](../spfx/publish-to-marketplace-faq.yml) for agent packaging, the required Copilot add-on USL, supported clients, and the combined Copilot/Teams package limitation.
+
+The walkthrough and screenshots below describe an earlier Partner Center experience. Check the current submission instructions before relying on exact UI labels, program names, or enrollment timelines.
 
 If you prefer, you can watch the following video, instead of reading the whole article, which you can still consider a much more detailed reference.
 
@@ -56,9 +60,7 @@ The next step is the *"Availability"* one, where you can configure the target ma
 
 ![The product configuration step about *"Availability"*, where you can define the target markets and the release date.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-10.png)
 
-In case your solution relies on Azure Access Control Service (ACS), you can configure the Client IDs of those applications, including a *"Friendly name"*, an *"App domain"*, an *"App redirect URL"*, and you can eventually generate a *"Client Secret"* through the *"Client IDs"* section. Clearly, for modern SharePoint Online solutions, you shouldn't rely on Azure ACS but on Azure Active Directory registered applications.
-
-![The product configuration step about *"Client IDs"*, where you can configure Azure AD applications required by the solution.](../images/add-in-transform/publishing-modern-sharepoint-apps-on-appsource/publishing-modern-sharepoint-apps-on-appsource-partner-center-11.png)
+Azure ACS authentication for SharePoint Online retired on April 2, 2026. Don't register ACS credentials for a new submission. Use the solution's supported Microsoft Entra ID authentication and permission model; Partner Center's historical **Client IDs** page isn't a substitute for Entra application registration or tenant consent.
 
 It is now time to provide *"Additional Certification Info"* useful to test your solution. Through this step, you can provide information useful for testing, screenshots, and additional PDF documentation. This information is not shown to customers but is used for testing purposes only. 
 

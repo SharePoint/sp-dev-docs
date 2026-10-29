@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # User controls and Web controls in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to implement custom controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, custom controls were built as user controls or web controls and deployed via SharePoint Solutions.
 
 In a SharePoint Add-in model scenario, the JavaScript is embedded in SharePoint pages to implement custom controls.

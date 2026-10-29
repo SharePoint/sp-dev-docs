@@ -47,8 +47,9 @@ Validation usually needs both ISV and customer roles.
 | Role | Responsibility |
 | --- | --- |
 | ISV developer | Supplies expected app IDs, container type ID, app behavior, and support troubleshooting. |
-| Customer Global Administrator or SharePoint Embedded Administrator | Confirms SharePoint Embedded app setup, billing, and administration visibility. |
-| Customer Azure billing owner or contributor | Helps resolve pass-through billing setup issues. |
+| Customer Billing Administrator or Global Administrator | Sets up or confirms pass-through billing. |
+| Customer SharePoint Embedded Administrator or Global Administrator | Confirms SharePoint Embedded app setup and administration visibility. |
+| Customer with the [Owner](/azure/role-based-access-control/built-in-roles/privileged#owner) or [Contributor](/azure/role-based-access-control/built-in-roles/privileged#contributor) role on the Azure subscription | Helps resolve pass-through billing setup issues. |
 | Customer test user | Signs in and performs app-level document actions. |
 
 ## Before you start
@@ -142,7 +143,7 @@ Check:
 - A valid Azure subscription is connected.
 - A valid resource group is selected.
 - The setup was completed for SharePoint Embedded apps.
-- The customer billing admin has owner or contributor permissions where required.
+- The customer administrator who sets up billing has the Owner or Contributor role on the Azure subscription where required.
 - The customer understands that disabling billing interrupts user access.
 
 For billing model guidance, see [Choose a billing model for your app](choose-app-billing-model.md).

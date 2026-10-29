@@ -42,7 +42,7 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 > To upgrade this project, run:
 >
 > ```console
-> npx -p @pnp/cli-microsoft365 m365 spfx project upgrade --toVersion 1.18 --output md
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.18.0 --output md
 > ```
 >
 > This analyzes your project and outputs all required changes, including a single script to apply them in one go.

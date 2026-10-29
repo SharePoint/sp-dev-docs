@@ -1,7 +1,7 @@
 ---
 title: Use the developer dashboard
 description: Use the developer dashboard to get more information about the SharePoint Framework components on the page
-ms.date: 10/21/2020
+ms.date: 10/28/2026
 ms.localizationpriority: medium
 ---
 # Use the developer dashboard
@@ -10,7 +10,7 @@ When debugging your SharePoint Framework components, you can get additional info
 
 ![Developer dashboard activated on a modern SharePoint page](../images/developer-dashboard-modern-page.png)
 
-Developer dashboard is available on modern SharePoint pages and on the hosted and local SharePoint Workbench.
+Use the developer dashboard on modern SharePoint pages, alongside the [developer toolbar](debug-toolbar.md). The local workbench was removed in SPFx 1.13, and SharePoint Online workbench debugging is deprecated. Use actual pages for web-part debugging. Copilot Workbench is a separate, fully supported experience for Copilot UX components.
 
 ## Open developer dashboard
 

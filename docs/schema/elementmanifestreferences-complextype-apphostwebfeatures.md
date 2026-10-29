@@ -11,6 +11,8 @@ ms.assetid: b7a6739c-2a8a-abc2-a8f7-2a898c329709
 
 # ElementManifestReferences complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -28,7 +28,7 @@ heft start
 
 ## Get access to page context
 
-The hosted workbench in SharePoint enables access to the page context, which exposes the following key properties such as:
+Running on a SharePoint page provides access to the page context, which exposes the following key properties:
 
 - Web title
 - Web absolute URL
@@ -71,7 +71,7 @@ this.context.pageContext
     > [!NOTE]
     > Keep the console window and Visual Studio Code side-by-side to see Heft automatically compile as you save changes in Visual Studio Code.
 
-1. Navigate to your SharePoint site's hosted workbench. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Refresh the hosted workbench to pick up the changes from the rebuilt code bundle.
+1. Open your test SharePoint page with local manifests enabled using the [SPFx developer toolbar](../../debug-modern-pages.md), as configured in the previous tutorial. Refresh the page to pick up the changes from the rebuilt code bundle.
 
     You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
@@ -192,7 +192,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 Open the `HelloWorldWebPart` class.
 
 > [!NOTE]
-> SharePoint Framework provides you options to detect environment details and host location using the `isServedFromLocalhost` property or with EnvironmentType details. In this case we'll focus on connecting to the data in the site which is hosting the online workbench.
+> SharePoint Framework provides options to detect environment details and host location using the `isServedFromLocalhost` property or `EnvironmentType`. Here, we'll connect to data in the site that hosts the test page. Serving bundles from localhost doesn't remove the SharePoint page context.
 
 1. Add the following private method inside the `HelloWorldWebPart` class:
 

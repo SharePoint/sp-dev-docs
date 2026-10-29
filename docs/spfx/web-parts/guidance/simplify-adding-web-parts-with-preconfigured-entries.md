@@ -6,6 +6,9 @@ ms.localizationpriority: high
 ---
 # Simplify adding web parts with preconfigured entries
 
+> [!NOTE]
+> The React snippet below uses the legacy rendering API from before SPFx 1.24. Preconfigured entries don't change React root ownership. For a current project, preserve the generated root and disposal method when applying these property changes. See the [React 18 upgrade guide](../../react-18-upgrade.md).
+
 More complex SharePoint Framework client-side web parts likely have many properties that the user must configure. You can help users by adding preconfigured property entries for specific scenarios. A preconfigured entry initializes the web part with pre-set values.
 
 > [!NOTE]
@@ -491,7 +494,7 @@ Imagine that users often use the gallery web part to show the five most recently
     ```
 
     > [!NOTE]
-    > If you were debugging the project previously, stop debugging and start it again. Changes made to the web part manifest are not automatically reflected in the Workbench while debugging, and you have to rebuild the project to see them.
+    > If you were debugging the project previously, stop debugging and start it again. After rebuilding, reload the test page with local manifests enabled using the [SPFx developer toolbar](../../debug-modern-pages.md) to see manifest changes.
 
 1. When you open the web part toolbox to add the web part to the canvas, you see that its name and icon changed to reflect the preconfigured settings.
 

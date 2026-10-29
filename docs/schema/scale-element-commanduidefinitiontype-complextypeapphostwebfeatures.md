@@ -11,6 +11,8 @@ ms.assetid: 6de35fa3-ba94-99bd-b927-9bfa70ea8ee0
 
 # Scale element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

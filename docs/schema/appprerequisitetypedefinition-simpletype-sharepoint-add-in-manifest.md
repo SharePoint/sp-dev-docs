@@ -11,6 +11,8 @@ ms.assetid: 432f44e8-1b98-d4e2-76d1-4ddbff34606d
 
 # AppPrerequisiteTypeDefinition simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

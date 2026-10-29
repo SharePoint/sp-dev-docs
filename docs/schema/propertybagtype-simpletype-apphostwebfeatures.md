@@ -11,6 +11,8 @@ ms.assetid: 28cd4136-0394-13b0-a2a6-17bdc2891beb
 
 # PropertyBagType simpleType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

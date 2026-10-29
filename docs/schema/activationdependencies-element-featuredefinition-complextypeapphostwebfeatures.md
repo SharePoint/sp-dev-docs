@@ -11,6 +11,8 @@ ms.assetid: 79b463d1-7b48-a56d-f9b5-0b0a3f91375b
 
 # ActivationDependencies element (FeatureDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

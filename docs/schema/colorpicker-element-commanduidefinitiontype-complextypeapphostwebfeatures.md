@@ -11,6 +11,8 @@ ms.assetid: a1eecc4c-e732-c2ed-2323-1828f69dccbf
 
 # ColorPicker element (CommandUIDefinitionType complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

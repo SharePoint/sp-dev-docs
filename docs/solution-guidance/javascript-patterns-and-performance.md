@@ -6,6 +6,10 @@ ms.localizationpriority: medium
 ---
 # JavaScript Patterns and Performance
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 Years ago, ASP.NET gave us server-side UI control rendering, and it was good. That server-side rendering, however, requires full trust code. Now that we have transitioned to SharePoint and Office 365, full trust code is no longer an option. That means server-side UI control rendering won't work for us any more.
 
 Yet, businesses still need custom UI functionality for their websites and apps. That means custom UI functionality must be moved from the server-side to the client-side.

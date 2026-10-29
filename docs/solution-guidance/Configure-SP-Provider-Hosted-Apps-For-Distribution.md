@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 #  Configure SharePoint provider-hosted add-ins for distribution
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 This page explains issues that may arise when sharing a SharePoint provider-hosted add-in with other developers or when obtaining a copy from a source control system such as Team Foundation Server, Git, or [Visual Studio Team Services](https://www.visualstudio.com/vso/).
 
 All SharePoint provider-hosted add-ins created by using Visual Studio include a NuGet package that adds SharePoint-specific code and references to the web application that serves as the RemoteWeb for the SharePoint add-in. 

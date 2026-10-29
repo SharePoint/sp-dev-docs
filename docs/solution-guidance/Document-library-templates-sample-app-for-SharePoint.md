@@ -7,6 +7,8 @@ ms.localizationpriority: high
 
 # Document library templates sample SharePoint Add-in
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The ECM.DocumentLibraries sample shows you how to use a provider-hosted add-in to create a list or document library, assign a content type to it, and remove the default content type. 
 
 Use this solution if you want to:    

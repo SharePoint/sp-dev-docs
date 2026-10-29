@@ -11,6 +11,8 @@ ms.assetid: 0317f92e-a422-0431-2693-514aa9892c9e
 
 # DebugInfo element (AutoDeployedWebApplication element)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

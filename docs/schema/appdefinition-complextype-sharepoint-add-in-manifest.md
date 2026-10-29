@@ -11,6 +11,8 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 
 # AppDefinition complexType
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013

@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 
 # Upload user profile pictures sample SharePoint Add-in
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
    
 The Core.ProfilePictureUploader sample shows you how to do a bulk upload of user profile data from either a file share or SharePoint Online URL, and how to link user profile properties to uploaded images.
     

@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Site provisioning in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 The approach you take to provision site collections and sub sites is different in the new SharePoint Add-in model, compared to how it was in Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you would create site collections and sub sites with the site definitions and web templates and then use declarative code to configure the sites and apply customizations. In this model, you would typically use declarative code to create site columns, content types, and lists defined in XML and then use SharePoint's feature framework elements to package and deploy them.
 
 In an SharePoint Add-in model scenario, you can use the SharePoint Client Side Object Model (CSOM) to create and configure site collections and sub sites. This pattern is commonly referred to as the *remote provisioning pattern*.

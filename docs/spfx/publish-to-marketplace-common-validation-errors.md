@@ -1,11 +1,22 @@
 ---
 title: Common validation errors when publishing your SharePoint Framework application in the Marketplace
 description: Common validation errors you can avoid when you want to get your SharePoint Framework application published in the Marketplace
-ms.date: 03/03/2025
+ms.date: 10/28/2026
 ms.localizationpriority: high
 ---
 
 # Common validation errors to avoid when publishing your SharePoint Framework application in the Marketplace
+
+## Copilot UX component submission preparation
+
+Copilot UX components are supported in the SharePoint Store starting with SPFx 1.24 GA. To avoid incomplete submissions:
+
+- Describe the included agent and components, required Copilot add-on USL for production use and development/testing, supported browser/desktop clients, and any API/service charges. Don't imply the component is available through consumption billing or on iOS/Android at GA.
+- Provide complete tenant deployment, initial agent-sync, permissions, and test-data instructions, with prompts for each component.
+- Test successful rendering and explicit handling of missing arguments, denied data access, and text context supplied using `createCopilotTextContent` that exceeds the GA 10 KB limit.
+- If the solution also includes SPFx Teams functionality, document the automatic-sync limitation and confirm the Store path for the manual-package workaround.
+
+See the [Copilot UX component test guidance](publish-to-marketplace-checklist.md#copilot-ux-component-test-guidance). The current Store certification requirements remain authoritative.
 
 ## Inadequate Solution description
 
@@ -19,7 +30,7 @@ A great Solution description highlights your Solution's benefits and encourages 
 - Contains comparative marketing content or competing offers in the Solution description or other metadata.
 - Contains exaggerated claims about the Solution such as #1, amazing, or the best.
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist#solutions-description-must-clearly-describe-the-different-components-included-in-the-package).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist.md#solutions-description-must-clearly-describe-the-different-components-included-in-the-package).
 
 ## Improper screenshots
 
@@ -41,7 +52,7 @@ If the following fields in the Partner Center and Solution manifest don't match,
 - Privacy Policy URLs
 - Solution name
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist#solution-package-must-contain-valid-developer-metadata).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist.md#solution-package-must-contain-valid-developer-metadata).
 
 ## Missing or incomplete test instructions
 
@@ -52,7 +63,7 @@ Detailed test instructions and credentials help you with a successful review of 
 - Test accounts provided don't support custom upload of .sppkg package.
 - Multiple test accounts aren't included when the Solution supports collaborative functionality in web part, full page, Teams Tab, etc...
 
-For more information, see [Publish SharePoint Framework applications to the marketplace](publish-to-marketplace-overview).
+For more information, see [Publish SharePoint Framework applications to the marketplace](publish-to-marketplace-overview.md).
 
 ## Broken solution functionality
 
@@ -65,4 +76,4 @@ Test your solution to verify its correctness, functionality, and usage. Ensure t
 - Have workflows where the user hits a dead end and can't navigate further in the solution.
 - Solution redirects users away from SharePoint and doesn't provide necessary disclaimers about navigation outside solution through links and buttons.
 
-For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist).
+For more information, see [Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist.md).

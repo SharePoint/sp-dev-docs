@@ -11,6 +11,8 @@ ms.assetid: f747c9b3-7443-4fee-4546-41b5c7cc3751
 
 # Types (SharePoint Add-in Manifest)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
 This topic lists the types in the **SharePoint Add-in Manifest** XML schema.

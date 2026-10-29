@@ -11,6 +11,8 @@ ms.assetid: b820d65f-12d5-8521-09c6-3db3902ca4a1
 
 # Property element (PropertyBagDefinition complexType)
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 (AppHostWebFeatures)
 
 > [!NOTE]

@@ -7,6 +7,10 @@ ms.localizationpriority: medium
 
 # Provision classic team sites in a Multi-Geo environment
 
+The SharePoint Add-in portions of this article are **legacy guidance**. The retirement below doesn't retire the other APIs or platforms discussed here.
+
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 SharePoint sites can be spread across the default and satellite geo locations of a Multi-Geo tenant. When your custom development (script, app, console application, node.js app, and so on) needs to provision sites, it's important to be aware of the geo locations in your Multi-Geo tenant. 
 
 When provisioning classic team site collections (for example, STS#0-based site collections), you need to use the [CSOM CreateSite method](https://msdn.microsoft.com/library/microsoft.online.sharepoint.tenantadministration.tenant.createsite(v=office.15).aspx) call as explained and shown in following articles and samples:

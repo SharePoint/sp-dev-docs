@@ -6,6 +6,8 @@ ms.localizationpriority: medium
 ---
 # Custom field type in the SharePoint Add-in model
 
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
 > [!IMPORTANT]
 > ## Legacy Content Notice
 > This article is based on legacy SharePoint development (Add-ins, JSLink, FTC/Farm Solutions) and is not recommended for modern SharePoint Online.

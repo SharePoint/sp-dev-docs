@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-ins compared with SharePoint solutions
-description: Learn about when to develop your SharePoint extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
-ms.date: 04/07/2023
+description: Historical comparison of SharePoint Add-ins, farm solutions, and no-code sandboxed solutions, with guidance for current SharePoint Online development.
+ms.date: 10/25/2026
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
 ms.localizationpriority: high
 ---
@@ -9,20 +9,21 @@ ms.localizationpriority: high
 
 # SharePoint Add-ins compared with SharePoint solutions
 
-Learn about when to develop your SharePoint extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
+[!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-deprecation.md)]
+
+This article preserves an earlier comparison of SharePoint Add-ins, farm solutions, and no-code sandboxed solutions. It is not a recommendation to create SharePoint Online Add-ins. For new SharePoint Online user interface extensions, use [SharePoint Framework (SPFx)](../spfx/sharepoint-framework-overview.md); for existing Add-ins, see the [migration guidance](../sp-add-ins-modernize/sp-add-in-modernize.md).
 
 This article compares the use cases of SharePoint Add-ins, farm solutions, and no-code sandboxed solutions (NCSSs).
 
-- New SharePoint Add-ins are self-contained extensions that may include cloud-based logic and data, SharePoint components, and client-side scripts, but not custom managed code that runs on SharePoint servers. They are installed from either the Office Store or an organization add-in catalog, and can be installed on either on-premises farms or Microsoft SharePoint Online. For an overview of SharePoint Add-ins, see [SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md).
+- SharePoint Add-ins are self-contained extensions that may include externally hosted logic and data, SharePoint components, and client-side scripts, but not custom managed code that runs on SharePoint servers. Historically, they could be installed on both SharePoint Online and SharePoint Server. After the SharePoint Online retirement, only applicable SharePoint Server deployments through an on-premises app catalog remain outside this retirement. For an overview, see [SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md).
 - SharePoint farm solutions are packages of SharePoint components that are uploaded to a farm-wide gallery from where they can be installed. They cannot be distributed through the Office Store, and they cannot be installed on SharePoint Online. They can include custom managed code that runs on the SharePoint farm servers. For more information about the basics of farm solutions, see  [Solutions Overview](/previous-versions/office/developer/sharepoint-2010/aa543214(v=office.14)) and [Farm Solutions in SharePoint 2010](/previous-versions/office/developer/sharepoint-2010/gg575564(v=office.14)).
 - NCSSs are also packages of SharePoint components; but they are uploaded to a site collection gallery from where they can be installed. They can be installed to either on-premises farms or to SharePoint Online, but they cannot be distributed through the Office Store. They can include almost the same kinds of descriptive components as SharePoint Add-ins and, like add-ins, they can have JavaScript, but they do not contain custom managed code that runs on the SharePoint servers. Differences in the deployment systems of add-ins and NCSSs make NCSSs a better development option for a short list of scenarios. For information about sandboxed solutions, see  [Sandboxed Solutions in SharePoint 2010](/previous-versions/office/developer/sharepoint-2010/ee536577(v=office.14)).
 
-> [!IMPORTANT]
-> While developing sandboxed solutions that contain only declarative markup and JavaScript -- which we call no-code sandboxed solutions (NCSS)-- is still viable, we have deprecated the use of custom managed code within the sandboxed solution. We have introduced the new SharePoint Add-in model as a replacement to those scenarios that required the use of managed code. The add-in model decouples the SharePoint core product from the add-in runtime, and this enables much more flexibility and gives you the ability to run the code in the environment of your choice. We realize that our customers have made investments in coded sandboxed solutions and we will phase them out responsibly. Existing coded sandboxed solutions will continue to work in on-premises SharePoint farms for the foreseeable future. Given the dynamic nature of online services, we will determine support needs for coded sandboxed solutions in SharePoint Online based on customer demand. NCSSs continue to be supported. All future investments will go to making the new SharePoint Add-in model richer and more powerful. Accordingly, we recommend that all new development should use the new add-in model whenever possible. In scenarios where you have to develop a farm solution or coded sandboxed solution, we recommend that you design it so that it can easily evolve toward a more loosely coupled development model.
+The remaining sections describe historical Add-in design trade-offs. Recommendations to use the Add-in model instead of farm or sandboxed solutions do not apply to SharePoint Online after retirement. The retirement does not retire the SharePoint client APIs used by these solutions.
 
 ## Develop an add-in whenever you can
 
-The most important guidance we can give you is to develop a SharePoint Add-in instead of a farm solution or NCSS whenever you can. SharePoint Add-ins have the following advantages over classic solutions:
+Historically, the guidance was to prefer a SharePoint Add-in over a farm solution or NCSS where possible. The following list records the original rationale, including marketplace capabilities that are no longer available; it is not current SharePoint Online development guidance:
 
 - Provide users with the easiest discovery, purchase, and installation process.
 - Give administrators the safest SharePoint extensions.

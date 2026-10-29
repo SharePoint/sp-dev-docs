@@ -139,7 +139,7 @@ public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
 
 ## Debug your ListView Command Set
 
-You cannot currently use the local Workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient.
+Test the Command Set on a live SharePoint Online list view, not in a workbench. Use the [SPFx developer toolbar](../../debug-modern-pages.md) with the command-set debug configuration below. Loading local manifests doesn't require deploying the customization to the app catalog.
 
 1. Go to any SharePoint list in your SharePoint Online site by using the modern experience or create a new list. Copy the URL of the list to clipboard as we will be needing that in following step.
 
