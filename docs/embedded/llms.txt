@@ -20,7 +20,8 @@
 - [Understand limits and calling patterns](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/plan/limits-calling-patterns): Service limits, throttling, batching, retry guidance.
 
 ## Build an app (developer)
-- [Quickstart: Build your first app with VS Code](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/quickstart-vscode): Install the extension, create a trial container type, run the sample app.
+- [Build a SharePoint Embedded app end to end](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/build-app-end-to-end): Canonical sequence from prerequisites and Entra permissions through container type registration, the first container, and file operations.
+- [Quickstart: Build your first app with VS Code](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/quickstart-vscode): Install the extension, create and register a container type, attach billing when needed, and run the sample app.
 - [Create and configure a container type](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/create-container-type): Create trial/production container types and the owning Entra app.
 - [Register application permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/register-application-permissions): Register container type permissions and grant consent.
 - [Configure authentication and authorization](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/configure-authentication-authorization): Entra app, tokens, app-only and delegated flows.

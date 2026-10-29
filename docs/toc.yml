@@ -648,6 +648,8 @@
       href: embedded/plan/ground-ai-without-a-vector-db.md
   - name: Build apps with SharePoint Embedded
     items:
+    - name: Build a SharePoint Embedded app end to end
+      href: embedded/build/build-app-end-to-end.md
     - name: 'Quickstart: Build your first app with VS Code'
       href: embedded/build/quickstart-vscode.md
     - name: Use the MCP server to build apps with a coding agent

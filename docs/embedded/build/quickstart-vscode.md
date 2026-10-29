@@ -1,6 +1,6 @@
 ---
 title: "Quickstart: Build your first app with VS Code"
-description: Create a standard SharePoint Embedded container type in Visual Studio Code and run the sample application locally.
+description: Create and register a trial or standard SharePoint Embedded container type in Visual Studio Code, then run the sample application locally.
 ms.date: 07/13/2026
 ms.reviewer: mawin
 ms.author: mawin
@@ -15,18 +15,18 @@ ai-usage: ai-assisted
 <!-- agent:
 task_type: quickstart
 audience: developer
-outcome: Create a standard container type, attach billing, register it locally, create a container, and run a sample app.
+outcome: Create and register a trial or standard container type, create a container, and run a sample app.
 next: create-container-type.md
 -->
 
 [!INCLUDE [Install the SharePoint Embedded VS Code extension](../includes/sharepoint-embedded-vscode-extension.md)]
 
-Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) to create a standard container type for your first app. The extension also configures the owning app, attaches Azure billing, and registers the container type. Then you create a container and run a local sample app.
+Use the [SharePoint Embedded Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=SharepointEmbedded.ms-sharepoint-embedded-vscode-extension) to create a trial container type for a prototype or a standard container type for production development. The extension also configures the owning app, registers the container type, and attaches Azure billing when you choose standard. Then you create a container and run a local sample app.
 
 This article starts the build journey. For more billing guidance, see [Create and configure a container type](create-container-type.md).
 
 > [!TIP]
-> Prefer to build with a coding agent instead of a guided view? Use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md) to provision and manage resources through natural language.
+> Prefer to build with a coding agent instead of a guided view? Use the [SharePoint Embedded Model Context Protocol (MCP) server](sharepoint-embedded-mcp-server.md) to provision and manage resources through natural language.
 
 [!INCLUDE [Install the SharePoint Embedded MCP server](../includes/mcp-install-buttons-quickstart-vscode.md)]
 
@@ -37,8 +37,8 @@ Before you start, make sure you have:
 - [Visual Studio Code](https://code.visualstudio.com/) installed.
 - Administrative access to a Microsoft 365 tenant.
 - A tenant with SharePoint available.
-- An Azure subscription and resource group that your account can access.
-- Owner or Contributor permissions on the Azure subscription.
+- For a standard container type, an Azure subscription and resource group that your account can access.
+- For a standard container type, Owner or Contributor permissions on the Azure subscription.
 - Node.js and npm installed for the sample app.
 - Permission to grant admin consent in Microsoft Entra ID.
 
@@ -74,19 +74,20 @@ After you sign in, the extension shows the SharePoint Embedded home view.
 
 ![Screenshot of the SharePoint Embedded home view in Visual Studio Code after sign-in. The view lists actions to create a container type and load a sample app.](../images/vsx-images/n4vsx-home-screen.png)
 
-## Create a standard container type
+## Create a trial or standard container type
 
 A container type defines the relationship, access privileges, billing accountability, and selected behaviors for a set of SharePoint Embedded containers.
 
 1. Select **Create Container Type**.
-1. For the billing method, select **standard**.
+1. For a 30-day prototype, select **trial**. For production development where the app owner pays, select **standard**.
 1. Enter a container type name.
 1. Follow the prompts until creation completes.
 
 ![Screenshot of the Visual Studio Code input box prompting for a container type name during the Create Container Type flow.](../images/vsx-images/n5a-name-ct.png)
 
-Use a standard container type when the organization that owns the app pays for SharePoint Embedded usage.
-For evaluation, choose **trial**. For customer-tenant billing, choose the pass-through option, which uses the `directToCustomer` billing classification.
+The trial path is single-tenant and doesn't require Azure billing. A tenant can have one trial container type with up to five containers, including containers in the recycle bin. Each container has 1 GB of storage. A trial can't convert to production.
+
+Use a standard container type when the organization that owns the app pays for SharePoint Embedded usage. For pass-through billing, choose the `directToCustomer` billing classification; the consuming tenant activates pay-as-you-go billing after registration.
 
 ## Create or select the owning app
 
@@ -104,6 +105,8 @@ Every container type has one owning Microsoft Entra ID application.
 For the model, see [SharePoint Embedded app architecture](../plan/app-tenant-architecture.md).
 
 ## Configure standard billing
+
+Skip this section for a trial container type.
 
 Standard container types require Azure billing. The extension attaches billing by using an Azure subscription and resource group that your account can access.
 
