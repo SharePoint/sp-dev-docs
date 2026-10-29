@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 08/26/2016
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -16,7 +16,7 @@ Client-side web parts support:
 - Both SharePoint Online and on-premises environments.
 
 > [!NOTE]
-> This walkthrough targets SharePoint Online with SPFx 1.24.0. Before you start, [set up your development environment](../../set-up-your-development-environment.md); Node.js 24 LTS is recommended. SharePoint Server requires an older, [supported SPFx version](../../compatibility.md), not the current generator.
+> This walkthrough targets SharePoint Online with SPFx 1.24.0. Before you start, [set up your development environment](../../set-up-your-development-environment.md); Node.js 26 LTS is recommended. SharePoint Server requires an older, [supported SPFx version](../../compatibility.md), not the current generator.
 
 You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 

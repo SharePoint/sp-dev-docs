@@ -1,14 +1,14 @@
 ---
 title: "SharePoint Framework Toolchain: Heft-based"
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects. This article covers the Heft-based toolchain introduced in SPFx v1.22.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework Toolchain: Heft & Webpack
 
 The SharePoint Framework (SPFx) v1.22 introduced a significant change to the build toolchain used to develop and package SPFx solutions. This article explains the changes, the reasons behind them, and how they affect both new and existing projects.
 
-For new SPFx 1.24 projects, follow the [development environment setup](../set-up-your-development-environment.md) using Node.js 24 LTS. Heft is the supported toolchain for SPFx 1.24.
+For new SPFx 1.24 projects, follow the [development environment setup](../set-up-your-development-environment.md) using Node.js 26 LTS. Heft is the supported toolchain for SPFx 1.24.
 
 > [!NOTE]
 > Prior to SPFx v1.22, Microsoft used a gulp and webpack based toolchain. Learn more: [SPFx Toolchain: Gulp & Webpack](sharepoint-framework-toolchain.md).

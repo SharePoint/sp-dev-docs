@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 06/13/2022
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -57,7 +57,7 @@ Once the Build Definition has been created, install the Node.js version supporte
 ![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE]
-> Use the [SPFx compatibility table](../compatibility.md) when setting `Version Spec`; don't assume that all Gulp-era projects use the same Node.js version. Older runtimes can be out of support and need an isolated maintenance environment. For SPFx 1.24, follow the current environment guidance and use a Heft-based pipeline; Node.js 24 LTS is recommended.
+> Use the [SPFx compatibility table](../compatibility.md) when setting `Version Spec`; don't assume that all Gulp-era projects use the same Node.js version. Older runtimes can be out of support and need an isolated maintenance environment. For SPFx 1.24, follow the current environment guidance and use a Heft-based pipeline; Node.js 26 LTS is recommended.
 
 ### Restoring dependencies
 

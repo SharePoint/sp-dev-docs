@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 10/28/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -24,14 +24,14 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 
 ## Install Node.js
 
-Install the latest available **[Node.js](https://nodejs.org) 24 LTS** release. Node.js 24 LTS is the recommended baseline for a new **SPFx 1.24** development environment.
+Install the latest available **[Node.js](https://nodejs.org) 26 LTS** release. Node.js 26 LTS is the recommended baseline for a new **SPFx 1.24** development environment.
 
-SPFx 1.24 also supports Node.js 22 (22.14.0 or later within the 22.x release line) and Node.js 26. If you're maintaining a solution on an earlier SPFx version, use the Node.js version listed for that release in the [compatibility reference](compatibility.md). Don't apply the Node.js 24 recommendation to older projects without checking their supported versions.
+SPFx 1.24 also supports Node.js 22 (22.14.0 or later within the 22.x release line) and Node.js 24. If you're maintaining a solution on an earlier SPFx version, use the Node.js version listed for that release in the [compatibility reference](compatibility.md). Don't apply the Node.js 26 recommendation to older projects without checking their supported versions.
 
 > [!IMPORTANT]
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
 >
-> Node.js lifecycle status and SPFx compatibility are separate. At the SPFx 1.24 release, Node.js 24 is LTS and Node.js 26 is Current. SPFx 1.24 supports both, but Node.js 24 LTS is recommended for getting started. Don't assume a newer Node.js release is supported just because it's available. For Node.js lifecycle details, see [Node.js releases](https://nodejs.org/en/about/previous-releases).
+> Node.js 26 entered LTS on October 28, 2026. Node.js lifecycle status and SPFx compatibility are separate. Don't assume a newer Node.js release is supported just because it's available. For Node.js lifecycle details, see [Node.js releases](https://nodejs.org/en/about/previous-releases).
 
 > [!TIP]
 > The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads](https://nodejs.org/download/) page and select the version you want to install.
@@ -45,7 +45,7 @@ You can check if you already have Node.js installed, including the installed ver
 node --version
 ```
 
-For the recommended SPFx 1.24 setup, the command should report a version starting with `v24.`. If you use a Node.js version manager, select Node.js 24 in the shell where you install the toolchain and run your project. See [Managing multiple development environments](#managing-multiple-development-environments).
+For the recommended SPFx 1.24 setup, the command should report a version starting with `v26.`. If you use a Node.js version manager, select Node.js 26 in the shell where you install the toolchain and run your project. See [Managing multiple development environments](#managing-multiple-development-environments).
 
 ## Install a code editor
 

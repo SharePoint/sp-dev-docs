@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework Platform & Toolchain Compatibility Reference
 description: Find which versions of the SharePoint Framework are compatible with SharePoint platform versions and dependencies including the build toolchain.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework Platform & Toolchain Compatibility Reference
@@ -45,7 +45,7 @@ As each new version of the SPFx is released, support for newer library versions 
 
 The following table lists the SPFx and compatible versions of common tools and libraries:
 
-For a new **SPFx 1.24** development environment, use **Node.js 24 LTS**. SPFx 1.24 also supports Node.js 22 (22.14.0 or later within the 22.x release line) and Node.js 26. Node.js 26 is Current, not LTS, at the time of the SPFx 1.24 release; the Node.js column lists supported versions, not their lifecycle status. For earlier SPFx releases, use the versions in their own rows rather than the 1.24 recommendation.
+For a new **SPFx 1.24** development environment, use **Node.js 26 LTS**. SPFx 1.24 also supports Node.js 22 (22.14.0 or later within the 22.x release line) and Node.js 24. The Node.js column lists supported versions, not their lifecycle status. For earlier SPFx releases, use the versions in their own rows rather than the 1.24 recommendation.
 
 |              SPFx               | Node.js       |   TypeScript   |    React    |
 | ------------------------------- | ------------- | -------------- | ----------- |

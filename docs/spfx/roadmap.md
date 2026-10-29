@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Released SharePoint Framework capabilities and planned investments across SharePoint and Microsoft 365.
-ms.date: 10/28/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -19,7 +19,7 @@ This page incorporates the [September 2026 roadmap update](https://devblogs.micr
 
 - **Copilot UX components generally available.** Package interactive UI with a declarative agent using the SPFx deployment model. See [availability, licensing, and supported clients](copilot/overview-copilot-apps.md#availability).
 - **React 18.3.1** for React-based SPFx solutions.
-- **Node.js 24 and 26 support**, alongside Node.js 22. Use Node.js 24 LTS for a new SPFx 1.24 development environment.
+- **Node.js 24 and 26 support**, alongside Node.js 22. Use Node.js 26 LTS for a new SPFx 1.24 development environment.
 - **SharePoint Store distribution** for solutions containing Copilot UX components.
 - Component display-mode improvements, build-time declarative-agent validation, and dynamic tool discovery.
 
