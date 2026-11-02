@@ -1,7 +1,7 @@
 ---
 title: Connect your Copilot UX component to SharePoint data
 description: Extend the Copilot UX component from part 1 to read live SharePoint data and accept parameters from the agent.
-ms.date: 10/28/2026
+ms.date: 11/02/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -16,7 +16,7 @@ In this tutorial, you extend the Copilot UX component from [Build your first Cop
 ## Prerequisites
 
 - You completed [Build your first Copilot UX component](build-your-first-copilot-app.md), and the `my-copilot-app` solution is deployed to your tenant.
-- The project uses SharePoint Framework **1.24.0**.
+- The project uses SharePoint Framework **1.24.1**.
 - You meet the [Copilot licensing and supported-client requirements](../overview-copilot-apps.md#availability).
 
 ## Define the tool parameters
@@ -122,7 +122,7 @@ The component calls the SharePoint REST API with `this.context.spHttpClient`. Th
 1. Install the SharePoint Framework HTTP package. The **No framework** template doesn't include it.
 
     ```console
-    npm install @microsoft/sp-http@1.24.0 --save-exact
+    npm install @microsoft/sp-http@1.24.1 --save-exact
     ```
 
 1. Create a file named **SharePointListsService.ts** in **./src/copilotComponents/myCopilotApp** with the following code.

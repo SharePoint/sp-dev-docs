@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Learn how set up your development environment for the SharePoint Framework Heft-based toolchain.
-ms.date: 10/29/2026
+ms.date: 11/02/2026
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -20,7 +20,7 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
 
 > [!IMPORTANT]
-> The following steps assume you're building solutions for SharePoint Online using SharePoint Framework 1.24. For other SPFx versions, check the [compatibility reference](compatibility.md) before installing Node.js.
+> The following steps assume you're building solutions for SharePoint Online using SharePoint Framework 1.24.1. For other SPFx versions, check the [compatibility reference](compatibility.md) before installing Node.js.
 
 ## Install Node.js
 
@@ -64,7 +64,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install @rushstack/heft yo @microsoft/generator-sharepoint@1.24.0 --global
+> npm install @rushstack/heft yo @microsoft/generator-sharepoint@1.24.1 --global
 > ```
 
 ### Install Heft
@@ -99,10 +99,12 @@ The Yeoman SharePoint web part generator helps you quickly create a SharePoint c
 To install the SharePoint Framework Yeoman generator globally, enter the following command:
 
 ```console
-npm install @microsoft/generator-sharepoint@1.24.0 --global
+npm install @microsoft/generator-sharepoint@1.24.1 --global
 ```
 
-Use `@microsoft/generator-sharepoint@latest` instead to install the latest public release. At SPFx 1.24 GA, the npm `@latest` tag selects `1.24.0`; it advances with subsequent releases. Keep the explicit version when you need a reproducible SPFx 1.24 environment.
+Use `@microsoft/generator-sharepoint@latest` instead to install the latest public release. As of November 2, 2026, the npm `@latest` tag selects `1.24.1`; it advances with subsequent releases. Keep the explicit version when you need a reproducible SPFx 1.24.1 environment.
+
+SPFx 1.24.1 corrects the default project scaffolding's release-candidate package references. Updating the generator doesn't change existing projects; see the [SPFx 1.24.1 release notes](release-1.24.1.md) for upgrade guidance.
 
 For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md).
 

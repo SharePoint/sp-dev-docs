@@ -16,7 +16,7 @@ This repository contains the source for the [SharePoint developer documentation 
 
 ## SharePoint Framework releases
 
-See the [SPFx compatibility reference](docs/spfx/compatibility.md) for supported combinations and links to released versions, the [SPFx 1.24 release notes](docs/spfx/release-1.24.0.md) for that release, and the [SharePoint Framework roadmap](docs/spfx/roadmap.md) for plans.
+See the [SPFx compatibility reference](docs/spfx/compatibility.md) for supported combinations and links to released versions, the [SPFx 1.24.1 release notes](docs/spfx/release-1.24.1.md) for the latest maintenance update, and the [SharePoint Framework roadmap](docs/spfx/roadmap.md) for plans.
 
 ## Get started
 

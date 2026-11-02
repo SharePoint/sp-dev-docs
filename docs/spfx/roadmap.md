@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Released SharePoint Framework capabilities and planned investments across SharePoint and Microsoft 365.
-ms.date: 10/29/2026
+ms.date: 11/02/2026
 ms.localizationpriority: high
 ---
 
@@ -11,9 +11,15 @@ SharePoint Framework (SPFx) supports client-side extensibility across SharePoint
 
 For monthly roadmap updates from the Microsoft engineering team, visit the [Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/).
 
-This page incorporates the [September 2026 roadmap update](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-september-2026/) and the October 28 SPFx 1.24 GA release. The September post describes the preview state at publication; the current release notes and availability guidance supersede its preview licensing and release-status statements.
+This page incorporates the [September 2026 roadmap update](https://devblogs.microsoft.com/microsoft365dev/sharepoint-framework-spfx-roadmap-update-september-2026/), the October 28 SPFx 1.24 GA release, and the November 2 SPFx 1.24.1 maintenance update. The September post describes the preview state at publication; the current release notes and availability guidance supersede its preview licensing and release-status statements.
 
 [!INCLUDE [sp-add-in-deprecation](../../includes/snippets/sp-add-in-spfx.md)]
+
+## Released: SPFx 1.24.1 - November 2, 2026
+
+SPFx 1.24.1 is the latest public release. It corrects the default project scaffolding to reference stable SPFx packages instead of `1.24.0-rc.0` packages and addresses some reported npm dependency vulnerabilities. Dependency maintenance continues.
+
+Use the 1.24.1 generator for new projects. Existing projects require dependency updates; installing the generator alone doesn't upgrade them. See the [SPFx 1.24.1 release notes](release-1.24.1.md) for installation and upgrade guidance. The SPFx 1.24 platform requirements and capabilities remain unchanged.
 
 ## Released: SPFx 1.24 - October 28, 2026
 
