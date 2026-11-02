@@ -652,7 +652,7 @@
       href: embedded/build/build-app-end-to-end.md
     - name: 'Quickstart: Build your first app with VS Code'
       href: embedded/build/quickstart-vscode.md
-    - name: Explore container requests with the playground Demo
+    - name: Plan your first app with a static example
       href: embedded/build/hosted-playground.md
     - name: Use the MCP server to build apps with a coding agent
       href: embedded/build/sharepoint-embedded-mcp-server.md

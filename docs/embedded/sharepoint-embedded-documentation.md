@@ -1,7 +1,7 @@
 ---
 title: SharePoint Embedded documentation
 description: Task-based index for SharePoint Embedded. Find the right page by what you're trying to do, whether you build apps or administer them.
-ms.date: 07/13/2026
+ms.date: 11/02/2026
 ms.reviewer: dilucesr
 ms.author: mawin
 ms.localizationpriority: high
@@ -53,6 +53,10 @@ Decide how SharePoint Embedded fits before you write code.
 ## Build an app
 
 A task-based build journey from prerequisites to a production-ready app. Start with the canonical end-to-end sequence. The Visual Studio Code quickstart and SharePoint Embedded Model Context Protocol (MCP) server are alternative guided starting paths; the remaining articles cover required setup and optional app capabilities.
+
+For a zero-setup orientation first, [plan your app with the static contract-workspace example](./build/hosted-playground.md).
+It explains the customer journey and required real-app setup without signing in,
+connecting a tenant, or creating resources.
 
 1. [Build a SharePoint Embedded app end to end](./build/build-app-end-to-end.md)
 1. [Quickstart: build your first app with VS Code](./build/quickstart-vscode.md)

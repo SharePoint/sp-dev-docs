@@ -1,62 +1,89 @@
 ---
-title: Explore container requests with the playground Demo
-description: Learn a small set of SharePoint Embedded container request shapes with browser-local synthetic data, without signing in or changing tenant resources.
-ms.date: 10/28/2026
+title: Plan your first SharePoint Embedded app with a static example
+description: Explore a synthetic contract workspace, understand the setup sequence, and plan how to build and onboard customers to a full SharePoint Embedded app.
+ms.date: 11/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
 
-# Explore container requests with the playground Demo
+# Plan your first SharePoint Embedded app with a static example
 
 **Applies to:** Developer
 
-The SharePoint Embedded playground Demo lets you inspect container requests,
-illustrative responses, and their effects on synthetic state. It doesn't connect
-to Microsoft Graph, require a tenant, or change SharePoint resources.
+Start with a small contract-workspace example to understand what SharePoint Embedded
+(SPE) provides, what your application must build, and which tenant setup steps come
+before real requests. Then follow the linked procedures to turn that design into
+a complete application.
+
+**V1 is entirely static.** The example runs against synthetic browser-local state.
+It doesn't sign in, connect to Microsoft Graph, register an app, configure billing,
+upload a document, or change tenant resources. No AI runner or model is needed.
 
 > [!NOTE]
-> This slice provides application source and a local Demo. A public hosted endpoint
-> has not been verified, and Live mode isn't available. Publishing this article
-> doesn't deploy the application. An application owner must separately host and
-> verify the static frontend before a hosted playground link is added here.
+> This contribution provides the static application source and local preview
+> instructions. A customer-facing hosted URL hasn't been verified. Publishing this
+> article doesn't deploy the application. V2's test-tenant connection is future work,
+> not an available feature or a prerequisite for trying V1.
 
-## Run the Demo
+## Choose where to start
 
-Get the [playground source and local run instructions](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground).
-Use the application README to start the local static file server and open its
-reported URL. That server serves frontend assets only; it isn't a simulated
-Graph API or a confidential backend.
+| Your goal | Start here | What you need |
+|---|---|---|
+| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | A browser; Node.js only if you serve the source locally |
+| Build a working application | [Turn the example into a full app](#turn-the-example-into-a-full-app) | A developer tenant, an app owner, and the administrators required by the linked setup procedures |
+| Install an existing ISV application for your organization | [Guide customers through tenant setup](../publish/customer-tenant-setup-guide.md) | The ISV's installation package and the appropriate customer administrators |
 
-No Microsoft 365 sign-in, container type registration, credential, or simulator
-service is needed for the Demo. The Demo engine runs in the browser.
+The [end-to-end build journey](build-app-end-to-end.md) is the authoritative
+setup sequence. Use the [Visual Studio Code quickstart](quickstart-vscode.md)
+when you're ready to configure a real development environment.
 
-Keep the visible **Demo** label in mind throughout the recipe. Example identifiers,
-including `demo-container-type` and IDs prefixed with `demo-`, are deliberately
-synthetic. They aren't valid identifiers for real Microsoft Graph requests.
+## Understand the example
 
-## Complete a container recipe
+Imagine a legal team that needs a workspace for each contract matter. A matter
+groups the agreement, supporting documents, and the people allowed to work on it.
 
-1. Select the list-containers example. Inspect its method, path, and empty body.
-   Selecting an example only fills an editable draft.
-1. Choose **Run**. Inspect the parsed request, labelled synthetic response, and
-   state view. Listing containers doesn't mutate the state.
-1. Select the create-container example. Set a display name and description, keeping
-   `containerTypeId` set to `demo-container-type`.
-1. Choose **Run**. The Demo creates a synthetic container and displays its ID.
-   Inspect the state effect and illustrative `201` response.
-1. Run the list request again to find the new container.
-1. Use that container's synthetic ID in the read-container request and choose
-   **Run**. Inspect its illustrative `200` response and unchanged state.
-1. Choose the Demo reset action. Confirm that only the known synthetic seed remains.
+| Contract application concept | SPE mapping | Application responsibility |
+|---|---|---|
+| The product that customers install | Owning Entra application and container type | Own the app registration, choose the tenant and billing model, and package customer setup |
+| One contract matter | One container in the consuming tenant | Store the returned container ID and enforce the intended business-object mapping |
+| Agreements and attachments | DriveItems inside the container's drive | Build file-management UX and use the documented DriveItem APIs |
+| Reviewers and matter owners | Container membership and roles for delegated access | Check the user's access and manage membership through authorized operations |
+| Review stages, due dates, approvals, and signatures | Your application's business model | Implement the workflow; SPE doesn't supply a contract lifecycle or signing service |
 
-Editing a draft doesn't execute it. Only **Run** invokes the local Demo operation.
-Reset is a separate, local action; it doesn't send a Microsoft Graph request.
+The scenario is inspired by the Legal/CLM example in the independently published
+[interactive sandbox prototype](https://shreyassar26.github.io/spe-sandbox/).
+The V1 application is an original implementation, not a copy of that prototype.
+Its supported operation set is intentionally smaller.
 
-## Supported Demo operations
+## Try the static example
 
-The Demo supports only the following request shapes. The response statuses and
-objects are synthetic teaching examples, not evidence that Graph authorized or
-executed an operation.
+Get the [application source and local preview instructions](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground).
+The local server serves static frontend assets only. It isn't a fake Graph API,
+confidential backend, or prerequisite service for the Demo engine.
+
+The page has two paths: try the example to learn the request/state relationship,
+or follow the build roadmap to plan a real application.
+
+1. Inspect the sample matter workspaces. Preparing a read or a new workspace only
+   fills an editable request draft; it doesn't execute an operation.
+1. Run the list example to see the known synthetic seed and an unchanged state.
+1. Prepare a create request for a new matter. Inspect the method, path, and body.
+   Keep the synthetic container type ID.
+1. Explicitly run the request. Inspect the illustrative `201` response, synthetic
+   container ID, new workspace, and state effect.
+1. List again, then prepare and run a read using the returned synthetic ID.
+   Inspect the illustrative `200` response and unchanged state.
+1. Reset the Demo. Only the known seed and this application's storage key reset.
+
+All IDs beginning with `demo-`, including `demo-container-type`, are synthetic and
+invalid for Live use. Editing or selecting a draft never sends a Graph request.
+The Demo doesn't persist drafts, tokens, credentials, or request history. Don't
+enter secrets, personal data, or actual contract content.
+
+### Supported V1 operations
+
+The request shapes below teach a small part of the Graph contract. Response
+objects and status values are synthetic, not evidence of authorization or execution.
 
 | Operation | Request | Synthetic response | State effect |
 |---|---|---|---|
@@ -72,48 +99,174 @@ executed an operation.
 }
 ```
 
-The real [list containers API](/graph/api/filestorage-list-containers) requires the
-container type filter. A bare collection `GET` isn't an advertised Demo request.
+The real [list containers API](/graph/api/filestorage-list-containers) requires a
+container type filter; a bare collection `GET` isn't a supported Demo request.
 See [Create fileStorageContainer](/graph/api/filestoragecontainer-post) and
-[Get fileStorageContainer](/graph/api/filestoragecontainer-get) for the corresponding
-real API contracts.
+[Get fileStorageContainer](/graph/api/filestoragecontainer-get) for real API contracts.
 
-Other operations, query options, filters, and non-synthetic resource identifiers
-aren't supported. Unsupported or malformed requests produce an explanatory Demo
-error without changing state. The Demo doesn't substitute a successful response
-for an unsupported request or a failed Live operation.
+Other methods, APIs, query options, filters, and non-synthetic identifiers are
+unsupported. Invalid requests produce explicit Demo errors without changing state
+or retaining a successful status. Browser-storage read, corruption, and write
+failures are reported explicitly, not silently converted to success. Reset doesn't
+clear other applications' browser storage.
 
-## State and reset boundaries
+## Turn the example into a full app
 
-The application stores only its synthetic state under its own browser-storage key.
-It doesn't persist request drafts or credentials. Don't enter secrets or real
-tenant content into learning requests.
+Use these milestones to plan implementation. Reading a stage or running the Demo
+doesn't mark any real tenant, permission, or billing prerequisite as complete.
 
-Reset restores the known Demo seed. It doesn't clear unrelated browser storage,
-delete tenant containers, or reset Live configuration. Browser-storage errors are
-reported explicitly rather than shown as successful operations.
+### 1. Decide who owns and consumes the app
 
-The Demo isn't a general-purpose Graph emulator. It doesn't establish product UI
-parity, production limits, permission behavior, or support for APIs beyond the
-operation set above.
+**Owner:** Application developer or architect.
 
-## Understand why Live is pending
+Choose a single-tenant internal application or a multitenant ISV application.
+Identify the developer/owning tenant and every consuming tenant. In the example,
+the consuming tenant stores that customer's matter containers and documents.
+The owning and consuming tenant can be the same for evaluation.
 
-Live operation execution is outside this slice. Before it can be enabled, the
-application owner must establish and validate:
+**Output:** A tenant model, one-matter-per-container decision, and named app,
+administration, and billing owners. See [App and tenant architecture](../plan/app-tenant-architecture.md)
+and [Choose an app model](../plan/choose-app-model.md).
 
-- The owned execution route, including a confidential backend for container creation.
-- An approved test application and tenant.
-- Microsoft Graph consent, container-type grants, and the required user and resource access.
-- A small, explicitly authorized operation sequence and genuine success/error evidence.
+### 2. Create the owning app and container type
 
-Sign-in alone wouldn't prove that an operation is authorized. A future Live
-integration must require an explicit **Run**, use real Graph results or actionable
-real errors, and never fall back to synthetic success.
+**Owner:** Application developer, with the roles and consent required by each setup procedure.
 
-For real integration prerequisites, see
-[Configure authentication and authorization](configure-authentication-authorization.md)
-and [Create and manage containers](create-manage-containers.md).
+Prepare a Microsoft 365 tenant with SharePoint, register the owning Entra
+application, and create its container type. One owning application owns one
+container type. Record the returned real app and type IDs outside the Demo.
 
-An assistant service is also outside this slice. A future request proposal must
-remain an editable draft and must not execute tenant changes automatically.
+Management, registration, and content access are different tasks:
+
+| Permission | Purpose |
+|---|---|
+| `FileStorageContainerType.Manage.All` | Container type management |
+| `FileStorageContainerTypeReg.Selected` | Registration in a consuming tenant |
+| `FileStorageContainer.Selected` | Container and content access |
+
+Request only the permission types needed by each component. Application permissions
+require administrator consent; delegated consent follows the documented flow and
+tenant policy. Don't grant every management permission to the runtime app by default.
+
+**Output:** An owning application and type, the chosen access model, and an
+operation-specific permission plan. See [Create a container type](create-container-type.md)
+and [Configure authentication and authorization](configure-authentication-authorization.md).
+
+### 3. Choose and configure billing in the right order
+
+**Owner:** Developer billing owner, or the consuming tenant's authorized billing administrator.
+
+| Choice | Required setup order | Boundary |
+|---|---|---|
+| Trial evaluation | Create the trial type, then register it before using containers | Trial types are single-tenant evaluation resources, not production types, and can't be converted in place |
+| `standard` | Create the type and attach the developer tenant's Azure billing profile before using it | The developer pays |
+| `directToCustomer` / pass-through | Create the type, register it in the consuming tenant, then activate consuming-tenant pay-as-you-go billing before container access | The customer pays and owns its billing setup |
+
+Choose before creating the type; changing billing classification needs a new type.
+Don't ask standard-billed customers to activate pass-through billing.
+
+**Output:** A documented payer and valid billing setup for the selected route.
+See [Choose a billing model](../plan/choose-billing-model.md).
+
+### 4. Register, consent, and authorize separately
+
+**Owner:** Application developer and consuming-tenant administrator; a test user
+participates in delegated validation.
+
+Register the type in every consuming tenant, including the same-tenant evaluation
+case. Establish the owning app's service principal, required Graph consent, and
+least-privilege container type application grants. For delegated content operations,
+also assign the user's appropriate container role.
+
+These are separate gates: Graph permission, container type application permission,
+and delegated user membership/role. Sign-in or Graph consent alone doesn't prove
+access. Allow documented registration propagation with bounded retries; don't
+replace failures with success.
+
+**Output:** A verified registration and permission plan for the exact tenant,
+app, type, user, and operation. See [Register application permissions](register-application-permissions.md)
+and [Plan authentication and permissions](../plan/authentication-permissions.md).
+
+### 5. Build the trusted backend and first document flow
+
+**Owner:** Application development team.
+
+Real container creation requires a confidential client even for delegated access.
+Keep credentials and token acquisition in an owned trusted backend, never in the
+static page or browser storage. A conceptual production request path is:
+
+```text
+Your application's browser UI
+  -> your confidential backend
+  -> Microsoft Graph
+  -> containers and documents in the consuming tenant
+```
+
+This isn't V1's network behavior. It is the application architecture you must
+implement and authorize independently.
+
+Create a real test container, create a folder, upload a small file, read its
+DriveItem metadata, and download it. Keep returned container and item IDs; the
+container ID is the Graph drive ID. Don't reconstruct IDs from URLs.
+
+**Output:** Genuine results or actionable genuine errors for the smallest
+authorized document flow. See [Create and manage containers](create-manage-containers.md)
+and [Upload, download, and manage files](manage-files.md).
+
+### 6. Add the contract experience and operational behavior
+
+**Owner:** Application development team and the customer's governance stakeholders.
+
+| Full-app capability | What to implement or integrate |
+|---|---|
+| Contract workflow | App-owned stages, approvals, due dates, notifications, and any signing integration |
+| Documents | File/folder UX, supported upload patterns, concurrency/error handling, and durable ID mapping |
+| Matter membership | Authorized container roles and [sharing operations](share-files-manage-permissions.md) |
+| Collaboration | [Office editing/coauthoring](open-office-files.md), with the applicable access and licensing requirements |
+| Discovery | [Preview](preview-files.md), [search](search-containers-files.md), and appropriate [metadata](container-metadata.md) |
+| Operations | Request outcomes/latency, bounded retry handling, support diagnostics without secrets, cost monitoring, and lifecycle cleanup |
+| Tenant governance | Work with administrators on [security and compliance controls](../plan/security-compliance-governance.md); don't assume a Demo proves a policy is configured |
+
+These capabilities aren't implemented by V1. Follow the linked procedures and
+validate only the capabilities your application advertises.
+
+### 7. Validate and hand off to customer administrators
+
+**Owner:** ISV/application team, customer administrator, and an authorized test user.
+
+Test the real production path, not a hidden bypass. Check at least:
+
+- The exact application, publisher, container type, and consuming-tenant registration.
+- Required consent, type-level grants, delegated user roles, and the selected billing route.
+- An authorized create/upload/read/download sequence and a denied operation for a
+  user or resource that shouldn't have access.
+- Real errors for missing registration, insufficient permissions, or incomplete
+  billing; no synthetic fallback.
+- Customer administrator visibility, support diagnostics, cost ownership, and cleanup.
+
+Provide the administrator with app/type IDs, redirect and sign-in URLs, permissions
+and their purpose, billing ownership, support contact, data-handling boundaries,
+and a validation checklist. The customer administrator reviews consent, completes
+registration through the approved app flow, and activates pass-through billing
+only when applicable.
+
+**Output:** Evidence from the actual consuming tenant and a repeatable customer
+onboarding package. A successful developer-tenant test isn't customer-tenant proof.
+See [Prepare customer installation](../publish/prepare-customer-installation.md),
+[Guide customer setup](../publish/customer-tenant-setup-guide.md), and
+[Validate installation](../publish/validate-customer-installation.md).
+
+## V1 now, V2 later
+
+| V1: implemented static learning | V2: future authorized test-tenant integration |
+|---|---|
+| Synthetic sample workspace, three request shapes, and state effects | An owned confidential backend and real Graph execution |
+| Readable setup roadmap and official documentation links | Verified application/tenant configuration, consent, grants, billing, and user access |
+| Explicit local Run and seed-only reset | Explicitly authorized real operations, genuine results/errors, and tenant-safe cleanup |
+| No sign-in, credentials, uploads, assistant, or tenant mutations | Separately scoped integration; not enabled by visiting or completing V1 |
+
+V2 must never reuse synthetic IDs as real resources, migrate Demo state into a
+tenant silently, or return synthetic success after a real operation fails. It
+needs its own implementation, authorization, security review, and test evidence.
+Static hosting, documentation publication, and a tenant-connected application are
+three separate delivery concerns.
