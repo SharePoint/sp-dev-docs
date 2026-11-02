@@ -24,7 +24,8 @@ after(async () => {
 
 function get(path, method = "GET") {
   return new Promise((resolve, reject) => {
-    const req = request({ host: "127.0.0.1", port, path, method, timeout: 5000 }, (response) => {
+    // CLI checks can outlive pooled sockets; each assertion needs its own connection.
+    const req = request({ host: "127.0.0.1", port, path, method, agent: false, timeout: 5000 }, (response) => {
       const chunks = [];
       response.on("data", (chunk) => chunks.push(chunk));
       response.on("error", reject);
@@ -57,6 +58,7 @@ for (const [path, file, contentType] of [
     assert.equal(result.headers["cache-control"], "no-store");
     assert.equal(result.headers["referrer-policy"], "no-referrer");
     assert.equal(result.headers["cross-origin-resource-policy"], "same-origin");
+    assert.equal(result.headers.connection, "close");
     assert.equal(result.headers["access-control-allow-origin"], undefined);
   });
 }
@@ -121,7 +123,7 @@ test("frontend declares local-only assets, labelled editors and accessible resul
   assert.match(html, /connect-src 'none'/);
   assert.match(html, /script type="module" src="\.\/app\.mjs"/);
   assert.match(html, /href="\.\/styles\.css"/);
-  assert.ok(!/(?:src|href)\s*=\s*["'](?:https?:)?\/\//i.test(html));
+  assert.ok(!/<(?:script|link|img|iframe|source)\b[^>]*(?:src|href)\s*=\s*["'](?:https?:)?\/\//i.test(html));
   for (const id of ["method", "path", "body"]) {
     assert.ok(html.includes(`label for="${id}"`));
     assert.ok(html.includes(`id="${id}"`));
@@ -129,7 +131,7 @@ test("frontend declares local-only assets, labelled editors and accessible resul
   assert.match(html, /role="status" aria-live="polite"/);
   assert.match(html, /role="alert" tabindex="-1"/);
   assert.match(html, /id="run" type="button" disabled/);
-  assert.match(html, /Live is unavailable \/ pending/);
+  assert.match(html, /V2 is a future authorized integration, not a mode switch/);
   assert.match(html, /identifiers are invalid for Live use/);
   assert.match(html, /<noscript>/);
 });

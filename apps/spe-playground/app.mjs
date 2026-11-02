@@ -9,7 +9,7 @@ const examples = {
   create: {
     method: "POST",
     path: COLLECTION_PATH,
-    body: pretty({ displayName: "My Demo project", description: "Created only in this browser.", containerTypeId: CONTAINER_TYPE }),
+    body: pretty({ displayName: "Synthetic services agreement", description: "A fictional contract matter for learning. No real documents or parties.", containerTypeId: CONTAINER_TYPE }),
   },
   read: { method: "GET", path: `${COLLECTION_PATH}/demo-container-2`, body: "" },
 };
@@ -33,11 +33,48 @@ function showError(error) {
 }
 
 function renderState() {
-  byId("state").textContent = pretty(engine.getState());
+  const state = engine.getState();
+  byId("state").textContent = pretty(state);
+  const cards = state.containers.map((container) => {
+    const card = document.createElement("li");
+    const heading = document.createElement("h4");
+    heading.textContent = container.displayName;
+    const description = document.createElement("p");
+    description.textContent = container.description;
+    const id = document.createElement("code");
+    id.textContent = container.id;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Prepare read request";
+    button.setAttribute("aria-label", `Prepare read request for ${container.displayName}`);
+    button.addEventListener("click", () => prepareDraft(
+      { method: "GET", path: `${COLLECTION_PATH}/${container.id}`, body: "" },
+      `Read for ${container.id} prepared in the draft only. Nothing ran. Inspect it, then select Run Demo request.`,
+    ));
+    card.append(heading, description, id, button);
+    return card;
+  });
+  byId("matter-list").replaceChildren(...cards);
+  byId("matter-count").textContent = `${cards.length} synthetic matter workspace${cards.length === 1 ? "" : "s"} in Demo storage.`;
+  byId("matter-unavailable").hidden = true;
+}
+
+function showUnavailableState(message) {
+  byId("matter-list").replaceChildren();
+  byId("matter-count").textContent = "Matter workspaces unavailable.";
+  byId("matter-unavailable").textContent = message;
+  byId("matter-unavailable").hidden = false;
+  byId("state").textContent = message;
+}
+
+function prepareDraft(draft, message) {
+  for (const key of Object.keys(fields)) fields[key].value = draft[key];
+  byId("status").textContent = message;
+  byId("request-heading").focus();
 }
 
 function clearExecution(message) {
-  byId("parsed").textContent = "No request has run since storage was initialized or reset.";
+  byId("parsed").textContent = "No current parsed request. No request has run since storage was initialized, reset, or invalidated.";
   byId("response-status").textContent = "No illustrative status.";
   byId("response").textContent = "No synthetic request response.";
   byId("effect").textContent = message;
@@ -62,7 +99,7 @@ function connectStorage() {
     byId("run").disabled = false;
     byId("status").textContent = "Demo ready. Choose an example, inspect the draft, then Run. Nothing has executed.";
   } catch (error) {
-    byId("state").textContent = "State unavailable. Saved data was not silently reset.";
+    showUnavailableState("State unavailable. Saved data was not silently reset. Retry storage or explicitly Reset Demo.");
     clearExecution("Initialization failed. No request ran. Retry storage, or explicitly Reset Demo to replace corrupt saved state.");
     showError(error);
   }
@@ -71,9 +108,7 @@ function connectStorage() {
 document.querySelectorAll("[data-example]").forEach((button) => {
   button.addEventListener("click", () => {
     const draft = examples[button.dataset.example];
-    for (const key of Object.keys(fields)) fields[key].value = draft[key];
-    byId("status").textContent = "Example loaded into the draft only. Nothing ran. Inspect it, then select Run Demo request.";
-    byId("request-heading").focus();
+    prepareDraft(draft, "Example loaded into the draft only. Nothing ran. Inspect it, then select Run Demo request.");
   });
 });
 
@@ -128,6 +163,8 @@ window.addEventListener("storage", (event) => {
   if (event.storageArea === activeStorage && (event.key === null || event.key === STORAGE_KEY)) {
     byId("run").disabled = true;
     engine = undefined;
+    showUnavailableState("Demo storage changed in another page. Retry storage to reload the matter workspaces and state.");
+    clearExecution("Storage changed. Previous results are no longer current. No request ran. Retry storage.");
     showError(new DemoError("StorageChanged", "Demo storage changed in another page. Retry storage before running or resetting."));
   }
 });

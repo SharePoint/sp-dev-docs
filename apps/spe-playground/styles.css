@@ -17,9 +17,11 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--page); color: var(--text); }
 button, input, textarea { font: inherit; }
+a { color: var(--brand); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: 2px; }
 button, summary { cursor: pointer; }
-button, input, textarea, summary, pre { border-radius: 6px; }
-button {
+button, .button, input, textarea, summary, pre { border-radius: 6px; }
+button, .button {
   padding: .65rem 1rem;
   background: var(--surface);
   color: var(--brand);
@@ -27,26 +29,54 @@ button {
   font-weight: 650;
   min-height: 44px;
 }
-button:hover { border-color: var(--brand); background: var(--code); }
+.button { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+button:hover, .button:hover { border-color: var(--brand); background: var(--code); }
 button:disabled { cursor: not-allowed; opacity: .6; }
 :focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
 [tabindex="-1"]:focus { outline: 3px solid var(--brand); outline-offset: 4px; }
 [hidden] { display: none !important; }
 .skip-link { position: absolute; top: -100px; left: 1rem; z-index: 1; background: var(--surface); padding: 1rem; color: var(--brand); }
 .skip-link:focus { top: 1rem; }
-.masthead { display: flex; align-items: center; gap: .85rem; padding: 1.15rem max(1.25rem, calc((100% - 1200px) / 2)); background: var(--surface); border-bottom: 1px solid var(--line); }
+.masthead { display: flex; align-items: center; flex-wrap: wrap; gap: .85rem; padding: 1.15rem max(1.25rem, calc((100% - 1200px) / 2)); background: var(--surface); border-bottom: 1px solid var(--line); }
 .masthead > .badge { margin-left: auto; }
 .brand-mark { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--accent); color: #fff; font-size: .9rem; font-weight: 750; }
 .brand-title { margin: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.2; }
 .eyebrow { margin: 0 0 .25rem; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-size: .72rem; font-weight: 750; }
 .badge { display: inline-block; flex-shrink: 0; color: var(--accent); background: var(--tint); border: 1px solid var(--accent); border-radius: 4px; padding: .12rem .45rem; font-size: .7rem; font-weight: 750; letter-spacing: .06em; white-space: nowrap; vertical-align: middle; }
 main { max-width: 1240px; padding: 0 1.25rem; margin: auto; }
-.intro { max-width: 810px; padding: 3.2rem 0 1.7rem; }
+.intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: center; gap: 3rem; padding: 3.5rem 0 2.5rem; }
 h1 { margin: .25rem 0 1rem; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -.035em; }
 h2 { font-size: 1.2rem; line-height: 1.4; margin: 0; }
 h3 { font-size: .93rem; margin: 1.4rem 0 .5rem; }
+h4 { font-size: .9rem; margin: 1.2rem 0 .5rem; }
 p { margin: .6rem 0; }
 .lede { color: var(--muted); font-size: 1.15rem; }
+.hero-actions { margin-top: 1.5rem; }
+.hero-actions .primary { width: auto; margin: 0; }
+.model-card { padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; box-shadow: 0 12px 30px #17263c0d; }
+.model-flow { margin: 1rem 0; }
+.model-flow > div { position: relative; border-left: 2px solid var(--accent); padding: .2rem 0 1.2rem 1rem; }
+.model-flow > div:last-child { padding-bottom: .2rem; }
+.model-flow dt { color: var(--muted); font-size: .75rem; }
+.model-flow dd { margin: 0; font-weight: 650; }
+.journey-nav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; margin-bottom: 1.5rem; }
+.journey-nav a { display: flex; align-items: center; gap: .6rem; padding: .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; text-decoration: none; font-size: .85rem; font-weight: 650; }
+.journey-nav a:hover { border-color: var(--brand); background: var(--tint); }
+.journey-nav span { color: var(--accent); font-size: .75rem; }
+.guide-section { padding: 1.5rem 0 2rem; scroll-margin-top: 1rem; }
+.guide-section > h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); letter-spacing: -.02em; }
+.guide-section > p { max-width: 90ch; margin: .8rem 0 1.3rem; }
+.explain-grid, .handoff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 1.25rem; }
+.ownership-note { background: var(--tint); padding: 1rem 1.25rem; border-radius: 8px; }
+.ownership-note h3, .section-top h3, .handoff-grid h3, .validation h3 { margin: 0; font-size: 1.05rem; }
+.sample-app { margin-top: 1.5rem; border-top: 4px solid var(--accent); }
+.matter-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1rem; padding: 0; list-style: none; }
+.matter-list li { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 1.25rem; border: 1px solid var(--line); border-radius: 8px; background: var(--code); overflow-wrap: anywhere; }
+.matter-list h4 { margin: 0; font-size: 1.05rem; }
+.matter-list p { font-size: .85rem; color: var(--muted); }
+.matter-list code { margin-top: auto; font-size: .75rem; }
+.matter-list button { margin-top: 1rem; font-size: .85rem; }
+.recipe { margin-top: 1.5rem; }
 .boundary { background: var(--tint); border-left: 4px solid var(--accent); padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; }
 .boundary h2 .badge { margin-right: .4rem; }
 details { border-top: 1px solid var(--line); margin-top: 1rem; padding-top: .75rem; }
@@ -72,14 +102,40 @@ pre { max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: a
 code { font: .85em ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
 .state { margin-top: 1.25rem; }
 .actions { display: flex; gap: .6rem; flex-wrap: wrap; }
+.roadmap { list-style: none; counter-reset: milestone; padding: 0; margin: 1.5rem 0 2rem; }
+.roadmap > li { counter-increment: milestone; position: relative; padding: 0 0 1.25rem 3.5rem; border-left: 1px solid var(--line); margin-left: 1rem; }
+.roadmap > li::before { content: counter(milestone, decimal-leading-zero); display: grid; place-items: center; position: absolute; left: -1rem; top: 1rem; width: 2rem; height: 2rem; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); background: var(--tint); font-size: .75rem; font-weight: 750; }
+.roadmap article { padding: 1.5rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.roadmap h3 { margin: 0; font-size: 1.1rem; }
+.roadmap p { max-width: 96ch; }
+.evidence { margin: 1rem 0 0; font-size: .88rem; }
+.evidence > div { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem; border-top: 1px solid var(--line); padding: .6rem 0; }
+.evidence dt { color: var(--accent); font-weight: 650; }
+.evidence dd { margin: 0; }
+.permission-purposes dt { margin-top: .75rem; font-weight: 650; }
+.permission-purposes dd { margin: .25rem 0; }
+.architecture { background: var(--tint); border-left: 3px solid var(--accent); padding: .8rem 1rem; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); text-align: left; font-size: .88rem; }
+th, td { padding: 1rem; vertical-align: top; border-bottom: 1px solid var(--line); min-width: 180px; }
+thead { background: var(--tint); }
+tbody tr:last-child > * { border-bottom: 0; }
+.validation { margin-top: 1.5rem; }
+.next-link { padding-top: 1rem; }
 footer { max-width: 1240px; margin: 2rem auto; padding: 0 1.25rem; color: var(--muted); font-size: .8rem; }
-@media (max-width: 900px) { .recipe-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+  .recipe-steps, .journey-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .intro { gap: 1.5rem; }
+}
 @media (max-width: 680px) {
-  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .workspace, .intro, .explain-grid, .handoff-grid { grid-template-columns: minmax(0, 1fr); }
   .card, .boundary { padding: 1.1rem; }
   .intro { padding-top: 2rem; }
   .masthead { padding: 1rem 1.25rem; }
   .masthead .eyebrow { font-size: .62rem; }
+  .roadmap > li { padding-left: 1.8rem; }
+  .roadmap article { padding: 1.1rem; }
+  .evidence > div { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
 }
 @media (max-width: 390px) { .recipe-steps { grid-template-columns: minmax(0, 1fr); } .brand-mark { display: none; } }
 @media (prefers-color-scheme: dark) {
