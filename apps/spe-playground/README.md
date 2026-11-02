@@ -16,7 +16,9 @@ No install, build, external dependency, CDN, font request, app registration, Gra
 
 ## Try the example
 
-The page has four native-anchor milestones: understand the model, try the example, build your app, and validate/customer handoff. Guide content is semantic HTML and remains readable without JavaScript. Only the local Demo requires JavaScript.
+The page follows the documentation layout of the [SharePoint Embedded overview on Microsoft Learn](https://learn.microsoft.com/sharepoint/dev/embedded/overview): an article column with breadcrumbs, desktop documentation navigation, an "In this article" table of contents, neutral light/dark surfaces, and restrained callouts. It uses original local markup and CSS, not copied site assets or a dependency on Learn's runtime. The header identifies it as a local static example; it doesn't imitate sign-in, Ask Learn, or an official hosted page.
+
+The page has four native-anchor milestones: understand the model, try the example, build your app, and validate/customer handoff. The article navigation moves above the content on smaller screens; the related documentation remains reachable through the header, breadcrumbs, and guide links. Guide content is semantic HTML and remains readable without JavaScript. Only the local Demo requires JavaScript.
 
 The matter workspace cards come directly from `DemoEngine.getState().containers`, including the unchanged known seed. No separate sample-record array, workflow state, or fake setup is maintained. All contract examples are invented synthetic text. Contract status, approvals, signatures, and due dates are app-owned concerns, not SPE business-process capabilities.
 

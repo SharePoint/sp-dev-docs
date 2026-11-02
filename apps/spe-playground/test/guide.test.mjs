@@ -21,6 +21,20 @@ test("guide markup uses four native anchor milestones with unique, existing dest
   assert.match(html, /href="#build-plan">Build your app/);
 });
 
+test("documentation layout provides article landmarks without pretending to be the hosted Learn site", () => {
+  assert.equal([...html.matchAll(/<main\b/g)].length, 1);
+  assert.equal([...html.matchAll(/<h1\b/g)].length, 1);
+  assert.match(html, /<main\b[^>]*id="main-content"/);
+  assert.match(html, /href="#main-content">Skip to content/);
+  assert.match(html, /aria-label="SharePoint Embedded documentation"/);
+  assert.match(html, /aria-label="Breadcrumb"/);
+  assert.match(html, /aria-label="In this article"/);
+  assert.match(html, /<h2>In this article<\/h2>/);
+  assert.match(html, /href="#page-title" aria-current="page"/);
+  assert.match(html, /Local static example/);
+  assert.ok(!/<(?:button|a)\b[^>]*>\s*(?:Sign in|Ask Learn)\s*</.test(html));
+});
+
 test("official documentation anchors resolve to current repository articles and heading fragments", async () => {
   const hrefs = [...new Set([...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1]).filter((href) => !href.startsWith("#")))];
   assert.ok(hrefs.length > 10);

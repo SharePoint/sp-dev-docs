@@ -7,47 +7,75 @@
   <meta name="color-scheme" content="light dark">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
-  <title>SharePoint Embedded | From contract workspace to app</title>
+  <title>Build your first SPE app with a static example | SharePoint Embedded</title>
   <link rel="stylesheet" href="./styles.css">
   <script type="module" src="./app.mjs"></script>
 </head>
 <body>
-  <a class="skip-link" href="#page-title">Skip to content</a>
-  <header class="masthead">
-    <div class="brand-mark" aria-hidden="true">SPE</div>
-    <div><p class="eyebrow">SharePoint Embedded</p><p class="brand-title">App playground</p></div>
-    <span class="badge">V1 / STATIC DEMO</span>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="docs-header">
+    <div class="docs-header-inner">
+      <a class="docs-product" href="https://learn.microsoft.com/sharepoint/dev/embedded/overview">SharePoint</a>
+      <a href="https://learn.microsoft.com/sharepoint/dev/embedded/sharepoint-embedded-documentation">Developer documentation</a>
+      <span class="preview-label">Local static example</span>
+    </div>
   </header>
-  <main>
+  <div class="docs-layout">
+    <aside class="docs-sidebar">
+      <nav aria-label="SharePoint Embedded documentation">
+        <h2>SharePoint development</h2>
+        <details open>
+          <summary>SharePoint Embedded</summary>
+          <ul class="docs-tree">
+            <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/overview">What is SharePoint Embedded?</a></li>
+            <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/plan/app-tenant-architecture">Plan a solution</a></li>
+            <li>
+              <details open>
+                <summary>Build apps</summary>
+                <ul>
+                  <li><a href="#page-title" aria-current="page">Learn with a static example</a></li>
+                  <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/build/build-app-end-to-end">Build an app end to end</a></li>
+                  <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/build/configure-authentication-authorization">Authentication and authorization</a></li>
+                  <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/build/create-manage-containers">Create and manage containers</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/publish/prepare-customer-installation">Publish and onboard customers</a></li>
+            <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/reference/troubleshooting">Troubleshooting</a></li>
+          </ul>
+        </details>
+      </nav>
+    </aside>
+  <main id="main-content" class="docs-main" tabindex="-1">
+    <div class="article-header">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/sharepoint-embedded-documentation">SharePoint Embedded</a></li>
+          <li><a href="https://learn.microsoft.com/sharepoint/dev/embedded/build/build-app-end-to-end">Build apps</a></li>
+          <li aria-current="page">Static example</li>
+        </ol>
+      </nav>
     <section class="intro" aria-labelledby="page-title">
-      <div>
-        <p class="eyebrow">A small example. A path to your full app.</p>
-        <h1 id="page-title" tabindex="-1">From contract workspace<br>to your first SPE app.</h1>
+        <h1 id="page-title" tabindex="-1">Build your first SPE app with a static example</h1>
+        <p class="article-meta"><span class="badge">V1 / STATIC DEMO</span><span><strong>Applies to:</strong> Developer</span></p>
         <p class="lede">Learn how a contract workspace becomes a real SharePoint Embedded app: start with a local example, see the request behind an action, then follow the production build plan.</p>
         <p>No setup or sign-in needed. Synthetic data stays in this browser.</p>
-        <div class="actions hero-actions"><a class="button primary" href="#example">Try the example</a><a class="button" href="#build-plan">Build your app</a></div>
-      </div>
-      <div class="model-card" role="group" aria-label="The example's storage model">
-        <p class="eyebrow">The idea in one minute</p>
-        <dl class="model-flow">
-          <div><dt>Your app</dt><dd>One contract matter</dd></div>
-          <div><dt>SharePoint Embedded</dt><dd>One container for that matter</dd></div>
-          <div><dt>Later, in a real app</dt><dd>Contract files as DriveItems</dd></div>
-        </dl>
-        <p class="hint">Your experience and business workflow.<br>Microsoft 365 content storage through Graph.</p>
-      </div>
+        <p class="start-links"><a href="#example">Try the example</a><span aria-hidden="true"> | </span><a href="#build-plan">Build your app</a></p>
     </section>
+    </div>
 
-    <nav class="journey-nav" aria-label="Learning milestones">
-      <a href="#understand"><span>01</span> Understand the model</a>
-      <a href="#example"><span>02</span> Try the example</a>
-      <a href="#build-plan"><span>03</span> Build your app</a>
-      <a href="#handoff"><span>04</span> Validate &amp; hand off</a>
+    <nav class="journey-nav" aria-label="In this article">
+      <h2>In this article</h2>
+      <a href="#understand">Understand the model</a>
+      <a href="#example">Try the example</a>
+      <a href="#build-plan">Build your app</a>
+      <a href="#handoff">Validate &amp; hand off</a>
     </nav>
 
+    <div class="article-body">
     <aside class="boundary" aria-labelledby="boundary-heading">
       <div>
-        <h2 id="boundary-heading"><span class="badge">DEMO</span> Synthetic data, local state</h2>
+        <h2 id="boundary-heading">Note: synthetic data, local state</h2>
         <p>Nothing here calls Microsoft Graph. Status codes are illustrative, not HTTP results.
           <strong>All <code>demo-</code> identifiers are invalid for Live use.</strong>
           Do not paste credentials, tokens, or personal data.</p>
@@ -60,8 +88,14 @@
     </aside>
 
     <section id="understand" class="guide-section" aria-labelledby="understand-heading">
-      <p class="eyebrow">01 / Understand</p>
       <h2 id="understand-heading">Your business object. Its own content boundary.</h2>
+      <div class="model-card" role="group" aria-label="The example's storage model">
+        <dl class="model-flow">
+          <div><dt>Your app</dt><dd>One contract matter</dd></div>
+          <div><dt>SharePoint Embedded</dt><dd>One container for that matter</dd></div>
+          <div><dt>Later, in a real app</dt><dd>Contract files as DriveItems</dd></div>
+        </dl>
+      </div>
       <div class="explain-grid">
         <div>
           <p>SharePoint Embedded (SPE) is API-only document storage built on Microsoft 365. You build the application experience; containers and files live in the consuming tenant.</p>
@@ -256,7 +290,9 @@
       </div>
       <p class="next-link"><a href="#example">Return to the local example</a> or follow the <a href="https://learn.microsoft.com/sharepoint/dev/embedded/build/build-app-end-to-end">official build sequence</a> when ready to implement outside V1.</p>
     </section>
+    </div>
   </main>
-  <footer>Browser-only Demo. No real resources. No permissions proven. No assistant or model calls.</footer>
+  </div>
+  <footer>Local static example. Browser-only Demo. No real resources. No permissions proven. No assistant or model calls.</footer>
 </body>
 </html>
