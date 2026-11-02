@@ -1,7 +1,7 @@
 ---
 title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 03/05/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -203,7 +203,7 @@ Confirm your changes by pressing the **Save** button.
 
 With the API configured and working, the next step is to build the SharePoint Framework solution that will consume the API.
 
-> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). SPFx 1.24 uses React 18.3.1 where React is selected, with Node.js 24 LTS recommended. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
+> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). SPFx 1.24 uses React 18.3.1 where React is selected, with Node.js 26 LTS recommended. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
 
 ### Create a new SharePoint Framework project
 

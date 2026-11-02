@@ -2,7 +2,7 @@
 metadata:
   title: SharePoint Framework known issues and frequently asked questions
   description: Find answers to issues and FAQ about the SharePoint Framework.
-  ms.date: 10/28/2026
+  ms.date: 10/29/2026
   ms.localizationpriority: high
 
 title: SharePoint Framework known issues and frequently asked questions
@@ -15,7 +15,7 @@ sections:
       - question: |
           Where should I start with SPFx 1.24?
         answer: |
-          Follow [environment setup](set-up-your-development-environment.md) using Node.js 24 LTS and the SPFx 1.24 toolchain. Check the [compatibility reference](compatibility.md) for older projects and SharePoint Server deployments.
+          Follow [environment setup](set-up-your-development-environment.md) using Node.js 26 LTS and the SPFx 1.24 toolchain. Check the [compatibility reference](compatibility.md) for older projects and SharePoint Server deployments.
       - question: |
           Should I use the SharePoint workbench to debug web parts?
         answer: |

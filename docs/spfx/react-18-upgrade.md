@@ -1,7 +1,7 @@
 ---
 title: Upgrade to React 18 in SharePoint Framework 1.24
 description: Learn how to upgrade a SharePoint Framework 1.23 React solution to SPFx 1.24, including dependencies, rendering, cleanup, and tests.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -19,7 +19,7 @@ SPFx 1.23 and 1.24 both use the Heft-based toolchain, so this upgrade doesn't re
 ## Prerequisites
 
 - An existing SPFx 1.23.x React project that targets SharePoint Online. SPFx 1.24 isn't supported on SharePoint Server.
-- A [supported development environment](set-up-your-development-environment.md) for the target SPFx version. Node.js 24 LTS is recommended for a new SPFx 1.24 environment. You can continue using a supported Node.js 22 version; upgrading Node.js isn't required to adopt React 18.
+- A [supported development environment](set-up-your-development-environment.md) for the target SPFx version. Node.js 26 LTS is recommended for a new SPFx 1.24 environment. You can continue using a supported Node.js 22 or 24 version; upgrading Node.js isn't required to adopt React 18.
 - Access to a development tenant and the hosts that your solution supports, such as SharePoint, Teams, or Microsoft 365 Copilot.
 
 The commands in this article use npm. Run project commands from the folder that contains **package.json**, except when generating the separate comparison project.

@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines
 description: Streamlining the build and deployment process by automating manual steps using Azure Pipelines.
-ms.date: 12/02/2020
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 # Implement Continuous Integration and Continuous deployment using Azure Pipelines
@@ -11,7 +11,7 @@ Azure Pipelines is the newer version of the Azure DevOps build and release featu
 This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 > [!NOTE]
-> Starting with SPFx 1.22, the build system uses Heft instead of Gulp. The YAML below is a historical pipeline example, not a validated SPFx 1.24 pipeline. For new SPFx 1.24 builds, use the project's generated scripts and lock file, with Node.js 24 LTS recommended. See [development environment compatibility](../compatibility.md). Older Gulp projects require their version-specific runtime and [legacy pipeline guidance](implement-ci-cd-with-azure-devops.md).
+> Starting with SPFx 1.22, the build system uses Heft instead of Gulp. The YAML below selects Node.js 26 LTS for SPFx 1.24 but otherwise retains a historical pipeline example; it isn't a validated SPFx 1.24 pipeline. For new SPFx 1.24 builds, use the project's generated scripts and lock file, with Node.js 26 LTS recommended. See [development environment compatibility](../compatibility.md). For earlier SPFx versions, select the runtime from that release's compatibility row. Older Gulp projects also require the [legacy pipeline guidance](implement-ci-cd-with-azure-devops.md).
 
 Before adapting the sample to a current project:
 
@@ -58,9 +58,9 @@ jobs:
       - checkout: self
 
       - task: NodeTool@0
-        displayName: 'Use Node 22.x'
+        displayName: 'Use Node 26.x'
         inputs:
-          versionSpec: 22.x
+          versionSpec: 26.x
           checkLatest: true
 
       - task: CacheBeta@1

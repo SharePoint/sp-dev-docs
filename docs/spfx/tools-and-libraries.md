@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries
 description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries
@@ -49,7 +49,7 @@ For more information about npm, see the [npm documentation](https://docs.npmjs.c
 
 Node.js is an open-source, cross-platform JavaScript runtime. SPFx uses Node.js to run development tools, including npm and Heft, on the developer workstation and build agent; the deployed client-side components run in the user's browser.
 
-For new SPFx 1.24 projects, use **Node.js 24 LTS**. Node.js 22 (22.14.0 or later in 22.x) and Node.js 26 are also supported. For earlier releases, follow their own [compatibility requirements](compatibility.md). See [Set up your development environment](set-up-your-development-environment.md).
+For new SPFx 1.24 projects, use **Node.js 26 LTS**. Node.js 22 (22.14.0 or later in 22.x) and Node.js 24 are also supported. For earlier releases, follow their own [compatibility requirements](compatibility.md). See [Set up your development environment](set-up-your-development-environment.md).
 
 For more information about Node.js, see the following:
 

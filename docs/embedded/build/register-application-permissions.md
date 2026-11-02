@@ -88,6 +88,21 @@ PUT https://graph.microsoft.com/v1.0/storage/fileStorage/containerTypeRegistrati
 
 In the request body, provide the application permission grants for the container type.
 
+## Create, replace, or update a registration
+
+Choose the operation based on whether you need to replace the complete registration or update selected properties:
+
+| Goal | Microsoft Graph request | Behavior |
+| --- | --- | --- |
+| Create or replace a registration | `PUT /storage/fileStorage/containerTypeRegistrations/{containerTypeId}` | Creates the registration with the container type ID. If the registration exists, the request replaces it with the complete payload. |
+| Update selected registration properties | `PATCH /storage/fileStorage/containerTypeRegistrations/{registrationId}` | Updates only the supplied properties in Microsoft Graph v1.0. |
+
+The `PATCH` operation uses the registration `etag` for optimistic concurrency. Read the current registration and include its `etag` property in the update body. If another request changes the registration first, read the latest value and reconcile your update instead of overwriting it.
+
+Registration updates can take up to one hour to propagate.
+
+For API details, see [Create a fileStorageContainerTypeRegistration](/graph/api/filestorage-post-containertyperegistrations) and [Update a fileStorageContainerTypeRegistration](/graph/api/filestoragecontainertyperegistration-update).
+
 ## Grant permissions to the owning app
 
 A common first registration grants the owning app full permissions for delegated and app-only calls.
@@ -187,7 +202,9 @@ The last successful registration call determines the settings used in the consum
 
 Use a safe update process:
 
-1. Build a complete registration payload.
+1. Decide whether the change requires a complete `PUT` replacement or a targeted `PATCH` update.
+1. For `PUT`, build a complete registration payload.
+1. For `PATCH`, read and include the current registration `etag`.
 1. Include all apps that should retain access.
 1. Submit the registration call.
 1. Validate the response.

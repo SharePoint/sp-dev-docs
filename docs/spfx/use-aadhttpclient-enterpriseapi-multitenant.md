@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 03/05/2026
+ms.date: 10/29/2026
 ms.localizationpriority: medium
 ---
 
@@ -240,7 +240,7 @@ Confirm that you want users in your organization to use the API, by selecting th
 
 With the API configured and working, the next step is to build the SharePoint Framework solution that will consume this API.
 
-> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). Node.js 24 LTS is recommended for SPFx 1.24. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
+> For a new SharePoint Online client, use the generator and Node.js versions in [Set up your development environment](set-up-your-development-environment.md). Node.js 26 LTS is recommended for SPFx 1.24. This no-framework sample doesn't require React. Existing projects must retain a compatible version-specific toolchain.
 
 ### Create new SharePoint Framework project
 

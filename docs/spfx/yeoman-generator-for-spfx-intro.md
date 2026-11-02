@@ -1,7 +1,7 @@
 ---
 title: Yeoman generator for the SharePoint Framework
 description: On this page, learn how to use the Yeoman generator for the SharePoint Framework to create SPFx projects.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 # Yeoman generator for the SharePoint Framework
@@ -11,7 +11,7 @@ The **SharePoint Online SPFx Yeoman Generator** helps you quickly create a Share
 > [!IMPORTANT]
 > This page assumes you've already installed all the necessary prerequisites for developing SharePoint Framework solutions. Verify the updated instructions outlined in the page [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
 
-For SPFx 1.24, use Node.js 24 LTS and the 1.24.0 generator. Generated projects use Heft, TypeScript 5.8, and, for React templates, React 18.3.1. See the [compatibility reference](compatibility.md) for supported alternatives and requirements for older releases.
+For SPFx 1.24, use Node.js 26 LTS and the 1.24.0 generator. Generated projects use Heft, TypeScript 5.8, and, for React templates, React 18.3.1. See the [compatibility reference](compatibility.md) for supported alternatives and requirements for older releases.
 
 The SharePoint Online SPFx Yeoman Generator (*the "SPFx generator"*), uses the responses to the questions the developer is prompted with to create a new SharePoint Framework (SPFx) project. Depending on some prompt responses, other questions are presented.
 

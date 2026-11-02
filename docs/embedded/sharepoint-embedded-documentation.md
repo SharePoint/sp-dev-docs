@@ -52,26 +52,27 @@ Decide how SharePoint Embedded fits before you write code.
 
 ## Build an app
 
-An ordered journey from first container to a full-featured app. You can also build with a guided view using the [SharePoint Embedded VS Code extension](./build/quickstart-vscode.md) or from a coding agent with the [SharePoint Embedded MCP server](./build/sharepoint-embedded-mcp-server.md).
+A task-based build journey from prerequisites to a production-ready app. Start with the canonical end-to-end sequence. The Visual Studio Code quickstart and SharePoint Embedded Model Context Protocol (MCP) server are alternative guided starting paths; the remaining articles cover required setup and optional app capabilities.
 
+1. [Build a SharePoint Embedded app end to end](./build/build-app-end-to-end.md)
 1. [Quickstart: build your first app with VS Code](./build/quickstart-vscode.md)
-2. [Use the MCP server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md)
-3. [Create and configure a container type](./build/create-container-type.md)
-4. [Register application permissions](./build/register-application-permissions.md)
-5. [Configure authentication and authorization](./build/configure-authentication-authorization.md)
-6. [Create and manage containers](./build/create-manage-containers.md)
-7. [Upload, download, and manage files](./build/manage-files.md)
-8. [Open Office files from your app](./build/open-office-files.md)
-9. [Preview files in your app](./build/preview-files.md)
-10. [Search containers and files](./build/search-containers-files.md)
-11. [Store and query container metadata](./build/container-metadata.md)
-12. [Share files and manage permissions](./build/share-files-manage-permissions.md)
-13. [Respond to file and container changes with webhooks](./build/respond-to-changes-webhooks.md)
-14. [Archive and restore containers](./build/archive-restore-containers.md)
-15. [Add real-time collaboration with Fluid Framework](./build/fluid-framework.md)
-16. [Add Microsoft 365 Copilot and agent experiences](./build/agent-experiences.md)
-17. [Set up SharePoint Embedded as a Foundry knowledge source](./build/sharepoint-embedded-knowledge-source.md)
-18. [Migrate from Azure Blob Storage](./build/migrate-azure-blob-storage.md)
+1. [Use the MCP server to build apps with a coding agent](./build/sharepoint-embedded-mcp-server.md)
+1. [Create and configure a container type](./build/create-container-type.md)
+1. [Register application permissions](./build/register-application-permissions.md)
+1. [Configure authentication and authorization](./build/configure-authentication-authorization.md)
+1. [Create and manage containers](./build/create-manage-containers.md)
+1. [Upload, download, and manage files](./build/manage-files.md)
+1. [Open Office files from your app](./build/open-office-files.md)
+1. [Preview files in your app](./build/preview-files.md)
+1. [Search containers and files](./build/search-containers-files.md)
+1. [Store and query container metadata](./build/container-metadata.md)
+1. [Share files and manage permissions](./build/share-files-manage-permissions.md)
+1. [Respond to file and container changes with webhooks](./build/respond-to-changes-webhooks.md)
+1. [Archive and restore containers](./build/archive-restore-containers.md)
+1. [Add real-time collaboration with Fluid Framework](./build/fluid-framework.md)
+1. [Add Microsoft 365 Copilot and agent experiences](./build/agent-experiences.md)
+1. [Set up SharePoint Embedded as a Foundry knowledge source](./build/sharepoint-embedded-knowledge-source.md)
+1. [Migrate from Azure Blob Storage](./build/migrate-azure-blob-storage.md)
 
 ## Publish and onboard customers
 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint development overview
 description: Choose supported SharePoint and Microsoft 365 development options, including SPFx Copilot UX components, web parts, extensions, APIs, and automation.
-ms.date: 10/28/2026
+ms.date: 10/29/2026
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ms.localizationpriority: high
 ---
@@ -35,7 +35,7 @@ Use the [supported-platform overview](../spfx/supported-extensibility-platforms-
 ## Set up your development environment and start developing
 <a name="bk_getstarted"> </a>
 
-For SPFx 1.24, follow the [development environment setup](../spfx/set-up-your-development-environment.md) with **Node.js 24 LTS**. Use the version-specific prerequisites for older projects and SharePoint Server.
+For SPFx 1.24, follow the [development environment setup](../spfx/set-up-your-development-environment.md) with **Node.js 26 LTS**. Use the version-specific prerequisites for older projects and SharePoint Server.
 
 - [Build your first Copilot UX component](../spfx/copilot/get-started/build-your-first-copilot-app.md).
 - [Build your first web part](../spfx/web-parts/get-started/build-a-hello-world-web-part.md).

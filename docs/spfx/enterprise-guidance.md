@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 10/25/2026
+ms.date: 10/29/2026
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 The SharePoint Framework (SPFx) is the supported development model for SharePoint client-side extensibility, used by Microsoft and third-party developers. This article provides administrators with the background and governance considerations needed to manage SPFx components within their SharePoint environments.
 
-For new SharePoint Online projects, follow the [SPFx 1.24 setup guidance](set-up-your-development-environment.md), using Node.js 24 LTS and Heft. SharePoint Server requires version-specific dependencies; see the [compatibility reference](compatibility.md).
+For new SharePoint Online projects, follow the [SPFx 1.24 setup guidance](set-up-your-development-environment.md), using Node.js 26 LTS and Heft. SharePoint Server requires version-specific dependencies; see the [compatibility reference](compatibility.md).
 
 ## Background
 
