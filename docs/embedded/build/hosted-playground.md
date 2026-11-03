@@ -1,7 +1,7 @@
 ---
 title: Plan your first SharePoint Embedded app with a static example
 description: Explore a synthetic contract workspace, understand the setup sequence, and plan how to build and onboard customers to a full SharePoint Embedded app.
-ms.date: 11/02/2026
+ms.date: 11/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -21,7 +21,7 @@ upload a document, or change tenant resources. No AI runner or model is needed.
 
 > [!NOTE]
 > This contribution provides the static application source and local preview
-> instructions. A customer-facing hosted URL hasn't been verified. Publishing this
+> instructions, not a hosted application URL. Publishing this
 > article doesn't deploy the application. V2's test-tenant connection is future work,
 > not an available feature or a prerequisite for trying V1.
 
@@ -29,7 +29,7 @@ upload a document, or change tenant resources. No AI runner or model is needed.
 
 | Your goal | Start here | What you need |
 |---|---|---|
-| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | A browser; Node.js only if you serve the source locally |
+| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | See the application's [local preview prerequisites](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground#run-locally) |
 | Build a working application | [Turn the example into a full app](#turn-the-example-into-a-full-app) | A developer tenant, an app owner, and the administrators required by the linked setup procedures |
 | Install an existing ISV application for your organization | [Guide customers through tenant setup](../publish/customer-tenant-setup-guide.md) | The ISV's installation package and the appropriate customer administrators |
 
@@ -65,7 +65,7 @@ Its supported operation set is intentionally smaller.
 
 ## Try the static example
 
-Get the [application source and local preview instructions](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground).
+Get the [application source and local preview instructions](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground#run-locally).
 The local server serves static frontend assets only. It isn't a fake Graph API,
 confidential backend, or prerequisite service for the Demo engine.
 
