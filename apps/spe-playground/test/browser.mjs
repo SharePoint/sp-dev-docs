@@ -88,9 +88,11 @@ export async function startBrowser() {
   return {
     close,
     origin,
-    async page(t, { javascript = true, initialization = "", width = 1440 } = {}) {
-      const { browserContextId } = await send("Target.createBrowserContext");
-      t.after(() => send("Target.disposeBrowserContext", { browserContextId }));
+    async page(t, { javascript = true, initialization = "", width = 1440, browserContextId } = {}) {
+      if (!browserContextId) {
+        ({ browserContextId } = await send("Target.createBrowserContext"));
+        t.after(() => send("Target.disposeBrowserContext", { browserContextId }));
+      }
       const { targetId } = await send("Target.createTarget", { url: "about:blank", browserContextId });
       const { sessionId } = await send("Target.attachToTarget", { targetId, flatten: true });
       const command = (method, params) => send(method, params, sessionId);
@@ -142,7 +144,7 @@ export async function startBrowser() {
         await command("Input.dispatchKeyEvent", { type: "keyUp", ...params });
       };
       return {
-        command, evaluate, observed, click, press,
+        command, evaluate, observed, click, press, browserContextId,
         async fill(selector, value) {
           await click(selector);
           await press("a", "KeyA", 65, 2);

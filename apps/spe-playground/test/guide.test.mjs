@@ -117,6 +117,11 @@ test("the browser consumes guide landmarks, accessible references, and a single 
   }
   assert.ok(nodes.some((node) => node.role.value === "status" && node.properties.some(({ name, value }) => name === "live" && value.value === "polite")));
   const before = await executionSnapshot(page);
+  for (const destination of ["example", "build-plan"]) {
+    await page.click(`.start-links a[href="#${destination}"]`);
+    assert.equal(await page.evaluate(() => location.hash), `#${destination}`);
+    assert.deepEqual(await executionSnapshot(page), before);
+  }
   for (const destination of ["understand", "example", "build-plan", "handoff"]) {
     await page.click(`.journey-nav a[href="#${destination}"]`);
     assert.equal(await page.evaluate(() => location.hash), `#${destination}`);
@@ -363,31 +368,306 @@ for (const failure of ["access", "read", "write", "corrupt"]) {
 
 test("rendered documentation typography and navigation reflow without mobile document overflow", async (t) => {
   const page = await browser.page(t);
-  for (const width of [1440, 390, 320]) {
-    await page.command("Emulation.setDeviceMetricsOverride", { width, height: 900, deviceScaleFactor: 1, mobile: false });
-    const layout = await page.evaluate(() => {
-      const body = getComputedStyle(document.body);
-      const title = getComputedStyle(document.querySelector("h1"));
-      return {
-        viewport: innerWidth, document: document.documentElement.scrollWidth,
-        bodyFont: body.fontSize, bodyLine: body.lineHeight,
-        titleFont: title.fontSize, titleLine: title.lineHeight, titleWeight: title.fontWeight,
-        articleWidth: document.querySelector(".article-body").getBoundingClientRect().width,
-        sidebar: document.querySelector(".docs-sidebar").checkVisibility(),
-        navigationCount: [...document.querySelectorAll('nav[aria-label="In this article"]')].filter((nav) => nav.checkVisibility()).length,
-      };
-    });
-    assert.equal(layout.viewport, width);
-    assert.ok(layout.document <= width, JSON.stringify(layout));
-    assert.equal(layout.bodyFont, "16px");
-    assert.equal(layout.bodyLine, "28px");
-    assert.ok(layout.articleWidth <= 768);
-    assert.equal(layout.navigationCount, 1);
-    assert.equal(layout.sidebar, width === 1440);
-    if (width === 1440) {
-      assert.equal(layout.titleFont, "40px");
-      assert.equal(layout.titleLine, "52px");
-      assert.equal(layout.titleWeight, "600");
+  const layouts = [];
+  for (const scheme of ["light", "dark"]) {
+    await page.command("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: scheme }] });
+    for (const width of [1440, 390, 320]) {
+      await page.command("Emulation.setDeviceMetricsOverride", { width, height: 900, deviceScaleFactor: 1, mobile: false });
+      const layout = await page.evaluate(() => {
+        const body = getComputedStyle(document.body);
+        const title = getComputedStyle(document.querySelector("h1"));
+        return {
+          viewport: innerWidth, document: document.documentElement.scrollWidth,
+          bodyFont: body.fontSize, bodyLine: body.lineHeight,
+          foreground: body.color, background: body.backgroundColor,
+          titleFont: title.fontSize, titleLine: title.lineHeight, titleWeight: title.fontWeight,
+          articleWidth: document.querySelector(".article-body").getBoundingClientRect().width,
+          sidebar: document.querySelector(".docs-sidebar").checkVisibility(),
+          navigationCount: [...document.querySelectorAll('nav[aria-label="In this article"]')].filter((nav) => nav.checkVisibility()).length,
+        };
+      });
+      assert.equal(layout.viewport, width);
+      assert.ok(layout.document <= width, JSON.stringify(layout));
+      assert.equal(layout.bodyFont, "16px");
+      assert.equal(layout.bodyLine, "28px");
+      assert.equal(layout.foreground, scheme === "light" ? "rgb(23, 23, 23)" : "rgb(255, 255, 255)");
+      assert.equal(layout.background, scheme === "light" ? "rgb(255, 255, 255)" : "rgb(31, 31, 31)");
+      assert.ok(layout.articleWidth <= 768);
+      assert.equal(layout.navigationCount, 1);
+      assert.equal(layout.sidebar, width === 1440);
+      if (width === 1440) {
+        assert.equal(layout.titleFont, "40px");
+        assert.equal(layout.titleLine, "52px");
+        assert.equal(layout.titleWeight, "600");
+      }
+      layouts.push({ scheme, ...layout });
     }
   }
+  t.diagnostic(JSON.stringify({ layouts }));
+});
+
+test("keyboard-only preparation and mobile Run create only the explicitly submitted synthetic matter", async (t) => {
+  const page = await browser.page(t, { width: 320 });
+  const initial = await executionSnapshot(page);
+  let tabs = 0;
+  while (await page.evaluate(() => document.activeElement.dataset.example !== "create")) {
+    assert.ok(++tabs < 60, "Create preparation must be reachable through native Tab navigation");
+    await page.press("Tab", "Tab", 9);
+  }
+  await page.press("Enter", "Enter", 13);
+  assert.equal(await page.evaluate(() => document.activeElement.id), "request-heading");
+  assert.deepEqual(await executionSnapshot(page), initial);
+  for (const id of ["method", "path", "body"]) {
+    await page.press("Tab", "Tab", 9);
+    assert.equal(await page.evaluate(() => document.activeElement.id), id);
+  }
+  const body = {
+    displayName: "Synthetic keyboard matter",
+    description: "x".repeat(500),
+    containerTypeId: CONTAINER_TYPE,
+  };
+  await page.press("a", "KeyA", 65, 2);
+  await page.command("Input.insertText", { text: JSON.stringify(body) });
+  assert.deepEqual(await executionSnapshot(page), initial);
+  await page.press("Tab", "Tab", 9);
+  assert.equal(await page.evaluate(() => document.activeElement.id), "run");
+  await page.press("Enter", "Enter", 13);
+  const result = await page.evaluate((key) => ({
+    response: JSON.parse(document.querySelector("#response").textContent),
+    status: document.querySelector("#response-status").innerText,
+    saved: JSON.parse(localStorage.getItem(key)),
+    cardCount: document.querySelector("#matter-list").children.length,
+    focus: document.activeElement.id,
+    viewport: innerWidth,
+    document: document.documentElement.scrollWidth,
+    entries: Object.keys(localStorage),
+  }), STORAGE_KEY);
+  assert.deepEqual(result.response, { id: "demo-container-2", ...body });
+  assert.match(result.status, /Illustrative status 201.*synthetic/);
+  assert.equal(result.cardCount, 2);
+  assert.equal(result.focus, "result-heading");
+  assert.equal(result.saved.containers[1].description.length, 500);
+  assert.equal(result.viewport, 320);
+  assert.ok(result.document <= result.viewport);
+  assert.deepEqual(result.entries, [STORAGE_KEY]);
+  assertNoServiceTraffic(page);
+  t.diagnostic(JSON.stringify({ keyboardCreate: result }));
+});
+
+async function safetyView(page) {
+  return page.evaluate((key) => ({
+    saved: localStorage.getItem(key),
+    displayed: document.querySelector("#state").textContent,
+    cards: [...document.querySelectorAll("#matter-list li")].map((card) => ({
+      name: card.querySelector("h4").textContent,
+      id: card.querySelector("code").textContent,
+    })),
+    response: document.querySelector("#response").textContent,
+    status: document.querySelector("#response-status").innerText,
+    parsed: document.querySelector("#parsed").textContent,
+    error: document.querySelector("#error").hidden ? null : document.querySelector("#error").innerText,
+    disabled: document.querySelector("#run").disabled,
+    unrelated: localStorage.getItem("another-app"),
+  }), STORAGE_KEY);
+}
+
+async function fillDraft(page, { method = "GET", path = LIST_PATH, body = "" } = {}) {
+  await page.fill("#method", method);
+  await page.fill("#path", path);
+  await page.fill("#body", body);
+}
+
+async function observeStorageChange(page, key) {
+  await page.evaluate((key) => {
+    globalThis.nextStorageChange = new Promise((resolve) => {
+      function changed(event) {
+        if (event.storageArea !== localStorage || event.key !== key) return;
+        removeEventListener("storage", changed);
+        resolve({ key: event.key, trusted: event.isTrusted, oldValue: event.oldValue, newValue: event.newValue });
+      }
+      addEventListener("storage", changed);
+    });
+  }, key);
+}
+
+test("native Run rejects unsupported requests after success without stale results, writes, or service traffic", async (t) => {
+  const page = await browser.page(t);
+  const initial = await safetyView(page);
+  const body = { displayName: "Synthetic matter", description: "", containerTypeId: CONTAINER_TYPE };
+  const failures = [
+    ["bare list", { path: COLLECTION_PATH }, "UnsupportedQuery"],
+    ["other filter", { path: `${COLLECTION_PATH}?$filter=displayName eq sample` }, "UnsupportedQuery"],
+    ["extra option", { path: `${LIST_PATH}&$top=1` }, "UnsupportedQuery"],
+    ["duplicate filter", { path: `${LIST_PATH}&$filter=containerTypeId eq ${CONTAINER_TYPE}` }, "UnsupportedQuery"],
+    ["Live type", { path: `${COLLECTION_PATH}?$filter=containerTypeId eq 00000000-0000-0000-0000-000000000001` }, "UnsupportedQuery"],
+    ["absolute Graph URL", { path: `https://graph.microsoft.com/v1.0${LIST_PATH}` }, "UnsupportedPath"],
+    ["file API", { path: "/drives/demo-container-1/root/children" }, "UnsupportedPath"],
+    ["encoded ID", { path: `${COLLECTION_PATH}/demo-container-%31` }, "UnsupportedPath"],
+    ["Live ID", { path: `${COLLECTION_PATH}/00000000-0000-0000-0000-000000000001` }, "UnsupportedPath"],
+    ["missing Demo ID", { path: `${COLLECTION_PATH}/demo-container-999` }, "ContainerNotFound"],
+    ["DELETE", { method: "DELETE", path: `${COLLECTION_PATH}/demo-container-1` }, "UnsupportedMethod"],
+    ["read body", { path: `${COLLECTION_PATH}/demo-container-1`, body: "null" }, "UnexpectedBody"],
+    ["invalid JSON", { method: "POST", path: COLLECTION_PATH, body: "{" }, "InvalidJson"],
+    ["extra create field", { method: "POST", path: COLLECTION_PATH, body: JSON.stringify({ ...body, id: "demo-container-2" }) }, "InvalidBody"],
+    ["non-Demo create type", { method: "POST", path: COLLECTION_PATH, body: JSON.stringify({ ...body, containerTypeId: "real-type" }) }, "InvalidBody"],
+  ];
+  const transcript = [];
+  for (const [name, request, code] of failures) {
+    await page.click('[data-example="list"]');
+    await page.click("#run");
+    assert.match((await safetyView(page)).status, /Illustrative status 200/);
+    await fillDraft(page, request);
+    await page.click("#run");
+    const failed = await safetyView(page);
+    assert.equal(JSON.parse(failed.response).error.code, code, name);
+    assert.match(failed.status, /No HTTP status or Microsoft Graph response/);
+    assert.equal(failed.saved, initial.saved, name);
+    assert.equal(failed.displayed, initial.displayed, name);
+    assert.deepEqual(failed.cards, initial.cards, name);
+    assert.ok(failed.error.includes(`[${code}]`), name);
+    assert.equal(await page.evaluate(() => document.activeElement.id), "error");
+    if (code === "InvalidJson") assert.match(failed.parsed, /No parsed request/);
+    else assert.equal(JSON.parse(failed.parsed).path, request.path ?? LIST_PATH);
+    transcript.push({ action: name, error: code, responseStatus: failed.status });
+  }
+  const writes = page.observed.filter(({ method }) => method === "DOMStorage.domStorageItemAdded" || method === "DOMStorage.domStorageItemUpdated");
+  assert.equal(writes.length, 1);
+  assert.equal(writes[0].params.key, STORAGE_KEY);
+  await page.click('[data-example="create"]');
+  await page.click("#run");
+  assert.equal(JSON.parse((await safetyView(page)).response).id, "demo-container-2");
+  assertNoServiceTraffic(page);
+  t.diagnostic(JSON.stringify({ rejectedRequests: transcript, stateAfterFailures: JSON.parse(initial.saved), firstCreatedId: "demo-container-2" }));
+});
+
+test("native storage quota and injected Reset write failures preserve committed cards and ID allocation", async (t) => {
+  const page = await browser.page(t, { initialization: 'localStorage.setItem("another-app", "keep me");' });
+  const initial = await safetyView(page);
+  await page.click('[data-example="create"]');
+  await page.command("DOMStorage.disable");
+  const quota = await page.evaluate(() => {
+    let low = 0;
+    let high = 6 * 1024 * 1024;
+    let quotaError;
+    while (low < high) {
+      const middle = Math.ceil((low + high) / 2);
+      try {
+        localStorage.setItem("owned-quota-fixture", "x".repeat(middle));
+        low = middle;
+      } catch (error) {
+        if (!(error instanceof DOMException) || error.name !== "QuotaExceededError") throw error;
+        quotaError = error.name;
+        high = middle - 1;
+      }
+    }
+    localStorage.setItem("owned-quota-fixture", "x".repeat(low));
+    return { filledCharacters: low, actualBrowserException: quotaError };
+  });
+  assert.equal(quota.actualBrowserException, "QuotaExceededError");
+  await page.click("#run");
+  const failed = await safetyView(page);
+  assert.equal(JSON.parse(failed.response).error.code, "StorageWriteFailed");
+  assert.equal(failed.saved, initial.saved);
+  assert.equal(failed.displayed, initial.displayed);
+  assert.deepEqual(failed.cards, initial.cards);
+  assert.match(failed.status, /No HTTP status/);
+  await page.evaluate(() => localStorage.removeItem("owned-quota-fixture"));
+  assert.equal((await safetyView(page)).response, failed.response);
+  await page.click("#run");
+  const committed = await safetyView(page);
+  assert.equal(JSON.parse(committed.response).id, "demo-container-2");
+  assert.equal(committed.cards.length, 2);
+  assert.deepEqual(JSON.parse(committed.displayed), JSON.parse(committed.saved));
+  await page.evaluate(() => {
+    const original = Storage.prototype.setItem;
+    Storage.prototype.setItem = function () { throw new DOMException("Test quota exhausted", "QuotaExceededError"); };
+    globalThis.restoreStorageWrites = () => { Storage.prototype.setItem = original; };
+  });
+  await page.click("#reset");
+  const resetFailed = await safetyView(page);
+  assert.ok(resetFailed.error.includes("[StorageWriteFailed]"));
+  assert.equal(resetFailed.saved, committed.saved);
+  assert.equal(resetFailed.displayed, committed.displayed);
+  assert.deepEqual(resetFailed.cards, committed.cards);
+  await page.evaluate(() => restoreStorageWrites());
+  await page.click("#reset");
+  const reset = await safetyView(page);
+  assert.deepEqual(JSON.parse(reset.saved), createSeedState());
+  assert.equal(reset.unrelated, "keep me");
+  assertNoServiceTraffic(page);
+  t.diagnostic(JSON.stringify({
+    quota,
+    failedCreate: JSON.parse(failed.response), stateAfterFailedCreate: JSON.parse(failed.saved),
+    successfulRetry: JSON.parse(committed.response), failedReset: resetFailed.error,
+    finalState: JSON.parse(reset.saved), unrelated: reset.unrelated,
+  }));
+});
+
+test("actual same-origin pages invalidate stale state, reload saved matters, and require explicit storage recovery", async (t) => {
+  const first = await browser.page(t, { initialization: 'localStorage.setItem("another-app", "keep me");' });
+  const second = await browser.page(t, { browserContextId: first.browserContextId });
+  await first.click("#run");
+  assert.match((await safetyView(first)).status, /Illustrative status 200/);
+  await observeStorageChange(first, "another-app");
+  await second.evaluate(() => localStorage.setItem("another-app", "updated elsewhere"));
+  assert.equal((await first.evaluate(() => nextStorageChange)).trusted, true);
+  const unchanged = await safetyView(first);
+  assert.equal(unchanged.disabled, false);
+  assert.equal(unchanged.error, null);
+  assert.equal(unchanged.cards.length, 1);
+  await observeStorageChange(first, STORAGE_KEY);
+  await second.click('[data-example="create"]');
+  await second.fill("#body", JSON.stringify({
+    displayName: "Synthetic second-page matter", description: "Cross-tab validation", containerTypeId: CONTAINER_TYPE,
+  }));
+  await second.click("#run");
+  assert.match((await safetyView(second)).status, /Illustrative status 201/);
+  const createdEvent = await first.evaluate(() => nextStorageChange);
+  assert.equal(createdEvent.trusted, true);
+  assert.equal(JSON.parse(createdEvent.newValue).containers.length, 2);
+  const stale = await safetyView(first);
+  assert.equal(stale.disabled, true);
+  assert.deepEqual(stale.cards, []);
+  assert.ok(stale.error.includes("[StorageChanged]"));
+  assert.match(stale.response, /No synthetic request response/);
+  assert.match(stale.status, /No illustrative status/);
+  await first.click("#reset");
+  assert.equal((await safetyView(first)).saved, (await safetyView(second)).saved);
+  assert.equal((await safetyView(first)).disabled, true);
+  await first.click("#retry");
+  const recovered = await safetyView(first);
+  assert.equal(recovered.disabled, false);
+  assert.equal(recovered.error, null);
+  assert.equal(recovered.cards.length, 2);
+  assert.deepEqual(JSON.parse(recovered.displayed), JSON.parse(recovered.saved));
+  assert.equal(recovered.unrelated, "updated elsewhere");
+  const reopened = await browser.page(t, { browserContextId: first.browserContextId });
+  const restored = await safetyView(reopened);
+  assert.deepEqual(restored.cards, recovered.cards);
+  assert.equal(restored.saved, recovered.saved);
+  assert.match(restored.response, /No synthetic request response/);
+  assert.deepEqual(await reopened.evaluate(() => ["method", "path", "body"].map((id) => document.getElementById(id).value)),
+    ["GET", LIST_PATH, ""]);
+  await observeStorageChange(first, STORAGE_KEY);
+  await second.evaluate((key) => localStorage.removeItem(key), STORAGE_KEY);
+  const removedEvent = await first.evaluate(() => nextStorageChange);
+  assert.equal(removedEvent.trusted, true);
+  assert.equal(removedEvent.newValue, null);
+  const removed = await safetyView(first);
+  assert.equal(removed.disabled, true);
+  assert.ok(removed.error.includes("[StorageChanged]"));
+  await first.click("#retry");
+  assert.deepEqual(JSON.parse((await safetyView(first)).saved), createSeedState());
+  assert.equal((await safetyView(first)).unrelated, "updated elsewhere");
+  assertNoServiceTraffic(first);
+  assertNoServiceTraffic(second);
+  assertNoServiceTraffic(reopened);
+  t.diagnostic(JSON.stringify({
+    createdEvent,
+    stale: { error: stale.error, status: stale.status, cards: stale.cards, disabled: stale.disabled },
+    recovered: { cards: recovered.cards, disabled: recovered.disabled, unrelated: recovered.unrelated },
+    restored: { cards: restored.cards, response: restored.response },
+    removedKey: { error: removed.error, disabled: removed.disabled },
+    finalState: JSON.parse((await safetyView(first)).saved),
+  }));
 });
