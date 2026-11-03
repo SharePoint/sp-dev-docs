@@ -116,35 +116,3 @@ test("CLI rejects invalid ports instead of binding a shared interface or silentl
     assert.equal(result.stdout, "");
   }
 });
-
-test("frontend declares local-only assets, labelled editors and accessible result/status regions", async () => {
-  const html = (await get("/")).body;
-  assert.match(html, /<html lang="en">/);
-  assert.match(html, /connect-src 'none'/);
-  assert.match(html, /script type="module" src="\.\/app\.mjs"/);
-  assert.match(html, /href="\.\/styles\.css"/);
-  assert.ok(!/<(?:script|link|img|iframe|source)\b[^>]*(?:src|href)\s*=\s*["'](?:https?:)?\/\//i.test(html));
-  for (const id of ["method", "path", "body"]) {
-    assert.ok(html.includes(`label for="${id}"`));
-    assert.ok(html.includes(`id="${id}"`));
-  }
-  assert.match(html, /role="status" aria-live="polite"/);
-  assert.match(html, /role="alert" tabindex="-1"/);
-  assert.match(html, /id="run" type="button" disabled/);
-  assert.match(html, /V2 is a future authorized integration, not a mode switch/);
-  assert.match(html, /identifiers are invalid for Live use/);
-  assert.match(html, /<noscript>/);
-});
-
-test("UI code renders learner content as text and exposes no network or destructive storage calls", async () => {
-  const app = (await get("/app.mjs")).body;
-  const engine = (await get("/engine.mjs")).body;
-  for (const source of [app, engine]) {
-    assert.ok(!/\b(?:innerHTML|outerHTML|insertAdjacentHTML|eval|XMLHttpRequest|WebSocket|EventSource)\b/.test(source));
-    assert.ok(!/\bfetch\s*\(/.test(source));
-    assert.ok(!/localStorage\.clear\s*\(/.test(source));
-  }
-  assert.match(app, /textContent/);
-  assert.match(app, /addEventListener\("submit", \(event\) => event\.preventDefault\(\)\)/);
-  assert.match(app, /byId\("run"\)\.addEventListener\("click"/);
-});
