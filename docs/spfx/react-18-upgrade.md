@@ -1,7 +1,7 @@
 ---
 title: Upgrade to React 18 in SharePoint Framework 1.24
 description: Learn how to upgrade a SharePoint Framework 1.23 React solution to SPFx 1.24, including dependencies, rendering, cleanup, and tests.
-ms.date: 10/29/2026
+ms.date: 11/02/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -14,7 +14,7 @@ SharePoint Framework (SPFx) 1.24 introduces support for React 18.3.1, replacing 
 SPFx 1.23 and 1.24 both use the Heft-based toolchain, so this upgrade doesn't require a Gulp-to-Heft migration. Existing function components, class components, hooks, and JSX can generally remain in place. Updating the globally installed Yeoman generator alone doesn't update an existing solution.
 
 > [!NOTE]
-> The commands in this article target SPFx `1.24.0`. The React contract is unchanged from `1.24.0-rc.0`; see the [SPFx 1.24 release notes](release-1.24.0.md). Use the exact target version for the generator and all SPFx packages. Don't mix release-candidate and stable packages.
+> The commands in this article target SPFx `1.24.1`, which includes [scaffolding and dependency fixes](release-1.24.1.md). The React contract is unchanged from `1.24.0-rc.0`; see the [SPFx 1.24 release notes](release-1.24.0.md). Use the exact target version for the generator and all SPFx packages. Don't mix release-candidate and stable packages.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ If your project still uses Gulp, first follow [Migrate from the Gulp-based to th
 
 | Area | SPFx 1.23 | SPFx 1.24 |
 | --- | --- | --- |
-| SPFx packages | Your existing 1.23.x version | 1.24.0 |
+| SPFx packages | Your existing 1.23.x version | 1.24.1 |
 | `react` and `react-dom` | 17.0.1 | 18.3.1 |
 | `@types/react` and `@types/react-dom` | 17.x | Compatible 18.x definitions |
 | React rendering | `ReactDom.render(element, container)` | `createRoot(container)`, followed by `root.render(element)` |
@@ -55,7 +55,7 @@ For supported Node.js and TypeScript versions, see the [SPFx compatibility refer
 2. Install the generator for the target SPFx version.
 
    ```console
-   npm install @microsoft/generator-sharepoint@1.24.0 --global
+   npm install @microsoft/generator-sharepoint@1.24.1 --global
    ```
 
 3. In a new, empty directory outside the existing solution, run the generator. Select the same component type as your solution and the React framework option where available.
@@ -70,22 +70,22 @@ For supported Node.js and TypeScript versions, see the [SPFx compatibility refer
 
 Use `npm pkg set` to update `package.json` before installing packages. This lets npm resolve the SPFx, React, and type-definition changes together, rather than trying to install an intermediate combination.
 
-1. Update every SPFx package that your project already references to the same exact `1.24.0` version.
+1. Update every SPFx package that your project already references to the same exact `1.24.1` version.
 
    The following commands cover the SPFx packages in a generated SPFx 1.23.2 React web part. Run only the commands for packages that your project uses, and keep each package in its existing `dependencies` or `devDependencies` section.
 
    ```console
-   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.0"
-   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.0"
-   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.0"
-   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.0"
-   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.0"
-   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.0"
-   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.0"
+   npm pkg set "dependencies.@microsoft/sp-core-library=1.24.1"
+   npm pkg set "dependencies.@microsoft/sp-component-base=1.24.1"
+   npm pkg set "dependencies.@microsoft/sp-property-pane=1.24.1"
+   npm pkg set "dependencies.@microsoft/sp-webpart-base=1.24.1"
+   npm pkg set "dependencies.@microsoft/sp-lodash-subset=1.24.1"
+   npm pkg set "dependencies.@microsoft/sp-office-ui-fabric-core=1.24.1"
+   npm pkg set "devDependencies.@microsoft/eslint-plugin-spfx=1.24.1"
+   npm pkg set "devDependencies.@microsoft/eslint-config-spfx=1.24.1"
+   npm pkg set "devDependencies.@microsoft/spfx-web-build-rig=1.24.1"
+   npm pkg set "devDependencies.@microsoft/spfx-heft-plugins=1.24.1"
+   npm pkg set "devDependencies.@microsoft/sp-module-interfaces=1.24.1"
    ```
 
    Also update any component-specific SPFx packages that your project references. Examples include `@microsoft/sp-application-base`, `@microsoft/sp-listview-extensibility`, `@microsoft/sp-dialog`, `@microsoft/sp-adaptive-card-extension-base`, and `@microsoft/sp-copilot-component`. Don't add packages for component types that your solution doesn't use.

@@ -10,7 +10,7 @@ metadata:
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/28/2026 #Required; mm/dd/yyyy format.
+  ms.date: 11/02/2026 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -68,6 +68,8 @@ landingContent:
             url: /sharepoint/dev/spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension
       - linkListType: whats-new
         links:
+          - text: SPFx 1.24.1 release notes
+            url: /sharepoint/dev/spfx/release-1.24.1
           - text: SPFx 1.24 release notes
             url: /sharepoint/dev/spfx/release-1.24.0
           - text: SharePoint Framework roadmap

@@ -1,12 +1,15 @@
 ---
 title: SharePoint Framework v1.24 release notes
 description: Release notes for SharePoint Framework v1.24, generally available October 28, 2026, including Copilot UX components, React 18, and Node.js 24 and 26 support.
-ms.date: 10/29/2026
+ms.date: 11/02/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.24 release notes
 
 SharePoint Framework (SPFx) 1.24 is generally available on **October 28, 2026**. This release makes **Copilot UX components** generally available, updates the React runtime to **React 18.3.1**, and adds support for **Node.js 24 and 26**, alongside Node.js 22.
+
+> [!NOTE]
+> [SPFx 1.24.1](release-1.24.1.md), released on **November 2, 2026**, is the latest maintenance update. It corrects the default project scaffolding to use stable `1.24.1` SPFx packages instead of `1.24.0-rc.0` references and includes dependency updates. Use the 1.24.1 generator for new projects. Updating the generator doesn't update existing projects; follow the [1.24.1 upgrade guidance](release-1.24.1.md#upgrading-projects-from-v1240-to-v1241).
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
