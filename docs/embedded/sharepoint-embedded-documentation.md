@@ -54,7 +54,8 @@ Decide how SharePoint Embedded fits before you write code.
 
 A task-based build journey from prerequisites to a production-ready app. Start with the canonical end-to-end sequence. The Visual Studio Code quickstart and SharePoint Embedded Model Context Protocol (MCP) server are alternative guided starting paths; the remaining articles cover required setup and optional app capabilities.
 
-For a zero-setup orientation first, [plan your app with the static contract-workspace example](./build/hosted-playground.md).
+For a zero-setup orientation first,
+[plan your app with the static contract-workspace example](./build/hosted-playground.md).
 It explains the customer journey and required real-app setup without signing in,
 connecting a tenant, or creating resources.
 

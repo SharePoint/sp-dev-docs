@@ -42,13 +42,21 @@ when you're ready to configure a real development environment.
 Imagine a legal team that needs a workspace for each contract matter. A matter
 groups the agreement, supporting documents, and the people allowed to work on it.
 
-| Contract application concept | SPE mapping | Application responsibility |
-|---|---|---|
-| The product that customers install | Owning Entra application and container type | Own the app registration, choose the tenant and billing model, and package customer setup |
-| One contract matter | One container in the consuming tenant | Store the returned container ID and enforce the intended business-object mapping |
-| Agreements and attachments | DriveItems inside the container's drive | Build file-management UX and use the documented DriveItem APIs |
-| Reviewers and matter owners | Container membership and roles for delegated access | Check the user's access and manage membership through authorized operations |
-| Review stages, due dates, approvals, and signatures | Your application's business model | Implement the workflow; SPE doesn't supply a contract lifecycle or signing service |
+- **The product that customers install.** SPE mapping: Owning Entra application
+  and container type. Application responsibility: Own the app registration,
+  choose the tenant and billing model, and package customer setup.
+- **One contract matter.** SPE mapping: One container in the consuming tenant.
+  Application responsibility: Store the returned container ID and enforce the
+  intended business-object mapping.
+- **Agreements and attachments.** SPE mapping: DriveItems inside the container's
+  drive. Application responsibility: Build file-management UX and use the
+  documented DriveItem APIs.
+- **Reviewers and matter owners.** SPE mapping: Container membership and roles
+  for delegated access. Application responsibility: Check the user's access and
+  manage membership through authorized operations.
+- **Review stages, due dates, approvals, and signatures.** SPE mapping: Your
+  application's business model. Application responsibility: Implement the
+  workflow; SPE doesn't supply a contract lifecycle or signing service.
 
 The scenario is inspired by the Legal/CLM example in the independently published
 [interactive sandbox prototype](https://shreyassar26.github.io/spe-sandbox/).
@@ -85,11 +93,18 @@ enter secrets, personal data, or actual contract content.
 The request shapes below teach a small part of the Graph contract. Response
 objects and status values are synthetic, not evidence of authorization or execution.
 
-| Operation | Request | Synthetic response | State effect |
-|---|---|---|---|
-| List containers | `GET /storage/fileStorage/containers?$filter=containerTypeId eq demo-container-type` with no body | `200`, containing the Demo container collection | None |
-| Create a container | `POST /storage/fileStorage/containers` with the JSON body below | `201`, containing the new synthetic container | Adds one Demo container |
-| Read a container | `GET /storage/fileStorage/containers/{demo-container-id}` with no body | `200`, containing the selected Demo container | None |
+- **List containers.** Request:
+  `GET /storage/fileStorage/containers?$filter=containerTypeId eq demo-container-type`
+  with no body. Synthetic response: `200`, containing the Demo container
+  collection. State effect: None.
+- **Create a container.** Request:
+  `POST /storage/fileStorage/containers` with the JSON body below.
+  Synthetic response: `201`, containing the new synthetic container.
+  State effect: Adds one Demo container.
+- **Read a container.** Request:
+  `GET /storage/fileStorage/containers/{demo-container-id}` with no body.
+  Synthetic response: `200`, containing the selected Demo container.
+  State effect: None.
 
 ```json
 {
@@ -130,7 +145,8 @@ and [Choose an app model](../plan/choose-app-model.md).
 
 ### 2. Create the owning app and container type
 
-**Owner:** Application developer, with the roles and consent required by each setup procedure.
+**Owner:** Application developer, with the roles and consent required by each
+setup procedure.
 
 Prepare a Microsoft 365 tenant with SharePoint, register the owning Entra
 application, and create its container type. One owning application owns one
@@ -154,13 +170,18 @@ and [Configure authentication and authorization](configure-authentication-author
 
 ### 3. Choose and configure billing in the right order
 
-**Owner:** Developer billing owner, or the consuming tenant's authorized billing administrator.
+**Owner:** Developer billing owner, or the consuming tenant's authorized billing
+administrator.
 
-| Choice | Required setup order | Boundary |
-|---|---|---|
-| Trial evaluation | Create the trial type, then register it before using containers | Trial types are single-tenant evaluation resources, not production types, and can't be converted in place |
-| `standard` | Create the type and attach the developer tenant's Azure billing profile before using it | The developer pays |
-| `directToCustomer` / pass-through | Create the type, register it in the consuming tenant, then activate consuming-tenant pay-as-you-go billing before container access | The customer pays and owns its billing setup |
+- **Trial evaluation.** Required setup order: Create the trial type, then register
+  it before using containers. Boundary: Trial types are single-tenant evaluation
+  resources, not production types, and can't be converted in place.
+- **`standard`.** Required setup order: Create the type and attach the developer
+  tenant's Azure billing profile before using it. Boundary: The developer pays.
+- **`directToCustomer` / pass-through.** Required setup order: Create the type,
+  register it in the consuming tenant, then activate consuming-tenant
+  pay-as-you-go billing before container access. Boundary: The customer pays and
+  owns its billing setup.
 
 Choose before creating the type; changing billing classification needs a new type.
 Don't ask standard-billed customers to activate pass-through billing.
@@ -217,15 +238,24 @@ and [Upload, download, and manage files](manage-files.md).
 
 **Owner:** Application development team and the customer's governance stakeholders.
 
-| Full-app capability | What to implement or integrate |
-|---|---|
-| Contract workflow | App-owned stages, approvals, due dates, notifications, and any signing integration |
-| Documents | File/folder UX, supported upload patterns, concurrency/error handling, and durable ID mapping |
-| Matter membership | Authorized container roles and [sharing operations](share-files-manage-permissions.md) |
-| Collaboration | [Office editing/coauthoring](open-office-files.md), with the applicable access and licensing requirements |
-| Discovery | [Preview](preview-files.md), [search](search-containers-files.md), and appropriate [metadata](container-metadata.md) |
-| Operations | Request outcomes/latency, bounded retry handling, support diagnostics without secrets, cost monitoring, and lifecycle cleanup |
-| Tenant governance | Work with administrators on [security and compliance controls](../plan/security-compliance-governance.md); don't assume a Demo proves a policy is configured |
+Full-app capabilities to implement or integrate:
+
+- **Contract workflow:** App-owned stages, approvals, due dates, notifications,
+  and any signing integration.
+- **Documents:** File/folder UX, supported upload patterns, concurrency/error
+  handling, and durable ID mapping.
+- **Matter membership:** Authorized container roles and
+  [sharing operations](share-files-manage-permissions.md).
+- **Collaboration:** [Office editing/coauthoring](open-office-files.md), with the
+  applicable access and licensing requirements.
+- **Discovery:** [Preview](preview-files.md),
+  [search](search-containers-files.md), and appropriate
+  [metadata](container-metadata.md).
+- **Operations:** Request outcomes/latency, bounded retry handling, support
+  diagnostics without secrets, cost monitoring, and lifecycle cleanup.
+- **Tenant governance:** Work with administrators on
+  [security and compliance controls](../plan/security-compliance-governance.md);
+  don't assume a Demo proves a policy is configured.
 
 These capabilities aren't implemented by V1. Follow the linked procedures and
 validate only the capabilities your application advertises.
@@ -237,7 +267,8 @@ validate only the capabilities your application advertises.
 Test the real production path, not a hidden bypass. Check at least:
 
 - The exact application, publisher, container type, and consuming-tenant registration.
-- Required consent, type-level grants, delegated user roles, and the selected billing route.
+- Required consent, type-level grants, delegated user roles, and the selected
+  billing route.
 - An authorized create/upload/read/download sequence and a denied operation for a
   user or resource that shouldn't have access.
 - Real errors for missing registration, insufficient permissions, or incomplete
@@ -258,12 +289,21 @@ See [Prepare customer installation](../publish/prepare-customer-installation.md)
 
 ## V1 now, V2 later
 
-| V1: implemented static learning | V2: future authorized test-tenant integration |
-|---|---|
-| Synthetic sample workspace, three request shapes, and state effects | An owned confidential backend and real Graph execution |
-| Readable setup roadmap and official documentation links | Verified application/tenant configuration, consent, grants, billing, and user access |
-| Explicit local Run and seed-only reset | Explicitly authorized real operations, genuine results/errors, and tenant-safe cleanup |
-| No sign-in, credentials, uploads, assistant, or tenant mutations | Separately scoped integration; not enabled by visiting or completing V1 |
+### V1: implemented static learning
+
+- Synthetic sample workspace, three request shapes, and state effects.
+- Readable setup roadmap and official documentation links.
+- Explicit local Run and seed-only reset.
+- No sign-in, credentials, uploads, assistant, or tenant mutations.
+
+### V2: future authorized test-tenant integration
+
+- An owned confidential backend and real Graph execution.
+- Verified application/tenant configuration, consent, grants, billing, and user
+  access.
+- Explicitly authorized real operations, genuine results/errors, and tenant-safe
+  cleanup.
+- Separately scoped integration; not enabled by visiting or completing V1.
 
 V2 must never reuse synthetic IDs as real resources, migrate Demo state into a
 tenant silently, or return synthetic success after a real operation fails. It

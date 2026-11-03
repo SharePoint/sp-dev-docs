@@ -21,7 +21,10 @@
 
 ## Build an app (developer)
 - [Build a SharePoint Embedded app end to end](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/build-app-end-to-end): Canonical sequence from prerequisites and Entra permissions through container type registration, the first container, and file operations.
-- [Plan your first app with a static example](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/hosted-playground): V1 contract-workspace onboarding with synthetic browser-local requests, the full-app setup roadmap, customer-admin handoff, and an explicit future V2 test-tenant boundary.
+- [Plan your first app with a static example](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/hosted-playground):
+  V1 contract-workspace onboarding with synthetic browser-local requests, the
+  full-app setup roadmap, customer-admin handoff, and an explicit future V2
+  test-tenant boundary.
 - [Quickstart: Build your first app with VS Code](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/quickstart-vscode): Install the extension, create and register a container type, attach billing when needed, and run the sample app.
 - [Create and configure a container type](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/create-container-type): Create trial/production container types and the owning Entra app.
 - [Register application permissions](https://learn.microsoft.com/en-us/sharepoint/dev/embedded/build/register-application-permissions): Register container type permissions and grant consent.
