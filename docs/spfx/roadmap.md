@@ -1,8 +1,9 @@
 ---
 title: SharePoint Framework roadmap
 description: Released SharePoint Framework capabilities and planned investments across SharePoint and Microsoft 365.
-ms.date: 11/02/2026
+ms.date: 11/04/2026
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ---
 
 # SharePoint Framework roadmap
@@ -35,9 +36,8 @@ See the [SPFx 1.24 release notes](release-1.24.0.md) for the full change list, i
 
 The current target window is **December 2026 through January 2027**. Planned investments include:
 
-- Further development of the Copilot UX components model.
+- Further development of the Copilot UX components model, including plugin-based packaging and skills support for SPFx-created solutions.
 - General availability of the open-source SPFx CLI and updated solution templates, with a planned transition from the Yeoman generator.
-- Navigation customizers for extending navigation nodes or experiences.
 - Dependency maintenance and quality improvements informed by customer and partner feedback.
 
 > [!IMPORTANT]
@@ -50,6 +50,14 @@ The current target window is **December 2026 through January 2027**. Planned inv
 - Additional Copilot hosting surfaces. Support in a desktop or browser client doesn't establish support in other applications.
 
 The automatic-sync fix and mobile support are planned as fast follows after GA, with **no committed delivery date**. These aren't guarantees for the 1.25 release. Review [GA limitations](copilot/overview-copilot-apps.md#ga-limitations) before choosing a deployment or client target.
+
+## Thinking for future releases
+
+The following ideas are potential directions under consideration for future releases. They represent early thinking, not committed roadmap items, and have no target release or delivery date.
+
+- **Navigation customizers** for extending navigation nodes or experiences.
+- **SPFx-powered views in lists** for tailored list experiences.
+- **A new single-page application (SPA) model** for more immersive SPFx-powered experiences across Microsoft 365.
 
 ## Earlier releases
 
