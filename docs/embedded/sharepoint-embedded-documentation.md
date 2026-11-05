@@ -56,8 +56,9 @@ A task-based build journey from prerequisites to a production-ready app. Start w
 
 For a zero-setup orientation first,
 [plan your app with the static contract-workspace example](./build/hosted-playground.md).
-It explains the customer journey and required real-app setup without signing in,
-connecting a tenant, or creating resources.
+The documentation explains the customer journey and required real-app setup
+without signing in, connecting a tenant, or creating resources. Runnable sample
+code is a separate contribution, not part of this documentation repository.
 
 1. [Build a SharePoint Embedded app end to end](./build/build-app-end-to-end.md)
 1. [Quickstart: build your first app with VS Code](./build/quickstart-vscode.md)

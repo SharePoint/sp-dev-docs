@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 Start with a small contract-workspace example to understand what SharePoint Embedded
 (SPE) provides, what your application must build, and which tenant setup steps come
-before real requests. The included Demo and build guide keep their learning
+before real requests. The companion Demo and build guide keep their learning
 navigation inside the application; the article's related procedures are internal
 to this documentation set.
 
@@ -21,16 +21,16 @@ It doesn't sign in, connect to Microsoft Graph, register an app, configure billi
 upload a document, or change tenant resources. No AI runner or model is needed.
 
 > [!NOTE]
-> This contribution provides the static application source and local preview
-> instructions, not a hosted application URL. Publishing this
-> article doesn't deploy the application. V2's test-tenant connection is future work,
-> not an available feature or a prerequisite for trying V1.
+> This repository contains documentation, not the application source. The runnable
+> sample, assets, preview server, and tests are a separate code contribution.
+> Publishing this article doesn't host or deploy that application. V2's test-tenant
+> connection is future work, not an available feature or a prerequisite for V1.
 
 ## Choose where to start
 
 | Your goal | Start here | What you need |
 |---|---|---|
-| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | Node.js 22 or later and the repository checkout; see [Run the included Demo](#run-the-included-demo) |
+| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | Node.js 22 or later and the separate sample checkout; see [Run the separate sample](#run-the-separate-sample) |
 | Build a working application | [Turn the example into a full app](#turn-the-example-into-a-full-app) | A developer tenant, an app owner, and the administrators required by the linked setup procedures |
 | Install an existing ISV application for your organization | [Guide customers through tenant setup](../publish/customer-tenant-setup-guide.md) | The ISV's installation package and the appropriate customer administrators |
 
@@ -65,9 +65,17 @@ Its supported operation set is intentionally small.
 
 ## Try the static example
 
-The Demo page, build guide, styles, engine, controller, static preview server, and
-tests are all included under `apps/spe-playground` in this repository. There is
-no separately hosted application dependency.
+The runnable playground is proposed as a separate sample in the
+[SharePoint Embedded samples repository](https://github.com/microsoft/SharePoint-Embedded-Samples).
+The [source review copy](https://github.com/PawanAIT/SharePoint-Embedded-Samples/tree/3e79157b7d14249bbff2760939a348c75fe143ff/Custom%20Apps/spe-playground)
+contains the Demo page, in-place guide, assets, preview server, and tests.
+
+> [!NOTE]
+> The source link is a review copy of the proposed code contribution, not a
+> Microsoft-supported hosted service or an accepted upstream sample path. The
+> [sample proposal](https://github.com/microsoft/SharePoint-Embedded-Samples/pull/268)
+> remains under review. Keep this article in draft until the sample location is
+> accepted and its canonical source handoff is verified.
 
 The page has two paths: try the example to learn the request/state relationship,
 or follow the build roadmap to plan a real application.
@@ -88,12 +96,14 @@ invalid for Live use. Editing or selecting a draft never sends a Graph request.
 The Demo doesn't persist drafts, tokens, credentials, or request history. Don't
 enter secrets, personal data, or actual contract content.
 
-### Run the included Demo
+### Run the separate sample
 
-Use Node.js 22 or later. From the repository root, run:
+Use Node.js 22 or later. In the separate sample repository checkout, enter the
+sample directory and start its static preview:
 
 ```sh
-node apps/spe-playground/server.mjs
+cd "Custom Apps/spe-playground"
+node server.mjs
 ```
 
 Open the loopback address printed by the server, using the `#example` fragment
@@ -101,11 +111,11 @@ to start at the Demo. The default address is `http://127.0.0.1:4173/#example`.
 You can select another port, for example:
 
 ```sh
-node apps/spe-playground/server.mjs 8789
+node server.mjs 8789
 ```
 
-The Demo page is `apps/spe-playground/index.html`; the in-place learning guide is
-`apps/spe-playground/guide.html`. Header, sidebar, breadcrumb, roadmap, and
+The sample's Demo page is `index.html`; its in-place learning guide is
+`guide.html`. Header, sidebar, breadcrumb, roadmap, and
 related-topic links stay within those pages. The guide covers the setup,
 permissions, billing, file-flow, and customer-handoff procedures without
 redirecting the learner to another site. Both pages remain readable without
@@ -323,7 +333,8 @@ See [Prepare customer installation](../publish/prepare-customer-installation.md)
 ### V1: implemented static learning
 
 - Synthetic sample workspace, three request shapes, and state effects.
-- Readable setup roadmap and included build guide with internal-only navigation.
+- Readable setup roadmap and the separate sample's guide with internal-only
+  application navigation.
 - Explicit local Run and seed-only reset.
 - No sign-in, credentials, uploads, assistant, or tenant mutations.
 
