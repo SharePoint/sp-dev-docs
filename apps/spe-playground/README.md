@@ -28,18 +28,28 @@ application.
 
 ## Try the example
 
-The page follows the documentation layout of the
-[SharePoint Embedded overview on Microsoft Learn](https://learn.microsoft.com/sharepoint/dev/embedded/overview):
+The page follows the documentation layout of the repository's
+[SharePoint Embedded overview](../../docs/embedded/overview.md):
 an article column with breadcrumbs, desktop documentation navigation, an "In this
 article" table of contents, neutral light/dark surfaces, and restrained callouts.
 It uses original local markup and CSS, not copied site assets or a dependency on
 Learn's runtime. The header identifies it as a local static example; it doesn't
 imitate sign-in, Ask Learn, or an official hosted page.
 
-The page has four native-anchor milestones: understand the model, try the example,
+The [Demo page](index.html) and [in-place build guide](guide.html) are included
+with their assets and tests in this contribution. Every application learning link
+is a relative page or section link on the same origin; no link sends the learner
+to Learn, GitHub, a prototype, or another site. Serve this directory to use both
+pages; opening HTML directly as files is unsupported.
+
+The Demo page has four native-anchor milestones: understand the model, try the example,
 build your app, and validate/customer handoff. The article navigation moves above
 the content on smaller screens; the related documentation remains reachable
-through the header, breadcrumbs, and guide links. Guide content is semantic HTML
+through the header, breadcrumbs, and local guide links. The guide provides
+read-only procedures for app/tenant planning, billing, registration,
+authentication, containers/files, expansion, customer handoff, and troubleshooting.
+It has no scripts or storage access, and links back to the Demo.
+Guide content is semantic HTML
 and remains readable without JavaScript. Only the local Demo requires JavaScript.
 
 The matter workspace cards come directly from `DemoEngine.getState().containers`,
@@ -150,8 +160,10 @@ The static roadmap follows
 tenant/app model; owning app and container type; standard developer billing;
 consuming-tenant registration/consent/grants; customer pay-as-you-go when
 applicable; confidential-backend container creation; then file operations and
-expansion. Each step identifies why it matters, its owner, the next official
-Learn procedure, and expected evidence.
+expansion. Each step identifies why it matters, its owner, the next in-place
+procedure, and expected evidence. The included guide explains the procedures
+without requiring a visit to a different documentation site. Real administration
+and service operations still require the organization's separately authorized tools.
 
 The feature map and customer handoff are educational guidance only. File
 operations, membership, Office, preview/search, workflow integrations, governance,
@@ -172,8 +184,9 @@ toggle, Connect action, automatic transfer of Demo IDs/data, or deployed URL. Re
 container creation requires a confidential client even for delegated access;
 credentials and token acquisition must never live in browser JavaScript/local
 storage. This slice adds no hosting/deployment changes and no assistant, SDK,
-model, or runner dependency. Official documentation anchors are allowed; external
-runtime assets and service calls remain blocked.
+model, or runner dependency. Application navigation is internal-only; external
+runtime assets and service calls remain blocked. The source, local preview, and
+Learn article remain separate from any future hosting deployment.
 
 ## Validate
 
@@ -199,8 +212,10 @@ exit. They exercise native mouse/keyboard preparation, editing, submission, Run
 and reset; literal learner-text rendering; scoped storage and injected
 storage-error recovery; observed frontend-only network traffic;
 accessibility-tree labels/live regions; JavaScript-disabled guide reading; and
-desktop/mobile layout. Consumed DOM links and a normalized documentation
-heading/link model check local destinations and procedure order, not prose token
-presence or external availability. No package installation, external service, or
+desktop/mobile layout. Real browser navigation checks every learning destination
+against the served local pages and section targets, including the return to saved
+Demo state and JavaScript-disabled guide reading. These checks cover consumed
+content and behavior, not source-token presence or external availability.
+No package installation, external service, or
 simulated API server is needed. These checks do not replace assistive-technology
 or real-tenant integration review.

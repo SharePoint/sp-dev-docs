@@ -88,7 +88,7 @@ export async function startBrowser() {
   return {
     close,
     origin,
-    async page(t, { javascript = true, initialization = "", width = 1440, browserContextId } = {}) {
+    async page(t, { javascript = true, initialization = "", width = 1440, browserContextId, path = "/" } = {}) {
       if (!browserContextId) {
         ({ browserContextId } = await send("Target.createBrowserContext"));
         t.after(() => send("Target.disposeBrowserContext", { browserContextId }));
@@ -111,21 +111,24 @@ export async function startBrowser() {
         if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description ?? result.exceptionDetails.text);
         return result.result.value;
       };
-      const loaded = new Promise((resolve, reject) => {
-        const timer = setTimeout(() => {
-          events.off("message", onLoad);
-          reject(new Error("Playground load timed out"));
-        }, 30000);
+      async function load(action) {
+        let timer;
         function onLoad(message) {
           if (message.sessionId !== sessionId || message.method !== "Page.loadEventFired") return;
+          loaded.resolve();
+        }
+        const loaded = Promise.withResolvers();
+        events.on("message", onLoad);
+        timer = setTimeout(() => loaded.reject(new Error("Playground load timed out")), 30000);
+        try {
+          await action();
+          await loaded.promise;
+        } finally {
           clearTimeout(timer);
           events.off("message", onLoad);
-          resolve();
         }
-        events.on("message", onLoad);
-      });
-      await command("Page.navigate", { url: origin });
-      await loaded;
+      }
+      await load(() => command("Page.navigate", { url: `${origin}${path}` }));
       const click = async (selector, index = 0) => {
         const point = await evaluate((selector, index) => {
           const element = document.querySelectorAll(selector)[index];
@@ -145,6 +148,9 @@ export async function startBrowser() {
       };
       return {
         command, evaluate, observed, click, press, browserContextId,
+        async follow(selector, index = 0) {
+          await load(() => click(selector, index));
+        },
         async fill(selector, value) {
           await click(selector);
           await press("a", "KeyA", 65, 2);

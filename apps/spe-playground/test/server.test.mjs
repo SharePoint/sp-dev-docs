@@ -42,6 +42,7 @@ function get(path, method = "GET") {
 for (const [path, file, contentType] of [
   ["/", "index.html", "text/html"],
   ["/index.html", "index.html", "text/html"],
+  ["/guide.html", "guide.html", "text/html"],
   ["/styles.css", "styles.css", "text/css"],
   ["/app.mjs", "app.mjs", "text/javascript"],
   ["/engine.mjs", "engine.mjs", "text/javascript"],

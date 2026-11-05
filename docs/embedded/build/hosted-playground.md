@@ -1,7 +1,7 @@
 ---
 title: Plan your first SharePoint Embedded app with a static example
 description: Explore a synthetic contract workspace, understand the setup sequence, and plan how to build and onboard customers to a full SharePoint Embedded app.
-ms.date: 11/03/2026
+ms.date: 11/05/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -12,8 +12,9 @@ ai-usage: ai-assisted
 
 Start with a small contract-workspace example to understand what SharePoint Embedded
 (SPE) provides, what your application must build, and which tenant setup steps come
-before real requests. Then follow the linked procedures to turn that design into
-a complete application.
+before real requests. The included Demo and build guide keep their learning
+navigation inside the application; the article's related procedures are internal
+to this documentation set.
 
 **V1 is entirely static.** The example runs against synthetic browser-local state.
 It doesn't sign in, connect to Microsoft Graph, register an app, configure billing,
@@ -29,7 +30,7 @@ upload a document, or change tenant resources. No AI runner or model is needed.
 
 | Your goal | Start here | What you need |
 |---|---|---|
-| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | See the application's [local preview prerequisites](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground#run-locally) |
+| Understand SPE before creating resources | [Try the static example](#try-the-static-example) | Node.js 22 or later and the repository checkout; see [Run the included Demo](#run-the-included-demo) |
 | Build a working application | [Turn the example into a full app](#turn-the-example-into-a-full-app) | A developer tenant, an app owner, and the administrators required by the linked setup procedures |
 | Install an existing ISV application for your organization | [Guide customers through tenant setup](../publish/customer-tenant-setup-guide.md) | The ISV's installation package and the appropriate customer administrators |
 
@@ -58,16 +59,15 @@ groups the agreement, supporting documents, and the people allowed to work on it
   application's business model. Application responsibility: Implement the
   workflow; SPE doesn't supply a contract lifecycle or signing service.
 
-The scenario is inspired by the Legal/CLM example in the independently published
-[interactive sandbox prototype](https://shreyassar26.github.io/spe-sandbox/).
-The V1 application is an original implementation, not a copy of that prototype.
-Its supported operation set is intentionally smaller.
+The V1 application is an original implementation with invented synthetic
+contract matters. It doesn't embed or depend on a separately hosted prototype.
+Its supported operation set is intentionally small.
 
 ## Try the static example
 
-Get the [application source and local preview instructions](https://github.com/SharePoint/sp-dev-docs/tree/main/apps/spe-playground#run-locally).
-The local server serves static frontend assets only. It isn't a fake Graph API,
-confidential backend, or prerequisite service for the Demo engine.
+The Demo page, build guide, styles, engine, controller, static preview server, and
+tests are all included under `apps/spe-playground` in this repository. There is
+no separately hosted application dependency.
 
 The page has two paths: try the example to learn the request/state relationship,
 or follow the build roadmap to plan a real application.
@@ -87,6 +87,34 @@ All IDs beginning with `demo-`, including `demo-container-type`, are synthetic a
 invalid for Live use. Editing or selecting a draft never sends a Graph request.
 The Demo doesn't persist drafts, tokens, credentials, or request history. Don't
 enter secrets, personal data, or actual contract content.
+
+### Run the included Demo
+
+Use Node.js 22 or later. From the repository root, run:
+
+```sh
+node apps/spe-playground/server.mjs
+```
+
+Open the loopback address printed by the server, using the `#example` fragment
+to start at the Demo. The default address is `http://127.0.0.1:4173/#example`.
+You can select another port, for example:
+
+```sh
+node apps/spe-playground/server.mjs 8789
+```
+
+The Demo page is `apps/spe-playground/index.html`; the in-place learning guide is
+`apps/spe-playground/guide.html`. Header, sidebar, breadcrumb, roadmap, and
+related-topic links stay within those pages. The guide covers the setup,
+permissions, billing, file-flow, and customer-handoff procedures without
+redirecting the learner to another site. Both pages remain readable without
+JavaScript; the synthetic Demo itself requires JavaScript.
+
+The server serves an allowlist of static frontend assets on loopback. It isn't a
+fake Graph API, confidential backend, or prerequisite service for the Demo engine.
+No install or build is required. This local command does not deploy the app;
+publishing this article also does not host its HTML or JavaScript.
 
 ### Supported V1 operations
 
@@ -114,10 +142,10 @@ objects and status values are synthetic, not evidence of authorization or execut
 }
 ```
 
-The real [list containers API](/graph/api/filestorage-list-containers) requires a
-container type filter; a bare collection `GET` isn't a supported Demo request.
-See [Create fileStorageContainer](/graph/api/filestoragecontainer-post) and
-[Get fileStorageContainer](/graph/api/filestoragecontainer-get) for real API contracts.
+Real container listing requires a container type filter; a bare collection `GET`
+isn't a supported Demo request. The in-place guide explains the real container
+request flow and its prerequisites. For the documentation-set procedure, see
+[Create and manage containers](create-manage-containers.md).
 
 Other methods, APIs, query options, filters, and non-synthetic identifiers are
 unsupported. Invalid requests produce explicit Demo errors without changing state
@@ -292,7 +320,7 @@ See [Prepare customer installation](../publish/prepare-customer-installation.md)
 ### V1: implemented static learning
 
 - Synthetic sample workspace, three request shapes, and state effects.
-- Readable setup roadmap and official documentation links.
+- Readable setup roadmap and included build guide with internal-only navigation.
 - Explicit local Run and seed-only reset.
 - No sign-in, credentials, uploads, assistant, or tenant mutations.
 

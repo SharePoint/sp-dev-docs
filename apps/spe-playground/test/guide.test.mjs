@@ -1,7 +1,6 @@
 // Copyright (c) Microsoft Corporation. Licensed under the MIT license.
 import { test, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
 import { startBrowser } from "./browser.mjs";
 import { createSeedState, STORAGE_KEY, COLLECTION_PATH, LIST_PATH, CONTAINER_TYPE } from "../engine.mjs";
 
@@ -9,45 +8,9 @@ let browser;
 before(async () => { browser = await startBrowser(); });
 after(async () => { await browser?.close(); });
 
-async function documentationLinkModel(href) {
-  const url = new URL(href);
-  assert.equal(url.origin, "https://learn.microsoft.com");
-  assert.ok(url.pathname.startsWith("/sharepoint/dev/embedded/"));
-  assert.equal(url.search, "");
-  const markdown = await readFile(new URL(`../../../docs/${url.pathname.slice("/sharepoint/dev/".length)}.md`, import.meta.url), "utf8");
-  const headings = [];
-  const links = [];
-  const sections = [];
-  let section;
-  let fence = false;
-  for (const line of markdown.split("\n")) {
-    if (/^\s*```/.test(line)) { fence = !fence; continue; }
-    if (fence) continue;
-    const heading = /^(#{1,6})\s+(.+?)\s*#*$/.exec(line);
-    if (heading) {
-      const name = heading[2].replace(/[`*]/g, "");
-      const slug = name.toLowerCase().replace(/[^\w -]/g, "").replace(/ /g, "-");
-      headings.push({ level: heading[1].length, name, slug });
-      if (heading[1].length === 2) {
-        section = { name, links: [] };
-        sections.push(section);
-      }
-    }
-    for (const [, target] of line.matchAll(/(?<!!)\[[^\]]+\]\(([^)\s]+)\)/g)) {
-      const link = new URL(target, url);
-      if (link.pathname.endsWith(".md")) link.pathname = link.pathname.slice(0, -3);
-      links.push(link.href);
-      section?.links.push(link.href);
-    }
-  }
-  assert.equal(headings.filter(({ level }) => level === 1).length, 1, href);
-  if (url.hash) assert.ok(headings.some(({ slug }) => slug === url.hash.slice(1)), `Missing heading destination: ${href}`);
-  return { headings, links, sections };
-}
-
-function assertNoServiceTraffic(page) {
+function assertNoServiceTraffic(page, paths = ["/", "/app.mjs", "/engine.mjs", "/styles.css"]) {
   const requests = page.observed.filter(({ method }) => method === "Network.requestWillBeSent").map(({ params }) => params.request);
-  assert.deepEqual([...new Set(requests.map(({ url }) => new URL(url).pathname))].sort(), ["/", "/app.mjs", "/engine.mjs", "/styles.css"]);
+  assert.deepEqual([...new Set(requests.map(({ url }) => new URL(url).pathname))].sort(), [...paths].sort());
   for (const request of requests) {
     assert.equal(new URL(request.url).origin, browser.origin);
     assert.equal(new URL(request.url).search, "");
@@ -64,6 +27,19 @@ function executionSnapshot(page) {
     response: document.querySelector("#response").textContent,
   }), STORAGE_KEY);
 }
+
+test("every playground learning link stays on the local origin", async (t) => {
+  const page = await browser.page(t);
+  const links = await page.evaluate(() => [...document.querySelectorAll("a[href]")].map((link) => link.href));
+  assert.ok(links.length > 0);
+  for (const href of links) {
+    const url = new URL(href);
+    assert.equal(url.origin, browser.origin, `Learning link leaves the playground: ${href}`);
+    assert.ok(["/", "/index.html", "/guide.html"].includes(url.pathname), href);
+    assert.equal(url.search, "", href);
+    assert.ok(url.hash, `Learning link needs a section destination: ${href}`);
+  }
+});
 
 test("the browser consumes guide landmarks, accessible references, and a single native-anchor article navigation", async (t) => {
   const page = await browser.page(t);
@@ -130,12 +106,13 @@ test("the browser consumes guide landmarks, accessible references, and a single 
   assertNoServiceTraffic(page);
 });
 
-test("the consumed roadmap links follow canonical procedures and retain structured handoff and expansion guidance", async (t) => {
+test("the served roadmap and guide resolve every internal destination in the intended setup order", async (t) => {
   const page = await browser.page(t);
   const model = await page.evaluate(() => {
     const links = (element) => [...element.querySelectorAll("a[href]")].map((link) => link.href);
     return {
-      links: links(document).filter((href) => new URL(href).origin !== location.origin),
+      links: links(document),
+      ids: [...document.querySelectorAll("[id]")].map((element) => element.id),
       steps: [...document.querySelectorAll(".roadmap > li > article")].map((article) => ({
         heading: article.querySelector("h3").innerText,
         evidence: [...article.querySelectorAll(":scope > dl > div")].map((pair) => ({
@@ -154,9 +131,32 @@ test("the consumed roadmap links follow canonical procedures and retain structur
       })),
     };
   });
-  const documentation = new Map();
-  assert.ok(new Set(model.links).size > 10);
-  for (const href of new Set(model.links)) documentation.set(href, await documentationLinkModel(href));
+  const guide = await browser.page(t, { path: "/guide.html" });
+  const guideModel = await guide.evaluate(() => ({
+    ids: [...document.querySelectorAll("[id]")].map((element) => element.id),
+    links: [...document.querySelectorAll("a[href]")].map((link) => link.href),
+    sequence: [...document.querySelectorAll(".setup-sequence a")].map((link) => link.href),
+    headings: document.querySelectorAll("h1").length,
+    main: document.querySelectorAll("main").length,
+    controls: document.querySelectorAll("button, input, textarea, select, form, script").length,
+    references: [...document.querySelectorAll("[aria-labelledby], [aria-describedby]")].flatMap((element) =>
+      ["aria-labelledby", "aria-describedby"].flatMap((attribute) => (element.getAttribute(attribute) ?? "").split(/\s+/).filter(Boolean).map((id) => ({
+        id, exists: Boolean(document.getElementById(id)),
+      })))),
+  }));
+  assert.equal(guideModel.headings, 1);
+  assert.equal(guideModel.main, 1);
+  assert.equal(guideModel.controls, 0);
+  assert.equal(new Set(guideModel.ids).size, guideModel.ids.length);
+  for (const reference of guideModel.references) assert.equal(reference.exists, true, reference.id);
+  const pages = new Map([["/", model.ids], ["/index.html", model.ids], ["/guide.html", guideModel.ids]]);
+  for (const href of new Set([...model.links, ...guideModel.links])) {
+    const url = new URL(href);
+    assert.equal(url.origin, browser.origin, href);
+    assert.equal(url.search, "", href);
+    assert.ok(url.hash, href);
+    assert.ok(pages.get(url.pathname)?.includes(url.hash.slice(1)), `Missing served section: ${href}`);
+  }
   assert.equal(model.steps.length, 7);
   assert.equal(new Set(model.steps.map(({ heading }) => heading)).size, 7);
   for (const step of model.steps) {
@@ -165,32 +165,93 @@ test("the consumed roadmap links follow canonical procedures and retain structur
     assert.ok(step.evidence.every(({ definition }) => definition));
     assert.ok(step.evidence[1].links.length > 0);
   }
-  const root = "https://learn.microsoft.com/sharepoint/dev/embedded/";
-  const core = [
-    "plan/app-tenant-architecture", "build/create-container-type", "plan/choose-billing-model",
-    "build/register-application-permissions", "build/create-manage-containers", "build/manage-files",
-  ].map((path) => `${root}${path}`);
-  const canonical = documentation.get(`${root}build/build-app-end-to-end`);
-  const canonicalOrder = canonical.sections.filter(({ name }) => /^\d+\./.test(name))
-    .flatMap(({ links }) => links).filter((href) => core.includes(href));
-  assert.equal(canonicalOrder.length, core.length);
-  const actions = model.steps.map(({ evidence }) => evidence[1].links.map((href) => href.split("#")[0]));
-  assert.deepEqual(actions.map((links) => links.find((href) => core.includes(href))).filter(Boolean), canonicalOrder);
-  const customerBilling = `${root}admin/setup-billing-microsoft-365-admin-center`;
-  assert.ok(documentation.get(`${root}plan/choose-billing-model`).links.includes(customerBilling));
-  assert.equal(actions.findIndex((links) => links.includes(customerBilling)),
-    actions.findIndex((links) => links.includes(`${root}build/register-application-permissions`)) + 1);
+  const setupOrder = ["app-model", "container-type", "standard-billing", "registration", "customer-billing", "containers", "files"];
+  const actions = model.steps.map(({ evidence }) => evidence[1].links[0]);
+  assert.deepEqual(actions, setupOrder.map((id) => `${browser.origin}/guide.html#${id}`));
+  assert.deepEqual(guideModel.sequence.map((href) => new URL(href).hash.slice(1)), setupOrder);
   assert.equal(model.featureRows.length, 6);
   for (const row of model.featureRows) {
     assert.ok(row.heading);
     assert.equal(row.cells.length, 2);
     assert.ok(row.cells.every(({ text }) => text));
   }
-  for (const path of ["publish/prepare-customer-installation", "publish/customer-tenant-setup-guide", "publish/validate-customer-installation"]) {
-    assert.ok(model.handoffLinks.includes(`${root}${path}`));
+  for (const id of ["developer-handoff", "customer-setup", "validation"]) {
+    assert.ok(model.handoffLinks.includes(`${browser.origin}/guide.html#${id}`));
   }
   assert.deepEqual(model.validation.map(({ term }) => term), ["Success evidence", "Denied-access evidence", "Error evidence"]);
   assert.ok(model.validation.every(({ definition }) => definition));
+  assertNoServiceTraffic(page);
+  assertNoServiceTraffic(guide, ["/guide.html", "/styles.css"]);
+});
+
+test("following the local guide and returning retains saved matters without executing a request", async (t) => {
+  const page = await browser.page(t);
+  const initial = await executionSnapshot(page);
+  const expectedMatterCount = JSON.parse(initial.saved).containers.length + 1;
+  await page.click('[data-example="create"]');
+  await page.click("#run");
+  const saved = (await executionSnapshot(page)).saved;
+  assert.equal(JSON.parse(saved).containers.length, expectedMatterCount);
+  await page.follow('.docs-header a[href="./guide.html#build-sequence"]');
+  assert.equal(await page.evaluate(() => location.pathname + location.hash), "/guide.html#build-sequence");
+  const targets = await page.evaluate(() => [...new Set([...document.querySelectorAll('a[href^="#"]:not(.skip-link)')].map((link) => link.hash))]);
+  for (const target of targets) {
+    await page.click(`a[href="${target}"]`);
+    const view = await page.evaluate((key, target) => ({
+      hash: location.hash, saved: localStorage.getItem(key),
+      visible: document.getElementById(target.slice(1)).checkVisibility(),
+    }), STORAGE_KEY, target);
+    assert.equal(view.hash, target);
+    assert.equal(view.saved, saved);
+    assert.equal(view.visible, true, target);
+  }
+  await page.follow('.docs-header a[href="./index.html#example"]');
+  assert.equal(await page.evaluate(() => location.pathname + location.hash), "/index.html#example");
+  assert.equal((await executionSnapshot(page)).saved, saved);
+  assert.equal(await page.evaluate(() => document.querySelectorAll("#matter-list li").length), expectedMatterCount);
+  assert.deepEqual(await page.evaluate(() => ({
+    parsed: document.querySelector("#parsed").textContent,
+    response: document.querySelector("#response").textContent,
+  })), {
+    parsed: initial.parsed,
+    response: initial.response,
+  });
+  await page.click('[data-example="list"]');
+  await page.click("#run");
+  assert.equal(await page.evaluate(() => JSON.parse(document.querySelector("#response").textContent).value.length), expectedMatterCount);
+  assertNoServiceTraffic(page, ["/", "/index.html", "/guide.html", "/app.mjs", "/engine.mjs", "/styles.css"]);
+});
+
+test("the in-place guide supports script-free keyboard navigation and narrow-screen reading", async (t) => {
+  for (const width of [1440, 390, 320]) {
+    const page = await browser.page(t, { path: "/guide.html", javascript: false, width });
+    for (const scheme of ["light", "dark"]) {
+      await page.command("Emulation.setEmulatedMedia", { features: [{ name: "prefers-color-scheme", value: scheme }] });
+      const layout = await page.evaluate(() => ({
+        width: innerWidth, document: document.documentElement.scrollWidth,
+        article: document.querySelector(".article-body").getBoundingClientRect().width,
+        scheme: getComputedStyle(document.documentElement).colorScheme,
+        saved: localStorage.length, title: document.querySelector("h1").checkVisibility(),
+      }));
+      assert.equal(layout.width, width);
+      assert.ok(layout.document <= width, JSON.stringify(layout));
+      assert.ok(layout.article <= 768);
+      assert.equal(layout.scheme, scheme);
+      assert.equal(layout.saved, 0);
+      assert.equal(layout.title, true);
+    }
+    await page.press("Tab", "Tab", 9);
+    assert.equal(await page.evaluate(() => document.activeElement.hash), "#main-content");
+    await page.press("Enter", "Enter", 13);
+    assert.equal(await page.evaluate(() => document.activeElement.id), "main-content");
+    await page.click('.journey-nav a[href="#registration"]');
+    assert.equal(await page.evaluate(() => location.hash), "#registration");
+    assert.equal(await page.evaluate(() => document.querySelector("#registration h2").checkVisibility()), true);
+    await page.follow('.docs-header a[href="./index.html#example"]');
+    assert.equal(await page.evaluate(() => document.querySelector("#run").disabled), true);
+    assert.equal(await page.evaluate(() => localStorage.length), 0);
+    assertNoServiceTraffic(page, ["/guide.html", "/styles.css", "/index.html"]);
+  }
 });
 
 test("without JavaScript the guide is rendered, disclosures and keyboard anchors work, and Run stays unavailable", async (t) => {
