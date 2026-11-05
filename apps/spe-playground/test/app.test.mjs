@@ -401,3 +401,58 @@ test("unrelated storage notifications do not invalidate the matter view", async 
     assertCardsMatchState(app);
   }
 });
+
+function showPage(app, persisted) {
+  const event = new Event("pageshow");
+  Object.defineProperty(event, "persisted", { value: persisted });
+  app.window.dispatchEvent(event);
+}
+
+test("only a cached pageshow reloads current saved matters and clears the executed draft without writing", async (t) => {
+  const app = await mount(t);
+  const initialDraft = app.draft();
+  const initialOutput = ["parsed", "response", "response-status"].map((id) => app.byId(id).textContent);
+  app.example("create");
+  app.run();
+  const executedDraft = app.draft();
+  const executedResponse = app.byId("response").textContent;
+  const otherEngine = new DemoEngine(app.storage);
+  otherEngine.initialize();
+  otherEngine.run({ method: "POST", path: COLLECTION_PATH, body: JSON.stringify({
+    displayName: "Synthetic matter saved while away", description: "", containerTypeId: CONTAINER_TYPE,
+  }) });
+  const saved = app.saved();
+  const writes = [...app.storage.writes];
+
+  showPage(app, false);
+  assert.deepEqual(app.draft(), executedDraft);
+  assert.equal(app.byId("response").textContent, executedResponse);
+  showPage(app, true);
+  assert.deepEqual(app.draft(), initialDraft);
+  assert.deepEqual(["parsed", "response", "response-status"].map((id) => app.byId(id).textContent), initialOutput);
+  assert.deepEqual(app.saved(), saved);
+  assertCardsMatchState(app);
+  assert.equal(app.byId("run").disabled, false);
+  assert.equal(app.byId("error").hidden, true);
+  assert.deepEqual(app.storage.writes, writes);
+  assert.equal(app.storage.getItem("another-app"), "keep me");
+});
+
+test("a cached pageshow with unreadable storage blocks Run and removes stale cards and success", async (t) => {
+  const app = await mount(t);
+  const initialResponse = app.byId("response").textContent;
+  app.example("create");
+  app.run();
+  const saved = app.storage.data.get(STORAGE_KEY);
+  const writes = [...app.storage.writes];
+  app.storage.failRead = true;
+  showPage(app, true);
+  assert.equal(app.byId("run").disabled, true);
+  assert.equal(app.cards().length, 0);
+  assert.equal(app.byId("error").hidden, false);
+  assert.match(app.byId("error").textContent, /StorageReadFailed/);
+  assert.equal(app.byId("response").textContent, initialResponse);
+  assert.equal(app.storage.data.get(STORAGE_KEY), saved);
+  assert.deepEqual(app.storage.writes, writes);
+  assert.equal(app.storage.data.get("another-app"), "keep me");
+});

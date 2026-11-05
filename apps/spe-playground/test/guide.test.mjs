@@ -222,6 +222,57 @@ test("following the local guide and returning retains saved matters without exec
   assertNoServiceTraffic(page, ["/", "/index.html", "/guide.html", "/app.mjs", "/engine.mjs", "/styles.css"]);
 });
 
+test("native browser Back restores a fresh unexecuted Demo from the back-forward cache without changing saved matters", async (t) => {
+  const page = await browser.page(t, { initialization: 'localStorage.setItem("another-app", "keep me");' });
+  const initial = await executionSnapshot(page);
+  const initialDraft = await page.evaluate(() => ["method", "path", "body"].map((id) => document.getElementById(id).value));
+  await page.command("Runtime.addBinding", { name: "recordDemoPageShow" });
+  await page.evaluate(() => addEventListener("pageshow", (event) => {
+    globalThis.recordDemoPageShow(JSON.stringify({ persisted: event.persisted, trusted: event.isTrusted }));
+  }));
+  await page.click('[data-example="create"]');
+  await page.click("#run");
+  const saved = (await executionSnapshot(page)).saved;
+  assert.equal(JSON.parse(saved).containers.length, JSON.parse(initial.saved).containers.length + 1);
+  const writes = page.observed.filter(({ method, params }) =>
+    (method === "DOMStorage.domStorageItemAdded" || method === "DOMStorage.domStorageItemUpdated") && params.key === STORAGE_KEY).length;
+  await page.follow('.docs-header a[href="./guide.html#build-sequence"]');
+  const history = await page.command("Page.getNavigationHistory");
+  assert.ok(history.currentIndex > 0);
+  const shown = await page.waitForEvent("Runtime.bindingCalled", () =>
+    page.command("Page.navigateToHistoryEntry", { entryId: history.entries[history.currentIndex - 1].id }));
+  assert.equal(shown.name, "recordDemoPageShow");
+  const restoration = JSON.parse(shown.payload);
+  assert.deepEqual(restoration, { persisted: true, trusted: true });
+  const returned = await page.evaluate((key) => ({
+    saved: localStorage.getItem(key),
+    unrelated: localStorage.getItem("another-app"),
+    draft: ["method", "path", "body"].map((id) => document.getElementById(id).value),
+    parsed: document.querySelector("#parsed").textContent,
+    response: document.querySelector("#response").textContent,
+    displayed: JSON.parse(document.querySelector("#state").textContent),
+    cards: document.querySelectorAll("#matter-list li").length,
+    disabled: document.querySelector("#run").disabled,
+    errorHidden: document.querySelector("#error").hidden,
+  }), STORAGE_KEY);
+  assert.deepEqual(returned.draft, initialDraft);
+  assert.equal(returned.saved, saved);
+  assert.equal(returned.unrelated, "keep me");
+  assert.equal(returned.parsed, initial.parsed);
+  assert.equal(returned.response, initial.response);
+  assert.deepEqual(returned.displayed, JSON.parse(saved));
+  assert.equal(returned.cards, JSON.parse(saved).containers.length);
+  assert.equal(returned.disabled, false);
+  assert.equal(returned.errorHidden, true);
+  assert.equal(page.observed.filter(({ method, params }) =>
+    (method === "DOMStorage.domStorageItemAdded" || method === "DOMStorage.domStorageItemUpdated") && params.key === STORAGE_KEY).length, writes);
+  await page.click("#run");
+  assert.equal(await page.evaluate(() => JSON.parse(document.querySelector("#response").textContent).value.length), returned.cards);
+  assert.equal((await executionSnapshot(page)).saved, saved);
+  assertNoServiceTraffic(page, ["/", "/guide.html", "/app.mjs", "/engine.mjs", "/styles.css"]);
+  t.diagnostic(JSON.stringify({ pageShow: restoration, savedMatters: returned.cards, draft: returned.draft }));
+});
+
 test("the in-place guide supports script-free keyboard navigation and narrow-screen reading", async (t) => {
   for (const width of [1440, 390, 320]) {
     const page = await browser.page(t, { path: "/guide.html", javascript: false, width });

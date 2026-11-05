@@ -169,4 +169,11 @@ window.addEventListener("storage", (event) => {
   }
 });
 
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    for (const key of Object.keys(fields)) fields[key].value = examples.list[key];
+    connectStorage();
+  }
+});
+
 connectStorage();

@@ -111,24 +111,23 @@ export async function startBrowser() {
         if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description ?? result.exceptionDetails.text);
         return result.result.value;
       };
-      async function load(action) {
-        let timer;
-        function onLoad(message) {
-          if (message.sessionId !== sessionId || message.method !== "Page.loadEventFired") return;
-          loaded.resolve();
+      async function waitForEvent(method, action) {
+        function received(message) {
+          if (message.sessionId !== sessionId || message.method !== method) return;
+          completion.resolve(message.params);
         }
-        const loaded = Promise.withResolvers();
-        events.on("message", onLoad);
-        timer = setTimeout(() => loaded.reject(new Error("Playground load timed out")), 30000);
+        const completion = Promise.withResolvers();
+        events.on("message", received);
+        const timer = setTimeout(() => completion.reject(new Error(`Chrome timed out waiting for ${method}`)), 30000);
         try {
           await action();
-          await loaded.promise;
+          return await completion.promise;
         } finally {
           clearTimeout(timer);
-          events.off("message", onLoad);
+          events.off("message", received);
         }
       }
-      await load(() => command("Page.navigate", { url: `${origin}${path}` }));
+      await waitForEvent("Page.loadEventFired", () => command("Page.navigate", { url: `${origin}${path}` }));
       const click = async (selector, index = 0) => {
         const point = await evaluate((selector, index) => {
           const element = document.querySelectorAll(selector)[index];
@@ -147,9 +146,9 @@ export async function startBrowser() {
         await command("Input.dispatchKeyEvent", { type: "keyUp", ...params });
       };
       return {
-        command, evaluate, observed, click, press, browserContextId,
+        command, evaluate, observed, click, press, browserContextId, waitForEvent,
         async follow(selector, index = 0) {
-          await load(() => click(selector, index));
+          await waitForEvent("Page.loadEventFired", () => click(selector, index));
         },
         async fill(selector, value) {
           await click(selector);

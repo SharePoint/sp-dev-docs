@@ -110,6 +110,9 @@ related-topic links stay within those pages. The guide covers the setup,
 permissions, billing, file-flow, and customer-handoff procedures without
 redirecting the learner to another site. Both pages remain readable without
 JavaScript; the synthetic Demo itself requires JavaScript.
+Returning from the guide, including with browser Back, reloads saved synthetic
+matters without replaying the previous request or retaining its success response.
+The request editor starts with an unexecuted list draft.
 
 The server serves an allowlist of static frontend assets on loopback. It isn't a
 fake Graph API, confidential backend, or prerequisite service for the Demo engine.

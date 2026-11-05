@@ -49,6 +49,9 @@ through the header, breadcrumbs, and local guide links. The guide provides
 read-only procedures for app/tenant planning, billing, registration,
 authentication, containers/files, expansion, customer handoff, and troubleshooting.
 It has no scripts or storage access, and links back to the Demo.
+Returning to the Demo, including a browser Back restoration from the page cache,
+reloads saved synthetic matters with a fresh unexecuted list draft and no old
+success response. It does not reset saved matters or write execution history.
 Guide content is semantic HTML
 and remains readable without JavaScript. Only the local Demo requires JavaScript.
 
@@ -216,6 +219,8 @@ desktop/mobile layout. Real browser navigation checks every learning destination
 against the served local pages and section targets, including the return to saved
 Demo state and JavaScript-disabled guide reading. These checks cover consumed
 content and behavior, not source-token presence or external availability.
+Native history coverage observes a genuine trusted, persisted `pageshow` event
+after browser Back; it is not just a manually dispatched lifecycle event.
 No package installation, external service, or
 simulated API server is needed. These checks do not replace assistive-technology
 or real-tenant integration review.
