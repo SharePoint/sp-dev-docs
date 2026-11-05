@@ -155,6 +155,11 @@ clears all storage, touches another app's keys, or calls a Live API. **Retry
 storage** explicitly reloads saved state. Another tab's storage-change
 notification removes stale cards/results and disables execution until Retry; this
 is a single-page learning app, not an atomic multi-tab database.
+The engine tracks the exact saved value it consumed or successfully wrote.
+Notifications queued while a page was cached are ignored only when current
+storage still matches that consumed value. A later unconsumed change or clear, or
+an unreadable value, still blocks execution. This does not turn cross-tab operations
+into an atomic transaction.
 
 ## Build guidance and V1 / V2 boundary
 

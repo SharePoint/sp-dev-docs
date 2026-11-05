@@ -161,11 +161,18 @@ byId("reset").addEventListener("click", () => {
 // Another tab must not silently overwrite this page's view of saved state.
 window.addEventListener("storage", (event) => {
   if (event.storageArea === activeStorage && (event.key === null || event.key === STORAGE_KEY)) {
+    let error = new DemoError("StorageChanged", "Demo storage changed in another page. Retry storage before running or resetting.");
+    try {
+      if (engine?.isStorageCurrent()) return;
+    } catch (cause) {
+      if (!(cause instanceof DemoError)) throw cause;
+      error = cause;
+    }
     byId("run").disabled = true;
     engine = undefined;
     showUnavailableState("Demo storage changed in another page. Retry storage to reload the matter workspaces and state.");
     clearExecution("Storage changed. Previous results are no longer current. No request ran. Retry storage.");
-    showError(new DemoError("StorageChanged", "Demo storage changed in another page. Retry storage before running or resetting."));
+    showError(error);
   }
 });
 

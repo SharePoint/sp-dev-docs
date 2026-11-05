@@ -111,9 +111,9 @@ export async function startBrowser() {
         if (result.exceptionDetails) throw new Error(result.exceptionDetails.exception?.description ?? result.exceptionDetails.text);
         return result.result.value;
       };
-      async function waitForEvent(method, action) {
+      async function waitForEvent(method, action, matches = () => true) {
         function received(message) {
-          if (message.sessionId !== sessionId || message.method !== method) return;
+          if (message.sessionId !== sessionId || message.method !== method || !matches(message.params)) return;
           completion.resolve(message.params);
         }
         const completion = Promise.withResolvers();

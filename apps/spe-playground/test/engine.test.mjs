@@ -62,6 +62,71 @@ test("initialization persists exactly the known seed under only the app key", ()
   assert.equal(storage.getItem("another-app"), "keep me");
 });
 
+test("storage currency detects an unconsumed change without loading it or writing, then recognizes an explicit reload", () => {
+  const { storage, engine } = setup();
+  const initial = engine.getState();
+  assert.equal(engine.isStorageCurrent(), true);
+  const other = new DemoEngine(storage);
+  other.initialize();
+  other.run(createDraft());
+  const writes = [...storage.writes];
+  assert.equal(engine.isStorageCurrent(), false);
+  assert.deepEqual(engine.getState(), initial);
+  engine.initialize();
+  assert.equal(engine.isStorageCurrent(), true);
+  assert.deepEqual(engine.getState(), other.getState());
+  assert.deepEqual(storage.writes, writes);
+});
+
+test("storage currency tracks the exact consumed bytes and detects deletion without silently restoring the seed", () => {
+  const storage = new StorageFixture();
+  const raw = JSON.stringify(createSeedState(), null, 2);
+  storage.data.set(STORAGE_KEY, raw);
+  const engine = new DemoEngine(storage);
+  engine.initialize();
+  assert.equal(engine.isStorageCurrent(), true);
+  storage.data.set(STORAGE_KEY, JSON.stringify(createSeedState()));
+  assert.equal(engine.isStorageCurrent(), false);
+  engine.initialize();
+  assert.equal(engine.isStorageCurrent(), true);
+  storage.data.delete(STORAGE_KEY);
+  assert.equal(engine.isStorageCurrent(), false);
+  assert.equal(storage.getItem(STORAGE_KEY), null);
+  assert.deepEqual(engine.getState(), createSeedState());
+  assert.deepEqual(storage.writes, []);
+});
+
+test("only successful own commits advance the consumed storage snapshot", () => {
+  const { storage, engine } = setup();
+  engine.run(createDraft());
+  assert.equal(engine.isStorageCurrent(), true);
+  const state = engine.getState();
+  const raw = storage.getItem(STORAGE_KEY);
+  storage.failWrite = true;
+  assertDemoError(() => engine.run(createDraft()), "StorageWriteFailed");
+  assertDemoError(() => engine.reset(), "StorageWriteFailed");
+  assert.equal(engine.isStorageCurrent(), true);
+  assert.equal(storage.getItem(STORAGE_KEY), raw);
+  assert.deepEqual(engine.getState(), state);
+  storage.failWrite = false;
+  engine.reset();
+  assert.equal(engine.isStorageCurrent(), true);
+  assert.deepEqual(engine.getState(), createSeedState());
+});
+
+test("uninitialized and unreadable storage currency checks report errors instead of claiming current state", () => {
+  const storage = new StorageFixture();
+  const engine = new DemoEngine(storage);
+  assertDemoError(() => engine.isStorageCurrent(), "NotInitialized");
+  engine.initialize();
+  const raw = storage.getItem(STORAGE_KEY);
+  const writes = [...storage.writes];
+  storage.failRead = true;
+  assertDemoError(() => engine.isStorageCurrent(), "StorageReadFailed");
+  assert.equal(storage.data.get(STORAGE_KEY), raw);
+  assert.deepEqual(storage.writes, writes);
+});
+
 test("list has the exact parsed request, synthetic 200 response and no state effect or write", () => {
   const { storage, engine } = setup();
   const before = engine.getState();

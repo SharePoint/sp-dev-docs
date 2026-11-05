@@ -273,6 +273,70 @@ test("native browser Back restores a fresh unexecuted Demo from the back-forward
   t.diagnostic(JSON.stringify({ pageShow: restoration, savedMatters: returned.cards, draft: returned.draft }));
 });
 
+test("cached Back consumes queued storage changes but later active-page changes still require Retry", async (t) => {
+  const page = await browser.page(t);
+  const initial = await executionSnapshot(page);
+  await page.command("Runtime.addBinding", { name: "recordDemoPageShow" });
+  await page.command("Runtime.addBinding", { name: "recordDemoStorage" });
+  await page.evaluate(() => {
+    addEventListener("pageshow", (event) => {
+      globalThis.recordDemoPageShow(JSON.stringify({ persisted: event.persisted, trusted: event.isTrusted }));
+    });
+    addEventListener("storage", (event) => {
+      globalThis.recordDemoStorage(JSON.stringify({
+        trusted: event.isTrusted, key: event.key, newValue: event.newValue,
+        cards: document.querySelectorAll("#matter-list li").length,
+        disabled: document.querySelector("#run").disabled,
+      }));
+    });
+  });
+  await page.click('[data-example="create"]');
+  await page.click("#run");
+  await page.follow('.docs-header a[href="./guide.html#build-sequence"]');
+  const other = await browser.page(t, { browserContextId: page.browserContextId });
+  for (const name of ["Synthetic queued matter one", "Synthetic queued matter two"]) {
+    await other.click('[data-example="create"]');
+    await other.fill("#body", JSON.stringify({ displayName: name, description: "", containerTypeId: CONTAINER_TYPE }));
+    await other.click("#run");
+  }
+  const latest = (await executionSnapshot(other)).saved;
+  const expectedCards = JSON.parse(latest).containers.length;
+  const history = await page.command("Page.getNavigationHistory");
+  const lastQueuedEvent = await page.waitForEvent("Runtime.bindingCalled", () =>
+    page.command("Page.navigateToHistoryEntry", { entryId: history.entries[history.currentIndex - 1].id }),
+  (params) => params.name === "recordDemoStorage" && JSON.parse(params.payload).newValue === latest);
+  const restoration = page.observed.filter(({ method, params }) =>
+    method === "Runtime.bindingCalled" && params.name === "recordDemoPageShow");
+  assert.deepEqual(restoration.map(({ params }) => JSON.parse(params.payload)), [{ persisted: true, trusted: true }]);
+  const queued = JSON.parse(lastQueuedEvent.payload);
+  assert.equal(queued.trusted, true);
+  assert.equal(queued.key, STORAGE_KEY);
+  assert.equal(queued.cards, expectedCards);
+  assert.equal(queued.disabled, false);
+  const returned = await executionSnapshot(page);
+  assert.equal(returned.saved, latest);
+  assert.equal(returned.parsed, initial.parsed);
+  assert.equal(returned.response, initial.response);
+  assert.equal(await page.evaluate(() => document.querySelector("#error").hidden), true);
+
+  const activeEvent = await page.waitForEvent("Runtime.bindingCalled", () => other.click("#run"),
+    (params) => params.name === "recordDemoStorage");
+  const changed = JSON.parse(activeEvent.payload);
+  assert.equal(changed.trusted, true);
+  assert.equal(changed.disabled, true);
+  assert.equal(changed.cards, 0);
+  assert.equal(await page.evaluate(() => document.querySelector("#error").hidden), false);
+  const activeSaved = (await executionSnapshot(other)).saved;
+  assert.notEqual(activeSaved, latest);
+  await page.click("#retry");
+  assert.equal(await page.evaluate(() => document.querySelectorAll("#matter-list li").length), JSON.parse(activeSaved).containers.length);
+  assert.equal(await page.evaluate(() => document.querySelector("#run").disabled), false);
+  assert.equal((await executionSnapshot(page)).saved, activeSaved);
+  assertNoServiceTraffic(page, ["/", "/guide.html", "/app.mjs", "/engine.mjs", "/styles.css"]);
+  assertNoServiceTraffic(other);
+  t.diagnostic(JSON.stringify({ queuedReturn: queued, laterActiveChange: changed }));
+});
+
 test("the in-place guide supports script-free keyboard navigation and narrow-screen reading", async (t) => {
   for (const width of [1440, 390, 320]) {
     const page = await browser.page(t, { path: "/guide.html", javascript: false, width });

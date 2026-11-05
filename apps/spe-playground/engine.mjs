@@ -123,6 +123,7 @@ export function parseRequest(draft) {
 export class DemoEngine {
   #storage;
   #state;
+  #savedValue;
 
   constructor(storage) {
     if (!storage || typeof storage.getItem !== "function" || typeof storage.setItem !== "function") {
@@ -131,13 +132,16 @@ export class DemoEngine {
     this.#storage = storage;
   }
 
-  initialize() {
-    let raw;
+  #readStorage() {
     try {
-      raw = this.#storage.getItem(STORAGE_KEY);
+      return this.#storage.getItem(STORAGE_KEY);
     } catch (cause) {
-      throw new DemoError("StorageReadFailed", "Browser storage could not be read. State was not initialized.", { cause });
+      throw new DemoError("StorageReadFailed", "Browser storage could not be read. Retry storage before continuing.", { cause });
     }
+  }
+
+  initialize() {
+    const raw = this.#readStorage();
     if (raw === null) {
       this.#commit(createSeedState());
     } else {
@@ -152,6 +156,7 @@ export class DemoEngine {
         throw new DemoError("StorageCorrupt", "Saved Demo state has an unsupported shape. It was not overwritten. Use Reset Demo to restore the known seed.");
       }
       this.#state = state;
+      this.#savedValue = raw;
     }
     return this.getState();
   }
@@ -163,13 +168,22 @@ export class DemoEngine {
     return structuredClone(this.#state);
   }
 
+  isStorageCurrent() {
+    if (!this.#state) {
+      throw new DemoError("NotInitialized", "Demo state is unavailable. Retry storage or explicitly Reset Demo.");
+    }
+    return this.#readStorage() === this.#savedValue;
+  }
+
   #commit(state) {
+    const raw = JSON.stringify(state);
     try {
-      this.#storage.setItem(STORAGE_KEY, JSON.stringify(state));
+      this.#storage.setItem(STORAGE_KEY, raw);
     } catch (cause) {
       throw new DemoError("StorageWriteFailed", "Browser storage could not be written. No in-memory state change was committed.", { cause });
     }
     this.#state = state;
+    this.#savedValue = raw;
   }
 
   reset() {

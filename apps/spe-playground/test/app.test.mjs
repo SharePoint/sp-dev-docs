@@ -408,6 +408,81 @@ function showPage(app, persisted) {
   app.window.dispatchEvent(event);
 }
 
+function notifyStorage(app, key = STORAGE_KEY) {
+  const event = new Event("storage");
+  Object.defineProperties(event, { storageArea: { value: app.storage }, key: { value: key } });
+  app.window.dispatchEvent(event);
+}
+
+test("already-consumed queued storage notifications preserve a restored view while a later actual change blocks Run", async (t) => {
+  const app = await mount(t);
+  app.example("create");
+  app.run();
+  const other = new DemoEngine(app.storage);
+  other.initialize();
+  const request = { method: "POST", path: COLLECTION_PATH, body: JSON.stringify({
+    displayName: "Synthetic matter saved while away", description: "", containerTypeId: CONTAINER_TYPE,
+  }) };
+  other.run(request);
+  other.run(request);
+  showPage(app, true);
+  const saved = app.saved();
+  const writes = [...app.storage.writes];
+  for (const notification of [1, 2]) {
+    notifyStorage(app);
+    assert.equal(app.byId("run").disabled, false, `Queued notification ${notification}`);
+    assert.equal(app.byId("error").hidden, true, `Queued notification ${notification}`);
+    assertCardsMatchState(app);
+  }
+  assert.deepEqual(app.saved(), saved);
+  assert.deepEqual(app.storage.writes, writes);
+  other.run(request);
+  notifyStorage(app);
+  assert.equal(app.byId("run").disabled, true);
+  assert.equal(app.cards().length, 0);
+  assert.match(app.byId("error").textContent, /StorageChanged/);
+  app.byId("retry").click();
+  assertCardsMatchState(app);
+  assert.equal(app.byId("run").disabled, false);
+});
+
+test("an unreadable storage notification removes stale success and reports the read error without writing", async (t) => {
+  const app = await mount(t);
+  app.example("create");
+  app.run();
+  const raw = app.storage.getItem(STORAGE_KEY);
+  const writes = [...app.storage.writes];
+  app.storage.failRead = true;
+  notifyStorage(app);
+  assert.equal(app.byId("run").disabled, true);
+  assert.equal(app.cards().length, 0);
+  assert.equal(app.byId("error").hidden, false);
+  assert.match(app.byId("error").textContent, /StorageReadFailed/);
+  assert.deepEqual(app.storage.writes, writes);
+  assert.equal(app.storage.data.get(STORAGE_KEY), raw);
+});
+
+test("a consumed queued clear is harmless but a new clear still invalidates the displayed state", async (t) => {
+  const app = await mount(t);
+  app.example("create");
+  app.run();
+  app.storage.data.delete(STORAGE_KEY);
+  showPage(app, true);
+  const writes = [...app.storage.writes];
+  notifyStorage(app, null);
+  assert.equal(app.byId("run").disabled, false);
+  assert.equal(app.byId("error").hidden, true);
+  assertCardsMatchState(app);
+  assert.deepEqual(app.storage.writes, writes);
+  app.storage.data.delete(STORAGE_KEY);
+  notifyStorage(app, null);
+  assert.equal(app.byId("run").disabled, true);
+  assert.equal(app.cards().length, 0);
+  assert.match(app.byId("error").textContent, /StorageChanged/);
+  assert.equal(app.storage.getItem(STORAGE_KEY), null);
+  assert.deepEqual(app.storage.writes, writes);
+});
+
 test("only a cached pageshow reloads current saved matters and clears the executed draft without writing", async (t) => {
   const app = await mount(t);
   const initialDraft = app.draft();
