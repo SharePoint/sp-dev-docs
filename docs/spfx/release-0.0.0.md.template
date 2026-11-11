@@ -26,19 +26,19 @@ In the project's **package.json** file, identify all SPFx vTODO: {version-previo
 1. Install the refreshed vTODO: {version-release} package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@TODO: {version-release}.0 --save --save-exact
+    npm install @microsoft/{spfx-package-name}@TODO: {version-release} --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
 
 > [!TIP]
-> To upgrade this project, run:
+> To generate an upgrade report for this project, run the following command from the project root:
 >
 > ```console
 > npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion TODO: {version-release} --output md
 > ```
 >
-> This analyzes your project and outputs all required changes, including a single script to apply them in one go.
+> This command generates an upgrade report; it doesn't modify project files. Review and apply the reported changes, preserving your solution's custom code and configuration.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 

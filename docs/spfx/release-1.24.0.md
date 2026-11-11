@@ -1,21 +1,21 @@
 ---
-title: SharePoint Framework v1.24 release notes
-description: Release notes for SharePoint Framework v1.24, generally available October 28, 2026, including Copilot UX components, React 18, and Node.js 24 and 26 support.
-ms.date: 11/02/2026
+title: SharePoint Framework v1.24.0 release notes
+description: Release notes for SharePoint Framework v1.24.0, generally available October 28, 2026, including Copilot UX components, React 18, and Node.js 24 and 26 support.
+ms.date: 11/11/2026
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.24 release notes
+# SharePoint Framework v1.24.0 release notes
 
-SharePoint Framework (SPFx) 1.24 is generally available on **October 28, 2026**. This release makes **Copilot UX components** generally available, updates the React runtime to **React 18.3.1**, and adds support for **Node.js 24 and 26**, alongside Node.js 22.
+SharePoint Framework (SPFx) 1.24.0 is generally available on **October 28, 2026**. This release makes **Copilot UX components** generally available, updates the React runtime to **React 18.3.1**, and adds support for **Node.js 24 and 26**, alongside Node.js 22.
 
 > [!NOTE]
 > [SPFx 1.24.1](release-1.24.1.md), released on **November 2, 2026**, is the latest maintenance update. It corrects the default project scaffolding to use stable `1.24.1` SPFx packages instead of `1.24.0-rc.0` references and includes dependency updates. Use the 1.24.1 generator for new projects. Updating the generator doesn't update existing projects; follow the [1.24.1 upgrade guidance](release-1.24.1.md#upgrading-projects-from-v1240-to-v1241).
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install SPFx 1.24
+## Install SPFx 1.24.0
 
-Install the SPFx 1.24 generator:
+Install the SPFx 1.24.0 generator:
 
 ```console
 npm install @microsoft/generator-sharepoint@1.24.0 --global
@@ -27,11 +27,26 @@ Alternatively, install the latest public release using the npm `@latest` tag:
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-At SPFx 1.24 GA, `@latest` selects `1.24.0`. The tag advances with subsequent public releases; keep the `1.24.0` pin when reproducing this release's setup.
+At SPFx 1.24.0 GA, `@latest` selects `1.24.0`. The tag advances with subsequent public releases; keep the `1.24.0` pin when reproducing this release's setup.
+
+## Upgrading projects to v1.24.0
+
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To generate an upgrade report for this project, run the following command from the project root:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.24.0 --output md
+> ```
+>
+> This command generates an upgrade report; it doesn't modify project files. Review and apply the reported changes, preserving your solution's custom code and configuration.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 For existing solutions, follow [Update SharePoint Framework packages](toolchain/update-latest-packages.md). Keep the SPFx packages in a project on the same release version. Projects created with a 1.24 beta or release candidate must update their SPFx package references to `1.24.0` before production deployment.
 
-## New features and capabilities in 1.24
+## New features and capabilities in 1.24.0
 
 ### React 18 is here
 
@@ -41,9 +56,9 @@ Validate the upgraded solution in each host it supports. Report issues through t
 
 ### Node.js 24 and 26 support
 
-SPFx 1.24 supports Node.js **22, 24, and 26**. Node.js 22 requires version **22.14.0 or later within the 22.x release line**. Node.js 24 and 26 support starts at 24.0.0 and 26.0.0, respectively, within their release lines.
+SPFx 1.24.0 supports Node.js **22, 24, and 26**. Node.js 22 requires version **22.14.0 or later within the 22.x release line**. Node.js 24 and 26 support starts at 24.0.0 and 26.0.0, respectively, within their release lines.
 
-Node.js **26 LTS** is the recommended baseline for a new SPFx 1.24 development environment. Node.js 26 entered LTS on **October 28, 2026**. See [Node.js releases](https://nodejs.org/en/about/previous-releases) for lifecycle details and the [compatibility reference](compatibility.md) for the supported platform and dependency versions.
+Node.js **26 LTS** is the recommended baseline for a new SPFx 1.24.0 development environment. Node.js 26 entered LTS on **October 28, 2026**. See [Node.js releases](https://nodejs.org/en/about/previous-releases) for lifecycle details and the [compatibility reference](compatibility.md) for the supported platform and dependency versions.
 
 ### Copilot UX components generally available
 
@@ -61,7 +76,7 @@ Copilot UX components **don't use a consumption-based plan and have no consumpti
 
 Supported clients are **Microsoft 365 Copilot in browser and desktop clients**, and **Copilot in Microsoft Teams in browser and desktop clients**. Copilot UX components aren't supported on iOS or Android at GA, including Teams mobile.
 
-Solutions containing Copilot UX components are supported in the **SharePoint Store starting with SPFx 1.24 GA**. A solution packages a declarative agent and its components together in an SPFx solution package (`.sppkg`). You can also deploy solutions privately through the tenant's SharePoint App Catalog.
+Solutions containing Copilot UX components are supported in the **SharePoint Store starting with SPFx 1.24.0 GA**. A solution packages a declarative agent and its components together in an SPFx solution package (`.sppkg`). You can also deploy solutions privately through the tenant's SharePoint App Catalog.
 
 ![Copilot UX component sample scenarios shown in different display modes](../images/124-release/copilot-apps-teaser-slide.png)
 
@@ -154,7 +169,7 @@ Here's a list of specific issues fixed around SharePoint Framework which are spe
 
 ## Deprecations
 
-No new deprecations are introduced in SPFx 1.24. Existing deprecations and retirement notices continue to apply.
+No new deprecations are introduced in SPFx 1.24.0. Existing deprecations and retirement notices continue to apply.
 
 ## Feedback and issues
 
