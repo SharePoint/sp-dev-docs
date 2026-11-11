@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.24.1 release notes
 description: Release notes for SharePoint Framework v1.24.1, released November 2, 2026, with corrected default project scaffolding and dependency updates.
-ms.date: 11/02/2026
+ms.date: 11/11/2026
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.24.1 release notes
 
-SharePoint Framework (SPFx) 1.24.1 is a minor maintenance update to [SPFx 1.24](release-1.24.0.md). It fixes the default project scaffolding to reference stable SPFx packages instead of release-candidate packages and includes dependency updates.
+SharePoint Framework (SPFx) 1.24.1 is a minor maintenance update to [SPFx 1.24.0](release-1.24.0.md). It fixes the default project scaffolding to reference stable SPFx packages instead of release-candidate packages and includes dependency updates.
 
 **Released:** November 2, 2026
 
@@ -45,6 +45,21 @@ This release also addresses some of the npm dependency vulnerabilities reported 
 Review findings against the affected dependency and its use in your project. See [Understanding npm audit vulnerabilities in SPFx projects](npm-vulnerabilities.md) for guidance.
 
 ## Upgrading projects from v1.24.0 to v1.24.1
+
+For upgrades from an earlier minor version:
+
+[!INCLUDE [spfx-release-upgrade-warning](../../includes/snippets/spfx-release-upgrade-warning.md)]
+
+> [!TIP]
+> To generate an upgrade report for this project, run the following command from the project root:
+>
+> ```console
+> npx -p @pnp/cli-microsoft365@latest m365 spfx project upgrade --toVersion 1.24.1 --output md
+> ```
+>
+> This command generates an upgrade report; it doesn't modify project files. Review and apply the reported changes, preserving your solution's custom code and configuration.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 1. Install the 1.24.1 generator using the command above.
 2. In your project's **package.json**, update existing Microsoft SPFx runtime, build-rig, plugin, and lint package references to the exact version `1.24.1`. Include any `1.24.0-rc.0` references left by the 1.24.0 generator. Keep each package in its existing `dependencies` or `devDependencies` section, and don't assign the SPFx version to unrelated packages.
