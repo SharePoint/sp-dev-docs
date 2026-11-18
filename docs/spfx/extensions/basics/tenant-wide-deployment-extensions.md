@@ -1,7 +1,7 @@
 ---
 title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
-ms.date: 03/28/2023
+ms.date: 11/18/2026
 ms.localizationpriority: high
 ---
 # Tenant-wide Deployment of SharePoint Framework Extensions
@@ -23,6 +23,9 @@ SharePoint Framework solution will need to be configured to use [Tenant-scoped s
 App catalog site collection is used to deploy SharePoint add-ins and SharePoint Framework components to the tenant. This site collection is created by tenant administrator and it is used to manage what customizations are available for end users in actual content site collections.
 
 App catalog site collection contains a **Tenant Wide Extensions** list, which can be used to manage SharePoint Framework Extension activations in the tenant. This list can be accessed from the **site contents** page of the app catalog site.
+
+> [!IMPORTANT]
+> The planned cutoff date for Sites.ReadWrite.All is **January 31, 2027**. After that date, app-only automation that adds or updates entries in the **Tenant Wide Extensions** list will require the **SharePointTenantSettings.ReadWrite.All** application permission on the **Office 365 SharePoint Online** resource. **Sites.ReadWrite.All** alone will no longer be sufficient for these operations. For details, see [Configure app-only permissions for tenant App Catalog operations](../../tenant-app-catalog-app-only-permissions.md).
 
 Specific SharePoint Framework extensions can be activated in the tenant level by adding entries to the **Tenant Wide Extension** list. Each entry can be targeted to specific web template or a list type, depending on the functional requirements.
 

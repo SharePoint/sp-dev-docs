@@ -1,12 +1,15 @@
 ---
 title: Tenant-scoped solution deployment for SharePoint Framework solutions
 description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant app catalog.
-ms.date: 10/25/2021
+ms.date: 11/18/2026
 ms.localizationpriority: high
 ---
 # Tenant-scoped solution deployment for SharePoint Framework solutions
 
 You can configure your SharePoint Framework (SPFx) components to be immediately available across the tenant when the solution package is installed to the tenant app catalog. This can be configured by using the `skipFeatureDeployment` attribute in the **./config/package-solution.json** file.
+
+> [!IMPORTANT]
+> The planned cutoff date for Sites.ReadWrite.All is **January 31, 2027**. After that date, app-only automation that adds or updates packages in the tenant App Catalog will require the **SharePointTenantSettings.ReadWrite.All** application permission on the **Office 365 SharePoint Online** resource. **Sites.ReadWrite.All** alone will no longer be sufficient for these operations. For details, see [Configure app-only permissions for tenant App Catalog operations](tenant-app-catalog-app-only-permissions.md).
 
 When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant app catalog.
 

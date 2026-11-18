@@ -381,6 +381,8 @@
       href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
     - name: Tenant-scoped solution deployment
       href: spfx/tenant-scoped-deployment.md
+    - name: App-only permissions for tenant App Catalog operations
+      href: spfx/tenant-app-catalog-app-only-permissions.md
     - name: Optimize builds for production
       href: spfx/toolchain/optimize-builds-for-production.md
   - name: Concepts & scenarios

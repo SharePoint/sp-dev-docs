@@ -1,7 +1,7 @@
 ---
 title: Granting access via Entra ID App-Only
 description: Granting access via Entra ID App-Only
-ms.date: 11/28/2025
+ms.date: 11/18/2026
 author: jansenbe
 ms.author: bjansen
 ms.topic: article
@@ -80,6 +80,9 @@ Running the `Register-PnPAzureADApp` did not only create and configure the Entra
 ## Using this principal with PnP PowerShell
 
 If you want to use this Entra ID App Only principal with [PnP PowerShell](https://github.com/pnp/PowerShell), after you have installed the PnP PowerShell module, you can connect to your SharePoint Online environment using the [non interactive authentication](https://pnp.github.io/powershell/articles/authentication.html#non-interactive-authentication) supported by PnP PowerShell.
+
+> [!IMPORTANT]
+> The planned cutoff date for Sites.ReadWrite.All is **January 31, 2027**. After that date, app-only workflows that add or update packages or Tenant-Wide Extensions in the tenant App Catalog will require the **SharePointTenantSettings.ReadWrite.All** application permission on the **Office 365 SharePoint Online** resource. **Sites.ReadWrite.All** alone will no longer be sufficient for these operations. For details, see [Configure app-only permissions for tenant App Catalog operations](../spfx/tenant-app-catalog-app-only-permissions.md).
 
 ```powershell
 Connect-PnPOnline [yourtenant].sharepoint.com -ClientId <client id of your Entra ID Application Registration> -Tenant <tenant>.onmicrosoft.com -CertificatePath <path to your .pfx certificate> 
@@ -292,4 +295,3 @@ Write-Host "Site Title:" $web.Title -ForegroundColor Green
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
 
 No, all other options are blocked by SharePoint Online and will result in an Access Denied message.
-
