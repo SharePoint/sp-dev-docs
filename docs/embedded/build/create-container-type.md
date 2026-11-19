@@ -97,7 +97,7 @@ The following restrictions apply to trial container types:
 
 Use standard billing when the developer tenant pays for consumption.
 
-Each tenant can create up to 25 container types in total. One of these can be a free trial container type; the rest are standard (billed) container types.
+Each tenant can create up to 100 container types in total. One of these can be a free trial container type; the rest are standard (billed) container types.
 
 1. Create or identify the owning Microsoft Entra ID application.
 1. Create the container type with the `standard` billing classification.
