@@ -24,7 +24,7 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 - **Microsoft Foundry Agent Service with a SharePoint knowledge source** — for agents you build on Foundry. Foundry runs retrieval for you as part of the agent. For setup steps, see [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md).
 - **Microsoft 365 Copilot Retrieval API** — for custom agents and apps that run their own grounding step. Call it from any app, including a Foundry agent that doesn't use the SharePoint knowledge source.
 
-Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself.
+Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself. Alternatively, leverage custom metadata on documents to augment your end-users' experience directly on Microsoft 365 Copilot.
 
 > [!TIP]
 > To provision and manage the SharePoint Embedded resources behind these experiences from a coding agent, use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md).
