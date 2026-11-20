@@ -195,7 +195,7 @@ Sign in with a user who can access the container content. Upload supported files
 - Indexing delay.
 
 
-## Ground answers in Copilot with custom column metadata
+## Ground answers in Microsoft 365 Copilot with custom metadata
 
 Your app often knows business facts about a file that aren't written in the file itself, such as the customer it belongs to, its document type, or its stage in a workflow. When you store those facts in [custom columns](/graph/api/filestoragecontainer-post-columns), SharePoint ingests eligible values into the semantic index so Microsoft 365 Copilot and agents can recognize the metadata and explain why a file is relevant.
 
