@@ -200,7 +200,7 @@ Sign in with a user who can access the container content. Upload supported files
 Your app often knows business facts about a file that aren't written in the file itself, such as the customer it belongs to, its document type, or its stage in a workflow. When you store those facts in [custom columns](/graph/api/filestoragecontainer-post-columns), SharePoint ingests eligible values into the semantic index so Microsoft 365 Copilot and agents can recognize the metadata and explain why a file is relevant.
 
 > [!IMPORTANT]
-> AdditionalGroundingData improves how Copilot understands files that were already retrieved. It doesn't filter results or control access. To restrict retrieval to files with specific values, see [Filter retrieval by custom metadata](#filter-retrieval-by-custom-metadata).
+> Microsoft 365 Copilot uses custom metadata to determine files that are relevant to a user's prompt. Custom metadata is not used to control access to files.
 
 ### Why metadata grounding matters
 
