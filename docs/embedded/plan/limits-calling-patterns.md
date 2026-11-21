@@ -51,7 +51,7 @@ SharePoint Embedded enforces the following size limits.
 | Container type registrations per consuming tenant | 100 |
 | Applications with permission grants per container type registration | 10 |
 | Container type name length | 255 characters |
-| URL template (**urlTemplate**) length for container type and registration settings | 400 characters |
+| URL template (`urlTemplate`) length for container type and registration settings | 400 characters |
 | Storage per container type per consuming tenant | 100 TB* |
 | Files and folders per container | 30 million |
 | Storage per container | 25 TB |
