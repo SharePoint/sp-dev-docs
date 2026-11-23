@@ -265,6 +265,8 @@
         href: spfx/copilot/get-started/connect-to-sharepoint-data.md
     - name: Development and deployment
       href: spfx/copilot/development-and-deployment.md
+    - name: Manually package a Copilot UX component as a plug-in
+      href: spfx/copilot/package-copilot-ux-component-as-plugin.md
     - name: Provide context to Copilot
       href: spfx/copilot/provide-context-to-copilot.md
     - name: Configure components and agents
