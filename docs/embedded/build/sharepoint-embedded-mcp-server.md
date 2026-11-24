@@ -181,10 +181,10 @@ Each action in the app corresponds to a SharePoint Embedded concept, and the cod
 
 | In the app | In SharePoint Embedded | Tool the agent calls |
 |---|---|---|
-| The contract management product | An owning app and one [container type](../plan/container-types-containers.md) | `project_provision` |
+| The contract management product | An owning app, one [container type](../plan/container-types-containers.md), and a default container | `project_provision` |
 | A new contract matter | One container, which is the matter's content and permission boundary | `container_create` |
 | Drafts, signed copies, and correspondence | Folders in the matter's container | `content_folder_create` |
-| A contract draft | A file in the container, which people can [co-author in Word](open-office-files.md) | `content_file_upload` |
+| Contract notes | A file in the matter's container | `content_file_upload` |
 | Reviewers on a matter | [Members of the container](share-files-manage-permissions.md#understand-container-roles) with a role such as writer | `container_permissions_manage` |
 | Finding a contract across matters | [Search](search-containers-files.md) scoped to the app's container type | `content_search` |
 
@@ -199,16 +199,16 @@ SharePoint Embedded stores the documents and enforces access. Contract stages, d
     Using the SharePoint Embedded MCP server, build a contract management app in my tenant:
 
     1. Check my sign-in and provisioning readiness.
-    2. Provision a trial container type named "Contract Matters" with its owning app.
-    3. Scaffold the React and Azure Functions reference app as "contract-matters", and write its configuration from the provisioning state.
-    4. Create two containers for these contract matters: "Fabrikam master services agreement" and "Northwind mutual NDA".
-    5. In each container, create the folders Drafts, Signed, and Correspondence.
+    2. Provision a trial container type named "Contract Matters" with its owning app and default container.
+    3. Scaffold the React reference app as "contract-matters", and write its configuration from the provisioning state.
+    4. Use container_create, not the app UI, to create two containers for these contract matters: "Fabrikam master services agreement" and "Northwind mutual NDA".
+    5. In each matter container, create the folders Drafts, Signed, and Correspondence.
     6. Run the app locally and give me its URL.
     ```
 
 1. Approve each tool call when the client asks. Folder and file operations also ask you to grant content access first.
 
-A trial container type is free and lasts 30 days. It allows up to five containers, so this example uses two.
+A trial container type is free and lasts 30 days. It allows up to five containers; this example uses three: the default container created during provisioning and the two matter containers.
 
 ### Work with the matters
 
@@ -220,10 +220,10 @@ After the app runs, keep going in the same chat. Replace the placeholder values 
     Add <reviewer email> as a writer on the "Fabrikam master services agreement" container.
     ```
 
-- Upload a contract draft:
+- Upload contract notes:
 
     ```text
-    Upload <path to a .docx file> to the Drafts folder of the "Fabrikam master services agreement" container.
+    Using content_file_upload, create "Fabrikam-MSA-notes.txt" in the Drafts folder of the "Fabrikam master services agreement" container with the text "Review the renewal terms."
     ```
 
 - Find contracts across matters:
