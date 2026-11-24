@@ -186,7 +186,6 @@ Each action in the app corresponds to a SharePoint Embedded concept, and the cod
 | Drafts, signed copies, and correspondence | Folders in the matter's container | `content_folder_create` |
 | Contract notes | A file in the matter's container | `content_file_upload` |
 | Reviewers on a matter | [Members of the container](share-files-manage-permissions.md#understand-container-roles) with a role such as writer | `container_permissions_manage` |
-| Finding a contract across matters | [Search](search-containers-files.md) scoped to the app's container type | `content_search` |
 
 SharePoint Embedded stores the documents and enforces access. Contract stages, due dates, approvals, and signatures are your app's business logic. Keep them in your app's data store, or as [metadata columns](container-metadata.md) on the files.
 
@@ -226,11 +225,7 @@ After the app runs, keep going in the same chat. Replace the placeholder values 
     Using content_file_upload, create "Fabrikam-MSA-notes.txt" in the Drafts folder of the "Fabrikam master services agreement" container with the text "Review the renewal terms."
     ```
 
-- Find contracts across matters:
-
-    ```text
-    Search my Contract Matters containers for files that mention "renewal".
-    ```
+Your app can add [search across matters](search-containers-files.md).
 
 To remove everything this example created, ask the agent to clean up the project. It deletes the container type and the owning app after you confirm.
 
