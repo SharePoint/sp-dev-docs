@@ -1,7 +1,7 @@
 ---
 title: Build a SharePoint Embedded app end to end
 description: Follow the complete sequence to create, register, and use a SharePoint Embedded app in a developer or consuming tenant.
-ms.date: 10/29/2026
+ms.date: 11/24/2026
 ms.reviewer: shsaravanan
 ms.localizationpriority: high
 ai-usage: ai-assisted
@@ -40,6 +40,7 @@ Follow this order:
 | Evaluate SharePoint Embedded for 30 days | Create a trial container type in your developer tenant. |
 | Build a production app where the developer pays | Create a standard container type and attach an Azure billing profile. |
 | Build a multitenant app where each customer pays | Create a `directToCustomer` container type and have each consuming tenant activate pay-as-you-go billing. |
+| Learn the request and state model before you create resources | Try the [SharePoint Embedded onboarding playground](https://github.com/microsoft/SharePoint-Embedded-Samples/tree/main/Custom%20Apps/spe-playground) sample. It runs in your browser with synthetic data and doesn't connect to Microsoft Graph. |
 | Start with guided tooling | Use the [Visual Studio Code quickstart](quickstart-vscode.md). |
 | Build with a coding agent | Use the [SharePoint Embedded Model Context Protocol (MCP) server](sharepoint-embedded-mcp-server.md). |
 
