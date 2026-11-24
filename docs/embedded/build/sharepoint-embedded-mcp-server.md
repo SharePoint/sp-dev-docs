@@ -1,7 +1,7 @@
 ---
 title: Use the MCP server to build apps with a coding agent
 description: Use the open-source SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
-ms.date: 07/10/2026
+ms.date: 11/24/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ms.reviewer: cindylay
@@ -167,6 +167,72 @@ With the server registered in your client and an Azure CLI sign-in complete, ask
 - *"Provision a new SharePoint Embedded app and scaffold a React sample."*
 
 The client calls the matching tools, prompts you for consent the first time, and reports the results.
+
+## Example: Build a contract management app
+
+This example walks through a contract management app for a legal team. The team tracks each contract matter, such as a master services agreement or a nondisclosure agreement (NDA), from first draft to signature and renewal.
+
+> [!CAUTION]
+> These prompts create real resources in the tenant you're signed in to. Use a development tenant, not production.
+
+### How the app maps to SharePoint Embedded
+
+Each action in the app corresponds to a SharePoint Embedded concept, and the coding agent uses an MCP tool to set it up:
+
+| In the app | In SharePoint Embedded | Tool the agent calls |
+|---|---|---|
+| The contract management product | An owning app and one [container type](../plan/container-types-containers.md) | `project_provision` |
+| A new contract matter | One container, which is the matter's content and permission boundary | `container_create` |
+| Drafts, signed copies, and correspondence | Folders in the matter's container | `content_folder_create` |
+| A contract draft | A file in the container, which people can [co-author in Word](open-office-files.md) | `content_file_upload` |
+| Reviewers on a matter | [Members of the container](share-files-manage-permissions.md#understand-container-roles) with a role such as writer | `container_permissions_manage` |
+| Finding a contract across matters | [Search](search-containers-files.md) scoped to the app's container type | `content_search` |
+
+SharePoint Embedded stores the documents and enforces access. Contract stages, due dates, approvals, and signatures are your app's business logic. Keep them in your app's data store, or as [metadata columns](container-metadata.md) on the files.
+
+### Build the app with a prompt
+
+1. Install the server with the buttons at the top of this article, then sign in with `az login --allow-no-subscriptions`.
+1. Open Copilot Chat in agent mode, and paste this prompt:
+
+    ```text
+    Using the SharePoint Embedded MCP server, build a contract management app in my tenant:
+
+    1. Check my sign-in and provisioning readiness.
+    2. Provision a trial container type named "Contract Matters" with its owning app.
+    3. Scaffold the React and Azure Functions reference app as "contract-matters", and write its configuration from the provisioning state.
+    4. Create two containers for these contract matters: "Fabrikam master services agreement" and "Northwind mutual NDA".
+    5. In each container, create the folders Drafts, Signed, and Correspondence.
+    6. Run the app locally and give me its URL.
+    ```
+
+1. Approve each tool call when the client asks. Folder and file operations also ask you to grant content access first.
+
+A trial container type is free and lasts 30 days. It allows up to five containers, so this example uses two.
+
+### Work with the matters
+
+After the app runs, keep going in the same chat. Replace the placeholder values with your own.
+
+- Add a reviewer to a matter:
+
+    ```text
+    Add <reviewer email> as a writer on the "Fabrikam master services agreement" container.
+    ```
+
+- Upload a contract draft:
+
+    ```text
+    Upload <path to a .docx file> to the Drafts folder of the "Fabrikam master services agreement" container.
+    ```
+
+- Find contracts across matters:
+
+    ```text
+    Search my Contract Matters containers for files that mention "renewal".
+    ```
+
+To remove everything this example created, ask the agent to clean up the project. It deletes the container type and the owning app after you confirm.
 
 ## Control what the server can do
 
