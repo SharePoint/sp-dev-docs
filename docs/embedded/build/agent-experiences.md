@@ -24,7 +24,7 @@ SharePoint Embedded agent experiences let your app answer questions over files s
 - **Microsoft Foundry Agent Service with a SharePoint knowledge source** — for agents you build on Foundry. Foundry runs retrieval for you as part of the agent. For setup steps, see [Set up SharePoint Embedded as a Foundry knowledge source](sharepoint-embedded-knowledge-source.md).
 - **Microsoft 365 Copilot Retrieval API** — for custom agents and apps that run their own grounding step. Call it from any app, including a Foundry agent that doesn't use the SharePoint knowledge source.
 
-Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself.
+Choose the knowledge source when you want Foundry to manage retrieval and agent orchestration. Choose the Retrieval API when you want to control the grounding step, the prompt, and the model yourself. Alternatively, leverage custom metadata on documents to augment your end-users' experience directly on Microsoft 365 Copilot.
 
 > [!TIP]
 > To provision and manage the SharePoint Embedded resources behind these experiences from a coding agent, use the [SharePoint Embedded MCP server](sharepoint-embedded-mcp-server.md).
@@ -193,6 +193,114 @@ Sign in with a user who can access the container content. Upload supported files
 - User access.
 - Scope selection.
 - Indexing delay.
+
+
+## Ground answers in Microsoft 365 Copilot with custom metadata
+
+Your app often knows business facts about a file that aren't written in the file itself, such as the customer it belongs to, its document type, or its stage in a workflow. When you store those facts in [custom columns](/graph/api/filestoragecontainer-post-columns), SharePoint ingests eligible values into the semantic index so Microsoft 365 Copilot and agents can recognize the metadata and explain why a file is relevant.
+
+> [!IMPORTANT]
+> Microsoft 365 Copilot uses custom metadata to determine files that are relevant to a user's prompt. Custom metadata is not used to control access to files.
+
+### Why metadata grounding matters
+
+Search can match a query against column values. If a file's `CustomerName` column contains `Contoso` and a user asks about Contoso, search can return the file. Without metadata in the grounding data, Copilot receives only the file content. If the agreement never mentions Contoso, Copilot can conclude the file is unrelated and drop it or fail to explain why it's included. AdditionalGroundingData supplies the metadata that produced the match, alongside the content.
+
+### How AdditionalGroundingData is built
+
+You don't create or write AdditionalGroundingData. SharePoint Embedded builds it from your custom columns whenever a file's content or field values change:
+
+1. **Collect.** SharePoint Embedded reads the container's column definitions and the file's field values.
+2. **Qualify.** Built-in SharePoint Embedded properties, excluded fields, empty values, and unsupported or malformed values are skipped.
+3. **Serialize.** Eligible column-and-value pairs are serialized into a JSON object.
+4. **Index.** The JSON object is stored in the file's AdditionalGroundingData managed property and indexed with the file.
+5. **Ground.** When the file is returned as a result, AdditionalGroundingData is included in the grounding data with the file content, and Copilot reasons over both.
+
+Processing is asynchronous. New or changed values aren't available until the file is reindexed.
+
+### AdditionalGroundingData format
+
+AdditionalGroundingData contains a flat JSON object. Each key is a column's internal name, and each value is the file's field value serialized as a string. For a file with these field values:
+
+| Internal name    | Type     | Value      |
+| ---------------- | -------- | ---------- |
+| `CustomerName` | text     | Contoso    |
+| `DocumentType` | choice   | Agreement  |
+| `ReviewStatus` | choice   | Legal      |
+| `RenewalDate`  | dateTime | 2027-02-15 |
+
+the property contains:
+
+```json
+{
+  "CustomerName": "Contoso",
+  "DocumentType": "Agreement",
+  "ReviewStatus": "Legal",
+  "RenewalDate": "2027-02-15"
+}
+```
+
+<!-- Reviewer: confirm before publishing - (1) keys are internal names rather than display names, (2) date serialization format, (3) serialization of multi-value choice and personOrGroup values, (4) whether to publish the size limit, (5) supported surfaces (Microsoft 365 Copilot, Foundry knowledge source, Retrieval API), (6) whether AdditionalGroundingData can be requested in resourceMetadata. -->
+
+- **Keys are internal names.** Copilot sees `CustomerName`, not the display name *Customer Name*, so choose internal names that are readable on their own.
+- **Values are text,** regardless of column type.
+- **Size is limited.** When eligible values exceed the size budget, larger values are trimmed or dropped before smaller ones.
+- **Fields aren't guaranteed.** The fields present depend on eligibility, size, and indexing state. Don't write prompts or agent instructions that depend on a specific field always being present.
+
+> [!NOTE]
+> This JSON shows how metadata is represented for grounding. It isn't a public API contract and can change.
+
+### How Copilot uses the metadata
+
+Copilot treats AdditionalGroundingData as evidence about a retrieved file. For the prompt *"Summarize the Contoso agreements currently under legal review,"* the file content supplies the obligations and terms, and the metadata confirms that the file is a Contoso agreement in legal review, even though neither fact appears in the text.
+
+Metadata grounding is most useful when:
+
+- **An identifier links many files,** such as a claim or matter number that not every document mentions.
+- **Workflow state isn't in the document,** such as approval or review status.
+- **Scope is contextual,** such as region, product family, or market.
+
+Metadata can affect an answer in three ways:
+
+| Capability                          | What it does                                                       | What it doesn't guarantee                                |
+| ----------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------- |
+| Matching                            | Column values can contribute to search relevance.                  | Exact field equality                                     |
+| Grounding (AdditionalGroundingData) | Copilot reasons over metadata with the content of retrieved files. | That a file is retrieved, or that every field is present |
+| Filtering (`filterExpression`)    | Limits candidates to files whose indexed values match.             | That every matching file has relevant content            |
+
+> [!WARNING]
+> Phrases such as "only approved documents" or "due this week" aren't converted into field predicates. When an answer must use only files that meet specific conditions, use [`filterExpression`](#filter-retrieval-by-custom-metadata).
+
+### Example prompts that benefit from metadata grounding
+
+These examples assume the columns shown earlier (`CustomerName`, `DocumentType`, `ReviewStatus`, `RenewalDate`). In each case, the metadata — not the file text — is what lets Copilot connect the file to the question.
+
+| Prompt                                                        | How the metadata helps                                                                                                                                                        |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *"What do we have on file for Contoso?"*                    | `CustomerName` identifies Contoso files even when the customer name never appears in the document body.                                                                     |
+| *"Summarize the agreements in legal review."*               | `DocumentType` and `ReviewStatus` confirm each retrieved file is an agreement under legal review, so Copilot doesn't drop contracts whose text never says "legal review." |
+| *"Which Contoso agreements renew early next year?"*         | `RenewalDate` gives Copilot the date context to interpret "early next year" against files already retrieved.                                                                |
+| *"Draft a status update on the Contoso agreement renewal."* | Copilot combines the agreement's terms (content) with its customer, type, and review state (metadata) to describe the file accurately.                                        |
+
+In agent instructions, you can make the same expectation explicit, for example: *"When you answer questions about a customer, check the file's metadata for the customer name and review status, and say when a file's metadata doesn't match the question."*
+
+### Design columns for metadata grounding
+
+- Use readable, stable internal names, because they appear as JSON keys. Renaming a column changes the key and requires reindexing.
+- Keep values short: a word, phrase, identifier, or date. Avoid long text, serialized JSON, and copies of the document body.
+- Use controlled vocabularies, so `Legal` is always `Legal`.
+- Prefer meaningful strings such as `Contoso` to opaque identifiers.
+
+> [!CAUTION]
+> AdditionalGroundingData can reach the grounding data of any user who can access the file. Don't store information in columns that those users shouldn't see.
+
+### Metadata grounding limitations
+
+- Files that haven't changed since metadata grounding became available might not have AdditionalGroundingData until they're updated and reindexed.
+- AdditionalGroundingData doesn't cause a file to be retrieved; it's attached to files that are already results.
+- Security trimming always applies.
+- Semantic vectorization of metadata is separate from AdditionalGroundingData.
+
 
 ## Next steps
 
