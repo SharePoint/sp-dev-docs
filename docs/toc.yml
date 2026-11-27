@@ -662,6 +662,8 @@
       href: embedded/build/quickstart-vscode.md
     - name: Use the MCP server to build apps with a coding agent
       href: embedded/build/sharepoint-embedded-mcp-server.md
+    - name: Build a contract management app with a coding agent
+      href: embedded/build/build-contract-management-app-coding-agent.md
     - name: Create and configure a container type
       href: embedded/build/create-container-type.md
     - name: Register application permissions
