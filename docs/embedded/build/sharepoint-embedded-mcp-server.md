@@ -1,7 +1,7 @@
 ---
 title: Use the MCP server to build apps with a coding agent
 description: Use the open-source SharePoint Embedded MCP server with a coding agent to provision, configure, scaffold, and manage SharePoint Embedded applications through natural language.
-ms.date: 07/10/2026
+ms.date: 11/27/2026
 ms.localizationpriority: high
 ms.author: grjoseph
 ms.reviewer: cindylay
@@ -119,6 +119,39 @@ The server accepts operational configuration through CLI flags or equivalent env
 
 Set flags in the `args` array or variables in the `env` object of your client's MCP configuration. Run `npx -y @microsoft/spe-mcp start --help` or see the [server configuration reference](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#configuration) for the complete, versioned option list.
 
+### Work with more than one tenant
+
+Use a separate server name and absolute `SPE_DATA_DIR` for each instance. Don't point a new tenant at another instance's provisioning state: it contains the owning app and container type IDs to reuse. `SPE_TENANT_ID` doesn't sign the Azure CLI in to that tenant or replace its cache.
+
+For an isolated Azure CLI sign-in, also set `AZURE_CONFIG_DIR`. The server's Azure CLI child processes inherit this environment variable. For example, on Windows, replace `<user>` and `<tenant-id>` with your own values:
+
+```json
+{
+  "servers": {
+    "spe-contract-matters": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@microsoft/spe-mcp", "start"],
+      "env": {
+        "SPE_TENANT_ID": "<tenant-id>",
+        "SPE_DATA_DIR": "C:\\Users\\<user>\\.spe-mcp-contract-matters\\<tenant-id>",
+        "AZURE_CONFIG_DIR": "C:\\Users\\<user>\\.azure-contract-matters\\<tenant-id>"
+      }
+    }
+  }
+}
+```
+
+Sign in using that same Azure CLI directory in your terminal:
+
+```powershell
+$env:AZURE_CONFIG_DIR = 'C:\Users\<user>\.azure-contract-matters\<tenant-id>'
+az login --tenant <tenant-id> --allow-no-subscriptions
+az account show --query tenantId --output tsv
+```
+
+Complete the browser and MFA prompts. Start or restart the matching MCP server, approve its configuration if prompted, and run `status_get`. Stop before provisioning if its tenant differs from the intended tenant or its saved app belongs to another setup. Don't clear other instances' caches to resolve a mismatch.
+
 ## Choose how the server authenticates
 
 The server supports two running modes.
@@ -151,12 +184,23 @@ The server supports two running modes.
 > Configure redirect URIs on the applicable app registration:
 >
 > - **Owning app registration for the MCP server**: Under **Mobile and desktop applications**, add `http://localhost` for interactive sign-in.
-> - **Owning app registration for the React single-page application (SPA)**: Under **Single-page application**, add the local app URL shown by `project_run_local` and the deployed URL returned by `project_deploy`. In pre-provisioned-app mode, add these redirect URIs manually if the server can't update the app registration.
+> - **Owning app registration for the React single-page application (SPA)**: Under **Single-page application**, register the exact callback URI requested by MSAL. When the app shares its registration with the MCP desktop client, use a distinct local callback path, such as `http://localhost:5173/auth/callback.html`, rather than the local app's root URL. Configure MSAL and its callback page to use the same URI. Register the deployed callback returned by your deployment workflow separately.
 > - **Separate C# web app registration**: The C# scaffold provisions this registration with a web redirect URI. Don't add the C# app's redirect URI to the owning app registration.
 >
 > Manage redirect URIs under **App registrations** > **Authentication** in the [Microsoft Entra admin center](https://entra.microsoft.com/).
+>
+> Entra [ignores localhost port numbers when matching redirects](/entra/identity-platform/reply-url#localhost-exceptions). Registering `http://localhost` as a desktop callback and `http://localhost:5173` as a SPA callback creates an ambiguous match; use different paths. An `AADSTS9002326` failure can therefore occur even when the SPA root URL is already registered.
 
 In bootstrap mode, the first SharePoint Embedded call opens a browser for a one-time consent and caches the token, so no separate terminal step is needed. For the full authentication waterfall, token storage details, and headless/automation guidance, see the [server README](https://github.com/microsoft/SharePoint-Embedded-MCP-Server#authentication).
+
+If browser sign-in doesn't complete, use the full error reported by the terminal or MCP client rather than the generic browser failure page. You can authenticate the saved owning app in a visible terminal without installing a global CLI:
+
+```powershell
+$env:SPE_DATA_DIR = 'C:\Users\<user>\.spe-mcp-contract-matters\<tenant-id>'
+npx -y @microsoft/spe-mcp auth --client-id <owning-app-id> --tenant-id <tenant-id>
+```
+
+Use the same data directory as the server, complete all sign-in prompts, and restart that server afterward. A policy-denial error such as `AADSTS500027` requires your Entra administrator to review the failure; don't disable tenant security policies or create duplicate apps to work around it.
 
 ## Try it
 
